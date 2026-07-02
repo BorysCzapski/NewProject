@@ -4,7 +4,7 @@
 // labels, homework type metadata). Centralised so every module presents the
 // same Polish copy instead of re-typing labels ad hoc.
 // ============================================================================
-import type { HomeworkType, UserLevel } from "@/lib/types/database";
+import type { HomeworkType, UserLevel, WritingTaskType } from "@/lib/types/database";
 
 export const LEVELS: UserLevel[] = ["A1", "A2", "B1", "B2"];
 
@@ -62,4 +62,11 @@ export const WRITING_WORD_LIMITS: Record<UserLevel, { min: number; max: number }
   A2: { min: 30, max: 70 },
   B1: { min: 40, max: 90 },
   B2: { min: 50, max: 120 },
+};
+
+export const WRITING_TASK_TYPE_LABELS: Record<WritingTaskType, string> = {
+  comment_reply: "Odpowiedź na komentarz",
+  message_friend: "Wiadomość do znajomego",
+  formal_email: "Formalny e-mail",
+  question_answer: "Odpowiedź na pytanie",
 };
