@@ -1,0 +1,143 @@
+/* ============================================================================
+ * globals.css
+ * Design tokens for the app: a warm, friendly palette (indigo primary, mint
+ * accent) tuned for a mobile-first learning app, plus a manually-toggled
+ * dark mode (".dark" class on <html>, see components/theme/theme-provider).
+ * ============================================================================ */
+@import "tailwindcss";
+
+/* Tailwind v4: opt into class-based dark mode instead of prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f7f7fb;
+  --surface: #ffffff;
+  --surface-muted: #f1f1f8;
+  --foreground: #16161d;
+  --foreground-muted: #6b6b7a;
+  --border: #e4e4ee;
+
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eef0fe;
+
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --accent-soft: #e6f9f1;
+
+  --danger: #e11d48;
+  --danger-soft: #fde8ed;
+  --warning: #d97706;
+  --warning-soft: #fef3e2;
+
+  --level-a1: #22c55e;
+  --level-a2: #3b82f6;
+  --level-b1: #a855f7;
+  --level-b2: #f97316;
+
+  --radius-card: 1.25rem;
+  --radius-control: 0.875rem;
+}
+
+.dark {
+  --background: #0f0f16;
+  --surface: #17171f;
+  --surface-muted: #1e1e29;
+  --foreground: #f4f4f8;
+  --foreground-muted: #9a9aab;
+  --border: #2a2a38;
+
+  --primary: #818cf8;
+  --primary-foreground: #12121a;
+  --primary-soft: #24243a;
+
+  --accent: #34d399;
+  --accent-foreground: #0b1f16;
+  --accent-soft: #163227;
+
+  --danger: #fb7185;
+  --danger-soft: #3a1620;
+  --warning: #fbbf24;
+  --warning-soft: #3a2a0e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+
+  --color-level-a1: var(--level-a1);
+  --color-level-a2: var(--level-a2);
+  --color-level-b1: var(--level-b1);
+  --color-level-b2: var(--level-b2);
+
+  --radius-card: var(--radius-card);
+  --radius-control: var(--radius-control);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent horizontal scroll on narrow phones no matter what a child does */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Utility: 3D flip card (used by the flashcards trainer) */
+.flip-card-scene {
+  perspective: 1200px;
+}
+.flip-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-card-face {
+  backface-visibility: hidden;
+}
+.flip-card-face-back {
+  transform: rotateY(180deg);
+}
+
+/* Hide scrollbars on horizontally-scrollable chip rows without losing scroll */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
