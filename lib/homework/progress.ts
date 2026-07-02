@@ -31,6 +31,9 @@ interface SimpleCountConfig {
 interface GrammarTopicConfig {
   topic_id: string;
 }
+interface WritingTaskConfig {
+  task_id?: string; // if set, only a submission for this specific task counts
+}
 interface SongTranslationConfig {
   song_id: string;
 }
@@ -117,11 +120,14 @@ async function computeProgress(
     }
 
     case "writing_task": {
-      const { count } = await supabase
+      const cfg = hw.config as unknown as WritingTaskConfig;
+      let query = supabase
         .from("writing_submissions")
         .select("id", { count: "exact", head: true })
         .eq("user_id", userId)
         .gte("created_at", since);
+      if (cfg.task_id) query = query.eq("task_id", cfg.task_id);
+      const { count } = await query;
       return { current: Math.min(count ?? 0, 1), target: 1 };
     }
 

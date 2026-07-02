@@ -397,10 +397,12 @@ alter table homework enable row level security;
 alter table homework_progress enable row level security;
 alter table activity_log enable row level security;
 
--- profiles: everyone can read (needed for username->email lookup on login and
--- for any "who else is learning" UI); users edit only their own row; admins
--- can update any row (e.g. future admin tools).
-create policy "profiles_select_all" on profiles for select to authenticated using (true);
+-- profiles: users can only read their own row; admins can read every row
+-- (needed for the "who completed what" homework view). Username->email
+-- lookup at login happens unauthenticated, via the service-role admin
+-- client in lib/supabase/admin.ts, so it never goes through this policy.
+create policy "profiles_select_own_or_admin" on profiles for select to authenticated
+  using (auth.uid() = id or public.is_admin());
 create policy "profiles_update_own" on profiles for update to authenticated
   using (auth.uid() = id) with check (auth.uid() = id);
 create policy "profiles_update_admin" on profiles for update to authenticated
