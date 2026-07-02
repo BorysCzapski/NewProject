@@ -48,6 +48,8 @@ export function HomeworkCreateForm({
   const [type, setType] = useState<HomeworkType | "">("");
   const [selectedLevels, setSelectedLevels] = useState<UserLevel[]>([]);
   const [wtMode, setWtMode] = useState<"any" | "specific">("any");
+  const [deadlineLocal, setDeadlineLocal] = useState("");
+  const [deadlineIso, setDeadlineIso] = useState("");
 
   const [isSuggesting, setIsSuggesting] = useState(false);
   const [suggestError, setSuggestError] = useState<string | null>(null);
@@ -138,7 +140,21 @@ export function HomeworkCreateForm({
 
       <div>
         <Label htmlFor="deadline">Termin (opcjonalnie)</Label>
-        <Input id="deadline" name="deadline" type="datetime-local" />
+        {/* datetime-local has no timezone info; a raw "2024-03-15T14:00" string
+            parsed on the server would be interpreted in the SERVER's timezone,
+            not the admin's. Convert to a real UTC instant here in the browser
+            (where `new Date(...)` correctly uses the admin's local timezone)
+            and submit that instead. */}
+        <Input
+          id="deadline"
+          type="datetime-local"
+          value={deadlineLocal}
+          onChange={(e) => {
+            setDeadlineLocal(e.target.value);
+            setDeadlineIso(e.target.value ? new Date(e.target.value).toISOString() : "");
+          }}
+        />
+        <input type="hidden" name="deadline" value={deadlineIso} />
       </div>
 
       <div>

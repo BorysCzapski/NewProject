@@ -85,7 +85,11 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
   if (levels.length === 0) return { error: "Wybierz co najmniej jeden poziom." };
   if (!HOMEWORK_TYPES.includes(type)) return { error: "Wybierz typ pracy domowej." };
 
-  const deadline = deadlineRaw ? new Date(deadlineRaw).toISOString() : null;
+  // deadlineRaw is already a UTC ISO string computed client-side (from the
+  // admin's local timezone) by homework-create-form.tsx — do NOT re-parse a
+  // datetime-local value here, `new Date("2024-03-15T14:00")` would be
+  // interpreted in the SERVER's timezone instead of the admin's.
+  const deadline = deadlineRaw || null;
   const primaryLevel = levels[0]; // resource (song/task/exercise) is created for the first selected level
 
   let config: Record<string, unknown>;

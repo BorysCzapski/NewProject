@@ -192,29 +192,46 @@ export async function getHomeworkWithProgress(
 
   if (!homeworkList || homeworkList.length === 0) return [];
 
-  const results: HomeworkWithProgress[] = [];
-  const upserts: Array<{
-    homework_id: string;
-    user_id: string;
-    status: HomeworkStatus;
-    progress_current: number;
-    progress_target: number;
-    completed_at: string | null;
-  }> = [];
+  // Needed so a re-render doesn't push completed_at forward to "now" every
+  // time — only the actual transition into "completed" should stamp it.
+  const { data: existingProgress } = await supabase
+    .from("homework_progress")
+    .select("homework_id, completed_at")
+    .eq("user_id", userId)
+    .in(
+      "homework_id",
+      (homeworkList as Homework[]).map((hw) => hw.id)
+    );
+  const existingCompletedAt = new Map(
+    (existingProgress ?? []).map((row) => [row.homework_id, row.completed_at as string | null])
+  );
 
-  for (const hw of homeworkList as Homework[]) {
-    const { current, target } = await computeProgress(supabase, userId, hw);
-    const status = statusFor(current, target, hw.deadline);
-    results.push({ ...hw, status, progress_current: current, progress_target: target });
-    upserts.push({
-      homework_id: hw.id,
-      user_id: userId,
-      status,
-      progress_current: current,
-      progress_target: target,
-      completed_at: status === "completed" ? new Date().toISOString() : null,
-    });
-  }
+  // Each homework's progress is independent (same userId, different row) —
+  // compute them concurrently instead of one round-trip at a time.
+  const computed = await Promise.all(
+    (homeworkList as Homework[]).map(async (hw) => {
+      const { current, target } = await computeProgress(supabase, userId, hw);
+      const status = statusFor(current, target, hw.deadline);
+      return { hw, status, current, target };
+    })
+  );
+
+  const results: HomeworkWithProgress[] = computed.map(({ hw, status, current, target }) => ({
+    ...hw,
+    status,
+    progress_current: current,
+    progress_target: target,
+  }));
+
+  const upserts = computed.map(({ hw, status, current, target }) => ({
+    homework_id: hw.id,
+    user_id: userId,
+    status,
+    progress_current: current,
+    progress_target: target,
+    completed_at:
+      status === "completed" ? existingCompletedAt.get(hw.id) ?? new Date().toISOString() : null,
+  }));
 
   await supabase.from("homework_progress").upsert(upserts, { onConflict: "homework_id,user_id" });
 

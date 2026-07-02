@@ -77,7 +77,8 @@ export default async function AdminHomeworkDetailPage({
                   <div className="min-w-0">
                     <p className="truncate font-medium text-foreground">{c.profile.username}</p>
                     <p className="text-xs text-foreground-muted">
-                      {c.progress_current}/{c.progress_target || "?"}
+                      {c.progress_current}/{c.progress_target}
+                      {c.progress_target === 0 && " • jeszcze nie rozpoczęto"}
                       {c.completed_at &&
                         ` • ukończono ${formatDeadline(c.completed_at)}`}
                     </p>

@@ -30,19 +30,28 @@ export async function listHomeworkForAdmin(supabase: SupabaseClient): Promise<Ho
 
   if (!homeworkList || homeworkList.length === 0) return [];
 
-  const results: HomeworkListItem[] = [];
-  for (const hw of homeworkList as Homework[]) {
-    const [{ count: eligibleCount }, { count: completedCount }] = await Promise.all([
-      supabase.from("profiles").select("id", { count: "exact", head: true }).in("level", hw.levels),
-      supabase
-        .from("homework_progress")
-        .select("id", { count: "exact", head: true })
-        .eq("homework_id", hw.id)
-        .eq("status", "completed"),
-    ]);
-    results.push({ ...hw, eligibleCount: eligibleCount ?? 0, completedCount: completedCount ?? 0 });
+  // Fetch every profile's level and every completed homework_progress row ONCE
+  // and aggregate in memory, instead of 2 queries per homework row (N+1).
+  const [{ data: profiles }, { data: completedRows }] = await Promise.all([
+    supabase.from("profiles").select("level"),
+    supabase.from("homework_progress").select("homework_id").eq("status", "completed"),
+  ]);
+
+  const eligibleByLevel = new Map<string, number>();
+  for (const p of profiles ?? []) {
+    eligibleByLevel.set(p.level, (eligibleByLevel.get(p.level) ?? 0) + 1);
   }
-  return results;
+
+  const completedByHomeworkId = new Map<string, number>();
+  for (const row of completedRows ?? []) {
+    completedByHomeworkId.set(row.homework_id, (completedByHomeworkId.get(row.homework_id) ?? 0) + 1);
+  }
+
+  return (homeworkList as Homework[]).map((hw) => ({
+    ...hw,
+    eligibleCount: hw.levels.reduce((sum, level) => sum + (eligibleByLevel.get(level) ?? 0), 0),
+    completedCount: completedByHomeworkId.get(hw.id) ?? 0,
+  }));
 }
 
 export interface CompletionRow {
