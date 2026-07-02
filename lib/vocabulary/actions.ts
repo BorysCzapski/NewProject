@@ -7,6 +7,7 @@
 // ============================================================================
 import { createClient } from "@/lib/supabase/server";
 import { upsertVocabularyProgress } from "@/lib/vocabulary/progress";
+import { ACTIVITY_TYPES } from "@/lib/constants";
 
 /** Records the result of reviewing one word (flashcards or meaning trainer). */
 export async function recordVocabularyAnswer(wordId: string, wasCorrect: boolean): Promise<void> {
@@ -22,11 +23,11 @@ export async function recordVocabularyAnswer(wordId: string, wasCorrect: boolean
 /** Marks a completed flashcards session (10+ cards reviewed) for streaks/homework. */
 export async function finishFlashcardSession(): Promise<void> {
   const supabase = await createClient();
-  await supabase.rpc("record_activity", { p_type: "flashcards" });
+  await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.FLASHCARDS });
 }
 
 /** Marks a completed meaning-trainer session (10 questions answered) for streaks/homework. */
 export async function finishMeaningSession(): Promise<void> {
   const supabase = await createClient();
-  await supabase.rpc("record_activity", { p_type: "vocabulary" });
+  await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.VOCABULARY });
 }

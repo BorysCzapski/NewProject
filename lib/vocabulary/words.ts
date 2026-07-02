@@ -45,11 +45,12 @@ export async function getFlashcardBatch(
   const statusByWordId = new Map<string, string>();
   for (const row of progressRows ?? []) statusByWordId.set(row.word_id, row.status);
 
-  const qualifying = levelWords.filter((w) => {
+  const isQualifying = (w: VocabularyWord) => {
     const status = statusByWordId.get(w.id);
     return status === undefined || status === "new" || status === "learning";
-  });
-  const rest = levelWords.filter((w) => !qualifying.includes(w));
+  };
+  const qualifying = levelWords.filter(isQualifying);
+  const rest = levelWords.filter((w) => !isQualifying(w));
 
   const selected =
     qualifying.length >= batchSize
