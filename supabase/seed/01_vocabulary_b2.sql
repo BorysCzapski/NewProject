@@ -1,0 +1,226 @@
+-- ============================================================================
+-- 01_vocabulary_b2.sql
+-- Seed data: CEFR level B2 vocabulary words for the English-learning app.
+-- Covers 8 thematic categories (biznes, polityka, nauka, media, idiomy,
+-- zaawansowane phrasal verbs, prawo, ekonomia), roughly 22-24 words each.
+-- Safe to re-run: existing B2 rows are deleted first.
+-- ============================================================================
+
+delete from vocabulary_words where level = 'B2';
+
+-- ----------------------------------------------------------------------------
+-- biznes (business)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'biznes', 'stakeholder', 'interesariusz', 'The manager consulted every stakeholder before changing the project plan.'),
+  ('B2', 'biznes', 'merger', 'fuzja (firm)', 'The merger between the two companies created the largest bank in the region.'),
+  ('B2', 'biznes', 'acquisition', 'przejęcie (firmy)', 'The tech giant announced the acquisition of a promising startup.'),
+  ('B2', 'biznes', 'revenue', 'przychód', 'Revenue grew by fifteen percent compared to last year.'),
+  ('B2', 'biznes', 'overhead', 'koszty stałe / ogólne', 'They cut overhead by moving to a smaller office.'),
+  ('B2', 'biznes', 'negotiate', 'negocjować', 'Our team will negotiate the terms of the contract tomorrow.'),
+  ('B2', 'biznes', 'entrepreneur', 'przedsiębiorca', 'The young entrepreneur launched three successful startups before turning thirty.'),
+  ('B2', 'biznes', 'outsource', 'zlecać na zewnątrz', 'The company decided to outsource its customer service to another firm.'),
+  ('B2', 'biznes', 'benchmark', 'punkt odniesienia / wzorzec', 'We use last quarter''s results as a benchmark for future performance.'),
+  ('B2', 'biznes', 'liability', 'odpowiedzialność (prawna/finansowa)', 'The company faces liability for any damage caused by its products.'),
+  ('B2', 'biznes', 'subsidiary', 'spółka zależna', 'The subsidiary reports directly to the parent company in London.'),
+  ('B2', 'biznes', 'procurement', 'zaopatrzenie / zamówienia', 'The procurement department is responsible for buying raw materials.'),
+  ('B2', 'biznes', 'workforce', 'siła robocza', 'Automation has changed the size of the workforce needed in the factory.'),
+  ('B2', 'biznes', 'headquarters', 'siedziba główna', 'The company moved its headquarters to a bigger city last year.'),
+  ('B2', 'biznes', 'turnover', 'obroty (firmy) / rotacja (pracowników)', 'Staff turnover has increased since the new manager arrived.'),
+  ('B2', 'biznes', 'shareholder', 'akcjonariusz', 'Shareholders voted against the proposed changes to the board.'),
+  ('B2', 'biznes', 'deadline', 'termin (ostateczny)', 'We have to submit the proposal before the deadline on Friday.'),
+  ('B2', 'biznes', 'sustainable', 'zrównoważony (rozwój, biznes)', 'The firm invested in sustainable packaging to reduce waste.'),
+  ('B2', 'biznes', 'incentive', 'zachęta / bodziec', 'The company offers financial incentives to employees who exceed their targets.'),
+  ('B2', 'biznes', 'brand awareness', 'świadomość marki', 'The campaign was designed to increase brand awareness among young people.'),
+  ('B2', 'biznes', 'supply chain', 'łańcuch dostaw', 'The pandemic disrupted supply chains around the world.'),
+  ('B2', 'biznes', 'venture capital', 'kapitał wysokiego ryzyka / venture capital', 'The startup secured venture capital to expand into new markets.'),
+  ('B2', 'biznes', 'insolvent', 'niewypłacalny', 'The firm became insolvent after losing its biggest client.');
+
+-- ----------------------------------------------------------------------------
+-- polityka (politics)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'polityka', 'legislation', 'ustawodawstwo', 'The new legislation aims to reduce carbon emissions by 2030.'),
+  ('B2', 'polityka', 'constituency', 'okręg wyborczy', 'The MP visited every town in her constituency before the election.'),
+  ('B2', 'polityka', 'referendum', 'referendum', 'The government called a referendum on the proposed constitutional changes.'),
+  ('B2', 'polityka', 'coalition', 'koalicja', 'Two small parties formed a coalition to gain a majority in parliament.'),
+  ('B2', 'polityka', 'sanctions', 'sankcje', 'The international community imposed sanctions on the regime.'),
+  ('B2', 'polityka', 'diplomacy', 'dyplomacja', 'Diplomacy prevented the border dispute from turning into a war.'),
+  ('B2', 'polityka', 'electorate', 'elektorat', 'The candidate promised to listen to the concerns of the electorate.'),
+  ('B2', 'polityka', 'campaign', 'kampania (wyborcza)', 'Her campaign focused heavily on healthcare reform.'),
+  ('B2', 'polityka', 'sovereignty', 'suwerenność', 'The treaty was criticized for undermining national sovereignty.'),
+  ('B2', 'polityka', 'bureaucracy', 'biurokracja', 'Small businesses often struggle with excessive bureaucracy.'),
+  ('B2', 'polityka', 'lobbying', 'lobbing', 'Lobbying by large corporations influenced the final version of the bill.'),
+  ('B2', 'polityka', 'incumbent', 'urzędujący (polityk)', 'The incumbent lost the election despite years of experience.'),
+  ('B2', 'polityka', 'amendment', 'poprawka (do ustawy)', 'Parliament approved an amendment to the existing tax law.'),
+  ('B2', 'polityka', 'ideology', 'ideologia', 'The two parties differ sharply in their political ideology.'),
+  ('B2', 'polityka', 'ballot', 'karta do głosowania / głosowanie', 'Voters marked their choice on the ballot at the local school.'),
+  ('B2', 'polityka', 'summit', 'szczyt (spotkanie przywódców)', 'World leaders gathered at the climate summit in Geneva.'),
+  ('B2', 'polityka', 'corruption', 'korupcja', 'The journalist exposed widespread corruption in the ministry.'),
+  ('B2', 'polityka', 'reform', 'reforma', 'The new government promised sweeping reform of the pension system.'),
+  ('B2', 'polityka', 'oppression', 'ucisk / opresja', 'The novel describes life under political oppression.'),
+  ('B2', 'polityka', 'treaty', 'traktat', 'The two countries signed a treaty to end decades of conflict.'),
+  ('B2', 'polityka', 'grassroots', 'oddolny (ruch, kampania)', 'A grassroots movement pushed the city council to act on housing.'),
+  ('B2', 'polityka', 'partisan', 'stronniczy / partyjny', 'The debate quickly became partisan, with neither side willing to compromise.');
+
+-- ----------------------------------------------------------------------------
+-- nauka (science)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'nauka', 'hypothesis', 'hipoteza', 'The researchers tested their hypothesis with a controlled experiment.'),
+  ('B2', 'nauka', 'breakthrough', 'przełom (naukowy)', 'Scientists announced a major breakthrough in cancer treatment.'),
+  ('B2', 'nauka', 'genome', 'genom', 'Researchers mapped the entire genome of the ancient bacteria.'),
+  ('B2', 'nauka', 'artificial intelligence', 'sztuczna inteligencja', 'Artificial intelligence is transforming the way doctors diagnose disease.'),
+  ('B2', 'nauka', 'sustainability', 'zrównoważony rozwój', 'The conference focused on sustainability in agriculture.'),
+  ('B2', 'nauka', 'peer-reviewed', 'recenzowany (naukowo)', 'The study was published in a peer-reviewed journal.'),
+  ('B2', 'nauka', 'variable', 'zmienna (naukowa)', 'The scientists controlled every variable except temperature.'),
+  ('B2', 'nauka', 'evolve', 'ewoluować', 'Over millions of years, this species evolved a resistance to poison.'),
+  ('B2', 'nauka', 'molecule', 'cząsteczka', 'Water is made up of two hydrogen atoms and one oxygen molecule.'),
+  ('B2', 'nauka', 'clinical trial', 'badanie kliniczne', 'The new drug is currently undergoing a clinical trial.'),
+  ('B2', 'nauka', 'renewable', 'odnawialny (energia)', 'The country plans to generate all its electricity from renewable sources.'),
+  ('B2', 'nauka', 'ecosystem', 'ekosystem', 'Pollution has seriously damaged the coral reef ecosystem.'),
+  ('B2', 'nauka', 'algorithm', 'algorytm', 'The app uses an algorithm to recommend songs based on your taste.'),
+  ('B2', 'nauka', 'quantum', 'kwantowy', 'Quantum computers could solve certain problems far faster than today''s machines.'),
+  ('B2', 'nauka', 'vaccine', 'szczepionka', 'The vaccine was developed and tested in record time.'),
+  ('B2', 'nauka', 'empirical', 'empiryczny', 'The theory needs empirical evidence before it can be widely accepted.'),
+  ('B2', 'nauka', 'simulate', 'symulować', 'Engineers use software to simulate how the bridge will behave in an earthquake.'),
+  ('B2', 'nauka', 'greenhouse gas', 'gaz cieplarniany', 'Cars and factories release large amounts of greenhouse gas every day.'),
+  ('B2', 'nauka', 'biodiversity', 'bioróżnorodność', 'Deforestation is one of the main threats to biodiversity.'),
+  ('B2', 'nauka', 'prototype', 'prototyp', 'The team built a working prototype of the new engine.'),
+  ('B2', 'nauka', 'discipline', 'dyscyplina (naukowa)', 'Neuroscience combines ideas from several academic disciplines.'),
+  ('B2', 'nauka', 'peer review', 'recenzja naukowa', 'Peer review helps ensure that published research is reliable.');
+
+-- ----------------------------------------------------------------------------
+-- media
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'media', 'headline', 'nagłówek', 'The scandal made headlines in every major newspaper.'),
+  ('B2', 'media', 'broadcast', 'nadawać / transmisja', 'The channel will broadcast the match live tonight.'),
+  ('B2', 'media', 'censorship', 'cenzura', 'The film was banned due to strict censorship laws.'),
+  ('B2', 'media', 'tabloid', 'brukowiec / tabloid', 'The tabloid printed an unverified story about the actress.'),
+  ('B2', 'media', 'bias', 'stronniczość', 'Critics accused the network of bias in its election coverage.'),
+  ('B2', 'media', 'outlet', 'medium (kanał informacyjny)', 'Several news outlets reported the story within minutes.'),
+  ('B2', 'media', 'coverage', 'relacja / doniesienia medialne', 'The wedding received extensive media coverage.'),
+  ('B2', 'media', 'misinformation', 'dezinformacja', 'Social media platforms are trying to limit the spread of misinformation.'),
+  ('B2', 'media', 'columnist', 'felietonista', 'The columnist wrote a sharp piece criticizing the new policy.'),
+  ('B2', 'media', 'subscription', 'subskrypcja / prenumerata', 'I cancelled my subscription to the streaming service.'),
+  ('B2', 'media', 'viral', 'wiralowy (popularny w sieci)', 'The video of the cat went viral within hours.'),
+  ('B2', 'media', 'editorial', 'artykuł redakcyjny / redakcyjny', 'The editorial criticized the government''s handling of the crisis.'),
+  ('B2', 'media', 'anchor', 'prowadzący (wiadomości)', 'The news anchor announced the results calmly and clearly.'),
+  ('B2', 'media', 'propaganda', 'propaganda', 'The regime used propaganda to control public opinion.'),
+  ('B2', 'media', 'leak', 'przeciek (informacji) / ujawnić', 'Documents about the deal were leaked to a journalist.'),
+  ('B2', 'media', 'audience', 'publiczność / odbiorcy', 'The show attracted a huge audience during its first season.'),
+  ('B2', 'media', 'defamation', 'zniesławienie', 'The actor sued the magazine for defamation.'),
+  ('B2', 'media', 'footage', 'materiał filmowy / nagranie', 'Security cameras captured footage of the incident.'),
+  ('B2', 'media', 'press release', 'komunikat prasowy', 'The company issued a press release to explain the delay.'),
+  ('B2', 'media', 'sensationalist', 'sensacyjny', 'The article used a sensationalist headline to attract clicks.'),
+  ('B2', 'media', 'credible', 'wiarygodny', 'Readers expect news outlets to provide credible information.'),
+  ('B2', 'media', 'streaming', 'streaming (przesyłanie strumieniowe)', 'Streaming has changed the way people watch television.');
+
+-- ----------------------------------------------------------------------------
+-- idiomy (idioms)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'idiomy', 'to hit the nail on the head', 'trafić w sedno', 'When she said the project failed due to poor planning, she hit the nail on the head.'),
+  ('B2', 'idiomy', 'to cost an arm and a leg', 'kosztować fortunę', 'That new laptop cost an arm and a leg, but it works perfectly.'),
+  ('B2', 'idiomy', 'to be under the weather', 'czuć się nieswojo / chorować', 'I''m feeling a bit under the weather, so I''ll skip the gym today.'),
+  ('B2', 'idiomy', 'to bite the bullet', 'przełknąć gorzką pigułkę / znieść coś', 'We had to bite the bullet and admit our plan wasn''t working.'),
+  ('B2', 'idiomy', 'to let the cat out of the bag', 'zdradzić sekret', 'He let the cat out of the bag about the surprise party.'),
+  ('B2', 'idiomy', 'to be on the same page', 'mieć wspólne zdanie / rozumieć się', 'Before we start, let''s make sure we''re all on the same page.'),
+  ('B2', 'idiomy', 'to jump on the bandwagon', 'przyłączyć się do trendu', 'Many companies jumped on the bandwagon once electric cars became popular.'),
+  ('B2', 'idiomy', 'to burn the midnight oil', 'pracować do późna w nocy', 'She burned the midnight oil for a week to finish her thesis.'),
+  ('B2', 'idiomy', 'to kill two birds with one stone', 'upiec dwie pieczenie na jednym ogniu', 'By biking to work, I kill two birds with one stone: exercise and commuting.'),
+  ('B2', 'idiomy', 'to beat around the bush', 'owijać w bawełnę', 'Stop beating around the bush and tell me what happened.'),
+  ('B2', 'idiomy', 'to go the extra mile', 'zrobić coś dodatkowego / dać z siebie więcej', 'Our teacher always goes the extra mile to help struggling students.'),
+  ('B2', 'idiomy', 'to be a piece of cake', 'być bardzo łatwym', 'Don''t worry about the exam, it will be a piece of cake for you.'),
+  ('B2', 'idiomy', 'to spill the beans', 'wygadać sekret', 'Someone spilled the beans about the merger before it was announced.'),
+  ('B2', 'idiomy', 'once in a blue moon', 'bardzo rzadko', 'He visits his hometown once in a blue moon these days.'),
+  ('B2', 'idiomy', 'to get cold feet', 'stchórzyć w ostatniej chwili', 'She got cold feet right before the wedding and postponed it.'),
+  ('B2', 'idiomy', 'to see eye to eye', 'zgadzać się z kimś w pełni', 'My brother and I don''t always see eye to eye on politics.'),
+  ('B2', 'idiomy', 'to be in hot water', 'być w kłopotach', 'The mayor is in hot water after the scandal was revealed.'),
+  ('B2', 'idiomy', 'to cut corners', 'iść na skróty / oszczędzać kosztem jakości', 'The contractor cut corners, and the roof started leaking within a year.'),
+  ('B2', 'idiomy', 'to pull strings', 'wykorzystać znajomości', 'He pulled some strings to get his son an interview at the firm.'),
+  ('B2', 'idiomy', 'to hit the ground running', 'ruszyć z kopyta / zacząć energicznie', 'The new manager hit the ground running and reorganized the team in a week.'),
+  ('B2', 'idiomy', 'to think outside the box', 'myśleć nieszablonowo', 'We need someone who can think outside the box to solve this problem.'),
+  ('B2', 'idiomy', 'the last straw', 'ostatnia kropla', 'Losing the client was the last straw that led to his resignation.');
+
+-- ----------------------------------------------------------------------------
+-- zaawansowane phrasal verbs (advanced phrasal verbs)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'phrasal verbs', 'come across', 'natknąć się na / sprawiać wrażenie', 'I came across an old photo album while cleaning the attic.'),
+  ('B2', 'phrasal verbs', 'get around to', 'w końcu coś zrobić / znaleźć na coś czas', 'I finally got around to fixing the leaking tap this weekend.'),
+  ('B2', 'phrasal verbs', 'put up with', 'znosić / tolerować', 'I don''t know how she puts up with such a noisy neighbor.'),
+  ('B2', 'phrasal verbs', 'look into', 'zbadać / przyjrzeć się', 'The police are looking into the cause of the fire.'),
+  ('B2', 'phrasal verbs', 'come up with', 'wpaść na (pomysł)', 'The designer came up with a clever solution to the layout problem.'),
+  ('B2', 'phrasal verbs', 'go over', 'przeanalizować / powtórzyć', 'Let''s go over the report once more before the meeting.'),
+  ('B2', 'phrasal verbs', 'carry out', 'przeprowadzić (badanie, plan)', 'Researchers carried out the experiment under strict conditions.'),
+  ('B2', 'phrasal verbs', 'bring about', 'spowodować / doprowadzić do', 'The new law brought about significant changes in the industry.'),
+  ('B2', 'phrasal verbs', 'stand out', 'wyróżniać się', 'Her presentation stood out because of its clear structure.'),
+  ('B2', 'phrasal verbs', 'fall through', 'nie dojść do skutku', 'Our holiday plans fell through because of the flight cancellation.'),
+  ('B2', 'phrasal verbs', 'set aside', 'odłożyć na bok (czas, pieniądze)', 'Try to set aside an hour every day for studying.'),
+  ('B2', 'phrasal verbs', 'wear off', 'przemijać / słabnąć (efekt)', 'The painkillers started to wear off after a few hours.'),
+  ('B2', 'phrasal verbs', 'take over', 'przejąć (kontrolę, firmę)', 'A larger corporation took over the small family business.'),
+  ('B2', 'phrasal verbs', 'work out', 'wypracować / okazać się dobrze', 'I''m confident this plan will work out in the end.'),
+  ('B2', 'phrasal verbs', 'hold back', 'powstrzymywać (się)', 'She held back her tears during the difficult announcement.'),
+  ('B2', 'phrasal verbs', 'weigh up', 'rozważyć (za i przeciw)', 'You should weigh up the pros and cons before deciding.'),
+  ('B2', 'phrasal verbs', 'branch out', 'rozszerzyć działalność', 'The bakery decided to branch out into catering for events.'),
+  ('B2', 'phrasal verbs', 'do away with', 'pozbyć się / zlikwidować', 'The company did away with paper contracts entirely.'),
+  ('B2', 'phrasal verbs', 'live up to', 'sprostać (oczekiwaniom)', 'The sequel failed to live up to the original film.'),
+  ('B2', 'phrasal verbs', 'iron out', 'wygładzić (problemy, różnice)', 'The two teams met to iron out the remaining differences in the contract.'),
+  ('B2', 'phrasal verbs', 'account for', 'wyjaśnić / stanowić (procent)', 'Rent and utilities account for half of our monthly budget.'),
+  ('B2', 'phrasal verbs', 'chip in', 'dołożyć się (finansowo)', 'Everyone in the office chipped in to buy her a farewell gift.');
+
+-- ----------------------------------------------------------------------------
+-- prawo (law)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'prawo', 'litigation', 'spór sądowy / proces', 'The dispute ended in years of costly litigation.'),
+  ('B2', 'prawo', 'plaintiff', 'powód (w procesie)', 'The plaintiff claimed damages for breach of contract.'),
+  ('B2', 'prawo', 'defendant', 'pozwany / oskarżony', 'The defendant pleaded not guilty to all charges.'),
+  ('B2', 'prawo', 'verdict', 'werdykt / wyrok', 'The jury reached a verdict after six hours of deliberation.'),
+  ('B2', 'prawo', 'testimony', 'zeznanie', 'Her testimony provided crucial evidence for the case.'),
+  ('B2', 'prawo', 'jurisdiction', 'jurysdykcja', 'The case falls outside the jurisdiction of this court.'),
+  ('B2', 'prawo', 'breach', 'naruszenie (umowy, przepisów)', 'The supplier was sued for breach of contract.'),
+  ('B2', 'prawo', 'clause', 'klauzula', 'Read the confidentiality clause carefully before signing.'),
+  ('B2', 'prawo', 'appeal', 'apelacja / odwołanie', 'The lawyer filed an appeal against the court''s decision.'),
+  ('B2', 'prawo', 'prosecute', 'ścigać sądownie / oskarżać', 'The authorities decided to prosecute the company for fraud.'),
+  ('B2', 'prawo', 'custody', 'opieka (nad dzieckiem) / areszt', 'The couple is fighting over custody of their children.'),
+  ('B2', 'prawo', 'statute', 'ustawa / przepis prawny', 'This statute has been in force for over fifty years.'),
+  ('B2', 'prawo', 'liable', 'odpowiedzialny prawnie', 'The driver was found liable for the accident.'),
+  ('B2', 'prawo', 'settlement', 'ugoda', 'The two companies reached a settlement out of court.'),
+  ('B2', 'prawo', 'testify', 'zeznawać', 'The witness agreed to testify at the trial next month.'),
+  ('B2', 'prawo', 'lawsuit', 'pozew / sprawa sądowa', 'She filed a lawsuit against her former employer.'),
+  ('B2', 'prawo', 'acquit', 'uniewinnić', 'The jury voted to acquit the defendant of all charges.'),
+  ('B2', 'prawo', 'infringement', 'naruszenie (praw, np. autorskich)', 'The artist accused the company of copyright infringement.'),
+  ('B2', 'prawo', 'compliance', 'zgodność z przepisami', 'The firm hired a specialist to ensure compliance with new regulations.'),
+  ('B2', 'prawo', 'binding', 'wiążący (prawnie)', 'Once signed, the agreement becomes legally binding.'),
+  ('B2', 'prawo', 'misdemeanor', 'wykroczenie', 'He was charged with a misdemeanor rather than a felony.'),
+  ('B2', 'prawo', 'injunction', 'nakaz sądowy / zakaz sądowy', 'The court issued an injunction to stop the demolition.');
+
+-- ----------------------------------------------------------------------------
+-- ekonomia (economics)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'ekonomia', 'inflation', 'inflacja', 'Rising inflation has made everyday goods more expensive.'),
+  ('B2', 'ekonomia', 'recession', 'recesja', 'The country entered a recession after two quarters of decline.'),
+  ('B2', 'ekonomia', 'unemployment', 'bezrobocie', 'Unemployment fell to its lowest level in a decade.'),
+  ('B2', 'ekonomia', 'gross domestic product', 'produkt krajowy brutto (PKB)', 'Gross domestic product grew faster than economists expected.'),
+  ('B2', 'ekonomia', 'interest rate', 'stopa procentowa', 'The central bank raised the interest rate to control inflation.'),
+  ('B2', 'ekonomia', 'deficit', 'deficyt', 'The government is trying to reduce the national deficit.'),
+  ('B2', 'ekonomia', 'subsidy', 'dotacja / subwencja', 'Farmers receive a subsidy to keep food prices stable.'),
+  ('B2', 'ekonomia', 'tariff', 'cło / taryfa celna', 'The new tariff on steel imports angered several trading partners.'),
+  ('B2', 'ekonomia', 'monopoly', 'monopol', 'The company held a monopoly on the local water supply.'),
+  ('B2', 'ekonomia', 'currency', 'waluta', 'The value of the local currency dropped sharply overnight.'),
+  ('B2', 'ekonomia', 'stock market', 'giełda', 'The stock market reacted badly to the news of the merger.'),
+  ('B2', 'ekonomia', 'purchasing power', 'siła nabywcza', 'Wages have not kept up with prices, so purchasing power has fallen.'),
+  ('B2', 'ekonomia', 'fiscal policy', 'polityka fiskalna', 'The government adjusted its fiscal policy to stimulate growth.'),
+  ('B2', 'ekonomia', 'trade deficit', 'deficyt handlowy', 'The country''s trade deficit widened as imports outpaced exports.'),
+  ('B2', 'ekonomia', 'commodity', 'towar (surowiec)', 'Oil is one of the most traded commodities in the world.'),
+  ('B2', 'ekonomia', 'austerity', 'oszczędności budżetowe / austerity', 'The government introduced austerity measures to cut public spending.'),
+  ('B2', 'ekonomia', 'demand', 'popyt', 'Demand for electric cars has risen sharply in recent years.'),
+  ('B2', 'ekonomia', 'supply', 'podaż', 'A sudden drop in supply pushed prices even higher.'),
+  ('B2', 'ekonomia', 'asset', 'aktywo / majątek', 'Real estate remains one of the safest assets to invest in.'),
+  ('B2', 'ekonomia', 'debt', 'dług', 'The company struggled to repay its debt after a bad year.'),
+  ('B2', 'ekonomia', 'growth rate', 'stopa wzrostu', 'Economists predict a modest growth rate for next year.'),
+  ('B2', 'ekonomia', 'consumer confidence', 'zaufanie konsumentów', 'Consumer confidence dropped after the announcement of new taxes.');
