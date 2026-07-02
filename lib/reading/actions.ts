@@ -92,14 +92,28 @@ export async function generateReadingText(topic: string): Promise<void> {
     throw new Error("Nie udało się zapisać tekstu.");
   }
 
-  const questionRows = (result.questions ?? []).map((q, index) => ({
-    text_id: textRow.id,
-    type: q.type,
-    question: q.question,
-    options: q.type === "multiple_choice" ? q.options ?? null : null,
-    correct_answer: q.type === "multiple_choice" ? q.correct_answer ?? null : null,
-    order_index: index,
-  }));
+  // Claude's structured output isn't schema-enforced for conditional fields (the
+  // tool schema can't require options/correct_answer only when type=multiple_choice),
+  // so a malformed multiple_choice question (missing options, or a correct_answer
+  // that isn't literally one of them) would otherwise permanently block the student
+  // from finishing — downgrade it to an "open" question instead of trusting it blindly.
+  const questionRows = (result.questions ?? []).map((q, index) => {
+    const isValidMultipleChoice =
+      q.type === "multiple_choice" &&
+      Array.isArray(q.options) &&
+      q.options.length >= 2 &&
+      !!q.correct_answer &&
+      q.options.includes(q.correct_answer);
+
+    return {
+      text_id: textRow.id,
+      type: isValidMultipleChoice ? "multiple_choice" : "open",
+      question: q.question,
+      options: isValidMultipleChoice ? q.options! : null,
+      correct_answer: isValidMultipleChoice ? q.correct_answer! : null,
+      order_index: index,
+    };
+  });
 
   if (questionRows.length > 0) {
     const { error: qError } = await supabase.from("reading_questions").insert(questionRows);

@@ -8,6 +8,7 @@
 // chips so the user can retry.
 // ============================================================================
 import { useState } from "react";
+import { unstable_rethrow } from "next/navigation";
 import { Shuffle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -37,6 +38,9 @@ export function TopicPicker() {
     try {
       await generateReadingText(topic);
     } catch (err) {
+      // generateReadingText redirects on success, which throws Next's internal
+      // NEXT_REDIRECT error — let it propagate instead of reporting it as failure.
+      unstable_rethrow(err);
       setError(err instanceof Error ? err.message : "Nie udało się wygenerować tekstu, spróbuj ponownie.");
       setPending(null);
     }

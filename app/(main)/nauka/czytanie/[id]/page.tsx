@@ -19,30 +19,22 @@ export default async function ReadingTextPage({ params }: { params: Promise<{ id
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const { data: text } = await supabase
-    .from("reading_texts")
-    .select("*")
-    .eq("id", id)
-    .eq("user_id", profile.id)
-    .maybeSingle();
+  // All three only need `id`/profile.id (not each other's data) — fetch concurrently.
+  const [{ data: text }, { data: questions }, { data: attempt }] = await Promise.all([
+    supabase.from("reading_texts").select("*").eq("id", id).eq("user_id", profile.id).maybeSingle(),
+    supabase.from("reading_questions").select("*").eq("text_id", id).order("order_index"),
+    supabase
+      .from("reading_attempts")
+      .select("*")
+      .eq("text_id", id)
+      .eq("user_id", profile.id)
+      .order("completed_at", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ]);
 
   if (!text) notFound();
   const readingText = text as ReadingText;
-
-  const { data: questions } = await supabase
-    .from("reading_questions")
-    .select("*")
-    .eq("text_id", id)
-    .order("order_index");
-
-  const { data: attempt } = await supabase
-    .from("reading_attempts")
-    .select("*")
-    .eq("text_id", id)
-    .eq("user_id", profile.id)
-    .order("completed_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
 
   let initialAttempt: { score: number; results: Record<string, ReadingQuestionResult>; answers: Record<string, string> } | null = null;
   if (attempt) {
