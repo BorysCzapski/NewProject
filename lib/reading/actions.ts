@@ -1,0 +1,228 @@
+"use server";
+
+// ============================================================================
+// lib/reading/actions.ts
+// Server Actions backing the reading module: generating a fresh AI article
+// with comprehension questions, and grading a submitted attempt (multiple
+// choice locally, open questions via a single batched AI call).
+// ============================================================================
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
+import { requireProfile } from "@/lib/auth/get-profile";
+import { askClaudeForJSON } from "@/lib/anthropic";
+import { ACTIVITY_TYPES } from "@/lib/constants";
+import type { ReadingQuestion, UserLevel } from "@/lib/types/database";
+
+const LEVEL_SPECS: Record<UserLevel, string> = {
+  A1: "60-100 słów, wyłącznie czas present simple, bardzo podstawowe słownictwo",
+  A2: "100-150 słów, czas past simple i present simple, słownictwo codzienne",
+  B1: "150-250 słów, szerszy zakres czasów gramatycznych, umiarkowanie zróżnicowane słownictwo",
+  B2: "250-400 słów, złożone zdania podrzędne, trochę słownictwa idiomatycznego",
+};
+
+interface GeneratedQuestion {
+  type: "multiple_choice" | "open";
+  question: string;
+  options?: string[];
+  correct_answer?: string;
+}
+
+interface GeneratedArticle {
+  title: string;
+  content: string;
+  questions: GeneratedQuestion[];
+}
+
+/** Generates a new AI reading text + questions for `topic` and redirects to it. */
+export async function generateReadingText(topic: string): Promise<void> {
+  const profile = await requireProfile();
+
+  let result: GeneratedArticle;
+  try {
+    result = await askClaudeForJSON<GeneratedArticle>({
+      system:
+        "Jesteś nauczycielem angielskiego tworzącym oryginalne, krótkie artykuły do czytania dla " +
+        "Polaków uczących się angielskiego, ściśle dopasowane do poziomu CEFR ucznia. Artykuł musi " +
+        'być całkowicie oryginalny i napisany po angielsku. Dołącz 3-5 pytań sprawdzających ' +
+        'zrozumienie tekstu: część typu "multiple_choice" (dokładnie 4 opcje, correct_answer musi ' +
+        'być identyczny jak jedna z opcji) i co najmniej jedno pytanie typu "open" (bez opcji i bez ' +
+        "correct_answer — zostanie ocenione później przez człowieka/AI). Pytania i opcje pisz po " +
+        "angielsku, tak jak sam tekst.",
+      prompt:
+        `Napisz krótki artykuł po angielsku na temat: "${topic}", dla poziomu ${profile.level} ` +
+        `(CEFR): ${LEVEL_SPECS[profile.level]}. Dodaj tytuł oraz 3-5 pytań sprawdzających ` +
+        `zrozumienie tekstu.`,
+      schema: {
+        title: { type: "string" },
+        content: { type: "string" },
+        questions: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              type: { type: "string", enum: ["multiple_choice", "open"] },
+              question: { type: "string" },
+              options: { type: "array", items: { type: "string" } },
+              correct_answer: { type: "string" },
+            },
+            required: ["type", "question"],
+          },
+        },
+      },
+      maxTokens: 2048,
+    });
+  } catch {
+    throw new Error("Nie udało się wygenerować tekstu, spróbuj ponownie.");
+  }
+
+  const supabase = await createClient();
+  const { data: textRow, error: textError } = await supabase
+    .from("reading_texts")
+    .insert({
+      user_id: profile.id,
+      level: profile.level,
+      topic,
+      title: result.title,
+      content: result.content,
+    })
+    .select()
+    .single();
+
+  if (textError || !textRow) {
+    throw new Error("Nie udało się zapisać tekstu.");
+  }
+
+  const questionRows = (result.questions ?? []).map((q, index) => ({
+    text_id: textRow.id,
+    type: q.type,
+    question: q.question,
+    options: q.type === "multiple_choice" ? q.options ?? null : null,
+    correct_answer: q.type === "multiple_choice" ? q.correct_answer ?? null : null,
+    order_index: index,
+  }));
+
+  if (questionRows.length > 0) {
+    const { error: qError } = await supabase.from("reading_questions").insert(questionRows);
+    if (qError) {
+      throw new Error("Nie udało się zapisać pytań.");
+    }
+  }
+
+  redirect(`/nauka/czytanie/${textRow.id}`);
+}
+
+export interface ReadingQuestionResult {
+  isCorrect: boolean;
+  feedback: string | null;
+}
+
+export interface ReadingAttemptResult {
+  score: number;
+  results: Record<string, ReadingQuestionResult>;
+}
+
+/**
+ * Grades one reading attempt: multiple-choice questions locally, all open
+ * questions in a single batched AI call, then persists reading_attempts and
+ * records the "reading" activity.
+ */
+export async function submitReadingAttempt(
+  textId: string,
+  answers: Record<string, string>
+): Promise<ReadingAttemptResult> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Musisz być zalogowany.");
+
+  const { data: text } = await supabase
+    .from("reading_texts")
+    .select("*")
+    .eq("id", textId)
+    .eq("user_id", user.id)
+    .maybeSingle();
+  if (!text) throw new Error("Nie znaleziono tekstu.");
+
+  const { data: questions } = await supabase
+    .from("reading_questions")
+    .select("*")
+    .eq("text_id", textId)
+    .order("order_index");
+  const questionList = (questions ?? []) as ReadingQuestion[];
+  if (questionList.length === 0) throw new Error("Ten tekst nie ma pytań.");
+
+  const openQuestions = questionList.filter((q) => q.type === "open");
+  let openResults: Record<string, { isCorrect: boolean; feedback: string }> = {};
+
+  if (openQuestions.length > 0) {
+    const schemaProps: Record<string, unknown> = {};
+    for (const q of openQuestions) {
+      schemaProps[q.id] = {
+        type: "object",
+        properties: {
+          isCorrect: { type: "boolean" },
+          feedback: { type: "string", description: "krótki komentarz po polsku" },
+        },
+        required: ["isCorrect", "feedback"],
+      };
+    }
+
+    const answersBlock = openQuestions
+      .map(
+        (q, i) =>
+          `${i + 1}. (id: ${q.id}) ${q.question}\nOdpowiedź ucznia: ${
+            answers[q.id]?.trim() || "(brak odpowiedzi)"
+          }`
+      )
+      .join("\n\n");
+
+    try {
+      openResults = await askClaudeForJSON<Record<string, { isCorrect: boolean; feedback: string }>>({
+        system:
+          "Oceniasz odpowiedzi ucznia na pytania otwarte dotyczące przeczytanego przez niego " +
+          "angielskiego tekstu. Odpowiadasz PO POLSKU, krótko i konkretnie wskazując błędy lub " +
+          "potwierdzając poprawność.",
+        prompt:
+          `Tekst przeczytany przez ucznia:\n"""\n${text.content}\n"""\n\n` +
+          "Oceń poniższe odpowiedzi ucznia na pytania otwarte. Dla każdego pytania (klucz = jego " +
+          "id) podaj isCorrect (czy odpowiedź jest merytorycznie poprawna) i feedback (krótki " +
+          `komentarz po polsku):\n\n${answersBlock}`,
+        schema: schemaProps,
+        maxTokens: 2048,
+      });
+    } catch {
+      throw new Error("Nie udało się ocenić odpowiedzi. Spróbuj ponownie.");
+    }
+  }
+
+  let correctCount = 0;
+  const results: Record<string, ReadingQuestionResult> = {};
+  for (const q of questionList) {
+    if (q.type === "multiple_choice") {
+      const isCorrect = answers[q.id] === q.correct_answer;
+      if (isCorrect) correctCount++;
+      results[q.id] = { isCorrect, feedback: null };
+    } else {
+      const r = openResults[q.id];
+      const isCorrect = r?.isCorrect ?? false;
+      if (isCorrect) correctCount++;
+      results[q.id] = { isCorrect, feedback: r?.feedback ?? "Brak oceny AI." };
+    }
+  }
+
+  const score = Math.round((correctCount / questionList.length) * 100);
+
+  const { error: insertError } = await supabase.from("reading_attempts").insert({
+    user_id: user.id,
+    text_id: textId,
+    answers,
+    score,
+    feedback: JSON.stringify(results),
+  });
+  if (insertError) throw new Error("Nie udało się zapisać wyniku.");
+
+  await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.READING });
+
+  return { score, results };
+}
