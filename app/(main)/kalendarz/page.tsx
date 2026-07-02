@@ -21,7 +21,7 @@ export default async function KalendarzPage() {
     { count: readingTexts },
     { count: writingSubmissions },
     { data: songAttempts },
-    { count: listeningAttempts },
+    { data: listeningAttempts },
   ] = await Promise.all([
     supabase
       .from("vocabulary_progress")
@@ -41,15 +41,16 @@ export default async function KalendarzPage() {
       .from("writing_submissions")
       .select("id", { count: "exact", head: true })
       .eq("user_id", profile.id),
-    // PostgREST has no COUNT DISTINCT — fetch song_id and dedupe with a Set below.
+    // PostgREST has no COUNT DISTINCT — fetch the id column and dedupe with a Set below.
+    // Both songs and listening exercises can be attempted/retried multiple times.
     supabase.from("song_translation_attempts").select("song_id").eq("user_id", profile.id),
-    supabase
-      .from("listening_attempts")
-      .select("id", { count: "exact", head: true })
-      .eq("user_id", profile.id),
+    supabase.from("listening_attempts").select("exercise_id").eq("user_id", profile.id),
   ]);
 
   const translatedSongs = new Set((songAttempts ?? []).map((row) => row.song_id)).size;
+  const completedListeningExercises = new Set(
+    (listeningAttempts ?? []).map((row) => row.exercise_id)
+  ).size;
 
   const stats = [
     { icon: BookMarked, label: "Opanowane słówka", value: masteredWords ?? 0 },
@@ -57,7 +58,7 @@ export default async function KalendarzPage() {
     { icon: BookOpen, label: "Przeczytane teksty", value: readingTexts ?? 0 },
     { icon: PenLine, label: "Napisane teksty", value: writingSubmissions ?? 0 },
     { icon: Music, label: "Przetłumaczone piosenki", value: translatedSongs },
-    { icon: Headphones, label: "Ukończone nagrania", value: listeningAttempts ?? 0 },
+    { icon: Headphones, label: "Ukończone nagrania", value: completedListeningExercises },
   ];
 
   return (
