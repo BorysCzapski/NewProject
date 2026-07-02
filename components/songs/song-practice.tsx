@@ -284,7 +284,7 @@ function WordLineRow({
 
   return (
     <Card className={cn(isDone && "border-primary/40 bg-primary-soft/40")}>
-      <div className="flex flex-wrap gap-1.5">
+      <div className="flex flex-wrap gap-x-1.5 gap-y-2.5">
         {words.map((word, i) => {
           const status = wordStates[i]?.status;
           return (
@@ -296,7 +296,7 @@ function WordLineRow({
                 setInputValue("");
               }}
               className={cn(
-                "rounded-md px-1.5 py-0.5 text-base font-medium transition-colors",
+                "min-h-11 rounded-md px-2 py-2 text-base font-medium leading-tight transition-colors",
                 status === "correct" && "bg-primary-soft text-primary",
                 status === "incorrect" && "bg-danger-soft text-danger",
                 !status && "text-foreground hover:bg-surface-muted",
