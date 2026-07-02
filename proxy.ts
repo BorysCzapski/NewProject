@@ -56,6 +56,24 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // First-login gate: everyone picks a level once, right after registration,
+  // before they can reach any other page.
+  if (user) {
+    const onboarded = user.user_metadata?.onboarding_completed === true;
+    if (!onboarded && !isPublicPath && pathname !== "/onboarding") {
+      const url = request.nextUrl.clone();
+      url.pathname = "/onboarding";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
+    if (onboarded && pathname === "/onboarding") {
+      const url = request.nextUrl.clone();
+      url.pathname = "/";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
+  }
+
   return response;
 }
 

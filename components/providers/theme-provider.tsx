@@ -4,11 +4,34 @@
 // theme-provider.tsx
 // Minimal light/dark theme toggle: persists choice in localStorage and
 // toggles the ".dark" class on <html> (see app/globals.css custom-variant).
-// No external dependency (next-themes) needed for a single boolean toggle.
+// Reads the DOM/localStorage as an external store (useSyncExternalStore)
+// rather than mirroring it into useState-in-an-effect, so the very first
+// client render can never mismatch the server-rendered HTML.
 // ============================================================================
-import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
+
+const listeners = new Set<() => void>();
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => listeners.delete(callback);
+}
+
+function getSnapshot(): Theme {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+
+function getServerSnapshot(): Theme {
+  return "light";
+}
+
+function applyTheme(theme: Theme) {
+  window.localStorage.setItem("theme", theme);
+  document.documentElement.classList.toggle("dark", theme === "dark");
+  for (const listener of listeners) listener();
+}
 
 interface ThemeContextValue {
   theme: Theme;
@@ -18,23 +41,10 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem("theme") as Theme | null;
-    const initial =
-      stored ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
-  }, []);
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggleTheme = useCallback(() => {
-    setTheme((prev) => {
-      const next = prev === "light" ? "dark" : "light";
-      window.localStorage.setItem("theme", next);
-      document.documentElement.classList.toggle("dark", next === "dark");
-      return next;
-    });
+    applyTheme(getSnapshot() === "dark" ? "light" : "dark");
   }, []);
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;

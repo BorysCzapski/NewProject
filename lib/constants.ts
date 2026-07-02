@@ -15,6 +15,13 @@ export const LEVEL_LABELS: Record<UserLevel, string> = {
   B2: "B2 — Wyższy średnio zaawansowany",
 };
 
+export const LEVEL_DESCRIPTIONS: Record<UserLevel, string> = {
+  A1: "Znam podstawowe słowa i zwroty, buduję proste zdania.",
+  A2: "Poradzę sobie w prostych, codziennych sytuacjach.",
+  B1: "Swobodnie piszę i mówię o znanych mi tematach.",
+  B2: "Rozumiem złożone teksty i dyskutuję na wiele tematów.",
+};
+
 export const NAV_ITEMS = [
   { href: "/", label: "Home", icon: "Home" },
   { href: "/nauka", label: "Nauka", icon: "BookOpen" },
@@ -35,6 +42,20 @@ export const HOMEWORK_TYPE_LABELS: Record<HomeworkType, string> = {
 };
 
 export const MIN_MASTERY_THRESHOLD = 0.8; // 80% correct answers => "mastered"
+
+// activity_log.activity_type values written by record_activity() — the single
+// vocabulary every module uses so streaks, the calendar and homework progress
+// all agree on what "one activity" means.
+export const ACTIVITY_TYPES = {
+  FLASHCARDS: "flashcards",
+  VOCABULARY: "vocabulary",
+  GRAMMAR: "grammar",
+  READING: "reading",
+  WRITING: "writing",
+  SONG: "song",
+  LISTENING: "listening",
+} as const;
+export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 
 export const WRITING_WORD_LIMITS: Record<UserLevel, { min: number; max: number }> = {
   A1: { min: 20, max: 50 },
