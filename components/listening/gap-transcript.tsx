@@ -39,7 +39,7 @@ export function GapTranscript({
   const gapsByKey = new Map(gaps.map((gap) => [gapId(gap), gap]));
 
   return (
-    <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-2 text-base leading-loose text-foreground">
+    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-3 text-base leading-loose text-foreground">
       {transcript.map((segment, segmentIndex) => {
         const words = segment.text.split(/\s+/).filter(Boolean);
         return words.map((word, wordIndex) => {
@@ -63,9 +63,9 @@ export function GapTranscript({
                 autoCapitalize="off"
                 autoCorrect="off"
                 spellCheck={false}
-                style={{ width: `${Math.max(5, Math.min(12, gap.answer.length + 2))}ch` }}
+                style={{ width: `${Math.max(6, Math.min(12, gap.answer.length + 2))}ch` }}
                 className={cn(
-                  "h-8 rounded-(--radius-control) border px-1.5 text-center text-sm",
+                  "h-10 min-w-11 rounded-(--radius-control) border px-1.5 text-center text-sm",
                   "focus:outline-none focus:ring-2 focus:ring-primary",
                   isCorrect === undefined && "border-border bg-surface text-foreground",
                   isCorrect === true && "border-primary bg-primary-soft text-primary",

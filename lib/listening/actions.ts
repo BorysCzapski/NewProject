@@ -48,6 +48,15 @@ export async function submitListeningAttempt(
   const { gaps } = exercise as ListeningExercise;
   if (gaps.length === 0) throw new Error("To ćwiczenie nie ma żadnych luk.");
 
+  // The UI allows unlimited retries of the same exercise ("Spróbuj ponownie") —
+  // only the FIRST attempt at a given exercise should count as the "meaningful
+  // activity" for streaks, otherwise retries would silently inflate activity_log.
+  const { count: priorAttempts } = await supabase
+    .from("listening_attempts")
+    .select("id", { count: "exact", head: true })
+    .eq("user_id", profile.id)
+    .eq("exercise_id", exerciseId);
+
   let correctCount = 0;
   for (const gap of gaps) {
     const gapId = `${gap.segmentIndex}-${gap.wordIndex}`;
@@ -67,7 +76,9 @@ export async function submitListeningAttempt(
     .single();
   if (insertError || !attempt) throw new Error("Nie udało się zapisać wyniku.");
 
-  await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.LISTENING });
+  if (!priorAttempts) {
+    await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.LISTENING });
+  }
 
   return attempt as ListeningAttempt;
 }
