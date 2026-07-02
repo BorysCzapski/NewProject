@@ -18,15 +18,17 @@ export default async function WritingTaskPage({ params }: { params: Promise<{ id
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const { data: task } = await supabase.from("writing_tasks").select("*").eq("id", id).maybeSingle();
+  // Independent of each other (both only need `id`/profile.id) — fetch concurrently.
+  const [{ data: task }, { data: submission }] = await Promise.all([
+    supabase.from("writing_tasks").select("*").eq("id", id).maybeSingle(),
+    supabase
+      .from("writing_submissions")
+      .select("*")
+      .eq("task_id", id)
+      .eq("user_id", profile.id)
+      .maybeSingle(),
+  ]);
   if (!task) notFound();
-
-  const { data: submission } = await supabase
-    .from("writing_submissions")
-    .select("*")
-    .eq("task_id", id)
-    .eq("user_id", profile.id)
-    .maybeSingle();
 
   return (
     <div>
