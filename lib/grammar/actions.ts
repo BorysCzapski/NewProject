@@ -7,7 +7,7 @@
 // (which drives streaks/calendar via record_activity).
 // ============================================================================
 import { createClient } from "@/lib/supabase/server";
-import { askClaudeForJSON } from "@/lib/anthropic";
+import { askAIForJSON } from "@/lib/ai";
 import { ACTIVITY_TYPES } from "@/lib/constants";
 
 /** Inserts one grammar_progress row for the current user. */
@@ -31,14 +31,14 @@ export async function recordGrammarAttempt(params: {
   if (error) throw new Error("Nie udało się zapisać odpowiedzi.");
 }
 
-/** Asks Claude to grade a free-form "transformation" answer against the reference. */
+/** Asks the AI to grade a free-form "transformation" answer against the reference. */
 export async function gradeTransformation(params: {
   prompt: string;
   referenceAnswer: string;
   studentAnswer: string;
 }): Promise<{ isCorrect: boolean; feedback: string }> {
   try {
-    return await askClaudeForJSON<{ isCorrect: boolean; feedback: string }>({
+    return await askAIForJSON<{ isCorrect: boolean; feedback: string }>({
       system:
         "Jesteś nauczycielem angielskiego. Oceniasz, czy przekształcone zdanie ucznia jest " +
         "gramatycznie poprawne i zachowuje sens/strukturę wymaganą przez polecenie, porównując " +

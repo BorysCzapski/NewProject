@@ -20,7 +20,7 @@ z lukami (YouTube), prace domowe z panelem admina, kalendarz i streaki.
 - **Next.js 16** (App Router, Turbopack) + **TypeScript**
 - **Tailwind CSS v4** — projekt mobile-first, dolna nawigacja jak w aplikacji mobilnej
 - **Supabase** — Postgres, autentykacja e-mail/hasło, Row Level Security
-- **Anthropic API (Claude)** — generowanie i ocenianie treści, wyłącznie po stronie serwera
+- **Groq API** (Llama 3.3) — generowanie i ocenianie treści, wyłącznie po stronie serwera, darmowy tier
 - **youtube-transcript** — pobieranie transkrypcji filmów YouTube do modułu słuchania
 
 > Next.js 16 zmienił konwencję `middleware.ts` na `proxy.ts` (patrz `proxy.ts` w katalogu
@@ -49,7 +49,7 @@ z lukami (YouTube), prace domowe z panelem admina, kalendarz i streaki.
 
 ## Uruchomienie lokalne
 
-Wymagania: Node.js 20.9+ (zalecane 22+), konto Supabase, klucz API Anthropic (do funkcji AI).
+Wymagania: Node.js 20.9+ (zalecane 22+), konto Supabase, klucz API Groq (do funkcji AI, darmowy).
 
 ```bash
 npm install
@@ -92,10 +92,10 @@ Patrz `.env.example`. Wymagane:
 | `NEXT_PUBLIC_SUPABASE_URL` | URL projektu Supabase |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | publiczny klucz anon Supabase |
 | `SUPABASE_SERVICE_ROLE_KEY` | klucz service_role — **tylko po stronie serwera**, używany m.in. do logowania po nazwie użytkownika |
-| `ANTHROPIC_API_KEY` | klucz API Anthropic (Claude) — funkcje AI (czytanie, pisanie, piosenki, gramatyka-przekształcenia) nie zadziałają bez niego |
+| `GROQ_API_KEY` | klucz API Groq — funkcje AI (czytanie, pisanie, piosenki, gramatyka-przekształcenia) nie zadziałają bez niego, darmowy tier na [console.groq.com](https://console.groq.com/keys) |
 | `NEXT_PUBLIC_SITE_URL` | publiczny URL wdrożenia (linki w e-mailach autoryzacyjnych) |
 
-Opcjonalnie: `ANTHROPIC_MODEL` (domyślnie `claude-sonnet-5`).
+Opcjonalnie: `GROQ_MODEL` (domyślnie `llama-3.3-70b-versatile`).
 
 ## Konto administratora
 
@@ -130,7 +130,7 @@ components/
 lib/
   supabase/          # klienci Supabase (przeglądarka / serwer / service role)
   actions/, <moduł>/ # Server Actions per moduł
-  anthropic.ts       # klient Claude + pomocnik do ustrukturyzowanych odpowiedzi JSON
+  ai.ts              # klient Groq + pomocnik do ustrukturyzowanych odpowiedzi JSON
   homework/progress.ts # automatyczne liczenie postępu prac domowych
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/

@@ -7,7 +7,7 @@
 // ============================================================================
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
-import { askClaudeForJSON } from "@/lib/anthropic";
+import { askAIForJSON } from "@/lib/ai";
 import { WRITING_WORD_LIMITS, WRITING_TASK_TYPE_LABELS } from "@/lib/constants";
 import type { UserLevel, WritingTask, WritingTaskType } from "@/lib/types/database";
 
@@ -21,7 +21,7 @@ export async function createWritingTask(params: {
   let scenario = params.scenario?.trim();
 
   if (!scenario) {
-    const result = await askClaudeForJSON<{ scenario: string }>({
+    const result = await askAIForJSON<{ scenario: string }>({
       system:
         "Jesteś nauczycielem angielskiego, który tworzy krótkie zadania pisemne dla Polaków " +
         "uczących się angielskiego. Polecenie zawsze piszesz PO POLSKU, zwięźle (1-3 zdania), " +

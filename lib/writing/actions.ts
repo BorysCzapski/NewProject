@@ -4,11 +4,11 @@
 // lib/writing/actions.ts
 // Server Actions backing the writing module: starting a new task (creating
 // it via lib/writing/create-task.ts and redirecting to it), grading a
-// submission with Claude, and a plain-text follow-up chat reply.
+// submission with AI, and a plain-text follow-up chat reply.
 // ============================================================================
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { askClaude, askClaudeForJSON } from "@/lib/anthropic";
+import { askAI, askAIForJSON } from "@/lib/ai";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { ACTIVITY_TYPES } from "@/lib/constants";
@@ -37,7 +37,7 @@ interface GradedWriting {
   score: number;
 }
 
-/** Grades a submitted text with Claude, persists it, and records the writing activity. */
+/** Grades a submitted text with AI, persists it, and records the writing activity. */
 export async function submitWriting(taskId: string, content: string): Promise<WritingSubmission> {
   const profile = await requireProfile();
   const supabase = await createClient();
@@ -54,7 +54,7 @@ export async function submitWriting(taskId: string, content: string): Promise<Wr
 
   let graded: GradedWriting;
   try {
-    graded = await askClaudeForJSON<GradedWriting>({
+    graded = await askAIForJSON<GradedWriting>({
       system:
         "Jesteś nauczycielem angielskiego oceniającym krótką pracę pisemną ucznia (nie esej). " +
         "Odpowiadasz PO POLSKU. Sprawdzasz poprawność gramatyczną, dobór słownictwa i czy treść " +
@@ -112,7 +112,7 @@ export async function askFollowup(taskId: string, userReply: string): Promise<st
   if (!trimmed) throw new Error("Wpisz odpowiedź przed wysłaniem.");
 
   try {
-    return await askClaude({
+    return await askAI({
       system:
         "Jesteś przyjaznym nauczycielem angielskiego prowadzącym krótki dialog po polsku z uczniem, " +
         "który właśnie odpowiedział na Twoje pytanie pogłębiające.",
