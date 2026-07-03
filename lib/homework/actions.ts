@@ -10,7 +10,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { requireAdmin } from "@/lib/auth/get-profile";
-import { askClaudeForJSON } from "@/lib/anthropic";
+import { askAIForJSON } from "@/lib/ai";
 import { createSong } from "@/lib/songs/create-song";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { createListeningExercise } from "@/lib/listening/create-exercise";
@@ -42,7 +42,7 @@ export interface HomeworkSuggestion {
 export async function suggestHomework(level: UserLevel): Promise<HomeworkSuggestion> {
   await requireAdmin();
 
-  return askClaudeForJSON<HomeworkSuggestion>({
+  return askAIForJSON<HomeworkSuggestion>({
     system:
       "Jesteś nauczycielem angielskiego proponującym ciekawe zadanie domowe dla uczniów. " +
       "Odpowiadasz PO POLSKU.",

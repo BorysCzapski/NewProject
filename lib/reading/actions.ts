@@ -9,7 +9,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
-import { askClaudeForJSON } from "@/lib/anthropic";
+import { askAIForJSON } from "@/lib/ai";
 import { ACTIVITY_TYPES } from "@/lib/constants";
 import type { ReadingQuestion, UserLevel } from "@/lib/types/database";
 
@@ -39,7 +39,7 @@ export async function generateReadingText(topic: string): Promise<void> {
 
   let result: GeneratedArticle;
   try {
-    result = await askClaudeForJSON<GeneratedArticle>({
+    result = await askAIForJSON<GeneratedArticle>({
       system:
         "Jesteś nauczycielem angielskiego tworzącym oryginalne, krótkie artykuły do czytania dla " +
         "Polaków uczących się angielskiego, ściśle dopasowane do poziomu CEFR ucznia. Artykuł musi " +
@@ -92,7 +92,7 @@ export async function generateReadingText(topic: string): Promise<void> {
     throw new Error("Nie udało się zapisać tekstu.");
   }
 
-  // Claude's structured output isn't schema-enforced for conditional fields (the
+  // The AI's structured output isn't schema-enforced for conditional fields (the
   // tool schema can't require options/correct_answer only when type=multiple_choice),
   // so a malformed multiple_choice question (missing options, or a correct_answer
   // that isn't literally one of them) would otherwise permanently block the student
@@ -192,7 +192,7 @@ export async function submitReadingAttempt(
       .join("\n\n");
 
     try {
-      openResults = await askClaudeForJSON<Record<string, { isCorrect: boolean; feedback: string }>>({
+      openResults = await askAIForJSON<Record<string, { isCorrect: boolean; feedback: string }>>({
         system:
           "Oceniasz odpowiedzi ucznia na pytania otwarte dotyczące przeczytanego przez niego " +
           "angielskiego tekstu. Odpowiadasz PO POLSKU, krótko i konkretnie wskazując błędy lub " +

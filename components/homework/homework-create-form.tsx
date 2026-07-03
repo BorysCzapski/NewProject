@@ -5,7 +5,7 @@
 // Admin homework creator form: shared fields (title/description/levels/
 // deadline/type) plus a section of type-specific fields that swaps based on
 // the chosen homework type. An "AI zaproponuj" button prefills title/
-// description/type from a Claude suggestion; submitting calls
+// description/type from an AI suggestion; submitting calls
 // createHomeworkAction which builds the config object and creates any
 // backing resource (song/writing task/listening exercise) first.
 // ============================================================================

@@ -4,14 +4,14 @@
 // lib/songs/actions.ts
 // Server Actions backing the songs module: starting a new song (creating it
 // via lib/songs/create-song.ts and redirecting to it), checking a line-level
-// or word-level Polish translation with Claude, and persisting the result
+// or word-level Polish translation with AI, and persisting the result
 // into song_translation_attempts. Also records the "song" activity once a
 // full practice pass through a song is finished.
 // ============================================================================
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
-import { askClaudeForJSON } from "@/lib/anthropic";
+import { askAIForJSON } from "@/lib/ai";
 import { createSong } from "@/lib/songs/create-song";
 import { ACTIVITY_TYPES } from "@/lib/constants";
 import type { Song } from "@/lib/types/database";
@@ -45,7 +45,7 @@ const CHECK_SCHEMA = {
 
 async function runCheck(system: string, prompt: string): Promise<TranslationCheckResult> {
   try {
-    return await askClaudeForJSON<TranslationCheckResult>({ system, prompt, schema: CHECK_SCHEMA });
+    return await askAIForJSON<TranslationCheckResult>({ system, prompt, schema: CHECK_SCHEMA });
   } catch {
     throw new Error("Nie udało się sprawdzić tłumaczenia przez AI. Spróbuj ponownie.");
   }
