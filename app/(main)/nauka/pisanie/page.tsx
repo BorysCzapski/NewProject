@@ -29,14 +29,19 @@ export default async function WritingHubPage() {
     .eq("user_id", profile.id)
     .order("created_at", { ascending: false });
 
-  const submissionList = (submissions ?? []) as WritingSubmission[];
-  const taskIds = submissionList.map((s) => s.task_id);
+  const allSubmissions = (submissions ?? []) as WritingSubmission[];
+  const taskIds = allSubmissions.map((s) => s.task_id);
 
   const tasksById = new Map<string, WritingTask>();
   if (taskIds.length > 0) {
     const { data: tasks } = await supabase.from("writing_tasks").select("*").in("id", taskIds);
     for (const task of (tasks ?? []) as WritingTask[]) tasksById.set(task.id, task);
   }
+
+  // writing_submissions has no level column of its own (it's on the linked
+  // writing_tasks row) — filter here so a level change doesn't leave old
+  // submissions from a different level cluttering this list.
+  const submissionList = allSubmissions.filter((s) => tasksById.get(s.task_id)?.level === profile.level);
 
   return (
     <div>
