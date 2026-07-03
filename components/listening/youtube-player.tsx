@@ -88,8 +88,13 @@ export const YoutubePlayer = forwardRef<YoutubePlayerHandle, { videoId: string }
     useImperativeHandle(ref, () => ({
       seekTo(seconds: number) {
         if (!playerRef.current || !ready) return;
+        // Seek only — do NOT force playVideo() here. This fires on every
+        // gap input's onFocus (see gap-transcript.tsx), so forcing playback
+        // meant simply tapping into a field to type an answer made the
+        // video jump and blast audio. If it was already playing it keeps
+        // playing after the seek; if paused, it stays paused and the user
+        // presses play themselves when ready to listen.
         playerRef.current.seekTo(seconds, true);
-        playerRef.current.playVideo();
       },
     }));
 
