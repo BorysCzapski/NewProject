@@ -19,17 +19,18 @@ export interface ActionState {
 const USERNAME_PATTERN = /^[a-zA-Z0-9_.-]{3,24}$/;
 
 /** Resolves a login "identifier" (email or username) to an email address. */
-async function resolveEmail(identifier: string): Promise<string | null> {
-  if (identifier.includes("@")) return identifier;
+async function resolveEmail(identifier: string): Promise<{ email: string | null; debug?: string }> {
+  if (identifier.includes("@")) return { email: identifier };
 
   const admin = createAdminClient();
-  const { data } = await admin
+  const { data, error } = await admin
     .from("profiles")
     .select("email")
     .eq("username", identifier)
     .maybeSingle();
 
-  return data?.email ?? null;
+  if (error) return { email: null, debug: `lookup error: ${error.message}` };
+  return { email: data?.email ?? null };
 }
 
 export async function login(_prevState: ActionState, formData: FormData): Promise<ActionState> {
@@ -41,16 +42,23 @@ export async function login(_prevState: ActionState, formData: FormData): Promis
     return { error: "Podaj login/e-mail i hasło." };
   }
 
-  const email = await resolveEmail(identifier);
+  const { email, debug } = await resolveEmail(identifier);
   if (!email) {
-    return { error: "Nie znaleziono konta o podanym loginie lub adresie e-mail." };
+    // TEMPORARY: surfaces the real cause instead of a generic message, to
+    // diagnose a production-only login failure. Revert once resolved.
+    return {
+      error: debug
+        ? `[DEBUG] ${debug}`
+        : "Nie znaleziono konta o podanym loginie lub adresie e-mail.",
+    };
   }
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
-    return { error: "Nieprawidłowy login lub hasło." };
+    // TEMPORARY: same as above — show the real Supabase error + status.
+    return { error: `[DEBUG] ${error.message} (status: ${error.status ?? "?"})` };
   }
 
   redirect(redirectTo || "/");
