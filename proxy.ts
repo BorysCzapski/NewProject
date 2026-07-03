@@ -7,16 +7,18 @@
 // ============================================================================
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import type { User } from "@supabase/supabase-js";
+import { cleanEnv, cleanUrlEnv } from "@/lib/env";
 
 const GUEST_ONLY_PATHS = ["/login", "/register"];
-const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback"];
+const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback", "/api/health"];
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    cleanUrlEnv(process.env.NEXT_PUBLIC_SUPABASE_URL),
+    cleanEnv(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY),
     {
       cookies: {
         getAll() {
@@ -35,9 +37,17 @@ export async function proxy(request: NextRequest) {
     }
   );
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // If Supabase is unreachable (network failure), treat the visitor as
+  // unauthenticated instead of crashing every page with a 500 — they land on
+  // /login and see a normal error there instead of a dead site.
+  let user: User | null = null;
+  try {
+    ({
+      data: { user },
+    } = await supabase.auth.getUser());
+  } catch {
+    user = null;
+  }
 
   const { pathname } = request.nextUrl;
   const isPublicPath = PUBLIC_PATHS.some((p) => pathname.startsWith(p));

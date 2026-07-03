@@ -9,19 +9,21 @@
 // ============================================================================
 import "server-only";
 import Groq from "groq-sdk";
+import { cleanEnv } from "@/lib/env";
 
-const MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const MODEL = cleanEnv(process.env.GROQ_MODEL) || "llama-3.3-70b-versatile";
 
 let client: Groq | null = null;
 
 function getClient(): Groq {
   if (!client) {
-    if (!process.env.GROQ_API_KEY) {
+    const apiKey = cleanEnv(process.env.GROQ_API_KEY);
+    if (!apiKey || apiKey === "your-groq-api-key") {
       throw new Error(
         "GROQ_API_KEY is not set — AI features are unavailable. Add it to .env.local (see .env.example)."
       );
     }
-    client = new Groq({ apiKey: process.env.GROQ_API_KEY });
+    client = new Groq({ apiKey });
   }
   return client;
 }
