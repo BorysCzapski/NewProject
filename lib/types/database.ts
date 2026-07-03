@@ -70,6 +70,16 @@ export interface GrammarTopic {
   created_at: string;
 }
 
+export interface LearningPathStage {
+  id: string;
+  level: UserLevel;
+  order_index: number;
+  category: string;
+  title: string;
+  grammar_topic_id: string | null;
+  created_at: string;
+}
+
 export interface GrammarExercise {
   id: string;
   topic_id: string;

@@ -11,16 +11,21 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 import { FlashcardTrainer } from "@/components/vocabulary/flashcard-trainer";
 
-export default async function FiszkiPage() {
+export default async function FiszkiPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { category } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const words = await getFlashcardBatch(supabase, profile.id, profile.level);
+  const words = await getFlashcardBatch(supabase, profile.id, profile.level, 15, category);
 
   return (
     <div>
       <PageHeader
         title="Fiszki"
-        subtitle="Powtarzaj słówka aż do opanowania"
+        subtitle={category ? `Kategoria: ${category}` : "Powtarzaj słówka aż do opanowania"}
         action={<LevelBadge level={profile.level} />}
       />
       <div className="mx-auto max-w-lg px-5 py-5">

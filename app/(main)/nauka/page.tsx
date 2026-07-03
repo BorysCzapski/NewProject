@@ -4,13 +4,19 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Layers, BookOpen, GraduationCap, PenLine, Music, Headphones } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 
 const MODULES = [
+  {
+    href: "/nauka/sciezka",
+    label: "Ścieżka nauki",
+    description: "Etapy do odblokowania: słówka + gramatyka razem",
+    icon: Map,
+  },
   {
     href: "/nauka/fiszki",
     label: "Fiszki",

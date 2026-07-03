@@ -18,10 +18,14 @@ export default async function ReadingHubPage() {
   const profile = await requireProfile();
   const supabase = await createClient();
 
+  // Scoped to the user's CURRENT level — if they change level later, older
+  // texts written for a different level shouldn't clutter this list (they're
+  // either too easy or too hard to be useful review material anymore).
   const { data: texts } = await supabase
     .from("reading_texts")
     .select("*")
     .eq("user_id", profile.id)
+    .eq("level", profile.level)
     .order("created_at", { ascending: false });
 
   const textList = (texts ?? []) as ReadingText[];
