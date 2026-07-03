@@ -4,10 +4,11 @@
 // preview of active homework. The landing screen after login.
 // ============================================================================
 import Link from "next/link";
-import { BookOpen, PenLine, Music, Headphones, GraduationCap, Layers, ArrowRight } from "lucide-react";
+import { BookOpen, PenLine, Music, Headphones, GraduationCap, Layers, ArrowRight, Map } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getHomeworkWithProgress } from "@/lib/homework/progress";
+import { getLearningPath } from "@/lib/learning-path/progress";
 import { StreakBadge } from "@/components/dashboard/streak-badge";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
@@ -28,10 +29,14 @@ export default async function DashboardPage() {
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const homework = await getHomeworkWithProgress(supabase, profile.id, profile.level);
+  const [homework, { stages, currentStageIndex }] = await Promise.all([
+    getHomeworkWithProgress(supabase, profile.id, profile.level),
+    getLearningPath(supabase, profile.id, profile.level),
+  ]);
   const activeHomework = homework
     .filter((h) => h.status !== "completed")
     .slice(0, 3);
+  const currentStage = stages[currentStageIndex] ?? stages[stages.length - 1];
 
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Dzień dobry" : hour < 18 ? "Miłego popołudnia" : "Dobry wieczór";
@@ -48,6 +53,23 @@ export default async function DashboardPage() {
           <LevelBadge level={profile.level} />
         </div>
       </div>
+
+      {currentStage && (
+        <Link href={`/nauka/sciezka/${currentStage.id}`} className="mb-6 block">
+          <Card className="flex items-center gap-3 bg-primary-soft">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <Map className="h-5 w-5" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <CardDescription className="text-primary">
+                Etap {Math.min(currentStageIndex + 1, stages.length)} z {stages.length}
+              </CardDescription>
+              <CardTitle>{currentStage.title}</CardTitle>
+            </div>
+            <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+          </Card>
+        </Link>
+      )}
 
       <section className="mb-6">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-foreground-muted">

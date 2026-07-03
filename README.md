@@ -30,22 +30,26 @@ z lukami (YouTube), prace domowe z panelem admina, kalendarz i streaki.
 
 1. **Autentykacja i profil** — rejestracja/logowanie e-mail+hasło, wybór poziomu (A1-B2) zaraz
    po rejestracji, zmiana poziomu w profilu, tryb jasny/ciemny.
-2. **Słówka** — fiszki z animacją obrotu i prostym algorytmem powtórek + trener znaczeń
-   (quiz 4-odpowiedziowy EN↔PL i tryb wpisywania z tolerancją literówek).
-3. **Gramatyka** — tematy per poziom z wyjaśnieniami po polsku, ćwiczenia (luki, wybór,
+2. **Ścieżka nauki** — mapa etapów per poziom (kategoria słówek + powiązany temat gramatyczny na
+   etap); kolejny etap odblokowuje się po opanowaniu 80% słówek z bieżącej kategorii. Admin widzi
+   na jakim etapie jest każdy uczeń i może jednym kliknięciem zadać pracę domową z zaległej kategorii.
+3. **Słówka** — fiszki z animacją obrotu i prostym algorytmem powtórek + trener znaczeń
+   (quiz 4-odpowiedziowy EN↔PL i tryb wpisywania z tolerancją literówek); oba tryby wspierają
+   ćwiczenie pojedynczej kategorii (np. z poziomu ścieżki nauki).
+4. **Gramatyka** — tematy per poziom z wyjaśnieniami po polsku, ćwiczenia (luki, wybór,
    przekształcenia zdań ocieniane przez AI).
-4. **Czytanie** — AI generuje krótkie artykuły dopasowane do poziomu i tematu, zadaje pytania
+5. **Czytanie** — AI generuje krótkie artykuły dopasowane do poziomu i tematu, zadaje pytania
    (ABCD + otwarte), ocenia odpowiedzi otwarte.
-5. **Pisanie** — krótkie formy (bez esejów) z poleceniem od AI, ocena poprawności/słownictwa,
+6. **Pisanie** — krótkie formy (bez esejów) z poleceniem od AI, ocena poprawności/słownictwa,
    poprawiona wersja tekstu, mini-dialog pogłębiający.
-6. **Piosenki** — wklejasz tekst piosenki, tłumaczysz linijka po linijce lub słowo po słowie,
+7. **Piosenki** — wklejasz tekst piosenki, tłumaczysz linijka po linijce lub słowo po słowie,
    AI akceptuje sensowne warianty tłumaczenia.
-7. **Słuchanie** — wklejasz link do YouTube, aplikacja pobiera transkrypcję i tworzy ćwiczenie
+8. **Słuchanie** — wklejasz link do YouTube, aplikacja pobiera transkrypcję i tworzy ćwiczenie
    z lukami; kliknięcie luki przewija film do właściwego momentu.
-8. **Prace domowe** — admin tworzy zadania (8 typów) widoczne dla wszystkich użytkowników;
+9. **Prace domowe** — admin tworzy zadania (8 typów) widoczne dla wszystkich użytkowników;
    postęp liczy się automatycznie z aktywności w modułach.
-9. **Kalendarz i streaki** — kalendarz miesięczny z oznaczonymi dniami aktywności, aktualny
-   streak i rekord, zbiorcze statystyki.
+10. **Kalendarz i streaki** — kalendarz miesięczny z oznaczonymi dniami aktywności, aktualny
+    streak i rekord, zbiorcze statystyki.
 
 ## Uruchomienie lokalne
 
@@ -64,11 +68,14 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
 1. Utwórz nowy projekt na [supabase.com](https://supabase.com).
 2. W **SQL Editor** uruchom po kolei zawartość plików z katalogu `supabase/`:
    1. `supabase/migrations/0001_init.sql` — schemat bazy (tabele, enumy, RLS, funkcje).
-   2. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
-   3. `supabase/seed/01_vocabulary_a1.sql`, `01_vocabulary_a2.sql`, `01_vocabulary_b1.sql`,
+   2. `supabase/migrations/0002_learning_path.sql` — tabela ścieżki nauki (etapy per poziom).
+   3. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
+   4. `supabase/seed/01_vocabulary_a1.sql`, `01_vocabulary_a2.sql`, `01_vocabulary_b1.sql`,
       `01_vocabulary_b2.sql` — słownictwo (~700 słówek, po ~150-200 na poziom).
-   4. `supabase/seed/02_grammar_a1.sql`, `02_grammar_a2.sql`, `02_grammar_b1.sql`,
+   5. `supabase/seed/02_grammar_a1.sql`, `02_grammar_a2.sql`, `02_grammar_b1.sql`,
       `02_grammar_b2.sql` — tematy i ćwiczenia gramatyczne (5 tematów × ~30 ćwiczeń na poziom).
+   6. `supabase/seed/03_learning_path.sql` — etapy ścieżki nauki (kategoria słówek + temat
+      gramatyczny na etap; wymaga plików 4-5 uruchomionych wcześniej).
 
    Każdy plik seeda usuwa najpierw dane dla swojego poziomu (`delete from ... where level = '...'`),
    więc można je bezpiecznie uruchomić ponownie.

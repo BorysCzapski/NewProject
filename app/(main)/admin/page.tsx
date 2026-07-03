@@ -4,7 +4,7 @@
 // rough completion count, linking through to its detail/completions screen.
 // ============================================================================
 import Link from "next/link";
-import { Plus, ClipboardList } from "lucide-react";
+import { Plus, ClipboardList, Map } from "lucide-react";
 import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { listHomeworkForAdmin } from "@/lib/homework/admin-queries";
@@ -36,6 +36,11 @@ export default async function AdminPage() {
         <Link href="/admin/prace-domowe/nowa">
           <Button variant="primary" className="w-full">
             <Plus className="h-4 w-4" /> Nowa praca domowa
+          </Button>
+        </Link>
+        <Link href="/admin/sciezka">
+          <Button variant="outline" className="w-full">
+            <Map className="h-4 w-4" /> Ścieżka nauki uczniów
           </Button>
         </Link>
         {homeworkList.length === 0 ? (

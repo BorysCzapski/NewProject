@@ -12,16 +12,21 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 import { MeaningTrainer } from "@/components/vocabulary/meaning-trainer";
 
-export default async function SlowkaPage() {
+export default async function SlowkaPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { category } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.level);
+  const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.level, 10, category);
 
   return (
     <div>
       <PageHeader
         title="Trener znaczeń"
-        subtitle="Quiz EN↔PL i wpisywanie tłumaczeń"
+        subtitle={category ? `Kategoria: ${category}` : "Quiz EN↔PL i wpisywanie tłumaczeń"}
         action={<LevelBadge level={profile.level} />}
       />
       <div className="mx-auto max-w-lg px-5 py-5">

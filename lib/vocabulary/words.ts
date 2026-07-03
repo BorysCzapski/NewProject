@@ -8,15 +8,15 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import type { UserLevel, VocabularyWord } from "@/lib/types/database";
 import { shuffle } from "@/lib/vocabulary/word-utils";
 
-/** All vocabulary_words rows for a given CEFR level. */
+/** All vocabulary_words rows for a given CEFR level, optionally narrowed to one category. */
 export async function getWordsForLevel(
   supabase: SupabaseClient,
-  level: UserLevel
+  level: UserLevel,
+  category?: string
 ): Promise<VocabularyWord[]> {
-  const { data } = await supabase
-    .from("vocabulary_words")
-    .select("*")
-    .eq("level", level);
+  let query = supabase.from("vocabulary_words").select("*").eq("level", level);
+  if (category) query = query.eq("category", category);
+  const { data } = await query;
   return (data as VocabularyWord[]) ?? [];
 }
 
@@ -30,9 +30,10 @@ export async function getFlashcardBatch(
   supabase: SupabaseClient,
   userId: string,
   level: UserLevel,
-  batchSize = 15
+  batchSize = 15,
+  category?: string
 ): Promise<VocabularyWord[]> {
-  const levelWords = await getWordsForLevel(supabase, level);
+  const levelWords = await getWordsForLevel(supabase, level, category);
   if (levelWords.length === 0) return [];
 
   const wordIds = levelWords.map((w) => w.id);
@@ -65,13 +66,23 @@ export interface MeaningTrainerData {
   pool: VocabularyWord[]; // full level word list, used to source distractors
 }
 
-/** Picks a batch of words for the meaning trainer plus the full-level pool for distractors. */
+/**
+ * Picks a batch of words for the meaning trainer plus a distractor pool.
+ * When `category` is set, the quiz batch is limited to that category (e.g.
+ * practicing a single ścieżka nauki stage) but distractors are still drawn
+ * from the whole level so wrong answers stay plausible even in a small category.
+ */
 export async function getMeaningTrainerBatch(
   supabase: SupabaseClient,
   level: UserLevel,
-  batchSize = 10
+  batchSize = 10,
+  category?: string
 ): Promise<MeaningTrainerData> {
-  const pool = await getWordsForLevel(supabase, level);
-  const batch = shuffle(pool).slice(0, batchSize);
-  return { batch, pool };
+  const [levelPool, categoryPool] = await Promise.all([
+    getWordsForLevel(supabase, level),
+    category ? getWordsForLevel(supabase, level, category) : Promise.resolve(null),
+  ]);
+  const source = categoryPool ?? levelPool;
+  const batch = shuffle(source).slice(0, batchSize);
+  return { batch, pool: levelPool };
 }
