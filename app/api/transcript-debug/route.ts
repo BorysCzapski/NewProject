@@ -19,6 +19,16 @@ function errMessage(err: unknown): string {
   return err instanceof Error ? `${err.name}: ${err.message}` : String(err);
 }
 
+async function tryTranscriptPlus(videoId: string): Promise<StrategyResult> {
+  try {
+    const { fetchTranscript } = await import("youtube-transcript-plus");
+    const raw = await fetchTranscript(videoId, { lang: "en" }).catch(() => fetchTranscript(videoId));
+    return { ok: raw.length > 0, segments: raw.length, sample: raw[0]?.text?.slice(0, 60) };
+  } catch (err) {
+    return { ok: false, error: errMessage(err) };
+  }
+}
+
 async function tryYoutubeTranscript(videoId: string): Promise<StrategyResult> {
   try {
     const raw = await YoutubeTranscript.fetchTranscript(videoId);
@@ -54,21 +64,19 @@ export async function GET(request: NextRequest) {
 
   const videoId = request.nextUrl.searchParams.get("videoId") ?? "arj7oStGLkU";
 
-  const [ytTranscript, innertubeWeb, innertubeAndroid, innertubeTv] = await Promise.all([
+  const [transcriptPlus, ytTranscript, innertubeWeb] = await Promise.all([
+    tryTranscriptPlus(videoId),
     tryYoutubeTranscript(videoId),
     tryInnertube(videoId),
-    tryInnertube(videoId, "ANDROID"),
-    tryInnertube(videoId, "TV_EMBEDDED"),
   ]);
 
   return NextResponse.json({
     videoId,
     runtime: process.version,
     strategies: {
+      "youtube-transcript-plus": transcriptPlus,
       "youtube-transcript": ytTranscript,
       "innertube-web": innertubeWeb,
-      "innertube-android": innertubeAndroid,
-      "innertube-tv-embedded": innertubeTv,
     },
   });
 }
