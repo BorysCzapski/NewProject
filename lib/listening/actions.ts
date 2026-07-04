@@ -22,7 +22,10 @@ import type { ListeningAttempt, ListeningExercise } from "@/lib/types/database";
  * of errors thrown in Server Actions, so throwing would show the user a
  * useless generic error instead of the real reason.
  */
-export async function startListeningExercise(youtubeUrl: string): Promise<ActionFailure> {
+export async function startListeningExercise(
+  youtubeUrl: string,
+  manualTranscript?: string
+): Promise<ActionFailure & { transcriptUnavailable?: boolean }> {
   const profile = await requireProfile();
 
   const trimmed = youtubeUrl.trim();
@@ -34,10 +37,14 @@ export async function startListeningExercise(youtubeUrl: string): Promise<Action
       youtubeUrl: trimmed,
       level: profile.level,
       createdBy: profile.id,
+      manualTranscript,
     });
   } catch (err) {
     console.error("[listening] createListeningExercise failed:", err);
-    if (err instanceof TranscriptError) return actionFailure(err.userMessage);
+    if (err instanceof TranscriptError) {
+      // Signals the form to offer the paste-it-yourself fallback.
+      return { ...actionFailure(err.userMessage), transcriptUnavailable: true };
+    }
     return actionFailure(
       err instanceof Error ? err.message : "Nie udało się utworzyć ćwiczenia. Spróbuj ponownie."
     );

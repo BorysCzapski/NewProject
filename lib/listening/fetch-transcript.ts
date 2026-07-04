@@ -103,7 +103,7 @@ export async function fetchYoutubeTranscript(videoId: string): Promise<Transcrip
   );
   throw new TranscriptError(
     looksLikeNoCaptions
-      ? "Ten filmik nie ma dostępnych napisów — wybierz inny film (najlepiej z napisami angielskimi)."
-      : "Nie udało się pobrać transkrypcji (YouTube mógł zablokować zapytanie z serwera). Spróbuj ponownie za chwilę lub wybierz inny film."
+      ? "Nie udało się automatycznie pobrać napisów tego filmiku — możesz wkleić transkrypcję ręcznie poniżej."
+      : "YouTube zablokował automatyczne pobieranie transkrypcji — wklej transkrypcję ręcznie poniżej (to zawsze działa)."
   );
 }

@@ -7,6 +7,7 @@
 // ============================================================================
 import "server-only";
 import { fetchYoutubeTranscript } from "@/lib/listening/fetch-transcript";
+import { parseManualTranscript } from "@/lib/listening/parse-manual-transcript";
 import { createClient } from "@/lib/supabase/server";
 import { extractYoutubeVideoId } from "@/lib/utils";
 import type { UserLevel, ListeningExercise, TranscriptSegment, ListeningGap } from "@/lib/types/database";
@@ -49,15 +50,25 @@ export async function createListeningExercise(params: {
   level: UserLevel;
   title?: string;
   createdBy?: string | null;
+  /** Pasted-by-hand transcript — the always-works fallback when YouTube blocks server fetching. */
+  manualTranscript?: string;
 }): Promise<ListeningExercise> {
   const videoId = extractYoutubeVideoId(params.youtubeUrl);
   if (!videoId) {
     throw new Error("Nieprawidłowy link do filmiku YouTube.");
   }
 
-  // Tries two strategies and throws TranscriptError with a user-friendly,
-  // honest message; the real causes are logged server-side.
-  const transcript: TranscriptSegment[] = await fetchYoutubeTranscript(videoId);
+  let transcript: TranscriptSegment[];
+  if (params.manualTranscript?.trim()) {
+    transcript = parseManualTranscript(params.manualTranscript);
+    if (transcript.length === 0) {
+      throw new Error("Nie udało się odczytać wklejonej transkrypcji — sprawdź jej format.");
+    }
+  } else {
+    // Tries automatic strategies and throws TranscriptError with a
+    // user-friendly, honest message; the real causes are logged server-side.
+    transcript = await fetchYoutubeTranscript(videoId);
+  }
 
   const gaps = selectGaps(transcript);
   if (gaps.length === 0) {
