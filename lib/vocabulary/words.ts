@@ -34,9 +34,23 @@ export async function getFlashcardBatch(
   category?: string
 ): Promise<VocabularyWord[]> {
   const levelWords = await getWordsForLevel(supabase, level, category);
-  if (levelWords.length === 0) return [];
+  return pickUnmasteredFirst(supabase, userId, levelWords, batchSize);
+}
 
-  const wordIds = levelWords.map((w) => w.id);
+/**
+ * Shared selection strategy: prefer words the user hasn't mastered yet
+ * (status 'new'/'learning', or no progress row at all), fall back to filling
+ * with already-mastered words if too few qualify. Result is shuffled.
+ */
+async function pickUnmasteredFirst(
+  supabase: SupabaseClient,
+  userId: string,
+  words: VocabularyWord[],
+  batchSize: number
+): Promise<VocabularyWord[]> {
+  if (words.length === 0) return [];
+
+  const wordIds = words.map((w) => w.id);
   const { data: progressRows } = await supabase
     .from("vocabulary_progress")
     .select("word_id, status")
@@ -50,8 +64,8 @@ export async function getFlashcardBatch(
     const status = statusByWordId.get(w.id);
     return status === undefined || status === "new" || status === "learning";
   };
-  const qualifying = levelWords.filter(isQualifying);
-  const rest = levelWords.filter((w) => !isQualifying(w));
+  const qualifying = words.filter(isQualifying);
+  const rest = words.filter((w) => !isQualifying(w));
 
   const selected =
     qualifying.length >= batchSize
@@ -71,9 +85,12 @@ export interface MeaningTrainerData {
  * When `category` is set, the quiz batch is limited to that category (e.g.
  * practicing a single ścieżka nauki stage) but distractors are still drawn
  * from the whole level so wrong answers stay plausible even in a small category.
+ * Like flashcards, unmastered words come first — otherwise repeated sessions
+ * keep re-quizzing words the user already knows and stage progress stalls.
  */
 export async function getMeaningTrainerBatch(
   supabase: SupabaseClient,
+  userId: string,
   level: UserLevel,
   batchSize = 10,
   category?: string
@@ -83,6 +100,6 @@ export async function getMeaningTrainerBatch(
     category ? getWordsForLevel(supabase, level, category) : Promise.resolve(null),
   ]);
   const source = categoryPool ?? levelPool;
-  const batch = shuffle(source).slice(0, batchSize);
+  const batch = await pickUnmasteredFirst(supabase, userId, source, batchSize);
   return { batch, pool: levelPool };
 }

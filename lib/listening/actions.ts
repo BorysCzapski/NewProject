@@ -10,22 +10,38 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createListeningExercise } from "@/lib/listening/create-exercise";
+import { TranscriptError } from "@/lib/listening/fetch-transcript";
 import { isCloseMatch } from "@/lib/utils";
 import { ACTIVITY_TYPES } from "@/lib/constants";
+import { actionFailure, type ActionFailure } from "@/lib/action-result";
 import type { ListeningAttempt, ListeningExercise } from "@/lib/types/database";
 
-/** Creates a new listening exercise from a YouTube link and redirects to it. */
-export async function startListeningExercise(youtubeUrl: string): Promise<never> {
+/**
+ * Creates a new listening exercise from a YouTube link and redirects to it.
+ * Failures are RETURNED (not thrown) — production Next.js redacts messages
+ * of errors thrown in Server Actions, so throwing would show the user a
+ * useless generic error instead of the real reason.
+ */
+export async function startListeningExercise(youtubeUrl: string): Promise<ActionFailure> {
   const profile = await requireProfile();
 
   const trimmed = youtubeUrl.trim();
-  if (!trimmed) throw new Error("Wklej link do filmiku YouTube.");
+  if (!trimmed) return actionFailure("Wklej link do filmiku YouTube.");
 
-  const exercise = await createListeningExercise({
-    youtubeUrl: trimmed,
-    level: profile.level,
-    createdBy: profile.id,
-  });
+  let exercise: ListeningExercise;
+  try {
+    exercise = await createListeningExercise({
+      youtubeUrl: trimmed,
+      level: profile.level,
+      createdBy: profile.id,
+    });
+  } catch (err) {
+    console.error("[listening] createListeningExercise failed:", err);
+    if (err instanceof TranscriptError) return actionFailure(err.userMessage);
+    return actionFailure(
+      err instanceof Error ? err.message : "Nie udało się utworzyć ćwiczenia. Spróbuj ponownie."
+    );
+  }
 
   redirect(`/nauka/sluchanie/${exercise.id}`);
 }

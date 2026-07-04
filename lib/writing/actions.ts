@@ -12,6 +12,7 @@ import { askAI, askAIForJSON } from "@/lib/ai";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { ACTIVITY_TYPES } from "@/lib/constants";
+import { actionFailure, type ActionFailure, type ActionResult } from "@/lib/action-result";
 import type { WritingSubmission, WritingTaskType } from "@/lib/types/database";
 
 const ALL_TASK_TYPES: WritingTaskType[] = [
@@ -21,13 +22,25 @@ const ALL_TASK_TYPES: WritingTaskType[] = [
   "question_answer",
 ];
 
-/** Creates a new writing task (random type if none given) and redirects to it. */
-export async function startWritingTask(taskType?: WritingTaskType): Promise<never> {
+/**
+ * Creates a new writing task (random type if none given) and redirects to it.
+ * Failures are RETURNED, not thrown — see lib/action-result.ts.
+ */
+export async function startWritingTask(taskType?: WritingTaskType): Promise<ActionFailure> {
   const profile = await requireProfile();
   const type = taskType ?? ALL_TASK_TYPES[Math.floor(Math.random() * ALL_TASK_TYPES.length)];
 
-  const task = await createWritingTask({ level: profile.level, taskType: type });
-  redirect(`/nauka/pisanie/${task.id}`);
+  let taskId: string;
+  try {
+    const task = await createWritingTask({ level: profile.level, taskType: type });
+    taskId = task.id;
+  } catch (err) {
+    console.error("[writing] createWritingTask failed:", err);
+    return actionFailure(
+      "Nie udało się przygotować zadania (błąd AI). Spróbuj ponownie za chwilę."
+    );
+  }
+  redirect(`/nauka/pisanie/${taskId}`);
 }
 
 interface GradedWriting {
@@ -37,8 +50,14 @@ interface GradedWriting {
   score: number;
 }
 
-/** Grades a submitted text with AI, persists it, and records the writing activity. */
-export async function submitWriting(taskId: string, content: string): Promise<WritingSubmission> {
+/**
+ * Grades a submitted text with AI, persists it, and records the writing
+ * activity. Failures are RETURNED, not thrown — see lib/action-result.ts.
+ */
+export async function submitWriting(
+  taskId: string,
+  content: string
+): Promise<ActionResult<WritingSubmission>> {
   const profile = await requireProfile();
   const supabase = await createClient();
 
@@ -47,10 +66,10 @@ export async function submitWriting(taskId: string, content: string): Promise<Wr
     .select("*")
     .eq("id", taskId)
     .single();
-  if (taskError || !task) throw new Error("Nie znaleziono zadania.");
+  if (taskError || !task) return actionFailure("Nie znaleziono zadania.");
 
   const trimmed = content.trim();
-  if (!trimmed) throw new Error("Wpisz swoją odpowiedź przed wysłaniem.");
+  if (!trimmed) return actionFailure("Wpisz swoją odpowiedź przed wysłaniem.");
 
   let graded: GradedWriting;
   try {
@@ -73,8 +92,9 @@ export async function submitWriting(taskId: string, content: string): Promise<Wr
         score: { type: "number", description: "0-100" },
       },
     });
-  } catch {
-    throw new Error("Nie udało się ocenić pracy przez AI. Spróbuj ponownie.");
+  } catch (err) {
+    console.error("[writing] AI grading failed:", err);
+    return actionFailure("Nie udało się ocenić pracy przez AI. Spróbuj ponownie za chwilę.");
   }
 
   const { data: submission, error: insertError } = await supabase
@@ -90,15 +110,18 @@ export async function submitWriting(taskId: string, content: string): Promise<Wr
     })
     .select()
     .single();
-  if (insertError || !submission) throw new Error("Nie udało się zapisać pracy.");
+  if (insertError || !submission) {
+    console.error("[writing] submission insert failed:", insertError);
+    return actionFailure("Nie udało się zapisać pracy.");
+  }
 
   await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.WRITING });
 
-  return submission as WritingSubmission;
+  return { ok: true, data: submission as WritingSubmission };
 }
 
 /** Ephemeral follow-up reply to the AI's follow-up question — not persisted anywhere. */
-export async function askFollowup(taskId: string, userReply: string): Promise<string> {
+export async function askFollowup(taskId: string, userReply: string): Promise<ActionResult<string>> {
   await requireProfile();
   const supabase = await createClient();
 
@@ -109,10 +132,10 @@ export async function askFollowup(taskId: string, userReply: string): Promise<st
     .single();
 
   const trimmed = userReply.trim();
-  if (!trimmed) throw new Error("Wpisz odpowiedź przed wysłaniem.");
+  if (!trimmed) return actionFailure("Wpisz odpowiedź przed wysłaniem.");
 
   try {
-    return await askAI({
+    const reply = await askAI({
       system:
         "Jesteś przyjaznym nauczycielem angielskiego prowadzącym krótki dialog po polsku z uczniem, " +
         "który właśnie odpowiedział na Twoje pytanie pogłębiające.",
@@ -122,7 +145,9 @@ export async function askFollowup(taskId: string, userReply: string): Promise<st
         "Odpowiedz krótko i zachęcająco po polsku.",
       maxTokens: 300,
     });
-  } catch {
-    throw new Error("Nie udało się uzyskać odpowiedzi AI. Spróbuj ponownie.");
+    return { ok: true, data: reply };
+  } catch (err) {
+    console.error("[writing] followup failed:", err);
+    return actionFailure("Nie udało się uzyskać odpowiedzi AI. Spróbuj ponownie.");
   }
 }

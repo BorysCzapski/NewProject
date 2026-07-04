@@ -72,9 +72,10 @@ function ComposeForm({
     setError(null);
     try {
       const result = await submitWriting(task.id, content);
-      onSubmitted(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Nie udało się wysłać pracy. Spróbuj ponownie.");
+      if (result.ok) onSubmitted(result.data);
+      else setError(result.error);
+    } catch {
+      setError("Nie udało się wysłać pracy. Spróbuj ponownie.");
     } finally {
       setPending(false);
     }
@@ -141,10 +142,11 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
     setPending(true);
     setError(null);
     try {
-      const aiReply = await askFollowup(task.id, userMessage);
-      setMessages((prev) => [...prev, { role: "ai", text: aiReply }]);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Nie udało się uzyskać odpowiedzi AI.");
+      const result = await askFollowup(task.id, userMessage);
+      if (result.ok) setMessages((prev) => [...prev, { role: "ai", text: result.data }]);
+      else setError(result.error);
+    } catch {
+      setError("Nie udało się uzyskać odpowiedzi AI.");
     } finally {
       setPending(false);
     }

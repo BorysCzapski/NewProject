@@ -23,12 +23,15 @@ export function NewExerciseForm() {
     setError(null);
     startTransition(async () => {
       try {
-        await startListeningExercise(youtubeUrl);
+        // On success the action redirects; on failure it RETURNS the error
+        // (thrown Server Action errors are redacted in production).
+        const result = await startListeningExercise(youtubeUrl);
+        if (result && !result.ok) setError(result.error);
       } catch (err) {
         // A successful call redirects, which throws a special Next.js
         // navigation error that must propagate, not be swallowed here.
         unstable_rethrow(err);
-        setError(err instanceof Error ? err.message : "Nie udało się utworzyć ćwiczenia.");
+        setError("Nie udało się utworzyć ćwiczenia. Spróbuj ponownie.");
       }
     });
   }

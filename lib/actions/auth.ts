@@ -44,21 +44,22 @@ export async function login(_prevState: ActionState, formData: FormData): Promis
 
   const { email, debug } = await resolveEmail(identifier);
   if (!email) {
-    // TEMPORARY: surfaces the real cause instead of a generic message, to
-    // diagnose a production-only login failure. Revert once resolved.
-    return {
-      error: debug
-        ? `[DEBUG] ${debug}`
-        : "Nie znaleziono konta o podanym loginie lub adresie e-mail.",
-    };
+    if (debug) console.error("[auth] username lookup failed:", debug);
+    return { error: "Nie znaleziono konta o podanym loginie lub adresie e-mail." };
   }
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
-    // TEMPORARY: same as above — show the real Supabase error + status.
-    return { error: `[DEBUG] ${error.message} (status: ${error.status ?? "?"})` };
+    // Real cause goes to the server logs; the user gets a friendly message.
+    console.error("[auth] signInWithPassword failed:", error.message, "status:", error.status);
+    return {
+      error:
+        error.message === "Invalid login credentials"
+          ? "Nieprawidłowy login lub hasło."
+          : "Nie udało się zalogować. Spróbuj ponownie za chwilę.",
+    };
   }
 
   redirect(redirectTo || "/");

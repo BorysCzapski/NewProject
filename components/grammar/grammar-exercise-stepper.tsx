@@ -286,12 +286,16 @@ function TransformationExercise({
     setGrading(true);
     setError(null);
     try {
-      const graded = await gradeTransformation({
+      const result = await gradeTransformation({
         prompt: exercise.prompt,
         referenceAnswer: exercise.correct_answer,
         studentAnswer: value,
       });
-      await onAnswered({ isCorrect: graded.isCorrect, feedback: graded.feedback });
+      if (result.ok) {
+        await onAnswered({ isCorrect: result.data.isCorrect, feedback: result.data.feedback });
+      } else {
+        setError(result.error);
+      }
     } catch {
       setError("Nie udało się ocenić odpowiedzi przez AI. Spróbuj ponownie.");
     } finally {

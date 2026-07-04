@@ -11,6 +11,8 @@ import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle } from "@/components/ui/card";
 import { GrammarExerciseStepper } from "@/components/grammar/grammar-exercise-stepper";
+import { GrammarLesson } from "@/components/grammar/lesson/grammar-lesson";
+import { getGrammarLesson } from "@/lib/grammar/content";
 import type { GrammarExercise, GrammarTopic } from "@/lib/types/database";
 
 export default async function GrammarTopicPage({
@@ -48,15 +50,35 @@ export default async function GrammarTopicPage({
           Wszystkie tematy
         </Link>
 
-        <Card className="mb-5">
-          <CardTitle>Wyjaśnienie</CardTitle>
-          <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-foreground">
-            {(topic as GrammarTopic).explanation}
-          </p>
-        </Card>
+        <LessonSection topic={topic as GrammarTopic} />
 
         <GrammarExerciseStepper topicId={topic.id} exercises={(exercises ?? []) as GrammarExercise[]} />
       </div>
     </div>
+  );
+}
+
+/**
+ * Interactive lesson when one is authored for this topic
+ * (lib/grammar/content/*), otherwise the plain-text explanation from the DB.
+ */
+function LessonSection({ topic }: { topic: GrammarTopic }) {
+  const lesson = getGrammarLesson(topic.level, topic.slug);
+
+  if (lesson) {
+    return (
+      <div className="mb-5">
+        <GrammarLesson blocks={lesson} />
+      </div>
+    );
+  }
+
+  return (
+    <Card className="mb-5">
+      <CardTitle>Wyjaśnienie</CardTitle>
+      <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-foreground">
+        {topic.explanation}
+      </p>
+    </Card>
   );
 }

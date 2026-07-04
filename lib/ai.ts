@@ -9,8 +9,22 @@
 // ============================================================================
 import "server-only";
 import Groq from "groq-sdk";
+import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions";
 
-const MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const CONFIGURED_MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+
+// Groq periodically decommissions models. If the configured model stops
+// existing, we fall through this list instead of hard-failing every AI
+// feature in the app. All entries support tool calling (required by
+// askAIForJSON's pinned tool choice).
+const FALLBACK_MODELS = [
+  "llama-3.3-70b-versatile",
+  "openai/gpt-oss-120b",
+  "llama-3.1-8b-instant",
+];
+
+// Model that most recently succeeded — start with the configured one.
+let activeModel = CONFIGURED_MODEL;
 
 let client: Groq | null = null;
 
@@ -26,6 +40,48 @@ function getClient(): Groq {
   return client;
 }
 
+/** True when the error means "this model doesn't exist / was retired". */
+function isModelUnavailable(err: unknown): boolean {
+  if (!(err instanceof Error)) return false;
+  const status = (err as { status?: number }).status;
+  return (
+    (status === 404 || status === 400) &&
+    /model|decommission|does not exist|not found/i.test(err.message)
+  );
+}
+
+/**
+ * Runs a completion, falling back through FALLBACK_MODELS when the current
+ * model has been retired by Groq. Any other failure is logged with its real
+ * cause (visible in Vercel logs) and rethrown.
+ */
+async function createCompletion(
+  groq: Groq,
+  params: Omit<ChatCompletionCreateParamsNonStreaming, "model">
+): Promise<Groq.Chat.ChatCompletion> {
+  const candidates = [activeModel, ...FALLBACK_MODELS.filter((m) => m !== activeModel)];
+  let lastError: unknown;
+
+  for (const model of candidates) {
+    try {
+      const response = await groq.chat.completions.create({ ...params, model });
+      activeModel = model;
+      return response;
+    } catch (err) {
+      lastError = err;
+      if (isModelUnavailable(err)) {
+        console.error(`[ai] model "${model}" unavailable, trying next fallback:`, err instanceof Error ? err.message : err);
+        continue;
+      }
+      console.error("[ai] Groq request failed:", err);
+      throw err;
+    }
+  }
+
+  console.error("[ai] all models unavailable:", lastError);
+  throw lastError;
+}
+
 /**
  * Asks the model to respond and forces the reply into `schema` via a pinned
  * tool call, so callers get a parsed, type-safe object back instead of
@@ -39,8 +95,7 @@ export async function askAIForJSON<T>(params: {
 }): Promise<T> {
   const groq = getClient();
 
-  const response = await groq.chat.completions.create({
-    model: MODEL,
+  const response = await createCompletion(groq, {
     max_completion_tokens: params.maxTokens ?? 2048,
     messages: [
       { role: "system", content: params.system },
@@ -82,8 +137,7 @@ export async function askAI(params: {
   maxTokens?: number;
 }): Promise<string> {
   const groq = getClient();
-  const response = await groq.chat.completions.create({
-    model: MODEL,
+  const response = await createCompletion(groq, {
     max_completion_tokens: params.maxTokens ?? 1024,
     messages: [
       { role: "system", content: params.system },

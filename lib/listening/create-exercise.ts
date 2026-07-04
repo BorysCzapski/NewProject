@@ -6,7 +6,7 @@
 // creator (type = 'listening_task') so both create exercises identically.
 // ============================================================================
 import "server-only";
-import { YoutubeTranscript } from "youtube-transcript";
+import { fetchYoutubeTranscript } from "@/lib/listening/fetch-transcript";
 import { createClient } from "@/lib/supabase/server";
 import { extractYoutubeVideoId } from "@/lib/utils";
 import type { UserLevel, ListeningExercise, TranscriptSegment, ListeningGap } from "@/lib/types/database";
@@ -55,23 +55,9 @@ export async function createListeningExercise(params: {
     throw new Error("Nieprawidłowy link do filmiku YouTube.");
   }
 
-  let raw;
-  try {
-    raw = await YoutubeTranscript.fetchTranscript(videoId);
-  } catch {
-    throw new Error(
-      "Nie udało się pobrać transkrypcji tego filmiku (może nie mieć napisów)."
-    );
-  }
-  if (!raw.length) {
-    throw new Error("Ten filmik nie ma dostępnej transkrypcji.");
-  }
-
-  const transcript: TranscriptSegment[] = raw.map((seg) => ({
-    text: seg.text,
-    start: seg.offset / 1000,
-    duration: seg.duration / 1000,
-  }));
+  // Tries two strategies and throws TranscriptError with a user-friendly,
+  // honest message; the real causes are logged server-side.
+  const transcript: TranscriptSegment[] = await fetchYoutubeTranscript(videoId);
 
   const gaps = selectGaps(transcript);
   if (gaps.length === 0) {
