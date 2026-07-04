@@ -6,7 +6,8 @@
 // (4-choice quiz or typed translation), then answer 10 questions in a row.
 // ============================================================================
 import { useMemo, useState } from "react";
-import { RotateCcw, ArrowRight, Check, X } from "lucide-react";
+import Link from "next/link";
+import { RotateCcw, ArrowRight, ArrowLeft, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -27,7 +28,16 @@ function answerFor(word: VocabularyWord, direction: Direction): string {
   return direction === "en-pl" ? word.translation_pl : word.word_en;
 }
 
-export function MeaningTrainer({ batch, pool }: { batch: VocabularyWord[]; pool: VocabularyWord[] }) {
+export function MeaningTrainer({
+  batch,
+  pool,
+  backHref,
+}: {
+  batch: VocabularyWord[];
+  pool: VocabularyWord[];
+  /** When the session was started from a learning-path stage, links back to it. */
+  backHref?: string;
+}) {
   const [phase, setPhase] = useState<Phase>("setup");
   const [direction, setDirection] = useState<Direction>("en-pl");
   const [mode, setMode] = useState<Mode>("quiz");
@@ -133,6 +143,14 @@ export function MeaningTrainer({ batch, pool }: { batch: VocabularyWord[]; pool:
           <RotateCcw className="h-5 w-5" />
           Zagraj ponownie
         </Button>
+        {backHref && (
+          <Link href={backHref} className="w-full">
+            <Button size="lg" variant="outline" className="w-full">
+              <ArrowLeft className="h-5 w-5" />
+              Wróć do ścieżki nauki
+            </Button>
+          </Link>
+        )}
       </Card>
     );
   }

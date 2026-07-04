@@ -9,7 +9,10 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 const GUEST_ONLY_PATHS = ["/login", "/register"];
-const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback"];
+// /api/transcript-debug is TEMPORARY (guarded by its own secret) — used to
+// diagnose YouTube transcript fetching from Vercel's servers. Remove both
+// the route and this entry once listening works reliably in production.
+const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback", "/api/transcript-debug"];
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });

@@ -75,8 +75,11 @@ export async function fetchYoutubeTranscript(videoId: string): Promise<Transcrip
   // give the user an honest, actionable message.
   console.error(`[listening] transcript fetch failed for video ${videoId}:`, failures);
 
-  const looksLikeNoCaptions = failures.some(
-    (f) => /disabled|unavailable|no transcript|not.*captions|transcript.*not/i.test(f)
+  // Only claim "the video has no captions" when EVERY strategy points that
+  // way — youtube-transcript reports "disabled" also when YouTube serves it
+  // a bot-wall, which used to mislabel every video as caption-less.
+  const looksLikeNoCaptions = failures.every(
+    (f) => /disabled|unavailable|no transcript|not.*captions|transcript.*not|panel not found/i.test(f)
   );
   throw new TranscriptError(
     looksLikeNoCaptions

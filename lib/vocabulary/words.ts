@@ -26,27 +26,39 @@ export async function getWordsForLevel(
  * all). Falls back to filling with already-mastered words of the same level
  * if too few qualify. Result is shuffled.
  */
+/**
+ * Which words a flashcard session draws from:
+ * - "all"        — prefer unmastered, fill up with mastered if needed (default)
+ * - "unmastered" — ONLY words not yet mastered (status new/learning/no row)
+ * - "new"        — ONLY words never practiced (no progress row / status new)
+ */
+export type FlashcardMode = "all" | "unmastered" | "new";
+
 export async function getFlashcardBatch(
   supabase: SupabaseClient,
   userId: string,
   level: UserLevel,
   batchSize = 15,
-  category?: string
+  category?: string,
+  mode: FlashcardMode = "all"
 ): Promise<VocabularyWord[]> {
   const levelWords = await getWordsForLevel(supabase, level, category);
-  return pickUnmasteredFirst(supabase, userId, levelWords, batchSize);
+  return pickUnmasteredFirst(supabase, userId, levelWords, batchSize, mode);
 }
 
 /**
  * Shared selection strategy: prefer words the user hasn't mastered yet
- * (status 'new'/'learning', or no progress row at all), fall back to filling
- * with already-mastered words if too few qualify. Result is shuffled.
+ * (status 'new'/'learning', or no progress row at all); in "all" mode fall
+ * back to filling with already-mastered words if too few qualify. Result is
+ * shuffled. In "unmastered"/"new" mode an empty result means "nothing left
+ * to practice" and the caller shows a congratulations state.
  */
 async function pickUnmasteredFirst(
   supabase: SupabaseClient,
   userId: string,
   words: VocabularyWord[],
-  batchSize: number
+  batchSize: number,
+  mode: FlashcardMode = "all"
 ): Promise<VocabularyWord[]> {
   if (words.length === 0) return [];
 
@@ -60,10 +72,18 @@ async function pickUnmasteredFirst(
   const statusByWordId = new Map<string, string>();
   for (const row of progressRows ?? []) statusByWordId.set(row.word_id, row.status);
 
+  const isNew = (w: VocabularyWord) => {
+    const status = statusByWordId.get(w.id);
+    return status === undefined || status === "new";
+  };
   const isQualifying = (w: VocabularyWord) => {
     const status = statusByWordId.get(w.id);
     return status === undefined || status === "new" || status === "learning";
   };
+
+  if (mode === "new") return shuffle(words.filter(isNew)).slice(0, batchSize);
+  if (mode === "unmastered") return shuffle(words.filter(isQualifying)).slice(0, batchSize);
+
   const qualifying = words.filter(isQualifying);
   const rest = words.filter((w) => !isQualifying(w));
 

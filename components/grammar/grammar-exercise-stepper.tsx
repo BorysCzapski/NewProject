@@ -57,18 +57,21 @@ export function GrammarExerciseStepper({
     const nextAnswered = new Set(answeredIds);
     nextAnswered.add(exerciseId);
     setAnsweredIds(nextAnswered);
+  }
 
-    if (nextAnswered.size === exercises.length) {
-      setCompleting(true);
-      setCompleteError(null);
-      try {
-        await completeGrammarTopic();
-        setCompleted(true);
-      } catch {
-        setCompleteError("Nie udało się zapisać ukończenia tematu. Twoje odpowiedzi zostały zapisane.");
-      } finally {
-        setCompleting(false);
-      }
+  // Completing the topic is an EXPLICIT button press after the last answer —
+  // switching to the summary automatically would hide the last exercise's
+  // feedback before the user had a chance to read it.
+  async function finishTopic() {
+    setCompleting(true);
+    setCompleteError(null);
+    try {
+      await completeGrammarTopic();
+      setCompleted(true);
+    } catch {
+      setCompleteError("Nie udało się zapisać ukończenia tematu. Twoje odpowiedzi zostały zapisane.");
+    } finally {
+      setCompleting(false);
     }
   }
 
@@ -120,11 +123,16 @@ export function GrammarExerciseStepper({
         </Button>
       )}
 
-      {currentResult && index === exercises.length - 1 && completing && (
-        <p className="mt-4 flex items-center justify-center gap-1.5 text-sm text-foreground-muted">
-          <Loader2 className="h-4 w-4 animate-spin" />
-          Zapisywanie ukończenia tematu…
-        </p>
+      {currentResult && index === exercises.length - 1 && !completeError && (
+        <Button
+          size="lg"
+          className="mt-4 w-full"
+          onClick={finishTopic}
+          isLoading={completing}
+          disabled={answeredIds.size < exercises.length}
+        >
+          {completing ? "Zapisywanie…" : "Zakończ temat"}
+        </Button>
       )}
     </div>
   );
