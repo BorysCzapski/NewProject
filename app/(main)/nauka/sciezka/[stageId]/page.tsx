@@ -24,7 +24,7 @@ export default async function StageDetailPage({
   const { stageId } = await params;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const { stages } = await getLearningPath(supabase, profile.id, profile.level);
+  const { stages } = await getLearningPath(supabase, profile.id, profile.level, profile.target_language);
 
   const stage = stages.find((s) => s.id === stageId);
   if (!stage) notFound();

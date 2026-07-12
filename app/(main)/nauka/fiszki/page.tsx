@@ -19,7 +19,7 @@ export default async function FiszkiPage({
   const { category } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const words = await getFlashcardBatch(supabase, profile.id, profile.level, 15, category);
+  const words = await getFlashcardBatch(supabase, profile.id, profile.target_language, profile.level, 15, category);
 
   return (
     <div>

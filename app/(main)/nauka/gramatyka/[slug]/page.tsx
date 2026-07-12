@@ -26,6 +26,7 @@ export default async function GrammarTopicPage({
     .from("grammar_topics")
     .select("*")
     .eq("slug", slug)
+    .eq("language", profile.target_language)
     .maybeSingle();
 
   if (!topic) notFound();

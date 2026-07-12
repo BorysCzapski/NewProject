@@ -23,6 +23,7 @@ export async function startListeningExercise(youtubeUrl: string): Promise<never>
 
   const exercise = await createListeningExercise({
     youtubeUrl: trimmed,
+    language: profile.target_language,
     level: profile.level,
     createdBy: profile.id,
   });

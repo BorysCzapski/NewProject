@@ -26,6 +26,7 @@ export default async function GrammarTopicsPage() {
     .from("grammar_topics")
     .select("*")
     .eq("level", profile.level)
+    .eq("language", profile.target_language)
     .order("order_index");
 
   const topicList = (topics ?? []) as GrammarTopic[];

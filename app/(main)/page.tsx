@@ -30,8 +30,13 @@ export default async function DashboardPage() {
   const supabase = await createClient();
 
   const [homework, { stages, currentStageIndex }] = await Promise.all([
-    getHomeworkWithProgress(supabase, profile.id, profile.level),
-    getLearningPath(supabase, profile.id, profile.level),
+    getHomeworkWithProgress(supabase, {
+      userId: profile.id,
+      level: profile.level,
+      language: profile.target_language,
+      role: profile.role,
+    }),
+    getLearningPath(supabase, profile.id, profile.level, profile.target_language),
   ]);
   const activeHomework = homework
     .filter((h) => h.status !== "completed")

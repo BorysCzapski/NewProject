@@ -34,7 +34,11 @@ export default async function WritingHubPage() {
 
   const tasksById = new Map<string, WritingTask>();
   if (taskIds.length > 0) {
-    const { data: tasks } = await supabase.from("writing_tasks").select("*").in("id", taskIds);
+    const { data: tasks } = await supabase
+      .from("writing_tasks")
+      .select("*")
+      .in("id", taskIds)
+      .eq("language", profile.target_language);
     for (const task of (tasks ?? []) as WritingTask[]) tasksById.set(task.id, task);
   }
 

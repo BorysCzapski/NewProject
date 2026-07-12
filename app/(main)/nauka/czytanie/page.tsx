@@ -26,6 +26,7 @@ export default async function ReadingHubPage() {
     .select("*")
     .eq("user_id", profile.id)
     .eq("level", profile.level)
+    .eq("language", profile.target_language)
     .order("created_at", { ascending: false });
 
   const textList = (texts ?? []) as ReadingText[];

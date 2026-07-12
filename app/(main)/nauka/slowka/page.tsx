@@ -20,7 +20,7 @@ export default async function SlowkaPage({
   const { category } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.level, 10, category);
+  const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.target_language, profile.level, 10, category);
 
   return (
     <div>

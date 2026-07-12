@@ -15,7 +15,7 @@ import { PathRoadmap } from "@/components/learning-path/path-roadmap";
 export default async function SciezkaPage() {
   const profile = await requireProfile();
   const supabase = await createClient();
-  const { stages, currentStageIndex } = await getLearningPath(supabase, profile.id, profile.level);
+  const { stages, currentStageIndex } = await getLearningPath(supabase, profile.id, profile.level, profile.target_language);
 
   return (
     <div>

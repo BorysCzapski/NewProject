@@ -22,6 +22,7 @@ export default async function ListeningHubPage() {
     .from("listening_exercises")
     .select("*")
     .eq("level", profile.level)
+    .eq("language", profile.target_language)
     .order("created_at", { ascending: false });
 
   const exerciseList = (exercises ?? []) as ListeningExercise[];
