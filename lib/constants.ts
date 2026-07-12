@@ -4,9 +4,24 @@
 // labels, homework type metadata). Centralised so every module presents the
 // same Polish copy instead of re-typing labels ad hoc.
 // ============================================================================
-import type { HomeworkType, UserLevel, WritingTaskType } from "@/lib/types/database";
+import type { HomeworkType, TargetLanguage, UserLevel, WritingTaskType } from "@/lib/types/database";
 
 export const LEVELS: UserLevel[] = ["A1", "A2", "B1", "B2"];
+
+// Languages the app can teach (always to a Polish speaker). 'en' is the default.
+export const LANGUAGES: TargetLanguage[] = ["en", "es", "ru"];
+
+export const LANGUAGE_LABELS: Record<TargetLanguage, string> = {
+  en: "Angielski",
+  es: "Hiszpański",
+  ru: "Rosyjski",
+};
+
+export const LANGUAGE_FLAGS: Record<TargetLanguage, string> = {
+  en: "🇬🇧",
+  es: "🇪🇸",
+  ru: "🇷🇺",
+};
 
 export const LEVEL_LABELS: Record<UserLevel, string> = {
   A1: "A1 — Początkujący",
@@ -39,6 +54,7 @@ export const HOMEWORK_TYPE_LABELS: Record<HomeworkType, string> = {
   grammar_topic: "Zadanie gramatyczne",
   writing_task: "Zadanie z pisania",
   listening_task: "Zadanie ze słuchania",
+  matching_game: "Gra: łączenie tłumaczeń",
 };
 
 export const MIN_MASTERY_THRESHOLD = 0.8; // 80% correct answers => "mastered"
@@ -54,6 +70,7 @@ export const ACTIVITY_TYPES = {
   WRITING: "writing",
   SONG: "song",
   LISTENING: "listening",
+  MATCHING: "matching",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 

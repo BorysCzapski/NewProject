@@ -10,7 +10,8 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import type { UserLevel } from "@/lib/types/database";
+import { LANGUAGES } from "@/lib/constants";
+import type { TargetLanguage, UserLevel } from "@/lib/types/database";
 
 export interface ActionState {
   error?: string;
@@ -18,19 +19,25 @@ export interface ActionState {
 
 const USERNAME_PATTERN = /^[a-zA-Z0-9_.-]{3,24}$/;
 
+function isLevel(v: string): v is UserLevel {
+  return ["A1", "A2", "B1", "B2"].includes(v);
+}
+function isLanguage(v: string): v is TargetLanguage {
+  return (LANGUAGES as string[]).includes(v);
+}
+
 /** Resolves a login "identifier" (email or username) to an email address. */
-async function resolveEmail(identifier: string): Promise<{ email: string | null; debug?: string }> {
-  if (identifier.includes("@")) return { email: identifier };
+async function resolveEmail(identifier: string): Promise<string | null> {
+  if (identifier.includes("@")) return identifier;
 
   const admin = createAdminClient();
-  const { data, error } = await admin
+  const { data } = await admin
     .from("profiles")
     .select("email")
     .eq("username", identifier)
     .maybeSingle();
 
-  if (error) return { email: null, debug: `lookup error: ${error.message}` };
-  return { email: data?.email ?? null };
+  return data?.email ?? null;
 }
 
 export async function login(_prevState: ActionState, formData: FormData): Promise<ActionState> {
@@ -42,23 +49,16 @@ export async function login(_prevState: ActionState, formData: FormData): Promis
     return { error: "Podaj login/e-mail i hasło." };
   }
 
-  const { email, debug } = await resolveEmail(identifier);
+  const email = await resolveEmail(identifier);
   if (!email) {
-    // TEMPORARY: surfaces the real cause instead of a generic message, to
-    // diagnose a production-only login failure. Revert once resolved.
-    return {
-      error: debug
-        ? `[DEBUG] ${debug}`
-        : "Nie znaleziono konta o podanym loginie lub adresie e-mail.",
-    };
+    return { error: "Nie znaleziono konta o podanym loginie lub adresie e-mail." };
   }
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
-    // TEMPORARY: same as above — show the real Supabase error + status.
-    return { error: `[DEBUG] ${error.message} (status: ${error.status ?? "?"})` };
+    return { error: "Nieprawidłowy login lub hasło." };
   }
 
   redirect(redirectTo || "/");
@@ -128,9 +128,13 @@ export async function completeOnboarding(
   _prevState: ActionState,
   formData: FormData
 ): Promise<ActionState> {
-  const level = String(formData.get("level") ?? "") as UserLevel;
-  if (!["A1", "A2", "B1", "B2"].includes(level)) {
+  const level = String(formData.get("level") ?? "");
+  const language = String(formData.get("language") ?? "en");
+  if (!isLevel(level)) {
     return { error: "Wybierz poziom, aby kontynuować." };
+  }
+  if (!isLanguage(language)) {
+    return { error: "Wybierz język, którego chcesz się uczyć." };
   }
 
   const supabase = await createClient();
@@ -141,17 +145,17 @@ export async function completeOnboarding(
 
   const { error: profileError } = await supabase
     .from("profiles")
-    .update({ level })
+    .update({ level, target_language: language })
     .eq("id", user.id);
   if (profileError) {
-    return { error: "Nie udało się zapisać poziomu. Spróbuj ponownie." };
+    return { error: "Nie udało się zapisać ustawień. Spróbuj ponownie." };
   }
 
   const { error: metaError } = await supabase.auth.updateUser({
     data: { onboarding_completed: true },
   });
   if (metaError) {
-    return { error: "Nie udało się zapisać poziomu. Spróbuj ponownie." };
+    return { error: "Nie udało się zapisać ustawień. Spróbuj ponownie." };
   }
 
   redirect("/");
@@ -161,8 +165,8 @@ export async function updateLevel(
   _prevState: ActionState,
   formData: FormData
 ): Promise<ActionState> {
-  const level = String(formData.get("level") ?? "") as UserLevel;
-  if (!["A1", "A2", "B1", "B2"].includes(level)) {
+  const level = String(formData.get("level") ?? "");
+  if (!isLevel(level)) {
     return { error: "Nieprawidłowy poziom." };
   }
 
@@ -176,5 +180,32 @@ export async function updateLevel(
   if (error) return { error: "Nie udało się zaktualizować poziomu." };
 
   revalidatePath("/profil");
+  return {};
+}
+
+/** Changes which foreign language the user is learning (from the profile page). */
+export async function updateLanguage(
+  _prevState: ActionState,
+  formData: FormData
+): Promise<ActionState> {
+  const language = String(formData.get("language") ?? "");
+  if (!isLanguage(language)) {
+    return { error: "Nieprawidłowy język." };
+  }
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/login");
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({ target_language: language })
+    .eq("id", user.id);
+  if (error) return { error: "Nie udało się zmienić języka." };
+
+  revalidatePath("/profil");
+  revalidatePath("/");
   return {};
 }
