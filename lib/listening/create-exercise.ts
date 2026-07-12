@@ -9,7 +9,8 @@
 // wiped Cyrillic entirely, producing zero gaps for Russian).
 // ============================================================================
 import "server-only";
-import { YoutubeTranscript } from "youtube-transcript";
+import { fetchYoutubeTranscript } from "@/lib/listening/fetch-transcript";
+import { parseManualTranscript } from "@/lib/listening/parse-manual-transcript";
 import { createClient } from "@/lib/supabase/server";
 import { extractYoutubeVideoId } from "@/lib/utils";
 import type {
@@ -78,6 +79,8 @@ export async function createListeningExercise(params: {
   level: UserLevel;
   title?: string;
   createdBy?: string | null;
+  /** Pasted-by-hand transcript — the always-works fallback when YouTube blocks server fetching. */
+  manualTranscript?: string;
 }): Promise<ListeningExercise> {
   const videoId = extractYoutubeVideoId(params.youtubeUrl);
   if (!videoId) {
@@ -97,15 +100,6 @@ export async function createListeningExercise(params: {
       "Nie udało się pobrać transkrypcji tego filmiku (może nie mieć napisów)."
     );
   }
-  if (!raw.length) {
-    throw new Error("Ten filmik nie ma dostępnej transkrypcji.");
-  }
-
-  const transcript: TranscriptSegment[] = raw.map((seg) => ({
-    text: seg.text,
-    start: seg.offset / 1000,
-    duration: seg.duration / 1000,
-  }));
 
   const gaps = selectGaps(transcript, params.language);
   if (gaps.length === 0) {

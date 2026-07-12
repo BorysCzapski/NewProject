@@ -62,12 +62,12 @@ export default async function StageDetailPage({
               </div>
               <HomeworkProgressBar current={stage.masteredWords} target={stage.totalWords || 1} />
               <div className="mt-4 grid grid-cols-2 gap-2">
-                <Link href={`/nauka/fiszki?category=${encodedCategory}`}>
+                <Link href={`/nauka/fiszki?category=${encodedCategory}&stage=${stage.id}`}>
                   <Button variant="primary" className="w-full" size="sm">
                     <Layers className="h-4 w-4" /> Fiszki
                   </Button>
                 </Link>
-                <Link href={`/nauka/slowka?category=${encodedCategory}`}>
+                <Link href={`/nauka/slowka?category=${encodedCategory}&stage=${stage.id}`}>
                   <Button variant="outline" className="w-full" size="sm">
                     <BookOpen className="h-4 w-4" /> Trener znaczeń
                   </Button>

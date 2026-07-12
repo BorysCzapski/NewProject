@@ -31,18 +31,27 @@ export async function getWordsForLevel(
  * all). Falls back to filling with already-mastered words of the same level
  * if too few qualify. Result is shuffled.
  */
+/**
+ * Which words a flashcard session draws from:
+ * - "all"        — prefer unmastered, fill up with mastered if needed (default)
+ * - "unmastered" — ONLY words not yet mastered (status new/learning/no row)
+ * - "new"        — ONLY words never practiced (no progress row / status new)
+ */
+export type FlashcardMode = "all" | "unmastered" | "new";
+
 export async function getFlashcardBatch(
   supabase: SupabaseClient,
   userId: string,
   language: TargetLanguage,
   level: UserLevel,
   batchSize = 15,
-  category?: string
+  category?: string,
+  mode: FlashcardMode = "all"
 ): Promise<VocabularyWord[]> {
   const levelWords = await getWordsForLevel(supabase, language, level, category);
   if (levelWords.length === 0) return [];
 
-  const wordIds = levelWords.map((w) => w.id);
+  const wordIds = words.map((w) => w.id);
   const { data: progressRows } = await supabase
     .from("vocabulary_progress")
     .select("word_id, status")
@@ -52,12 +61,20 @@ export async function getFlashcardBatch(
   const statusByWordId = new Map<string, string>();
   for (const row of progressRows ?? []) statusByWordId.set(row.word_id, row.status);
 
+  const isNew = (w: VocabularyWord) => {
+    const status = statusByWordId.get(w.id);
+    return status === undefined || status === "new";
+  };
   const isQualifying = (w: VocabularyWord) => {
     const status = statusByWordId.get(w.id);
     return status === undefined || status === "new" || status === "learning";
   };
-  const qualifying = levelWords.filter(isQualifying);
-  const rest = levelWords.filter((w) => !isQualifying(w));
+
+  if (mode === "new") return shuffle(words.filter(isNew)).slice(0, batchSize);
+  if (mode === "unmastered") return shuffle(words.filter(isQualifying)).slice(0, batchSize);
+
+  const qualifying = words.filter(isQualifying);
+  const rest = words.filter((w) => !isQualifying(w));
 
   const selected =
     qualifying.length >= batchSize
@@ -77,6 +94,8 @@ export interface MeaningTrainerData {
  * When `category` is set, the quiz batch is limited to that category (e.g.
  * practicing a single ścieżka nauki stage) but distractors are still drawn
  * from the whole level so wrong answers stay plausible even in a small category.
+ * Like flashcards, unmastered words come first — otherwise repeated sessions
+ * keep re-quizzing words the user already knows and stage progress stalls.
  */
 export async function getMeaningTrainerBatch(
   supabase: SupabaseClient,
@@ -90,7 +109,7 @@ export async function getMeaningTrainerBatch(
     category ? getWordsForLevel(supabase, language, level, category) : Promise.resolve(null),
   ]);
   const source = categoryPool ?? levelPool;
-  const batch = shuffle(source).slice(0, batchSize);
+  const batch = await pickUnmasteredFirst(supabase, userId, source, batchSize);
   return { batch, pool: levelPool };
 }
 

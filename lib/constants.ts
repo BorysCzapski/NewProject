@@ -57,7 +57,10 @@ export const HOMEWORK_TYPE_LABELS: Record<HomeworkType, string> = {
   matching_game: "Gra: łączenie tłumaczeń",
 };
 
-export const MIN_MASTERY_THRESHOLD = 0.8; // 80% correct answers => "mastered"
+// A learning-path stage completes when this share of the stage category's
+// words has status "mastered" (a word masters at 2 net-correct reviews —
+// see lib/vocabulary/progress.ts).
+export const MIN_MASTERY_THRESHOLD = 0.8;
 
 // activity_log.activity_type values written by record_activity() — the single
 // vocabulary every module uses so streaks, the calendar and homework progress

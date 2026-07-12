@@ -26,7 +26,13 @@ export function NewTaskForm() {
     setPendingType(taskType ?? "random");
     startTransition(async () => {
       try {
-        await startWritingTask(taskType);
+        // On success the action redirects; on failure it RETURNS the error
+        // (thrown Server Action errors are redacted in production).
+        const result = await startWritingTask(taskType);
+        if (result && !result.ok) {
+          setError(result.error);
+          setPendingType(null);
+        }
       } catch (err) {
         // On success the action redirects, which throws a special Next.js
         // navigation error that must propagate, not be swallowed here.

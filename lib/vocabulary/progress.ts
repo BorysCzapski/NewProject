@@ -29,8 +29,11 @@ export async function upsertVocabularyProgress(
   const correctCount = (existing?.correct_count ?? 0) + (wasCorrect ? 1 : 0);
   const incorrectCount = (existing?.incorrect_count ?? 0) + (wasCorrect ? 0 : 1);
 
+  // A word counts as mastered after 2 net-correct reviews (correct answers
+  // minus mistakes). The previous threshold of 3 made stage progress on the
+  // learning path crawl: ~15 words x 3 net hits before a stage unlocked.
   const status: MasteryStatus =
-    correctCount - incorrectCount >= 3
+    correctCount - incorrectCount >= 2
       ? "mastered"
       : correctCount + incorrectCount > 0
         ? "learning"

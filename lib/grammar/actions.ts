@@ -9,6 +9,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { askAIForJSON } from "@/lib/ai";
 import { ACTIVITY_TYPES } from "@/lib/constants";
+import { actionFailure, type ActionResult } from "@/lib/action-result";
 
 /** Inserts one grammar_progress row for the current user. */
 export async function recordGrammarAttempt(params: {
@@ -31,14 +32,17 @@ export async function recordGrammarAttempt(params: {
   if (error) throw new Error("Nie udało się zapisać odpowiedzi.");
 }
 
-/** Asks the AI to grade a free-form "transformation" answer against the reference. */
+/**
+ * Asks the AI to grade a free-form "transformation" answer against the
+ * reference. Failures are RETURNED, not thrown — see lib/action-result.ts.
+ */
 export async function gradeTransformation(params: {
   prompt: string;
   referenceAnswer: string;
   studentAnswer: string;
-}): Promise<{ isCorrect: boolean; feedback: string }> {
+}): Promise<ActionResult<{ isCorrect: boolean; feedback: string }>> {
   try {
-    return await askAIForJSON<{ isCorrect: boolean; feedback: string }>({
+    const graded = await askAIForJSON<{ isCorrect: boolean; feedback: string }>({
       system:
         "Jesteś nauczycielem angielskiego. Oceniasz, czy przekształcone zdanie ucznia jest " +
         "gramatycznie poprawne i zachowuje sens/strukturę wymaganą przez polecenie, porównując " +
@@ -53,8 +57,10 @@ export async function gradeTransformation(params: {
         feedback: { type: "string", description: "krótka informacja zwrotna po polsku" },
       },
     });
-  } catch {
-    throw new Error("Nie udało się ocenić odpowiedzi. Spróbuj ponownie.");
+    return { ok: true, data: graded };
+  } catch (err) {
+    console.error("[grammar] AI grading failed:", err);
+    return actionFailure("Nie udało się ocenić odpowiedzi przez AI. Spróbuj ponownie za chwilę.");
   }
 }
 

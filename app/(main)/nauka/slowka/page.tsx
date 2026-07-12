@@ -15,9 +15,9 @@ import { MeaningTrainer } from "@/components/vocabulary/meaning-trainer";
 export default async function SlowkaPage({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; stage?: string }>;
 }) {
-  const { category } = await searchParams;
+  const { category, stage } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
   const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.target_language, profile.level, 10, category);
@@ -38,7 +38,7 @@ export default async function SlowkaPage({
             </CardDescription>
           </Card>
         ) : (
-          <MeaningTrainer batch={batch} pool={pool} />
+          <MeaningTrainer batch={batch} pool={pool} backHref={backHref} />
         )}
       </div>
     </div>

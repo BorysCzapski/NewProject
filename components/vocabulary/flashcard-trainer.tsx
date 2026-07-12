@@ -7,7 +7,8 @@
 // and a summary screen once 10 cards have been processed.
 // ============================================================================
 import { useRef, useState } from "react";
-import { RotateCcw, Check, X } from "lucide-react";
+import Link from "next/link";
+import { RotateCcw, Check, X, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +23,14 @@ interface QueueItem {
 
 const SESSION_TARGET = 10;
 
-export function FlashcardTrainer({ words }: { words: VocabularyWord[] }) {
+export function FlashcardTrainer({
+  words,
+  backHref,
+}: {
+  words: VocabularyWord[];
+  /** When the session was started from a learning-path stage, links back to it. */
+  backHref?: string;
+}) {
   const [queue, setQueue] = useState<QueueItem[]>(() =>
     words.map((word, i) => ({ uid: `${word.id}-${i}`, word }))
   );
@@ -85,6 +93,14 @@ export function FlashcardTrainer({ words }: { words: VocabularyWord[] }) {
           <RotateCcw className="h-5 w-5" />
           Nowa sesja
         </Button>
+        {backHref && (
+          <Link href={backHref} className="w-full">
+            <Button size="lg" variant="outline" className="w-full">
+              <ArrowLeft className="h-5 w-5" />
+              Wróć do ścieżki nauki
+            </Button>
+          </Link>
+        )}
       </Card>
     );
   }
