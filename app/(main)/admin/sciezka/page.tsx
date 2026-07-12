@@ -27,7 +27,12 @@ export default async function AdminSciezkaPage() {
 
   const rows = await Promise.all(
     ((profiles ?? []) as Profile[]).map(async (student) => {
-      const { stages, currentStageIndex } = await getLearningPath(supabase, student.id, student.level);
+      const { stages, currentStageIndex } = await getLearningPath(
+        supabase,
+        student.id,
+        student.level,
+        student.target_language
+      );
       const currentStage = stages[currentStageIndex] ?? stages[stages.length - 1] ?? null;
       return { student, stages, currentStageIndex, currentStage };
     })
@@ -58,7 +63,7 @@ export default async function AdminSciezkaPage() {
                     className="mt-3"
                   />
                   <div className="mt-3">
-                    <AssignCatchupButton level={student.level} category={currentStage.category} />
+                    <AssignCatchupButton studentId={student.id} category={currentStage.category} />
                   </div>
                 </>
               ) : (

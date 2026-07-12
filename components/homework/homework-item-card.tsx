@@ -8,6 +8,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { HomeworkProgressBar } from "@/components/homework/homework-progress-bar";
 import { formatDeadline } from "@/components/homework/format-deadline";
+import { homeworkRequirementText } from "@/lib/homework/labels";
 import { HOMEWORK_TYPE_LABELS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import type { HomeworkWithProgress } from "@/lib/homework/progress";
@@ -21,6 +22,8 @@ export function HomeworkItemCard({ homework }: { homework: HomeworkWithProgress 
         <CardTitle>{homework.title}</CardTitle>
         <Badge className="shrink-0">{HOMEWORK_TYPE_LABELS[homework.type]}</Badge>
       </div>
+      {/* Concrete Polish sentence of exactly what to do, so tasks are przejrzyste. */}
+      <p className="text-xs text-foreground-muted">{homeworkRequirementText(homework)}</p>
       {homework.description && <CardDescription>{homework.description}</CardDescription>}
 
       <HomeworkProgressBar current={homework.progress_current} target={homework.progress_target} className="mt-1" />

@@ -11,11 +11,12 @@ import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { askAIForJSON } from "@/lib/ai";
 import { ACTIVITY_TYPES } from "@/lib/constants";
+import { langInfo } from "@/lib/languages";
 import type { ReadingQuestion, UserLevel } from "@/lib/types/database";
 
 const LEVEL_SPECS: Record<UserLevel, string> = {
-  A1: "60-100 słów, wyłącznie czas present simple, bardzo podstawowe słownictwo",
-  A2: "100-150 słów, czas past simple i present simple, słownictwo codzienne",
+  A1: "60-100 słów, tylko podstawowe czasy, bardzo podstawowe słownictwo",
+  A2: "100-150 słów, czasy przeszłe i teraźniejsze, słownictwo codzienne",
   B1: "150-250 słów, szerszy zakres czasów gramatycznych, umiarkowanie zróżnicowane słownictwo",
   B2: "250-400 słów, złożone zdania podrzędne, trochę słownictwa idiomatycznego",
 };
@@ -36,20 +37,21 @@ interface GeneratedArticle {
 /** Generates a new AI reading text + questions for `topic` and redirects to it. */
 export async function generateReadingText(topic: string): Promise<void> {
   const profile = await requireProfile();
+  const info = langInfo(profile.target_language);
 
   let result: GeneratedArticle;
   try {
     result = await askAIForJSON<GeneratedArticle>({
       system:
-        "Jesteś nauczycielem angielskiego tworzącym oryginalne, krótkie artykuły do czytania dla " +
-        "Polaków uczących się angielskiego, ściśle dopasowane do poziomu CEFR ucznia. Artykuł musi " +
-        'być całkowicie oryginalny i napisany po angielsku. Dołącz 3-5 pytań sprawdzających ' +
-        'zrozumienie tekstu: część typu "multiple_choice" (dokładnie 4 opcje, correct_answer musi ' +
-        'być identyczny jak jedna z opcji) i co najmniej jedno pytanie typu "open" (bez opcji i bez ' +
-        "correct_answer — zostanie ocenione później przez człowieka/AI). Pytania i opcje pisz po " +
-        "angielsku, tak jak sam tekst.",
+        `Jesteś nauczycielem języka ${info.pl}ego tworzącym oryginalne, krótkie artykuły do czytania dla ` +
+        `Polaków, ściśle dopasowane do poziomu CEFR ucznia. Artykuł musi być całkowicie oryginalny ` +
+        `i napisany W JĘZYKU ${info.pl.toUpperCase()}M (${info.en}). Dołącz 3-5 pytań sprawdzających ` +
+        `zrozumienie tekstu: część typu "multiple_choice" (dokładnie 4 opcje, correct_answer musi ` +
+        `być identyczny jak jedna z opcji) i co najmniej jedno pytanie typu "open" (bez opcji i bez ` +
+        `correct_answer — zostanie ocenione później przez AI). Pytania i opcje pisz w języku ${info.pl}m, ` +
+        `tak jak sam tekst.`,
       prompt:
-        `Napisz krótki artykuł po angielsku na temat: "${topic}", dla poziomu ${profile.level} ` +
+        `Napisz krótki artykuł w języku ${info.pl}m na temat: "${topic}", dla poziomu ${profile.level} ` +
         `(CEFR): ${LEVEL_SPECS[profile.level]}. Dodaj tytuł oraz 3-5 pytań sprawdzających ` +
         `zrozumienie tekstu.`,
       schema: {
@@ -80,6 +82,7 @@ export async function generateReadingText(topic: string): Promise<void> {
     .from("reading_texts")
     .insert({
       user_id: profile.id,
+      language: profile.target_language,
       level: profile.level,
       topic,
       title: result.title,
@@ -195,7 +198,7 @@ export async function submitReadingAttempt(
       openResults = await askAIForJSON<Record<string, { isCorrect: boolean; feedback: string }>>({
         system:
           "Oceniasz odpowiedzi ucznia na pytania otwarte dotyczące przeczytanego przez niego " +
-          "angielskiego tekstu. Odpowiadasz PO POLSKU, krótko i konkretnie wskazując błędy lub " +
+          "obcojęzycznego tekstu. Odpowiadasz PO POLSKU, krótko i konkretnie wskazując błędy lub " +
           "potwierdzając poprawność.",
         prompt:
           `Tekst przeczytany przez ucznia:\n"""\n${text.content}\n"""\n\n` +

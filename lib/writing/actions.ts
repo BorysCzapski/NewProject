@@ -12,7 +12,7 @@ import { askAI, askAIForJSON } from "@/lib/ai";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { ACTIVITY_TYPES } from "@/lib/constants";
-import { actionFailure, type ActionFailure, type ActionResult } from "@/lib/action-result";
+import { langInfo } from "@/lib/languages";
 import type { WritingSubmission, WritingTaskType } from "@/lib/types/database";
 
 const ALL_TASK_TYPES: WritingTaskType[] = [
@@ -30,17 +30,12 @@ export async function startWritingTask(taskType?: WritingTaskType): Promise<Acti
   const profile = await requireProfile();
   const type = taskType ?? ALL_TASK_TYPES[Math.floor(Math.random() * ALL_TASK_TYPES.length)];
 
-  let taskId: string;
-  try {
-    const task = await createWritingTask({ level: profile.level, taskType: type });
-    taskId = task.id;
-  } catch (err) {
-    console.error("[writing] createWritingTask failed:", err);
-    return actionFailure(
-      "Nie udało się przygotować zadania (błąd AI). Spróbuj ponownie za chwilę."
-    );
-  }
-  redirect(`/nauka/pisanie/${taskId}`);
+  const task = await createWritingTask({
+    language: profile.target_language,
+    level: profile.level,
+    taskType: type,
+  });
+  redirect(`/nauka/pisanie/${task.id}`);
 }
 
 interface GradedWriting {
@@ -71,20 +66,24 @@ export async function submitWriting(
   const trimmed = content.trim();
   if (!trimmed) return actionFailure("Wpisz swoją odpowiedź przed wysłaniem.");
 
+  const info = langInfo(task.language);
   let graded: GradedWriting;
   try {
     graded = await askAIForJSON<GradedWriting>({
       system:
-        "Jesteś nauczycielem angielskiego oceniającym krótką pracę pisemną ucznia (nie esej). " +
-        "Odpowiadasz PO POLSKU. Sprawdzasz poprawność gramatyczną, dobór słownictwa i czy treść " +
-        "pasuje do polecenia/kontekstu.",
+        `Jesteś nauczycielem języka ${info.pl}ego oceniającym krótką pracę pisemną ucznia (nie esej). ` +
+        `Odpowiadasz PO POLSKU. Sprawdzasz poprawność gramatyczną, dobór słownictwa i czy treść ` +
+        `pasuje do polecenia/kontekstu.`,
       prompt:
         `Poziom ucznia: ${task.level}.\n` +
         `Polecenie zadania: "${task.scenario}"\n` +
-        `Tekst ucznia:\n"""\n${trimmed}\n"""`,
+        `Tekst ucznia (w języku ${info.pl}m):\n"""\n${trimmed}\n"""`,
       schema: {
         feedback: { type: "string", description: "konkretne uwagi po polsku" },
-        correctedVersion: { type: "string", description: "poprawiona wersja tekstu ucznia, po angielsku" },
+        correctedVersion: {
+          type: "string",
+          description: `poprawiona wersja tekstu ucznia, w języku ${info.pl}m (${info.en})`,
+        },
         followupQuestion: {
           type: "string",
           description: "krótkie pytanie pogłębiające po polsku, żeby kontynuować mini-dialog",

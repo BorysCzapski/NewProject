@@ -2,11 +2,14 @@
 
 // ============================================================================
 // lib/songs/actions.ts
-// Server Actions backing the songs module: starting a new song (creating it
-// via lib/songs/create-song.ts and redirecting to it), checking a line-level
-// or word-level Polish translation with AI, and persisting the result
-// into song_translation_attempts. Also records the "song" activity once a
-// full practice pass through a song is finished.
+// Server Actions backing the songs module. Two sensible activities:
+//  - LINE mode: translate a whole line to Polish; AI grades it (accepting free
+//    but meaning-preserving translations) and the attempt is persisted so it
+//    counts toward song_translation homework.
+//  - HINT mode ("słówka"): tap any word to get its contextual meaning. This
+//    replaced the old "translate each word" grading, which was linguistically
+//    nonsensical for songs (word order, idioms) — now it's a helpful glossary,
+//    informational only, nothing is graded or stored.
 // ============================================================================
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
@@ -14,12 +17,14 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { askAIForJSON } from "@/lib/ai";
 import { createSong } from "@/lib/songs/create-song";
 import { ACTIVITY_TYPES } from "@/lib/constants";
-import type { Song } from "@/lib/types/database";
+import { langInfo } from "@/lib/languages";
+import type { Song, TargetLanguage } from "@/lib/types/database";
 
 /** Creates a new song from pasted lyrics and redirects to its practice page. */
 export async function startSong(title: string, artist: string, lyrics: string): Promise<never> {
   const profile = await requireProfile();
   const song: Song = await createSong({
+    language: profile.target_language,
     title,
     artist: artist.trim() || undefined,
     lyrics,
@@ -34,29 +39,13 @@ export interface TranslationCheckResult {
   suggestion: string;
 }
 
-const CHECK_SCHEMA = {
-  isCorrect: { type: "boolean" },
-  feedback: { type: "string" },
-  suggestion: {
-    type: "string",
-    description: "lepsza wersja tłumaczenia, jeśli potrzebna, inaczej pusty string",
-  },
-};
-
-async function runCheck(system: string, prompt: string): Promise<TranslationCheckResult> {
-  try {
-    return await askAIForJSON<TranslationCheckResult>({ system, prompt, schema: CHECK_SCHEMA });
-  } catch {
-    throw new Error("Nie udało się sprawdzić tłumaczenia przez AI. Spróbuj ponownie.");
-  }
-}
-
 /** Checks a whole-line Polish translation of `originalLine` and records the attempt. */
 export async function checkLineTranslation(
   songId: string,
   lineIndex: number,
   originalLine: string,
-  userTranslation: string
+  userTranslation: string,
+  language: TargetLanguage
 ): Promise<TranslationCheckResult> {
   const profile = await requireProfile();
   const supabase = await createClient();
@@ -64,13 +53,28 @@ export async function checkLineTranslation(
   const trimmed = userTranslation.trim();
   if (!trimmed) throw new Error("Wpisz tłumaczenie przed wysłaniem.");
 
-  const result = await runCheck(
-    "Jesteś nauczycielem sprawdzającym tłumaczenie linijki tekstu piosenki z angielskiego na polski. " +
-      "Akceptuj sensowne, poprawne tłumaczenia — nie tylko dosłowne, poetyckie/swobodne też mogą być " +
-      "poprawne jeśli oddają sens. Odpowiadasz PO POLSKU, krótko. Jeśli tłumaczenie jest błędne lub " +
-      "można je poprawić, zaproponuj lepszą wersję.",
-    `Oryginalna linijka (angielski): "${originalLine}"\nTłumaczenie ucznia (polski): "${trimmed}"`
-  );
+  const info = langInfo(language);
+  let result: TranslationCheckResult;
+  try {
+    result = await askAIForJSON<TranslationCheckResult>({
+      system:
+        `Jesteś nauczycielem sprawdzającym tłumaczenie linijki tekstu piosenki z języka ${info.pl}ego ` +
+        `na polski. Akceptuj sensowne, poprawne tłumaczenia — nie tylko dosłowne, poetyckie/swobodne ` +
+        `też mogą być poprawne jeśli oddają sens. Odpowiadasz PO POLSKU, krótko. Jeśli tłumaczenie ` +
+        `jest błędne lub można je poprawić, zaproponuj lepszą wersję.`,
+      prompt: `Oryginalna linijka (${info.pl}): "${originalLine}"\nTłumaczenie ucznia (polski): "${trimmed}"`,
+      schema: {
+        isCorrect: { type: "boolean" },
+        feedback: { type: "string" },
+        suggestion: {
+          type: "string",
+          description: "lepsza wersja tłumaczenia, jeśli potrzebna, inaczej pusty string",
+        },
+      },
+    });
+  } catch {
+    throw new Error("Nie udało się sprawdzić tłumaczenia przez AI. Spróbuj ponownie.");
+  }
 
   const { error } = await supabase.from("song_translation_attempts").insert({
     user_id: profile.id,
@@ -85,47 +89,40 @@ export async function checkLineTranslation(
   return result;
 }
 
+export interface WordMeaning {
+  meaning: string;
+  note: string;
+}
+
 /**
- * Checks a single word's Polish translation, in the context of the line it
- * came from. `allOtherWordsCorrect` reflects the caller's session-local
- * tracking of every other word in that line already being confirmed correct
- * — the persisted row is only marked is_correct once the whole line is done
- * word-by-word, so it contributes to line-level ("song_translation" homework)
- * progress the same way a correct line-mode attempt does.
+ * Explains one word's meaning IN CONTEXT (glossary hint) — no grading, nothing
+ * stored. This is the sensible replacement for word-by-word translation.
  */
-export async function checkWordTranslation(
-  songId: string,
-  lineIndex: number,
+export async function explainWord(
   line: string,
   word: string,
-  userTranslation: string,
-  allOtherWordsCorrect: boolean
-): Promise<TranslationCheckResult> {
-  const profile = await requireProfile();
-  const supabase = await createClient();
+  language: TargetLanguage
+): Promise<WordMeaning> {
+  await requireProfile();
+  const info = langInfo(language);
 
-  const trimmed = userTranslation.trim();
-  if (!trimmed) throw new Error("Wpisz tłumaczenie słowa przed wysłaniem.");
-
-  const result = await runCheck(
-    "Jesteś nauczycielem sprawdzającym tłumaczenie POJEDYNCZEGO SŁOWA z angielskiego na polski, w " +
-      "kontekście linijki tekstu piosenki, z której pochodzi — weź pod uwagę, że znaczenie słowa może " +
-      "zależeć od kontekstu. Akceptuj sensowne, poprawne tłumaczenia. Odpowiadasz PO POLSKU, krótko. " +
-      "Jeśli tłumaczenie jest błędne lub można je poprawić, zaproponuj lepszą wersję.",
-    `Linijka (kontekst): "${line}"\nSłowo do przetłumaczenia: "${word}"\nTłumaczenie ucznia (polski): "${trimmed}"`
-  );
-
-  const { error } = await supabase.from("song_translation_attempts").insert({
-    user_id: profile.id,
-    song_id: songId,
-    line_index: lineIndex,
-    user_translation: trimmed,
-    is_correct: result.isCorrect && allOtherWordsCorrect,
-    ai_feedback: result.feedback,
-  });
-  if (error) throw new Error("Nie udało się zapisać odpowiedzi.");
-
-  return result;
+  try {
+    return await askAIForJSON<WordMeaning>({
+      system:
+        `Jesteś słownikiem kontekstowym dla ucznia języka ${info.pl}ego. Wyjaśniasz znaczenie ` +
+        `jednego słowa w kontekście linijki piosenki. Odpowiadasz PO POLSKU, bardzo krótko.`,
+      prompt: `Linijka (${info.pl}): "${line}"\nSłowo do wyjaśnienia: "${word}"`,
+      schema: {
+        meaning: { type: "string", description: "polskie znaczenie słowa w tym kontekście (1-4 słowa)" },
+        note: {
+          type: "string",
+          description: "krótka uwaga o użyciu/kontekście, jeśli warto, inaczej pusty string",
+        },
+      },
+    });
+  } catch {
+    throw new Error("Nie udało się pobrać znaczenia słowa. Spróbuj ponownie.");
+  }
 }
 
 /** Marks a fully completed practice pass through a song (every line correct at least once). */

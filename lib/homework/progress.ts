@@ -6,10 +6,20 @@
 // list is rendered (user view) or the admin "who completed what" view is
 // opened; results are upserted into homework_progress so admins can query
 // completion status directly too.
+//
+// A student sees homework that is EITHER assigned to their whole level in
+// their language (target_user_id null) OR assigned to them personally
+// (target_user_id = their id). Admins receive no homework at all.
 // ============================================================================
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { Homework, HomeworkStatus } from "@/lib/types/database";
+import type {
+  Homework,
+  HomeworkStatus,
+  TargetLanguage,
+  UserLevel,
+  UserRole,
+} from "@/lib/types/database";
 
 export interface HomeworkWithProgress extends Homework {
   status: HomeworkStatus;
@@ -40,6 +50,10 @@ interface SongTranslationConfig {
 interface ListeningTaskConfig {
   exercise_id: string;
 }
+interface MatchingGameConfig {
+  count: number;
+  category?: string;
+}
 
 async function computeProgress(
   supabase: SupabaseClient,
@@ -51,15 +65,21 @@ async function computeProgress(
   switch (hw.type) {
     case "vocabulary_mastery": {
       const cfg = hw.config as unknown as VocabularyMasteryConfig;
-      let wordsQuery = supabase.from("vocabulary_words").select("id", { count: "exact", head: true });
+      // Scope by the homework's language, otherwise a category name shared
+      // across languages (e.g. "jedzenie") would double-count.
+      let wordsQuery = supabase
+        .from("vocabulary_words")
+        .select("id", { count: "exact", head: true })
+        .eq("language", hw.language);
       if (cfg.category) wordsQuery = wordsQuery.eq("category", cfg.category);
       const { count: totalWords } = await wordsQuery;
 
       let masteredQuery = supabase
         .from("vocabulary_progress")
-        .select("id, vocabulary_words!inner(category)", { count: "exact", head: true })
+        .select("id, vocabulary_words!inner(category, language)", { count: "exact", head: true })
         .eq("user_id", userId)
-        .eq("status", "mastered");
+        .eq("status", "mastered")
+        .eq("vocabulary_words.language", hw.language);
       if (cfg.category) masteredQuery = masteredQuery.eq("vocabulary_words.category", cfg.category);
       const { count: mastered } = await masteredQuery;
 
@@ -162,6 +182,20 @@ async function computeProgress(
       return { current: Math.min(count ?? 0, 1), target: 1 };
     }
 
+    case "matching_game": {
+      const cfg = hw.config as unknown as MatchingGameConfig;
+      const target = cfg.count && cfg.count > 0 ? cfg.count : 1;
+      let query = supabase
+        .from("matching_attempts")
+        .select("id", { count: "exact", head: true })
+        .eq("user_id", userId)
+        .eq("language", hw.language)
+        .gte("completed_at", since);
+      if (cfg.category) query = query.eq("category", cfg.category);
+      const { count } = await query;
+      return { current: Math.min(count ?? 0, target), target };
+    }
+
     default:
       return { current: 0, target: 1 };
   }
@@ -174,23 +208,49 @@ function statusFor(current: number, target: number, deadline: string | null): Ho
   return "todo";
 }
 
+export interface HomeworkAudience {
+  userId: string;
+  level: UserLevel;
+  language: TargetLanguage;
+  role: UserRole;
+}
+
 /**
- * Loads all homework visible to `level`, computes each item's live progress
- * for `userId`, and upserts the result into homework_progress so admins can
- * read completion status without recomputing it themselves.
+ * Loads the homework visible to this student — level-wide items in their
+ * language plus items assigned to them personally — computes each item's live
+ * progress, and upserts the result into homework_progress. Admins get an empty
+ * list (they assign homework, they don't receive it).
  */
 export async function getHomeworkWithProgress(
   supabase: SupabaseClient,
-  userId: string,
-  level: string
+  audience: HomeworkAudience
 ): Promise<HomeworkWithProgress[]> {
-  const { data: homeworkList } = await supabase
-    .from("homework")
-    .select("*")
-    .contains("levels", [level])
-    .order("deadline", { ascending: true, nullsFirst: false });
+  if (audience.role === "admin") return [];
 
-  if (!homeworkList || homeworkList.length === 0) return [];
+  const { userId, level, language } = audience;
+
+  // Two sources: level-wide (in this language, no personal target) + personal.
+  const [{ data: levelWide }, { data: personal }] = await Promise.all([
+    supabase
+      .from("homework")
+      .select("*")
+      .eq("language", language)
+      .is("target_user_id", null)
+      .contains("levels", [level]),
+    supabase.from("homework").select("*").eq("target_user_id", userId).eq("language", language),
+  ]);
+
+  const byId = new Map<string, Homework>();
+  for (const hw of [...(levelWide ?? []), ...(personal ?? [])] as Homework[]) byId.set(hw.id, hw);
+  const homeworkList = [...byId.values()].sort((a, b) => {
+    // deadline ascending, nulls last, then newest first
+    if (a.deadline && b.deadline) return a.deadline.localeCompare(b.deadline);
+    if (a.deadline) return -1;
+    if (b.deadline) return 1;
+    return b.created_at.localeCompare(a.created_at);
+  });
+
+  if (homeworkList.length === 0) return [];
 
   // Needed so a re-render doesn't push completed_at forward to "now" every
   // time — only the actual transition into "completed" should stamp it.
@@ -200,16 +260,14 @@ export async function getHomeworkWithProgress(
     .eq("user_id", userId)
     .in(
       "homework_id",
-      (homeworkList as Homework[]).map((hw) => hw.id)
+      homeworkList.map((hw) => hw.id)
     );
   const existingCompletedAt = new Map(
     (existingProgress ?? []).map((row) => [row.homework_id, row.completed_at as string | null])
   );
 
-  // Each homework's progress is independent (same userId, different row) —
-  // compute them concurrently instead of one round-trip at a time.
   const computed = await Promise.all(
-    (homeworkList as Homework[]).map(async (hw) => {
+    homeworkList.map(async (hw) => {
       const { current, target } = await computeProgress(supabase, userId, hw);
       const status = statusFor(current, target, hw.deadline);
       return { hw, status, current, target };

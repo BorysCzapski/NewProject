@@ -14,11 +14,32 @@ import { askAIForJSON } from "@/lib/ai";
 import { createSong } from "@/lib/songs/create-song";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { createListeningExercise } from "@/lib/listening/create-exercise";
-import type { HomeworkType, TrainingModule, UserLevel, WritingTaskType } from "@/lib/types/database";
+import { langInfo } from "@/lib/languages";
+import { LANGUAGES } from "@/lib/constants";
+import type {
+  HomeworkType,
+  Profile,
+  TargetLanguage,
+  TrainingModule,
+  UserLevel,
+  WritingTaskType,
+} from "@/lib/types/database";
 
 export interface ActionState {
   error?: string;
 }
+
+// Types the AI is allowed to suggest — excludes ones needing an admin-provided
+// resource (song lyrics / youtube link) which the AI can't invent.
+const SUGGESTABLE_TYPES: HomeworkType[] = [
+  "vocabulary_mastery",
+  "training_count",
+  "reading_count",
+  "flashcards_count",
+  "grammar_topic",
+  "writing_task",
+  "matching_game",
+];
 
 const HOMEWORK_TYPES: HomeworkType[] = [
   "song_translation",
@@ -29,7 +50,12 @@ const HOMEWORK_TYPES: HomeworkType[] = [
   "grammar_topic",
   "writing_task",
   "listening_task",
+  "matching_game",
 ];
+
+function isLanguage(v: string): v is TargetLanguage {
+  return (LANGUAGES as string[]).includes(v);
+}
 
 export interface HomeworkSuggestion {
   title: string;
@@ -38,25 +64,30 @@ export interface HomeworkSuggestion {
   reasoning: string;
 }
 
-/** AI-generated homework idea for a level, used to prefill the creator form's title/description/type. */
-export async function suggestHomework(level: UserLevel): Promise<HomeworkSuggestion> {
+/** AI-generated homework idea for a language+level, used to prefill the creator form. */
+export async function suggestHomework(
+  language: TargetLanguage,
+  level: UserLevel
+): Promise<HomeworkSuggestion> {
   await requireAdmin();
+  const info = langInfo(language);
 
   return askAIForJSON<HomeworkSuggestion>({
     system:
-      "Jesteś nauczycielem angielskiego proponującym ciekawe zadanie domowe dla uczniów. " +
-      "Odpowiadasz PO POLSKU.",
+      `Jesteś nauczycielem języka ${info.pl}ego proponującym KONKRETNE, przejrzyste zadanie domowe. ` +
+      "Odpowiadasz PO POLSKU. Zadanie musi być jasne — uczeń po przeczytaniu opisu ma dokładnie " +
+      "wiedzieć co zrobić.",
     prompt:
-      `Zaproponuj jedno zadanie domowe dla uczniów na poziomie ${level} (CEFR). ` +
-      `Wybierz jeden typ zadania z tej listy (podaj dokładnie jedną z tych wartości w polu "type"): ` +
-      `${HOMEWORK_TYPES.join(", ")}. ` +
-      "Podaj krótki, konkretny tytuł (po polsku), opis 2-3 zdania wyjaśniający uczniowi po polsku " +
-      "co ma zrobić, oraz krótkie uzasadnienie wyboru tego typu zadania.",
+      `Zaproponuj jedno zadanie domowe dla uczniów uczących się języka ${info.pl}ego na poziomie ` +
+      `${level} (CEFR). Wybierz jeden typ z listy (dokładnie jedna wartość w polu "type"): ` +
+      `${SUGGESTABLE_TYPES.join(", ")}. ` +
+      "Tytuł: krótki i konkretny. Opis: 1-2 zdania mówiące uczniowi wprost co ma zrobić i po co " +
+      "(bez ogólników typu 'ćwicz więcej'). Uzasadnienie: dlaczego akurat to zadanie.",
     schema: {
-      title: { type: "string", description: "Krótki tytuł zadania, po polsku." },
-      description: { type: "string", description: "Opis zadania dla ucznia, po polsku." },
-      type: { type: "string", enum: HOMEWORK_TYPES, description: "Jeden z dozwolonych typów zadania." },
-      reasoning: { type: "string", description: "Krótkie uzasadnienie wyboru typu, po polsku." },
+      title: { type: "string", description: "Krótki, konkretny tytuł, po polsku." },
+      description: { type: "string", description: "Jasny opis zadania dla ucznia, po polsku." },
+      type: { type: "string", enum: SUGGESTABLE_TYPES, description: "Jeden z dozwolonych typów." },
+      reasoning: { type: "string", description: "Krótkie uzasadnienie, po polsku." },
     },
   });
 }
@@ -79,11 +110,34 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
   const description = String(formData.get("description") ?? "").trim();
   const type = String(formData.get("type") ?? "") as HomeworkType;
   const deadlineRaw = String(formData.get("deadline") ?? "").trim();
-  const levels = parseLevels(formData);
+  const targetUserId = String(formData.get("target_user_id") ?? "").trim();
+  let language = String(formData.get("language") ?? "en");
+  let levels = parseLevels(formData);
 
   if (!title) return { error: "Podaj tytuł pracy domowej." };
-  if (levels.length === 0) return { error: "Wybierz co najmniej jeden poziom." };
   if (!HOMEWORK_TYPES.includes(type)) return { error: "Wybierz typ pracy domowej." };
+  if (!isLanguage(language)) return { error: "Wybierz język zadania." };
+
+  // If assigned to one specific student, derive language + level from that
+  // student so progress computation matches exactly what they study.
+  let resolvedTargetUserId: string | null = null;
+  if (targetUserId) {
+    const { data: student } = await supabase
+      .from("profiles")
+      .select("id, level, target_language, role")
+      .eq("id", targetUserId)
+      .maybeSingle();
+    if (!student || (student as Profile).role !== "user") {
+      return { error: "Wybrany uczeń nie istnieje." };
+    }
+    resolvedTargetUserId = (student as Profile).id;
+    language = (student as Profile).target_language;
+    levels = [(student as Profile).level];
+  }
+
+  if (levels.length === 0) return { error: "Wybierz co najmniej jeden poziom (lub konkretnego ucznia)." };
+
+  const languageTyped = language as TargetLanguage;
 
   // deadlineRaw is already a UTC ISO string computed client-side (from the
   // admin's local timezone) by homework-create-form.tsx — do NOT re-parse a
@@ -101,7 +155,13 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
       const lyrics = String(formData.get("song_lyrics") ?? "").trim();
       if (!songTitle || !lyrics) return { error: "Podaj tytuł i tekst piosenki." };
       try {
-        const song = await createSong({ title: songTitle, artist: artist || undefined, lyrics, createdBy: profile.id });
+        const song = await createSong({
+          language: languageTyped,
+          title: songTitle,
+          artist: artist || undefined,
+          lyrics,
+          createdBy: profile.id,
+        });
         config = { song_id: song.id };
       } catch (err) {
         return { error: err instanceof Error ? err.message : "Nie udało się utworzyć piosenki." };
@@ -163,6 +223,7 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
         if (!taskType) return { error: "Wybierz rodzaj zadania pisemnego." };
         try {
           const task = await createWritingTask({
+            language: languageTyped,
             level: primaryLevel,
             taskType,
             scenario: scenario || undefined,
@@ -184,11 +245,24 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
       const youtubeUrl = String(formData.get("lt_youtube_url") ?? "").trim();
       if (!youtubeUrl) return { error: "Podaj link do filmiku YouTube." };
       try {
-        const exercise = await createListeningExercise({ youtubeUrl, level: primaryLevel, createdBy: profile.id });
+        const exercise = await createListeningExercise({
+          youtubeUrl,
+          language: languageTyped,
+          level: primaryLevel,
+          createdBy: profile.id,
+        });
         config = { exercise_id: exercise.id };
       } catch (err) {
         return { error: err instanceof Error ? err.message : "Nie udało się utworzyć ćwiczenia ze słuchania." };
       }
+      break;
+    }
+
+    case "matching_game": {
+      const count = Number(formData.get("mg_count") ?? 0);
+      const category = String(formData.get("mg_category") ?? "").trim();
+      if (!Number.isFinite(count) || count < 1) return { error: "Podaj liczbę gier większą od zera." };
+      config = { count, ...(category ? { category } : {}) };
       break;
     }
 
@@ -204,6 +278,8 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
       type,
       config,
       levels,
+      language: languageTyped,
+      target_user_id: resolvedTargetUserId,
       deadline,
       created_by: profile.id,
     })
@@ -215,4 +291,44 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
   }
 
   redirect(`/admin/prace-domowe/${homework.id}`);
+}
+
+/**
+ * Edits an existing homework's wording (title/description/deadline). Type and
+ * config are intentionally NOT editable — they own backing resources (a song,
+ * a task, a listening exercise) and student progress, so changing them mid-
+ * flight would corrupt tracking. Admins fix unclear homework by rewording it.
+ */
+export async function updateHomeworkAction(_prevState: ActionState, formData: FormData): Promise<ActionState> {
+  await requireAdmin();
+  const supabase = await createClient();
+
+  const id = String(formData.get("id") ?? "").trim();
+  const title = String(formData.get("title") ?? "").trim();
+  const description = String(formData.get("description") ?? "").trim();
+  const deadlineRaw = String(formData.get("deadline") ?? "").trim();
+
+  if (!id) return { error: "Brak identyfikatora pracy domowej." };
+  if (!title) return { error: "Podaj tytuł pracy domowej." };
+
+  const { error } = await supabase
+    .from("homework")
+    .update({
+      title,
+      description: description || null,
+      deadline: deadlineRaw || null,
+    })
+    .eq("id", id);
+
+  if (error) return { error: "Nie udało się zapisać zmian." };
+
+  redirect(`/admin/prace-domowe/${id}`);
+}
+
+/** Deletes a homework (and its progress rows cascade). */
+export async function deleteHomeworkAction(id: string): Promise<void> {
+  await requireAdmin();
+  const supabase = await createClient();
+  await supabase.from("homework").delete().eq("id", id);
+  redirect("/admin");
 }

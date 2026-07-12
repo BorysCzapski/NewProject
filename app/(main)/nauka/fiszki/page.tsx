@@ -49,19 +49,7 @@ export default async function FiszkiPage({
   const mode = parseMode(rawMode);
   const profile = await requireProfile();
   const supabase = await createClient();
-  const words = await getFlashcardBatch(supabase, profile.id, profile.level, 15, category, mode);
-
-  const backHref = stage ? `/nauka/sciezka/${encodeURIComponent(stage)}` : undefined;
-  const hrefFor = (m: FlashcardMode) => {
-    const params = new URLSearchParams();
-    if (category) params.set("category", category);
-    if (stage) params.set("stage", stage);
-    if (m !== "all") params.set("mode", m);
-    const query = params.toString();
-    return `/nauka/fiszki${query ? `?${query}` : ""}`;
-  };
-
-  const empty = EMPTY_MESSAGES[mode];
+  const words = await getFlashcardBatch(supabase, profile.id, profile.target_language, profile.level, 15, category);
 
   return (
     <div>

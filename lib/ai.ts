@@ -9,33 +9,21 @@
 // ============================================================================
 import "server-only";
 import Groq from "groq-sdk";
-import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions";
+import { cleanEnv } from "@/lib/env";
 
-const CONFIGURED_MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
-
-// Groq periodically decommissions models. If the configured model stops
-// existing, we fall through this list instead of hard-failing every AI
-// feature in the app. All entries support tool calling (required by
-// askAIForJSON's pinned tool choice).
-const FALLBACK_MODELS = [
-  "llama-3.3-70b-versatile",
-  "openai/gpt-oss-120b",
-  "llama-3.1-8b-instant",
-];
-
-// Model that most recently succeeded — start with the configured one.
-let activeModel = CONFIGURED_MODEL;
+const MODEL = cleanEnv(process.env.GROQ_MODEL) || "llama-3.3-70b-versatile";
 
 let client: Groq | null = null;
 
 function getClient(): Groq {
   if (!client) {
-    if (!process.env.GROQ_API_KEY) {
+    const apiKey = cleanEnv(process.env.GROQ_API_KEY);
+    if (!apiKey || apiKey === "your-groq-api-key") {
       throw new Error(
         "GROQ_API_KEY is not set — AI features are unavailable. Add it to .env.local (see .env.example)."
       );
     }
-    client = new Groq({ apiKey: process.env.GROQ_API_KEY });
+    client = new Groq({ apiKey });
   }
   return client;
 }

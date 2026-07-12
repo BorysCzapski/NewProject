@@ -4,7 +4,7 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2 } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -28,6 +28,12 @@ const MODULES = [
     label: "Trener znaczeń",
     description: "Quiz EN↔PL i wpisywanie tłumaczeń",
     icon: BookOpen,
+  },
+  {
+    href: "/nauka/laczenie",
+    label: "Łączenie tłumaczeń",
+    description: "Połącz słowa z ich tłumaczeniami — gra na dopasowanie",
+    icon: Link2,
   },
   {
     href: "/nauka/gramatyka",

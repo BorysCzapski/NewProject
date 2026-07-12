@@ -31,24 +31,12 @@ export async function startListeningExercise(
   const trimmed = youtubeUrl.trim();
   if (!trimmed) return actionFailure("Wklej link do filmiku YouTube.");
 
-  let exercise: ListeningExercise;
-  try {
-    exercise = await createListeningExercise({
-      youtubeUrl: trimmed,
-      level: profile.level,
-      createdBy: profile.id,
-      manualTranscript,
-    });
-  } catch (err) {
-    console.error("[listening] createListeningExercise failed:", err);
-    if (err instanceof TranscriptError) {
-      // Signals the form to offer the paste-it-yourself fallback.
-      return { ...actionFailure(err.userMessage), transcriptUnavailable: true };
-    }
-    return actionFailure(
-      err instanceof Error ? err.message : "Nie udało się utworzyć ćwiczenia. Spróbuj ponownie."
-    );
-  }
+  const exercise = await createListeningExercise({
+    youtubeUrl: trimmed,
+    language: profile.target_language,
+    level: profile.level,
+    createdBy: profile.id,
+  });
 
   redirect(`/nauka/sluchanie/${exercise.id}`);
 }

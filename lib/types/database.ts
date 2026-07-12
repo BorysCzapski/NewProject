@@ -6,6 +6,8 @@
 
 export type UserLevel = "A1" | "A2" | "B1" | "B2";
 export type UserRole = "user" | "admin";
+/** Which foreign language the user is learning (always taught to a Polish speaker). */
+export type TargetLanguage = "en" | "es" | "ru";
 export type MasteryStatus = "new" | "learning" | "mastered";
 export type HomeworkType =
   | "song_translation"
@@ -15,7 +17,8 @@ export type HomeworkType =
   | "flashcards_count"
   | "grammar_topic"
   | "writing_task"
-  | "listening_task";
+  | "listening_task"
+  | "matching_game";
 export type HomeworkStatus = "todo" | "in_progress" | "completed" | "overdue";
 export type TrainingModule = "vocabulary" | "grammar" | "writing";
 export type GrammarExerciseType = "gap_fill" | "multiple_choice" | "transformation";
@@ -30,6 +33,7 @@ export interface Profile {
   username: string;
   email: string;
   level: UserLevel;
+  target_language: TargetLanguage;
   role: UserRole;
   current_streak: number;
   longest_streak: number;
@@ -40,8 +44,12 @@ export interface Profile {
 
 export interface VocabularyWord {
   id: string;
+  language: TargetLanguage;
   level: UserLevel;
   category: string;
+  // NOTE: column is historically named `word_en`, but holds the foreign word
+  // in whatever `language` the row belongs to (Spanish/Russian too). Kept the
+  // name to avoid a disruptive rename; treat it as "the target-language word".
   word_en: string;
   translation_pl: string;
   example_sentence: string | null;
@@ -62,6 +70,7 @@ export interface VocabularyProgress {
 
 export interface GrammarTopic {
   id: string;
+  language: TargetLanguage;
   level: UserLevel;
   slug: string;
   title: string;
@@ -72,6 +81,7 @@ export interface GrammarTopic {
 
 export interface LearningPathStage {
   id: string;
+  language: TargetLanguage;
   level: UserLevel;
   order_index: number;
   category: string;
@@ -102,6 +112,7 @@ export interface GrammarProgress {
 export interface ReadingText {
   id: string;
   user_id: string | null;
+  language: TargetLanguage;
   level: UserLevel;
   topic: string;
   title: string;
@@ -131,6 +142,7 @@ export interface ReadingAttempt {
 
 export interface WritingTask {
   id: string;
+  language: TargetLanguage;
   level: UserLevel;
   task_type: WritingTaskType;
   scenario: string;
@@ -154,6 +166,7 @@ export interface WritingSubmission {
 
 export interface Song {
   id: string;
+  language: TargetLanguage;
   title: string;
   artist: string | null;
   lyrics: string;
@@ -187,6 +200,7 @@ export interface ListeningGap {
 
 export interface ListeningExercise {
   id: string;
+  language: TargetLanguage;
   youtube_url: string;
   video_id: string;
   title: string;
@@ -213,9 +227,23 @@ export interface Homework {
   type: HomeworkType;
   config: Record<string, unknown>;
   levels: UserLevel[];
+  language: TargetLanguage;
+  /** null = whole level(s); set = a single student this homework was assigned to. */
+  target_user_id: string | null;
   deadline: string | null;
   created_by: string | null;
   created_at: string;
+}
+
+export interface MatchingAttempt {
+  id: string;
+  user_id: string;
+  language: TargetLanguage;
+  level: UserLevel;
+  category: string | null;
+  score: number;
+  total: number;
+  completed_at: string;
 }
 
 export interface HomeworkProgress {

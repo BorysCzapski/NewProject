@@ -10,7 +10,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { MIN_MASTERY_THRESHOLD } from "@/lib/constants";
-import type { LearningPathStage, UserLevel } from "@/lib/types/database";
+import type { LearningPathStage, TargetLanguage, UserLevel } from "@/lib/types/database";
 
 export type StageStatus = "completed" | "current" | "locked";
 
@@ -32,12 +32,14 @@ export interface LearningPathResult {
 export async function getLearningPath(
   supabase: SupabaseClient,
   userId: string,
-  level: UserLevel
+  level: UserLevel,
+  language: TargetLanguage
 ): Promise<LearningPathResult> {
   const { data: stageRows } = await supabase
     .from("learning_path_stages")
     .select("*, grammar_topics(title, slug)")
     .eq("level", level)
+    .eq("language", language)
     .order("order_index");
 
   const stages = (stageRows ?? []) as Array<
@@ -50,13 +52,19 @@ export async function getLearningPath(
 
   const [{ data: wordRows }, { data: progressRows }, { data: grammarExerciseRows }, { data: grammarProgressRows }] =
     await Promise.all([
-      supabase.from("vocabulary_words").select("id, category").eq("level", level).in("category", categories),
+      supabase
+        .from("vocabulary_words")
+        .select("id, category")
+        .eq("level", level)
+        .eq("language", language)
+        .in("category", categories),
       supabase
         .from("vocabulary_progress")
-        .select("word_id, status, vocabulary_words!inner(category)")
+        .select("word_id, status, vocabulary_words!inner(category, language)")
         .eq("user_id", userId)
         .eq("status", "mastered")
         .eq("vocabulary_words.level", level)
+        .eq("vocabulary_words.language", language)
         .in("vocabulary_words.category", categories),
       grammarTopicIds.length > 0
         ? supabase.from("grammar_exercises").select("id, topic_id").in("topic_id", grammarTopicIds)

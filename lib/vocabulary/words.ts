@@ -1,20 +1,25 @@
 // ============================================================================
 // lib/vocabulary/words.ts
 // Word-selection logic shared by the flashcards and meaning-trainer pages:
-// fetching a level-appropriate batch and shuffling it.
+// fetching a language- + level-appropriate batch and shuffling it.
 // ============================================================================
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { UserLevel, VocabularyWord } from "@/lib/types/database";
+import type { TargetLanguage, UserLevel, VocabularyWord } from "@/lib/types/database";
 import { shuffle } from "@/lib/vocabulary/word-utils";
 
-/** All vocabulary_words rows for a given CEFR level, optionally narrowed to one category. */
+/** All vocabulary_words rows for a language + CEFR level, optionally narrowed to one category. */
 export async function getWordsForLevel(
   supabase: SupabaseClient,
+  language: TargetLanguage,
   level: UserLevel,
   category?: string
 ): Promise<VocabularyWord[]> {
-  let query = supabase.from("vocabulary_words").select("*").eq("level", level);
+  let query = supabase
+    .from("vocabulary_words")
+    .select("*")
+    .eq("language", language)
+    .eq("level", level);
   if (category) query = query.eq("category", category);
   const { data } = await query;
   return (data as VocabularyWord[]) ?? [];
@@ -37,30 +42,14 @@ export type FlashcardMode = "all" | "unmastered" | "new";
 export async function getFlashcardBatch(
   supabase: SupabaseClient,
   userId: string,
+  language: TargetLanguage,
   level: UserLevel,
   batchSize = 15,
   category?: string,
   mode: FlashcardMode = "all"
 ): Promise<VocabularyWord[]> {
-  const levelWords = await getWordsForLevel(supabase, level, category);
-  return pickUnmasteredFirst(supabase, userId, levelWords, batchSize, mode);
-}
-
-/**
- * Shared selection strategy: prefer words the user hasn't mastered yet
- * (status 'new'/'learning', or no progress row at all); in "all" mode fall
- * back to filling with already-mastered words if too few qualify. Result is
- * shuffled. In "unmastered"/"new" mode an empty result means "nothing left
- * to practice" and the caller shows a congratulations state.
- */
-async function pickUnmasteredFirst(
-  supabase: SupabaseClient,
-  userId: string,
-  words: VocabularyWord[],
-  batchSize: number,
-  mode: FlashcardMode = "all"
-): Promise<VocabularyWord[]> {
-  if (words.length === 0) return [];
+  const levelWords = await getWordsForLevel(supabase, language, level, category);
+  if (levelWords.length === 0) return [];
 
   const wordIds = words.map((w) => w.id);
   const { data: progressRows } = await supabase
@@ -110,16 +99,33 @@ export interface MeaningTrainerData {
  */
 export async function getMeaningTrainerBatch(
   supabase: SupabaseClient,
-  userId: string,
+  language: TargetLanguage,
   level: UserLevel,
   batchSize = 10,
   category?: string
 ): Promise<MeaningTrainerData> {
   const [levelPool, categoryPool] = await Promise.all([
-    getWordsForLevel(supabase, level),
-    category ? getWordsForLevel(supabase, level, category) : Promise.resolve(null),
+    getWordsForLevel(supabase, language, level),
+    category ? getWordsForLevel(supabase, language, level, category) : Promise.resolve(null),
   ]);
   const source = categoryPool ?? levelPool;
   const batch = await pickUnmasteredFirst(supabase, userId, source, batchSize);
   return { batch, pool: levelPool };
+}
+
+/**
+ * A set of vocabulary pairs for the matching game, scoped to language + level
+ * (optionally a category). Returns `count` random words with their PL
+ * translations. Server-side selection keeps the game honest (answers aren't
+ * derivable from the payload order — the client shuffles both columns).
+ */
+export async function getMatchingPairs(
+  supabase: SupabaseClient,
+  language: TargetLanguage,
+  level: UserLevel,
+  count = 6,
+  category?: string
+): Promise<VocabularyWord[]> {
+  const pool = await getWordsForLevel(supabase, language, level, category);
+  return shuffle(pool).slice(0, count);
 }

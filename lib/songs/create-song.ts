@@ -2,13 +2,15 @@
 // lib/songs/create-song.ts
 // Inserts a songs row (title/artist/lyrics as pasted by a user or admin).
 // Shared by the songs practice module and the homework admin creator
-// (type = 'song_translation').
+// (type = 'song_translation'). Language-scoped so learners only see songs in
+// the language they're studying.
 // ============================================================================
 import "server-only";
 import { createClient } from "@/lib/supabase/server";
-import type { Song } from "@/lib/types/database";
+import type { Song, TargetLanguage } from "@/lib/types/database";
 
 export async function createSong(params: {
+  language: TargetLanguage;
   title: string;
   artist?: string;
   lyrics: string;
@@ -23,6 +25,7 @@ export async function createSong(params: {
   const { data, error } = await supabase
     .from("songs")
     .insert({
+      language: params.language,
       title: params.title.trim() || "Bez tytułu",
       artist: params.artist?.trim() || null,
       lyrics,

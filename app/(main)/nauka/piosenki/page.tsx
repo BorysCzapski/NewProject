@@ -20,6 +20,7 @@ export default async function SongsHubPage() {
   const { data: songs } = await supabase
     .from("songs")
     .select("*")
+    .eq("language", profile.target_language)
     .order("created_at", { ascending: false });
   const songList = (songs ?? []) as Song[];
 
