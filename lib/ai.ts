@@ -9,9 +9,23 @@
 // ============================================================================
 import "server-only";
 import Groq from "groq-sdk";
+import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions";
 import { cleanEnv } from "@/lib/env";
 
-const MODEL = cleanEnv(process.env.GROQ_MODEL) || "llama-3.3-70b-versatile";
+const CONFIGURED_MODEL = cleanEnv(process.env.GROQ_MODEL) || "llama-3.3-70b-versatile";
+
+// Groq periodically decommissions models. If the configured model stops
+// existing, we fall through this list instead of hard-failing every AI
+// feature in the app. All entries support tool calling (required by
+// askAIForJSON's pinned tool choice).
+const FALLBACK_MODELS = [
+  "llama-3.3-70b-versatile",
+  "openai/gpt-oss-120b",
+  "llama-3.1-8b-instant",
+];
+
+// Model that most recently succeeded — start with the configured one.
+let activeModel = CONFIGURED_MODEL;
 
 let client: Groq | null = null;
 

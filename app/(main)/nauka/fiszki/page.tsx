@@ -1,9 +1,10 @@
 // ============================================================================
 // app/(main)/nauka/fiszki/page.tsx
-// Flashcards trainer entry point: fetches a level-appropriate word batch on
-// the server, then hands it off to the client-driven flip-card session.
-// The mode switcher narrows the batch to unmastered-only or brand-new-only
-// words; ?stage= carries the learning-path stage to return to afterwards.
+// Flashcards trainer entry point: fetches a language- + level-appropriate
+// word batch on the server, then hands it off to the client-driven flip-card
+// session. The mode switcher narrows the batch to unmastered-only or
+// brand-new-only words; ?stage= carries the learning-path stage to return to
+// afterwards.
 // ============================================================================
 import Link from "next/link";
 import { requireProfile } from "@/lib/auth/get-profile";
@@ -49,7 +50,27 @@ export default async function FiszkiPage({
   const mode = parseMode(rawMode);
   const profile = await requireProfile();
   const supabase = await createClient();
-  const words = await getFlashcardBatch(supabase, profile.id, profile.target_language, profile.level, 15, category);
+  const words = await getFlashcardBatch(
+    supabase,
+    profile.id,
+    profile.target_language,
+    profile.level,
+    15,
+    category,
+    mode
+  );
+
+  const backHref = stage ? `/nauka/sciezka/${encodeURIComponent(stage)}` : undefined;
+  const hrefFor = (m: FlashcardMode) => {
+    const params = new URLSearchParams();
+    if (category) params.set("category", category);
+    if (stage) params.set("stage", stage);
+    if (m !== "all") params.set("mode", m);
+    const query = params.toString();
+    return `/nauka/fiszki${query ? `?${query}` : ""}`;
+  };
+
+  const empty = EMPTY_MESSAGES[mode];
 
   return (
     <div>

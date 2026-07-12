@@ -21,11 +21,11 @@ export class TranscriptError extends Error {
   }
 }
 
-async function viaTranscriptPlus(videoId: string): Promise<TranscriptSegment[]> {
+async function viaTranscriptPlus(videoId: string, lang: string): Promise<TranscriptSegment[]> {
   const { fetchTranscript } = await import("youtube-transcript-plus");
-  // Prefer English captions; if the video has none tagged "en", retry with
-  // whatever default track exists.
-  const raw = await fetchTranscript(videoId, { lang: "en" }).catch(() => fetchTranscript(videoId));
+  // Prefer captions in the target language; if the video has none tagged with
+  // it, retry with whatever default track exists.
+  const raw = await fetchTranscript(videoId, { lang }).catch(() => fetchTranscript(videoId));
   return raw.map((seg) => ({
     text: seg.text,
     start: seg.offset,
@@ -64,11 +64,14 @@ async function viaInnertube(videoId: string): Promise<TranscriptSegment[]> {
     .filter((seg) => seg.text.trim().length > 0);
 }
 
-export async function fetchYoutubeTranscript(videoId: string): Promise<TranscriptSegment[]> {
+export async function fetchYoutubeTranscript(
+  videoId: string,
+  lang = "en"
+): Promise<TranscriptSegment[]> {
   const failures: string[] = [];
 
   try {
-    const segments = await viaTranscriptPlus(videoId);
+    const segments = await viaTranscriptPlus(videoId, lang);
     if (segments.length > 0) return segments;
     failures.push("youtube-transcript-plus: pusta transkrypcja");
   } catch (err) {

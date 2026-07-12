@@ -13,6 +13,7 @@ import { createWritingTask } from "@/lib/writing/create-task";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { ACTIVITY_TYPES } from "@/lib/constants";
 import { langInfo } from "@/lib/languages";
+import { actionFailure, type ActionFailure, type ActionResult } from "@/lib/action-result";
 import type { WritingSubmission, WritingTaskType } from "@/lib/types/database";
 
 const ALL_TASK_TYPES: WritingTaskType[] = [
@@ -30,12 +31,21 @@ export async function startWritingTask(taskType?: WritingTaskType): Promise<Acti
   const profile = await requireProfile();
   const type = taskType ?? ALL_TASK_TYPES[Math.floor(Math.random() * ALL_TASK_TYPES.length)];
 
-  const task = await createWritingTask({
-    language: profile.target_language,
-    level: profile.level,
-    taskType: type,
-  });
-  redirect(`/nauka/pisanie/${task.id}`);
+  let taskId: string;
+  try {
+    const task = await createWritingTask({
+      language: profile.target_language,
+      level: profile.level,
+      taskType: type,
+    });
+    taskId = task.id;
+  } catch (err) {
+    console.error("[writing] createWritingTask failed:", err);
+    return actionFailure(
+      "Nie udało się przygotować zadania (błąd AI). Spróbuj ponownie za chwilę."
+    );
+  }
+  redirect(`/nauka/pisanie/${taskId}`);
 }
 
 interface GradedWriting {

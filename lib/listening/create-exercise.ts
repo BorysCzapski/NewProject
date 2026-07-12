@@ -87,18 +87,17 @@ export async function createListeningExercise(params: {
     throw new Error("Nieprawidłowy link do filmiku YouTube.");
   }
 
-  let raw;
-  try {
-    // Prefer captions in the target language; fall back to whatever's available.
-    try {
-      raw = await YoutubeTranscript.fetchTranscript(videoId, { lang: params.language });
-    } catch {
-      raw = await YoutubeTranscript.fetchTranscript(videoId);
+  let transcript: TranscriptSegment[];
+  if (params.manualTranscript?.trim()) {
+    transcript = parseManualTranscript(params.manualTranscript);
+    if (transcript.length === 0) {
+      throw new Error("Nie udało się odczytać wklejonej transkrypcji — sprawdź jej format.");
     }
-  } catch {
-    throw new Error(
-      "Nie udało się pobrać transkrypcji tego filmiku (może nie mieć napisów)."
-    );
+  } else {
+    // Tries automatic strategies (preferring captions in the target language)
+    // and throws TranscriptError with a user-friendly, honest message; the
+    // real causes are logged server-side.
+    transcript = await fetchYoutubeTranscript(videoId, params.language);
   }
 
   const gaps = selectGaps(transcript, params.language);
