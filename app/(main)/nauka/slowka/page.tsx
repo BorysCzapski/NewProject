@@ -20,7 +20,15 @@ export default async function SlowkaPage({
   const { category, stage } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
-  const { batch, pool } = await getMeaningTrainerBatch(supabase, profile.target_language, profile.level, 10, category);
+  const { batch, pool } = await getMeaningTrainerBatch(
+    supabase,
+    profile.id,
+    profile.target_language,
+    profile.level,
+    10,
+    category
+  );
+  const backHref = stage ? `/nauka/sciezka/${encodeURIComponent(stage)}` : undefined;
 
   return (
     <div>

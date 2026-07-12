@@ -26,12 +26,6 @@ export async function getWordsForLevel(
 }
 
 /**
- * Picks ~`batchSize` words for a flashcards session, prioritizing words the
- * user hasn't mastered yet (status 'new'/'learning', or no progress row at
- * all). Falls back to filling with already-mastered words of the same level
- * if too few qualify. Result is shuffled.
- */
-/**
  * Which words a flashcard session draws from:
  * - "all"        — prefer unmastered, fill up with mastered if needed (default)
  * - "unmastered" — ONLY words not yet mastered (status new/learning/no row)
@@ -39,6 +33,10 @@ export async function getWordsForLevel(
  */
 export type FlashcardMode = "all" | "unmastered" | "new";
 
+/**
+ * Picks ~`batchSize` words for a flashcards session according to `mode`,
+ * prioritizing words the user hasn't mastered yet. Result is shuffled.
+ */
 export async function getFlashcardBatch(
   supabase: SupabaseClient,
   userId: string,
@@ -49,7 +47,24 @@ export async function getFlashcardBatch(
   mode: FlashcardMode = "all"
 ): Promise<VocabularyWord[]> {
   const levelWords = await getWordsForLevel(supabase, language, level, category);
-  if (levelWords.length === 0) return [];
+  return pickUnmasteredFirst(supabase, userId, levelWords, batchSize, mode);
+}
+
+/**
+ * Shared selection strategy: prefer words the user hasn't mastered yet
+ * (status 'new'/'learning', or no progress row at all); in "all" mode fall
+ * back to filling with already-mastered words if too few qualify. Result is
+ * shuffled. In "unmastered"/"new" mode an empty result means "nothing left
+ * to practice" and the caller shows a congratulations state.
+ */
+async function pickUnmasteredFirst(
+  supabase: SupabaseClient,
+  userId: string,
+  words: VocabularyWord[],
+  batchSize: number,
+  mode: FlashcardMode = "all"
+): Promise<VocabularyWord[]> {
+  if (words.length === 0) return [];
 
   const wordIds = words.map((w) => w.id);
   const { data: progressRows } = await supabase
@@ -99,6 +114,7 @@ export interface MeaningTrainerData {
  */
 export async function getMeaningTrainerBatch(
   supabase: SupabaseClient,
+  userId: string,
   language: TargetLanguage,
   level: UserLevel,
   batchSize = 10,
