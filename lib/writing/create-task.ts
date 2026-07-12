@@ -83,6 +83,9 @@ export async function createWritingTask(params: {
     .single();
 
   if (error || !data) {
+    // Real cause (RLS denial, constraint, connectivity) goes to server logs;
+    // the user gets the safe Polish message.
+    console.error("[writing] writing_tasks insert failed:", error);
     throw new Error("Nie udało się utworzyć zadania pisemnego.");
   }
   return data as WritingTask;

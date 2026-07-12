@@ -37,12 +37,17 @@ export async function startWritingTask(taskType?: WritingTaskType): Promise<Acti
       language: profile.target_language,
       level: profile.level,
       taskType: type,
+      // RLS: writing_tasks_insert_own requires created_by = auth.uid() for
+      // non-admins — without it the insert is silently rejected.
+      createdBy: profile.id,
     });
     taskId = task.id;
   } catch (err) {
     console.error("[writing] createWritingTask failed:", err);
     return actionFailure(
-      "Nie udało się przygotować zadania (błąd AI). Spróbuj ponownie za chwilę."
+      err instanceof Error && err.message
+        ? err.message
+        : "Nie udało się przygotować zadania. Spróbuj ponownie za chwilę."
     );
   }
   redirect(`/nauka/pisanie/${taskId}`);
