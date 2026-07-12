@@ -2,27 +2,29 @@
 
 // ============================================================================
 // components/songs/song-practice.tsx
-// Song practice UI: a mode toggle between "linijka po linijce" (whole-line
-// translation) and "pojedyncze słowa" (tap a word, translate just that
-// word). Tracks locally which lines have a correct attempt this session and
-// fires the one-time "song" activity + completion summary once every line
-// is done.
+// Song practice UI with two sensible modes:
+//  - "Linijka po linijce": translate each whole line to Polish (AI-graded).
+//  - "Słówka": tap any word to reveal its contextual meaning (glossary hint,
+//    not graded) — replaces the old nonsensical word-by-word grading.
+// Tracks locally which lines have a correct attempt this session and fires the
+// one-time "song" activity + completion summary once every line is done.
 // ============================================================================
 import { useRef, useState, useTransition } from "react";
-import { Check } from "lucide-react";
+import { Check, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import {
   checkLineTranslation,
-  checkWordTranslation,
   completeSongPractice,
+  explainWord,
   type TranslationCheckResult,
+  type WordMeaning,
 } from "@/lib/songs/actions";
 import type { Song } from "@/lib/types/database";
 
-type Mode = "line" | "word";
+type Mode = "line" | "words";
 
 export function SongPractice({ song, lines }: { song: Song; lines: string[] }) {
   const [mode, setMode] = useState<Mode>("line");
@@ -39,8 +41,7 @@ export function SongPractice({ song, lines }: { song: Song; lines: string[] }) {
         firedRef.current = true;
         setFinished(true);
         completeSongPractice().catch(() => {
-          // Best-effort: streak/homework bump isn't critical enough to
-          // surface as a blocking error here.
+          // Best-effort: streak/homework bump isn't critical enough to block on.
         });
       }
       return next;
@@ -66,13 +67,13 @@ export function SongPractice({ song, lines }: { song: Song; lines: string[] }) {
           </button>
           <button
             type="button"
-            onClick={() => setMode("word")}
+            onClick={() => setMode("words")}
             className={cn(
               "rounded-full px-3 py-1.5 text-xs font-medium transition-colors",
-              mode === "word" ? "bg-primary text-primary-foreground" : "text-foreground-muted"
+              mode === "words" ? "bg-primary text-primary-foreground" : "text-foreground-muted"
             )}
           >
-            Pojedyncze słowa
+            Słówka
           </button>
         </div>
       </div>
@@ -90,25 +91,25 @@ export function SongPractice({ song, lines }: { song: Song; lines: string[] }) {
       )}
 
       {mode === "line" ? (
-        <LineMode songId={song.id} lines={lines} completedLines={completedLines} onLineCorrect={markLineComplete} />
+        <LineMode song={song} lines={lines} completedLines={completedLines} onLineCorrect={markLineComplete} />
       ) : (
-        <WordMode songId={song.id} lines={lines} completedLines={completedLines} onLineCorrect={markLineComplete} />
+        <WordsMode song={song} lines={lines} />
       )}
     </div>
   );
 }
 
 // ----------------------------------------------------------------------------
-// Line mode
+// Line mode — translate whole lines (graded)
 // ----------------------------------------------------------------------------
 
 function LineMode({
-  songId,
+  song,
   lines,
   completedLines,
   onLineCorrect,
 }: {
-  songId: string;
+  song: Song;
   lines: string[];
   completedLines: Set<number>;
   onLineCorrect: (lineIndex: number) => void;
@@ -118,7 +119,7 @@ function LineMode({
       {lines.map((line, index) => (
         <LineRow
           key={index}
-          songId={songId}
+          song={song}
           lineIndex={index}
           line={line}
           isDone={completedLines.has(index)}
@@ -130,13 +131,13 @@ function LineMode({
 }
 
 function LineRow({
-  songId,
+  song,
   lineIndex,
   line,
   isDone,
   onCorrect,
 }: {
-  songId: string;
+  song: Song;
   lineIndex: number;
   line: string;
   isDone: boolean;
@@ -152,7 +153,7 @@ function LineRow({
     setError(null);
     startTransition(async () => {
       try {
-        const res = await checkLineTranslation(songId, lineIndex, line, value);
+        const res = await checkLineTranslation(song.id, lineIndex, line, value, song.language);
         setResult(res);
         if (res.isCorrect) onCorrect();
       } catch (err) {
@@ -194,151 +195,80 @@ function LineRow({
 }
 
 // ----------------------------------------------------------------------------
-// Word mode
+// Words mode — tap a word to reveal its meaning (glossary hint, not graded)
 // ----------------------------------------------------------------------------
 
 function splitWords(line: string): string[] {
   return line.split(/\s+/).filter(Boolean);
 }
 
-interface WordState {
-  status: "correct" | "incorrect";
-  feedback: string;
-  suggestion: string;
-}
-
-function WordMode({
-  songId,
-  lines,
-  completedLines,
-  onLineCorrect,
-}: {
-  songId: string;
-  lines: string[];
-  completedLines: Set<number>;
-  onLineCorrect: (lineIndex: number) => void;
-}) {
+function WordsMode({ song, lines }: { song: Song; lines: string[] }) {
   return (
     <div className="flex flex-col gap-3">
+      <Card className="bg-surface-muted">
+        <CardDescription className="flex items-center gap-2">
+          <BookOpen className="h-4 w-4 shrink-0" />
+          Dotknij dowolnego słowa, aby zobaczyć jego znaczenie w tym kontekście.
+        </CardDescription>
+      </Card>
       {lines.map((line, index) => (
-        <WordLineRow
-          key={index}
-          songId={songId}
-          lineIndex={index}
-          line={line}
-          isDone={completedLines.has(index)}
-          onLineCorrect={() => onLineCorrect(index)}
-        />
+        <WordLineRow key={index} songLanguage={song.language} line={line} />
       ))}
     </div>
   );
 }
 
-function WordLineRow({
-  songId,
-  lineIndex,
-  line,
-  isDone,
-  onLineCorrect,
-}: {
-  songId: string;
-  lineIndex: number;
-  line: string;
-  isDone: boolean;
-  onLineCorrect: () => void;
-}) {
+function WordLineRow({ songLanguage, line }: { songLanguage: Song["language"]; line: string }) {
   const words = splitWords(line);
-  const [wordStates, setWordStates] = useState<Record<number, WordState>>({});
   const [activeWord, setActiveWord] = useState<number | null>(null);
-  const [inputValue, setInputValue] = useState("");
+  const [meaning, setMeaning] = useState<WordMeaning | null>(null);
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
 
-  function handleCheck(wordIndex: number) {
-    if (!inputValue.trim() || pending) return;
+  function reveal(wordIndex: number) {
+    setActiveWord(wordIndex);
+    setMeaning(null);
     setError(null);
-    const word = words[wordIndex];
-    // Whether every OTHER word in this line is already confirmed correct
-    // this session — if this one also comes back correct, the whole line
-    // is done via word-by-word translation.
-    const allOtherWordsCorrect = words.every((_, i) => i === wordIndex || wordStates[i]?.status === "correct");
-
     startTransition(async () => {
       try {
-        const res = await checkWordTranslation(songId, lineIndex, line, word, inputValue, allOtherWordsCorrect);
-        setWordStates((prev) => ({
-          ...prev,
-          [wordIndex]: { status: res.isCorrect ? "correct" : "incorrect", feedback: res.feedback, suggestion: res.suggestion },
-        }));
-        if (res.isCorrect) {
-          setInputValue("");
-          if (allOtherWordsCorrect) onLineCorrect();
-        }
+        const res = await explainWord(line, words[wordIndex], songLanguage);
+        setMeaning(res);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Nie udało się sprawdzić słowa.");
+        setError(err instanceof Error ? err.message : "Nie udało się pobrać znaczenia.");
       }
     });
   }
 
-  const activeState = activeWord !== null ? wordStates[activeWord] : undefined;
-
   return (
-    <Card className={cn(isDone && "border-primary/40 bg-primary-soft/40")}>
+    <Card>
       <div className="flex flex-wrap gap-x-1.5 gap-y-2.5">
-        {words.map((word, i) => {
-          const status = wordStates[i]?.status;
-          return (
-            <button
-              key={i}
-              type="button"
-              onClick={() => {
-                setActiveWord(i);
-                setInputValue("");
-              }}
-              className={cn(
-                "min-h-11 rounded-md px-2 py-2 text-base font-medium leading-tight transition-colors",
-                status === "correct" && "bg-primary-soft text-primary",
-                status === "incorrect" && "bg-danger-soft text-danger",
-                !status && "text-foreground hover:bg-surface-muted",
-                activeWord === i && "ring-2 ring-primary"
-              )}
-            >
-              {word}
-            </button>
-          );
-        })}
+        {words.map((word, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => reveal(i)}
+            className={cn(
+              "min-h-9 rounded-md px-2 py-1.5 text-base font-medium leading-tight transition-colors",
+              activeWord === i ? "bg-primary-soft text-primary ring-2 ring-primary" : "text-foreground hover:bg-surface-muted"
+            )}
+          >
+            {word}
+          </button>
+        ))}
       </div>
 
       {activeWord !== null && (
-        <div className="mt-3 flex items-center gap-2">
-          <span className="shrink-0 text-sm font-medium text-foreground-muted">{words[activeWord]}:</span>
-          <input
-            autoFocus
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleCheck(activeWord)}
-            disabled={pending}
-            placeholder="tłumaczenie słowa..."
-            className={cn(
-              "h-10 w-full rounded-(--radius-control) border border-border bg-surface px-3 text-sm text-foreground",
-              "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-70"
-            )}
-          />
-          <Button size="sm" onClick={() => handleCheck(activeWord)} disabled={!inputValue.trim()} isLoading={pending}>
-            Sprawdź
-          </Button>
-        </div>
-      )}
-
-      {error && <p className="mt-2 text-sm text-danger">{error}</p>}
-
-      {activeState && (
-        <p className={cn("mt-2 text-sm leading-relaxed", activeState.status === "correct" ? "text-primary" : "text-danger")}>
-          {activeState.feedback}
-          {activeState.suggestion && activeState.status === "incorrect" && (
-            <span className="mt-1 block text-foreground-muted">Propozycja: {activeState.suggestion}</span>
+        <div className="mt-3 rounded-(--radius-control) bg-surface-muted p-3 text-sm">
+          <span className="font-semibold text-foreground">{words[activeWord]}</span>
+          {pending && <span className="ml-2 text-foreground-muted">sprawdzam…</span>}
+          {error && <span className="ml-2 text-danger">{error}</span>}
+          {meaning && (
+            <span className="mt-1 block text-foreground">
+              {meaning.meaning}
+              {meaning.note && <span className="mt-1 block text-foreground-muted">{meaning.note}</span>}
+            </span>
           )}
-        </p>
+        </div>
       )}
     </Card>
   );
