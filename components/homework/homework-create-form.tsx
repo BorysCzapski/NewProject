@@ -2,12 +2,13 @@
 
 // ============================================================================
 // components/homework/homework-create-form.tsx
-// Admin homework creator form: shared fields (title/description/levels/
-// deadline/type) plus a section of type-specific fields that swaps based on
-// the chosen homework type. An "AI zaproponuj" button prefills title/
-// description/type from an AI suggestion; submitting calls
-// createHomeworkAction which builds the config object and creates any
-// backing resource (song/writing task/listening exercise) first.
+// Admin homework creator form: shared fields (language / assignment /
+// title / description / levels / deadline / type) plus a section of
+// type-specific fields that swaps based on the chosen homework type. An
+// "AI zaproponuj" button prefills title/description/type from an AI suggestion;
+// submitting calls createHomeworkAction which builds the config object and
+// creates any backing resource (song/writing task/listening exercise) first.
+// The vocabulary/grammar suggestions follow the currently chosen language.
 // ============================================================================
 import { useActionState, useState } from "react";
 import { Sparkles } from "lucide-react";
@@ -16,10 +17,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import { LEVELS, HOMEWORK_TYPE_LABELS, WRITING_TASK_TYPE_LABELS } from "@/lib/constants";
+import {
+  LEVELS,
+  LANGUAGES,
+  LANGUAGE_LABELS,
+  LANGUAGE_FLAGS,
+  HOMEWORK_TYPE_LABELS,
+  WRITING_TASK_TYPE_LABELS,
+} from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import type { GrammarTopic, HomeworkType, TrainingModule, UserLevel } from "@/lib/types/database";
-import type { VocabularyCategoryOption } from "@/lib/homework/admin-queries";
+import type {
+  GrammarTopic,
+  HomeworkType,
+  TargetLanguage,
+  TrainingModule,
+  UserLevel,
+} from "@/lib/types/database";
+import type { StudentOption, VocabularyCategoryOption } from "@/lib/homework/admin-queries";
 
 const TRAINING_MODULE_LABELS: Record<TrainingModule, string> = {
   vocabulary: "Słówka",
@@ -35,17 +49,22 @@ const textareaClass =
 const initialState: ActionState = {};
 
 export function HomeworkCreateForm({
-  categories,
-  topics,
+  categoriesByLang,
+  topicsByLang,
+  students,
 }: {
-  categories: VocabularyCategoryOption[];
-  topics: GrammarTopic[];
+  categoriesByLang: Record<TargetLanguage, VocabularyCategoryOption[]>;
+  topicsByLang: Record<TargetLanguage, GrammarTopic[]>;
+  students: StudentOption[];
 }) {
   const [state, formAction, isPending] = useActionState(createHomeworkAction, initialState);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState<HomeworkType | "">("");
+  const [language, setLanguage] = useState<TargetLanguage>("en");
+  const [assignMode, setAssignMode] = useState<"level" | "student">("level");
+  const [targetUserId, setTargetUserId] = useState("");
   const [selectedLevels, setSelectedLevels] = useState<UserLevel[]>([]);
   const [wtMode, setWtMode] = useState<"any" | "specific">("any");
   const [deadlineLocal, setDeadlineLocal] = useState("");
@@ -55,6 +74,18 @@ export function HomeworkCreateForm({
   const [suggestError, setSuggestError] = useState<string | null>(null);
   const [reasoning, setReasoning] = useState<string | null>(null);
 
+  const selectedStudent =
+    assignMode === "student" ? students.find((s) => s.id === targetUserId) ?? null : null;
+
+  // When a single student is targeted the action derives language + level from
+  // their profile, so those inputs are irrelevant. For content suggestions we
+  // still want language-appropriate lists, so mirror the student's profile.
+  const effectiveLanguage: TargetLanguage = selectedStudent?.target_language ?? language;
+  const effectiveLevels: UserLevel[] = selectedStudent ? [selectedStudent.level] : selectedLevels;
+
+  const languageCategories = categoriesByLang[effectiveLanguage] ?? [];
+  const languageTopics = topicsByLang[effectiveLanguage] ?? [];
+
   function toggleLevel(level: UserLevel) {
     setSelectedLevels((prev) => (prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level]));
   }
@@ -63,7 +94,7 @@ export function HomeworkCreateForm({
     setIsSuggesting(true);
     setSuggestError(null);
     try {
-      const suggestion = await suggestHomework(selectedLevels[0] ?? "A1");
+      const suggestion = await suggestHomework(effectiveLanguage, effectiveLevels[0] ?? "A1");
       setTitle(suggestion.title);
       setDescription(suggestion.description);
       setType(suggestion.type);
@@ -75,10 +106,12 @@ export function HomeworkCreateForm({
     }
   }
 
-  const filteredCategories = categories.filter(
-    (c) => selectedLevels.length === 0 || selectedLevels.includes(c.level)
+  const filteredCategories = languageCategories.filter(
+    (c) => effectiveLevels.length === 0 || effectiveLevels.includes(c.level)
   );
-  const filteredTopics = topics.filter((t) => selectedLevels.length === 0 || selectedLevels.includes(t.level));
+  const filteredTopics = languageTopics.filter(
+    (t) => effectiveLevels.length === 0 || effectiveLevels.includes(t.level)
+  );
 
   return (
     <form action={formAction} className="flex flex-col gap-5">
@@ -91,6 +124,108 @@ export function HomeworkCreateForm({
           <p className="font-medium text-primary">Dlaczego ten typ?</p>
           <p className="mt-1">{reasoning}</p>
         </Card>
+      )}
+
+      <div>
+        <Label>Przypisz do</Label>
+        <div className="flex flex-col gap-2">
+          <label className="flex items-center gap-2 text-sm text-foreground">
+            <input
+              type="radio"
+              name="assign_mode"
+              value="level"
+              checked={assignMode === "level"}
+              onChange={() => setAssignMode("level")}
+              className="accent-primary"
+            />
+            Cały poziom
+          </label>
+          <label className="flex items-center gap-2 text-sm text-foreground">
+            <input
+              type="radio"
+              name="assign_mode"
+              value="student"
+              checked={assignMode === "student"}
+              onChange={() => setAssignMode("student")}
+              className="accent-primary"
+            />
+            Konkretny uczeń
+          </label>
+        </div>
+      </div>
+
+      {assignMode === "student" ? (
+        <div className="flex flex-col gap-2">
+          <div>
+            <Label htmlFor="target_user_id">Uczeń</Label>
+            <select
+              id="target_user_id"
+              name="target_user_id"
+              value={targetUserId}
+              onChange={(e) => setTargetUserId(e.target.value)}
+              required
+              className={selectClass}
+            >
+              <option value="" disabled>
+                Wybierz ucznia...
+              </option>
+              {students.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {LANGUAGE_FLAGS[s.target_language]} {s.username} ({s.level})
+                </option>
+              ))}
+            </select>
+          </div>
+          <p className="text-xs text-foreground-muted">
+            Poziom i język zostaną wzięte z profilu ucznia.
+          </p>
+        </div>
+      ) : (
+        <>
+          <div>
+            <Label htmlFor="language">Język</Label>
+            <select
+              id="language"
+              name="language"
+              value={language}
+              onChange={(e) => setLanguage(e.target.value as TargetLanguage)}
+              className={selectClass}
+            >
+              {LANGUAGES.map((lang) => (
+                <option key={lang} value={lang}>
+                  {LANGUAGE_FLAGS[lang]} {LANGUAGE_LABELS[lang]}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <Label>Poziomy</Label>
+            <div className="flex flex-wrap gap-2">
+              {LEVELS.map((level) => (
+                <label
+                  key={level}
+                  className={cn(
+                    "flex cursor-pointer items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-medium",
+                    selectedLevels.includes(level)
+                      ? "border-primary bg-primary-soft text-primary"
+                      : "text-foreground-muted"
+                  )}
+                >
+                  <input
+                    type="checkbox"
+                    name="levels"
+                    value={level}
+                    checked={selectedLevels.includes(level)}
+                    onChange={() => toggleLevel(level)}
+                    className="sr-only"
+                  />
+                  {level}
+                </label>
+              ))}
+            </div>
+          </div>
+        </>
       )}
 
       <div>
@@ -109,33 +244,6 @@ export function HomeworkCreateForm({
           className={textareaClass}
           placeholder="Krótki opis dla ucznia..."
         />
-      </div>
-
-      <div>
-        <Label>Poziomy</Label>
-        <div className="flex flex-wrap gap-2">
-          {LEVELS.map((level) => (
-            <label
-              key={level}
-              className={cn(
-                "flex cursor-pointer items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-medium",
-                selectedLevels.includes(level)
-                  ? "border-primary bg-primary-soft text-primary"
-                  : "text-foreground-muted"
-              )}
-            >
-              <input
-                type="checkbox"
-                name="levels"
-                value={level}
-                checked={selectedLevels.includes(level)}
-                onChange={() => toggleLevel(level)}
-                className="sr-only"
-              />
-              {level}
-            </label>
-          ))}
-        </div>
       </div>
 
       <div>
@@ -263,8 +371,26 @@ export function HomeworkCreateForm({
             ))}
           </select>
           {filteredTopics.length === 0 && (
-            <p className="mt-1 text-xs text-foreground-muted">Brak tematów gramatycznych dla wybranych poziomów.</p>
+            <p className="mt-1 text-xs text-foreground-muted">Brak tematów gramatycznych dla wybranego języka i poziomów.</p>
           )}
+        </div>
+      )}
+
+      {type === "matching_game" && (
+        <div className="flex flex-col gap-3">
+          <div>
+            <Label htmlFor="mg_count">Liczba gier</Label>
+            <Input id="mg_count" name="mg_count" type="number" min={1} defaultValue={3} required />
+          </div>
+          <div>
+            <Label htmlFor="mg_category">Kategoria (opcjonalnie)</Label>
+            <Input id="mg_category" name="mg_category" list="mg-categories" placeholder="np. jedzenie" />
+            <datalist id="mg-categories">
+              {filteredCategories.map((c) => (
+                <option key={`${c.level}-${c.category}`} value={c.category} />
+              ))}
+            </datalist>
+          </div>
         </div>
       )}
 

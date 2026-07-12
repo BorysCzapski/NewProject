@@ -30,7 +30,12 @@ export default async function PraceDomowePage() {
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const homeworkList = await getHomeworkWithProgress(supabase, profile.id, profile.level);
+  const homeworkList = await getHomeworkWithProgress(supabase, {
+    userId: profile.id,
+    level: profile.level,
+    language: profile.target_language,
+    role: profile.role,
+  });
 
   // Each homework's live status (computed by getHomeworkWithProgress) already
   // decides precedence: completed always wins over overdue.

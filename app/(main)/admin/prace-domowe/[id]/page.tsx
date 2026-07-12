@@ -1,21 +1,25 @@
 // ============================================================================
 // app/(main)/admin/prace-domowe/[id]/page.tsx
-// Admin homework detail: the assignment's own details plus a per-student
+// Admin homework detail: the assignment's own details (including a precise,
+// human-readable requirement line and edit/delete controls) plus a per-student
 // completion table (everyone eligible by level, not just those who've
 // started).
 // ============================================================================
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CalendarClock } from "lucide-react";
+import { ArrowLeft, CalendarClock, Pencil, Trash2 } from "lucide-react";
 import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getCompletionsForHomework } from "@/lib/homework/admin-queries";
+import { deleteHomeworkAction } from "@/lib/homework/actions";
+import { homeworkRequirementText } from "@/lib/homework/labels";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { HomeworkStatusBadge } from "@/components/homework/homework-status-badge";
 import { formatDeadline } from "@/components/homework/format-deadline";
-import { HOMEWORK_TYPE_LABELS } from "@/lib/constants";
+import { HOMEWORK_TYPE_LABELS, LANGUAGE_FLAGS, LANGUAGE_LABELS } from "@/lib/constants";
 
 export default async function AdminHomeworkDetailPage({
   params,
@@ -31,6 +35,8 @@ export default async function AdminHomeworkDetailPage({
 
   const { homework, completions } = result;
   const completedCount = completions.filter((c) => c.status === "completed").length;
+  // When assigned to one student, getCompletionsForHomework returns just them.
+  const assignedStudent = homework.target_user_id ? completions[0]?.profile ?? null : null;
 
   return (
     <div>
@@ -50,8 +56,23 @@ export default async function AdminHomeworkDetailPage({
             <Badge className="shrink-0">{HOMEWORK_TYPE_LABELS[homework.type]}</Badge>
           </div>
           {homework.description && <CardDescription>{homework.description}</CardDescription>}
+
+          {/* Precise requirement so the admin can sanity-check what students see. */}
+          <p className="mt-1 rounded-(--radius-control) bg-primary-soft px-3 py-2 text-sm font-medium text-primary">
+            {homeworkRequirementText(homework)}
+          </p>
+
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-foreground-muted">
-            <span>Poziomy: {homework.levels.join(", ")}</span>
+            <span>
+              {LANGUAGE_FLAGS[homework.language]} {LANGUAGE_LABELS[homework.language]}
+            </span>
+            {assignedStudent ? (
+              <span>Uczeń: {assignedStudent.username}</span>
+            ) : homework.target_user_id ? (
+              <span>Przypisano do konkretnego ucznia</span>
+            ) : (
+              <span>Poziomy: {homework.levels.join(", ")}</span>
+            )}
             {homework.deadline && (
               <span className="flex items-center gap-1">
                 <CalendarClock className="h-3.5 w-3.5" />
@@ -60,6 +81,23 @@ export default async function AdminHomeworkDetailPage({
             )}
           </div>
         </Card>
+
+        <div className="flex gap-2">
+          <Link href={`/admin/prace-domowe/${homework.id}/edytuj`} className="flex-1">
+            <Button variant="outline" className="w-full">
+              <Pencil className="h-4 w-4" />
+              Edytuj
+            </Button>
+          </Link>
+          {/* deleteHomeworkAction takes an id; bind it so the form submit deletes
+              this homework, then redirects to /admin. */}
+          <form action={deleteHomeworkAction.bind(null, homework.id)} className="flex-1">
+            <Button type="submit" variant="danger" className="w-full">
+              <Trash2 className="h-4 w-4" />
+              Usuń
+            </Button>
+          </form>
+        </div>
 
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground-muted">
