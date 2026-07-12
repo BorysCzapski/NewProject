@@ -11,7 +11,9 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { LevelChangeForm } from "@/components/profile/level-change-form";
+import { LanguageChangeForm } from "@/components/profile/language-change-form";
 import { ThemeToggle } from "@/components/profile/theme-toggle";
+import { LANGUAGE_FLAGS, LANGUAGE_LABELS } from "@/lib/constants";
 import Link from "next/link";
 
 export default async function ProfilePage() {
@@ -74,6 +76,20 @@ export default async function ProfilePage() {
             </Card>
           </Link>
         )}
+
+        <section>
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-foreground-muted">
+            Język nauki
+          </h2>
+          <p className="mb-3 flex items-center gap-2 text-foreground">
+            <span className="text-2xl">{LANGUAGE_FLAGS[profile.target_language]}</span>
+            <span className="font-semibold">{LANGUAGE_LABELS[profile.target_language]}</span>
+          </p>
+          <LanguageChangeForm currentLanguage={profile.target_language} />
+          <p className="mt-2 text-xs text-foreground-muted">
+            Zmiana języka przełącza wszystkie treści (słówka, gramatykę, zadania) na wybrany język.
+          </p>
+        </section>
 
         <section>
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-foreground-muted">
