@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { YoutubePlayer, type YoutubePlayerHandle } from "@/components/listening/youtube-player";
 import { GapTranscript, gapId } from "@/components/listening/gap-transcript";
+import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { isCloseMatch } from "@/lib/utils";
 import { submitListeningAttempt } from "@/lib/listening/actions";
 import type { ListeningExercise } from "@/lib/types/database";
@@ -93,6 +94,12 @@ export function ExerciseSession({
           disabled={results !== null}
         />
       </Card>
+
+      {/* Sticky so it stays reachable while scrolling between scattered gaps;
+          it types into whichever gap input was focused last. */}
+      {exercise.language === "ru" && results === null && (
+        <CyrillicKeyboard className="sticky bottom-20 z-10 shadow-lg" />
+      )}
 
       {error && <p className="text-sm text-danger">{error}</p>}
 

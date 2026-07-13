@@ -15,9 +15,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn, isCloseMatch } from "@/lib/utils";
 import { recordGrammarAttempt, gradeTransformation, completeGrammarTopic } from "@/lib/grammar/actions";
-import type { GrammarExercise } from "@/lib/types/database";
+import type { GrammarExercise, TargetLanguage } from "@/lib/types/database";
 
 interface ExerciseResult {
   isCorrect: boolean;
@@ -27,9 +28,12 @@ interface ExerciseResult {
 export function GrammarExerciseStepper({
   topicId,
   exercises,
+  language = "en",
 }: {
   topicId: string;
   exercises: GrammarExercise[];
+  /** Topic's language — Russian topics get an on-screen Cyrillic keyboard. */
+  language?: TargetLanguage;
 }) {
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<string, ExerciseResult>>({});
@@ -105,6 +109,12 @@ export function GrammarExerciseStepper({
           onAnswered={(result) => handleAnswered(current.id, result)}
         />
       </Card>
+
+      {/* One keyboard serves both the gap input and the transformation
+          textarea — it types into whichever field was focused last. */}
+      {language === "ru" && current.type !== "multiple_choice" && !currentResult && (
+        <CyrillicKeyboard className="mt-3" />
+      )}
 
       {completeError && (
         <div className="mt-3">

@@ -46,7 +46,12 @@ export default async function SlowkaPage({
             </CardDescription>
           </Card>
         ) : (
-          <MeaningTrainer batch={batch} pool={pool} backHref={backHref} />
+          <MeaningTrainer
+            batch={batch}
+            pool={pool}
+            backHref={backHref}
+            language={profile.target_language}
+          />
         )}
       </div>
     </div>

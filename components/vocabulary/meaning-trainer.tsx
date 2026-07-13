@@ -11,8 +11,9 @@ import { RotateCcw, ArrowRight, ArrowLeft, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn, isCloseMatch } from "@/lib/utils";
-import type { VocabularyWord } from "@/lib/types/database";
+import type { TargetLanguage, VocabularyWord } from "@/lib/types/database";
 import { pickDistractors, shuffle } from "@/lib/vocabulary/word-utils";
 import { recordVocabularyAnswer, finishMeaningSession } from "@/lib/vocabulary/actions";
 
@@ -28,15 +29,24 @@ function answerFor(word: VocabularyWord, direction: Direction): string {
   return direction === "en-pl" ? word.translation_pl : word.word_en;
 }
 
+const TYPING_PLACEHOLDER: Record<TargetLanguage, string> = {
+  en: "Wpisz tłumaczenie po angielsku",
+  es: "Wpisz tłumaczenie po hiszpańsku",
+  ru: "Wpisz tłumaczenie po rosyjsku",
+};
+
 export function MeaningTrainer({
   batch,
   pool,
   backHref,
+  language = "en",
 }: {
   batch: VocabularyWord[];
   pool: VocabularyWord[];
   /** When the session was started from a learning-path stage, links back to it. */
   backHref?: string;
+  /** Language the words belong to — drives placeholders and the Cyrillic keyboard. */
+  language?: TargetLanguage;
 }) {
   const [phase, setPhase] = useState<Phase>("setup");
   const [direction, setDirection] = useState<Direction>("en-pl");
@@ -205,10 +215,12 @@ export function MeaningTrainer({
           <Input
             value={typedValue}
             onChange={(e) => setTypedValue(e.target.value)}
-            placeholder={direction === "en-pl" ? "Wpisz tłumaczenie po polsku" : "Wpisz tłumaczenie po angielsku"}
+            placeholder={direction === "en-pl" ? "Wpisz tłumaczenie po polsku" : TYPING_PLACEHOLDER[language]}
             disabled={!!feedback}
             autoFocus
           />
+          {/* Typing INTO Russian without a Cyrillic layout — on-screen keys. */}
+          {language === "ru" && direction === "pl-en" && !feedback && <CyrillicKeyboard />}
           {!feedback && (
             <Button size="lg" type="submit">
               Sprawdź

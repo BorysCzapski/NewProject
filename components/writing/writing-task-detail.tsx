@@ -13,10 +13,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScoreBadge } from "@/components/writing/score-badge";
+import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn } from "@/lib/utils";
 import { submitWriting, askFollowup } from "@/lib/writing/actions";
 import { WRITING_TASK_TYPE_LABELS } from "@/lib/constants";
-import type { WritingSubmission, WritingTask } from "@/lib/types/database";
+import type { TargetLanguage, WritingSubmission, WritingTask } from "@/lib/types/database";
+
+const COMPOSE_PLACEHOLDER: Record<TargetLanguage, string> = {
+  en: "Napisz swoją odpowiedź po angielsku…",
+  es: "Napisz swoją odpowiedź po hiszpańsku…",
+  ru: "Napisz swoją odpowiedź po rosyjsku…",
+};
 
 export function WritingTaskDetail({
   task,
@@ -89,13 +96,14 @@ function ComposeForm({
         onChange={(e) => setContent(e.target.value)}
         disabled={pending}
         rows={8}
-        placeholder="Napisz swoją odpowiedź po angielsku…"
+        placeholder={COMPOSE_PLACEHOLDER[task.language]}
         className={cn(
           "mt-3 w-full rounded-(--radius-control) border border-border bg-surface px-4 py-3 text-base text-foreground",
           "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
           "disabled:opacity-70"
         )}
       />
+      {task.language === "ru" && !pending && <CyrillicKeyboard className="mt-2" />}
       <p
         className={cn(
           "mt-1.5 text-xs font-medium",

@@ -11,6 +11,7 @@ import { useState } from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn } from "@/lib/utils";
 import { submitReadingAttempt, type ReadingAttemptResult, type ReadingQuestionResult } from "@/lib/reading/actions";
 import type { ReadingQuestion, ReadingText } from "@/lib/types/database";
@@ -70,6 +71,12 @@ export function ReadingSession({
           />
         ))}
       </div>
+
+      {/* Open answers to a Russian text are typed in Russian — sticky keys
+          stay reachable while scrolling between the question cards. */}
+      {text.language === "ru" && !result && (
+        <CyrillicKeyboard className="sticky bottom-20 z-10 mt-4 shadow-lg" />
+      )}
 
       {error && <p className="mt-3 text-sm text-danger">{error}</p>}
 
