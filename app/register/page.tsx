@@ -7,7 +7,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Link href="/" className="text-2xl font-bold text-primary">
-            EnglishApp
+            Phoenix
           </Link>
           <p className="mt-2 text-foreground-muted">Załóż konto i wybierz swój poziom</p>
         </div>

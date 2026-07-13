@@ -40,7 +40,7 @@ export async function assignCatchUpHomework(studentId: string, category: string)
 
   if (error) throw new Error("Nie udało się utworzyć pracy domowej.");
 
-  revalidatePath("/admin/sciezka");
-  revalidatePath("/admin");
-  revalidatePath("/prace-domowe");
+  revalidatePath("/jezyki/admin/sciezka");
+  revalidatePath("/jezyki/admin");
+  revalidatePath("/jezyki/prace-domowe");
 }

@@ -1,8 +1,17 @@
-# EnglishApp — aplikacja do nauki angielskiego
+# Phoenix — platforma mini-aplikacji
 
-Mobilna (mobile-first) aplikacja webowa do nauki angielskiego po polsku: fiszki i trener
-słówek, gramatyka, czytanie i pisanie oceniane przez AI, tłumaczenie piosenek, słuchanie
-z lukami (YouTube), prace domowe z panelem admina, kalendarz i streaki.
+**Phoenix** to jedna aplikacja-powłoka (super-app), w której mieszkają mini-aplikacje —
+każda pod własną przestrzenią tras, ze wspólnym logowaniem, profilem i motywem. Ekran
+główny (`/`) to launcher z kafelkami zainstalowanych aplikacji podzielonymi na sekcje
+(Nauka / Narzędzia / Wiara); użytkownik wybiera swoje aplikacje na `/aplikacje`.
+Rejestr aplikacji: `lib/phoenix/apps.ts` — dodanie nowej mini-aplikacji to jeden wpis
+tam + trasy pod `app/(main)/<id>/`.
+
+Pierwsza mini-aplikacja to **Linguo** (`/jezyki`) — nauka języków po polsku
+(angielski, hiszpański, rosyjski): fiszki i trener słówek, gramatyka z interaktywnymi
+lekcjami, czytanie i pisanie oceniane przez AI, tłumaczenie piosenek, słuchanie z lukami
+(YouTube), gra „łączenie tłumaczeń", prace domowe z panelem admina, kalendarz i streaki,
+a dla rosyjskiego — wprowadzenie do cyrylicy i ekranowa klawiatura.
 
 ## Spis treści
 
@@ -79,21 +88,25 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    3. `supabase/migrations/0003_multilang_homework_matching.sql` — wielojęzyczność (kolumna
       `language` + `profiles.target_language`), prace domowe per-uczeń, gra „łączenie tłumaczeń",
       polityki RLS admin-read (dzięki nim admin widzi postęp uczniów).
+   4. `supabase/migrations/0004_writing_tasks_insert_own.sql` — polityka RLS pozwalająca
+      uczniom generować zadania pisemne.
+   5. `supabase/migrations/0005_phoenix_installed_apps.sql` — kolumna `installed_apps`
+      (aplikacje widoczne na launcherze Phoenixa).
 
    **Seed — konto admina:**
-   4. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
+   6. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
 
    **Seed — angielski (język domyślny):**
-   5. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~700 słówek).
-   6. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
-   7. `03_learning_path.sql` — ścieżka nauki EN.
+   7. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~1000 słówek).
+   8. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
+   9. `03_learning_path.sql` — ścieżka nauki EN.
 
    **Seed — hiszpański (opcjonalnie, jeśli chcesz język ES):**
-   8. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
+   10. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
       `es_02_grammar_b2.sql`, a na końcu `es_03_learning_path.sql`.
 
    **Seed — rosyjski (opcjonalnie, jeśli chcesz język RU):**
-   9. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
+   11. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -152,25 +165,30 @@ Logowanie w aplikacji akceptuje login **lub** e-mail — dla konta admina wystar
 ```
 app/
   (main)/            # ekrany za logowaniem — wspólny layout z dolną nawigacją
-    page.tsx          # dashboard
-    nauka/             # hub + wszystkie moduły nauki (fiszki, słówka, gramatyka, ...)
-    prace-domowe/      # widok prac domowych użytkownika
-    kalendarz/         # kalendarz, streaki, statystyki
-    profil/            # profil, poziom, motyw, wylogowanie
-    admin/             # panel administratora (prace domowe)
+    page.tsx          # PHOENIX: launcher (kafelki zainstalowanych aplikacji)
+    aplikacje/         # PHOENIX: menedżer aplikacji (dodaj/usuń z ekranu głównego)
+    profil/            # PHOENIX: profil, poziom, język, motyw, wylogowanie
+    jezyki/            # LINGUO — mini-aplikacja językowa
+      page.tsx          # dashboard („Dziś"): streak, etap ścieżki, prace domowe
+      nauka/             # hub + wszystkie moduły nauki (fiszki, gramatyka, ...)
+      prace-domowe/      # widok prac domowych użytkownika
+      kalendarz/         # kalendarz, streaki, statystyki
+      admin/             # panel administratora (prace domowe, ścieżki uczniów)
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/
   ui/                # podstawowe komponenty (Button, Card, Input, Badge, ...)
-  layout/            # dolna nawigacja, nagłówek strony
-  <moduł>/           # komponenty specyficzne dla danego modułu nauki
+  layout/            # dolna nawigacja (per-aplikacja), nagłówek strony
+  phoenix/           # komponenty powłoki (ikony aplikacji, menedżer)
+  <moduł>/           # komponenty specyficzne dla danego modułu Linguo
 lib/
+  phoenix/           # rejestr aplikacji + akcje powłoki
   supabase/          # klienci Supabase (przeglądarka / serwer / service role)
   actions/, <moduł>/ # Server Actions per moduł
   ai.ts              # klient Groq + pomocnik do ustrukturyzowanych odpowiedzi JSON
   homework/progress.ts # automatyczne liczenie postępu prac domowych
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
-  migrations/        # schemat SQL
+  migrations/        # schemat SQL (0005 = kolumna installed_apps Phoenixa)
   seed/               # dane początkowe (admin, słówka, gramatyka)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
 ```

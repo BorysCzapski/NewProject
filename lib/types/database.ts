@@ -38,6 +38,8 @@ export interface Profile {
   current_streak: number;
   longest_streak: number;
   last_activity_date: string | null;
+  /** Phoenix: mini-app ids shown on the user's launcher (lib/phoenix/apps.ts). */
+  installed_apps: string[];
   created_at: string;
   updated_at: string;
 }

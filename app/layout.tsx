@@ -20,12 +20,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EnglishApp — Nauka angielskiego",
-  description: "Ucz się angielskiego codziennie: słówka, gramatyka, czytanie, pisanie, piosenki i słuchanie — dopasowane do Twojego poziomu.",
+  title: "Phoenix — Twoje aplikacje w jednym miejscu",
+  description: "Phoenix: platforma mini-aplikacji do nauki i codziennych spraw. Pierwsza z nich to Linguo — nauka angielskiego, hiszpańskiego i rosyjskiego.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "EnglishApp",
+    title: "Phoenix",
   },
 };
 

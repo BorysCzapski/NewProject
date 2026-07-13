@@ -56,7 +56,7 @@ export function PathRoadmap({ stages }: { stages: LearningPathStageWithProgress[
 
         return (
           <li key={stage.id}>
-            {isLocked ? node : <Link href={`/nauka/sciezka/${stage.id}`}>{node}</Link>}
+            {isLocked ? node : <Link href={`/jezyki/nauka/sciezka/${stage.id}`}>{node}</Link>}
           </li>
         );
       })}

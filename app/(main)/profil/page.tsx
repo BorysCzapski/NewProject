@@ -68,7 +68,7 @@ export default async function ProfilePage() {
         </div>
 
         {profile.role === "admin" && (
-          <Link href="/admin">
+          <Link href="/jezyki/admin">
             <Card className="flex items-center justify-between bg-primary-soft">
               <span className="flex items-center gap-2 font-semibold text-primary">
                 <ShieldCheck className="h-5 w-5" /> Panel administratora
