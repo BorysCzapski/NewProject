@@ -95,9 +95,15 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    **Seed — rosyjski (opcjonalnie, jeśli chcesz język RU):**
    9. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
 
-   Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language/level = ...`), więc można
-   je bezpiecznie uruchomić ponownie. `*_03_learning_path.sql` wymaga wcześniej uruchomionych plików
-   ze słownictwem i gramatyką danego języka (odwołuje się do ich kategorii i tematów).
+   Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
+   więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
+   pozostałych języków. `*_03_learning_path.sql` wymaga wcześniej uruchomionych plików ze
+   słownictwem i gramatyką danego języka (odwołuje się do ich kategorii i tematów).
+
+   > ⚠️ Ponowne uruchomienie seeda **słownictwa** danego języka wstawia słówka z nowymi ID,
+   > więc kasuje postęp opanowania słówek (`vocabulary_progress`) tego języka — to skutek
+   > kaskady kluczy obcych, nie błąd. Uruchamiaj ponownie tylko wtedy, gdy naprawdę chcesz
+   > odświeżyć pulę słówek.
 3. W **Authentication → Providers** upewnij się, że logowanie e-mail/hasło jest włączone.
    Do szybkich testów lokalnych możesz wyłączyć "Confirm email" w
    **Authentication → Sign In / Providers**, żeby rejestracja od razu dawała aktywną sesję

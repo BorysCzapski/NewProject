@@ -6,7 +6,7 @@
 -- Safe to re-run: existing B2 rows are deleted first.
 -- ============================================================================
 
-delete from vocabulary_words where level = 'B2';
+delete from vocabulary_words where language = 'en' and level = 'B2';
 
 -- ----------------------------------------------------------------------------
 -- biznes (business)

@@ -10,10 +10,10 @@
 -- Idempotent: deletes by level first.
 -- ============================================================================
 
-delete from learning_path_stages where level = 'A1';
-delete from learning_path_stages where level = 'A2';
-delete from learning_path_stages where level = 'B1';
-delete from learning_path_stages where level = 'B2';
+delete from learning_path_stages where language = 'en' and level = 'A1';
+delete from learning_path_stages where language = 'en' and level = 'A2';
+delete from learning_path_stages where language = 'en' and level = 'B1';
+delete from learning_path_stages where language = 'en' and level = 'B2';
 
 -- ----------------------------------------------------------------------------
 -- A1 — 10 categories, cycling 5 grammar topics

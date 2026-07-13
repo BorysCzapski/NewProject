@@ -7,7 +7,7 @@
 -- means this file can be re-run safely.
 -- ============================================================================
 
-delete from grammar_topics where level = 'A2';
+delete from grammar_topics where language = 'en' and level = 'A2';
 
 -- ----------------------------------------------------------------------------
 -- Topic 0: Past Simple

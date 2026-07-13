@@ -6,7 +6,7 @@
 -- re-run: existing A2 rows are deleted first.
 -- ============================================================================
 
-delete from vocabulary_words where level = 'A2';
+delete from vocabulary_words where language = 'en' and level = 'A2';
 
 -- ----------------------------------------------------------------------------
 -- podróże (travel)

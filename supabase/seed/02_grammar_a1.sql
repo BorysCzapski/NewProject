@@ -7,7 +7,7 @@
 -- means this file can be re-run safely.
 -- ============================================================================
 
-delete from grammar_topics where level = 'A1';
+delete from grammar_topics where language = 'en' and level = 'A1';
 
 -- ----------------------------------------------------------------------------
 -- Topic 0: Czasownik "to be"
