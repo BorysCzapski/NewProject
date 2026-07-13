@@ -51,7 +51,7 @@ export async function startListeningExercise(
     );
   }
 
-  redirect(`/nauka/sluchanie/${exercise.id}`);
+  redirect(`/jezyki/nauka/sluchanie/${exercise.id}`);
 }
 
 /** Grades a submitted gap-fill attempt, persists it, and records the listening activity. */

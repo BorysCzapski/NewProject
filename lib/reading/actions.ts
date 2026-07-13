@@ -125,7 +125,7 @@ export async function generateReadingText(topic: string): Promise<void> {
     }
   }
 
-  redirect(`/nauka/czytanie/${textRow.id}`);
+  redirect(`/jezyki/nauka/czytanie/${textRow.id}`);
 }
 
 export interface ReadingQuestionResult {

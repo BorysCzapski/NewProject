@@ -158,7 +158,7 @@ export async function completeOnboarding(
     return { error: "Nie udało się zapisać ustawień. Spróbuj ponownie." };
   }
 
-  redirect("/");
+  redirect("/jezyki");
 }
 
 export async function updateLevel(

@@ -37,13 +37,37 @@ export const LEVEL_DESCRIPTIONS: Record<UserLevel, string> = {
   B2: "Rozumiem złożone teksty i dyskutuję na wiele tematów.",
 };
 
-export const NAV_ITEMS = [
-  { href: "/", label: "Home", icon: "Home" },
-  { href: "/nauka", label: "Nauka", icon: "BookOpen" },
-  { href: "/prace-domowe", label: "Prace domowe", icon: "ClipboardList" },
-  { href: "/kalendarz", label: "Kalendarz", icon: "Calendar" },
+// Phoenix is a shell hosting mini-apps, so the bottom tab bar is PER-APP:
+// inside /jezyki the Linguo tabs show (with a Phoenix-home tab first);
+// everywhere else the platform-level tabs show. The bottom nav picks the
+// set whose `prefix` matches the current pathname (longest wins).
+export interface NavItem {
+  href: string;
+  label: string;
+  icon: "Home" | "BookOpen" | "ClipboardList" | "Calendar" | "User" | "LayoutGrid" | "Sun";
+  /** Highlight only on exact pathname match (for app/platform home tabs). */
+  exact?: boolean;
+}
+
+export const PHOENIX_NAV: NavItem[] = [
+  { href: "/", label: "Start", icon: "Home", exact: true },
+  { href: "/aplikacje", label: "Aplikacje", icon: "LayoutGrid" },
   { href: "/profil", label: "Profil", icon: "User" },
-] as const;
+];
+
+export const LINGUO_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/jezyki", label: "Dziś", icon: "Sun", exact: true },
+  { href: "/jezyki/nauka", label: "Nauka", icon: "BookOpen" },
+  { href: "/jezyki/prace-domowe", label: "Prace", icon: "ClipboardList" },
+  { href: "/jezyki/kalendarz", label: "Kalendarz", icon: "Calendar" },
+];
+
+/** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
+export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
+  { prefix: "/jezyki", items: LINGUO_NAV },
+  { prefix: "", items: PHOENIX_NAV },
+];
 
 export const HOMEWORK_TYPE_LABELS: Record<HomeworkType, string> = {
   song_translation: "Przetłumacz piosenkę",

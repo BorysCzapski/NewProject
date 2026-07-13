@@ -18,7 +18,7 @@ export default async function LoginPage({
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Link href="/" className="text-2xl font-bold text-primary">
-            EnglishApp
+            Phoenix
           </Link>
           <p className="mt-2 text-foreground-muted">Zaloguj się i wróć do nauki</p>
         </div>

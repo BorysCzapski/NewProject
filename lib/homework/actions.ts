@@ -290,7 +290,7 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
     return { error: "Nie udało się zapisać pracy domowej." };
   }
 
-  redirect(`/admin/prace-domowe/${homework.id}`);
+  redirect(`/jezyki/admin/prace-domowe/${homework.id}`);
 }
 
 /**
@@ -322,7 +322,7 @@ export async function updateHomeworkAction(_prevState: ActionState, formData: Fo
 
   if (error) return { error: "Nie udało się zapisać zmian." };
 
-  redirect(`/admin/prace-domowe/${id}`);
+  redirect(`/jezyki/admin/prace-domowe/${id}`);
 }
 
 /** Deletes a homework (and its progress rows cascade). */
@@ -330,5 +330,5 @@ export async function deleteHomeworkAction(id: string): Promise<void> {
   await requireAdmin();
   const supabase = await createClient();
   await supabase.from("homework").delete().eq("id", id);
-  redirect("/admin");
+  redirect("/jezyki/admin");
 }

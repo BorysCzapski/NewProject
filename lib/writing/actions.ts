@@ -50,7 +50,7 @@ export async function startWritingTask(taskType?: WritingTaskType): Promise<Acti
         : "Nie udało się przygotować zadania. Spróbuj ponownie za chwilę."
     );
   }
-  redirect(`/nauka/pisanie/${taskId}`);
+  redirect(`/jezyki/nauka/pisanie/${taskId}`);
 }
 
 interface GradedWriting {

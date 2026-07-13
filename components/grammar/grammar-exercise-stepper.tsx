@@ -87,7 +87,7 @@ export function GrammarExerciseStepper({
         <CardDescription className="mt-1">
           Poprawnych odpowiedzi: {correctCount}/{exercises.length}
         </CardDescription>
-        <Link href="/nauka/gramatyka">
+        <Link href="/jezyki/nauka/gramatyka">
           <Button className="mt-4 w-full" size="lg">
             Wróć do listy tematów
           </Button>
@@ -119,7 +119,7 @@ export function GrammarExerciseStepper({
       {completeError && (
         <div className="mt-3">
           <p className="text-sm text-danger">{completeError}</p>
-          <Link href="/nauka/gramatyka">
+          <Link href="/jezyki/nauka/gramatyka">
             <Button variant="outline" className="mt-3 w-full">
               Wróć do listy tematów
             </Button>

@@ -30,7 +30,7 @@ export async function startSong(title: string, artist: string, lyrics: string): 
     lyrics,
     createdBy: profile.id,
   });
-  redirect(`/nauka/piosenki/${song.id}`);
+  redirect(`/jezyki/nauka/piosenki/${song.id}`);
 }
 
 export interface TranslationCheckResult {

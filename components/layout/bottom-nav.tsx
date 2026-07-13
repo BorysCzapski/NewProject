@@ -2,19 +2,26 @@
 
 // ============================================================================
 // components/layout/bottom-nav.tsx
-// Fixed bottom tab bar — the app's primary navigation on mobile. Respects
-// the safe-area inset so it doesn't collide with the home indicator on iOS.
+// Fixed bottom tab bar — the app's primary navigation on mobile. Phoenix is
+// a shell hosting mini-apps, so the tab set depends on where you are: inside
+// /jezyki you get Linguo's tabs (first tab = back to the Phoenix launcher),
+// elsewhere the platform tabs. Respects the safe-area inset so it doesn't
+// collide with the home indicator on iOS.
 // ============================================================================
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, ClipboardList, Calendar, User } from "lucide-react";
-import { NAV_ITEMS } from "@/lib/constants";
+import { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun } from "lucide-react";
+import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const ICONS = { Home, BookOpen, ClipboardList, Calendar, User };
+const ICONS = { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun };
 
 export function BottomNav() {
   const pathname = usePathname();
+  // Longest matching prefix wins; the "" entry is the platform fallback.
+  const items = NAV_BY_PREFIX.find(
+    (set) => set.prefix === "" || pathname === set.prefix || pathname.startsWith(`${set.prefix}/`)
+  )!.items;
 
   return (
     <nav
@@ -22,9 +29,11 @@ export function BottomNav() {
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="mx-auto flex max-w-lg items-stretch justify-between px-2">
-        {NAV_ITEMS.map((item) => {
+        {items.map((item) => {
           const Icon = ICONS[item.icon];
-          const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          const isActive = item.exact
+            ? pathname === item.href
+            : pathname.startsWith(item.href);
           return (
             <li key={item.href} className="flex-1">
               <Link
