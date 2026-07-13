@@ -7,6 +7,9 @@
 -- means this file can be re-run safely.
 -- ============================================================================
 
+-- learning_path_stages reference these topics (FK without cascade) — clear the
+-- stages slice first; re-run 03_learning_path.sql afterwards to restore it.
+delete from learning_path_stages where language = 'en' and level = 'B2';
 delete from grammar_topics where language = 'en' and level = 'B2';
 
 -- ----------------------------------------------------------------------------

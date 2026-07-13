@@ -104,6 +104,10 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    > więc kasuje postęp opanowania słówek (`vocabulary_progress`) tego języka — to skutek
    > kaskady kluczy obcych, nie błąd. Uruchamiaj ponownie tylko wtedy, gdy naprawdę chcesz
    > odświeżyć pulę słówek.
+
+   > ⚠️ Seedy **gramatyki** (`*02_grammar_*.sql`) czyszczą też etapy ścieżki nauki swojego
+   > języka (etapy wskazują na tematy gramatyczne kluczem obcym). Po ich ponownym uruchomieniu
+   > zawsze uruchom na końcu `*_03_learning_path.sql` tego języka, żeby odtworzyć ścieżkę.
 3. W **Authentication → Providers** upewnij się, że logowanie e-mail/hasło jest włączone.
    Do szybkich testów lokalnych możesz wyłączyć "Confirm email" w
    **Authentication → Sign In / Providers**, żeby rejestracja od razu dawała aktywną sesję

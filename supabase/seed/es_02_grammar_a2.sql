@@ -5,6 +5,9 @@
 -- (cascades to grammar_exercises), then re-inserts using fixed topic uuids.
 -- ============================================================================
 
+-- learning_path_stages reference these topics (FK without cascade) — clear the
+-- stages slice first; re-run es_03_learning_path.sql afterwards to restore it.
+delete from learning_path_stages where language = 'es' and level = 'A2';
 delete from grammar_topics where language = 'es' and level = 'A2';
 
 -- ----------------------------------------------------------------------------

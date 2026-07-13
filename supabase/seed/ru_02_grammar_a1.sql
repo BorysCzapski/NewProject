@@ -6,6 +6,9 @@
 --       Explanations are in Polish. Idempotent: re-running replaces A1/ru data.
 -- =============================================================================
 
+-- learning_path_stages reference these topics (FK without cascade) — clear the
+-- stages slice first; re-run ru_03_learning_path.sql afterwards to restore it.
+delete from learning_path_stages where language = 'ru' and level = 'A1';
 delete from grammar_topics where language = 'ru' and level = 'A1';
 
 -- -----------------------------------------------------------------------------

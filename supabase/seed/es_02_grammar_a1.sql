@@ -6,6 +6,9 @@
 --             before re-inserting. Uses fixed UUIDs for stable references.
 -- ============================================================================
 
+-- learning_path_stages reference these topics (FK without cascade) — clear the
+-- stages slice first; re-run es_03_learning_path.sql afterwards to restore it.
+delete from learning_path_stages where language = 'es' and level = 'A1';
 delete from grammar_topics where language = 'es' and level = 'A1';
 
 -- ----------------------------------------------------------------------------
