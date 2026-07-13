@@ -16,6 +16,20 @@ export const RU_A1_LESSONS: Record<string, GrammarLesson> = {
     },
     {
       type: "table",
+      title: "Na dzień dobry za darmo — wyglądają i brzmią jak polskie",
+      headers: ["Litera", "Czytamy jak", "Przykład"],
+      rows: [
+        ["А а", "a", "мама [mama] — mama"],
+        ["К к", "k", "кот [kot] — kot"],
+        ["М м", "m", "март [mart] — marzec"],
+        ["О о", "o (pod akcentem)", "он [on] — on"],
+        ["Т т", "t", "там [tam] — tam"],
+      ],
+      caption:
+        "Tych pięciu liter nie musisz się uczyć — z nich złożysz już мама, кот czy там.",
+    },
+    {
+      type: "table",
       title: "Fałszywi przyjaciele — wyglądają znajomo, brzmią inaczej",
       headers: ["Litera", "Czytamy jak", "Przykład"],
       rows: [
@@ -32,22 +46,50 @@ export const RU_A1_LESSONS: Record<string, GrammarLesson> = {
     },
     {
       type: "table",
-      title: "Litery, których nie ma w polskim alfabecie",
+      title: "Litery nowe dla Polaka",
       headers: ["Litera", "Czytamy jak", "Przykład"],
       rows: [
+        ["Б б", "b", "банк [bank] — bank"],
+        ["Г г", "g", "год [got] — rok"],
+        ["Д д", "d", "да [da] — tak"],
         ["Ж ж", "ż", "журнал [żurnał] — czasopismo"],
+        ["З з", "z", "зима [zima] — zima"],
+        ["И и", "i", "имя [imia] — imię"],
+        ["Й й", "j", "мой [moj] — mój"],
+        ["Л л", "ł (twarde) / l (miękkie)", "лампа [łampa] — lampa"],
+        ["П п", "p", "папа [papa] — tata"],
+        ["Ф ф", "f", "фильм [film] — film"],
+        ["Ц ц", "c", "цирк [cyrk] — cyrk"],
+        ["Ч ч", "cz (miękkie)", "чай [czaj] — herbata"],
         ["Ш ш", "sz", "школа [szkoła] — szkoła"],
         ["Щ щ", "szcz (miękkie)", "борщ [borszcz] — barszcz"],
-        ["Ч ч", "cz (miękkie)", "чай [czaj] — herbata"],
-        ["Ц ц", "c", "цирк [cyrk] — cyrk"],
         ["Ы ы", "y", "сын [syn] — syn"],
         ["Э э", "e", "это [eta] — to"],
         ["Ю ю", "ju", "юг [juk] — południe"],
         ["Я я", "ja", "яблоко [jabłaka] — jabłko"],
         ["Ё ё", "jo — ZAWSZE akcentowane", "ёлка [jołka] — choinka"],
-        ["Й й", "j", "мой [moj] — mój"],
-        ["Ь ь", "brak dźwięku — zmiękcza poprzednią spółgłoskę", "день [dień] — dzień"],
       ],
+      caption:
+        "Uwaga na pary kształtów: б (b) ≠ в (w), и (i) ≠ й (j), ш (sz) ≠ щ (szcz). Ю, я, ё po spółgłosce dodatkowo ją zmiękczają.",
+    },
+    {
+      type: "table",
+      title: "Znaki specjalne: ъ i ь — litery bez własnego dźwięku",
+      headers: ["Znak", "Co robi", "Przykład"],
+      rows: [
+        [
+          "Ъ ъ",
+          "twardy znak — nie ma dźwięku; oddziela spółgłoskę od е, ё, ю, я, żeby wybrzmiało [j]",
+          "подъезд [padjezd] — klatka schodowa",
+        ],
+        [
+          "Ь ь",
+          "miękki znak — nie ma dźwięku; zmiękcza poprzednią spółgłoskę",
+          "день [dień] — dzień",
+        ],
+      ],
+      caption:
+        "Żaden z tych znaków nigdy nie stoi na początku słowa. Ъ jest rzadki, ь spotkasz bardzo często (мать, говорить).",
     },
     {
       type: "examples",

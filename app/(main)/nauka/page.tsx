@@ -4,7 +4,7 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2 } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -67,8 +67,18 @@ const MODULES = [
   },
 ];
 
+// Shown only to Russian learners, at the very top — the alphabet comes first.
+const CYRYLICA_MODULE = {
+  href: "/nauka/cyrylica",
+  label: "Cyrylica — zacznij tutaj",
+  description: "Wprowadzenie do alfabetu: bez tego fiszki będą nieczytelne",
+  icon: Type,
+};
+
 export default async function NaukaPage() {
   const profile = await requireProfile();
+  const modules =
+    profile.target_language === "ru" ? [CYRYLICA_MODULE, ...MODULES] : MODULES;
 
   return (
     <div>
@@ -78,7 +88,7 @@ export default async function NaukaPage() {
         action={<LevelBadge level={profile.level} />}
       />
       <div className="mx-auto flex max-w-lg flex-col gap-3 px-5 py-5">
-        {MODULES.map((mod) => (
+        {modules.map((mod) => (
           <Link key={mod.href} href={mod.href}>
             <Card className="flex items-center gap-4 active:scale-[0.98] transition-transform">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">

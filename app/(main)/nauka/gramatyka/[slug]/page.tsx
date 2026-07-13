@@ -53,7 +53,11 @@ export default async function GrammarTopicPage({
 
         <LessonSection topic={topic as GrammarTopic} />
 
-        <GrammarExerciseStepper topicId={topic.id} exercises={(exercises ?? []) as GrammarExercise[]} />
+        <GrammarExerciseStepper
+          topicId={topic.id}
+          exercises={(exercises ?? []) as GrammarExercise[]}
+          language={(topic as GrammarTopic).language}
+        />
       </div>
     </div>
   );
