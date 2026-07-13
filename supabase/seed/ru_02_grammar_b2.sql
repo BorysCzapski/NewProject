@@ -6,6 +6,9 @@
 -- Idempotent: the delete below cascades to grammar_exercises before re-seeding.
 -- ============================================================================
 
+-- learning_path_stages reference these topics (FK without cascade) — clear the
+-- stages slice first; re-run ru_03_learning_path.sql afterwards to restore it.
+delete from learning_path_stages where language = 'ru' and level = 'B2';
 delete from grammar_topics where language = 'ru' and level = 'B2';
 
 -- ----------------------------------------------------------------------------
