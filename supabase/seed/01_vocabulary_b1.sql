@@ -6,7 +6,7 @@
 -- each. Safe to re-run: existing B1 rows are deleted first.
 -- ============================================================================
 
-delete from vocabulary_words where level = 'B1';
+delete from vocabulary_words where language = 'en' and level = 'B1';
 
 -- ----------------------------------------------------------------------------
 -- emocje (emotions)

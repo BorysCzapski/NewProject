@@ -6,7 +6,7 @@
 -- ~18 words each. Safe to re-run: existing A1 rows are deleted first.
 -- ============================================================================
 
-delete from vocabulary_words where level = 'A1';
+delete from vocabulary_words where language = 'en' and level = 'A1';
 
 -- ----------------------------------------------------------------------------
 -- rodzina (family)
