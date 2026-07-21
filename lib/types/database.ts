@@ -267,3 +267,27 @@ export interface ActivityLog {
   metadata: Record<string, unknown> | null;
   created_at: string;
 }
+
+export interface PromptForgeMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+export interface PromptForgeConflict {
+  issue: string;
+  fix: string;
+}
+
+export interface PromptSession {
+  id: string;
+  user_id: string;
+  title: string;
+  goal: string;
+  draft: string;
+  messages: PromptForgeMessage[];
+  conflicts: PromptForgeConflict[];
+  suggestions: string[];
+  ready_to_copy: boolean;
+  created_at: string;
+  updated_at: string;
+}

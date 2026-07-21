@@ -13,6 +13,12 @@ lekcjami, czytanie i pisanie oceniane przez AI, tłumaczenie piosenek, słuchani
 (YouTube), gra „łączenie tłumaczeń", prace domowe z panelem admina, kalendarz i streaki,
 a dla rosyjskiego — wprowadzenie do cyrylicy i ekranowa klawiatura.
 
+Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
+aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do
+skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne uzupełnienia
+i wykrywając sprzeczności/luki w dotychczasowych ustaleniach — z propozycją naprawy jednym
+kliknięciem. Gotowy prompt wkleja się w nową, osobną sesję czatu, żeby zacząć budowę.
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)
@@ -92,21 +98,23 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       uczniom generować zadania pisemne.
    5. `supabase/migrations/0005_phoenix_installed_apps.sql` — kolumna `installed_apps`
       (aplikacje widoczne na launcherze Phoenixa).
+   6. `supabase/migrations/0006_prompt_forge.sql` — tabela `prompt_sessions` (Kuźnia:
+      sesje kreatora promptów).
 
    **Seed — konto admina:**
-   6. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
+   7. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
 
    **Seed — angielski (język domyślny):**
-   7. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~1000 słówek).
-   8. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
-   9. `03_learning_path.sql` — ścieżka nauki EN.
+   8. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~1000 słówek).
+   9. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
+   10. `03_learning_path.sql` — ścieżka nauki EN.
 
    **Seed — hiszpański (opcjonalnie, jeśli chcesz język ES):**
-   10. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
+   11. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
       `es_02_grammar_b2.sql`, a na końcu `es_03_learning_path.sql`.
 
    **Seed — rosyjski (opcjonalnie, jeśli chcesz język RU):**
-   11. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
+   12. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych

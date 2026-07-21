@@ -10,11 +10,11 @@
 // ============================================================================
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun } from "lucide-react";
+import { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun, Hammer } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-const ICONS = { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun };
+const ICONS = { Home, BookOpen, ClipboardList, Calendar, User, LayoutGrid, Sun, Hammer };
 
 export function BottomNav() {
   const pathname = usePathname();
