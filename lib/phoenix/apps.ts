@@ -55,6 +55,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     comingSoon: true,
   },
   {
+    id: "kuznia",
+    name: "Kuźnia",
+    description: "Kreator promptów do budowy kolejnych aplikacji",
+    section: "narzedzia",
+    icon: "Hammer",
+    href: "/kuznia",
+  },
+  {
     id: "paragony",
     name: "Paragony",
     description: "Skanowanie paragonów i kontrola wydatków",

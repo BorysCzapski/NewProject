@@ -94,6 +94,8 @@ export async function askAIForJSON<T>(params: {
   prompt: string;
   schema: Record<string, unknown>;
   maxTokens?: number;
+  /** Prior turns to include for real multi-turn memory, oldest first. */
+  history?: Array<{ role: "user" | "assistant"; content: string }>;
 }): Promise<T> {
   const groq = getClient();
 
@@ -101,6 +103,7 @@ export async function askAIForJSON<T>(params: {
     max_completion_tokens: params.maxTokens ?? 2048,
     messages: [
       { role: "system", content: params.system },
+      ...(params.history ?? []),
       { role: "user", content: params.prompt },
     ],
     tools: [

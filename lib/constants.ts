@@ -44,7 +44,7 @@ export const LEVEL_DESCRIPTIONS: Record<UserLevel, string> = {
 export interface NavItem {
   href: string;
   label: string;
-  icon: "Home" | "BookOpen" | "ClipboardList" | "Calendar" | "User" | "LayoutGrid" | "Sun";
+  icon: "Home" | "BookOpen" | "ClipboardList" | "Calendar" | "User" | "LayoutGrid" | "Sun" | "Hammer";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -63,9 +63,15 @@ export const LINGUO_NAV: NavItem[] = [
   { href: "/jezyki/kalendarz", label: "Kalendarz", icon: "Calendar" },
 ];
 
+export const KUZNIA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/kuznia", label: "Kuźnia", icon: "Hammer", exact: true },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
+  { prefix: "/kuznia", items: KUZNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 
