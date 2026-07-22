@@ -443,21 +443,26 @@ const IMPORT_SCHEMA = {
   },
 };
 
-// Groq's on-demand tier for llama-3.3-70b-versatile caps a SINGLE request
-// (system + schema + prompt + requested completion, all counted together)
-// at ~12,000 tokens/minute — this is a hard per-request ceiling on this
-// tier, not just a pacing limit, confirmed in production by a real "413
-// Request too large ... Limit 12000, Requested 12566" failure. Polish text
-// runs meaningfully more tokens/char than English (diacritics + subword
-// tokenization), so char budgets here are deliberately conservative. A
-// second real failure ("400 Failed to call a function ... tool_use_failed"
-// with an unterminated JSON dump in failed_generation) was the model's
-// output getting cut off mid-JSON by maxTokens on a large arkusz — the two
-// fixes below (smaller input, smaller/adaptive output ceiling) address both.
-const MAX_PROMPT_CHARS = 6_000;
-const MAX_ANSWER_KEY_CHARS = 4_000;
-const DEFAULT_MAX_COMPLETION_TOKENS = 4_000;
-const RETRY_MAX_COMPLETION_TOKENS = 2_500;
+// Groq's FREE on-demand tier caps a single request at ~12,000 tokens total
+// (system + schema + prompt + requested completion) — confirmed in
+// production by a real "413 Request too large ... Limit 12000, Requested
+// 12566" failure. An earlier version of this file reacted by shrinking
+// MAX_PROMPT_CHARS all the way down to 6,000 — but that silently TRUNCATED
+// real arkusze mid-arkusz (a full rozszerzony arkusz's problem text easily
+// runs past that), so the AI only ever saw the first ~3 zadania of a real
+// ~14-zadanie arkusz and correctly extracted only those. Once the account
+// is on a paid tier (removes the 12k/request ceiling; the model's actual
+// context window is 128k tokens), the right fix is a MUCH higher ceiling
+// so truncation essentially never triggers for a real arkusz — these
+// numbers are sized generously (est. ~1.6 chars/token for Polish text) with
+// real headroom under a 128k-token context, not tuned to any specific rate
+// limit. If a future run ever needs the free tier again, lower these back
+// down — but prefer processing fewer arkusze per day over silently
+// dropping most of an arkusz's problems.
+const MAX_PROMPT_CHARS = 40_000;
+const MAX_ANSWER_KEY_CHARS = 25_000;
+const DEFAULT_MAX_COMPLETION_TOKENS = 12_000;
+const RETRY_MAX_COMPLETION_TOKENS = 6_000;
 
 function truncate(text: string, maxChars: number): string {
   return text.length > maxChars ? `${text.slice(0, maxChars)}\n[...treść obcięta...]` : text;
