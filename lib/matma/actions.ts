@@ -178,12 +178,11 @@ export async function submitProblemAttempt(
     return actionFailure("Nie udało się ocenić rozwiązania. Spróbuj ponownie za chwilę.");
   }
 
-  const tasks: Promise<unknown>[] = [
+  await Promise.all([
     recomputeTopicProgress(supabase, profile.id, problem.topic_id),
     supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.MATH }),
-  ];
-  if (isSpacedReview) tasks.push(markTopicReviewed(supabase, profile.id, problem.topic_id));
-  await Promise.all(tasks);
+    isSpacedReview ? markTopicReviewed(supabase, profile.id, problem.topic_id) : Promise.resolve(),
+  ]);
 
   revalidatePath("/matma");
   revalidatePath("/matma/nauka");

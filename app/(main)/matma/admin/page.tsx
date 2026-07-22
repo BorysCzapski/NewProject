@@ -5,7 +5,7 @@
 // the two other admin screens (zadania, uczniowie).
 // ============================================================================
 import Link from "next/link";
-import { ClipboardList, Users } from "lucide-react";
+import { ClipboardList, Users, Download } from "lucide-react";
 import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getAdminTopicsOverview } from "@/lib/matma/admin-queries";
@@ -40,6 +40,11 @@ export default async function MatmaAdminPage() {
           <Link href="/matma/admin/uczniowie">
             <Button variant="outline" className="w-full">
               <Users className="h-4 w-4" /> Uczniowie
+            </Button>
+          </Link>
+          <Link href="/matma/admin/import" className="col-span-2">
+            <Button variant="outline" className="w-full">
+              <Download className="h-4 w-4" /> Import arkuszy CKE
             </Button>
           </Link>
         </div>
