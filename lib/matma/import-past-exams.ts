@@ -103,7 +103,14 @@ export interface ArkuszImportSummary {
 // Low-level HTTP helpers
 // ----------------------------------------------------------------------------
 
-const REQUEST_TIMEOUT_MS = 20_000;
+// Kept fairly tight: this fires once per candidate URL (up to ~7 per
+// discover*Year() call, see formula2023/2015ArkuszCandidates), and the whole
+// admin import UI now runs one YEAR per request (see import-trigger-form.tsx)
+// specifically to stay well under typical serverless function time limits —
+// a slow-but-alive host should still resolve well inside 10s; anything
+// longer is treated as unreachable rather than risking the request itself
+// timing out first.
+const REQUEST_TIMEOUT_MS = 10_000;
 // A real browser UA — some CKE-adjacent hosts / CDNs reject default
 // server-side fetch UAs outright.
 const USER_AGENT =
@@ -346,14 +353,17 @@ export async function discoverPastExamArkusze(opts?: {
 
   const results: ArkuszDescriptor[] = [];
   for (let year = yearFrom; year <= yearTo; year++) {
-    if (year >= 2023) {
-      const d = await discoverFormula2023Year(year).catch(() => null);
-      if (d) results.push(d);
-    }
-    if (year >= 2015 && year <= 2025) {
-      const d = await discoverFormula2015Year(year).catch(() => null);
-      if (d) results.push(d);
-    }
+    // Formula 2023 and Formula 2015 checks are independent (different hosts/
+    // paths) — run them concurrently instead of sequentially so a year in
+    // the 2023-2025 overlap doesn't pay for both discovery passes back to
+    // back (this roughly halves worst-case latency per year, which matters
+    // now that the admin UI issues one Server Action call per year).
+    const [formula2023, formula2015] = await Promise.all([
+      year >= 2023 ? discoverFormula2023Year(year).catch(() => null) : Promise.resolve(null),
+      year >= 2015 && year <= 2025 ? discoverFormula2015Year(year).catch(() => null) : Promise.resolve(null),
+    ]);
+    if (formula2023) results.push(formula2023);
+    if (formula2015) results.push(formula2015);
     if (year <= 2014) {
       const found = await discoverStaraFormulaYear(year).catch(() => [] as ArkuszDescriptor[]);
       results.push(...found);

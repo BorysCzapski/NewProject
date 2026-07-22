@@ -3,13 +3,21 @@
 // ============================================================================
 // components/matma/admin/import-trigger-form.tsx
 // Trigger UI for the CKE past-exam import pipeline (lib/matma/import-actions
-// .ts runPastExamImport). This can be SLOW — many PDFs downloaded, parsed,
-// and sent to the AI one arkusz at a time — so it shows an explicit loading
-// state and never assumes a fast response, then renders the per-arkusz
-// summary list (found/inserted counts + errors) once it resolves.
+// .ts runPastExamImport). CHUNKED PER YEAR on purpose: discovering + parsing
+// + AI-structuring a single year's arkusz can already take tens of seconds
+// (multiple candidate-URL probes, PDF downloads, one LLM call), and the
+// server default for an unbounded range is the full 2007-today history —
+// running that as ONE Server Action call is exactly what made the very
+// first version of this form appear to hang forever (a single request that
+// either runs for many minutes or gets killed by the platform's serverless
+// function timeout, with no partial progress and — in the very first
+// version — no error surfaced to the UI at all). Looping one year per
+// request instead keeps each individual call short, shows results
+// streaming in as they complete, and lets one bad/slow year fail without
+// taking the rest of the range down with it.
 // ============================================================================
-import { useState, useTransition } from "react";
-import { Download, AlertTriangle } from "lucide-react";
+import { useRef, useState } from "react";
+import { Download, AlertTriangle, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,38 +32,85 @@ const FORMULA_LABELS: Record<string, string> = {
   stara: "stara formuła",
 };
 
-export function ImportTriggerForm() {
-  const [yearFrom, setYearFrom] = useState("");
-  const [yearTo, setYearTo] = useState("");
-  const [isPending, startTransition] = useTransition();
-  const [error, setError] = useState<string | null>(null);
-  const [summaries, setSummaries] = useState<ArkuszImportSummary[] | null>(null);
+const CURRENT_YEAR = new Date().getFullYear();
 
-  function run() {
-    setError(null);
-    setSummaries(null);
-    const from = yearFrom.trim() ? Number(yearFrom) : undefined;
-    const to = yearTo.trim() ? Number(yearTo) : undefined;
-    if (from !== undefined && !Number.isInteger(from)) {
-      setError("Rok początkowy musi być liczbą całkowitą.");
-      return;
-    }
-    if (to !== undefined && !Number.isInteger(to)) {
-      setError("Rok końcowy musi być liczbą całkowitą.");
-      return;
-    }
-    startTransition(async () => {
-      const result = await runPastExamImport(from, to);
-      if (result.ok) {
-        setSummaries(result.data);
-      } else {
-        setError(result.error);
-      }
-    });
+export function ImportTriggerForm() {
+  const [yearFrom, setYearFrom] = useState(String(CURRENT_YEAR));
+  const [yearTo, setYearTo] = useState(String(CURRENT_YEAR));
+  const [isRunning, setIsRunning] = useState(false);
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [summaries, setSummaries] = useState<ArkuszImportSummary[]>([]);
+  const stopRequested = useRef(false);
+
+  function stop() {
+    stopRequested.current = true;
   }
 
-  const totalFound = summaries?.reduce((s, x) => s + x.problemsFound, 0) ?? 0;
-  const totalInserted = summaries?.reduce((s, x) => s + x.problemsInserted, 0) ?? 0;
+  async function run() {
+    const from = Number(yearFrom);
+    const to = Number(yearTo);
+    if (!Number.isInteger(from) || !Number.isInteger(to)) {
+      setError("Rok początkowy i końcowy muszą być liczbami całkowitymi.");
+      return;
+    }
+    if (from > to) {
+      setError("Rok początkowy nie może być późniejszy niż rok końcowy.");
+      return;
+    }
+    if (to - from > 30) {
+      setError("Zakres maksymalnie 30 lat na raz — zaimportuj resztę w kolejnym uruchomieniu.");
+      return;
+    }
+
+    setError(null);
+    setSummaries([]);
+    setIsRunning(true);
+    stopRequested.current = false;
+
+    // Sequential ON PURPOSE, one year per Server Action call — see file
+    // header comment. Each call is independently try/caught so a single
+    // year timing out or erroring doesn't abort the rest of the range.
+    for (let year = from; year <= to; year++) {
+      if (stopRequested.current) break;
+      setCurrentYear(year);
+      try {
+        const result = await runPastExamImport(year, year);
+        if (result.ok) {
+          setSummaries((prev) => [...prev, ...result.data]);
+        } else {
+          setSummaries((prev) => [
+            ...prev,
+            { year, session: "-", formula: "-", problemsFound: 0, problemsInserted: 0, errors: [result.error] },
+          ]);
+        }
+      } catch (err) {
+        // A real network/timeout failure (not an ActionResult error) —
+        // surface it as a per-year row instead of silently hanging/dying.
+        setSummaries((prev) => [
+          ...prev,
+          {
+            year,
+            session: "-",
+            formula: "-",
+            problemsFound: 0,
+            problemsInserted: 0,
+            errors: [
+              err instanceof Error
+                ? `Błąd sieci/timeout: ${err.message}`
+                : "Nieoczekiwany błąd sieci lub przekroczony czas oczekiwania.",
+            ],
+          },
+        ]);
+      }
+    }
+
+    setCurrentYear(null);
+    setIsRunning(false);
+  }
+
+  const totalFound = summaries.reduce((s, x) => s + x.problemsFound, 0);
+  const totalInserted = summaries.reduce((s, x) => s + x.problemsInserted, 0);
 
   return (
     <div className="flex flex-col gap-3">
@@ -63,38 +118,46 @@ export function ImportTriggerForm() {
         <div>
           <CardTitle>Uruchom import</CardTitle>
           <CardDescription>
-            Przeszukuje archiwum CKE (arkusze maturalne, matematyka rozszerzona) i importuje znalezione zadania.
-            Może to potrwać kilka minut — pobiera i analizuje wiele plików PDF.
+            Przeszukuje archiwum CKE (arkusze maturalne, matematyka rozszerzona) rok po roku i importuje znalezione
+            zadania. Każdy rok to osobne zapytanie — wyniki pojawiają się na bieżąco. Jeden rok to zwykle kilkanaście
+            do kilkudziesięciu sekund; szerszy zakres proporcjonalnie dłużej.
           </CardDescription>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <Label htmlFor="year-from">Rok od (opcjonalnie)</Label>
+            <Label htmlFor="year-from">Rok od</Label>
             <Input
               id="year-from"
               type="number"
-              placeholder="np. 2023"
               value={yearFrom}
+              disabled={isRunning}
               onChange={(e) => setYearFrom(e.target.value)}
             />
           </div>
           <div>
-            <Label htmlFor="year-to">Rok do (opcjonalnie)</Label>
+            <Label htmlFor="year-to">Rok do</Label>
             <Input
               id="year-to"
               type="number"
-              placeholder="np. 2026"
               value={yearTo}
+              disabled={isRunning}
               onChange={(e) => setYearTo(e.target.value)}
             />
           </div>
         </div>
-        <Button isLoading={isPending} onClick={run} className="self-start">
-          <Download className="h-4 w-4" /> Uruchom import
-        </Button>
-        {isPending && (
+        <div className="flex gap-2">
+          <Button isLoading={isRunning} onClick={run} className="self-start" disabled={isRunning}>
+            <Download className="h-4 w-4" /> Uruchom import
+          </Button>
+          {isRunning && (
+            <Button variant="outline" onClick={stop} className="self-start">
+              <Square className="h-4 w-4" /> Zatrzymaj po bieżącym roku
+            </Button>
+          )}
+        </div>
+        {isRunning && (
           <p className="text-sm text-foreground-muted">
-            Import w toku — pobieranie i analiza arkuszy CKE, to może chwilę potrwać…
+            Import w toku — sprawdzam rok {currentYear}…
           </p>
         )}
         {error && (
@@ -104,13 +167,13 @@ export function ImportTriggerForm() {
         )}
       </Card>
 
-      {summaries && (
+      {summaries.length > 0 && (
         <Card className="flex flex-col gap-3">
           <div>
-            <CardTitle>Wynik importu</CardTitle>
+            <CardTitle>Wynik importu{isRunning ? " (w toku)" : ""}</CardTitle>
             <CardDescription>
-              Znaleziono {summaries.length} {summaries.length === 1 ? "arkusz" : "arkuszy"} · {totalFound} zadań
-              rozpoznanych przez AI · {totalInserted} zapisanych do bazy.
+              Sprawdzono {summaries.length} {summaries.length === 1 ? "rok/arkusz" : "lata/arkusze"} · {totalFound}{" "}
+              zadań rozpoznanych przez AI · {totalInserted} zapisanych do bazy.
             </CardDescription>
           </div>
           <div className="flex flex-col gap-2">
