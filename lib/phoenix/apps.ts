@@ -48,7 +48,7 @@ export const PHOENIX_APPS: PhoenixApp[] = [
   {
     id: "matma",
     name: "Matma",
-    description: "Trening matematyki",
+    description: "Matura rozszerzona z matematyki",
     section: "nauka",
     icon: "Calculator",
     href: "/matma",

@@ -291,3 +291,199 @@ export interface PromptSession {
   created_at: string;
   updated_at: string;
 }
+
+// ============================================================================
+// Matma — matura rozszerzona z matematyki trainer (0007_matma.sql)
+// ============================================================================
+
+export type MathProblemSource = "topic" | "past_exam" | "curated" | "ai_generated";
+export type MathMockExamStatus = "in_progress" | "completed" | "abandoned";
+export type MathStudyPlanWeekStatus =
+  | "upcoming"
+  | "in_progress"
+  | "completed"
+  | "partially_completed"
+  | "skipped";
+
+export interface MathTopic {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  order_index: number;
+  exam_weight: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MathLesson {
+  id: string;
+  topic_id: string;
+  title: string;
+  // MathBlock[] from lib/matma/lesson-blocks.ts — kept as unknown[] here to
+  // avoid a client-type <-> db-type import cycle; cast at the call site.
+  content: unknown[];
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MathProblemContent {
+  /** Polish prose; may embed KaTeX via $inline$ / $$display$$ delimiters
+   * (see lib/matma/lesson-blocks.ts header comment) — render with
+   * components/matma/math.tsx's <MathText>. */
+  statement: string;
+  imageUrl?: string;
+  /** Only for non-proof problems with one unambiguous final result — lets
+   * submitProblemAttempt skip the AI round-trip and grade programmatically
+   * when the student typed just the final answer with no method/canvas. */
+  acceptedAnswers?: string[];
+}
+
+export interface MathGradingCriterion {
+  step: string;
+  points: number;
+  description: string;
+}
+
+export interface MathPastExamMetadata {
+  year: number;
+  session: string;
+  formula: string;
+  source_url: string;
+}
+
+export interface MathCuratedMetadata {
+  attribution: string;
+}
+
+export interface MathProblem {
+  id: string;
+  topic_id: string;
+  content: MathProblemContent;
+  difficulty: 1 | 2 | 3;
+  is_proof: boolean;
+  points_max: number;
+  source: MathProblemSource;
+  grading_criteria: MathGradingCriterion[];
+  source_metadata: MathPastExamMetadata | MathCuratedMetadata | null;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface MathStepBreakdownEntry {
+  step: string;
+  points_awarded: number;
+  points_possible: number;
+  satisfied: boolean;
+  justification: string;
+}
+
+export interface MathAiFeedback {
+  points_awarded: number;
+  max_points: number;
+  step_breakdown: MathStepBreakdownEntry[];
+  improvement_tip: string;
+}
+
+export interface MathProblemAttempt {
+  id: string;
+  problem_id: string;
+  user_id: string;
+  answer_text: string | null;
+  canvas_image_url: string | null;
+  method_description: string | null;
+  points_awarded: number | null;
+  ai_feedback: MathAiFeedback | null;
+  mock_exam_id: string | null;
+  attempted_at: string;
+}
+
+export interface MathMockExamBreakdownEntry {
+  topic_id: string;
+  topic_title: string;
+  points_awarded: number;
+  points_max: number;
+}
+
+export interface MathMockExamDraftAnswer {
+  answerText: string | null;
+  /** Raw "data:image/png;base64,..." ink snapshot — NOT a stored URL yet;
+   * it's only uploaded to Storage once the exam is graded (see
+   * lib/matma/actions.ts uploadCanvasImage). */
+  canvasImageDataUrl: string | null;
+  methodDescription: string | null;
+  savedAt: string;
+}
+
+export interface MathMockExam {
+  id: string;
+  user_id: string;
+  problem_ids: string[];
+  time_limit_seconds: number;
+  started_at: string;
+  finished_at: string | null;
+  total_points: number | null;
+  max_points: number;
+  breakdown: MathMockExamBreakdownEntry[] | null;
+  draft_answers: Record<string, MathMockExamDraftAnswer>;
+  status: MathMockExamStatus;
+}
+
+export interface MathTopicProgress {
+  id: string;
+  user_id: string;
+  topic_id: string;
+  status: MasteryStatus;
+  mastery_score: number;
+  diagnosed_at: string | null;
+  last_reviewed_at: string | null;
+  updated_at: string;
+}
+
+export interface MathLearningPathStage {
+  id: string;
+  order_index: number;
+  topic_id: string;
+  title: string;
+  created_at: string;
+}
+
+export interface MathProgressSnapshot {
+  id: string;
+  user_id: string;
+  snapshot_at: string;
+  estimated_score: number;
+  estimated_percent: number;
+  topic_breakdown: Record<string, number>;
+}
+
+export interface MathStudyPlan {
+  id: string;
+  user_id: string;
+  exam_date: string | null;
+  weekly_hours_target: number | null;
+  generated_at: string;
+  last_recomputed_at: string | null;
+}
+
+export interface MathAssignedPractice {
+  id: string;
+  student_id: string;
+  topic_id: string;
+  assigned_by: string | null;
+  note: string | null;
+  created_at: string;
+  dismissed_at: string | null;
+}
+
+export interface MathStudyPlanWeek {
+  id: string;
+  plan_id: string;
+  week_index: number;
+  target_start_date: string;
+  target_end_date: string;
+  topic_ids: string[];
+  is_review_week: boolean;
+  status: MathStudyPlanWeekStatus;
+}

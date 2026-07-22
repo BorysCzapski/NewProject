@@ -152,3 +152,91 @@ export async function askAI(params: {
 
   return response.choices[0]?.message?.content ?? "";
 }
+
+// ----------------------------------------------------------------------------
+// Vision (optional). Used by Matma's "Warstwa 2" fallback — qualitative
+// grading of a photographed/scanned solution when digital-ink recognition
+// (Warstwa 1: MyScript/Mathpix, not integrated — no API keys available in
+// this environment) isn't wired up. Models confirmed live on Groq as of
+// July 2026 (console.groq.com/docs/vision): both Llama 4 Scout and Maverick
+// are natively multimodal, up to 5 images per request. Kept as a SEPARATE
+// model list from FALLBACK_MODELS because plain text models reject image
+// content parts outright.
+// ----------------------------------------------------------------------------
+const VISION_MODELS = [
+  "meta-llama/llama-4-scout-17b-16e-instruct",
+  "meta-llama/llama-4-maverick-17b-128e-instruct",
+];
+
+let activeVisionModel = VISION_MODELS[0];
+
+/**
+ * Like askAIForJSON, but attaches one image (data URL or https URL) to the
+ * user turn for a vision-capable model. Throws if no vision model is
+ * currently available on Groq — callers (e.g. lib/matma/grading.ts) should
+ * treat that as "layer 2 unavailable" and fall back to text-only grading
+ * rather than surfacing a hard error to the student.
+ */
+export async function askAIForJSONWithImage<T>(params: {
+  system: string;
+  prompt: string;
+  imageUrl: string;
+  schema: Record<string, unknown>;
+  maxTokens?: number;
+}): Promise<T> {
+  const groq = getClient();
+  const candidates = [activeVisionModel, ...VISION_MODELS.filter((m) => m !== activeVisionModel)];
+  let lastError: unknown;
+
+  for (const model of candidates) {
+    try {
+      const response = await groq.chat.completions.create({
+        model,
+        max_completion_tokens: params.maxTokens ?? 2048,
+        messages: [
+          { role: "system", content: params.system },
+          {
+            role: "user",
+            content: [
+              { type: "text", text: params.prompt },
+              { type: "image_url", image_url: { url: params.imageUrl } },
+            ],
+          },
+        ],
+        tools: [
+          {
+            type: "function",
+            function: {
+              name: "respond",
+              description: "Return the structured response for this task.",
+              parameters: {
+                type: "object",
+                properties: params.schema,
+                required: Object.keys(params.schema),
+              },
+            },
+          },
+        ],
+        tool_choice: { type: "function", function: { name: "respond" } },
+      });
+      activeVisionModel = model;
+
+      const toolCall = response.choices[0]?.message?.tool_calls?.[0];
+      if (!toolCall || toolCall.function.name !== "respond") {
+        throw new Error("The AI did not return a structured response.");
+      }
+      return JSON.parse(toolCall.function.arguments) as T;
+    } catch (err) {
+      lastError = err;
+      if (isModelUnavailable(err)) {
+        console.error(`[ai] vision model "${model}" unavailable, trying next fallback:`, err instanceof Error ? err.message : err);
+        continue;
+      }
+      console.error("[ai] Groq vision request failed:", err);
+      throw err;
+    }
+  }
+
+  console.error("[ai] all vision models unavailable:", lastError);
+  throw lastError;
+}
