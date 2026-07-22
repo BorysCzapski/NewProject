@@ -13,6 +13,7 @@ import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { actionFailure, type ActionResult } from "@/lib/action-result";
 import { discoverPastExamArkusze, importArkusz, type ArkuszImportSummary } from "@/lib/matma/import-past-exams";
+import { importMatemaksDzial, type MatemaksImportSummary } from "@/lib/matma/import-curated-matemaks";
 import type {
   MathGradingCriterion,
   MathPastExamMetadata,
@@ -25,10 +26,14 @@ import type {
  * single bad arkusz fail the whole batch — see importArkusz's own
  * try/catch-into-summary.errors behavior. WARNING: slow (downloads +
  * parses multiple PDFs and makes one LLM call per arkusz) — callers must
- * show a loading state, not assume a fast response. */
+ * show a loading state, not assume a fast response.
+ * `force: true` re-imports years that already have rows (deleting the old
+ * ones first) instead of skipping them — use this to fix years imported
+ * before a bug fix (e.g. the truncated-arkusz bug), not for routine runs. */
 export async function runPastExamImport(
   yearFrom?: number,
-  yearTo?: number
+  yearTo?: number,
+  force?: boolean
 ): Promise<ActionResult<ArkuszImportSummary[]>> {
   const admin = await requireAdmin();
   const supabase = await createClient();
@@ -48,7 +53,7 @@ export async function runPastExamImport(
   const summaries: ArkuszImportSummary[] = [];
   for (const descriptor of descriptors) {
     try {
-      summaries.push(await importArkusz(supabase, descriptor, { createdBy: admin.id }));
+      summaries.push(await importArkusz(supabase, descriptor, { createdBy: admin.id, force }));
     } catch (err) {
       // importArkusz already catches its own internal errors — this is a
       // last-resort guard so one truly unexpected throw still can't abort
@@ -135,4 +140,32 @@ export async function adminUpsertProblem(input: AdminUpsertProblemInput): Promis
   revalidatePath("/matma/admin/import");
   revalidatePath("/matma/admin");
   return { ok: true, data: data as MathProblem };
+}
+
+/** Imports curated problems from matemaks.pl for ONE dział (department) —
+ * chunked per dział for the same reason runPastExamImport is chunked per
+ * year: crawling+structuring a whole department can take a while, so one
+ * Server Action call per dział keeps each call short and lets the UI show
+ * per-dział progress. `dzialSlug`/`startSlug` default to the built-in seed
+ * list (MATEMAKS_DZIAL_SEEDS) when omitted, but can be overridden — the
+ * seeds beyond "elementy-analizy-matematycznej" are informed guesses, not
+ * confirmed URLs (see import-curated-matemaks.ts header comment), so an
+ * admin who finds the real slug for a dział that came back empty should
+ * pass it here directly. */
+export async function runMatemaksDzialImport(
+  dzialSlug: string,
+  startSlug: string
+): Promise<ActionResult<MatemaksImportSummary>> {
+  const admin = await requireAdmin();
+  const supabase = await createClient();
+
+  try {
+    const summary = await importMatemaksDzial(supabase, dzialSlug, startSlug, { createdBy: admin.id });
+    revalidatePath("/matma/admin/import");
+    revalidatePath("/matma/admin");
+    return { ok: true, data: summary };
+  } catch (err) {
+    console.error(`[matma] runMatemaksDzialImport failed for ${dzialSlug}:`, err);
+    return actionFailure(`Import działu "${dzialSlug}" nie powiódł się: ${err instanceof Error ? err.message : String(err)}`);
+  }
 }

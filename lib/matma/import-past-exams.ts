@@ -538,16 +538,20 @@ async function getTopicIdBySlug(supabase: SupabaseClient): Promise<Map<string, s
  * arkusz/problem can't fail the whole batch; callers (runPastExamImport)
  * surface summary.errors in the admin UI for manual correction.
  *
- * IDEMPOTENT: bails out immediately (before any download or AI call) if
- * this exact (year, session, formula) already has past_exam rows — makes
- * it safe and cheap to just re-run the same broad year range after hitting
- * Groq's daily token cap; already-done years cost one quick DB count
- * instead of a full download+parse+LLM pass, and re-runs can't create
- * duplicate rows. */
+ * IDEMPOTENT BY DEFAULT: bails out immediately (before any download or AI
+ * call) if this exact (year, session, formula) already has past_exam rows
+ * — makes it safe and cheap to just re-run the same broad year range after
+ * hitting Groq's daily token cap; already-done years cost one quick DB
+ * count instead of a full download+parse+LLM pass, and re-runs can't
+ * create duplicate rows. Pass `force: true` to instead DELETE those
+ * existing rows and re-import fresh — needed because "already has rows"
+ * doesn't mean "fully/correctly imported": an earlier bug (since fixed)
+ * silently truncated long arkusze to their first ~3 zadania, and those
+ * partial imports would otherwise be permanently skipped forever. */
 export async function importArkusz(
   supabase: SupabaseClient,
   descriptor: ArkuszDescriptor,
-  opts?: { createdBy?: string | null }
+  opts?: { createdBy?: string | null; force?: boolean }
 ): Promise<ArkuszImportSummary> {
   const summary: ArkuszImportSummary = {
     year: descriptor.year,
@@ -558,7 +562,7 @@ export async function importArkusz(
     errors: [],
   };
 
-  const { count: existingCount } = await supabase
+  const existingQuery = supabase
     .from("math_problems")
     .select("id", { count: "exact", head: true })
     .eq("source", "past_exam")
@@ -566,11 +570,23 @@ export async function importArkusz(
     .eq("source_metadata->>session", descriptor.session)
     .eq("source_metadata->>formula", descriptor.formula);
 
-  if (existingCount && existingCount > 0) {
-    summary.problemsFound = existingCount;
-    summary.problemsInserted = 0;
-    summary.alreadyImported = true;
-    return summary;
+  if (opts?.force) {
+    // Delete first so a re-import can't leave old + new rows side by side.
+    await supabase
+      .from("math_problems")
+      .delete()
+      .eq("source", "past_exam")
+      .eq("source_metadata->>year", String(descriptor.year))
+      .eq("source_metadata->>session", descriptor.session)
+      .eq("source_metadata->>formula", descriptor.formula);
+  } else {
+    const { count: existingCount } = await existingQuery;
+    if (existingCount && existingCount > 0) {
+      summary.problemsFound = existingCount;
+      summary.problemsInserted = 0;
+      summary.alreadyImported = true;
+      return summary;
+    }
   }
 
   let problemsText: string;

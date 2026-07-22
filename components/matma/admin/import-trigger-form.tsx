@@ -37,6 +37,7 @@ const CURRENT_YEAR = new Date().getFullYear();
 export function ImportTriggerForm() {
   const [yearFrom, setYearFrom] = useState(String(CURRENT_YEAR));
   const [yearTo, setYearTo] = useState(String(CURRENT_YEAR));
+  const [force, setForce] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [currentYear, setCurrentYear] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -75,7 +76,7 @@ export function ImportTriggerForm() {
       if (stopRequested.current) break;
       setCurrentYear(year);
       try {
-        const result = await runPastExamImport(year, year);
+        const result = await runPastExamImport(year, year, force);
         if (result.ok) {
           setSummaries((prev) => [...prev, ...result.data]);
         } else {
@@ -145,6 +146,17 @@ export function ImportTriggerForm() {
             />
           </div>
         </div>
+        <label className="flex items-center gap-2 text-sm text-foreground-muted">
+          <input
+            type="checkbox"
+            checked={force}
+            disabled={isRunning}
+            onChange={(e) => setForce(e.target.checked)}
+            className="h-4 w-4 accent-primary"
+          />
+          Wymuś ponowny import (nadpisuje już zaimportowane lata — użyj, żeby naprawić lata zaimportowane niepełne
+          przed poprawką)
+        </label>
         <div className="flex gap-2">
           <Button isLoading={isRunning} onClick={run} className="self-start" disabled={isRunning}>
             <Download className="h-4 w-4" /> Uruchom import
