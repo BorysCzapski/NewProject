@@ -97,6 +97,10 @@ export interface ArkuszImportSummary {
   problemsFound: number;
   problemsInserted: number;
   errors: string[];
+  /** True when this arkusz was already in the database and importArkusz
+   * skipped it without spending any network/AI budget — see importArkusz's
+   * header comment. Not an error; the UI should render it neutrally. */
+  alreadyImported?: boolean;
 }
 
 // ----------------------------------------------------------------------------
@@ -527,7 +531,14 @@ async function getTopicIdBySlug(supabase: SupabaseClient): Promise<Map<string, s
  * Never throws — every failure (download, extraction, AI, per-problem
  * validation, insert) is caught and pushed into summary.errors so ONE bad
  * arkusz/problem can't fail the whole batch; callers (runPastExamImport)
- * surface summary.errors in the admin UI for manual correction. */
+ * surface summary.errors in the admin UI for manual correction.
+ *
+ * IDEMPOTENT: bails out immediately (before any download or AI call) if
+ * this exact (year, session, formula) already has past_exam rows — makes
+ * it safe and cheap to just re-run the same broad year range after hitting
+ * Groq's daily token cap; already-done years cost one quick DB count
+ * instead of a full download+parse+LLM pass, and re-runs can't create
+ * duplicate rows. */
 export async function importArkusz(
   supabase: SupabaseClient,
   descriptor: ArkuszDescriptor,
@@ -541,6 +552,21 @@ export async function importArkusz(
     problemsInserted: 0,
     errors: [],
   };
+
+  const { count: existingCount } = await supabase
+    .from("math_problems")
+    .select("id", { count: "exact", head: true })
+    .eq("source", "past_exam")
+    .eq("source_metadata->>year", String(descriptor.year))
+    .eq("source_metadata->>session", descriptor.session)
+    .eq("source_metadata->>formula", descriptor.formula);
+
+  if (existingCount && existingCount > 0) {
+    summary.problemsFound = existingCount;
+    summary.problemsInserted = 0;
+    summary.alreadyImported = true;
+    return summary;
+  }
 
   let problemsText: string;
   try {

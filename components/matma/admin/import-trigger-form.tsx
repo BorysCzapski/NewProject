@@ -183,8 +183,13 @@ export function ImportTriggerForm() {
                   <span>
                     {s.year} · {s.session} · {FORMULA_LABELS[s.formula] ?? s.formula}
                   </span>
-                  <span className={cn("font-normal", s.errors.length > 0 ? "text-danger" : "text-accent")}>
-                    {s.problemsInserted}/{s.problemsFound} zapisano
+                  <span
+                    className={cn(
+                      "font-normal",
+                      s.alreadyImported ? "text-foreground-muted" : s.errors.length > 0 ? "text-danger" : "text-accent"
+                    )}
+                  >
+                    {s.alreadyImported ? `już w bazie (${s.problemsFound})` : `${s.problemsInserted}/${s.problemsFound} zapisano`}
                   </span>
                 </div>
                 {s.errors.length > 0 && (
