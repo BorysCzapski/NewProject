@@ -44,7 +44,16 @@ export const LEVEL_DESCRIPTIONS: Record<UserLevel, string> = {
 export interface NavItem {
   href: string;
   label: string;
-  icon: "Home" | "BookOpen" | "ClipboardList" | "Calendar" | "User" | "LayoutGrid" | "Sun" | "Hammer";
+  icon:
+    | "Home"
+    | "BookOpen"
+    | "ClipboardList"
+    | "Calendar"
+    | "User"
+    | "LayoutGrid"
+    | "Sun"
+    | "Hammer"
+    | "Calculator";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -68,10 +77,19 @@ export const KUZNIA_NAV: NavItem[] = [
   { href: "/kuznia", label: "Kuźnia", icon: "Hammer", exact: true },
 ];
 
+export const MATMA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/matma", label: "Dziś", icon: "Calculator", exact: true },
+  { href: "/matma/nauka", label: "Nauka", icon: "BookOpen" },
+  { href: "/matma/egzamin", label: "Egzamin", icon: "ClipboardList" },
+  { href: "/matma/plan", label: "Plan", icon: "Calendar" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
   { prefix: "/kuznia", items: KUZNIA_NAV },
+  { prefix: "/matma", items: MATMA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 
@@ -89,7 +107,9 @@ export const HOMEWORK_TYPE_LABELS: Record<HomeworkType, string> = {
 
 // A learning-path stage completes when this share of the stage category's
 // words has status "mastered" (a word masters at 2 net-correct reviews —
-// see lib/vocabulary/progress.ts).
+// see lib/vocabulary/progress.ts). Matma reuses the same constant, but
+// applies it PER TOPIC (see lib/matma/progress.ts) instead of one global
+// counter, so a weak department can't hide behind a strong one.
 export const MIN_MASTERY_THRESHOLD = 0.8;
 
 // activity_log.activity_type values written by record_activity() — the single
@@ -104,6 +124,7 @@ export const ACTIVITY_TYPES = {
   SONG: "song",
   LISTENING: "listening",
   MATCHING: "matching",
+  MATH: "math",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 

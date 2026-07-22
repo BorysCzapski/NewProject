@@ -43,16 +43,13 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     icon: "Languages",
     href: "/jezyki",
   },
-  // ——— planned apps: visible in /aplikacje as "wkrótce", hidden from the
-  // launcher until they get routes and comingSoon is removed ———
   {
     id: "matma",
     name: "Matma",
-    description: "Trening matematyki",
+    description: "Matura rozszerzona z matematyki",
     section: "nauka",
     icon: "Calculator",
     href: "/matma",
-    comingSoon: true,
   },
   {
     id: "kuznia",
@@ -62,6 +59,8 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     icon: "Hammer",
     href: "/kuznia",
   },
+  // ——— planned apps: visible in /aplikacje as "wkrótce", hidden from the
+  // launcher until they get routes and comingSoon is removed ———
   {
     id: "paragony",
     name: "Paragony",

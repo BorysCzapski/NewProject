@@ -19,6 +19,16 @@ skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne u
 i wykrywając sprzeczności/luki w dotychczasowych ustaleniach — z propozycją naprawy jednym
 kliknięciem. Gotowy prompt wkleja się w nową, osobną sesję czatu, żeby zacząć budowę.
 
+Trzecia mini-aplikacja to **Matma** (`/matma`) — pełny kurs + trener zadaniowy + symulator
+egzaminu przygotowujący do matury rozszerzonej z matematyki (CKE), z celem 80% punktów:
+interaktywne lekcje (suwaki parametrów wykresów, przeciąganie punktów geometrii, obracalne
+bryły 3D, rozwiązania krok po kroku z odsłanianiem), bank zadań z czterech źródeł (tematyczne,
+prawdziwe zadania maturalne CKE, kuratorowane, generowane przez AI) oceniany analitycznym
+schematem punktowym jak na maturze, diagnoza startowa i adaptacyjna ścieżka nauki per dział,
+rysik/tablet graficzny (Pointer Events — nacisk, gumka, cofnij/ponów) do zapisu toku
+rozwiązania, pełne symulacje egzaminu (180 minut, 50 punktów), spersonalizowany harmonogram
+nauki do dnia matury, trener dowodów i panel nauczyciela.
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)
@@ -100,21 +110,35 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       (aplikacje widoczne na launcherze Phoenixa).
    6. `supabase/migrations/0006_prompt_forge.sql` — tabela `prompt_sessions` (Kuźnia:
       sesje kreatora promptów).
+   7. `supabase/migrations/0007_matma.sql` — schemat Matmy (matura rozszerzona z matematyki):
+      działy, lekcje, bank zadań, próby, egzaminy próbne, postęp per dział, ścieżka nauki,
+      migawki postępu, plan nauki, przypisane ćwiczenia; tworzy też prywatny bucket Storage
+      `math-attempts` na zdjęcia brudnopisu.
 
    **Seed — konto admina:**
-   7. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
+   8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
 
    **Seed — angielski (język domyślny):**
-   8. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~1000 słówek).
-   9. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
-   10. `03_learning_path.sql` — ścieżka nauki EN.
+   9. `01_vocabulary_a1.sql` … `01_vocabulary_b2.sql` — słownictwo EN (~1000 słówek).
+   10. `02_grammar_a1.sql` … `02_grammar_b2.sql` — gramatyka EN (5 tematów × ~30 ćwiczeń/poziom).
+   11. `03_learning_path.sql` — ścieżka nauki EN.
 
    **Seed — hiszpański (opcjonalnie, jeśli chcesz język ES):**
-   11. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
+   12. `es_01_vocabulary_a1.sql` … `es_01_vocabulary_b2.sql`, `es_02_grammar_a1.sql` …
       `es_02_grammar_b2.sql`, a na końcu `es_03_learning_path.sql`.
 
    **Seed — rosyjski (opcjonalnie, jeśli chcesz język RU):**
-   12. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
+   13. `ru_01_vocabulary_a1.sql` … `ru_02_grammar_b2.sql`, a na końcu `ru_03_learning_path.sql`.
+
+   **Seed — Matma:**
+   14. `supabase/seed/matma/01_topics.sql` — 11 działów matury rozszerzonej z matematyki
+      + rekomendowana kolejność (ścieżka nauki).
+   15. `supabase/seed/matma/02_lessons_<dzial>.sql` i `03_problems_<dzial>.sql` (po jednej
+      parze plików na dział, 11 par) — interaktywne lekcje i bank zadań (źródło `topic`).
+      Uruchom `01_topics.sql` przed nimi (odwołują się do działów po `slug`).
+   16. Prawdziwe zadania maturalne CKE (`source: 'past_exam'`) **nie** są w plikach seed —
+      importuje je administrator jednorazowym skryptem z panelu `/matma/admin/import`
+      (patrz `lib/matma/import-past-exams.ts`), nie jest to część standardowego seedowania.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -182,11 +206,23 @@ app/
       prace-domowe/      # widok prac domowych użytkownika
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
+    kuznia/            # KUŹNIA — kreator promptów
+    matma/             # MATMA — matura rozszerzona z matematyki
+      page.tsx          # dashboard: szacowany wynik, mastery per dział, trend, plan
+      nauka/             # hub działów, lekcje interaktywne, ćwiczenia
+      diagnoza/          # test diagnostyczny startowy (opcjonalny, per dział)
+      dowody/            # trener dowodów (przekrojowy, is_proof=true)
+      egzamin/           # symulacja egzaminu (180 min / 50 pkt)
+      plan/              # harmonogram nauki do daty matury
+      kalendarz/         # kalendarz aktywności (reużywa components/calendar)
+      admin/             # panel nauczyciela + import zadań maturalnych CKE
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/
   ui/                # podstawowe komponenty (Button, Card, Input, Badge, ...)
   layout/            # dolna nawigacja (per-aplikacja), nagłówek strony
   phoenix/           # komponenty powłoki (ikony aplikacji, menedżer)
+  matma/             # komponenty Matmy: lesson/ (bloki lekcji), problem/ (rysik,
+                     # ocena AI), exam/, diagnostic/, plan/, dashboard/, admin/
   <moduł>/           # komponenty specyficzne dla danego modułu Linguo
 lib/
   phoenix/           # rejestr aplikacji + akcje powłoki
@@ -194,10 +230,12 @@ lib/
   actions/, <moduł>/ # Server Actions per moduł
   ai.ts              # klient Groq + pomocnik do ustrukturyzowanych odpowiedzi JSON
   homework/progress.ts # automatyczne liczenie postępu prac domowych
+  matma/             # silnik Matmy: mastery per dział, ocena AI, egzamin,
+                     # diagnoza, plan nauki, dashboard, akcje, import CKE
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
-  migrations/        # schemat SQL (0005 = kolumna installed_apps Phoenixa)
-  seed/               # dane początkowe (admin, słówka, gramatyka)
+  migrations/        # schemat SQL (0007 = Matma)
+  seed/               # dane początkowe (admin, słówka, gramatyka, matma/)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
 ```
 
