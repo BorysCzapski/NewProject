@@ -439,10 +439,40 @@ const IMPORT_SCHEMA = {
   },
 };
 
-const MAX_PROMPT_CHARS = 20_000;
+// Groq's on-demand tier for llama-3.3-70b-versatile caps a SINGLE request
+// (system + schema + prompt + requested completion, all counted together)
+// at ~12,000 tokens/minute — this is a hard per-request ceiling on this
+// tier, not just a pacing limit, confirmed in production by a real "413
+// Request too large ... Limit 12000, Requested 12566" failure. Polish text
+// runs meaningfully more tokens/char than English (diacritics + subword
+// tokenization), so char budgets here are deliberately conservative. A
+// second real failure ("400 Failed to call a function ... tool_use_failed"
+// with an unterminated JSON dump in failed_generation) was the model's
+// output getting cut off mid-JSON by maxTokens on a large arkusz — the two
+// fixes below (smaller input, smaller/adaptive output ceiling) address both.
+const MAX_PROMPT_CHARS = 6_000;
+const MAX_ANSWER_KEY_CHARS = 4_000;
+const DEFAULT_MAX_COMPLETION_TOKENS = 4_000;
+const RETRY_MAX_COMPLETION_TOKENS = 2_500;
 
 function truncate(text: string, maxChars: number): string {
   return text.length > maxChars ? `${text.slice(0, maxChars)}\n[...treść obcięta...]` : text;
+}
+
+function buildStructurePrompt(
+  problemsText: string,
+  answerKeyText: string,
+  descriptor: Pick<ArkuszDescriptor, "year" | "session" | "formula">,
+  promptChars: number,
+  answerChars: number
+): string {
+  return (
+    `Rok: ${descriptor.year}, sesja: ${descriptor.session}, formuła: ${descriptor.formula}.\n\n` +
+    `--- TEKST ARKUSZA (wyodrębniony z PDF) ---\n${truncate(problemsText, promptChars)}\n\n` +
+    (answerKeyText
+      ? `--- TEKST ZASAD OCENIANIA / KLUCZA ODPOWIEDZI (wyodrębniony z PDF) ---\n${truncate(answerKeyText, answerChars)}`
+      : "--- Brak dostępnego klucza odpowiedzi — skonstruuj rozsądny schemat punktowania. ---")
+  );
 }
 
 async function structureExamProblems(
@@ -450,20 +480,37 @@ async function structureExamProblems(
   answerKeyText: string,
   descriptor: Pick<ArkuszDescriptor, "year" | "session" | "formula">
 ): Promise<StructuredExamProblem[]> {
-  const prompt =
-    `Rok: ${descriptor.year}, sesja: ${descriptor.session}, formuła: ${descriptor.formula}.\n\n` +
-    `--- TEKST ARKUSZA (wyodrębniony z PDF) ---\n${truncate(problemsText, MAX_PROMPT_CHARS)}\n\n` +
-    (answerKeyText
-      ? `--- TEKST ZASAD OCENIANIA / KLUCZA ODPOWIEDZI (wyodrębniony z PDF) ---\n${truncate(answerKeyText, MAX_PROMPT_CHARS)}`
-      : "--- Brak dostępnego klucza odpowiedzi — skonstruuj rozsądny schemat punktowania. ---");
-
-  const result = await askAIForJSON<{ problems: StructuredExamProblem[] }>({
-    system: IMPORT_SYSTEM_PROMPT,
-    prompt,
-    schema: IMPORT_SCHEMA,
-    maxTokens: 8000,
-  });
-  return result.problems ?? [];
+  try {
+    const result = await askAIForJSON<{ problems: StructuredExamProblem[] }>({
+      system: IMPORT_SYSTEM_PROMPT,
+      prompt: buildStructurePrompt(problemsText, answerKeyText, descriptor, MAX_PROMPT_CHARS, MAX_ANSWER_KEY_CHARS),
+      schema: IMPORT_SCHEMA,
+      maxTokens: DEFAULT_MAX_COMPLETION_TOKENS,
+    });
+    return result.problems ?? [];
+  } catch (err) {
+    // One retry with a much smaller prompt/completion budget — recovers
+    // from both failure modes above (over-budget input, truncated output)
+    // at the cost of possibly dropping a few problems from a very long
+    // arkusz, which is preferable to losing the whole arkusz.
+    console.error(
+      `[matma] structureExamProblems failed for ${descriptor.year}/${descriptor.session}, retrying smaller:`,
+      err
+    );
+    const result = await askAIForJSON<{ problems: StructuredExamProblem[] }>({
+      system: IMPORT_SYSTEM_PROMPT,
+      prompt: buildStructurePrompt(
+        problemsText,
+        answerKeyText,
+        descriptor,
+        Math.floor(MAX_PROMPT_CHARS / 2),
+        Math.floor(MAX_ANSWER_KEY_CHARS / 2)
+      ),
+      schema: IMPORT_SCHEMA,
+      maxTokens: RETRY_MAX_COMPLETION_TOKENS,
+    });
+    return result.problems ?? [];
+  }
 }
 
 // ----------------------------------------------------------------------------
