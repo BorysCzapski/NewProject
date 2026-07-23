@@ -53,7 +53,11 @@ export interface NavItem {
     | "LayoutGrid"
     | "Sun"
     | "Hammer"
-    | "Calculator";
+    | "Calculator"
+    | "Wallet"
+    | "PiggyBank"
+    | "TrendingUp"
+    | "Target";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -85,11 +89,20 @@ export const MATMA_NAV: NavItem[] = [
   { href: "/matma/plan", label: "Plan", icon: "Calendar" },
 ];
 
+export const PARAGONY_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/paragony", label: "Pulpit", icon: "Wallet", exact: true },
+  { href: "/paragony/budzet", label: "Budżet", icon: "PiggyBank" },
+  { href: "/paragony/etf", label: "ETF", icon: "TrendingUp" },
+  { href: "/paragony/cele", label: "Cele", icon: "Target" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
   { prefix: "/kuznia", items: KUZNIA_NAV },
   { prefix: "/matma", items: MATMA_NAV },
+  { prefix: "/paragony", items: PARAGONY_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 

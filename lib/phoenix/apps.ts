@@ -64,11 +64,10 @@ export const PHOENIX_APPS: PhoenixApp[] = [
   {
     id: "paragony",
     name: "Paragony",
-    description: "Skanowanie paragonów i kontrola wydatków",
+    description: "Paragony, budżet domowy i portfel ETF",
     section: "narzedzia",
     icon: "ReceiptText",
     href: "/paragony",
-    comingSoon: true,
   },
   {
     id: "butelki",
