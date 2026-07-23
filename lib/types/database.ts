@@ -487,3 +487,177 @@ export interface MathStudyPlanWeek {
   is_review_week: boolean;
   status: MathStudyPlanWeekStatus;
 }
+
+// ============================================================================
+// Paragony: receipts, home budget ledger, ETF portfolio.
+// Mirrors supabase/migrations/0008_paragony_budzet_etf.sql.
+// ============================================================================
+
+export type AccountKind = "cash" | "bank" | "credit_card" | "other";
+export type BudgetCategoryKind = "expense" | "income";
+export type ReceiptStatus = "pending_review" | "confirmed";
+export type TransactionType = "uznanie" | "obciazenie" | "transfer";
+export type RecurringFrequency = "monthly" | "quarterly" | "yearly";
+export type EtfProvider = "stooq" | "fmp";
+export type EtfTransactionType = "buy" | "sell";
+
+export interface Account {
+  id: string;
+  user_id: string;
+  name: string;
+  kind: AccountKind;
+  starting_balance: number;
+  created_at: string;
+}
+
+export interface BudgetCategory {
+  id: string;
+  /** null = shared default category, visible to everyone. */
+  user_id: string | null;
+  name: string;
+  kind: BudgetCategoryKind;
+  icon: string | null;
+  is_default: boolean;
+  created_at: string;
+}
+
+/** Raw structured OCR extraction from askAIForJSONWithImage, before review. */
+export interface ReceiptOcrResult {
+  store_name: string | null;
+  purchase_date: string | null;
+  total_amount: number | null;
+  payment_method: string | null;
+  items: Array<{
+    name: string;
+    quantity: number;
+    unit_price: number | null;
+    total_price: number;
+    /** AI-suggested category name (see lib/paragony/categories.ts), matched
+     * to a budget_categories row by name at insert time. */
+    category?: string;
+  }>;
+}
+
+export interface Receipt {
+  id: string;
+  user_id: string;
+  store_name: string | null;
+  purchase_date: string | null;
+  total_amount: number | null;
+  raw_ocr_json: ReceiptOcrResult | null;
+  status: ReceiptStatus;
+  image_path: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ReceiptItem {
+  id: string;
+  receipt_id: string;
+  user_id: string;
+  name: string;
+  quantity: number;
+  unit_price: number | null;
+  total_price: number;
+  category_id: string | null;
+  created_at: string;
+}
+
+export interface RecurringTransaction {
+  id: string;
+  user_id: string;
+  type: Extract<TransactionType, "uznanie" | "obciazenie">;
+  amount: number;
+  description: string;
+  category_id: string | null;
+  account_id: string;
+  frequency: RecurringFrequency;
+  day_of_period: number;
+  next_due_date: string;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SavingsGoal {
+  id: string;
+  user_id: string;
+  title: string;
+  target_amount: number;
+  target_date: string | null;
+  current_amount: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Transaction {
+  id: string;
+  user_id: string;
+  type: TransactionType;
+  amount: number;
+  occurred_at: string;
+  description: string;
+  category_id: string | null;
+  account_id: string;
+  transfer_to_account_id: string | null;
+  receipt_id: string | null;
+  recurring_transaction_id: string | null;
+  savings_goal_id: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MonthlyBudget {
+  id: string;
+  user_id: string;
+  category_id: string;
+  year: number;
+  month: number;
+  planned_amount: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface EtfHolding {
+  id: string;
+  user_id: string;
+  ticker: string;
+  provider: EtfProvider;
+  name: string | null;
+  currency: string;
+  asset_class: string | null;
+  region: string | null;
+  ter: number | null;
+  created_at: string;
+}
+
+export interface EtfTransaction {
+  id: string;
+  holding_id: string;
+  user_id: string;
+  type: EtfTransactionType;
+  units: number;
+  price_per_unit: number;
+  transaction_date: string;
+  created_at: string;
+}
+
+export interface EtfDividend {
+  id: string;
+  holding_id: string;
+  user_id: string;
+  amount: number;
+  payment_date: string;
+  notes: string | null;
+  created_at: string;
+}
+
+/** Global cache shared across all users — see migration comment. */
+export interface EtfPriceHistoryRow {
+  id: string;
+  ticker: string;
+  price_date: string;
+  close_price: number;
+  currency: string;
+  fetched_at: string;
+}

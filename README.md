@@ -29,6 +29,15 @@ rysik/tablet graficzny (Pointer Events — nacisk, gumka, cofnij/ponów) do zapi
 rozwiązania, pełne symulacje egzaminu (180 minut, 50 punktów), spersonalizowany harmonogram
 nauki do dnia matury, trener dowodów i panel nauczyciela.
 
+Czwarta mini-aplikacja to **Paragony** (`/paragony`) — paragony, budżet domowy i portfel
+ETF: skanowanie paragonu ze zdjęcia (Groq, model wizyjny) z ekranem korekty przed zapisem,
+automatyczna kategoryzacja AI, konta/portfele z saldem per konto, rachunki cykliczne
+(czynsz, subskrypcje), cele oszczędnościowe z szacowaną datą osiągnięcia, budżet miesięczny
+plan vs wykonanie z wykresami i drill-downem do listy transakcji; oraz ręczna ewidencja
+posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla GPW, FMP dla
+zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
+z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)
@@ -114,6 +123,12 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       działy, lekcje, bank zadań, próby, egzaminy próbne, postęp per dział, ścieżka nauki,
       migawki postępu, plan nauki, przypisane ćwiczenia; tworzy też prywatny bucket Storage
       `math-attempts` na zdjęcia brudnopisu.
+   8. `supabase/migrations/0008_paragony_budzet_etf.sql` — schemat Paragonów: konta,
+      kategorie budżetowe, paragony + pozycje, transakcje (uznanie/obciążenie/transfer),
+      rachunki cykliczne, cele oszczędnościowe, budżet miesięczny, portfel ETF (holdingi,
+      transakcje kupna/sprzedaży, dywidendy) oraz globalny cache cen `etf_price_history`
+      (bez RLS per-user — patrz komentarz w migracji); tworzy też prywatny bucket Storage
+      `paragony-receipts` na zdjęcia paragonów.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -176,7 +191,10 @@ Patrz `.env.example`. Wymagane:
 | `GROQ_API_KEY` | klucz API Groq — funkcje AI (czytanie, pisanie, piosenki, gramatyka-przekształcenia) nie zadziałają bez niego, darmowy tier na [console.groq.com](https://console.groq.com/keys) |
 | `NEXT_PUBLIC_SITE_URL` | publiczny URL wdrożenia (linki w e-mailach autoryzacyjnych) |
 
-Opcjonalnie: `GROQ_MODEL` (domyślnie `llama-3.3-70b-versatile`).
+Opcjonalnie: `GROQ_MODEL` (domyślnie `llama-3.3-70b-versatile`), `FMP_API_KEY` — klucz
+Financial Modeling Prep (darmowy tier: 250 zapytań/dzień) używany przez Paragony do cen
+ETF-ów zagranicznych; bez niego działają nadal ETF-y notowane na GPW (Stooq, bez klucza) —
+patrz `lib/paragony/etf-prices.ts`.
 
 ## Konto administratora
 

@@ -35,6 +35,20 @@
   --level-b1: #a855f7;
   --level-b2: #f97316;
 
+  /* Categorical chart series (Paragony budget/ETF charts) — validated 8-hue
+   * order (fixed CVD-safe ordering, see the dataviz skill's palette.md).
+   * Three light-mode slots (chart-3/4/5) sit below 3:1 contrast on the light
+   * surface by design — charts using them must ship visible direct labels
+   * or a legend, never rely on hue alone. */
+  --chart-1: #2a78d6;
+  --chart-2: #008300;
+  --chart-3: #e87ba4;
+  --chart-4: #eda100;
+  --chart-5: #1baf7a;
+  --chart-6: #eb6834;
+  --chart-7: #4a3aa7;
+  --chart-8: #e34948;
+
   --radius-card: 1.25rem;
   --radius-control: 0.875rem;
 }
@@ -59,6 +73,17 @@
   --danger-soft: #3a1620;
   --warning: #fbbf24;
   --warning-soft: #3a2a0e;
+
+  /* Same 8 hues, stepped for the dark chart surface — not a separate
+   * palette, see the light block's comment. */
+  --chart-1: #3987e5;
+  --chart-2: #008300;
+  --chart-3: #d55181;
+  --chart-4: #c98500;
+  --chart-5: #199e70;
+  --chart-6: #d95926;
+  --chart-7: #9085e9;
+  --chart-8: #e66767;
 }
 
 @theme inline {
@@ -86,6 +111,15 @@
   --color-level-a2: var(--level-a2);
   --color-level-b1: var(--level-b1);
   --color-level-b2: var(--level-b2);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
 
   --radius-card: var(--radius-card);
   --radius-control: var(--radius-control);
