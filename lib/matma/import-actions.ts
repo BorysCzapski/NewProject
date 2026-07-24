@@ -18,6 +18,7 @@ import {
   importMatemaksFromPastedExtraction,
   type MatemaksImportSummary,
 } from "@/lib/matma/import-curated-matemaks";
+import { importPdfProblems, type PdfImportSummary } from "@/lib/matma/import-pdf";
 import type {
   MathGradingCriterion,
   MathPastExamMetadata,
@@ -184,6 +185,29 @@ export async function runMatemaksPastedImport(rawJson: string): Promise<ActionRe
   const supabase = await createClient();
 
   const summary = await importMatemaksFromPastedExtraction(supabase, rawJson, { createdBy: admin.id });
+  revalidatePath("/matma/admin/import");
+  revalidatePath("/matma/admin");
+  return { ok: true, data: summary };
+}
+
+/** Imports problems from a PDF the admin uploads directly (worksheet,
+ * textbook scan, problem set from elsewhere saved as PDF) — see
+ * lib/matma/import-pdf.ts. `formData` must contain a "file" field with the
+ * PDF (see next.config.ts's serverActions.bodySizeLimit for the upload cap). */
+export async function runPdfImport(formData: FormData): Promise<ActionResult<PdfImportSummary>> {
+  const admin = await requireAdmin();
+  const supabase = await createClient();
+
+  const file = formData.get("file");
+  if (!(file instanceof File)) {
+    return actionFailure("Nie wybrano pliku PDF.");
+  }
+  if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) {
+    return actionFailure("Wybrany plik nie jest PDF-em.");
+  }
+
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const summary = await importPdfProblems(supabase, buffer, file.name, { createdBy: admin.id });
   revalidatePath("/matma/admin/import");
   revalidatePath("/matma/admin");
   return { ok: true, data: summary };

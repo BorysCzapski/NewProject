@@ -624,7 +624,8 @@ export async function importArkusz(
   }
 
   const topicIdBySlug = await getTopicIdBySlug(supabase);
-  const sourceMetadata: MathPastExamMetadata = {
+  const fallbackTopicId = topicIdBySlug.get(MATH_TOPIC_SLUGS[0]);
+  const baseSourceMetadata = {
     year: descriptor.year,
     session: descriptor.session,
     formula: descriptor.formula,
@@ -634,24 +635,57 @@ export async function importArkusz(
   for (let i = 0; i < structured.length; i++) {
     const p = structured[i];
     const label = `Zadanie ${i + 1}`;
+    let needsReview = false;
 
-    const topicId = topicIdBySlug.get(p.topic_slug);
+    // Nierozpoznany dział przez AI nie oznacza, że zadanie jest bezużyteczne
+    // — zapisujemy je pod domyślnym działem i flagujemy do przeglądu, zamiast
+    // tracić całą treść (jw. import-curated-matemaks.ts — użytkownik wprost
+    // poprosił, by import z CKE też nigdy po cichu nie pomijał zadań).
+    let topicId = topicIdBySlug.get(p.topic_slug);
     if (!topicId) {
-      summary.errors.push(`${label}: nierozpoznany dział „${p.topic_slug}” — pominięto, wymaga ręcznego dodania.`);
-      continue;
+      if (!fallbackTopicId) {
+        summary.errors.push(`${label}: nierozpoznany dział „${p.topic_slug}” i brak działu domyślnego — pominięto.`);
+        continue;
+      }
+      topicId = fallbackTopicId;
+      needsReview = true;
+      summary.errors.push(
+        `${label}: nierozpoznany dział „${p.topic_slug}” — zapisano pod domyślnym działem, wymaga przeglądu.`
+      );
     }
+
+    // Brak treści lub punktacji czyni zadanie nie do ocenienia — to jedyny
+    // przypadek, w którym nadal pomijamy (nie ma czego zapisać/ocenić).
     if (!p.statement?.trim() || !p.points_max || p.points_max <= 0) {
       summary.errors.push(`${label}: brak treści lub nieprawidłowa punktacja — pominięto, wymaga ręcznego dodania.`);
       continue;
     }
-    const criteriaSum = (p.grading_criteria ?? []).reduce((sum, c) => sum + (c.points || 0), 0);
+
+    let gradingCriteria = p.grading_criteria ?? [];
+    const criteriaSum = gradingCriteria.reduce((sum, c) => sum + (c.points || 0), 0);
     if (criteriaSum !== p.points_max) {
+      needsReview = true;
       summary.errors.push(
-        `${label}: kryteria oceniania sumują się do ${criteriaSum} pkt zamiast ${p.points_max} — pominięto, wymaga ` +
-          `ręcznej korekty (adminUpsertProblem).`
+        `${label}: kryteria oceniania sumowały się do ${criteriaSum} pkt zamiast ${p.points_max} — skorygowano ` +
+          `automatycznie, wymaga przeglądu (adminUpsertProblem).`
       );
-      continue;
+      gradingCriteria =
+        gradingCriteria.length === 0
+          ? [{ step: "Całe zadanie", points: p.points_max, description: "Brak schematu punktowania od AI — wymaga przeglądu." }]
+          : (() => {
+              const adjusted = [...gradingCriteria];
+              const lastIndex = adjusted.length - 1;
+              adjusted[lastIndex] = {
+                ...adjusted[lastIndex],
+                points: Math.max(0, (adjusted[lastIndex].points || 0) + (p.points_max - criteriaSum)),
+              };
+              return adjusted;
+            })();
     }
+
+    const sourceMetadata: MathPastExamMetadata = needsReview
+      ? { ...baseSourceMetadata, needsReview: true }
+      : baseSourceMetadata;
 
     const { error } = await supabase.from("math_problems").insert({
       topic_id: topicId,
@@ -660,7 +694,7 @@ export async function importArkusz(
       is_proof: !!p.is_proof,
       points_max: p.points_max,
       source: "past_exam",
-      grading_criteria: p.grading_criteria,
+      grading_criteria: gradingCriteria,
       source_metadata: sourceMetadata,
       created_by: opts?.createdBy ?? null,
     });
