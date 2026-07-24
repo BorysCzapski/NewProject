@@ -46,8 +46,8 @@ interface StructuredGeneratedProblem {
 // smaller batches keeps each individual response comfortably short (and
 // shrinks the blast radius of any other JSON-validity slip to one batch
 // instead of all 20 problems).
-const BATCH_SIZE = 8;
-const TOKENS_PER_PROBLEM = 1_200;
+const BATCH_SIZE = 5;
+const TOKENS_PER_PROBLEM = 1_800;
 const TOKENS_OVERHEAD = 1_500;
 
 function systemPrompt(lekcja: AiGenerationLekcja, count: number): string {
@@ -129,16 +129,28 @@ function reconcileCriteria(criteria: MathGradingCriterion[], pointsMax: number):
   return adjusted;
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 /** Generates one batch of `count` problems. Groq occasionally rejects the
  * model's own tool call with a 400 "tool_use_failed" — either the response
  * ran past its token budget before every brace closed, or the model slipped
  * on the backslash-escaping rule in systemPrompt() — a transient generation
- * glitch, not a systematic problem with the request. Retries a couple of
- * times, HALVING the requested count on each retry (a smaller ask is less
- * likely to hit the same failure) before giving up on this batch. */
-async function generateBatch(lekcja: AiGenerationLekcja, count: number): Promise<StructuredGeneratedProblem[]> {
+ * glitch, not a systematic problem with the request; a 429 rate-limit is
+ * also possible once several batches per lekcja are in flight. Retries with
+ * backoff (1s/2s/4s — gives a rate limit time to clear), HALVING the
+ * requested count on each retry (a smaller ask is less likely to hit a
+ * token-budget truncation) before giving up on this batch. Returns the last
+ * error message alongside whatever problems it managed, instead of failing
+ * silently, so the admin UI can show WHY a batch came back short. */
+async function generateBatch(
+  lekcja: AiGenerationLekcja,
+  count: number
+): Promise<{ problems: StructuredGeneratedProblem[]; error: string | null }> {
   let attemptCount = count;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const result = await askAIForJSON<{ problems: StructuredGeneratedProblem[] }>({
         system: systemPrompt(lekcja, attemptCount),
@@ -146,33 +158,39 @@ async function generateBatch(lekcja: AiGenerationLekcja, count: number): Promise
         schema: SCHEMA,
         maxTokens: Math.min(16_000, TOKENS_PER_PROBLEM * attemptCount + TOKENS_OVERHEAD),
       });
-      return result.problems ?? [];
+      return { problems: result.problems ?? [], error: null };
     } catch (err) {
+      lastError = err;
       console.error(
-        `[matma] generateBatch failed for "${lekcja.title}" (attempt ${attempt}/3, count=${attemptCount}):`,
+        `[matma] generateBatch failed for "${lekcja.title}" (attempt ${attempt}/4, count=${attemptCount}):`,
         err
       );
       attemptCount = Math.max(2, Math.floor(attemptCount / 2));
+      if (attempt < 4) await sleep(2 ** attempt * 500);
     }
   }
-  console.error(`[matma] generateBatch gave up for "${lekcja.title}" after 3 attempts`);
-  return [];
+  console.error(`[matma] generateBatch gave up for "${lekcja.title}" after 4 attempts`);
+  return { problems: [], error: errMessage(lastError) };
 }
 
 /** Generates all AI_GENERATION_PROBLEMS_PER_LEKCJA problems for a lekcja as
  * several smaller batches (see BATCH_SIZE) instead of one big request — a
  * failed batch just returns fewer problems for this lekcja, it no longer
  * zeroes out the whole thing. */
-async function generateStructuredProblems(lekcja: AiGenerationLekcja): Promise<StructuredGeneratedProblem[]> {
+async function generateStructuredProblems(
+  lekcja: AiGenerationLekcja
+): Promise<{ problems: StructuredGeneratedProblem[]; errors: string[] }> {
   const problems: StructuredGeneratedProblem[] = [];
+  const errors: string[] = [];
   let remaining = AI_GENERATION_PROBLEMS_PER_LEKCJA;
   while (remaining > 0) {
     const batchCount = Math.min(BATCH_SIZE, remaining);
     const batch = await generateBatch(lekcja, batchCount);
-    problems.push(...batch);
+    problems.push(...batch.problems);
+    if (batch.error) errors.push(`Partia zadań nie powiodła się: ${batch.error}`);
     remaining -= batchCount;
   }
-  return problems;
+  return { problems, errors };
 }
 
 /** Generates + inserts ~20 original problems for lekcja #index (see
@@ -229,13 +247,8 @@ export async function generateAiProblemsForLekcja(
     }
   }
 
-  let structured: StructuredGeneratedProblem[];
-  try {
-    structured = await generateStructuredProblems(lekcja);
-  } catch (err) {
-    summary.errors.push(`AI nie wygenerowało zadań: ${errMessage(err)}`);
-    return summary;
-  }
+  const { problems: structured, errors: batchErrors } = await generateStructuredProblems(lekcja);
+  summary.errors.push(...batchErrors);
 
   summary.problemsGenerated = structured.length;
   if (structured.length === 0) {
