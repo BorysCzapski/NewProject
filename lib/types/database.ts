@@ -364,6 +364,16 @@ export interface MathCuratedMetadata {
   needsReview?: boolean;
 }
 
+export interface MathGeneratedMetadata {
+  /** The lekcja title this batch was generated for (see
+   * lib/matma/ai-generation-lekcje.ts) — lets generateAiProblemsForLekcja
+   * check "already generated for this lekcja" the same way the CKE/curated
+   * pipelines check "already imported". */
+  lekcja: string;
+  /** See MathPastExamMetadata.needsReview — same meaning, AI-generation pipeline. */
+  needsReview?: boolean;
+}
+
 export interface MathProblem {
   id: string;
   topic_id: string;
@@ -373,7 +383,7 @@ export interface MathProblem {
   points_max: number;
   source: MathProblemSource;
   grading_criteria: MathGradingCriterion[];
-  source_metadata: MathPastExamMetadata | MathCuratedMetadata | null;
+  source_metadata: MathPastExamMetadata | MathCuratedMetadata | MathGeneratedMetadata | null;
   created_by: string | null;
   created_at: string;
 }
