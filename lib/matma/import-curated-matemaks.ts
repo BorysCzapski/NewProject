@@ -78,10 +78,26 @@ async function timedFetch(url: string): Promise<Response> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    return await fetch(url, { signal: controller.signal, headers: { "User-Agent": USER_AGENT } });
+    // Headers beyond User-Agent matter here: some anti-bot/WAF rules key off
+    // a request "looking like a browser" (missing Accept/Accept-Language is
+    // a common automated-request signal) — a real failure mode observed in
+    // production was a page that loads fine in an actual browser but fails
+    // server-side with no HTTP-level reason, consistent with this.
+    return await fetch(url, {
+      signal: controller.signal,
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "pl-PL,pl;q=0.9,en;q=0.8",
+      },
+    });
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function errMessage(err: unknown): string {
+  return err instanceof Error ? err.message : String(err);
 }
 
 function resolveUrl(href: string, base: string): string {
@@ -155,15 +171,38 @@ function extractStatement($: cheerio.CheerioAPI, el: cheerio.Cheerio<never>, pag
   return { text, imageUrl };
 }
 
-async function fetchAndParseTematPage(slug: string): Promise<ParsedTematPage | null> {
+/** Throws a DESCRIPTIVE error on any failure (HTTP status, timeout, network
+ * error, or "fetched fine but doesn't look like a temat page") instead of
+ * silently returning null — a live production report showed a page that
+ * loads fine in a browser still failing server-side with no visible reason,
+ * so surfacing the real cause (status code / body snippet) matters more
+ * here than in the CKE PDF pipeline, where a 404 is unambiguous. Likely
+ * culprits for "loads in browser, fails server-side": bot/anti-scraping
+ * protection keyed off User-Agent or missing browser-only headers, or a
+ * cookie-consent gate serving different content without a consent cookie. */
+async function fetchAndParseTematPage(slug: string): Promise<ParsedTematPage> {
   const url = `${SITE_ROOT}/${slug}`;
-  let html: string;
+  let res: Response;
   try {
-    const res = await timedFetch(url);
-    if (!res.ok) return null;
-    html = await res.text();
-  } catch {
-    return null;
+    res = await timedFetch(url);
+  } catch (err) {
+    const reason = err instanceof Error && err.name === "AbortError" ? "przekroczono czas oczekiwania (timeout)" : errMessage(err);
+    throw new Error(`nie udało się połączyć z ${url} (${reason})`);
+  }
+  if (!res.ok) {
+    throw new Error(`serwer zwrócił status ${res.status} ${res.statusText} dla ${url}`);
+  }
+  const html = await res.text();
+  if (!/<h1[^>]*class="tytuldzialu"/i.test(html) || !/class="zadanie"/.test(html)) {
+    // Fetched SOMETHING (200 OK) but it doesn't look like a real temat page
+    // — likely a cookie-consent interstitial, an anti-bot challenge page,
+    // or a redirect target that isn't a temat. Surface a snippet so the
+    // admin can tell which.
+    const snippet = html.replace(/\s+/g, " ").trim().slice(0, 300);
+    throw new Error(
+      `${url} zwrócił 200 OK, ale treść nie wygląda jak strona tematu (brak spodziewanej struktury) — ` +
+        `możliwa blokada bota/ciasteczek. Fragment odpowiedzi: "${snippet}"`
+    );
   }
 
   const $ = cheerio.load(html);
@@ -317,11 +356,11 @@ export async function importMatemaksDzial(
 
   while (currentSlug && !visited.has(currentSlug) && summary.tematyVisited < MAX_TEMATY_PER_DZIAL) {
     visited.add(currentSlug);
-    const page = await fetchAndParseTematPage(currentSlug);
-    if (!page) {
-      if (summary.tematyVisited === 0) {
-        summary.errors.push(`Nie udało się pobrać strony startowej "${currentSlug}" — sprawdź, czy slug jest poprawny.`);
-      }
+    let page: ParsedTematPage;
+    try {
+      page = await fetchAndParseTematPage(currentSlug);
+    } catch (err) {
+      summary.errors.push(`Nie udało się pobrać/przetworzyć strony "${currentSlug}": ${errMessage(err)}`);
       break;
     }
     summary.tematyVisited += 1;
