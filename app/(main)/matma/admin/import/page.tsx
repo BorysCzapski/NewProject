@@ -15,6 +15,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ImportTriggerForm } from "@/components/matma/admin/import-trigger-form";
 import { MatemaksPasteImportForm } from "@/components/matma/admin/matemaks-paste-import-form";
+import { PdfImportForm } from "@/components/matma/admin/pdf-import-form";
 
 export default async function MatmaAdminImportPage() {
   await requireAdmin();
@@ -66,6 +67,15 @@ export default async function MatmaAdminImportPage() {
             uruchamiany w Twojej własnej przeglądarce, nie przez automatyczne pobieranie.
           </CardDescription>
           <MatemaksPasteImportForm />
+        </div>
+
+        <div className="mt-2 border-t border-border pt-5">
+          <CardTitle>Import z własnego PDF-a</CardTitle>
+          <CardDescription className="mb-3">
+            Arkusz, podręcznik albo zbiór zadań z dowolnego innego źródła — wgraj plik PDF, a AI wyodrębni z niego
+            zadania.
+          </CardDescription>
+          <PdfImportForm />
         </div>
       </div>
     </div>

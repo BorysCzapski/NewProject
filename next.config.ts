@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    serverActions: {
+      // Default is 1MB — too small for a Matma admin PDF upload (see
+      // lib/matma/import-pdf.ts), scanned/multi-page arkusze routinely
+      // exceed that.
+      bodySizeLimit: "20mb",
+    },
+  },
   // The language app used to live at the root; since the Phoenix shell took
   // over "/" it moved under /jezyki. Keep old bookmarks and in-flight links
   // working forever.
