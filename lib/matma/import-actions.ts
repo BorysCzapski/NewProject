@@ -19,6 +19,7 @@ import {
   type MatemaksImportSummary,
 } from "@/lib/matma/import-curated-matemaks";
 import { importPdfProblems, type PdfImportSummary } from "@/lib/matma/import-pdf";
+import { generateAiProblemsForLekcja, type AiGenerationSummary } from "@/lib/matma/generate-ai-problems";
 import type {
   MathGradingCriterion,
   MathPastExamMetadata,
@@ -208,6 +209,23 @@ export async function runPdfImport(formData: FormData): Promise<ActionResult<Pdf
 
   const buffer = Buffer.from(await file.arrayBuffer());
   const summary = await importPdfProblems(supabase, buffer, file.name, { createdBy: admin.id });
+  revalidatePath("/matma/admin/import");
+  revalidatePath("/matma/admin");
+  return { ok: true, data: summary };
+}
+
+/** Generates ~20 original AI problems for lekcja #index — see
+ * lib/matma/generate-ai-problems.ts and lib/matma/ai-generation-lekcje.ts.
+ * Chunked per lekcja (like runPastExamImport is chunked per year) — the
+ * client loops over AI_GENERATION_LEKCJE.length calls, one per request. */
+export async function runAiProblemGeneration(
+  index: number,
+  force?: boolean
+): Promise<ActionResult<AiGenerationSummary>> {
+  const admin = await requireAdmin();
+  const supabase = await createClient();
+
+  const summary = await generateAiProblemsForLekcja(supabase, index, { createdBy: admin.id, force });
   revalidatePath("/matma/admin/import");
   revalidatePath("/matma/admin");
   return { ok: true, data: summary };

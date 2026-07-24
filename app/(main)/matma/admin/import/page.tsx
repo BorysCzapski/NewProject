@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { ImportTriggerForm } from "@/components/matma/admin/import-trigger-form";
 import { MatemaksPasteImportForm } from "@/components/matma/admin/matemaks-paste-import-form";
 import { PdfImportForm } from "@/components/matma/admin/pdf-import-form";
+import { AiGenerationTriggerForm } from "@/components/matma/admin/ai-generation-trigger-form";
 
 export default async function MatmaAdminImportPage() {
   await requireAdmin();
@@ -76,6 +77,15 @@ export default async function MatmaAdminImportPage() {
             zadania.
           </CardDescription>
           <PdfImportForm />
+        </div>
+
+        <div className="mt-2 border-t border-border pt-5">
+          <CardTitle>Generowanie zadań przez AI</CardTitle>
+          <CardDescription className="mb-3">
+            Zamiast importu z istniejącego źródła — AI układa całkiem nowe, oryginalne zadania na podstawie pełnego
+            programu matury rozszerzonej.
+          </CardDescription>
+          <AiGenerationTriggerForm />
         </div>
       </div>
     </div>
