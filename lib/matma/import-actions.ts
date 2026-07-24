@@ -13,7 +13,11 @@ import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { actionFailure, type ActionResult } from "@/lib/action-result";
 import { discoverPastExamArkusze, importArkusz, type ArkuszImportSummary } from "@/lib/matma/import-past-exams";
-import { importMatemaksDzial, type MatemaksImportSummary } from "@/lib/matma/import-curated-matemaks";
+import {
+  importMatemaksDzial,
+  importMatemaksFromPastedExtraction,
+  type MatemaksImportSummary,
+} from "@/lib/matma/import-curated-matemaks";
 import type {
   MathGradingCriterion,
   MathPastExamMetadata,
@@ -168,4 +172,19 @@ export async function runMatemaksDzialImport(
     console.error(`[matma] runMatemaksDzialImport failed for ${dzialSlug}:`, err);
     return actionFailure(`Import działu "${dzialSlug}" nie powiódł się: ${err instanceof Error ? err.message : String(err)}`);
   }
+}
+
+/** The SUPPORTED matemaks.pl import path: structures + inserts problems
+ * from JSON the admin extracted themselves via lib/matma/matemaks-console-
+ * script.ts, run in their own browser console while normally viewing a
+ * page (never touches matemaks.pl server-side — see that file's header
+ * comment for why the live crawler above doesn't work). */
+export async function runMatemaksPastedImport(rawJson: string): Promise<ActionResult<MatemaksImportSummary>> {
+  const admin = await requireAdmin();
+  const supabase = await createClient();
+
+  const summary = await importMatemaksFromPastedExtraction(supabase, rawJson, { createdBy: admin.id });
+  revalidatePath("/matma/admin/import");
+  revalidatePath("/matma/admin");
+  return { ok: true, data: summary };
 }
