@@ -283,7 +283,11 @@ const CURATED_SYSTEM_PROMPT =
   `4) topic_slug: DOKŁADNIE jeden z: ${MATH_TOPIC_SLUGS.join(", ")}. ` +
   "5) grading_criteria: analityczny schemat punktowania w stylu CKE (krok + opis + liczba punktów). SUMA points " +
   "MUSI być równa podanej liczbie punktów za zadanie — to twardy wymóg. Jeśli podano prawdziwą odpowiedź końcową, " +
-  "upewnij się że ostatni krok schematu odpowiada dokładnie tej odpowiedzi.";
+  "upewnij się że ostatni krok schematu odpowiada dokładnie tej odpowiedzi. " +
+  "6) KRYTYCZNE dla poprawności JSON: pola statement/step/description trafiają do pól typu string w JSON, więc " +
+  "KAŻDY pojedynczy znak backslash użyty w komendzie LaTeX MUSI być zapisany jako PODWÓJNY backslash — np. " +
+  "zamiast \\frac napisz \\\\frac, zamiast \\left( napisz \\\\left(, zamiast \\sqrt napisz \\\\sqrt. Jeśli " +
+  "zostawisz pojedynczy backslash, wygenerowany JSON będzie niepoprawny i cała odpowiedź zostanie odrzucona.";
 
 const CURATED_SCHEMA = {
   statement: { type: "string", description: "Pełna treść zadania po polsku, wzory w LaTeX." },

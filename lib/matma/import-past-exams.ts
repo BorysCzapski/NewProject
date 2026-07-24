@@ -410,7 +410,11 @@ const IMPORT_SYSTEM_PROMPT =
   "twardy wymóg. " +
   "8) Jeśli fragment jest zbyt zniekształcony by wiernie go odtworzyć (np. zadanie geometryczne opisane przez " +
   "nieczytelne dane z rysunku), i tak zwróć najlepszą możliwą próbę — administrator przejrzy i poprawi wynik " +
-  "ręcznie, nie musisz być idealny.";
+  "ręcznie, nie musisz być idealny. " +
+  "9) KRYTYCZNE dla poprawności JSON: pola statement/step/description trafiają do pól typu string w JSON, więc " +
+  "KAŻDY pojedynczy znak backslash użyty w komendzie LaTeX MUSI być zapisany jako PODWÓJNY backslash — np. " +
+  "zamiast \\frac napisz \\\\frac, zamiast \\left( napisz \\\\left(, zamiast \\sqrt napisz \\\\sqrt. Jeśli " +
+  "zostawisz pojedynczy backslash, wygenerowany JSON będzie niepoprawny i cała odpowiedź zostanie odrzucona.";
 
 const IMPORT_SCHEMA = {
   problems: {

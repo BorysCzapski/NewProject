@@ -67,7 +67,11 @@ const IMPORT_SYSTEM_PROMPT =
   "7) grading_criteria: analityczny schemat punktowania w stylu CKE (krok + opis + liczba punktów); SUMA points " +
   "we wszystkich krokach MUSI być równa points_max — to twardy wymóg. " +
   "8) Jeśli fragment jest zbyt zniekształcony by wiernie go odtworzyć, i tak zwróć najlepszą możliwą próbę — " +
-  "administrator przejrzy i poprawi wynik ręcznie, nie musisz być idealny.";
+  "administrator przejrzy i poprawi wynik ręcznie, nie musisz być idealny. " +
+  "9) KRYTYCZNE dla poprawności JSON: pola statement/step/description trafiają do pól typu string w JSON, więc " +
+  "KAŻDY pojedynczy znak backslash użyty w komendzie LaTeX MUSI być zapisany jako PODWÓJNY backslash — np. " +
+  "zamiast \\frac napisz \\\\frac, zamiast \\left( napisz \\\\left(, zamiast \\sqrt napisz \\\\sqrt. Jeśli " +
+  "zostawisz pojedynczy backslash, wygenerowany JSON będzie niepoprawny i cała odpowiedź zostanie odrzucona.";
 
 const IMPORT_SCHEMA = {
   problems: {
