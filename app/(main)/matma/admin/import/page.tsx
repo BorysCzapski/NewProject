@@ -14,7 +14,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ImportTriggerForm } from "@/components/matma/admin/import-trigger-form";
-import { MatemaksTriggerForm } from "@/components/matma/admin/matemaks-trigger-form";
+import { MatemaksPasteImportForm } from "@/components/matma/admin/matemaks-paste-import-form";
 
 export default async function MatmaAdminImportPage() {
   await requireAdmin();
@@ -62,9 +62,10 @@ export default async function MatmaAdminImportPage() {
         <div className="mt-2 border-t border-border pt-5">
           <CardTitle>Zadania spoza CKE (kuratorowane)</CardTitle>
           <CardDescription className="mb-3">
-            Zadania z zewnętrznych serwisów edukacyjnych, z podaniem źródła (source = curated).
+            Matemaks.pl blokuje automatyczne zapytania serwera (403 na każde żądanie) — import działa przez skrypt
+            uruchamiany w Twojej własnej przeglądarce, nie przez automatyczne pobieranie.
           </CardDescription>
-          <MatemaksTriggerForm />
+          <MatemaksPasteImportForm />
         </div>
       </div>
     </div>

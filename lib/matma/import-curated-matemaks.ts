@@ -328,6 +328,80 @@ async function getTopicIdBySlug(supabase: SupabaseClient): Promise<Map<string, s
   return new Map(topics.map((t) => [t.slug, t.id]));
 }
 
+/** Shared per-problem tail of both import paths (live crawl and pasted-
+ * console-extraction): dedupe check, AI structuring, validation, insert.
+ * Mutates `summary` in place; never throws, every failure is caught into
+ * summary.errors so one bad problem can't abort the batch. */
+async function structureAndInsertRawProblems(
+  supabase: SupabaseClient,
+  topicIdBySlug: Map<string, string>,
+  problems: RawMatemaksProblem[],
+  pageInfo: { title: string; url: string },
+  summary: { problemsFound: number; problemsInserted: number; errors: string[] },
+  opts?: { createdBy?: string | null }
+): Promise<void> {
+  for (const raw of problems) {
+    if (!raw.points) {
+      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: brak punktacji w źródle — pominięto.`);
+      continue;
+    }
+
+    const { count: existing } = await supabase
+      .from("math_problems")
+      .select("id", { count: "exact", head: true })
+      .eq("source", "curated")
+      .eq("source_metadata->>matemaksId", raw.matemaksId);
+    if (existing && existing > 0) continue; // already imported, skip quietly
+
+    summary.problemsFound += 1;
+    let structured: StructuredCuratedProblem;
+    try {
+      structured = await structureCuratedProblem(raw, raw.points);
+    } catch (err) {
+      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: AI nie ustrukturyzowało treści — ${errMessage(err)}`);
+      continue;
+    }
+
+    const topicId = topicIdBySlug.get(structured.topic_slug);
+    if (!topicId) {
+      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: nierozpoznany dział „${structured.topic_slug}” — pominięto.`);
+      continue;
+    }
+    const criteriaSum = (structured.grading_criteria ?? []).reduce((sum, c) => sum + (c.points || 0), 0);
+    if (criteriaSum !== raw.points) {
+      summary.errors.push(
+        `"${pageInfo.title}" zadanie ${raw.nrZad}: kryteria sumują się do ${criteriaSum} zamiast ${raw.points} — pominięto, wymaga ręcznej korekty.`
+      );
+      continue;
+    }
+
+    const sourceMetadata: MathCuratedMetadata & { matemaksId: string } = {
+      attribution: `${ATTRIBUTION} — ${pageInfo.title} (${pageInfo.url})`,
+      matemaksId: raw.matemaksId,
+    };
+
+    const { error } = await supabase.from("math_problems").insert({
+      topic_id: topicId,
+      content: {
+        statement: structured.statement,
+        ...(raw.imageUrl ? { imageUrl: raw.imageUrl } : {}),
+      },
+      difficulty: structured.difficulty >= 3 ? 3 : structured.difficulty <= 1 ? 1 : 2,
+      is_proof: !!structured.is_proof,
+      points_max: raw.points,
+      source: "curated",
+      grading_criteria: structured.grading_criteria,
+      source_metadata: sourceMetadata,
+      created_by: opts?.createdBy ?? null,
+    });
+    if (error) {
+      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: błąd zapisu do bazy — ${error.message}`);
+      continue;
+    }
+    summary.problemsInserted += 1;
+  }
+}
+
 /** Crawls one dział starting from `startSlug` (following next_temat until
  * the parent dział link changes, MAX_TEMATY_PER_DZIAL is hit, or there's no
  * next link), structuring and inserting every rozszerzony-level problem
@@ -335,7 +409,17 @@ async function getTopicIdBySlug(supabase: SupabaseClient): Promise<Map<string, s
  * problem id already imported (checked via source_metadata->>matemaksId),
  * same rationale as importArkusz's per-arkusz skip in import-past-exams.ts
  * — safe/cheap to re-run. Never throws; every failure is caught into
- * summary.errors. */
+ * summary.errors.
+ *
+ * NOTE: matemaks.pl actively blocks automated/datacenter requests (403 on
+ * every request, confirmed in production — even a confirmed-correct URL
+ * fails this way) — this function will currently fail to fetch anything.
+ * Kept in the codebase for if that ever changes (site policy, official
+ * access, etc.); the SUPPORTED import path today is
+ * importMatemaksFromPastedExtraction below, fed by a script the admin runs
+ * in their own browser console while normally viewing the page (see
+ * MATEMAKS_CONSOLE_SCRIPT) — that never touches matemaks.pl outside of the
+ * admin's own regular, legitimate page views. */
 export async function importMatemaksDzial(
   supabase: SupabaseClient,
   dzialSlug: string,
@@ -369,71 +453,102 @@ export async function importMatemaksDzial(
     // into the following dział on the site).
     if (page.dzialSlug && page.dzialSlug !== dzialSlug && summary.tematyVisited > 1) break;
 
-    for (const raw of page.problems) {
-      if (!raw.points) {
-        summary.errors.push(`"${page.title}" zadanie ${raw.nrZad}: brak punktacji w źródle — pominięto.`);
-        continue;
-      }
-
-      const { count: existing } = await supabase
-        .from("math_problems")
-        .select("id", { count: "exact", head: true })
-        .eq("source", "curated")
-        .eq("source_metadata->>matemaksId", raw.matemaksId);
-      if (existing && existing > 0) continue; // already imported, skip quietly
-
-      summary.problemsFound += 1;
-      let structured: StructuredCuratedProblem;
-      try {
-        structured = await structureCuratedProblem(raw, raw.points);
-      } catch (err) {
-        summary.errors.push(
-          `"${page.title}" zadanie ${raw.nrZad}: AI nie ustrukturyzowało treści — ${err instanceof Error ? err.message : String(err)}`
-        );
-        continue;
-      }
-
-      const topicId = topicIdBySlug.get(structured.topic_slug);
-      if (!topicId) {
-        summary.errors.push(`"${page.title}" zadanie ${raw.nrZad}: nierozpoznany dział „${structured.topic_slug}” — pominięto.`);
-        continue;
-      }
-      const criteriaSum = (structured.grading_criteria ?? []).reduce((sum, c) => sum + (c.points || 0), 0);
-      if (criteriaSum !== raw.points) {
-        summary.errors.push(
-          `"${page.title}" zadanie ${raw.nrZad}: kryteria sumują się do ${criteriaSum} zamiast ${raw.points} — pominięto, wymaga ręcznej korekty.`
-        );
-        continue;
-      }
-
-      const sourceMetadata: MathCuratedMetadata & { matemaksId: string } = {
-        attribution: `${ATTRIBUTION} — ${page.title} (${SITE_ROOT}/${currentSlug})`,
-        matemaksId: raw.matemaksId,
-      };
-
-      const { error } = await supabase.from("math_problems").insert({
-        topic_id: topicId,
-        content: {
-          statement: structured.statement,
-          ...(raw.imageUrl ? { imageUrl: raw.imageUrl } : {}),
-        },
-        difficulty: structured.difficulty >= 3 ? 3 : structured.difficulty <= 1 ? 1 : 2,
-        is_proof: !!structured.is_proof,
-        points_max: raw.points,
-        source: "curated",
-        grading_criteria: structured.grading_criteria,
-        source_metadata: sourceMetadata,
-        created_by: opts?.createdBy ?? null,
-      });
-      if (error) {
-        summary.errors.push(`"${page.title}" zadanie ${raw.nrZad}: błąd zapisu do bazy — ${error.message}`);
-        continue;
-      }
-      summary.problemsInserted += 1;
-    }
+    await structureAndInsertRawProblems(
+      supabase,
+      topicIdBySlug,
+      page.problems,
+      { title: page.title, url: `${SITE_ROOT}/${currentSlug}` },
+      summary,
+      opts
+    );
 
     currentSlug = page.nextSlug;
   }
+
+  return summary;
+}
+
+// ----------------------------------------------------------------------------
+// Pasted-extraction import — the SUPPORTED path (see importMatemaksDzial's
+// header comment on why the live crawler doesn't work against matemaks.pl).
+// ----------------------------------------------------------------------------
+
+/** Shape produced by lib/matma/matemaks-console-script.ts's browser script —
+ * the admin pastes its JSON output (via clipboard) here. Intentionally the
+ * exact same fields as RawMatemaksProblem/ParsedTematPage so validation is
+ * a straightforward structural check, not a remapping. */
+export interface PastedMatemaksExtraction {
+  title: string;
+  url: string;
+  problems: Array<{
+    matemaksId: string;
+    nrZad: number;
+    points: number | null;
+    statementText: string;
+    answerText: string | null;
+    imageUrl: string | null;
+  }>;
+}
+
+function isValidExtraction(value: unknown): value is PastedMatemaksExtraction {
+  if (!value || typeof value !== "object") return false;
+  const v = value as Record<string, unknown>;
+  if (typeof v.title !== "string" || typeof v.url !== "string" || !Array.isArray(v.problems)) return false;
+  return v.problems.every(
+    (p) =>
+      p &&
+      typeof p === "object" &&
+      typeof (p as Record<string, unknown>).matemaksId === "string" &&
+      typeof (p as Record<string, unknown>).nrZad === "number" &&
+      typeof (p as Record<string, unknown>).statementText === "string"
+  );
+}
+
+/** Structures + inserts problems from a PastedMatemaksExtraction (the
+ * console script's clipboard output, pasted by the admin as raw JSON text).
+ * This is the path that actually works against matemaks.pl's anti-bot
+ * blocking — see importMatemaksDzial's header comment. Never throws;
+ * validation and every per-problem failure go into summary.errors. */
+export async function importMatemaksFromPastedExtraction(
+  supabase: SupabaseClient,
+  rawJson: string,
+  opts?: { createdBy?: string | null }
+): Promise<MatemaksImportSummary> {
+  const summary: MatemaksImportSummary = {
+    dzialSlug: "(wklejone)",
+    tematyVisited: 0,
+    problemsFound: 0,
+    problemsInserted: 0,
+    errors: [],
+  };
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(rawJson);
+  } catch (err) {
+    summary.errors.push(`Wklejony tekst nie jest poprawnym JSON-em: ${errMessage(err)}`);
+    return summary;
+  }
+  if (!isValidExtraction(parsed)) {
+    summary.errors.push(
+      "Wklejone dane nie mają oczekiwanego kształtu (title/url/problems[]) — upewnij się, że to wynik działania " +
+        "skryptu konsoli, wklejony bez modyfikacji."
+    );
+    return summary;
+  }
+
+  summary.dzialSlug = parsed.title || "(wklejone)";
+  summary.tematyVisited = 1;
+
+  const topicIdBySlug = await getTopicIdBySlug(supabase);
+  await structureAndInsertRawProblems(
+    supabase,
+    topicIdBySlug,
+    parsed.problems,
+    { title: parsed.title, url: parsed.url },
+    summary,
+    opts
+  );
 
   return summary;
 }
