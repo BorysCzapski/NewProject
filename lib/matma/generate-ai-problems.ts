@@ -61,7 +61,12 @@ function systemPrompt(lekcja: AiGenerationLekcja): string {
     " 5) points_max: liczba punktów zgodna z konwencją CKE (zwykle 2-6 dla zadań rozszerzonych, więcej dla " +
     "złożonych zadań wielostopniowych lub dowodowych). " +
     "6) grading_criteria: analityczny schemat punktowania w stylu CKE (krok + opis + liczba punktów); SUMA " +
-    "points we wszystkich krokach MUSI być równa points_max — to twardy wymóg."
+    "points we wszystkich krokach MUSI być równa points_max — to twardy wymóg. " +
+    "7) KRYTYCZNE dla poprawności JSON: pola statement/step/description trafiają do pól typu string w JSON, więc " +
+    "KAŻDY pojedynczy znak backslash użyty w komendzie LaTeX MUSI być zapisany jako PODWÓJNY backslash — np. " +
+    "zamiast \\frac napisz \\\\frac, zamiast \\left( napisz \\\\left(, zamiast \\sqrt napisz \\\\sqrt, zamiast " +
+    "\\log napisz \\\\log, zamiast \\neq napisz \\\\neq, zamiast \\in napisz \\\\in. Jeśli zostawisz pojedynczy " +
+    "backslash, wygenerowany JSON będzie niepoprawny i cała odpowiedź zostanie odrzucona — to najważniejsza zasada."
   );
 }
 
@@ -111,14 +116,30 @@ function reconcileCriteria(criteria: MathGradingCriterion[], pointsMax: number):
   return adjusted;
 }
 
+/** Groq occasionally rejects the model's own tool call with a 400
+ * "tool_use_failed" when heavy LaTeX content (lots of literal backslashes
+ * inside a JSON string) breaks JSON validity despite the explicit escaping
+ * rule in systemPrompt() — a transient generation glitch, not a systematic
+ * problem with the request. Retries a couple of times (the model usually
+ * gets the escaping right on a later attempt) before giving up, so one bad
+ * generation doesn't zero out an entire lekcja's 20 problems. */
 async function generateStructuredProblems(lekcja: AiGenerationLekcja): Promise<StructuredGeneratedProblem[]> {
-  const result = await askAIForJSON<{ problems: StructuredGeneratedProblem[] }>({
-    system: systemPrompt(lekcja),
-    prompt: `Wygeneruj ${AI_GENERATION_PROBLEMS_PER_LEKCJA} zadań na temat: „${lekcja.title}”.`,
-    schema: SCHEMA,
-    maxTokens: MAX_COMPLETION_TOKENS,
-  });
-  return result.problems ?? [];
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const result = await askAIForJSON<{ problems: StructuredGeneratedProblem[] }>({
+        system: systemPrompt(lekcja),
+        prompt: `Wygeneruj ${AI_GENERATION_PROBLEMS_PER_LEKCJA} zadań na temat: „${lekcja.title}”.`,
+        schema: SCHEMA,
+        maxTokens: MAX_COMPLETION_TOKENS,
+      });
+      return result.problems ?? [];
+    } catch (err) {
+      lastError = err;
+      console.error(`[matma] generateStructuredProblems failed for "${lekcja.title}" (attempt ${attempt}/3):`, err);
+    }
+  }
+  throw lastError;
 }
 
 /** Generates + inserts ~20 original problems for lekcja #index (see
