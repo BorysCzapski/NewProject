@@ -332,6 +332,52 @@ async function getTopicIdBySlug(supabase: SupabaseClient): Promise<Map<string, s
  * console-extraction): dedupe check, AI structuring, validation, insert.
  * Mutates `summary` in place; never throws, every failure is caught into
  * summary.errors so one bad problem can't abort the batch. */
+/**
+ * Best-effort recovery when the AI failed to structure a problem at all
+ * (parse/tool-call failure — usually LaTeX-heavy content, e.g. many nested
+ * \pm/\cup/\infty symbols, tripping up JSON-escaping on the model's side).
+ * Rather than lose the raw content, wrap it as a single ungraded step for
+ * admin review — see the "insert anyway" philosophy in the two callers
+ * below: a student can still see/attempt an unreviewed problem, an admin
+ * can fix it later via adminUpsertProblem, but NOTHING gets silently
+ * dropped just because the AI stumbled on one specific problem.
+ */
+function fallbackStructuredProblem(raw: RawMatemaksProblem, pointsMax: number): StructuredCuratedProblem {
+  return {
+    statement: raw.statementText,
+    difficulty: 2,
+    is_proof: false,
+    topic_slug: MATH_TOPIC_SLUGS[0],
+    grading_criteria: [
+      {
+        step: "Całe zadanie (import bez automatycznej strukturyzacji)",
+        points: pointsMax,
+        description: "Automatyczna strukturyzacja AI nie powiodła się — wymaga przeglądu przez administratora.",
+      },
+    ],
+  };
+}
+
+/** Nudges grading_criteria to sum EXACTLY to pointsMax by adjusting the
+ * last step, instead of discarding an otherwise-good structuring over a
+ * rounding/counting mismatch (a real failure mode in production: the AI
+ * split one point across two half-point sub-steps a few times). Only used
+ * when the criteria are non-empty and the gap is small/sane — if something
+ * is badly wrong (e.g. AI returned no criteria at all), that is handled by
+ * fallbackStructuredProblem instead. */
+function reconcileCriteriaSum(criteria: MathGradingCriterion[], pointsMax: number): MathGradingCriterion[] {
+  if (criteria.length === 0) {
+    return [{ step: "Całe zadanie", points: pointsMax, description: "Brak schematu punktowania od AI — wymaga przeglądu." }];
+  }
+  const sum = criteria.reduce((s, c) => s + (c.points || 0), 0);
+  const diff = pointsMax - sum;
+  if (diff === 0) return criteria;
+  const adjusted = [...criteria];
+  const lastIndex = adjusted.length - 1;
+  adjusted[lastIndex] = { ...adjusted[lastIndex], points: Math.max(0, (adjusted[lastIndex].points || 0) + diff) };
+  return adjusted;
+}
+
 async function structureAndInsertRawProblems(
   supabase: SupabaseClient,
   topicIdBySlug: Map<string, string>,
@@ -342,7 +388,7 @@ async function structureAndInsertRawProblems(
 ): Promise<void> {
   for (const raw of problems) {
     if (!raw.points) {
-      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: brak punktacji w źródle — pominięto.`);
+      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: brak punktacji w źródle — pominięto (nie da się ocenić bez punktacji).`);
       continue;
     }
 
@@ -355,29 +401,45 @@ async function structureAndInsertRawProblems(
 
     summary.problemsFound += 1;
     let structured: StructuredCuratedProblem;
+    let needsReview = false;
     try {
       structured = await structureCuratedProblem(raw, raw.points);
     } catch (err) {
-      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: AI nie ustrukturyzowało treści — ${errMessage(err)}`);
-      continue;
+      // Insert anyway with the raw content instead of losing it — see
+      // fallbackStructuredProblem's doc comment.
+      summary.errors.push(
+        `"${pageInfo.title}" zadanie ${raw.nrZad}: AI nie ustrukturyzowało treści (${errMessage(err)}) — dodano bez ` +
+          `strukturyzacji, wymaga przeglądu w panelu admina.`
+      );
+      structured = fallbackStructuredProblem(raw, raw.points);
+      needsReview = true;
     }
 
-    const topicId = topicIdBySlug.get(structured.topic_slug);
+    let topicId = topicIdBySlug.get(structured.topic_slug);
     if (!topicId) {
-      summary.errors.push(`"${pageInfo.title}" zadanie ${raw.nrZad}: nierozpoznany dział „${structured.topic_slug}” — pominięto.`);
-      continue;
+      summary.errors.push(
+        `"${pageInfo.title}" zadanie ${raw.nrZad}: nierozpoznany dział „${structured.topic_slug}” — przypisano ` +
+          `tymczasowo do „${MATH_TOPIC_SLUGS[0]}”, wymaga ręcznego przeniesienia w panelu admina.`
+      );
+      topicId = topicIdBySlug.get(MATH_TOPIC_SLUGS[0]);
+      needsReview = true;
+      if (!topicId) continue; // only possible if math_topics is completely unseeded
     }
+
     const criteriaSum = (structured.grading_criteria ?? []).reduce((sum, c) => sum + (c.points || 0), 0);
     if (criteriaSum !== raw.points) {
       summary.errors.push(
-        `"${pageInfo.title}" zadanie ${raw.nrZad}: kryteria sumują się do ${criteriaSum} zamiast ${raw.points} — pominięto, wymaga ręcznej korekty.`
+        `"${pageInfo.title}" zadanie ${raw.nrZad}: kryteria sumowały się do ${criteriaSum} zamiast ${raw.points} — ` +
+          `skorygowano ostatni krok, wymaga przeglądu w panelu admina.`
       );
-      continue;
+      structured = { ...structured, grading_criteria: reconcileCriteriaSum(structured.grading_criteria, raw.points) };
+      needsReview = true;
     }
 
-    const sourceMetadata: MathCuratedMetadata & { matemaksId: string } = {
+    const sourceMetadata: MathCuratedMetadata & { matemaksId: string; needsReview?: boolean } = {
       attribution: `${ATTRIBUTION} — ${pageInfo.title} (${pageInfo.url})`,
       matemaksId: raw.matemaksId,
+      ...(needsReview ? { needsReview: true } : {}),
     };
 
     const { error } = await supabase.from("math_problems").insert({

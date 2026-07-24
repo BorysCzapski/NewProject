@@ -351,10 +351,17 @@ export interface MathPastExamMetadata {
   session: string;
   formula: string;
   source_url: string;
+  /** True when the automated importer couldn't fully validate this problem
+   * (unrecognized topic, mismatched grading-criteria sum, AI structuring
+   * failure) and inserted it anyway rather than silently dropping it — flags
+   * it for an admin to double-check via adminUpsertProblem. */
+  needsReview?: boolean;
 }
 
 export interface MathCuratedMetadata {
   attribution: string;
+  /** See MathPastExamMetadata.needsReview — same meaning, curated pipeline. */
+  needsReview?: boolean;
 }
 
 export interface MathProblem {
