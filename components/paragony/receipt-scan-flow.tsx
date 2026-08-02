@@ -23,6 +23,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CategoryIcon } from "@/components/paragony/category-icon";
+import { resizeImageToDataUrl } from "@/lib/client/resize-image";
 import type { AccountBalance } from "@/lib/paragony/queries";
 import type { BudgetCategory, Receipt } from "@/lib/types/database";
 
@@ -41,37 +42,6 @@ type Step = "capture" | "scanning" | "review";
 
 function todayIso(): string {
   return new Date().toISOString().slice(0, 10);
-}
-
-function resizeImageToDataUrl(file: File, maxDim = 1600, quality = 0.82): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = () => reject(new Error("Nie udało się odczytać pliku."));
-    reader.onload = () => {
-      const img = new Image();
-      img.onerror = () => reject(new Error("Nie udało się wczytać zdjęcia."));
-      img.onload = () => {
-        let { width, height } = img;
-        if (width > maxDim || height > maxDim) {
-          const scale = maxDim / Math.max(width, height);
-          width = Math.round(width * scale);
-          height = Math.round(height * scale);
-        }
-        const canvas = document.createElement("canvas");
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) {
-          reject(new Error("Przeglądarka nie obsługuje przetwarzania obrazu."));
-          return;
-        }
-        ctx.drawImage(img, 0, 0, width, height);
-        resolve(canvas.toDataURL("image/jpeg", quality));
-      };
-      img.src = reader.result as string;
-    };
-    reader.readAsDataURL(file);
-  });
 }
 
 export function ReceiptScanFlow({

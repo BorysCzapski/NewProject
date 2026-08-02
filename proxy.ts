@@ -13,6 +13,17 @@ import { cleanEnv, cleanUrlEnv } from "@/lib/env";
 const GUEST_ONLY_PATHS = ["/login", "/register"];
 const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback", "/api/health"];
 
+// Schola is a fully separate realm on the same Supabase project — see
+// supabase/migrations/0009_schola.sql and lib/schola/*. It gets its own
+// guest-only paths, its own redirect targets, and — crucially — skips
+// Phoenix's onboarding gate entirely, since a Schola member need not (and
+// should never be forced to) have a Phoenix profile/language/level set up.
+const SCHOLA_GUEST_ONLY_PATHS = ["/schola/logowanie", "/schola/rejestracja"];
+
+function isScholaPath(pathname: string): boolean {
+  return pathname === "/schola" || pathname.startsWith("/schola/");
+}
+
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
 
@@ -50,6 +61,29 @@ export async function proxy(request: NextRequest) {
   }
 
   const { pathname } = request.nextUrl;
+
+  if (isScholaPath(pathname)) {
+    const isScholaGuestPath = SCHOLA_GUEST_ONLY_PATHS.some((p) => pathname.startsWith(p));
+
+    if (!user && !isScholaGuestPath) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/schola/logowanie";
+      url.searchParams.set("redirectTo", pathname);
+      return NextResponse.redirect(url);
+    }
+
+    if (user && isScholaGuestPath) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/schola";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
+
+    // No onboarding gate for /schola/* at all — see the comment above
+    // SCHOLA_GUEST_ONLY_PATHS.
+    return response;
+  }
+
   const isPublicPath = PUBLIC_PATHS.some((p) => pathname.startsWith(p));
 
   if (!user && !isPublicPath) {
