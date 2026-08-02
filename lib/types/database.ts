@@ -678,3 +678,48 @@ export interface EtfPriceHistoryRow {
   currency: string;
   fetched_at: string;
 }
+
+// ============================================================================
+// Schola: a fully separate realm (own membership, own auth pages, no
+// Phoenix shell) — see app/schola/* and lib/schola/*. Mirrors
+// supabase/migrations/0009_schola.sql.
+// ============================================================================
+
+export interface ScholaMember {
+  id: string;
+  display_name: string;
+  created_at: string;
+}
+
+export interface ScholaSong {
+  id: string;
+  title: string;
+  /** Lyrics with inline ChordPro-style chord tags, e.g. "[C]tekst linijki". */
+  lyrics_chordpro: string;
+  tags: string[];
+  youtube_url: string | null;
+  sheet_music_url: string | null;
+  created_by: string | null;
+  updated_by: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ScholaMassPlan {
+  id: string;
+  title: string;
+  mass_date: string;
+  notes: string;
+  created_by: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ScholaMassPlanItem {
+  id: string;
+  plan_id: string;
+  song_id: string;
+  order_index: number;
+  note: string;
+  created_at: string;
+}

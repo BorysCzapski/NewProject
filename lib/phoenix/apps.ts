@@ -79,15 +79,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     comingSoon: true,
   },
   {
-    id: "schola",
-    name: "Schola",
-    description: "Śpiewnik scholi: spis pieśni i notatki",
-    section: "wiara",
-    icon: "Music4",
-    href: "/schola",
-    comingSoon: true,
-  },
-  {
     id: "modlitwa",
     name: "Modlitwa",
     description: "Refleksje, werset dnia i liturgia słowa",

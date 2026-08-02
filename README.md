@@ -38,6 +38,23 @@ posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla G
 zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
 z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
 
+**Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
+wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
+w pełni osobny realm dla scholi kościelnej: własna rejestracja/logowanie (`/schola/logowanie`,
+`/schola/rejestracja`), własna powłoka bez dolnej nawigacji Phoenixa — użytkownicy Scholi
+nigdy nie widzą reszty Phoenixa. Mimo to działa w tym samym wdrożeniu Next.js i tym samym
+projekcie Supabase (dla prostoty hostingu), z osobną tabelą członkostwa `schola_members`
+(niezależną od `profiles`) i politykami RLS opartymi o `is_schola_member()` zamiast
+własności wiersza — każdy zalogowany członek scholi może edytować każdą pieśń i każdy plan.
+Funkcje: śpiewnik (tytuł, tekst z akordami w formacie ChordPro, tagi liturgiczne, linki do
+nagrań/nut), planowanie Mszy (uporządkowana lista pieśni z notatkami typu „2x refren, 1x
+zwrotka"), import całego śpiewnika z PDF-a (AI dzieli plik na pojedyncze pieśni) oraz import
+pojedynczej pieśni ze zdjęcia nut/tekstu z akordami — oba z obowiązkowym ekranem korekty
+przed zapisem, ten sam schemat co w Paragonach. Zob. `supabase/migrations/0009_schola.sql`
+i `lib/schola/*` po szczegóły; osoba z istniejącym kontem Phoenixa, która chce dołączyć do
+Scholi, loguje się tym samym e-mailem na `/schola/logowanie` (patrz komentarz „Sharp edges”
+w planie implementacji, jeśli szukasz uzasadnienia tej decyzji).
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)
@@ -129,6 +146,11 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       transakcje kupna/sprzedaży, dywidendy) oraz globalny cache cen `etf_price_history`
       (bez RLS per-user — patrz komentarz w migracji); tworzy też prywatny bucket Storage
       `paragony-receipts` na zdjęcia paragonów.
+   9. `supabase/migrations/0009_schola.sql` — schemat Scholi (osobny realm, patrz wyżej):
+      `schola_members` (osobne członkostwo, niezależne od `profiles`), `schola_songs`
+      (śpiewnik), `schola_mass_plans` + `schola_mass_plan_items` (planowanie Mszy); RLS
+      oparta o funkcję `is_schola_member()`, nie o własność wiersza — brak bucketu Storage
+      (import PDF/zdjęcia jest przetwarzany tymczasowo, nic nie jest trwale zapisywane).
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -252,7 +274,7 @@ lib/
                      # diagnoza, plan nauki, dashboard, akcje, import CKE
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
-  migrations/        # schemat SQL (0007 = Matma)
+  migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
 ```
