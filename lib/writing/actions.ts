@@ -4,11 +4,12 @@
 // lib/writing/actions.ts
 // Server Actions backing the writing module: starting a new task (creating
 // it via lib/writing/create-task.ts and redirecting to it), grading a
-// submission with AI, and a plain-text follow-up chat reply.
+// submission with AI, and a structured follow-up chat reply (with
+// word-level corrections).
 // ============================================================================
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { askAI, askAIForJSON } from "@/lib/ai";
+import { askAIForJSON } from "@/lib/ai";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { ACTIVITY_TYPES } from "@/lib/constants";
@@ -134,32 +135,67 @@ export async function submitWriting(
   return { ok: true, data: submission as WritingSubmission };
 }
 
+export interface WordCorrection {
+  wrong: string;
+  correct: string;
+  note: string;
+}
+
+export interface FollowupReply {
+  reply: string;
+  corrections: WordCorrection[];
+}
+
 /** Ephemeral follow-up reply to the AI's follow-up question — not persisted anywhere. */
-export async function askFollowup(taskId: string, userReply: string): Promise<ActionResult<string>> {
+export async function askFollowup(
+  taskId: string,
+  userReply: string
+): Promise<ActionResult<FollowupReply>> {
   await requireProfile();
   const supabase = await createClient();
 
   const { data: task } = await supabase
     .from("writing_tasks")
-    .select("scenario")
+    .select("scenario, language")
     .eq("id", taskId)
     .single();
 
   const trimmed = userReply.trim();
   if (!trimmed) return actionFailure("Wpisz odpowiedź przed wysłaniem.");
 
+  const info = langInfo(task?.language ?? "en");
+
   try {
-    const reply = await askAI({
+    const result = await askAIForJSON<FollowupReply>({
       system:
-        "Jesteś przyjaznym nauczycielem angielskiego prowadzącym krótki dialog po polsku z uczniem, " +
-        "który właśnie odpowiedział na Twoje pytanie pogłębiające.",
+        `Jesteś przyjaznym nauczycielem języka ${info.pl}ego prowadzącym krótki dialog po polsku z ` +
+        `uczniem, który właśnie odpowiedział (w języku ${info.pl}m) na Twoje pytanie pogłębiające. ` +
+        `Oprócz odpowiedzi w dialogu sprawdzasz też, czy w tekście ucznia są błędne słowa lub ` +
+        `wyrażenia w języku ${info.pl}m (błędy gramatyczne, ortograficzne lub złe dobory słów).`,
       prompt:
         `Kontekst zadania pisemnego: "${task?.scenario ?? ""}"\n` +
-        `Odpowiedź ucznia na Twoje pytanie pogłębiające: "${trimmed}"\n` +
-        "Odpowiedz krótko i zachęcająco po polsku.",
-      maxTokens: 300,
+        `Odpowiedź ucznia na Twoje pytanie pogłębiające (w języku ${info.pl}m): "${trimmed}"\n` +
+        "Odpowiedz krótko i zachęcająco po polsku, kontynuując dialog.",
+      schema: {
+        reply: { type: "string", description: "krótka, zachęcająca odpowiedź po polsku kontynuująca dialog" },
+        corrections: {
+          type: "array",
+          description:
+            "błędne słowa/wyrażenia z odpowiedzi ucznia (pusta lista, jeśli odpowiedź nie zawiera błędów)",
+          items: {
+            type: "object",
+            properties: {
+              wrong: { type: "string", description: "błędne słowo lub wyrażenie użyte przez ucznia" },
+              correct: { type: "string", description: "poprawna forma" },
+              note: { type: "string", description: "krótkie wyjaśnienie błędu po polsku" },
+            },
+            required: ["wrong", "correct", "note"],
+          },
+        },
+      },
+      maxTokens: 500,
     });
-    return { ok: true, data: reply };
+    return { ok: true, data: { reply: result.reply, corrections: result.corrections ?? [] } };
   } catch (err) {
     console.error("[writing] followup failed:", err);
     return actionFailure("Nie udało się uzyskać odpowiedzi AI. Spróbuj ponownie.");

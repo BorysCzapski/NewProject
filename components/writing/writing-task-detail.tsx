@@ -8,14 +8,14 @@
 // sparked by the AI's follow-up question.
 // ============================================================================
 import { useState } from "react";
-import { Loader2, Send } from "lucide-react";
+import { Loader2, Send, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScoreBadge } from "@/components/writing/score-badge";
 import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn } from "@/lib/utils";
-import { submitWriting, askFollowup } from "@/lib/writing/actions";
+import { submitWriting, askFollowup, type WordCorrection } from "@/lib/writing/actions";
 import { WRITING_TASK_TYPE_LABELS } from "@/lib/constants";
 import type { TargetLanguage, WritingSubmission, WritingTask } from "@/lib/types/database";
 
@@ -132,6 +132,8 @@ function ComposeForm({
 interface ChatMessage {
   role: "ai" | "user";
   text: string;
+  /** Word-level corrections for this (user) message, from the AI's next reply. */
+  corrections?: WordCorrection[];
 }
 
 function WritingReview({ task, submission }: { task: WritingTask; submission: WritingSubmission }) {
@@ -141,6 +143,9 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
   const [reply, setReply] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Client-only: the chat isn't persisted, so "ending" it just stops the
+  // student from continuing an otherwise open-ended AI dialog.
+  const [ended, setEnded] = useState(false);
 
   async function handleReply() {
     if (!reply.trim() || pending) return;
@@ -151,8 +156,19 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
     setError(null);
     try {
       const result = await askFollowup(task.id, userMessage);
-      if (result.ok) setMessages((prev) => [...prev, { role: "ai", text: result.data }]);
-      else setError(result.error);
+      if (result.ok) {
+        const { reply: aiReply, corrections } = result.data;
+        setMessages((prev) => {
+          // The message we just pushed (the student's turn this reply grades)
+          // is still the last one — nothing else appends while pending.
+          const withCorrections = corrections.length
+            ? prev.map((m, i) => (i === prev.length - 1 ? { ...m, corrections } : m))
+            : prev;
+          return [...withCorrections, { role: "ai", text: aiReply }];
+        });
+      } else {
+        setError(result.error);
+      }
     } catch {
       setError("Nie udało się uzyskać odpowiedzi AI.");
     } finally {
@@ -192,22 +208,53 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
 
       {messages.length > 0 && (
         <Card>
-          <CardTitle>Porozmawiaj dalej</CardTitle>
-          <CardDescription className="mt-1">
-            Krótka rozmowa uzupełniająca — nie jest zapisywana.
-          </CardDescription>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <CardTitle>Porozmawiaj dalej</CardTitle>
+              <CardDescription className="mt-1">
+                Krótka rozmowa uzupełniająca — nie jest zapisywana.
+              </CardDescription>
+            </div>
+            {!ended && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="shrink-0 text-foreground-muted"
+                onClick={() => setEnded(true)}
+              >
+                <X className="h-3.5 w-3.5" />
+                Zakończ rozmowę
+              </Button>
+            )}
+          </div>
           <div className="mt-3 flex flex-col gap-2">
             {messages.map((message, i) => (
               <div
                 key={i}
-                className={cn(
-                  "max-w-[85%] rounded-(--radius-control) px-3 py-2 text-sm leading-relaxed",
-                  message.role === "ai"
-                    ? "self-start bg-surface-muted text-foreground"
-                    : "self-end bg-primary-soft text-primary"
-                )}
+                className={cn("flex flex-col", message.role === "ai" ? "items-start" : "items-end")}
               >
-                {message.text}
+                <div
+                  className={cn(
+                    "max-w-[85%] rounded-(--radius-control) px-3 py-2 text-sm leading-relaxed",
+                    message.role === "ai"
+                      ? "self-start bg-surface-muted text-foreground"
+                      : "self-end bg-primary-soft text-primary"
+                  )}
+                >
+                  {message.text}
+                </div>
+                {message.corrections && message.corrections.length > 0 && (
+                  <div className="mt-1 flex max-w-[85%] flex-col gap-1 rounded-(--radius-control) border border-warning/30 bg-warning-soft px-3 py-2 text-xs text-foreground">
+                    {message.corrections.map((c, ci) => (
+                      <p key={ci}>
+                        <span className="font-medium text-danger">{c.wrong}</span>
+                        {" → "}
+                        <span className="font-medium text-accent">{c.correct}</span>
+                        {c.note && <span className="text-foreground-muted"> — {c.note}</span>}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
             {pending && (
@@ -220,23 +267,27 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
 
           {error && <p className="mt-2 text-sm text-danger">{error}</p>}
 
-          <div className="mt-3 flex items-center gap-2">
-            <input
-              value={reply}
-              onChange={(e) => setReply(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleReply()}
-              disabled={pending}
-              placeholder="Napisz odpowiedź…"
-              className={cn(
-                "h-11 w-full rounded-(--radius-control) border border-border bg-surface px-3 text-sm text-foreground",
-                "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
-                "disabled:opacity-70"
-              )}
-            />
-            <Button size="icon" onClick={handleReply} disabled={!reply.trim() || pending} aria-label="Wyślij">
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
+          {ended ? (
+            <p className="mt-3 text-sm text-foreground-muted">Rozmowa zakończona.</p>
+          ) : (
+            <div className="mt-3 flex items-center gap-2">
+              <input
+                value={reply}
+                onChange={(e) => setReply(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleReply()}
+                disabled={pending}
+                placeholder="Napisz odpowiedź…"
+                className={cn(
+                  "h-11 w-full rounded-(--radius-control) border border-border bg-surface px-3 text-sm text-foreground",
+                  "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
+                  "disabled:opacity-70"
+                )}
+              />
+              <Button size="icon" onClick={handleReply} disabled={!reply.trim() || pending} aria-label="Wyślij">
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
         </Card>
       )}
     </div>
