@@ -29,11 +29,22 @@ export function GrammarExerciseStepper({
   topicId,
   exercises,
   language = "en",
+  backHref = "/jezyki/nauka/gramatyka",
+  onAttempt = recordGrammarAttempt,
+  onComplete = completeGrammarTopic,
 }: {
   topicId: string;
   exercises: GrammarExercise[];
   /** Topic's language — Russian topics get an on-screen Cyrillic keyboard. */
   language?: TargetLanguage;
+  /** Where "Wróć do listy tematów" links — e.g. a Podręcznik unit isn't in the
+   * global topic list. */
+  backHref?: string;
+  /** Overrides attempt persistence — e.g. Podręcznik topics aren't rows in
+   * grammar_topics, so they can't go through recordGrammarAttempt's FK. */
+  onAttempt?: (params: { topicId: string; exerciseId: string; isCorrect: boolean }) => Promise<void>;
+  /** Overrides completion persistence, same reasoning as onAttempt. */
+  onComplete?: () => Promise<void>;
 }) {
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<string, ExerciseResult>>({});
@@ -56,7 +67,7 @@ export function GrammarExerciseStepper({
 
   async function handleAnswered(exerciseId: string, result: ExerciseResult) {
     setResults((prev) => ({ ...prev, [exerciseId]: result }));
-    await recordGrammarAttempt({ topicId, exerciseId, isCorrect: result.isCorrect });
+    await onAttempt({ topicId, exerciseId, isCorrect: result.isCorrect });
 
     const nextAnswered = new Set(answeredIds);
     nextAnswered.add(exerciseId);
@@ -70,7 +81,7 @@ export function GrammarExerciseStepper({
     setCompleting(true);
     setCompleteError(null);
     try {
-      await completeGrammarTopic();
+      await onComplete();
       setCompleted(true);
     } catch {
       setCompleteError("Nie udało się zapisać ukończenia tematu. Twoje odpowiedzi zostały zapisane.");
@@ -87,7 +98,7 @@ export function GrammarExerciseStepper({
         <CardDescription className="mt-1">
           Poprawnych odpowiedzi: {correctCount}/{exercises.length}
         </CardDescription>
-        <Link href="/jezyki/nauka/gramatyka">
+        <Link href={backHref}>
           <Button className="mt-4 w-full" size="lg">
             Wróć do listy tematów
           </Button>
@@ -119,7 +130,7 @@ export function GrammarExerciseStepper({
       {completeError && (
         <div className="mt-3">
           <p className="text-sm text-danger">{completeError}</p>
-          <Link href="/jezyki/nauka/gramatyka">
+          <Link href={backHref}>
             <Button variant="outline" className="mt-3 w-full">
               Wróć do listy tematów
             </Button>

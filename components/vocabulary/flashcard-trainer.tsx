@@ -26,10 +26,14 @@ const SESSION_TARGET = 10;
 export function FlashcardTrainer({
   words,
   backHref,
+  onAnswer = recordVocabularyAnswer,
 }: {
   words: VocabularyWord[];
   /** When the session was started from a learning-path stage, links back to it. */
   backHref?: string;
+  /** Overrides how a review is recorded — e.g. Podręcznik words aren't rows in
+   * vocabulary_words, so they can't go through recordVocabularyAnswer's FK. */
+  onAnswer?: (wordId: string, wasCorrect: boolean) => void | Promise<void>;
 }) {
   const [queue, setQueue] = useState<QueueItem[]>(() =>
     words.map((word, i) => ({ uid: `${word.id}-${i}`, word }))
@@ -48,7 +52,7 @@ export function FlashcardTrainer({
     if (!current) return;
     setFlipped(false);
 
-    void recordVocabularyAnswer(current.word.id, wasCorrect);
+    void onAnswer(current.word.id, wasCorrect);
 
     const newProcessed = processed + 1;
     let newQueue = queue.slice(1);

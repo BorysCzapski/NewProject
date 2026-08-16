@@ -723,3 +723,70 @@ export interface ScholaMassPlanItem {
   note: string;
   created_at: string;
 }
+
+// ============================================================================
+// Podręcznik: a student's own uploaded English-textbook PDF, split by AI into
+// units/vocabulary/grammar. Mirrors supabase/migrations/0010_textbooks.sql.
+// ============================================================================
+
+export interface Textbook {
+  id: string;
+  user_id: string;
+  title: string;
+  language: TargetLanguage;
+  created_at: string;
+}
+
+export interface TextbookUnit {
+  id: string;
+  textbook_id: string;
+  user_id: string;
+  title: string;
+  order_index: number;
+  created_at: string;
+}
+
+export interface TextbookWord {
+  id: string;
+  unit_id: string;
+  textbook_id: string;
+  user_id: string;
+  language: TargetLanguage;
+  level: UserLevel;
+  category: string;
+  word_en: string;
+  translation_pl: string;
+  example_sentence: string | null;
+  order_index: number;
+  correct_count: number;
+  incorrect_count: number;
+  mastery_status: MasteryStatus;
+  updated_at: string;
+  created_at: string;
+}
+
+export interface TextbookGrammarTopic {
+  id: string;
+  textbook_id: string;
+  unit_id: string | null;
+  user_id: string;
+  language: TargetLanguage;
+  title: string;
+  // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
+  // to avoid a client-type <-> db-type import cycle; cast at the call site
+  // (same pattern as MathLesson.content above).
+  blocks: unknown[];
+  order_index: number;
+  created_at: string;
+}
+
+export interface TextbookGrammarExercise {
+  id: string;
+  topic_id: string;
+  user_id: string;
+  type: Extract<GrammarExerciseType, "gap_fill" | "multiple_choice">;
+  prompt: string;
+  options: string[] | null;
+  correct_answer: string;
+  order_index: number;
+}
