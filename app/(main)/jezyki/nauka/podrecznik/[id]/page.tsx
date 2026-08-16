@@ -49,7 +49,7 @@ export default async function TextbookDetailPage({ params }: { params: Promise<{
 
   return (
     <div>
-      <PageHeader title={(textbook as Textbook).title} subtitle="Podręcznik" />
+      <PageHeader title={(textbook as Textbook).title} subtitle="Angielski szkoła" />
       <div className="mx-auto max-w-lg px-5 py-5">
         <Link
           href="/jezyki/nauka/podrecznik"

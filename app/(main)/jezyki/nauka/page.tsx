@@ -67,7 +67,7 @@ const MODULES = [
   },
   {
     href: "/jezyki/nauka/podrecznik",
-    label: "Podręcznik",
+    label: "Angielski szkoła",
     description: "Wgraj własny podręcznik — działy, słówka i gramatyka z PDF-a",
     icon: BookMarked,
   },

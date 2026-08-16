@@ -26,7 +26,7 @@ export default async function PodrecznikHubPage() {
 
   return (
     <div>
-      <PageHeader title="Podręcznik" subtitle="Twój własny podręcznik do angielskiego" />
+      <PageHeader title="Angielski szkoła" subtitle="Twój własny podręcznik do angielskiego" />
       <div className="mx-auto max-w-lg px-5 py-5">
         <Card className="mb-6">
           <CardTitle>Nowy podręcznik</CardTitle>
