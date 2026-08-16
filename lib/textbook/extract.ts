@@ -39,8 +39,44 @@ export interface ExtractedUnit {
   grammar_topics: ExtractedGrammarTopic[];
 }
 
+// What the AI is actually allowed to omit (see the "required": ["explanation"]
+// comment below) — normalizeGrammarTopic fills in the rest before anything
+// downstream sees an ExtractedGrammarTopic, so callers never juggle optionality.
+interface RawExtractedGrammarTopic {
+  title?: string;
+  explanation: string;
+  examples?: Array<{ en: string; pl: string }>;
+  tips?: string[];
+  table?: { headers: string[]; rows: string[][] } | null;
+  exercises?: Array<Partial<ExtractedGrammarExercise>>;
+}
+
+interface RawExtractedUnit {
+  unit_title: string;
+  words: ExtractedWord[];
+  grammar_topics: RawExtractedGrammarTopic[];
+}
+
 interface ChunkExtraction {
-  units: ExtractedUnit[];
+  units: RawExtractedUnit[];
+}
+
+function normalizeGrammarTopic(raw: RawExtractedGrammarTopic): ExtractedGrammarTopic {
+  return {
+    title: raw.title?.trim() || "Gramatyka",
+    explanation: raw.explanation,
+    examples: raw.examples ?? [],
+    tips: raw.tips ?? [],
+    table: raw.table ?? null,
+    exercises: (raw.exercises ?? [])
+      .filter((exercise): exercise is ExtractedGrammarExercise => !!exercise.prompt && !!exercise.correct_answer)
+      .map((exercise) => ({
+        type: exercise.type === "multiple_choice" ? "multiple_choice" : "gap_fill",
+        prompt: exercise.prompt,
+        options: exercise.options ?? null,
+        correct_answer: exercise.correct_answer,
+      })),
+  };
 }
 
 /** Extracts one chunk's units, retrying once (a past cause of truncated-JSON
@@ -59,8 +95,12 @@ export async function extractUnitsFromChunk(chunk: string): Promise<ExtractedUni
           "Jeśli fragment nie ma wyraźnego nagłówka i jest kontynuacją poprzedniego działu, użyj tego " +
           "samego tytułu; jeśli nie da się określić, użyj \"Ogólne\".\n" +
           "2. Dla każdego działu wypisz słówka (angielskie słowo + polskie tłumaczenie + zdanie PO " +
-          "ANGIELSKU zawierające DOKŁADNIE to słowo) — TYLKO słówka faktycznie widoczne/uczone w tym " +
-          "fragmencie (słowniczek, pogrubione słowa, listy vocabulary). NIE wymyślaj słówek spoza tekstu.\n" +
+          "ANGIELSKU zawierające DOKŁADNIE to słowo, w TEJ SAMEJ, NIEODMIENIONEJ formie co word_en — " +
+          "to zdanie posłuży do ćwiczenia \"uzupełnij lukę\", więc np. dla \"to go jogging\" napisz " +
+          "\"I love to go jogging in the morning\", a NIE \"She goes jogging every morning\"; dla " +
+          "rzeczowników w liczbie pojedynczej nie zamieniaj ich na mnogą, itd.) — TYLKO słówka " +
+          "faktycznie widoczne/uczone w tym fragmencie (słowniczek, pogrubione słowa, listy " +
+          "vocabulary). NIE wymyślaj słówek spoza tekstu.\n" +
           "3. Jeśli fragment zawiera WYRAŹNIE wytłumaczoną regułę gramatyczną (sekcja \"Grammar\", " +
           "tabela odmiany, wyjaśnienie czasu) — opisz ją: krótkie wyjaśnienie po polsku, 2-4 przykładowe " +
           "zdania (en+pl), opcjonalne 0-2 krótkie wskazówki/pułapki po polsku, opcjonalna tabelka (np. " +
@@ -94,8 +134,14 @@ export async function extractUnitsFromChunk(chunk: string): Promise<ExtractedUni
                   items: {
                     type: "object",
                     properties: {
-                      title: { type: "string" },
-                      explanation: { type: "string" },
+                      title: {
+                        type: "string",
+                        description: "krótki tytuł reguły po polsku, np. \"Present Simple vs Present Continuous\"",
+                      },
+                      explanation: {
+                        type: "string",
+                        description: "wyjaśnienie reguły po polsku, 2-4 zdania (NIE tytuł)",
+                      },
                       examples: {
                         type: "array",
                         items: {
@@ -122,11 +168,18 @@ export async function extractUnitsFromChunk(chunk: string): Promise<ExtractedUni
                             options: { type: "array", items: { type: "string" } },
                             correct_answer: { type: "string" },
                           },
-                          required: ["type", "prompt", "correct_answer"],
+                          required: ["prompt", "correct_answer"],
                         },
                       },
                     },
-                    required: ["title", "explanation", "examples", "exercises"],
+                    // Only "explanation" is required — a single omitted field
+                    // anywhere in a strict tool-call schema fails Groq's
+                    // validation for the WHOLE response (observed live: a
+                    // missing nested "title" discarded an entire chunk's
+                    // otherwise-good vocabulary along with it). Everything
+                    // else recoverable gets a code-side fallback instead —
+                    // see the `?? []` / `|| "Gramatyka"` defaults below.
+                    required: ["explanation"],
                   },
                 },
               },
@@ -136,7 +189,11 @@ export async function extractUnitsFromChunk(chunk: string): Promise<ExtractedUni
         },
         maxTokens: 6000,
       });
-      return result.units ?? [];
+      return (result.units ?? []).map((unit) => ({
+        unit_title: unit.unit_title,
+        words: unit.words,
+        grammar_topics: unit.grammar_topics.map(normalizeGrammarTopic),
+      }));
     } catch (err) {
       if (attempt === 0) {
         console.error("[textbook] chunk extraction failed, retrying once:", err);
