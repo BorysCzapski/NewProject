@@ -122,7 +122,8 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
 ## Konfiguracja Supabase
 
 1. Utwórz nowy projekt na [supabase.com](https://supabase.com).
-2. W **SQL Editor** uruchom po kolei zawartość plików z katalogu `supabase/`:
+2. W **SQL Editor** uruchom po kolei zawartość plików z katalogu `supabase/`
+   (albo z terminala — patrz [Wgrywanie migracji z terminala](#wgrywanie-migracji-z-terminala)):
 
    **Migracje (schemat):**
    1. `supabase/migrations/0001_init.sql` — schemat bazy (tabele, enumy, RLS, funkcje).
@@ -196,6 +197,43 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    (w przeciwnym razie użytkownik musi potwierdzić adres e-mail przed pierwszym logowaniem).
 4. Skopiuj **Project URL**, **anon public key** i **service_role key** z
    **Project Settings → API** do `.env.local`.
+
+### Wgrywanie migracji z terminala
+
+Zamiast klikać w SQL Editor można puścić migracje skryptem `scripts/db.mjs`. Wymaga jednej
+dodatkowej zmiennej w `.env.local` — connection stringu z **Project Settings → Database →
+Connection string → Session pooler** (port 5432; „Direct connection" jest IPv6-only i zwykle
+nie łączy się z domowego łącza), z `[YOUR-PASSWORD]` podmienionym na hasło do bazy:
+
+```bash
+SUPABASE_DB_URL=postgresql://postgres.<ref>:<haslo>@aws-0-<region>.pooler.supabase.com:5432/postgres
+```
+
+```bash
+npm run db status              # co jest wgrane, co czeka
+npm run db baseline            # jednorazowo: oznacz już wklejone migracje jako wgrane
+npm run db up                  # wgraj oczekujące migracje (każda w transakcji)
+npm run db up -- --dry-run     # tylko pokaż, co poszłoby na bazę
+npm run db sql supabase/seed/00_admin.sql
+npm run db query "select count(*) from profiles"
+```
+
+Skrypt trzyma rejestr wgranych migracji w tabeli `public._migrations` (wersja, nazwa, suma
+kontrolna pliku, data) — z włączonym RLS i odebranymi uprawnieniami dla `anon`/`authenticated`,
+więc nie wychodzi przez PostgREST. `status` oznacza migrację jako `zmieniony`, jeśli plik
+różni się od tego, co faktycznie poszło na bazę.
+
+Na **istniejącej** bazie, gdzie migracje `0001`–`0009` wklejano ręcznie, uruchom najpierw
+`npm run db baseline` — zapisze je w rejestrze **bez wykonywania SQL**. Bez tego `up`
+spróbowałoby wgrać je od nowa. Na czystej bazie pomiń `baseline` i od razu zrób `up`.
+
+Plik migracji, który nie może działać w transakcji (np. `CREATE INDEX CONCURRENTLY`), oznacz
+komentarzem `-- no-transaction` w pierwszych liniach — skrypt puści go wtedy bez własnego
+`BEGIN`/`COMMIT`.
+
+> `SUPABASE_DB_URL` zawiera hasło do bazy i omija RLS. Trzyma się je wyłącznie w `.env.local`
+> (jest w `.gitignore`) — nie dodawaj go do zmiennych środowiskowych na Vercelu, aplikacja
+> go nie używa.
 
 Cała logika Row Level Security (kto co widzi/edytuje) jest już zdefiniowana w migracji:
 własne postępy widzi tylko właściciel, treści współdzielone (słówka, gramatyka, prace domowe)
@@ -276,6 +314,8 @@ lib/
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/)
+scripts/
+  db.mjs             # runner migracji i skryptów SQL (`npm run db`)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
 ```
 
