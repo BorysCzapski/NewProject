@@ -1216,3 +1216,273 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Własność Darboux
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rachunek-rozniczkowy'),
+  $title5$Własność Darboux$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Własność Darboux to ważna własność funkcji ciągłych, która mówi, że jeśli funkcja ciągła przyjmuje wartości zarówno dodatnie, jak i ujemne, to musi również przyjmować wartość zero. Własność ta jest nazwana na cześć francuskiego matematyka Jeana Gastona Darboux."
+  },
+  {
+    "type": "definition",
+    "term": "Własność Darboux",
+    "text": "Jeśli funkcja $f(x)$ jest ciągła na przedziale $[a, b]$ i $f(a) < 0 < f(b)$, to istnieje punkt $c$ w przedziale $[a, b]$, taki że $f(c) = 0$.",
+    "formula": "\\frac{f(b) - f(a)}{b - a}"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "Tak, funkcja $f(x) = x^2 - 4$ spełnia własność Darboux, ponieważ $f(-2) = 0$ i $f(2) = 0$.",
+        "problem": "Rozważmy funkcję $f(x) = x^2 - 4$. Czy funkcja ta spełnia własność Darboux?",
+        "steps": [
+          {
+            "formula": "f(x) = x^2 - 4",
+            "text": "Funkcja $f(x) = x^2 - 4$ jest ciągła na przedziale $[-2, 2]$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dowód własności Darboux",
+    "problem": "Dlaczego funkcja ciągła $f(x)$ spełnia własność Darboux?",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "Pokaż, że $f(c) = 0$"
+        ],
+        "kind": "input",
+        "prompt": "Pokaż, że $f(c) = 0$",
+        "reveal": "Funkcja ciągła $f(x)$ spełnia własność Darboux, ponieważ $f(c) = 0$."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co oznacza własność Darboux?",
+    "options": [
+      "Funkcja ciągła musi przyjmować wartość zero",
+      "Funkcja ciągła musi być monotoniczna",
+      "Funkcja ciągła musi być okresowa",
+      "Funkcja ciągła musi być ograniczona"
+    ],
+    "correctIndex": 0,
+    "explanation": "Własność Darboux mówi, że jeśli funkcja ciągła przyjmuje wartości zarówno dodatnie, jak i ujemne, to musi również przyjmować wartość zero."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz wyjaśnić własność Darboux i podać przykłady funkcji, które ją spełniają."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Interpretacja geometryczna pochodnej
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rachunek-rozniczkowy'),
+  $title6$Interpretacja geometryczna pochodnej$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Pochodna funkcji jest bardzo ważnym pojęciem w analizie matematycznej i ma wiele różnych interpretacji. Jedną z najważniejszych jest interpretacja geometryczna, która będziemy omawiać w tej lekcji."
+  },
+  {
+    "type": "definition",
+    "term": "Pochodna",
+    "text": "Pochodna funkcji $f(x)$ w punkcie $x_0$ jest definiowana jako $f'(x_0) = \\lim_{h \\to 0} \\frac{f(x_0 + h) - f(x_0)}{h}$.",
+    "formula": "\\lim_{h \\to 0} \\frac{f(x_0 + h) - f(x_0)}{h}"
+  },
+  {
+    "type": "formula",
+    "title": "Pochodna",
+    "expression": "\\frac{d}{dx} f(x)",
+    "variables": [
+      {
+        "meaning": "zmienna niezależna",
+        "symbol": "x"
+      },
+      {
+        "meaning": "funkcja",
+        "symbol": "f(x)"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykład 1",
+    "items": [
+      {
+        "answer": "2x",
+        "problem": "Znajdź pochodną funkcji $f(x) = x^2$.",
+        "steps": [
+          {
+            "formula": "\\lim_{h \\to 0} \\frac{(x_0 + h)^2 - x_0^2}{h}",
+            "text": "Użyj definicji pochodnej."
+          },
+          {
+            "formula": "\\lim_{h \\to 0} \\frac{x_0^2 + 2x_0h + h^2 - x_0^2}{h}",
+            "text": "Rozwiń i uproszcz."
+          },
+          {
+            "formula": "\\lim_{h \\to 0} \\frac{2x_0h + h^2}{h}",
+            "text": "Uproszcz dalej."
+          },
+          {
+            "formula": "2x_0",
+            "text": "Zastąp $h$ przez $0$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co oznacza pochodna geometrycznie?",
+    "options": [
+      "Nachylenie stycznej",
+      "Współczynnik kierunkowy",
+      "Wysokość punktu",
+      "Odległość punktu od osi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pochodna geometrycznie oznacza nachylenie stycznej do wykresu funkcji w danym punkcie."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Interpretacja geometryczna",
+    "problem": "Znajdź nachylenie stycznej do wykresu funkcji $f(x) = x^2$ w punkcie $x_0 = 2$. ",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "\\lim_{h \\to 0} \\frac{(x_0 + h)^2 - x_0^2}{h}"
+        ],
+        "kind": "input",
+        "prompt": "Użyj definicji pochodnej",
+        "reveal": "Pochodna daje nam nachylenie stycznej"
+      },
+      {
+        "acceptedAnswers": [
+          "\\lim_{h \\to 0} \\frac{(2 + h)^2 - 2^2}{h}"
+        ],
+        "kind": "input",
+        "prompt": "Zastąp $x_0$ przez $2$",
+        "reveal": "Teraz musimy obliczyć limit"
+      },
+      {
+        "acceptedAnswers": [
+          "4"
+        ],
+        "formula": "2 \\cdot 2",
+        "kind": "input",
+        "prompt": "Oblicz limit",
+        "reveal": "Oto nasz wynik!"
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli rozumiesz pojęcie pochodnej i jej interpretację geometryczną. Pamiętaj, że pochodna jest bardzo ważnym pojęciem w analizie matematycznej."
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Granice funkcji
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rachunek-rozniczkowy'),
+  $title7$Granice funkcji$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Granice funkcji to pojęcie podstawowe w analizie matematycznej, pozwalające na opisanie zachowania się funkcji w okolicy punktu lub przy zbliżaniu się do granicy dziedziny. W tej lekcji zajmiemy się obliczaniem granic funkcji, w tym także granic jednostronnych."
+  },
+  {
+    "type": "definition",
+    "term": "Granica funkcji",
+    "text": "Granica funkcji $f(x)$ w punkcie $x_0$ to wartość, do której funkcja $f(x)$ zbliża się przy coraz mniejszych odległościach od $x_0$. Zapisujemy ją jako $$\\lim_{x \\to x_0} f(x).$$",
+    "formula": "\\lim_{x \\to x_0} f(x)"
+  },
+  {
+    "type": "formula",
+    "title": "Granica funkcji liniowej",
+    "expression": "\\lim_{x \\to x_0} (ax + b)",
+    "variables": [
+      {
+        "meaning": "współczynnik liniowy",
+        "symbol": "a"
+      },
+      {
+        "meaning": "wyraz wolny",
+        "symbol": "b"
+      },
+      {
+        "meaning": "punkt, w którym obliczamy granicę",
+        "symbol": "x_0"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady granic",
+    "items": [
+      {
+        "answer": "$5$",
+        "problem": "Oblicz $$\\lim_{x \\to 2} (3x - 1)$$",
+        "steps": [
+          {
+            "text": "Podstawiamy $x = 2$ do funkcji $3x - 1$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Granica funkcji kwadratowej",
+    "problem": "Oblicz $$\\lim_{x \\to 1} (x^2 + 2x - 3)$$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "4"
+        ],
+        "formula": "(1)^2 + 2(1) - 3 = 4",
+        "kind": "input",
+        "prompt": "Podstaw x = 1 do funkcji",
+        "reveal": "Wynik to 4"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest granica funkcji $f(x) = \\frac{1}{x}$ w punkcie $x = 0$?",
+    "options": [
+      "$0$",
+      "$1$",
+      "nie istnieje",
+      "nie można określić"
+    ],
+    "correctIndex": 2,
+    "explanation": "Funkcja $f(x) = \\frac{1}{x}$ nie jest określona w punkcie $x = 0$, więc granica nie istnieje."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie obliczać granice funkcji, w tym także granice jednostronne, oraz rozumiesz pojęcie granicy jako wartości, do której funkcja zbliża się przy coraz mniejszych odległościach od punktu."
+  }
+]$content7$::jsonb,
+  6
+);

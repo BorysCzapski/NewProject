@@ -23,9 +23,13 @@ export default async function MatmaAdminZadaniaPage() {
   await requireAdmin();
   const supabase = await createClient();
 
-  const [reviewQueue, { data: problems }] = await Promise.all([
+  const sources = Object.keys(SOURCE_LABELS) as MathProblemSource[];
+  // Exact head-count per source instead of pulling every row: a plain
+  // .select("source") silently truncates at PostgREST's project db-max-rows
+  // (1000) once the problem bank grows past it, which it already has.
+  const [reviewQueue, ...countResults] = await Promise.all([
     getAiGradingReviewQueue(supabase),
-    supabase.from("math_problems").select("source"),
+    ...sources.map((source) => supabase.from("math_problems").select("id", { count: "exact", head: true }).eq("source", source)),
   ]);
 
   const countsBySource: Record<MathProblemSource, number> = {
@@ -34,9 +38,9 @@ export default async function MatmaAdminZadaniaPage() {
     curated: 0,
     ai_generated: 0,
   };
-  for (const p of (problems ?? []) as Array<{ source: MathProblemSource }>) {
-    countsBySource[p.source] += 1;
-  }
+  sources.forEach((source, i) => {
+    countsBySource[source] = countResults[i].count ?? 0;
+  });
   const total = Object.values(countsBySource).reduce((a, b) => a + b, 0);
 
   return (

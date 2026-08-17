@@ -20,11 +20,28 @@ export interface AdminTopicOverviewRow {
   avgMasteryScore: number;
 }
 
+// PostgREST caps an unpaginated select at its project db-max-rows setting
+// (1000 on this project) — math_problems passed that a while ago, so a
+// plain .select() here silently truncates and undercounts. Page through it
+// instead of adding a `.limit()`/RPC (this table is admin-panel-scale, not
+// hot-path, so a full in-memory read is fine).
+async function fetchAllRows<T>(supabase: SupabaseClient, table: string, columns: string): Promise<T[]> {
+  const PAGE_SIZE = 1000;
+  const rows: T[] = [];
+  for (let from = 0; ; from += PAGE_SIZE) {
+    const { data } = await supabase.from(table).select(columns).range(from, from + PAGE_SIZE - 1);
+    if (!data || data.length === 0) break;
+    rows.push(...(data as T[]));
+    if (data.length < PAGE_SIZE) break;
+  }
+  return rows;
+}
+
 export async function getAdminTopicsOverview(supabase: SupabaseClient): Promise<AdminTopicOverviewRow[]> {
-  const [{ data: topics }, { data: lessons }, { data: problems }, { data: progress }] = await Promise.all([
+  const [{ data: topics }, { data: lessons }, problems, { data: progress }] = await Promise.all([
     supabase.from("math_topics").select("id, title, order_index, exam_weight").order("order_index"),
     supabase.from("math_lessons").select("id, topic_id"),
-    supabase.from("math_problems").select("id, topic_id, source"),
+    fetchAllRows<{ id: string; topic_id: string; source: MathProblemSource }>(supabase, "math_problems", "id, topic_id, source"),
     supabase.from("math_topic_progress").select("topic_id, mastery_score"),
   ]);
 
@@ -33,7 +50,7 @@ export async function getAdminTopicsOverview(supabase: SupabaseClient): Promise<
 
   const problemCounts = new Map<string, number>();
   const problemBySource = new Map<string, Record<MathProblemSource, number>>();
-  for (const p of (problems ?? []) as Array<{ id: string; topic_id: string; source: MathProblemSource }>) {
+  for (const p of problems) {
     problemCounts.set(p.topic_id, (problemCounts.get(p.topic_id) ?? 0) + 1);
     const bucket = problemBySource.get(p.topic_id) ?? { topic: 0, past_exam: 0, curated: 0, ai_generated: 0 };
     bucket[p.source] += 1;

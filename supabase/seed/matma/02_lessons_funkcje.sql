@@ -1119,3 +1119,504 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Przekształcenia wykresów funkcji
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'funkcje'),
+  $title5$Przekształcenia wykresów funkcji$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj na lekcji o przekształceniach wykresów funkcji! Na tej lekcji dowiesz się, jak zmienić wykres funkcji, przesuwając go w poziomie lub pionie, odbijając w osiach oraz skalując."
+  },
+  {
+    "type": "definition",
+    "term": "Przesunięcie w poziomie",
+    "text": "Przesunięcie w poziomie to zmiana wykresu funkcji $y = f(x)$ na $y = f(x - a)$, gdzie $a$ jest liczbą rzeczywistą. Jeśli $a > 0$, to wykres funkcji przesuwa się w prawo, a jeśli $a < 0$, to w lewo.",
+    "formula": "y = f(x - a)"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady przesunięć w poziomie",
+    "items": [
+      {
+        "answer": "y = f(x - 2)",
+        "problem": "Zmieniona funkcja $y = f(x - 2)$ jest przesunięta o $2$ w prawo.",
+        "steps": [
+          {
+            "formula": "y = f(x)",
+            "text": "Pierwotna funkcja to $y = f(x)$."
+          },
+          {
+            "formula": "y = f(x - 2)",
+            "text": "Przesunięcie w prawo o $2$ jednostek daje $y = f(x - 2)$."
+          }
+        ]
+      },
+      {
+        "answer": "y = f(x + 3)",
+        "problem": "Zmieniona funkcja $y = f(x + 3)$ jest przesunięta o $3$ w lewo.",
+        "steps": [
+          {
+            "formula": "y = f(x)",
+            "text": "Pierwotna funkcja to $y = f(x)$."
+          },
+          {
+            "formula": "y = f(x + 3)",
+            "text": "Przesunięcie w lewo o $3$ jednostek daje $y = f(x + 3)$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co się stanie z wykresem funkcji $y = f(x)$, jeśli zmienimy ją na $y = f(x - 4)$?",
+    "options": [
+      "Przesunie się o $4$ w prawo",
+      "Przesunie się o $4$ w lewo",
+      "Zmniejszy się o $4$ razy",
+      "Zwiększy się o $4$ razy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wykres funkcji $y = f(x)$ przesunie się o $4$ w prawo, ponieważ $a > 0$."
+  },
+  {
+    "type": "definition",
+    "term": "Odbicie w osiach",
+    "text": "Odbicie w osiach to zmiana wykresu funkcji $y = f(x)$ na $y = -f(x)$ lub $y = f(-x)$.",
+    "formula": "y = -f(x) lub y = f(-x)"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady odbić w osiach",
+    "items": [
+      {
+        "answer": "y = -f(x)",
+        "problem": "Zmieniona funkcja $y = -f(x)$ jest odbiciem funkcji $y = f(x)$ w osi $x$.",
+        "steps": [
+          {
+            "formula": "y = f(x)",
+            "text": "Pierwotna funkcja to $y = f(x)$."
+          },
+          {
+            "formula": "y = -f(x)",
+            "text": "Odbicie w osi $x$ daje $y = -f(x)$."
+          }
+        ]
+      },
+      {
+        "answer": "y = f(-x)",
+        "problem": "Zmieniona funkcja $y = f(-x)$ jest odbiciem funkcji $y = f(x)$ w osi $y$.",
+        "steps": [
+          {
+            "formula": "y = f(x)",
+            "text": "Pierwotna funkcja to $y = f(x)$."
+          },
+          {
+            "formula": "y = f(-x)",
+            "text": "Odbicie w osi $y$ daje $y = f(-x)$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz przesuwać, odbijać i skalować wykresy funkcji. Pamiętaj, że przesunięcia w poziomie zmieniają położenie wykresu, odbicia w osiach zmieniają jego kształt, a skalowanie może zmieniać rozmiar wykresu."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Funkcja homograficzna
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'funkcje'),
+  $title6$Funkcja homograficzna$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Funkcja homograficzna jest funkcją, która przekształca każdy punkt na płaszczyźnie w inny punkt, zachowując stosunki między punktami. Innymi słowy, jest to funkcja, która zachowuje współliniowość punktów. W tym rozdziale zajmiemy się właściwościami funkcji homograficznej i sposobami jej przekształcania."
+  },
+  {
+    "type": "definition",
+    "term": "Funkcja homograficzna",
+    "text": "Funkcja $f(x)$ jest funkcją homograficzną, jeśli może być wyrażona w postaci $f(x) = \\frac{ax+b}{cx+d}$, gdzie $a, b, c, d$ są stałymi liczbami, a $ad - bc \\neq 0$.",
+    "formula": "\\frac{ax+b}{cx+d}"
+  },
+  {
+    "type": "formula",
+    "title": "Przekształcanie funkcji homograficznej",
+    "expression": "\\frac{a(x-h)+k}{c(x-h)+d}",
+    "variables": [
+      {
+        "meaning": "punkt stały",
+        "symbol": "h"
+      },
+      {
+        "meaning": "punkt przesunięcia",
+        "symbol": "k"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "$\\frac{11}{2}$",
+        "problem": "Oblicz wartość funkcji $f(x) = \\frac{2x+3}{x-2}$ dla $x=4$",
+        "steps": [
+          {
+            "formula": "f(4) = \\frac{2(4)+3}{4-2}",
+            "text": "Wstawiamy $x=4$ do funkcji $f(x)$"
+          },
+          {
+            "formula": "f(4) = \\frac{8+3}{2} = \\frac{11}{2}",
+            "text": "Uproszczamy wyrażenie"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Badanie monotoniczności",
+    "problem": "Czy funkcja $f(x) = \\frac{3x-2}{x+1}$ jest rosnąca czy malejąca?",
+    "steps": [
+      {
+        "correctIndex": 0,
+        "kind": "choice",
+        "options": [
+          "większa",
+          "mniejsza",
+          "równa"
+        ],
+        "prompt": "Porównaj pochodną z zero",
+        "reveal": "Funkcja jest rosnąca, ponieważ pochodna jest dodatnia"
+      }
+    ]
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Złożenia funkcji
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'funkcje'),
+  $title7$Złożenia funkcji$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Witaj na lekcji teorii \"Złożenia funkcji\". Na tej lekcji dowiesz się jak posługiwać się złożeniami funkcji, wyznaczać wzór złożenia oraz dziedziny złożenia."
+  },
+  {
+    "type": "definition",
+    "term": "Złożenie funkcji",
+    "text": "Złożeniem funkcji $f$ i $g$ nazywamy funkcję $(f \\circ g)(x) = f(g(x))$.",
+    "formula": "(f \\circ g)(x) = f(g(x))"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór złożenia",
+    "expression": "(f \\circ g)(x) = f(g(x))",
+    "variables": [
+      {
+        "meaning": "pierwsza funkcja",
+        "symbol": "f"
+      },
+      {
+        "meaning": "druga funkcja",
+        "symbol": "g"
+      },
+      {
+        "meaning": "zmienna niezależna",
+        "symbol": "x"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "2x^2 + 1",
+        "problem": "Dana jest funkcja $f(x) = 2x + 1$ i $g(x) = x^2$. Wyznacz wzór złożenia $(f \\circ g)(x)$.",
+        "steps": [
+          {
+            "formula": "(f \\circ g)(x) = f(g(x)) = 2(g(x)) + 1 = 2x^2 + 1",
+            "text": "Wstawiamy $g(x)$ do $f(x)$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Wyznaczanie dziedziny złożenia",
+    "problem": "Dana jest funkcja $f(x) = \\frac{1}{x}$ i $g(x) = x - 2$. Wyznacz dziedzinę złożenia $(f \\circ g)(x)$.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "x = 2"
+        ],
+        "formula": "g(x) = x - 2 = 0 \\implies x = 2",
+        "kind": "input",
+        "prompt": "Które wartości x powodują, że g(x) = 0?",
+        "reveal": "Dziedzina złożenia to wszystkie liczby rzeczywiste poza x = 2."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co oznacza złożenie funkcji?",
+    "options": [
+      "Jest to nowa funkcja utworzona z dwóch innych funkcji.",
+      "Jest to iloraz dwóch funkcji.",
+      "Jest to suma dwóch funkcji.",
+      "Jest to iloczyn dwóch funkcji."
+    ],
+    "correctIndex": 0,
+    "explanation": "Złożeniem funkcji nazywamy nową funkcję utworzoną z dwóch innych funkcji."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli umiesz wyznaczać wzór złożenia i dziedzinę złożenia funkcji. Pamiętaj, że złożenie funkcji jest nową funkcją utworzoną z dwóch innych funkcji."
+  }
+]$content7$::jsonb,
+  6
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Praktyczne zastosowania funkcji wykładniczej i logarytmicznej
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'funkcje'),
+  $title8$Praktyczne zastosowania funkcji wykładniczej i logarytmicznej$title8$,
+  $content8$[
+  {
+    "type": "intro",
+    "text": "Funkcje wykładnicze i logarytmiczne są niezwykle ważne w wielu dziedzinach nauki i życia codziennego. W tej lekcji poznasz praktyczne zastosowania tych funkcji."
+  },
+  {
+    "type": "definition",
+    "term": "Funkcja wykładnicza",
+    "text": "Funkcja wykładnicza to funkcja postaci $y = a^x$, gdzie $a$ jest stałą dodatnią.",
+    "formula": "y = a^x"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór na funkcję wykładniczą",
+    "expression": "y = a^x",
+    "variables": [
+      {
+        "meaning": "stała dodatnia",
+        "symbol": "a"
+      },
+      {
+        "meaning": "zmienna",
+        "symbol": "x"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "64",
+        "problem": "Oblicz wartość $2^{3x}$ dla $x = 2$",
+        "steps": [
+          {
+            "formula": "2^{3 \\cdot 2} = 2^6",
+            "text": "Wstawiamy $x = 2$ do wzoru $2^{3x}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest wynik $\\log_2{8}$?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ponieważ $2^3 = 8$, więc $\\log_2{8} = 3$."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązanie równania wykładniczego",
+    "problem": "Rozwiąż równanie $2^x = 16$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "4"
+        ],
+        "formula": "x = 4",
+        "kind": "input",
+        "prompt": "Jaki jest wynik $x$?",
+        "reveal": "Ponieważ $2^4 = 16$, więc $x = 4$."
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Porównanie funkcji wykładniczej i logarytmicznej",
+    "headers": [
+      "Funkcja",
+      "Wzór"
+    ],
+    "rows": [
+      [
+        "Wykładnicza",
+        "y = a^x"
+      ],
+      [
+        "Logarytmiczna",
+        "y = \\log_a{x}"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz obliczyć wartości funkcji wykładniczej i logarytmicznej, rozwiązać równania wykładnicze i zrozumieć ich zastosowania w praktyce."
+  }
+]$content8$::jsonb,
+  7
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Funkcja wykładnicza i logarytmiczna
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'funkcje'),
+  $title9$Funkcja wykładnicza i logarytmiczna$title9$,
+  $content9$[
+  {
+    "type": "intro",
+    "text": "Funkcje wykładnicze i logarytmiczne są bardzo ważne w matematyce i mają wiele zastosowań w różnych dziedzinach. W tej lekcji będziemy badać te funkcje i ich właściwości."
+  },
+  {
+    "type": "definition",
+    "term": "Funkcja wykładnicza",
+    "text": "Funkcja wykładnicza to funkcja postaci $f(x) = a^x$, gdzie $a$ jest stałą większą niż $0$ i różną od $1$.",
+    "formula": "\\exp(x)"
+  },
+  {
+    "type": "definition",
+    "term": "Funkcja logarytmiczna",
+    "text": "Funkcja logarytmiczna to funkcja postaci $f(x) = \\log_a(x)$, gdzie $a$ jest stałą większą niż $0$ i różną od $1$.",
+    "formula": "\\log_a(x)"
+  },
+  {
+    "type": "formula",
+    "title": "Własności funkcji wykładniczych",
+    "expression": "a^{x+y} = a^x \\cdot a^y",
+    "variables": [
+      {
+        "meaning": "stała większa niż 0 i różna od 1",
+        "symbol": "a"
+      },
+      {
+        "meaning": "zmienna",
+        "symbol": "x"
+      },
+      {
+        "meaning": "zmienna",
+        "symbol": "y"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "64",
+        "problem": "Znajdź wartość $2^{3+2}$",
+        "steps": [
+          {
+            "formula": "2^{3+2} = 2^3 \\cdot 2^2",
+            "text": "Wydzielamy $2^3$ i $2^2$ i mnożymy je"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie równań",
+    "problem": "Rozwiąż równanie $2^x = 8$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "2^3"
+        ],
+        "kind": "input",
+        "prompt": "Wyraź $8$ jako potęgę $2$",
+        "reveal": "Teraz możemy porównać wykładniki"
+      },
+      {
+        "acceptedAnswers": [
+          "x = 3"
+        ],
+        "kind": "input",
+        "prompt": "Porównaj wykładniki",
+        "reveal": "Otrzymany wynik"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest dziedzina funkcji logarytmicznej $f(x) = \\log_2(x)$?",
+    "options": [
+      "$(-\\infty, 0)$",
+      "$(0, \\infty)$",
+      "$(0, 1)$",
+      "$(1, \\infty)$"
+    ],
+    "correctIndex": 1,
+    "explanation": "Funkcja logarytmiczna jest określona tylko dla wartości większych niż 0."
+  },
+  {
+    "type": "table",
+    "title": "Porównanie funkcji wykładniczych i logarytmicznych",
+    "headers": [
+      "Funkcja",
+      "Dziedzina",
+      "Zakres"
+    ],
+    "rows": [
+      [
+        "$2^x$",
+        "$((-\\infty, \\infty))$",
+        "$(0, \\infty)$"
+      ],
+      [
+        "$\\log_2(x)$",
+        "$(0, \\infty)$",
+        "$((-\\infty, \\infty))$"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli rozumiesz różnicę między funkcjami wykładniczymi i logarytmicznymi oraz potrafisz je stosować w różnych zadaniach."
+  }
+]$content9$::jsonb,
+  8
+);

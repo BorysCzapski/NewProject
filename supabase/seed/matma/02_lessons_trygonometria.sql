@@ -1035,3 +1035,165 @@ insert into math_lessons (topic_id, title, content, order_index) values (
   3
 );
 
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Trygonometria rozszerzona
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'trygonometria'),
+  $title5$Trygonometria rozszerzona$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Trygonometria rozszerzona to dziedzina matematyki, która zajmuje się badaniem funkcji trygonometrycznych, takich jak sin, cos i tg, oraz ich zastosowania w różnych dziedzinach nauki i inżynierii. W tej lekcji zostaną omówione definicje i wartości sin, cos i tg dowolnego kąta w stopniach i radianach, a także zamiana miary łukowej na stopniową i odwrotnie."
+  },
+  {
+    "type": "definition",
+    "term": "Funkcja trygonometryczna",
+    "text": "Funkcja trygonometryczna to funkcja, która opisuje zależność między kątem a wartością trygonometryczną. Przykłady funkcji trygonometrycznych to sin, cos i tg.",
+    "formula": "\\sin(x)"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór na sinusa",
+    "expression": "\\sin(x)",
+    "variables": [
+      {
+        "meaning": "kąt w radianach",
+        "symbol": "x"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "$\\frac{1}{2}$",
+        "problem": "Oblicz wartość $\\sin(30^\\circ)$",
+        "steps": [
+          {
+            "formula": "\\sin(30^\\circ) = \\frac{1}{2}",
+            "text": "Ponieważ $30^\\circ$ to kąt prosty, możemy użyć wzoru $\\sin(x) = \\frac{opposite}{hypotenuse}$"
+          }
+        ]
+      },
+      {
+        "answer": "$\\frac{1}{2}$",
+        "problem": "Oblicz wartość $\\cos(60^\\circ)$",
+        "steps": [
+          {
+            "formula": "\\cos(60^\\circ) = \\frac{1}{2}",
+            "text": "Ponieważ $60^\\circ$ to kąt prosty, możemy użyć wzoru $\\cos(x) = \\frac{adjacent}{hypotenuse}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest wartość $\\tg(45^\\circ)$?",
+    "options": [
+      "$0$",
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ponieważ $45^\\circ$ to kąt prosty, możemy użyć wzoru $\\tg(x) = \\frac{opposite}{adjacent}$. W tym przypadku $\\tg(45^\\circ) = \\frac{1}{1} = 1$"
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz obliczać wartości sin, cos i tg dowolnego kąta w stopniach i radianach, a także zamieniać miarę łukową na stopniową i odwrotnie. Pamiętaj, że funkcje trygonometryczne są very ważne w różnych dziedzinach nauki i inżynierii."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Równania trygonometryczne
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'trygonometria'),
+  $title6$Równania trygonometryczne$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Równania trygonometryczne są równaniami, w których występują funkcje trygonometryczne, takie jak sin, cos, tan. Są one bardzo ważne w matematyce i mają wiele zastosowań w naukach ścisłych, inżynierii i innych dziedzinach."
+  },
+  {
+    "type": "definition",
+    "term": "Równanie trygonometryczne",
+    "text": "Równanie trygonometryczne to równanie, w którym występuje co najmniej jeden wyraz zawierający funkcję trygonometryczną.",
+    "formula": "\\sin(x) = \\frac{1}{2}"
+  },
+  {
+    "type": "formula",
+    "title": "Wzory na sumę kątów",
+    "expression": "\\sin(A + B) = \\sin(A)\\cos(B) + \\cos(A)\\sin(B)",
+    "variables": [
+      {
+        "meaning": "pierwszy kąt",
+        "symbol": "A"
+      },
+      {
+        "meaning": "drugi kąt",
+        "symbol": "B"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Rozwiązywanie równań trygonometrycznych",
+    "items": [
+      {
+        "answer": "$$x = \\frac{\\pi}{6} + 2k\\pi$$",
+        "problem": "$$\\sin(x) = \\frac{1}{2}$$",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Funkcja sin ma okres $2\\pi$, więc rozwiązań może być wiele."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest różnica między równaniami trygonometrycznymi a innymi równaniami?",
+    "options": [
+      "Różnią się tylko funkcjami",
+      "Różnią się tylko zmiennymi",
+      "Różnią się tylko stałymi",
+      "Różnią się wszystkim"
+    ],
+    "correctIndex": 0,
+    "explanation": "Równania trygonometryczne różnią się od innych równań tym, że zawierają funkcje trygonometryczne."
+  },
+  {
+    "type": "table",
+    "title": "Wzory na sumę i różnicę kątów",
+    "headers": [
+      "Funkcja",
+      "Wzór"
+    ],
+    "rows": [
+      [
+        "sin",
+        "\\sin(A + B) = \\sin(A)\\cos(B) + \\cos(A)\\sin(B)"
+      ],
+      [
+        "cos",
+        "\\cos(A + B) = \\cos(A)\\cos(B) - \\sin(A)\\sin(B)"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz rozwiązywać równania trygonometryczne i znałeś wzory na sumę i różnicę kątów."
+  }
+]$content6$::jsonb,
+  5
+);

@@ -913,3 +913,205 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Wektory
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'geometria-analityczna'),
+  $title5$Wektory$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat wektorów. Wektory to istotna część matematyki, szczególnie w geometrii płaskiej i przestrzennej. Pozwalają one na opisanie kierunku i wielkości w przestrzeni. W tej lekcji dowiesz się, jak obliczać współrzędne wektora, jego długość, oraz jak dodawać, odejmować i porównywać wektory."
+  },
+  {
+    "type": "definition",
+    "term": "Wektor",
+    "text": "Wektor to para punktów w przestrzeni, która opisuje kierunek i wielkość od punktu początkowego do punktu końcowego.",
+    "formula": "\\overrightarrow{AB}"
+  },
+  {
+    "type": "formula",
+    "title": "Długość wektora",
+    "expression": "\\sqrt{x^2 + y^2)",
+    "variables": [
+      {
+        "meaning": "współrzędna x wektora",
+        "symbol": "x"
+      },
+      {
+        "meaning": "współrzędna y wektora",
+        "symbol": "y"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Obliczanie długości wektora",
+    "items": [
+      {
+        "answer": "$d = 5$",
+        "problem": "$\\overrightarrow{AB} = (3, 4)$",
+        "steps": [
+          {
+            "formula": "d = \\sqrt{3^2 + 4^2)",
+            "text": "Użyty wzór: $d = \\sqrt{x^2 + y^2}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dodawanie wektorów",
+    "problem": "$\\overrightarrow{AB} = (2, 3)$ i $\\overrightarrow{BC} = (4, 1)$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(6, 4)"
+        ],
+        "formula": "(2+4, 3+1)",
+        "kind": "input",
+        "prompt": "Oblicz współrzędne wektora $\\overrightarrow{AC}$",
+        "reveal": "Użyty wzór: $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest wynik dodawania wektorów $\\overrightarrow{AB} = (1, 2)$ i $\\overrightarrow{BC} = (3, 4)$?",
+    "options": [
+      "(2, 3)",
+      "(4, 6)",
+      "(5, 5)",
+      "(6, 4)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Użyty wzór: $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$"
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie obliczać współrzędne wektora, jego długość, oraz dodawać, odejmować i porównywać wektory."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Proste, odcinki i okręgi
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'geometria-analityczna'),
+  $title6$Proste, odcinki i okręgi$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Witaj na lekcji teorii geometrii analitycznej! Dziś zajmiemy się prostymi, odcinkami i okręgami. Zagadnienia te są podstawą geometrii analitycznej i są niezbędne do rozwiązywania zadań z tego zakresu."
+  },
+  {
+    "type": "definition",
+    "term": "Prosta",
+    "text": "Prosta to zbiór wszystkich punktów, które spełniają równanie liniowe $ax + by + c = 0$, gdzie $a$, $b$ i $c$ są stałymi, a $x$ i $y$ są zmienne."
+  },
+  {
+    "type": "formula",
+    "title": "Równanie prostej",
+    "expression": "ax + by + c = 0",
+    "variables": [
+      {
+        "meaning": "współczynnik przy x",
+        "symbol": "a"
+      },
+      {
+        "meaning": "współczynnik przy y",
+        "symbol": "b"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "c"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady prostych",
+    "items": [
+      {
+        "answer": "y = x + 1",
+        "problem": "Znajdź równanie prostej przechodzącej przez punkty $(1, 2)$ i $(3, 4)$",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Wzór na równanie prostej przechodzącej przez dwa punkty to $y - y_1 = \\frac{y_2 - y_1}{x_2 - x_1}(x - x_1)$"
+          },
+          {
+            "formula": "",
+            "text": "Podstawiamy dane punkty do wzoru i uzyskujemy $y - 2 = \\frac{4 - 2}{3 - 1}(x - 1)$"
+          }
+        ]
+      },
+      {
+        "answer": "(1, 1)",
+        "problem": "Znajdź punkt przecięcia prostych $x + 2y - 3 = 0$ i $x - y + 1 = 0$",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Równania prostych można rozwiązać równocześnie"
+          },
+          {
+            "formula": "",
+            "text": "Mnożymy pierwsze równanie przez 1, a drugie przez 2 i uzyskujemy $x + 2y - 3 = 0$ i $2x - 2y + 2 = 0$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest wzoru na odległość punktu $(x_1, y_1)$ od prostej $ax + by + c = 0$?",
+    "options": [
+      "$\\frac{|ax_1 + by_1 + c|}{\\sqrt{a^2 + b^2}}$",
+      "$\\frac{ax_1 + by_1 + c}{\\sqrt{a^2 + b^2}}$",
+      "$\\frac{|ax_1 + by_1 + c|}{a^2 + b^2}$",
+      "$\\frac{ax_1 + by_1 + c}{a^2 + b^2}$"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wzór na odległość punktu od prostej jest wyrażony przez $\\frac{|ax_1 + by_1 + c|}{\\sqrt{a^2 + b^2}}$, co wynika z faktu, że odległość jest zawsze nieujemna."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Znajdź odległość punktu $(1, 2)$ od prostej $x + 2y - 3 = 0$",
+    "problem": "Znajdź odległość punktu $(1, 2)$ od prostej $x + 2y - 3 = 0$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(1, 2)"
+        ],
+        "correctIndex": 0,
+        "kind": "input",
+        "options": [],
+        "prompt": "Wprowadź współrzędne punktu",
+        "reveal": "Punkt jest wprowadzony poprawnie"
+      },
+      {
+        "acceptedAnswers": [
+          "x + 2y - 3 = 0"
+        ],
+        "correctIndex": 0,
+        "kind": "input",
+        "options": [],
+        "prompt": "Wprowadź równanie prostej",
+        "reveal": "Równanie prostej jest wprowadzone poprawnie"
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli znasz wzory na równanie prostej, odległość punktu od prostej i potrafisz rozwiązać zadania dotyczące prostych i okręgów. Ćwicz dalej, aby utrwalić wiedzę!"
+  }
+]$content6$::jsonb,
+  5
+);

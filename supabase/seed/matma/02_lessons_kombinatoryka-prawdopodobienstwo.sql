@@ -814,3 +814,193 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Prawdopodobieństwo warunkowe i całkowite
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'kombinatoryka-prawdopodobienstwo'),
+  $title5$Prawdopodobieństwo warunkowe i całkowite$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witamy w lekcji o prawdopodobieństwie warunkowym i całkowitym. W tym rozdziale poznasz, czym jest prawdopodobieństwo warunkowe oraz jak oblicza się prawdopodobieństwo całkowite."
+  },
+  {
+    "type": "definition",
+    "term": "Prawdopodobieństwo warunkowe",
+    "text": "Prawdopodobieństwo warunkowe to prawdopodobieństwo zdarzenia, które następuje pod warunkiem, że wystąpiło inne zdarzenie. Oznacza się je symbolem $P(A|B)$ i czyta \"prawdopodobieństwo A przy zdarzeniu B\". Zdarzenie B musi mieć miejsce, aby możemy mówić o prawdopodobieństwie warunkowym.",
+    "formula": "\\frac{P(A \\cap B)}{P(B)}"
+  },
+  {
+    "type": "formula",
+    "title": "Prawdopodobieństwo warunkowe",
+    "expression": "\\frac{P(A \\cap B)}{P(B)}",
+    "variables": [
+      {
+        "meaning": "prawdopodobieństwo wystąpienia zdarzeń A i B",
+        "symbol": "P(A \\cap B)"
+      },
+      {
+        "meaning": "prawdopodobieństwo wystąpienia zdarzenia B",
+        "symbol": "P(B)"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "\\frac{1}{2}",
+        "problem": "Zdarzenie A jest zdarzeniem, które $\\frac{1}{3}$ razy następuje po zdarzeniu B, które z kolei ma $\\frac{1}{2}$ prawdopodobieństwo. Jaka jest wartość $P(A|B)$?",
+        "steps": [
+          {
+            "formula": "\\frac{P(A \\cap B)}{P(B)}",
+            "text": "Użycie wzoru na prawdopodobieństwo warunkowe $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest wartość $P(A|B)$, jeżeli $P(A \\cap B) = \\frac{1}{4}$ oraz $P(B) = \\frac{1}{2}$?",
+    "options": [
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wykorzystanie wzoru na prawdopodobieństwo warunkowe $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, podstawienie danych i obliczenie."
+  },
+  {
+    "type": "table",
+    "title": "Przykładowe dane",
+    "headers": [
+      "Zdarzenie A",
+      "Zdarzenie B",
+      "P(A \\cap B)",
+      "P(B)",
+      "P(A|B)"
+    ],
+    "rows": [
+      [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{3}$"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz prawidłowo obliczać prawdopodobieństwo warunkowe, korzystając z wzoru $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ oraz rozpoznać, gdy można użyć tego pojęcia, w sytuacjach praktycznych."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Wzór Bayesa
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'kombinatoryka-prawdopodobienstwo'),
+  $title6$Wzór Bayesa$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Wzór Bayesa to podstawowe pojęcie w teorii prawdopodobieństwa, które pozwala na aktualizację prawdopodobieństwa hipotezy na podstawie nowych danych. Jest to bardzo ważny tool w statystyce i teorii decyzji."
+  },
+  {
+    "type": "definition",
+    "term": "Wzór Bayesa",
+    "text": "Wzór Bayesa to wzór, który pozawala na obliczenie prawdopodobieństwa hipotezy na podstawie nowych danych.",
+    "formula": "\\frac{P(H|D) = \\frac{P(D|H) \\cdot P(H)}{P(D)}}"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór Bayesa",
+    "expression": "\\frac{P(H|D) = \\frac{P(D|H) \\cdot P(H)}{P(D)}",
+    "variables": [
+      {
+        "meaning": "prawdopodobieństwo hipotezy na podstawie danych",
+        "symbol": "P(H|D)"
+      },
+      {
+        "meaning": "prawdopodobieństwo danych na podstawie hipotezy",
+        "symbol": "P(D|H)"
+      },
+      {
+        "meaning": "prawdopodobieństwo hipotezy",
+        "symbol": "P(H)"
+      },
+      {
+        "meaning": "prawdopodobieństwo danych",
+        "symbol": "P(D)"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykład użycia wzoru Bayesa",
+    "items": [
+      {
+        "answer": "\\frac{0,99 \\cdot 0,01}{0,05 \\cdot 0,99 + 0,01 \\cdot 0,99} = 0,665",
+        "problem": "Znajdź prawdopodobieństwo, że osoba ma chorobę, jeśli wynik testu jest pozytywny. Prawdopodobieństwo choroby wynosi 0,01, a prawdopodobieństwo pozytywnego wyniku testu u osoby chorej wynosi 0,99, a u osoby zdrowej wynosi 0,05.",
+        "steps": [
+          {
+            "formula": "\\frac{P(Choroba|Pozytywny) = \\frac{P(Pozytywny|Choroba) \\cdot P(Choroba)}{P(Pozytywny)}",
+            "text": "Oblicz pravdopodobieństwo choroby na podstawie pozytywnego wyniku testu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Krok po kroku",
+    "problem": "Znajdź prawdopodobieństwo, że osoba ma chorobę, jeśli wynik testu jest pozytywny.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "0,05 \\cdot 0,99 + 0,01 \\cdot 0,99"
+        ],
+        "formula": "0,05 \\cdot 0,99 + 0,01 \\cdot 0,99",
+        "kind": "input",
+        "prompt": "Oblicz prawdopodobieństwo pozytywnego wyniku testu.",
+        "reveal": "Prawdopodobieństwo pozytywnego wyniku testu wynosi 0,0594."
+      },
+      {
+        "acceptedAnswers": [
+          "\\frac{0,99 \\cdot 0,01}{0,0594}"
+        ],
+        "formula": "\\frac{0,99 \\cdot 0,01}{0,0594}",
+        "kind": "input",
+        "prompt": "Oblicz prawdopodobieństwo choroby na podstawie pozytywnego wyniku testu.",
+        "reveal": "Prawdopodobieństwo choroby na podstawie pozytywnego wyniku testu wynosi 0,167."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co oznacza wzór Bayesa?",
+    "options": [
+      "Aktualizację prawdopodobieństwa hipotezy na podstawie nowych danych.",
+      "Prawdopodobieństwo hipotezy.",
+      "Prawdopodobieństwo danych."
+    ],
+    "correctIndex": 0,
+    "explanation": "Wzór Bayesa pozwala na aktualizację prawdopodobieństwa hipotezy na podstawie nowych danych."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz obliczyć prawdopodobieństwo hipotezy na podstawie nowych danych przy użyciu wzoru Bayesa."
+  }
+]$content6$::jsonb,
+  5
+);
