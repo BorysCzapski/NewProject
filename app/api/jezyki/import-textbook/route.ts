@@ -10,7 +10,10 @@
 //
 // Auth is checked manually (not requireProfile(), which redirects — wrong
 // for an endpoint returning JSON to a fetch() call). Any authenticated user
-// may upload their own textbook — this module has no admin/membership gate.
+// may upload a textbook — this module has no admin/membership gate. Once
+// uploaded, the textbook is visible to every student (0012_textbooks_shared.
+// sql); only the uploader can delete it, and each student's flashcard/
+// exercise progress on its words is tracked separately per-user.
 // ============================================================================
 import { NextResponse, type NextRequest } from "next/server";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";

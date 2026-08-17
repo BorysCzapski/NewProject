@@ -23,7 +23,7 @@ export default async function TextbookGrammarTopicPage({
   params: Promise<{ id: string; topicId: string }>;
 }) {
   const { id, topicId } = await params;
-  const profile = await requireProfile();
+  await requireProfile();
   const supabase = await createClient();
 
   const { data: topic } = await supabase
@@ -31,7 +31,6 @@ export default async function TextbookGrammarTopicPage({
     .select("*")
     .eq("id", topicId)
     .eq("textbook_id", id)
-    .eq("user_id", profile.id)
     .maybeSingle();
   if (!topic) notFound();
 

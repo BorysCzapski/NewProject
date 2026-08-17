@@ -21,7 +21,7 @@ export default async function NewTextbookPage() {
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground-muted"
         >
           <ArrowLeft className="h-4 w-4" />
-          Twoje podręczniki
+          Podręczniki
         </Link>
         <TextbookUploadFlow />
       </div>

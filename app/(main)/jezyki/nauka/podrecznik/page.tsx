@@ -1,7 +1,8 @@
 // ============================================================================
 // app/(main)/jezyki/nauka/podrecznik/page.tsx
-// Podręcznik hub: upload a new textbook PDF, browse ones already uploaded.
-// Any student can upload their own — these rows are per-user, not shared.
+// Podręcznik hub: upload a new textbook PDF, browse a SHARED library of
+// every textbook any student has uploaded — once one person uploads a book,
+// everyone can study it (see 0012_textbooks_shared.sql).
 // ============================================================================
 import Link from "next/link";
 import { BookMarked } from "lucide-react";
@@ -9,6 +10,7 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Textbook } from "@/lib/types/database";
 
@@ -19,7 +21,6 @@ export default async function PodrecznikHubPage() {
   const { data: textbooks } = await supabase
     .from("textbooks")
     .select("*")
-    .eq("user_id", profile.id)
     .order("created_at", { ascending: false });
 
   const textbookList = (textbooks ?? []) as Textbook[];
@@ -41,10 +42,10 @@ export default async function PodrecznikHubPage() {
           </Link>
         </Card>
 
-        <h2 className="mb-3 text-sm font-semibold text-foreground-muted">Twoje podręczniki</h2>
+        <h2 className="mb-3 text-sm font-semibold text-foreground-muted">Podręczniki</h2>
         {textbookList.length === 0 ? (
           <Card>
-            <CardDescription>Nie masz jeszcze żadnego podręcznika — wgraj pierwszy powyżej.</CardDescription>
+            <CardDescription>Nikt jeszcze nie wgrał podręcznika — wgraj pierwszy powyżej.</CardDescription>
           </Card>
         ) : (
           <div className="flex flex-col gap-3">
@@ -57,6 +58,7 @@ export default async function PodrecznikHubPage() {
                   <span className="min-w-0 flex-1">
                     <CardTitle className="truncate">{textbook.title}</CardTitle>
                   </span>
+                  {textbook.user_id === profile.id && <Badge className="shrink-0">Twój</Badge>}
                 </Card>
               </Link>
             ))}

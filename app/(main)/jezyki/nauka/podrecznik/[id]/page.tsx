@@ -20,13 +20,9 @@ export default async function TextbookDetailPage({ params }: { params: Promise<{
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const { data: textbook } = await supabase
-    .from("textbooks")
-    .select("*")
-    .eq("id", id)
-    .eq("user_id", profile.id)
-    .maybeSingle();
+  const { data: textbook } = await supabase.from("textbooks").select("*").eq("id", id).maybeSingle();
   if (!textbook) notFound();
+  const isOwner = (textbook as Textbook).user_id === profile.id;
 
   const [{ data: units }, { data: words }, { data: grammarTopics }] = await Promise.all([
     supabase.from("textbook_units").select("*").eq("textbook_id", id).order("order_index"),
@@ -56,7 +52,7 @@ export default async function TextbookDetailPage({ params }: { params: Promise<{
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground-muted"
         >
           <ArrowLeft className="h-4 w-4" />
-          Twoje podręczniki
+          Podręczniki
         </Link>
 
         <h2 className="mb-3 text-sm font-semibold text-foreground-muted">Działy</h2>
@@ -107,7 +103,7 @@ export default async function TextbookDetailPage({ params }: { params: Promise<{
           </>
         )}
 
-        <DeleteTextbookButton textbookId={id} />
+        {isOwner && <DeleteTextbookButton textbookId={id} />}
       </div>
     </div>
   );

@@ -14,11 +14,12 @@ import { actionFailure, type ActionFailure } from "@/lib/action-result";
 import type { MasteryStatus } from "@/lib/types/database";
 
 /**
- * Records one review of a textbook word: increments correct/incorrect counts
- * and recomputes mastery_status directly on textbook_words (no separate
- * progress table — unlike vocabulary_progress, these rows are never shared
- * between users, so inline counters are simpler). Same "2 net-correct ->
- * mastered" rule as lib/vocabulary/progress.ts, for consistent UX.
+ * Records one review of a (possibly shared) textbook word: increments
+ * correct/incorrect counts and recomputes mastery_status in
+ * textbook_word_progress, keyed by (current user, word) — a textbook can be
+ * studied by many students, so progress can't live on the word row itself.
+ * Same "2 net-correct -> mastered" rule as lib/vocabulary/progress.ts, for
+ * consistent UX.
  */
 export async function recordTextbookWordAnswer(wordId: string, wasCorrect: boolean): Promise<void> {
   const supabase = await createClient();
@@ -27,24 +28,28 @@ export async function recordTextbookWordAnswer(wordId: string, wasCorrect: boole
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Musisz być zalogowany.");
 
-  const { data: word } = await supabase
-    .from("textbook_words")
+  const { data: existing } = await supabase
+    .from("textbook_word_progress")
     .select("correct_count, incorrect_count")
-    .eq("id", wordId)
     .eq("user_id", user.id)
+    .eq("word_id", wordId)
     .maybeSingle();
-  if (!word) return;
 
-  const correctCount = word.correct_count + (wasCorrect ? 1 : 0);
-  const incorrectCount = word.incorrect_count + (wasCorrect ? 0 : 1);
+  const correctCount = (existing?.correct_count ?? 0) + (wasCorrect ? 1 : 0);
+  const incorrectCount = (existing?.incorrect_count ?? 0) + (wasCorrect ? 0 : 1);
   const status: MasteryStatus =
     correctCount - incorrectCount >= 2 ? "mastered" : correctCount + incorrectCount > 0 ? "learning" : "new";
 
-  await supabase
-    .from("textbook_words")
-    .update({ correct_count: correctCount, incorrect_count: incorrectCount, mastery_status: status })
-    .eq("id", wordId)
-    .eq("user_id", user.id);
+  await supabase.from("textbook_word_progress").upsert(
+    {
+      user_id: user.id,
+      word_id: wordId,
+      correct_count: correctCount,
+      incorrect_count: incorrectCount,
+      mastery_status: status,
+    },
+    { onConflict: "user_id,word_id" }
+  );
 }
 
 /** Marks a completed fill-blank exercise session for streaks/homework. */
@@ -62,7 +67,7 @@ export async function noopTextbookGrammarAttempt(): Promise<void> {}
 
 /** Marks one meaningful grammar activity (a fully-answered textbook grammar
  * topic) for streaks/calendar — same activity type as the global grammar
- * module, no separate per-attempt log (not needed for a private upload). */
+ * module, no separate per-attempt log (not needed for a textbook-derived topic). */
 export async function completeTextbookGrammarTopic(): Promise<void> {
   const supabase = await createClient();
   const { error } = await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.GRAMMAR });

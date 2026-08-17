@@ -758,6 +758,16 @@ export interface TextbookWord {
   translation_pl: string;
   example_sentence: string | null;
   order_index: number;
+  created_at: string;
+}
+
+/** Per-student progress on a (possibly shared) textbook word — mirrors
+ * VocabularyProgress. Split out from TextbookWord because a textbook can be
+ * studied by many students, each with their own mastery of the same word. */
+export interface TextbookWordProgress {
+  id: string;
+  user_id: string;
+  word_id: string;
   correct_count: number;
   incorrect_count: number;
   mastery_status: MasteryStatus;

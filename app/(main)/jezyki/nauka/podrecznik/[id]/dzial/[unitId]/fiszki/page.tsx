@@ -22,7 +22,7 @@ export default async function TextbookUnitFlashcardsPage({
   params: Promise<{ id: string; unitId: string }>;
 }) {
   const { id, unitId } = await params;
-  const profile = await requireProfile();
+  await requireProfile();
   const supabase = await createClient();
 
   const { data: unit } = await supabase
@@ -30,7 +30,6 @@ export default async function TextbookUnitFlashcardsPage({
     .select("*")
     .eq("id", unitId)
     .eq("textbook_id", id)
-    .eq("user_id", profile.id)
     .maybeSingle();
   if (!unit) notFound();
 
