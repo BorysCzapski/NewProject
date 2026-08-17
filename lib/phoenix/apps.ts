@@ -76,7 +76,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     section: "narzedzia",
     icon: "Recycle",
     href: "/butelki",
-    comingSoon: true,
   },
   {
     id: "modlitwa",

@@ -800,3 +800,16 @@ export interface TextbookGrammarExercise {
   correct_answer: string;
   order_index: number;
 }
+
+export interface BottleCounter {
+  user_id: string;
+  count: number;
+  updated_at: string;
+}
+
+export interface BottleCoupon {
+  id: string;
+  user_id: string;
+  image_path: string;
+  created_at: string;
+}
