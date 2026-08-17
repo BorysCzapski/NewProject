@@ -975,3 +975,502 @@ insert into math_lessons (topic_id, title, content, order_index) values (
   3
 );
 
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Wielomiany — wprowadzenie
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'liczby-rzeczywiste'),
+  $title5$Wielomiany — wprowadzenie$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat \"Wielomiany — wprowadzenie\". Wielomiany są podstawowym pojęciem w algebrze i są używane do opisu różnych zależności między zmiennymi. W tej lekcji dowiesz się, jak rozkładać wielomiany na czynniki, wyłączać wspólne czynniki i rozwiązywać równania wielomianowe."
+  },
+  {
+    "type": "definition",
+    "term": "Wielomian",
+    "text": "Wielomian to wyrażenie algebraiczne, które składa się z jednomianów połączonych znakami dodawania i odejmowania.",
+    "formula": "a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0"
+  },
+  {
+    "type": "formula",
+    "title": "Rozkład wielomianu na czynniki",
+    "expression": "(x - a)(x - b)",
+    "variables": [
+      {
+        "meaning": "zmienna",
+        "symbol": "x"
+      },
+      {
+        "meaning": "pierwszy czynnik",
+        "symbol": "a"
+      },
+      {
+        "meaning": "drugi czynnik",
+        "symbol": "b"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady rozkładu wielomianu na czynniki",
+    "items": [
+      {
+        "answer": "(x + 2)(x + 3)",
+        "problem": "Rozłóż na czynniki wielomian $x^2 + 5x + 6$",
+        "steps": [
+          {
+            "formula": "(x + 2)(x + 3)",
+            "text": "Wypisz wielomian w postaci $(x + a)(x + b)$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie równań wielomianowych",
+    "problem": "Rozwiąż równanie $x^2 + 4x + 4 = 0$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(x + 2)^2 = 0"
+        ],
+        "formula": "(x + 2)^2 = 0",
+        "kind": "input",
+        "prompt": "Wypisz równanie w postaci $(x - a)^2 = 0$",
+        "reveal": "Rozwiązaniem jest x = -2"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest czynnik wielomianu $x^2 + 4x + 4$?",
+    "options": [
+      "(x + 1)",
+      "(x + 2)",
+      "(x + 3)",
+      "(x + 4)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prawidłową odpowiedzią jest (x + 2), ponieważ (x + 2)^2 = x^2 + 4x + 4"
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz rozkładać wielomiany na czynniki, wyłączać wspólne czynniki i rozwiązywać równania wielomianowe."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Zadania dowodowe (podzielność, potęgi, pierwiastki)
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'liczby-rzeczywiste'),
+  $title6$Zadania dowodowe (podzielność, potęgi, pierwiastki)$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii „Zadania dowodowe (podzielność, potęgi, pierwiastki)”. Tutaj będziemy rozwiązywać zadania dowodowe związane z podzielnością liczb całkowitych i reszt z dzielenia. Poznasz, jak stosować potęgi i pierwiastki w zadaniach dowodowych oraz wzory skróconego mnożenia."
+  },
+  {
+    "type": "definition",
+    "term": "Podzielność",
+    "text": "Mówimy, że liczba $a$ jest podzielna przez liczbę $b$, jeśli istnieje liczba całkowita $k$ taka, że $a = bk$.",
+    "formula": "\\frac{a}{b} = k"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady podzielności",
+    "items": [
+      {
+        "answer": "Tak, 24 jest podzielne przez 3.",
+        "problem": "Czy liczba 24 jest podzielna przez 3?",
+        "steps": [
+          {
+            "formula": "24 = 3k",
+            "text": "Sprawdźmy, czy istnieje liczba całkowita $k$ taka, że $24 = 3k$."
+          },
+          {
+            "text": "Tak, istnieje $k = 8$, bo $24 = 3 \\cdot 8$."
+          }
+        ]
+      },
+      {
+        "answer": "Nie, 25 nie jest podzielne przez 4.",
+        "problem": "Czy liczba 25 jest podzielna przez 4?",
+        "steps": [
+          {
+            "formula": "25 = 4k",
+            "text": "Sprawdźmy, czy istnieje liczba całkowita $k$ taka, że $25 = 4k$."
+          },
+          {
+            "text": "Nie, nie istnieje taka liczba całkowita $k$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Wzór skróconego mnożenia",
+    "expression": "(a + b)(a - b)",
+    "variables": [
+      {
+        "meaning": "pierwsza liczba",
+        "symbol": "a"
+      },
+      {
+        "meaning": "druga liczba",
+        "symbol": "b"
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dowód podzielności",
+    "problem": "Czy liczba $a^2 - b^2$ jest podzielna przez $a + b$?",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(a+b)(a-b)"
+        ],
+        "correctIndex": 0,
+        "formula": "(a+b)(a-b)",
+        "kind": "input",
+        "options": [],
+        "prompt": "Rozwijajmy wzór $a^2 - b^2$.",
+        "reveal": "Tak, jest podzielna, bo $a^2 - b^2 = (a + b)(a - b)$."
+      },
+      {
+        "acceptedAnswers": [
+          "a-b"
+        ],
+        "correctIndex": 0,
+        "formula": "a^2 - b^2 = (a + b)(a - b)",
+        "kind": "input",
+        "options": [],
+        "prompt": "Sprawdźmy, czy istnieje liczba całkowita $k$ taka, że $a^2 - b^2 = (a + b)k$.",
+        "reveal": "Tak, istnieje $k = a - b$, bo $a^2 - b^2 = (a + b)(a - b)$."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Czy liczba $16$ jest podzielna przez $4$?",
+    "options": [
+      "Tak",
+      "Nie"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tak, bo $16 = 4 \\cdot 4$."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli umiesz rozwiązywać zadania dowodowe związane z podzielnością liczb całkowitych i reszt z dzielenia, stosować potęgi i pierwiastki w zadaniach dowodowych oraz wzory skróconego mnożenia."
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Pierwiastki całkowite wielomianu
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'liczby-rzeczywiste'),
+  $title7$Pierwiastki całkowite wielomianu$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Witamy w lekcji teorii na temat pierwiastków całkowitych wielomianu. W tym module zajmiemy się badaniem cech wielomianów o współczynnikach całkowitych, szczególnie w kontekście ich pierwiastków całkowitych. Rozpoczniemy od podstawowej definicji i będziemy rozważać techniki dostosowane do dzielenia wielomianów oraz rozwiązywania równań dwukwadratowych."
+  },
+  {
+    "type": "definition",
+    "term": "Pierwiastek całkowity",
+    "text": "Pierwiastek całkowity wielomianu to taka liczba całkowita $a$, dla której $f(a) = 0$. Innymi słowy, jest to solutionem równania $f(x) = 0$ w dziedzinie liczb całkowitych.",
+    "formula": "\\frac{f(a)}{x-a}"
+  },
+  {
+    "type": "formula",
+    "title": "Twierdzenie o pierwiastkach całkowitych",
+    "expression": "a | P(0)",
+    "variables": [
+      {
+        "meaning": "całkowity pierwiastek",
+        "symbol": "a"
+      },
+      {
+        "meaning": "wartość wielomianu w punkcie 0",
+        "symbol": "P(0)"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykład 1",
+    "items": [
+      {
+        "answer": "$x = -2$ oraz $x = -3$",
+        "problem": "Rozwiąž równanie $x^2 + 5x + 6 = 0$",
+        "steps": [
+          {
+            "formula": "x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}",
+            "text": "Wzór na pierwiastki"
+          },
+          {
+            "text": "Wstawiamy $a=1$, $b=5$, $c=6$ do wzoru"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dzielenie wielomianu",
+    "problem": "Dzielić $x^3 - 6x^2 + 11x - 6$ przez $x-2$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "x^2 - 4x + 3"
+        ],
+        "kind": "input",
+        "prompt": "Podaj wynik dzielenia",
+        "reveal": "Wynik dzielenia"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest największy możliwy współczynnik wielomianu $f(x)$, jeśli $f(1) = 5$?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 2,
+    "explanation": "Współczynnik wielomianu jest związany z wartością funkcji w punkcie 1"
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie rozwiązywać równania dwukwadratowe i dzielić wielomiany według podanych reguł."
+  }
+]$content7$::jsonb,
+  6
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Twierdzenie o reszcie i twierdzenie Bézouta
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'liczby-rzeczywiste'),
+  $title8$Twierdzenie o reszcie i twierdzenie Bézouta$title8$,
+  $content8$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat \"Twierdzenie o reszcie i twierdzenie Bézouta\". W tej lekcji przedstawimy te dwa ważne twierdzenia z dziedziny rachunku wielomianów oraz wyjaśnimy ich znaczenie i zastosowanie."
+  },
+  {
+    "type": "definition",
+    "term": "Twierdzenie o reszcie",
+    "text": "Twierdzenie o reszcie mówi, że jeśli $f(x)$ jest wielomianem, a $a$ jest dowolnym liczbą, to reszta z dzielenia $f(x)$ przez $x-a$ jest równa $f(a)$. Innymi słowy, $f(x) = (x-a)q(x) + r$, gdzie $q(x)$ jest ilorazem, a $r$ jest resztą, oraz $r = f(a)$.",
+    "formula": "\\frac{f(x)}{x-a} = q(x) + \\frac{r}{x-a}"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady zastosowania twierdzenia o reszcie",
+    "items": [
+      {
+        "answer": "$4$",
+        "problem": "Znajdź resztę z dzielenia $f(x) = x^2 + 2x + 1$ przez $x-1$.",
+        "steps": [
+          {
+            "formula": "f(1) = (1)^2 + 2(1) + 1 = 4",
+            "text": "Zastosuj twierdzenie o reszcie."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "definition",
+    "term": "Twierdzenie Bézouta",
+    "text": "Twierdzenie Bézouta mówi, że dla dowolnych dwóch niezerowych wielomianów $f(x)$ i $g(x)$ istnieją wielomiany $s(x)$ i $t(x)$ takie, że $f(x)s(x) + g(x)t(x) = \\gcd(f(x), g(x))$. Innymi słowy, największy wspólny dzielnik dwóch wielomianów można zapisać jako liniową kombinację tych wielomianów.",
+    "formula": "f(x)s(x) + g(x)t(x) = \\gcd(f(x), g(x))"
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dowód twierdzenia Bézouta",
+    "problem": "Dany $f(x) = x^2 + 1$, $g(x) = x^2 - 1$. Znajdź $s(x)$ i $t(x)$.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "$x^2 - 1$"
+        ],
+        "correctIndex": 0,
+        "formula": "x^2 - 1 = (x^2 + 1) - 2",
+        "kind": "input",
+        "options": [],
+        "prompt": "Zastosuj algorytm Euklidesa, aby znaleźć $\\gcd(f(x), g(x))$.",
+        "reveal": "Zastosuj twierdzenie o reszcie."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest największy wspólny dzielnik $f(x) = x^2 + 1$ i $g(x) = x^2 - 1$?",
+    "options": [
+      "$x^2 + 1$",
+      "$x^2 - 1$",
+      "$x + 1$",
+      "$x - 1$"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wynika to z faktu, że $x^2 - 1$ jest liniową kombinacją $x^2 + 1$ i $x^2 - 1$."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz zastosować twierdzenie o reszcie i twierdzenie Bézouta do rozwiązywania problemów oraz rozumiesz znaczenie tych twierdzeń w rachunku wielomianów."
+  }
+]$content8$::jsonb,
+  7
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Trójkąt Pascala i symbol Newtona
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'liczby-rzeczywiste'),
+  $title9$Trójkąt Pascala i symbol Newtona$title9$,
+  $content9$[
+  {
+    "type": "intro",
+    "text": "Trójkąt Pascala to jeden z najważniejszych obiektów w matematyce, ściśle związany z kombinacjami i symbolami Newtona. W tej lekcji dowiemy się, jakie są własności trójkąta Pascala i symbolu Newtona oraz jak je stosować w różnych sytuacjach."
+  },
+  {
+    "type": "definition",
+    "term": "Trójkąt Pascala",
+    "text": "Trójkąt Pascala to trójkątna tablica liczb naturalnych, w której każda liczba jest sumą dwóch liczb znajdujących się bezpośrednio nad nią.",
+    "formula": "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}"
+  },
+  {
+    "type": "formula",
+    "title": "Symbol Newtona",
+    "expression": "\\binom{n}{k}",
+    "variables": [
+      {
+        "meaning": "liczba naturalna",
+        "symbol": "n"
+      },
+      {
+        "meaning": "liczba naturalna",
+        "symbol": "k"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Własności symbolu Newtona",
+    "items": [
+      {
+        "answer": "$\\binom{5}{2} = 10$",
+        "problem": "Oblicz $\\binom{5}{2}$",
+        "steps": [
+          {
+            "formula": "\\binom{5}{2} = \\frac{5!}{2!(5-2)!}",
+            "text": "Stosujemy formula $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$"
+          }
+        ]
+      },
+      {
+        "answer": "$\\binom{7}{3} = 35$",
+        "problem": "Oblicz $\\binom{7}{3}$",
+        "steps": [
+          {
+            "formula": "\\binom{7}{3} = \\frac{7!}{3!(7-3)!}",
+            "text": "Stosujemy formula $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Wzór na $a^3+b^3$",
+    "problem": "Oblicz $a^3+b^3$",
+    "steps": [
+      {
+        "acceptedAnswers": [],
+        "correctIndex": 0,
+        "kind": "choice",
+        "options": [
+          "$(a+b)(a^2-ab+b^2)$",
+          "$(a-b)(a^2+ab+b^2)$"
+        ],
+        "prompt": "Rozwijamy $a^3+b^3$ używając wzoru",
+        "reveal": "Stosujemy wzór na $a^3+b^3$"
+      },
+      {
+        "acceptedAnswers": [
+          "$(a+b)(a^2-ab+b^2)$"
+        ],
+        "correctIndex": 0,
+        "kind": "input",
+        "options": [],
+        "prompt": "Upraszczamy wyrażenie",
+        "reveal": "Mamy $a^3+b^3 = (a+b)(a^2-ab+b^2)$"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest wynik $\\binom{4}{2}$?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stosujemy formula $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$, mamy $\\binom{4}{2} = \\frac{4!}{2!(4-2)!} = 6$"
+  },
+  {
+    "type": "table",
+    "title": "Własności symbolu Newtona",
+    "headers": [
+      "Własność",
+      "Opis"
+    ],
+    "rows": [
+      [
+        "$\\binom{n}{0} = 1$",
+        "Każdy zestaw ma jeden podzestaw pusty"
+      ],
+      [
+        "$\\binom{n}{1} = n$",
+        "Każdy zestaw ma $n$ podzestawów jednopunktowych"
+      ],
+      [
+        "$\\binom{n}{n-1} = n$",
+        "Każdy zestaw ma $n$ podzestawów $(n-1)$-punktowych"
+      ],
+      [
+        "$\\binom{n}{k} = \\binom{n}{n-k}$",
+        "Symetria symbolu Newtona"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli umiesz stosować wzory na $a^3+b^3$, $a^3-b^3$, $a^n-b^n$, $(a+b)^n$, $(a-b)^n$ oraz własności symbolu Newtona. Zadania te są niezwykle ważne w matematyce i pojawiają się często w różnych kontekstach, dlatego ważne jest, aby je opanować."
+  }
+]$content9$::jsonb,
+  8
+);

@@ -755,3 +755,427 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Twierdzenie sinusów i cosinusów
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'planimetria'),
+  $title5$Twierdzenie sinusów i cosinusów$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat twierdzenia sinusów i cosinusów. To podstawowa concept w geometrii i trigonometrii, która pozwala nam na obliczanie kątów i boków trójkątów. W tej lekcji dowiesz się, jak stosować te twierdzenia, aby rozwiązywać różne zadania."
+  },
+  {
+    "type": "definition",
+    "term": "Twierdzenie sinusów",
+    "text": "Twierdzenie sinusów mówi, że dla dowolnego trójkąta $\\triangle ABC$, gdzie $a, b, c$ są długościami boków, a $A, B, C$ są kątami przeciwstawnymi do tych boków, zachodzi następująca zależność: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$.",
+    "formula": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}"
+  },
+  {
+    "type": "formula",
+    "title": "Twierdzenie cosinusów",
+    "expression": "c^2 = a^2 + b^2 - 2ab \\cdot \\cos C",
+    "variables": [
+      {
+        "meaning": "długość boku a",
+        "symbol": "a"
+      },
+      {
+        "meaning": "długość boku b",
+        "symbol": "b"
+      },
+      {
+        "meaning": "długość boku c",
+        "symbol": "c"
+      },
+      {
+        "meaning": "kąt C",
+        "symbol": "C"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykład",
+    "items": [
+      {
+        "answer": "c = \\sqrt{25 + 49 - 70 \\cdot \\frac{1}{2}} = \\sqrt{74 - 35} = \\sqrt{39}",
+        "problem": "W $\\triangle ABC$ mamy $a = 5$, $b = 7$, $C = 60^\\circ$. Oblicz $c$.",
+        "steps": [
+          {
+            "formula": "c^2 = 5^2 + 7^2 - 2 \\cdot 5 \\cdot 7 \\cdot \\cos 60^\\circ",
+            "text": "Użyj twierdzenia cosinusów."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co oznacza twierdzenie sinusów?",
+    "options": [
+      "To twierdzenie, które pozwala na obliczanie długości boków trójkąta, jeśli znane są kąty.",
+      "To twierdzenie, które pozwala na obliczanie kątów trójkąta, jeśli znane są długości boków.",
+      "To twierdzenie, które pozwala na obliczanie długości boków trójkąta, jeśli znane są długości dwóch boków i kąt pomiędzy nimi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Twierdzenie sinusów mówi, że dla dowolnego trójkąta $\\triangle ABC$, gdzie $a, b, c$ są długościami boków, a $A, B, C$ są kątami przeciwstawnymi do tych boków, zachodzi następująca zależność: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie trójkątów",
+    "problem": "W $\\triangle ABC$ mamy $a = 3$, $b = 4$, $c = 5$. Oblicz kąt $C$.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "\\frac{a^2 + b^2 - c^2}{2ab}"
+        ],
+        "formula": "\\cos C = \\frac{3^2 + 4^2 - 5^2}{2 \\cdot 3 \\cdot 4}",
+        "kind": "input",
+        "prompt": "Użyj twierdzenia cosinusów, aby obliczyć $\\cos C$.",
+        "reveal": "Wartość $\\cos C$ jest równa $\\frac{3^2 + 4^2 - 5^2}{2 \\cdot 3 \\cdot 4} = \\frac{9 + 16 - 25}{24} = \\frac{0}{24} = 0$."
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz stosować twierdzenie sinusów i cosinusów, aby rozwiązywać trójkąty."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Podobieństwo figur i twierdzenie Talesa
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'planimetria'),
+  $title6$Podobieństwo figur i twierdzenie Talesa$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "W dzisiejszej lekcji zajmiemy się podobieństwem figur i twierdzeniem Talesa. Podobieństwo figur jest pojęciem geometrycznym, które opisuje relację między dwiema figurami, które mają takie same kąty i proporcjonalne boki. Twierdzenie Talesa jest ważnym twierdzeniem w geometrii, które opisuje relację między odcinkami prostych, które przecinają okrąg."
+  },
+  {
+    "type": "definition",
+    "term": "Podobieństwo figur",
+    "text": "Dwie figury są podobne, jeśli mają takie same kąty i proporcjonalne boki. Oznacza to, że istnieje taka stała $k$, że długość każdego boku jednej figury jest $k$ razy większa niż długość odpowiadającego mu boku drugiej figury.",
+    "formula": "\\frac{a}{b}=\\frac{c}{d}"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór na obwód figury podobnej",
+    "expression": "P'=kP",
+    "variables": [
+      {
+        "meaning": "obwód figury oryginalnej",
+        "symbol": "P"
+      },
+      {
+        "meaning": "obwód figury podobnej",
+        "symbol": "P'"
+      },
+      {
+        "meaning": "współczynnik podobieństwa",
+        "symbol": "k"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady podobieństwa figur",
+    "items": [
+      {
+        "answer": "$\\frac{1}{2}$",
+        "problem": "Dwie figury są podobne. Jeden bok pierwszej figury ma długość $4$, a odpowiadający mu bok drugiej figury ma długość $8$. Jaki jest współczynnik podobieństwa?",
+        "steps": [
+          {
+            "formula": "\\frac{a}{b}=\\frac{c}{d}",
+            "text": "Podobieństwo figur oznacza, że istnieje stała $k$, która opisuje relację między długościami boków."
+          },
+          {
+            "text": "W tym przypadku mamy $\\frac{4}{8}=\\frac{1}{2}$, co oznacza, że współczynnik podobieństwa jest równy $\\frac{1}{2}$."
+          }
+        ]
+      },
+      {
+        "answer": "2",
+        "problem": "Dwie figury są podobne. Obwód pierwszej figury jest równy $10$, a obwód drugiej figury jest równy $20$. Jaki jest współczynnik podobieństwa?",
+        "steps": [
+          {
+            "formula": "P'=kP",
+            "text": "Wzór na obwód figury podobnej to $P'=kP$."
+          },
+          {
+            "text": "W tym przypadku mamy $20=k\\cdot10$, co oznacza, że $k=2$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest relacja między obwodami dwóch figur podobnych?",
+    "options": [
+      "Obwody są równe",
+      "Obwody są niezmienne",
+      "Obwody są proporcjonalne",
+      "Obwody są odwrotnie proporcjonalne"
+    ],
+    "correctIndex": 2,
+    "explanation": "Figury podobne mają proporcjonalne boki, co oznacza, że ich obwody są również proporcjonalne."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Twierdzenie Talesa",
+    "problem": "Dano okrąg z punktem $A$ na jego obrzeżeniu. Przez punkt $A$ poprowadzono prostą, która przecina okrąg w punkcie $B$. Jaki jest kąt $\\angle ACB$?",
+    "steps": [
+      {
+        "correctIndex": 2,
+        "formula": "\\angle ACB=\\angle ADB=\\angle ADC",
+        "kind": "choice",
+        "options": [
+          "$\\angle ADB$",
+          "$\\angle ADC$",
+          "$\\angle ADB$ i $\\angle ADC$"
+        ],
+        "prompt": "Który kąt jest równy kątowi $\\angle ACB$?",
+        "reveal": "Kąt $\\angle ACB$ jest równy kątowi $\\angle ADB$ i $\\angle ADC$, gdyż są to kąty wstawione między te same dwie półproste."
+      },
+      {
+        "acceptedAnswers": [
+          "Twierdzenie Talesa mówi, że kąt wstawiony między dwie półproste jest równy połowie kąta środkowego, opisanego na tym samym łuku."
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Co to jest twierdzenie Talesa?",
+        "reveal": "Twierdzenie Talesa jest ważnym twierdzeniem w geometrii, które opisuje relację między kątami wstawionymi między półproste i kątami środkowymi."
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz wyjaśnić pojęcie podobieństwa figur, zastosować wzór na obwód figury podobnej i wyjaśnić twierdzenie Talesa. Pamiętaj, że ćwiczenia i przykłady są kluczem do zrozumienia tych pojęć."
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Pomysły w geometrii płaskiej
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'planimetria'),
+  $title7$Pomysły w geometrii płaskiej$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji dotyczącej podstawowych pojęć i pomysłów w geometrii płaskiej, niezbędnych do rozwinięcia umiejętności rozwiązywania zadań i problemów geometrycznych na poziomie matury rozszerzonej."
+  },
+  {
+    "type": "definition",
+    "term": "Czworokąt wpisany w okrąg",
+    "text": "Czworokąt wpisany w okrąg to taki, którego wszystkie wierzchołki leżą na okręgu."
+  },
+  {
+    "type": "formula",
+    "title": "Prawo cosinusów",
+    "expression": "c^{2} = a^{2} + b^{2} - 2ab\\cos(\\gamma)",
+    "variables": [
+      {
+        "meaning": "długość boku a",
+        "symbol": "a"
+      },
+      {
+        "meaning": "długość boku b",
+        "symbol": "b"
+      },
+      {
+        "meaning": "długość boku c",
+        "symbol": "c"
+      },
+      {
+        "meaning": "kąt pomiędzy bokami a i b",
+        "symbol": "\\gamma"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady zastosowania prawa cosinusów",
+    "items": [
+      {
+        "answer": "$BC = \\sqrt{5^{2} + 7^{2} - 2 \\cdot 5 \\cdot 7 \\cdot \\cos(60^\\circ)} = \\sqrt{25 + 49 - 2 \\cdot 5 \\cdot 7 \\cdot 0.5} = \\sqrt{25 + 49 - 35} = \\sqrt{39}$",
+        "problem": "W trójkącie $ABC$ o długościach $AB = 5$, $AC = 7$ i kącie $\\angle BAC = 60^\\circ$. Jaka jest długość $BC$?",
+        "steps": [
+          {
+            "formula": "c^{2} = 5^{2} + 7^{2} - 2 \\cdot 5 \\cdot 7 \\cdot \\cos(60^\\circ)",
+            "text": "Użycie prawa cosinusów"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest kąt $\\angle BAC$ w trójkącie $ABC$ o długościach $AB = 3$, $AC = 4$ i $BC = 5$?",
+    "options": [
+      "30^\\circ",
+      "45^\\circ",
+      "60^\\circ",
+      "90^\\circ"
+    ],
+    "correctIndex": 3,
+    "explanation": "Prawo cosinusów mówi nam, że $5^{2} = 3^{2} + 4^{2} - 2 \\cdot 3 \\cdot 4 \\cdot \\cos(\\angle BAC)$. Rozwiązując to równanie, otrzymujemy $\\cos(\\angle BAC) = 0$, co oznacza, że $\\angle BAC = 90^\\circ$."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz rozwiązywać zadania geometryczne z użyciem prawa cosinusów i innych podstawowych pojęć geometrycznych."
+  }
+]$content7$::jsonb,
+  6
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Zadania dowodowe z geometrii
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'planimetria'),
+  $title8$Zadania dowodowe z geometrii$title8$,
+  $content8$[
+  {
+    "type": "intro",
+    "text": "Witamy w lekcji teorii na temat zadań dowodowych z geometrii. Dowody matematyczne są niezwykle ważne w matematyce, ponieważ pozwalają nam udowodnić, że pewne twierdzenia są prawdziwe. W tej lekcji przeanalizujemy różne typy zadań dowodowych i nauczysz się, jak je rozwiązywać."
+  },
+  {
+    "type": "definition",
+    "term": "Dowód matematyczny",
+    "text": "Dowód matematyczny to seria logicznych kroków, które prowadzą do udowodnienia pewnego twierdzenia. Dowód składa się z aksjomatów, definicji i wcześniej udowodnionych twierdzeń."
+  },
+  {
+    "type": "formula",
+    "title": "Twierdzenie o niezależności",
+    "expression": "\\frac{a}{b} = \\frac{c}{d}",
+    "variables": [
+      {
+        "meaning": "licznik",
+        "symbol": "a"
+      },
+      {
+        "meaning": "mianownik",
+        "symbol": "b"
+      },
+      {
+        "meaning": "licznik",
+        "symbol": "c"
+      },
+      {
+        "meaning": "mianownik",
+        "symbol": "d"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady zadań dowodowych",
+    "items": [
+      {
+        "answer": "Trójkąt $\\triangle ABC$ jest równoboczny.",
+        "problem": "Udowodnij, że $\\triangle ABC$ jest równoboczny, jeśli $AB = BC = CA$",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Narysuj trójkąt $\\triangle ABC$."
+          }
+        ]
+      },
+      {
+        "answer": "$\\angle BAC = 60^\\circ$",
+        "problem": "Udowodnij, że $\\angle BAC = 60^\\circ$, jeśli $AB = BC = CA$",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Użyj twierdzenia o kącie w trójkącie równobocznym."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Dowód twierdzenia o niezależności",
+    "problem": "Udowodnij, że $\\frac{a}{b} = \\frac{c}{d}$, jeśli $ad = bc$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Wprowadź wartości $a$, $b$, $c$ i $d$.",
+        "reveal": "Wynik niezależności."
+      },
+      {
+        "acceptedAnswers": [
+          "ad",
+          "bc"
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Oblicz $ad$ i $bc$.",
+        "reveal": "Porównaj wyniki."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Co to jest dowód matematyczny?",
+    "options": [
+      "Seria logicznych kroków",
+      "Twierdzenie matematyczne",
+      "Definicja matematyczna",
+      "Aksjomat"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dowód matematyczny to seria logicznych kroków, które prowadzą do udowodnienia pewnego twierdzenia."
+  },
+  {
+    "type": "table",
+    "title": "Rodzaje dowodów",
+    "headers": [
+      "Typ dowodu",
+      "Opis"
+    ],
+    "rows": [
+      [
+        "Dowód bezpośredni",
+        "Dowód, w którym twierdzenie jest udowodnione bezpośrednio"
+      ],
+      [
+        "Dowód niebezpośredni",
+        "Dowód, w którym twierdzenie jest udowodnione przez sprzeczność"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie rozwiązywać zadania dowodowe i stosować twierdzenia geometrii w praktyce."
+  }
+]$content8$::jsonb,
+  7
+);

@@ -757,3 +757,290 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Proste w przestrzeni
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'stereometria'),
+  $title5$Proste w przestrzeni$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Lekcja teorii na temat prostej w przestrzeni i twierdzeń związanych z nią. Omówimy zagadnienia CKE do matury rozszerzonej."
+  },
+  {
+    "type": "definition",
+    "term": "Prosta",
+    "text": "Prosta w przestrzeni to zbiór punktów spełniających pewne warunki. Jest to pojęcie podstawowe w geometrii przestrzennej."
+  },
+  {
+    "type": "formula",
+    "title": "Równanie prostej w przestrzeni",
+    "expression": "\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}",
+    "variables": [
+      {
+        "meaning": "współrzędna x punktu należącego do prostej",
+        "symbol": "x_0"
+      },
+      {
+        "meaning": "współrzędna y punktu należącego do prostej",
+        "symbol": "y_0"
+      },
+      {
+        "meaning": "współrzędna z punktu należącego do prostej",
+        "symbol": "z_0"
+      },
+      {
+        "meaning": "współczynnik kierunkowy prostej w kierunku x",
+        "symbol": "a"
+      },
+      {
+        "meaning": "współczynnik kierunkowy prostej w kierunku y",
+        "symbol": "b"
+      },
+      {
+        "meaning": "współczynnik kierunkowy prostej w kierunku z",
+        "symbol": "c"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady prostych w przestrzeni",
+    "items": [
+      {
+        "answer": "\\frac{x - 1}{2} = \\frac{y - 2}{3} = \\frac{z - 3}{4}",
+        "problem": "Znajdź równanie prostej przechodzącej przez punkt $(1, 2, 3)$ i mającej wektory kierunkowe $(2, 3, 4)$.",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Podstawiamy dane do równania prostej."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Czym charakteryzuje się prosta w przestrzeni?",
+    "options": [
+      "Przecina się z inną prostą w jednym punkcie.",
+      "Jest to zbiór punktów spełniających pewne warunki.",
+      "Ma stałą długość.",
+      "Jest zawsze równoległa do innej prostej."
+    ],
+    "correctIndex": 1,
+    "explanation": "Prosta w przestrzeni jest zbiorem punktów spełniających pewne warunki."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Twierdzenie o prostej prostopadłej do płaszczyzny",
+    "problem": "Dowiedz, że prosta przechodząca przez punkt $(1, 2, 3)$ i mająca wektor kierunkowy $(2, 3, 4)$ jest prostopadła do płaszczyzny $2x + 3y + 4z = 12$.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "nie"
+        ],
+        "correctIndex": 0,
+        "kind": "input",
+        "options": [],
+        "prompt": "Wektor kierunkowy prostej jest równoległy do płaszczyzny.",
+        "reveal": "Wektor kierunkowy prostej $(2, 3, 4)$ jest równoległy do normalnej płaszczyzny $(2, 3, 4)$, zatem prosta jest prostopadła do płaszczyzny."
+      },
+      {
+        "acceptedAnswers": [],
+        "correctIndex": 1,
+        "kind": "choice",
+        "options": [
+          "tak",
+          "nie"
+        ],
+        "prompt": "Prosta przechodzi przez punkt należący do płaszczyzny.",
+        "reveal": "Prosta nie przechodzi przez punkt należący do płaszczyzny."
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz zdefiniować prostą w przestrzeni oraz zastosować twierdzenie o prostej prostopadłej do płaszczyzny."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Przekroje wielościanów
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'stereometria'),
+  $title6$Przekroje wielościanów$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Przekroje wielościanów to podstawowy temat w geometrii, który zajmuje się badaniem kształtów powstających w wyniku przecięcia wielościanu przez płaszczyznę. W tym rozdziale zajmiemy się wyznaczaniem przekrojów sześcianu i ostrosłupów prawidłowych oraz obliczaniem ich pól, także z użyciem trygonometrii."
+  },
+  {
+    "type": "definition",
+    "term": "Przekrój",
+    "text": "Przekrój to figura geometryczna powstająca w wyniku przecięcia dwóch lub więcej płaszczyzn."
+  },
+  {
+    "type": "formula",
+    "title": "Pole przekroju",
+    "expression": "\\frac{1}{2} \\cdot b \\cdot h",
+    "variables": [
+      {
+        "meaning": "długość podstawy",
+        "symbol": "b"
+      },
+      {
+        "meaning": "wysokość",
+        "symbol": "h"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "$8$ cm$^2$",
+        "problem": "Wyznacz pole przekroju sześcianu o boku $4$ cm.",
+        "steps": [
+          {
+            "formula": "",
+            "text": "Pole przekroju sześcianu jest równe połowie iloczynu długości boku i wysokości."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Wyznaczanie przekroju",
+    "problem": "Wyznacz przekrój sześcianu o boku $6$ cm.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "6"
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Wyznacz długość podstawy.",
+        "reveal": "Długość podstawy jest równa $6$ cm."
+      },
+      {
+        "acceptedAnswers": [
+          "6"
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Wyznacz wysokość.",
+        "reveal": "Wysokość jest równa $6$ cm."
+      },
+      {
+        "acceptedAnswers": [
+          "18"
+        ],
+        "correctIndex": 0,
+        "formula": "",
+        "kind": "input",
+        "options": [],
+        "prompt": "Wyznacz pole przekroju.",
+        "reveal": "Pole przekroju jest równe $18$ cm$^2$."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest wzór na pole przekroju?",
+    "options": [
+      "$\\frac{1}{2} \\cdot b \\cdot h$",
+      "$b \\cdot h$",
+      "$\\frac{1}{3} \\cdot b \\cdot h$"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pole przekroju jest równe połowie iloczynu długości boku i wysokości."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz wyznaczyć przekroje sześcianu i ostrosłupów prawidłowych oraz obliczyć ich pola, także z użyciem trygonometrii."
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Bryły obrotowe
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'stereometria'),
+  $title7$Bryły obrotowe$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Bryły obrotowe są przedmiotem zainteresowania geometrii i mają szerokie zastosowanie w fizyce i inżynierii. W tymodule będziemy zajmować się obliczaniem objętości i pola powierzchni walca, stożka, kuli oraz zależnością między objętościami brył podobnych."
+  },
+  {
+    "type": "definition",
+    "term": "Bryła obrotowa",
+    "text": "Bryła obrotowa jest bryłą, której kształt powstaje przez obrot punktu lub krzywej wokół osi."
+  },
+  {
+    "type": "formula",
+    "title": "Objętość walca",
+    "expression": "\\frac{\\pi r^2 h}{1}",
+    "variables": [
+      {
+        "meaning": "promień podstawy",
+        "symbol": "r"
+      },
+      {
+        "meaning": "wysokość",
+        "symbol": "h"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "$45\\pi$",
+        "problem": "Oblicz objętość walca o promieniu podstawy $3$ i wysokości $5$. ",
+        "steps": [
+          {
+            "formula": "\\pi r^2 h",
+            "text": "Wzór na objętość walca to $V = \\pi r^2 h$. "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest zależność między objętościami dwóch brył podobnych?",
+    "options": [
+      "Objętości są takie same",
+      "Objętości są proporcjonalne do długości",
+      "Objętości są proporcjonalne do kwadratu długości",
+      "Objętości są proporcjonalne do sześcianu długości"
+    ],
+    "correctIndex": 3,
+    "explanation": "Objętości brył podobnych są proporcjonalne do sześcianu długości."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz wyjaśnić pojęcie bryły obrotowej i obliczyć objętości oraz pola powierzchni różnych brył obrotowych."
+  }
+]$content7$::jsonb,
+  6
+);

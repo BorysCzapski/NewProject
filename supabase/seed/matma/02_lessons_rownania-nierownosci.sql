@@ -863,3 +863,506 @@ insert into math_lessons (topic_id, title, content, order_index) values (
   3
 );
 
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Równania dwukwadratowe
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rownania-nierownosci'),
+  $title5$Równania dwukwadratowe$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat równań dwukwadratowych, które są szczególnym przypadkiem równań wielomianowych. Równania te mają postać $(x^2 + ax + b)(x^2 + cx + d) = 0$ i są sprowadzalne do równania kwadratowego."
+  },
+  {
+    "type": "definition",
+    "term": "Równanie dwukwadratowe",
+    "text": "Równanie dwukwadratowe to równanie postaci $(x^2 + ax + b)(x^2 + cx + d) = 0$, gdzie $a, b, c, d$ są stałymi.",
+    "formula": "(x^2 + ax + b)(x^2 + cx + d) = 0"
+  },
+  {
+    "type": "formula",
+    "title": "Rozwinięcie równania dwukwadratowego",
+    "expression": "x^4 + (a+c)x^3 + (ac+b+d)x^2 + (bc+ad)x + bd",
+    "variables": [
+      {
+        "meaning": "stała",
+        "symbol": "a"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "b"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "c"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "d"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "x^4 - x^3 - 4x^2 + x + 2 = 0",
+        "problem": "Rozwiąż równanie $(x^2 + 2x + 1)(x^2 - 3x + 2) = 0$",
+        "steps": [
+          {
+            "formula": "x^4 + (2-3)x^3 + (2\\cdot(-3)+1\\cdot2)x^2 + (1\\cdot(-3)+2\\cdot2)x + 1\\cdot2 = 0",
+            "text": "Rozwijamy równanie"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest wynik rozwinięcia równania $(x^2 + 2x + 1)(x^2 - 3x + 2) = 0$?",
+    "options": [
+      "x^4 + x^3 - 4x^2 + x + 2 = 0",
+      "x^4 - x^3 - 4x^2 + x + 2 = 0",
+      "x^4 + 2x^3 - 3x^2 + x + 1 = 0",
+      "x^4 - 2x^3 + 4x^2 + x - 1 = 0"
+    ],
+    "correctIndex": 1,
+    "explanation": "Poprawna odpowiedź to x^4 - x^3 - 4x^2 + x + 2 = 0, ponieważ jest to wynik rozwinięcia równania $(x^2 + 2x + 1)(x^2 - 3x + 2) = 0$."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz rozwiązywać równania dwukwadratowe i rozumiesz ich postać oraz rozwinięcie."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Nierówności wielomianowe
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rownania-nierownosci'),
+  $title6$Nierówności wielomianowe$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat nierówności wielomianowych. W tej lekcji dowiesz się, jak rozwiązywać nierówności wielomianowe o różnych stopniach i rodzajach"
+  },
+  {
+    "type": "definition",
+    "term": "Nierówność wielomianowa",
+    "text": "Nierówność wielomianowa to nierówność, w której występuje wielomian. Może to być nierówność liniowa, kwadratowa, sześcienna itd.",
+    "formula": "\\frac{x^2 + 3x - 4}{x + 2} > 0"
+  },
+  {
+    "type": "formula",
+    "title": "Nierówność wielomianowa",
+    "expression": "(x + 2)(x - 2) > 0",
+    "variables": [
+      {
+        "meaning": "zmienna",
+        "symbol": "x"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady nierówności wielomianowych",
+    "items": [
+      {
+        "answer": "x > 2 i x > -3",
+        "problem": "(x - 2)(x + 3) > 0",
+        "steps": [
+          {
+            "formula": "(x - 2) > 0 i (x + 3) > 0",
+            "text": " Rozbijamy na czynniki i rozwiązujemy nierówność dla każdego czynnika"
+          }
+        ]
+      },
+      {
+        "answer": "x \\leq -4 i x \\geq 1",
+        "problem": "(x^2 + 3x - 4) \\geq 0",
+        "steps": [
+          {
+            "formula": "(x + 4)(x - 1) \\geq 0",
+            "text": "Rozbijamy na czynniki i rozwiązujemy nierówność dla każdego czynnika"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie nierówności wielomianowych",
+    "problem": "(x^2 - 4x - 3) < 0",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(x + 1)(x - 3)"
+        ],
+        "formula": "(x + 1)(x - 3)",
+        "kind": "input",
+        "prompt": "Rozbij na czynniki",
+        "reveal": "Nierówność można rozbić na czynniki: (x + 1)(x - 3) < 0"
+      },
+      {
+        "correctIndex": 2,
+        "formula": "(x + 1) < 0 i (x - 3) > 0",
+        "kind": "choice",
+        "options": [
+          "(x + 1) < 0 i (x - 3) < 0",
+          "(x + 1) > 0 i (x - 3) > 0",
+          "(x + 1) < 0 i (x - 3) > 0"
+        ],
+        "prompt": "Rozwijamy nierówność",
+        "reveal": "Odpowiedź to: (x + 1) < 0 i (x - 3) > 0"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest suma korzeni równania x^2 + 5x + 6 = 0?",
+    "options": [
+      "-5",
+      "-6",
+      "5",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Suma korzeni wynika z wzoru Vieta: -b/a = -5/1 = -5"
+  },
+  {
+    "type": "table",
+    "title": "Rodzaje nierówności wielomianowych",
+    "headers": [
+      "Stopień",
+      "Przykład"
+    ],
+    "rows": [
+      [
+        "Liniowa",
+        "x + 2 > 0"
+      ],
+      [
+        "Kwadratowa",
+        "x^2 + 3x - 4 > 0"
+      ],
+      [
+        "Sześcienna",
+        "x^3 - 2x^2 - 5x + 6 > 0"
+      ]
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz rozwiązywać nierówności wielomianowe o różnych stopniach i rodzajach. Pamiętaj, że rozwiązywanie nierówności wielomianowych wymaga zrozumienia własności funkcji wielomianowych i umiejętności analizy przypadków"
+  }
+]$content6$::jsonb,
+  5
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Nierówności wymierne
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rownania-nierownosci'),
+  $title7$Nierówności wymierne$title7$,
+  $content7$[
+  {
+    "type": "intro",
+    "text": "Wszystkie podaneTypeDefinicje i wzory nierówności wymiernych, są one ważne w sytuacjach, gdzie zachodzą one wraz z warunkami równości."
+  },
+  {
+    "type": "definition",
+    "term": "Nierówności wymierne",
+    "text": "To nierówności postaci $\\frac{f(x)}{g(x)} > 0$ lub $\\frac{f(x)}{g(x)} < 0$, gdzie $f(x)$ i $g(x)$ są funkcjami wymiernymi, tzn. ilorazami wielomianów.",
+    "formula": "\\frac{f(x)}{g(x)} > 0, \\frac{f(x)}{g(x)} < 0"
+  },
+  {
+    "type": "formula",
+    "title": "Przykładowa nierówność wymierna",
+    "expression": "\\frac{x^2 + 2x - 3}{x^2 - 4} > 0",
+    "variables": [
+      {
+        "meaning": "zmienna niezależna",
+        "symbol": "x"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Rozwiązywanie nierówności wymiernych",
+    "items": [
+      {
+        "answer": "$x \\in (-\\infty, -3) \\cup (1, 3) \\cup (3, \\infty)$",
+        "problem": "$\\frac{x^2 - 4x + 3}{x^2 - 9} > 0$",
+        "steps": [
+          {
+            "text": "Rozwiązujemy równania $x^2 - 4x + 3 = 0$ i $x^2 - 9 = 0$."
+          },
+          {
+            "text": "Korzystamy z reguły znaków, aby określić, gdzie wyrażenie $\\frac{x^2 - 4x + 3}{x^2 - 9}$ jest dodatnie."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaka jest wartość x, dla której $\\frac{x^2 - 4}{x + 2} = 0$?",
+    "options": [
+      "-2",
+      "-1",
+      "1",
+      "2"
+    ],
+    "correctIndex": 3,
+    "explanation": "$\\frac{x^2 - 4}{x + 2} = \\frac{(x + 2)(x - 2)}{x + 2} = x - 2$, więc $x - 2 = 0$ i $x = 2$."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie nierówności wymiernych z wieloma warunkami",
+    "problem": "$\\frac{x^2 + 3x + 2}{x^2 - x - 6} > 0$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "-1",
+          "-2"
+        ],
+        "correctIndex": 0,
+        "formula": "(x + 1)(x + 2) = 0",
+        "kind": "input",
+        "options": [],
+        "prompt": " Rozwiązuję równanie $x^2 + 3x + 2 = 0$",
+        "reveal": "Rozwiązania to $x = -1$ i $x = -2$."
+      },
+      {
+        "acceptedAnswers": [
+          "-2",
+          "3"
+        ],
+        "correctIndex": 0,
+        "formula": "(x - 3)(x + 2) = 0",
+        "kind": "input",
+        "options": [],
+        "prompt": " Rozwiązuję równanie $x^2 - x - 6 = 0$",
+        "reveal": "Rozwiązania to $x = -2$ i $x = 3$."
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Ten temat jest dość skomplikowany, więc upewnij się, że masz dobre przygotowanie w zakresie podstaw algebraicznych, by móc go zrozumieć i rozwiązywać nierówności wymierne."
+  }
+]$content7$::jsonb,
+  6
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Równania kwadratowe z parametrem i wzory Viète'a
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rownania-nierownosci'),
+  $title8$Równania kwadratowe z parametrem i wzory Viète'a$title8$,
+  $content8$[
+  {
+    "type": "intro",
+    "text": "Równania kwadratowe z parametrem to jeden z najważniejszych tematów w matematyce, zwłaszcza na maturze rozszerzonej. Wzory Viète'a są bardzo przydatne w rozwiązywaniu równań kwadratowych, dlatego w tej lekcji będziemy się ich uczyć."
+  },
+  {
+    "type": "definition",
+    "term": "Wzory Viète'a",
+    "text": "Wzory Viète'a to trzy wzory, które pozwalają na wyznaczenie sumy i iloczynu pierwiastków równania kwadratowego. Są one następujące: $x_1 + x_2 = -\\frac{b}{a}$, $x_1x_2 = \\frac{c}{a}$.",
+    "formula": "\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+  },
+  {
+    "type": "formula",
+    "title": "Wzory Viète'a",
+    "expression": "x_1 + x_2 = -\\frac{b}{a}",
+    "variables": [
+      {
+        "meaning": "współczynnik przy x^2",
+        "symbol": "a"
+      },
+      {
+        "meaning": "współczynnik przy x",
+        "symbol": "b"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "c"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykład 1",
+    "items": [
+      {
+        "answer": "x_1 + x_2 = -5",
+        "problem": "Rozwiąż równanie $x^2 + 5x + 6 = 0$.",
+        "steps": [
+          {
+            "formula": "x = \\frac{-5 \\pm \\sqrt{25 - 24}}{2}",
+            "text": "Wzór kwadratowy to $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$."
+          },
+          {
+            "formula": "x = \\frac{-5 \\pm 1}{2}",
+            "text": "Zastąpmy wartości a, b, c."
+          },
+          {
+            "formula": "x_1 + x_2 = -2 + (-3)",
+            "text": "Pierwiastki to -2 i -3."
+          },
+          {
+            "formula": "x_1 + x_2 = -\\frac{5}{1}",
+            "text": "Suma pierwiastków to -5."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest iloczyn pierwiastków równania $x^2 + 5x + 6 = 0$?",
+    "options": [
+      "-6",
+      "-5",
+      "6",
+      "5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Iloczyn pierwiastków to $x_1x_2 = \\frac{c}{a} = \\frac{6}{1} = 6$"
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Wyznaczanie parametru m",
+    "problem": "Rozwiąż równanie $x^2 + mx + 6 = 0$.",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "3"
+        ],
+        "formula": "x = \\frac{-m \\pm \\sqrt{m^2 - 24}}{2}",
+        "kind": "input",
+        "prompt": "Wprowadź wartość m",
+        "reveal": "Poprawna odpowiedź to m = 3"
+      },
+      {
+        "acceptedAnswers": [
+          "-2"
+        ],
+        "formula": "x = \\frac{-3 \\pm 1}{2}",
+        "kind": "input",
+        "prompt": "Wprowadź wartość x",
+        "reveal": "Poprawna odpowiedź to x = -2"
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz stosować wzory Viète'a w różnych sytuacjach."
+  }
+]$content8$::jsonb,
+  7
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Układy równań
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'rownania-nierownosci'),
+  $title9$Układy równań$title9$,
+  $content9$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji teorii na temat \"Układy równań\". Podczas tej lekcji dowiesz się, jak rozwiązywać układy równań, w tym układy składające się z jednego równania liniowego i jednego równania kwadratowego, oraz układy dwóch równań kwadratowych. Nauczysz się także, jak stosować metody podstawiania i rozwiązywania układów równań."
+  },
+  {
+    "type": "definition",
+    "term": "Układ równań",
+    "text": "Układ równań to zbiór dwóch lub więcej równań, które muszą być spełnione jednocześnie. Równania w układzie mogą być liniowe, kwadratowe lub wyższych stopni.",
+    "formula": "\\begin{cases} ax + by = c \\\\ dx + ey = f \\end{cases}"
+  },
+  {
+    "type": "formula",
+    "title": "Metoda podstawiania",
+    "expression": "y = \\frac{c - ax}{b}",
+    "variables": [
+      {
+        "meaning": "współczynnik przy x",
+        "symbol": "a"
+      },
+      {
+        "meaning": "współczynnik przy y",
+        "symbol": "b"
+      },
+      {
+        "meaning": "stała",
+        "symbol": "c"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": " Rozwiązanie układu równań",
+    "items": [
+      {
+        "answer": "x = 1, y = \\frac{3}{2}",
+        "problem": "Rozwiąż układ równań: $\\begin{cases} x + 2y = 4 \\\\ x^2 + y^2 = 5 \\end{cases}$",
+        "steps": [
+          {
+            "text": "W pierwszym równaniu wyodrębnij y: $y = \\frac{4 - x}{2}$"
+          },
+          {
+            "text": "Podstaw wyrażenie dla y do drugiego równania: $x^2 + (\\frac{4 - x}{2})^2 = 5$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązywanie układu równań",
+    "problem": "$\\begin{cases} x + y = 3 \\\\ x^2 + y^2 = 9 \\end{cases}$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "1",
+          "2",
+          "3"
+        ],
+        "formula": "y = 3 - x",
+        "kind": "input",
+        "prompt": "Wprowadź wartość x do pierwszego równania",
+        "reveal": "y = 2"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest największy stopsień równań, które mogą być rozwiązane przy pomocy metody podstawiania?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "Metoda podstawiania jest najbardziej efektywna dla układów liniowych i kwadratowych."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli potrafisz rozwiązać układy równań liniowych i kwadratowych przy użyciu metody podstawiania i innymi metodami."
+  }
+]$content9$::jsonb,
+  8
+);

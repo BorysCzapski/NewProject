@@ -713,3 +713,192 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 ]$content4$::jsonb,
   3
 );
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Ciąg arytmetyczny i geometryczny
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'ciagi'),
+  $title5$Ciąg arytmetyczny i geometryczny$title5$,
+  $content5$[
+  {
+    "type": "intro",
+    "text": "Witaj w lekcji na temat ciągów arytmetycznych i geometrycznych. Ciągi te są podstawowymi pojęciami w matematyce i są wykorzystywane w wielu dziedzinach, takich jak algebra, analiza matematyczna, a nawet fizyka i inżynieria. W tej lekcji będziemy się zajmować definicjami, wzorami i przykładami ciągów arytmetycznych i geometrycznych."
+  },
+  {
+    "type": "definition",
+    "term": "Ciąg arytmetyczny",
+    "text": "Ciąg arytmetyczny to ciąg liczb, w którym każda następna liczba jest otrzymywana przez dodanie stałej wartości do poprzedniej liczby. Ta stała wartość nazywa się współczynnikiem arytmetycznym.",
+    "formula": "\\frac{a_n - a_{n-1}}{1} = r"
+  },
+  {
+    "type": "definition",
+    "term": "Ciąg geometryczny",
+    "text": "Ciąg geometryczny to ciąg liczb, w którym każda następna liczba jest otrzymywana przez pomnożenie poprzedniej liczby przez stałą wartość. Ta stała wartość nazywa się współczynnikiem geometrycznym.",
+    "formula": "a_n = a_1 * r^{n-1}"
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady ciągów arytmetycznych i geometrycznych",
+    "items": [
+      {
+        "answer": "a_n = 2 + 3(n-1)",
+        "problem": "Ciąg arytmetyczny: 2, 5, 8, 11, ...",
+        "steps": [
+          {
+            "text": "Współczynnik arytmetyczny to 3, ponieważ każda następna liczba jest otrzymywana przez dodanie 3 do poprzedniej liczby."
+          },
+          {
+            "text": "Ciąg ten można przedstawić jako: $a_n = 2 + 3(n-1)$"
+          }
+        ]
+      },
+      {
+        "answer": "a_n = 2 * 3^{n-1}",
+        "problem": "Ciąg geometryczny: 2, 6, 18, 54, ...",
+        "steps": [
+          {
+            "text": "Współczynnik geometryczny to 3, ponieważ każda następna liczba jest otrzymywana przez pomnożenie poprzedniej liczby przez 3."
+          },
+          {
+            "text": "Ciąg ten można przedstawić jako: $a_n = 2 * 3^{n-1}$"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Jaki jest współczynnik arytmetyczny w ciągu: 1, 4, 7, 10, ...?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Współczynnik arytmetyczny to 3, ponieważ każda następna liczba jest otrzymywana przez dodanie 3 do poprzedniej liczby."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Rozwiązanie problemu",
+    "problem": "Ciąg arytmetyczny: 2, 5, 8, 11, ... . Jaki jest wzór na $n$-tą liczbę w tym ciągu?",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "3"
+        ],
+        "formula": "",
+        "kind": "input",
+        "prompt": "Współczynnik arytmetyczny to...",
+        "reveal": "Współczynnik arytmetyczny to 3, ponieważ każda następna liczba jest otrzymywana przez dodanie 3 do poprzedniej liczby."
+      },
+      {
+        "acceptedAnswers": [
+          "a_n = 2 + 3(n-1)"
+        ],
+        "formula": "a_n = 2 + 3(n-1)",
+        "kind": "input",
+        "prompt": "Ciąg ten można przedstawić jako...",
+        "reveal": "Ciąg ten można przedstawić jako: $a_n = 2 + 3(n-1)$"
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś/aś, jeśli wiesz, jak obliczyć współczynnik arytmetyczny i geometryczny, oraz jak przedstawić ciąg arytmetyczny i geometryczny za pomocą wzoru."
+  }
+]$content5$::jsonb,
+  4
+);
+
+-- ----------------------------------------------------------------------------
+-- Lesson (AI-generated addition, temat-fill 2026-08): Szeregi geometryczne
+-- ----------------------------------------------------------------------------
+insert into math_lessons (topic_id, title, content, order_index) values (
+  (select id from math_topics where slug = 'ciagi'),
+  $title6$Szeregi geometryczne$title6$,
+  $content6$[
+  {
+    "type": "intro",
+    "text": "Witaj na lekcji teorii szeregów geometrycznych! Szeregi geometryczne to jeden z podstawowych tematów w matematyce, szczególnie ważny na maturze rozszerzonej. W tej lekcji dowiesz się, jak badać zbieżność szeregu geometrycznego i jak obliczyć jego sumę."
+  },
+  {
+    "type": "definition",
+    "term": "Szereg geometryczny",
+    "text": "Szereg geometryczny to szereg postaci $a + ar + ar^2 + \\cdots + ar^{n-1} + \\cdots$, gdzie $a$ jest pierwszym wyrazem, a $r$ jest współczynnikiem ilorazowym.",
+    "formula": "a + ar + ar^2 + \\cdots + ar^{n-1} + \\cdots"
+  },
+  {
+    "type": "formula",
+    "title": "Wzór na sumę szeregu geometrycznego",
+    "expression": "\\frac{a}{1-r}",
+    "variables": [
+      {
+        "meaning": "pierwszy wyraz",
+        "symbol": "a"
+      },
+      {
+        "meaning": "współczynnik ilorazowy",
+        "symbol": "r"
+      }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Przykłady",
+    "items": [
+      {
+        "answer": "Pierwszy wyraz: $2$, współczynnik ilorazowy: $3$",
+        "problem": "Jaki jest pierwszy wyraz i współczynnik ilorazowy w szeregu $2 + 6 + 18 + \\cdots$?",
+        "steps": [
+          {
+            "text": "Pierwszy wyraz to $2$, a współczynnik ilorazowy to $3$."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Czy szereg $1 + \\frac{1}{2} + \\frac{1}{4} + \\cdots$ jest zbieżny?",
+    "options": [
+      "Tak",
+      "Nie"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tak, szereg jest zbieżny, ponieważ $|r| < 1$."
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Obliczanie sumy szeregu geometrycznego",
+    "problem": "Jaki jest sumy szeregu $2 + 6 + 18 + \\cdots$?",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "2, 3"
+        ],
+        "formula": "\\frac{2}{1-3}",
+        "kind": "input",
+        "prompt": "Podaj pierwszy wyraz i współczynnik ilorazowy",
+        "reveal": "Pierwszy wyraz to $2$, a współczynnik ilorazowy to $3$."
+      },
+      {
+        "acceptedAnswers": [
+          "-1"
+        ],
+        "kind": "input",
+        "prompt": "Oblicz sumę szeregu",
+        "reveal": "Suma szeregu wynosi $-1$."
+      }
+    ]
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie badać zbieżność szeregu geometrycznego i obliczyć jego sumę. Pamiętaj, że $|r| < 1$ jest warunkiem niezbędnym dla zbieżności szeregu!"
+  }
+]$content6$::jsonb,
+  5
+);
