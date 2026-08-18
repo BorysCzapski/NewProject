@@ -8,6 +8,7 @@
 import {
   Calculator,
   Church,
+  Compass,
   GraduationCap,
   Hammer,
   Languages,
@@ -24,6 +25,7 @@ import {
 const ICONS: Record<string, LucideIcon> = {
   Calculator,
   Church,
+  Compass,
   GraduationCap,
   Hammer,
   Languages,

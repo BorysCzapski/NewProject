@@ -1068,3 +1068,193 @@ export interface BottleCoupon {
   image_path: string;
   created_at: string;
 }
+
+// ============================================================================
+// Geografia — matura rozszerzona z geografii exam prep. Mirrors
+// supabase/migrations/0015_geografia.sql. Sibling to Matma/Matura Angielski:
+// shared content (topics/exercises) + per-user attempts, mastery-per-topic,
+// spaced review. Open-answer grading is DELIBERATELY not AI-authoritative
+// (see lib/geografia/grading.ts) — the student self-assesses against a
+// rubric, AI only supplies a hint, per product requirement.
+// ============================================================================
+export type GeoExerciseType = "mc" | "open" | "map";
+export type GeoExerciseSource = "built_in" | "ai_generated" | "uploaded";
+/** 'layer_select' is reserved for a future thematic-layer picker — schema-only for now. */
+export type GeoMapInteraction = "point" | "region" | "layer_select";
+export type GeoAnnotationType = "note" | "highlight";
+export type GeoFileStatus = "processing" | "ready" | "failed";
+
+export interface GeoTopic {
+  id: string;
+  cke_number: string;
+  slug: string;
+  title: string;
+  description: string;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GeoFile {
+  id: string;
+  user_id: string;
+  title: string;
+  mime_type: string;
+  size_bytes: number;
+  storage_path: string;
+  status: GeoFileStatus;
+  error_message: string | null;
+  exercises_extracted: number;
+  created_at: string;
+}
+
+export interface GeoExercisePrompt {
+  statement: string;
+  imageUrl?: string;
+}
+
+export interface GeoMcOption {
+  id: string;
+  text: string;
+}
+
+export interface GeoMcCorrectAnswer {
+  correctOptionIds: string[];
+}
+
+export interface GeoOpenCorrectAnswer {
+  modelAnswer: string;
+  rubric: string[];
+}
+
+export interface GeoExercise {
+  id: string;
+  topic_id: string;
+  type: GeoExerciseType;
+  difficulty: 1 | 2 | 3;
+  points_max: number;
+  prompt: GeoExercisePrompt;
+  options: GeoMcOption[] | null;
+  correct_answer: GeoMcCorrectAnswer | GeoOpenCorrectAnswer | null;
+  hints: string[];
+  source: GeoExerciseSource;
+  needs_review: boolean;
+  file_id: string | null;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface GeoMapPointInput {
+  center: [number, number];
+  zoom: number;
+}
+
+export interface GeoMapRegionFeatureProperties {
+  regionId: string;
+  label: string;
+}
+
+export interface GeoMapRegionInput {
+  center: [number, number];
+  zoom: number;
+  geojson: {
+    type: "FeatureCollection";
+    features: Array<{
+      type: "Feature";
+      properties: GeoMapRegionFeatureProperties;
+      geometry: { type: "Polygon" | "MultiPolygon"; coordinates: unknown };
+    }>;
+  };
+}
+
+export interface GeoMapPointAnswer {
+  lat: number;
+  lng: number;
+  toleranceKm: number;
+}
+
+export interface GeoMapRegionAnswer {
+  correctRegionIds: string[];
+  partialRegionIds?: string[];
+}
+
+export interface GeoMapTask {
+  id: string;
+  exercise_id: string;
+  interaction_type: GeoMapInteraction;
+  input_data: GeoMapPointInput | GeoMapRegionInput | Record<string, unknown>;
+  correct_answer: GeoMapPointAnswer | GeoMapRegionAnswer | Record<string, unknown>;
+  feedback_description: string | null;
+}
+
+/** Hint-only AI output for an open-answer attempt — NEVER drives points_awarded. */
+export interface GeoExerciseAiFeedback {
+  hint: string;
+  matchedRubricPoints: string[];
+  missingRubricPoints: string[];
+}
+
+export interface GeoMcAnswer {
+  selectedOptionIds: string[];
+}
+export interface GeoOpenAnswer {
+  text: string;
+}
+export interface GeoMapPointGivenAnswer {
+  lat: number;
+  lng: number;
+}
+export interface GeoMapRegionGivenAnswer {
+  regionId: string;
+}
+
+export interface GeoExerciseAttempt {
+  id: string;
+  exercise_id: string;
+  user_id: string;
+  answer: GeoMcAnswer | GeoOpenAnswer | GeoMapPointGivenAnswer | GeoMapRegionGivenAnswer;
+  points_awarded: number;
+  points_max: number;
+  self_assessed: boolean;
+  ai_feedback: GeoExerciseAiFeedback | null;
+  duration_seconds: number | null;
+  attempted_at: string;
+}
+
+export interface GeoTopicProgress {
+  id: string;
+  user_id: string;
+  topic_id: string;
+  status: MasteryStatus;
+  mastery_score: number;
+  solved_count: number;
+  last_reviewed_at: string | null;
+  updated_at: string;
+}
+
+export interface GeoProgressSnapshot {
+  id: string;
+  user_id: string;
+  snapshot_at: string;
+  estimated_percent: number;
+  topic_breakdown: Record<string, number>;
+}
+
+export interface GeoFavorite {
+  user_id: string;
+  exercise_id: string;
+  created_at: string;
+}
+
+export interface GeoAnnotation {
+  id: string;
+  file_id: string;
+  user_id: string;
+  page_number: number;
+  type: GeoAnnotationType;
+  content: string;
+  excerpt: string | null;
+  color: string | null;
+  created_at: string;
+  updated_at: string;
+}

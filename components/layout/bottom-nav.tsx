@@ -25,6 +25,8 @@ import {
   TrendingUp,
   Target,
   GraduationCap,
+  Compass,
+  Upload,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -44,6 +46,8 @@ const ICONS = {
   TrendingUp,
   Target,
   GraduationCap,
+  Compass,
+  Upload,
 };
 
 export function BottomNav() {
