@@ -52,6 +52,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/matma",
   },
   {
+    id: "matura",
+    name: "Matura Angielski",
+    description: "Przygotowanie do matury z języka angielskiego (CKE)",
+    section: "nauka",
+    icon: "ScrollText",
+    href: "/matura",
+  },
+  {
     id: "kuznia",
     name: "Kuźnia",
     description: "Kreator promptów do budowy kolejnych aplikacji",

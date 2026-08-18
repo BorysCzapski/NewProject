@@ -57,7 +57,8 @@ export interface NavItem {
     | "Wallet"
     | "PiggyBank"
     | "TrendingUp"
-    | "Target";
+    | "Target"
+    | "GraduationCap";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -97,12 +98,20 @@ export const PARAGONY_NAV: NavItem[] = [
   { href: "/paragony/cele", label: "Cele", icon: "Target" },
 ];
 
+export const MATURA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/matura", label: "Dziś", icon: "GraduationCap", exact: true },
+  { href: "/matura/nauka", label: "Nauka", icon: "BookOpen" },
+  { href: "/matura/ustawienia", label: "Poziom", icon: "ClipboardList" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
   { prefix: "/kuznia", items: KUZNIA_NAV },
   { prefix: "/matma", items: MATMA_NAV },
   { prefix: "/paragony", items: PARAGONY_NAV },
+  { prefix: "/matura", items: MATURA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 
@@ -138,6 +147,7 @@ export const ACTIVITY_TYPES = {
   LISTENING: "listening",
   MATCHING: "matching",
   MATH: "math",
+  MATURA: "matura",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 

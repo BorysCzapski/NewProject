@@ -38,6 +38,20 @@ posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla G
 zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
 z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
 
+Piąta mini-aplikacja to **Matura Angielski** (`/matura`) — przygotowanie do matury z języka
+angielskiego (CKE), poziom podstawowy lub rozszerzony (wybór na starcie, zmienialny w każdej
+chwili). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
+tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
+(edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie. Dziś w
+pełni działa dział **Znajomość środków językowych**: krótka lekcja (słowotwórstwo, parafrazy,
+struktury gramatyczne) + bank zadań (słowotwórstwo, wybór wielokrotny, parafraza jednym wyrazem,
+parafraza ze słowem kluczowym) oceniany programistycznie (dokładne dopasowanie znormalizowanej
+odpowiedzi — bez AI). Pozostałe trzy działy są zasiane jako rekordy (nawigacja/dashboard mają się
+do czego odnieść), ale oznaczone „wkrótce" — ich lekcje/bank zadań to kolejny krok. Schemat bazy
+(`supabase/migrations/0013_matura.sql`) jest już przygotowany na pełny docelowy zakres: bank zadań
+z czterech źródeł (tematyczne/CKE/kuratorowane/AI, jak w Matmie), symulacje egzaminu, plan nauki do
+dnia matury, panel nauczyciela z przydzielaniem ćwiczeń — czekają na UI w kolejnych sesjach.
+
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
 w pełni osobny realm dla scholi kościelnej: własna rejestracja/logowanie (`/schola/logowanie`,
@@ -152,6 +166,11 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       (śpiewnik), `schola_mass_plans` + `schola_mass_plan_items` (planowanie Mszy); RLS
       oparta o funkcję `is_schola_member()`, nie o własność wiersza — brak bucketu Storage
       (import PDF/zdjęcia jest przetwarzany tymczasowo, nic nie jest trwale zapisywane).
+   10. `supabase/migrations/0013_matura.sql` — schemat Matury Angielski: cztery części
+      egzaminu per poziom (`matura_sections`), lekcje, bank zadań, próby, symulacje
+      egzaminu, postęp per część, migawki postępu, plan nauki, przydzielone ćwiczenia
+      i wybrany poziom matury (`matura_settings`) — pełny docelowy zakres (patrz opis
+      aplikacji wyżej), choć dziś tylko dział „Znajomość środków językowych" ma treść.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -177,6 +196,15 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    16. Prawdziwe zadania maturalne CKE (`source: 'past_exam'`) **nie** są w plikach seed —
       importuje je administrator jednorazowym skryptem z panelu `/matma/admin/import`
       (patrz `lib/matma/import-past-exams.ts`), nie jest to część standardowego seedowania.
+
+   **Seed — Matura Angielski:**
+   17. `supabase/seed/matura/01_sections.sql` — 4 części egzaminu × 2 poziomy
+      (`matura_sections`), z wagami punktowymi (przybliżenie, patrz opis aplikacji wyżej).
+   18. `supabase/seed/matura/02_lessons_srodki_jezykowe.sql` — po jednej lekcji na poziom
+      dla działu „Znajomość środków językowych" (treść jsonb w formacie `GrammarBlock`,
+      ten sam renderer co lekcje gramatyki w Linguo). Uruchom `01_sections.sql` wcześniej.
+   19. `supabase/seed/matura/03_tasks_srodki_jezykowe.sql` — kuratorowany bank zadań
+      (`source: 'curated'`), po 3 zadania na poziom. Uruchom `01_sections.sql` wcześniej.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -294,6 +322,11 @@ app/
       plan/              # harmonogram nauki do daty matury
       kalendarz/         # kalendarz aktywności (reużywa components/calendar)
       admin/             # panel nauczyciela + import zadań maturalnych CKE
+    matura/            # MATURA ANGIELSKI — matura z języka angielskiego (CKE)
+      page.tsx          # dashboard: wybór poziomu (pierwsza wizyta) / szacowany wynik
+      nauka/             # hub 4 części egzaminu (tylko środki-jezykowe zbudowane)
+        srodki-jezykowe/  # lekcja + bank zadań + ekran próby zadania
+      ustawienia/        # zmiana poziomu matury (podstawowa/rozszerzona)
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/
   ui/                # podstawowe komponenty (Button, Card, Input, Badge, ...)
@@ -301,6 +334,8 @@ components/
   phoenix/           # komponenty powłoki (ikony aplikacji, menedżer)
   matma/             # komponenty Matmy: lesson/ (bloki lekcji), problem/ (rysik,
                      # ocena AI), exam/, diagnostic/, plan/, dashboard/, admin/
+  matura/            # komponenty Matury Angielski: poziom, dashboard, lista części,
+                     # próba zadania (reużywa components/grammar/lesson dla treści)
   <moduł>/           # komponenty specyficzne dla danego modułu Linguo
 lib/
   phoenix/           # rejestr aplikacji + akcje powłoki
@@ -310,10 +345,13 @@ lib/
   homework/progress.ts # automatyczne liczenie postępu prac domowych
   matma/             # silnik Matmy: mastery per dział, ocena AI, egzamin,
                      # diagnoza, plan nauki, dashboard, akcje, import CKE
+  matura/            # silnik Matury Angielski: sekcje, ocena programistyczna
+                     # (bez AI), mastery per część, szacowany wynik, akcje
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
-  migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola)
-  seed/               # dane początkowe (admin, słówka, gramatyka, matma/)
+  migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
+                     # 0013 = Matura Angielski)
+  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
