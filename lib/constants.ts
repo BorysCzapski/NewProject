@@ -58,7 +58,9 @@ export interface NavItem {
     | "PiggyBank"
     | "TrendingUp"
     | "Target"
-    | "GraduationCap";
+    | "GraduationCap"
+    | "Compass"
+    | "Upload";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -105,6 +107,14 @@ export const MATURA_NAV: NavItem[] = [
   { href: "/matura/ustawienia", label: "Poziom", icon: "ClipboardList" },
 ];
 
+export const GEOGRAFIA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/geografia", label: "Dziś", icon: "Compass", exact: true },
+  { href: "/geografia/tematy", label: "Tematy", icon: "BookOpen" },
+  { href: "/geografia/postepy", label: "Postępy", icon: "TrendingUp" },
+  { href: "/geografia/wgraj", label: "Wgraj", icon: "Upload" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
@@ -112,6 +122,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/matma", items: MATMA_NAV },
   { prefix: "/paragony", items: PARAGONY_NAV },
   { prefix: "/matura", items: MATURA_NAV },
+  { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 
@@ -148,6 +159,7 @@ export const ACTIVITY_TYPES = {
   MATCHING: "matching",
   MATH: "math",
   MATURA: "matura",
+  GEOGRAFIA: "geografia",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 

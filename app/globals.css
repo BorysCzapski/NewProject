@@ -175,3 +175,15 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Geografia progress report (app/(main)/geografia/raport): hide the app
+   shell's chrome when printing/saving-as-PDF, keep only the report content. */
+@media print {
+  nav,
+  header {
+    display: none !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+}

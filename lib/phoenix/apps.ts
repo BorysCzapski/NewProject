@@ -60,6 +60,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/matura",
   },
   {
+    id: "geografia",
+    name: "Geografia",
+    description: "Matura rozszerzona z geografii: 23 działy CKE, mapy, powtórki",
+    section: "nauka",
+    icon: "Compass",
+    href: "/geografia",
+  },
+  {
     id: "kuznia",
     name: "Kuźnia",
     description: "Kreator promptów do budowy kolejnych aplikacji",
