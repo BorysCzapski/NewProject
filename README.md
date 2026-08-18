@@ -60,11 +60,17 @@ tematy z Informatora CKE; rozprawka za i przeciw na rozszerzonym — w tym prawd
 2023-2025) z własną, oryginalną wzorcową odpowiedzią odsłanianą po wysłaniu własnej pracy. Ocena
 wypowiedzi pisemnej jest analityczna wg 4 kryteriów CKE (Groq, z twardo wymuszaną w kodzie zasadą
 „gilotyny" długości tekstu — poniżej progu słów pozostałe kryteria są zerowane niezależnie od oceny
-AI), nie jednym zbiorczym wynikiem. Schemat bazy (`supabase/migrations/0013_matura.sql`,
-`0014_matura_writing.sql`) jest już przygotowany na pełny docelowy zakres: bank zadań z czterech
-źródeł (tematyczne/CKE/kuratorowane/AI, jak w Matmie),
-symulacje egzaminu, plan nauki do dnia matury, panel nauczyciela z przydzielaniem ćwiczeń — czekają
-na UI w kolejnych sesjach.
+AI), nie jednym zbiorczym wynikiem. Panel administratora (`/matura/admin/import`, widoczny na
+dashboardzie tylko dla `role = 'admin'`) pozwala wgrać dowolny arkusz maturalny z poprzednich lat
+jako PDF (opcjonalnie razem z osobnym plikiem klucza odpowiedzi, co poprawia trafność odpowiedzi w
+zadaniach zamkniętych) — AI wyodrębnia z niego zadania środków językowych, czytania i pisania
+(zawsze `source: 'curated'` + `needsReview: true`, świadomie ostrożniejsze niż automatyczny
+pipeline Matmy, bo nie da się algorytmicznie zweryfikować, że wgrany PDF to naprawdę niezmieniony
+arkusz CKE — patrz `lib/matura/import-pdf.ts`). „Rozumienie ze słuchu" jest z tego importu świadomie
+wykluczone: arkusz to sam tekst, bez nagrania, a CKE nawet nie drukuje transkrypcji zadań na
+słuchanie. Schemat bazy (`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`) jest już
+przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
+przydzielanie ćwiczeń uczniom — czekają na UI w kolejnych sesjach.
 
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
@@ -369,6 +375,7 @@ app/
         pisanie/          # osobna trasa: lekcja + bank zadań pisemnych + kompozycja
                           # oceniana przez AI (inny model danych — patrz opis wyżej)
       ustawienia/        # zmiana poziomu matury (podstawowa/rozszerzona)
+      admin/import/      # panel admina: import arkusza PDF (+ opcjonalny klucz odpowiedzi)
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/
   ui/                # podstawowe komponenty (Button, Card, Input, Badge, ...)
