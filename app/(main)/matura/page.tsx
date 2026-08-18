@@ -6,7 +6,7 @@
 // /onboarding for Linguo.
 // ============================================================================
 import Link from "next/link";
-import { ChevronRight, Settings2 } from "lucide-react";
+import { ChevronRight, Settings2, UploadCloud } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
@@ -74,6 +74,19 @@ export default async function MaturaDashboardPage() {
         </span>
         <ChevronRight className="h-4 w-4 text-foreground-muted" />
       </Link>
+
+      {profile.role === "admin" && (
+        <Link
+          href="/matura/admin/import"
+          className="flex items-center justify-between gap-2 rounded-(--radius-card) border border-border bg-surface px-4 py-3.5 active:opacity-80"
+        >
+          <span className="flex items-center gap-2 text-sm font-medium text-foreground">
+            <UploadCloud className="h-4 w-4 text-primary" />
+            Import zadań z arkusza (admin)
+          </span>
+          <ChevronRight className="h-4 w-4 text-foreground-muted" />
+        </Link>
+      )}
     </div>
   );
 }
