@@ -24,6 +24,7 @@ import {
   PiggyBank,
   TrendingUp,
   Target,
+  GraduationCap,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -42,6 +43,7 @@ const ICONS = {
   PiggyBank,
   TrendingUp,
   Target,
+  GraduationCap,
 };
 
 export function BottomNav() {

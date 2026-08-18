@@ -15,6 +15,7 @@ import {
   Music4,
   ReceiptText,
   Recycle,
+  ScrollText,
   Sparkles,
   Wrench,
   type LucideIcon,
@@ -29,6 +30,7 @@ const ICONS: Record<string, LucideIcon> = {
   Music4,
   ReceiptText,
   Recycle,
+  ScrollText,
   Sparkles,
   Wrench,
 };

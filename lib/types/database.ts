@@ -801,6 +801,261 @@ export interface TextbookGrammarExercise {
   order_index: number;
 }
 
+// ============================================================================
+// Matura Angielski — CKE English matura exam prep (poziom podstawowy /
+// rozszerzony). Mirrors supabase/migrations/0013_matura.sql. Sibling to
+// Matma (lib/matma/*), same shape: shared content (sections/lessons/task
+// bank) + per-user attempts, mastery-per-section, mock exams, study plan.
+// ============================================================================
+
+export type MaturaLevel = "podstawowa" | "rozszerzona";
+export type MaturaTaskSource = "topic" | "past_exam" | "curated" | "ai_generated";
+export type MaturaMockExamStatus = "in_progress" | "completed" | "abandoned";
+export type MaturaStudyPlanWeekStatus =
+  | "upcoming"
+  | "in_progress"
+  | "completed"
+  | "partially_completed"
+  | "skipped";
+
+/** The 4 CKE exam parts — see lib/matura/sections.ts MATURA_SECTION_SLUGS. */
+export type MaturaSectionSlug = "sluchanie" | "czytanie" | "srodki-jezykowe" | "pisanie";
+
+export interface MaturaSection {
+  id: string;
+  level: MaturaLevel;
+  slug: MaturaSectionSlug;
+  title: string;
+  description: string;
+  order_index: number;
+  exam_weight: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaLesson {
+  id: string;
+  section_id: string;
+  title: string;
+  // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
+  // to avoid a client-type <-> db-type import cycle; cast at the call site
+  // (same pattern as MathLesson.content / TextbookGrammarTopic.blocks).
+  content: unknown[];
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export type MaturaTaskItemType = "gap_fill" | "multiple_choice";
+
+export interface MaturaTaskItem {
+  id: string;
+  type: MaturaTaskItemType;
+  /** Sentence/question for this sub-item, e.g. "I wish I ___ (KNOW) the answer sooner." */
+  prompt: string;
+  /** The base word to transform, shown separately — słowotwórstwo-style items. */
+  transformWord?: string;
+  /** multiple_choice only. */
+  options?: string[];
+  /** Accepted answers, exact-normalized match (see lib/matura/grading.ts) —
+   * for multiple_choice, the single correct option text. */
+  correctAnswers: string[];
+  explanation?: string;
+}
+
+export interface MaturaTaskContent {
+  instructions: string;
+  /** Optional shared reading passage/context for the item group. */
+  passage?: string;
+  /** Listening tasks only: embeds a real YouTube video the student plays
+   * while answering — see components/matura/task-attempt-form.tsx. */
+  youtubeVideoId?: string;
+  items: MaturaTaskItem[];
+}
+
+export interface MaturaPastExamMetadata {
+  year: number;
+  session: string;
+  source_url: string;
+  needsReview?: boolean;
+}
+
+export interface MaturaCuratedMetadata {
+  attribution: string;
+  needsReview?: boolean;
+}
+
+export interface MaturaGeneratedMetadata {
+  needsReview?: boolean;
+}
+
+export interface MaturaTask {
+  id: string;
+  section_id: string;
+  content: MaturaTaskContent;
+  points_max: number;
+  source: MaturaTaskSource;
+  source_metadata: MaturaPastExamMetadata | MaturaCuratedMetadata | MaturaGeneratedMetadata | null;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface MaturaTaskItemResult {
+  itemId: string;
+  isCorrect: boolean;
+  studentAnswer: string;
+  correctAnswers: string[];
+}
+
+export interface MaturaTaskAttempt {
+  id: string;
+  task_id: string;
+  user_id: string;
+  answers: Record<string, string>;
+  points_awarded: number;
+  max_points: number;
+  item_results: MaturaTaskItemResult[];
+  mock_exam_id: string | null;
+  attempted_at: string;
+}
+
+export interface MaturaMockExamBreakdownEntry {
+  section_id: string;
+  section_title: string;
+  points_awarded: number;
+  points_max: number;
+}
+
+export interface MaturaMockExam {
+  id: string;
+  user_id: string;
+  level: MaturaLevel;
+  task_ids: string[];
+  time_limit_seconds: number;
+  started_at: string;
+  finished_at: string | null;
+  total_points: number | null;
+  max_points: number;
+  breakdown: MaturaMockExamBreakdownEntry[] | null;
+  draft_answers: Record<string, unknown>;
+  status: MaturaMockExamStatus;
+}
+
+export interface MaturaSectionProgress {
+  id: string;
+  user_id: string;
+  section_id: string;
+  status: MasteryStatus;
+  mastery_score: number;
+  diagnosed_at: string | null;
+  last_reviewed_at: string | null;
+  updated_at: string;
+}
+
+export interface MaturaProgressSnapshot {
+  id: string;
+  user_id: string;
+  level: MaturaLevel;
+  snapshot_at: string;
+  estimated_score: number;
+  estimated_percent: number;
+  section_breakdown: Record<string, number>;
+}
+
+export interface MaturaStudyPlan {
+  id: string;
+  user_id: string;
+  level: MaturaLevel;
+  exam_date: string | null;
+  weekly_hours_target: number | null;
+  generated_at: string;
+  last_recomputed_at: string | null;
+}
+
+export interface MaturaStudyPlanWeek {
+  id: string;
+  plan_id: string;
+  week_index: number;
+  target_start_date: string;
+  target_end_date: string;
+  section_ids: string[];
+  is_review_week: boolean;
+  status: MaturaStudyPlanWeekStatus;
+}
+
+export interface MaturaAssignedPractice {
+  id: string;
+  student_id: string;
+  section_id: string;
+  assigned_by: string | null;
+  note: string | null;
+  created_at: string;
+  dismissed_at: string | null;
+}
+
+export interface MaturaSettings {
+  user_id: string;
+  level: MaturaLevel;
+  created_at: string;
+  updated_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Wypowiedź pisemna (0014_matura_writing.sql) — separate from MaturaTask/
+// MaturaTaskAttempt above: a writing submission is one free-text answer
+// graded holistically against a 4-part CKE rubric, not per-item exact match.
+// ----------------------------------------------------------------------------
+
+export type MaturaWritingFormType = "email" | "blog_post" | "forum_post" | "rozprawka_za_i_przeciw";
+
+export interface MaturaWritingTask {
+  id: string;
+  section_id: string;
+  form_type: MaturaWritingFormType;
+  instructions: string;
+  content_points: string[];
+  min_words: number;
+  max_words: number;
+  points_max: number;
+  source: MaturaTaskSource;
+  source_metadata: MaturaPastExamMetadata | MaturaCuratedMetadata | MaturaGeneratedMetadata | null;
+  /** Original, full-mark-quality reference text — revealed only after the
+   * student submits their own attempt. */
+  model_answer: string;
+  model_answer_notes: string;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface MaturaWritingCriterionResult {
+  /** e.g. "tresc" | "zgodnosc" | "spojnosc" | "zakres" | "poprawnosc" */
+  key: string;
+  label: string;
+  pointsAwarded: number;
+  pointsMax: number;
+  comment: string;
+}
+
+export interface MaturaWritingAiFeedback {
+  criteria: MaturaWritingCriterionResult[];
+  totalPoints: number;
+  maxPoints: number;
+  generalFeedback: string;
+  improvementTip: string;
+}
+
+export interface MaturaWritingSubmission {
+  id: string;
+  task_id: string;
+  user_id: string;
+  content: string;
+  word_count: number;
+  points_awarded: number;
+  max_points: number;
+  ai_feedback: MaturaWritingAiFeedback;
+  created_at: string;
+}
+
 export interface BottleCounter {
   user_id: string;
   count: number;

@@ -38,6 +38,34 @@ posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla G
 zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
 z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
 
+Piąta mini-aplikacja to **Matura Angielski** (`/matura`) — przygotowanie do matury z języka
+angielskiego (CKE), poziom podstawowy lub rozszerzony (wybór na starcie, zmienialny w każdej
+chwili). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
+tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
+(edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie.
+Wszystkie cztery działy działają już dziś, każdy z lekcją (kryteria CKE, typy zadań, strategie,
+przykłady) i bankiem zadań. **Znajomość środków językowych**: słowotwórstwo, wybór wielokrotny,
+parafraza jednym wyrazem, parafraza ze słowem kluczowym — oceniane programistycznie (dokładne
+dopasowanie znormalizowanej odpowiedzi, bez AI). **Rozumienie tekstów pisanych**: wybór
+wielokrotny, dopasowanie nagłówków, prawda/fałsz, tekst z lukami zdaniowymi, dopasowanie pytań do
+fragmentów tekstu — oryginalne teksty w stylu i typach zadań prawdziwych arkuszy CKE, oceniane tak
+samo programistycznie. **Rozumienie ze słuchu**: prawdziwe, publicznie dostępne nagrania BBC
+Learning English („6 Minute English") osadzone przez ten sam odtwarzacz YouTube co moduł słuchania
+w Linguo — każde pytanie sprawdzone względem faktycznie pobranej transkrypcji nagrania (tą samą
+biblioteką co `lib/listening/fetch-transcript.ts`), a nie zgadywane. **Wypowiedź pisemna**: lekcja
+z pełnym rozkładem punktowym CKE (12 pkt podstawowa / 13 pkt rozszerzona, źródło: oficjalny
+Informator o egzaminie maturalnym), przydatnymi zwrotami i jednym w pełni omówionym przykładem na
+maksimum punktów per poziom, plus bank zadań (e-mail/wpis na blogu na podstawie — w tym prawdziwe
+tematy z Informatora CKE; rozprawka za i przeciw na rozszerzonym — w tym prawdziwe tematy z matur
+2023-2025) z własną, oryginalną wzorcową odpowiedzią odsłanianą po wysłaniu własnej pracy. Ocena
+wypowiedzi pisemnej jest analityczna wg 4 kryteriów CKE (Groq, z twardo wymuszaną w kodzie zasadą
+„gilotyny" długości tekstu — poniżej progu słów pozostałe kryteria są zerowane niezależnie od oceny
+AI), nie jednym zbiorczym wynikiem. Schemat bazy (`supabase/migrations/0013_matura.sql`,
+`0014_matura_writing.sql`) jest już przygotowany na pełny docelowy zakres: bank zadań z czterech
+źródeł (tematyczne/CKE/kuratorowane/AI, jak w Matmie),
+symulacje egzaminu, plan nauki do dnia matury, panel nauczyciela z przydzielaniem ćwiczeń — czekają
+na UI w kolejnych sesjach.
+
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
 w pełni osobny realm dla scholi kościelnej: własna rejestracja/logowanie (`/schola/logowanie`,
@@ -152,6 +180,16 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       (śpiewnik), `schola_mass_plans` + `schola_mass_plan_items` (planowanie Mszy); RLS
       oparta o funkcję `is_schola_member()`, nie o własność wiersza — brak bucketu Storage
       (import PDF/zdjęcia jest przetwarzany tymczasowo, nic nie jest trwale zapisywane).
+   10. `supabase/migrations/0013_matura.sql` — schemat Matury Angielski: cztery części
+      egzaminu per poziom (`matura_sections`), lekcje, bank zadań, próby, symulacje
+      egzaminu, postęp per część, migawki postępu, plan nauki, przydzielone ćwiczenia
+      i wybrany poziom matury (`matura_settings`) — pełny docelowy zakres (patrz opis
+      aplikacji wyżej), choć dziś tylko dwa działy mają treść.
+   11. `supabase/migrations/0014_matura_writing.sql` — schemat „Wypowiedzi pisemnej":
+      `matura_writing_tasks` (bank zadań z wzorcową odpowiedzią) i
+      `matura_writing_submissions` (oceniane analitycznie przez AI wg 4 kryteriów CKE,
+      patrz opis aplikacji wyżej) — osobne tabele od `matura_tasks`/`matura_task_attempts`
+      z 0013, bo ocena jest holistyczna, nie dopasowaniem pojedynczych odpowiedzi.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -177,6 +215,34 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
    16. Prawdziwe zadania maturalne CKE (`source: 'past_exam'`) **nie** są w plikach seed —
       importuje je administrator jednorazowym skryptem z panelu `/matma/admin/import`
       (patrz `lib/matma/import-past-exams.ts`), nie jest to część standardowego seedowania.
+
+   **Seed — Matura Angielski:**
+   17. `supabase/seed/matura/01_sections.sql` — 4 części egzaminu × 2 poziomy
+      (`matura_sections`), z wagami punktowymi (przybliżenie, patrz opis aplikacji wyżej).
+   18. `supabase/seed/matura/02_lessons_srodki_jezykowe.sql` — po jednej lekcji na poziom
+      dla działu „Znajomość środków językowych" (treść jsonb w formacie `GrammarBlock`,
+      ten sam renderer co lekcje gramatyki w Linguo). Uruchom `01_sections.sql` wcześniej.
+   19. `supabase/seed/matura/03_tasks_srodki_jezykowe.sql` — kuratorowany bank zadań
+      (`source: 'curated'`), po 3 zadania na poziom. Uruchom `01_sections.sql` wcześniej.
+   20. `supabase/seed/matura/04_lessons_pisanie.sql` — po jednej lekcji na poziom dla
+      działu „Wypowiedź pisemna" (kryteria CKE, przydatne zwroty, w pełni omówiony
+      przykład na maksimum punktów). Uruchom `01_sections.sql` wcześniej.
+   21. `supabase/seed/matura/05_writing_tasks_podstawowa.sql` i
+      `06_writing_tasks_rozszerzona.sql` — bank zadań pisemnych (`matura_writing_tasks`),
+      4 na poziom, część z prawdziwych tematów CKE (`source: 'past_exam'`) — patrz
+      komentarz w każdym pliku po dokładne źródło — reszta oryginalne (`source: 'curated'`).
+      Każde zadanie ma własną, oryginalną wzorcową odpowiedź. Uruchom `01_sections.sql`
+      wcześniej.
+   22. `supabase/seed/matura/07_lessons_czytanie.sql` i `08_tasks_czytanie.sql` — lekcja +
+      kuratorowany bank zadań (`source: 'curated'`) dla „Rozumienia tekstów pisanych", po
+      3 zadania na poziom — oryginalne teksty w typach zadań prawdziwych arkuszy CKE
+      (dopasowanie nagłówków, prawda/fałsz, tekst z lukami zdaniowymi, dopasowanie pytań
+      do fragmentów). Uruchom `01_sections.sql` wcześniej.
+   23. `supabase/seed/matura/09_lessons_sluchanie.sql` i `10_tasks_sluchanie.sql` — lekcja
+      + kuratorowany bank zadań dla „Rozumienia ze słuchu", po 2 zadania na poziom, każde
+      osadzające prawdziwe nagranie BBC Learning English („6 Minute English",
+      `content.youtubeVideoId`) — pytania zweryfikowane względem faktycznie pobranej
+      transkrypcji nagrania, nie zgadywane. Uruchom `01_sections.sql` wcześniej.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -294,6 +360,15 @@ app/
       plan/              # harmonogram nauki do daty matury
       kalendarz/         # kalendarz aktywności (reużywa components/calendar)
       admin/             # panel nauczyciela + import zadań maturalnych CKE
+    matura/            # MATURA ANGIELSKI — matura z języka angielskiego (CKE)
+      page.tsx          # dashboard: wybór poziomu (pierwsza wizyta) / szacowany wynik
+      nauka/             # hub 4 części egzaminu — wszystkie zbudowane
+        [sectionSlug]/     # generyczna trasa dla 3 działów ocenianych dokładnym
+                          # dopasowaniem: środki-jezykowe, czytanie, słuchanie (osadza
+                          # prawdziwe nagranie YouTube gdy content.youtubeVideoId jest ustawiony)
+        pisanie/          # osobna trasa: lekcja + bank zadań pisemnych + kompozycja
+                          # oceniana przez AI (inny model danych — patrz opis wyżej)
+      ustawienia/        # zmiana poziomu matury (podstawowa/rozszerzona)
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/
   ui/                # podstawowe komponenty (Button, Card, Input, Badge, ...)
@@ -301,6 +376,8 @@ components/
   phoenix/           # komponenty powłoki (ikony aplikacji, menedżer)
   matma/             # komponenty Matmy: lesson/ (bloki lekcji), problem/ (rysik,
                      # ocena AI), exam/, diagnostic/, plan/, dashboard/, admin/
+  matura/            # komponenty Matury Angielski: poziom, dashboard, lista części,
+                     # próba zadania (reużywa components/grammar/lesson dla treści)
   <moduł>/           # komponenty specyficzne dla danego modułu Linguo
 lib/
   phoenix/           # rejestr aplikacji + akcje powłoki
@@ -310,10 +387,14 @@ lib/
   homework/progress.ts # automatyczne liczenie postępu prac domowych
   matma/             # silnik Matmy: mastery per dział, ocena AI, egzamin,
                      # diagnoza, plan nauki, dashboard, akcje, import CKE
+  matura/            # silnik Matury Angielski: sekcje, ocena programistyczna
+                     # środków językowych (bez AI), ocena AI wypowiedzi pisemnej wg
+                     # kryteriów CKE, mastery per część, szacowany wynik, akcje
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
-  migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola)
-  seed/               # dane początkowe (admin, słówka, gramatyka, matma/)
+  migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
+                     # 0013 = Matura Angielski)
+  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
