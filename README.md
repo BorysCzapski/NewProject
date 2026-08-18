@@ -42,22 +42,27 @@ Piąta mini-aplikacja to **Matura Angielski** (`/matura`) — przygotowanie do m
 angielskiego (CKE), poziom podstawowy lub rozszerzony (wybór na starcie, zmienialny w każdej
 chwili). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
 tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
-(edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie. Dziś w
-pełni działają dwa działy. **Znajomość środków językowych**: krótka lekcja (słowotwórstwo,
-parafrazy, struktury gramatyczne) + bank zadań (słowotwórstwo, wybór wielokrotny, parafraza jednym
-wyrazem, parafraza ze słowem kluczowym) oceniany programistycznie (dokładne dopasowanie
-znormalizowanej odpowiedzi — bez AI). **Wypowiedź pisemna**: lekcja z pełnym rozkładem punktowym
-CKE (12 pkt podstawowa / 13 pkt rozszerzona, źródło: oficjalny Informator o egzaminie maturalnym),
-przydatnymi zwrotami i jednym w pełni omówionym przykładem na maksimum punktów per poziom, plus
-bank zadań (e-mail/wpis na blogu na podstawie — w tym prawdziwe tematy z Informatora CKE;
-rozprawka za i przeciw na rozszerzonym — w tym prawdziwe tematy z matur 2023-2025) z własną,
-oryginalną wzorcową odpowiedzią odsłanianą po wysłaniu własnej pracy. Ocena wypowiedzi pisemnej
-jest analityczna wg 4 kryteriów CKE (Groq, z twardo wymuszaną w kodzie zasadą „gilotyny" długości
-tekstu — poniżej progu słów pozostałe kryteria są zerowane niezależnie od oceny AI), nie jednym
-zbiorczym wynikiem. Pozostałe dwa działy (słuchanie, czytanie) są zasiane jako rekordy
-(nawigacja/dashboard mają się do czego odnieść), ale oznaczone „wkrótce". Schemat bazy
-(`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`) jest już przygotowany na pełny
-docelowy zakres: bank zadań z czterech źródeł (tematyczne/CKE/kuratorowane/AI, jak w Matmie),
+(edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie.
+Wszystkie cztery działy działają już dziś, każdy z lekcją (kryteria CKE, typy zadań, strategie,
+przykłady) i bankiem zadań. **Znajomość środków językowych**: słowotwórstwo, wybór wielokrotny,
+parafraza jednym wyrazem, parafraza ze słowem kluczowym — oceniane programistycznie (dokładne
+dopasowanie znormalizowanej odpowiedzi, bez AI). **Rozumienie tekstów pisanych**: wybór
+wielokrotny, dopasowanie nagłówków, prawda/fałsz, tekst z lukami zdaniowymi, dopasowanie pytań do
+fragmentów tekstu — oryginalne teksty w stylu i typach zadań prawdziwych arkuszy CKE, oceniane tak
+samo programistycznie. **Rozumienie ze słuchu**: prawdziwe, publicznie dostępne nagrania BBC
+Learning English („6 Minute English") osadzone przez ten sam odtwarzacz YouTube co moduł słuchania
+w Linguo — każde pytanie sprawdzone względem faktycznie pobranej transkrypcji nagrania (tą samą
+biblioteką co `lib/listening/fetch-transcript.ts`), a nie zgadywane. **Wypowiedź pisemna**: lekcja
+z pełnym rozkładem punktowym CKE (12 pkt podstawowa / 13 pkt rozszerzona, źródło: oficjalny
+Informator o egzaminie maturalnym), przydatnymi zwrotami i jednym w pełni omówionym przykładem na
+maksimum punktów per poziom, plus bank zadań (e-mail/wpis na blogu na podstawie — w tym prawdziwe
+tematy z Informatora CKE; rozprawka za i przeciw na rozszerzonym — w tym prawdziwe tematy z matur
+2023-2025) z własną, oryginalną wzorcową odpowiedzią odsłanianą po wysłaniu własnej pracy. Ocena
+wypowiedzi pisemnej jest analityczna wg 4 kryteriów CKE (Groq, z twardo wymuszaną w kodzie zasadą
+„gilotyny" długości tekstu — poniżej progu słów pozostałe kryteria są zerowane niezależnie od oceny
+AI), nie jednym zbiorczym wynikiem. Schemat bazy (`supabase/migrations/0013_matura.sql`,
+`0014_matura_writing.sql`) jest już przygotowany na pełny docelowy zakres: bank zadań z czterech
+źródeł (tematyczne/CKE/kuratorowane/AI, jak w Matmie),
 symulacje egzaminu, plan nauki do dnia matury, panel nauczyciela z przydzielaniem ćwiczeń — czekają
 na UI w kolejnych sesjach.
 
@@ -228,6 +233,16 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       komentarz w każdym pliku po dokładne źródło — reszta oryginalne (`source: 'curated'`).
       Każde zadanie ma własną, oryginalną wzorcową odpowiedź. Uruchom `01_sections.sql`
       wcześniej.
+   22. `supabase/seed/matura/07_lessons_czytanie.sql` i `08_tasks_czytanie.sql` — lekcja +
+      kuratorowany bank zadań (`source: 'curated'`) dla „Rozumienia tekstów pisanych", po
+      3 zadania na poziom — oryginalne teksty w typach zadań prawdziwych arkuszy CKE
+      (dopasowanie nagłówków, prawda/fałsz, tekst z lukami zdaniowymi, dopasowanie pytań
+      do fragmentów). Uruchom `01_sections.sql` wcześniej.
+   23. `supabase/seed/matura/09_lessons_sluchanie.sql` i `10_tasks_sluchanie.sql` — lekcja
+      + kuratorowany bank zadań dla „Rozumienia ze słuchu", po 2 zadania na poziom, każde
+      osadzające prawdziwe nagranie BBC Learning English („6 Minute English",
+      `content.youtubeVideoId`) — pytania zweryfikowane względem faktycznie pobranej
+      transkrypcji nagrania, nie zgadywane. Uruchom `01_sections.sql` wcześniej.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -347,9 +362,12 @@ app/
       admin/             # panel nauczyciela + import zadań maturalnych CKE
     matura/            # MATURA ANGIELSKI — matura z języka angielskiego (CKE)
       page.tsx          # dashboard: wybór poziomu (pierwsza wizyta) / szacowany wynik
-      nauka/             # hub 4 części egzaminu (środki-jezykowe + pisanie zbudowane)
-        srodki-jezykowe/  # lekcja + bank zadań (dopasowanie dokładne) + próba zadania
-        pisanie/          # lekcja + bank zadań pisemnych + kompozycja oceniana przez AI
+      nauka/             # hub 4 części egzaminu — wszystkie zbudowane
+        [sectionSlug]/     # generyczna trasa dla 3 działów ocenianych dokładnym
+                          # dopasowaniem: środki-jezykowe, czytanie, słuchanie (osadza
+                          # prawdziwe nagranie YouTube gdy content.youtubeVideoId jest ustawiony)
+        pisanie/          # osobna trasa: lekcja + bank zadań pisemnych + kompozycja
+                          # oceniana przez AI (inny model danych — patrz opis wyżej)
       ustawienia/        # zmiana poziomu matury (podstawowa/rozszerzona)
   login/ register/ onboarding/   # ekrany publiczne / pierwsze logowanie
 components/

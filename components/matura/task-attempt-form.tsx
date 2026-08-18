@@ -2,12 +2,15 @@
 
 // ============================================================================
 // components/matura/task-attempt-form.tsx
-// Renders one "środki językowe" task (a group of graded sub-items) as a
-// single form — the whole task is submitted and graded at once, matching
-// how CKE numbers a task as one unit (e.g. "zadanie 4.1-4.5"), unlike the
-// grammar module's one-exercise-at-a-time stepper. Grading happens
-// server-side (see submitTaskAttempt) — the client never sees correct
-// answers before submitting.
+// Renders one exact-match task (środki językowe / czytanie / słuchanie) — a
+// group of graded sub-items — as a single form — the whole task is
+// submitted and graded at once, matching how CKE numbers a task as one unit
+// (e.g. "zadanie 4.1-4.5"), unlike the grammar module's one-exercise-at-a-
+// time stepper. Grading happens server-side (see submitTaskAttempt) — the
+// client never sees correct answers before submitting. Listening tasks
+// (content.youtubeVideoId set) embed the real recording via the same
+// YoutubePlayer Linguo's listening module uses — no seek/gap-sync needed
+// here, just playback.
 // ============================================================================
 import { useState } from "react";
 import Link from "next/link";
@@ -16,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { YoutubePlayer } from "@/components/listening/youtube-player";
 import { cn } from "@/lib/utils";
 import { submitTaskAttempt } from "@/lib/matura/actions";
 import type { MaturaTask, MaturaTaskItemResult } from "@/lib/types/database";
@@ -49,6 +53,8 @@ export function TaskAttemptForm({ task, backHref }: { task: MaturaTask; backHref
 
   return (
     <div className="flex flex-col gap-4">
+      {task.content.youtubeVideoId && <YoutubePlayer videoId={task.content.youtubeVideoId} />}
+
       <Card>
         <CardDescription>{task.content.instructions}</CardDescription>
         {task.content.passage && (

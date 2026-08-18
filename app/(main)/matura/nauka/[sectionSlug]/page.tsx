@@ -1,8 +1,10 @@
 // ============================================================================
-// app/(main)/matura/nauka/srodki-jezykowe/page.tsx
-// "Znajomość środków językowych" hub: the section's lesson (reuses
-// GrammarLesson — see matura_lessons comment in 0013_matura.sql) followed by
-// its task bank, each task tagged with the student's last score if any.
+// app/(main)/matura/nauka/[sectionSlug]/page.tsx
+// Generic hub for any exact-match-graded section (środki językowe, czytanie,
+// słuchanie — see MATURA_EXACT_MATCH_SECTION_SLUGS): the section's lesson
+// followed by its task bank, each task tagged with the student's last score
+// if any. "pisanie" has its own dedicated route (different tables, AI-graded
+// holistically) and is NOT served here.
 // ============================================================================
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
@@ -10,13 +12,21 @@ import { ChevronRight } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
+import { MATURA_EXACT_MATCH_SECTION_SLUGS } from "@/lib/matura/sections";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { GrammarLesson } from "@/components/grammar/lesson/grammar-lesson";
 import type { GrammarBlock } from "@/lib/grammar/lesson-blocks";
-import type { MaturaLesson, MaturaSection, MaturaTask, MaturaTaskAttempt } from "@/lib/types/database";
+import type { MaturaLesson, MaturaSection, MaturaSectionSlug, MaturaTask, MaturaTaskAttempt } from "@/lib/types/database";
 
-export default async function SrodkiJezykowePage() {
+export default async function MaturaSectionPage({
+  params,
+}: {
+  params: Promise<{ sectionSlug: string }>;
+}) {
+  const { sectionSlug } = await params;
+  if (!MATURA_EXACT_MATCH_SECTION_SLUGS.includes(sectionSlug as MaturaSectionSlug)) notFound();
+
   const profile = await requireProfile();
   const supabase = await createClient();
   const settings = await getMaturaSettings(supabase, profile.id);
@@ -26,7 +36,7 @@ export default async function SrodkiJezykowePage() {
     .from("matura_sections")
     .select("*")
     .eq("level", settings.level)
-    .eq("slug", "srodki-jezykowe")
+    .eq("slug", sectionSlug)
     .maybeSingle();
   if (!sectionRow) notFound();
   const section = sectionRow as MaturaSection;
@@ -66,7 +76,7 @@ export default async function SrodkiJezykowePage() {
         {tasks.map((task, i) => {
           const attempt = latestAttemptByTask.get(task.id);
           return (
-            <Link key={task.id} href={`/matura/nauka/srodki-jezykowe/${task.id}`}>
+            <Link key={task.id} href={`/matura/nauka/${sectionSlug}/${task.id}`}>
               <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">
                 <div className="min-w-0 flex-1">
                   <CardTitle>Zadanie {i + 1}</CardTitle>

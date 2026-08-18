@@ -867,6 +867,9 @@ export interface MaturaTaskContent {
   instructions: string;
   /** Optional shared reading passage/context for the item group. */
   passage?: string;
+  /** Listening tasks only: embeds a real YouTube video the student plays
+   * while answering — see components/matura/task-attempt-form.tsx. */
+  youtubeVideoId?: string;
   items: MaturaTaskItem[];
 }
 

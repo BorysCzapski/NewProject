@@ -20,7 +20,13 @@ export interface MaturaSectionSeed {
 }
 
 /** Sections that have real content today — everything else renders as "wkrótce". */
-export const MATURA_BUILT_SECTION_SLUGS: MaturaSectionSlug[] = ["srodki-jezykowe", "pisanie"];
+export const MATURA_BUILT_SECTION_SLUGS: MaturaSectionSlug[] = ["srodki-jezykowe", "pisanie", "czytanie", "sluchanie"];
+
+/** Sections graded by exact-match items (matura_tasks/matura_task_attempts),
+ * served by the generic app/(main)/matura/nauka/[sectionSlug]/ route —
+ * "pisanie" is deliberately excluded, it has its own route + tables
+ * (matura_writing_tasks/matura_writing_submissions, AI-graded holistically). */
+export const MATURA_EXACT_MATCH_SECTION_SLUGS: MaturaSectionSlug[] = ["srodki-jezykowe", "czytanie", "sluchanie"];
 
 const SHARED_DESCRIPTIONS: Record<MaturaSectionSlug, string> = {
   sluchanie: "Nagrania i zadania sprawdzające rozumienie ze słuchu.",

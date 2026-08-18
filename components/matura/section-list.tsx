@@ -1,9 +1,8 @@
 // ============================================================================
 // components/matura/section-list.tsx
 // The 4 CKE exam parts with this student's mastery. Only sections in
-// MATURA_BUILT_SECTION_SLUGS (today: "srodki-jezykowe") are clickable — the
-// rest render as disabled "wkrótce" rows, same visual language as Phoenix's
-// comingSoon app tiles.
+// MATURA_BUILT_SECTION_SLUGS are clickable — the rest render as disabled
+// "wkrótce" rows, same visual language as Phoenix's comingSoon app tiles.
 // ============================================================================
 import Link from "next/link";
 import { Lock } from "lucide-react";
