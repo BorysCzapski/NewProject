@@ -20,7 +20,7 @@ export interface MaturaSectionSeed {
 }
 
 /** Sections that have real content today — everything else renders as "wkrótce". */
-export const MATURA_BUILT_SECTION_SLUGS: MaturaSectionSlug[] = ["srodki-jezykowe"];
+export const MATURA_BUILT_SECTION_SLUGS: MaturaSectionSlug[] = ["srodki-jezykowe", "pisanie"];
 
 const SHARED_DESCRIPTIONS: Record<MaturaSectionSlug, string> = {
   sluchanie: "Nagrania i zadania sprawdzające rozumienie ze słuchu.",

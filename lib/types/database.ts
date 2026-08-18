@@ -997,6 +997,62 @@ export interface MaturaSettings {
   updated_at: string;
 }
 
+// ----------------------------------------------------------------------------
+// Wypowiedź pisemna (0014_matura_writing.sql) — separate from MaturaTask/
+// MaturaTaskAttempt above: a writing submission is one free-text answer
+// graded holistically against a 4-part CKE rubric, not per-item exact match.
+// ----------------------------------------------------------------------------
+
+export type MaturaWritingFormType = "email" | "blog_post" | "forum_post" | "rozprawka_za_i_przeciw";
+
+export interface MaturaWritingTask {
+  id: string;
+  section_id: string;
+  form_type: MaturaWritingFormType;
+  instructions: string;
+  content_points: string[];
+  min_words: number;
+  max_words: number;
+  points_max: number;
+  source: MaturaTaskSource;
+  source_metadata: MaturaPastExamMetadata | MaturaCuratedMetadata | MaturaGeneratedMetadata | null;
+  /** Original, full-mark-quality reference text — revealed only after the
+   * student submits their own attempt. */
+  model_answer: string;
+  model_answer_notes: string;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface MaturaWritingCriterionResult {
+  /** e.g. "tresc" | "zgodnosc" | "spojnosc" | "zakres" | "poprawnosc" */
+  key: string;
+  label: string;
+  pointsAwarded: number;
+  pointsMax: number;
+  comment: string;
+}
+
+export interface MaturaWritingAiFeedback {
+  criteria: MaturaWritingCriterionResult[];
+  totalPoints: number;
+  maxPoints: number;
+  generalFeedback: string;
+  improvementTip: string;
+}
+
+export interface MaturaWritingSubmission {
+  id: string;
+  task_id: string;
+  user_id: string;
+  content: string;
+  word_count: number;
+  points_awarded: number;
+  max_points: number;
+  ai_feedback: MaturaWritingAiFeedback;
+  created_at: string;
+}
+
 export interface BottleCounter {
   user_id: string;
   count: number;
