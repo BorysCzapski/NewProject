@@ -9,7 +9,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { MIN_MASTERY_THRESHOLD } from "@/lib/constants";
-import type { MasteryStatus, MaturaSection, MaturaSectionProgress } from "@/lib/types/database";
+import type { MaturaLanguage, MasteryStatus, MaturaSection, MaturaSectionProgress } from "@/lib/types/database";
 
 interface LatestAttemptInfo {
   ratio: number; // points_awarded / max_points, clamped 0-1
@@ -123,15 +123,20 @@ export interface SectionWithProgress extends MaturaSection {
   masteryScore: number;
 }
 
-/** All sections for a level, annotated with this student's progress. */
+/** All sections for one (język, poziom) pair, annotated with this student's
+ * progress. Both scopes are required: section slugs repeat across languages
+ * and levels, so filtering on only one of them would mix e.g. the English and
+ * Spanish "czytanie" rows into a single list. */
 export async function getSectionsWithProgress(
   supabase: SupabaseClient,
   userId: string,
+  language: MaturaLanguage,
   level: MaturaSection["level"]
 ): Promise<SectionWithProgress[]> {
   const { data: sectionRows } = await supabase
     .from("matura_sections")
     .select("*")
+    .eq("language", language)
     .eq("level", level)
     .order("order_index");
 

@@ -3,9 +3,13 @@
 // Base text input, styled to match the app's rounded card language.
 // ============================================================================
 import { cn } from "@/lib/utils";
-import type { InputHTMLAttributes } from "react";
+import type { ComponentPropsWithRef } from "react";
 
-export function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {
+// ComponentPropsWithRef, not InputHTMLAttributes: callers need to hold a ref
+// to the underlying input (e.g. components/matura/accent-bar.tsx inserts a
+// character at the caret). React 19 passes `ref` through as an ordinary prop
+// for function components, so this needs no forwardRef — only the type.
+export function Input({ className, ...props }: ComponentPropsWithRef<"input">) {
   return (
     <input
       className={cn(

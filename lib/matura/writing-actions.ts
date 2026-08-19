@@ -5,8 +5,8 @@
 // Server Action for "Wypowiedź pisemna": grades the student's free-text
 // submission against the CKE rubric (lib/matura/writing-grading.ts) and
 // persists it. Separate file from lib/matura/actions.ts because it needs
-// its own MaturaLevel lookup (to pick the right rubric) that the exact-match
-// task flow doesn't.
+// its own section lookup — poziom AND język, both of which shape the rubric
+// prompt — that the exact-match task flow doesn't.
 // ============================================================================
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
@@ -29,19 +29,19 @@ export async function submitWritingTask(params: {
 
   const { data: task, error: taskError } = await supabase
     .from("matura_writing_tasks")
-    .select("*, matura_sections!inner(level)")
+    .select("*, matura_sections!inner(level, language)")
     .eq("id", params.taskId)
     .single();
   if (taskError || !task) return actionFailure("Nie znaleziono zadania.");
 
   const { matura_sections, ...taskRow } = task as MaturaWritingTask & {
-    matura_sections: Pick<MaturaSection, "level">;
+    matura_sections: Pick<MaturaSection, "level" | "language">;
   };
-  const level = matura_sections.level;
+  const { level, language } = matura_sections;
 
   let feedback;
   try {
-    feedback = await gradeWritingSubmission(level, taskRow, trimmed);
+    feedback = await gradeWritingSubmission(language, level, taskRow, trimmed);
   } catch (err) {
     console.error("[matura] gradeWritingSubmission failed:", err);
     return actionFailure("Nie udało się ocenić pracy przez AI. Spróbuj ponownie za chwilę.");

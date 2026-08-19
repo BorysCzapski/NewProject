@@ -12,20 +12,30 @@ import { requireAdmin } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { actionFailure, type ActionResult } from "@/lib/action-result";
 import { importMaturaArkuszPdf, type MaturaPdfImportSummary } from "@/lib/matura/import-pdf";
-import { MATURA_LEVELS } from "@/lib/matura/constants";
-import type { MaturaLevel } from "@/lib/types/database";
+import { MATURA_LANGUAGES, MATURA_LEVELS } from "@/lib/matura/constants";
+import type { MaturaLanguage, MaturaLevel } from "@/lib/types/database";
 
 function isMaturaLevel(v: string): v is MaturaLevel {
   return (MATURA_LEVELS as string[]).includes(v);
 }
 
+function isMaturaLanguage(v: string): v is MaturaLanguage {
+  return (MATURA_LANGUAGES as string[]).includes(v);
+}
+
 /** Imports środki-językowe/czytanie/pisanie tasks from an admin-uploaded
  * arkusz PDF (+ optional answer-key PDF for more reliable correctAnswers —
- * see lib/matura/import-pdf.ts). `formData` must contain a "level" field
- * and an "arkusz" file field; "klucz" and "note" are optional. */
+ * see lib/matura/import-pdf.ts). `formData` must contain "language" and
+ * "level" fields and an "arkusz" file field; "klucz" and "note" are optional.
+ * The language is asked for explicitly rather than guessed from the PDF: a
+ * misdetected language would file every extracted task under the wrong
+ * exam, and the admin uploading the arkusz already knows the answer. */
 export async function runMaturaPdfImport(formData: FormData): Promise<ActionResult<MaturaPdfImportSummary>> {
   const admin = await requireAdmin();
   const supabase = await createClient();
+
+  const language = String(formData.get("language") ?? "");
+  if (!isMaturaLanguage(language)) return actionFailure("Wybierz język arkusza.");
 
   const level = String(formData.get("level") ?? "");
   if (!isMaturaLevel(level)) return actionFailure("Wybierz poziom matury.");
@@ -50,9 +60,16 @@ export async function runMaturaPdfImport(formData: FormData): Promise<ActionResu
   const note = String(formData.get("note") ?? "").trim() || null;
   const arkuszBuffer = Buffer.from(await arkusz.arrayBuffer());
 
-  const summary = await importMaturaArkuszPdf(supabase, level, arkuszBuffer, arkusz.name, kluczBuffer, note, {
-    createdBy: admin.id,
-  });
+  const summary = await importMaturaArkuszPdf(
+    supabase,
+    language,
+    level,
+    arkuszBuffer,
+    arkusz.name,
+    kluczBuffer,
+    note,
+    { createdBy: admin.id }
+  );
 
   revalidatePath("/matura/admin/import");
   revalidatePath("/matura/nauka/srodki-jezykowe");
