@@ -49,3 +49,12 @@ export const MATURA_WRITING_FORM_LABELS: Record<MaturaWritingFormType, string> =
   forum_post: "Wpis na forum",
   rozprawka_za_i_przeciw: "Rozprawka za i przeciw",
 };
+
+/** Gramatyka/słownictwo cascade: rozszerzona builds ON TOP of podstawowa
+ * (foundation + advanced additions, same relationship CKE's own grammar
+ * scope has), so a rozszerzona student sees both; podstawowa sees only its
+ * own. Used to query matura_grammar_topics/matura_vocabulary_words with
+ * `.in("level", visibleMaturaLevels(settings.level))` instead of `.eq`. */
+export function visibleMaturaLevels(level: MaturaLevel): MaturaLevel[] {
+  return level === "rozszerzona" ? ["podstawowa", "rozszerzona"] : ["podstawowa"];
+}
