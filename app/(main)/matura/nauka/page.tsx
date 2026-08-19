@@ -17,7 +17,7 @@ export default async function MaturaNaukaPage() {
   const settings = await getMaturaSettings(supabase, profile.id);
   if (!settings) redirect("/matura");
 
-  const sections = await getSectionsWithProgress(supabase, profile.id, settings.level);
+  const sections = await getSectionsWithProgress(supabase, profile.id, settings.language, settings.level);
 
   return (
     <div>

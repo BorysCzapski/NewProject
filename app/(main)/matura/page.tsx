@@ -1,8 +1,8 @@
 // ============================================================================
 // app/(main)/matura/page.tsx
-// Matura Angielski home ("Dziś") screen — the bottom-nav root tab. First
-// visit (no matura_settings row) shows the poziom picker instead of a
-// dashboard, same "pick a level before anything else" pattern as
+// Matura home ("Dziś") screen — the bottom-nav root tab. First visit (no
+// matura_settings row) shows the język + poziom picker instead of a
+// dashboard, same "pick your target before anything else" pattern as
 // /onboarding for Linguo.
 // ============================================================================
 import Link from "next/link";
@@ -12,10 +12,10 @@ import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
 import { getSectionsWithProgress } from "@/lib/matura/progress";
 import { computeEstimatedScore } from "@/lib/matura/dashboard";
-import { MATURA_LEVEL_LABELS } from "@/lib/matura/constants";
+import { MATURA_LANGUAGE_LABELS, MATURA_LEVEL_LABELS } from "@/lib/matura/constants";
 import { StreakBadge } from "@/components/dashboard/streak-badge";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { LevelPickerForm } from "@/components/matura/level-picker-form";
+import { ExamPreferencesForm } from "@/components/matura/exam-preferences-form";
 import { EstimatedScoreCard } from "@/components/matura/estimated-score-card";
 import { SectionList } from "@/components/matura/section-list";
 
@@ -37,17 +37,17 @@ export default async function MaturaDashboardPage() {
         <Card>
           <CardTitle>Do jakiej matury się przygotowujesz?</CardTitle>
           <CardDescription className="mt-1">
-            Wybierz poziom — możesz go później zmienić w każdej chwili w ustawieniach.
+            Wybierz język i poziom — oba możesz później zmienić w każdej chwili w ustawieniach.
           </CardDescription>
           <div className="mt-4">
-            <LevelPickerForm submitLabel="Zaczynamy!" />
+            <ExamPreferencesForm submitLabel="Zaczynamy!" />
           </div>
         </Card>
       </div>
     );
   }
 
-  const sections = await getSectionsWithProgress(supabase, profile.id, settings.level);
+  const sections = await getSectionsWithProgress(supabase, profile.id, settings.language, settings.level);
   const estimate = computeEstimatedScore(sections, settings.level);
 
   return (
@@ -70,7 +70,7 @@ export default async function MaturaDashboardPage() {
       >
         <span className="flex items-center gap-2 text-sm font-medium text-foreground">
           <Settings2 className="h-4 w-4 text-primary" />
-          Poziom: {MATURA_LEVEL_LABELS[settings.level]}
+          {MATURA_LANGUAGE_LABELS[settings.language]} — {MATURA_LEVEL_LABELS[settings.level].toLowerCase()}
         </span>
         <ChevronRight className="h-4 w-4 text-foreground-muted" />
       </Link>

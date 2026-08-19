@@ -28,6 +28,7 @@ export default async function PisaniePage() {
   const { data: sectionRow } = await supabase
     .from("matura_sections")
     .select("*")
+    .eq("language", settings.language)
     .eq("level", settings.level)
     .eq("slug", "pisanie")
     .maybeSingle();
