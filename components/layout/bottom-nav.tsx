@@ -27,6 +27,9 @@ import {
   GraduationCap,
   Compass,
   Upload,
+  Sparkles,
+  Church,
+  HeartHandshake,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -48,6 +51,9 @@ const ICONS = {
   GraduationCap,
   Compass,
   Upload,
+  Sparkles,
+  Church,
+  HeartHandshake,
 };
 
 export function BottomNav() {
