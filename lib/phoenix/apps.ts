@@ -96,11 +96,10 @@ export const PHOENIX_APPS: PhoenixApp[] = [
   {
     id: "modlitwa",
     name: "Modlitwa",
-    description: "Refleksje, werset dnia i liturgia słowa",
+    description: "Werset dnia, czytania, liturgia godzin i intencje",
     section: "wiara",
     icon: "Sparkles",
     href: "/modlitwa",
-    comingSoon: true,
   },
 ];
 
