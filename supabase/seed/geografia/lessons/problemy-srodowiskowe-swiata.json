@@ -1,0 +1,2794 @@
+{
+  "topicSlug": "problemy-srodowiskowe-swiata",
+  "lessons": [
+    {
+      "slug": "efekt-cieplarniany-i-globalne-ocieplenie",
+      "title": "Efekt cieplarniany i mechanizm globalnego ocieplenia",
+      "summary": "Jak działa efekt cieplarniany, które gazy go wzmacniają i skąd wiemy, że klimat Ziemi naprawdę się ociepla.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Klimat Ziemi zmieniał się zawsze — na przemian nadchodziły zlodowacenia i okresy cieplejsze, sterowane cyklami astronomicznymi Milankovicia, aktywnością Słońca i wulkanizmem. Nowe jest jednak **tempo** obecnej zmiany i jej **przyczyna**: od początku rewolucji przemysłowej człowiek uwalnia do atmosfery węgiel gromadzony w skorupie ziemskiej przez setki milionów lat. W tej lekcji odtworzysz cały łańcuch przyczynowy: od promieniowania słonecznego wpadającego do atmosfery, przez gazy cieplarniane i ich źródła, aż po obserwacyjne dowody ocieplenia. Bez zrozumienia tego mechanizmu nie da się poprawnie wytłumaczyć na maturze ani skutków zmian klimatu, ani sensu porozumień klimatycznych."
+        },
+        {
+          "type": "definition",
+          "term": "Efekt cieplarniany",
+          "text": "Zjawisko polegające na pochłanianiu przez **gazy cieplarniane** znacznej części **promieniowania długofalowego (podczerwonego)**, które Ziemia wysyła w przestrzeń kosmiczną, i na ponownym wypromieniowaniu tej energii we wszystkich kierunkach — w tym z powrotem ku powierzchni (tzw. **promieniowanie zwrotne atmosfery**). Skutkiem jest wyższa temperatura powierzchni Ziemi niż wynikałaby z samego bilansu promieniowania słonecznego.",
+          "note": "Kluczowa asymetria: atmosfera jest niemal przezroczysta dla krótkofalowego promieniowania Słońca, ale silnie pochłania długofalowe promieniowanie Ziemi. To dlatego działa jak szyba w szklarni."
+        },
+        {
+          "type": "process",
+          "title": "Droga energii słonecznej przez atmosferę",
+          "caption": "Kliknij kolejne etapy — to jest szkielet odpowiedzi na maturalne polecenie: wyjaśnij mechanizm efektu cieplarnianego.",
+          "steps": [
+            {
+              "title": "1. Dopływ promieniowania krótkofalowego",
+              "text": "Do górnej granicy atmosfery dociera promieniowanie słoneczne o dużej energii i **krótkiej fali** (widzialne i UV). Atmosfera jest dla niego w większości **przepuszczalna** — pochłaniana jest głównie część UV (przez ozon) i podczerwień bliska (przez parę wodną)."
+            },
+            {
+              "title": "2. Odbicie części energii — albedo",
+              "text": "Około **30%** promieniowania zostaje odbite przez chmury, aerozole i jasne powierzchnie (lód, śnieg, pustynie) i bezpowrotnie ucieka w kosmos. To globalne **albedo Ziemi**. Z pozostałych ok. 70% mniej więcej jedna trzecia jest pochłaniana już w samej atmosferze (chmury, para wodna, aerozole, ozon), a ok. **połowa całego dopływu** dociera do powierzchni i zostaje przez nią pochłonięta."
+            },
+            {
+              "title": "3. Nagrzewanie powierzchni",
+              "text": "Pochłonięta energia zamienia się w ciepło. Powierzchnia Ziemi (ląd, ocean) nagrzewa się i — jak każde ciało o temperaturze powyżej zera bezwzględnego — sama emituje promieniowanie."
+            },
+            {
+              "title": "4. Emisja promieniowania długofalowego",
+              "text": "Ponieważ Ziemia jest znacznie chłodniejsza od Słońca, wysyła promieniowanie o **długiej fali (podczerwone, cieplne)**. To ono jest kluczowe — bo właśnie dla tego zakresu atmosfera jest mało przezroczysta."
+            },
+            {
+              "title": "5. Pochłanianie przez gazy cieplarniane",
+              "text": "Cząsteczki **wieloatomowe** — para wodna, $CO_2$, $CH_4$, $N_2O$ — pochłaniają podczerwień, bo ich drgania odpowiadają energii tych fal. Gazy dwuatomowe budujące większość atmosfery ($N_2$, $O_2$) tego nie robią i **nie są** gazami cieplarnianymi."
+            },
+            {
+              "title": "6. Promieniowanie zwrotne i wzrost temperatury",
+              "text": "Rozgrzana atmosfera wypromieniowuje energię w każdą stronę, także w dół. Powierzchnia otrzymuje więc dwa strumienie ciepła (od Słońca i od atmosfery) i ustala się nowa, wyższa **temperatura równowagi**. Im więcej gazów cieplarnianych, tym większe promieniowanie zwrotne i wyższa temperatura."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto znać na pamięć",
+          "items": [
+            {
+              "value": "33",
+              "unit": "°C",
+              "label": "O tyle naturalny efekt cieplarniany podnosi średnią temperaturę Ziemi",
+              "note": "z ok. −18 °C (bilans samego promieniowania) do ok. +15 °C"
+            },
+            {
+              "value": "280 → ok. 420",
+              "unit": "ppm",
+              "label": "Stężenie CO2: epoka przedprzemysłowa (przed 1750 r.) i współcześnie (2023)",
+              "note": "wzrost o połowę — najwyższy poziom od co najmniej 800 tys. lat"
+            },
+            {
+              "value": "ok. 1,1",
+              "unit": "°C",
+              "label": "Wzrost średniej temperatury globalnej (dekada 2011–2020 wobec 1850–1900)"
+            },
+            {
+              "value": "ok. 0,2",
+              "unit": "°C/dekadę",
+              "label": "Obecne tempo ocieplania się klimatu",
+              "note": "dla porównania: wyjście z ostatniego zlodowacenia to ok. 1 °C na tysiąc lat"
+            },
+            {
+              "value": "ok. 30",
+              "unit": "%",
+              "label": "Albedo planetarne Ziemi — udział promieniowania odbitego w kosmos"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Efekt cieplarniany naturalny a wzmocniony (antropogeniczny)",
+          "leftLabel": "Naturalny",
+          "rightLabel": "Wzmocniony",
+          "rows": [
+            {
+              "aspect": "Przyczyna",
+              "left": "Naturalna obecność pary wodnej, CO2, metanu i ozonu w atmosferze",
+              "right": "**Dodatkowa** emisja gazów cieplarnianych przez człowieka od ok. 1750 r."
+            },
+            {
+              "aspect": "Główny gaz",
+              "left": "**Para wodna** — odpowiada za większość naturalnego efektu",
+              "right": "**Dwutlenek węgla** ze spalania paliw kopalnych i wylesiania"
+            },
+            {
+              "aspect": "Skutek dla temperatury",
+              "left": "Utrzymuje średnią +15 °C — warunek istnienia życia i wody w stanie ciekłym",
+              "right": "Podnosi temperaturę **ponad** poziom naturalny — obecnie o ok. 1,1 °C"
+            },
+            {
+              "aspect": "Ocena",
+              "left": "Zjawisko **korzystne i konieczne** — bez niego Ziemia byłaby zmarzniętą planetą",
+              "right": "Zjawisko **niekorzystne** — destabilizuje klimat szybciej, niż ekosystemy i gospodarka mogą się dostosować"
+            },
+            {
+              "aspect": "Skala czasu",
+              "left": "Działa od miliardów lat, w równowadze z obiegiem węgla",
+              "right": "Rozwija się w ciągu ok. 250 lat — to mgnienie w skali geologicznej"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Główne gazy cieplarniane i ich źródła",
+          "caption": "GWP (potencjał tworzenia efektu cieplarnianego) mówi, ile razy 1 kg gazu jest groźniejszy od 1 kg CO2 w horyzoncie 100 lat.",
+          "headers": [
+            "Gaz",
+            "Główne źródła antropogeniczne",
+            "GWP (100 lat)",
+            "Czas przebywania w atmosferze"
+          ],
+          "rows": [
+            [
+              "Para wodna (H2O)",
+              "Nie emitowana bezpośrednio w istotnej skali — jej ilość zależy od temperatury (sprzężenie zwrotne)",
+              "—",
+              "dni"
+            ],
+            [
+              "Dwutlenek węgla (CO2)",
+              "Spalanie węgla, ropy i gazu, wylesianie, produkcja cementu",
+              "1 (poziom odniesienia)",
+              "setki lat"
+            ],
+            [
+              "Metan (CH4)",
+              "Hodowla bydła, pola ryżowe, składowiska odpadów, wydobycie i transport gazu i węgla, wieczna zmarzlina",
+              "ok. 28",
+              "ok. 12 lat"
+            ],
+            [
+              "Podtlenek azotu (N2O)",
+              "Nawozy azotowe, spalanie paliw i biomasy",
+              "ok. 265",
+              "ok. 110 lat"
+            ],
+            [
+              "Freony i ich zamienniki (CFC, HFC)",
+              "Dawniej aerozole i chłodnictwo, dziś HFC w klimatyzacji",
+              "od kilkuset do kilkunastu tysięcy",
+              "od kilkunastu do setek lat"
+            ]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Udział sektorów gospodarki w globalnej emisji gazów cieplarnianych",
+          "caption": "Dane orientacyjne (ok. 2016 r.). Zapamiętaj proporcje, nie miejsca po przecinku: energetyka w najszerszym ujęciu to blisko trzy czwarte emisji.",
+          "unit": "%",
+          "labels": [
+            "Energetyka (prąd, ciepło, transport, budynki, przemysł)",
+            "Rolnictwo, leśnictwo i użytkowanie ziemi",
+            "Procesy przemysłowe",
+            "Odpady i ścieki"
+          ],
+          "series": [
+            {
+              "name": "Udział w emisji",
+              "values": [
+                73,
+                18,
+                5,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Stężenie CO2 w atmosferze — obserwatorium Mauna Loa (Hawaje)",
+          "caption": "Tzw. krzywa Keelinga. Wzrost jest niemal liniowy, a ostatnio wręcz przyspiesza — to najmocniejszy pojedynczy dowód antropogenicznej ingerencji w obieg węgla.",
+          "unit": "ppm",
+          "labels": [
+            "1960",
+            "1970",
+            "1980",
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "Średnie roczne stężenie CO2",
+              "values": [
+                317,
+                326,
+                339,
+                354,
+                370,
+                390,
+                414
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Sprzężenie zwrotne dodatnie",
+          "text": "Mechanizm, w którym **skutek zmiany wzmacnia jej przyczynę**, przez co proces sam siebie napędza. W systemie klimatycznym to on odpowiada za to, że stosunkowo niewielki impuls (wzrost stężenia CO2) daje znacznie większy efekt końcowy.",
+          "note": "Najważniejsze dodatnie sprzężenia: lodowo-albedowe, wzrost zawartości pary wodnej w cieplejszym powietrzu, uwalnianie metanu z topniejącej wiecznej zmarzliny, pożary lasów. Sprzężenie ujemne (hamujące) to np. wzrost zachmurzenia niskiego, zwiększającego albedo."
+        },
+        {
+          "type": "cycle",
+          "title": "Sprzężenie lodowo-albedowe — błędne koło ocieplenia Arktyki",
+          "caption": "Zamknięta pętla: każdy obrót podnosi temperaturę bardziej niż poprzedni. Dlatego Arktyka ociepla się kilkakrotnie szybciej niż reszta świata (amplifikacja arktyczna).",
+          "stages": [
+            {
+              "name": "Wzrost temperatury powietrza",
+              "text": "Wzmocniony efekt cieplarniany podnosi temperaturę w rejonach polarnych."
+            },
+            {
+              "name": "Topnienie lodu i pokrywy śnieżnej",
+              "text": "Kurczy się zasięg lodu morskiego i pokrywy śnieżnej, odsłaniając ciemną powierzchnię oceanu i tundry."
+            },
+            {
+              "name": "Spadek albedo",
+              "text": "Lód odbija nawet 80–90% promieniowania, otwarta woda tylko ok. 6–10%. Powierzchnia staje się znacznie ciemniejsza."
+            },
+            {
+              "name": "Większe pochłanianie promieniowania",
+              "text": "Ocean magazynuje więcej energii słonecznej zamiast ją odbijać — nagrzewa się i oddaje ciepło do atmosfery."
+            },
+            {
+              "name": "Dalsze ocieplenie i opóźnione zamarzanie",
+              "text": "Cieplejszy ocean opóźnia jesienne zamarzanie, cienki lód łatwiej topi się następnego lata — pętla zamyka się i wraca do punktu wyjścia."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Dowody współczesnego ocieplenia klimatu",
+          "caption": "Na maturze często pada polecenie: podaj trzy dowody. Wybieraj z różnych grup — to pokazuje rozumienie systemu klimatycznego.",
+          "groups": [
+            {
+              "name": "Pomiary bezpośrednie (instrumentalne)",
+              "description": "Ciągłe serie pomiarowe temperatury powietrza od połowy XIX w., temperatury oceanu (boje Argo) oraz stężenia gazów cieplarnianych.",
+              "examples": [
+                "wzrost średniej temperatury globalnej o ok. 1,1 °C",
+                "krzywa Keelinga z Mauna Loa",
+                "wzrost zawartości ciepła w oceanach"
+              ]
+            },
+            {
+              "name": "Kriosfera",
+              "description": "Lód reaguje na temperaturę najszybciej i najbardziej jednoznacznie — jest naturalnym termometrem planety.",
+              "examples": [
+                "cofanie się lodowców górskich (Alpy, Andy, Himalaje)",
+                "spadek letniego zasięgu lodu morskiego Arktyki",
+                "ubytek masy lądolodów Grenlandii i Antarktydy Zachodniej",
+                "zanik wiecznej zmarzliny"
+              ]
+            },
+            {
+              "name": "Hydrosfera",
+              "description": "Ocieplenie zapisuje się w poziomie i chemii oceanu.",
+              "examples": [
+                "wzrost poziomu morza o ok. 20 cm od 1900 r.",
+                "spadek pH wód oceanicznych",
+                "częstsze morskie fale upałów"
+              ]
+            },
+            {
+              "name": "Biosfera (dowody fenologiczne)",
+              "description": "Organizmy reagują na temperaturę zmianą terminów rozwoju i zasięgów występowania.",
+              "examples": [
+                "wcześniejsze kwitnienie i pękanie pąków",
+                "przesuwanie się zasięgów gatunków ku biegunom i w górę stoków",
+                "skracanie okresu zalegania pokrywy śnieżnej"
+              ]
+            },
+            {
+              "name": "Paleoklimatologia — tło porównawcze",
+              "description": "Pozwala porównać dzisiejsze wartości z tysiącami lat wstecz i wykazać, że obecna zmiana wykracza poza naturalną zmienność.",
+              "examples": [
+                "rdzenie lodowe z Antarktydy (Wostok, EPICA) — pęcherzyki dawnego powietrza",
+                "słoje drzew (dendrochronologia)",
+                "osady jeziorne i pyłki roślin (palinologia)",
+                "rafy koralowe"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa najczęstsze błędy w tym temacie. **Pierwszy: mylenie efektu cieplarnianego z dziurą ozonową.** To dwa niezależne problemy — ozon dotyczy stratosfery i promieniowania UV, efekt cieplarniany troposfery i promieniowania podczerwonego. Dziura ozonowa nie powoduje globalnego ocieplenia. **Drugi: mylenie pogody z klimatem.** Mroźna zima w Polsce nie podważa ocieplenia, bo klimat to statystyka pogody z co najmniej 30 lat i w skali całej planety."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj gaz cieplarniany do jego głównego źródła",
+          "instruction": "Połącz każdy gaz z procesem lub działalnością, które odpowiadają za większość jego dopływu do atmosfery.",
+          "pairs": [
+            {
+              "left": "Dwutlenek węgla (CO2)",
+              "right": "Spalanie węgla, ropy naftowej i gazu ziemnego oraz wylesianie"
+            },
+            {
+              "left": "Metan (CH4)",
+              "right": "Fermentacja jelitowa bydła, pola ryżowe i składowiska odpadów"
+            },
+            {
+              "left": "Podtlenek azotu (N2O)",
+              "right": "Nawozy azotowe stosowane w rolnictwie"
+            },
+            {
+              "left": "Freony (CFC)",
+              "right": "Dawne aerozole, urządzenia chłodnicze i pianki izolacyjne"
+            },
+            {
+              "left": "Para wodna (H2O)",
+              "right": "Parowanie z oceanów — ilość rośnie samoczynnie wraz z temperaturą"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega istota efektu cieplarnianego?",
+          "options": [
+            "Na odbijaniu promieniowania słonecznego od warstwy chmur z powrotem w kosmos",
+            "Na pochłanianiu przez gazy atmosferyczne promieniowania długofalowego wysyłanego przez Ziemię i jego częściowej reemisji ku powierzchni",
+            "Na zatrzymywaniu promieniowania ultrafioletowego Słońca przez warstwę ozonową",
+            "Na wzroście przezroczystości atmosfery dla promieniowania krótkofalowego wskutek zanieczyszczeń"
+          ],
+          "correctIndex": 1,
+          "explanation": "Atmosfera przepuszcza krótkofalowe promieniowanie Słońca, ale gazy cieplarniane pochłaniają długofalowe (podczerwone) promieniowanie emitowane przez nagrzaną powierzchnię Ziemi i wypromieniowują je we wszystkich kierunkach, także w dół (promieniowanie zwrotne). Odpowiedź C opisuje rolę ozonosfery — to zupełnie inny mechanizm."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego azot i tlen — mimo że stanowią ok. 99% objętości atmosfery — nie są gazami cieplarnianymi?",
+          "options": [
+            "Bo występują zbyt wysoko, powyżej troposfery",
+            "Bo ich cząsteczki są dwuatomowe i nie pochłaniają promieniowania podczerwonego",
+            "Bo są lżejsze od dwutlenku węgla i szybko uciekają w kosmos",
+            "Bo są gazami szlachetnymi, chemicznie obojętnymi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Promieniowanie podczerwone pochłaniają cząsteczki o odpowiednich drganiach — trój- i wieloatomowe (H2O, CO2, CH4, N2O, O3). Symetryczne cząsteczki dwuatomowe N2 i O2 praktycznie nie absorbują podczerwieni, dlatego ilościowa przewaga w atmosferze nie czyni ich gazami cieplarnianymi."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko jest przykładem dodatniego sprzężenia zwrotnego w systemie klimatycznym?",
+          "options": [
+            "Wzrost zachmurzenia niskiego, które zwiększa albedo i ochładza powierzchnię",
+            "Pochłanianie CO2 przez rosnące lasy",
+            "Topnienie lodu morskiego, które obniża albedo i zwiększa pochłanianie promieniowania",
+            "Wybuch wulkanu wyrzucający aerozole siarczanowe do stratosfery"
+          ],
+          "correctIndex": 2,
+          "explanation": "W sprzężeniu dodatnim skutek wzmacnia przyczynę: ocieplenie topi lód, ciemniejsza powierzchnia oceanu pochłania więcej energii, co pogłębia ocieplenie. Odpowiedzi A, B i D opisują mechanizmy hamujące ocieplenie (sprzężenia ujemne lub czynnik chłodzący)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu **wyjaśnij mechanizm** klucz CKE punktuje łańcuch przyczynowo-skutkowy, a nie hasła. Zawsze zapisz trzy ogniwa: (1) rodzaj promieniowania — krótkofalowe wpada, długofalowe wraca; (2) rolę gazów cieplarnianych — pochłaniają podczerwień i emitują promieniowanie zwrotne; (3) skutek — wzrost temperatury powierzchni. Odpowiedź w stylu „CO2 zatrzymuje ciepło, więc jest cieplej” zwykle nie dostaje kompletu punktów, bo brakuje w niej różnicy między promieniowaniem krótko- i długofalowym."
+        }
+      ]
+    },
+    {
+      "slug": "skutki-zmian-klimatu-i-regiony-zagrozone",
+      "title": "Skutki zmian klimatu i regiony najbardziej zagrożone",
+      "summary": "Od topnienia lodowców i wzrostu poziomu morza po zakwaszenie oceanów i przesuwanie stref klimatycznych — kto i dlaczego traci najwięcej.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wzrost średniej temperatury o „zaledwie” 1,1 °C brzmi niegroźnie, dopóki nie zobaczy się, co dzieje się w poszczególnych sferach Ziemi. Energia zmagazynowana w systemie klimatycznym nie rozkłada się równomiernie: kriosfera topnieje, ocean się rozszerza i zakwasza, obieg wody przyspiesza, a strefy klimatyczne przesuwają się ku biegunom. W tej lekcji prześledzisz skutki **sfera po sferze**, a potem sprawdzisz, gdzie na mapie świata uderzają one najmocniej — i dlaczego najbardziej cierpią kraje, które emitują najmniej."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala obserwowanych zmian",
+          "items": [
+            {
+              "value": "ok. 20",
+              "unit": "cm",
+              "label": "Wzrost średniego poziomu morza od 1900 r."
+            },
+            {
+              "value": "ok. 3–4",
+              "unit": "mm/rok",
+              "label": "Obecne tempo podnoszenia się poziomu oceanu",
+              "note": "ponad dwukrotnie szybciej niż w XX w. — tempo przyspiesza"
+            },
+            {
+              "value": "ok. 13",
+              "unit": "% na dekadę",
+              "label": "Tempo spadku wrześniowego zasięgu lodu morskiego Arktyki"
+            },
+            {
+              "value": "0,1",
+              "unit": "jednostki pH",
+              "label": "Spadek odczynu wód powierzchniowych oceanu od czasów przedprzemysłowych",
+              "note": "skala pH jest logarytmiczna: to ok. 30% wzrost stężenia jonów wodorowych"
+            },
+            {
+              "value": "ok. 90",
+              "unit": "%",
+              "label": "Udział oceanu w pochłanianiu dodatkowego ciepła zgromadzonego w systemie klimatycznym",
+              "note": "dlatego ocean jest „kołem zamachowym” zmian klimatu — reaguje wolno, ale bezwładnie"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Skutki zmian klimatu według sfer Ziemi",
+          "caption": "Uporządkowanie sferami to najbezpieczniejszy sposób odpowiadania na polecenie „podaj skutki” — gwarantuje różnorodność przykładów.",
+          "groups": [
+            {
+              "name": "Kriosfera",
+              "description": "Reaguje najszybciej, bo lód topnieje już przy przekroczeniu 0 °C. Skutki są tu najlepiej widoczne i najczęściej ilustrowane zdjęciami porównawczymi.",
+              "examples": [
+                "cofanie się i zanik lodowców górskich",
+                "spadek zasięgu i grubości lodu morskiego Arktyki",
+                "ubytek masy lądolodów Grenlandii i Antarktydy",
+                "degradacja wiecznej zmarzliny i osiadanie gruntu"
+              ]
+            },
+            {
+              "name": "Hydrosfera",
+              "description": "Cieplejszy ocean zajmuje większą objętość, wolniej rozpuszcza tlen i szybciej paruje.",
+              "examples": [
+                "wzrost poziomu morza i zalewanie wybrzeży",
+                "zakwaszenie oceanów",
+                "spadek zawartości tlenu w wodzie",
+                "zmiana zasięgu prądów morskich i osłabienie cyrkulacji termohalinowej"
+              ]
+            },
+            {
+              "name": "Atmosfera",
+              "description": "Cieplejsze powietrze zawiera więcej pary wodnej (ok. 7% na każdy 1 °C), więc obieg wody staje się bardziej „gwałtowny”: dłuższe susze przeplatane ulewami.",
+              "examples": [
+                "częstsze i dłuższe fale upałów",
+                "nawalne opady i powodzie błyskawiczne",
+                "silniejsze cyklony tropikalne",
+                "przesunięcie pasów opadowych i wydłużenie okresu wegetacyjnego"
+              ]
+            },
+            {
+              "name": "Biosfera",
+              "description": "Gatunki uciekają przed ociepleniem ku biegunom i w górę stoków; te, które nie mają dokąd, wymierają.",
+              "examples": [
+                "blaknięcie raf koralowych",
+                "przesuwanie zasięgów gatunków i granicy lasu",
+                "rozprzestrzenianie się szkodników i chorób tropikalnych",
+                "rozsynchronizowanie cykli życiowych (np. kwitnienie a lot zapylaczy)"
+              ]
+            },
+            {
+              "name": "Antroposfera — skutki społeczno-gospodarcze",
+              "description": "Ostatecznie zmiany klimatu są problemem gospodarczym i politycznym, a nie tylko przyrodniczym.",
+              "examples": [
+                "spadek plonów w strefie międzyzwrotnikowej",
+                "migracje klimatyczne",
+                "wzrost kosztów ubezpieczeń i odbudowy po katastrofach",
+                "konflikty o wodę i grunty rolne",
+                "zagrożenie infrastruktury nadmorskiej i miast portowych"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego podnosi się poziom morza — trzy składniki jednego skutku",
+          "caption": "Uwaga na klasyczne pytanie: topnienie lodu morskiego NIE podnosi poziomu oceanu.",
+          "steps": [
+            {
+              "title": "1. Rozszerzalność termiczna wody (ekspansja termiczna)",
+              "text": "Woda ogrzewana powyżej 4 °C zwiększa objętość. Ponieważ ocean pochłonął ok. 90% nadmiaru ciepła, samo jego ogrzanie odpowiada mniej więcej za **połowę** dotychczasowego wzrostu poziomu morza. To skutek najbardziej bezwładny — będzie trwał setki lat po ustaniu emisji."
+            },
+            {
+              "title": "2. Topnienie lodowców górskich",
+              "text": "Lodowce Alp, Andów, Himalajów, Alaski i Patagonii mają małą objętość, ale ogromną powierzchnię i reagują szybko. Ich woda roztopowa spływa rzekami do oceanu, **dodając** nową masę wody."
+            },
+            {
+              "title": "3. Ubytek masy lądolodów Grenlandii i Antarktydy",
+              "text": "Lądolody zawierają najwięcej lodu (Antarktyda ok. 90% lodu Ziemi). Topnieją wolniej, ale to one decydują o wzroście poziomu morza w perspektywie stuleci. Cielenie się lodowców szelfowych przyspiesza spływ lodu do oceanu."
+            },
+            {
+              "title": "4. Dlaczego lód morski się nie liczy",
+              "text": "Lód morski **pływa** — wypiera już objętość wody odpowiadającą swojej masie (prawo Archimedesa). Jego stopienie nie zmienia poziomu oceanu, choć drastycznie obniża albedo. Poziom morza podnosi tylko lód, który wcześniej leżał **na lądzie**."
+            },
+            {
+              "title": "5. Skutki na wybrzeżach",
+              "text": "Zalewanie nisko położonych terenów, cofanie się linii brzegowej (abrazja), zasolenie wód gruntowych i ujść rzek, wyższe spiętrzenia sztormowe. Najbardziej narażone są **delty rzek** i **atole koralowe**."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Zakwaszenie oceanów",
+          "text": "Spadek pH wód oceanicznych spowodowany rozpuszczaniem się w nich nadmiaru **dwutlenku węgla** z atmosfery. Ocean pochłonął dotąd ok. jednej czwartej antropogenicznej emisji CO2 — łagodzi to ocieplenie, ale zmienia chemię wody morskiej.",
+          "note": "To osobny skutek emisji CO2, niezależny od temperatury — bywa nazywany „drugim problemem CO2” albo „bliźniakiem globalnego ocieplenia”."
+        },
+        {
+          "type": "formula",
+          "title": "Chemia zakwaszenia — dlaczego rafy tracą budulec",
+          "expression": "CO_2 + H_2O \\rightleftharpoons H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-",
+          "variables": [
+            {
+              "symbol": "CO_2",
+              "meaning": "dwutlenek węgla rozpuszczający się w wodzie morskiej"
+            },
+            {
+              "symbol": "H_2CO_3",
+              "meaning": "kwas węglowy — nietrwały, od razu dysocjuje"
+            },
+            {
+              "symbol": "H^+",
+              "meaning": "jon wodorowy — jego przybywanie oznacza spadek pH, czyli zakwaszenie"
+            },
+            {
+              "symbol": "HCO_3^-",
+              "meaning": "jon wodorowęglanowy"
+            }
+          ],
+          "caption": "Nadmiar jonów H+ wiąże jony węglanowe (CO3^2-), z których organizmy budują szkielety i muszle z węglanu wapnia. Rafom koralowym, mięczakom i planktonowi wapiennemu brakuje budulca, a istniejące struktury zaczynają się rozpuszczać."
+        },
+        {
+          "type": "case-study",
+          "title": "Blaknięcie Wielkiej Rafy Koralowej",
+          "region": "Morze Koralowe, u północno-wschodnich wybrzeży Australii",
+          "text": "Wielka Rafa Koralowa to największa struktura zbudowana przez organizmy żywe — ciągnie się przez ponad 2000 km wzdłuż wybrzeża Queensland. Koralowce żyją w **symbiozie z glonami (zooksantellami)**, które dostarczają im do 90% pożywienia i nadają barwę. Gdy temperatura wody utrzymuje się przez kilka tygodni ok. 1–2 °C powyżej normy, koralowiec usuwa glony i **blednie** — traci kolor i źródło pokarmu. Krótkie epizody są odwracalne, ale powtarzające się co kilka lat masowe blaknięcia (rejestrowane m.in. w 1998, 2002, 2016, 2017 i 2020 r.) nie dają rafie czasu na regenerację. Równolegle zakwaszenie utrudnia odbudowę szkieletów wapiennych, a cyklony tropikalne niszczą osłabione struktury.",
+          "takeaway": "Rafy koralowe to najczulszy wskaźnik zmian klimatu w oceanie: łączą w sobie skutek termiczny (blaknięcie) i chemiczny (zakwaszenie). Ich zanik oznacza utratę siedlisk ok. 25% gatunków morskich, spadek połowów i ochrony wybrzeży przed falowaniem."
+        },
+        {
+          "type": "zones",
+          "title": "Przesuwanie się stref klimatyczno-roślinnych ku biegunom",
+          "caption": "Ocieplenie nie „dodaje ciepła wszędzie po równo” — ono przesuwa granice stref. Kliknij strefy od bieguna ku równikowi.",
+          "zones": [
+            {
+              "name": "Strefa polarna i subpolarna",
+              "latitude": "66,5–90°",
+              "text": "Ociepla się najszybciej (amplifikacja arktyczna, nawet 3–4 razy szybciej niż średnia globalna). Tundra jest zarastana przez krzewy i las (borealizacja), wieczna zmarzlina topnieje, a wraz z nią destabilizuje się grunt pod infrastrukturą.",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa umiarkowana chłodna",
+              "latitude": "50–66,5°",
+              "text": "Wydłuża się okres wegetacyjny i przesuwa granica upraw ku północy (np. kukurydza i winorośl w Polsce i Skandynawii). Rośnie za to ryzyko suszy glebowej latem i gwałtownych opadów.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa podzwrotnikowa (śródziemnomorska) i umiarkowana ciepła",
+              "latitude": "30–50°",
+              "text": "Obszar tzw. rozszerzania się komórki Hadleya: pas wyżów zwrotnikowych przesuwa się ku biegunom, więc basen Morza Śródziemnego, Kalifornia i południowa Australia stają się **suchsze**. Częstsze fale upałów i pożary.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa zwrotnikowa sucha",
+              "latitude": "20–30°",
+              "text": "Pustynie i półpustynie rozszerzają się ku wyższym szerokościom. Nakłada się to na presję człowieka, dając pustynnienie na obrzeżach Sahary, w Azji Środkowej i Australii.",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa podrównikowa (sawann)",
+              "latitude": "10–20°",
+              "text": "Najbardziej wrażliwa na zmiany opadów: pora deszczowa staje się krótsza i mniej przewidywalna. To tu leży Sahel — region, gdzie zawodność monsunu zachodnioafrykańskiego przekłada się wprost na głód.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa równikowa",
+              "latitude": "0–10°",
+              "text": "Wzrost temperatury jest tu najmniejszy, ale i tak groźny: gatunki tropikalne żyją blisko granicy tolerancji cieplnej i nie mają dokąd migrować. Rośnie ryzyko przekształcania wilgotnego lasu w formacje sawannowe.",
+              "tone": "vegetation"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Wrześniowy (minimalny) zasięg lodu morskiego Arktyki",
+          "caption": "Wrzesień to koniec lata polarnego — moment najmniejszego zasięgu lodu w roku. Wartości orientacyjne, w mln km².",
+          "unit": "mln km²",
+          "labels": [
+            "1980",
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "Zasięg lodu morskiego",
+              "values": [
+                7.7,
+                6.2,
+                6.3,
+                4.9,
+                3.9
+              ]
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat regionu najbardziej narażonego na pustynnienie",
+          "station": "Niamey (Niger, Sahel)",
+          "caption": "Zwróć uwagę na dwie cechy naraz: wysokie temperatury przez cały rok i skrajną koncentrację opadów w kilku miesiącach.",
+          "temps": [
+            24.5,
+            27.5,
+            31,
+            34,
+            34,
+            32,
+            29,
+            27.5,
+            29,
+            30.5,
+            27.5,
+            24.5
+          ],
+          "precip": [
+            0,
+            0,
+            3,
+            8,
+            33,
+            68,
+            145,
+            185,
+            90,
+            12,
+            0,
+            0
+          ],
+          "answer": {
+            "climate": "Klimat podrównikowy suchy (sawannowy) strefy międzyzwrotnikowej",
+            "reasoning": "Średnie miesięczne temperatury nie spadają poniżej 24 °C, a roczna amplituda jest niewielka (ok. 9,5 °C) — to strefa międzyzwrotnikowa. Roczna suma opadów wynosi ok. 550 mm, a blisko 90% tej sumy przypada na cztery miesiące lata północnego (VI–IX), gdy nad region wkracza monsun zachodnioafrykański wraz ze strefą zbieżności międzyzwrotnikowej. Od listopada do kwietnia opady są zerowe lub znikome. Taki reżim — deszcz „wszystko albo nic” — sprawia, że przesunięcie pory deszczowej o kilka tygodni oznacza nieurodzaj i jest bezpośrednią przyczyną kryzysów żywnościowych w Sahelu."
+          }
+        },
+        {
+          "type": "map-explore",
+          "title": "Regiony najbardziej zagrożone zmianami klimatu",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że zagrożenie wynika z połączenia narażenia przyrodniczego i niskiej zdolności adaptacyjnej.",
+          "center": [
+            15,
+            30
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -8.52,
+              "lng": 179.2,
+              "label": "Tuvalu (Funafuti)",
+              "text": "Państwo atolowe na Pacyfiku: maksymalna wysokość ok. 4,5 m n.p.m. Zagrożenia to zalewanie w czasie sztormów i przypływów syzygijnych, zasolenie soczewek wód słodkich i gruntów uprawnych. Tuvalu, Kiribati i Malediwy tworzą grupę **małych rozwijających się państw wyspiarskich (SIDS)** — najgłośniejszych uczestników negocjacji klimatycznych."
+            },
+            {
+              "lat": 4.17,
+              "lng": 73.51,
+              "label": "Malediwy (Male)",
+              "text": "Ok. 1200 wysp koralowych o średniej wysokości ok. 1,5 m n.p.m. Podwójne zagrożenie: wzrost poziomu morza oraz zamieranie raf, które dotąd naturalnie chroniły wyspy przed falowaniem i dostarczały materiału budującego atole."
+            },
+            {
+              "lat": 1.33,
+              "lng": 172.98,
+              "label": "Kiribati (Tarawa)",
+              "text": "Państwo rozrzucone na ogromnym obszarze Pacyfiku. Wykupiło grunty na Fidżi jako zabezpieczenie na wypadek konieczności przesiedlenia ludności — podręcznikowy przykład **migracji klimatycznej** planowanej z wyprzedzeniem."
+            },
+            {
+              "lat": 22,
+              "lng": 89.5,
+              "label": "Delta Gangesu i Brahmaputry (Bangladesz)",
+              "text": "Nizinny kraj o gęstości zaludnienia powyżej 1000 os./km². Nakładają się tu: wzrost poziomu morza, spiętrzenia sztormowe cyklonów Zatoki Bengalskiej, osiadanie deltowe i zasolenie gleb. Miliony ludzi w strefie zagrożenia — główne źródło migracji klimatycznych w Azji."
+            },
+            {
+              "lat": 78.22,
+              "lng": 15.65,
+              "label": "Svalbard / Arktyka",
+              "text": "Region ocieplający się kilkakrotnie szybciej niż średnia globalna (amplifikacja arktyczna). Zanik lodu morskiego, degradacja wiecznej zmarzliny, zmiana warunków życia Inuitów i Saamów, ale też otwarcie nowych szlaków żeglugowych i dostępu do surowców — czyli konflikt interesów."
+            },
+            {
+              "lat": 13.51,
+              "lng": 2.11,
+              "label": "Sahel (Niamey, Niger)",
+              "text": "Pas przejściowy między Saharą a sawannami. Rosnąca zmienność opadów, susze i szybki przyrost naturalny prowadzą do degradacji gleb, głodu i konfliktów o pastwiska. Klasyczny przykład regionu o **najmniejszej emisji i największej wrażliwości**."
+            },
+            {
+              "lat": 69.22,
+              "lng": -51.1,
+              "label": "Ilulissat (Grenlandia)",
+              "text": "Jeden z najszybciej płynących lodowców świata (Sermeq Kujalleq). Ubytek masy lądolodu Grenlandii jest dziś jednym z głównych składników wzrostu poziomu morza — całkowite jego stopienie podniosłoby ocean o ok. 7 m."
+            },
+            {
+              "lat": -18.3,
+              "lng": 147.7,
+              "label": "Wielka Rafa Koralowa (Australia)",
+              "text": "Największy ekosystem rafowy świata, wielokrotnie dotknięty masowym blaknięciem. Łączy skutki termiczne i chemiczne ocieplenia oraz pokazuje straty gospodarcze (turystyka, rybołówstwo)."
+            },
+            {
+              "lat": 45.44,
+              "lng": 12.32,
+              "label": "Wenecja (Włochy)",
+              "text": "Miasto na lagunie, gdzie wzrost poziomu morza nakłada się na osiadanie gruntu. Coraz częstsze zjawisko *acqua alta* wymusiło budowę ruchomych zapór MOSE — przykład kosztownej **adaptacji** w kraju wysoko rozwiniętym."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Kto emituje, a kto ponosi skutki — nierówność klimatyczna",
+          "leftLabel": "Kraje wysoko rozwinięte",
+          "rightLabel": "Kraje rozwijające się i SIDS",
+          "rows": [
+            {
+              "aspect": "Udział w emisji historycznej",
+              "left": "Bardzo wysoki — emitują od początku rewolucji przemysłowej",
+              "right": "Znikomy; wiele państw wyspiarskich odpowiada za ułamek promila emisji globalnej"
+            },
+            {
+              "aspect": "Emisja na mieszkańca",
+              "left": "Wysoka (kilkanaście ton CO2 na osobę rocznie w USA, Kanadzie, Australii)",
+              "right": "Niska — w wielu krajach Afryki poniżej 1 t CO2 na osobę rocznie"
+            },
+            {
+              "aspect": "Położenie i narażenie",
+              "left": "Głównie strefa umiarkowana; skutki dotkliwe, ale rozłożone w czasie",
+              "right": "Strefa międzyzwrotnikowa, atole, delty — narażenie na cyklony, susze i zalewanie"
+            },
+            {
+              "aspect": "Zdolność adaptacyjna",
+              "left": "Duża: kapitał, technologie, ubezpieczenia, systemy ostrzegania, wały i zapory",
+              "right": "Mała: brak środków, zależność od rolnictwa nienawadnianego, słabe instytucje"
+            },
+            {
+              "aspect": "Postulat negocjacyjny",
+              "left": "Redukcja emisji (mitygacja) i transfer technologii",
+              "right": "Finansowanie adaptacji, rekompensata **strat i szkód** (loss and damage), uznanie odpowiedzialności historycznej"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki. **(1)** „Ocieplenie = wszędzie cieplej i sucho” — nieprawda: w wielu regionach rosną opady, a zimą możliwe są ekstremalne mrozy związane z osłabieniem wiru polarnego. Poprawny termin to **zmiana klimatu**, bo zmienia się cały rozkład zjawisk. **(2)** Topnienie **lodu morskiego** nie podnosi poziomu oceanu — robi to tylko lód lądowy i rozszerzalność termiczna. **(3)** Zakwaszenie oceanów nie jest skutkiem wzrostu temperatury, lecz bezpośrednim skutkiem rozpuszczania CO2 — te dwa procesy trzeba w odpowiedzi rozdzielić."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj region do dominującego zagrożenia klimatycznego",
+          "instruction": "Każdemu obszarowi przyporządkuj skutek zmian klimatu, który jest w nim najgroźniejszy.",
+          "pairs": [
+            {
+              "left": "Tuvalu i Malediwy",
+              "right": "Zalewanie terenu i zasolenie wód gruntowych wskutek wzrostu poziomu morza"
+            },
+            {
+              "left": "Arktyka",
+              "right": "Amplifikacja polarna: zanik lodu morskiego i degradacja wiecznej zmarzliny"
+            },
+            {
+              "left": "Sahel",
+              "right": "Susze i pustynnienie wskutek zawodności pory deszczowej"
+            },
+            {
+              "left": "Basen Morza Śródziemnego",
+              "right": "Spadek opadów, fale upałów i pożary wskutek przesunięcia pasa wyżów zwrotnikowych"
+            },
+            {
+              "left": "Wielka Rafa Koralowa",
+              "right": "Masowe blaknięcie koralowców i zakwaszenie wód"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko NIE przyczynia się bezpośrednio do wzrostu poziomu morza?",
+          "options": [
+            "Rozszerzalność termiczna ogrzewającej się wody oceanicznej",
+            "Topnienie lodowców górskich w Himalajach i Andach",
+            "Topnienie pływającego lodu morskiego w Arktyce",
+            "Ubytek masy lądolodu Grenlandii"
+          ],
+          "correctIndex": 2,
+          "explanation": "Lód morski pływa, więc wypiera już objętość wody odpowiadającą swojej masie — jego stopienie nie zmienia poziomu oceanu (prawo Archimedesa). Poziom morza podnoszą: ekspansja termiczna wody oraz dopływ wody z lodu, który leżał na lądzie (lodowce górskie, lądolody)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego zakwaszenie oceanów szczególnie zagraża koralowcom, mięczakom i planktonowi wapiennemu?",
+          "options": [
+            "Bo niższe pH podnosi temperaturę wody i powoduje blaknięcie",
+            "Bo nadmiar jonów wodorowych wiąże jony węglanowe, utrudniając budowę szkieletów z węglanu wapnia",
+            "Bo kwaśna woda zawiera mniej soli mineralnych potrzebnych do wzrostu",
+            "Bo rozpuszczony CO2 blokuje dopływ światła do warstwy powierzchniowej"
+          ],
+          "correctIndex": 1,
+          "explanation": "CO2 rozpuszczony w wodzie tworzy kwas węglowy, który dysocjuje, zwiększając stężenie jonów H+. Te wiążą jony węglanowe CO3^2-, czyli budulec węglanu wapnia. Organizmom wapiennym trudniej jest tworzyć szkielety i muszle, a już istniejące struktury zaczynają się rozpuszczać."
+        },
+        {
+          "type": "quiz",
+          "question": "Małe państwa wyspiarskie (SIDS) są uznawane za najbardziej poszkodowane przez zmiany klimatu przede wszystkim dlatego, że:",
+          "options": [
+            "emitują najwięcej gazów cieplarnianych w przeliczeniu na mieszkańca",
+            "leżą w strefie klimatu umiarkowanego, gdzie ocieplenie jest najszybsze",
+            "są nisko położone i mają małe możliwości finansowe adaptacji, mimo znikomego udziału w emisji",
+            "położone są na płytach tektonicznych ulegających obniżaniu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Zagrożenie SIDS wynika z połączenia trzech cech: skrajnie niskiego położenia (atole często poniżej 3–4 m n.p.m.), braku środków i przestrzeni na adaptację oraz zależności od raf i rybołówstwa. Jednocześnie ich udział w emisji globalnej jest znikomy — stąd argument o nierówności klimatycznej i postulat rekompensaty strat i szkód."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o skutkach zmian klimatu zawsze pisz skutek **kierunkowo i mierzalnie**: nie „zmiany w przyrodzie”, lecz „wzrost poziomu morza powodujący zalewanie atoli i zasolenie wód gruntowych”. Gdy polecenie brzmi „podaj trzy skutki”, wybierz je z **trzech różnych sfer** (np. kriosfera, hydrosfera, antroposfera) — klucz CKE nie punktuje dwukrotnie tego samego mechanizmu opisanego innymi słowami. Przy pytaniach o region uzasadniaj zawsze dwoma czynnikami: cechą środowiska (położenie, wysokość, klimat) i cechą społeczno-gospodarczą (poziom rozwoju, gęstość zaludnienia)."
+        }
+      ]
+    },
+    {
+      "slug": "polityka-klimatyczna-i-dekarbonizacja",
+      "title": "Przeciwdziałanie zmianom klimatu: porozumienia, adaptacja i dekarbonizacja",
+      "summary": "Czym różni się mitygacja od adaptacji, co ustaliły protokół z Kioto i porozumienie paryskie oraz na czym polega dekarbonizacja gospodarki.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Skoro znasz już mechanizm i skutki zmian klimatu, pora na pytanie egzaminacyjne, które pojawia się najczęściej: **co można z tym zrobić?** Odpowiedź ma dwa filary — ograniczanie emisji (mitygacja) i przystosowanie się do zmian już nieuniknionych (adaptacja) — oraz jeden problem organizacyjny: atmosfera jest wspólna, a państwa suwerenne. Dlatego ochrona klimatu jest w praktyce **polityką międzynarodową**: ciągiem konwencji, protokołów i porozumień, z których każde uczyło się na słabościach poprzedniego."
+        },
+        {
+          "type": "compare",
+          "title": "Mitygacja a adaptacja — dwie odpowiedzi na ten sam problem",
+          "leftLabel": "Mitygacja (przeciwdziałanie)",
+          "rightLabel": "Adaptacja (przystosowanie)",
+          "rows": [
+            {
+              "aspect": "Cel",
+              "left": "Zmniejszyć **przyczynę** — ograniczyć emisję gazów cieplarnianych i zwiększyć ich pochłanianie",
+              "right": "Zmniejszyć **skutki** — dostosować gospodarkę i infrastrukturę do zmienionego klimatu"
+            },
+            {
+              "aspect": "Skala działania",
+              "left": "Globalna — efekt odczuwa cała planeta niezależnie od tego, kto redukuje",
+              "right": "Lokalna i regionalna — korzyść odnosi ten, kto inwestuje"
+            },
+            {
+              "aspect": "Czas efektu",
+              "left": "Odroczony o dziesięciolecia (bezwładność systemu klimatycznego)",
+              "right": "Natychmiastowy lub w ciągu kilku lat"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "OZE zamiast węgla, elektryfikacja transportu, termomodernizacja, zalesianie, CCS, ograniczenie spożycia wołowiny",
+              "right": "Wały przeciwpowodziowe i zapory sztormowe, retencja i oszczędzanie wody, odmiany odporne na suszę, systemy wczesnego ostrzegania, zazielenianie miast"
+            },
+            {
+              "aspect": "Kto najbardziej potrzebuje",
+              "left": "Najwięksi emitenci — kraje wysoko rozwinięte i wielkie gospodarki wschodzące",
+              "right": "Kraje najbardziej narażone — SIDS, Sahel, delty Azji Południowej"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Kalendarium międzynarodowej polityki klimatycznej",
+          "caption": "Kliknij kolejne daty. Zapamiętaj przynajmniej cztery: 1988, 1992, 1997 i 2015.",
+          "events": [
+            {
+              "period": "1988",
+              "label": "Powstanie IPCC",
+              "text": "Międzyrządowy Zespół ds. Zmian Klimatu (IPCC) zostaje powołany przez ONZ i Światową Organizację Meteorologiczną. Nie prowadzi własnych badań — **podsumowuje stan wiedzy naukowej** w raportach, które są podstawą negocjacji politycznych."
+            },
+            {
+              "period": "1992",
+              "label": "Szczyt Ziemi w Rio de Janeiro — Ramowa konwencja (UNFCCC)",
+              "text": "Konferencja ONZ „Środowisko i Rozwój” przyjmuje **Ramową konwencję Narodów Zjednoczonych w sprawie zmian klimatu**, Agendę 21 oraz konwencje o bioróżnorodności i o pustynnieniu. Konwencja klimatyczna wyznacza cel ogólny, ale **nie zawiera wiążących limitów emisji** — jest ramą dla późniejszych protokołów."
+            },
+            {
+              "period": "1997",
+              "label": "Protokół z Kioto",
+              "text": "Pierwsza umowa z **prawnie wiążącymi** celami redukcyjnymi. Kraje rozwinięte (tzw. załącznik I) zobowiązały się zmniejszyć emisję średnio o ok. 5% w latach 2008–2012 w stosunku do roku bazowego **1990**. Wprowadził mechanizmy elastyczne: handel emisjami, wspólne wdrożenia i mechanizm czystego rozwoju."
+            },
+            {
+              "period": "2005",
+              "label": "Wejście Kioto w życie i start systemu EU ETS",
+              "text": "Protokół zaczyna obowiązywać dopiero po ratyfikacji przez Rosję — USA go nie ratyfikowały, a Kanada z niego wystąpiła. W tym samym roku Unia Europejska uruchamia **EU ETS** — pierwszy i wciąż największy pod względem wartości obrotu system handlu uprawnieniami do emisji (od 2021 r. większy zakres emisji obejmuje system chiński)."
+            },
+            {
+              "period": "2015",
+              "label": "Porozumienie paryskie (COP21)",
+              "text": "Cel: utrzymanie wzrostu średniej temperatury globalnej **znacznie poniżej 2 °C** wobec epoki przedprzemysłowej, z dążeniem do **1,5 °C**. Zobowiązania obejmują **wszystkie** państwa, ale każde samo określa swój wkład (NDC) i co pięć lat go podnosi. Weszło w życie w 2016 r."
+            },
+            {
+              "period": "2021",
+              "label": "Pakiet Fit for 55 i szczyt w Glasgow (COP26)",
+              "text": "UE przyjmuje cel redukcji emisji netto o **55% do 2030 r.** względem 1990 i neutralności klimatycznej do **2050 r.**. W Glasgow po raz pierwszy w dokumencie końcowym pojawia się zapis o ograniczaniu energetyki węglowej; rozpoczyna się też **dialog glasgowski** o finansowaniu strat i szkód — sam fundusz strat i szkód powołano dopiero na COP27 (2022) i uruchomiono na COP28 (2023)."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Protokół z Kioto a porozumienie paryskie",
+          "leftLabel": "Kioto (1997)",
+          "rightLabel": "Paryż (2015)",
+          "rows": [
+            {
+              "aspect": "Kogo obejmuje",
+              "left": "Tylko kraje rozwinięte z załącznika I; kraje rozwijające się bez limitów",
+              "right": "**Wszystkie** państwa-strony, także Chiny, Indie i kraje rozwijające się"
+            },
+            {
+              "aspect": "Charakter zobowiązań",
+              "left": "Odgórnie narzucone, prawnie wiążące limity emisji",
+              "right": "Oddolne, dobrowolnie deklarowane wkłady krajowe (**NDC**) aktualizowane co 5 lat"
+            },
+            {
+              "aspect": "Cel",
+              "left": "Redukcja emisji o ok. 5% wobec 1990 r. w latach 2008–2012",
+              "right": "Cel temperaturowy: znacznie poniżej 2 °C, dążenie do 1,5 °C"
+            },
+            {
+              "aspect": "Główna słabość",
+              "left": "Brak USA (nieratyfikowany), wystąpienie Kanady, wyłączenie największych gospodarek wschodzących",
+              "right": "Brak sankcji za niewykonanie NDC — działa siłą przejrzystości i presji politycznej"
+            },
+            {
+              "aspect": "Znaczenie",
+              "left": "Pierwszy realny mechanizm rynkowy (handel emisjami) i precedens prawny",
+              "right": "Powszechność i cel długookresowy: neutralność klimatyczna w drugiej połowie XXI w."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Neutralność klimatyczna (zeroemisyjność netto)",
+          "text": "Stan, w którym ilość gazów cieplarnianych **emitowanych** przez gospodarkę jest równoważona przez ilość **pochłanianą** — przez lasy, gleby, oceany oraz technologie wychwytu i składowania dwutlenku węgla (CCS/CCU). Bilans netto wynosi wtedy zero.",
+          "note": "To nie to samo co zero emisji: część emisji (rolnictwo, lotnictwo, cementownie) jest trudna do usunięcia, więc musi zostać zrównoważona pochłanianiem. Unia Europejska wyznaczyła sobie ten cel na 2050 r."
+        },
+        {
+          "type": "definition",
+          "term": "Ślad węglowy",
+          "text": "Całkowita ilość gazów cieplarnianych wyemitowana bezpośrednio i pośrednio przez osobę, produkt, firmę lub państwo, przeliczona na **ekwiwalent CO2** (t CO2e). Pozwala porównywać wpływ różnych działań na klimat wspólną miarą.",
+          "note": "Przelicznikiem jest GWP: 1 kg metanu liczy się jak ok. 28 kg CO2. Dlatego ograniczenie emisji metanu daje szybki efekt klimatyczny — metan rozkłada się w atmosferze w ciągu ok. dekady."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Emisja CO2 na mieszkańca w wybranych państwach",
+          "caption": "Wartości orientacyjne (ok. 2022 r.), w tonach CO2 na osobę rocznie. Porównaj z pozycją tych państw w rankingu emisji całkowitej — Chiny są największym emitentem globalnym, ale na mieszkańca emitują mniej niż Polska.",
+          "unit": "t CO2 / os.",
+          "labels": [
+            "Katar",
+            "USA",
+            "Rosja",
+            "Polska",
+            "Chiny",
+            "Niemcy",
+            "Brazylia",
+            "Indie",
+            "Nigeria"
+          ],
+          "series": [
+            {
+              "name": "Emisja na mieszkańca",
+              "values": [
+                35,
+                15,
+                11,
+                8.5,
+                8,
+                8,
+                2.2,
+                2,
+                0.6
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dekarbonizacja gospodarki — jak się ją przeprowadza",
+          "caption": "Kolejność nie jest przypadkowa: najtańsza jest energia, której nie trzeba wyprodukować.",
+          "steps": [
+            {
+              "title": "1. Ograniczenie zapotrzebowania (efektywność energetyczna)",
+              "text": "Termomodernizacja budynków, oświetlenie LED, odzysk ciepła w przemyśle, ograniczanie strat w przesyle. Efekt najtańszy i najszybszy — dlatego w polityce UE nosi nazwę zasady **„efektywność energetyczna przede wszystkim”**."
+            },
+            {
+              "title": "2. Zmiana miksu energetycznego",
+              "text": "Zastąpienie węgla i ropy przez **OZE** (wiatr, fotowoltaika, woda, geotermia, biomasa) oraz — w wielu krajach — energetykę jądrową, która jest niskoemisyjna, choć nieodnawialna. Gaz ziemny bywa traktowany jako paliwo przejściowe, bo emituje ok. dwukrotnie mniej CO2 niż węgiel na jednostkę energii."
+            },
+            {
+              "title": "3. Elastyczność systemu i magazynowanie",
+              "text": "Wiatr i słońce są **niesterowalne**, więc rosnący ich udział wymaga magazynów energii (baterie, elektrownie szczytowo-pompowe, wodór), inteligentnych sieci i połączeń transgranicznych. To dziś główne wąskie gardło transformacji."
+            },
+            {
+              "title": "4. Elektryfikacja końcowego zużycia",
+              "text": "Przenoszenie transportu, ogrzewania i procesów przemysłowych z paliw kopalnych na energię elektryczną (pojazdy elektryczne, pompy ciepła, piece elektryczne). Ma sens tylko wtedy, gdy równolegle dekarbonizuje się produkcję prądu."
+            },
+            {
+              "title": "5. Sektory trudne do zdekarbonizowania",
+              "text": "Cementownie, hutnictwo, lotnictwo, żegluga i rolnictwo nie mają prostych zamienników. Tu wchodzą wodór, biopaliwa, paliwa syntetyczne oraz **CCS** — wychwyt i geologiczne składowanie CO2."
+            },
+            {
+              "title": "6. Pochłanianie pozostałych emisji",
+              "text": "Zalesianie i odtwarzanie mokradeł, rolnictwo węglowe (zwiększanie zawartości próchnicy w glebie), ochrona lasów tropikalnych. Dopiero suma kroków 1–6 daje **neutralność klimatyczną**."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Instrumenty polityki klimatycznej",
+          "caption": "Pytania maturalne często proszą o „działania na rzecz ograniczenia emisji” — warto wskazać instrument z każdej grupy, a nie trzy razy „mniej jeździć samochodem”.",
+          "groups": [
+            {
+              "name": "Rynkowe",
+              "description": "Nadają emisji cenę, dzięki czemu ograniczanie jej staje się opłacalne dla przedsiębiorstw.",
+              "examples": [
+                "EU ETS — handel uprawnieniami do emisji",
+                "podatek węglowy (np. w Szwecji)",
+                "CBAM — graniczny mechanizm węglowy UE, opłata od importu towarów wysokoemisyjnych"
+              ]
+            },
+            {
+              "name": "Regulacyjne (nakazowo-zakazowe)",
+              "description": "Ustalają normy, których nie wolno przekroczyć, albo terminy wycofania technologii.",
+              "examples": [
+                "normy emisji CO2 dla nowych samochodów",
+                "standardy energetyczne budynków",
+                "zakaz sprzedaży nowych aut spalinowych w UE po 2035 r.",
+                "wygaszanie elektrowni węglowych"
+              ]
+            },
+            {
+              "name": "Finansowe i wsparciowe",
+              "description": "Obniżają koszt technologii niskoemisyjnych i finansują transformację regionów zależnych od węgla.",
+              "examples": [
+                "dopłaty do fotowoltaiki i pomp ciepła",
+                "Fundusz Sprawiedliwej Transformacji",
+                "zielone obligacje",
+                "wycofywanie dopłat do paliw kopalnych"
+              ]
+            },
+            {
+              "name": "Adaptacyjne",
+              "description": "Nie zmniejszają emisji, lecz ograniczają straty — coraz większa część budżetów klimatycznych.",
+              "examples": [
+                "miejskie plany adaptacji do zmian klimatu",
+                "mała retencja i odbetonowanie miast",
+                "systemy wczesnego ostrzegania przed powodzią i upałem",
+                "ubezpieczenia rolne"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Transformacja energetyczna Polski — węgiel na zakręcie",
+          "region": "Polska, głównie Górnośląskie Zagłębie Węglowe i Bełchatów",
+          "text": "Polska rozpoczęła transformację z najbardziej węglowego miksu energetycznego w Unii Europejskiej — jeszcze w latach 90. węgiel kamienny i brunatny dawały ponad 95% produkcji energii elektrycznej, a w 2023 r. wciąż ok. 60%. Elektrownia Bełchatów, zasilana węglem brunatnym z sąsiedniej odkrywki, przez lata była pojedynczym największym emitentem CO2 w Europie. Napędem zmiany są trzy czynniki: **rosnące ceny uprawnień w systemie EU ETS**, które czynią prąd z węgla coraz droższym; unijne cele redukcyjne; oraz wyczerpywanie się złóż i rosnące koszty wydobycia w głębokich kopalniach śląskich. Rozwijają się fotowoltaika (w tym mikroinstalacje prosumenckie), morskie farmy wiatrowe na Bałtyku i planowana energetyka jądrowa. Kluczowym problemem pozostaje **wymiar społeczny**: w górnictwie i sektorach powiązanych pracuje kilkadziesiąt tysięcy osób, a regiony górnicze wymagają nowych miejsc pracy — stąd unijna koncepcja **sprawiedliwej transformacji**.",
+          "takeaway": "Dekarbonizacja to nie tylko problem technologiczny, ale przede wszystkim społeczno-gospodarczy: koszt transformacji jest skoncentrowany w kilku regionach i grupach zawodowych, a korzyści rozproszone globalnie. To wyjaśnia opór polityczny wobec ambitnych celów klimatycznych."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do jego znaczenia",
+          "instruction": "Połącz terminy z polityki klimatycznej z ich opisami.",
+          "pairs": [
+            {
+              "left": "NDC",
+              "right": "Dobrowolnie deklarowany przez państwo wkład w redukcję emisji, aktualizowany co 5 lat"
+            },
+            {
+              "left": "EU ETS",
+              "right": "Unijny system handlu uprawnieniami do emisji, w którym pozwolenie na emisję tony CO2 ma cenę rynkową"
+            },
+            {
+              "left": "CBAM",
+              "right": "Opłata graniczna od importu towarów wysokoemisyjnych, chroniąca przed ucieczką emisji poza UE"
+            },
+            {
+              "left": "CCS",
+              "right": "Wychwytywanie dwutlenku węgla ze spalin i składowanie go w strukturach geologicznych"
+            },
+            {
+              "left": "Adaptacja",
+              "right": "Przystosowanie infrastruktury i gospodarki do skutków, których nie da się już uniknąć"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze pomyłki w tym temacie. **Adaptacja to nie ograniczanie emisji** — budowa wałów przeciwpowodziowych czy nawadnianie pól nie zmniejszają efektu cieplarnianego. **Energetyka jądrowa nie jest OZE** — jest niskoemisyjna, ale uran to surowiec nieodnawialny; w zadaniu o źródłach odnawialnych elektrownia atomowa będzie błędem. I wreszcie: **neutralność klimatyczna ≠ zero emisji**, bo część emisji równoważy się pochłanianiem."
+        },
+        {
+          "type": "quiz",
+          "question": "Która cecha odróżnia porozumienie paryskie od protokołu z Kioto?",
+          "options": [
+            "Porozumienie paryskie nakłada wiążące limity emisji wyłącznie na kraje rozwinięte",
+            "Porozumienie paryskie obejmuje wszystkie państwa-strony, a cele redukcyjne deklarują one samodzielnie (NDC)",
+            "Protokół z Kioto ustalał cel temperaturowy 2 °C, a paryskie tylko limity ilościowe",
+            "Protokół z Kioto po raz pierwszy objął zobowiązaniami Chiny i Indie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kioto działało odgórnie i obejmowało tylko kraje rozwinięte z załącznika I. Paryż odwrócił logikę: zobowiązania dotyczą wszystkich stron, ale każda sama określa swój wkład (NDC) i podnosi ambicje co pięć lat, a nadrzędnym celem jest utrzymanie ocieplenia znacznie poniżej 2 °C, z dążeniem do 1,5 °C."
+        },
+        {
+          "type": "quiz",
+          "question": "Które z wymienionych działań jest przykładem adaptacji, a nie mitygacji?",
+          "options": [
+            "Budowa morskiej farmy wiatrowej na Bałtyku",
+            "Termomodernizacja budynków mieszkalnych",
+            "Wprowadzenie odmian pszenicy odpornych na suszę i budowa zbiorników retencyjnych",
+            "Zastąpienie kotłów węglowych pompami ciepła"
+          ],
+          "correctIndex": 2,
+          "explanation": "Adaptacja ogranicza skutki zmian klimatu, których już nie da się uniknąć — odmiany odporne na suszę i retencja wody nie zmniejszają emisji, lecz pozwalają funkcjonować w zmienionym klimacie. Pozostałe odpowiedzi to mitygacja, czyli ograniczanie emisji u źródła."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega idea systemu handlu uprawnieniami do emisji (EU ETS)?",
+          "options": [
+            "Państwa kupują od siebie prawo do zwiększania emisji bez żadnego limitu globalnego",
+            "Ustalany jest malejący pułap emisji, a uprawnienia w jego ramach mają cenę rynkową, więc redukcja staje się opłacalna",
+            "Przedsiębiorstwa płacą stałą opłatę za każdą tonę CO2, niezależnie od wielkości emisji",
+            "Zakłady emitujące CO2 muszą zasadzić las o powierzchni odpowiadającej emisji"
+          ],
+          "correctIndex": 1,
+          "explanation": "EU ETS działa w formule *cap and trade*: całkowity pułap emisji (cap) jest z góry ustalony i corocznie obniżany, a uprawnienia w jego ramach są przedmiotem obrotu (trade). Firma, której taniej jest zredukować emisję, sprzedaje nadwyżkę uprawnień; ta, dla której redukcja jest droga, kupuje je. Odpowiedź C opisuje podatek węglowy — inny instrument."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Pytania o porozumienia klimatyczne najczęściej sprawdzają **cztery** rzeczy: rok, zakres podmiotowy (kto jest objęty), charakter zobowiązań (wiążące czy dobrowolne) i cel liczbowy. Naucz się pary: **Kioto — 1997, kraje rozwinięte, wiążące limity, ok. −5% wobec 1990** i **Paryż — 2015, wszystkie państwa, NDC, znacznie poniżej 2 °C i dążenie do 1,5 °C**. Gdy w poleceniu pada „uzasadnij, dlaczego działania ochrony klimatu wymagają współpracy międzynarodowej”, wskaż na globalny charakter atmosfery: emisja z dowolnego miejsca oddziałuje na cały świat, więc redukcja przez jedno państwo nie przyniesie efektu, jeśli inne jej nie podejmą."
+        }
+      ]
+    },
+    {
+      "slug": "dziura-ozonowa-i-zanieczyszczenie-powietrza",
+      "title": "Dziura ozonowa, smog i kwaśne opady",
+      "summary": "Trzy problemy atmosfery, których nie wolno mylić: niszczenie ozonu stratosferycznego, zanieczyszczenie powietrza w miastach i zakwaszanie opadów.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Zmiany klimatu to nie jedyny problem atmosfery — i co ważniejsze, **nie ten sam problem** co dziura ozonowa czy smog. Każde z tych zjawisk zachodzi na innej wysokości, dotyczy innych substancji i wymaga innych rozwiązań. Dziura ozonowa to sprawa stratosfery i promieniowania ultrafioletowego. Smog i pyły to warstwa graniczna troposfery, czyli powietrze, którym oddychasz. Kwaśne opady łączą jedno z drugim — zanieczyszczenia emitowane lokalnie wracają na ziemię setki kilometrów dalej. W tej lekcji rozdzielisz te trzy mechanizmy tak, żeby na maturze nigdy ich nie pomylić."
+        },
+        {
+          "type": "layers",
+          "title": "Gdzie w atmosferze rozgrywa się który problem",
+          "caption": "Kliknij warstwy od góry. To najprostszy sposób zapamiętania różnicy: ozon w stratosferze jest dobroczynny, ozon przy gruncie jest trucizną.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Stratosfera — ozonosfera („dobry ozon”)",
+              "range": "ok. 15–35 km",
+              "text": "Warstwa o największym stężeniu ozonu ($O_3$), z maksimum ok. 20–25 km. Pochłania niemal całe promieniowanie **UV-C** i większość **UV-B**, chroniąc życie na powierzchni. To tutaj freony niszczą ozon, tworząc **dziurę ozonową**. Pochłanianie UV ogrzewa stratosferę — dlatego temperatura rośnie tam z wysokością.",
+              "tone": "sky"
+            },
+            {
+              "name": "Górna i środkowa troposfera",
+              "range": "ok. 3–12 km",
+              "text": "Strefa, przez którą trwałe zanieczyszczenia (freony, część siarki i azotu) są transportowane w górę i na dużą odległość. Freon potrzebuje kilku lat, żeby dotrzeć do stratosfery — dlatego skutki emisji sprzed dziesięcioleci odczuwamy do dziś.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Warstwa graniczna troposfery („zły ozon”, smog, pyły)",
+              "range": "0–2 km",
+              "text": "Warstwa bezpośrednio kontaktująca się z powierzchnią. Gromadzą się w niej pyły PM, $SO_2$, tlenki azotu i **ozon troposferyczny**, który tu jest szkodliwy dla płuc i roślin. W warunkach **inwersji temperatury** (cieplejsze powietrze nad chłodniejszym) zanieczyszczenia nie mogą się rozproszyć ku górze i powstaje smog.",
+              "tone": "earth"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Dziura ozonowa",
+          "text": "Sezonowy, gwałtowny spadek zawartości ozonu w stratosferze, przy którym całkowita zawartość ozonu w słupie powietrza spada poniżej **220 DU** (jednostek Dobsona), podczas gdy wartość typowa wynosi ok. 300 DU. Największy ubytek pojawia się nad **Antarktydą** w tamtejszą wiosnę (wrzesień–listopad).",
+          "note": "1 DU odpowiada warstwie czystego ozonu o grubości 0,01 mm w warunkach normalnych. Cały ozon atmosfery sprężony przy powierzchni utworzyłby warstwę grubości zaledwie ok. 3 mm. „Dziura” to nie otwór w atmosferze, lecz obszar silnego **przerzedzenia** warstwy ozonowej."
+        },
+        {
+          "type": "process",
+          "title": "Mechanizm powstawania dziury ozonowej",
+          "caption": "Zwróć uwagę na trzy warunki, które muszą wystąpić razem: freony, bardzo niska temperatura i powrót Słońca po nocy polarnej.",
+          "steps": [
+            {
+              "title": "1. Emisja freonów (CFC) przy powierzchni",
+              "text": "Freony — chlorofluorowęglowodory — były używane jako czynniki chłodnicze w lodówkach i klimatyzatorach, nośniki aerozoli w dezodorantach, środki spieniające i gaśnicze. Są **nietoksyczne, niepalne i chemicznie bierne**, co czyniło je idealnymi w użyciu — i katastrofalnymi w skutkach."
+            },
+            {
+              "title": "2. Transport do stratosfery",
+              "text": "Właśnie dlatego, że nie reagują w troposferze i nie wymywa ich deszcz, freony **trwają w powietrzu dziesiątki lat** i powoli, wraz z ruchami mas powietrza, wędrują do stratosfery."
+            },
+            {
+              "title": "3. Fotoliza i uwolnienie chloru",
+              "text": "W stratosferze silne promieniowanie **UV** rozbija cząsteczki freonów, uwalniając wolne atomy **chloru (Cl)** — a z halonów także bromu, jeszcze groźniejszego."
+            },
+            {
+              "title": "4. Katalityczny rozkład ozonu",
+              "text": "Atom chloru rozbija cząsteczkę ozonu i **odtwarza się** w kolejnej reakcji, więc może powtórzyć proces wielokrotnie. Jeden atom chloru niszczy nawet **dziesiątki tysięcy** cząsteczek ozonu, zanim zostanie związany. To wyjaśnia, dlaczego niewielkie stężenia freonów dają tak duży efekt."
+            },
+            {
+              "title": "5. Rola zimy polarnej i chmur stratosferycznych",
+              "text": "Nad Antarktydą zimą tworzy się **wir okołobiegunowy**, który izoluje masę powietrza i wychładza ją poniżej −78 °C. Powstają wtedy **polarne chmury stratosferyczne**, na których powierzchni nieaktywne związki chloru przekształcają się w formy gotowe do reakcji."
+            },
+            {
+              "title": "6. Wiosenny wybuch niszczenia ozonu",
+              "text": "Gdy po nocy polarnej wraca Słońce (wrzesień–listopad na półkuli południowej), promieniowanie UV uruchamia zgromadzony chlor naraz — zawartość ozonu spada w ciągu tygodni. Latem, po rozpadzie wiru, powietrze się miesza i warstwa częściowo się odbudowuje. Na Arktyce zjawisko jest **słabsze**, bo wir polarny jest tam mniej stabilny."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Cykl katalityczny chloru — dlaczego jeden atom niszczy tysiące cząsteczek",
+          "expression": "Cl + O_3 \\rightarrow ClO + O_2 \\qquad ClO + O \\rightarrow Cl + O_2",
+          "variables": [
+            {
+              "symbol": "Cl",
+              "meaning": "wolny atom chloru uwolniony z freonu przez promieniowanie UV"
+            },
+            {
+              "symbol": "O_3",
+              "meaning": "cząsteczka ozonu ulegająca rozkładowi"
+            },
+            {
+              "symbol": "ClO",
+              "meaning": "tlenek chloru — produkt pośredni, oddający tlen w drugiej reakcji"
+            }
+          ],
+          "caption": "Sumarycznie: $O_3 + O \\rightarrow 2O_2$, a atom chloru **wychodzi z reakcji nienaruszony** i wraca do punktu wyjścia. Na tym polega kataliza — chlor nie jest zużywany, więc działa latami."
+        },
+        {
+          "type": "classification",
+          "title": "Skutki zubożenia warstwy ozonowej",
+          "caption": "Cały łańcuch skutków wynika z jednego ogniwa: mniej ozonu w stratosferze = więcej promieniowania **UV-B** docierającego do powierzchni Ziemi. Zacznij odpowiedź od tego zdania.",
+          "groups": [
+            {
+              "name": "Dla zdrowia człowieka",
+              "description": "Promieniowanie UV-B uszkadza DNA komórek skóry oraz białka soczewki oka, a skutki kumulują się przez lata ekspozycji.",
+              "examples": [
+                "wzrost zachorowań na nowotwory skóry, w tym czerniaka złośliwego",
+                "zaćma i uszkodzenia rogówki",
+                "osłabienie odporności organizmu",
+                "oparzenia słoneczne i przyspieszone starzenie się skóry"
+              ]
+            },
+            {
+              "name": "Dla roślin i upraw",
+              "description": "Nadmiar UV-B hamuje fotosyntezę i uszkadza tkanki roślinne, co obniża plony i zmienia konkurencję między gatunkami.",
+              "examples": [
+                "spadek plonów zbóż, ryżu i soi",
+                "zaburzenia wzrostu, kwitnienia i wydawania nasion",
+                "zmiany składu gatunkowego zbiorowisk roślinnych"
+              ]
+            },
+            {
+              "name": "Dla ekosystemów wodnych",
+              "description": "UV-B przenika kilka–kilkanaście metrów w głąb czystej wody, uderzając w organizmy warstwy powierzchniowej — czyli w podstawę łańcucha pokarmowego.",
+              "examples": [
+                "zamieranie fitoplanktonu i spadek produkcji pierwotnej oceanu",
+                "uszkodzenia ikry, larw ryb i zooplanktonu",
+                "słabsze pochłanianie CO2 przez ocean jako skutek wtórny"
+              ]
+            },
+            {
+              "name": "Gdzie skutki są największe",
+              "description": "Nie tam, gdzie emitowano freony, lecz pod obszarem przerzedzonej warstwy ozonowej i na jego obrzeżach — to typowa pułapka w zadaniach maturalnych.",
+              "examples": [
+                "Antarktyda oraz południowe Chile i Argentyna (Patagonia), gdy płat ubogiego w ozon powietrza przesuwa się znad bieguna",
+                "Australia i Nowa Zelandia — jedne z najwyższych na świecie wskaźników zachorowań na czerniaka",
+                "obszary wysokogórskie, gdzie warstwa atmosfery pochłaniająca UV jest cieńsza"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Od odkrycia do odbudowy warstwy ozonowej",
+          "caption": "Protokół montrealski bywa nazywany najskuteczniejszą umową środowiskową w historii — warto umieć uzasadnić dlaczego.",
+          "events": [
+            {
+              "period": "1974",
+              "label": "Hipoteza Moliny i Rowlanda",
+              "text": "Chemicy Mario Molina i Sherwood Rowland ogłaszają, że freony mogą niszczyć ozon stratosferyczny. Za te badania (wraz z Paulem Crutzenem) otrzymali Nagrodę Nobla w 1995 r."
+            },
+            {
+              "period": "1985",
+              "label": "Odkrycie dziury ozonowej nad Antarktydą",
+              "text": "Zespół brytyjskich badaczy (J. Farman i in.) ze stacji Halley publikuje pomiary pokazujące dramatyczny wiosenny spadek zawartości ozonu. Satelity wcześniej „odrzucały” te wartości jako błąd pomiaru, bo wydawały się nieprawdopodobne."
+            },
+            {
+              "period": "1987",
+              "label": "Protokół montrealski",
+              "text": "Umowa o substancjach zubożających warstwę ozonową: harmonogram wycofania **freonów, halonów i innych substancji zubożających ozon**, wsparcie finansowe dla krajów rozwijających się i dłuższe terminy dla nich. Wszedł w życie w 1989 r."
+            },
+            {
+              "period": "1989–2010",
+              "label": "Wycofywanie freonów",
+              "text": "Protokół ratyfikowały **wszystkie państwa świata** — to jedyna taka umowa środowiskowa. Produkcja CFC w krajach rozwiniętych ustaje w 1996 r., w rozwijających się do 2010 r. Freony zastąpiono najpierw HCFC, potem HFC (nieszkodliwymi dla ozonu, ale będącymi silnymi gazami cieplarnianymi)."
+            },
+            {
+              "period": "2016",
+              "label": "Poprawka z Kigali",
+              "text": "Rozszerza protokół o stopniowe wycofywanie **HFC** — właśnie ze względu na ich ogromny potencjał tworzenia efektu cieplarnianego. To przykład powiązania dwóch problemów atmosfery przez jedną umowę."
+            },
+            {
+              "period": "2. połowa XXI w.",
+              "label": "Prognozowana odbudowa",
+              "text": "Zawartość ozonu wyraźnie przestała spadać, a dziura ozonowa się kurczy. Powrót do stanu sprzed 1980 r. przewiduje się na ok. połowę XXI w. dla większości świata i ok. lat 60. XXI w. nad Antarktydą — opóźnienie wynika z **wieloletniej trwałości freonów** już obecnych w atmosferze."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Absolutny klasyk błędów maturalnych: **dziura ozonowa nie powoduje globalnego ocieplenia**, a efekt cieplarniany nie niszczy ozonu. Zapamiętaj rozdzielnie: ozon — stratosfera, promieniowanie **UV**, freony, protokół **montrealski** (1987), problem w dużej mierze **rozwiązany**. Klimat — troposfera, promieniowanie **podczerwone**, CO2 i metan, protokół z **Kioto** i porozumienie **paryskie**, problem **narastający**. Jedyne realne połączenie: freony i ich zamienniki są przy okazji bardzo silnymi gazami cieplarnianymi."
+        },
+        {
+          "type": "compare",
+          "title": "Smog londyński a smog fotochemiczny",
+          "leftLabel": "Smog londyński (kwaśny, redukcyjny)",
+          "rightLabel": "Smog fotochemiczny (typu Los Angeles, utleniający)",
+          "rows": [
+            {
+              "aspect": "Pora roku i pogoda",
+              "left": "Zima, chłodno i wilgotno, wyż baryczny, cisza, mgła i **inwersja temperatury**",
+              "right": "Lato, gorąco, bezchmurnie, silne nasłonecznienie, słaby wiatr"
+            },
+            {
+              "aspect": "Główne zanieczyszczenia",
+              "left": "**Dwutlenek siarki (SO2)**, pyły i sadza ze spalania węgla",
+              "right": "**Tlenki azotu (NOx)** i lotne związki organiczne ze spalin samochodowych"
+            },
+            {
+              "aspect": "Mechanizm",
+              "left": "Zanieczyszczenia gromadzą się pod warstwą inwersyjną i łączą z kropelkami mgły, tworząc kwaśny aerozol",
+              "right": "Promieniowanie słoneczne uruchamia **reakcje fotochemiczne**, w których powstają wtórne zanieczyszczenia: ozon przygruntowy i PAN"
+            },
+            {
+              "aspect": "Wygląd",
+              "left": "Gęsta, ciemnożółta lub szara mgła, silnie ograniczona widoczność",
+              "right": "Brunatnożółta zawiesina, często bez mgły, z drażniącym zapachem"
+            },
+            {
+              "aspect": "Skutki zdrowotne",
+              "left": "Choroby układu oddechowego i krążenia, zaostrzenia astmy, wzrost śmiertelności",
+              "right": "Podrażnienie oczu i dróg oddechowych, spadek wydolności płuc, uszkodzenia roślin"
+            },
+            {
+              "aspect": "Gdzie typowy",
+              "left": "Londyn (historycznie), Kraków, konurbacja katowicka, miasta Chin i Indii ogrzewane węglem",
+              "right": "Los Angeles, Meksyk, Ateny, Tokio, Sydney — miasta o dużym ruchu samochodowym i dużym nasłonecznieniu"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Wielki smog londyński 1952 r. — katastrofa, która zmieniła prawo",
+          "region": "Londyn, Wielka Brytania",
+          "text": "Na początku grudnia 1952 r. nad Londynem uformował się rozległy **wyż baryczny**: bezwietrznie, chłodno i z silną **inwersją temperatury**, która przykryła miasto niczym pokrywka. Setki tysięcy domowych pieców opalanych tanim, siarkowym węglem oraz elektrownie miejskie wyrzucały w powietrze dwutlenek siarki i sadzę, które nie miały dokąd się rozproszyć. Przez pięć dni widoczność spadła miejscami do kilku metrów, ruch komunikacji zamarł, a zanieczyszczenia w połączeniu z mgłą utworzyły kwaśny aerozol wnikający głęboko do płuc. Szacunki liczby zgonów sięgają od ok. 4 tys. bezpośrednio w czasie zdarzenia do kilkunastu tysięcy w kolejnych tygodniach. Reakcją było uchwalenie **Clean Air Act (1956)** — pierwszego nowoczesnego prawa o ochronie powietrza: wyznaczono strefy bezdymne, dotowano zmianę paliwa na koks i gaz oraz przeniesiono elektrownie poza miasto i podniesiono kominy.",
+          "takeaway": "Smog londyński powstaje z **trzech** czynników naraz: emisji ze spalania paliw stałych, warunków meteorologicznych blokujących wymianę powietrza (inwersja, cisza, wyż) i ukształtowania terenu sprzyjającego zastoiskom. Ten sam zestaw przyczyn odpowiada dziś za zimowy smog w Krakowie, Nowej Rudzie czy Rybniku."
+        },
+        {
+          "type": "table",
+          "title": "Pyły zawieszone — czego dotyczą normy",
+          "caption": "Im mniejsza cząstka, tym groźniejsza: PM10 zatrzymuje się w górnych drogach oddechowych, PM2,5 dociera do pęcherzyków płucnych i przenika do krwiobiegu.",
+          "headers": [
+            "Zanieczyszczenie",
+            "Charakterystyka",
+            "Główne źródła",
+            "Wytyczne WHO (2021)"
+          ],
+          "rows": [
+            [
+              "PM10",
+              "Pyły o średnicy ziaren do 10 µm",
+              "Spalanie paliw stałych, ruch drogowy (ścieranie opon i hamulców, wtórne pylenie), przemysł, rolnictwo",
+              "15 µg/m³ (średnia roczna), 45 µg/m³ (doba)"
+            ],
+            [
+              "PM2,5",
+              "Pyły drobne, do 2,5 µm — wnikają do pęcherzyków płucnych i krwi",
+              "Spalanie węgla i drewna w domach, silniki Diesla, procesy wtórne z SO2 i NOx",
+              "5 µg/m³ (średnia roczna), 15 µg/m³ (doba)"
+            ],
+            [
+              "Benzo(a)piren",
+              "Wielopierścieniowy węglowodór aromatyczny, silnie rakotwórczy",
+              "Niepełne spalanie węgla, drewna i odpadów w domowych kotłach",
+              "brak bezpiecznego poziomu — zalecana minimalizacja"
+            ],
+            [
+              "Ozon przygruntowy (O3)",
+              "Zanieczyszczenie **wtórne** — nie jest emitowany, lecz powstaje w powietrzu",
+              "Reakcje fotochemiczne NOx i lotnych związków organicznych w słoneczne dni",
+              "100 µg/m³ (8 godzin)"
+            ],
+            [
+              "Dwutlenek siarki (SO2)",
+              "Gaz o ostrym zapachu, prekursor kwaśnych opadów i pyłów wtórnych",
+              "Spalanie węgla i ciężkich olejów, hutnictwo metali nieżelaznych",
+              "40 µg/m³ (doba)"
+            ]
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Niska emisja",
+          "text": "Emisja zanieczyszczeń wprowadzanych do powietrza z **emitorów o niewielkiej wysokości** — do ok. 40 m — czyli głównie z domowych kotłów i pieców oraz z rur wydechowych pojazdów. Nazwa nie odnosi się do wielkości emisji, lecz do **wysokości**, na której trafia ona do atmosfery.",
+          "note": "To dlatego niska emisja jest tak groźna: zanieczyszczenia nie zostają wyniesione w górę i rozproszone, tylko pozostają w strefie oddychania. Jest głównym źródłem zimowego smogu w polskich miastach i przyczyną, dla której gminy uchwalają uchwały antysmogowe i wymieniają „kopciuchy”."
+        },
+        {
+          "type": "formula",
+          "title": "Kwaśne opady — reakcje, które trzeba znać",
+          "expression": "SO_2 + \\tfrac{1}{2}O_2 + H_2O \\rightarrow H_2SO_4 \\qquad 3NO_2 + H_2O \\rightarrow 2HNO_3 + NO",
+          "variables": [
+            {
+              "symbol": "SO_2",
+              "meaning": "dwutlenek siarki — głównie ze spalania węgla i z hutnictwa"
+            },
+            {
+              "symbol": "NO_2",
+              "meaning": "tlenki azotu — ze spalin silników i wysokotemperaturowego spalania"
+            },
+            {
+              "symbol": "H_2SO_4",
+              "meaning": "kwas siarkowy(VI) — główny składnik kwaśnych opadów"
+            },
+            {
+              "symbol": "HNO_3",
+              "meaning": "kwas azotowy(V) — rosnący udział wraz z motoryzacją"
+            }
+          ],
+          "caption": "Naturalny opad ma odczyn lekko kwaśny ($pH \\approx 5{,}6$) z powodu rozpuszczonego CO2. Za **kwaśny opad** uznaje się ten o $pH < 5{,}6$; w rejonach przemysłowych notowano wartości poniżej 4. Zanieczyszczenia przenoszone są z wiatrem na setki kilometrów, dlatego kwaśne deszcze to problem **transgraniczny** — Skandynawia ucierpiała od emisji z Wielkiej Brytanii i Europy Środkowej."
+        },
+        {
+          "type": "classification",
+          "title": "Skutki kwaśnych opadów",
+          "caption": "Przy poleceniu „podaj skutki” wybieraj przykłady z różnych grup — to gwarantuje pełną punktację.",
+          "groups": [
+            {
+              "name": "Dla gleb",
+              "description": "Kwas wypłukuje z kompleksu sorpcyjnego kationy zasadowe (wapń, magnez, potas) i uwalnia toksyczne jony glinu.",
+              "examples": [
+                "zakwaszenie i wyjałowienie gleb",
+                "uwalnianie glinu uszkadzającego korzenie",
+                "spadek aktywności mikroorganizmów glebowych"
+              ]
+            },
+            {
+              "name": "Dla lasów",
+              "description": "Bezpośrednie uszkodzenie aparatu asymilacyjnego plus osłabienie przez zatrucie gleby — drzewa stają się podatne na susze i szkodniki.",
+              "examples": [
+                "defoliacja i żółknięcie igieł",
+                "zamieranie świerczyn w Karkonoszach i Górach Izerskich",
+                "klęska ekologiczna „Czarnego Trójkąta” na pograniczu Polski, Czech i Niemiec"
+              ]
+            },
+            {
+              "name": "Dla wód powierzchniowych",
+              "description": "Jeziora o podłożu krystalicznym mają małą zdolność buforowania, więc kwaśnieją najszybciej.",
+              "examples": [
+                "zakwaszenie jezior Skandynawii i Kanady",
+                "zanik ryb łososiowatych i bezkręgowców",
+                "uwalnianie metali ciężkich z osadów"
+              ]
+            },
+            {
+              "name": "Dla infrastruktury i zabytków",
+              "description": "Kwasy reagują z węglanem wapnia w wapieniach, marmurach i zaprawach oraz przyspieszają korozję metali.",
+              "examples": [
+                "niszczenie rzeźb i elewacji (m.in. Akropol, katedry Europy)",
+                "korozja konstrukcji stalowych",
+                "uszkodzenia betonu"
+              ]
+            },
+            {
+              "name": "Przeciwdziałanie",
+              "description": "Skuteczność potwierdzona: emisja SO2 w Europie spadła o ponad 80% od lat 80. XX w., a wiele jezior się zregenerowało.",
+              "examples": [
+                "instalacje odsiarczania spalin w elektrowniach",
+                "katalizatory w samochodach i normy Euro",
+                "paliwa niskosiarkowe",
+                "wapnowanie zakwaszonych gleb i jezior",
+                "konwencja genewska o transgranicznym zanieczyszczaniu powietrza (1979)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa problemów atmosfery",
+          "caption": "Kliknij znaczniki i zwróć uwagę, że każde miejsce ilustruje inny mechanizm.",
+          "center": [
+            25,
+            10
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -75.58,
+              "lng": -26.65,
+              "label": "Stacja Halley (Antarktyda)",
+              "text": "Miejsce odkrycia dziury ozonowej w 1985 r. Nad Antarktydą warunki są idealne dla niszczenia ozonu: stabilny wir okołobiegunowy, temperatury poniżej −78 °C i polarne chmury stratosferyczne."
+            },
+            {
+              "lat": 51.51,
+              "lng": -0.13,
+              "label": "Londyn",
+              "text": "Kolebka pojęcia „smog” (smoke + fog). Po katastrofie z 1952 r. Clean Air Act stał się wzorem regulacji jakości powietrza na świecie."
+            },
+            {
+              "lat": 34.05,
+              "lng": -118.24,
+              "label": "Los Angeles",
+              "text": "Modelowy przykład smogu fotochemicznego: kotlina otoczona górami, inwersja z prądu Kalifornijskiego, ogromny ruch samochodowy i intensywne nasłonecznienie."
+            },
+            {
+              "lat": 19.43,
+              "lng": -99.13,
+              "label": "Meksyk (Ciudad de México)",
+              "text": "Wielkie miasto na wysokości ok. 2200 m n.p.m. w kotlinie górskiej. Rozrzedzone powietrze pogarsza spalanie w silnikach, a otaczające góry blokują przewietrzanie — smog fotochemiczny występuje niemal cały rok."
+            },
+            {
+              "lat": 50.06,
+              "lng": 19.94,
+              "label": "Kraków",
+              "text": "Zimowy smog typu londyńskiego w polskim wydaniu: położenie w dolinie Wisły, częste inwersje i cisze, niska emisja z kotłów węglowych w gminach ościennych. Od 2019 r. obowiązuje zakaz palenia węglem i drewnem w granicach miasta."
+            },
+            {
+              "lat": 28.61,
+              "lng": 77.21,
+              "label": "Delhi",
+              "text": "Jedno z najbardziej zanieczyszczonych wielkich miast świata. Jesienią nakładają się: wypalanie ściernisk w Pendżabie, ruch samochodowy, przemysł i inwersja — stężenia PM2,5 wielokrotnie przekraczają wytyczne WHO."
+            },
+            {
+              "lat": 50.85,
+              "lng": 15.55,
+              "label": "Góry Izerskie i Karkonosze",
+              "text": "„Czarny Trójkąt” — pogranicze Polski, Czech i Niemiec. W latach 70. i 80. XX w. emisje SO2 z elektrowni na węglu brunatnym doprowadziły do zamarcia setek kilometrów kwadratowych świerczyn. Po odsiarczeniu spalin lasy są sukcesywnie odbudowywane."
+            },
+            {
+              "lat": 69.35,
+              "lng": 88.2,
+              "label": "Norylsk (Rosja)",
+              "text": "Jedno z największych na świecie źródeł emisji dwutlenku siarki — hutnictwo niklu i miedzi w strefie subpolarnej. Wokół miasta rozciąga się rozległa strefa martwej tundry i lasotundry."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego dziura ozonowa jest największa nad Antarktydą, a nie nad obszarami największej emisji freonów?",
+          "options": [
+            "Bo freony są cięższe od powietrza i spływają ku biegunowi południowemu",
+            "Bo nad Antarktydą warstwa ozonowa jest naturalnie najcieńsza, więc łatwiej ją zniszczyć",
+            "Bo stabilny wir okołobiegunowy i bardzo niskie temperatury sprzyjają powstawaniu polarnych chmur stratosferycznych, na których uaktywnia się chlor",
+            "Bo nad Antarktydą promieniowanie UV jest najsilniejsze na Ziemi"
+          ],
+          "correctIndex": 2,
+          "explanation": "Freony mieszają się w atmosferze globalnie, ale sam ich rozkład nie wystarcza. Potrzebne są warunki uaktywniające chlor: zimowy wir okołobiegunowy izolujący masę powietrza, temperatura poniżej −78 °C umożliwiająca powstanie polarnych chmur stratosferycznych oraz powrót Słońca wiosną. Nad Arktyką wir jest mniej stabilny, więc ubytek ozonu jest tam mniejszy."
+        },
+        {
+          "type": "quiz",
+          "question": "Które warunki meteorologiczne sprzyjają powstaniu smogu typu londyńskiego?",
+          "options": [
+            "Silny wiatr i przechodzenie frontu chłodnego",
+            "Wyż baryczny, cisza, wilgotne powietrze i inwersja temperatury",
+            "Niż baryczny z intensywnymi opadami konwekcyjnymi",
+            "Wysoka temperatura, bezchmurne niebo i silne nasłonecznienie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Smog londyński to zjawisko zimowe: wyż baryczny daje ciszę i pogodę wyżową bez opadów, a inwersja temperatury (cieplejsze powietrze nad chłodniejszym) blokuje pionowe mieszanie i zatrzymuje zanieczyszczenia przy gruncie. Odpowiedź D opisuje warunki dla smogu fotochemicznego."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw poprawnie opisuje kwaśne opady?",
+          "options": [
+            "Powstają z CO2 i metanu, mają pH poniżej 7 i zakwaszają tylko wody w pobliżu źródła emisji",
+            "Powstają z SO2 i tlenków azotu, mają pH poniżej 5,6 i są problemem transgranicznym",
+            "Powstają z freonów rozkładanych w stratosferze i niszczą przede wszystkim ozon",
+            "Powstają z pyłów PM2,5 i wywołują głównie eutrofizację jezior"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kwaśne opady to efekt utleniania SO2 i NOx do kwasu siarkowego(VI) i azotowego(V). Granicą jest pH 5,6, bo tyle ma naturalny opad z rozpuszczonym CO2. Zanieczyszczenia są przenoszone przez wiatr na setki kilometrów — dlatego skutki (zakwaszone jeziora Skandynawii) występują daleko od emitentów."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy w zadaniu pojawia się mapa lub opis miasta, a polecenie brzmi „wyjaśnij przyczyny wysokiego stężenia zanieczyszczeń”, zawsze podaj **trzy grupy przyczyn**: emisyjne (co i skąd — niska emisja z kotłów, transport, przemysł), meteorologiczne (inwersja, cisza, wyż, zimą; nasłonecznienie latem) oraz **topograficzne** (kotlina, dolina, zabudowa blokująca przewietrzanie). Odpowiedź uwzględniająca tylko emisję zwykle nie dostaje kompletu punktów, bo zadanie zwykle testuje właśnie rozumienie roli warunków lokalnych."
+        }
+      ]
+    },
+    {
+      "slug": "deficyt-i-zanieczyszczenie-wod",
+      "title": "Deficyt i zanieczyszczenie wód. Eutrofizacja",
+      "summary": "Dlaczego wody słodkiej brakuje mimo że Ziemia jest niebieska, skąd biorą się zanieczyszczenia wód i jak nawozy zabijają jeziora oraz morza.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Woda pokrywa ponad 70% powierzchni Ziemi, a mimo to jej brak jest jednym z najpoważniejszych problemów współczesnego świata. Powód jest prosty: prawie cała woda hydrosfery jest **słona**, a większość słodkiej — uwięziona w lodzie. Do tego zasoby są rozmieszczone skrajnie nierównomiernie i coraz częściej **zanieczyszczone**. W tej lekcji poznasz dwa oblicza kryzysu wodnego: ilościowe (deficyt) i jakościowe (zanieczyszczenie), a na koniec prześledzisz krok po kroku eutrofizację — proces, który zamienia żyzne jeziora i szelfy w strefy martwe."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Zasoby wodne Ziemi w liczbach",
+          "items": [
+            {
+              "value": "97,5",
+              "unit": "%",
+              "label": "Udział wód słonych w hydrosferze",
+              "note": "wody słodkie to zaledwie 2,5% zasobów"
+            },
+            {
+              "value": "ok. 69",
+              "unit": "%",
+              "label": "Udział lodowców i pokryw lodowych w zasobach wody słodkiej",
+              "note": "kolejne ok. 30% to wody podziemne; jeziora i rzeki to ułamek procenta"
+            },
+            {
+              "value": "ok. 70",
+              "unit": "%",
+              "label": "Udział rolnictwa w globalnym poborze wody"
+            },
+            {
+              "value": "ok. 2,2",
+              "unit": "mld",
+              "label": "Liczba ludzi bez dostępu do bezpiecznie zarządzanej wody pitnej (2022)"
+            },
+            {
+              "value": "ok. 1600",
+              "unit": "m³/os./rok",
+              "label": "Odnawialne zasoby wodne Polski na mieszkańca",
+              "note": "ok. 3 razy mniej niż średnia europejska — Polska jest krajem o niskich zasobach wodnych"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Stres wodny i deficyt wody",
+          "text": "**Stres wodny** występuje, gdy odnawialne zasoby wody słodkiej przypadające na mieszkańca spadają poniżej **1700 m³ rocznie**; poniżej **1000 m³** mówi się o **niedoborze (deficycie) wody**, a poniżej **500 m³** — o niedoborze skrajnym. To tzw. wskaźnik Falkenmarka.",
+          "note": "Wskaźnik odnosi zasoby do liczby ludności, więc deficyt może pogłębiać się z dwóch stron naraz: przez ubywanie wody (susze, przesuszanie klimatu) i przez przyrost naturalny. Dokładnie to dzieje się w Sahelu i na Bliskim Wschodzie."
+        },
+        {
+          "type": "compare",
+          "title": "Niedobór fizyczny a niedobór ekonomiczny wody",
+          "leftLabel": "Niedobór fizyczny",
+          "rightLabel": "Niedobór ekonomiczny",
+          "rows": [
+            {
+              "aspect": "Na czym polega",
+              "left": "Wody w środowisku jest **za mało** w stosunku do potrzeb",
+              "right": "Woda w środowisku **jest**, ale brakuje infrastruktury, by ją ująć, uzdatnić i doprowadzić"
+            },
+            {
+              "aspect": "Przyczyna główna",
+              "left": "Warunki klimatyczne (małe opady, duże parowanie) i nadmierna eksploatacja",
+              "right": "Ubóstwo, brak kapitału, konflikty zbrojne, słabe instytucje"
+            },
+            {
+              "aspect": "Gdzie występuje",
+              "left": "Bliski Wschód, Afryka Północna, Azja Środkowa, zachodnie USA, południowo-wschodnia Australia",
+              "right": "Afryka Subsaharyjska (m.in. Kongo, Sahel), część Azji Południowej i Ameryki Środkowej"
+            },
+            {
+              "aspect": "Sposób rozwiązania",
+              "left": "Retencja, oszczędne nawadnianie, odsalanie, recykling ścieków, ograniczenie upraw wodochłonnych",
+              "right": "Inwestycje w studnie, wodociągi, oczyszczalnie i sieć dystrybucji — problem jest przede wszystkim rozwojowy"
+            },
+            {
+              "aspect": "Paradoks",
+              "left": "Bogate kraje pustynne (Izrael, Zatoka Perska) radzą sobie mimo skrajnie suchego klimatu",
+              "right": "Kraje o obfitych opadach mogą cierpieć na brak wody zdatnej do picia"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Źródła zanieczyszczeń wód",
+          "caption": "Podstawowy podział przebiega według tego, czy da się wskazać jeden „koniec rury” — to on decyduje o tym, jak trudno zanieczyszczenie ograniczyć.",
+          "groups": [
+            {
+              "name": "Punktowe (skoncentrowane)",
+              "description": "Zanieczyszczenia trafiają do wód w jednym, dającym się zlokalizować miejscu. Są stosunkowo łatwe do kontroli — wystarczy oczyszczalnia lub zamknięcie zrzutu.",
+              "examples": [
+                "zrzuty ścieków komunalnych",
+                "ścieki przemysłowe z zakładów",
+                "wody kopalniane (zasolone)",
+                "wycieki ze składowisk odpadów"
+              ]
+            },
+            {
+              "name": "Obszarowe (rozproszone)",
+              "description": "Spływają z dużych powierzchni wraz z wodą opadową. Najtrudniejsze do ograniczenia, bo źródeł są tysiące — dziś to główny problem w krajach rozwiniętych.",
+              "examples": [
+                "spływ nawozów i pestycydów z pól",
+                "odcieki z ferm i gnojowica",
+                "spływ z dróg i terenów zurbanizowanych",
+                "opad zanieczyszczeń z atmosfery"
+              ]
+            },
+            {
+              "name": "Zanieczyszczenia komunalne",
+              "description": "Ścieki bytowe: materia organiczna, biogeny (azot, fosfor z detergentów), bakterie chorobotwórcze, farmaceutyki.",
+              "examples": [
+                "nieoczyszczone ścieki miast krajów rozwijających się",
+                "przelewy burzowe kanalizacji ogólnospławnej",
+                "mikroplastik z prania tkanin syntetycznych"
+              ]
+            },
+            {
+              "name": "Zanieczyszczenia przemysłowe",
+              "description": "Najbardziej toksyczne, choć ilościowo mniejsze. Metale ciężkie kumulują się w łańcuchu pokarmowym.",
+              "examples": [
+                "metale ciężkie (rtęć, kadm, ołów)",
+                "substancje ropopochodne",
+                "zanieczyszczenia termiczne z elektrowni",
+                "chemikalia trwałe (PFAS)"
+              ]
+            },
+            {
+              "name": "Zanieczyszczenia rolnicze",
+              "description": "Największe źródło biogenów, a tym samym główna przyczyna eutrofizacji wód śródlądowych i mórz przybrzeżnych.",
+              "examples": [
+                "azotany i fosforany z nawozów mineralnych",
+                "pestycydy",
+                "odchody zwierzęce z hodowli przemysłowej"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Eutrofizacja",
+          "text": "Proces **użyźniania wód** wskutek dopływu nadmiaru substancji biogennych — głównie związków **azotu i fosforu** — prowadzący do gwałtownego rozwoju glonów i sinic, a następnie do deficytu tlenu w wodzie i zamierania organizmów.",
+          "note": "Eutrofizacja może zachodzić naturalnie (powolne starzenie się jezior przez tysiące lat), ale człowiek przyspieszył ją setki razy. Czynnikiem ograniczającym w wodach słodkich jest zwykle **fosfor**, a w morskich **azot** — dlatego wycofano fosforany z detergentów, a w rolnictwie ogranicza się nawożenie azotem."
+        },
+        {
+          "type": "process",
+          "title": "Eutrofizacja krok po kroku — jak nawóz zabija jezioro",
+          "caption": "Kliknij etapy po kolei. To jeden z najczęściej sprawdzanych na maturze ciągów przyczynowo-skutkowych.",
+          "steps": [
+            {
+              "title": "1. Dopływ biogenów",
+              "text": "Do zbiornika spływają związki **azotu i fosforu**: z nawozów wypłukiwanych z pól, z gnojowicy, ze ścieków komunalnych. Woda z ubogiej w składniki (oligotroficznej) staje się żyzna (eutroficzna)."
+            },
+            {
+              "title": "2. Zakwit glonów i sinic",
+              "text": "Nadmiar pokarmu wywołuje **masowy rozwój fitoplanktonu** w warstwie powierzchniowej. Woda mętnieje, zmienia barwę na zieloną, pojawiają się kożuchy sinic — część z nich wydziela toksyny groźne dla ludzi i zwierząt."
+            },
+            {
+              "title": "3. Ograniczenie dostępu światła",
+              "text": "Gęsty „kożuch” na powierzchni **blokuje przenikanie światła** w głąb. Rośliny zanurzone i glony denne, które produkowały tlen przy dnie, obumierają."
+            },
+            {
+              "title": "4. Rozkład martwej materii organicznej",
+              "text": "Obumarłe glony opadają na dno, gdzie rozkładają je bakterie tlenowe. Rozkład **zużywa rozpuszczony w wodzie tlen** — im większy zakwit, tym większe zapotrzebowanie."
+            },
+            {
+              "title": "5. Deficyt tlenu (hipoksja) i strefa martwa",
+              "text": "Przy dnie stężenie tlenu spada poniżej granicy przeżycia (ok. 2 mg/l). Ryby i bezkręgowce, które mogą, uciekają; reszta ginie. Powstaje **strefa martwa**. W warunkach beztlenowych zaczyna się rozkład gnilny z wydzielaniem siarkowodoru i metanu."
+            },
+            {
+              "title": "6. Skutki wtórne i sprzężenie zwrotne",
+              "text": "Z beztlenowych osadów uwalnia się zmagazynowany wcześniej fosfor (tzw. zasilanie wewnętrzne), co podtrzymuje zakwity nawet po odcięciu dopływu z zewnątrz. Zbiornik traci wartość rekreacyjną, rybacką i jako źródło wody pitnej, a jego rekultywacja trwa dziesięciolecia."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Strefa martwa w Zatoce Meksykańskiej",
+          "region": "Zatoka Meksykańska u ujścia Missisipi, USA",
+          "text": "Dorzecze Missisipi obejmuje ponad 40% powierzchni kontynentalnej części Stanów Zjednoczonych, w tym Pas Kukurydziany — jeden z najintensywniej nawożonych obszarów rolniczych świata. Wypłukiwane z pól azotany i fosforany spływają rzeką do Zatoki Meksykańskiej, gdzie wiosną i latem wywołują ogromny zakwit fitoplanktonu. Ciepła, mniej zasolona woda rzeczna tworzy nad słoną wodą morską warstwę o mniejszej gęstości, która **blokuje pionowe mieszanie** i dostarczanie tlenu do warstw przydennych. Rozkład opadającej materii organicznej zużywa resztę tlenu i co roku powstaje sezonowa strefa martwa o powierzchni rzędu **15–20 tys. km²** — jedna z największych na świecie. Krewetki i ryby uciekają lub giną, co uderza w rybołówstwo Luizjany. Jesienne sztormy mieszają wodę i strefa zanika, by odtworzyć się w kolejnym roku.",
+          "takeaway": "Eutrofizacja mórz przybrzeżnych to skutek działalności prowadzonej **tysiące kilometrów w głębi lądu**. Skuteczna ochrona wymaga więc zarządzania całym dorzeczem: stref buforowych wzdłuż cieków, ograniczenia dawek nawozów i odbudowy mokradeł przechwytujących biogeny."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura globalnego poboru wody słodkiej",
+          "caption": "Wartości orientacyjne. Zapamiętaj proporcję: to rolnictwo, a nie przemysł czy gospodarstwa domowe, decyduje o bilansie wodnym świata.",
+          "unit": "%",
+          "labels": [
+            "Rolnictwo (nawadnianie, hodowla)",
+            "Przemysł i energetyka",
+            "Gospodarstwa domowe i usługi"
+          ],
+          "series": [
+            {
+              "name": "Udział w poborze wody",
+              "values": [
+                70,
+                19,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Regiony kryzysu wodnego",
+          "caption": "Każdy przykład pokazuje inną przyczynę: klimat, nadmierną eksploatację albo konflikt o wodę transgraniczną.",
+          "center": [
+            25,
+            40
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 24.71,
+              "lng": 46.68,
+              "label": "Rijad (Arabia Saudyjska)",
+              "text": "Region skrajnego niedoboru fizycznego. Zasoby wód kopalnych są wyczerpywane szybciej, niż się odnawiają, a większość wody pitnej pochodzi z **odsalania** wody morskiej — procesu skrajnie energochłonnego, produkującego gorącą, zagęszczoną solankę szkodliwą dla ekosystemów Zatoki Perskiej."
+            },
+            {
+              "lat": 36.02,
+              "lng": -114.74,
+              "label": "Jezioro Mead i rzeka Kolorado (USA)",
+              "text": "Woda Kolorado jest rozdzielona między siedem stanów i Meksyk umowami zawartymi w wilgotniejszym okresie XX w. Nadmierny pobór na nawadnianie i długotrwała susza sprawiły, że rzeka w wielu latach **nie dopływa do morza**, a poziom zbiorników spadł do rekordowo niskich wartości."
+            },
+            {
+              "lat": 30.73,
+              "lng": 76.78,
+              "label": "Pendżab (Indie)",
+              "text": "Serce zielonej rewolucji. Darmowa energia elektryczna dla rolników i uprawa ryżu w suchym klimacie doprowadziły do rabunkowej eksploatacji wód podziemnych — zwierciadło wody opada tu o kilkadziesiąt centymetrów rocznie."
+            },
+            {
+              "lat": 11.21,
+              "lng": 35.09,
+              "label": "Zapora Wielkiego Odrodzenia (Etiopia)",
+              "text": "Największa elektrownia wodna Afryki na Nilu Błękitnym. Przykład **konfliktu o wodę transgraniczną**: Etiopia zyskuje energię, a Egipt, który czerpie z Nilu ok. **97% zużywanej wody**, obawia się ograniczenia przepływu w okresie napełniania zbiornika."
+            },
+            {
+              "lat": 13,
+              "lng": 14.3,
+              "label": "Jezioro Czad",
+              "text": "Od lat 60. XX w. powierzchnia jeziora zmniejszyła się o ponad 90%. Złożyły się na to susze w Sahelu, pobór wody na nawadnianie i szybki przyrost ludności w zlewni. Skutkiem są konflikty między rolnikami, pasterzami i rybakami oraz migracje."
+            },
+            {
+              "lat": -34,
+              "lng": 142,
+              "label": "Dorzecze Murray-Darling (Australia)",
+              "text": "Najważniejszy region rolniczy Australii. Nadmierne pobory na nawadnianie w połączeniu z suszami prowadzą do zasolenia gleb, masowych śnięć ryb i sporów o przydział wody między stanami — przykład kraju wysoko rozwiniętego z poważnym deficytem."
+            },
+            {
+              "lat": 31.5,
+              "lng": 34.75,
+              "label": "Izrael i Strefa Gazy",
+              "text": "Region, w którym wodę traktuje się jako zasób strategiczny. Izrael łączy odsalanie, recykling ponad połowy ścieków w rolnictwie i **nawadnianie kropelkowe** — pokazuje, że technologia potrafi zredukować skutki niedoboru fizycznego."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Jak przeciwdziałać kryzysowi wodnemu",
+          "caption": "Kolejność nieprzypadkowa: najtańsza jest woda, której nie zużyto i nie zanieczyszczono.",
+          "groups": [
+            {
+              "name": "Oszczędzanie i zwiększanie efektywności",
+              "description": "Największy potencjał leży w rolnictwie, bo ono zużywa najwięcej wody.",
+              "examples": [
+                "nawadnianie kropelkowe zamiast zalewowego",
+                "dobór upraw do warunków klimatycznych",
+                "ograniczenie strat w sieciach wodociągowych",
+                "zamknięte obiegi wody w przemyśle"
+              ]
+            },
+            {
+              "name": "Retencja i odtwarzanie naturalnego obiegu",
+              "description": "Zatrzymanie wody w krajobrazie zamiast szybkiego odprowadzania jej rowami do rzek.",
+              "examples": [
+                "mała retencja, oczka wodne i stawy",
+                "renaturyzacja rzek i odtwarzanie mokradeł",
+                "zbiorniki retencyjne",
+                "ogrody deszczowe i odbetonowanie miast"
+              ]
+            },
+            {
+              "name": "Oczyszczanie i ponowne wykorzystanie",
+              "description": "Chroni jakość zasobów, a odzyskana woda staje się nowym źródłem.",
+              "examples": [
+                "oczyszczalnie ścieków z usuwaniem azotu i fosforu",
+                "recykling ścieków do nawadniania",
+                "strefy buforowe wzdłuż cieków przechwytujące spływ z pól"
+              ]
+            },
+            {
+              "name": "Pozyskiwanie nowych zasobów",
+              "description": "Rozwiązania kosztowne i energochłonne — stosowane tam, gdzie inne zawiodły.",
+              "examples": [
+                "odsalanie wody morskiej",
+                "przerzuty wody między dorzeczami",
+                "ujmowanie wód podziemnych (ryzyko nadmiernej eksploatacji)"
+              ]
+            },
+            {
+              "name": "Prawo i zarządzanie",
+              "description": "Woda jest zasobem wspólnym, więc kluczowe są zasady podziału i cena.",
+              "examples": [
+                "dyrektywa wodna UE i planowanie w skali dorzeczy",
+                "opłaty za pobór wody i zrzut ścieków",
+                "porozumienia o rzekach transgranicznych",
+                "programy azotanowe ograniczające nawożenie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na dwa rozróżnienia. **Eutrofizacja to nie zatrucie** — do wody trafiają substancje odżywcze, a nie trucizny; szkodę wyrządza dopiero łańcuch: zakwit → brak światła → rozkład → **zużycie tlenu**. W odpowiedzi musi pojawić się ogniwo tlenowe, inaczej nie ma punktu. Drugie: **niedobór wody nie zawsze wynika z suchego klimatu** — w Afryce Subsaharyjskiej ma on charakter ekonomiczny, czyli infrastrukturalny. Zwróć też uwagę, że Polska ma niskie zasoby wodne mimo klimatu umiarkowanego: decydują o tym niewielkie opady, duże parowanie i mała retencja."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj zanieczyszczenie do jego głównego źródła",
+          "instruction": "Połącz rodzaj zanieczyszczenia wód z działalnością, która najczęściej je powoduje.",
+          "pairs": [
+            {
+              "left": "Azotany i fosforany",
+              "right": "Spływ nawozów z pól uprawnych i gnojowicy z ferm"
+            },
+            {
+              "left": "Metale ciężkie (rtęć, kadm)",
+              "right": "Ścieki przemysłowe, hutnictwo i górnictwo"
+            },
+            {
+              "left": "Bakterie chorobotwórcze i wirusy",
+              "right": "Nieoczyszczone ścieki komunalne"
+            },
+            {
+              "left": "Zanieczyszczenie termiczne",
+              "right": "Zrzut wód chłodniczych z elektrowni cieplnych"
+            },
+            {
+              "left": "Zasolenie wód powierzchniowych",
+              "right": "Wody dołowe odprowadzane z kopalń węgla kamiennego"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Który ciąg poprawnie oddaje mechanizm eutrofizacji?",
+          "options": [
+            "Dopływ biogenów → zakwit glonów → ograniczenie dostępu światła → rozkład obumarłej materii → spadek zawartości tlenu → śnięcie organizmów",
+            "Dopływ toksyn → zatrucie ryb → rozkład szczątków → wzrost zawartości tlenu → zanik glonów",
+            "Wzrost temperatury wody → parowanie → wzrost zasolenia → zamieranie roślin → zakwit sinic",
+            "Zakwaszenie wody → rozpuszczenie węglanów → uwolnienie metali ciężkich → śnięcie ryb"
+          ],
+          "correctIndex": 0,
+          "explanation": "Eutrofizacja zaczyna się od dopływu substancji **odżywczych** (azot, fosfor), a organizmy giną nie od trucizny, lecz od **braku tlenu** zużytego przez bakterie rozkładające obumarły fitoplankton. Odpowiedź D opisuje skutki zakwaszenia, a nie eutrofizacji."
+        },
+        {
+          "type": "quiz",
+          "question": "Kraj o obfitych opadach i dużych zasobach wód powierzchniowych może mimo to cierpieć na brak wody pitnej. Zjawisko to nazywamy:",
+          "options": [
+            "niedoborem fizycznym wody",
+            "niedoborem ekonomicznym wody",
+            "stresem wodnym według wskaźnika Falkenmarka",
+            "eutrofizacją zasobów wodnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Niedobór ekonomiczny oznacza, że woda w środowisku jest, ale brakuje kapitału i infrastruktury (ujęć, wodociągów, uzdatniania), by uczynić ją dostępną. Dotyczy m.in. Afryki Subsaharyjskiej, w tym dorzecza Konga — jednego z najzasobniejszych w wodę regionów świata."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego ograniczenie zanieczyszczeń obszarowych jest trudniejsze niż punktowych?",
+          "options": [
+            "Bo zanieczyszczenia obszarowe są zawsze bardziej toksyczne",
+            "Bo pochodzą z rozproszonych źródeł na dużej powierzchni i trafiają do wód wraz ze spływem powierzchniowym, więc nie da się ich przechwycić w jednym miejscu",
+            "Bo powstają wyłącznie w krajach rozwijających się, gdzie brakuje prawa ochrony środowiska",
+            "Bo są przenoszone przez wiatr, a nie przez wodę"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zanieczyszczenie punktowe ma zlokalizowany zrzut — wystarczy oczyszczalnia. Obszarowe pochodzi z tysięcy pól, dróg i podwórek, a nośnikiem jest spływ powierzchniowy po opadzie; ograniczenie wymaga zmiany sposobu gospodarowania w całej zlewni (dawki nawozów, strefy buforowe, mokradła)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o wodzie pilnuj **jednostek i skali**: zasoby na mieszkańca podaje się w m³/os./rok, a nie w procentach. Gdy polecenie brzmi „wyjaśnij, dlaczego mimo dużych zasobów wodnych w regionie występuje deficyt wody”, odpowiedź niemal zawsze dotyczy niedoboru **ekonomicznego** albo **sezonowości opadów** (woda jest, ale w niewłaściwym czasie — jak w klimacie monsunowym). A jeśli w zadaniu pojawia się jezioro z zakwitem sinic, w uzasadnieniu wskaż konkretne źródło biogenów (rolnictwo w zlewni, ścieki z zabudowy rekreacyjnej), a nie ogólne „zanieczyszczenie środowiska”."
+        }
+      ]
+    },
+    {
+      "slug": "pustynnienie-degradacja-gleb-i-wylesianie",
+      "title": "Pustynnienie, degradacja gleb i wylesianie",
+      "summary": "Jak człowiek niszczy dwa najcenniejsze zasoby lądu — glebę i las — oraz dlaczego skutki tych procesów są w dużej mierze nieodwracalne.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gleba i las to zasoby, które w skali ludzkiego życia są praktycznie **nieodnawialne**: warstwa gleby o grubości jednego centymetra powstaje setki lat, a las tropikalny odtwarza się przez stulecia — o ile w ogóle. Tymczasem oba znikają w tempie liczonym w milionach hektarów rocznie. W tej lekcji zobaczysz, jak działa mechanizm pustynnienia (i dlaczego to **nie to samo** co powiększanie się naturalnej pustyni), jakie są typy degradacji gleb oraz co naprawdę napędza wylesianie w Amazonii i w Azji Południowo-Wschodniej."
+        },
+        {
+          "type": "definition",
+          "term": "Pustynnienie (desertyfikacja)",
+          "text": "Degradacja ziemi na obszarach **suchych, półsuchych i subwilgotnych suchych**, prowadząca do trwałego spadku produktywności biologicznej gruntu, wywołana zarówno czynnikami naturalnymi (susze, zmiany klimatu), jak i — przede wszystkim — działalnością człowieka. Tak definiuje je Konwencja ONZ w sprawie zwalczania pustynnienia (UNCCD, 1994).",
+          "note": "Pustynnienie **nie** oznacza „przesuwania się piasków Sahary”. To utrata żyzności na obrzeżach obszarów suchych, powstawanie płatów jałowej ziemi, które stopniowo się zlewają. Nie dotyczy też obszarów wilgotnych — tam mówimy po prostu o degradacji gleb."
+        },
+        {
+          "type": "process",
+          "title": "Mechanizm pustynnienia — spirala, z której trudno wyjść",
+          "caption": "Zwróć uwagę na ostatni etap: to sprzężenie zwrotne sprawia, że proces sam się napędza nawet bez dalszej presji człowieka.",
+          "steps": [
+            {
+              "title": "1. Presja demograficzna i gospodarcza",
+              "text": "Szybki przyrost naturalny zwiększa zapotrzebowanie na żywność, opał i pastwiska. Na obszarach suchych, gdzie ekosystemy są kruche, nawet niewielka intensyfikacja użytkowania przekracza możliwości regeneracyjne środowiska."
+            },
+            {
+              "title": "2. Nadmierny wypas, wyręb i uprawa gleb marginalnych",
+              "text": "Zbyt liczne stada zjadają i wydeptują runo, drzewa i krzewy trafiają na opał, a pola zakłada się na glebach, które powinny pozostać pastwiskiem. Skraca się okres ugorowania, więc gleba nie ma czasu na odbudowę."
+            },
+            {
+              "title": "3. Utrata pokrywy roślinnej",
+              "text": "Roślinność przestaje osłaniać powierzchnię. Znikają korzenie wiążące glebę i ściółka chroniąca ją przed uderzeniami kropel deszczu i przed nagrzewaniem."
+            },
+            {
+              "title": "4. Erozja i wyjałowienie",
+              "text": "Wiatr wywiewa najdrobniejsze, najżyźniejsze cząstki (**erozja eoliczna**), a rzadkie, ale ulewne deszcze zmywają glebę ze stoków (**erozja wodna**). Ubywa próchnicy, spada zdolność zatrzymywania wody i składników pokarmowych."
+            },
+            {
+              "title": "5. Zmiana bilansu wodnego",
+              "text": "Zbita, pozbawiona roślin powierzchnia słabo wchłania wodę — deszcz spływa zamiast wsiąkać. Obniża się poziom wód gruntowych, wysychają studnie i okresowe cieki."
+            },
+            {
+              "title": "6. Sprzężenie zwrotne przez albedo",
+              "text": "Jasna, pozbawiona roślinności powierzchnia **odbija więcej promieniowania**. Powietrze nad nią słabiej się nagrzewa, osłabia się konwekcja, a wraz z nią opady konwekcyjne. Mniej deszczu oznacza mniej roślin — i spirala zamyka się na coraz niższym poziomie."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Typy degradacji gleb",
+          "caption": "Na maturze często trzeba wskazać typ degradacji na podstawie opisu regionu — kluczem jest zawsze klimat i sposób użytkowania.",
+          "groups": [
+            {
+              "name": "Erozja wodna",
+              "description": "Zmywanie i żłobienie gleby przez spływ powierzchniowy. Nasila się na stokach pozbawionych roślinności i przy orce zgodnej ze spadkiem.",
+              "examples": [
+                "Wyżyna Lessowa w Chinach — żółta barwa Huang He pochodzi ze zmytego lessu",
+                "stoki Andów i Himalajów",
+                "polskie wyżyny lessowe (Lubelszczyzna, Wyżyna Sandomierska)"
+              ]
+            },
+            {
+              "name": "Erozja eoliczna (wietrzna)",
+              "description": "Wywiewanie drobnych cząstek z odsłoniętej, suchej gleby. Typowa dla obszarów suchych i dla wielkich, bezdrzewnych pól uprawnych.",
+              "examples": [
+                "Dust Bowl na Wielkich Równinach USA w latach 30. XX w.",
+                "burze pyłowe w Sahelu i Azji Środkowej",
+                "wywiewanie gleb torfowych po odwodnieniu"
+              ]
+            },
+            {
+              "name": "Zasolenie wtórne",
+              "description": "Skutek **nadmiernego nawadniania w klimacie suchym**: woda paruje, a rozpuszczone w niej sole zostają i podsiąkają kapilarnie ku powierzchni, tworząc biały nalot.",
+              "examples": [
+                "dolina Indusu w Pakistanie",
+                "Azja Środkowa — dorzecza Amu-darii i Syr-darii",
+                "dorzecze Murray-Darling w Australii"
+              ]
+            },
+            {
+              "name": "Zakwaszenie i zanieczyszczenie chemiczne",
+              "description": "Kwaśne opady, nadmierne nawożenie mineralne, metale ciężkie z przemysłu i górnictwa oraz pozostałości pestycydów.",
+              "examples": [
+                "okolice hut metali nieżelaznych",
+                "gleby wokół Legnicko-Głogowskiego Okręgu Miedziowego",
+                "regiony intensywnego rolnictwa"
+              ]
+            },
+            {
+              "name": "Utrata materii organicznej i zbicie gleby",
+              "description": "Intensywna uprawa bez nawożenia organicznego, monokultury i ciężki sprzęt niszczą strukturę gruzełkowatą i ubożą glebę w próchnicę.",
+              "examples": [
+                "monokultury zbożowe",
+                "przesuszenie i mineralizacja gleb organicznych po odwodnieniu",
+                "ubytek próchnicy na gruntach ornych Europy"
+              ]
+            },
+            {
+              "name": "Trwałe wyłączenie gleb z użytkowania",
+              "description": "Gleba nie zawsze jest degradowana chemicznie — bywa po prostu zabetonowana lub przekształcona.",
+              "examples": [
+                "zabudowa i uszczelnianie powierzchni w miastach",
+                "wyrobiska i zwałowiska górnicze",
+                "infrastruktura transportowa"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala problemu",
+          "items": [
+            {
+              "value": "ok. 1 cm",
+              "unit": "na 100–400 lat",
+              "label": "Tempo naturalnego powstawania gleby",
+              "note": "erozja potrafi usunąć tę warstwę w kilka lat — dlatego glebę traktuje się jako zasób nieodnawialny"
+            },
+            {
+              "value": "ok. 1/3",
+              "unit": "",
+              "label": "Szacowany udział gleb świata dotkniętych degradacją (FAO)"
+            },
+            {
+              "value": "ok. 40",
+              "unit": "%",
+              "label": "Udział obszarów suchych w powierzchni lądów Ziemi",
+              "note": "mieszka na nich ponad 2 mld ludzi — to oni są bezpośrednio narażeni na pustynnienie"
+            },
+            {
+              "value": "ok. 4,7",
+              "unit": "mln ha/rok",
+              "label": "Roczna utrata lasów netto w latach 2010–2020 (FAO)",
+              "note": "w latach 90. XX w. było to ok. 7,8 mln ha rocznie — tempo maleje, ale ubytek trwa"
+            },
+            {
+              "value": "ok. 8000",
+              "unit": "km",
+              "label": "Planowana długość Wielkiego Zielonego Muru w Afryce — od Senegalu po Dżibuti"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Sahel — modelowy obszar pustynnienia",
+          "region": "Pas między Saharą a sawannami Afryki (Mauretania, Mali, Niger, Czad, Sudan)",
+          "text": "Sahel to strefa przejściowa o opadach 150–600 mm rocznie, skoncentrowanych w kilku miesiącach letniego monsunu zachodnioafrykańskiego. Roczne sumy opadów wahają się tu skrajnie: susze z lat **1968–1974** i **1983–1985** przyniosły klęski głodu, śmierć milionów zwierząt hodowlanych i masowe migracje. Na wahania klimatyczne nałożyła się jednak presja człowieka: jeden z najwyższych na świecie **przyrostów naturalnych**, powiększanie pogłowia bydła i kóz ponad pojemność pastwisk, wycinanie akacji na opał (drewno jest tu podstawowym paliwem) oraz wypieranie tradycyjnego, koczowniczego wypasu przez osiadłe rolnictwo. Skutkiem jest degradacja pastwisk, spadek plonów prosa i sorga, wysychanie studni, konflikty między rolnikami a pasterzami oraz emigracja do miast i do Europy. Odpowiedzią jest m.in. **Wielki Zielony Mur** — inicjatywa Unii Afrykańskiej z 2007 r., łącząca nasadzenia drzew z odbudową pastwisk, małą retencją i wspieraniem naturalnej regeneracji drzew na polach (rolnictwo agroleśne).",
+          "takeaway": "Pustynnienie jest zawsze wypadkową **czynnika przyrodniczego** (zmienność opadów, susza) i **antropogenicznego** (przeludnienie, nadmierny wypas, wylesianie, uprawa gleb marginalnych). W odpowiedzi maturalnej trzeba wskazać obie grupy przyczyn — wskazanie tylko suszy zwykle nie wystarcza."
+        },
+        {
+          "type": "definition",
+          "term": "Wylesianie (deforestacja)",
+          "text": "Trwałe usuwanie pokrywy leśnej i przeznaczanie gruntu na inne cele — najczęściej rolnicze. Od wylesiania odróżnia się **degradację lasu**, w której las pozostaje, ale traci zwarcie, bioróżnorodność i zasobność (np. przez selektywny wyrąb najcenniejszych drzew albo pożary).",
+          "note": "Bilans lasów oblicza się jako **zmianę netto**: nowe nasadzenia w Europie, Chinach czy Indiach częściowo równoważą straty w tropikach. Ale plantacja eukaliptusa albo palmy olejowej nie zastąpi lasu pierwotnego pod względem bioróżnorodności i zasobów węgla."
+        },
+        {
+          "type": "compare",
+          "title": "Wylesianie w Amazonii a w Azji Południowo-Wschodniej",
+          "leftLabel": "Amazonia",
+          "rightLabel": "Azja Południowo-Wschodnia (Indonezja, Malezja)",
+          "rows": [
+            {
+              "aspect": "Główna przyczyna bezpośrednia",
+              "left": "Zakładanie **pastwisk dla bydła**, a następnie plantacji soi",
+              "right": "Plantacje **palmy olejowej** i kauczukowca oraz wyrąb drewna tropikalnego"
+            },
+            {
+              "aspect": "Przyczyna pośrednia",
+              "left": "Budowa dróg (m.in. Transamazonica), programy kolonizacji wnętrza kraju, nielegalne zawłaszczanie ziemi i górnictwo złota",
+              "right": "Popyt światowy na tani olej roślinny w żywności, kosmetykach i biopaliwach"
+            },
+            {
+              "aspect": "Podłoże",
+              "left": "Ubogie gleby ferralitowe — składniki pokarmowe są zmagazynowane w biomasie, nie w glebie",
+              "right": "Znaczny udział **torfowisk**, które po osuszeniu i wypaleniu emitują ogromne ilości CO2"
+            },
+            {
+              "aspect": "Metoda",
+              "left": "Wycinka i wypalanie, często w okresie suszy; „łuk wylesiania” na południowym i wschodnim skraju puszczy",
+              "right": "Osuszanie torfowisk rowami, wypalanie, zakładanie plantacji w monokulturze"
+            },
+            {
+              "aspect": "Specyficzny skutek",
+              "left": "Zaburzenie **recyklingu opadów** („latające rzeki”) i ryzyko przekształcenia lasu w sawannę",
+              "right": "Transgraniczny smog (haze) z palących się torfowisk oraz zagrożenie dla orangutanów i tygrysów sumatrzańskich"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Średnia roczna utrata lasów netto na świecie",
+          "caption": "Dane FAO, wartości uśrednione dla dekad, w mln ha rocznie. Tempo wylesiania maleje, ale ubytek netto wciąż trwa — a straty dotyczą głównie lasów tropikalnych, przyrosty zaś stref umiarkowanych.",
+          "unit": "mln ha/rok",
+          "labels": [
+            "1990–2000",
+            "2000–2010",
+            "2010–2020"
+          ],
+          "series": [
+            {
+              "name": "Ubytek lasów netto",
+              "values": [
+                7.8,
+                5.2,
+                4.7
+              ]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Skutki wylesiania",
+          "caption": "Wybieraj skutki z różnych grup — to najczęściej punktowany element odpowiedzi.",
+          "groups": [
+            {
+              "name": "Klimatyczne",
+              "description": "Las jest zarazem magazynem węgla i „pompą” obiegu wody.",
+              "examples": [
+                "uwolnienie węgla zmagazynowanego w biomasie i glebie (wylesianie odpowiada za znaczną część emisji CO2)",
+                "spadek ewapotranspiracji, a więc i opadów w regionie",
+                "wzrost albedo i zmiana bilansu cieplnego",
+                "wzrost amplitud temperatury"
+              ]
+            },
+            {
+              "name": "Glebowe",
+              "description": "W tropikach gleba bez lasu ulega degradacji w kilka lat.",
+              "examples": [
+                "nasilenie erozji wodnej na stokach",
+                "wypłukiwanie składników pokarmowych (lateryzacja)",
+                "zbicie i utwardzenie powierzchni gleby",
+                "spadek plonów po 2–3 latach użytkowania"
+              ]
+            },
+            {
+              "name": "Hydrologiczne",
+              "description": "Znika ściółka i system korzeniowy zatrzymujące wodę opadową.",
+              "examples": [
+                "gwałtowniejsze wezbrania i powodzie po ulewach",
+                "niższe przepływy w porze suchej",
+                "zamulanie zbiorników i koryt rzek",
+                "obniżenie poziomu wód gruntowych"
+              ]
+            },
+            {
+              "name": "Przyrodnicze",
+              "description": "Lasy tropikalne skupiają większość gatunków lądowych Ziemi.",
+              "examples": [
+                "utrata siedlisk i wymieranie gatunków",
+                "fragmentacja ekosystemów i efekt brzegowy",
+                "zanik gatunków endemicznych"
+              ]
+            },
+            {
+              "name": "Społeczne i gospodarcze",
+              "description": "Straty ponoszą przede wszystkim ludność rdzenna i lokalne społeczności.",
+              "examples": [
+                "utrata terytoriów i źródeł utrzymania ludów rdzennych",
+                "konflikty o ziemię",
+                "wzrost ryzyka chorób odzwierzęcych przy kontakcie z nowymi siedliskami",
+                "krótkotrwałe zyski gospodarcze kosztem trwałej utraty zasobu"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Główne obszary wylesiania i degradacji gruntów",
+          "caption": "Kliknij znaczniki — każdy ilustruje inny mechanizm i inną przyczynę gospodarczą.",
+          "center": [
+            5,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -3.12,
+              "lng": -60.02,
+              "label": "Amazonia (Manaus, Brazylia)",
+              "text": "Największy las deszczowy świata i największe pojedyncze ognisko wylesiania. Wycinka postępuje od południowego i wschodniego skraju — to tzw. **łuk wylesiania** w stanach Pará, Mato Grosso i Rondônia. Głównym motorem są pastwiska dla bydła i uprawa soi, ułatwione przez sieć dróg."
+            },
+            {
+              "lat": -1,
+              "lng": 114,
+              "label": "Borneo (Kalimantan)",
+              "text": "Wyspa podzielona między Indonezję, Malezję i Brunei. Lasy zastępowane są plantacjami palmy olejowej, a osuszane torfowiska płoną, dając emisje CO2 porównywalne z emisjami całych państw. To także ostatnie siedlisko orangutana borneańskiego."
+            },
+            {
+              "lat": 0.51,
+              "lng": 101.45,
+              "label": "Sumatra (Riau, Indonezja)",
+              "text": "Region rekordowej utraty lasów torfowych. Pożary z lat 1997 i 2015 wywołały transgraniczny smog (haze) nad Malezją i Singapurem, zamykając szkoły i lotniska — przykład, jak lokalne wylesianie staje się problemem międzynarodowym."
+            },
+            {
+              "lat": 0.4,
+              "lng": 22,
+              "label": "Kotlina Konga",
+              "text": "Drugi co do wielkości kompleks lasów deszczowych świata, na razie mniej zniszczony niż Amazonia. Presja rośnie: rolnictwo żarowe, pozyskiwanie drewna opałowego i węgla drzewnego oraz górnictwo (m.in. kobalt i koltan)."
+            },
+            {
+              "lat": 13.51,
+              "lng": -6,
+              "label": "Sahel (Mali)",
+              "text": "Strefa pustynnienia: nadmierny wypas, wycinka akacji na opał i uprawa gleb marginalnych na obszarze o skrajnie zmiennych opadach. Tu realizowany jest program Wielkiego Zielonego Muru."
+            },
+            {
+              "lat": 36.9,
+              "lng": -101.9,
+              "label": "Wielkie Równiny (USA) — Dust Bowl",
+              "text": "Klasyczny przykład erozji wietrznej wywołanej przez człowieka: w latach 20. XX w. rozorano darń stepową pod pszenicę, a susza lat 30. zamieniła glebę w pył unoszony przez burze pyłowe. Skutkiem była masowa migracja rolników do Kalifornii."
+            },
+            {
+              "lat": 37.5,
+              "lng": 110,
+              "label": "Wyżyna Lessowa (Chiny)",
+              "text": "Obszar najsilniejszej erozji wodnej na Ziemi. Less jest bardzo żyzny, ale i podatny na rozmywanie — Huang He (Rzeka Żółta) unosi rekordowy na świecie ładunek zawiesiny. Odbudowa objęła zalesianie i tarasowanie stoków."
+            },
+            {
+              "lat": 27.7,
+              "lng": 68.8,
+              "label": "Dolina Indusu (Pakistan)",
+              "text": "Jeden z największych systemów nawadniających świata i zarazem obszar rozległego **zasolenia wtórnego**: intensywne parowanie w klimacie suchym pozostawia sól w profilu glebowym, wyłączając grunty z uprawy."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Amazonia — czy las może „wyłączyć” własny deszcz?",
+          "region": "Dorzecze Amazonki, Ameryka Południowa",
+          "text": "Amazonia nie tylko korzysta z obfitych opadów — ona je **wytwarza**. Drzewa pobierają wodę z gleby i oddają ją do atmosfery w procesie ewapotranspiracji; para skrapla się i spada ponownie w głębi kontynentu, po czym cykl powtarza się kilkukrotnie. Te przemieszczające się nad lasem masy wilgotnego powietrza nazwano **latającymi rzekami** — zasilają one w opady także rolnicze regiony południowej Brazylii, Paragwaju i Argentyny. Znaczna część opadów w głębi Amazonii pochodzi właśnie z tego wewnętrznego recyklingu wilgoci. Gdy las jest wycinany, ewapotranspiracja spada, pora sucha wydłuża się, a osłabiony las staje się podatny na pożary — które niszczą kolejne fragmenty. Naukowcy ostrzegają, że po przekroczeniu pewnego progu wylesienia proces stanie się **samopodtrzymujący**: wschodnia Amazonia przekształciłaby się w formację sawannową, uwalniając ogromne ilości węgla. To klasyczny przykład **punktu krytycznego** (tipping point) w systemie przyrodniczym.",
+          "takeaway": "Las deszczowy to nie tylko efekt klimatu — to także jego przyczyna. Dlatego skutki wylesiania nie są proporcjonalne do wyciętej powierzchni: po przekroczeniu progu degradacja przyspiesza samoczynnie i staje się nieodwracalna."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj etapy degradacji gruntu po wykarczowaniu lasu równikowego",
+          "instruction": "Ustaw wydarzenia w kolejności chronologicznej — od wycinki do porzucenia pola.",
+          "items": [
+            "Wycięcie i wypalenie fragmentu lasu pod uprawę",
+            "Krótkotrwały wzrost żyzności gleby dzięki składnikom mineralnym zawartym w popiele",
+            "Wypłukiwanie składników pokarmowych przez ulewne deszcze w głąb profilu glebowego",
+            "Spadek plonów po dwóch–trzech latach uprawy",
+            "Porzucenie wyjałowionego pola i wykarczowanie kolejnego fragmentu lasu"
+          ],
+          "explanation": "W klimacie równikowym zasoby składników pokarmowych są zmagazynowane głównie w biomasie, a nie w glebie — gleby ferralitowe są ubogie i kwaśne. Popiół z wypalonego lasu daje zastrzyk żyzności na 2–3 lata, po czym ulewne deszcze wymywają składniki. Rolnictwo żarowe jest zrównoważone tylko przy bardzo małej gęstości zaludnienia i długim ugorowaniu (20–30 lat); przy presji demograficznej okres ten skraca się i las nie zdąża się odbudować."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy rozróżnienia, na których łatwo stracić punkty. **(1) Pustynnienie a pustynia**: pustynnienie to degradacja gruntów na obrzeżach obszarów suchych wskutek działalności człowieka, a nie „przesuwanie się wydm Sahary”. **(2) Wylesianie a degradacja lasu**: wycięcie lasu pod pole to wylesianie, przetrzebienie drzewostanu — degradacja. **(3) Erozja wodna a wietrzna**: w opisie szukaj wskazówek o klimacie i rzeźbie — stoki i ulewy to erozja wodna, płaskie, suche i bezdrzewne równiny to erozja eoliczna. I pamiętaj: bilans lasów **netto** może być dodatni w kraju, który równocześnie niszczy lasy pierwotne, a sadzi plantacje."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie przyczyn pustynnienia w Sahelu jest pełne i poprawne?",
+          "options": [
+            "Wyłącznie naturalne wahania opadów i susze",
+            "Wyłącznie nadmierny wypas i wycinka drzew na opał",
+            "Zmienność opadów i susze w połączeniu z przyrostem naturalnym, nadmiernym wypasem, wycinką drzew i uprawą gleb marginalnych",
+            "Zasolenie gleb wskutek nadmiernego nawadniania i zanieczyszczenie przemysłowe"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pustynnienie jest zawsze wypadkową czynników przyrodniczych i antropogenicznych. Sama susza jest zjawiskiem odwracalnym — dopiero nałożenie presji człowieka na kruchy ekosystem obszaru suchego prowadzi do trwałej utraty produktywności. Odpowiedź D opisuje inny typ degradacji, typowy dla obszarów nawadnianych, np. doliny Indusu."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego gleby wilgotnych lasów równikowych szybko tracą żyzność po wykarczowaniu lasu?",
+          "options": [
+            "Bo są bogate w próchnicę, która natychmiast zamarza",
+            "Bo składniki pokarmowe są zmagazynowane głównie w biomasie roślinnej, a uwolnione z popiołu zostają wymyte przez ulewne opady",
+            "Bo bez lasu gleba ulega zasoleniu wskutek podsiąkania kapilarnego",
+            "Bo temperatura gleby spada, co zatrzymuje działalność mikroorganizmów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Gleby ferralitowe są ubogie, kwaśne i silnie zwietrzałe — obieg materii zamyka się niemal w całości w biomasie i ściółce. Po wypaleniu popiół daje krótkotrwały wzrost żyzności, ale wysokie opady szybko wypłukują składniki, więc pole trzeba porzucić po 2–3 latach. Zasolenie (odpowiedź C) występuje w klimacie suchym, przy nawadnianiu."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaż skutek wylesiania w Amazonii najsilniej związany z obiegiem wody w tym regionie:",
+          "options": [
+            "Wzrost zasolenia gleb i wyłączanie ich z uprawy",
+            "Spadek ewapotranspiracji, osłabienie recyklingu opadów („latających rzek”) i wydłużenie pory suchej",
+            "Wzrost częstotliwości trzęsień ziemi wskutek odciążenia podłoża",
+            "Zwiększenie retencji wód gruntowych dzięki usunięciu drzew pobierających wodę"
+          ],
+          "correctIndex": 1,
+          "explanation": "Las deszczowy sam wytwarza znaczną część własnych opadów: parująca z liści woda ponownie się skrapla w głębi kontynentu. Wycinka przerywa ten obieg — opadów jest mniej, pora sucha się wydłuża, a osłabiony las staje się podatny na pożary. To mechanizm prowadzący do punktu krytycznego i savannizacji."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o degradacji lądów najczęściej wymagają **powiązania przyczyny z regionem**. Zbuduj sobie prostą siatkę: klimat suchy + nawadnianie → **zasolenie wtórne**; klimat suchy + wypas → **pustynnienie**; stoki + ulewy → **erozja wodna**; płaskie, bezdrzewne pola + susza → **erozja wietrzna**; klimat równikowy + wycinka → **lateryzacja i wypłukiwanie składników**. Gdy polecenie brzmi „podaj przyczyny” problemu środowiskowego w kraju rozwijającym się, prawie zawsze warto wskazać zarówno czynnik przyrodniczy, jak i **presję demograficzną** — to najczęściej punktowana para."
+        }
+      ]
+    },
+    {
+      "slug": "bioroznorodnosc-odpady-i-katastrofy-ekologiczne",
+      "title": "Utrata bioróżnorodności, odpady i katastrofy ekologiczne",
+      "summary": "Dlaczego gatunki wymierają szybciej niż kiedykolwiek, co dzieje się z plastikiem w oceanach i czego uczą największe katastrofy ekologiczne XX i XXI wieku.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Ostatnia lekcja działu zbiera problemy, które łączy jedna cecha: ich skutki są **nieodwracalne albo bardzo długotrwałe**. Wymarłego gatunku nie da się przywrócić. Plastik wyrzucony dziś do morza będzie krążył w oceanie przez stulecia. Skażenie po awarii reaktora utrzymuje się przez pokolenia, a wyschnięte jezioro zostawia po sobie pustynię soli. Zobaczysz tu, jak przebiega **szóste wielkie wymieranie**, na czym polega problem gatunków inwazyjnych i odpadów oraz jak analizować katastrofy ekologiczne — zawsze według schematu: przyczyna, mechanizm, skutki, wnioski."
+        },
+        {
+          "type": "definition",
+          "term": "Różnorodność biologiczna (bioróżnorodność)",
+          "text": "Zróżnicowanie życia na Ziemi rozpatrywane na **trzech poziomach**: genetycznym (zmienność w obrębie gatunku), gatunkowym (liczba i różnorodność gatunków) oraz ekosystemowym (różnorodność siedlisk i biocenoz). Chroni ją **Konwencja o różnorodności biologicznej** przyjęta na Szczycie Ziemi w Rio de Janeiro w 1992 r.",
+          "note": "Obecne tempo wymierania gatunków szacuje się na **100–1000 razy szybsze** niż naturalne tempo tła znane z zapisu kopalnego. Dlatego mówi się o szóstym wielkim wymieraniu — pierwszym w dziejach Ziemi wywołanym przez jeden gatunek. Stan zagrożenia gatunków rejestruje **Czerwona księga IUCN**."
+        },
+        {
+          "type": "mnemonic",
+          "title": "Pięć przyczyn utraty bioróżnorodności — HIPPO",
+          "text": "**H** – *Habitat loss* (niszczenie siedlisk) • **I** – *Invasive species* (gatunki inwazyjne) • **P** – *Pollution* (zanieczyszczenia) • **P** – *Population* (presja rosnącej populacji ludzkiej) • **O** – *Overharvesting* (nadmierna eksploatacja)",
+          "expansion": "Kolejność nie jest przypadkowa — to ranking wagi przyczyn. Największe znaczenie ma niszczenie i fragmentacja siedlisk (wylesianie, osuszanie mokradeł, zabudowa), najmniejsze — choć często najbardziej medialne — bezpośrednie polowania i połowy. Do tej piątki dochodzi dziś szósty, coraz silniejszy czynnik: **zmiany klimatu**."
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny utraty różnorodności biologicznej",
+          "caption": "Przy każdej grupie zwróć uwagę na mechanizm — na maturze pytanie brzmi zwykle „wyjaśnij, w jaki sposób”, a nie „wymień”.",
+          "groups": [
+            {
+              "name": "Niszczenie i fragmentacja siedlisk",
+              "description": "Najważniejsza przyczyna. Gatunek pozbawiony siedliska ginie nawet wtedy, gdy nikt go nie zabija. Podział dużego kompleksu na małe płaty odcina populacje od siebie, co prowadzi do wsobności i utraty zmienności genetycznej.",
+              "examples": [
+                "wylesianie tropików",
+                "osuszanie mokradeł i regulacja rzek",
+                "zabudowa i drogi przecinające korytarze ekologiczne",
+                "zamiana łąk i stepów na pola uprawne"
+              ]
+            },
+            {
+              "name": "Gatunki inwazyjne",
+              "description": "Obce gatunki pozbawione naturalnych wrogów rozmnażają się bez ograniczeń i wypierają rodzime — szczególnie groźne na wyspach i w jeziorach, gdzie ewolucja przebiegała w izolacji.",
+              "examples": [
+                "okoń nilowy w Jeziorze Wiktorii",
+                "królik i ropucha aga w Australii",
+                "szczury i koty na wyspach oceanicznych"
+              ]
+            },
+            {
+              "name": "Zanieczyszczenia",
+              "description": "Działają pośrednio: zmieniają warunki siedliskowe albo kumulują się w łańcuchu pokarmowym (biomagnifikacja).",
+              "examples": [
+                "eutrofizacja i strefy martwe",
+                "pestycydy i spadek liczebności owadów zapylających",
+                "metale ciężkie w rybach drapieżnych",
+                "zanieczyszczenie światłem i hałasem"
+              ]
+            },
+            {
+              "name": "Presja demograficzna i gospodarcza",
+              "description": "Rosnąca liczba ludności i konsumpcja zwiększają zapotrzebowanie na grunty, wodę i surowce — to czynnik stojący za wszystkimi pozostałymi.",
+              "examples": [
+                "ekspansja rolnictwa (soja, palma olejowa, bydło)",
+                "urbanizacja",
+                "górnictwo odkrywkowe"
+              ]
+            },
+            {
+              "name": "Nadmierna eksploatacja",
+              "description": "Pozyskiwanie szybsze niż zdolność populacji do odtworzenia. Klasyczny problem „tragedii wspólnego pastwiska”.",
+              "examples": [
+                "przełowienie łowisk (dorsz Nowej Fundlandii)",
+                "kłusownictwo (nosorożce, słonie, łuskowce)",
+                "handel gatunkami zagrożonymi — reguluje go konwencja CITES"
+              ]
+            },
+            {
+              "name": "Zmiany klimatu",
+              "description": "Przesuwają strefy klimatyczne szybciej, niż gatunki są w stanie migrować; szczególnie groźne dla gatunków górskich i polarnych, które nie mają dokąd się przenieść.",
+              "examples": [
+                "blaknięcie raf koralowych",
+                "zanik siedlisk niedźwiedzia polarnego",
+                "rozsynchronizowanie kwitnienia i lotu zapylaczy"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Gatunek obcy a gatunek inwazyjny",
+          "text": "**Gatunek obcy** to taki, który znalazł się poza swoim naturalnym zasięgiem wskutek działalności człowieka (celowo lub przypadkiem — np. z wodami balastowymi statków). **Gatunkiem inwazyjnym** nazywamy ten obcy gatunek, który zaczyna rozprzestrzeniać się samoistnie i powoduje szkody przyrodnicze, gospodarcze lub zdrowotne.",
+          "note": "Nie każdy gatunek obcy jest inwazyjny — ziemniak i kukurydza też pochodzą z Ameryki. O inwazyjności decyduje **brak naturalnych wrogów i konkurentów** w nowym środowisku oraz duża zdolność rozmnażania. Dlatego najbardziej wrażliwe są **wyspy** i **jeziora**, gdzie rodzime gatunki ewoluowały w izolacji."
+        },
+        {
+          "type": "table",
+          "title": "Wybrane gatunki inwazyjne i ich skutki",
+          "caption": "W polskiej części tabeli znajdziesz gatunki, o które CKE pyta najczęściej — warto znać ich pochodzenie.",
+          "headers": [
+            "Gatunek",
+            "Obszar pochodzenia",
+            "Obszar inwazji",
+            "Skutki"
+          ],
+          "rows": [
+            [
+              "Barszcz Sosnowskiego",
+              "Kaukaz",
+              "Polska, Europa Środkowa i Wschodnia",
+              "Wypiera rodzimą roślinność, tworzy zwarte łany; sok powoduje ciężkie oparzenia skóry pod wpływem światła"
+            ],
+            [
+              "Nawłoć kanadyjska",
+              "Ameryka Północna",
+              "Europa, w tym Polska",
+              "Opanowuje odłogi i nieużytki, tworzy monokultury i zuboża łąki oraz murawy"
+            ],
+            [
+              "Rak pręgowany",
+              "Ameryka Północna",
+              "Wody Europy",
+              "Przenosi dżumę raczą, śmiertelną dla rodzimego raka szlachetnego i błotnego"
+            ],
+            [
+              "Królik europejski",
+              "Europa",
+              "Australia (introdukcja w XIX w.)",
+              "Wyjadanie roślinności, nasilenie erozji gleb, konkurencja z rodzimymi torbaczami"
+            ],
+            [
+              "Ropucha aga",
+              "Ameryka Środkowa i Południowa",
+              "Australia (introdukcja w 1935 r.)",
+              "Silnie trująca — zabija rodzime drapieżniki, które próbują ją zjeść; wprowadzona omyłkowo do walki ze szkodnikami trzciny cukrowej"
+            ],
+            [
+              "Okoń nilowy",
+              "Dorzecze Nilu",
+              "Jezioro Wiktorii",
+              "Doprowadził do wymarcia lub skrajnego zagrożenia dziesiątek endemicznych gatunków pielęgnic"
+            ],
+            [
+              "Racicznica zmienna",
+              "Morze Czarne i Kaspijskie",
+              "Wielkie Jeziora Ameryki Północnej, Europa Zachodnia",
+              "Zarasta ujęcia wody i instalacje przemysłowe, przebudowuje sieć pokarmową jezior"
+            ]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Odpady i plastik w liczbach",
+          "items": [
+            {
+              "value": "ok. 8–12",
+              "unit": "mln ton/rok",
+              "label": "Szacunkowa ilość plastiku trafiającego do oceanów",
+              "note": "większość rzekami, z krajów o słabo rozwiniętej gospodarce odpadami"
+            },
+            {
+              "value": "ok. 1,6",
+              "unit": "mln km²",
+              "label": "Szacowana powierzchnia Wielkiej Pacyficznej Plamy Śmieci",
+              "note": "to nie zwarta „wyspa”, lecz zupa rozdrobnionych cząstek utrzymywana przez wir oceaniczny"
+            },
+            {
+              "value": "poniżej 5",
+              "unit": "mm",
+              "label": "Umowna granica wielkości mikroplastiku"
+            },
+            {
+              "value": "setki lat",
+              "unit": "",
+              "label": "Czas rozkładu butelki PET w środowisku morskim",
+              "note": "plastik nie rozkłada się biologicznie — rozpada się na coraz mniejsze cząstki"
+            },
+            {
+              "value": "ok. 9",
+              "unit": "%",
+              "label": "Szacowany udział tworzyw sztucznych poddanych recyklingowi w skali świata",
+              "note": "reszta trafia na składowiska, do spalarni albo do środowiska"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Od kosza do łańcucha pokarmowego — droga plastiku",
+          "caption": "Zwróć uwagę, że plastik nie znika: on tylko zmienia rozmiar i miejsce.",
+          "steps": [
+            {
+              "title": "1. Ucieczka odpadu ze strumienia gospodarki odpadami",
+              "text": "Odpady niezebrane, wyrzucone poza system albo składowane na niezabezpieczonych wysypiskach są porywane przez wiatr i wody opadowe. Do tego dochodzą śmieci porzucane bezpośrednio w środowisku i utracone sieci rybackie."
+            },
+            {
+              "title": "2. Transport rzekami do morza",
+              "text": "Rzeki działają jak taśmociąg — kilkanaście wielkich rzek Azji i Afryki odpowiada za znaczną część ładunku plastiku trafiającego do oceanów. Kluczem jest więc gospodarka odpadami w ich dorzeczach."
+            },
+            {
+              "title": "3. Gromadzenie w wirach oceanicznych",
+              "text": "Prądy morskie tworzące wielkoskalowe **wiry (gyry)** zbierają unoszące się cząstki w środku okrążanego obszaru. Największym takim skupiskiem jest **Wielka Pacyficzna Plama Śmieci** między Kalifornią a Hawajami."
+            },
+            {
+              "title": "4. Rozpad na mikroplastik",
+              "text": "Promieniowanie UV, falowanie i sól kruszą tworzywo na coraz mniejsze fragmenty. Powstaje **mikroplastik** (<5 mm), a następnie nanoplastik. Do tego dochodzi mikroplastik pierwotny — z prania tkanin syntetycznych, ścierania opon i kosmetyków."
+            },
+            {
+              "title": "5. Wejście do łańcucha pokarmowego",
+              "text": "Zooplankton i ryby mylą cząstki z pokarmem. Plastik zapycha przewody pokarmowe (ptaki morskie, żółwie mylące torebki z meduzami), a na jego powierzchni kumulują się trwałe zanieczyszczenia organiczne, które przechodzą wyżej w łańcuchu pokarmowym — aż do ryb spożywanych przez człowieka."
+            },
+            {
+              "title": "6. Skutki gospodarcze i trwałość problemu",
+              "text": "Zaśmiecone plaże uderzają w turystykę, dryfujące sieci („sieci widma”) w rybołówstwo, a zaplątane liny w żeglugę. Ponieważ plastik nie ulega rozkładowi biologicznemu, jedynym skutecznym rozwiązaniem jest **ograniczenie u źródła**, a nie sprzątanie skutków."
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uszereguj sposoby postępowania z odpadami — od najbardziej do najmniej pożądanego",
+          "instruction": "Odtwórz hierarchię postępowania z odpadami obowiązującą w prawie Unii Europejskiej.",
+          "items": [
+            "Zapobieganie powstawaniu odpadów (ograniczenie zużycia, projektowanie trwałych produktów)",
+            "Przygotowanie do ponownego użycia (naprawa, opakowania zwrotne)",
+            "Recykling (odzysk surowców i wytworzenie z nich nowych produktów)",
+            "Inne metody odzysku, przede wszystkim odzysk energii w spalarniach",
+            "Unieszkodliwianie, czyli składowanie odpadów"
+          ],
+          "explanation": "Ta pięciostopniowa hierarchia jest podstawą **gospodarki o obiegu zamkniętym (GOZ)**. Najkorzystniejszy jest odpad, który w ogóle nie powstał — nie wymaga transportu, przetworzenia ani miejsca na składowisku. Recykling znajduje się dopiero na trzecim miejscu, bo sam wymaga energii i nie każdy materiał można przetwarzać wielokrotnie. Składowanie jest ostatecznością: zajmuje teren, emituje metan i grozi skażeniem wód gruntowych odciekami."
+        },
+        {
+          "type": "timeline",
+          "title": "Największe katastrofy ekologiczne",
+          "caption": "Każda z nich doprowadziła do zmian w prawie — to najlepszy klucz do zapamiętania ich znaczenia.",
+          "events": [
+            {
+              "period": "1976",
+              "label": "Seveso (Włochy)",
+              "text": "Awaria w zakładach chemicznych pod Mediolanem uwolniła chmurę **dioksyn**. Skażony obszar wymagał usunięcia wierzchniej warstwy gleby i ewakuacji. Efektem prawnym jest unijna **dyrektywa Seveso**, regulująca bezpieczeństwo zakładów o dużym ryzyku awarii przemysłowej."
+            },
+            {
+              "period": "1984",
+              "label": "Bhopal (Indie)",
+              "text": "Wyciek **izocyjanianu metylu** z fabryki pestycydów — najtragiczniejsza katastrofa przemysłowa w dziejach; tysiące ofiar śmiertelnych i setki tysięcy poszkodowanych. Pokazała problem podwójnych standardów bezpieczeństwa w krajach rozwijających się."
+            },
+            {
+              "period": "1986",
+              "label": "Czarnobyl (ZSRR, dziś Ukraina)",
+              "text": "26 kwietnia 1986 r. eksplozja i pożar reaktora nr 4 elektrowni jądrowej podczas nieprawidłowo prowadzonego testu. Chmura radioaktywna (m.in. jod-131 i cez-137) przeszła nad znaczną częścią Europy. Utworzono **30-kilometrową strefę wykluczenia**, wysiedlono ponad 100 tys. osób."
+            },
+            {
+              "period": "1989",
+              "label": "Exxon Valdez (Alaska)",
+              "text": "Tankowiec wszedł na skały w cieśninie Prince William Sound, uwalniając ok. 37 tys. ton ropy na dziewicze wybrzeże. Skutkiem prawnym był amerykański **Oil Pollution Act (1990)** i wymóg podwójnych kadłubów dla tankowców."
+            },
+            {
+              "period": "2010",
+              "label": "Deepwater Horizon (Zatoka Meksykańska)",
+              "text": "Wybuch i zatonięcie platformy wiertniczej. Przez niemal trzy miesiące z odwiertu na głębokości ok. 1500 m wydobywała się ropa — największy morski wyciek w historii. Skażeniu uległo ok. 2000 km wybrzeża pięciu stanów USA (od Teksasu po Florydę, najsilniej Luizjany), co uderzyło w rybołówstwo i turystykę."
+            },
+            {
+              "period": "2011",
+              "label": "Fukushima (Japonia)",
+              "text": "Trzęsienie ziemi o magnitudzie 9,0 i wywołane nim **tsunami** zalały generatory awaryjne elektrowni Fukushima Daiichi. Utrata chłodzenia doprowadziła do stopienia rdzeni trzech reaktorów i wybuchów wodoru. Skutkiem była m.in. rezygnacja Niemiec z energetyki jądrowej."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Czarnobyl a Fukushima — dwie awarie o tej samej ocenie w skali INES",
+          "leftLabel": "Czarnobyl (1986)",
+          "rightLabel": "Fukushima (2011)",
+          "rows": [
+            {
+              "aspect": "Przyczyna bezpośrednia",
+              "left": "Błędy obsługi podczas testu i wadliwa konstrukcja reaktora RBMK — przyczyna **wewnętrzna**",
+              "right": "Trzęsienie ziemi i tsunami, które zalało generatory awaryjne — przyczyna **zewnętrzna** (naturalna)"
+            },
+            {
+              "aspect": "Przebieg",
+              "left": "Wybuch i pożar grafitu wyniosły materiał promieniotwórczy wysoko w atmosferę",
+              "right": "Utrata chłodzenia, stopienie rdzeni i wybuchy wodoru; brak pożaru wynoszącego skażenie tak wysoko"
+            },
+            {
+              "aspect": "Zasięg skażenia",
+              "left": "Kontynentalny — opad radioaktywny nad Białorusią, Ukrainą, Rosją i znaczną częścią Europy",
+              "right": "Regionalny — skażenie terenów wokół elektrowni oraz zrzuty wody skażonej do Pacyfiku"
+            },
+            {
+              "aspect": "Skala INES",
+              "left": "7 — najwyższy stopień",
+              "right": "7 — najwyższy stopień, ale przy wielokrotnie mniejszej emisji izotopów"
+            },
+            {
+              "aspect": "Skutki społeczne",
+              "left": "Strefa wykluczenia 30 km, wysiedlenia, choroby tarczycy u dzieci, wieloletnie skażenie gleb i lasów",
+              "right": "Ewakuacja ok. 150 tys. osób, ogromne koszty dekontaminacji, zwrot polityki energetycznej wielu państw"
+            },
+            {
+              "aspect": "Wniosek",
+              "left": "Znaczenie kultury bezpieczeństwa i jawności informacji",
+              "right": "Znaczenie lokalizacji obiektów i odporności na zagrożenia naturalne"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Jezioro Aralskie — katastrofa zaplanowana przy biurku",
+          "region": "Pogranicze Kazachstanu i Uzbekistanu, Azja Środkowa",
+          "text": "Jeszcze w latach 60. XX w. Jezioro Aralskie było **czwartym co do wielkości jeziorem świata** (ok. 68 tys. km²), z prężnym rybołówstwem i portami w Mujnaku i Aralsku. Zasilały je dwie wielkie rzeki: **Amu-daria i Syr-daria**. Radziecki plan gospodarczy przewidywał przekształcenie pustynnych obszarów Azji Środkowej w zagłębie **bawełny** — najbardziej wodochłonnej z upraw. Zbudowano gigantyczne systemy nawadniające (m.in. Kanał Karakumski) o bardzo niskiej sprawności: znaczna część wody parowała lub wsiąkała po drodze. Dopływ do jeziora niemal ustał, a w klimacie suchym parowanie z powierzchni pozostało ogromne — bilans wodny się załamał. Jezioro rozpadło się na części, powierzchnia skurczyła o ponad 90%, a **zasolenie wzrosło kilkakrotnie**, zabijając ryby. Na odsłoniętym dnie powstała nowa pustynia — **Aralkum** — z której wiatr porywa sól i pozostałości pestycydów, roznosząc je po okolicznych polach i osiedlach; skutkiem są choroby dróg oddechowych i nowotwory. Zanikło rybołówstwo (statki na piasku pod Mujnakiem stały się symbolem katastrofy), a lokalny klimat stał się bardziej kontynentalny — mroźniejsze zimy i gorętsze lata. Częściową poprawę przyniosła **grobla Kokaral** (2005), która pozwoliła odbudować poziom i zmniejszyć zasolenie Małego Aralu w Kazachstanie; Duży Aral po stronie uzbeckiej praktycznie wysechł.",
+          "takeaway": "To podręcznikowy przykład **katastrofy o przyczynie gospodarczej, nie technicznej**: nie było tu awarii ani wybuchu, lecz konsekwentnie realizowany plan nawodnienia pustyni. Pokazuje łańcuch skutków: hydrologicznych (zanik jeziora), chemicznych (zasolenie), zdrowotnych (burze solne), gospodarczych (upadek rybołówstwa) i klimatycznych (wzrost kontynentalizmu)."
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa katastrof ekologicznych i skutków odpadów",
+          "caption": "Kliknij znaczniki. Przy każdym miejscu spróbuj samodzielnie odtworzyć schemat: przyczyna → mechanizm → skutek.",
+          "center": [
+            30,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 51.39,
+              "lng": 30.1,
+              "label": "Czarnobyl (Ukraina)",
+              "text": "Największa awaria jądrowa w historii (1986). Strefa wykluczenia o promieniu 30 km funkcjonuje do dziś, choć paradoksalnie stała się ostoją dzikiej przyrody — brak człowieka okazał się dla zwierząt korzystniejszy niż promieniowanie szkodliwe."
+            },
+            {
+              "lat": 37.42,
+              "lng": 141.03,
+              "label": "Fukushima Daiichi (Japonia)",
+              "text": "Awaria wywołana przez tsunami po trzęsieniu ziemi Tōhoku (2011). Przykład tzw. kaskady zdarzeń: zagrożenie naturalne uruchamia awarię techniczną, ta zaś kryzys społeczny i zmianę polityki energetycznej na innym kontynencie."
+            },
+            {
+              "lat": 60.85,
+              "lng": -146.7,
+              "label": "Prince William Sound (Alaska)",
+              "text": "Miejsce katastrofy tankowca Exxon Valdez (1989). Zimne wody i skaliste wybrzeże spowolniły rozkład ropy — jej ślady w osadach są wykrywane po dziesięcioleciach."
+            },
+            {
+              "lat": 28.74,
+              "lng": -88.39,
+              "label": "Deepwater Horizon (Zatoka Meksykańska)",
+              "text": "Największy morski wyciek ropy (2010). Wykorzystanie dyspergentów rozproszyło plamę, ale przeniosło zanieczyszczenie w głąb toni wodnej — pokazuje, że w takich katastrofach nie ma rozwiązań bezkosztowych."
+            },
+            {
+              "lat": 45,
+              "lng": 59.5,
+              "label": "Jezioro Aralskie (Kazachstan/Uzbekistan)",
+              "text": "Zanik jeziora wskutek poboru wody z Amu-darii i Syr-darii na nawadnianie bawełny. Na odsłoniętym dnie powstała pustynia solna Aralkum, źródło burz pyłowo-solnych."
+            },
+            {
+              "lat": 23.26,
+              "lng": 77.41,
+              "label": "Bhopal (Indie)",
+              "text": "Wyciek izocyjanianu metylu z fabryki pestycydów (1984) — najtragiczniejsza w skutkach katastrofa przemysłowa w historii. Skażenie terenu zakładu nie zostało w pełni usunięte do dziś."
+            },
+            {
+              "lat": 45.65,
+              "lng": 9.15,
+              "label": "Seveso (Włochy)",
+              "text": "Uwolnienie dioksyn (1976). Nazwa miejscowości stała się nazwą unijnej dyrektywy o przeciwdziałaniu poważnym awariom przemysłowym."
+            },
+            {
+              "lat": 32,
+              "lng": -145,
+              "label": "Wielka Pacyficzna Plama Śmieci",
+              "text": "Obszar akumulacji plastiku w wirze północnopacyficznym, między Kalifornią a Hawajami. Nie jest to zwarta wyspa, lecz rozproszona zawiesina cząstek — dlatego tak trudno ją usunąć."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy uproszczenia. **(1)** Wielka Pacyficzna Plama Śmieci to **nie wyspa**, po której można chodzić — to rozproszona zawiesina, w większości mikroplastiku, niewidoczna na zdjęciach satelitarnych. **(2)** Nie każdy **gatunek obcy** jest inwazyjny; inwazyjny to ten, który sam się rozprzestrzenia i wyrządza szkody. **(3)** Jezioro Aralskie nie wyschło „z powodu zmian klimatu” — bezpośrednią przyczyną był **pobór wody z rzek zasilających na nawadnianie upraw bawełny**. Zmiany klimatu problem pogłębiają, ale przyczyną sprawczą była decyzja gospodarcza."
+        },
+        {
+          "type": "quiz",
+          "question": "Która przyczyna odpowiada dziś za największą część utraty różnorodności biologicznej na świecie?",
+          "options": [
+            "Bezpośrednie polowania i kłusownictwo",
+            "Niszczenie i fragmentacja siedlisk, głównie przez rolnictwo i wylesianie",
+            "Zanieczyszczenie hałasem i światłem",
+            "Introdukcja gatunków obcych do ogrodów botanicznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "W schemacie HIPPO na pierwszym miejscu stoi *habitat loss*. Gatunek pozbawiony siedliska ginie nawet bez bezpośredniego prześladowania, a fragmentacja izoluje populacje i obniża ich zmienność genetyczną. Nadmierna eksploatacja (odpowiedź A) jest istotna, ale ustępuje utracie siedlisk."
+        },
+        {
+          "type": "quiz",
+          "question": "Bezpośrednią przyczyną zaniku Jeziora Aralskiego było:",
+          "options": [
+            "trzęsienie ziemi, które zmieniło bieg rzek zasilających jezioro",
+            "wzrost temperatury powietrza i parowania wskutek globalnego ocieplenia",
+            "pobór wody z Amu-darii i Syr-darii na nawadnianie plantacji bawełny",
+            "budowa elektrowni wodnej na Amu-darii, która zatrzymała cały przepływ"
+          ],
+          "correctIndex": 2,
+          "explanation": "Bilans wodny jeziora bezodpływowego zależy od relacji dopływu rzecznego do parowania. Odprowadzenie wody z obu rzek zasilających na wielkoskalowe nawadnianie bawełny w klimacie suchym zredukowało dopływ niemal do zera, przy niezmienionym parowaniu — jezioro zaczęło się kurczyć i zasalać."
+        },
+        {
+          "type": "quiz",
+          "question": "Zgodnie z hierarchią postępowania z odpadami najbardziej pożądanym sposobem gospodarowania nimi jest:",
+          "options": [
+            "recykling surowców wtórnych",
+            "zapobieganie powstawaniu odpadów",
+            "spalanie z odzyskiem energii",
+            "składowanie na uszczelnionych składowiskach"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hierarchia ma pięć stopni: zapobieganie → przygotowanie do ponownego użycia → recykling → inny odzysk (w tym energii) → unieszkodliwianie (składowanie). Najlepszy jest odpad, który nie powstał, bo nie wymaga ani transportu, ani energii na przetworzenie, ani miejsca na składowisku."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Katastrofy ekologiczne opisuj zawsze według stałego schematu: **co się stało → mechanizm rozprzestrzeniania skutków → skutki przyrodnicze i społeczno-gospodarcze → wnioski (zmiany w prawie)**. Naucz się par „miejsce – rok – przyczyna”: Czarnobyl 1986 (błąd obsługi i konstrukcji reaktora), Fukushima 2011 (tsunami), Exxon Valdez 1989 i Deepwater Horizon 2010 (wycieki ropy), Bhopal 1984 (awaria chemiczna), Aral (nawadnianie upraw bawełny). Gdy w poleceniu pojawia się słowo **„uzasadnij”** przy problemie środowiskowym, w odpowiedzi musi wystąpić czasownik opisujący mechanizm („powoduje wzrost zasolenia, przez co…”), a nie samo wyliczenie skutków."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1351 @@
+{
+  "topicSlug": "morze-baltyckie",
+  "lessons": [
+    {
+      "slug": "polozenie-i-cechy-baltyku",
+      "title": "Bałtyk — morze śródlądowe na szelfie",
+      "summary": "Położenie, wielkość, ukształtowanie dna i linia brzegowa Morza Bałtyckiego oraz konsekwencje jego niemal całkowitego odcięcia od oceanu.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Morze Bałtyckie wygląda na mapie jak wielka zatoka wciśnięta między Skandynawię a Niż Europejski — i właśnie z tego kształtu wynika niemal wszystko, czego uczysz się o tym akwenie. Bałtyk jest **płytki**, **młody** i **prawie odcięty od oceanu**. Te trzy cechy tłumaczą jego rekordowo **niskie zasolenie**, **brak pływów**, **coroczne zlodzenie** północnych zatok, ubogą faunę morską i wyjątkową **podatność na zanieczyszczenia**. W tej lekcji poznasz „szkielet” Bałtyku: gdzie leży, jak jest duży, jak wygląda jego dno i jak jest zbudowana linia brzegowa. Wszystkie kolejne lekcje działu będą się do tych faktów odwoływać."
+        },
+        {
+          "type": "definition",
+          "term": "Morze śródlądowe (wewnętrzne)",
+          "text": "Morze wcinające się głęboko w ląd, otoczone niemal ze wszystkich stron obszarami lądowymi i połączone z oceanem wyłącznie przez **wąskie, płytkie cieśniny**. Bałtyk łączy się z Morzem Północnym (a więc z Atlantykiem) tylko przez **Cieśniny Duńskie** — **Sund (Öresund)**, **Wielki Bełt** i **Mały Bełt** — a dalej przez **Kattegat** i **Skagerrak**.",
+          "note": "W polskiej terminologii „morze śródlądowe” = „morze wewnętrzne”. Nie myl tego określenia z **Morzem Śródziemnym**, które jest nazwą własną konkretnego akwenu (też zresztą śródlądowego)."
+        },
+        {
+          "type": "definition",
+          "term": "Morze szelfowe",
+          "text": "Morze leżące w całości (lub prawie w całości) na **szelfie kontynentalnym**, czyli na podwodnym przedłużeniu kontynentu. Bałtyk jest klasycznym morzem szelfowym: jego średnia głębokość to zaledwie ok. **52 m**, a misa morska powstała jako obniżenie na styku **tarczy bałtyckiej** i platformy wschodnioeuropejskiej, dodatkowo **wyżłobione i wymodelowane przez lądolód skandynawski**.",
+          "note": "Dno Bałtyku to układ **głębi (basenów)** rozdzielonych **progami (ryglami)**. Progi ograniczają swobodny przepływ wód przydennych między basenami — to klucz do zrozumienia deficytu tlenu w głębiach."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Bałtyk w liczbach",
+          "items": [
+            { "value": "415", "unit": "tys. km²", "label": "Powierzchnia", "note": "wraz z Kattegatem; bez niego ok. 386 tys. km²" },
+            { "value": "21,7", "unit": "tys. km³", "label": "Objętość wód", "note": "dla porównania: Morze Śródziemne ok. 3,7 mln km³" },
+            { "value": "52", "unit": "m", "label": "Średnia głębokość", "note": "średnia głębokość oceanu światowego to ok. 3700 m" },
+            { "value": "459", "unit": "m", "label": "Głębokość maksymalna — Głębia Landsort", "note": "u wybrzeży Szwecji, na północny zachód od Gotlandii" },
+            { "value": "1,7", "unit": "mln km²", "label": "Powierzchnia zlewiska", "note": "ponad 4× więcej niż powierzchnia samego morza — stąd ogromny dopływ wód rzecznych" },
+            { "value": "ok. 12", "unit": "tys. lat", "label": "Wiek akwenu", "note": "jedno z najmłodszych mórz na Ziemi" },
+            { "value": "ok. 8", "unit": "tys. km", "label": "Długość linii brzegowej", "note": "bardzo rozwinięta: liczne zatoki, wyspy i szkiery" },
+            { "value": "770", "unit": "km", "label": "Długość wybrzeża Polski", "note": "wraz z Półwyspem Helskim i brzegami zalewów; sam brzeg otwartego morza to ok. 528 km" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Części Morza Bałtyckiego",
+          "caption": "Podział stosowany w opracowaniach naukowych i na mapach tematycznych — warto go znać, bo zasolenie, zlodzenie i stan środowiska opisuje się właśnie dla tych części.",
+          "groups": [
+            {
+              "name": "Cieśniny Duńskie i Kattegat",
+              "description": "**Strefa przejściowa** między Bałtykiem a Morzem Północnym. Bardzo płytka (progi 8–18 m) i wąska, przez co przepuszcza tylko niewielkie ilości słonej wody oceanicznej. To tutaj zasolenie zmienia się najgwałtowniej — od ok. 30‰ w Skagerraku do ok. 8‰ na wschód od Bornholmu.",
+              "examples": ["Skagerrak", "Kattegat", "Sund (Öresund)", "Wielki Bełt", "Mały Bełt"]
+            },
+            {
+              "name": "Bałtyk Właściwy",
+              "description": "Największa, centralna część morza — od Cieśnin Duńskich po Wyspy Alandzkie. Mieści najgłębsze baseny, a przy jej południowym brzegu leży całe wybrzeże Polski. Zasolenie wód powierzchniowych to ok. **7–8‰**.",
+              "examples": ["Basen Bornholmski", "Basen Gotlandzki", "Zatoka Gdańska", "Zatoka Pomorska", "Głębia Landsort"]
+            },
+            {
+              "name": "Zatoka Botnicka",
+              "description": "Najdalej na północ wysunięta część Bałtyku, między Szwecją a Finlandią. **Najbardziej wysłodzona** (2–3‰) i **najsilniej zlodzona** — zamarza corocznie. Jej dno wciąż podnosi się izostatycznie.",
+              "examples": ["Morze Botnickie", "Zatoka Botnicka Północna", "Wyspy Alandzkie"]
+            },
+            {
+              "name": "Zatoka Fińska",
+              "description": "Wąska, płytka zatoka na wschodzie. Uchodzi do niej **Newa** — rzeka o największym dopływie wód do Bałtyku — dlatego w jej wschodniej części zasolenie spada do 1–2‰, a woda jest niemal słodka.",
+              "examples": ["ujście Newy", "Sankt Petersburg", "Zatoka Wyborska"]
+            },
+            {
+              "name": "Zatoka Ryska",
+              "description": "Oddzielona od otwartego morza wyspami estońskimi, przez co słabo wymienia wody. Zasolenie ok. 5–6‰, zimą częste zlodzenie.",
+              "examples": ["wyspa Sarema (Ozylia)", "wyspa Hiuma", "ujście Dźwiny (Daugawy)"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Bałtyk — obiekty, które musisz umieć wskazać na mapie",
+          "caption": "Kliknij znacznik, aby zobaczyć opis. Na maturze bardzo często pojawia się mapa Bałtyku z ponumerowanymi obiektami do rozpoznania.",
+          "center": [58, 19],
+          "zoom": 5,
+          "markers": [
+            { "lat": 58.62, "lng": 18.15, "label": "Głębia Landsort", "text": "**Najgłębsze miejsce Bałtyku — 459 m.** Wąska rynna u wybrzeży Szwecji, na północny zachód od Gotlandii." },
+            { "lat": 57.3, "lng": 20.0, "label": "Głębia Gotlandzka Wschodnia", "text": "Głębokość ok. 249 m. Największy zbiornik wód przydennych Bałtyku Właściwego — i największa **strefa beztlenowa** z siarkowodorem." },
+            { "lat": 55.25, "lng": 15.5, "label": "Głębia Bornholmska", "text": "Ok. 105 m. Pierwszy duży basen zasilany słonymi **wlewami** z Morza Północnego, dlatego natlenia się najczęściej." },
+            { "lat": 54.85, "lng": 19.3, "label": "Głębia Gdańska", "text": "Ok. 118 m — najgłębsze miejsce polskich obszarów morskich. Oddzielona od Basenu Gotlandzkiego **Rynną Słupską**." },
+            { "lat": 55.8, "lng": 12.7, "label": "Sund (Öresund)", "text": "Cieśnina między duńską Zelandią a Szwecją. Bardzo płytka (próg ok. 8 m), przepuszcza ok. 1/4 wód wymienianych z Morzem Północnym. Przez nią biegnie most i tunel Kopenhaga–Malmö." },
+            { "lat": 55.35, "lng": 11.0, "label": "Wielki Bełt", "text": "Najgłębsza i najważniejsza z Cieśnin Duńskich (próg ok. 18 m) — główna droga **wlewów** słonej wody do Bałtyku." },
+            { "lat": 55.35, "lng": 9.75, "label": "Mały Bełt", "text": "Najwęższa z Cieśnin Duńskich, między Półwyspem Jutlandzkim a wyspą Fionią. Znaczenie dla wymiany wód niewielkie." },
+            { "lat": 57.0, "lng": 11.3, "label": "Kattegat", "text": "Płytka cieśnina (średnio ok. 25 m) między Jutlandią a Szwecją. Strefa przejściowa: zasolenie 20–30‰." },
+            { "lat": 57.9, "lng": 9.3, "label": "Skagerrak", "text": "Łączy Kattegat z Morzem Północnym. Zasolenie już niemal oceaniczne (30–34‰). Bywa uznawany za granicę Bałtyku." },
+            { "lat": 62.5, "lng": 20.0, "label": "Zatoka Botnicka", "text": "Najbardziej na północ wysunięta część Bałtyku. Zasolenie tylko 2–3‰, **corocznie zamarza**, a jej dno podnosi się o ok. 8–9 mm rocznie." },
+            { "lat": 60.0, "lng": 26.5, "label": "Zatoka Fińska", "text": "Uchodzi do niej **Newa** — rzeka wnosząca do Bałtyku najwięcej wody (ok. 2500 m³/s). W jej wschodniej części woda jest niemal słodka." },
+            { "lat": 57.6, "lng": 23.4, "label": "Zatoka Ryska", "text": "Odcięta od morza wyspami Sarema i Hiuma, przez co słabo wymienia wody. Uchodzi do niej Dźwina (Daugawa)." },
+            { "lat": 54.55, "lng": 19.0, "label": "Zatoka Gdańska", "text": "Największa zatoka polskiego wybrzeża. Jej osłoniętą, płytką częścią jest **Zatoka Pucka**, odgrodzona Półwyspem Helskim." },
+            { "lat": 57.5, "lng": 18.5, "label": "Gotlandia", "text": "Największa wyspa w otwartym Bałtyku (Szwecja). Uwaga: **największą wyspą całego Bałtyku jest duńska Zelandia**, leżąca przy Cieśninach Duńskich." },
+            { "lat": 55.13, "lng": 14.9, "label": "Bornholm", "text": "Duńska wyspa na południe od Szwecji, zbudowana z granitów. W jej sąsiedztwie zatopiono po 1945 r. część niemieckiej broni chemicznej." }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Charakterystyczne obiekty Bałtyku",
+          "caption": "Zestaw minimum do zadań z mapą konturową.",
+          "headers": ["Obiekt", "Rodzaj", "Co trzeba o nim wiedzieć"],
+          "rows": [
+            ["Zatoka Botnicka", "zatoka", "Najdalej na północ; najniższe zasolenie (2–3‰); zamarza corocznie"],
+            ["Zatoka Fińska", "zatoka", "Uchodzi do niej Newa — największy dopływ Bałtyku"],
+            ["Zatoka Ryska", "zatoka", "Odgrodzona wyspami Sarema i Hiuma; słaba wymiana wód"],
+            ["Zatoka Gdańska", "zatoka", "Największa zatoka wybrzeża Polski; jej częścią jest Zatoka Pucka"],
+            ["Zelandia", "wyspa", "Największa wyspa Bałtyku (Dania), przy Cieśninach Duńskich; leży na niej Kopenhaga"],
+            ["Gotlandia", "wyspa", "Największa wyspa w otwartym Bałtyku (Szwecja); obok Głębia Gotlandzka"],
+            ["Sund (Öresund)", "cieśnina", "Między Zelandią a Szwecją; bardzo płytki próg (ok. 8 m)"],
+            ["Wielki Bełt", "cieśnina", "Najgłębsza z Cieśnin Duńskich — główna droga wlewów wód słonych"],
+            ["Rynna Słupska", "próg / rynna", "Podwodne przejście (ok. 60–90 m) łączące Basen Bornholmski z Głębią Gdańską"]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Średnia głębokość — Bałtyk na tle innych akwenów",
+          "caption": "Bałtyk jest ekstremalnie płytki. Płytkie morze szybciej się nagrzewa i wychładza, łatwiej ulega wymieszaniu przez wiatr, ale też ma małą objętość, w której rozcieńczają się zanieczyszczenia.",
+          "labels": ["Bałtyk", "Morze Północne", "Morze Czarne", "Morze Śródziemne", "Ocean Światowy"],
+          "series": [{ "name": "Średnia głębokość", "values": [52, 95, 1250, 1500, 3700] }],
+          "unit": "m"
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uczniowie mylą dwa **niezależne** kryteria. **Morze śródlądowe (wewnętrzne)** to kryterium *stopnia odcięcia od oceanu* — Bałtyk, Morze Czarne i Śródziemne są śródlądowe. **Morze szelfowe** to kryterium *głębokości i podłoża* — Bałtyk i Morze Północne leżą na szelfie, ale Morze Śródziemne i Czarne mają głębokie baseny i szelfowe nie są. Bałtyk jest jednocześnie **śródlądowy i szelfowy** — i dlatego jest tak nietypowy."
+        },
+        {
+          "type": "matching",
+          "title": "Obiekt i jego cecha wyróżniająca",
+          "instruction": "Połącz obiekt geograficzny z opisem, który jednoznacznie do niego pasuje.",
+          "pairs": [
+            { "left": "Głębia Landsort", "right": "Najgłębsze miejsce Bałtyku — 459 m" },
+            { "left": "Cieśniny Duńskie", "right": "Płytkie progi (8–18 m) ograniczające wymianę wód z oceanem" },
+            { "left": "Newa", "right": "Rzeka wnosząca do Bałtyku najwięcej wody" },
+            { "left": "Zatoka Botnicka", "right": "Najdalej na północ wysunięta, najbardziej wysłodzona część morza" },
+            { "left": "Zelandia", "right": "Największa wyspa Morza Bałtyckiego" },
+            { "left": "Zatoka Pucka", "right": "Płytki akwen osłonięty Półwyspem Helskim" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Która cecha Morza Bałtyckiego wynika BEZPOŚREDNIO z jego położenia na szelfie kontynentalnym?",
+          "options": [
+            "Niewielka średnia głębokość — ok. 52 m",
+            "Niskie zasolenie wód powierzchniowych",
+            "Coroczne zamarzanie Zatoki Botnickiej",
+            "Uboga fauna morska"
+          ],
+          "correctIndex": 0,
+          "explanation": "Położenie na szelfie to przede wszystkim informacja o **głębokości i podłożu**. Niskie zasolenie wynika z bilansu wodnego i odcięcia od oceanu, zlodzenie — z klimatu i wysłodzenia, a uboga fauna — z niskiego zasolenia. To ważne rozróżnienie: pytanie „co wynika z czego” jest na maturze bardzo częste."
+        },
+        {
+          "type": "quiz",
+          "question": "Cieśniny Duńskie mają dla Bałtyku znaczenie kluczowe, ponieważ:",
+          "options": [
+            "są najgłębszymi miejscami Bałtyku, w których gromadzi się najsłonsza woda",
+            "są jedynym połączeniem z oceanem, a ich płytkie progi drastycznie ograniczają wymianę wód",
+            "oddzielają Bałtyk Właściwy od Zatoki Botnickiej",
+            "przebiegają przez nie najważniejsze bałtyckie linie promowe do Skandynawii"
+          ],
+          "correctIndex": 1,
+          "explanation": "Progi w Cieśninach Duńskich mają zaledwie 8–18 m głębokości. To „wąskie gardło” sprawia, że słona woda oceaniczna dostaje się do Bałtyku w niewielkich ilościach i nieregularnie — stąd niskie zasolenie oraz bardzo długi czas wymiany wód (25–30 lat)."
+        },
+        {
+          "type": "quiz",
+          "question": "Zlewisko Bałtyku jest ponad czterokrotnie większe od powierzchni samego morza. Jaka jest najważniejsza konsekwencja tego stosunku?",
+          "options": [
+            "Bałtyk ma bardzo rozwiniętą linię brzegową",
+            "W Bałtyku występują silne pływy",
+            "Do morza trafia ogromny ładunek wód rzecznych, a wraz z nimi biogenów i zanieczyszczeń",
+            "Dno Bałtyku jest równe i pozbawione głębi"
+          ],
+          "correctIndex": 2,
+          "explanation": "Duże zlewisko + mała objętość morza = ogromny dopływ słodkiej wody (wysłodzenie) i jednocześnie ogromny ładunek **azotu i fosforu** oraz zanieczyszczeń z terenów zamieszkanych przez kilkadziesiąt milionów ludzi. To fundament dwóch dalszych tematów: zasolenia i eutrofizacji."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Na maturze rozszerzonej zadania o Bałtyku prawie zawsze mają formę **„wyjaśnij, dlaczego…”**. Buduj wtedy odpowiedź jako **łańcuch przyczynowo-skutkowy** złożony z co najmniej dwóch ogniw, np.: *„Bałtyk łączy się z oceanem tylko wąskimi i płytkimi cieśninami → wymiana wód z Morzem Północnym jest bardzo ograniczona → słona woda dopływa w małych ilościach → zasolenie jest niskie”.* Odpowiedź składająca się z samego stwierdzenia („bo jest odcięty”) zwykle nie dostaje punktu."
+        }
+      ]
+    },
+    {
+      "slug": "geneza-i-etapy-rozwoju",
+      "title": "Geneza Bałtyku — od jeziora lodowego do dzisiejszego morza",
+      "summary": "Cztery etapy rozwoju Bałtyku po ustąpieniu lądolodu i wyścig ruchów izostatycznych z eustatycznymi, który je wywołał.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bałtyk ma zaledwie ok. **12 tysięcy lat** — jest młodszy niż rolnictwo. Powstał po ustąpieniu **lądolodu skandynawskiego**, w obniżeniu, które lodowiec wyżłobił i pogłębił. Jego historia to jednak nie prosta „powódź”, lecz **czterokrotna zmiana charakteru wód**: raz był słodkowodnym jeziorem, raz słonawym morzem. Za tę huśtawkę odpowiada **wyścig dwóch procesów**: podnoszenia się skorupy ziemskiej uwolnionej spod ciężaru lodu (**izostazja**) i podnoszenia się poziomu oceanu światowego wskutek topnienia lądolodów (**eustazja**). Kto w danym momencie „wygrywał”, ten decydował, czy połączenie z oceanem było otwarte, czy zamknięte."
+        },
+        {
+          "type": "definition",
+          "term": "Ruchy izostatyczne (izostazja)",
+          "text": "Pionowe ruchy skorupy ziemskiej dążące do przywrócenia **równowagi izostatycznej** — czyli równowagi między „pływającą” litosferą a plastyczną astenosferą. Ciężar lądolodu o miąższości nawet 3 km wcisnął Skandynawię w głąb płaszcza; po jego stopnieniu obszar zaczął się **podnosić** i podnosi się do dziś, w rejonie Zatoki Botnickiej o ok. **8–9 mm rocznie**.",
+          "note": "To ruch **regionalny** — dotyczy obszaru dawnego zlodowacenia. Jego skutek dla Bałtyku: **podnoszą się progi i brzegi**, a więc połączenia z oceanem mogą się zamykać."
+        },
+        {
+          "type": "definition",
+          "term": "Ruchy eustatyczne (eustazja)",
+          "text": "**Ogólnoświatowe** zmiany poziomu oceanu, wywołane głównie zmianami objętości wody w oceanach. Podczas maksimum ostatniego zlodowacenia woda uwięziona w lądolodach obniżyła poziom oceanu o ok. **120 m**; wraz z ich topnieniem poziom wracał w górę.",
+          "note": "Skutek dla Bałtyku odwrotny niż izostazji: **rosnący poziom oceanu otwiera** połączenia i wpuszcza słoną wodę."
+        },
+        {
+          "type": "compare",
+          "title": "Dwa procesy, które rozegrały historię Bałtyku",
+          "leftLabel": "Ruchy izostatyczne",
+          "rightLabel": "Ruchy eustatyczne",
+          "rows": [
+            { "aspect": "Przyczyna", "left": "Odciążenie skorupy po stopnieniu lądolodu", "right": "Zmiana objętości wody w oceanie światowym (topnienie lądolodów)" },
+            { "aspect": "Zasięg", "left": "Regionalny — obszar dawnego zlodowacenia", "right": "Globalny — cały ocean światowy" },
+            { "aspect": "Co się porusza", "left": "Ląd (dno i brzegi) — w górę", "right": "Poziom wody — w górę" },
+            { "aspect": "Skutek dla połączenia z oceanem", "left": "Podnoszenie progów → **zamykanie** cieśnin → wysładzanie", "right": "Wzrost poziomu wody → **otwieranie** cieśnin → zasalanie" },
+            { "aspect": "Tempo dziś", "left": "Do ok. 8–9 mm/rok w rejonie Zatoki Botnickiej; ok. 0 na południu Bałtyku", "right": "Ok. 3–4 mm/rok (współczesne globalne ocieplenie)" },
+            { "aspect": "Efekt netto nad Bałtykiem", "left": "Na północy ląd przyrasta, morze się wycofuje", "right": "Na południu (Polska) brzeg raczej się cofa" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego Bałtyk raz był jeziorem, a raz morzem",
+          "caption": "Ten mechanizm to sedno tematu — etapy rozwoju są tylko jego skutkiem. Kliknij kolejne kroki.",
+          "steps": [
+            { "title": "Lądolód ustępuje", "text": "Około 14–12 tys. lat temu czoło lądolodu skandynawskiego cofa się na północ. W obniżeniu między lodem a morenami na południu gromadzi się woda z topniejącego lodu — powstaje pierwszy zbiornik." },
+            { "title": "Startuje wyścig izostazji z eustazją", "text": "Skorupa uwolniona od ciężaru lodu zaczyna się **podnosić**, ale jednocześnie **rośnie poziom oceanu** zasilanego wodą z topniejących lądolodów całego świata. Oba procesy zmieniają wysokość progu, który oddziela zbiornik od oceanu." },
+            { "title": "Gdy wygrywa izostazja", "text": "Ląd podnosi się szybciej niż poziom oceanu → **próg wynurza się**, połączenie zamyka się. Dopływ wód rzecznych szybko wysładza zbiornik i powstaje **jezioro** (tak było w fazie Bałtyckiego Jeziora Lodowego i Jeziora Ancylusowego)." },
+            { "title": "Gdy wygrywa eustazja", "text": "Poziom oceanu rośnie szybciej niż podnosi się ląd → **próg zostaje zalany**, słona woda wdziera się do zbiornika, który staje się **morzem** (Morze Yoldiowe, Morze Littorynowe)." },
+            { "title": "Stan dzisiejszy", "text": "Eustazja niemal wyhamowała po zakończeniu deglacjacji, a izostatyczne podnoszenie Skandynawii trwa. Dlatego od ok. 4 tys. lat połączenie z oceanem powoli się **zwęża i płyci**, a zasolenie Bałtyku spada — z ok. 15‰ w Morzu Littorynowym do dzisiejszych ok. 7‰." }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Etapy rozwoju Morza Bałtyckiego",
+          "caption": "Daty są przybliżone i w różnych podręcznikach mogą się nieco różnić — na maturze liczy się **kolejność, charakter wód i przyczyna zmiany**.",
+          "events": [
+            {
+              "period": "ok. 13 000–10 300 lat temu",
+              "label": "Bałtyckie Jezioro Lodowe",
+              "text": "**Zbiornik słodkowodny** spiętrzony przed czołem lądolodu, o poziomie nawet ok. 25 m wyższym od ówczesnego poziomu oceanu. Zasilany wodami z topniejącego lodu. Etap zakończył się **gwałtownym spustem wód** przez rejon góry Billingen w środkowej Szwecji, gdy lądolód cofnął się na tyle, że odsłonił niżej położone przejście — poziom jeziora obniżył się o ok. 25 m w bardzo krótkim czasie."
+            },
+            {
+              "period": "ok. 10 300–9 500 lat temu",
+              "label": "Morze Yoldiowe",
+              "text": "Przez odsłonięte obniżenia **środkowej Szwecji** (rejon dzisiejszych jezior Wener i Wetter) zbiornik połączył się ze Skagerrakiem. Wpłynęły **wody słonawe** i chłodnolubna fauna morska. Nazwa pochodzi od małża arktycznego *Yoldia arctica* — skamieniałości przewodniej tego etapu."
+            },
+            {
+              "period": "ok. 9 500–8 000 lat temu",
+              "label": "Jezioro Ancylusowe",
+              "text": "**Izostatyczne podnoszenie Skandynawii** zamknęło połączenie przez środkową Szwecję. Zbiornik ponownie stał się **słodkowodnym jeziorem** — jego poziom przez pewien czas był wyższy od oceanu. Nazwa od słodkowodnego ślimaka *Ancylus fluviatilis* (przytulika strumieniowego)."
+            },
+            {
+              "period": "ok. 8 000–4 000 lat temu",
+              "label": "Morze Littorynowe",
+              "text": "**Transgresja littorynowa**: eustatyczny wzrost poziomu oceanu przewyższył tempo podnoszenia lądu i zalał obszar dzisiejszych **Cieśnin Duńskich**. Powstało szerokie i głębokie połączenie z oceanem, więc zasolenie osiągnęło ok. **10–15‰** — wyraźnie więcej niż dziś. Wraz z wodą przywędrował ślimak *Littorina littorea* (pobrzeżek). W tym etapie ukształtowała się większość dzisiejszej linii brzegowej Polski."
+            },
+            {
+              "period": "ok. 4 000 lat temu – dziś",
+              "label": "Bałtyk współczesny (Morze Mya / faza limneowa)",
+              "text": "Dalsze podnoszenie izostatyczne przy zatrzymanej eustazji stopniowo **spłyca i zwęża** Cieśniny Duńskie. Dopływ słonej wody maleje, zasolenie spada do dzisiejszych ok. **7‰**. Nazwa od małża *Mya arenaria* (małgiew piaskołaz)."
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Ustaw etapy rozwoju Bałtyku w kolejności chronologicznej",
+          "instruction": "Od najstarszego do najmłodszego.",
+          "items": [
+            "Bałtyckie Jezioro Lodowe — zbiornik słodkowodny przed czołem lądolodu",
+            "Morze Yoldiowe — połączenie ze Skagerrakiem przez środkową Szwecję, wody słonawe",
+            "Jezioro Ancylusowe — połączenie zamknięte przez wypiętrzanie lądu, wody słodkie",
+            "Morze Littorynowe — transgresja przez Cieśniny Duńskie, zasolenie wyższe niż dziś",
+            "Bałtyk współczesny — stopniowy spadek zasolenia do ok. 7‰"
+          ],
+          "explanation": "Zwróć uwagę na regularność: **jezioro → morze → jezioro → morze**. Za każdą zmianą stoi to samo pytanie: czy próg oddzielający zbiornik od oceanu w danym momencie wynurzał się (izostazja), czy był zalewany (eustazja)."
+        },
+        {
+          "type": "mnemonic",
+          "title": "Jak zapamiętać kolejność etapów",
+          "text": "**BY–AL**: **B**ałtyckie Jezioro Lodowe → **Y**oldiowe → **A**ncylusowe → **L**ittorynowe.",
+          "expansion": "Do tego jedna zasada: charakter wód zmienia się **naprzemiennie** — słodkie, słonawe, słodkie, słone. Trzy ostatnie nazwy pochodzą od **skamieniałości przewodnich**, czyli mięczaków, których szczątki znajdowane są w osadach danego etapu: *Yoldia arctica* (zimnolubny małż morski), *Ancylus fluviatilis* (ślimak **słodkowodny** — stąd jezioro), *Littorina littorea* (ślimak **morski** — stąd morze). Jeśli zapamiętasz, że „Ancylus mieszka w rzece”, nigdy nie pomylisz Jeziora Ancylusowego z morzem."
+        },
+        {
+          "type": "map-explore",
+          "title": "Miejsca kluczowe dla genezy Bałtyku",
+          "caption": "Trzy punkty na mapie wyjaśniają całą historię: gdzie było dawne połączenie, gdzie jest dzisiejsze i gdzie ląd podnosi się najszybciej.",
+          "center": [58.5, 16],
+          "zoom": 5,
+          "markers": [
+            { "lat": 58.4, "lng": 13.6, "label": "Góra Billingen (środkowa Szwecja)", "text": "Miejsce **gwałtownego spustu** wód Bałtyckiego Jeziora Lodowego ok. 10 300 lat temu. Cofający się lądolód odsłonił tu niżej położone przejście — poziom jeziora spadł o ok. 25 m i rozpoczął się etap Morza Yoldiowego." },
+            { "lat": 58.9, "lng": 13.3, "label": "Jezioro Wener (Vänern)", "text": "Największe jezioro Szwecji, pozostałość po **cieśninie środkowoszwedzkiej**, którą w etapie Morza Yoldiowego wpływała słona woda ze Skagerraku. Dziś to ląd wyniesiony izostatycznie." },
+            { "lat": 55.35, "lng": 11.0, "label": "Cieśniny Duńskie", "text": "Połączenie otwarte dopiero w etapie **Morza Littorynowego** (ok. 8 tys. lat temu) przez eustatyczny wzrost poziomu oceanu. Dziś jedyna droga wymiany wód — i to coraz płytsza." },
+            { "lat": 63.5, "lng": 20.5, "label": "Wybrzeże Zatoki Botnickiej (Wysokie Wybrzeże)", "text": "Rekord tempa **podnoszenia izostatycznego** w Europie: ok. 8–9 mm rocznie. Od epoki lodowej ląd wyniósł się tu o ok. 300 m. Dawne średniowieczne porty leżą dziś kilometry od morza." },
+            { "lat": 54.4, "lng": 18.6, "label": "Wybrzeże Polski", "text": "Na południu Bałtyku podnoszenie izostatyczne praktycznie zanikło, a poziom morza rośnie. Skutek: dominuje **abrazja** i cofanie brzegu, a linia brzegowa ukształtowała się głównie po transgresji littorynowej." }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Geneza Bałtyku — liczby, które warto znać",
+          "items": [
+            { "value": "8–9", "unit": "mm/rok", "label": "Tempo podnoszenia lądu nad Zatoką Botnicką", "note": "najszybsze w Europie; na wybrzeżu Polski praktycznie zanikło" },
+            { "value": "ok. 300", "unit": "m", "label": "Całkowite wydźwignięcie Skandynawii od końca zlodowacenia", "note": "część tego ruchu wciąż trwa" },
+            { "value": "ok. 120", "unit": "m", "label": "Wzrost poziomu oceanu światowego po ostatnim zlodowaceniu", "note": "to eustatyczna „strona” wyścigu" },
+            { "value": "ok. 25", "unit": "m", "label": "Obniżenie poziomu Bałtyckiego Jeziora Lodowego przy spuście wód", "note": "gwałtowne, w rejonie góry Billingen" },
+            { "value": "10–15", "unit": "‰", "label": "Zasolenie Morza Littorynowego", "note": "dwukrotnie wyższe niż dzisiejsze ok. 7‰" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Ląd, który wciąż rośnie",
+          "region": "Wysokie Wybrzeże nad Zatoką Botnicką (Szwecja) i Ostrobotnia (Finlandia)",
+          "text": "Nad Zatoką Botnicką izostazja nie jest teorią z podręcznika, lecz codziennością. Ląd podnosi się tu o ok. **8–9 mm rocznie**, czyli blisko metr na stulecie. Skutki są bardzo konkretne: średniowieczne przystanie rybackie leżą dziś kilka kilometrów od brzegu, płycizny zamieniają się w wyspy, a wyspy — w półwyspy; gminy muszą regularnie pogłębiać tory podejściowe do portów, a granice działek nad wodą bywają przedmiotem sporów, bo powierzchnia gruntu realnie przyrasta. Szwedzkie Wysokie Wybrzeże (Höga Kusten) wpisano z tego powodu na listę światowego dziedzictwa UNESCO jako modelowy przykład **glacjoizostazji**. W dłuższej skali czasu ten sam proces spłyca Cieśniny Duńskie — a to oznacza, że Bałtyk będzie się dalej wysładzał.",
+          "takeaway": "Izostazja to proces trwający **do dziś** — na północy Bałtyku zmienia linię brzegową szybciej niż jakikolwiek proces brzegowy, a w skali tysiącleci decyduje o zasoleniu całego morza."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy klasyczne pomyłki: **(1)** Morze **Yoldiowe** i Jezioro **Ancylusowe** — mimo podobnych, „obcych” nazw pierwsze było **słonawe**, drugie **słodkie**. **(2)** Misa Bałtyku **nie powstała tektonicznie** ani w wyniku zapadnięcia rowu — to obniżenie na starej platformie, **wyżłobione przez lądolód**. **(3)** Nie pisz, że Bałtyk „powstał, gdy stopniał lodowiec i zalała go woda z oceanu” — pierwszy etap był **słodkowodnym jeziorem zasilanym wodami roztopowymi**, a połączenie z oceanem pojawiło się dopiero później."
+        },
+        {
+          "type": "quiz",
+          "question": "Jezioro Ancylusowe było zbiornikiem słodkowodnym, ponieważ:",
+          "options": [
+            "temperatura wody była zbyt niska, by sól mogła się rozpuścić",
+            "izostatyczne podnoszenie się Skandynawii zamknęło połączenie ze Skagerrakiem",
+            "eustatyczne obniżenie poziomu oceanu odsłoniło Cieśniny Duńskie",
+            "lądolód ponownie nasunął się na obszar Bałtyku"
+          ],
+          "correctIndex": 1,
+          "explanation": "W tym etapie **izostazja wygrała wyścig z eustazją**: ląd w środkowej Szwecji podniósł się szybciej, niż rósł poziom oceanu, więc cieśnina yoldiowa wynurzyła się. Zbiornik odcięty od morza i zasilany rzekami wysłodził się w stosunkowo krótkim czasie."
+        },
+        {
+          "type": "quiz",
+          "question": "Zasolenie Morza Littorynowego (10–15‰) było wyraźnie wyższe niż dzisiejszego Bałtyku. Bezpośrednią przyczyną było:",
+          "options": [
+            "cieplejszy klimat i większe parowanie z powierzchni morza",
+            "mniejszy dopływ wód rzecznych ze zlewiska",
+            "szersze i głębsze połączenie z oceanem po eustatycznym podniesieniu poziomu morza",
+            "brak lądolodu skandynawskiego"
+          ],
+          "correctIndex": 2,
+          "explanation": "O zasoleniu Bałtyku decyduje przede wszystkim **drożność połączenia z oceanem**. W etapie littorynowym transgresja zalała obszar Cieśnin Duńskich, tworząc szerokie przejście, którym swobodnie wpływała słona woda. Klimat rzeczywiście był wtedy cieplejszy (optimum klimatyczne holocenu), ale parowanie nad Bałtykiem nigdy nie było czynnikiem decydującym."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o przyszłości Bałtyku wynika logicznie z trwających dziś procesów izostatycznych?",
+          "options": [
+            "Cieśniny Duńskie będą się spłycać, a zasolenie Bałtyku dalej spadać",
+            "Bałtyk stanie się morzem o zasoleniu zbliżonym do oceanicznego",
+            "Zatoka Botnicka będzie się pogłębiać i powiększać",
+            "Głębia Landsort zostanie zasypana osadami rzecznymi"
+          ],
+          "correctIndex": 0,
+          "explanation": "Skandynawia wciąż się podnosi, a eustatyczny wzrost poziomu oceanu jest obecnie znacznie wolniejszy niż podczas deglacjacji. Wypadkowa: progi w Cieśninach Duńskich stopniowo się wynurzają → dopływ słonej wody maleje → zasolenie spada. W bardzo długiej skali czasu Bałtyk może ponownie stać się zbiornikiem jeziornym."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadanie o genezie Bałtyku rzadko brzmi „wymień etapy”. Znacznie częściej dostajesz **opis lub rysunek jednego etapu** (np. „zbiornik połączony z oceanem przez środkową Szwecję”) i masz go **nazwać oraz uzasadnić**. Ćwicz więc rozpoznawanie po dwóch wskazówkach: **gdzie było połączenie** (środkowa Szwecja = Yoldia; Cieśniny Duńskie = Littorina; brak = jezioro) oraz **jaka fauna** (ślimak słodkowodny = jezioro, mięczak morski = morze)."
+        }
+      ]
+    },
+    {
+      "slug": "wody-baltyku",
+      "title": "Wody Bałtyku — zasolenie, uwarstwienie, temperatura i lód",
+      "summary": "Dlaczego Bałtyk jest wysłodzony, jak zbudowana jest jego pionowa struktura wód i skąd bierze się deficyt tlenu w głębiach.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bałtyk to **największy na świecie akwen wód słonawych (brakicznych)**. Woda przy powierzchni ma tu ok. **7‰** zasolenia — pięć razy mniej niż ocean. Dla organizmów morskich jest za słodka, dla słodkowodnych za słona, dlatego bałtyckie ekosystemy są ubogie gatunkowo i wyjątkowo wrażliwe. Ale najważniejsze w tej lekcji jest coś innego: Bałtyk jest **trwale uwarstwiony**. Lżejsza woda wysłodzona leży na cięższej wodzie słonej i te dwie warstwy prawie się nie mieszają. Ta jedna cecha tłumaczy wszystko, co dalej: martwe strefy przy dnie, znaczenie „wlewów” z Morza Północnego i katastrofalne skutki eutrofizacji."
+        },
+        {
+          "type": "definition",
+          "term": "Zasolenie",
+          "text": "Zawartość rozpuszczonych soli mineralnych w wodzie morskiej, wyrażana w **promilach (‰)**, czyli w gramach soli na kilogram wody. Zasolenie **7‰** oznacza 7 gramów soli w każdym kilogramie wody. Średnie zasolenie oceanu światowego wynosi **35‰**, Bałtyku — tylko ok. **7‰** przy powierzchni.",
+          "note": "Wody o zasoleniu pośrednim między słodkimi a morskimi (ok. 0,5–30‰) nazywamy **słonawymi (brakicznymi)**. Bałtyk jest największym takim akwenem na Ziemi."
+        },
+        {
+          "type": "formula",
+          "title": "Bilans wodny Bałtyku",
+          "expression": "P + R > E",
+          "variables": [
+            { "symbol": "P", "meaning": "opady atmosferyczne nad powierzchnią morza" },
+            { "symbol": "R", "meaning": "dopływ wód rzecznych ze zlewiska (ok. 440 km³ rocznie)" },
+            { "symbol": "E", "meaning": "parowanie z powierzchni morza" }
+          ],
+          "caption": "Bałtyk ma **dodatni bilans wodny** — przychód wody słodkiej przewyższa parowanie. Nadwyżka musi gdzieś odpłynąć: uchodzi powierzchniowym prądem przez Cieśniny Duńskie. To odwrotność sytuacji Morza Śródziemnego, gdzie parowanie przewyższa przychód, a zasolenie rośnie do ok. 38‰."
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego Bałtyk jest tak wysłodzony — cztery przyczyny",
+          "caption": "Na maturze warto wymienić co najmniej trzy z nich; sama „bliskość rzek” to za mało.",
+          "steps": [
+            { "title": "Ogromne zlewisko i dopływ rzek", "text": "Zlewisko liczy ok. **1,7 mln km²** — ponad czterokrotnie więcej niż powierzchnia morza. Rzeki (Newa, Wisła, Odra, Niemen, Dźwina, Kemijoki) wnoszą rocznie ok. **440 km³** wody słodkiej, czyli ok. 2% objętości całego Bałtyku." },
+            { "title": "Klimat: opady większe od parowania", "text": "Bałtyk leży w strefie klimatu **umiarkowanego chłodnego i ciepłego**, gdzie temperatury są niskie, a parowanie z powierzchni morza niewielkie. Wody nie ubywa więc tak jak w morzach strefy zwrotnikowej — w Morzu Czerwonym parowanie podnosi zasolenie do ok. 40‰." },
+            { "title": "Wąskie i płytkie połączenie z oceanem", "text": "Słona woda oceaniczna może wpłynąć tylko przez **Cieśniny Duńskie**, których progi mają 8–18 m głębokości. To „wąskie gardło” przepuszcza bardzo mało wody, i to nieregularnie — pełna wymiana wód Bałtyku trwa **25–30 lat**." },
+            { "title": "Skutek: wysłodzona warstwa powierzchniowa", "text": "Nadmiar wody słodkiej gromadzi się przy powierzchni (jest lżejsza) i odpływa na zachód. Powstaje układ: **wysłodzona woda na wierzchu, słona przy dnie** — czyli trwałe uwarstwienie, o którym mówi kolejny blok." }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Zasolenie wód powierzchniowych w różnych częściach Bałtyku",
+          "caption": "Zasolenie maleje z zachodu na wschód i z południa na północ — czyli w miarę oddalania się od Cieśnin Duńskich i zbliżania do ujść wielkich rzek. Dla porównania ocean światowy: 35‰.",
+          "labels": ["Kattegat", "Głębia Bornholmska", "Zatoka Gdańska", "Basen Gotlandzki", "Zatoka Ryska", "Zatoka Botnicka", "wschód Zatoki Fińskiej"],
+          "series": [{ "name": "Zasolenie powierzchniowe", "values": [20, 8, 7, 7, 6, 3, 2] }],
+          "unit": "‰"
+        },
+        {
+          "type": "definition",
+          "term": "Haloklina",
+          "text": "Warstwa **skokowej zmiany zasolenia** z głębokością. W Bałtyku Właściwym leży na głębokości ok. **60–80 m** i oddziela wysłodzoną (ok. 7‰), dobrze natlenioną wodę powierzchniową od słonej (11–13‰), cięższej wody przydennej.",
+          "note": "Haloklina działa jak **szczelna pokrywa**: różnica gęstości jest tak duża, że wiatr ani konwekcja nie potrafią wymieszać wody przez tę warstwę. Skutek — do głębin nie dociera tlen z powierzchni."
+        },
+        {
+          "type": "layers",
+          "title": "Pionowe uwarstwienie wód Bałtyku (lato, Basen Gotlandzki)",
+          "caption": "Kliknij warstwę, aby poznać jej cechy. Zwróć uwagę, że Bałtyk ma **dwie** warstwy skokowe: termoklinę (sezonową) i haloklinę (trwałą).",
+          "orientation": "top-down",
+          "layers": [
+            { "name": "Warstwa powierzchniowa", "range": "0–15 m", "text": "Nagrzana latem do **17–20°C** na południu Bałtyku, zasolenie ok. 7‰, dobrze **natleniona** i mieszana przez wiatr i falowanie. To tu żyje najwięcej planktonu i ryb — i tu rozwijają się letnie zakwity sinic.", "tone": "sky" },
+            { "name": "Termoklina (warstwa skoku termicznego)", "range": "15–30 m (latem)", "text": "Gwałtowny spadek temperatury — nawet o kilkanaście stopni na kilku metrach. **Zjawisko sezonowe**: tworzy się wiosną, zanika jesienią, gdy wychłodzona woda powierzchniowa opada i miesza się z niższą warstwą.", "tone": "water" },
+            { "name": "Zimna warstwa pośrednia", "range": "30–60 m", "text": "„Relikt zimy” — woda o temperaturze ok. **2–4°C**, wychłodzona w poprzedniej zimie i przykryta latem cieplejszą warstwą powierzchniową. Zachowuje niską temperaturę przez cały rok.", "tone": "ice" },
+            { "name": "Haloklina (warstwa skoku zasolenia)", "range": "60–80 m", "text": "Zasolenie rośnie skokowo z ok. 7‰ do 11–12‰. **Trwała, całoroczna bariera gęstościowa** — nie pozwala na pionowe mieszanie wód, a więc odcina głębiny od tlenu atmosferycznego.", "tone": "neutral" },
+            { "name": "Wody głębinowe (przydenne)", "range": "poniżej 80 m", "text": "Zasolenie **11–13‰**, temperatura stale ok. 4–6°C. **Deficyt tlenu**, a w najgłębszych partiach (Głębia Gotlandzka) warunki beztlenowe i obecność trującego **siarkowodoru (H₂S)**. Odnawiane wyłącznie przez wlewy z Morza Północnego.", "tone": "rock" }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Obieg i wymiana wód Bałtyku",
+          "caption": "Zamknięty układ: dopływ słodkiej wody z lądu i rzadkie zastrzyki wody słonej z oceanu.",
+          "stages": [
+            { "name": "Dopływ wód rzecznych", "text": "Rzeki wnoszą rocznie ok. 440 km³ wody słodkiej, wraz z nią biogeny i zanieczyszczenia z całego, zamieszkanego przez kilkadziesiąt milionów ludzi zlewiska." },
+            { "name": "Powierzchniowy prąd wypływowy", "text": "Nadmiar lekkiej wody wysłodzonej odpływa **przy powierzchni** przez Cieśniny Duńskie do Kattegatu i dalej do Morza Północnego. To stały, choć zmienny co do natężenia strumień." },
+            { "name": "Wlew wód słonych przy dnie", "text": "W przeciwnym kierunku, **przy dnie cieśnin**, wpływa cięższa woda oceaniczna. Dzieje się to tylko przy długotrwałych, silnych wiatrach zachodnich — stąd nazwa **wlewy sztormowe**. Duże wlewy zdarzają się średnio raz na kilkanaście–kilkadziesiąt lat." },
+            { "name": "Rozpływanie się wód po basenach", "text": "Słona i natleniona woda spływa kaskadowo: najpierw wypełnia **Głębię Bornholmską**, potem przez **Rynnę Słupską** przelewa się do Głębi Gdańskiej i Basenu Gotlandzkiego, wypychając stare, beztlenowe wody ku górze." },
+            { "name": "Stratyfikacja i powolna wymiana", "text": "Nowa woda przydenna odtwarza haloklinę i z czasem zużywa cały tlen. Ponieważ mieszanie pionowe jest zablokowane, **pełna wymiana wód Bałtyku trwa 25–30 lat** — to jedna z najwolniejszych na świecie." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Wielki wlew wód z Morza Północnego",
+          "region": "Cieśniny Duńskie – Głębia Bornholmska – Basen Gotlandzki",
+          "text": "W grudniu 2014 r. nad północną Europą utrzymywały się przez kilkanaście dni silne wiatry zachodnie, które przepchnęły przez Cieśniny Duńskie ok. **200 km³ słonej i dobrze natlenionej wody** z Morza Północnego — jeden z trzech największych wlewów zarejestrowanych od połowy XX wieku. Woda ta, cięższa od bałtyckiej, spłynęła po dnie i kolejno wypełniała baseny: w ciągu tygodni natleniła Głębię Bornholmską, po kilkunastu miesiącach dotarła do Basenu Gotlandzkiego. Efekt był jednak **przejściowy** — wypchnięte ku górze beztlenowe wody uwolniły do warstwy powierzchniowej duże ilości fosforu, co wzmocniło zakwity, a tlen w głębiach został zużyty na rozkład materii organicznej w ciągu kilku lat. Wlewy takiej skali są nieregularne: w latach 1983–1992 nie było ich w ogóle, co doprowadziło wtedy do rekordowego zasięgu stref beztlenowych.",
+          "takeaway": "Bałtyk **nie potrafi natlenić własnych głębin** — może to zrobić tylko woda z zewnątrz. Dlatego kondycja jego dna zależy od zjawiska pogodowego, na które człowiek nie ma wpływu; realny wpływ mamy tylko na ładunek biogenów."
+        },
+        {
+          "type": "table",
+          "title": "Temperatura, zlodzenie i poziom wody",
+          "caption": "Cechy termiczne i dynamiczne Bałtyku — częsty materiał zadań z analizy danych.",
+          "headers": ["Cecha", "Charakterystyka", "Przyczyna"],
+          "rows": [
+            ["Temperatura wód powierzchniowych latem", "16–20°C na południu (u wybrzeży Polski), ok. 10–12°C w Zatoce Botnickiej", "Płytkie morze szybko się nagrzewa; różnica wynika z szerokości geograficznej"],
+            ["Temperatura zimą", "0–4°C w warstwie powierzchniowej; wody przydenne stale ok. 4–6°C", "Wychłodzenie od atmosfery; głębiny izolowane halokliną"],
+            ["Zlodzenie", "Corocznie zamarzają Zatoka Botnicka i Fińska; u wybrzeży Polski lód pojawia się rzadko i głównie w zalewach, portach i przy brzegu", "Niskie zasolenie podnosi temperaturę zamarzania (przy 7‰ to ok. −0,4°C, przy 35‰ ok. −1,9°C) — Bałtyk zamarza łatwiej niż ocean"],
+            ["Zasięg lodu w ostrych zimach", "Nawet 40–50% powierzchni morza; niemal całkowite zlodzenie zdarzyło się w XX w. tylko kilka razy (m.in. 1942, 1947)", "Napływ mroźnych mas powietrza kontynentalnego"],
+            ["Pływy", "Praktycznie brak — amplituda kilku centymetrów", "Morze małe i odcięte: fala pływowa oceanu nie ma jak wniknąć przez płytkie cieśniny"],
+            ["Spiętrzenia sztormowe", "Wahania poziomu wody nawet 1,5–2 m przy silnych wiatrach z sektora północnego", "Wiatr nagarnia wodę na brzeg — to główna przyczyna powodzi sztormowych i podtopień Żuław"]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Wody Bałtyku — liczby",
+          "items": [
+            { "value": "7", "unit": "‰", "label": "Średnie zasolenie wód powierzchniowych", "note": "ocean światowy: 35‰" },
+            { "value": "11–13", "unit": "‰", "label": "Zasolenie wód przydennych w głębiach", "note": "poniżej halokliny, dzięki wlewom" },
+            { "value": "ok. 440", "unit": "km³/rok", "label": "Dopływ wód rzecznych", "note": "ok. 2% objętości morza rocznie" },
+            { "value": "25–30", "unit": "lat", "label": "Czas pełnej wymiany wód", "note": "dla porównania w Morzu Północnym liczy się go w latach" },
+            { "value": "< 10", "unit": "cm", "label": "Amplituda pływów", "note": "morze praktycznie bezpływowe" },
+            { "value": "60–80", "unit": "m", "label": "Głębokość zalegania halokliny", "note": "w Bałtyku Właściwym" }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat wybrzeża",
+          "station": "Świnoujście",
+          "caption": "Przeanalizuj przebieg roczny temperatury i opadów na stacji położonej tuż nad Bałtykiem, a potem sprawdź odpowiedź.",
+          "temps": [0.7, 0.6, 2.9, 7.2, 12.3, 15.6, 17.6, 17.6, 14.4, 10.0, 5.3, 2.1],
+          "precip": [46, 33, 38, 34, 48, 57, 68, 65, 55, 51, 54, 50],
+          "answer": {
+            "climate": "Klimat umiarkowany ciepły morski (odmiana przejściowa z wyraźnym wpływem Bałtyku)",
+            "reasoning": "Roczna amplituda temperatury wynosi tylko ok. **17°C** — wyraźnie mniej niż w głębi Polski (w Warszawie ok. 21°C), bo woda morska ma dużą pojemność cieplną i łagodzi wahania. Najzimniejszy miesiąc ma temperaturę **powyżej 0°C**, mimo położenia nad 53°N. Widać też **opóźnienie termiczne**: sierpień jest tak samo ciepły jak lipiec, a jesień (październik ok. 10°C) cieplejsza od wiosny (kwiecień ok. 7°C) — morze oddaje zimą ciepło zgromadzone latem. Opady ok. 600 mm rocznie z maksimum letnim, bez pory suchej."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Bałtyk a otwarty ocean",
+          "leftLabel": "Morze Bałtyckie",
+          "rightLabel": "Otwarty ocean (np. Atlantyk)",
+          "rows": [
+            { "aspect": "Zasolenie powierzchniowe", "left": "ok. 7‰ (2–20‰ w zależności od części)", "right": "ok. 35‰, bardzo wyrównane" },
+            { "aspect": "Pływy", "left": "Praktycznie brak (kilka cm)", "right": "Od kilkudziesięciu cm do kilkunastu metrów" },
+            { "aspect": "Głębokość", "left": "Średnio 52 m, maks. 459 m", "right": "Średnio ok. 3700 m, maks. ponad 11 000 m" },
+            { "aspect": "Zlodzenie", "left": "Coroczne na północy; przy 7‰ woda zamarza już przy ok. −0,4°C", "right": "Tylko w strefach polarnych" },
+            { "aspect": "Wymiana wód", "left": "25–30 lat — bardzo wolna, przez płytkie cieśniny", "right": "Swobodna, w skali globalnej cyrkulacji termohalinowej" },
+            { "aspect": "Różnorodność gatunkowa", "left": "Bardzo mała — woda za słona dla gatunków słodkowodnych i za słodka dla morskich", "right": "Bardzo duża, pełne zespoły gatunków morskich" },
+            { "aspect": "Podatność na zanieczyszczenia", "left": "Ekstremalna — mała objętość, wolna wymiana, duże zlewisko", "right": "Znacznie mniejsza — ogromna objętość rozcieńcza zanieczyszczenia" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa częste błędy. **(1)** „Brak pływów” nie znaczy „stały poziom wody” — poziom Bałtyku zmienia się i to znacznie, ale przyczyną są **wiatry i ciśnienie** (spiętrzenia sztormowe do 1,5–2 m), a nie przyciąganie Księżyca. **(2)** Wyższe zasolenie przy dnie nie oznacza „lepszej”, oceanicznej wody — to właśnie ta różnica gęstości tworzy **haloklinę**, która blokuje dopływ tlenu i tworzy martwe strefy. Uwarstwienie jest tu problemem, nie zaletą."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie przyczyn niskiego zasolenia Bałtyku jest pełne i poprawne?",
+          "options": [
+            "Duży dopływ wód rzecznych, przewaga opadów nad parowaniem oraz ograniczona wymiana wód z oceanem przez płytkie cieśniny",
+            "Duży dopływ wód rzecznych, wysoka temperatura wody i silne pływy",
+            "Niewielka głębokość morza, duże parowanie i brak lodu",
+            "Ograniczona wymiana wód, duże parowanie i mały dopływ rzeczny"
+          ],
+          "correctIndex": 0,
+          "explanation": "To trzy filary odpowiedzi maturalnej: **przychód wody słodkiej** (rzeki + opady), **mały ubytek** (słabe parowanie w chłodnym klimacie) i **brak dopływu soli** (płytkie, wąskie Cieśniny Duńskie). Wszystkie pozostałe warianty zawierają twierdzenia sprzeczne z faktami (duże parowanie, silne pływy)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w głębiach Bałtyku brakuje tlenu, mimo że powierzchnia morza jest dobrze natleniona?",
+          "options": [
+            "Ponieważ na dnie nie ma światła, więc rośliny nie produkują tlenu",
+            "Ponieważ trwała haloklina blokuje pionowe mieszanie wód, a tlen przy dnie zużywany jest na rozkład opadającej materii organicznej",
+            "Ponieważ wody przydenne mają zbyt niską temperaturę, by rozpuszczał się w nich tlen",
+            "Ponieważ prądy morskie w Bałtyku płyną wyłącznie w kierunku wschodnim"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kluczem jest **bariera gęstościowa**. Woda przydenna jest znacznie cięższa (11–13‰) od powierzchniowej (7‰), więc wiatr i konwekcja jesienna mieszają wodę tylko do głębokości halokliny. Poniżej tlen nie jest uzupełniany, a bakterie rozkładające opadającą materię organiczną szybko go zużywają. Uwaga: niska temperatura sprzyja rozpuszczalności tlenu, więc odpowiedź trzecia jest odwrotna do prawdy."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach z wykresem lub przekrojem pionowym Bałtyku kluczowe jest nazwanie warstwy skoku **właściwym terminem**: **haloklina** (skok zasolenia, całoroczna) albo **termoklina** (skok temperatury, sezonowa, letnia). Jeśli w poleceniu jest mowa o deficycie tlenu — odpowiedź prawie zawsze musi zawierać słowo **haloklina** i sformułowanie „uniemożliwia pionowe mieszanie wód / wymianę tlenu z warstwą powierzchniową”."
+        }
+      ]
+    },
+    {
+      "slug": "wybrzeze-polski",
+      "title": "Wybrzeże Polski — typy, formy i procesy brzegowe",
+      "summary": "Klify, mierzeje, zalewy i jeziora przybrzeżne — jak abrazja i akumulacja modelują polski brzeg oraz jak się go chroni.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polskie wybrzeże ma ok. **770 km** długości (w tym ok. 528 km brzegu otwartego morza) i jest **wyrównane** — nie ma tu głębokich zatok ani fiordów. To skutek dwóch rzeczy: młodego wieku (linia brzegowa ukształtowała się głównie po **transgresji littorynowej**, ok. 8–4 tys. lat temu) oraz nieustannej pracy dwóch przeciwstawnych procesów. **Abrazja** niszczy odcinki wysunięte w morze, **akumulacja** zasypuje zatoki. Efektem jest charakterystyczna dla Polski mozaika: strome **klify** i długie, piaszczyste **mierzeje** odcinające **zalewy** i **jeziora przybrzeżne**."
+        },
+        {
+          "type": "classification",
+          "title": "Typy wybrzeży Bałtyku",
+          "caption": "Cały Bałtyk pokazuje trzy zupełnie różne modele brzegu — a to konsekwencja historii lodowcowej i izostazji.",
+          "groups": [
+            {
+              "name": "Wybrzeże szkierowe (skaliste)",
+              "description": "Charakterystyczne dla **północnego Bałtyku** (Szwecja, Finlandia). Lądolód wygładził tam odsłonięte skały krystaliczne tarczy bałtyckiej, tworząc niskie, opływowe pagórki (**mutony**). Po zalaniu przez morze ich szczyty tworzą tysiące małych, skalistych wysepek — **szkierów**. Izostatyczne podnoszenie sprawia, że wciąż wynurzają się nowe.",
+              "examples": ["archipelag sztokholmski", "Archipelag Turku", "Wyspy Alandzkie"]
+            },
+            {
+              "name": "Wybrzeże klifowe (abrazyjne)",
+              "description": "Powstaje tam, gdzie morze podcina **wysoczyznę morenową** zbudowaną z glin i piasków polodowcowych. Dominuje **abrazja**, brzeg stromo opada ku morzu i systematycznie się cofa. W Polsce zajmuje ok. 1/5 długości brzegu otwartego morza.",
+              "examples": ["Gosań i Wolin", "Trzęsacz", "Rozewie i Jastrzębia Góra", "Klif Orłowski", "Kępa Swarzewska"]
+            },
+            {
+              "name": "Wybrzeże wydmowo-mierzejowe (akumulacyjne, lagunowe)",
+              "description": "Najbardziej typowe dla Polski. Materiał niesiony **prądem przybrzeżnym** odkłada się w postaci piaszczystych wałów, które odcinają dawne zatoki. Powstają **mierzeje**, a za nimi **zalewy** i **jeziora przybrzeżne**; od strony lądu ciągną się pasy **wydm**.",
+              "examples": ["Mierzeja Wiślana i Zalew Wiślany", "Półwysep Helski", "Mierzeja Łebska i jezioro Łebsko", "Mierzeja Dziwnowska", "Zalew Szczeciński"]
+            },
+            {
+              "name": "Wybrzeże niskie, deltowe i lagunowe",
+              "description": "Płaskie, zabagnione obszary u ujść wielkich rzek oraz nad zalewami, często sztucznie odwadniane i chronione wałami. Występują tu **depresje** — jedyne w Polsce.",
+              "examples": ["Żuławy Wiślane", "Wyspa Sobieszewska", "Raczki Elbląskie (−1,8 m n.p.m.)", "równiny nad Zalewem Szczecińskim"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Abrazja",
+          "text": "**Niszcząca praca morza** polegająca na mechanicznym podcinaniu i ścieraniu brzegu przez fale, wzbogacone o niesiony materiał skalny (żwir, piasek, otoczaki). Najsilniej działa podczas sztormów i na odcinkach wysuniętych w morze. Na polskim wybrzeżu klify cofają się średnio o **0,5–1 m rocznie**, a w latach szczególnie sztormowych lokalnie znacznie więcej.",
+          "note": "Produkty abrazji nie znikają — **prąd przybrzeżny** przenosi je wzdłuż brzegu i buduje z nich mierzeje. Klif i mierzeja to więc dwa końce tego samego systemu transportu materiału."
+        },
+        {
+          "type": "process",
+          "title": "Powstawanie i cofanie się klifu",
+          "caption": "Kliknij kolejne etapy — to klasyczny materiał na zadanie z rysunkiem przekroju.",
+          "steps": [
+            { "title": "Fale uderzają w podstawę wysoczyzny", "text": "Morze podchodzi pod wysoczyznę morenową. Fale sztormowe, uzbrojone w niesiony piasek i żwir, atakują brzeg zawsze w tej samej strefie — na wysokości poziomu wody." },
+            { "title": "Powstaje nisza abrazyjna", "text": "W podstawie stoku wyrabia się poziome wcięcie — **nisza abrazyjna**. Nadległa część stoku traci podparcie i wisi nad podciętym podłożem." },
+            { "title": "Obrywy i osuwiska", "text": "Nadwieszony materiał obrywa się lub zsuwa do morza. Powstaje stroma **ściana klifowa** — świeża, pozbawiona roślinności, o jasnej barwie. Proces przyspiesza po opadach i roztopach, gdy nasiąknięte gliny tracą spójność." },
+            { "title": "Rozwija się platforma abrazyjna", "text": "U podnóża klifu, pod wodą, powstaje niemal płaska **platforma abrazyjna** — ścięta powierzchnia skalna, z której fale wynoszą drobniejszy materiał. Im szersza platforma, tym więcej energii fal rozprasza się, zanim dotrą do klifu." },
+            { "title": "Klif cofa się — albo zamiera", "text": "Cykl powtarza się i brzeg systematycznie się cofa (**klif aktywny/żywy**). Jeśli jednak u podnóża odłoży się szeroka plaża albo platforma stanie się bardzo szeroka, fale przestają docierać do ściany: stok porasta roślinność i powstaje **klif martwy (zamarły)**." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Prąd przybrzeżny (wzdłużbrzegowy)",
+          "text": "Prąd płynący równolegle do linii brzegowej, wywołany przez fale nabiegające na brzeg **pod kątem ostrym**. Woda wraca do morza prostopadle, ale nabiega skośnie — dzięki temu ziarna piasku wędrują wzdłuż plaży zygzakiem. Nad polskim wybrzeżem przeważają wiatry **zachodnie**, więc dominujący transport materiału odbywa się **z zachodu na wschód**.",
+          "note": "To dlatego mierzeje polskiego wybrzeża są wydłużone ku wschodowi, a wszelkie budowle poprzeczne (ostrogi, falochrony portowe) powodują odkładanie piasku **po zachodniej stronie** i erozję **po wschodniej**."
+        },
+        {
+          "type": "ordering",
+          "title": "Etapy powstawania jeziora przybrzeżnego",
+          "instruction": "Uporządkuj etapy od najwcześniejszego do najpóźniejszego.",
+          "items": [
+            "Morze zalewa obniżenie w lądzie — powstaje zatoka wcinająca się w brzeg",
+            "Prąd przybrzeżny transportuje wzdłuż brzegu piasek pochodzący z abrazji klifów",
+            "Przy wejściu do zatoki odkłada się piaszczysty wał — kosa, przyrastająca ku wschodowi",
+            "Kosa wydłuża się i zamyka zatokę, tworząc mierzeję — akwen za nią staje się zalewem",
+            "Rzeki wysładzają odcięty akwen, a połączenie z morzem zarasta i zamula się",
+            "Powstaje jezioro przybrzeżne — płytkie, o wodzie słodkiej lub lekko słonawej"
+          ],
+          "explanation": "Ta sekwencja tłumaczy jednym mechanizmem trzy formy jednocześnie: **mierzeję**, **zalew** i **jezioro przybrzeżne**. To różne **stadia tego samego procesu**: zalew ma jeszcze łączność z morzem, jezioro przybrzeżne (np. Łebsko, Gardno, Jamno) już jest od niego oddzielone, choć przy silnych sztormach woda morska bywa do niego wpychana."
+        },
+        {
+          "type": "compare",
+          "title": "Brzeg klifowy a brzeg wydmowo-mierzejowy",
+          "leftLabel": "Brzeg klifowy",
+          "rightLabel": "Brzeg wydmowo-mierzejowy",
+          "rows": [
+            { "aspect": "Dominujący proces", "left": "**Abrazja** — niszczenie", "right": "**Akumulacja** — budowanie" },
+            { "aspect": "Budowa i wygląd", "left": "Stroma ściana z glin i piasków morenowych, wąska plaża lub jej brak", "right": "Szeroka plaża, za nią wał wydm białych i szarych" },
+            { "aspect": "Kierunek zmian", "left": "Brzeg **cofa się** o 0,5–1 m rocznie", "right": "Brzeg **przyrasta** lub jest w równowadze, ale wydmy wędrują w głąb lądu" },
+            { "aspect": "Położenie", "left": "Odcinki wysunięte w morze, przy wysoczyznach morenowych", "right": "Dawne zatoki i obniżenia między wysoczyznami" },
+            { "aspect": "Przykłady w Polsce", "left": "Wolin (Gosań), Trzęsacz, Rozewie, Jastrzębia Góra, Orłowo", "right": "Mierzeja Wiślana, Półwysep Helski, Mierzeja Łebska" },
+            { "aspect": "Główne zagrożenie", "left": "Utrata gruntu i budynków stojących na krawędzi", "right": "Przerwanie mierzei podczas sztormu i zalanie terenów za nią" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Formy polskiego wybrzeża",
+          "caption": "Kliknij znaczniki. Każdy obiekt to gotowy przykład do zadania „podaj nazwę formy i wyjaśnij jej genezę”.",
+          "center": [54.5, 17.2],
+          "zoom": 7,
+          "markers": [
+            { "lat": 53.93, "lng": 14.47, "label": "Gosań (Wolin)", "text": "**Najwyższy klif polskiego wybrzeża — ok. 95 m n.p.m.** Zbudowany z glin i piasków moreny czołowej wyspy Wolin; chroniony w Wolińskim Parku Narodowym." },
+            { "lat": 54.07, "lng": 15.02, "label": "Trzęsacz", "text": "Klif z ruinami średniowiecznego kościoła — najsłynniejszy w Polsce dowód **tempa abrazji**. Świątynia stała pierwotnie ok. 2 km od morza." },
+            { "lat": 54.83, "lng": 18.33, "label": "Rozewie i Jastrzębia Góra", "text": "Odcinek klifowy Kępy Rozewskiej z zabytkową latarnią morską. W pobliżu, przy Jastrzębiej Górze, znajduje się **najdalej na północ wysunięty punkt Polski**." },
+            { "lat": 54.48, "lng": 18.56, "label": "Klif Orłowski (Gdynia)", "text": "Aktywny klif nad Zatoką Gdańską, ok. 45 m wysokości. Świetnie widoczne skutki podcinania: świeże obrywy i przewrócone drzewa u podnóża." },
+            { "lat": 54.75, "lng": 17.28, "label": "Wydma Łącka (Ruchome Wydmy)", "text": "Największa **wydma ruchoma** Słowińskiego Parku Narodowego, ok. 42 m n.p.m. Przemieszcza się na wschód w tempie ok. 3–10 m rocznie, zasypując las." },
+            { "lat": 54.70, "lng": 17.40, "label": "Jezioro Łebsko", "text": "**Jezioro przybrzeżne** odcięte od morza Mierzeją Łebską; ok. 71 km² — trzecie co do powierzchni jezioro Polski. Woda lekko słonawa, bo sztormy wpychają do niego wodę morską." },
+            { "lat": 54.62, "lng": 18.80, "label": "Półwysep Helski", "text": "**Mierzeja** o długości ok. 34 km i szerokości od ok. 300 m do 3 km. Zbudowany z materiału niesionego prądem przybrzeżnym z zachodu; w przeszłości wielokrotnie przerywany przez sztormy." },
+            { "lat": 54.65, "lng": 18.55, "label": "Zatoka Pucka", "text": "Płytki akwen osłonięty Półwyspem Helskim, w części wewnętrznej głęboki tylko kilka metrów. Dzięki osłonie i płytkiej wodzie — zagłębie sportów wodnych (Chałupy, Jastarnia, Rewa)." },
+            { "lat": 54.42, "lng": 19.50, "label": "Zalew Wiślany", "text": "**Zalew** o powierzchni ok. 838 km² (polska część ok. 328 km²), odcięty **Mierzeją Wiślaną**. Bardzo płytki (średnio ok. 2,7 m), wody słonawe." },
+            { "lat": 53.77, "lng": 14.42, "label": "Zalew Szczeciński", "text": "Zalew o powierzchni ok. 687 km² (polska część ok. 410 km²) u ujścia Odry, oddzielony od morza wyspami **Uznam i Wolin**; łączy się z Bałtykiem trzema cieśninami: Świną, Dziwną i Pianą." },
+            { "lat": 54.35, "lng": 18.95, "label": "Przekop Wisły / Wyspa Sobieszewska", "text": "Sztuczne ujście Wisły wykonane w 1895 r., by skrócić drogę wód powodziowych do morza. Wisła buduje tu **stożek ujściowy** — jeden z niewielu odcinków polskiego brzegu, który przyrasta." },
+            { "lat": 54.16, "lng": 19.40, "label": "Żuławy Wiślane / Raczki Elbląskie", "text": "Delta Wisły — teren **depresyjny**, sztucznie odwadniany. W Raczkach Elbląskich znajduje się najniżej położony punkt Polski: **−1,8 m n.p.m.**" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Trzęsacz — kościół, który wpadł do morza",
+          "region": "Trzęsacz, wybrzeże zachodnie (woj. zachodniopomorskie)",
+          "text": "Kościół w Trzęsaczu zbudowano ok. 1400 r. na klifie, w odległości **ok. 2 km od brzegu morza**. Przez kolejne stulecia abrazja systematycznie zabierała ląd: w 1750 r. do krawędzi klifu było już tylko ok. 58 m, w 1820 r. — ok. 13 m. Ostatnie nabożeństwo odprawiono w 1874 r., a dwa lata później pierwsza część murów runęła na plażę. Kolejne fragmenty osuwały się w XX wieku; dziś zachowała się jedynie część ściany południowej, zabezpieczona kosztowną konstrukcją oporową. Średnie tempo cofania brzegu wyliczone dla tego odcinka to ok. **0,5 m rocznie**, ale nie jest ono równomierne — brzeg cofa się skokowo, po pojedynczych sztormach, gdy z klifu obrywają się wielkometrowe pakiety gliny.",
+          "takeaway": "Abrazja to proces **powolny w skali roku, ale nieubłagany w skali stuleci**. Trzęsacz jest w zadaniach maturalnych standardowym przykładem, na którym można obliczyć średnie tempo cofania brzegu na podstawie dat i odległości."
+        },
+        {
+          "type": "table",
+          "title": "Metody ochrony brzegu morskiego",
+          "caption": "W Polsce prowadzi je Urząd Morski w ramach wieloletniego programu ochrony brzegów morskich. Zwróć uwagę, że każda metoda ma skutek uboczny.",
+          "headers": ["Metoda", "Na czym polega", "Zaleta / wada"],
+          "rows": [
+            ["Ostrogi (opaski poprzeczne)", "Drewniane lub betonowe konstrukcje ustawione prostopadle do brzegu, wchodzące w morze", "Zatrzymują wędrujący piasek i poszerzają plażę — ale „głodzą” odcinek położony dalej w kierunku prądu, gdzie erozja przyspiesza"],
+            ["Opaski i falochrony brzegowe", "Konstrukcje równoległe do brzegu, u podnóża klifu lub wydmy", "Skutecznie chronią zabudowę — ale fala odbita od betonu wymywa plażę u ich podstawy, która z czasem zanika"],
+            ["Refulacja (sztuczne zasilanie brzegu)", "Dosypywanie piasku pobranego z dna morskiego i przetłaczanego rurociągiem na plażę", "Metoda „miękka”, nie zaburza naturalnego transportu i odbudowuje plażę — ale jest kosztowna i trzeba ją regularnie powtarzać"],
+            ["Odbudowa i umacnianie wydm", "Płotki faszynowe zatrzymujące piasek, nasadzenia traw (piaskownica zwyczajna, wydmuchrzyca piaskowa)", "Najtańsza i najbardziej naturalna ochrona — wydma sama regeneruje się po sztormie; wymaga jednak wyłączenia terenu z ruchu turystycznego"],
+            ["Progi podwodne", "Wały usypane na dnie w pewnej odległości od brzegu", "Rozbijają falę, zanim dotrze do brzegu — nie szpecą plaży, ale są drogie i mniej skuteczne przy silnych sztormach"]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Polskie wybrzeże w liczbach",
+          "items": [
+            { "value": "0,5–1", "unit": "m/rok", "label": "Średnie tempo cofania się klifów", "note": "lokalnie po sztormach znacznie więcej" },
+            { "value": "ok. 95", "unit": "m n.p.m.", "label": "Gosań — najwyższy klif polskiego wybrzeża", "note": "wyspa Wolin" },
+            { "value": "34", "unit": "km", "label": "Długość Półwyspu Helskiego", "note": "szerokość od ok. 300 m do ok. 3 km" },
+            { "value": "3–10", "unit": "m/rok", "label": "Tempo wędrówki wydm ruchomych pod Łebą", "note": "kierunek zgodny z dominującymi wiatrami zachodnimi" },
+            { "value": "71", "unit": "km²", "label": "Powierzchnia jeziora Łebsko", "note": "trzecie co do wielkości jezioro Polski" },
+            { "value": "−1,8", "unit": "m n.p.m.", "label": "Raczki Elbląskie — najniższy punkt Polski", "note": "depresja na Żuławach Wiślanych" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Rozróżnij precyzyjnie trzy pary pojęć. **(1) Kosa a mierzeja** — kosa jest jednym końcem przytwierdzona do lądu i „rośnie” w morze; mierzeja **zamyka już** zatokę (może być przytwierdzona obydwoma końcami). **(2) Zalew a jezioro przybrzeżne** — zalew ma jeszcze **stałe połączenie z morzem** i wody słonawe (Wiślany, Szczeciński); jezioro przybrzeżne jest **odcięte** (Łebsko, Gardno, Jamno). **(3) Klif żywy a martwy** — żywy jest wciąż podcinany przez fale (stroma, naga ściana), martwy ma u podnóża szeroką plażę i porasta go roślinność."
+        },
+        {
+          "type": "matching",
+          "title": "Forma brzegowa i jej przykład",
+          "instruction": "Dopasuj formę do najbardziej typowego polskiego przykładu.",
+          "pairs": [
+            { "left": "Klif aktywny", "right": "Gosań na wyspie Wolin" },
+            { "left": "Mierzeja", "right": "Mierzeja Łebska" },
+            { "left": "Jezioro przybrzeżne", "right": "Łebsko" },
+            { "left": "Zalew", "right": "Zalew Wiślany" },
+            { "left": "Wydma ruchoma", "right": "Wydma Łącka" },
+            { "left": "Depresja w delcie rzeki", "right": "Raczki Elbląskie" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego polskie mierzeje (np. Półwysep Helski) przyrastają w kierunku wschodnim?",
+          "options": [
+            "Ponieważ Wisła i Odra wynoszą materiał na wschód",
+            "Ponieważ nad południowym Bałtykiem przeważają wiatry zachodnie, które generują prąd przybrzeżny transportujący materiał z zachodu na wschód",
+            "Ponieważ na wschodzie Bałtyku jest niższy poziom morza",
+            "Ponieważ na wschodzie zasolenie jest niższe, więc piasek łatwiej opada"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fale generowane przez dominujące wiatry zachodnie nabiegają na brzeg **pod kątem ostrym**, a to wymusza wzdłużbrzegowy transport rumowiska ku wschodowi. Materiał pochodzi głównie z **abrazji klifów** położonych na zachodzie, a odkłada się tam, gdzie brzeg zmienia kierunek — stąd wydłużanie się mierzei ku wschodowi."
+        },
+        {
+          "type": "quiz",
+          "question": "Budowa ostróg na jednym odcinku brzegu często przyspiesza erozję na odcinku sąsiednim. Dlaczego?",
+          "options": [
+            "Ostrogi zwiększają wysokość fal na sąsiednim odcinku",
+            "Ostrogi zatrzymują wędrujący wzdłuż brzegu piasek, więc dalej wzdłuż prądu brzeg dostaje mniej materiału, niż go traci",
+            "Ostrogi podnoszą poziom morza przy brzegu",
+            "Ostrogi zwiększają zasolenie wody, co przyspiesza rozpuszczanie skał"
+          ],
+          "correctIndex": 1,
+          "explanation": "To klasyczny przykład **przeniesienia problemu**, a nie jego rozwiązania. Prąd przybrzeżny płynie dalej, ale niesie już mniej piasku, więc „zabiera” go z brzegu położonego za ostrogami. Dlatego dziś preferuje się metody „miękkie”, przede wszystkim **refulację**, która dostarcza materiał zamiast go przechwytywać."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie opisuje jezioro Łebsko?",
+          "options": [
+            "Jezioro polodowcowe rynnowe, odcięte od morza wałem moreny czołowej",
+            "Zalew połączony z morzem stałą cieśniną, o zasoleniu ok. 7‰",
+            "Jezioro przybrzeżne odcięte od morza mierzeją, płytkie, o wodzie okresowo słonawej",
+            "Sztuczny zbiornik retencyjny na rzece Łebie"
+          ],
+          "correctIndex": 2,
+          "explanation": "Łebsko to dawna zatoka morska zamknięta **Mierzeją Łebską** zbudowaną przez prąd przybrzeżny. Jest bardzo płytkie (średnio ok. 1,6 m), a podczas silnych sztormów woda morska bywa wpychana do niego przez ujście Łeby — stąd okresowo słonawy charakter wód i występowanie gatunków słonolubnych."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o wybrzeżu bardzo często dają **mapę fragmentu brzegu lub zdjęcie** i pytanie „podaj nazwę formy i wyjaśnij jej powstanie”. Wyjaśnienie musi zawierać **czynnik + proces + kierunek**, np.: *„Mierzeja powstała w wyniku akumulacyjnej działalności morza — materiał pochodzący z abrazji klifów został przeniesiony prądem przybrzeżnym z zachodu na wschód i odłożony w poprzek dawnej zatoki”.* Jeśli w zadaniu podano daty i odległości (jak w Trzęsaczu), sprawdź, czy nie trzeba **obliczyć średniego tempa** cofania brzegu."
+        }
+      ]
+    },
+    {
+      "slug": "porty-i-transport-morski",
+      "title": "Porty morskie i transport morski Polski",
+      "summary": "Gdańsk, Gdynia i zespół Szczecin–Świnoujście — funkcje portów, ich uwarunkowania i rola żeglugi w polskim handlu zagranicznym.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Transport morski przewozi ok. **80% masy światowego handlu towarowego** — jest najtańszym sposobem przemieszczania ładunków masowych na duże odległości. Dla Polski, kraju o 770 km wybrzeża i dużym zapleczu przemysłowym, porty są **oknem na świat**: to przez nie płynie ropa, gaz, węgiel, ruda, zboże i kontenery z towarami przemysłowymi. Polskie porty mają jednak bardzo różne uwarunkowania naturalne — jeden leży wprost nad otwartą zatoką, inny 68 km w górę rzeki. W tej lekcji zobaczysz, jak te warunki przekładają się na funkcje i znaczenie każdego z nich."
+        },
+        {
+          "type": "definition",
+          "term": "Gospodarka morska",
+          "text": "Zespół działów gospodarki, których działalność jest bezpośrednio związana z morzem. Obejmuje: **porty morskie i ich obsługę (przeładunki, logistyka)**, **transport morski** (żegluga towarowa i promowa), **przemysł stoczniowy**, **rybołówstwo i przetwórstwo rybne**, **morską energetykę i wydobycie** (offshore, terminal LNG, wydobycie ropy z dna) oraz **turystykę nadmorską**.",
+          "note": "W zadaniach maturalnych „gospodarka morska” to hasło-parasol. Jeśli polecenie brzmi „wymień działy gospodarki morskiej Polski”, nie wystarczy napisać „porty” — trzeba pokazać co najmniej trzy różne działy."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje portu morskiego",
+          "caption": "Duże porty pełnią kilka funkcji jednocześnie; małe porty polskiego wybrzeża zwykle specjalizują się w jednej lub dwóch.",
+          "groups": [
+            {
+              "name": "Funkcja transportowa (przeładunkowa)",
+              "description": "Podstawowa: przeładunek towarów między statkiem a transportem lądowym (kolej, samochody, rurociągi) i żeglugą śródlądową. O jej skali świadczą **przeładunki w mln ton** — to podstawowy wskaźnik wielkości portu.",
+              "examples": ["terminale kontenerowe", "terminale masowe (węgiel, ruda, zboże)", "bazy paliw płynnych"]
+            },
+            {
+              "name": "Funkcja handlowa i logistyczna",
+              "description": "Port jako węzeł dystrybucji: magazyny, centra logistyczne, składy celne, usługi spedycyjne, obsługa **tranzytu** towarów krajów sąsiednich pozbawionych dostępu do morza.",
+              "examples": ["tranzyt czeski i słowacki przez Szczecin", "centra dystrybucyjne przy Baltic Hub w Gdańsku"]
+            },
+            {
+              "name": "Funkcja przemysłowa",
+              "description": "Zakłady lokalizowane przy porcie ze względu na **transportochłonne surowce** przywożone drogą morską (rafinerie, huty, przemysł chemiczny, cementownie) oraz stocznie.",
+              "examples": ["Rafineria Gdańska", "zakłady chemiczne w Policach", "stocznie remontowe w Gdańsku i Szczecinie"]
+            },
+            {
+              "name": "Funkcja pasażerska i turystyczna",
+              "description": "Obsługa **promów** i statków wycieczkowych, terminale pasażerskie, mariny jachtowe i żegluga przybrzeżna.",
+              "examples": ["terminal promowy w Świnoujściu", "terminal promowy w Gdyni", "przystanie żeglugi wycieczkowej w Gdańsku"]
+            },
+            {
+              "name": "Funkcja rybacka",
+              "description": "Bazy kutrów i łodzi rybackich, przystanie wyładunkowe, aukcje i przetwórnie ryb. To główna funkcja małych portów polskiego wybrzeża.",
+              "examples": ["Władysławowo", "Kołobrzeg", "Ustka", "Darłowo", "Hel"]
+            },
+            {
+              "name": "Funkcja militarna",
+              "description": "Bazy Marynarki Wojennej i infrastruktura obronna.",
+              "examples": ["Gdynia (Oksywie)", "Świnoujście", "Hel"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Trzy główne zespoły portowe Polski",
+          "caption": "Zestawienie „warunki naturalne → specjalizacja” to najczęstsza oś zadań o polskich portach.",
+          "headers": ["Port", "Położenie i dostępność", "Specjalizacja i znaczenie"],
+          "rows": [
+            [
+              "Gdańsk",
+              "Bezpośrednio nad Zatoką Gdańską, u ujścia Wisły; **port głębokowodny** (przy terminalu kontenerowym do ok. 17 m), praktycznie **niezamarzający**",
+              "Największy port Polski i jeden z największych na Bałtyku. Port Wewnętrzny (drobnica, siarka, stocznie) i **Port Północny** (ropa naftowa, węgiel, LPG). Terminal Baltic Hub przyjmuje największe kontenerowce oceaniczne — jedyny taki na Bałtyku"
+            ],
+            [
+              "Gdynia",
+              "Nad Zatoką Gdańską, osłonięty falochronem; port **sztucznie zbudowany od podstaw** w latach 1926–1939",
+              "Port uniwersalny o dużym udziale **drobnicy i kontenerów**; terminale ro-ro i promowy (linia do Karlskrony), przeładunek zboża; baza Marynarki Wojennej"
+            ],
+            [
+              "Szczecin–Świnoujście",
+              "**Jeden zespół portowy**: Świnoujście u wyjścia Świny na morze (głębokowodne), Szczecin **68 km w górę Odry** torem wodnym (zanurzenie do 12,5 m po pogłębieniu w 2022 r.)",
+              "Świnoujście: terminal **LNG**, przeładunek rudy i węgla, największy polski terminal **promowy** do Skandynawii. Szczecin: port morsko-rzeczny, ładunki masowe i drobnicowe, obsługa **tranzytu** czeskiego, słowackiego i niemieckiego"
+            ],
+            [
+              "Porty małe i rybackie",
+              "Rozproszone wzdłuż wybrzeża, zwykle u ujść małych rzek",
+              "Rybołówstwo, turystyka i żegluga przybrzeżna: Kołobrzeg, Ustka, Darłowo, Władysławowo, Hel, Łeba. Police — port przemysłowy zakładów chemicznych. Elbląg — port nad Zalewem Wiślanym"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Porty polskiego wybrzeża",
+          "caption": "Zwróć uwagę na koncentrację dużych portów w dwóch skrajnych punktach wybrzeża — tam, gdzie do morza uchodzą Wisła i Odra, czyli największe rzeki z największym zapleczem gospodarczym.",
+          "center": [54.4, 17.0],
+          "zoom": 7,
+          "markers": [
+            { "lat": 54.40, "lng": 18.68, "label": "Gdańsk", "text": "**Największy port Polski.** Port Wewnętrzny nad Martwą Wisłą + głębokowodny **Port Północny** nad otwartą zatoką: baza paliw płynnych, terminal węglowy, terminal kontenerowy Baltic Hub." },
+            { "lat": 54.53, "lng": 18.55, "label": "Gdynia", "text": "Port zbudowany od podstaw w dwudziestoleciu międzywojennym. Drobnica, kontenery, ro-ro, terminal promowy do Karlskrony, terminal zbożowy, port wojenny na Oksywiu." },
+            { "lat": 53.91, "lng": 14.25, "label": "Świnoujście", "text": "Głębokowodna „brama” zespołu portowego. **Terminal LNG im. Prezydenta Lecha Kaczyńskiego**, terminale masowe i największy polski terminal promowy (linie do Ystad i Trelleborga)." },
+            { "lat": 53.43, "lng": 14.57, "label": "Szczecin", "text": "Port **morsko-rzeczny** 68 km od morza, nad Odrą. Ograniczeniem jest zanurzenie na torze wodnym, atutem — bezpośredni dostęp do żeglugi śródlądowej i zaplecza w Czechach i Niemczech." },
+            { "lat": 53.57, "lng": 14.57, "label": "Police", "text": "Port przemysłowy obsługujący zakłady chemiczne (nawozy, fosforyty, siarka) — przykład **funkcji przemysłowej** portu." },
+            { "lat": 54.19, "lng": 15.56, "label": "Kołobrzeg", "text": "Port rybacki, pasażerski i jachtowy; jednocześnie największe polskie **uzdrowisko nadmorskie**." },
+            { "lat": 54.79, "lng": 18.41, "label": "Władysławowo", "text": "Jeden z najważniejszych polskich portów **rybackich**, u nasady Półwyspu Helskiego. Baza kutrów poławiających szprota i śledzia." },
+            { "lat": 54.58, "lng": 16.86, "label": "Ustka", "text": "Port rybacki i turystyczny; rozwijany jako **port serwisowy morskich farm wiatrowych**." },
+            { "lat": 54.43, "lng": 16.38, "label": "Darłowo", "text": "Port rybacki i handlowy u ujścia Wieprzy; przeładunki drobnych ładunków masowych." },
+            { "lat": 54.16, "lng": 19.40, "label": "Elbląg", "text": "Port nad Zalewem Wiślanym. Od 2022 r. dostępny dla statków morskich dzięki **kanałowi żeglugowemu przez Mierzeję Wiślaną**, z pominięciem kontrolowanej przez Rosję Cieśniny Piławskiej." },
+            { "lat": 54.35, "lng": 19.32, "label": "Przekop Mierzei Wiślanej", "text": "Kanał żeglugowy o długości ok. 1,3 km otwarty w 2022 r., wraz z torem wodnym po Zalewie Wiślanym do Elbląga. Motyw budowy: **niezależność komunikacyjna** portu w Elblągu." }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Przeładunki w polskich portach morskich",
+          "caption": "Wartości przybliżone (2023 r.). Na maturze ważniejsze od dokładnych liczb są **proporcje**: Gdańsk przeładowuje mniej więcej tyle, co pozostałe duże porty razem wzięte.",
+          "labels": ["Gdańsk", "Szczecin–Świnoujście", "Gdynia", "Police"],
+          "series": [{ "name": "Przeładunki", "values": [81, 36, 28, 3] }],
+          "unit": "mln ton"
+        },
+        {
+          "type": "compare",
+          "title": "Gdańsk a zespół portowy Szczecin–Świnoujście",
+          "leftLabel": "Gdańsk",
+          "rightLabel": "Szczecin–Świnoujście",
+          "rows": [
+            { "aspect": "Położenie względem otwartego morza", "left": "Bezpośrednio nad Zatoką Gdańską — statek wchodzi wprost do portu", "right": "Świnoujście przy wyjściu Świny; Szczecin dopiero **68 km torem wodnym** w górę Odry" },
+            { "aspect": "Dopuszczalne zanurzenie statków", "left": "Do ok. 15–17 m w Porcie Północnym — obsługa największych jednostek oceanicznych", "right": "Świnoujście do ok. 13,5 m, Szczecin do 12,5 m (po pogłębieniu toru w 2022 r.)" },
+            { "aspect": "Zlodzenie", "left": "Praktycznie niezamarzający", "right": "Tor wodny i Zalew Szczeciński mogą wymagać lodołamania w ostrych zimach" },
+            { "aspect": "Główne ładunki", "left": "Ropa naftowa i paliwa, węgiel, kontenery, zboże", "right": "LNG, ruda i węgiel, ładunki masowe agro, drobnica, ruch promowy" },
+            { "aspect": "Zaplecze (hinterland)", "left": "Polska centralna i wschodnia, kraje bałtyckie, tranzyt na Białoruś i Ukrainę", "right": "Polska zachodnia, wschodnie Niemcy, **Czechy i Słowacja** (tranzyt)" },
+            { "aspect": "Powiązanie z żeglugą śródlądową", "left": "Wisła praktycznie nieżeglowna dla transportu towarowego", "right": "Odrzańska Droga Wodna — realny, choć niedoinwestowany, atut Szczecina" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Gdynia — port zbudowany od zera",
+          "region": "Gdynia, województwo pomorskie",
+          "text": "Po odzyskaniu niepodległości Polska otrzymała ok. **140 km wybrzeża bez żadnego dużego portu**: Gdańsk miał status Wolnego Miasta i pozostawał poza polską kontrolą celną, a napięcia polityczne (m.in. odmowa wyładunku amunicji w 1920 r. podczas wojny z bolszewikami) pokazały, że oparcie handlu na cudzym porcie jest ryzykowne. Ustawę o budowie portu w Gdyni uchwalono w 1922 r., a intensywne prace ruszyły w 1926 r. pod kierunkiem inż. Tadeusza Wendy. W ciągu kilkunastu lat z wioski rybackiej powstało miasto liczące ponad 100 tys. mieszkańców i najnowocześniejszy port Bałtyku. Kluczowym uzupełnieniem inwestycji była **magistrala węglowa Śląsk–Gdynia** ukończona w 1933 r., która połączyła port z zagłębiem węglowym — bez zaplecza surowcowego port nie miałby czym handlować. Dziś Gdynia specjalizuje się w drobnicy, kontenerach i ruchu promowym.",
+          "takeaway": "Port nie powstaje tylko dzięki warunkom naturalnym — decydują też **czynniki polityczne** i **połączenie z zapleczem lądowym**. Bez magistrali węglowej Gdynia pozostałaby portem lokalnym."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Infrastruktura portowa w liczbach",
+          "items": [
+            { "value": "ok. 80", "unit": "%", "label": "Udział transportu morskiego w masie światowego handlu towarowego", "note": "najtańszy transport ładunków masowych na duże odległości" },
+            { "value": "ok. 17", "unit": "m", "label": "Głębokość przy terminalu kontenerowym w Gdańsku", "note": "warunek przyjmowania największych kontenerowców oceanicznych" },
+            { "value": "68", "unit": "km", "label": "Długość toru wodnego Świnoujście–Szczecin", "note": "pogłębiony w 2022 r. do 12,5 m" },
+            { "value": "1,3", "unit": "km", "label": "Długość kanału żeglugowego przez Mierzeję Wiślaną", "note": "otwarty w 2022 r. wraz z torem wodnym do Elbląga" },
+            { "value": "ok. 140", "unit": "km", "label": "Długość wybrzeża Polski w dwudziestoleciu międzywojennym", "note": "bez Wolnego Miasta Gdańska — powód budowy Gdyni" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje żeglugi morskiej",
+          "caption": "Podział według organizacji rejsów i rodzaju ładunku — pojawia się w zadaniach o transporcie.",
+          "groups": [
+            {
+              "name": "Żegluga liniowa",
+              "description": "Rejsy **regularne**, według stałego rozkładu, na wyznaczonej trasie i między stałymi portami — niezależnie od stopnia wypełnienia statku. Przewozi głównie kontenery i drobnicę, czyli ładunki o wysokiej wartości.",
+              "examples": ["połączenia kontenerowe Baltic Hub z Dalekim Wschodem", "serwisy dowozowe (feeder) do portów bałtyckich"]
+            },
+            {
+              "name": "Żegluga trampowa",
+              "description": "Rejsy **nieregularne**, organizowane na zamówienie konkretnego ładunku, na dowolnej trasie. Obsługuje ładunki masowe o niskiej wartości jednostkowej, dla których liczy się przede wszystkim koszt frachtu.",
+              "examples": ["masowce z rudą żelaza i węglem", "zbiornikowce z ropą naftową", "statki ze zbożem"]
+            },
+            {
+              "name": "Żegluga promowa (ro-pax)",
+              "description": "Regularne połączenia pasażersko-towarowe obsługujące ciężarówki, wagony i samochody osobowe wjeżdżające na pokład (technologia **ro-ro** — roll on/roll off). Dla Polski to najkrótsza droga transportu drogowego do Skandynawii.",
+              "examples": ["Świnoujście–Ystad", "Świnoujście–Trelleborg", "Gdynia–Karlskrona", "Gdańsk–Nynäshamn"]
+            },
+            {
+              "name": "Żegluga przybrzeżna i śródlądowo-morska",
+              "description": "Rejsy wzdłuż wybrzeża oraz statkami mogącymi wpływać na drogi wodne śródlądowe. Ma znaczenie lokalne, turystyczne i dowozowe.",
+              "examples": ["rejsy wycieczkowe na Hel i do Sopotu", "żegluga po Zalewie Szczecińskim i Zalewie Wiślanym"]
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Port i jego cecha wyróżniająca",
+          "instruction": "Dopasuj port do cechy, która wyróżnia go spośród pozostałych.",
+          "pairs": [
+            { "left": "Gdańsk", "right": "Największy port Polski, z terminalem dla największych kontenerowców oceanicznych" },
+            { "left": "Gdynia", "right": "Port zbudowany od podstaw w dwudziestoleciu międzywojennym" },
+            { "left": "Świnoujście", "right": "Terminal gazowy LNG i największy polski terminal promowy" },
+            { "left": "Szczecin", "right": "Port morsko-rzeczny położony 68 km od morza" },
+            { "left": "Police", "right": "Port przemysłowy zakładów chemicznych" },
+            { "left": "Elbląg", "right": "Port nad Zalewem Wiślanym, dostępny od 2022 r. kanałem przez mierzeję" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki. **(1) Szczecin i Świnoujście** to **jeden zespół portowy** zarządzany przez wspólny podmiot — nie traktuj ich jako konkurentów, lecz jako uzupełniające się części (Świnoujście przyjmuje duże statki, Szczecin daje dostęp do zaplecza i żeglugi śródlądowej). **(2)** Nie utożsamiaj **portu** ze **stocznią** — port przeładowuje towary, stocznia buduje i remontuje statki, choć często sąsiadują. **(3)** Wielkość portu mierzy się **masą przeładunków (mln ton)**, a nie liczbą statków ani powierzchnią."
+        },
+        {
+          "type": "quiz",
+          "question": "Która cecha decyduje o tym, że Gdańsk może obsługiwać największe kontenerowce oceaniczne, a Szczecin nie?",
+          "options": [
+            "Gdańsk leży dalej na wschód, bliżej głównych szlaków bałtyckich",
+            "Gdańsk leży bezpośrednio nad otwartą zatoką i ma nabrzeża o głębokości ok. 17 m, podczas gdy Szczecin jest dostępny wąskim torem wodnym o zanurzeniu do 12,5 m",
+            "Gdańsk nie zamarza, a Szczecin zamarza każdej zimy",
+            "Gdańsk ma większe zaplecze przemysłowe"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje **dostępność nawigacyjna**: głębokość akwatorium i toru podejściowego. Największe kontenerowce mają zanurzenie kilkunastu metrów, więc mogą wejść tylko do portu głębokowodnego położonego przy otwartym morzu. Zaplecze i położenie to czynniki ważne, ale wtórne wobec fizycznego ograniczenia zanurzenia."
+        },
+        {
+          "type": "quiz",
+          "question": "Zespół portowy Szczecin–Świnoujście obsługuje znaczący tranzyt czeski i słowacki. Główną przyczyną jest:",
+          "options": [
+            "niższe opłaty portowe niż w portach niemieckich",
+            "brak dostępu Czech i Słowacji do morza oraz korzystne położenie zespołu portowego względem tych krajów, w tym powiązanie z Odrzańską Drogą Wodną",
+            "obowiązek wynikający z umów Unii Europejskiej",
+            "zamarzanie portów niemieckich w okresie zimowym"
+          ],
+          "correctIndex": 1,
+          "explanation": "Czechy i Słowacja są krajami **śródlądowymi** — muszą korzystać z portów sąsiadów. Szczecin–Świnoujście konkuruje o ten ruch z Hamburgiem i Rotterdamem, a jego atutem jest odległość oraz połączenie kolejowe i (potencjalnie) odrzańskie. To klasyczny przykład **funkcji tranzytowej** portu."
+        },
+        {
+          "type": "quiz",
+          "question": "Które połączenie ładunku z odpowiednim rodzajem żeglugi jest poprawne?",
+          "options": [
+            "Ruda żelaza z Brazylii — żegluga liniowa",
+            "Kontenery z elektroniką z Chin — żegluga trampowa",
+            "Węgiel kamienny na zamówienie elektrowni — żegluga trampowa",
+            "Ciężarówki jadące do Szwecji — żegluga trampowa"
+          ],
+          "correctIndex": 2,
+          "explanation": "**Żegluga trampowa** obsługuje jednorazowe zlecenia na przewóz ładunków masowych (węgiel, ruda, zboże, ropa) — statek płynie tam, gdzie jest ładunek. **Żegluga liniowa** to regularne rejsy z kontenerami i drobnicą, a przewóz ciężarówek do Szwecji to **żegluga promowa (ro-ro)**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o portach schemat odpowiedzi jest niemal zawsze taki sam: **warunek naturalny → skutek gospodarczy**. Ćwicz konkretne pary: *„port głębokowodny i niezamarzający → możliwość obsługi największych statków przez cały rok”*, *„położenie u ujścia dużej rzeki z zapleczem przemysłowym → duże przeładunki masowe”*, *„położenie w głębi lądu przy torze wodnym → ograniczenie zanurzenia, obsługa mniejszych statków, ale dostęp do żeglugi śródlądowej”*. Odpowiedź „bo jest duży i nowoczesny” nigdy nie dostaje punktu."
+        }
+      ]
+    },
+    {
+      "slug": "przemysl-rybolowstwo-i-energetyka-morska",
+      "title": "Stocznie, rybołówstwo, energetyka morska i turystyka",
+      "summary": "Pozostałe działy gospodarki morskiej Polski: przemysł stoczniowy po transformacji, połowy bałtyckie, offshore, gazoport i turystyka nadmorska.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Porty to tylko jeden dział gospodarki morskiej. Pozostałe przeszły w ostatnich dekadach dramatyczne przemiany: **przemysł stoczniowy** z pozycji światowego potentata spadł do roli producenta niszowego, **rybołówstwo** utraciło flotę dalekomorską i zmaga się z załamaniem stad dorsza, a jednocześnie pojawiły się dwa zupełnie nowe filary — **morska energetyka wiatrowa** i **terminal gazowy LNG**. Ich wspólnym mianownikiem jest **bezpieczeństwo energetyczne**: dostęp do morza staje się dziś dla Polski nie tylko kanałem handlu, lecz także źródłem energii."
+        },
+        {
+          "type": "timeline",
+          "title": "Polski przemysł stoczniowy — wzlot i przebudowa",
+          "caption": "Historia, która świetnie ilustruje skutki transformacji gospodarczej i konkurencji globalnej.",
+          "events": [
+            { "period": "lata 50.–80. XX w.", "label": "Polska w światowej czołówce", "text": "Stocznia Gdańska, Stocznia Gdynia i Stocznia Szczecińska budowały statki głównie na zamówienie **ZSRR i krajów RWPG**, w systemie planowej, wielkoseryjnej produkcji. Polska mieściła się wtedy w pierwszej dziesiątce światowych producentów statków, a stocznie zatrudniały dziesiątki tysięcy ludzi." },
+            { "period": "1980", "label": "Sierpień '80 w Stoczni Gdańskiej", "text": "Strajk w Stoczni Gdańskiej i podpisanie Porozumień Sierpniowych — narodziny „Solidarności”. Stocznia stała się symbolem przemian politycznych w Europie Środkowej, co dziś jest ważnym elementem oferty turystycznej Gdańska (Europejskie Centrum Solidarności)." },
+            { "period": "lata 90. XX w.", "label": "Utrata rynków i kapitału", "text": "Rozpad RWPG odebrał stoczniom głównego odbiorcę. Jednocześnie na rynku globalnym rosła przewaga **Korei Południowej, Japonii i Chin**, dysponujących tańszą siłą roboczą, ogromną skalą produkcji i wsparciem państwa. Polskie stocznie, zadłużone i niedoinwestowane, straciły konkurencyjność." },
+            { "period": "2009", "label": "Likwidacja stoczni w Gdyni i Szczecinie", "text": "Komisja Europejska uznała wieloletnią pomoc publiczną dla stoczni za **niedozwoloną pomoc państwa** zakłócającą konkurencję. Majątek obu zakładów sprzedano, a produkcja statków w dotychczasowej formie została przerwana." },
+            { "period": "obecnie", "label": "Nisze zamiast masowej produkcji", "text": "Przemysł stoczniowy w Polsce **nie zniknął — zmienił charakter**. Dominują: remonty statków (Gdańsk, Szczecin, Świnoujście), budowa **kadłubów i jednostek specjalistycznych** (promy, statki serwisowe, jednostki dla offshore), a także produkcja **jachtów i łodzi rekreacyjnych**, w której Polska należy do światowej czołówki pod względem liczby wytwarzanych jednostek." }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje rybołówstwa morskiego",
+          "caption": "Polska flota po 1990 r. przeszła z dominacji połowów dalekomorskich na niemal wyłącznie bałtyckie.",
+          "groups": [
+            {
+              "name": "Rybołówstwo przybrzeżne (łodziowe)",
+              "description": "Niewielkie łodzie operujące w pasie kilku mil od brzegu, rejsy jednodniowe. Duże znaczenie społeczne dla małych miejscowości nadmorskich, niewielki udział w połowach.",
+              "examples": ["łodzie z Helu, Kuźnicy, Rewy", "połowy storni, śledzia przybrzeżnego, węgorza w zalewach"]
+            },
+            {
+              "name": "Rybołówstwo bałtyckie (kutrowe)",
+              "description": "Kutry poławiające na całym Bałtyku, rejsy kilkudniowe. To **trzon dzisiejszej polskiej floty**. Połowy limitowane unijnymi kwotami połowowymi.",
+              "examples": ["Władysławowo", "Kołobrzeg", "Ustka", "Darłowo"]
+            },
+            {
+              "name": "Rybołówstwo dalekomorskie",
+              "description": "Duże trawlery-przetwórnie operujące na oceanach (Atlantyk, Pacyfik, wody Afryki Zachodniej). W PRL było potęgą polskiej gospodarki morskiej; po 1990 r. flota **niemal całkowicie zanikła** — z powodu wysokich kosztów paliwa i utrzymania statków, ustanowienia przez państwa nadbrzeżne 200-milowych **wyłącznych stref ekonomicznych** oraz braku kapitału na modernizację.",
+              "examples": ["dawne przedsiębiorstwa Dalmor, Gryf, Odra", "dzisiejsze nieliczne połowy na wodach obcych na podstawie umów"]
+            },
+            {
+              "name": "Akwakultura (hodowla)",
+              "description": "Chów ryb w stawach i sadzach — w Polsce głównie **śródlądowa** (karp, pstrąg). Ma rosnące znaczenie, bo odciąża przełowione łowiska morskie.",
+              "examples": ["hodowla pstrąga tęczowego", "stawy karpiowe"]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura polskich połowów na Bałtyku według gatunków",
+          "caption": "Udziały przybliżone. Od lat w polskich połowach bałtyckich zdecydowanie dominują **ryby pelagiczne** — szprot i śledź — łowione głównie na paszę i do przetwórstwa, a nie na bezpośrednie spożycie.",
+          "labels": ["Szprot", "Śledź", "Stornia (flądra)", "Dorsz", "Łosoś i troć"],
+          "series": [{ "name": "Udział w masie połowów", "values": [58, 24, 14, 3, 1] }],
+          "unit": "%"
+        },
+        {
+          "type": "table",
+          "title": "Główne gatunki ryb bałtyckich i stan ich zasobów",
+          "headers": ["Gatunek", "Znaczenie gospodarcze", "Stan zasobów i regulacje"],
+          "rows": [
+            ["Szprot", "Podstawa polskich połowów; przetwórstwo (konserwy) i mączka rybna", "Zasoby względnie stabilne; połowy limitowane kwotami"],
+            ["Śledź", "Drugi gatunek pod względem masy; tradycyjny surowiec przetwórstwa", "Stada zachodniobałtyckie mocno uszczuplone — kwoty silnie ograniczane"],
+            ["Dorsz", "Dawniej najcenniejszy gatunek konsumpcyjny Bałtyku", "**Załamanie stada wschodniobałtyckiego**; od 2019 r. obowiązuje zakaz połowów ukierunkowanych we wschodnim Bałtyku"],
+            ["Stornia (flądra) i inne płastugi", "Ryby denne o stabilnym popycie lokalnym", "Zasoby umiarkowane; częsty przyłów w połowach dennych"],
+            ["Łosoś i troć wędrowna", "Niewielka masa, wysoka wartość jednostkowa", "Zasoby zależne od stanu rzek (tarliska); zarybianie i ścisłe limity"],
+            ["Węgorz europejski", "Poławiany głównie w zalewach i jeziorach przybrzeżnych", "Gatunek **krytycznie zagrożony**; surowe ograniczenia połowowe w całej UE"]
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "TAC (kwoty połowowe)",
+          "text": "**Total Allowable Catch** — całkowity dopuszczalny połów danego stada w danym roku, wyrażony w tonach. Dla Bałtyku ustala go corocznie **Rada Unii Europejskiej** na podstawie opinii naukowej **ICES** (Międzynarodowej Rady Badań Morza), a następnie dzieli między państwa członkowskie według stałych, historycznych udziałów.",
+          "note": "To narzędzie **Wspólnej Polityki Rybołówstwa UE**. Uzupełniają je: minimalne wymiary ochronne ryb, okresy ochronne w czasie tarła, ograniczenia rodzaju sieci oraz zakaz odrzutów (obowiązek wyładunku całego połowu)."
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje morska farma wiatrowa",
+          "caption": "Bałtyk jest dla offshore niemal idealny: jest płytki, wieją nad nim stałe i silne wiatry zachodnie, a odbiorcy energii są blisko brzegu.",
+          "steps": [
+            { "title": "Badania i pozwolenie lokalizacyjne", "text": "Wieloletnie pomiary **wietrzności**, badania dna, warunków falowych i oddziaływania na środowisko (ptaki, ssaki morskie, trasy żeglugowe). Inwestor uzyskuje pozwolenie na wznoszenie sztucznych wysp oraz warunki przyłączenia do sieci." },
+            { "title": "Posadowienie fundamentów", "text": "Na płytkim Bałtyku (zwykle 20–40 m głębokości) stosuje się przede wszystkim **monopale** — stalowe rury o średnicy kilku metrów wbijane w dno. Prace prowadzą specjalistyczne jednostki instalacyjne wypływające z **portu instalacyjnego** (dla polskich projektów: Świnoujście, Gdańsk)." },
+            { "title": "Montaż turbin", "text": "Na fundamentach stawia się wieże, gondole i wirniki o średnicy przekraczającej 200 m. Elementy są tak wielkie, że produkuje się je i składa w porcie, a na morze transportuje w całości." },
+            { "title": "Wyprowadzenie mocy na ląd", "text": "Turbiny łączy się kablami wewnętrznymi ze **stacją transformatorową na morzu**, skąd kable eksportowe biegną po dnie i wchodzą na ląd, zwykle pod plażą metodą przewiertu, do stacji przyłączeniowej krajowej sieci energetycznej." },
+            { "title": "Eksploatacja i serwis", "text": "Farma pracuje kilkadziesiąt lat, wymagając stałej obsługi. Statki serwisowe operują z niewielkich **portów serwisowych** — dla polskich farm przygotowywane są Łeba i Ustka. To dla tych miast szansa na zatrudnienie poza sezonem turystycznym." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Morska energetyka wiatrowa u wybrzeży Polski",
+          "region": "Ławica Słupska i Ławica Środkowa, polska wyłączna strefa ekonomiczna",
+          "text": "Polskie obszary morskie mają dla offshore cechy niemal wzorcowe: **niewielka głębokość** (na Ławicy Słupskiej i Ławicy Środkowej ok. 20–40 m, co pozwala stosować tanie fundamenty monopalowe), **wysokie i stabilne prędkości wiatru** wynikające z dominacji cyrkulacji zachodniej nad Bałtykiem oraz **brak pływów** i niewielkie falowanie w porównaniu z Morzem Północnym. Do tego dochodzi bliskość dużych odbiorców energii i sieci przesyłowej. Na podstawie ustawy z 2021 r. przyznano wsparcie kilku projektom (m.in. Baltic Power, Baltica 2 i Baltica 3, FEW Baltic II); pierwsze farmy mają rozpocząć pracę w **drugiej połowie lat 20. XXI w.**, a docelowy potencjał polskiej strefy szacuje się na kilkanaście GW mocy. Inwestycje te uruchamiają cały łańcuch przemysłowy: fabryki wież i fundamentów, terminale instalacyjne, stocznie budujące statki serwisowe.",
+          "takeaway": "Offshore to przykład **nowej funkcji morza**: obszar morski staje się terenem produkcji energii. Dla Polski oznacza to jednocześnie dekarbonizację energetyki i rewitalizację przemysłu stoczniowego oraz małych portów."
+        },
+        {
+          "type": "case-study",
+          "title": "Terminal LNG w Świnoujściu",
+          "region": "Świnoujście, województwo zachodniopomorskie",
+          "text": "Terminal skroplonego gazu ziemnego im. Prezydenta Lecha Kaczyńskiego przyjął pierwszą dostawę w **grudniu 2015 r.**, a eksploatację komercyjną rozpoczął w 2016 r. Gaz przypływa **gazowcami** w postaci cieczy schłodzonej do ok. **−162°C**, dzięki czemu zajmuje ok. 600 razy mniejszą objętość niż w stanie lotnym. W terminalu jest magazynowany w zbiornikach kriogenicznych i **regazyfikowany**, czyli ponownie zamieniany w gaz, po czym trafia do krajowej sieci przesyłowej. Pierwotną zdolność ok. 5 mld m³ rocznie rozbudowano do ok. **6,2 mld m³**, a trwają dalsze prace zwiększające przepustowość. Wraz z gazociągiem **Baltic Pipe** (uruchomionym w 2022 r., o przepustowości do 10 mld m³ rocznie, prowadzącym gaz z Norwegii przez Danię) terminal całkowicie zmienił kierunki dostaw gazu do Polski — z dominacji jednego dostawcy lądowego na dostawy morskie z wielu kierunków świata.",
+          "takeaway": "Gazoport pokazuje, że port morski może pełnić funkcję **strategiczną**: dostęp do morza oznacza dostęp do **globalnego, konkurencyjnego rynku surowców** zamiast uzależnienia od jednego rurociągu."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Nowa gospodarka morska w liczbach",
+          "items": [
+            { "value": "−162", "unit": "°C", "label": "Temperatura skroplonego gazu ziemnego (LNG)", "note": "objętość mniejsza ok. 600 razy niż gazu w stanie lotnym" },
+            { "value": "ok. 6,2", "unit": "mld m³/rok", "label": "Zdolność regazyfikacji terminalu w Świnoujściu", "note": "po rozbudowie; pierwotnie ok. 5 mld m³" },
+            { "value": "do 10", "unit": "mld m³/rok", "label": "Przepustowość gazociągu Baltic Pipe", "note": "uruchomiony w 2022 r., gaz z Norwegii przez Danię" },
+            { "value": "20–40", "unit": "m", "label": "Głębokość morza na polskich obszarach przewidzianych pod farmy wiatrowe", "note": "pozwala stosować najtańsze fundamenty monopalowe" },
+            { "value": "2019", "unit": "", "label": "Rok wprowadzenia zakazu połowów ukierunkowanych na dorsza we wschodnim Bałtyku", "note": "reakcja na załamanie stada" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Turystyka nadmorska w Polsce",
+          "caption": "Pas nadmorski to jeden z dwóch (obok gór) najsilniej obciążonych turystycznie regionów Polski — z bardzo wyraźną **sezonowością**.",
+          "groups": [
+            {
+              "name": "Turystyka wypoczynkowa (plażowa)",
+              "description": "Główny, ale skrajnie **sezonowy** rodzaj ruchu — skoncentrowany w lipcu i sierpniu. Bazuje na szerokich, piaszczystych plażach, których polskie wybrzeże ma pod dostatkiem. Skutki: przeciążenie infrastruktury latem i bezrobocie sezonowe zimą.",
+              "examples": ["Sopot", "Międzyzdroje", "Łeba", "Ustka", "Krynica Morska", "Władysławowo"]
+            },
+            {
+              "name": "Turystyka uzdrowiskowa i zdrowotna",
+              "description": "Znacznie mniej sezonowa, oparta na naturalnych surowcach leczniczych: **solankach**, **borowinach** i **aerozolu morskim bogatym w jod**. Kuracjusze przyjeżdżają przez cały rok, co stabilizuje lokalną gospodarkę.",
+              "examples": ["Kołobrzeg", "Świnoujście", "Ustka", "Sopot", "Dąbki", "Kamień Pomorski"]
+            },
+            {
+              "name": "Turystyka krajoznawcza i przyrodnicza",
+              "description": "Oparta na walorach przyrodniczych i kulturowych wybrzeża: parki narodowe, klify, latarnie morskie, zabytki i dziedzictwo morskie.",
+              "examples": ["Słowiński Park Narodowy (ruchome wydmy)", "Woliński Park Narodowy", "klif w Trzęsaczu", "latarnia w Rozewiu", "Muzeum II Wojny Światowej i Westerplatte"]
+            },
+            {
+              "name": "Turystyka aktywna i żeglarska",
+              "description": "Sporty wodne i żeglarstwo, korzystające z osłoniętych, płytkich akwenów o stałych wiatrach. Rozwija się dzięki sieci **marin** budowanych w ostatnich latach.",
+              "examples": ["windsurfing i kitesurfing w Zatoce Puckiej (Chałupy, Rewa, Jastarnia)", "żeglarstwo na Zalewie Szczecińskim", "mariny w Gdyni, Kołobrzegu i Świnoujściu"]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uwaga na trzy uproszczenia. **(1)** Nie pisz, że polski przemysł stoczniowy „upadł” — produkcja **trwa**, ale zmieniła charakter (remonty, jednostki specjalistyczne, kadłuby, jachty). **(2)** Nie myl **rybołówstwa** (odławianie ryb dziko żyjących) z **rybactwem/akwakulturą** (hodowla). **(3)** Morska energetyka wiatrowa nie jest „taka sama jak lądowa” — jej przewagą jest **silniejszy i stabilniejszy wiatr** oraz brak konfliktów z zabudową, a wadą znacznie wyższy koszt budowy i serwisu."
+        },
+        {
+          "type": "quiz",
+          "question": "Która przyczyna NIE tłumaczy zaniku polskiego rybołówstwa dalekomorskiego po 1990 roku?",
+          "options": [
+            "Ustanowienie przez państwa nadbrzeżne 200-milowych wyłącznych stref ekonomicznych",
+            "Wysokie koszty paliwa i utrzymania przestarzałej floty",
+            "Brak kapitału na modernizację statków po transformacji ustrojowej",
+            "Wprowadzenie przez Unię Europejską zakazu połowów na Oceanie Atlantyckim"
+          ],
+          "correctIndex": 3,
+          "explanation": "Takiego zakazu nie ma — UE reguluje połowy przez kwoty i umowy z państwami trzecimi, a nie przez całkowity zakaz. Pozostałe trzy przyczyny są prawdziwe i uzupełniają się: strefy ekonomiczne zamknęły dostęp do najlepszych łowisk, a flota była zbyt kosztowna i przestarzała, by konkurować bez dotacji."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego południowy Bałtyk jest uznawany za bardzo korzystny akwen dla morskiej energetyki wiatrowej?",
+          "options": [
+            "Bo jest płytki (20–40 m), wieją nad nim stałe wiatry zachodnie, nie występują pływy, a odbiorcy energii są blisko brzegu",
+            "Bo panuje tam wysokie zasolenie, które chroni konstrukcje przed korozją",
+            "Bo dno jest skaliste, co ułatwia kotwiczenie fundamentów",
+            "Bo zimą morze zamarza, co ułatwia montaż turbin z powierzchni lodu"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kluczowa jest **niewielka głębokość** — pozwala stosować tanie fundamenty monopalowe zamiast kosztownych konstrukcji pływających — oraz **zasoby wiatru** wynikające z dominacji cyrkulacji zachodniej. Dno Bałtyku jest w tych rejonach piaszczyste (co również sprzyja wbijaniu pali), zasolenie jest niskie, a lód montażowi w niczym nie pomaga."
+        },
+        {
+          "type": "quiz",
+          "question": "Kołobrzeg, Świnoujście i Ustka rozwinęły funkcję uzdrowiskową dzięki:",
+          "options": [
+            "wysokim temperaturom wody morskiej latem",
+            "obecności solanek, borowin i bogatego w jod aerozolu morskiego",
+            "położeniu przy głębokowodnych torach podejściowych",
+            "corocznemu zlodzeniu, które oczyszcza wody przybrzeżne"
+          ],
+          "correctIndex": 1,
+          "explanation": "Podstawą uzdrowiska są **naturalne surowce lecznicze**: wody mineralne (solanki), złoża borowiny (torfu leczniczego) oraz specyficzny mikroklimat nadmorski z aerozolem zawierającym jod i sole. Ich największą zaletą gospodarczą jest to, że przyciągają kuracjuszy **przez cały rok**, łagodząc sezonowość turystyki nadmorskiej."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Bardzo częste polecenie brzmi: **„Oceń znaczenie gospodarki morskiej dla rozwoju Polski”** albo **„Podaj argumenty za i przeciw”**. Przygotuj sobie po trzy argumenty z każdej strony i **przypisz każdemu konkretny dział**: korzyści — dostęp do rynków światowych (porty), bezpieczeństwo energetyczne (LNG, offshore), miejsca pracy i dochody gmin (turystyka); ograniczenia — sezonowość turystyki, presja na środowisko Bałtyku (eutrofizacja, hałas i emisje ze statków), zależność od kwot połowowych i konkurencji zagranicznej. Ogólniki bez wskazania działu są punktowane najsłabiej."
+        }
+      ]
+    },
+    {
+      "slug": "zagrozenia-i-ochrona-baltyku",
+      "title": "Zagrożenia środowiska Bałtyku i jego ochrona",
+      "summary": "Eutrofizacja i zakwity sinic, zanieczyszczenia chemiczne, zatopiona broń, przełowienie oraz międzynarodowy system ochrony morza (Konwencja Helsińska, HELCOM).",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bałtyk uchodzi za **jedno z najbardziej zanieczyszczonych mórz świata** — i nie wynika to z tego, że mieszkańcy jego zlewiska zanieczyszczają bardziej niż inni. Winne są **cechy fizyczne** akwenu, które poznałeś wcześniej: mała objętość wód, wolna wymiana z oceanem (25–30 lat), trwała **haloklina** blokująca natlenienie głębin i ogromne zlewisko zamieszkane przez ok. **85 mln ludzi** w 14 państwach. Każdy ładunek zanieczyszczeń zostaje tu na dziesięciolecia. Ta lekcja pokazuje cztery główne zagrożenia i międzynarodowy system ochrony, który jest odpowiedzią na fakt, że **jedno państwo nie uratuje Bałtyku samodzielnie**."
+        },
+        {
+          "type": "definition",
+          "term": "Eutrofizacja",
+          "text": "**Przeżyźnienie** zbiornika wodnego, czyli nadmierne wzbogacenie go w związki biogenne — przede wszystkim **azot (N)** i **fosfor (P)**. Skutkuje gwałtownym rozwojem glonów i sinic, a w dalszej kolejności — zużyciem tlenu przy dnie i powstaniem stref beztlenowych. To **najpoważniejszy** problem środowiskowy Morza Bałtyckiego.",
+          "note": "Eutrofizacja może być naturalna (bardzo powolna), ale w Bałtyku jest **antropogeniczna** i zachodzi w tempie liczonym w dekadach, nie tysiącleciach."
+        },
+        {
+          "type": "process",
+          "title": "Mechanizm eutrofizacji i powstawania stref beztlenowych",
+          "caption": "Sześć ogniw łańcucha przyczynowo-skutkowego. Zwróć uwagę na ostatnie — to ono sprawia, że problem sam się napędza.",
+          "steps": [
+            { "title": "Dopływ biogenów ze zlewiska", "text": "**Azot i fosfor** trafiają do morza z: spływu powierzchniowego z pól nawożonych mineralnie i gnojowicą (źródło **obszarowe**, największe), niedostatecznie oczyszczonych ścieków komunalnych i przemysłowych (**punktowe**) oraz z **depozycji atmosferycznej** (tlenki azotu ze spalania paliw, amoniak z hodowli)." },
+            { "title": "Masowy rozwój fitoplanktonu", "text": "Nadmiar biogenów przy wysokiej temperaturze i nasłonecznieniu wywołuje **zakwit** — eksplozję liczebności glonów i sinic. Woda mętnieje, staje się zielonobrunatna, a światło przestaje docierać w głąb, przez co giną głębiej rosnące rośliny denne (m.in. łąki morszczynu)." },
+            { "title": "Obumieranie i opadanie materii organicznej", "text": "Zakwit trwa krótko. Obumarłe glony opadają na dno w postaci ogromnej ilości **martwej materii organicznej** — znacznie większej, niż dno jest w stanie przetworzyć." },
+            { "title": "Rozkład zużywa tlen przy dnie", "text": "Bakterie rozkładające materię organiczną **pobierają tlen** z wody przydennej. Ponieważ **haloklina** uniemożliwia pionowe mieszanie, tlen nie jest uzupełniany z powierzchni." },
+            { "title": "Powstaje strefa beztlenowa", "text": "Gdy tlen się skończy, bakterie beztlenowe zaczynają wykorzystywać siarczany, wytwarzając trujący **siarkowodór (H₂S)**. Dno staje się **martwą strefą** — nie żyją tam ryby, skorupiaki ani organizmy denne. Ginie m.in. baza pokarmowa i tarliska dorsza." },
+            { "title": "Sprzężenie zwrotne dodatnie", "text": "W warunkach beztlenowych z osadów dennych **uwalnia się fosfor**, który wcześniej był w nich trwale związany. Wraca on do wody i zasila kolejne zakwity — to tzw. **wewnętrzne zasilanie**. Dlatego nawet gdyby dziś całkowicie odciąć dopływ biogenów z lądu, Bałtyk potrzebowałby dziesięcioleci na regenerację." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Zakwit sinic",
+          "text": "Masowy rozwój **cyjanobakterii** (sinic, np. *Nodularia spumigena*) w warstwie powierzchniowej, występujący w Bałtyku najczęściej w lipcu i sierpniu — przy wysokiej temperaturze wody, bezwietrznej pogodzie i nadmiarze fosforu. Tworzy na powierzchni charakterystyczne zielonożółte smugi i „kożuchy”.",
+          "note": "Sinice to **bakterie, nie glony** — i wiele z nich wytwarza **toksyny** (m.in. hepatotoksyny szkodliwe dla wątroby). Dlatego latem zamyka się kąpieliska. Dodatkowo sinice potrafią **wiązać azot atmosferyczny**, więc ograniczenie samego azotu w ściekach nie powstrzyma zakwitów — kluczowe jest ograniczenie **fosforu**."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Główne źródła azotu docierającego do Bałtyku",
+          "caption": "Udziały przybliżone, według szacunków HELCOM. Wniosek dla polityki ochrony: bez zmian w **rolnictwie** nie da się rozwiązać problemu eutrofizacji — oczyszczalnie ścieków to za mało.",
+          "labels": ["Rolnictwo (spływ obszarowy)", "Depozycja z atmosfery", "Ścieki komunalne i przemysłowe", "Pozostałe źródła"],
+          "series": [{ "name": "Udział w ładunku azotu", "values": [45, 30, 20, 5] }],
+          "unit": "%"
+        },
+        {
+          "type": "classification",
+          "title": "Główne zagrożenia środowiska Morza Bałtyckiego",
+          "caption": "Uporządkowana lista — przydatna, gdy polecenie brzmi „wymień i scharakteryzuj zagrożenia”.",
+          "groups": [
+            {
+              "name": "Eutrofizacja",
+              "description": "Największy problem Bałtyku. Nadmiar azotu i fosforu → zakwity sinic → martwe strefy przy dnie obejmujące okresowo dziesiątki tysięcy km² powierzchni dna.",
+              "examples": ["spływ nawozów z pól", "ścieki komunalne", "depozycja tlenków azotu z atmosfery"]
+            },
+            {
+              "name": "Trwałe zanieczyszczenia chemiczne",
+              "description": "Substancje trudno rozkładalne, które **kumulują się w łańcuchu pokarmowym** (biomagnifikacja) i osiągają najwyższe stężenia u drapieżników szczytowych oraz w tkance tłuszczowej ryb.",
+              "examples": ["dioksyny i PCB", "metale ciężkie (rtęć, kadm, ołów)", "związki cynoorganiczne (TBT) z farb przeciwporostowych", "farmaceutyki i mikroplastik"]
+            },
+            {
+              "name": "Zanieczyszczenia ropopochodne",
+              "description": "Skutek intensywnej żeglugi (Bałtyk jest jednym z najbardziej ruchliwych mórz świata) i transportu ropy. Groźne są zarówno katastrofy, jak i codzienne, nielegalne zrzuty wód zęzowych i popłuczyn ze zbiorników.",
+              "examples": ["wycieki ze statków i terminali", "zalegające wraki (np. „Franken” w Zatoce Gdańskiej, „Stuttgart” koło Helu)"]
+            },
+            {
+              "name": "Zatopiona broń chemiczna i amunicja",
+              "description": "Pozostałość po II wojnie światowej — pojemniki korodują, a substancje trujące przedostają się do osadów dennych.",
+              "examples": ["Głębia Bornholmska", "Głębia Gotlandzka", "Cieśnina Mały Bełt"]
+            },
+            {
+              "name": "Przełowienie",
+              "description": "Odławianie ryb szybciej, niż zdolne są się odtworzyć. Wzmocnione przez skutki eutrofizacji: **martwe strefy niszczą tarliska**, a ryby, które przeżyją, są mniejsze i chudsze.",
+              "examples": ["załamanie stada dorsza wschodniobałtyckiego", "przełowienie śledzia zachodniobałtyckiego", "krytyczny stan węgorza"]
+            },
+            {
+              "name": "Presja w strefie brzegowej",
+              "description": "Zabudowa wybrzeża, ruch turystyczny, hałas podwodny, zabudowa hydrotechniczna zaburzająca transport rumowiska, prace czerpalne.",
+              "examples": ["intensywna zabudowa nadmorskich kurortów", "hałas z prac budowlanych na morzu", "presja na wydmy i klify"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Zatopiona broń chemiczna",
+          "region": "Głębia Bornholmska, Głębia Gotlandzka, Cieśnina Mały Bełt",
+          "text": "Po zakończeniu II wojny światowej mocarstwa alianckie musiały pozbyć się przejętych niemieckich zapasów broni chemicznej. Najprostszym rozwiązaniem okazało się zatopienie ich w morzu: w Bałtyku spoczywa według szacunków ok. **40 tys. ton amunicji chemicznej**, zawierającej ok. **15 tys. ton bojowych środków trujących** — przede wszystkim **iperytu (gazu musztardowego)**, ale też adamsytu, klarku i fosgenu. Główne miejsca zatopień to okolice Bornholmu i Głębia Gotlandzka. Metalowe pojemniki **korodują**, a iperyt w zimnej wodzie przybiera postać galaretowatych brył, które bywają wyciągane w sieciach rybackich — kontakt ze skórą powoduje ciężkie oparzenia; takie przypadki notowano wielokrotnie. Zagrożone jest też prowadzenie prac na dnie: układanie kabli, rurociągów i fundamentów farm wiatrowych wymaga wcześniejszego rozpoznania dna. Międzynarodowe projekty badawcze (m.in. CHEMSEA, DAIMON) skatalogowały miejsca zalegania i oceniły ryzyko, ale **wydobycie uznano za bardziej niebezpieczne niż pozostawienie** ładunków pod stałym monitoringiem.",
+          "takeaway": "To zagrożenie **odziedziczone**, którego nie da się szybko usunąć — pokazuje, jak długo morze przechowuje skutki decyzji podjętych kilkadziesiąt lat wcześniej."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala problemu",
+          "items": [
+            { "value": "ok. 85", "unit": "mln", "label": "Liczba mieszkańców zlewiska Bałtyku", "note": "zlewisko obejmuje częściowo 14 państw, w tym 9 nadbałtyckich" },
+            { "value": "9", "unit": "", "label": "Liczba państw nadbałtyckich", "note": "Polska, Niemcy, Dania, Szwecja, Finlandia, Rosja, Estonia, Łotwa, Litwa" },
+            { "value": "ok. 60", "unit": "tys. km²", "label": "Powierzchnia dna okresowo pozbawionego tlenu", "note": "wartość silnie zmienna w zależności od wlewów; jedna z największych „martwych stref” świata" },
+            { "value": "ok. 40", "unit": "tys. ton", "label": "Zatopiona po 1945 r. amunicja chemiczna", "note": "w tym ok. 15 tys. ton bojowych środków trujących" },
+            { "value": "25–30", "unit": "lat", "label": "Czas pełnej wymiany wód Bałtyku", "note": "zanieczyszczenia pozostają w morzu przez dziesięciolecia" },
+            { "value": "1974", "unit": "", "label": "Rok podpisania pierwszej Konwencji Helsińskiej", "note": "pierwsza na świecie umowa obejmująca wszystkie źródła zanieczyszczeń całego morza" }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Zanieczyszczenia obszarowe a punktowe",
+          "leftLabel": "Źródła obszarowe (rozproszone)",
+          "rightLabel": "Źródła punktowe",
+          "rows": [
+            { "aspect": "Skąd pochodzą", "left": "Rozległe powierzchnie: pola uprawne, pastwiska, tereny zurbanizowane, depozycja z atmosfery", "right": "Konkretne, zidentyfikowane miejsca zrzutu: kolektory oczyszczalni, rury zakładów przemysłowych, hodowle" },
+            { "aspect": "Główne ładunki", "left": "Azot i fosfor z nawozów, pestycydy, zawiesina z erozji gleb", "right": "Ścieki komunalne i przemysłowe, metale ciężkie, substancje ropopochodne" },
+            { "aspect": "Łatwość kontroli", "left": "**Bardzo trudna** — nie da się „zamknąć rury”; potrzebna zmiana praktyk rolniczych na milionach hektarów", "right": "**Względnie łatwa** — wystarczy wybudować lub zmodernizować oczyszczalnię" },
+            { "aspect": "Skuteczne narzędzia", "left": "Strefy buforowe wzdłuż cieków, właściwe dawkowanie i terminy nawożenia, międzyplony, ograniczenie obsady zwierząt, dopłaty rolnośrodowiskowe", "right": "Oczyszczalnie z podwyższonym usuwaniem biogenów, pozwolenia wodnoprawne, opłaty i kary środowiskowe" },
+            { "aspect": "Postęp nad Bałtykiem", "left": "Powolny — rolnictwo pozostaje **głównym** źródłem biogenów", "right": "Znaczny — rozbudowa oczyszczalni bardzo zmniejszyła ładunki punktowe, zwłaszcza po wejściu państw regionu do UE" }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Ochrona Bałtyku — kalendarium",
+          "caption": "Bałtyk jest modelowym przykładem **współpracy międzynarodowej** w ochronie środowiska: żadne państwo nie może uratować go w pojedynkę.",
+          "events": [
+            { "period": "1974", "label": "Konwencja Helsińska", "text": "Podpisana w Helsinkach przez wszystkie ówczesne państwa nadbałtyckie (7 państw, mimo podziału zimnowojennego). **Pierwsza na świecie umowa międzynarodowa obejmująca wszystkie źródła zanieczyszczeń całego morza** — lądowe, atmosferyczne i pochodzące ze statków." },
+            { "period": "1980", "label": "Wejście w życie i powołanie HELCOM", "text": "Konwencja zaczęła obowiązywać; utworzono organ wykonawczy — **Komisję Ochrony Środowiska Morskiego Bałtyku (HELCOM)** z siedzibą w Helsinkach." },
+            { "period": "1992", "label": "Nowa Konwencja Helsińska", "text": "Po zmianach politycznych w Europie podpisano zaktualizowaną konwencję — już przez **9 państw nadbałtyckich oraz Unię Europejską**. Rozszerzono ją o zasadę przezorności i objęto nią również wody wewnętrzne. Weszła w życie w 2000 r." },
+            { "period": "2004–2005", "label": "Bałtyk jako obszar PSSA", "text": "Międzynarodowa Organizacja Morska (IMO) uznała Bałtyk (poza wodami rosyjskimi) za **szczególnie wrażliwy obszar morski (PSSA)**, co pozwala wprowadzać zaostrzone zasady żeglugi." },
+            { "period": "2006", "label": "Obszar kontroli emisji siarki (SECA)", "text": "Ostre ograniczenie zawartości siarki w paliwie żeglugowym na Bałtyku — realna redukcja zakwaszających emisji i depozycji siarki na powierzchnię morza." },
+            { "period": "2007 i 2021", "label": "Bałtycki Plan Działań (BSAP)", "text": "Plan HELCOM wyznaczający **konkretne, przypisane państwom limity redukcji zrzutu azotu i fosforu** oraz cele dotyczące bioróżnorodności, substancji niebezpiecznych i śmieci morskich. Zaktualizowany w 2021 r. z horyzontem do 2030 r." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "HELCOM (Komisja Helsińska)",
+          "text": "Organ wykonawczy Konwencji Helsińskiej, z siedzibą w **Helsinkach**, zrzeszający **9 państw nadbałtyckich i Unię Europejską**. Koordynuje monitoring stanu środowiska Bałtyku, opracowuje wspólne oceny i **zalecenia (rekomendacje HELCOM)**, prowadzi Bałtycki Plan Działań i sieć morskich obszarów chronionych.",
+          "note": "Zalecenia HELCOM nie są prawem bezpośrednio obowiązującym obywateli — państwa muszą je wdrożyć we własnym prawie. To typowa słabość prawa międzynarodowego: siłą HELCOM jest wspólny monitoring i presja opinii publicznej, a nie sankcje."
+        },
+        {
+          "type": "matching",
+          "title": "Zagrożenie i jego bezpośrednia przyczyna",
+          "instruction": "Dopasuj zjawisko do przyczyny, która wywołuje je bezpośrednio.",
+          "pairs": [
+            { "left": "Letnie zakwity sinic", "right": "Nadmiar azotu i fosforu spływających głównie z pól uprawnych" },
+            { "left": "Martwe strefy przy dnie", "right": "Rozkład opadającej materii organicznej pod trwałą halokliną" },
+            { "left": "Oparzenia rybaków wyciągających sieci", "right": "Korodujące pojemniki z iperytem zatopione po 1945 r." },
+            { "left": "Zakaz połowów dorsza we wschodnim Bałtyku", "right": "Załamanie stada wskutek przełowienia i utraty natlenionych tarlisk" },
+            { "left": "Ostrzeżenia przed spożywaniem tłustych ryb bałtyckich", "right": "Kumulacja dioksyn i PCB w tkance tłuszczowej" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery precyzyjne rozróżnienia. **(1) Eutrofizacja** to **przeżyźnienie** (za dużo substancji odżywczych), a nie „zatrucie” — mechanizm szkody jest pośredni: przez zużycie tlenu. **(2) Sinice to bakterie**, nie glony; dlatego mówimy o „zakwicie sinic”, a nie „zakwicie glonów”, gdy chodzi o toksyczne kożuchy latem. **(3)** Bezpośrednią przyczyną martwych stref jest **brak tlenu**, a nie sama obecność zanieczyszczeń. **(4)** **Konwencja Helsińska** to umowa (dokument), a **HELCOM** to komisja (instytucja), która ją realizuje — nie używaj tych nazw zamiennie."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego skutki eutrofizacji są w Bałtyku znacznie poważniejsze niż w otwartym oceanie o podobnym ładunku biogenów?",
+          "options": [
+            "Bo woda Bałtyku ma niższą temperaturę, więc glony rosną szybciej",
+            "Bo mała objętość wód, wolna wymiana z oceanem i trwała haloklina blokująca natlenienie głębin sprawiają, że biogeny i skutki ich rozkładu pozostają w morzu przez dziesięciolecia",
+            "Bo w Bałtyku nie ma pływów, więc zanieczyszczenia nie docierają do brzegu",
+            "Bo Bałtyk jest morzem szelfowym, a szelf pochłania więcej tlenu"
+          ],
+          "correctIndex": 1,
+          "explanation": "To najważniejszy wniosek całego działu: **cechy fizyczne akwenu decydują o jego wrażliwości**. Mała objętość oznacza słabe rozcieńczenie, powolna wymiana — brak „przepłukiwania”, a haloklina uniemożliwia napowietrzenie dna. Ten sam ładunek biogenów daje więc w Bałtyku skutki nieporównanie większe niż w oceanie."
+        },
+        {
+          "type": "quiz",
+          "question": "Ograniczenie zrzutu samego azotu może nie wystarczyć do powstrzymania zakwitów sinic w Bałtyku. Dlaczego?",
+          "options": [
+            "Bo sinice nie potrzebują azotu do wzrostu",
+            "Bo wiele bałtyckich sinic potrafi wiązać azot atmosferyczny, więc czynnikiem ograniczającym staje się fosfor",
+            "Bo azot rozkłada się w wodzie morskiej w ciągu kilku dni",
+            "Bo azot pochodzi wyłącznie z depozycji atmosferycznej, której nie da się kontrolować"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sinice (cyjanobakterie) mają zdolność **wiązania azotu atmosferycznego** rozpuszczonego w wodzie — potrafią więc uzupełnić jego niedobór same. Czynnikiem naprawdę limitującym ich rozwój jest **fosfor**, dlatego Bałtycki Plan Działań kładzie tak duży nacisk na redukcję ładunku fosforu, zwłaszcza z rolnictwa i oczyszczalni."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o systemie ochrony Bałtyku jest poprawne?",
+          "options": [
+            "Konwencję Helsińską podpisano w 1992 r. wyłącznie przez państwa Unii Europejskiej, a HELCOM jest agencją UE",
+            "Pierwszą Konwencję Helsińską podpisano w 1974 r. przez wszystkie ówczesne państwa nadbałtyckie, a jej organem wykonawczym jest HELCOM z siedzibą w Helsinkach",
+            "HELCOM wydaje przepisy obowiązujące bezpośrednio obywateli państw nadbałtyckich",
+            "Bałtycki Plan Działań dotyczy wyłącznie ograniczenia wycieków ropy naftowej"
+          ],
+          "correctIndex": 1,
+          "explanation": "Konwencja z 1974 r. była **pierwszą na świecie** umową obejmującą wszystkie źródła zanieczyszczeń całego morza i podpisały ją wszystkie ówczesne państwa nadbałtyckie — mimo podziału zimnowojennego. Zaktualizowana wersja z 1992 r. objęła 9 państw i UE. HELCOM nie jest agencją UE i nie stanowi prawa powszechnie obowiązującego — wydaje **zalecenia**, które państwa wdrażają we własnym prawie."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o zagrożeniach Bałtyku najczęściej wymagają **łańcucha przyczynowo-skutkowego o co najmniej trzech ogniwach**, np.: *„intensywne nawożenie pól w zlewisku → spływ azotu i fosforu rzekami do morza → zakwity glonów i sinic → opadanie i rozkład obumarłej materii → zużycie tlenu w wodach przydennych, których haloklina nie pozwala natlenić → powstanie strefy beztlenowej i zanik organizmów dennych”*. Warto też umieć uzasadnić, dlaczego ochrona Bałtyku **musi być międzynarodowa**: zlewisko obejmuje 14 państw, a wody swobodnie przemieszczają się między obszarami morskimi — działania jednego kraju są bezskuteczne bez współpracy pozostałych."
+        }
+      ]
+    }
+  ]
+}

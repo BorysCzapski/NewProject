@@ -1,0 +1,1988 @@
+{
+  "topicSlug": "strefowosc-przyrodnicza",
+  "lessons": [
+    {
+      "slug": "strefowosc-i-astrefowosc",
+      "title": "Strefowość i astrefowość — podstawowa prawidłowość środowiska",
+      "summary": "Skąd bierze się równoleżnikowy układ stref na Ziemi i co go zaburza.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gdybyś przeleciał samolotem z Kongo do Norwegii, krajobraz pod tobą zmieniałby się w powtarzalnej, przewidywalnej kolejności: wilgotny las równikowy, sawanna, pustynia, gaje oliwne, lasy liściaste, tajga, tundra. Ta sama sekwencja powtarza się w Ameryce Południowej, w Azji i — lustrzanie — na półkuli południowej. To nie przypadek. **Strefowość** jest najważniejszą prawidłowością środowiska przyrodniczego Ziemi: skutkiem tego, że kulista planeta oświetlana przez odległe Słońce otrzymuje różne ilości energii na różnych szerokościach geograficznych. W tej lekcji poznasz mechanizm, który tę prawidłowość tworzy, oraz czynniki, które ją zaburzają — bo bez nich mapa stref byłaby zestawem idealnych pasów, a w rzeczywistości nią nie jest."
+        },
+        {
+          "type": "definition",
+          "term": "Strefowość (strefowość pozioma, latitudinalna)",
+          "text": "**Prawidłowe, w przybliżeniu równoleżnikowe rozmieszczenie zjawisk i elementów środowiska przyrodniczego na Ziemi**, wynikające ze zróżnicowania dopływu energii słonecznej wraz z szerokością geograficzną. Strefowo rozmieszczone są: temperatura powietrza, ciśnienie i wiatry stałe, opady, gleby, formacje roślinne, świat zwierzęcy, a w ślad za nimi także sposoby gospodarowania człowieka.",
+          "note": "Strefowość dotyczy przede wszystkim lądów. W oceanach jest słabiej czytelna, bo woda swobodnie przemieszcza ciepło w poziomie i w pionie."
+        },
+        {
+          "type": "process",
+          "title": "Od kąta padania promieni słonecznych do strefy krajobrazowej",
+          "caption": "To jest łańcuch przyczynowo-skutkowy, którego CKE wymaga w zadaniach typu „wyjaśnij, dlaczego…”. Naucz się go w tej kolejności.",
+          "steps": [
+            {
+              "title": "1. Kulistość Ziemi różnicuje dopływ energii",
+              "text": "Na równiku promienie słoneczne padają w ciągu roku niemal prostopadle — ta sama wiązka promieni oświetla małą powierzchnię i przebywa krótką drogę w atmosferze. W wyższych szerokościach kąt padania maleje: wiązka rozkłada się na coraz większą powierzchnię i traci więcej energii w grubszej warstwie atmosfery. **Bilans radiacyjny** jest dodatni między ok. 40°N a 40°S, a ujemny w wyższych szerokościach."
+            },
+            {
+              "title": "2. Różnice temperatury uruchamiają cyrkulację atmosfery",
+              "text": "Nadmiar ciepła nad równikiem wywołuje wznoszenie powietrza (**równikowy pas niskiego ciśnienia**), a jego opadanie w okolicach zwrotników tworzy **wyże zwrotnikowe**. Powstają komórki cyrkulacyjne (Hadleya, Ferrela, polarna) i strefowy układ pasów ciśnienia oraz wiatrów stałych: pasatów, wiatrów zachodnich i wschodnich wiatrów polarnych."
+            },
+            {
+              "title": "3. Cyrkulacja rozkłada opady w pasy",
+              "text": "Tam, gdzie powietrze się wznosi (równik, ok. 60° szerokości), jest wilgotno — para wodna kondensuje, powstają chmury i obfite opady. Tam, gdzie opada (zwrotniki, obszary okołobiegunowe), powietrze ogrzewa się adiabatycznie, jego wilgotność względna maleje i opadów niemal nie ma. Stąd **naprzemienne pasy: wilgotny — suchy — wilgotny — suchy**, licząc od równika ku biegunom."
+            },
+            {
+              "title": "4. Klimat kształtuje glebę",
+              "text": "Temperatura i stosunek opadu do parowania decydują o tempie wietrzenia, o kierunku przemieszczania roztworów w profilu glebowym i o szybkości rozkładu materii organicznej. Dlatego typy gleb także układają się w pasy: gleby ferralitowe pod lasem równikowym, czarnoziemy pod stepem, bielice pod tajgą."
+            },
+            {
+              "title": "5. Klimat i gleba wyznaczają formację roślinną, a ta — faunę i gospodarkę",
+              "text": "Rośliny są przywiązane do miejsca, więc muszą znieść lokalne warunki: to one najsilniej odzwierciedlają klimat. Formacja roślinna tworzy bazę pokarmową i schronienie dla zwierząt, a razem wyznaczają, co człowiek może tu uprawiać, hodować i wydobywać. Powstaje **strefa krajobrazowa** — pas o spójnym zestawie cech całego środowiska."
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefy krajobrazowe Ziemi — od bieguna do równika",
+          "caption": "Podane szerokości są orientacyjne i dotyczą półkuli północnej. Kliknij kolejne pasy — zwróć uwagę, że pasy suche (pustynie zwrotnikowe) i wilgotne (lasy równikowe, lasy umiarkowane) występują naprzemiennie.",
+          "zones": [
+            {
+              "name": "Pustynie lodowe",
+              "latitude": "powyżej 75°",
+              "text": "Trwała pokrywa lodowa, temperatury poniżej 0 °C przez cały rok, opady śladowe. Brak gleb i zwartej roślinności.",
+              "tone": "ice"
+            },
+            {
+              "name": "Tundra",
+              "latitude": "60–75°",
+              "text": "Lato krótkie i chłodne (poniżej 10 °C w najcieplejszym miesiącu), wieloletnia zmarzlina, mchy, porosty i krzewinki. Brak drzew.",
+              "tone": "ice"
+            },
+            {
+              "name": "Tajga (borealne lasy iglaste)",
+              "latitude": "50–65°",
+              "text": "Długa mroźna zima, krótkie ciepłe lato, opady 300–600 mm. Bór świerkowo-sosnowo-modrzewiowy na glebach bielicowych.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Lasy liściaste i mieszane strefy umiarkowanej",
+              "latitude": "40–60°",
+              "text": "Cztery wyraźne pory roku, opady 500–1000 mm rozłożone równomiernie. Drzewa zrzucające liście na zimę, gleby brunatne i płowe.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Stepy",
+              "latitude": "35–55° we wnętrzach kontynentów",
+              "text": "Klimat kontynentalny, opady 250–500 mm z maksimum letnim. Zbiorowiska traw na czarnoziemach — najżyźniejszych glebach świata.",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa śródziemnomorska (twardolistna)",
+              "latitude": "30–45°, zachodnie wybrzeża kontynentów",
+              "text": "Lato gorące i suche, zima łagodna i deszczowa. Wiecznie zielone lasy twardolistne, makia, garig; gleby cynamonowe i terra rossa.",
+              "tone": "heat"
+            },
+            {
+              "name": "Pustynie i półpustynie zwrotnikowe",
+              "latitude": "15–35°",
+              "text": "Obszar stałego wyżu zwrotnikowego: opady poniżej 250 mm, ogromne amplitudy dobowe, silne parowanie. Roślinność skrajnie uboga, gleby inicjalne i zasolone.",
+              "tone": "heat"
+            },
+            {
+              "name": "Sawanny",
+              "latitude": "5–20°",
+              "text": "Wyraźna pora deszczowa i sucha, wysokie temperatury przez cały rok. Trawy z pojedynczymi drzewami (akacje, baobaby), gleby czerwone ferruginowe.",
+              "tone": "earth"
+            },
+            {
+              "name": "Wilgotne lasy równikowe",
+              "latitude": "10°N–10°S",
+              "text": "Wysoka temperatura (ok. 25–27 °C) i opady powyżej 2000 mm przez cały rok, mała amplituda roczna. Wielopiętrowy las na ubogich glebach ferralitowych.",
+              "tone": "vegetation"
+            }
+          ]
+        },
+        {
+          "type": "mnemonic",
+          "title": "Kolejność stref od równika do bieguna",
+          "text": "**L**edwo **S**ię **P**óźno **Ś**miał, **L**ecz **S**tarzec **T**akże **T**ulił **L**ód.",
+          "expansion": "Lasy równikowe → Sawanny → Pustynie zwrotnikowe → Śródziemnomorska → Lasy liściaste i mieszane → Stepy → Tajga → Tundra → pustynie Lodowe. Uwaga: stepy leżą „w środku kontynentów”, a nie ściśle za strefą lasów — w tej wyliczance są ustawione wg rosnącej szerokości geograficznej ich centrów."
+        },
+        {
+          "type": "definition",
+          "term": "Astrefowość",
+          "text": "**Odstępstwo od równoleżnikowego układu stref**, wywołane czynnikami niezależnymi od dopływu energii słonecznej: rozmieszczeniem lądów i oceanów, prądami morskimi, rzeźbą terenu, wysokością nad poziomem morza czy budową geologiczną. Astrefowość nie znosi strefowości — nakłada się na nią, przerywając pasy, przesuwając ich granice albo wprowadzając zupełnie „obcy” krajobraz.",
+          "note": "Skrajny przykład: pustynia Atakama leży na tej samej szerokości co brazylijskie sawanny i lasy, a jest najsuchszym miejscem na Ziemi. Odpowiadają za to zimny prąd morski i cień opadowy Andów."
+        },
+        {
+          "type": "classification",
+          "title": "Czynniki astrefowe — cztery grupy",
+          "caption": "Każdą z tych grup omówimy szczegółowo w kolejnych lekcjach działu.",
+          "groups": [
+            {
+              "name": "Rozkład lądów i oceanów",
+              "description": "Ląd nagrzewa się i wychładza szybciej niż woda (mniejsze ciepło właściwe, brak mieszania). Im dalej od oceanu, tym większa amplituda roczna temperatury i mniejsze opady — to **kontynentalizm**; przeciwieństwem jest **oceanizm**. Dlatego strefa stepów pojawia się we wnętrzach kontynentów, a na tej samej szerokości nad oceanem rosną lasy.",
+              "examples": [
+                "stepy Kazachstanu i prerie Ameryki Północnej",
+                "łagodne, wilgotne wybrzeże Norwegii",
+                "brak strefy stepowej na półkuli południowej poza Pampą — bo brak rozległych lądów"
+              ]
+            },
+            {
+              "name": "Prądy morskie",
+              "description": "Ciepłe prądy ogrzewają i nawilżają powietrze nad wybrzeżem, przesuwając granice stref w stronę bieguna. Zimne prądy wychładzają dolną warstwę powietrza, tworzą **inwersję termiczną**, blokują konwekcję i pozbawiają wybrzeże opadów.",
+              "examples": [
+                "Prąd Północnoatlantycki — lasy i uprawy za kołem podbiegunowym w Norwegii",
+                "Prąd Peruwiański — pustynia Atakama",
+                "Prąd Benguelski — pustynia Namib",
+                "Prąd Labradorski — tundra na szerokości Danii"
+              ]
+            },
+            {
+              "name": "Rzeźba terenu i wysokość",
+              "description": "Góry wymuszają wznoszenie powietrza, przez co po stronie nawietrznej występują obfite **opady orograficzne**, a po zawietrznej **cień opadowy**. Sam wzrost wysokości obniża temperaturę, tworząc **piętrowość** — pionowy odpowiednik strefowości.",
+              "examples": [
+                "Patagonia — step w cieniu opadowym Andów",
+                "Wyżyna Tybetańska za Himalajami",
+                "piętra roślinne w Tatrach i na Kilimandżaro"
+              ]
+            },
+            {
+              "name": "Cyrkulacja monsunowa i lokalne układy baryczne",
+              "description": "Sezonowa zmiana kierunku wiatru między lądem a oceanem całkowicie przebudowuje rozkład opadów. Obszary, które „powinny” być pustynne, dostają tysiące milimetrów deszczu w ciągu kilku miesięcy.",
+              "examples": [
+                "Indie i Azja Południowo-Wschodnia",
+                "Mawsynram i Czerapundżi w Górach Khasi",
+                "monsun zachodnioafrykański w Sahelu"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Strefowość pozioma a piętrowość pionowa",
+          "leftLabel": "Strefowość (pozioma)",
+          "rightLabel": "Piętrowość (pionowa)",
+          "rows": [
+            {
+              "aspect": "Przyczyna zmienności",
+              "left": "Zmiana kąta padania promieni słonecznych wraz z szerokością geograficzną",
+              "right": "Spadek temperatury i ciśnienia wraz z wysokością nad poziomem morza (średnio 0,6 °C na 100 m)"
+            },
+            {
+              "aspect": "Skala przestrzenna",
+              "left": "Tysiące kilometrów — pełna sekwencja od równika do bieguna to ok. 10 000 km",
+              "right": "Kilka kilometrów w pionie — na Kilimandżaro cała sekwencja mieści się na 5,9 km wysokości"
+            },
+            {
+              "aspect": "Zmiana długości dnia i pór roku",
+              "left": "Tak — im wyższa szerokość, tym większe różnice sezonowe i dłuższe dni polarne",
+              "right": "Nie — na całej wysokości góry długość dnia jest taka sama; zmienia się tylko temperatura i opady"
+            },
+            {
+              "aspect": "Ciśnienie i zawartość tlenu",
+              "left": "Praktycznie stałe",
+              "right": "Wyraźnie maleją — na 5000 m ciśnienie stanowi ok. połowy wartości z poziomu morza"
+            },
+            {
+              "aspect": "Nasłonecznienie",
+              "left": "Maleje ku biegunom",
+              "right": "Rośnie z wysokością (cieńsza i czystsza atmosfera, więcej promieniowania UV)"
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, na których opiera się strefowość",
+          "items": [
+            {
+              "value": "1361",
+              "unit": "W/m²",
+              "label": "Stała słoneczna — strumień energii docierający do górnej granicy atmosfery przy prostopadłym padaniu promieni"
+            },
+            {
+              "value": "66°34′",
+              "label": "Kąt nachylenia osi ziemskiej do płaszczyzny orbity — przyczyna pór roku i sezonowego przesuwania pasów ciśnienia"
+            },
+            {
+              "value": "ok. 30",
+              "unit": "%",
+              "label": "Albedo planetarne Ziemi — udział promieniowania odbitego w przestrzeń kosmiczną"
+            },
+            {
+              "value": "ok. 40",
+              "unit": "°N i °S",
+              "label": "Granica, powyżej której roczny bilans radiacyjny powierzchni Ziemi staje się ujemny — nadwyżkę ciepła przenoszą tam prądy morskie i cyrkulacja atmosfery"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Przeciągnij opis do właściwego pojęcia. Te definicje wracają w kluczach odpowiedzi CKE niemal dosłownie.",
+          "pairs": [
+            {
+              "left": "Strefowość",
+              "right": "Równoleżnikowy układ zjawisk wynikający ze zróżnicowania dopływu energii słonecznej"
+            },
+            {
+              "left": "Astrefowość",
+              "right": "Zaburzenie układu równoleżnikowego przez prądy morskie, rzeźbę lub rozkład lądów"
+            },
+            {
+              "left": "Piętrowość",
+              "right": "Pionowa zmienność środowiska wraz ze wzrostem wysokości nad poziomem morza"
+            },
+            {
+              "left": "Strefa krajobrazowa",
+              "right": "Pas o spójnym zestawie cech klimatu, gleb, roślinności i fauny"
+            },
+            {
+              "left": "Formacja roślinna",
+              "right": "Zbiorowisko roślin o wspólnym pokroju i wymaganiach, np. tajga lub step"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Nie myl trzech podziałów, które nakładają się na siebie na mapie świata. **Strefy oświetlenia** (międzyzwrotnikowa, umiarkowane, podbiegunowe) są wyznaczone czysto astronomicznie — przez zwrotniki i koła podbiegunowe. **Strefy klimatyczne** (równikowa, zwrotnikowa, podzwrotnikowa, umiarkowana, okołobiegunowa) opierają się na temperaturze i opadach. **Strefy krajobrazowe** (las równikowy, sawanna, tajga…) uwzględniają dodatkowo gleby i roślinność, więc jest ich najwięcej i mają najbardziej poszarpane granice. W zadaniu zawsze sprawdź, o który podział pyta polecenie."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw prawidłowo oddaje kierunek zależności między elementami środowiska w strefie krajobrazowej?",
+          "options": [
+            "gleba → klimat → roślinność → świat zwierzęcy",
+            "klimat → gleba → roślinność → świat zwierzęcy → gospodarka człowieka",
+            "roślinność → klimat → gleba → gospodarka człowieka",
+            "świat zwierzęcy → roślinność → klimat → gleba"
+          ],
+          "correctIndex": 1,
+          "explanation": "Klimat jest czynnikiem nadrzędnym: to on decyduje o tempie wietrzenia i kierunku przemieszczania roztworów glebowych, a klimat wraz z glebą wyznacza formację roślinną. Roślinność tworzy bazę pokarmową dla zwierząt, a całość określa możliwości gospodarowania. Zależności te są jednak dwukierunkowe — roślinność wzbogaca glebę w próchnicę i wpływa na wilgotność powietrza — ale kierunek nadrzędny idzie od klimatu."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko jest przykładem astrefowej modyfikacji układu stref krajobrazowych?",
+          "options": [
+            "Występowanie tajgi na obszarach między 50° a 65° szerokości geograficznej w Kanadzie i Rosji",
+            "Pustynia Namib ciągnąca się wąskim pasem wzdłuż wybrzeża chłodzonego przez Prąd Benguelski",
+            "Sawanny występujące po obu stronach strefy wilgotnych lasów równikowych",
+            "Pustynie lodowe otaczające oba bieguny Ziemi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Odpowiedzi A, C i D opisują typowy, równoleżnikowy układ stref wynikający wprost z dopływu energii słonecznej i cyrkulacji atmosfery — to strefowość. Namib jest pustynią wybrzeżną: jej skrajna suchość i wąski, południkowy przebieg wynikają z zimnego Prądu Benguelskiego, który wywołuje inwersję termiczną i blokuje konwekcję. To czynnik astrefowy."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego pasy suche i wilgotne występują na Ziemi naprzemiennie, licząc od równika ku biegunom?",
+          "options": [
+            "Bo naprzemiennie występują lądy i oceany",
+            "Bo prądy morskie płyną naprzemiennie w kierunku bieguna i równika",
+            "Bo w komórkach cyrkulacyjnych powietrze naprzemiennie się wznosi (opady) i osiada (pogoda bezchmurna)",
+            "Bo albedo powierzchni Ziemi rośnie skokowo co 20° szerokości geograficznej"
+          ],
+          "correctIndex": 2,
+          "explanation": "Wznoszenie powietrza nad równikiem i w strefie frontu polarnego (ok. 60°) prowadzi do jego ochładzania adiabatycznego, kondensacji pary wodnej i opadów. Osiadanie powietrza w wyżach zwrotnikowych i wyżach okołobiegunowych powoduje ogrzewanie adiabatyczne, spadek wilgotności względnej i brak chmur. Stąd sekwencja: wilgotno (równik) – sucho (zwrotniki) – wilgotno (ok. 60°) – sucho (bieguny)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W poleceniach typu „wyjaśnij zależność między klimatem a glebą/roślinnością” punkt dostaje się wyłącznie za **pełny łańcuch przyczynowo-skutkowy**, a nie za wymienienie cech. Buduj odpowiedź według wzoru: *czynnik klimatyczny → proces fizyczny lub chemiczny → skutek w środowisku*. Przykład wart pełnej punktacji: „Wysokie opady i temperatura przyspieszają wietrzenie chemiczne oraz wymywanie krzemionki i zasad w głąb profilu (laterytyzacja), przez co gleby lasu równikowego są kwaśne, ubogie w składniki pokarmowe i mają cienki poziom próchniczny”. Sama informacja „gleby są ubogie” to zero punktów."
+        }
+      ]
+    },
+    {
+      "slug": "klimat-gleba-roslinnosc",
+      "title": "Łańcuch zależności: klimat → gleba → roślinność → fauna → gospodarka",
+      "summary": "Jak klimat buduje glebę, gleba karmi roślinność, a roślinność wyznacza granice gospodarowania.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "W poprzedniej lekcji poznałeś ogólny mechanizm strefowości. Teraz rozbierzemy na części jego najważniejsze ogniwo — przejście od klimatu do gleby i roślinności. To tutaj rozstrzyga się, dlaczego pod najbujniejszym lasem świata leżą jedne z najuboższych gleb, a pod ubogim trawiastym stepem — najżyźniejsze. Zrozumienie tego paradoksu jest kluczem do połowy zadań maturalnych z tego działu."
+        },
+        {
+          "type": "definition",
+          "term": "Gleba strefowa",
+          "text": "**Gleba, której typ wynika przede wszystkim z klimatu i związanej z nim roślinności**, a nie z rodzaju skały macierzystej czy rzeźby. Gleby strefowe układają się w pasy równoleżnikowe: ferralitowe, czerwone ferruginowe, cynamonowe, brunatne i płowe, czarnoziemy, bielicowe, tundrowe glejowe.",
+          "note": "Przeciwieństwem są **gleby astrefowe (śródstrefowe i niecałkowicie wykształcone)**: rędziny na wapieniach, mady w dolinach rzecznych, gleby bagienne, gleby wulkaniczne. Powstają lokalnie, niezależnie od strefy — rędzina wygląda tak samo w Polsce i w Hiszpanii."
+        },
+        {
+          "type": "process",
+          "title": "Jak klimat tworzy glebę",
+          "caption": "Kliknij kolejne etapy. Zwróć uwagę, że w każdym z nich decydującą rolę odgrywa stosunek opadu do parowania.",
+          "steps": [
+            {
+              "title": "1. Wietrzenie skały macierzystej",
+              "text": "W klimacie gorącym i wilgotnym dominuje **wietrzenie chemiczne** — hydroliza i rozpuszczanie zachodzą tym szybciej, im wyższa temperatura (reguła: wzrost o 10 °C przyspiesza reakcje kilkakrotnie). Powstaje gruba, nawet kilkudziesięciometrowa zwietrzelina. W klimacie zimnym i suchym przeważa **wietrzenie fizyczne (mrozowe, insolacyjne)** — zwietrzelina jest cienka i gruboziarnista."
+            },
+            {
+              "title": "2. Dostawa i rozkład materii organicznej",
+              "text": "Rośliny dostarczają obumarłe szczątki, a destruenci (bakterie, grzyby, dżdżownice) je rozkładają. Tempo rozkładu zależy od temperatury i wilgotności. W lesie równikowym opad organiczny jest ogromny, ale rozkłada się w kilka tygodni — próchnica nie zdąży się nagromadzić. Na stepie opad jest mniejszy, lecz zimą rozkład ustaje, a suche lato go hamuje — próchnica **akumuluje się latami**."
+            },
+            {
+              "title": "3. Przemieszczanie roztworów w profilu",
+              "text": "Gdy **opad przewyższa parowanie**, woda przesącza się w dół i wynosi z górnych poziomów zasady, węglany, a nawet krzemionkę — to **przemywanie (ługowanie)**. Gdy **parowanie przewyższa opad**, woda podsiąka kapilarnie ku górze i pozostawia przy powierzchni węglany oraz sole — powstają gleby węglanowe i zasolone (sołonczaki)."
+            },
+            {
+              "title": "4. Wykształcenie poziomów genetycznych",
+              "text": "Powtarzane przez setki lat wymywanie i wmywanie różnicuje profil na poziomy: organiczny, próchniczny, wymywania i wmywania. **Rodzaj dominującego procesu nadaje glebie nazwę**: bielicowanie (tajga), brunatnienie i płowienie (lasy liściaste), laterytyzacja (las równikowy), akumulacja próchnicy (step), oglejenie (tundra)."
+            },
+            {
+              "title": "5. Sprzężenie zwrotne z roślinnością",
+              "text": "Powstała gleba decyduje, co może na niej wyrosnąć — ale roślinność zmienia glebę dalej. Igliwie tajgi rozkłada się na kwaśną próchnicę surową, która przyspiesza bielicowanie. Trawy stepu co roku oddają glebie gęstą, obumarłą darń i dają czarnoziem. **Gleba i roślinność tworzą układ, który sam siebie podtrzymuje** — dlatego jego zniszczenie bywa nieodwracalne."
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Poziomy genetyczne gleby — profil modelowy",
+          "caption": "Kliknij poziomy. Nie każda gleba ma wszystkie: w czarnoziemie poziom E praktycznie nie występuje, a w bielicy jest bardzo wyraźny, popielaty.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "O — poziom organiczny",
+              "range": "0–10 cm",
+              "text": "Ściółka i częściowo rozłożone szczątki roślinne. W tajdze gruby i kwaśny (próchnica surowa, mor), w lesie równikowym niemal nieobecny — wszystko rozkłada się natychmiast.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "A — poziom próchniczny",
+              "range": "10–40 cm",
+              "text": "Mieszanina próchnicy i części mineralnych, ciemny, najżyźniejszy. W czarnoziemie sięga nawet 1–1,5 m i zawiera 10–12% próchnicy; w glebie ferralitowej ma kilka centymetrów i 1–2%.",
+              "tone": "earth"
+            },
+            {
+              "name": "E — poziom wymywania (eluwialny)",
+              "range": "20–60 cm",
+              "text": "Zubożony, jaśniejszy — woda wyniosła z niego iły, związki żelaza i glinu. W bielicach ma barwę popielatą, stąd nazwa gleby.",
+              "tone": "neutral"
+            },
+            {
+              "name": "B — poziom wmywania (iluwialny)",
+              "range": "40–120 cm",
+              "text": "Wzbogacony w to, co zostało wymyte wyżej: iły, tlenki żelaza i glinu, próchnicę. Bywa zbity i rdzawy; w glebach laterytowych może stwardnieć w nieprzepuszczalną skorupę (lateryt).",
+              "tone": "earth"
+            },
+            {
+              "name": "C — zwietrzelina skały macierzystej",
+              "range": "100–200 cm",
+              "text": "Rozdrobniona, ale mało przetworzona skała. To z niej pochodzi mineralny szkielet gleby i jej zasobność w składniki pokarmowe.",
+              "tone": "rock"
+            },
+            {
+              "name": "R — lita skała podłoża",
+              "range": "poniżej profilu",
+              "text": "Niezwietrzała skała macierzysta. Jej skład decyduje o odczynie i żyzności gleby — np. wapienie dają rędziny o odczynie zasadowym.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Strefowe typy gleb",
+          "caption": "Zapamiętaj pary: strefa ↔ typ gleby ↔ proces glebotwórczy. Na maturze pytanie brzmi zwykle „podaj nazwę procesu” albo „wyjaśnij, dlaczego gleby tej strefy są mało/bardzo żyzne”.",
+          "headers": ["Strefa krajobrazowa", "Typ gleby", "Dominujący proces glebotwórczy", "Zawartość próchnicy i żyzność"],
+          "rows": [
+            ["Wilgotne lasy równikowe", "gleby ferralitowe (laterytowe), czerwone i żółte", "laterytyzacja — całkowite wietrzenie chemiczne, wymywanie krzemionki i zasad, akumulacja tlenków żelaza i glinu", "1–2% — bardzo mała; składniki krążą w biomasie, nie w glebie"],
+            ["Sawanny", "gleby czerwone ferruginowe, arenosole", "sezonowe przemywanie w porze deszczowej i podsiąkanie w porze suchej; miejscami twardnienie lateritu", "mała; ryzyko powstania nieprzepuszczalnej skorupy po wylesieniu"],
+            ["Pustynie i półpustynie zwrotnikowe", "gleby inicjalne, szaroziemy, sołonczaki i sołońce", "wznoszenie kapilarne roztworów i zasolenie; wietrzenie fizyczne", "znikoma; żyzność ograniczona wyłącznie brakiem wody i solami"],
+            ["Strefa śródziemnomorska", "gleby cynamonowe, terra rossa na wapieniach", "przemywanie w wilgotnej zimie, wysychanie i utlenianie żelaza latem", "umiarkowana; gleby płytkie i silnie narażone na erozję po wylesieniu"],
+            ["Lasy liściaste i mieszane", "gleby brunatne i płowe (lessivé)", "brunatnienie (uwalnianie tlenków żelaza) i płowienie (przemieszczanie iłu z poziomu E do B)", "3–5% — dobra; podstawa rolnictwa Europy Zachodniej i Środkowej"],
+            ["Stepy", "czarnoziemy, gleby kasztanowe", "akumulacja próchnicy z corocznie obumierającej darni; brak przemywania (opad ≈ parowanie)", "8–12% — najwyższa na Ziemi; gleby o gruzełkowatej strukturze i odczynie obojętnym"],
+            ["Tajga", "gleby bielicowe (bielice)", "bielicowanie — kwaśne kwasy próchnicowe z igliwia wymywają żelazo i glin do poziomu B", "mała; odczyn silnie kwaśny, konieczne wapnowanie i nawożenie"],
+            ["Tundra", "gleby tundrowe glejowe, gleby torfowe", "oglejenie nad nieprzepuszczalną zmarzliną, zabagnienie, kriogeniczne mieszanie gruntu", "próchnicy dużo, ale nierozłożonej; gleby zimne, płytkie i kwaśne"],
+            ["Pustynie lodowe", "brak gleb lub gleby inicjalne (litosole)", "brak procesów glebotwórczych — trwały mróz i brak roślinności", "brak"]
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Obieg materii organicznej w ekosystemie",
+          "caption": "To ten sam obieg w każdej strefie — różni się wyłącznie tempem i tym, gdzie zatrzymuje się największa pula składników: w glebie czy w biomasie.",
+          "stages": [
+            {
+              "name": "Produkcja pierwotna",
+              "text": "Rośliny w fotosyntezie wiążą CO₂ i pobierają z roztworu glebowego jony (azot, fosfor, potas, wapń), budując z nich biomasę. Tempo tego procesu — **produktywność pierwotna netto** — zależy głównie od temperatury, opadów i nasłonecznienia."
+            },
+            {
+              "name": "Konsumpcja",
+              "text": "Roślinożercy zjadają część produkcji, drapieżniki zjadają roślinożerców. Na każdym poziomie troficznym ok. 90% energii jest tracone na oddychanie i ciepło — dlatego dużych drapieżników jest zawsze niewiele."
+            },
+            {
+              "name": "Opad organiczny",
+              "text": "Obumarłe liście, korzenie, odchody i zwłoki trafiają na powierzchnię gleby, tworząc ściółkę. Na stepie największa część opadu pochodzi z **korzeni traw** — dlatego próchnica gromadzi się głęboko w profilu, a nie tylko na powierzchni."
+            },
+            {
+              "name": "Rozkład i humifikacja",
+              "text": "Destruenci rozkładają szczątki, a ich trudniej rozkładalne resztki przekształcają się w **próchnicę (humus)**. Proces jest szybki w cieple i wilgoci, a wolny w chłodzie, suszy lub warunkach beztlenowych (torfowiska)."
+            },
+            {
+              "name": "Mineralizacja i pobranie",
+              "text": "Ostateczny rozkład uwalnia jony do roztworu glebowego, skąd rośliny pobierają je ponownie. W lesie równikowym pobranie następuje niemal natychmiast — składniki nie zdążą wsiąknąć głębiej i **cały zapas krąży w drzewach**, nie w glebie."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Bilans wodny gleby decyduje o kierunku ruchu roztworów",
+          "leftLabel": "Klimat wilgotny (opad > parowanie)",
+          "rightLabel": "Klimat suchy (parowanie > opad)",
+          "rows": [
+            {
+              "aspect": "Kierunek ruchu wody w profilu",
+              "left": "W dół — przemywanie (ługowanie)",
+              "right": "W górę — wznoszenie kapilarne"
+            },
+            {
+              "aspect": "Los składników pokarmowych",
+              "left": "Zasady i węglany są wymywane poza zasięg korzeni; gleba kwaśnieje",
+              "right": "Węglany i sole gromadzą się przy powierzchni; gleba alkalizuje się lub zasala"
+            },
+            {
+              "aspect": "Typowe gleby",
+              "left": "Gleby ferralitowe, bielicowe, płowe",
+              "right": "Szaroziemy, gleby kasztanowe, sołonczaki i sołońce"
+            },
+            {
+              "aspect": "Główne ograniczenie dla rolnictwa",
+              "left": "Zakwaszenie i niedobór składników — potrzebne wapnowanie i nawożenie",
+              "right": "Niedobór wody i **wtórne zasolenie** przy nieumiejętnym nawadnianiu"
+            },
+            {
+              "aspect": "Przykładowy obszar",
+              "left": "Nizina Amazonki, tajga Syberii Zachodniej",
+              "right": "Kotlina Turańska, dorzecze Amu-darii i Syr-darii"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Produktywność pierwotna netto wybranych formacji roślinnych",
+          "caption": "Wartości uśrednione (za R. Whittakerem), w gramach suchej masy na m² rocznie. Zwróć uwagę: produktywność rośnie tam, gdzie jednocześnie jest ciepło i wilgotno. Sama wysoka temperatura (pustynia) lub sama wilgoć bez ciepła (tundra) nie wystarczają.",
+          "labels": ["Wilgotny las równikowy", "Las liściasty umiarkowany", "Sawanna", "Tajga", "Step", "Tundra", "Pustynia"],
+          "series": [
+            {
+              "name": "Produktywność pierwotna netto",
+              "values": [2200, 1200, 900, 800, 600, 140, 90]
+            }
+          ],
+          "unit": "g suchej masy/m² rocznie"
+        },
+        {
+          "type": "classification",
+          "title": "Grupy ekologiczne roślin — przystosowanie do wody",
+          "caption": "Ten podział pozwala jednym słowem opisać roślinność każdej strefy. Warto go znać na pamięć.",
+          "groups": [
+            {
+              "name": "Higrofity",
+              "description": "Rośliny obszarów stale wilgotnych. Duże, cienkie liście o dużej powierzchni transpiracji, słabo rozwinięta kutykula, płytkie korzenie. Nie mają mechanizmów oszczędzania wody, bo ich nie potrzebują.",
+              "examples": ["drzewa wilgotnego lasu równikowego", "paprocie i epifity", "rośliny lasów mgielnych"]
+            },
+            {
+              "name": "Kserofity",
+              "description": "Rośliny obszarów suchych. Ograniczają transpirację (małe liście, gruba kutykula, wosk, włoski, aparaty szparkowe w zagłębieniach) lub magazynują wodę.",
+              "examples": ["sukulenty — kaktusy, agawy, wilczomlecze", "rośliny twardolistne — oliwka, dąb ostrolistny", "akacje sawann"]
+            },
+            {
+              "name": "Efemerydy (terofity pustynne)",
+              "description": "Rośliny jednoroczne o skrajnie skróconym cyklu życiowym. Kiełkują po deszczu, kwitną i wydają nasiona w kilka tygodni, a suszę przetrwają w formie nasion. Dają efekt „kwitnącej pustyni”.",
+              "examples": ["kwitnąca Atakama po latach z opadem", "efemerydy Karakum i Kyzyłkum"]
+            },
+            {
+              "name": "Tropofity",
+              "description": "Rośliny dostosowane do rytmu sezonowego: w niekorzystnej porze roku zrzucają liście i przechodzą w stan spoczynku. Odpowiedź zarówno na suszę, jak i na mróz.",
+              "examples": ["drzewa liściaste strefy umiarkowanej (dąb, buk)", "baobab i drzewa sawann zrzucające liście w porze suchej", "modrzew dahurski gubiący igły na syberyjską zimę"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Bujny las na jałowej glebie — paradoks Amazonii",
+          "region": "Nizina Amazonki, Brazylia",
+          "text": "Wilgotny las równikowy wytwarza najwięcej biomasy ze wszystkich ekosystemów lądowych, a mimo to rośnie na jednych z najuboższych gleb świata. Nie ma tu sprzeczności: **cały zapas składników pokarmowych zmagazynowany jest w żywej biomasie**, a nie w glebie. Opadający liść rozkłada się w kilka tygodni, a uwolnione jony są natychmiast przechwytywane przez gęstą, płytką sieć korzeni i grzybnię mikoryzową, zanim woda opadowa zdąży je wypłukać w głąb profilu. Obieg jest niemal zamknięty i bardzo szybki. Kiedy człowiek wycina i wypala las, popiół daje jednorazowy zastrzyk składników — plony pierwszego i drugiego roku bywają dobre. Potem ulewne deszcze wymywają składniki z odsłoniętej gleby, tlenki żelaza i glinu twardnieją w skorupę laterytową, a pole trzeba porzucić po 3–5 latach. Tradycyjne **rolnictwo żarowo-odłogowe** działało, dopóki wypaloną działkę zostawiano na 15–20 lat regeneracji przy niewielkiej gęstości zaludnienia. Przy dzisiejszej presji demograficznej i przy wielkoobszarowych plantacjach soi oraz pastwiskach dla bydła ten cykl się załamuje.",
+          "takeaway": "Żyzność ekosystemu i żyzność gleby to dwie różne rzeczy. Wycinając las równikowy, usuwa się magazyn składników pokarmowych, a nie tylko drzewa."
+        },
+        {
+          "type": "ordering",
+          "title": "Ustaw ogniwa łańcucha zależności w prawidłowej kolejności",
+          "instruction": "Uporządkuj od czynnika nadrzędnego do skutku najbardziej zależnego.",
+          "items": [
+            "Klimat — rozkład temperatury i opadów w ciągu roku",
+            "Wietrzenie skały macierzystej i powstanie gleby o określonych właściwościach",
+            "Formacja roślinna dostosowana do wilgotności, temperatury i żyzności gleby",
+            "Zespół zwierząt roślinożernych i drapieżnych związanych z tą formacją",
+            "Sposób i ograniczenia gospodarowania człowieka"
+          ],
+          "explanation": "To standardowy schemat opisu strefy krajobrazowej. Odtwarzając go na maturze, masz gotowy plan odpowiedzi na każde pytanie typu „scharakteryzuj strefę X”."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: **utożsamianie bujnej roślinności z żyzną glebą**. Uczniowie piszą, że gleby lasów równikowych są żyzne, „bo rośnie tam gęsty las”. Jest dokładnie odwrotnie — im szybszy rozkład materii organicznej i im silniejsze przemywanie, tym mniej próchnicy zostaje w glebie. Najżyźniejsze gleby świata (czarnoziemy) powstają pod **trawami**, w klimacie umiarkowanie suchym, gdzie próchnica gromadzi się latami, bo mróz i susza hamują jej rozkład."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego czarnoziemy stepowe zawierają kilkakrotnie więcej próchnicy niż gleby wilgotnych lasów równikowych, mimo że produkcja biomasy jest tam znacznie mniejsza?",
+          "options": [
+            "Bo trawy stepowe wytwarzają próchnicę bezpośrednio w liściach",
+            "Bo mroźna zima i sucha część lata hamują rozkład materii organicznej, a brak przemywania zatrzymuje składniki w profilu",
+            "Bo skała macierzysta stepów (less) sama zawiera dużo próchnicy",
+            "Bo na stepie nie ma destruentów rozkładających martwe szczątki"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decydujące jest tempo rozkładu i bilans wodny. Na stepie destruenci działają tylko przez część roku, więc obumarła darń akumuluje się szybciej, niż jest rozkładana. Jednocześnie opad jest zbliżony do parowania, więc uwolnione składniki nie są wymywane poza zasięg korzeni. Less jest wprawdzie doskonałą skałą macierzystą — zasobną w węglan wapnia i przepuszczalną — ale sam próchnicy nie zawiera."
+        },
+        {
+          "type": "quiz",
+          "question": "Rolnik nawadnia pole w klimacie zwrotnikowym suchym, stosując obfite zalewanie i nie budując drenażu. Jaki proces glebowy najprawdopodobniej doprowadzi do utraty plonów?",
+          "options": [
+            "Bielicowanie — wymycie żelaza i glinu do poziomu iluwialnego",
+            "Wtórne zasolenie — podniesienie zwierciadła wód gruntowych i wytrącenie soli przy powierzchni po parowaniu wody",
+            "Oglejenie — powstanie warunków beztlenowych nad wieloletnią zmarzliną",
+            "Płowienie — przemieszczenie cząstek ilastych z poziomu E do B"
+          ],
+          "correctIndex": 1,
+          "explanation": "W klimacie o wysokim parowaniu woda dostarczona na pole częściowo wsiąka i podnosi poziom wód gruntowych, a częściowo paruje z powierzchni. Rozpuszczone w niej sole zostają — z każdym cyklem nawodnienia jest ich więcej. Powstaje biała, solna skorupa, która uniemożliwia wzrost roślin. To główna przyczyna degradacji pól w Azji Środkowej i w dolinie Nilu. Bielicowanie i oglejenie wymagają nadmiaru wody i chłodu, a płowienie — klimatu umiarkowanego wilgotnego."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o glebach na maturze rozszerzonej mają zwykle jeden z trzech kształtów: (1) rozpoznaj typ gleby po opisie profilu lub po strefie, (2) podaj nazwę procesu glebotwórczego, (3) oceń przydatność rolniczą i uzasadnij. Do trzeciego typu miej gotowy zestaw czynników: **zawartość próchnicy, odczyn, miąższość poziomu próchnicznego, stosunki wodne i zagrożenie erozją**. Odpowiedź „gleba jest żyzna, bo jest czarna” nie zdobywa punktu — „gleba zawiera 8–12% próchnicy, ma odczyn obojętny i strukturę gruzełkowatą, co zapewnia dobre stosunki wodno-powietrzne” zdobywa."
+        }
+      ]
+    },
+    {
+      "slug": "strefy-miedzyzwrotnikowe",
+      "title": "Strefy gorące: lasy równikowe, sawanny i pustynie zwrotnikowe",
+      "summary": "Trzy strefy pasa międzyzwrotnikowego — od nieustannego deszczu po skrajną suszę.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Między zwrotnikami mieści się najgorętsza część Ziemi — i jednocześnie najbardziej kontrastowa pod względem opadów. Na przestrzeni zaledwie 2500 km, od Kisangani nad Kongo do Tamanrasset na Saharze, roczna suma opadów spada z ponad 1700 mm do kilku milimetrów. Temperatura zmienia się przy tym niewiele. To dowód, że w pasie międzyzwrotnikowym **o krajobrazie decydują opady, a nie temperatura** — i że rytm opadów wyznacza wędrówka jednego układu barycznego: strefy zbieżności pasatów."
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — stacja 1",
+          "station": "Manaus (Brazylia, 3°S)",
+          "caption": "Przeanalizuj amplitudę roczną temperatury i rozkład opadów, zanim odsłonisz odpowiedź.",
+          "temps": [26.1, 26.0, 26.1, 26.3, 26.7, 26.9, 27.0, 27.7, 27.9, 27.8, 27.4, 26.7],
+          "precip": [260, 288, 314, 300, 256, 114, 88, 58, 83, 126, 183, 217],
+          "answer": {
+            "climate": "Klimat równikowy wilgotny (strefa równikowa)",
+            "reasoning": "Temperatura powyżej 26 °C przez cały rok, amplituda roczna zaledwie ok. 1,9 °C — to możliwe tylko w pobliżu równika, gdzie kąt padania promieni słonecznych zmienia się w ciągu roku minimalnie. Roczna suma opadów przekracza 2200 mm i opady występują w każdym miesiącu (minimum ok. 58 mm), z dwoma maksimami związanymi z dwukrotnym przejściem strefy zbieżności pasatów nad równikiem."
+          }
+        },
+        {
+          "type": "layers",
+          "title": "Piętrowa budowa wilgotnego lasu równikowego",
+          "caption": "Kliknij poszczególne warstwy. Ta struktura jest efektem konkurencji o światło — do dna lasu dociera zaledwie 1–2% promieniowania padającego na korony.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Runo i dno lasu",
+              "range": "0–2 m",
+              "text": "Wbrew wyobrażeniom — bardzo ubogie i łatwe do przejścia. Panuje tu półmrok, wilgotność bliska 100% i niemal całkowity bezruch powietrza. Rosną saprofity i siewki, a ściółka rozkłada się w kilka tygodni. Gęsta, nieprzebyta dżungla powstaje tylko tam, gdzie światło dociera do dna: na brzegach rzek i w lukach po powalonych drzewach.",
+              "tone": "earth"
+            },
+            {
+              "name": "Podszyt",
+              "range": "2–10 m",
+              "text": "Krzewy, młode drzewa, paprocie drzewiaste i palmy cieniolubne. Liście duże i cienkie — maksymalizują przechwytywanie skąpego światła.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Dolna warstwa drzew",
+              "range": "10–25 m",
+              "text": "Drzewa o wąskich, wysmukłych koronach czekające na lukę w okapie. Pnie oplecione lianami, na gałęziach epifity — storczyki i bromelie, które czerpią wodę z powietrza i nie potrzebują kontaktu z glebą.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Warstwa koron (okap)",
+              "range": "25–45 m",
+              "text": "Zwarte sklepienie przechwytujące niemal całe światło. Tu zachodzi ok. 90% fotosyntezy i tu żyje większość gatunków lasu — małpy, ptaki, owady. Liście mają charakterystyczne **okapniki** (wyciągnięte końce), po których szybko spływa woda, co zapobiega rozwojowi glonów i grzybów na blaszce.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Drzewa wystające (emergenty)",
+              "range": "45–60 m i więcej",
+              "text": "Pojedyncze olbrzymy górujące nad okapem, np. ceiba (puchowiec) czy drzewo kapokowe. Wystawione na silny wiatr i intensywne promieniowanie. Utrzymują się dzięki **korzeniom szkarpowym (przyporowym)** — płaskim, kilkumetrowym podporom, koniecznym, bo system korzeniowy jest płytki: składniki pokarmowe są tylko przy powierzchni.",
+              "tone": "vegetation"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — stacja 2",
+          "station": "Kano (Nigeria, 12°N)",
+          "caption": "Porównaj z poprzednim wykresem: temperatura podobnie wysoka, ale rozkład opadów zupełnie inny.",
+          "temps": [21.5, 24.0, 28.0, 31.0, 30.5, 28.5, 26.5, 25.5, 26.5, 27.5, 25.0, 22.0],
+          "precip": [0, 0, 2, 10, 65, 110, 205, 300, 130, 15, 0, 0],
+          "answer": {
+            "climate": "Klimat podrównikowy suchy (sawannowy)",
+            "reasoning": "Temperatury wysokie przez cały rok (amplituda ok. 9,5 °C — większa niż na równiku, bo szerokość geograficzna jest wyższa), z maksimum w kwietniu, czyli tuż przed porą deszczową, gdy zachmurzenie jest jeszcze małe. Roczna suma opadów ok. 840 mm skupiona w jednej porze deszczowej (V–IX) z maksimum w sierpniu, gdy strefa zbieżności pasatów jest najdalej wysunięta na północ. Przez pięć miesięcy opady są zerowe — to klasyczny rytm sawanny suchej."
+          }
+        },
+        {
+          "type": "cycle",
+          "title": "Wędrówka strefy zbieżności pasatów (ITCZ) w ciągu roku",
+          "caption": "Ten jeden mechanizm wyjaśnia i dwie pory deszczowe na równiku, i jedną w sawannie, i suchość obszarów zwrotnikowych. Kliknij kolejne etapy.",
+          "stages": [
+            {
+              "name": "Grudzień–luty",
+              "text": "Słońce góruje w zenicie nad zwrotnikiem Koziorożca. Strefa zbieżności pasatów (ITCZ) jest przesunięta najdalej na południe — nad Afryką sięga ok. 15°S. **Pora deszczowa panuje w sawannach półkuli południowej** (Zambia, Zimbabwe, brazylijskie cerrado), a w Sahelu trwa sucha, zapylona pora z wiatrem harmattan wiejącym znad Sahary."
+            },
+            {
+              "name": "Marzec–maj",
+              "text": "Zenitalne górowanie Słońca przesuwa się ku równikowi i dalej na północ, a wraz z nim ITCZ. **Nad równikiem następuje pierwsze z dwóch rocznych maksimów opadów** (zobacz marzec–kwiecień na wykresie z Manaus). W sawannach półkuli północnej zaczyna padać."
+            },
+            {
+              "name": "Czerwiec–sierpień",
+              "text": "Słońce góruje w zenicie nad zwrotnikiem Raka. ITCZ osiąga najdalsze położenie północne — nad Afryką Zachodnią ok. 15–20°N. **Szczyt pory deszczowej w Sahelu i w sawannie sudańskiej** (sierpniowe maksimum w Kano). Nad równikiem jest wtedy relatywnie sucho, bo ITCZ jest daleko."
+            },
+            {
+              "name": "Wrzesień–listopad",
+              "text": "ITCZ wraca na południe, po drodze **drugi raz w roku przechodząc nad równikiem** — stąd drugie maksimum opadów w strefie równikowej (październik–listopad w Manaus). W sawannie północnej pora deszczowa gwałtownie się kończy."
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — stacja 3",
+          "station": "Asuan (Egipt, 24°N)",
+          "caption": "Ostatnia stacja pasa międzyzwrotnikowego. Zwróć uwagę na oś opadów.",
+          "temps": [16.0, 18.0, 22.0, 27.0, 31.0, 33.0, 33.5, 33.0, 31.0, 28.0, 22.0, 17.5],
+          "precip": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "answer": {
+            "climate": "Klimat zwrotnikowy suchy (pustynny) kontynentalny",
+            "reasoning": "Opady praktycznie nie występują — Asuan leży w obszarze stałego oddziaływania **wyżu zwrotnikowego**, gdzie powietrze osiada, ogrzewa się adiabatycznie i jego wilgotność względna spada, więc chmury nie powstają. Bardzo wysokie temperatury latem (ponad 33 °C), wyraźnie chłodniejsza zima (16 °C) i duża amplituda roczna (ok. 17,5 °C) wskazują na położenie w głębi lądu, z dala od łagodzącego wpływu morza. Amplituda dobowa przekracza tu 15 °C — bezchmurne niebo oznacza silne nagrzewanie w dzień i intensywne wypromieniowanie nocą."
+          }
+        },
+        {
+          "type": "classification",
+          "title": "Przystosowania organizmów pustyni zwrotnikowej",
+          "caption": "Trzy strategie roślin i trzy strategie zwierząt — każda rozwiązuje ten sam problem inaczej.",
+          "groups": [
+            {
+              "name": "Rośliny magazynujące wodę (sukulenty)",
+              "description": "Gromadzą wodę w mięsistych łodygach lub liściach, mają grubą kutykulę, warstwę wosku i zredukowane liście (ciernie), które ograniczają transpirację i chronią przed zwierzętami. Aparaty szparkowe otwierają się dopiero nocą (fotosynteza typu CAM), gdy parowanie jest najmniejsze.",
+              "examples": ["kaktusy Ameryki Północnej i Południowej", "wilczomlecze Afryki", "agawy", "aloesy"]
+            },
+            {
+              "name": "Rośliny sięgające po wodę gruntową",
+              "description": "Zamiast magazynować, docierają do zwierciadła wód podziemnych korzeniami palowymi o długości nawet kilkudziesięciu metrów. Dzięki temu zachowują liście i wegetują przez cały rok.",
+              "examples": ["akacje", "tamaryszek", "saksauł pustyń Azji Środkowej"]
+            },
+            {
+              "name": "Rośliny unikające suszy (efemerydy)",
+              "description": "Przeczekują suszę jako nasiona odporne na wysokie temperatury. Po rzadkim deszczu kiełkują, kwitną i owocują w ciągu 2–6 tygodni. Efektem jest zjawisko „kwitnącej pustyni”.",
+              "examples": ["efemerydy Atakamy", "roślinność Karakum po wiosennych deszczach"]
+            },
+            {
+              "name": "Zwierzęta — ograniczanie strat wody",
+              "description": "Wydalają skoncentrowany mocz i suche odchody, część gatunków nie pije w ogóle, czerpiąc wodę metaboliczną z rozkładu pokarmu. Wielbłąd toleruje utratę do ok. 25% masy ciała i wahania temperatury ciała o kilka stopni, dzięki czemu nie musi się pocić w dzień.",
+              "examples": ["wielbłąd jednogarbny", "skoczkowate (gryzonie pustynne)", "antylopa addax"]
+            },
+            {
+              "name": "Zwierzęta — unikanie upału",
+              "description": "Aktywność nocna lub o świcie i zmierzchu, przeczekiwanie dnia w norach, gdzie temperatura jest o kilkanaście stopni niższa i wilgotność wyższa. Duże uszy (fenek) zwiększają powierzchnię oddawania ciepła.",
+              "examples": ["fenek", "skorpiony", "gekony", "jerboa"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Trzy strefy pasa międzyzwrotnikowego — zestawienie",
+          "caption": "Tabela do nauki na pamięć. W zadaniach maturalnych najczęściej porównuje się wiersze „gleby”, „przystosowania” i „ograniczenia gospodarowania”.",
+          "headers": ["Cecha", "Wilgotne lasy równikowe", "Sawanny", "Pustynie zwrotnikowe"],
+          "rows": [
+            ["Temperatura", "24–28 °C przez cały rok, amplituda roczna 1–3 °C, amplituda dobowa większa od rocznej", "24–30 °C, amplituda roczna 5–10 °C, maksimum przed porą deszczową", "lato powyżej 30 °C, zima 10–20 °C, amplituda dobowa nawet 30–40 °C"],
+            ["Opady", "powyżej 2000 mm, w każdym miesiącu, dwa maksima; głównie konwekcyjne, popołudniowe", "500–1500 mm, jedna pora deszczowa (2–7 miesięcy); im dalej od równika, tym krótsza i bardziej niepewna", "poniżej 250 mm, nieregularne; miejscami brak opadów przez kilka lat"],
+            ["Gleby", "ferralitowe (laterytowe), czerwone, kwaśne, ubogie, o cienkim poziomie próchnicznym", "czerwone gleby ferruginowe; miejscami twarda skorupa laterytowa odsłonięta po wylesieniu", "gleby inicjalne, szaroziemy, sołonczaki; hamady, seriry i ergi zamiast gleb"],
+            ["Formacja roślinna", "wielopiętrowy, wiecznie zielony las o ogromnej różnorodności — do 300 gatunków drzew na hektarze", "trawy (do 3–5 m w sawannie wilgotnej) z pojedynczymi drzewami: akacjami i baobabami", "roślinność skrajnie uboga, kępowa; sukulenty, efemerydy, w oazach palma daktylowa"],
+            ["Fauna", "gatunki nadrzewne o chwytnych ogonach i kamuflażu: małpy, leniwce, papugi, żaby drzewne; ogromna liczba owadów", "wielkie stada roślinożerców odbywających sezonowe migracje (gnu, zebry, antylopy, słonie, żyrafy) i drapieżniki (lew, gepard)", "gatunki nocne, ryjące nory, oszczędzające wodę: fenek, addax, skoczkowate, gady"],
+            ["Możliwości gospodarowania", "plantacje kakao, kauczuku, palmy olejowej i bananów; pozyskanie drewna szlachetnego; ogromny potencjał hydroenergetyczny", "pasterstwo koczownicze i uprawa prosa, sorga oraz orzeszków ziemnych; turystyka safari i parki narodowe", "rolnictwo oazowe (daktyle, warzywa) i nawadniane; wydobycie ropy, gazu i fosforytów; energetyka słoneczna"],
+            ["Ograniczenia i zagrożenia", "gleby tracą żyzność po 3–5 latach; choroby (malaria, śpiączka); szybkie wylesianie pod soję i pastwiska", "susze i nieprzewidywalność pory deszczowej; przepas i wylesianie prowadzą do **pustynnienia**, zwłaszcza w Sahelu", "brak wody, silne parowanie, wtórne zasolenie gleb, ruchome piaski, ekstremalne temperatury"]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Sahel — gdzie strefa krajobrazowa przesuwa się na oczach jednego pokolenia",
+          "region": "Sahel: pas od Mauretanii i Senegalu po Sudan i Erytreę, ok. 12–17°N",
+          "text": "Sahel to strefa przejściowa między Saharą a wilgotną sawanną sudańską, o opadach 150–600 mm rocznie skupionych w 2–4 miesiącach. Jej klimat jest z natury bardzo zmienny: suma opadów zależy od tego, jak daleko na północ dotrze w danym roku strefa zbieżności pasatów. Po serii wilgotnych lat lat 50. i 60. XX w. nastąpiły katastrofalne susze **1968–1974 i 1983–1985**, które doprowadziły do masowego padnięcia bydła, klęski głodu i migracji milionów ludzi. Naturalną suszę wzmocniły czynniki antropogeniczne: gwałtowny wzrost liczby ludności i pogłowia zwierząt, **przepas** niszczący darń, wycinanie drzew na opał i orka gleb, które po utracie okrywy roślinnej stały się podatne na erozję wietrzną. Wzrosło albedo odsłoniętej powierzchni, co ograniczyło konwekcję i jeszcze bardziej zmniejszyło opady — klasyczne **dodatnie sprzężenie zwrotne**. Odpowiedzią jest dziś m.in. inicjatywa Wielkiego Zielonego Muru (od 2007 r.), a przede wszystkim proste techniki: półksiężycowe zagłębienia zatrzymujące wodę, doły zaï, regeneracja drzew z pniaków (FMNR) i agroleśnictwo.",
+          "takeaway": "Pustynnienie nie polega na „przesuwaniu się wydm”, lecz na degradacji gleb i roślinności w strefie suchej pod wpływem suszy i presji człowieka. Granica stref krajobrazowych jest ruchoma i wrażliwa."
+        },
+        {
+          "type": "map-explore",
+          "title": "Pas międzyzwrotnikowy na mapie świata",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że te same trzy strefy powtarzają się na wszystkich kontynentach po obu stronach równika.",
+          "center": [3, 15],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 0.52,
+              "lng": 25.2,
+              "label": "Kisangani, DR Konga",
+              "text": "Serce kotliny Konga — druga co do wielkości połać wilgotnego lasu równikowego na Ziemi. Opady powyżej 1700 mm, brak pory suchej."
+            },
+            {
+              "lat": -3.1,
+              "lng": -60.02,
+              "label": "Manaus, Brazylia",
+              "text": "Amazonia — największy zwarty las równikowy świata. Miejsce spotkania „czarnej” Rio Negro i „białej” Solimões."
+            },
+            {
+              "lat": -2.33,
+              "lng": 34.83,
+              "label": "Serengeti, Tanzania",
+              "text": "Sawanna wschodnioafrykańska. Corocznie ponad milion gnu i setki tysięcy zebr wędrują za deszczem — migracja sterowana rytmem ITCZ."
+            },
+            {
+              "lat": -15.79,
+              "lng": -47.88,
+              "label": "Cerrado, Brazylia",
+              "text": "Sawanna półkuli południowej. Pora deszczowa przypada tu na grudzień–marzec, czyli w przeciwfazie do Sahelu."
+            },
+            {
+              "lat": 12.0,
+              "lng": 8.52,
+              "label": "Kano, Nigeria",
+              "text": "Sawanna sudańska na granicy Sahelu. Jedna pora deszczowa z maksimum w sierpniu; opady ok. 840 mm."
+            },
+            {
+              "lat": 22.79,
+              "lng": 5.53,
+              "label": "Tamanrasset, Algieria",
+              "text": "Środek Sahary, na wyżynie Ahaggar. Opady poniżej 50 mm rocznie, ogromne amplitudy dobowe."
+            },
+            {
+              "lat": -23.7,
+              "lng": 133.88,
+              "label": "Alice Springs, Australia",
+              "text": "Australijska pustynia zwrotnikowa („czerwone centrum”) — ten sam mechanizm wyżu zwrotnikowego, co na Saharze."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uwaga na dwa mylone pojęcia. **Sawanna** to strefa podrównikowa z jedną porą deszczową, trawami i drzewami — występuje między lasem równikowym a pustynią zwrotnikową. **Step** to strefa umiarkowana z mroźną zimą, bez drzew, na czarnoziemach. Obie są trawiaste, ale klimat, gleby i fauna są zupełnie inne. Drugi częsty błąd: pisanie, że w lesie równikowym „jest gęsta, nieprzebyta dżungla” — dno lasu jest ubogie i przejrzyste, bo dociera do niego 1–2% światła. Zwarta gęstwina rośnie tylko przy rzekach i w lukach po powalonych drzewach."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w strefie równikowej występują dwa maksima opadów w roku, a w sawannie tylko jedno?",
+          "options": [
+            "Bo nad równikiem prądy morskie zmieniają kierunek dwa razy w roku",
+            "Bo strefa zbieżności pasatów przechodzi nad równikiem dwukrotnie (wędrując na północ i z powrotem), a nad sawanną osiąga tylko skrajne położenie raz w roku",
+            "Bo na równiku Słońce góruje w zenicie przez cały rok",
+            "Bo w sawannie parowanie jest zbyt duże, by opady mogły wystąpić dwa razy"
+          ],
+          "correctIndex": 1,
+          "explanation": "ITCZ przemieszcza się w ślad za zenitalnym górowaniem Słońca. Nad równikiem Słońce góruje w zenicie dwa razy w roku (ok. 21 III i 23 IX), więc ITCZ przechodzi tamtędy dwukrotnie — stąd dwie pory deszczowe, często zlewające się ze sobą. Nad szerokością 12°N ITCZ dociera tylko w kulminacyjnym momencie swojej wędrówki na północ, dając jedną, krótszą porę deszczową."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaż zestaw cech charakteryzujących glebę ferralitową wilgotnego lasu równikowego.",
+          "options": [
+            "Odczyn zasadowy, wysoka zawartość węglanu wapnia, gruby poziom próchniczny",
+            "Odczyn kwaśny, wysoka zawartość tlenków żelaza i glinu, cienki poziom próchniczny, mała zasobność w składniki pokarmowe",
+            "Odczyn obojętny, struktura gruzełkowata, 8–12% próchnicy",
+            "Wysokie zasolenie, białe wykwity soli na powierzchni, brak poziomu B"
+          ],
+          "correctIndex": 1,
+          "explanation": "Odpowiedź C opisuje czarnoziem, D — sołonczak, A — rędzinę lub glebę węglanową. Gleby ferralitowe powstają przy intensywnym wietrzeniu chemicznym i przemywaniu: krzemionka i zasady są wymywane, a w profilu pozostają trudno rozpuszczalne tlenki żelaza i glinu, które nadają glebie czerwoną barwę. Poziom próchniczny jest cienki, bo materia organiczna rozkłada się natychmiast."
+        },
+        {
+          "type": "quiz",
+          "question": "Rolnik w Sahelu zwiększa pogłowie kóz i wypala krzewy pod pastwiska. Jaka sekwencja skutków najlepiej opisuje mechanizm pustynnienia w tym przypadku?",
+          "options": [
+            "Wzrost wypasu → zniszczenie darni → erozja wietrzna i wzrost albedo → osłabienie konwekcji i spadek opadów → dalsza degradacja",
+            "Wzrost wypasu → zwiększenie zawartości próchnicy → zakwaszenie gleby → obumieranie traw",
+            "Wypalanie krzewów → wzrost wilgotności powietrza → większe opady → wymycie składników z gleby",
+            "Wzrost pogłowia → zwiększenie retencji wody w glebie → podniesienie wód gruntowych → zasolenie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kluczem jest dodatnie sprzężenie zwrotne. Zniszczona okrywa roślinna przestaje chronić glebę przed wywiewaniem, a jasna, odsłonięta powierzchnia odbija więcej promieniowania (wyższe albedo), więc mniej energii ogrzewa powietrze przy gruncie. Słabsza konwekcja to mniej chmur i opadów, a mniejsze opady to jeszcze uboższa roślinność. Odpowiedzi B, C i D odwracają kierunek zależności."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Klimatogram jest jednym z najczęściej powtarzających się zadań maturalnych. Rozpoznawaj klimat w stałej kolejności: **(1) amplituda roczna temperatury** — mała (do 5 °C) oznacza strefę równikową lub klimat morski, duża (powyżej 25 °C) kontynentalny umiarkowany; **(2) czy najcieplejszy miesiąc przypada na lipiec, czy na styczeń** — to rozstrzyga o półkuli; **(3) roczna suma i rozkład opadów** — maksimum letnie sugeruje monsun lub kontynentalizm, maksimum zimowe klimat śródziemnomorski, brak pory suchej — strefę równikową lub morską. Dopiero na końcu przypisz nazwę. W uzasadnieniu **zawsze podawaj konkretne liczby z wykresu** — klucz CKE punktuje wartości, nie ogólniki."
+        }
+      ]
+    },
+    {
+      "slug": "strefy-umiarkowane",
+      "title": "Strefy umiarkowane: śródziemnomorska, lasy liściaste i mieszane, stepy",
+      "summary": "Trzy strefy o czterech porach roku — i o najgęstszym zaludnieniu oraz najżyźniejszych glebach Ziemi.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Strefy umiarkowane to obszar, na którym mieszka większość ludzkości i powstała większość światowej produkcji rolnej i przemysłowej. Rządzi tu nie tyle temperatura, ile **sezonowość**: wyraźny rytm czterech pór roku i okres wegetacyjny ograniczony przez mróz. W tej lekcji zobaczysz, jak jedna zmienna — odległość od oceanu — rozdziela ten pas na trzy zupełnie różne krajobrazy: wiecznie zielony gaj oliwny, liściasty las i bezdrzewny step."
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — Europa Południowa",
+          "station": "Rzym (Włochy, 42°N)",
+          "caption": "Uwaga na miesiąc, w którym wypada minimum opadów — to najważniejsza wskazówka.",
+          "temps": [8.0, 9.0, 11.5, 14.0, 18.5, 22.5, 25.5, 25.5, 21.5, 17.0, 12.5, 9.0],
+          "precip": [67, 73, 58, 81, 53, 34, 19, 37, 73, 113, 115, 81],
+          "answer": {
+            "climate": "Klimat podzwrotnikowy morski (śródziemnomorski)",
+            "reasoning": "Najcieplejszy miesiąc to lipiec/sierpień (25,5 °C), najzimniejszy styczeń (8 °C) — półkula północna, amplituda roczna 17,5 °C, więc klimat umiarkowanie łagodny, bez mrozów. Kluczowa jest **odwrotna sezonowość opadów**: minimum przypada na lato (lipiec 19 mm), a maksimum na późną jesień i zimę (październik–listopad ponad 110 mm). Roczna suma ok. 800 mm. Taki rozkład występuje tylko na zachodnich obrzeżach kontynentów między 30° a 45° szerokości."
+          }
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego strefa śródziemnomorska ma suche lato i deszczową zimę",
+          "caption": "Ten mechanizm to sezonowe przesuwanie pasów ciśnienia — najczęściej sprawdzany „dlaczego” z tej strefy.",
+          "steps": [
+            {
+              "title": "1. Latem pasy ciśnienia przesuwają się na północ",
+              "text": "W ślad za zenitalnym górowaniem Słońca cały układ stref barycznych wędruje ku biegunowi. Nad basen Morza Śródziemnego wsuwa się wtedy północna część **wyżu zwrotnikowego** (Wyż Azorski)."
+            },
+            {
+              "title": "2. W wyżu powietrze osiada",
+              "text": "Osiadające powietrze ogrzewa się adiabatycznie (ok. 1 °C na 100 m). Jego temperatura rośnie, więc **wilgotność względna spada**, a poziom kondensacji podnosi się poza zasięg konwekcji. Chmury nie powstają — lato jest bezdeszczowe, słoneczne i gorące."
+            },
+            {
+              "title": "3. Zimą pasy wracają na południe",
+              "text": "Wyż zwrotnikowy cofa się w stronę równika, a nad Morze Śródziemne wkracza strefa wiatrów zachodnich wraz z **frontem polarnym** i wędrującymi znad Atlantyku niżami. Ciepłe morze dodatkowo zasila je wilgocią i energią."
+            },
+            {
+              "title": "4. Skutek dla roślin: susza w okresie wegetacji",
+              "text": "Deszcz pada wtedy, gdy jest chłodno i wegetacja i tak zwolniona, a brakuje go wtedy, gdy temperatura sprzyja wzrostowi. Rośliny musiały więc rozwinąć **twardolistność (skleromorfizm)**: małe, skórzaste, wiecznie zielone liście z grubą kutykulą i woskiem, aparaty szparkowe w zagłębieniach, olejki eteryczne ograniczające parowanie. Wiecznie zielone pozostają dlatego, że mogą wykorzystać łagodną, wilgotną zimę do fotosyntezy."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Formacje roślinne strefy śródziemnomorskiej — od lasu do kamienistego ugoru",
+          "caption": "To sekwencja degradacji: każda kolejna formacja powstaje po wycięciu, wypaleniu i wypasie poprzedniej. Odtworzenie lasu trwa setki lat.",
+          "groups": [
+            {
+              "name": "Lasy twardolistne (formacja pierwotna)",
+              "description": "Wiecznie zielony las o zwartym okapie 10–20 m. Dziś zachowany tylko na niewielkich powierzchniach — przez tysiąclecia wycinany pod pola, pastwiska i na budowę okrętów.",
+              "examples": ["dąb ostrolistny", "dąb korkowy", "sosna alepska", "pinia", "dąb kermesowy"]
+            },
+            {
+              "name": "Makia (macchia, maquis)",
+              "description": "Gęste, trudne do przejścia zarośla wiecznie zielonych krzewów o wysokości 2–5 m, na podłożach kwaśnych i wilgotniejszych. Wtórna formacja po wycięciu lasu.",
+              "examples": ["mirt", "wrzosiec drzewiasty", "dzika oliwka", "laur szlachetny", "chruścina jagodna"]
+            },
+            {
+              "name": "Garig (garrigue)",
+              "description": "Niższe (do 1 m) i luźne zarośla twardolistne na suchym, wapiennym podłożu — kolejny etap degradacji, silnie przekształcony wypasem kóz. Bogaty w rośliny aromatyczne.",
+              "examples": ["lawenda", "rozmaryn", "tymianek", "karłowaty dąb kermesowy", "czystek"]
+            },
+            {
+              "name": "Frygana (tomillary)",
+              "description": "Najuboższa formacja: niskie, kolczaste i poduchowate krzewinki na silnie zerodowanych, kamienistych stokach Grecji, Bliskiego Wschodu i Hiszpanii. Ostatni etap przed odsłonięciem litej skały.",
+              "examples": ["kolczaste astragalusy", "szałwia", "cząber", "wilczomlecze"]
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — Europa Środkowa",
+          "station": "Warszawa (Polska, 52°N)",
+          "caption": "Twoja własna strefa krajobrazowa. Sprawdź, ile miesięcy ma tu średnią temperaturę powyżej 5 °C — to długość okresu wegetacyjnego.",
+          "temps": [-1.8, -0.6, 3.0, 9.0, 14.4, 17.5, 19.6, 19.0, 14.0, 9.0, 3.8, 0.0],
+          "precip": [30, 28, 33, 39, 57, 70, 78, 65, 50, 41, 40, 35],
+          "answer": {
+            "climate": "Klimat umiarkowany ciepły przejściowy (morsko-kontynentalny)",
+            "reasoning": "Cztery wyraźne pory roku: najcieplejszy lipiec (19,6 °C), najzimniejszy styczeń (−1,8 °C), amplituda roczna ok. 21,4 °C — pośrednia między morską (poniżej 15 °C) a kontynentalną (powyżej 30 °C), stąd określenie „przejściowy”. Trzy miesiące ze średnią poniżej 0 °C oznaczają zimę z pokrywą śnieżną. Opady umiarkowane (ok. 570 mm) i występujące przez cały rok, ale z wyraźnym maksimum letnim (lipiec 78 mm) — typowym dla opadów konwekcyjnych nad ogrzanym lądem. Okres wegetacyjny (średnia dobowa powyżej 5 °C) trwa ok. 210 dni."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Strefa śródziemnomorska a strefa lasów liściastych i mieszanych",
+          "leftLabel": "Śródziemnomorska",
+          "rightLabel": "Lasy liściaste i mieszane",
+          "rows": [
+            {
+              "aspect": "Rytm opadów",
+              "left": "Maksimum zimą, susza latem — deszcz i ciepło rozminięte w czasie",
+              "right": "Opady przez cały rok z maksimum letnim — deszcz i ciepło zbiegają się"
+            },
+            {
+              "aspect": "Strategia drzew",
+              "left": "Wiecznie zielone, twardolistne — chronią się przed **suszą letnią**",
+              "right": "Zrzucające liście na zimę — chronią się przed **mrozem i suszą fizjologiczną**"
+            },
+            {
+              "aspect": "Gatunki charakterystyczne",
+              "left": "Dąb ostrolistny i korkowy, oliwka, sosna alepska, pinia",
+              "right": "Dąb szypułkowy, buk, grab, klon, lipa; z domieszką sosny i świerku w lasach mieszanych"
+            },
+            {
+              "aspect": "Gleby",
+              "left": "Cynamonowe i terra rossa — płytkie, na wapieniach, bardzo podatne na erozję po wylesieniu",
+              "right": "Brunatne i płowe — głębsze, o dobrej strukturze, 3–5% próchnicy"
+            },
+            {
+              "aspect": "Rolnictwo",
+              "left": "Uprawy trwałe odporne na suszę: oliwka, winorośl, cytrusy, figowiec; zboża ozime siane jesienią; nawadnianie niezbędne latem",
+              "right": "Uprawy jednoroczne: pszenica, kukurydza, ziemniaki, buraki cukrowe; rolnictwo intensywne, wysokotowarowe"
+            },
+            {
+              "aspect": "Główne zagrożenia",
+              "left": "Pożary, erozja gleb, deficyt wody latem spotęgowany turystyką",
+              "right": "Wylesienie historyczne (strefa najbardziej przekształcona przez człowieka), zakwaszenie i eutrofizacja"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — wnętrze Azji",
+          "station": "Astana (Kazachstan, 51°N)",
+          "caption": "Ta sama szerokość geograficzna co Warszawa. Porównaj oba wykresy — różnica bierze się wyłącznie z odległości od oceanu.",
+          "temps": [-14.2, -14.0, -7.0, 5.0, 13.5, 19.5, 21.0, 19.0, 13.0, 5.0, -5.0, -11.5],
+          "precip": [17, 15, 17, 22, 33, 41, 54, 33, 24, 29, 26, 22],
+          "answer": {
+            "climate": "Klimat umiarkowany chłodny kontynentalny (suchy — stepowy)",
+            "reasoning": "Ta sama szerokość geograficzna co Warszawa, ale amplituda roczna wynosi ok. 35 °C (od −14,2 °C w styczniu do 21 °C w lipcu) zamiast 21 °C — to skutek **kontynentalizmu**: położenia w głębi Eurazji, z dala od łagodzącego wpływu oceanu. Roczna suma opadów zaledwie ok. 333 mm, z maksimum letnim (opady konwekcyjne). Przy takim parowaniu latem to za mało, by utrzymać las — dlatego rośnie tu step, a nie lasy liściaste."
+          }
+        },
+        {
+          "type": "definition",
+          "term": "Step",
+          "text": "**Bezdrzewna formacja roślinna złożona z traw i bylin, występująca w klimacie umiarkowanym kontynentalnym**, gdzie opady (250–500 mm) są zbyt małe, by utrzymać las, ale wystarczające, by nie powstała pustynia. Dominują trawy kępowe o głębokich, gęstych systemach korzeniowych — ostnica, kostrzewa, perz — które co roku obumierają i budują potężny poziom próchniczny czarnoziemu.",
+          "note": "Regionalne nazwy tej samej formacji: **preria** (Ameryka Północna), **pampa** (Argentyna i Urugwaj), **puszta** (Nizina Węgierska), **weld** (RPA — choć ten leży już w strefie podzwrotnikowej). Step wysokotrawiasty przechodzi ku wnętrzu kontynentu w step niskotrawiasty, a dalej w półpustynię."
+        },
+        {
+          "type": "table",
+          "title": "Trzy strefy umiarkowane — zestawienie",
+          "caption": "Zauważ, jak stopniowo spada suma opadów przy zbliżonej szerokości geograficznej — i jak zmienia się w ślad za tym cała reszta środowiska.",
+          "headers": ["Cecha", "Strefa śródziemnomorska", "Lasy liściaste i mieszane", "Stepy"],
+          "rows": [
+            ["Klimat", "podzwrotnikowy morski: lato 22–28 °C i suche, zima 5–12 °C i deszczowa, bez mrozów", "umiarkowany ciepły morski lub przejściowy: amplituda 10–25 °C, cztery pory roku", "umiarkowany ciepły lub chłodny kontynentalny: amplituda 30–40 °C, mroźna zima, gorące lato"],
+            ["Opady", "500–900 mm, maksimum jesienno-zimowe, letnia susza 2–4 miesiące", "500–1000 mm, przez cały rok, maksimum letnie", "250–500 mm, maksimum letnie, częste susze i lata bezśnieżne"],
+            ["Gleby", "gleby cynamonowe, terra rossa", "gleby brunatne i płowe, bielicowe w części północnej", "czarnoziemy, dalej ku suchszym obszarom gleby kasztanowe"],
+            ["Formacja roślinna", "wiecznie zielone lasy twardolistne, makia, garig, frygana", "lasy liściaste (dąb, buk, grab) i mieszane, o wyraźnej sezonowości", "trawy kępowe (ostnica, kostrzewa) bez drzew; drzewa tylko w dolinach rzek (łęgi)"],
+            ["Fauna", "gatunki o niewielkich rozmiarach, gady i owady; muflon, szakal, sęp płowy", "sarna, jeleń, dzik, lis, borsuk, wiewiórka; ptaki wędrowne, sen zimowy u części ssaków", "kopytne odbywające dalekie wędrówki (suhak, koń Przewalskiego) oraz gryzonie ryjące nory (susły, świstaki, bobaki)"],
+            ["Przystosowania", "twardolistność, olejki eteryczne, głębokie korzenie, odporność na pożar (dąb korkowy odrasta z pnia)", "zrzucanie liści na zimę, gromadzenie zapasów, hibernacja, migracje ptaków", "głęboki system korzeniowy traw, kopanie nor jako ochrona przed mrozem, upałem i brakiem kryjówek"],
+            ["Gospodarka", "uprawy trwałe (oliwka, winorośl, cytrusy), turystyka, rybołówstwo; deficyt wody i pożary", "rolnictwo intensywne, przemysł, największa gęstość zaludnienia w Europie — strefa najsilniej przekształcona", "wielkoobszarowa uprawa pszenicy i kukurydzy, ekstensywne ranczerstwo; erozja wietrzna i susze"]
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Step pod pługiem — czego uczy historia zaorania stepów",
+          "caption": "Trzy fale zaorania stepów i jedna lekcja, którą z nich wyciągnięto.",
+          "events": [
+            {
+              "period": "1862–1900",
+              "label": "Zaoranie prerii Ameryki Północnej",
+              "text": "Ustawa Homestead Act (1862) i budowa kolei transkontynentalnej otwierają Wielkie Równiny dla osadników. Naturalna darń prerii, budowana przez tysiące lat, zostaje w ciągu dwóch pokoleń zastąpiona pszenicą."
+            },
+            {
+              "period": "1931–1939",
+              "label": "Dust Bowl",
+              "text": "Wieloletnia susza spotyka się z glebą pozbawioną korzeni trawy i uprawianą płytką orką. Burze pyłowe („czarne zamiecie”) unoszą wierzchnią warstwę czarnoziemu na setki kilometrów. Setki tysięcy rolników porzucają gospodarstwa i migrują do Kalifornii. To najbardziej znany w historii przykład **erozji wietrznej wywołanej przez człowieka**."
+            },
+            {
+              "period": "1954–1963",
+              "label": "Kampania zagospodarowania celiny w ZSRR",
+              "text": "Zaoranie ok. 40 mln ha stepu w północnym Kazachstanie i na Syberii Zachodniej. Po kilku rekordowych zbiorach przychodzą susze i erozja wietrzna, a plony spadają. Powtórzenie błędu z Wielkich Równin w jeszcze większej skali."
+            },
+            {
+              "period": "od lat 80. XX w.",
+              "label": "Rolnictwo konserwujące",
+              "text": "Uprawa bezorkowa i pasowa, pozostawianie resztek pożniwnych na polu, pasy wiatrochronne z drzew, płodozmian z roślinami okrywowymi i ugorowanie. Erozja spada, a wilgoć zostaje w glebie — dziś to standard na Wielkich Równinach."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Czarnoziemy Ukrainy — najżyźniejsza gleba i jej wrażliwość",
+          "region": "Ukraina, południowa Rosja, północny Kazachstan",
+          "text": "Pas czarnoziemów ciągnie się od Rumunii przez Ukrainę i południową Rosję aż po Ałtaj. Powstały pod stepem na **lessach** — pylastej skale osadzonej przez wiatr w plejstocenie, zasobnej w węglan wapnia, przepuszczalnej i łatwej w uprawie. Corocznie obumierająca darń trawiasta dostarczała ogromnych ilości materii organicznej, a mroźna zima i suche lato hamowały jej rozkład, dzięki czemu poziom próchniczny osiągnął miąższość 1–1,5 m przy zawartości próchnicy 8–12%. Odczyn jest obojętny, a struktura gruzełkowata — czarnoziem doskonale magazynuje wodę i powietrze jednocześnie. Stąd określenie „spichlerz Europy”. Ta sama gleba jest jednak wyjątkowo wrażliwa: po zaoraniu i usunięciu darni bywa wywiewana przez suche wiatry stepowe (susza pyłowa, czarne burze) i spłukiwana ze stoków w czasie gwałtownych letnich ulew. Ubytek 1 cm poziomu próchnicznego trwa kilka minut podczas burzy pyłowej, a jego odtworzenie w warunkach naturalnych — kilkaset lat.",
+          "takeaway": "Żyzność czarnoziemów wynika ze współdziałania lessu, klimatu i roślinności stepowej. Usunięcie jednego ogniwa — naturalnej darni — uruchamia degradację, której nie da się szybko cofnąć."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Częsty błąd w wyjaśnieniach: uczniowie piszą, że w strefie stepowej „nie ma lasów, bo jest zbyt zimno”. Nieprawda — decyduje **niedobór wody w okresie wegetacyjnym**. Drzewo o dużej powierzchni liści transpiruje znacznie więcej niż trawa, a przy 300 mm opadów i wysokim letnim parowaniu nie zdoła pokryć strat. Dowodem są **łęgi** — lasy rosnące na stepie wzdłuż rzek, gdzie woda gruntowa jest dostępna. Drugi błąd: mylenie amplitudy rocznej z dobową. Kontynentalizm rozpoznajesz po amplitudzie **rocznej**, a klimat pustynny — po dobowej."
+        },
+        {
+          "type": "map-explore",
+          "title": "Strefy umiarkowane na czterech kontynentach",
+          "caption": "Kliknij znaczniki. Zauważ regułę: strefa śródziemnomorska leży zawsze na **zachodnich** wybrzeżach między 30° a 45°, a stepy — w głębi kontynentów.",
+          "center": [40, 0],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 41.9,
+              "lng": 12.5,
+              "label": "Rzym, Włochy",
+              "text": "Klasyczna strefa śródziemnomorska: sucha lato, deszczowa zima, gaje oliwne i winnice."
+            },
+            {
+              "lat": 37.77,
+              "lng": -122.42,
+              "label": "San Francisco, USA",
+              "text": "Klimat śródziemnomorski poza Europą — zachodnie wybrzeże Ameryki Północnej. Winnice Doliny Napa i chaparral, odpowiednik makii."
+            },
+            {
+              "lat": -33.93,
+              "lng": 18.42,
+              "label": "Kapsztad, RPA",
+              "text": "Śródziemnomorski skrawek półkuli południowej, z unikatową formacją fynbos. Pora deszczowa przypada tu na czerwiec–sierpień."
+            },
+            {
+              "lat": 52.23,
+              "lng": 21.01,
+              "label": "Warszawa, Polska",
+              "text": "Strefa lasów liściastych i mieszanych w odmianie przejściowej. Dawniej puszcze dębowo-grabowe, dziś krajobraz rolniczy."
+            },
+            {
+              "lat": 50.45,
+              "lng": 30.52,
+              "label": "Kijów, Ukraina",
+              "text": "Granica lasostepu i stepu — początek pasa czarnoziemów ciągnącego się po Ałtaj."
+            },
+            {
+              "lat": 51.13,
+              "lng": 71.43,
+              "label": "Astana, Kazachstan",
+              "text": "Step kazachski w klimacie skrajnie kontynentalnym. Amplituda roczna ok. 35 °C przy 333 mm opadów."
+            },
+            {
+              "lat": 38.5,
+              "lng": -98.0,
+              "label": "Kansas, USA",
+              "text": "Preria Wielkich Równin — północnoamerykański odpowiednik stepu, dziś pas pszenicy ozimej."
+            },
+            {
+              "lat": -34.6,
+              "lng": -58.38,
+              "label": "Pampa, Argentyna",
+              "text": "Step półkuli południowej. Żyzne gleby i wilgotniejszy klimat pozwoliły rozwinąć wielkoobszarową hodowlę bydła i uprawę soi."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Warszawa i Astana leżą na niemal tej samej szerokości geograficznej, a mimo to w pierwszej rosną lasy, a wokół drugiej step. Która przyczyna to wyjaśnia?",
+          "options": [
+            "Astana leży znacznie wyżej nad poziomem morza, więc jest tam chłodniej",
+            "Astana leży w głębi kontynentu, przez co ma większą amplitudę roczną i znacznie mniejsze opady — zbyt małe, by utrzymać las",
+            "Wokół Astany dominują gleby zbyt żyzne dla drzew",
+            "Nad Astaną częściej przechodzi strefa zbieżności pasatów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje kontynentalizm. Masy powietrza znad Atlantyku docierają w głąb Eurazji już wysuszone, więc roczna suma opadów spada z ok. 570 mm w Warszawie do ok. 333 mm w Astanie, a amplituda roczna rośnie z 21 do 35 °C. Przy tak małych opadach i dużym letnim parowaniu bilans wodny nie wystarcza na pokrycie transpiracji drzew — utrzymują się tylko trawy o głębokim systemie korzeniowym."
+        },
+        {
+          "type": "quiz",
+          "question": "Które przystosowanie roślin jest charakterystyczne dla strefy śródziemnomorskiej i wyjaśnia jej nazwę „strefa twardolistna”?",
+          "options": [
+            "Zrzucanie liści przed nadejściem zimy w celu ograniczenia strat wody podczas mrozu",
+            "Grube, skórzaste, wiecznie zielone liście z woskiem i aparatami szparkowymi w zagłębieniach, ograniczające transpirację w suche lato",
+            "Magazynowanie wody w mięsistych łodygach i redukcja liści do cierni",
+            "Skrócenie całego cyklu życiowego do kilku tygodni po opadach"
+          ],
+          "correctIndex": 1,
+          "explanation": "Odpowiedź A opisuje tropofity strefy umiarkowanej (ochrona przed mrozem), C — sukulenty pustyń, D — efemerydy. W strefie śródziemnomorskiej czynnikiem stresowym jest susza letnia przy braku mrozów, więc opłaca się zachować liście przez cały rok (by fotosyntetyzować w wilgotną zimę), ale zbudować je tak, by wytrzymały suszę: małe, twarde, pokryte kutykulą i woskiem."
+        },
+        {
+          "type": "quiz",
+          "question": "Które działanie NAJSKUTECZNIEJ ogranicza erozję wietrzną czarnoziemów na zaoranym stepie?",
+          "options": [
+            "Głęboka orka jesienna odwracająca skibę",
+            "Nawadnianie zalewowe bez systemu drenażu",
+            "Uprawa bezorkowa z pozostawieniem resztek pożniwnych oraz zakładanie pasów wiatrochronnych",
+            "Rezygnacja z płodozmianu na rzecz monokultury pszenicy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Erozja wietrzna atakuje glebę odsłoniętą i pozbawioną struktury. Resztki pożniwne i uprawa bezorkowa utrzymują okrywę oraz sieć korzeni wiążącą agregaty glebowe, a pasy drzew zmniejszają prędkość wiatru przy gruncie. Głęboka orka rozpyla strukturę i odsłania glebę, monokultura wyczerpuje ją i skraca okres okrywy, a nawadnianie bez drenażu grozi wtórnym zasoleniem — to inny problem, ale też degradacja."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Bardzo częsty format zadania: dwie stacje o **tej samej szerokości geograficznej**, ale różnych klimatogramach, i polecenie „wyjaśnij przyczynę różnicy”. Odruchowo sprawdź trzy czynniki astrefowe w tej kolejności: **odległość od oceanu** (kontynentalizm — porównaj amplitudy roczne), **prąd morski** przy wybrzeżu (porównaj temperatury zimy) oraz **położenie względem bariery górskiej** (porównaj sumy opadów). Prawie zawsze jeden z nich jest odpowiedzią. W uzasadnieniu podaj wartość liczbową różnicy — np. „amplituda roczna wynosi 35 °C wobec 21 °C”."
+        }
+      ]
+    },
+    {
+      "slug": "strefy-chlodne",
+      "title": "Strefy chłodne: tajga, tundra i pustynie lodowe",
+      "summary": "Trzy strefy, w których o wszystkim decyduje długość i ciepło krótkiego lata.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Na północ od strefy lasów liściastych o krajobrazie przestaje decydować suma opadów, a zaczyna **ilość ciepła dostępna w okresie wegetacyjnym**. Granice kolejnych stref chłodnych dają się opisać jednym parametrem: izotermą 10 °C najcieplejszego miesiąca (północna granica lasu, początek tundry) i izotermą 0 °C najcieplejszego miesiąca (koniec roślinności, początek pustyń lodowych). Paradoks tej części Ziemi polega na tym, że opadów jest tu tyle, co na pustyni — a mimo to teren bywa zabagniony."
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — Syberia Wschodnia",
+          "station": "Jakuck (Rosja, 62°N)",
+          "caption": "Zwróć uwagę na wartość amplitudy rocznej — to jedna z najwyższych na Ziemi.",
+          "temps": [-38.6, -33.9, -20.2, -4.8, 7.5, 16.6, 19.5, 15.3, 6.0, -7.8, -27.9, -36.5],
+          "precip": [8, 6, 7, 12, 25, 38, 40, 39, 30, 24, 15, 11],
+          "answer": {
+            "climate": "Klimat umiarkowany chłodny skrajnie kontynentalny (syberyjski) — strefa tajgi",
+            "reasoning": "Amplituda roczna wynosi ok. 58 °C (od −38,6 °C w styczniu do 19,5 °C w lipcu) — to najwyższa wartość na Ziemi, skutek położenia w głębi Azji i zalegania zimą potężnego **Wyżu Azjatyckiego (syberyjskiego)**, w którym powietrze osiada i wypromieniowuje ciepło przy bezchmurnym niebie. Roczna suma opadów zaledwie ok. 255 mm — tyle, co na półpustyni — z maksimum letnim. Mimo tak małych opadów rośnie tu las, ponieważ parowanie przy niskich temperaturach jest znikome, a wieloletnia zmarzlina zatrzymuje wodę roztopową tuż pod powierzchnią."
+          }
+        },
+        {
+          "type": "classification",
+          "title": "Jak drzewa tajgi radzą sobie z mrozem i suszą fizjologiczną",
+          "caption": "Zimą woda w gruncie jest zamarznięta, więc drzewo nie może jej pobrać — dla rośliny to susza. Każde z tych przystosowań ogranicza straty wody albo obciążenie śniegiem.",
+          "groups": [
+            {
+              "name": "Stożkowaty pokrój korony",
+              "description": "Wąska, spiczasta korona i skośnie opadające gałęzie sprawiają, że śnieg zsuwa się, zamiast łamać konary. Dodatkowo taki kształt lepiej wykorzystuje niskie, ukośne promienie słoneczne typowe dla wysokich szerokości.",
+              "examples": ["świerk pospolity", "jodła syberyjska"]
+            },
+            {
+              "name": "Igły zamiast liści",
+              "description": "Mała powierzchnia, gruba kutykula, warstwa wosku i aparaty szparkowe w zagłębieniach radykalnie ograniczają transpirację w okresie suszy fizjologicznej. Zachowanie igieł przez zimę pozwala rozpocząć fotosyntezę natychmiast, gdy tylko przyjdzie wiosna — a lato trwa tu zaledwie 2–3 miesiące.",
+              "examples": ["sosna zwyczajna", "świerk", "jodła"]
+            },
+            {
+              "name": "Płytki, rozległy system korzeniowy",
+              "description": "Zmarzlina i płytka, kwaśna gleba bielicowa uniemożliwiają wrastanie w głąb, więc korzenie rozchodzą się tuż pod powierzchnią. Skutkiem ubocznym jest podatność na wiatrowały i „pijany las” — drzewa pochylone przez osiadanie odmarzającego gruntu.",
+              "examples": ["świerk na zmarzlinie Syberii", "modrzewiny Jakucji"]
+            },
+            {
+              "name": "Zrzucanie igieł na zimę",
+              "description": "Skrajne rozwiązanie w najostrzejszym klimacie: drzewo całkowicie eliminuje transpirację, tracąc igły. Modrzew dahurski znosi temperatury poniżej −60 °C i rośnie na zmarzlinie, tworząc jedyne lasy tak daleko na północ.",
+              "examples": ["modrzew dahurski (Syberia Wschodnia)", "modrzew syberyjski"]
+            },
+            {
+              "name": "Przystosowania zwierząt",
+              "description": "Gruba sierść i podskórna warstwa tłuszczu, zmiana ubarwienia na białe zimą, sen zimowy lub hibernacja, gromadzenie zapasów pokarmu, szerokie łapy działające jak rakiety śnieżne.",
+              "examples": ["niedźwiedź brunatny (sen zimowy)", "ryś (szerokie łapy)", "sobol i gronostaj (biała zimowa sierść)", "łoś, rosomak"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Wieloletnia zmarzlina (permafrost)",
+          "text": "**Grunt, którego temperatura pozostaje poniżej 0 °C nieprzerwanie przez co najmniej dwa kolejne lata.** Zajmuje ok. 20–25% powierzchni lądów półkuli północnej, a jej miąższość sięga w Jakucji ponad 1000 m. Na powierzchni zalega **warstwa czynna (aktywna)** o miąższości od kilkudziesięciu centymetrów w tundrze do 2–3 m w tajdze, która rozmarza latem i zamarza zimą.",
+          "note": "Zmarzlina jest praktycznie nieprzepuszczalna, więc pełni rolę warstwy wodoszczelnej. To ona odpowiada za zabagnienie tundry mimo śladowych opadów, a jej rozmarzanie w ocieplającym się klimacie powoduje osiadanie gruntu, niszczenie budynków i rurociągów oraz uwalnianie metanu i CO₂ z rozmarzającej materii organicznej."
+        },
+        {
+          "type": "layers",
+          "title": "Grunt w strefie wieloletniej zmarzliny",
+          "caption": "Kliknij warstwy. To ten układ tłumaczy zarówno zabagnienie tundry, jak i problemy budownictwa w Norylsku czy na Alasce.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Warstwa czynna (aktywna)",
+              "range": "0,3–2 m",
+              "text": "Rozmarza latem i zamarza zimą. Tylko w niej możliwa jest wegetacja roślin i procesy glebotwórcze. W tundrze płytka (0,3–0,8 m), dlatego drzewa nie mają gdzie zakotwiczyć korzeni — to jedna z przyczyn bezdrzewności tundry.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Wieloletnia zmarzlina",
+              "range": "od kilkunastu do ponad 1000 m",
+              "text": "Trwale zamarznięty grunt z soczewkami czystego lodu. Nieprzepuszczalna dla wody. Zawiera olbrzymie ilości nierozłożonej materii organicznej — po rozmarznięciu staje się źródłem gazów cieplarnianych.",
+              "tone": "ice"
+            },
+            {
+              "name": "Talik i grunt niezamarznięty",
+              "range": "poniżej zmarzliny",
+              "text": "Warstwa o temperaturze powyżej 0 °C, ogrzewana ciepłem wnętrza Ziemi. Taliki (obszary niezamarznięte) tworzą się też pod jeziorami i korytami rzek, których woda nie przemarza do dna — dlatego studnie w tundrze kopie się właśnie tam.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — wybrzeże Oceanu Arktycznego",
+          "station": "Utqiaġvik / Barrow (Alaska, 71°N)",
+          "caption": "Sprawdź, ile miesięcy ma tu średnią temperaturę powyżej 0 °C — to cały okres wegetacyjny.",
+          "temps": [-25.5, -27.0, -25.0, -17.0, -7.0, 1.5, 5.0, 4.5, 0.0, -8.5, -17.5, -22.5],
+          "precip": [5, 4, 4, 5, 6, 9, 25, 30, 22, 15, 8, 6],
+          "answer": {
+            "climate": "Klimat subpolarny (okołobiegunowy) — strefa tundry",
+            "reasoning": "Temperatura najcieplejszego miesiąca (lipiec 5 °C) mieści się między 0 a 10 °C — to definicyjny warunek klimatu tundry. Tylko cztery miesiące mają średnią powyżej 0 °C, więc okres wegetacyjny trwa ok. 2–3 miesiące. Roczna suma opadów ok. 139 mm — mniej niż na wielu pustyniach — z maksimum późnoletnim, gdy morze jest wolne od lodu i dostarcza wilgoci. Mimo to teren jest podmokły, bo parowanie jest znikome, a nieprzepuszczalna zmarzlina zatrzymuje wodę tuż pod powierzchnią."
+          }
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego tundra jest zabagniona, choć opadów ma tyle, co pustynia",
+          "caption": "Jedno z ulubionych pytań maturalnych. Chodzi o bilans wodny, nie o sumę opadów.",
+          "steps": [
+            {
+              "title": "1. Latem rozmarza tylko cienka warstwa gruntu",
+              "text": "Ciepła jest tak mało, że odwilż sięga zaledwie 30–80 cm w głąb. Poniżej pozostaje trwale zamarznięta zmarzlina."
+            },
+            {
+              "title": "2. Zmarzlina działa jak nieprzepuszczalna posadzka",
+              "text": "Woda z topniejącego śniegu i z letnich opadów nie może wsiąknąć głębiej — nie ma odpływu podziemnego. Cała gromadzi się w cienkiej warstwie czynnej."
+            },
+            {
+              "title": "3. Parowanie jest bardzo małe",
+              "text": "Przy temperaturach 2–8 °C i wysokiej wilgotności względnej powietrza parowanie terenowe wynosi zaledwie kilkadziesiąt milimetrów rocznie. **Opad przewyższa parowanie**, mimo że opadu jest bardzo mało."
+            },
+            {
+              "title": "4. Płaska rzeźba blokuje odpływ powierzchniowy",
+              "text": "Rozległe niziny nadmorskie mają minimalne spadki, więc woda nie spływa, tylko stagnuje. Powstają tysiące jeziorek termokrasowych i rozległe torfowiska."
+            },
+            {
+              "title": "5. Skutek w glebie",
+              "text": "W nasyconym wodą, beztlenowym gruncie zachodzi **oglejenie** — żelazo przechodzi w formy zredukowane, nadając glebie sinozieloną barwę. Rozkład materii organicznej niemal ustaje, więc gromadzi się nierozłożony torf. Powstają gleby tundrowe glejowe i torfowe."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Pustynie lodowe w liczbach",
+          "items": [
+            {
+              "value": "−89,2",
+              "unit": "°C",
+              "label": "Najniższa temperatura zmierzona przy powierzchni Ziemi — stacja Wostok, Antarktyda, 21 lipca 1983 r."
+            },
+            {
+              "value": "ok. −68",
+              "unit": "°C",
+              "label": "Rekord półkuli północnej — Ojmiakon i Wierchojańsk na Syberii, tzw. bieguny zimna",
+              "note": "Zwróć uwagę: bieguny zimna leżą w głębi lądu, a nie na biegunie geograficznym — decyduje kontynentalizm i kotlinne położenie"
+            },
+            {
+              "value": "ok. 2",
+              "unit": "km",
+              "label": "Średnia grubość lądolodu Antarktydy; maksymalnie ponad 4 km"
+            },
+            {
+              "value": "ok. 90",
+              "unit": "%",
+              "label": "Udział Antarktydy w światowych zasobach lodu lądowego"
+            },
+            {
+              "value": "poniżej 50",
+              "unit": "mm",
+              "label": "Roczna suma opadów (ekwiwalent wody) w głębi Antarktydy — mniej niż na Saharze; stąd nazwa „pustynia lodowa”"
+            },
+            {
+              "value": "80–90",
+              "unit": "%",
+              "label": "Albedo świeżego śniegu — powoduje dodatnie sprzężenie zwrotne lodowo-albedowe i wzmacnia ochłodzenie"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Trzy strefy chłodne — zestawienie",
+          "caption": "Granice tych stref najlepiej zapamiętać przez izotermy najcieplejszego miesiąca: 10 °C oddziela tajgę od tundry, 0 °C — tundrę od pustyń lodowych.",
+          "headers": ["Cecha", "Tajga", "Tundra", "Pustynie lodowe"],
+          "rows": [
+            ["Klimat", "umiarkowany chłodny (borealny), często skrajnie kontynentalny; lato 15–20 °C, zima do −40 °C", "subpolarny; najcieplejszy miesiąc 0–10 °C, zima −20 do −35 °C, silne wiatry", "polarny; najcieplejszy miesiąc poniżej 0 °C, w głębi Antarktydy średnie roczne poniżej −50 °C"],
+            ["Opady", "300–600 mm, maksimum letnie; zimą trwała, gruba pokrywa śnieżna", "150–350 mm, głównie w postaci śniegu; parowanie znikome", "poniżej 100 mm (w głębi Antarktydy poniżej 50 mm), wyłącznie śnieg"],
+            ["Gleby", "bielicowe — silnie kwaśne, o wyraźnym popielatym poziomie wymywania", "tundrowe glejowe i torfowe nad zmarzliną; struktury poligonalne z mrozowego pękania gruntu", "brak gleb lub gleby inicjalne na skrawkach wolnych od lodu (oazy antarktyczne)"],
+            ["Roślinność", "bór iglasty: świerk, sosna, jodła, modrzew; ubogie runo z borówek i mchów, mała różnorodność gatunkowa", "mchy, porosty (chrobotek), krzewinki (bagno, borówka), karłowate brzozy i wierzby płożące się przy ziemi", "brak zwartej roślinności; glony na śniegu, porosty i mchy na skałach, dwa gatunki roślin kwiatowych na Antarktydzie"],
+            ["Fauna", "łoś, niedźwiedź brunatny, ryś, rosomak, sobol, wilk; latem gigantyczne roje komarów", "renifer/karibu i piżmowół (sezonowe wędrówki), leming, lis polarny, sowa śnieżna; latem miliony ptaków wodnych na lęgi", "fauna związana z morzem: pingwiny, foki, wieloryby (Antarktyda), niedźwiedź polarny na lodzie morskim (Arktyka)"],
+            ["Możliwości gospodarowania", "leśnictwo i przemysł drzewny, wydobycie ropy, gazu i rud, energetyka wodna, myślistwo i futrzarstwo", "pasterstwo reniferów (Saamowie, Nieńcy, Czukcze), rybołówstwo, wydobycie surowców, turystyka arktyczna", "wyłącznie badania naukowe i turystyka ekspedycyjna; brak stałej ludności"],
+            ["Ograniczenia", "krótki okres wegetacyjny, kwaśne gleby, zabagnienie, zmarzlina utrudniająca budowę dróg i rurociągów", "brak drzew i materiału budowlanego, zmarzlina wymuszająca budowę na palach, ekstremalnie wrażliwy ekosystem o wolnej regeneracji", "brak gleb i roślinności, noc polarna, ochrona prawna (Układ Antarktyczny zakazuje działalności gospodarczej)"]
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Arktyka a Antarktyda — dlaczego dwa bieguny to dwa różne światy",
+          "leftLabel": "Arktyka",
+          "rightLabel": "Antarktyda",
+          "rows": [
+            {
+              "aspect": "Podłoże",
+              "left": "Ocean pokryty **lodem morskim** o miąższości 2–4 m, otoczony lądami trzech kontynentów",
+              "right": "Kontynent o powierzchni ok. 14 mln km² przykryty **lądolodem** o średniej grubości ok. 2 km"
+            },
+            {
+              "aspect": "Temperatury",
+              "left": "Łagodniejsze — ocean pod lodem oddaje ciepło; średnia zimowa ok. −30 °C",
+              "right": "Skrajnie niskie — wysokie wyniesienie lądolodu (średnio ok. 2000 m n.p.m.) i brak morza pod spodem; rekord −89,2 °C"
+            },
+            {
+              "aspect": "Roślinność",
+              "left": "Na obrzeżach szeroki pas tundry z mchami, porostami i krzewinkami",
+              "right": "Praktycznie brak — tylko porosty, mchy i dwa gatunki roślin kwiatowych na Półwyspie Antarktycznym"
+            },
+            {
+              "aspect": "Fauna lądowa",
+              "left": "Bogata: niedźwiedź polarny, renifer, piżmowół, lis polarny, leming",
+              "right": "Brak lądowych kręgowców; pingwiny i foki żerują w morzu, a na lądzie tylko się rozmnażają"
+            },
+            {
+              "aspect": "Ludność",
+              "left": "Ludy rdzenne od tysięcy lat: Inuici, Saamowie, Nieńcy, Czukcze; miasta powyżej 100 tys. mieszkańców (Murmańsk, Norylsk)",
+              "right": "Brak stałej ludności — wyłącznie personel stacji badawczych, kilka tysięcy osób latem"
+            },
+            {
+              "aspect": "Status prawny",
+              "left": "Terytoria i wyłączne strefy ekonomiczne ośmiu państw arktycznych; spory o szelf i szlaki żeglugowe",
+              "right": "**Układ Antarktyczny** (podpisany w 1959 r., obowiązuje od 1961 r.) — zamrożenie roszczeń terytorialnych, zakaz działalności militarnej i wydobywczej, wyłącznie badania naukowe"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Norylsk — miasto, które stoi na palach",
+          "region": "Norylsk, Kraj Krasnojarski, Rosja (69°N)",
+          "text": "Norylsk to jedno z najdalej na północ wysuniętych dużych miast świata, zbudowane w strefie ciągłej wieloletniej zmarzliny, ponad 300 km za kołem podbiegunowym. Powstało wokół największych na świecie złóż rud niklu, miedzi, kobaltu i platynowców — ich wartość była na tyle duża, że opłacało się pokonać wszystkie bariery środowiskowe. **Budynki stawia się tu na betonowych palach wbitych kilkanaście metrów w zmarzlinę**, z wentylowaną pustką pod podłogą: gdyby ciepło budynku ogrzało grunt, ten rozmarzłby i osiadł, a konstrukcja pękłaby. Rurociągi i sieci ciepłownicze prowadzi się nad ziemią, na estakadach, z tego samego powodu. Nie ma połączenia drogowego z resztą kraju — zaopatrzenie idzie rzeką Jenisej i Północną Drogą Morską, czynną przy pomocy lodołamaczy, oraz drogą lotniczą. Noc polarna trwa ok. 45 dni. Emisje dwutlenku siarki z hut doprowadziły do obumarcia lasotundry w promieniu kilkudziesięciu kilometrów, a w 2020 r. awaria zbiornika paliwa — według oficjalnych ustaleń związana z osiadaniem rozmarzającego gruntu pod fundamentami — spowodowała rozlew ok. 20 tys. ton oleju napędowego do rzeki Ambarnaja.",
+          "takeaway": "W strefach chłodnych to nie temperatura sama w sobie, lecz **zmarzlina** jest głównym ograniczeniem gospodarowania — i jednocześnie tym elementem środowiska, który najszybciej reaguje na ocieplenie klimatu."
+        },
+        {
+          "type": "map-explore",
+          "title": "Strefy chłodne na mapie",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, jak nierówno przebiega północna granica lasu — na zachodzie Europy sięga znacznie dalej na północ niż w Kanadzie.",
+          "center": [60, 30],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 62.03,
+              "lng": 129.73,
+              "label": "Jakuck, Rosja",
+              "text": "Największe miasto świata zbudowane na ciągłej zmarzlinie. Amplituda roczna ok. 58 °C — rekord Ziemi. Wokół modrzewiowa tajga."
+            },
+            {
+              "lat": 63.46,
+              "lng": 142.79,
+              "label": "Ojmiakon, Rosja",
+              "text": "Biegun zimna półkuli północnej — ok. −68 °C. Kotlinne położenie sprzyja spływowi i zaleganiu zimnego powietrza (inwersja termiczna)."
+            },
+            {
+              "lat": 69.35,
+              "lng": 88.2,
+              "label": "Norylsk, Rosja",
+              "text": "Górnictwo i hutnictwo niklu w lasotundrze. Budynki na palach, brak połączenia drogowego z resztą kraju."
+            },
+            {
+              "lat": 71.29,
+              "lng": -156.79,
+              "label": "Utqiaġvik (Barrow), Alaska",
+              "text": "Tundra nadmorska. Najcieplejszy miesiąc 5 °C, opady 139 mm, a teren podmokły — klasyczny paradoks tundry."
+            },
+            {
+              "lat": 70.32,
+              "lng": -148.71,
+              "label": "Prudhoe Bay, Alaska",
+              "text": "Największe złoże ropy naftowej Ameryki Północnej. Rurociąg transalaskański biegnie nad ziemią na podporach, by nie rozmrażać zmarzliny."
+            },
+            {
+              "lat": 78.22,
+              "lng": 15.65,
+              "label": "Longyearbyen, Svalbard",
+              "text": "Najdalej na północ wysunięte miasto świata. Dzięki ciepłemu Prądowi Zachodniospitsbergeńskiemu klimat jest tu znacznie łagodniejszy niż na tej samej szerokości w Kanadzie."
+            },
+            {
+              "lat": -78.46,
+              "lng": 106.84,
+              "label": "Stacja Wostok, Antarktyda",
+              "text": "Miejsce pomiaru −89,2 °C. Leży na wysokości ok. 3500 m n.p.m., na lądolodzie o grubości blisko 4 km, nad jeziorem podlodowcowym Wostok."
+            },
+            {
+              "lat": -62.16,
+              "lng": -58.47,
+              "label": "Polska Stacja Antarktyczna im. H. Arctowskiego",
+              "text": "Wyspa Króla Jerzego, Szetlandy Południowe. Działa nieprzerwanie od 1977 r. — polski wkład w badania prowadzone w ramach Układu Antarktycznego."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki tej lekcji. Po pierwsze: **tundra nie jest bezdrzewna z powodu mrozu zimą**, lecz z powodu zbyt krótkiego i chłodnego lata (poniżej 10 °C) oraz płytkiej warstwy czynnej, w której korzenie nie mają się jak zakotwiczyć. Po drugie: nie myl **lodu morskiego** (zamarznięta woda oceanu, Arktyka) z **lądolodem** (lód powstały z przeobrażonego śniegu na lądzie, Antarktyda i Grenlandia) — tylko topnienie lądolodu podnosi poziom mórz. Po trzecie: **zmarzlina to zamarznięty grunt, a nie lód** — jest w niej skała, żwir i materia organiczna, dlatego jej rozmarzanie uwalnia gazy cieplarniane."
+        },
+        {
+          "type": "quiz",
+          "question": "W tundrze roczna suma opadów wynosi ok. 150 mm — mniej niż na wielu pustyniach — a mimo to teren jest silnie zabagniony. Jaka jest tego główna przyczyna?",
+          "options": [
+            "Duża liczba rzek płynących z południa, które regularnie wylewają",
+            "Nieprzepuszczalna wieloletnia zmarzlina blokująca wsiąkanie oraz bardzo małe parowanie przy niskich temperaturach",
+            "Wysoka zawartość próchnicy w glebie, która chłonie wodę jak gąbka",
+            "Częste mgły i rosa dostarczające wody nieuwzględnianej w sumie opadów"
+          ],
+          "correctIndex": 1,
+          "explanation": "O zabagnieniu decyduje bilans wodny, a nie sama suma opadów. Zmarzlina uniemożliwia odpływ podziemny, płaska rzeźba ogranicza odpływ powierzchniowy, a niskie temperatury sprawiają, że parowanie terenowe jest znikome. W efekcie mimo skąpych opadów **opad przewyższa parowanie** i woda stagnuje w cienkiej warstwie czynnej."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie łączy strefę z typem gleby i dominującym procesem glebotwórczym?",
+          "options": [
+            "Tajga — czarnoziem — akumulacja próchnicy",
+            "Tundra — gleba bielicowa — laterytyzacja",
+            "Tajga — gleba bielicowa — bielicowanie",
+            "Tundra — gleba brunatna — brunatnienie"
+          ],
+          "correctIndex": 2,
+          "explanation": "W tajdze igliwie rozkłada się na kwaśną próchnicę surową (mor). Powstające kwasy próchnicowe rozpuszczają i wymywają z górnej części profilu związki żelaza i glinu, tworząc popielaty poziom E, a wmywają je do poziomu B — to bielicowanie. Czarnoziemy powstają pod stepem, laterytyzacja zachodzi w klimacie równikowym, a gleby brunatne pod lasami liściastymi strefy umiarkowanej."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego na Antarktydzie zmierzono temperatury o kilkanaście stopni niższe niż gdziekolwiek w Arktyce, mimo że obie strefy leżą w podobnych szerokościach geograficznych?",
+          "options": [
+            "Bo Antarktyda otrzymuje mniej promieniowania słonecznego niż Arktyka",
+            "Bo Arktyka to ocean oddający ciepło przez pokrywę lodową, a Antarktyda to wysoko wyniesiony kontynent pokryty lądolodem o bardzo wysokim albedo",
+            "Bo nad Antarktydą przez cały rok utrzymuje się niż baryczny",
+            "Bo Antarktyda leży dalej od Słońca w czasie swojej zimy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decydują trzy czynniki: ocean pod arktycznym lodem stale oddaje ciepło do atmosfery, czego nad Antarktydą nie ma; powierzchnia lądolodu leży średnio ok. 2000 m n.p.m., a temperatura maleje z wysokością; wysokie albedo śniegu (80–90%) sprawia, że niemal całe promieniowanie letnie zostaje odbite. Nad Antarktydą utrzymuje się zresztą wyż, a nie niż. Odległość Ziemi od Słońca zmienia dopływ energii o ok. 7% i nie tłumaczy różnicy kilkunastu stopni."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o strefach chłodnych używaj **izoterm jako kryteriów granic** — klucze CKE punktują je wprost. Zapamiętaj: izoterma 10 °C najcieplejszego miesiąca wyznacza północną granicę lasu (granicę tajgi i tundry), a izoterma 0 °C najcieplejszego miesiąca — granicę tundry i pustyń lodowych. Gdy polecenie brzmi „wyjaśnij, dlaczego granica lasu przebiega dalej na północ w Skandynawii niż w Kanadzie”, odpowiedź zawsze wskazuje czynnik astrefowy: ciepły Prąd Północnoatlantycki po stronie europejskiej i zimny Prąd Labradorski po stronie kanadyjskiej."
+        }
+      ]
+    },
+    {
+      "slug": "pietrowosc-w-gorach",
+      "title": "Piętrowość — strefowość pionowa w górach",
+      "summary": "Jak kilka kilometrów w pionie odtwarza sekwencję krajobrazów rozciągniętą normalnie na tysiące kilometrów.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wspinając się z podnóża Kilimandżaro na jego szczyt, w ciągu kilku dni mijasz sawannę, wilgotny las górski, wrzosowiska, wysokogórską półpustynię i wieczny śnieg. Ten sam ciąg krajobrazów, przemierzając Ziemię w poziomie, spotkałbyś dopiero na trasie z Tanzanii do Grenlandii. **Piętrowość** jest pionowym odpowiednikiem strefowości — ale tylko odpowiednikiem, nie kopią: pięter nie da się utożsamić ze strefami, bo w górach nie zmienia się długość dnia ani rytm pór roku."
+        },
+        {
+          "type": "definition",
+          "term": "Piętrowość (strefowość pionowa, piętra klimatyczno-roślinne)",
+          "text": "**Prawidłowa zmienność warunków klimatycznych, gleb i roślinności wraz ze wzrostem wysokości nad poziomem morza.** Jej bezpośrednią przyczyną jest spadek temperatury powietrza — średnio o 0,6 °C na każde 100 m wzniesienia — oraz towarzyszący mu spadek ciśnienia i najczęściej wzrost opadów do pewnej wysokości (piętro maksimum opadów), powyżej której opady znów maleją.",
+          "note": "Liczba pięter zależy od wysokości gór i od szerokości geograficznej ich położenia. Im bliżej równika i im wyższe pasmo, tym więcej pięter można wyróżnić — na Kilimandżaro jest ich pięć, a w niskich górach Skandynawii zaledwie dwa–trzy."
+        },
+        {
+          "type": "formula",
+          "title": "Obliczanie temperatury na danej wysokości",
+          "expression": "t_h = t_0 - 0{,}6 \\cdot \\dfrac{h - h_0}{100}",
+          "variables": [
+            { "symbol": "t_h", "meaning": "temperatura powietrza na wysokości h (°C)" },
+            { "symbol": "t_0", "meaning": "temperatura na wysokości odniesienia h_0 (°C)" },
+            { "symbol": "h,\\ h_0", "meaning": "wysokości nad poziomem morza (m)" },
+            { "symbol": "0{,}6", "meaning": "średni pionowy gradient termiczny w troposferze (°C na 100 m)" }
+          ],
+          "caption": "Przykład: w Zakopanem (850 m n.p.m.) jest 15 °C. Na Kasprowym Wierchu (1987 m n.p.m.) różnica wysokości wynosi 1137 m, czyli 11,37 setek metrów. Spadek temperatury: 0,6 · 11,37 ≈ 6,8 °C, więc t = 15 − 6,8 ≈ 8,2 °C. Uwaga: 0,6 °C/100 m to wartość średnia. Powietrze suche ochładza się przy wznoszeniu o 1 °C/100 m (gradient suchoadiabatyczny), a nasycone parą wodną — o ok. 0,6 °C/100 m, bo skraplanie uwalnia ciepło utajone."
+        },
+        {
+          "type": "layers",
+          "title": "Piętra roślinne Tatr",
+          "caption": "Kliknij piętra od dołu. Wysokości podano dla Tatr Polskich — na stokach o wystawie południowej granice leżą o 100–200 m wyżej.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Piętro pogórza",
+              "range": "do 700 m n.p.m.",
+              "text": "Naturalnie porastały je lasy liściaste (dąb, grab, lipa), ale zostały niemal całkowicie wycięte. Dziś to krajobraz rolniczy i osadniczy — pola, łąki kośne, zabudowa wsi podhalańskich.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel dolny",
+              "range": "700–1250 m n.p.m.",
+              "text": "Lasy mieszane: buk, jodła i świerk. Piętro najżyźniejsze i najbogatsze gatunkowo, z glebami brunatnymi. Jego górną granicę wyznacza spadek temperatury poniżej wymagań buka i jodły.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel górny",
+              "range": "1250–1550 m n.p.m.",
+              "text": "Zwarty, jednogatunkowy **bór świerkowy** na glebach bielicowych. Okres wegetacyjny skraca się do ok. 100 dni, pokrywa śnieżna zalega do maja. Górna granica tego piętra to jednocześnie **górna granica lasu**.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro kosodrzewiny (subalpejskie)",
+              "range": "1550–1800 m n.p.m.",
+              "text": "Powyżej granicy lasu drzewa nie wytrzymują wiatru, mrozu i krótkiego lata. Zastępuje je płożąca się **kosodrzewina** oraz jarzębina i wierzby, których pokrój chroni je przed wysuszającym wiatrem i pozwala zimować pod śniegiem.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro halne (alpejskie)",
+              "range": "1800–2300 m n.p.m.",
+              "text": "Murawy wysokogórskie — hale — złożone z traw, turzyc i sitów, wykorzystywane historycznie do letniego wypasu owiec. Rośliny są niskie, poduchowate i często omszone, co chroni je przed wiatrem i intensywnym promieniowaniem UV.",
+              "tone": "earth"
+            },
+            {
+              "name": "Piętro turniowe (subniwalne)",
+              "range": "powyżej 2300 m n.p.m.",
+              "text": "Nagie skały, rumowiska i ściany, na których utrzymują się tylko porosty, mchy i pojedyncze rośliny naskalne w szczelinach. Płaty śniegu zalegają przez większość roku, ale trwałej pokrywy nie ma — Tatry są za niskie.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Piętrowość w czterech górach świata",
+          "caption": "Ta tabela odpowiada na pytanie „od czego zależy układ pięter”. Porównuj wiersze między kolumnami, a zobaczysz wpływ szerokości geograficznej i wysokości pasma.",
+          "headers": ["Element", "Tatry (49°N)", "Alpy (46°N)", "Andy Ekwadoru (0°)", "Kilimandżaro (3°S)"],
+          "rows": [
+            ["Najwyższy szczyt", "Gerlach 2655 m n.p.m.", "Mont Blanc 4808 m n.p.m.", "Chimborazo 6263 m n.p.m.", "Kibo 5895 m n.p.m."],
+            ["Piętro najniższe", "pogórze — pola i resztki lasów liściastych", "pogórze — uprawy, winnice w dolinach, lasy liściaste", "tierra caliente — wilgotny las równikowy, plantacje bananów i trzciny cukrowej", "sawanna i pas upraw (kawa, banany), silnie zaludniony"],
+            ["Górne piętro leśne", "regiel górny — bór świerkowy", "regiel górny — świerk, modrzew, limba", "tierra fría — lasy mgielne z drzewami obwieszonymi mchami", "wilgotny las górski (mgielny) — źródło wody dla całego regionu"],
+            ["Górna granica lasu", "ok. 1550 m n.p.m.", "ok. 1800–2200 m n.p.m. (wyżej po stronie południowej)", "ok. 3500–3900 m n.p.m.", "ok. 3000 m n.p.m."],
+            ["Piętro ponad lasem", "kosodrzewina, hale, turnie", "kosodrzewina, hale alpejskie, piętro turniowe", "páramo — trawy kępowe i frailejony o omszonych liściach", "wrzosowiska z olbrzymimi lobeliami i starcami, wyżej wysokogórska półpustynia"],
+            ["Granica wiecznego śniegu", "teoretycznie ok. 2200–2300 m n.p.m. — leży powyżej większości szczytów, więc utrzymują się tylko płaty firnu, bez lodowców", "ok. 2800–3200 m n.p.m. — liczne lodowce dolinne (Aletsch, Mer de Glace)", "ok. 4800–5000 m n.p.m. — czapy lodowe na stożkach wulkanicznych (Cotopaxi, Cayambe)", "ok. 5200 m n.p.m. — kurczące się lodowce na wierzchołku Kibo"],
+            ["Rytm termiczny", "wyraźne cztery pory roku, duża amplituda roczna", "wyraźne cztery pory roku", "znikoma amplituda roczna — „zima nocą, lato w dzień”; amplituda dobowa większa od rocznej", "znikoma amplituda roczna, rytm wyznaczają dwie pory deszczowe"]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Górna granica lasu i granica wiecznego śniegu a szerokość geograficzna",
+          "caption": "Wartości uśrednione, w metrach n.p.m. Obie granice obniżają się ku biegunom, ale maksimum przypada nie na równiku, lecz w suchych obszarach zwrotnikowych (ok. 20–25°): mała liczba dni z opadem śniegu i silne nasłonecznienie przy bezchmurnym niebie podnoszą tam granicę wiecznego śniegu. Nad samym równikiem duże zachmurzenie i wysokie opady ją obniżają.",
+          "labels": ["0°", "20°", "30°", "45°", "50°", "60°", "70°"],
+          "series": [
+            {
+              "name": "Górna granica lasu",
+              "values": [3600, 4400, 3800, 2000, 1550, 900, 400]
+            },
+            {
+              "name": "Granica wiecznego śniegu",
+              "values": [4900, 6000, 5200, 2900, 2300, 1300, 600]
+            }
+          ],
+          "unit": "m n.p.m."
+        },
+        {
+          "type": "definition",
+          "term": "Granica wiecznego śniegu (granica wieloletniego śniegu)",
+          "text": "**Wysokość, powyżej której roczny przychód śniegu (opad i nawiew) przewyższa jego roczny ubytek (topnienie, sublimacja, odpadanie lawin).** Powyżej tej granicy śnieg zalega przez cały rok, przekształca się w firn, a następnie w lód — dlatego to właśnie tam zaczynają się pola firnowe zasilające lodowce.",
+          "note": "Nie myl jej z **górną granicą lasu**, wyznaczoną przez temperaturę okresu wegetacyjnego (drzewa potrzebują średniej ok. 6–7 °C w najcieplejszym miesiącu). Między nimi mieszczą się piętra bezleśne: subalpejskie, alpejskie i subniwalne. Granica wiecznego śniegu zależy nie tylko od temperatury, lecz także od sumy opadów — w górach suchych leży wyżej niż w wilgotnych na tej samej szerokości."
+        },
+        {
+          "type": "compare",
+          "title": "Wystawa (ekspozycja) stoku — dlaczego jedna dolina ma dwa różne krajobrazy",
+          "leftLabel": "Stok południowy (półkula północna)",
+          "rightLabel": "Stok północny (półkula północna)",
+          "rows": [
+            {
+              "aspect": "Kąt padania promieni słonecznych",
+              "left": "Duży — promienie padają bardziej stromo, ta sama wiązka oświetla mniejszą powierzchnię",
+              "right": "Mały — ta sama wiązka rozkłada się na większą powierzchnię"
+            },
+            {
+              "aspect": "Nasłonecznienie i temperatura",
+              "left": "Wyższe; śnieg topnieje wcześniej, okres wegetacyjny dłuższy nawet o kilka tygodni",
+              "right": "Niższe; pokrywa śnieżna zalega dłużej, wegetacja rusza później"
+            },
+            {
+              "aspect": "Wilgotność gleby",
+              "left": "Mniejsza — silniejsze parowanie i szybszy odpływ wody roztopowej",
+              "right": "Większa — mniejsze parowanie, dłuższa retencja śniegu"
+            },
+            {
+              "aspect": "Położenie granic pięter",
+              "left": "Przesunięte w górę, w Alpach nawet o 100–300 m",
+              "right": "Przesunięte w dół"
+            },
+            {
+              "aspect": "Lodowce i płaty śniegu",
+              "left": "Rzadsze i mniejsze; szybciej się cofają",
+              "right": "Częstsze i większe — to na stokach północnych utrzymują się w Tatrach wieloletnie płaty firnu"
+            },
+            {
+              "aspect": "Sposób użytkowania w Alpach",
+              "left": "Stok słoneczny (fr. **adret**) — wsie, pola, sady, winnice, ośrodki turystyczne",
+              "right": "Stok cienisty (fr. **ubac**) — lasy, hale wypasowe, trasy narciarskie o dłuższym sezonie"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kilimandżaro — wszystkie strefy krajobrazowe na jednej górze",
+          "region": "Kilimandżaro, Tanzania (3°S, 5895 m n.p.m.)",
+          "text": "Kilimandżaro jest wygasłym stratowulkanem wznoszącym się niemal 5 km ponad otaczającą sawannę, tuż przy równiku. Dzięki temu mieści na sobie pełną sekwencję pięter. Do ok. 1800 m n.p.m. ciągnie się **pas upraw** — najgęściej zaludniona część regionu, gdzie na żyznych glebach wulkanicznych lud Chagga uprawia kawę, banany i kukurydzę w systemie agroleśnym. Wyżej, do ok. 2800 m, rośnie **wilgotny las górski (mgielny)**, przechwytujący wilgoć z chmur i pełniący rolę naturalnego zbiornika wody dla całej okolicy — to on zasila rzeki i wodociągi. Między 2800 a 4000 m rozciąga się **piętro wrzosowisk i zarośli** z osobliwymi gigantycznymi lobeliami i starcami, których grube, omszone liście zamykają się nocą, chroniąc pąk przed przymrozkiem. Powyżej 4000 m leży **wysokogórska półpustynia (piętro alpejskie)**: skrajne wahania dobowe temperatury, silne promieniowanie UV, roślinność sprowadzona do porostów i kęp traw. Od ok. 5000 m zaczyna się **piętro niwalne** z resztkami lodowców, które w ciągu XX i XXI w. straciły znaczną część powierzchni — głównie wskutek zmniejszenia opadów i wzrostu nasłonecznienia po wylesieniu niższych pięter oraz ocieplenia klimatu.",
+          "takeaway": "Piętrowość na Kilimandżaro pokazuje kluczową różnicę wobec strefowości: klimat zmienia się z wysokością, ale długość dnia pozostaje równikowa (ok. 12 godzin przez cały rok), a amplituda dobowa jest większa od rocznej na każdym piętrze."
+        },
+        {
+          "type": "ordering",
+          "title": "Uszereguj piętra roślinne Tatr",
+          "instruction": "Ustaw od najniżej do najwyżej położonego.",
+          "items": [
+            "Piętro pogórza (do 700 m n.p.m.)",
+            "Regiel dolny (700–1250 m n.p.m.)",
+            "Regiel górny (1250–1550 m n.p.m.)",
+            "Piętro kosodrzewiny (1550–1800 m n.p.m.)",
+            "Piętro halne (1800–2300 m n.p.m.)",
+            "Piętro turniowe (powyżej 2300 m n.p.m.)"
+          ],
+          "explanation": "Zapamiętaj nie tylko kolejność, lecz także wysokości granic — na maturze pojawiają się polecenia typu „podaj wysokość górnej granicy lasu w Tatrach” albo „określ, na jakiej wysokości znajduje się punkt oznaczony na przekroju”."
+        },
+        {
+          "type": "map-explore",
+          "title": "Piętrowość w górach świata",
+          "caption": "Kliknij znaczniki i porównaj wysokości granicy lasu. Zwróć uwagę, jak bardzo różnią się góry o podobnej wysokości, ale położone na różnych szerokościach geograficznych.",
+          "center": [20, 20],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 49.18,
+              "lng": 20.09,
+              "label": "Rysy, Tatry (2499 m n.p.m.)",
+              "text": "Sześć pięter roślinnych, granica lasu ok. 1550 m. Góry zbyt niskie, by powstały lodowce — pozostały po nich tylko formy polodowcowe z plejstocenu: kotły, doliny U-kształtne i jeziora cyrkowe."
+            },
+            {
+              "lat": 45.83,
+              "lng": 6.86,
+              "label": "Mont Blanc, Alpy (4808 m n.p.m.)",
+              "text": "Granica lasu ok. 1800–2200 m, granica wiecznego śniegu ok. 2800–3200 m. Lodowce dolinne schodzą znacznie poniżej granicy śniegu, bo lód spływa w dół pod własnym ciężarem."
+            },
+            {
+              "lat": -3.07,
+              "lng": 37.35,
+              "label": "Kilimandżaro, Tanzania (5895 m n.p.m.)",
+              "text": "Pełna sekwencja pięter od sawanny po lodowce, na przestrzeni ok. 5 km w pionie i 40 km w poziomie."
+            },
+            {
+              "lat": -1.47,
+              "lng": -78.82,
+              "label": "Chimborazo, Ekwador (6263 m n.p.m.)",
+              "text": "Wulkan, którego wierzchołek jest najdalej oddalonym od środka Ziemi punktem powierzchni — z powodu spłaszczenia biegunowego. Klasyczny obiekt badań Aleksandra von Humboldta nad piętrowością."
+            },
+            {
+              "lat": 27.99,
+              "lng": 86.93,
+              "label": "Mount Everest, Himalaje (8849 m n.p.m.)",
+              "text": "Po stronie południowej (nepalskiej) opady monsunowe podnoszą granicę lasu do ok. 4000 m, a po suchej stronie tybetańskiej granica wiecznego śniegu leży o ponad 1000 m wyżej."
+            },
+            {
+              "lat": -32.65,
+              "lng": -70.01,
+              "label": "Aconcagua, Andy (6961 m n.p.m.)",
+              "text": "Najwyższy szczyt obu Ameryk, w suchej strefie zwrotnikowej. Granica wiecznego śniegu leży tu wyjątkowo wysoko — ok. 5000–5500 m — z powodu małych opadów."
+            },
+            {
+              "lat": 68.09,
+              "lng": 18.61,
+              "label": "Abisko, Alpy Skandynawskie (68°N)",
+              "text": "Za kołem podbiegunowym granica lasu (brzoza omszona) spada do ok. 500–700 m n.p.m., a lodowce schodzą niemal do poziomu morza."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd: pisanie, że „piętra roślinne odpowiadają strefom krajobrazowym”. To tylko **analogia**, a nie tożsamość. Piętro halne bywa nazywane „tundrą wysokogórską”, ale różni się od prawdziwej tundry w trzech punktach: długość dnia jest tu taka jak w otaczających nizinach (a nie polarna), promieniowanie UV jest znacznie silniejsze, a ciśnienie i zawartość tlenu — niższe. Dodatkowo w górach amplituda **dobowa** temperatury jest zwykle większa niż w odpowiadającej strefie nizinnej. Drugi błąd: mylenie górnej granicy lasu z granicą wiecznego śniegu — pierwszą wyznacza temperatura okresu wegetacyjnego, drugą bilans przychodu i ubytku śniegu."
+        },
+        {
+          "type": "quiz",
+          "question": "U podnóża góry (200 m n.p.m.) temperatura wynosi 21 °C. Zakładając średni gradient 0,6 °C/100 m, jaka jest temperatura na szczycie położonym na wysokości 2700 m n.p.m.?",
+          "options": ["9,0 °C", "6,0 °C", "3,0 °C", "−1,0 °C"],
+          "correctIndex": 1,
+          "explanation": "Różnica wysokości wynosi 2700 − 200 = 2500 m, czyli 25 setek metrów. Spadek temperatury: 0,6 · 25 = 15 °C. Temperatura na szczycie: 21 − 15 = 6 °C. Uwaga na typowy błąd rachunkowy — do wzoru wstawia się różnicę wysokości, a nie samą wysokość szczytu."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w Andach Ekwadoru górna granica lasu leży na wysokości ok. 3700 m n.p.m., a w Tatrach zaledwie ok. 1550 m n.p.m.?",
+          "options": [
+            "Bo w Andach opady są znacznie mniejsze, a las potrzebuje suchego klimatu",
+            "Bo Andy leżą na równiku, gdzie temperatura u podnóża jest znacznie wyższa, więc granica temperatury krytycznej dla drzew jest osiągana dopiero na dużo większej wysokości",
+            "Bo w Andach ciśnienie atmosferyczne maleje wolniej niż w Europie",
+            "Bo w Tatrach panuje wieloletnia zmarzlina uniemożliwiająca wzrost drzew"
+          ],
+          "correctIndex": 1,
+          "explanation": "Granicę lasu wyznacza temperatura okresu wegetacyjnego — drzewa potrzebują średniej ok. 6–7 °C w najcieplejszym miesiącu. Na równiku, gdzie u podnóża jest ok. 25 °C, taka temperatura występuje dopiero powyżej 3500 m. W Tatrach, gdzie u podnóża latem jest ok. 17 °C, ten sam próg osiągany jest już na ok. 1550 m. **Wysokość granic pięter zależy więc przede wszystkim od szerokości geograficznej.**"
+        },
+        {
+          "type": "quiz",
+          "question": "Na dwóch przeciwległych stokach tej samej alpejskiej doliny stwierdzono różne wysokości górnej granicy lasu. Które wyjaśnienie jest poprawne?",
+          "options": [
+            "Na stoku północnym granica leży wyżej, bo pada tam więcej deszczu",
+            "Na stoku południowym granica leży wyżej, bo większy kąt padania promieni oznacza wyższą temperaturę i dłuższy okres wegetacyjny",
+            "Różnica wynika wyłącznie z rodzaju skały macierzystej",
+            "Na obu stokach granica leży na tej samej wysokości, bo zależy tylko od wysokości nad poziomem morza"
+          ],
+          "correctIndex": 1,
+          "explanation": "To wpływ wystawy (ekspozycji) stoku. Na półkuli północnej stok południowy otrzymuje promienie pod większym kątem, więc na jednostkę powierzchni przypada więcej energii. Jest cieplej, śnieg topnieje wcześniej, okres wegetacyjny jest dłuższy — granica lasu i granica wiecznego śniegu przesuwają się w górę, w Alpach nawet o 100–300 m. Rodzaj skały modyfikuje żyzność gleby, ale nie tłumaczy systematycznej różnicy między stokami."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z przekrojami pięter to niemal pewny punkt, jeśli opanujesz dwie umiejętności. Po pierwsze — **rachunek z gradientem 0,6 °C/100 m**: zawsze najpierw oblicz różnicę wysokości, potem podziel ją przez 100 i dopiero pomnóż przez gradient. Po drugie — **uzasadnianie różnic między górami przez trzy czynniki w stałej kolejności: szerokość geograficzna, wysokość pasma, wystawa stoku i suchość klimatu**. Gdy polecenie brzmi „wyjaśnij, dlaczego granica wiecznego śniegu w Andach Boliwii leży wyżej niż w Andach Ekwadoru”, odpowiedź nie brzmi „bo jest cieplej”, lecz „bo opady są tam znacznie mniejsze, więc przychód śniegu jest niższy przy dużym nasłonecznieniu i sublimacji”."
+        }
+      ]
+    },
+    {
+      "slug": "astrefowe-modyfikacje",
+      "title": "Astrefowe modyfikacje: prądy morskie, kontynentalizm, cień opadowy i monsuny",
+      "summary": "Cztery czynniki, które łamią idealny układ stref i tworzą pustynie tam, gdzie ich nie powinno być.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gdyby Ziemia była jednolitą kulą pokrytą oceanem, strefy krajobrazowe biegłyby wzdłuż równoleżników idealnie równymi pasami. Nie biegną — bo istnieją kontynenty o różnych kształtach, łańcuchy górskie ustawione w poprzek wiatrów i prądy morskie przenoszące ciepło przez tysiące kilometrów. W tej lekcji uporządkujemy cztery najważniejsze czynniki astrefowe. Każdy z nich pojawia się na maturze w tym samym schemacie zadania: dwa punkty o zbliżonej szerokości geograficznej, wyraźnie różne klimatogramy i polecenie „wyjaśnij przyczynę różnicy”."
+        },
+        {
+          "type": "table",
+          "title": "Prądy morskie a klimat i krajobraz wybrzeży",
+          "caption": "Reguła: **prądy ciepłe ogrzewają i nawilżają**, przesuwając granice stref ku biegunowi; **prądy zimne wychładzają i osuszają**, tworząc pustynie wybrzeżne.",
+          "headers": ["Prąd morski", "Obszar oddziaływania", "Wpływ na temperaturę i opady", "Skutek w krajobrazie"],
+          "rows": [
+            ["Prąd Zatokowy i Prąd Północnoatlantycki (ciepłe)", "zachodnia i północna Europa, Wyspy Brytyjskie, wybrzeże Norwegii", "podnosi średnią temperaturę stycznia nawet o kilkanaście °C względem tej samej szerokości w Kanadzie; ogrzane od dołu powietrze jest chwiejne, co sprzyja opadom", "lasy liściaste i uprawy sięgają daleko na północ; port w Narwiku (68°N) nie zamarza, podczas gdy Zatoka Hudsona na 60°N jest skuta lodem"],
+            ["Prąd Peruwiański (Humboldta) (zimny)", "zachodnie wybrzeże Peru i północnego Chile", "chłodzi dolną warstwę powietrza, tworząc **inwersję termiczną**; powietrze staje się stabilne, konwekcja zanika, powstają uporczywe mgły (garúa) zamiast deszczu", "pustynia Atakama — w niektórych stacjach nie zmierzono opadu przez kilka lat z rzędu"],
+            ["Prąd Benguelski (zimny)", "wybrzeże Namibii i Angoli", "ten sam mechanizm inwersji; wilgoć dociera do brzegu wyłącznie w postaci gęstych mgieł znad oceanu", "pustynia Namib dochodząca do samej linii brzegowej; niektóre organizmy (chrząszcz Onymacris) piją wyłącznie wodę skroploną z mgły"],
+            ["Prąd Labradorski (zimny)", "wschodnie wybrzeże Kanady, Labrador, Nowa Fundlandia", "obniża temperaturę i przynosi góry lodowe; w miejscu zetknięcia z Prądem Zatokowym powstają jedne z najgęstszych mgieł świata", "tundra i lasotundra sięgają aż po 55°N — czyli szerokość Danii i południowej Szwecji"],
+            ["Prąd Wschodnioaustralijski (ciepły)", "wschodnie wybrzeże Australii", "podnosi temperaturę wód i wilgotność powietrza napływającego na ląd", "wilgotne lasy podzwrotnikowe na stokach Wielkich Gór Wododziałowych i warunki sprzyjające rozwojowi Wielkiej Rafy Koralowej"]
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — wybrzeże Chile",
+          "station": "Antofagasta (Chile, 23°S)",
+          "caption": "Stacja leży na zwrotniku Koziorożca, tuż nad oceanem. Zwróć uwagę jednocześnie na temperatury i na sumę opadów.",
+          "temps": [20.5, 20.5, 19.5, 17.5, 16.0, 15.0, 14.0, 14.0, 15.0, 16.0, 18.0, 19.5],
+          "precip": [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
+          "answer": {
+            "climate": "Klimat zwrotnikowy suchy (pustynny) w odmianie morskiej — chłodna pustynia wybrzeżna",
+            "reasoning": "Opady praktycznie nie występują (ok. 4 mm rocznie), co wskazuje na klimat pustynny. Zaskakujące są jednak temperatury: latem (styczeń, półkula południowa) tylko 20,5 °C i amplituda roczna zaledwie 6,5 °C — dla pustyni zwrotnikowej to wartości wyjątkowo niskie i wyrównane. Odpowiadają za to dwa czynniki astrefowe: **zimny Prąd Peruwiański** chłodzący powietrze i wywołujący inwersję termiczną, oraz sąsiedztwo oceanu łagodzące amplitudę. Trzeci czynnik — cień opadowy Andów od wschodu — dopełnia suchości."
+          }
+        },
+        {
+          "type": "process",
+          "title": "Cień opadowy — jak góry tworzą pustynię",
+          "caption": "Kliknij etapy. Kluczowa jest różnica dwóch gradientów: wilgotnoadiabatycznego przy wznoszeniu i suchoadiabatycznego przy opadaniu.",
+          "steps": [
+            {
+              "title": "1. Wilgotne powietrze napotyka barierę górską",
+              "text": "Masy powietrza znad oceanu, niosące dużo pary wodnej, zostają zmuszone do wznoszenia się po stoku **nawietrznym**. To wznoszenie wymuszone, niezależne od temperatury podłoża."
+            },
+            {
+              "title": "2. Ochładzanie, kondensacja i opady orograficzne",
+              "text": "Powietrze ochładza się najpierw suchoadiabatycznie (1 °C/100 m), a po osiągnięciu poziomu kondensacji — wilgotnoadiabatycznie (ok. 0,6 °C/100 m), bo skraplanie uwalnia ciepło utajone. Para wodna kondensuje, powstają chmury i **obfite opady orograficzne**. Po tej stronie gór leżą najwilgotniejsze miejsca Ziemi."
+            },
+            {
+              "title": "3. Zejście po stoku zawietrznym",
+              "text": "Za grzbietem powietrze — już pozbawione większości wilgoci — opada i ogrzewa się suchoadiabatycznie, czyli o 1 °C na 100 m: **szybciej, niż się ochładzało**. W efekcie u podnóża stoku zawietrznego jest cieplej niż na tej samej wysokości po stronie nawietrznej."
+            },
+            {
+              "title": "4. Wiatr fenowy",
+              "text": "Ciepłe i suche powietrze schodzące ze stoku to **fen** (halny w Tatrach, chinook w Górach Skalistych, wiatr Zonda w Andach). Wilgotność względna gwałtownie spada, chmury zanikają, śnieg topnieje w kilka godzin."
+            },
+            {
+              "title": "5. Cień opadowy",
+              "text": "Za pasmem górskim rozciąga się rozległy obszar suchy — **cień opadowy**. Przykłady: Patagonia za Andami, Wielka Kotlina i Dolina Śmierci za Sierra Nevada, Wyżyna Tybetańska i pustynia Gobi za Himalajami, Kotlina Kaszgarska za Tienszanem."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Efekt fenowy — obliczenie temperatury po zawietrznej stronie gór",
+          "expression": "t_2 = t_1 - \\gamma_w \\cdot \\dfrac{h_g - h_1}{100} + \\gamma_s \\cdot \\dfrac{h_g - h_2}{100}",
+          "variables": [
+            { "symbol": "t_1", "meaning": "temperatura u podnóża stoku nawietrznego (°C)" },
+            { "symbol": "t_2", "meaning": "temperatura u podnóża stoku zawietrznego (°C)" },
+            { "symbol": "h_g", "meaning": "wysokość grzbietu górskiego (m n.p.m.)" },
+            { "symbol": "h_1,\\ h_2", "meaning": "wysokości obu podnóży (m n.p.m.)" },
+            { "symbol": "\\gamma_w", "meaning": "gradient wilgotnoadiabatyczny, ok. 0,6 °C/100 m — wznoszenie z kondensacją" },
+            { "symbol": "\\gamma_s", "meaning": "gradient suchoadiabatyczny, 1 °C/100 m — opadanie powietrza suchego" }
+          ],
+          "caption": "Przykład: powietrze o temperaturze 10 °C u podnóża (200 m n.p.m.) wznosi się do grzbietu na 2200 m n.p.m., ochładzając się wilgotnoadiabatycznie: 0,6 · 20 = 12 °C, czyli na grzbiecie jest −2 °C. Po drugiej stronie opada do 200 m n.p.m., ogrzewając się suchoadiabatycznie: 1 · 20 = 20 °C, więc u podnóża zawietrznego temperatura wynosi 18 °C. **Powietrze jest cieplejsze o 8 °C niż na starcie** — to istota efektu fenowego. W zadaniu maturalnym zwykle zakłada się, że kondensacja zaczyna się już u podnóża."
+        },
+        {
+          "type": "case-study",
+          "title": "Atakama — najsuchsza pustynia świata i trzy czynniki naraz",
+          "region": "Atakama, północne Chile i południowe Peru (18–28°S)",
+          "text": "Atakama leży dokładnie tam, gdzie „powinna” być pustynia zwrotnikowa — pod wpływem osiadającego powietrza wyżu zwrotnikowego. Sama strefowość nie tłumaczy jednak jej ekstremalnej suchości: w centralnych częściach pustyni średnia roczna suma opadów wynosi poniżej 5 mm, a w stacji Arica przez wiele lat nie zanotowano opadu w ogóle. Nakładają się tu **trzy czynniki**. Po pierwsze — stały **wyż zwrotnikowy** (czynnik strefowy) z osiadaniem powietrza. Po drugie — **zimny Prąd Peruwiański**, który chłodzi dolną warstwę powietrza; powstaje inwersja termiczna, czyli warstwa, w której temperatura rośnie z wysokością. Powietrze przy gruncie jest cięższe od tego wyżej, więc nie może się wznieść — konwekcja jest zablokowana, a wilgoć skrapla się co najwyżej w postaci przyziemnej mgły (garúa) i niskich chmur warstwowych. Po trzecie — **cień opadowy Andów**, które odcinają dopływ wilgotnych mas powietrza z dorzecza Amazonki od wschodu. Efektem jest krajobraz tak jałowy, że wykorzystuje się go do testowania łazików marsjańskich, a jednocześnie tak przejrzysty atmosferycznie, że powstały tu największe obserwatoria astronomiczne świata (Paranal, ALMA na płaskowyżu Chajnantor). Życie opiera się na mgle: porosty, tillandsie i pustynne chrząszcze czerpią wodę wprost z kropelek zawieszonych w powietrzu, a ludzie stawiają siatki przechwytujące mgłę (atrapanieblas).",
+          "takeaway": "Skrajne cechy środowiska rzadko mają jedną przyczynę. W wyjaśnieniach maturalnych wymieniaj wszystkie czynniki i wskazuj, który jest strefowy, a który astrefowy."
+        },
+        {
+          "type": "compare",
+          "title": "Klimat morski (oceaniczny) a kontynentalny",
+          "leftLabel": "Morski — np. Bergen (60°N)",
+          "rightLabel": "Kontynentalny — np. Irkuck (52°N), Jakuck (62°N)",
+          "rows": [
+            {
+              "aspect": "Przyczyna fizyczna",
+              "left": "Woda ma duże ciepło właściwe, jest przezroczysta i miesza się — nagrzewa i wychładza wolno, oddając ciepło do atmosfery z opóźnieniem",
+              "right": "Ląd ma małe ciepło właściwe i nagrzewa się tylko powierzchniowo — szybko się nagrzewa i szybko wychładza"
+            },
+            {
+              "aspect": "Amplituda roczna temperatury",
+              "left": "Mała — Bergen ok. 13 °C",
+              "right": "Duża — Irkuck ok. 36 °C, Jakuck ok. 58 °C"
+            },
+            {
+              "aspect": "Termiczne pory roku",
+              "left": "Chłodne lato, łagodna zima; maksimum często dopiero w sierpniu, minimum w lutym — opóźnienie względem górowania Słońca",
+              "right": "Gorące lato, mroźna zima; maksimum w lipcu, minimum w styczniu"
+            },
+            {
+              "aspect": "Roczna suma opadów",
+              "left": "Duża, często ponad 800 mm (Bergen ok. 2250 mm)",
+              "right": "Mała, zwykle 250–500 mm"
+            },
+            {
+              "aspect": "Rozkład opadów w roku",
+              "left": "Równomierny, z maksimum jesienno-zimowym (aktywność niżów frontalnych)",
+              "right": "Wyraźne maksimum letnie — opady konwekcyjne; zimą wyż i pogoda bezchmurna"
+            },
+            {
+              "aspect": "Skutek w krajobrazie",
+              "left": "Lasy liściaste, torfowiska i wrzosowiska; długi okres wegetacyjny, uprawa traw i hodowla bydła",
+              "right": "Stepy i tajga; krótki okres wegetacyjny, konieczność doboru odmian wczesnych, miejscami nawadnianie"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — Syberia Południowa",
+          "station": "Irkuck (Rosja, 52°N)",
+          "caption": "Ta sama szerokość geograficzna co Warszawa, Astana i Berlin. Porównaj amplitudę i sumę opadów z klimatogramem Warszawy z lekcji o strefach umiarkowanych.",
+          "temps": [-17.8, -14.9, -6.2, 2.8, 10.5, 16.0, 18.3, 15.8, 9.2, 1.5, -8.4, -15.7],
+          "precip": [13, 9, 12, 22, 36, 78, 114, 92, 55, 25, 20, 18],
+          "answer": {
+            "climate": "Klimat umiarkowany chłodny kontynentalny (skrajnie kontynentalny)",
+            "reasoning": "Amplituda roczna wynosi ok. 36 °C (od −17,8 °C w styczniu do 18,3 °C w lipcu) — niemal dwukrotnie więcej niż w Warszawie na tej samej szerokości. Roczna suma opadów ok. 494 mm, z bardzo silnym maksimum letnim (lipiec 114 mm) i niemal bezopadową zimą — to typowy rozkład kontynentalny: zimą zalega Wyż Azjatycki blokujący napływ wilgoci, latem silne nagrzanie lądu wywołuje konwekcję. Za taki obraz odpowiada odległość od oceanu przekraczająca 3000 km oraz bariery górskie odcinające wpływy Pacyfiku."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Monsun letni a monsun zimowy w Azji Południowej i Południowo-Wschodniej",
+          "leftLabel": "Monsun letni (VI–IX)",
+          "rightLabel": "Monsun zimowy (XI–III)",
+          "rows": [
+            {
+              "aspect": "Przyczyna termiczna",
+              "left": "Ląd Azji nagrzewa się szybciej niż ocean; nad Wyżyną Tybetańską i Azją Południowo-Zachodnią tworzy się rozległy **niż baryczny**",
+              "right": "Ląd wychładza się szybciej niż ocean; nad Syberią i Mongolią formuje się potężny **Wyż Azjatycki (syberyjski)**"
+            },
+            {
+              "aspect": "Kierunek wiatru",
+              "left": "Z oceanu na ląd — z południowego zachodu nad Indiami, z południowego wschodu nad Chinami",
+              "right": "Z lądu na ocean — z północnego wschodu"
+            },
+            {
+              "aspect": "Wilgotność mas powietrza",
+              "left": "Bardzo duża — powietrze przeszło setki kilometrów nad ciepłym Oceanem Indyjskim",
+              "right": "Mała — powietrze kontynentalne, wychłodzone, o niskiej zawartości pary wodnej"
+            },
+            {
+              "aspect": "Opady",
+              "left": "Ekstremalnie obfite, dodatkowo wzmacniane orograficznie na stokach Ghatów Zachodnich i Himalajów; w Górach Khasi (Mawsynram, Czerapundżi) roczne sumy przekraczają 11 000 mm",
+              "right": "Znikome — pora sucha. Wyjątkiem są wschodnie wybrzeża, gdzie wiatr przechodzi nad ciepłym morzem i przynosi opady (Sri Lanka, wschodnie Filipiny, Wietnam)"
+            },
+            {
+              "aspect": "Znaczenie gospodarcze",
+              "left": "Wyznacza cały kalendarz rolniczy — sadzenie ryżu, juty i bawełny. Opóźnienie monsunu oznacza suszę i nieurodzaj, nadmiar deszczu — katastrofalne powodzie w deltach Gangesu i Brahmaputry",
+              "right": "Pora żniw i suszenia plonów, sprzyjająca też turystyce; poza obszarami nawadnianymi rolnictwo praktycznie zamiera"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat — zachodnie wybrzeże Indii",
+          "station": "Mumbaj (Indie, 19°N)",
+          "caption": "Popatrz na skalę opadów — i na liczbę miesięcy, w których w ogóle występują.",
+          "temps": [24.0, 24.5, 27.0, 29.0, 30.0, 29.0, 27.5, 27.0, 27.5, 28.5, 27.5, 25.5],
+          "precip": [1, 1, 0, 1, 12, 525, 800, 530, 310, 60, 15, 3],
+          "answer": {
+            "climate": "Klimat podrównikowy wilgotny (monsunowy)",
+            "reasoning": "Temperatury wysokie przez cały rok (24–30 °C, amplituda ok. 6 °C), z maksimum w maju — tuż przed nadejściem monsunu, gdy zachmurzenie jest jeszcze małe. Rozkład opadów jest skrajnie nierównomierny: ok. 2250 mm rocznie, z czego blisko 95% przypada na cztery miesiące (VI–IX), gdy wieje wilgotny monsun letni znad Oceanu Indyjskiego, dodatkowo wypiętrzany na Ghatach Zachodnich. Od listopada do maja opady niemal ustają, bo wieje suchy monsun zimowy z wnętrza Azji."
+          }
+        },
+        {
+          "type": "map-explore",
+          "title": "Astrefowość na mapie świata",
+          "caption": "Kliknij znaczniki. Przy każdym zastanów się, jaki byłby krajobraz tego miejsca, gdyby działała wyłącznie strefowość.",
+          "center": [20, 10],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 68.44,
+              "lng": 17.43,
+              "label": "Narwik, Norwegia (68°N)",
+              "text": "Port niezamarzający przez cały rok, choć leży za kołem podbiegunowym — zasługa ciepłego Prądu Północnoatlantyckiego. Dzięki temu w czasie II wojny światowej wywożono stąd rudę żelaza z Kiruny."
+            },
+            {
+              "lat": 60.39,
+              "lng": 5.32,
+              "label": "Bergen, Norwegia",
+              "text": "Wzorcowy klimat morski: amplituda roczna ok. 13 °C i ok. 2250 mm opadów rocznie, z maksimum jesienno-zimowym. Opady wzmacnia dodatkowo wypiętrzanie powietrza na Górach Skandynawskich."
+            },
+            {
+              "lat": 56.54,
+              "lng": -61.69,
+              "label": "Nain, Labrador (56°N)",
+              "text": "Ta sama szerokość co Kopenhaga i Moskwa, a krajobraz to lasotundra i tundra. Powód: zimny Prąd Labradorski i napływ mas powietrza znad wychłodzonego wnętrza Kanady."
+            },
+            {
+              "lat": -23.65,
+              "lng": -70.4,
+              "label": "Antofagasta, Chile",
+              "text": "Atakama — zimny Prąd Peruwiański, inwersja termiczna, wyż zwrotnikowy i cień opadowy Andów działające jednocześnie."
+            },
+            {
+              "lat": -22.96,
+              "lng": 14.51,
+              "label": "Walvis Bay, Namibia",
+              "text": "Pustynia Namib schodząca do samego oceanu. Prąd Benguelski daje mgły zamiast deszczu — to na nich opiera się cały tutejszy ekosystem."
+            },
+            {
+              "lat": -50.34,
+              "lng": -72.27,
+              "label": "El Calafate, Patagonia",
+              "text": "Step patagoński w cieniu opadowym Andów. Po zachodniej stronie gór, w chilijskich fiordach, spada ponad 3000 mm deszczu rocznie; po wschodniej — poniżej 300 mm."
+            },
+            {
+              "lat": 36.46,
+              "lng": -116.87,
+              "label": "Dolina Śmierci, USA",
+              "text": "Najniżej położone (−86 m p.p.m.) i najgorętsze miejsce Ameryki Północnej, w cieniu opadowym Sierra Nevada. Zmierzono tu 56,7 °C (1913 r.)."
+            },
+            {
+              "lat": 25.3,
+              "lng": 91.58,
+              "label": "Mawsynram, Indie",
+              "text": "Jedno z najwilgotniejszych miejsc na Ziemi — ok. 11 000 mm rocznie. Monsun letni napotyka tu strome stoki Gór Khasi, co maksymalizuje opady orograficzne."
+            },
+            {
+              "lat": 52.29,
+              "lng": 104.28,
+              "label": "Irkuck, Rosja",
+              "text": "Skrajny kontynentalizm na szerokości Warszawy: amplituda roczna 36 °C i niemal bezśnieżna, bezopadowa zima pod Wyżem Azjatyckim."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy rzeczy, które łatwo pomylić. (1) **Prąd zimny nie „zabiera” wilgoci** — powietrze nad nim jest wręcz wilgotne, o wilgotności względnej bliskiej 100%. Blokuje opady przez to, że wychładza dolną warstwę i tworzy **inwersję**, która uniemożliwia wznoszenie powietrza. Bez wznoszenia nie ma ochładzania adiabatycznego, a bez niego nie ma kondensacji na wysokości i deszczu. (2) **Monsun to nie wiatr, który wieje przez cały rok w jedną stronę** — jego istotą jest **sezonowa zmiana kierunku o ok. 180°**. (3) **Fen jest ciepły i suchy**, mimo że schodzi z gór — nie myl go z chłodnym wiatrem górskim (bora), który powstaje, gdy zimne powietrze przelewa się przez niską przełęcz i nie zdąży się dostatecznie ogrzać."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego zimny prąd morski wzdłuż wybrzeża sprzyja powstawaniu pustyni, mimo że nad oceanem powietrze ma bardzo wysoką wilgotność względną?",
+          "options": [
+            "Bo zimna woda paruje tak wolno, że w powietrzu nie ma pary wodnej",
+            "Bo wychłodzenie dolnej warstwy powietrza tworzy inwersję termiczną, która blokuje wznoszenie i konwekcję, więc para skrapla się tylko jako przyziemna mgła",
+            "Bo zimny prąd odpycha od brzegu wilgotne masy powietrza znad oceanu",
+            "Bo nad zimną wodą tworzy się stały niż baryczny wypychający chmury w głąb lądu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Chłodne powietrze przy powierzchni jest gęstsze niż warstwa cieplejszego powietrza nad nim — układ jest stabilny, a wznoszenie niemożliwe. Bez wznoszenia nie ma ochładzania adiabatycznego i kondensacji na wysokości, więc chmury deszczowe nie powstają. Wilgoć realizuje się w postaci mgieł (garúa, mgły Namibu), które dostarczają wody roślinom, ale nie tworzą opadu mierzalnego deszczomierzem."
+        },
+        {
+          "type": "quiz",
+          "question": "Powietrze o temperaturze 8 °C wznosi się od podnóża na wysokości 300 m n.p.m. do grzbietu na 2300 m n.p.m., ochładzając się wilgotnoadiabatycznie (0,6 °C/100 m), a następnie opada po stronie zawietrznej do 300 m n.p.m., ogrzewając się suchoadiabatycznie (1 °C/100 m). Jaka będzie temperatura u podnóża stoku zawietrznego?",
+          "options": ["8 °C", "12 °C", "16 °C", "20 °C"],
+          "correctIndex": 2,
+          "explanation": "Różnica wysokości wynosi 2000 m, czyli 20 setek metrów. Wznoszenie: 8 − 0,6 · 20 = 8 − 12 = −4 °C na grzbiecie. Opadanie: −4 + 1 · 20 = −4 + 20 = 16 °C. Powietrze jest o 8 °C cieplejsze niż na starcie, bo przy wznoszeniu ochładzało się wolniej (kondensacja uwalniała ciepło utajone), niż ogrzewało się przy opadaniu. To istota efektu fenowego."
+        },
+        {
+          "type": "quiz",
+          "question": "Które wyjaśnienie prawidłowo opisuje przyczynę monsunu letniego w Azji Południowej?",
+          "options": [
+            "Ląd nagrzewa się wolniej niż ocean, więc nad lądem powstaje wyż, z którego powietrze wieje ku oceanowi",
+            "Ląd nagrzewa się szybciej niż ocean, więc nad lądem powstaje niż, do którego napływa wilgotne powietrze znad oceanu",
+            "Prądy morskie zmieniają latem kierunek, spychając wilgotne powietrze nad ląd",
+            "Ruch obrotowy Ziemi latem przyspiesza, wzmacniając pasaty nad Oceanem Indyjskim"
+          ],
+          "correctIndex": 1,
+          "explanation": "Podstawą cyrkulacji monsunowej jest różnica pojemności cieplnej lądu i wody. Latem rozległy ląd Azji nagrzewa się znacznie szybciej niż ocean, powietrze nad nim się wznosi i powstaje niż termiczny (Niż Południowoazjatycki). Wiatr wieje z obszaru wyższego ciśnienia nad oceanem ku niżowi nad lądem, niosąc ogromne ilości pary wodnej. Zimą sytuacja się odwraca — nad wychłodzonym lądem powstaje Wyż Azjatycki i wiatr wieje w stronę oceanu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zbierz sobie ten dział w jedno zdanie-klucz do każdej odpowiedzi: **strefowość tłumaczy, co „powinno” być w danym miejscu, a astrefowość — dlaczego jest inaczej**. W wypracowaniach i zadaniach otwartych stosuj taką konstrukcję: „Ze względu na położenie w szerokości … powinien tu występować …, jednak wskutek działania … (prądu morskiego / cienia opadowego / kontynentalizmu / monsunu) …”. Pamiętaj też, by w każdym wyjaśnieniu zawrzeć **kierunek zmiany parametru** (temperatura rośnie/maleje, opady rosną/maleją) oraz **mechanizm fizyczny** (inwersja, konwekcja, ochładzanie adiabatyczne, różnica ciepła właściwego). Klucze CKE punktują właśnie te dwa elementy."
+        }
+      ]
+    }
+  ]
+}

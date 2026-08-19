@@ -1,0 +1,1471 @@
+{
+  "topicSlug": "spoleczenstwo-i-gospodarka-polski",
+  "lessons": [
+    {
+      "slug": "ludnosc-polski-liczba-rozmieszczenie-ruch-naturalny",
+      "title": "Ludność Polski: liczba, rozmieszczenie i ruch naturalny",
+      "summary": "Ilu nas jest, gdzie mieszkamy i dlaczego od lat 90. rodzi się w Polsce coraz mniej dzieci.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "W ciągu jednego pokolenia liczba urodzeń w Polsce spadła niemal o połowę. **Demografia Polski** to nie jest zestaw liczb do wykucia — to opis mechanizmu, który już dziś decyduje o tym, ile osób pracuje na jedną emeryturę, które szkoły są zamykane i dlaczego wsie na Podlasiu pustoszeją, a te pod Warszawą pęcznieją. W tej lekcji zajmiemy się dwoma filarami: **stanem i rozmieszczeniem ludności** (ile osób i gdzie) oraz **ruchem naturalnym** (co dzieje się z populacją bez udziału migracji). Migracje i struktury wieku dołożymy w następnej lekcji — ale już teraz zapamiętaj, że liczba ludności kraju zmienia się z dwóch powodów naraz: rodzą się i umierają ludzie oraz przemieszczają się przez granicę."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Polska w liczbach — punkt wyjścia",
+          "items": [
+            { "value": "312,7", "unit": "tys. km²", "label": "Powierzchnia Polski", "note": "9. miejsce w Europie, 6. w Unii Europejskiej" },
+            { "value": "ok. 38", "unit": "mln", "label": "Liczba ludności (NSP 2021)", "note": "ok. 0,5% ludności świata" },
+            { "value": "ok. 122", "unit": "os./km²", "label": "Średnia gęstość zaludnienia (2021)", "note": "powyżej średniej światowej, poniżej Niemiec (ok. 240)" },
+            { "value": "38,7", "unit": "mln", "label": "Historyczne maksimum ludności (1998-1999)", "note": "od tego czasu liczba ludności Polski maleje" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Gęstość zaludnienia",
+          "text": "Liczba mieszkańców przypadająca na jednostkę powierzchni, najczęściej na $1\\ \\text{km}^2$. Jest to **wskaźnik natężenia** — pokazuje, jak bardzo ludzie są skupieni, ale nic nie mówi o tym, czy mieszkają równomiernie. Średnia krajowa ukrywa różnicę między konurbacją katowicką (miejscami ponad 2000 os./km²) a gminą Lutowiska w Bieszczadach (ok. 4 os./km²).",
+          "note": "Uwaga na jednostki: gęstość zaludnienia liczymy zwykle dla powierzchni **całkowitej**, więc w województwach z dużym udziałem lasów i wód wskaźnik jest z definicji zaniżony w stosunku do rzeczywistego zagęszczenia w miejscowościach."
+        },
+        {
+          "type": "formula",
+          "title": "Gęstość zaludnienia",
+          "expression": "G_z = \\frac{L}{P}",
+          "variables": [
+            { "symbol": "G_z", "meaning": "gęstość zaludnienia [os./km²]" },
+            { "symbol": "L", "meaning": "liczba ludności [osoby]" },
+            { "symbol": "P", "meaning": "powierzchnia [km²]" }
+          ],
+          "caption": "Sprawdź na Polsce: $38\\ 000\\ 000 : 312\\ 700 \\approx 121,5$ os./km². W zadaniach maturalnych zwracaj uwagę, czy powierzchnię podano w km², czy w hektarach ($1\\ \\text{km}^2 = 100\\ \\text{ha}$)."
+        },
+        {
+          "type": "table",
+          "title": "Skrajne gęstości zaludnienia w województwach (ok. 2021)",
+          "caption": "Rozpiętość jest ponad sześciokrotna — i to w kraju bez pustyń i wysokich gór na większości obszaru.",
+          "headers": ["Województwo", "Gęstość [os./km²]", "Dlaczego akurat tyle"],
+          "rows": [
+            ["śląskie", "ok. 360", "konurbacja katowicka — XIX-wieczna industrializacja na złożach węgla kamiennego skupiła ludność na małej powierzchni"],
+            ["małopolskie", "ok. 225", "aglomeracja krakowska plus wyjątkowo gęsta sieć wsi na Pogórzu Karpackim (dziedzictwo rozdrobnienia agrarnego)"],
+            ["mazowieckie", "ok. 155", "średnią winduje aglomeracja warszawska; reszta województwa (np. Kurpie, Płockie) jest zaludniona rzadko"],
+            ["Polska — średnio", "ok. 122", "wartość odniesienia dla wszystkich porównań"],
+            ["zachodniopomorskie", "ok. 73", "lasy, wielkoobszarowe gospodarstwa po dawnych PGR-ach, rzadka sieć miast"],
+            ["warmińsko-mazurskie", "ok. 58", "pojezierza, duża lesistość i jeziorność, położenie peryferyjne"],
+            ["podlaskie", "ok. 57", "najniższa w kraju — puszcze, bagna Biebrzy i Narwi, wieloletni odpływ migracyjny"]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie faktycznie mieszkają Polacy",
+          "caption": "Kliknij punkty: cztery obszary koncentracji i trzy obszary pustki osadniczej. Zwróć uwagę, że oś zagęszczenia biegnie z południowego zachodu (GOP) na północny wschód (Warszawa) — to tzw. pas najgęstszego zaludnienia.",
+          "center": [52.0, 19.3],
+          "zoom": 6,
+          "markers": [
+            { "lat": 50.26, "lng": 19.02, "label": "Konurbacja katowicka", "text": "Najgęściej zaludniony obszar Polski. Ludność ściągnęły tu w XIX i XX w. złoża węgla kamiennego i hutnictwo — to przykład czynnika gospodarczo-surowcowego." },
+            { "lat": 52.23, "lng": 21.01, "label": "Aglomeracja warszawska", "text": "Największe skupisko ludności w Polsce (stolica plus strefa podmiejska). Tu działa czynnik administracyjny i rynek pracy — magnes dla migracji z całego kraju." },
+            { "lat": 50.06, "lng": 19.94, "label": "Kraków i podnóże Karpat", "text": "Pas gęstego zaludnienia u wylotu dolin karpackich: żyzne gleby lessowe, długa tradycja osadnicza, rozdrobnione gospodarstwa i wielowioskowe gminy." },
+            { "lat": 54.35, "lng": 18.65, "label": "Trójmiasto", "text": "Aglomeracja policentryczna nad Zatoką Gdańską — czynnik nadmorski: porty, stocznie, handel, dziś także usługi i turystyka." },
+            { "lat": 54.1, "lng": 22.93, "label": "Suwalszczyzna", "text": "Jeden z najrzadziej zaludnionych obszarów kraju: surowszy klimat (najniższe średnie roczne temperatury na nizinach Polski), słabe gleby, peryferyjne położenie, silna emigracja." },
+            { "lat": 49.2, "lng": 22.4, "label": "Bieszczady", "text": "Najrzadziej zaludniony obszar Polski (miejscami poniżej 10 os./km²). Poza warunkami górskimi zadziałał czynnik historyczny — wysiedlenia ludności w latach 1944-1947." },
+            { "lat": 52.7, "lng": 23.8, "label": "Puszcza Białowieska", "text": "Pustka osadnicza o podłożu przyrodniczym i prawnym: zwarty kompleks leśny objęty ochroną, brak gruntów pod zabudowę i rolnictwo." }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Czynniki rozmieszczenia ludności Polski",
+          "caption": "W zadaniu maturalnym rzadko wystarczy jeden czynnik — najlepsze odpowiedzi łączą przyrodniczy z historycznym lub gospodarczym.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Działają głównie **ograniczająco**: wypychają ludzi z terenów o trudnych warunkach. W Polsce mają mniejsze znaczenie niż w krajach o skrajnym klimacie, bo prawie cały kraj nadaje się do zamieszkania.",
+              "examples": ["wysokie góry (Tatry, wyższe partie Sudetów i Beskidów)", "bagna i doliny zalewowe (Biebrza, Narew)", "zwarte kompleksy leśne (Puszcza Białowieska, Bory Tucholskie)", "słabe gleby piaszczyste Niziny Mazowieckiej i Podlasia"]
+            },
+            {
+              "name": "Historyczno-polityczne",
+              "description": "Tłumaczą różnice, których nie da się wyjaśnić przyrodą — dwie sąsiednie krainy o podobnych glebach mogą mieć zupełnie inną sieć osadniczą.",
+              "examples": ["granice zaborów (gęstsza sieć wsi i kolei w dawnym zaborze pruskim)", "wysiedlenia i przesiedlenia po 1945 r. (Ziemie Zachodnie i Północne, akcja Wisła w Bieszczadach)", "straty wojenne — zagłada ludności żydowskiej wyludniła wiele miasteczek wschodniej Polski"]
+            },
+            {
+              "name": "Gospodarcze",
+              "description": "Najsilniejszy czynnik współczesny: ludzie idą tam, gdzie jest praca. Historycznie decydowały surowce, dziś — usługi i inwestycje w metropoliach.",
+              "examples": ["węgiel kamienny → konurbacja katowicka", "miedź → Legnicko-Głogowski Okręg Miedziowy", "port i przemysł stoczniowy → Trójmiasto, Szczecin", "usługi wyższego rzędu i inwestycje zagraniczne → Warszawa, Wrocław, Poznań, Kraków"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Ruch naturalny i przyrost naturalny",
+          "text": "**Ruch naturalny** to ogół zdarzeń zmieniających liczbę i strukturę ludności bez udziału migracji: urodzenia, zgony, małżeństwa, rozwody. **Przyrost naturalny** to różnica między liczbą urodzeń żywych a liczbą zgonów w danym okresie. Gdy zgonów jest więcej niż urodzeń, mówimy o **ubytku naturalnym** (przyroście ujemnym) — i taka właśnie jest sytuacja Polski nieprzerwanie od 2013 r. (wcześniej ubytek wystąpił także w latach 2002-2005).",
+          "note": "Wartość bezwzględna (np. −150 tys. osób) nie pozwala porównywać krajów o różnej wielkości — dlatego liczymy **współczynnik** przyrostu naturalnego w promilach."
+        },
+        {
+          "type": "formula",
+          "title": "Współczynnik przyrostu naturalnego",
+          "expression": "W_{pn} = \\frac{U - Z}{L} \\cdot 1000\\ [\\text{‰}]",
+          "variables": [
+            { "symbol": "U", "meaning": "liczba urodzeń żywych w roku" },
+            { "symbol": "Z", "meaning": "liczba zgonów w roku" },
+            { "symbol": "L", "meaning": "liczba ludności (stan średnioroczny)" }
+          ],
+          "caption": "W latach 2020-2023 współczynnik przyrostu naturalnego w Polsce wynosił od ok. −3‰ do ok. −5‰ (najgłębiej w pandemicznym 2021 r.). Dla porównania: w 1955 r. przekraczał +19‰."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Liczba urodzeń żywych w Polsce (w tysiącach)",
+          "caption": "Wykres pokazuje falowanie: wyż powojenny, echo wyżu w latach 80. i dwa głębokie niże. Kolejne fale są coraz niższe — to efekt kumulacji malejącej dzietności i coraz mniej licznych roczników matek.",
+          "labels": ["1950", "1955", "1960", "1970", "1983", "1990", "2000", "2003", "2009", "2017", "2023"],
+          "series": [
+            { "name": "Urodzenia żywe [tys.]", "values": [763, 794, 669, 546, 723, 548, 378, 351, 418, 402, 272] }
+          ],
+          "unit": "tys."
+        },
+        {
+          "type": "timeline",
+          "title": "Fazy demograficzne Polski po 1945 roku",
+          "caption": "Każdy wyż wraca po ok. 25-30 latach jako echo — dlatego demografia jest przewidywalna na dekady naprzód.",
+          "events": [
+            { "period": "1946-1960", "label": "Wyż powojenny (kompensacyjny)", "text": "Po wojnie zawierano odłożone małżeństwa, a odbudowa dawała pracę i mieszkania. Współczynnik przyrostu naturalnego przekraczał **19‰**, rekord urodzeń padł w 1955 r. (ok. 794 tys.). To najliczniejsze roczniki w historii Polski — dziś są to osoby w wieku emerytalnym, co jest główną przyczyną wzrostu liczby zgonów." },
+            { "period": "1961-1970", "label": "Niż lat 60.", "text": "W wiek rozrodczy weszły nieliczne roczniki urodzone w czasie **II wojny światowej**. Klasyczny przykład **echa demograficznego**: mniej potencjalnych matek to mniej urodzeń nawet przy niezmienionej dzietności." },
+            { "period": "1975-1985", "label": "Echo wyżu powojennego", "text": "Dzieci rodzą osoby z wyżu lat 50. Szczyt w 1983 r. (ok. 723 tys. urodzeń), współczynnik dzietności ok. **2,4** — powyżej prostej zastępowalności pokoleń. To ostatni moment, gdy Polska rodziła więcej dzieci, niż potrzeba do odtworzenia pokolenia." },
+            { "period": "1990-2003", "label": "Zapaść urodzeń okresu transformacji", "text": "Liczba urodzeń spada z 548 tys. do **351 tys.** — minimum powojenne. W latach 2002-2005 przyrost naturalny staje się po raz pierwszy ujemny. Nakładają się dwa procesy: zmiana modelu rodziny i szok gospodarczy transformacji." },
+            { "period": "2004-2012", "label": "Krótkie odbicie", "text": "W wiek rozrodczy wchodzi **echo echa** — liczne roczniki z lat 80. Do tego poprawa koniunktury i realizacja odłożonych urodzeń. Liczba urodzeń rośnie do ok. 418 tys. (2009), ale dzietność pozostaje niska (ok. 1,4)." },
+            { "period": "od 2013", "label": "Trwały ubytek naturalny", "text": "Rodzą coraz mniej liczne roczniki z niżu lat 90., a umierają liczne roczniki wyżu powojennego. Od 2013 r. przyrost naturalny jest **nieprzerwanie ujemny**, a w 2023 r. liczba urodzeń spadła do ok. 272 tys. — najniższej wartości w powojennej historii." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego dzietność w Polsce spadła — mechanizm krok po kroku",
+          "caption": "Odsłaniaj kolejno. Zwróć uwagę, że tylko dwa pierwsze ogniwa to decyzje ludzi — dwa ostatnie działają automatycznie, niezależnie od polityki rodzinnej.",
+          "steps": [
+            { "title": "1. Zmiana modelu życia", "text": "Wydłużyła się edukacja (masowe studia po 1990 r.) i wzrosła aktywność zawodowa kobiet. Decyzja o dziecku jest odkładana: **mediana wieku matki przy pierwszym dziecku** przesunęła się z ok. 23 lat (1990) do ok. 29 lat obecnie. Odłożone urodzenie często zamienia się w urodzenie, które nigdy nie nastąpi — biologia zamyka okno." },
+            { "title": "2. Koszt i niepewność", "text": "Bezrobocie transformacyjne, umowy czasowe, drogie mieszkania w miastach o najlepszym rynku pracy. Dziecko przestało być inwestycją (jak w gospodarstwie rolnym), a stało się kosztem — to klasyczna zmiana z fazy 2. na 4. **modelu przejścia demograficznego**." },
+            { "title": "3. Drugie przejście demograficzne", "text": "Spadek liczby zawieranych małżeństw, wzrost udziału urodzeń pozamałżeńskich (z ok. 6% w 1990 r. do ok. 27% obecnie), popularność związków nieformalnych i bezdzietności z wyboru, sekularyzacja. Zmieniły się **wartości**, nie tylko możliwości finansowe." },
+            { "title": "4. Efekt struktury wieku (momentum)", "text": "W wiek rozrodczy weszły **niżowe roczniki lat 90.** Nawet gdyby dzietność wróciła do 2,1, liczba urodzeń przez wiele lat pozostałaby niska — po prostu jest mniej kobiet w wieku 25-34 lata. To najczęściej pomijana przyczyna w odpowiedziach maturalnych." },
+            { "title": "5. Rezultat", "text": "**Współczynnik dzietności (TFR)** w Polsce wynosi ok. **1,2** (2023) przy **prostej zastępowalności pokoleń na poziomie 2,1**. Oznacza to, że każde kolejne pokolenie jest o ok. 40% mniej liczne od poprzedniego — a ubytek naturalny będzie się pogłębiał niezależnie od dalszych zmian postaw." }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Przyrost naturalny a przyrost rzeczywisty",
+          "leftLabel": "Przyrost naturalny",
+          "rightLabel": "Przyrost rzeczywisty",
+          "rows": [
+            { "aspect": "Co mierzy", "left": "różnicę urodzeń i zgonów", "right": "całkowitą zmianę liczby ludności" },
+            { "aspect": "Wzór", "left": "$PN = U - Z$", "right": "$PR = PN + SM$, gdzie $SM$ to saldo migracji (imigracja − emigracja)" },
+            { "aspect": "Czy uwzględnia migracje", "left": "nie", "right": "tak — to jedyna różnica" },
+            { "aspect": "Sytuacja Polski (ostatnie lata)", "left": "wyraźnie ujemny (ok. −3 do −5‰)", "right": "również ujemny, choć w latach 2022-2023 napływ uchodźców z Ukrainy chwilowo go łagodził" },
+            { "aspect": "Typowa gmina podmiejska (np. pod Wrocławiem)", "left": "bliski zeru lub lekko dodatni — napływają młodzi ludzie w wieku rozrodczym", "right": "silnie dodatni — decyduje **dodatnie saldo migracji** z miasta centralnego" },
+            { "aspect": "Typowa gmina peryferyjna (np. na Podlasiu)", "left": "silnie ujemny — dominują roczniki starsze, więc dużo zgonów", "right": "jeszcze bardziej ujemny — do ubytku naturalnego dochodzi odpływ migracyjny młodych" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki, na których uczniowie tracą punkty. **Po pierwsze**: przyrost naturalny to nie to samo co przyrost rzeczywisty — jeśli w zadaniu pojawia się migracja, na pewno chodzi o rzeczywisty. **Po drugie**: współczynniki demograficzne podaje się w **promilach (‰)**, a nie w procentach — pomylenie jednostki to błąd merytoryczny, nawet gdy liczba jest dobra. **Po trzecie**: spadek liczby urodzeń nie musi oznaczać spadku dzietności — może wynikać z samej struktury wieku (mniej kobiet w wieku rozrodczym), i odwrotnie."
+        },
+        {
+          "type": "quiz",
+          "question": "W pewnym powiecie w 2023 r. przy 80 000 mieszkańców odnotowano 640 urodzeń żywych, 1040 zgonów oraz saldo migracji równe +200 osób. Jaki był współczynnik przyrostu naturalnego?",
+          "options": ["−5‰", "−2,5‰", "+2,5‰", "−0,5‰"],
+          "correctIndex": 0,
+          "explanation": "Przyrost naturalny to $640 - 1040 = -400$ osób. Współczynnik: $\\frac{-400}{80\\,000} \\cdot 1000 = -5$‰. Saldo migracji (+200) do tego wzoru **nie wchodzi** — posłużyłoby dopiero do obliczenia przyrostu rzeczywistego, który wyniósłby $-400 + 200 = -200$ osób, czyli −2,5‰ (odpowiedź B to właśnie ta pułapka)."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie łączy obszar Polski z GŁÓWNĄ przyczyną jego bardzo małej gęstości zaludnienia?",
+          "options": [
+            "Bieszczady — wyłącznie surowy klimat górski, bez wpływu czynników historycznych",
+            "Bieszczady — warunki górskie wzmocnione powojennymi wysiedleniami ludności",
+            "Podlasie — zwarta zabudowa przemysłowa ograniczająca teren pod mieszkalnictwo",
+            "Żuławy Wiślane — nieużytki i brak gleb nadających się pod uprawę"
+          ],
+          "correctIndex": 1,
+          "explanation": "W Bieszczadach czynnik przyrodniczy (góry, krótki okres wegetacyjny) nałożył się na czynnik historyczny — wysiedlenia ludności łemkowskiej i ukraińskiej w latach 1944-1947 wyludniły całe doliny, które nigdy nie zostały ponownie zasiedlone. Podlasie jest rzadko zaludnione z powodu puszcz, bagien i odpływu migracyjnego, a nie przemysłu. Żuławy mają jedne z najżyźniejszych gleb w Polsce (mady) — ich mała gęstość zaludnienia wynika z rolniczego, a nie miejskiego charakteru, ale nie z braku gleb."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego liczba urodzeń w Polsce spadała po 2013 r. mimo wprowadzenia programów wsparcia rodzin?",
+          "options": [
+            "Ponieważ współczynnik zgonów przewyższył współczynnik urodzeń, co automatycznie zmniejsza liczbę urodzeń",
+            "Ponieważ w wiek rozrodczy weszły mało liczne roczniki z niżu demograficznego lat 90.",
+            "Ponieważ wzrosła emigracja osób starszych, co obniżyło liczbę ludności ogółem",
+            "Ponieważ wydłużyło się przeciętne trwanie życia, co zmniejsza dzietność"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje **struktura wieku**: liczba urodzeń zależy nie tylko od tego, ile dzieci rodzi przeciętna kobieta (TFR), ale też od tego, ile jest kobiet w wieku 20-39 lat. Po 2013 r. w ten wiek weszły roczniki z głębokiego niżu lat 90., więc nawet chwilowy wzrost dzietności nie zdołał utrzymać liczby urodzeń. Odpowiedź A myli skutek z przyczyną, C i D nie mają związku przyczynowego z liczbą urodzeń."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** Gdy polecenie brzmi „wyjaśnij przyczyny zmian liczby urodzeń w Polsce”, nigdy nie poprzestawaj na jednej grupie przyczyn. Klucze CKE zwykle wymagają **dwóch różnych mechanizmów**, na przykład: (1) przyczyny **strukturalnej** — w wiek rozrodczy wchodzą mało liczne roczniki niżu demograficznego, oraz (2) przyczyny **behawioralnej/ekonomicznej** — późniejszy wiek zawierania małżeństw, aktywność zawodowa kobiet, koszty mieszkania i wychowania dziecka. Formułuj je jako zdania przyczynowo-skutkowe („ponieważ..., dlatego...”), a nie jako hasła. Do zadań obliczeniowych zapamiętaj kolejność: przyrost naturalny → dodaj saldo migracji → przyrost rzeczywisty, a wynik zawsze podaj z **jednostką i znakiem**."
+        }
+      ]
+    },
+    {
+      "slug": "struktura-ludnosci-migracje-i-prognozy",
+      "title": "Struktura ludności, migracje i prognozy demograficzne",
+      "summary": "Piramida wieku Polski, mechanizm starzenia się społeczeństwa, emigracja poakcesyjna i imigracja oraz to, co z tego wynika na przyszłość.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wiesz już, ilu nas jest. Teraz najważniejsze pytanie: **kim jesteśmy** — w jakim wieku, jakiej płci, skąd przybyliśmy. Struktura demograficzna decyduje o gospodarce mocniej niż sama liczba ludności: kraj 38-milionowy z medianą wieku 25 lat i kraj 38-milionowy z medianą 45 lat to dwa zupełnie różne państwa pod względem rynku pracy, wydatków publicznych i potrzeb infrastrukturalnych. Polska w ciągu 30 lat przeszła z pierwszego typu w kierunku drugiego — i to jest treść tej lekcji."
+        },
+        {
+          "type": "population-pyramid",
+          "title": "Piramida wieku i płci ludności Polski",
+          "country": "Polska",
+          "caption": "Wartości w procentach ogółu ludności, w pięcioletnich grupach wieku (stan zbliżony do NSP 2021). Zanim odsłonisz odpowiedź, sprawdź trzy rzeczy: szerokość podstawy, wybrzuszenia w środku i długość „ogona” powyżej 70 lat.",
+          "male": [2.36, 2.75, 2.8, 2.36, 2.41, 3.05, 3.7, 4.2, 4.15, 3.55, 2.95, 2.73, 3.25, 3.05, 2.4, 1.22, 0.95, 0.62],
+          "female": [2.24, 2.6, 2.66, 2.24, 2.29, 2.9, 3.55, 4.05, 4.05, 3.5, 3.0, 2.87, 3.6, 3.65, 3.1, 1.78, 1.65, 1.48],
+          "ageLabels": ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69", "70-74", "75-79", "80-84", "85+"],
+          "answer": {
+            "shape": "regresywna (zwężająca się), z wyraźnymi wcięciami i wybrzuszeniami",
+            "reasoning": "Podstawa jest **węższa** od środkowych partii — rodzi się mniej dzieci, niż liczą roczniki ich rodziców, więc piramida ma kształt odwróconej gruszki (dzbana). Widoczne są trzy ślady historii: wybrzuszenie w grupach 60-69 lat (wyż powojenny lat 50.), wybrzuszenie w grupach 35-44 lata (echo wyżu z lat 80.) oraz wcięcie w grupach 15-24 lata (niż lat 90. i początku XXI w.). Po prawej stronie, powyżej 70. roku życia, słupki kobiet są wyraźnie dłuższe — to skutek **nadumieralności mężczyzn** i różnicy w przeciętnym trwaniu życia wynoszącej ok. 8 lat."
+          }
+        },
+        {
+          "type": "definition",
+          "term": "Ekonomiczne grupy wieku",
+          "text": "Podział ludności ze względu na zdolność do pracy, stosowany w polskiej statystyce: **wiek przedprodukcyjny** (0-17 lat), **wiek produkcyjny** (mężczyźni 18-64, kobiety 18-59 lat) oraz **wiek poprodukcyjny** (mężczyźni 65+, kobiety 60+). W Polsce udziały te wynoszą obecnie ok. **18% / 60% / 22%**, podczas gdy w 1990 r. było to ok. 29% / 58% / 13%. Kurczy się więc podstawa, a rośnie szczyt — przy niemal stałym udziale grupy produkcyjnej, który dopiero teraz zaczyna szybko spadać.",
+          "note": "Uwaga: granice wieku produkcyjnego są **różne dla płci** w Polsce (skutek różnego wieku emerytalnego) — dlatego statystyki polskie nie są wprost porównywalne z międzynarodowymi, gdzie stosuje się przedział 15-64 lata dla obu płci."
+        },
+        {
+          "type": "formula",
+          "title": "Współczynnik obciążenia demograficznego",
+          "expression": "W_{od} = \\frac{L_{przedprod.} + L_{poprod.}}{L_{prod.}} \\cdot 100",
+          "variables": [
+            { "symbol": "L_{przedprod.}", "meaning": "liczba osób w wieku przedprodukcyjnym" },
+            { "symbol": "L_{poprod.}", "meaning": "liczba osób w wieku poprodukcyjnym" },
+            { "symbol": "L_{prod.}", "meaning": "liczba osób w wieku produkcyjnym" }
+          ],
+          "caption": "Mówi, ile osób w wieku nieprodukcyjnym przypada na 100 osób w wieku produkcyjnym (w Polsce ok. 68). Kluczowa jest jego **struktura**: jeszcze w latach 90. obciążenie tworzyły głównie dzieci (koszt: szkoły, żłobki — inwestycja zwracająca się za 20 lat), dziś coraz bardziej tworzą je osoby starsze (koszt: emerytury i opieka zdrowotna — wydatek nieodwracalny)."
+        },
+        {
+          "type": "compare",
+          "title": "Struktura ludności: miasto a wieś w Polsce",
+          "leftLabel": "Miasta",
+          "rightLabel": "Wieś",
+          "rows": [
+            { "aspect": "Współczynnik feminizacji", "left": "wyższy — ok. 111 kobiet na 100 mężczyzn", "right": "niższy — ok. 101 kobiet na 100 mężczyzn" },
+            { "aspect": "Przyczyna różnicy", "left": "silniejsza migracja kobiet do miast (praca w usługach, edukacja, awans społeczny) oraz starsza struktura wieku", "right": "odpływ młodych kobiet ze wsi; w młodszych rocznikach powstaje **deficyt kobiet** utrudniający zakładanie rodzin" },
+            { "aspect": "Udział osób starszych", "left": "wysoki w miastach o kurczącej się liczbie ludności (Łódź, miasta GOP)", "right": "bardzo wysoki na obszarach peryferyjnych, ale **niski w strefach podmiejskich**, gdzie osiedlają się młode rodziny" },
+            { "aspect": "Ruch naturalny", "left": "ujemny w większości dużych miast", "right": "silnie ujemny na peryferiach, dodatni w gminach podmiejskich" },
+            { "aspect": "Wniosek", "left": "miasto centralne starzeje się i traci ludność na rzecz swojej strefy podmiejskiej", "right": "„wieś” to dwa różne światy: rosnąca wieś podmiejska i wyludniająca się wieś peryferyjna" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak działa starzenie się społeczeństwa — dwa mechanizmy naraz",
+          "caption": "To ważne rozróżnienie: starzenie od dołu i od góry mają inne przyczyny, inne tempo i wymagają innych reakcji państwa.",
+          "steps": [
+            { "title": "1. Starzenie się od dołu (podstawy piramidy)", "text": "Spada liczba urodzeń, więc **maleje udział dzieci** w populacji. Automatycznie rośnie udział osób starszych — nawet gdyby ich liczba się nie zmieniła. To główny mechanizm starzenia się Polski po 1990 r. i jest on **szybki**: wystarczyło jedno pokolenie niskiej dzietności." },
+            { "title": "2. Starzenie się od góry (wierzchołka piramidy)", "text": "Wydłuża się przeciętne trwanie życia (w Polsce ok. **74 lata dla mężczyzn i ok. 82 dla kobiet**, 2023), więc rośnie **liczba i udział osób w wieku 80+**. Ten mechanizm jest wolniejszy, ale bardziej kosztowny — to on generuje popyt na opiekę długoterminową." },
+            { "title": "3. Nakładanie się fal wyżowych", "text": "W latach 2010-2020 w wiek emerytalny weszły liczne roczniki **wyżu powojennego**. Skokowo wzrosła liczba emerytów, a jednocześnie z rynku pracy zaczęły ubywać najliczniejsze grupy pracowników. Za ok. 20 lat to samo powtórzy się z rocznikami z echa wyżu (lata 80.)." },
+            { "title": "4. Skutek: podwójny nacisk na finanse publiczne", "text": "Rośnie liczba świadczeniobiorców, maleje liczba płatników składek. Rośnie **współczynnik obciążenia demograficznego osobami starszymi**, a wraz z nim wydatki na emerytury, opiekę zdrowotną i usługi opiekuńcze. Reakcje państw: wydłużanie wieku emerytalnego, polityka prorodzinna, otwarcie na imigrację zarobkową, automatyzacja." },
+            { "title": "5. Skutek przestrzenny", "text": "Starzenie nie jest równomierne. Najstarsze są **peryferie wschodnie** i **kurczące się miasta poprzemysłowe**, najmłodsze — **strefy podmiejskie metropolii**. Prowadzi to do lokalnego zamykania szkół i przychodni tam, gdzie ubywa ludzi, przy jednoczesnym niedoborze tych samych usług w gminach podmiejskich, gdzie ludzi przybywa." }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Migracje Polaków — od „za chlebem” do imigracji do Polski",
+          "caption": "Zauważ moment przełomu: przez ponad 150 lat Polska była krajem emigracyjnym, a po ok. 2015 r. stała się krajem imigracji netto.",
+          "events": [
+            { "period": "1870-1914", "label": "Emigracja „za chlebem”", "text": "Przeludnienie agrarne i bieda ziem polskich pod zaborami wypchnęły ok. **3,5 mln** osób, głównie do USA, Brazylii i Niemiec (Zagłębie Ruhry). To wtedy powstała **Polonia** — jedna z największych diaspor świata." },
+            { "period": "1944-1950", "label": "Przymusowe przemieszczenia powojenne", "text": "Zmiana granic uruchomiła migracje na skalę milionów: wysiedlenia Niemców, przesiedlenia Polaków z Kresów na **Ziemie Zachodnie i Północne**, akcja Wisła. Skutkiem była wymiana ludności na jednej trzeciej terytorium kraju i uczynienie Polski państwem niemal jednolitym narodowościowo." },
+            { "period": "1980-1989", "label": "Emigracja polityczno-zarobkowa", "text": "Stan wojenny i kryzys gospodarczy wypchnęły ok. **1 mln** osób, głównie do RFN, USA, Kanady i Szwecji. Charakterystyczny był **drenaż mózgów** — wyjeżdżali ludzie z wyższym wykształceniem." },
+            { "period": "od 1 maja 2004", "label": "Emigracja poakcesyjna", "text": "Wejście do UE i otwarcie rynków pracy (najpierw Wielka Brytania, Irlandia i Szwecja) uruchomiło największą falę migracji w historii III RP. W szczycie (ok. 2017 r.) **poza granicami przebywało czasowo ok. 2,5 mln Polaków**. Motyw był głównie **ekonomiczny**: różnica płac i wysokie bezrobocie w Polsce (ok. 19-20% w 2004 r.)." },
+            { "period": "2014-2021", "label": "Odwrócenie kierunku — imigracja zarobkowa", "text": "Spadek bezrobocia w Polsce poniżej 6% i niedobór rąk do pracy przyciągnęły imigrantów, przede wszystkim **z Ukrainy i Białorusi**. Przed 2022 r. w Polsce pracowało nawet ok. 1,3-1,5 mln obywateli Ukrainy. Jednocześnie **brexit** ograniczył atrakcyjność Wielkiej Brytanii i część Polaków wróciła." },
+            { "period": "od 24 lutego 2022", "label": "Napływ uchodźców wojenny", "text": "Po pełnoskalowej agresji Rosji na Ukrainę granicę przekroczyły miliony osób; na stałe w Polsce pozostało ok. **1 mln** uchodźców, głównie kobiet z dziećmi. To migracja **przymusowa** (nie zarobkowa) i to ona przez pewien czas maskowała ubytek naturalny w statystykach." }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Główne kraje pobytu Polaków przebywających czasowo za granicą (ok. 2019 r., w tys.)",
+          "caption": "Dane szacunkowe GUS dla pobytów powyżej 3 miesięcy. Widać dominację dwóch kierunków: Niemcy (bliskość, tradycja, praca sezonowa) oraz Wielka Brytania (otwarcie rynku pracy już w 2004 r., znajomość języka).",
+          "labels": ["Niemcy", "Wielka Brytania", "Holandia", "Irlandia", "Włochy", "Norwegia"],
+          "series": [
+            { "name": "Liczba Polaków [tys.]", "values": [704, 678, 125, 112, 92, 85] }
+          ],
+          "unit": "tys."
+        },
+        {
+          "type": "case-study",
+          "title": "Imigracja z Ukrainy — jak zmienia polski rynek pracy i demografię",
+          "region": "Polska (największe skupiska: Warszawa, Wrocław, Kraków, Gdańsk, Poznań)",
+          "text": "Do 2014 r. Polska była krajem typowo emigracyjnym. Zmieniły to trzy czynniki naraz: spadek bezrobocia poniżej 6%, ubytek naturalny odbierający gospodarce pracowników oraz wojna i kryzys gospodarczy u wschodniego sąsiada. Imigranci z Ukrainy zapełnili luki w budownictwie, transporcie, rolnictwie, przetwórstwie spożywczym i usługach — czyli w sektorach, z których wcześniej wyemigrowali Polacy. Po 2022 r. dołączyła fala uchodźców wojennych: głównie kobiet z dziećmi, o odmiennej strukturze (mało mężczyzn w wieku produkcyjnym), która obciążyła system edukacji i ochrony zdrowia, ale też podniosła popyt konsumpcyjny i liczbę uczniów w wyludniających się szkołach. **Migracja odmładza strukturę wieku** — imigranci są przeciętnie młodsi od ludności przyjmującej — ale jej wpływ na dzietność jest ograniczony i krótkotrwały, bo wzorce rodzinne migrantów szybko upodabniają się do wzorców kraju docelowego.",
+          "takeaway": "Imigracja może **złagodzić** skutki ubytku naturalnego na rynku pracy, ale go nie odwraca: aby utrzymać stałą liczbę ludności w wieku produkcyjnym, Polska musiałaby przyjmować napływ liczony w setkach tysięcy osób rocznie przez dziesięciolecia."
+        },
+        {
+          "type": "table",
+          "title": "Struktura narodowościowa i wyznaniowa Polski (Narodowy Spis Powszechny 2021)",
+          "caption": "Polska należy do najbardziej jednorodnych narodowościowo państw Europy — to skutek zmiany granic, zagłady ludności żydowskiej i powojennych przesiedleń. Uwaga: w spisie można było zadeklarować **dwie** identyfikacje narodowo-etniczne, dlatego udziały nie sumują się do 100%.",
+          "headers": ["Kategoria", "Przykłady / wielkość", "Komentarz maturalny"],
+          "rows": [
+            ["Narodowość polska", "ok. 97% deklaracji", "przed 1939 r. mniejszości stanowiły ok. 1/3 ludności II RP — to jedna z najgłębszych zmian społecznych XX w."],
+            ["Mniejszości narodowe (ustawowo 9)", "Niemcy, Ukraińcy, Białorusini, Litwini, Rosjanie, Słowacy, Czesi, Ormianie, Żydzi", "**mają państwo macierzyste** poza Polską; Niemcy skupieni na Opolszczyźnie, Białorusini i Litwini na Podlasiu"],
+            ["Mniejszości etniczne (ustawowo 4)", "Łemkowie, Romowie, Tatarzy, Karaimi", "**nie mają własnego państwa** — to najczęściej sprawdzana różnica wobec mniejszości narodowych"],
+            ["Społeczności regionalne", "identyfikacja śląska (ok. 0,5 mln), kaszubska (ok. 180 tys.)", "kaszubski ma status **języka regionalnego**, jedynego w Polsce; śląska nie jest ustawową mniejszością"],
+            ["Wyznanie rzymskokatolickie", "ok. 71% deklaracji", "udział systematycznie maleje, najszybciej w dużych miastach i wśród młodzieży"],
+            ["Inne wyznania i bezwyznaniowość", "prawosławie (Podlasie, ok. 0,5 mln), protestantyzm (Śląsk Cieszyński), Świadkowie Jehowy; bezwyznaniowi ok. 7%", "rozmieszczenie wyznań to **mapa historii**: prawosławie na wschodzie, luteranizm tam, gdzie sięgały wpływy pruskie i habsburskie"]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Liczba ludności Polski — stan i prognoza GUS do 2060 r. (w mln)",
+          "caption": "Wariant średni prognozy GUS z 2023 r. Prognozy demograficzne są wyjątkowo wiarygodne w krótkim i średnim okresie, bo osoby, które w 2060 r. będą miały 40 lat, już się urodziły — jedyną realną niewiadomą pozostaje saldo migracji.",
+          "labels": ["2000", "2010", "2021", "2030", "2040", "2050", "2060"],
+          "series": [
+            { "name": "Ludność Polski [mln]", "values": [38.3, 38.5, 38.0, 36.7, 34.8, 32.9, 30.9] }
+          ],
+          "unit": "mln"
+        },
+        {
+          "type": "classification",
+          "title": "Konsekwencje starzenia się i depopulacji Polski",
+          "caption": "W zadaniach typu „podaj dwie konsekwencje” najlepiej wybrać skutki z **różnych** grup — to zabezpiecza przed powtórzeniem tej samej myśli innymi słowami.",
+          "groups": [
+            {
+              "name": "Gospodarcze",
+              "description": "Zmiana relacji między liczbą pracujących a liczbą świadczeniobiorców uderza w podaż pracy i finanse publiczne.",
+              "examples": ["kurczenie się zasobów pracy i niedobór pracowników w budownictwie, opiece i transporcie", "rosnące wydatki na emerytury i ochronę zdrowia przy malejącej liczbie płatników składek", "presja na wydłużanie wieku emerytalnego i automatyzację", "rozwój **silver economy** — usług adresowanych do seniorów"]
+            },
+            {
+              "name": "Społeczne",
+              "description": "Zmienia się struktura rodziny i zapotrzebowanie na usługi publiczne.",
+              "examples": ["wzrost liczby gospodarstw jednoosobowych, zwłaszcza starszych kobiet (singularyzacja starości)", "zamykanie szkół i przedszkoli w gminach wyludniających się", "rosnące zapotrzebowanie na opiekę długoterminową i geriatrię", "zmiana struktury wyborców i priorytetów politycznych"]
+            },
+            {
+              "name": "Przestrzenne",
+              "description": "Skutki nie rozkładają się równomiernie — pogłębiają istniejące różnice regionalne.",
+              "examples": ["depopulacja **ściany wschodniej** i kurczących się miast poprzemysłowych", "koncentracja młodych w obszarach metropolitalnych", "nieefektywna, przewymiarowana infrastruktura tam, skąd ludzie odeszli (sieci wodociągowe, drogi, szkoły)", "brak infrastruktury tam, dokąd przybyli — w gminach podmiejskich"]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze pomyłki w tym temacie. **Mniejszość narodowa a etniczna**: różnica polega wyłącznie na tym, czy dana grupa ma państwo macierzyste (Niemcy, Ukraińcy — narodowa; Łemkowie, Romowie, Tatarzy, Karaimi — etniczna). **Emigracja a imigracja**: emigracja to wyjazd Z kraju, imigracja to przyjazd DO kraju; saldo migracji to imigracja minus emigracja. **Starzenie się od dołu a od góry**: spadek dzietności odpowiada za starzenie od dołu, a wydłużenie trwania życia — od góry; podanie tylko drugiego mechanizmu jako przyczyny starzenia się Polski jest odpowiedzią niepełną. Nie myl też **współczynnika feminizacji** (kobiety na 100 mężczyzn) ze **współczynnikiem maskulinizacji** (mężczyźni na 100 kobiet)."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Połącz termin demograficzny z sytuacją, którą opisuje.",
+          "pairs": [
+            { "left": "Saldo migracji", "right": "Różnica między liczbą imigrantów a liczbą emigrantów w danym okresie" },
+            { "left": "Współczynnik dzietności (TFR)", "right": "Przeciętna liczba dzieci urodzonych przez kobietę w całym okresie rozrodczym" },
+            { "left": "Współczynnik obciążenia demograficznego", "right": "Liczba osób w wieku nieprodukcyjnym przypadająca na 100 osób w wieku produkcyjnym" },
+            { "left": "Mniejszość etniczna", "right": "Grupa o odrębnej tożsamości, która nie ma własnego państwa poza granicami Polski" },
+            { "left": "Drenaż mózgów", "right": "Odpływ za granicę osób z wysokimi kwalifikacjami, kształconych kosztem kraju pochodzenia" },
+            { "left": "Prosta zastępowalność pokoleń", "right": "Dzietność ok. 2,1, przy której pokolenie dzieci ma tę samą liczebność co pokolenie rodziców" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Piramida wieku Polski ma wyraźne wcięcie w grupach 15-24 lata oraz wybrzuszenie w grupach 35-44 lata. Jak poprawnie wyjaśnić oba te elementy?",
+          "options": [
+            "Wcięcie to skutek emigracji poakcesyjnej, a wybrzuszenie to skutek imigracji z Ukrainy",
+            "Wcięcie to skutek niżu demograficznego lat 90., a wybrzuszenie to echo wyżu demograficznego z lat 80.",
+            "Wcięcie to skutek nadumieralności mężczyzn, a wybrzuszenie to skutek wydłużenia trwania życia",
+            "Oba elementy wynikają wyłącznie ze zmian wieku emerytalnego"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kształt piramidy zapisuje historię urodzeń. Osoby w wieku 35-44 lata urodziły się w latach 80., czyli w okresie **echa wyżu powojennego** (szczyt 1983 r.). Osoby w wieku 15-24 lata urodziły się w latach 90. i na początku XXI w., w czasie **najgłębszego niżu** (minimum 351 tys. urodzeń w 2003 r.). Emigracja poakcesyjna miała pewien wpływ, ale nie tworzy tak regularnych wcięć; nadumieralność mężczyzn ujawnia się dopiero w rocznikach starszych."
+        },
+        {
+          "type": "quiz",
+          "question": "W gminie liczącej 10 000 mieszkańców jest 6000 osób w wieku produkcyjnym, 1800 w przedprodukcyjnym i 2200 w poprodukcyjnym. Ile wynosi współczynnik obciążenia demograficznego?",
+          "options": ["36,7", "66,7", "40,0", "150,0"],
+          "correctIndex": 1,
+          "explanation": "$\\frac{1800 + 2200}{6000} \\cdot 100 = \\frac{4000}{6000} \\cdot 100 \\approx 66,7$. Na 100 osób w wieku produkcyjnym przypada niecałe 67 osób w wieku nieprodukcyjnym. Odpowiedź A powstaje z podzielenia przez liczbę ludności ogółem, a D z odwrócenia ułamka — obie to typowe błędy rachunkowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o migracjach w Polsce po 2004 r. jest FAŁSZYWE?",
+          "options": [
+            "Główną przyczyną emigracji poakcesyjnej były różnice w poziomie płac i wysokie bezrobocie w Polsce",
+            "Emigracja poakcesyjna dotyczyła głównie osób młodych, co pogłębiło starzenie się społeczeństwa",
+            "Napływ imigrantów zarobkowych z Ukrainy trwale odwrócił ujemny przyrost naturalny Polski",
+            "Brexit ograniczył atrakcyjność Wielkiej Brytanii jako kierunku emigracji zarobkowej Polaków"
+          ],
+          "correctIndex": 2,
+          "explanation": "Imigracja wpływa na **przyrost rzeczywisty** (przez saldo migracji), a nie na przyrost naturalny, który zależy wyłącznie od relacji urodzeń i zgonów. Napływ imigrantów łagodzi skutki depopulacji na rynku pracy i chwilowo poprawia bilans ludnościowy, ale nie zmienia faktu, że w Polsce umiera więcej osób, niż się rodzi. Pozostałe trzy zdania są prawdziwe."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** Piramida wieku pojawia się na maturze rozszerzonej niemal co roku — i prawie zawsze w formie „na podstawie piramidy sformułuj wniosek / wyjaśnij przyczynę wskazanego elementu”. Wypracuj sobie stały schemat opisu: (1) **podstawa** — szeroka czy wąska, co mówi o dzietności; (2) **wybrzuszenia i wcięcia** — przelicz wiek na rok urodzenia (rok spisu minus wiek) i przypisz je do wyżu lub niżu; (3) **wierzchołek** — długość i asymetria płci, czyli trwanie życia i nadumieralność mężczyzn; (4) **typ** — progresywna, zastojowa czy regresywna. Kluczowy nawyk: **zamień grupę wieku na rok urodzenia**, bo tylko wtedy możesz wskazać konkretne wydarzenie historyczne, a klucze CKE punktują właśnie takie konkretne odwołania."
+        }
+      ]
+    },
+    {
+      "slug": "siec-osadnicza-i-urbanizacja-polski",
+      "title": "Sieć osadnicza i urbanizacja Polski",
+      "summary": "Miasta Polski i ich funkcje, aglomeracje i konurbacja katowicka, suburbanizacja oraz problemy kurczących się miast i wyludniającej się wsi.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska jest krajem **średnio zurbanizowanym** — w miastach mieszka ok. 60% ludności, mniej niż w Niemczech (ok. 77%) czy Wielkiej Brytanii (ok. 84%), ale też z zupełnie inną strukturą: obok jednej metropolii o zasięgu europejskim mamy gęstą sieć miast średnich i małych oraz najbardziej rozdrobnioną sieć wsi w tej części Europy. W tej lekcji zobaczysz, skąd wziął się ten układ, dlaczego wskaźnik urbanizacji od 30 lat **spada**, choć miasta wcale się nie kurczą jako obszary funkcjonalne, i na czym polega paradoks pustoszejących centrów przy pęczniejących przedmieściach."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Sieć osadnicza Polski — skala zjawiska",
+          "items": [
+            { "value": "ok. 980", "label": "Liczba miast (2023)", "note": "liczba rośnie, bo małe miejscowości odzyskują prawa miejskie" },
+            { "value": "ok. 60", "unit": "%", "label": "Wskaźnik urbanizacji (2021)", "note": "spadek z 61,8% w 1990 r." },
+            { "value": "ok. 1,86", "unit": "mln", "label": "Ludność Warszawy (2023)", "note": "obszar metropolitalny to ok. 3 mln osób" },
+            { "value": "ok. 2,2", "unit": "mln", "label": "Ludność Górnośląsko-Zagłębiowskiej Metropolii", "note": "41 gmin — największe skupisko miejskie w Polsce" },
+            { "value": "ok. 40", "unit": "tys.", "label": "Liczba wsi (miejscowości wiejskich)", "note": "wyjątkowo gęsta i rozdrobniona sieć osadnicza" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Wskaźnik urbanizacji",
+          "text": "Udział ludności miejskiej w ludności ogółem, wyrażony w procentach. W Polsce ma on charakter **administracyjny**: miastem jest miejscowość, która ma nadane prawa miejskie — niezależnie od liczby mieszkańców czy struktury zatrudnienia. Dlatego w statystyce jako „miasta” figurują miejscowości liczące poniżej tysiąca mieszkańców (np. Wyśmierzyce), a jako „wieś” — podmiejskie miejscowości z kilkunastoma tysiącami mieszkańców, w pełni miejskie stylem życia i strukturą pracy.",
+          "note": "To dlatego wskaźnik urbanizacji Polski **spada** od lat 90.: ludzie nie wracają na wieś, tylko wyprowadzają się z miasta do gminy wiejskiej tuż za jego granicą. Formalnie stają się mieszkańcami wsi, faktycznie nadal żyją miejsko — nadal pracują, uczą się i robią zakupy w mieście. Nazywamy to **urbanizacją pozorną w statystyce** i jest to ulubiony materiał na zadania z analizy danych."
+        },
+        {
+          "type": "table",
+          "title": "Największe miasta Polski i ich funkcje (ludność ok. 2023 r.)",
+          "caption": "Wielkość to jedno, funkcja — drugie. W zadaniach maturalnych częściej pyta się o funkcje niż o rankingi.",
+          "headers": ["Miasto", "Ludność (ok.)", "Dominujące funkcje", "Trend liczby ludności"],
+          "rows": [
+            ["Warszawa", "1,86 mln", "administracyjna (stolica), finansowa, usług wyższego rzędu, naukowa, transportowa (największy port lotniczy)", "wzrost"],
+            ["Kraków", "800 tys.", "naukowa i akademicka, turystyczna (UNESCO), nowoczesnych usług biznesowych (BPO/SSC)", "wzrost"],
+            ["Wrocław", "670 tys.", "przemysłowa (AGD, motoryzacja, baterie), akademicka, usługowa", "stabilizacja/wzrost"],
+            ["Łódź", "660 tys.", "dawniej włókiennicza — dziś logistyka, AGD, przemysł kreatywny; miasto po głębokiej restrukturyzacji", "silny spadek"],
+            ["Poznań", "540 tys.", "targowo-handlowa (Międzynarodowe Targi Poznańskie), przemysłowa (motoryzacja), akademicka", "spadek na rzecz strefy podmiejskiej"],
+            ["Gdańsk", "490 tys.", "portowa i morska, turystyczna, przemysł stoczniowy i rafineryjny", "wzrost"],
+            ["Szczecin", "390 tys.", "portowa, transportowa, przemysłowa", "spadek"],
+            ["Katowice", "280 tys.", "rdzeń konurbacji — administracyjna dla regionu, usługowa, dawniej górnicza", "silny spadek"]
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Typy zespołów miejskich w Polsce",
+          "caption": "Rozróżnienie aglomeracji monocentrycznej od konurbacji jest jednym z najczęściej sprawdzanych pojęć w dziale osadnictwo.",
+          "groups": [
+            {
+              "name": "Aglomeracja monocentryczna",
+              "description": "Jedno wyraźnie dominujące miasto centralne otoczone strefą podmiejską, która jest od niego funkcjonalnie zależna (dojazdy do pracy, usługi wyższego rzędu). Powstaje przez **rozrost jednego ośrodka**.",
+              "examples": ["warszawska", "krakowska", "łódzka", "wrocławska", "poznańska", "szczecińska"]
+            },
+            {
+              "name": "Konurbacja (aglomeracja policentryczna)",
+              "description": "Zespół **kilku miast o zbliżonej randze**, które rozrosły się obok siebie i zrosły przestrzennie, bez jednego dominującego centrum. Powstaje najczęściej na obszarze wydobycia surowca, gdzie osady rozwijały się przy szybach i hutach.",
+              "examples": ["konurbacja katowicka (górnośląska) — największa w Polsce", "konurbacja gdańska (Trójmiasto: Gdańsk-Sopot-Gdynia)", "zespół bydgosko-toruński (układ bipolarny — dwa bieguny)"]
+            },
+            {
+              "name": "Obszar metropolitalny",
+              "description": "Pojęcie **funkcjonalne**, szersze niż aglomeracja: obejmuje miasto rdzeniowe i cały obszar powiązany z nim codziennymi dojazdami do pracy i nauki, niezależnie od granic administracyjnych.",
+              "examples": ["warszawski (ok. 3 mln osób)", "Górnośląsko-Zagłębiowska Metropolia — jedyny w Polsce związek metropolitalny powołany ustawowo (2017)", "trójmiejski", "krakowski"]
+            },
+            {
+              "name": "Miasta małe i średnie",
+              "description": "Kręgosłup polskiej sieci osadniczej — pełnią funkcje **usługowe i administracyjne** dla otaczających je obszarów wiejskich. Wiele z nich traci te funkcje po utracie statusu siedziby województwa (reforma 1999 r.) lub upadku lokalnego zakładu pracy.",
+              "examples": ["dawne miasta wojewódzkie: Radom, Częstochowa, Kielce, Elbląg, Włocławek", "ośrodki jednozakładowe: Bełchatów, Police, Puławy", "miasteczka rolnicze i turystyczne ściany wschodniej"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Największe zespoły miejskie Polski",
+          "caption": "Zwróć uwagę na to, jak niesymetryczny jest rozkład: gęsta sieć dużych miast na południu i zachodzie, ubóstwo dużych ośrodków na wschodzie i w części północno-wschodniej.",
+          "center": [52.0, 19.3],
+          "zoom": 6,
+          "markers": [
+            { "lat": 52.23, "lng": 21.01, "label": "Warszawa — aglomeracja monocentryczna", "text": "Jedyny w Polsce ośrodek o funkcjach metropolitalnych w skali europejskiej: centrale banków i korporacji, największe lotnisko, węzeł kolejowy i drogowy. Silna suburbanizacja w kierunku Piaseczna, Legionowa i Pruszkowa." },
+            { "lat": 50.26, "lng": 19.02, "label": "Konurbacja katowicka", "text": "Kilkanaście miast o podobnej randze zrośniętych w jeden organizm (Katowice, Sosnowiec, Gliwice, Zabrze, Bytom, Tychy, Ruda Śląska). Układ **policentryczny** — brak jednego dominującego centrum, wspólna infrastruktura, wspólny rynek pracy." },
+            { "lat": 54.4, "lng": 18.6, "label": "Trójmiasto — konurbacja nadmorska", "text": "Gdańsk (funkcje portowe i administracyjne), Gdynia (port i przemysł, miasto zbudowane od zera w latach 20. XX w.), Sopot (uzdrowiskowo-turystyczne). Układ pasmowy wzdłuż wybrzeża." },
+            { "lat": 51.76, "lng": 19.46, "label": "Łódź — miasto kurczące się", "text": "Klasyczny **shrinking city**: od lat 80. straciła ponad 200 tys. mieszkańców. Przyczyny: upadek przemysłu włókienniczego po 1989 r., ujemny przyrost naturalny i odpływ migracyjny (m.in. do Warszawy oddalonej o 1,5 godziny koleją)." },
+            { "lat": 53.12, "lng": 18.01, "label": "Zespół bydgosko-toruński", "text": "Układ **bipolarny** — dwa miasta o zbliżonej wielkości i konkurujących funkcjach, oddalone o ok. 45 km. Rzadki w Polsce przykład rywalizacji o funkcje stołeczne wewnątrz jednego województwa." },
+            { "lat": 53.13, "lng": 23.16, "label": "Białystok — stolica regionu peryferyjnego", "text": "Największe miasto północno-wschodniej Polski, ale bez zaplecza innych dużych ośrodków. Pokazuje, jak rzadka jest sieć dużych miast na wschód od Wisły." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Konurbacja katowicka — dlaczego wygląda inaczej niż każde inne polskie miasto",
+          "region": "Górny Śląsk i Zagłębie Dąbrowskie (woj. śląskie)",
+          "text": "Konurbacja katowicka nie powstała przez rozrost jednego miasta, lecz przez **równoczesny wzrost kilkunastu osad przy kopalniach i hutach** w XIX i XX w. Stąd jej cechy: brak jednego śródmieścia, wielokrotnie powtórzone funkcje (każde miasto ma własny ratusz, szpital, dworzec), rekordowa gęstość zaludnienia i najgęstsza w kraju sieć drogowa i kolejowa. Po 1989 r. rozpoczęła się **restrukturyzacja**: zamykanie kopalń, likwidacja hut, spadek zatrudnienia w górnictwie z ok. 400 tys. do kilkudziesięciu tysięcy osób. Konurbacja zaczęła gwałtownie tracić ludność — Bytom, Zabrze i Sosnowiec należą do miast o najgłębszej depopulacji w Polsce — ale jednocześnie przyciągnęła nowe inwestycje: montownie samochodów w Tychach i Gliwicach, centra logistyczne przy autostradach A1 i A4 oraz usługi biznesowe w Katowicach. Powstały problemy typowe dla obszarów pogórniczych: **szkody górnicze** (zapadliska, zalewiska), zdegradowane tereny poprzemysłowe wymagające rekultywacji, dzielnice o skoncentrowanym bezrobociu i ubóstwie (Bytom-Bobrek) oraz jedno z najgorszych powietrz w Europie zimą, wynikające z niskiej emisji z pieców węglowych.",
+          "takeaway": "Konurbacja jest zapisem swojej **genezy surowcowej**: policentryczność, powtarzalność funkcji i skala problemów restrukturyzacyjnych wynikają wprost z tego, że miasta wyrosły przy szybach kopalń, a nie wokół rynku i kościoła."
+        },
+        {
+          "type": "process",
+          "title": "Cykl rozwoju miasta — cztery fazy urbanizacji",
+          "caption": "Model van den Berga. Polskie metropolie są dziś w fazie 2., a niektóre dzielnice śródmiejskie Warszawy, Krakowa i Wrocławia wchodzą już w fazę 4.",
+          "steps": [
+            { "title": "1. Urbanizacja (koncentracja)", "text": "Ludność napływa ze wsi do miasta centralnego, które szybko rośnie. W Polsce faza ta trwała od XIX w. do końca lat 80. XX w., a jej silnikiem była **industrializacja** — zwłaszcza socjalistyczna po 1945 r., z budową Nowej Huty, Nowych Tychów czy Stalowej Woli. Wskaźnik urbanizacji wzrósł z ok. 32% (1946) do ok. 62% (1990)." },
+            { "title": "2. Suburbanizacja (dekoncentracja w obrębie aglomeracji)", "text": "Miasto centralne **traci** ludność na rzecz strefy podmiejskiej, ale cała aglomeracja nadal rośnie. W Polsce ruszyła po 2000 r., napędzana wzrostem zamożności, dostępnością kredytów hipotecznych, masową motoryzacją i niższymi cenami działek za miastem. Skutek przestrzenny: **rozlewanie się zabudowy** (urban sprawl) wzdłuż dróg wylotowych." },
+            { "title": "3. Dezurbanizacja (kontrurbanizacja)", "text": "Cała aglomeracja traci ludność — odpływ sięga dalej niż strefa podmiejska, w kierunku mniejszych miast i obszarów wiejskich, często atrakcyjnych krajobrazowo. W Polsce zjawisko marginalne; typowe raczej dla starych regionów przemysłowych Europy Zachodniej. Nie myl go z suburbanizacją." },
+            { "title": "4. Reurbanizacja", "text": "Powrót ludności do centrum dzięki **rewitalizacji** zdegradowanych dzielnic, przekształceniom terenów poprzemysłowych i modzie na życie bez samochodu. W Polsce widoczna punktowo: Manufaktura i Księży Młyn w Łodzi, Stara Rzeźnia w Szczecinie, Wyspa Spichrzów w Gdańsku, Nowe Żerniki we Wrocławiu." }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Wskaźnik urbanizacji Polski w latach 1946-2021 (%)",
+          "caption": "Uwaga na kształt: gwałtowny wzrost w okresie industrializacji, plateau na przełomie wieków i **powolny spadek** po 2000 r. Spadek nie oznacza, że Polacy wracają na wieś — oznacza suburbanizację i statystyczne przenoszenie ludności do gmin wiejskich.",
+          "labels": ["1946", "1960", "1970", "1980", "1990", "2000", "2010", "2021"],
+          "series": [
+            { "name": "Ludność miejska [% ogółu]", "values": [32, 48, 52, 58, 62, 62, 61, 60] }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "compare",
+          "title": "Skutki suburbanizacji: miasto centralne kontra strefa podmiejska",
+          "leftLabel": "Miasto centralne",
+          "rightLabel": "Gmina podmiejska",
+          "rows": [
+            { "aspect": "Liczba ludności", "left": "spada — wyprowadzają się przede wszystkim rodziny z dziećmi", "right": "szybko rośnie, czasem podwaja się w ciągu 15-20 lat" },
+            { "aspect": "Struktura wieku", "left": "starzeje się (zostają osoby starsze i single)", "right": "odmładza się — napływają osoby w wieku 25-40 lat wraz z dziećmi" },
+            { "aspect": "Dochody budżetu", "left": "maleją wpływy z PIT, bo podatek płaci się w gminie zameldowania", "right": "rosną wpływy z PIT, ale często nie nadążają za kosztami nowej infrastruktury" },
+            { "aspect": "Infrastruktura", "left": "niewykorzystana, przewymiarowana (puste szkoły, nadmiarowe sieci)", "right": "chronicznie niedoinwestowana — brak kanalizacji, chodników, miejsc w szkołach i przedszkolach" },
+            { "aspect": "Transport", "left": "kongestia (korki) na drogach wlotowych w godzinach szczytu", "right": "uzależnienie od samochodu; niska gęstość zabudowy uniemożliwia opłacalny transport zbiorowy" },
+            { "aspect": "Krajobraz i środowisko", "left": "presja na tereny zielone, ale też szansa na rewitalizację pustostanów", "right": "**chaos przestrzenny**, zabudowa rozproszona wzdłuż dróg, ubytek gruntów rolnych i rozdrobnienie krajobrazu" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Problemy polskich miast i wsi",
+          "caption": "Zwróć uwagę, że część problemów miast i wsi to **ta sama moneta**: to, co dla gminy podmiejskiej jest wzrostem, dla miasta rdzeniowego jest utratą.",
+          "groups": [
+            {
+              "name": "Problemy dużych miast",
+              "description": "Wynikają z koncentracji ludzi i funkcji na małej powierzchni oraz z presji rynku nieruchomości.",
+              "examples": ["kongestia transportowa i zanieczyszczenie powietrza (niska emisja zimą, transport przez cały rok)", "deficyt i drożyzna mieszkań, wypychanie mieszkańców na peryferia", "**betonoza** i miejska wyspa ciepła — brak retencji, wzrost skutków ulew i upałów", "chaos przestrzenny wynikający z niskiego pokrycia planami miejscowymi"]
+            },
+            {
+              "name": "Problemy miast kurczących się",
+              "description": "Dotykają miast poprzemysłowych i średnich ośrodków, które utraciły funkcje administracyjne po reformie 1999 r.",
+              "examples": ["depopulacja: Łódź, Wałbrzych, Bytom, Sosnowiec, Zabrze, Kielce", "pustostany, zdegradowane śródmieścia i tereny pofabryczne", "utrata funkcji wyższego rzędu (sądy, uczelnie, szpitale specjalistyczne) i tzw. **wykluczenie transportowe**", "błędne koło: mniej ludzi → mniej usług → jeszcze więcej wyjazdów"]
+            },
+            {
+              "name": "Problemy wsi peryferyjnej",
+              "description": "Dotyczą przede wszystkim ściany wschodniej oraz obszarów popegeerowskich na północy i zachodzie.",
+              "examples": ["**depopulacja** i zaawansowane starzenie się ludności", "deficyt kobiet w młodszych rocznikach", "likwidacja szkół, poczt, połączeń autobusowych — degradacja usług podstawowych", "ukryte bezrobocie w rolnictwie i niska dostępność ofert pracy poza rolnictwem"]
+            },
+            {
+              "name": "Problemy wsi podmiejskiej",
+              "description": "Paradoksalnie problemy **nadmiaru**, a nie niedoboru — wynikają z szybkiego, niekontrolowanego napływu ludności.",
+              "examples": ["rozproszona zabudowa bez planów miejscowych", "przeciążone szkoły i przedszkola, brak kanalizacji", "zanik funkcji rolniczej i konflikty przestrzenne rolnictwo-mieszkalnictwo", "wysokie koszty obsługi rozproszonej zabudowy ponoszone przez gminę"]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na cztery pułapki. **Suburbanizacja to nie dezurbanizacja** — w suburbanizacji cała aglomeracja rośnie, a tylko rdzeń traci; w dezurbanizacji traci cały zespół miejski. **Aglomeracja monocentryczna to nie konurbacja** — decyduje liczba dominujących ośrodków, a nie wielkość zespołu. **Spadek wskaźnika urbanizacji w Polsce nie oznacza deurbanizacji społeczeństwa** — to głównie efekt administracyjnej definicji miasta i przenoszenia się ludzi za granicę administracyjną miasta. I wreszcie: **depopulacja miasta to nie to samo co depopulacja aglomeracji** — Poznań traci mieszkańców, ale poznański obszar metropolitalny nadal rośnie."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj miasta według liczby ludności — od największego do najmniejszego",
+          "instruction": "Ustaw w kolejności malejącej liczby mieszkańców (stan ok. 2023 r.).",
+          "items": ["Warszawa (ok. 1,86 mln)", "Kraków (ok. 800 tys.)", "Wrocław (ok. 670 tys.)", "Poznań (ok. 540 tys.)", "Gdańsk (ok. 490 tys.)", "Szczecin (ok. 390 tys.)", "Białystok (ok. 290 tys.)"],
+          "explanation": "Zwróć uwagę na trzy rzeczy. Po pierwsze, Łódź (ok. 660 tys.) przez dekady była drugim miastem Polski, a dziś przez depopulację zbliża się do Wrocławia — dlatego kolejność miast w środku rankingu zmienia się co kilka lat. Po drugie, Katowice mają tylko ok. 280 tys. mieszkańców, mimo że stoją na czele największego skupiska miejskiego w kraju — bo konurbacja dzieli ludność między kilkanaście osobnych miast. Po trzecie, ranking według **obszarów metropolitalnych** wyglądałby zupełnie inaczej niż ranking według granic administracyjnych."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaźnik urbanizacji Polski obniżył się z ok. 62% w 1990 r. do ok. 60% w 2021 r. Jak najtrafniej wyjaśnić tę zmianę?",
+          "options": [
+            "Nastąpiła dezurbanizacja — mieszkańcy aglomeracji masowo przenoszą się na tereny wiejskie oddalone od miast",
+            "Postępuje suburbanizacja: ludność przenosi się do gmin wiejskich w strefie podmiejskiej, pozostając funkcjonalnie związana z miastem",
+            "Wiele miast utraciło prawa miejskie, co statystycznie zmniejszyło ludność miejską",
+            "Spadła liczba urodzeń w miastach, a wzrosła na wsi, co zmieniło proporcje ludności"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje **suburbanizacja połączona z administracyjną definicją miasta**: osoba, która przeprowadza się z Warszawy do gminy Lesznowola, w statystyce przestaje być mieszkańcem miasta, choć nadal pracuje i korzysta z usług w mieście. Dezurbanizacja (A) oznaczałaby ubytek ludności całej aglomeracji, co w Polsce nie zachodzi. Miast w Polsce **przybywa**, a nie ubywa (C). Dzietność na wsi jest wyższa niż w mieście, ale różnica jest zbyt mała, by wyjaśnić trend (D)."
+        },
+        {
+          "type": "quiz",
+          "question": "Które cechy jednoznacznie wskazują, że dany zespół miejski jest konurbacją, a nie aglomeracją monocentryczną?",
+          "options": [
+            "Bardzo duża liczba mieszkańców i wysoka gęstość zaludnienia",
+            "Kilka miast o zbliżonej randze, brak jednego dominującego centrum, powtarzające się funkcje w każdym z miast",
+            "Istnienie strefy podmiejskiej powiązanej dojazdami do pracy z miastem rdzeniowym",
+            "Położenie na obszarze występowania surowców mineralnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Definicyjna cecha konurbacji to **policentryczność** — kilka równorzędnych miast, które zrosły się przestrzennie, każde z własnym centrum i własnym zestawem funkcji. Duża liczba mieszkańców (A) i strefa podmiejska (C) występują w obu typach zespołów. Geneza surowcowa (D) jest typowa dla konurbacji katowickiej, ale nie jest warunkiem koniecznym — konurbacja gdańska powstała nad morzem, bez związku z górnictwem."
+        },
+        {
+          "type": "quiz",
+          "question": "Gmina wiejska pod dużym miastem w ciągu 15 lat podwoiła liczbę mieszkańców. Który zestaw skutków jest dla niej najbardziej typowy?",
+          "options": [
+            "Starzenie się ludności, zamykanie szkół, ubytek naturalny",
+            "Odmłodzenie struktury wieku, przeciążenie szkół i przedszkoli, braki w kanalizacji i chaos przestrzenny",
+            "Wzrost zatrudnienia w rolnictwie i powiększenie średniej powierzchni gospodarstw",
+            "Spadek liczby samochodów na mieszkańca dzięki rozwojowi transportu zbiorowego"
+          ],
+          "correctIndex": 1,
+          "explanation": "Do stref podmiejskich napływają przede wszystkim **młode rodziny**, więc struktura wieku się odmładza, a rośnie zapotrzebowanie na żłobki, przedszkola i szkoły, którego gmina zwykle nie nadąża zaspokoić. Rozproszona zabudowa bez planów miejscowych utrudnia budowę kanalizacji. Odpowiedź A opisuje wieś peryferyjną. Suburbanizacja **zmniejsza** areał rolny (C) i **zwiększa** zależność od samochodu (D), bo niska gęstość zabudowy czyni transport zbiorowy nieopłacalnym."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** W zadaniach o urbanizacji CKE bardzo często podaje tabelę ze zmianą liczby ludności miasta rdzeniowego i otaczających je gmin, a poleca „rozpoznaj proces i uzasadnij”. Nawyk, który daje pewny punkt: porównaj **kierunek zmian w rdzeniu i w strefie** — spadek w rdzeniu przy wzroście w strefie to zawsze **suburbanizacja**, spadek w obu to **dezurbanizacja**, wzrost w obu to **urbanizacja**, a wzrost w rdzeniu po okresie spadku to **reurbanizacja**. W uzasadnieniu obowiązkowo dopisz mechanizm (dostępność działek i tańszych mieszkań, motoryzacja, ucieczka od hałasu i zanieczyszczeń) oraz skutek dla gminy (koszty infrastruktury, wzrost wpływów z PIT). I pamiętaj, żeby przy nazwach zespołów miejskich używać terminu **konurbacja katowicka** lub **górnośląska** — to sformułowanie z kluczy odpowiedzi."
+        }
+      ]
+    },
+    {
+      "slug": "rynek-pracy-i-struktura-zatrudnienia",
+      "title": "Rynek pracy Polski: zatrudnienie i bezrobocie",
+      "summary": "Trójsektorowa struktura zatrudnienia i jej przemiany po 1989 r., rodzaje bezrobocia oraz jego regionalne zróżnicowanie.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Struktura zatrudnienia to najczulszy wskaźnik poziomu rozwoju gospodarczego — czulszy niż PKB, bo trudniej go zniekształcić. Kraj, w którym co czwarta osoba pracuje w rolnictwie, i kraj, w którym robi to jedna na dziesięć, są na zupełnie innym etapie rozwoju, nawet jeśli produkują tyle samo żywności. Polska przeszła tę drogę w rekordowym tempie: między 1990 a 2020 r. udział rolnictwa w zatrudnieniu spadł o dwie trzecie, a usługi przejęły rolę głównego pracodawcy. Zapłaciliśmy za to jednak wysoką cenę — dwucyfrowym **bezrobociem strukturalnym**, którego echo w niektórych regionach słychać do dziś."
+        },
+        {
+          "type": "definition",
+          "term": "Ludność aktywna zawodowo",
+          "text": "Osoby **pracujące** oraz **bezrobotne** (czyli niepracujące, ale aktywnie poszukujące pracy i gotowe ją podjąć). Nie należą do niej osoby bierne zawodowo: uczniowie i studenci, emeryci, osoby zajmujące się domem czy zniechęceni długotrwałym poszukiwaniem. **Współczynnik aktywności zawodowej** to udział aktywnych zawodowo w ludności w wieku 15 lat i więcej — w Polsce wynosi ok. 58%, czyli poniżej średniej UE, głównie z powodu niskiej aktywności osób w wieku 55+ i kobiet w wieku okołoemerytalnym.",
+          "note": "To rozróżnienie jest kluczowe dla rachunków: **stopę bezrobocia liczymy w odniesieniu do aktywnych zawodowo, a nie do ogółu ludności**. Podzielenie liczby bezrobotnych przez liczbę mieszkańców to najczęstszy błąd rachunkowy w tym dziale."
+        },
+        {
+          "type": "formula",
+          "title": "Stopa bezrobocia",
+          "expression": "S_b = \\frac{B}{Z + B} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "B", "meaning": "liczba bezrobotnych" },
+            { "symbol": "Z", "meaning": "liczba pracujących (zatrudnionych)" },
+            { "symbol": "Z + B", "meaning": "liczba aktywnych zawodowo" }
+          ],
+          "caption": "Przykład: w powiecie pracuje 40 tys. osób, bezrobotnych jest 5 tys., a ludność liczy 90 tys. Stopa bezrobocia wynosi $\\frac{5}{45} \\cdot 100\\% \\approx 11,1\\%$ — a nie $\\frac{5}{90} \\cdot 100\\% \\approx 5,6\\%$."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Struktura pracujących w Polsce według sektorów gospodarki (%)",
+          "caption": "Trzy linie opowiadają całą historię transformacji: rolnictwo oddaje pracowników, przemysł utrzymuje się na stałym poziomie (choć produkuje wielokrotnie więcej dzięki wzrostowi wydajności), a usługi przejmują rolę głównego pracodawcy. Dane przybliżone.",
+          "labels": ["1990", "2000", "2010", "2022"],
+          "series": [
+            { "name": "Sektor I — rolnictwo, leśnictwo, rybactwo", "values": [25, 19, 13, 9] },
+            { "name": "Sektor II — przemysł i budownictwo", "values": [37, 31, 30, 31] },
+            { "name": "Sektor III — usługi", "values": [38, 50, 57, 60] }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "classification",
+          "title": "Sektory gospodarki — jak je rozpoznać w zadaniu",
+          "caption": "Model trójsektorowy Clarka i Fishera. Wraz z rozwojem gospodarki zatrudnienie przesuwa się kolejno z sektora I do II, a następnie do III i IV.",
+          "groups": [
+            {
+              "name": "Sektor I — pierwotny",
+              "description": "Pozyskiwanie surowców i płodów wprost ze środowiska. W Polsce jego udział jest wciąż **wysoki jak na kraj UE** (ok. 9% wobec ok. 4% średniej unijnej) — to skutek rozdrobnienia agrarnego i ukrytego bezrobocia na wsi.",
+              "examples": ["rolnictwo", "leśnictwo", "rybactwo", "górnictwo (w niektórych ujęciach zaliczane do sektora II)"]
+            },
+            {
+              "name": "Sektor II — wtórny",
+              "description": "Przetwarzanie surowców w wyroby gotowe. Udział zatrudnienia w Polsce jest **stabilny i wysoki** na tle Europy Zachodniej — Polska stała się zapleczem produkcyjnym Unii, m.in. dla motoryzacji, AGD i mebli.",
+              "examples": ["przemysł przetwórczy", "budownictwo", "wytwarzanie energii"]
+            },
+            {
+              "name": "Sektor III — usługi",
+              "description": "Wszystko, co nie jest wytwarzaniem dóbr materialnych. Jego wzrost to główny motor przemian po 1989 r. — handel, transport, finanse i administracja wchłonęły większość osób odchodzących z rolnictwa i przemysłu.",
+              "examples": ["handel i naprawy", "transport i logistyka", "finanse i ubezpieczenia", "edukacja, ochrona zdrowia, administracja", "turystyka i gastronomia"]
+            },
+            {
+              "name": "Sektor IV — usługi oparte na wiedzy",
+              "description": "Wydzielana część usług o najwyższej wartości dodanej. Koncentruje się wyłącznie w **największych ośrodkach akademickich** — to jedna z przyczyn narastania różnic między metropoliami a resztą kraju.",
+              "examples": ["badania i rozwój (B+R)", "informatyka i usługi IT", "nowoczesne usługi biznesowe (BPO/SSC) w Krakowie, Warszawie, Wrocławiu", "szkolnictwo wyższe"]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje bezrobocia",
+          "caption": "Klucz do zadań: rodzaj bezrobocia rozpoznajemy po **przyczynie**, a nie po długości pozostawania bez pracy.",
+          "groups": [
+            {
+              "name": "Strukturalne",
+              "description": "Kwalifikacje bezrobotnych **nie odpowiadają** zapotrzebowaniu gospodarki — najczęściej po upadku dominującej gałęzi przemysłu. Najtrudniejsze do zwalczenia: wymaga przekwalifikowania i zwykle jest długotrwałe.",
+              "examples": ["górnicy po zamknięciu kopalń w Wałbrzychu (1990-1996)", "włókniarki po upadku przemysłu lekkiego w Łodzi", "pracownicy zlikwidowanych PGR-ów na Warmii i Pomorzu"]
+            },
+            {
+              "name": "Koniunkturalne (cykliczne)",
+              "description": "Skutek **spadku popytu** w fazie recesji — firmy ograniczają produkcję i zwalniają. Ustępuje wraz z poprawą koniunktury, więc jest przejściowe.",
+              "examples": ["zwolnienia w kryzysie po 2008 r.", "utrata pracy w gastronomii i turystyce w czasie lockdownów 2020 r."]
+            },
+            {
+              "name": "Frykcyjne",
+              "description": "Naturalne i **nieuniknione** — wynika z czasu potrzebnego na zmianę pracy lub wejście na rynek po studiach. Jego istnienie oznacza, że stopa bezrobocia nigdy nie spadnie do zera; poziom 2-3% uznaje się za bezrobocie naturalne.",
+              "examples": ["absolwent szukający pierwszej pracy", "osoba, która zwolniła się sama i szuka lepszej oferty"]
+            },
+            {
+              "name": "Sezonowe",
+              "description": "Wynika z **rytmu roku** w branżach zależnych od pory roku. Widoczne w statystykach jako regularne wahania: wzrost zimą, spadek latem.",
+              "examples": ["budownictwo i drogownictwo zimą", "rolnictwo i przetwórstwo owoców poza sezonem", "usługi turystyczne nad morzem i w górach poza sezonem"]
+            },
+            {
+              "name": "Ukryte (agrarne)",
+              "description": "Osoby formalnie pracujące w gospodarstwie rolnym, których odejście **nie zmniejszyłoby produkcji** — są zbędne, ale nie figurują w statystykach jako bezrobotne. Zjawisko charakterystyczne dla rozdrobnionego rolnictwa południowo-wschodniej Polski.",
+              "examples": ["nadmiar rąk do pracy w 2-hektarowym gospodarstwie w Małopolsce", "domownicy ubezpieczeni w KRUS bez realnego zatrudnienia"]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwie miary bezrobocia — dlaczego podają różne liczby",
+          "leftLabel": "Bezrobocie rejestrowane (GUS/urzędy pracy)",
+          "rightLabel": "Bezrobocie według BAEL (badanie aktywności ekonomicznej ludności)",
+          "rows": [
+            { "aspect": "Kto jest bezrobotnym", "left": "osoba zarejestrowana w powiatowym urzędzie pracy i spełniająca warunki ustawowe", "right": "osoba, która w badanym tygodniu nie pracowała, aktywnie szukała pracy i była gotowa ją podjąć (definicja **Międzynarodowej Organizacji Pracy**)" },
+            { "aspect": "Źródło danych", "left": "rejestry administracyjne — pełna ewidencja", "right": "badanie ankietowe na reprezentatywnej próbie gospodarstw domowych" },
+            { "aspect": "Kogo zawyża", "left": "osoby rejestrujące się **dla ubezpieczenia zdrowotnego** lub pracujące w szarej strefie", "right": "nikogo — ale pomija osoby, które przestały szukać pracy (bierne zawodowo)" },
+            { "aspect": "Typowa wartość dla Polski", "left": "wyższa (w ostatnich latach ok. 5%)", "right": "niższa (w ostatnich latach ok. 3%), jedna z najniższych w UE" },
+            { "aspect": "Do czego służy", "left": "porównania **wewnątrz kraju** (powiaty, województwa) i polityka rynku pracy", "right": "porównania **międzynarodowe** — Eurostat i OECD używają wyłącznie tej miary" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Regionalne zróżnicowanie bezrobocia rejestrowanego (rzędy wielkości z ostatnich lat)",
+          "caption": "Zapamiętaj nie liczby, lecz **układ przestrzenny i jego przyczyny** — konkretne wartości zmieniają się z roku na rok.",
+          "headers": ["Województwa", "Poziom bezrobocia", "Przyczyny"],
+          "rows": [
+            ["wielkopolskie, śląskie, małopolskie, mazowieckie", "najniższe (ok. 3-4%)", "duże metropolie, dywersyfikacja gospodarki, inwestycje zagraniczne, gęsta sieć średnich miast z lokalnymi rynkami pracy"],
+            ["dolnośląskie, pomorskie, łódzkie", "poniżej lub blisko średniej krajowej", "silne ośrodki miejskie i specjalne strefy ekonomiczne, ale z wyspami bezrobocia w podregionach poprzemysłowych (Wałbrzych)"],
+            ["kujawsko-pomorskie, świętokrzyskie, lubelskie", "powyżej średniej", "słabo zdywersyfikowana gospodarka, ukryte bezrobocie na wsi, mniejszy napływ inwestycji"],
+            ["podkarpackie, warmińsko-mazurskie", "najwyższe (ok. 8-9%)", "podkarpackie — rozdrobnione rolnictwo i ukryte bezrobocie agrarne; warmińsko-mazurskie — trwałe skutki likwidacji PGR-ów i sezonowość turystyki"]
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Polski rynek pracy po 1989 roku",
+          "caption": "Zwróć uwagę na sprzężenie zwrotne: wysokie bezrobocie napędziło emigrację, a emigracja i demografia sprawiły, że dziś problemem jest **niedobór pracowników**.",
+          "events": [
+            { "period": "1990-1993", "label": "Szok transformacyjny", "text": "Urynkowienie gospodarki obnażyło nieefektywność przemysłu socjalistycznego. Upadły całe branże (przemysł lekki, część zbrojeniowego), zlikwidowano **PGR-y** (1991-1993), pozostawiając ok. 400 tys. osób bez pracy w miejscowościach, gdzie nie było żadnego innego pracodawcy. Bezrobocie — nieznane przed 1989 r. — sięgnęło 16%." },
+            { "period": "1999-2003", "label": "Szczyt bezrobocia", "text": "Nałożyły się: spowolnienie gospodarcze, wejście na rynek pracy licznych roczników z **echa wyżu lat 80.** oraz restrukturyzacja górnictwa i hutnictwa. Stopa bezrobocia rejestrowanego przekroczyła **20%** (2003) — najwyższą wartość w historii III RP." },
+            { "period": "2004-2008", "label": "Akcesja, emigracja i boom", "text": "Otwarcie rynków pracy UE, napływ funduszy strukturalnych i inwestycji zagranicznych oraz odpływ ok. 2 mln osób za granicę obniżyły bezrobocie do ok. 9,5%. Część spadku wynikała z realnego wzrostu zatrudnienia, część — z **wyjazdu bezrobotnych**." },
+            { "period": "2009-2013", "label": "Echo kryzysu światowego", "text": "Polska uniknęła recesji, ale spowolnienie podniosło bezrobocie do ok. 13%. To ostatni okres wysokiego **bezrobocia koniunkturalnego** w polskiej gospodarce." },
+            { "period": "2014-2019", "label": "Rynek pracownika", "text": "Trwały wzrost gospodarczy i kurczenie się zasobów pracy (wchodzą niżowe roczniki lat 90.) obniżyły bezrobocie do ok. 5% rejestrowanego i ok. 3% według BAEL. Pojawił się **niedobór rąk do pracy** i masowa imigracja zarobkowa z Ukrainy." },
+            { "period": "od 2020", "label": "Pandemia i deficyt pracowników", "text": "Lockdowny uderzyły w usługi (gastronomia, turystyka, kultura), ale programy osłonowe zapobiegły trwałemu wzrostowi bezrobocia. Strukturalnym problemem pozostaje **starzenie się zasobów pracy**, a nie brak miejsc pracy — to odwrócenie sytuacji z lat 90." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Popegeerowska Warmia — bezrobocie, które trwa trzy pokolenia",
+          "region": "Warmia i Mazury, Pomorze Zachodnie",
+          "text": "Na Ziemiach Zachodnich i Północnych po 1945 r. utworzono **Państwowe Gospodarstwa Rolne**, które przejęły grunty poniemieckie. Wieś popegeerowska była specyficzna: mieszkańcy nie mieli własnej ziemi, mieszkali w blokach należących do gospodarstwa, a PGR zapewniał nie tylko pracę, lecz także przedszkole, świetlicę, dowóz dzieci i transport. Gdy w latach 1991-1993 PGR-y zlikwidowano, w jednej chwili zniknął **jedyny pracodawca i cała infrastruktura społeczna** — a ludzie zostali na miejscu, bo nie mieli mieszkań, do których mogliby się przeprowadzić, ani kwalifikacji poszukiwanych gdzie indziej. Powstały enklawy bezrobocia strukturalnego, które okazały się **dziedziczone**: dzieci wychowane bez wzorca pracy zawodowej miały niższe wykształcenie i mniejszą mobilność. Mimo że dziś stopa bezrobocia w kraju wynosi ok. 5%, w niektórych powiatach warmińsko-mazurskich (np. braniewskim, bartoszyckim, szydłowieckim w mazowieckim) wciąż przekracza 15-20%.",
+          "takeaway": "Bezrobocie strukturalne różni się od koniunkturalnego trwałością: koniunkturalne mija wraz z poprawą gospodarki, strukturalne wymaga inwestycji w **przekwalifikowanie, mobilność i nowe funkcje gospodarcze regionu** — inaczej utrwala się na dziesięciolecia."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery klasyczne pomyłki. **Stopa bezrobocia liczy się od aktywnych zawodowo**, a nie od ludności ogółem ani od ludności w wieku produkcyjnym. **Bezrobotny to nie osoba bierna zawodowo** — kto przestał szukać pracy, wypada ze statystyk i sztucznie obniża stopę bezrobocia. **Niska stopa bezrobocia nie oznacza dobrego rynku pracy** — w regionach depopulacyjnych bywa niska dlatego, że bezrobotni po prostu wyjechali. I wreszcie: **spadek zatrudnienia w przemyśle to nie deindustrializacja** — polski przemysł produkuje dziś dużo więcej niż w 1990 r., tylko przy wyższej wydajności pracy."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj rodzaj bezrobocia do sytuacji",
+          "instruction": "Każda sytuacja ilustruje jeden, dominujący rodzaj bezrobocia.",
+          "pairs": [
+            { "left": "Bezrobocie strukturalne", "right": "Górnik po zamknięciu kopalni nie znajduje pracy, bo w regionie nie ma zapotrzebowania na jego kwalifikacje" },
+            { "left": "Bezrobocie sezonowe", "right": "Pracownik firmy drogowej co roku traci pracę na okres zimowy" },
+            { "left": "Bezrobocie koniunkturalne", "right": "Firma zwalnia część załogi z powodu spadku zamówień w czasie recesji" },
+            { "left": "Bezrobocie frykcyjne", "right": "Absolwent uczelni przez trzy miesiące przebiera w ofertach przed podjęciem pierwszej pracy" },
+            { "left": "Bezrobocie ukryte", "right": "W małym gospodarstwie rolnym pracuje pięć osób, choć do tej samej produkcji wystarczyłyby dwie" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W powiecie mieszka 120 tys. osób, z czego 60 tys. pracuje, a 6 tys. jest bezrobotnych. Ile wynosi stopa bezrobocia?",
+          "options": ["5,0%", "9,1%", "10,0%", "6,0%"],
+          "correctIndex": 1,
+          "explanation": "Aktywni zawodowo to pracujący plus bezrobotni: $60 + 6 = 66$ tys. Stopa bezrobocia: $\\frac{6}{66} \\cdot 100\\% \\approx 9,1\\%$. Odpowiedź A (5,0%) powstaje z błędnego podzielenia przez całą ludność (120 tys.), a C — z podzielenia przez samych pracujących. To najczęstszy błąd w zadaniach obliczeniowych z tego działu."
+        },
+        {
+          "type": "quiz",
+          "question": "Które wyjaśnienie najlepiej tłumaczy, dlaczego udział sektora I w zatrudnieniu jest w Polsce (ok. 9%) wyraźnie wyższy niż średnio w UE (ok. 4%)?",
+          "options": [
+            "Polska ma znacznie lepsze warunki naturalne dla rolnictwa niż większość krajów UE",
+            "Rozdrobniona struktura agrarna i ukryte bezrobocie w gospodarstwach utrzymują nadmiar rąk do pracy w rolnictwie",
+            "Polskie rolnictwo jest bardziej zmechanizowane, więc wymaga większej obsługi technicznej",
+            "Rolnictwo w Polsce ma najwyższą w UE wydajność pracy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wysoki udział zatrudnienia w rolnictwie przy stosunkowo niewielkiej produkcji na jednego pracującego to wskaźnik **niskiej wydajności pracy**, a nie przewagi. W Polsce jego źródłem jest rozdrobnienie gospodarstw (średnio ok. 11 ha, na Podkarpaciu ok. 5 ha) i bezrobocie ukryte, szczególnie na południowym wschodzie. Warunki naturalne Polski są przeciętne, a mechanizacja **obniża**, a nie podnosi zapotrzebowanie na pracę."
+        },
+        {
+          "type": "quiz",
+          "question": "Stopa bezrobocia rejestrowanego w Polsce jest zwykle wyższa niż stopa bezrobocia według BAEL. Jaka jest główna przyczyna tej różnicy?",
+          "options": [
+            "BAEL uwzględnia osoby bierne zawodowo, a rejestrowane nie",
+            "Część zarejestrowanych bezrobotnych nie szuka aktywnie pracy lub pracuje w szarej strefie, rejestrując się m.in. dla ubezpieczenia zdrowotnego",
+            "BAEL obejmuje wyłącznie duże miasta, gdzie bezrobocie jest niższe",
+            "Bezrobocie rejestrowane jest liczone w odniesieniu do ludności ogółem, a BAEL do aktywnych zawodowo"
+          ],
+          "correctIndex": 1,
+          "explanation": "BAEL stosuje ścisłą definicję Międzynarodowej Organizacji Pracy: bezrobotnym jest tylko ten, kto **aktywnie szuka pracy i jest gotów ją podjąć**. Rejestr urzędów pracy obejmuje natomiast wszystkich, którzy spełnili warunki formalne — także osoby rejestrujące się dla świadczeń lub pracujące nieoficjalnie. Odpowiedź A odwraca sens (żadna z miar nie zalicza biernych do bezrobotnych), C jest nieprawdziwa, a D myli mianowniki — obie miary odnoszą się do aktywnych zawodowo."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** Przy mapach lub tabelach z bezrobociem w powiatach CKE prosi zwykle o **wyjaśnienie przyczyn zróżnicowania**. Zbuduj odpowiedź na trzech filarach, których łączne użycie prawie zawsze pokrywa klucz: (1) **struktura gospodarki** — czy region opiera się na jednej, upadającej branży, czy na wielu; (2) **historia** — likwidacja PGR-ów na północy, restrukturyzacja górnictwa na Śląsku, rozdrobnienie agrarne na południowym wschodzie; (3) **dostępność i inwestycje** — bliskość metropolii, autostrady, specjalnej strefy ekonomicznej. Unikaj sformułowań ogólnikowych typu „bo jest tam biednie” — klucz punktuje wskazanie **konkretnego mechanizmu**. I zawsze sprawdzaj, o którą miarę bezrobocia pyta zadanie, bo rejestrowane i BAEL dają wyraźnie różne wartości."
+        }
+      ]
+    },
+    {
+      "slug": "rolnictwo-polski",
+      "title": "Rolnictwo Polski",
+      "summary": "Warunki przyrodnicze i struktura agrarna, główne uprawy i chów zwierząt, regiony rolnicze oraz przemiany po wejściu do Unii Europejskiej.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polskie rolnictwo jest pełne sprzeczności. Warunki przyrodnicze mamy przeciętne — gleby w większości średniej jakości, opady niskie, okres wegetacyjny krótszy niż w Europie Zachodniej — a mimo to Polska jest **największym producentem jabłek w Unii Europejskiej**, największym producentem mięsa drobiowego i jednym z największych eksporterów żywności w Europie. Jednocześnie w gospodarstwach rolnych pracuje u nas ponad dwa razy większy odsetek ludności niż średnio w UE, a przeciętne gospodarstwo jest kilkakrotnie mniejsze niż niemieckie czy francuskie. Ta lekcja tłumaczy, skąd biorą się oba oblicza polskiego rolnictwa."
+        },
+        {
+          "type": "classification",
+          "title": "Warunki rozwoju rolnictwa w Polsce",
+          "caption": "W zadaniach o warunkach rolnictwa zawsze rozdzielaj przyrodnicze od pozaprzyrodniczych — klucze CKE zwykle wymagają jednych lub drugich, a pomylenie grupy oznacza zero punktów.",
+          "groups": [
+            {
+              "name": "Rzeźba terenu — atut",
+              "description": "Ponad 90% powierzchni Polski leży poniżej 300 m n.p.m., a nizinność sprzyja **mechanizacji** i scalaniu pól. Bariery pojawiają się dopiero w Karpatach i Sudetach, gdzie strome stoki wymuszają gospodarkę łąkowo-pastwiskową i sprzyjają erozji gleb.",
+              "examples": ["niziny środkowopolskie — łatwa uprawa mechaniczna", "pojezierza — pola porozdzielane jeziorami i wzgórzami morenowymi", "Karpaty i Sudety — hodowla owiec i bydła zamiast upraw"]
+            },
+            {
+              "name": "Klimat — czynnik ograniczający",
+              "description": "Największą barierą jest **niedobór wody**: opady 500-700 mm rocznie, a na Kujawach — w cieniu opadowym Pojezierza Pomorskiego — poniżej 500 mm, co czyni je najbardziej suszowym regionem rolniczym Polski. Okres wegetacyjny skraca się z ok. 220 dni na Nizinie Śląskiej do ok. 190 dni na Suwalszczyźnie i poniżej 180 dni w górach.",
+              "examples": ["susze rolnicze na Kujawach i w Wielkopolsce", "krótki okres wegetacyjny na Suwalszczyźnie — ogranicza uprawę pszenicy i kukurydzy", "przymrozki wiosenne groźne dla sadów", "wzrost znaczenia nawodnień i retencji"]
+            },
+            {
+              "name": "Gleby — mozaika",
+              "description": "Dominują gleby **średniej jakości**: brunatne i płowe (razem ponad połowa powierzchni) oraz ubogie bielicowe i rdzawe na piaskach. Gleb najlepszych jest mało i występują wyspowo, dlatego rejony intensywnych upraw są w Polsce wyraźnie ograniczone przestrzennie.",
+              "examples": ["czarnoziemy — tylko wyspowo (okolice Proszowic, Wyżyna Lubelska, Wyżyna Sandomierska)", "mady — Żuławy Wiślane, doliny rzek", "czarne ziemie — Kujawy, Wielkopolska", "rędziny — Wyżyna Lubelska i Wyżyna Krakowsko-Częstochowska", "bielicowe i rdzawe — Mazowsze, Podlasie, Bory Tucholskie"]
+            },
+            {
+              "name": "Warunki pozaprzyrodnicze",
+              "description": "To one w największym stopniu odpowiadają za dzisiejszy kształt polskiego rolnictwa — a zwłaszcza za jego rozdrobnienie i regionalne różnice w towarowości.",
+              "examples": ["rozdrobniona struktura agrarna (dziedzictwo dziedziczenia i braku kolektywizacji)", "poziom wykształcenia rolników i wiek właścicieli gospodarstw", "dopłaty bezpośrednie i programy Wspólnej Polityki Rolnej", "dostęp do rynków zbytu, przetwórstwa i grup producenckich", "polityka państwa: KRUS, ceny skupu, kredyty"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Wskaźnik waloryzacji rolniczej przestrzeni produkcyjnej (WRPP)",
+          "text": "Syntetyczna ocena warunków przyrodniczych dla rolnictwa, opracowana przez IUNG w Puławach. Sumuje w punktach cztery elementy: **jakość gleb, agroklimat, rzeźbę terenu i warunki wodne**. Skala sięga ok. 100 punktów, a średnia dla Polski to ok. **66 punktów**. Najwyższe wartości osiągają województwa opolskie (ok. 81), lubelskie i dolnośląskie; najniższe — podlaskie i warmińsko-mazurskie (ok. 55).",
+          "note": "WRPP tłumaczy, dlaczego kierunki produkcji rolnej są w Polsce tak wyraźnie rozdzielone przestrzennie: tam, gdzie wskaźnik jest wysoki, opłaca się uprawa wymagających roślin (pszenica, buraki cukrowe, rzepak), a gdzie niski — dominuje żyto, ziemniaki, łąki i chów bydła."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Rolnictwo Polski — skala",
+          "items": [
+            { "value": "ok. 60", "unit": "%", "label": "Udział użytków rolnych w powierzchni kraju", "note": "wysoki jak na Europę; grunty orne to ok. 3/4 użytków rolnych" },
+            { "value": "ok. 11", "unit": "ha", "label": "Średnia powierzchnia gospodarstwa rolnego", "note": "przy ok. 4-5 ha w Małopolsce i ponad 30 ha w Zachodniopomorskiem" },
+            { "value": "ok. 30", "unit": "%", "label": "Lesistość Polski", "note": "ogranicza dalsze powiększanie areału rolnego" },
+            { "value": "ok. 66", "unit": "pkt", "label": "Średni wskaźnik WRPP dla Polski", "note": "wartość odniesienia przy porównywaniu województw" },
+            { "value": "1 maja 2004", "label": "Wejście Polski do Unii Europejskiej", "note": "początek dopłat bezpośrednich i najgłębszych przemian polskiego rolnictwa po 1945 r." }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwa różne rolnictwa w jednym kraju",
+          "leftLabel": "Południowy wschód (małopolskie, podkarpackie, świętokrzyskie, lubelskie)",
+          "rightLabel": "Północ i zachód (zachodniopomorskie, warmińsko-mazurskie, lubuskie, opolskie)",
+          "rows": [
+            { "aspect": "Średnia wielkość gospodarstwa", "left": "bardzo mała — 4-8 ha, często w kilku oddalonych od siebie działkach", "right": "duża — 20-30 ha i więcej, pola zwarte" },
+            { "aspect": "Przyczyna historyczna", "left": "uwłaszczenie w zaborze austriackim i wielopokoleniowe **dziedziczenie z podziałem** ziemi między dzieci; brak kolektywizacji po 1945 r.", "right": "grunty poniemieckie przejęte po 1945 r. przez **PGR-y**, sprywatyzowane w latach 90. jako duże gospodarstwa" },
+            { "aspect": "Towarowość", "left": "niska — znaczna część produkcji na samozaopatrzenie; gospodarstwa socjalne", "right": "wysoka — produkcja wyłącznie na rynek, powiązanie z przetwórstwem" },
+            { "aspect": "Zatrudnienie w rolnictwie", "left": "wysokie, z dużym **ukrytym bezrobociem agrarnym**", "right": "niskie — wysoki poziom mechanizacji, niewielu pracowników na 100 ha" },
+            { "aspect": "Typowe kierunki produkcji", "left": "warzywa, owoce miękkie, tytoń, chmiel, chów w małej skali", "right": "rzepak, pszenica, kukurydza na kiszonkę, wielkotowarowy chów zwierząt" },
+            { "aspect": "Główna bariera rozwoju", "left": "rozdrobnienie i szachownica gruntów — utrudniają mechanizację i obniżają opłacalność", "right": "niedobór wody i słabsze gleby na części obszaru, wysoka kapitałochłonność" }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Średnia powierzchnia gospodarstwa rolnego w wybranych województwach (ha)",
+          "caption": "Rozpiętość ośmiokrotna w granicach jednego kraju — to jedna z największych różnic regionalnych w rolnictwie Unii Europejskiej. Dane przybliżone dla ostatnich lat.",
+          "labels": ["zachodniopomorskie", "warmińsko-mazurskie", "kujawsko-pomorskie", "wielkopolskie", "Polska", "lubelskie", "świętokrzyskie", "podkarpackie", "małopolskie"],
+          "series": [
+            { "name": "Średnia powierzchnia [ha]", "values": [31, 23, 16, 14, 11, 8, 6, 5, 4] }
+          ],
+          "unit": "ha"
+        },
+        {
+          "type": "table",
+          "title": "Główne uprawy Polski — wymagania i rejony koncentracji",
+          "caption": "Reguła, którą warto znać na pamięć: rośliny o **wysokich wymaganiach glebowych** trafiają tam, gdzie gleby są najlepsze, a żyto i ziemniaki są roślinami gleb słabych, które opanowały resztę kraju.",
+          "headers": ["Uprawa", "Wymagania", "Główne rejony uprawy"],
+          "rows": [
+            ["Pszenica", "wysokie — gleby żyzne, zasobne w wapń, ciepły klimat i długi okres wegetacyjny", "Żuławy Wiślane, Nizina Śląska, Kujawy, Wyżyna Lubelska, Wyżyna Sandomierska"],
+            ["Żyto", "niskie — znosi gleby piaszczyste, kwaśne i chłodniejszy klimat", "Mazowsze, Podlasie, Nizina Południowowielkopolska, Bory Tucholskie"],
+            ["Buraki cukrowe", "bardzo wysokie — gleby żyzne, głębokie, dużo ciepła i wilgoci w lecie; wymagają bliskości cukrowni", "Kujawy, Nizina Śląska, Wyżyna Lubelska, Żuławy"],
+            ["Ziemniaki", "małe wymagania glebowe, ale duże zapotrzebowanie na wilgoć", "Mazowsze, Podlasie, Polska południowo-wschodnia (dawniej znacznie większy areał)"],
+            ["Rzepak", "wysokie — gleby dobre, łagodne zimy (odmiany ozime); uprawa opłacalna w dużej skali", "Dolny Śląsk, Opolszczyzna, Kujawy, Pomorze Zachodnie, Żuławy"],
+            ["Kukurydza", "duże wymagania cieplne; areał szybko rośnie wraz z ociepleniem klimatu", "Wielkopolska, Dolny Śląsk, Kujawy, Nizina Śląska"],
+            ["Chmiel i tytoń", "specyficzne — ciepły klimat, gleby lessowe, duży nakład pracy ręcznej", "Lubelszczyzna (chmiel — okolice Lublina i Puław), Wyżyna Lubelska i Podkarpacie (tytoń)"],
+            ["Owoce (sady)", "gleby dobre, osłona od wiatru, brak zastoisk mrozu; bliskość przetwórstwa i chłodni", "rejon grójecki (jabłka), rejon sandomierski (owoce miękkie, jabłka), okolice Warszawy"]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Regiony rolnicze Polski",
+          "caption": "Kliknij punkty i zwróć uwagę na regułę: rejony intensywnych upraw pokrywają się z obszarami najlepszych gleb i najdłuższego okresu wegetacyjnego, a rejony chowu — z obszarami gleb słabych i dużym udziałem łąk.",
+          "center": [52.0, 19.3],
+          "zoom": 6,
+          "markers": [
+            { "lat": 54.21, "lng": 19.12, "label": "Żuławy Wiślane", "text": "Najżyźniejsze gleby Polski — **mady** delty Wisły, część obszaru poniżej poziomu morza (depresja pod Elblągiem, ok. −1,8 m). Uprawa pszenicy, buraków cukrowych i rzepaku; konieczne stałe odwadnianie polderów." },
+            { "lat": 52.8, "lng": 18.26, "label": "Kujawy", "text": "Czarne ziemie i wysoki wskaźnik WRPP — klasyczny region buraczano-pszeniczny z tradycją cukrownictwa. Jednocześnie **najbardziej suszowy region rolniczy Polski** (opady poniżej 500 mm), leżący w cieniu opadowym pojezierzy." },
+            { "lat": 50.67, "lng": 17.93, "label": "Nizina Śląska (Opolszczyzna)", "text": "Najwyższy wskaźnik waloryzacji rolniczej w Polsce: żyzne gleby, najdłuższy okres wegetacyjny (ok. 220 dni), łagodne zimy. Pszenica, buraki cukrowe, rzepak, kukurydza." },
+            { "lat": 51.25, "lng": 22.57, "label": "Wyżyna Lubelska", "text": "Gleby lessowe i rędziny, duże nasłonecznienie. Pszenica, buraki, chmiel, tytoń, a także maliny i porzeczki. Region łączy dobre warunki przyrodnicze z **rozdrobnioną strukturą agrarną** — to hamuje towarowość." },
+            { "lat": 51.86, "lng": 20.87, "label": "Rejon grójecki", "text": "Największy zwarty obszar sadowniczy w Europie. O jego sukcesie zdecydowały czynniki **pozaprzyrodnicze**: bliskość rynku warszawskiego, tradycja, sieć chłodni i przetwórni oraz grupy producenckie eksportujące jabłka." },
+            { "lat": 52.92, "lng": 22.51, "label": "Podlasie — Wysokie Mazowieckie", "text": "Zagłębie mleczarskie Polski: słabe gleby i wysoki udział łąk sprzyjają chowowi **bydła mlecznego**. Region wyspecjalizował się dzięki spółdzielczości mleczarskiej (Mlekovita, Mlekpol) i inwestycjom w przetwórstwo." },
+            { "lat": 52.41, "lng": 16.93, "label": "Wielkopolska", "text": "Najbardziej towarowe rolnictwo w Polsce: duże gospodarstwa, wysoka kultura rolna, dominacja chowu **trzody chlewnej** i drobiu oraz uprawy zbóż paszowych i kukurydzy." },
+            { "lat": 49.6, "lng": 20.6, "label": "Pogórze Karpackie", "text": "Skrajne rozdrobnienie (gospodarstwa 2-4 ha, szachownica pól), stoki i erozja gleb. Rolnictwo w dużej mierze **samozaopatrzeniowe**, z rosnącym znaczeniem agroturystyki i dochodów pozarolniczych." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Rejon grójecki — dlaczego jabłka rosną akurat tam",
+          "region": "Mazowsze, okolice Grójca, Warki i Belska Dużego",
+          "text": "Warunki przyrodnicze rejonu grójeckiego są dobre, ale nie wyjątkowe — podobne gleby i klimat ma znaczna część Mazowsza. O powstaniu największego zwartego obszaru sadowniczego w Europie zdecydowały czynniki **pozaprzyrodnicze**, nawarstwiające się przez sto lat: bliskość ogromnego rynku zbytu w Warszawie (tu zaczęła się XIX-wieczna tradycja sadownicza), przekazywana z pokolenia na pokolenie wiedza i kapitał, a po 1990 r. — inwestycje w **chłodnie z kontrolowaną atmosferą**, umożliwiające sprzedaż jabłek przez cały rok, oraz zorganizowanie się producentów w grupy zdolne obsłużyć eksport. Po wejściu do UE dopłaty i fundusze PROW sfinansowały nowoczesne sady karłowe, systemy nawadniania i siatki przeciwgradowe, dzięki czemu Polska stała się największym producentem jabłek w Unii i jednym z największych eksporterów na świecie. Region odczuł też ryzyko monokultury: po wprowadzeniu przez Rosję embarga na owoce (2014) trzeba było w kilka lat przebudować kierunki eksportu.",
+          "takeaway": "Rozmieszczenie produkcji rolnej tłumaczy się **łącznie** warunkami przyrodniczymi i pozaprzyrodniczymi — a im wyższy poziom rozwoju rolnictwa, tym większe znaczenie mają te drugie: przetwórstwo, logistyka, organizacja rynku i kapitał."
+        },
+        {
+          "type": "timeline",
+          "title": "Rolnictwo Polski — przemiany po wejściu do Unii Europejskiej",
+          "caption": "Zwróć uwagę na kierunek wszystkich zmian: **mniej gospodarstw, większe gospodarstwa, wyższa produkcja**. To klasyczna koncentracja i specjalizacja produkcji.",
+          "events": [
+            { "period": "przed 2004", "label": "Punkt wyjścia", "text": "Rolnictwo rozdrobnione, o niskiej towarowości i przestarzałym parku maszynowym, obciążone ukrytym bezrobociem. Obawy przed akcesją dotyczyły niekonkurencyjności wobec rolnictwa zachodnioeuropejskiego oraz wykupu ziemi przez cudzoziemców." },
+            { "period": "2004-2013", "label": "Dopłaty bezpośrednie i fundusze", "text": "Objęcie polskiego rolnictwa **Wspólną Polityką Rolną**: dopłaty bezpośrednie do hektara, programy rozwoju obszarów wiejskich (PROW) finansujące modernizację gospodarstw, renty strukturalne i wsparcie dla młodych rolników. Dopłaty zwiększyły dochody i — co ważne — **utrwaliły część małych gospodarstw**, bo opłacało się utrzymać ziemię." },
+            { "period": "2004-2020", "label": "Otwarcie rynku i eksplozja eksportu", "text": "Zniesienie ceł otworzyło rynek 500 mln konsumentów. Polska stała się **eksporterem netto żywności** z trwałą nadwyżką w handlu rolno-spożywczym. Motory eksportu: mięso drobiowe (Polska największym producentem w UE), jabłka, przetwory mleczne, wyroby czekoladowe, wołowina." },
+            { "period": "2004-2020", "label": "Koncentracja i specjalizacja", "text": "Liczba gospodarstw spadła o setki tysięcy, a średnia powierzchnia wzrosła. Zniknęły gospodarstwa wielokierunkowe („po trochu wszystkiego”), pojawiły się wyspecjalizowane: mleczne na Podlasiu, trzodowe i drobiarskie w Wielkopolsce, sadownicze na Mazowszu. Wzrosła wydajność: plony pszenicy zwiększyły się o kilkadziesiąt procent." },
+            { "period": "od 2015", "label": "Nowe wyzwania", "text": "Susze rolnicze i konieczność retencji, wysokie ceny nawozów i paliwa, choroby zwierząt (ASF u trzody chlewnej, ptasia grypa), presja **Europejskiego Zielonego Ładu** na ograniczenie nawozów i pestycydów oraz konkurencja taniego zboża z Ukrainy. Rośnie znaczenie rolnictwa ekologicznego i skracania łańcuchów dostaw." }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy typowe błędy. **Nie myl żyta z pszenicą**: żyto ma **niskie** wymagania glebowe i klimatyczne (dlatego rośnie na piaskach Mazowsza i Podlasia), a pszenica **wysokie** (dlatego jej rejony pokrywają się z mapą najlepszych gleb). **Nie utożsamiaj wielkości produkcji z towarowością** — gospodarstwo może dużo produkować i mało sprzedawać, jeśli produkcja idzie na samozaopatrzenie; to właśnie odróżnia rolnictwo Podkarpacia od zachodniopomorskiego. I wreszcie: **dopłaty bezpośrednie nie zmniejszyły rozdrobnienia** — w wielu przypadkach je utrwaliły, bo uczyniły opłacalnym samo posiadanie ziemi."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj kierunek produkcji do regionu",
+          "instruction": "Połącz produkt lub kierunek produkcji z regionem, w którym jest szczególnie skoncentrowany.",
+          "pairs": [
+            { "left": "Chów bydła mlecznego", "right": "Podlasie, okolice Wysokiego Mazowieckiego" },
+            { "left": "Sadownictwo (jabłka)", "right": "Rejon grójecki na Mazowszu" },
+            { "left": "Chów trzody chlewnej i drobiu", "right": "Wielkopolska i Kujawy" },
+            { "left": "Uprawa chmielu", "right": "Lubelszczyzna" },
+            { "left": "Uprawa pszenicy i buraków cukrowych na madach", "right": "Żuławy Wiślane" },
+            { "left": "Wielkoobszarowa uprawa rzepaku w gospodarstwach popegeerowskich", "right": "Pomorze Zachodnie" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W dwóch województwach o zbliżonej jakości gleb średnia powierzchnia gospodarstwa wynosi 5 ha i 25 ha. Co najlepiej tłumaczy tę różnicę?",
+          "options": [
+            "Różnice w wysokości opadów i długości okresu wegetacyjnego",
+            "Odmienna historia własności ziemi: wielopokoleniowe dziedziczenie z podziałem na południowym wschodzie i przejęcie gruntów poniemieckich przez PGR-y na północy i zachodzie",
+            "Różnice w wysokości dopłat bezpośrednich do hektara między województwami",
+            "Wyższy poziom mechanizacji rolnictwa w województwach o mniejszych gospodarstwach"
+          ],
+          "correctIndex": 1,
+          "explanation": "Struktura agrarna to przede wszystkim **dziedzictwo historyczne**. Na południowym wschodzie (dawny zabór austriacki) ziemię dzielono między spadkobierców przez pokolenia, a po 1945 r. nie przeprowadzono tam kolektywizacji. Na Ziemiach Zachodnich i Północnych grunty poniemieckie trafiły do PGR-ów, a po ich likwidacji zostały sprywatyzowane jako duże, zwarte gospodarstwa. Dopłaty są liczone według jednolitych zasad w całym kraju, a klimat nie wpływa na wielkość działek."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie regionu i dominującego kierunku produkcji rolnej jest POPRAWNE?",
+          "options": [
+            "Podlasie — wielkoobszarowa uprawa buraków cukrowych i pszenicy",
+            "Kujawy — chów bydła mlecznego oparty na trwałych użytkach zielonych",
+            "Nizina Śląska — uprawa pszenicy, buraków cukrowych i rzepaku",
+            "Bory Tucholskie — intensywne sadownictwo towarowe"
+          ],
+          "correctIndex": 2,
+          "explanation": "Nizina Śląska łączy najlepsze warunki przyrodnicze w Polsce: żyzne gleby, najdłuższy okres wegetacyjny i łagodne zimy — stąd uprawy o wysokich wymaganiach. Podlasie ma gleby słabe i wysoki udział łąk, więc dominuje tam chów bydła mlecznego (odpowiedzi A i B są zamienione miejscami). Bory Tucholskie to obszar piaszczysty i leśny, nieprzydatny pod sady towarowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Która zmiana NIE zaszła w polskim rolnictwie po wejściu do Unii Europejskiej w 2004 r.?",
+          "options": [
+            "Wzrost średniej powierzchni gospodarstwa i spadek ich liczby",
+            "Powstanie trwałej nadwyżki w handlu produktami rolno-spożywczymi",
+            "Wyrównanie średniej wielkości gospodarstw między województwami południowo-wschodnimi a zachodnimi",
+            "Wzrost specjalizacji gospodarstw i spadek udziału produkcji na samozaopatrzenie"
+          ],
+          "correctIndex": 2,
+          "explanation": "Różnice regionalne w strukturze agrarnej **utrzymały się**, a miejscami nawet się pogłębiły: gospodarstwa duże powiększały się szybciej niż małe, bo miały większą zdolność inwestycyjną i łatwiejszy dostęp do kredytów. Trzy pozostałe procesy — koncentracja, specjalizacja i nadwyżka handlowa w obrocie żywnością — to najlepiej udokumentowane skutki akcesji."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** Najczęstszy typ zadania z tego tematu brzmi: „wyjaśnij, dlaczego w regionie X rozwinęła się uprawa Y”. Odpowiedź maksymalnie punktowana zawiera zwykle **jeden argument przyrodniczy i jeden pozaprzyrodniczy**, oba dopasowane do konkretnej rośliny. Przykład wzorcowej konstrukcji dla buraka cukrowego na Kujawach: „występują tu żyzne czarne ziemie i wysoka suma temperatur w okresie wegetacji, co zapewnia wysokie plony korzeni, a jednocześnie w regionie działają cukrownie, dzięki czemu koszt transportu korzeni — nietrwałych i ciężkich — pozostaje niski”. Zapamiętaj także zasadę odwrotnego doboru: **im lepsze gleby, tym bardziej wymagająca roślina** (pszenica, burak, rzepak), a na glebach słabych — żyto, ziemniaki i użytki zielone pod chów bydła."
+        }
+      ]
+    },
+    {
+      "slug": "przemysl-i-energetyka-polski",
+      "title": "Przemysł i energetyka Polski",
+      "summary": "Okręgi przemysłowe i ich restrukturyzacja, struktura wytwarzania energii elektrycznej i transformacja energetyczna oraz nowoczesne gałęzie przemysłu.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polski przemysł zmienił się po 1989 r. tak głęboko jak żaden inny dział gospodarki. Zamknięto kopalnie i huty, wokół których wyrosły całe miasta, a w ich miejsce pojawiły się montownie samochodów, fabryki AGD i centra logistyczne. Jednocześnie jeden element pozostał zaskakująco trwały: **węgiel**. Polska wciąż wytwarza z niego większość energii elektrycznej — więcej niż jakikolwiek inny kraj Unii Europejskiej — a odchodzenie od niego jest największym wyzwaniem gospodarczym najbliższych dekad. Ta lekcja pokazuje, skąd wzięła się dzisiejsza mapa przemysłu Polski i dokąd zmierza jej energetyka."
+        },
+        {
+          "type": "definition",
+          "term": "Okręg przemysłowy",
+          "text": "Obszar o dużej koncentracji zakładów przemysłowych, powiązanych ze sobą kooperacją, wspólną infrastrukturą i wspólnym rynkiem pracy. Okręgi powstawały najczęściej **na złożach surowców** (GOP, LGOM, Bełchatów), przy szlakach transportowych albo w wyniku decyzji politycznych (COP, Nowa Huta). Mniejszą jednostką jest **ośrodek przemysłowy** — pojedyncze miasto z zakładami jednej lub kilku branż (Płock, Puławy, Police).",
+          "note": "Rozróżniaj **okręg** (obszar wielu miast) od **ośrodka** (jedno miasto) i od **węzła przemysłowego** (miasto z zapleczem). W kluczach CKE ta terminologia jest stosowana ściśle."
+        },
+        {
+          "type": "timeline",
+          "title": "Etapy uprzemysłowienia ziem polskich",
+          "caption": "Każdy etap zostawił trwały ślad na mapie: dzisiejsze problemy Wałbrzycha, Łodzi czy Bytomia to skutki decyzji sprzed 100-200 lat.",
+          "events": [
+            { "period": "XVII-XIX w.", "label": "Staropolski Okręg Przemysłowy", "text": "**Najstarszy okręg przemysłowy na ziemiach polskich**, w widłach Wisły i Pilicy (Kielce, Starachowice, Ostrowiec Świętokrzyski, Skarżysko-Kamienna). Oparty na miejscowych rudach żelaza, drewnie jako paliwie i energii wody. Wyczerpanie rud i przejście hutnictwa na koks przesądziło o jego upadku już w XIX w. — dziś to obszar o wysokim bezrobociu strukturalnym." },
+            { "period": "XIX w.", "label": "Rewolucja przemysłowa: Górny Śląsk i Łódź", "text": "Górny Śląsk rozwinął się na **węglu kamiennym** (górnictwo, hutnictwo, koksownictwo), Łódź — jako ośrodek przemysłu włókienniczego, zaopatrujący chłonny rynek rosyjski. Oba przypadki pokazują dwa mechanizmy lokalizacji: przy surowcu i przy rynku zbytu." },
+            { "period": "1936-1939", "label": "Centralny Okręg Przemysłowy", "text": "Największa inwestycja II RP, realizowana z inicjatywy **Eugeniusza Kwiatkowskiego** w widłach Wisły i Sanu. Motywy: bezpieczeństwo (największa odległość od granic z Niemcami i ZSRR), dostępność energii, siły roboczej i wody oraz walka z przeludnieniem agrarnym. Powstały Stalowa Wola, Mielec, Dębica, Nowa Dęba — do dziś zaplecze przemysłu lotniczego i zbrojeniowego." },
+            { "period": "1945-1989", "label": "Industrializacja socjalistyczna", "text": "Priorytet dla **przemysłu ciężkiego**, lokalizacja często wbrew rachunkowi ekonomicznemu (Nowa Huta pod Krakowem — bez rudy i węgla na miejscu, za to z motywacją polityczną). Powstały nowe okręgi: bełchatowski (węgiel brunatny), legnicko-głogowski (miedź), płocki (petrochemia), tarnobrzeski (siarka). Efekt uboczny: energochłonna, surowcochłonna i wysoce zanieczyszczająca struktura gospodarki." },
+            { "period": "1990-2004", "label": "Restrukturyzacja i szok", "text": "Utrata rynków RWPG i konkurencja światowa obnażyły nieefektywność przemysłu. Upadły przemysł włókienniczy w Łodzi, siarkowy w Tarnobrzegu i górnictwo w **Wałbrzychu** (jedyny przypadek likwidacji całego zagłębia węglowego w Polsce). Zatrudnienie w górnictwie węgla kamiennego spadło z ok. 400 tys. do kilkudziesięciu tysięcy. Od 1995 r. tworzone są **specjalne strefy ekonomiczne** — pierwsza w Mielcu." },
+            { "period": "od 2004", "label": "Reindustrializacja na nowych zasadach", "text": "Napływ bezpośrednich inwestycji zagranicznych po akcesji do UE. Polska stała się zapleczem produkcyjnym Europy: motoryzacja, AGD, meble, opakowania, autobusy, baterie. Nowa lokalizacja przemysłu kieruje się nie surowcem, lecz **dostępnością transportową (autostrady), rynkiem pracy i zachętami inwestycyjnymi**." }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Okręgi i ośrodki przemysłowe Polski",
+          "caption": "Kliknij punkty. Zwróć uwagę na czynnik lokalizacji każdego z nich — to jest realna treść zadań maturalnych o przemyśle.",
+          "center": [51.6, 19.3],
+          "zoom": 6,
+          "markers": [
+            { "lat": 50.26, "lng": 19.02, "label": "Górnośląski Okręg Przemysłowy (GOP)", "text": "Największy okręg Polski, oparty na **węglu kamiennym**. Dawniej górnictwo, hutnictwo żelaza i cynku, koksownictwo. Dziś — po restrukturyzacji — motoryzacja (Tychy, Gliwice), logistyka przy A1 i A4 oraz usługi w Katowicach." },
+            { "lat": 50.93, "lng": 21.39, "label": "Staropolski Okręg Przemysłowy", "text": "Najstarszy okręg na ziemiach polskich — rudy żelaza, drewno i energia wody. Upadł już w XIX w. wraz z wyczerpaniem złóż. Dziś Ostrowiec (hutnictwo), Starachowice (samochody dostawcze) i Kielce (targi, materiały budowlane)." },
+            { "lat": 51.37, "lng": 19.36, "label": "Okręg bełchatowski", "text": "Powstał wokół odkrywki **węgla brunatnego** — surowca, którego nie opłaca się transportować, więc elektrownię buduje się przy kopalni. Elektrownia Bełchatów o mocy ok. 5100 MW jest największą w Polsce i jedną z największych opalanych węglem brunatnym w Europie." },
+            { "lat": 51.4, "lng": 16.2, "label": "Legnicko-Głogowski Okręg Miedziowy", "text": "Wydobycie i przetwórstwo **rud miedzi i srebra** (KGHM: kopalnie Lubin, Polkowice-Sieroszowice, Rudna; huty Głogów i Legnica). Polska należy do światowej czołówki producentów srebra. Problem: głębokość eksploatacji ponad 1000 m i wstrząsy górotworu." },
+            { "lat": 52.55, "lng": 19.71, "label": "Płock — ośrodek petrochemiczny", "text": "Największa rafineria w Polsce, zlokalizowana **przy rurociągu Przyjaźń i nad Wisłą** (woda technologiczna), a nie przy surowcu — ropa jest importowana. Klasyczny przykład lokalizacji transportowej." },
+            { "lat": 50.29, "lng": 21.42, "label": "Mielec — pierwsza SSE", "text": "Ośrodek lotniczy z czasów COP. W 1995 r. utworzono tu **pierwszą w Polsce specjalną strefę ekonomiczną** (EURO-PARK Mielec) jako odpowiedź na bezrobocie po upadku produkcji zbrojeniowej." },
+            { "lat": 50.04, "lng": 22.0, "label": "Rzeszów — Dolina Lotnicza", "text": "Klaster przemysłu lotniczego (Rzeszów, Mielec, Świdnik, Krosno) oparty na tradycji COP, zapleczu Politechniki Rzeszowskiej i inwestycjach koncernów lotniczych. Przykład **przemysłu zaawansowanej technologii** poza metropolią." },
+            { "lat": 50.77, "lng": 16.28, "label": "Wałbrzych — zagłębie po likwidacji", "text": "W latach 1990-1996 zamknięto **wszystkie kopalnie** dolnośląskiego zagłębia węglowego (węgiel koksujący, trudne warunki geologiczne). Powstało bezrobocie strukturalne sięgające 30%. Odpowiedzią była Wałbrzyska SSE, dziś jedna z największych w kraju (motoryzacja, AGD)." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Restrukturyzacja Górnego Śląska — jak przebudowuje się region jednej branży",
+          "region": "województwo śląskie (GOP i Rybnicki Okręg Węglowy)",
+          "text": "W 1989 r. Górny Śląsk był monokulturą gospodarczą: górnictwo, hutnictwo i energetyka dawały pracę większości mieszkańców, zapewniały mieszkania, przedszkola i domy kultury. Restrukturyzacja polegała na trzech równoległych procesach. **Po pierwsze**, likwidacji nierentownych kopalń i hut oraz redukcji zatrudnienia — z ok. 400 tys. górników do kilkudziesięciu tysięcy; osłoną były pakiety socjalne (odprawy, urlopy górnicze), które złagodziły napięcia społeczne, ale opóźniły przekwalifikowanie. **Po drugie**, przyciąganiu nowych inwestycji: Katowicka SSE stała się jedną z największych w Polsce, powstały montownie samochodów w Tychach i Gliwicach oraz centra logistyczne przy skrzyżowaniu autostrad A1 i A4 — region wykorzystał swój najtrwalszy atut, czyli **położenie transportowe i wykwalifikowaną siłę roboczą**. **Po trzecie**, rekultywacji i rewitalizacji: hałdy i tereny pokopalniane przekształcono w parki, centra handlowe i obiekty kultury (Strefa Kultury w Katowicach na terenie dawnej kopalni Katowice, Szyb Wilson). Bilans jest niejednoznaczny: bezrobocie w województwie śląskim należy dziś do najniższych w kraju, ale konurbacja wyludnia się najszybciej w Polsce, a miasta takie jak Bytom czy Świętochłowice nie odbudowały swojej bazy ekonomicznej.",
+          "takeaway": "Restrukturyzacja regionu przemysłowego udaje się tam, gdzie obok likwidacji starych zakładów pojawia się **nowa funkcja gospodarcza** — bez niej pozostaje wyludnienie i dziedziczone bezrobocie strukturalne."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura wytwarzania energii elektrycznej w Polsce (% produkcji)",
+          "caption": "Porównanie dwóch momentów pokazuje kierunek i tempo transformacji: udział węgla spadł z ok. 87% do ok. 61%, a odnawialne źródła zbliżyły się do jednej czwartej produkcji. Wartości przybliżone.",
+          "labels": ["węgiel kamienny", "węgiel brunatny", "wiatr", "fotowoltaika", "gaz ziemny", "pozostałe (biomasa, woda, inne)"],
+          "series": [
+            { "name": "2010", "values": [55, 32, 2, 0, 3, 8] },
+            { "name": "2023", "values": [42, 19, 13, 7, 11, 8] }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "classification",
+          "title": "Elektrownie w Polsce — typy, lokalizacja i przykłady",
+          "caption": "Zasada, która porządkuje całą mapę energetyki: **elektrownie na węglu brunatnym stoją przy kopalni** (surowiec o niskiej wartości opałowej nie znosi transportu), a na węglu kamiennym mogą stać przy odbiorcy.",
+          "groups": [
+            {
+              "name": "Cieplne na węglu brunatnym",
+              "description": "Zawsze **przy odkrywce** — węgiel brunatny ma dużo wody i niską wartość opałową, więc jego transport na większe odległości jest nieopłacalny. Dają energię tanią, ale najbardziej emisyjną.",
+              "examples": ["Bełchatów (ok. 5100 MW — największa w Polsce)", "Turów (Bogatynia)", "Pątnów-Adamów-Konin (Wielkopolska Wschodnia)"]
+            },
+            {
+              "name": "Cieplne na węglu kamiennym",
+              "description": "Lokalizowane przy złożu, przy dużym odbiorcy lub przy wodzie chłodzącej — węgiel kamienny opłaca się transportować koleją. Stanowią podstawę systemu i pracują w tzw. podstawie obciążenia.",
+              "examples": ["Kozienice (ok. 4000 MW, nad Wisłą)", "Opole", "Połaniec", "Jaworzno III", "Rybnik"]
+            },
+            {
+              "name": "Wodne",
+              "description": "Niewielkie znaczenie (ok. 2% produkcji) ze względu na **nizinny charakter kraju i małe spadki rzek**. Szczególną rolę pełnią elektrownie szczytowo-pompowe: magazynują energię, przepompowując wodę w nocy do górnego zbiornika.",
+              "examples": ["Żarnowiec — największa szczytowo-pompowa (ok. 716 MW)", "Solina — największa zbiornikowa", "Włocławek — największa przepływowa, na Wiśle", "Porąbka-Żar, Żydowo"]
+            },
+            {
+              "name": "Wiatrowe",
+              "description": "Najszybciej rosnące źródło. Lokalizowane tam, gdzie **średnia prędkość wiatru jest największa**: Pomorze, Kujawy, Suwalszczyzna, Wielkopolska. Rozwój lądowy spowolniła ustawa odległościowa z 2016 r.; przyszłość to farmy morskie na Bałtyku.",
+              "examples": ["farmy na Pomorzu i Kujawach", "budowane morskie farmy wiatrowe (m.in. Baltic Power) — pierwsze uruchomienia planowane w drugiej połowie lat 20."]
+            },
+            {
+              "name": "Fotowoltaika",
+              "description": "Wzrost niemal z zera do kilku procent produkcji w kilka lat, napędzany programami wsparcia mikroinstalacji (prosumenci). Wadą jest **zmienność dobowa i sezonowa** — szczyt produkcji latem w południe, nie w zimowy wieczór, gdy popyt jest największy.",
+              "examples": ["setki tysięcy instalacji prosumenckich na dachach", "farmy PV w Wielkopolsce i na Lubelszczyźnie"]
+            },
+            {
+              "name": "Jądrowa (planowana)",
+              "description": "Polska nie ma czynnej elektrowni jądrowej. Pierwszą planuje się w gminie **Choczewo (Lubiatowo-Kopalino)** na Pomorzu — lokalizacja nad morzem zapewnia wodę do chłodzenia i bliskość odbiorców na północy kraju, gdzie brakuje mocy wytwórczych.",
+              "examples": ["planowana elektrownia Lubiatowo-Kopalino", "zaniechana budowa w Żarnowcu (przerwana w 1990 r.)"]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Energetyka Polski w liczbach",
+          "items": [
+            { "value": "ok. 61", "unit": "%", "label": "Udział węgla w produkcji energii elektrycznej (2023)", "note": "najwyższy w Unii Europejskiej" },
+            { "value": "ok. 27", "unit": "%", "label": "Udział odnawialnych źródeł energii (2023)", "note": "w 2010 r. było to ok. 7%" },
+            { "value": "ok. 5100", "unit": "MW", "label": "Moc Elektrowni Bełchatów", "note": "największa elektrownia w Polsce, na węglu brunatnym" },
+            { "value": "ok. 50", "unit": "mln t", "label": "Roczne wydobycie węgla kamiennego (ostatnie lata)", "note": "w 1979 r. — ponad 200 mln t" },
+            { "value": "2049", "label": "Docelowa data zakończenia wydobycia węgla kamiennego", "note": "według umowy społecznej z 2021 r." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Transformacja energetyczna Polski — dlaczego jest trudniejsza niż gdzie indziej",
+          "caption": "Cztery bariery, których nie mają kraje o innej strukturze wytwarzania. To najlepszy materiał na zadania typu „wyjaśnij uwarunkowania”.",
+          "steps": [
+            { "title": "1. Punkt startowy: monokultura węglowa", "text": "Jeszcze w 2010 r. węgiel dawał ok. **87%** polskiej energii elektrycznej. Kraje takie jak Francja (atom) czy Szwecja (woda i atom) startowały z zupełnie innego poziomu emisyjności — im transformacja polega na wymianie części źródeł, Polsce na przebudowie całego systemu." },
+            { "title": "2. Bariera społeczna i regionalna", "text": "Górnictwo i energetyka to dziesiątki tysięcy miejsc pracy skoncentrowanych w kilku regionach (Śląsk, Bełchatów, Turów, Konin). Zamknięcie kopalni oznacza tam nie utratę pracy w jednej firmie, lecz **załamanie lokalnej gospodarki**. Stąd Fundusz Sprawiedliwej Transformacji UE, finansujący przekwalifikowanie i nowe inwestycje w tych regionach." },
+            { "title": "3. Bariera techniczna: zmienność OZE", "text": "Wiatr i słońce dają energię wtedy, gdy wieje i świeci, a nie wtedy, gdy jest popyt. Wymaga to **magazynów energii, elektrowni szczytowo-pompowych, elastycznych bloków gazowych i rozbudowy sieci przesyłowej** — zwłaszcza na osi północ-południe, bo moce powstają nad morzem, a odbiorcy są na południu." },
+            { "title": "4. Bariera ekonomiczna: koszt emisji", "text": "Unijny system handlu uprawnieniami do emisji (**EU ETS**) sprawia, że każda tona CO₂ ma cenę. Im droższe uprawnienia, tym mniej opłacalne elektrownie węglowe — to mechanizm rynkowy, który wypycha węgiel z systemu szybciej niż jakakolwiek decyzja administracyjna." },
+            { "title": "5. Kierunki działania", "text": "Rozwój morskiej energetyki wiatrowej na Bałtyku, budowa pierwszej elektrowni jądrowej, rozbudowa fotowoltaiki i magazynów energii, bloki gazowe jako źródło przejściowe, poprawa efektywności energetycznej budynków oraz dywersyfikacja dostaw surowców (gazoport w Świnoujściu, gazociąg Baltic Pipe, Naftoport w Gdańsku)." }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Nowoczesne gałęzie przemysłu w Polsce",
+          "caption": "Wspólna cecha nowej lokalizacji: nie surowiec, lecz **autostrada, rynek pracy i zachęta inwestycyjna**.",
+          "groups": [
+            {
+              "name": "Motoryzacyjny",
+              "description": "Największa gałąź eksportowa polskiego przemysłu. Polska produkuje głównie **części, silniki i pojazdy użytkowe**, a od niedawna także akumulatory do samochodów elektrycznych.",
+              "examples": ["montownie samochodów osobowych w Tychach i Gliwicach", "fabryki silników w Bielsku-Białej i Tychach", "Volkswagen Poznań i Września (samochody dostawcze)", "fabryka baterii w Kobierzycach koło Wrocławia", "autobusy Solaris (Bolechowo koło Poznania)"]
+            },
+            {
+              "name": "AGD i elektroniczny",
+              "description": "Polska jest jednym z największych producentów sprzętu gospodarstwa domowego w Europie. Decydujące były koszty pracy, kwalifikacje i **położenie blisko rynku niemieckiego**.",
+              "examples": ["Łódź i okolice (pralki, zmywarki)", "Wrocław i Wałbrzych", "Wronki (Amica)", "Kwidzyn, Mława"]
+            },
+            {
+              "name": "Meblarski i drzewny",
+              "description": "Oparty na krajowej bazie surowcowej (lesistość ok. 30%) i tradycji rzemieślniczej. Polska należy do **największych eksporterów mebli na świecie**.",
+              "examples": ["Wielkopolska (Swarzędz, Kępno)", "Kujawy i Pomorze", "zakłady płyt drewnopochodnych w Grajewie i Szczecinku"]
+            },
+            {
+              "name": "Lotniczy i zbrojeniowy",
+              "description": "Kontynuacja tradycji Centralnego Okręgu Przemysłowego, wzmocniona bliskością uczelni technicznych i inwestycjami koncernów zagranicznych.",
+              "examples": ["Dolina Lotnicza: Rzeszów, Mielec, Świdnik, Krosno", "Stalowa Wola (sprzęt wojskowy)", "Bydgoszcz, Radom"]
+            },
+            {
+              "name": "Chemiczny i farmaceutyczny",
+              "description": "Zakłady wielkiej syntezy chemicznej lokalizowane przy surowcu, rurociągu lub wodzie; farmacja — przy zapleczu naukowym.",
+              "examples": ["Płock (rafineria i petrochemia)", "Puławy, Włocławek, Police, Kędzierzyn-Koźle (nawozy)", "farmacja w Warszawie, Krakowie, Starogardzie Gdańskim"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Specjalna strefa ekonomiczna (SSE)",
+          "text": "Wyodrębniony administracyjnie obszar, na którym przedsiębiorcy prowadzą działalność na **preferencyjnych warunkach** — przede wszystkim ze zwolnieniem z podatku dochodowego od części zainwestowanego kapitału, na uzbrojonym terenie przygotowanym pod inwestycję. Pierwszą strefę utworzono w 1995 r. w **Mielcu**, a docelowo powstało 14 stref. Ich pierwotnym celem było łagodzenie bezrobocia strukturalnego w regionach dotkniętych restrukturyzacją (Mielec, Wałbrzych, Katowice, Starachowice).",
+          "note": "Od 2018 r. działa **Polska Strefa Inwestycji**: zwolnienia podatkowe można uzyskać na terenie **całego kraju**, a nie tylko w wyznaczonych strefach. Zmiana ta miała skierować inwestycje do powiatów o wysokim bezrobociu, gdzie kryteria uzyskania wsparcia są łagodniejsze."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na cztery rzeczy. **Moc to nie produkcja**: moc podajemy w MW (zdolność w danej chwili), a produkcję w GWh (energia wytworzona w roku) — elektrownia wiatrowa o mocy 1 MW wytworzy w roku znacznie mniej niż węglowa o tej samej mocy, bo pracuje z przerwami. **Węgiel kamienny to nie węgiel brunatny**: brunatny wydobywa się odkrywkowo na Nizinie Południowowielkopolskiej i w okolicach Bełchatowa i Turowa, kamienny — głębinowo na Górnym Śląsku, w Lubelskiem (Bogdanka) i częściowo na Dolnym Śląsku (złoża nieeksploatowane). **OZE to nie tylko wiatr i słońce** — zalicza się do nich także biomasę, biogaz, wodę i energię geotermalną. I wreszcie: **restrukturyzacja to nie likwidacja przemysłu** — polski przemysł wytwarza dziś znacznie więcej niż w 1989 r., zmieniła się jego struktura, a nie skala."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj chronologicznie etapy rozwoju przemysłu na ziemiach polskich",
+          "instruction": "Ustaw wydarzenia od najwcześniejszego do najpóźniejszego.",
+          "items": [
+            "Rozwój Staropolskiego Okręgu Przemysłowego na rudach żelaza i energii wody",
+            "Rozkwit przemysłu włókienniczego w Łodzi i górnictwa węgla na Górnym Śląsku w XIX w.",
+            "Budowa Centralnego Okręgu Przemysłowego w widłach Wisły i Sanu (1936-1939)",
+            "Budowa kombinatu metalurgicznego w Nowej Hucie i rozwój przemysłu ciężkiego po 1945 r.",
+            "Uruchomienie kopalni i elektrowni Bełchatów na węglu brunatnym (lata 70. i 80. XX w.)",
+            "Likwidacja kopalń w Wałbrzychu i utworzenie pierwszej specjalnej strefy ekonomicznej w Mielcu (lata 90.)",
+            "Napływ inwestycji zagranicznych po wejściu Polski do UE i budowa fabryk baterii do samochodów elektrycznych"
+          ],
+          "explanation": "Ta kolejność to zarazem historia zmieniających się **czynników lokalizacji przemysłu**: od surowca miejscowego i energii wody (SOP), przez węgiel i rynek zbytu (XIX w.), decyzje polityczno-strategiczne (COP, Nowa Huta), wielkie złoża energetyczne (Bełchatów), aż po dostępność transportową, kwalifikacje pracowników i zachęty podatkowe (SSE, inwestycje po 2004 r.)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego elektrownie opalane węglem brunatnym budowane są bezpośrednio przy kopalniach odkrywkowych, a elektrownie na węglu kamiennym już niekoniecznie?",
+          "options": [
+            "Ponieważ węgiel brunatny jest bardziej wybuchowy i nie wolno go przewozić koleją",
+            "Ponieważ węgiel brunatny ma dużą wilgotność i niską wartość opałową, więc jego transport na większe odległości jest nieopłacalny",
+            "Ponieważ kopalnie odkrywkowe wymagają stałego zasilania z sąsiadującej elektrowni",
+            "Ponieważ węgiel brunatny wydobywa się wyłącznie w regionach o dużym zapotrzebowaniu na energię"
+          ],
+          "correctIndex": 1,
+          "explanation": "Węgiel brunatny zawiera nawet ponad 40% wody, a jego wartość opałowa jest ok. dwukrotnie niższa niż węgla kamiennego. Przewożąc go, transportowałoby się głównie wodę i skałę płonną — dlatego elektrownię stawia się przy odkrywce i przesyła **energię, a nie surowiec**. To modelowy przykład lokalizacji przy surowcu nietransportowalnym (Bełchatów, Turów, Konin)."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o strukturze wytwarzania energii elektrycznej w Polsce jest prawdziwe?",
+          "options": [
+            "Polska wytwarza z węgla najmniejszą część energii elektrycznej spośród krajów Unii Europejskiej",
+            "Udział węgla w produkcji energii elektrycznej spadł, ale nadal jest najwyższy w Unii Europejskiej",
+            "Elektrownie wodne dostarczają w Polsce ok. jednej czwartej energii elektrycznej",
+            "Polska od lat 90. XX w. wytwarza część energii elektrycznej w elektrowni jądrowej"
+          ],
+          "correctIndex": 1,
+          "explanation": "Udział węgla obniżył się z ok. 87% (2010) do ok. 61% (2023), ale wciąż jest najwyższy w UE. Elektrownie wodne dają w Polsce zaledwie ok. 2% energii — ogranicza je nizinny charakter kraju i małe spadki rzek. Polska nie ma dotąd czynnej elektrowni jądrowej; budowę w Żarnowcu przerwano w 1990 r., a pierwsza siłownia planowana jest na Pomorzu w gminie Choczewo."
+        },
+        {
+          "type": "quiz",
+          "question": "Jaki był podstawowy cel utworzenia pierwszych specjalnych stref ekonomicznych w Polsce w latach 90. XX w.?",
+          "options": [
+            "Zwiększenie wydobycia surowców mineralnych w regionach górniczych",
+            "Ograniczenie bezrobocia strukturalnego w regionach dotkniętych upadkiem tradycyjnego przemysłu",
+            "Zahamowanie napływu inwestycji zagranicznych do dużych miast",
+            "Wyrównanie gęstości zaludnienia między województwami"
+          ],
+          "correctIndex": 1,
+          "explanation": "Strefy powstawały tam, gdzie restrukturyzacja pozostawiła masowe bezrobocie strukturalne: Mielec (upadek produkcji lotniczo-zbrojeniowej, pierwsza strefa w 1995 r.), Wałbrzych (likwidacja kopalń), Katowice i Starachowice. Ulgi podatkowe i uzbrojone tereny miały przyciągnąć inwestorów, którzy zatrudnią zwolnionych pracowników. Od 2018 r. mechanizm rozszerzono na cały kraj w ramach Polskiej Strefy Inwestycji."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** W zadaniach o przemyśle CKE prawie zawsze pyta o **czynniki lokalizacji** — i oczekuje, że wskażesz te właściwe dla konkretnego zakładu, a nie ogólną listę. Naucz się przypisywać: hutnictwo aluminium i elektrownia na węglu brunatnym → **baza energetyczna i surowiec nietransportowalny**; rafineria w Płocku → **rurociąg i woda**; cukrownia → **bliskość plantacji buraków (surowiec nietrwały)**; przemysł precyzyjny i farmaceutyczny → **zaplecze naukowe i wykwalifikowani pracownicy**; montownia samochodów i centrum logistyczne → **autostrada, rynek pracy, zachęty podatkowe**. Jeśli zadanie brzmi „oceń skutki restrukturyzacji”, pamiętaj, by podać skutki **pozytywne i negatywne** (nowe inwestycje i spadek emisji kontra bezrobocie strukturalne, depopulacja i degradacja terenów poprzemysłowych) — polecenie „oceń” wymaga obu stron bilansu."
+        }
+      ]
+    },
+    {
+      "slug": "uslugi-i-zroznicowanie-regionalne-polski",
+      "title": "Usługi i zróżnicowanie regionalne Polski",
+      "summary": "Transport, handel zagraniczny i turystyka oraz przyczyny podziału na Polskę A i B i rola funduszy Unii Europejskiej.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Usługi zatrudniają dziś w Polsce sześciu na dziesięciu pracujących i wytwarzają większość PKB — ale ich rozmieszczenie jest najbardziej nierównomierne ze wszystkich działów gospodarki. Fabrykę można zbudować w powiecie o wysokim bezrobociu, port lotniczy czy centralę banku — nie. Dlatego rozwój usług **wzmacnia** różnice regionalne zamiast je łagodzić. Ta lekcja łączy więc dwa tematy, które w rzeczywistości są jednym: co Polska ma w sferze usług — transport, wymianę handlową i turystykę — oraz dlaczego mimo dwudziestu lat funduszy unijnych podział na Polskę A i Polskę B nadal się utrzymuje."
+        },
+        {
+          "type": "classification",
+          "title": "Usługi w Polsce — jak są zorganizowane",
+          "caption": "Rozmieszczenie usług rządzi się prostą zasadą: im **wyższy rząd** usługi, tym większy ośrodek jest potrzebny, by ją utrzymać (teoria ośrodków centralnych).",
+          "groups": [
+            {
+              "name": "Usługi podstawowe (niższego rzędu)",
+              "description": "Potrzebne codziennie, o niewielkim zasięgu obsługi — muszą być blisko odbiorcy, więc występują nawet w małych miejscowościach. To ich zanik na wsiach peryferyjnych jest najbardziej dotkliwym objawem depopulacji.",
+              "examples": ["sklepy spożywcze", "szkoły podstawowe", "przychodnie POZ", "poczta, apteka, przystanek autobusowy"]
+            },
+            {
+              "name": "Usługi wyższego rzędu",
+              "description": "Rzadziej potrzebne, ale o dużym zasięgu obsługi — potrzebują wielu odbiorców, więc lokalizują się w miastach powiatowych i wojewódzkich. Ich utrata przez miasto (np. po reformie administracyjnej 1999 r.) osłabia całe otoczenie.",
+              "examples": ["szpitale specjalistyczne", "sądy okręgowe", "uczelnie wyższe", "teatry, filharmonie, galerie handlowe"]
+            },
+            {
+              "name": "Usługi metropolitalne",
+              "description": "Występują wyłącznie w największych ośrodkach i decydują o randze miasta w skali kraju i Europy. To one odpowiadają za najwyższe zarobki i największą wartość dodaną.",
+              "examples": ["centrale banków i korporacji", "nowoczesne usługi biznesowe (BPO/SSC) w Krakowie, Warszawie, Wrocławiu", "duże porty lotnicze", "instytuty badawcze i centra R&D"]
+            },
+            {
+              "name": "Usługi rynkowe i nierynkowe",
+              "description": "Podział według sposobu finansowania. Nierynkowe finansuje budżet publiczny, dlatego państwo może je świadomie rozmieszczać — bywają narzędziem polityki regionalnej.",
+              "examples": ["rynkowe: handel, transport, finanse, turystyka, IT", "nierynkowe: administracja publiczna, obrona, znaczna część edukacji i ochrony zdrowia"]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Transport drogowy a kolejowy w Polsce",
+          "leftLabel": "Transport drogowy",
+          "rightLabel": "Transport kolejowy",
+          "rows": [
+            { "aspect": "Udział w przewozach ładunków", "left": "dominujący (ok. 3/4 masy przewożonych towarów)", "right": "malejący przez lata, dziś kilkanaście procent; rośnie znaczenie przewozów kontenerowych z portów" },
+            { "aspect": "Sieć", "left": "ok. 5 tys. km dróg szybkiego ruchu (autostrady i drogi ekspresowe) — sieć zbudowana głównie po 2004 r.", "right": "ok. 19 tys. km linii; sieć **odziedziczona** i od lat 90. skracana — zlikwidowano tysiące kilometrów linii lokalnych" },
+            { "aspect": "Rozmieszczenie", "left": "coraz bardziej równomierne — po realizacji S3, S7, S17 i S19 (Via Carpatia) dostępność wschodu wyraźnie się poprawiła", "right": "wyraźnie **gęstsza na zachodzie i południu** — to dziedzictwo rozbudowy kolei w zaborze pruskim; najrzadsza na Podlasiu i Lubelszczyźnie" },
+            { "aspect": "Zalety", "left": "dostawy „od drzwi do drzwi”, elastyczność tras i terminów", "right": "niskie koszty jednostkowe na dużych odległościach, mała emisyjność, duża ładowność" },
+            { "aspect": "Wady", "left": "kongestia, wypadkowość, wysoka emisja CO₂ i hałas", "right": "konieczność przeładunku, mniejsza elastyczność, długoletnie zaległości inwestycyjne w infrastrukturze" },
+            { "aspect": "Kierunek zmian", "left": "domykanie sieci: S19 wzdłuż ściany wschodniej, obwodnice miast", "right": "modernizacja magistral, Centralna Magistrala Kolejowa, projekt Centralnego Portu Komunikacyjnego i Rail Baltica" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Węzły transportowe Polski",
+          "caption": "Zauważ, że wszystkie największe węzły leżą na przecięciu korytarzy europejskich: równoleżnikowego wschód-zachód (A2, A4) i południkowego północ-południe (A1, S3, S7) — to skutek położenia Polski na szlaku między Europą Zachodnią a Wschodnią oraz między Bałtykiem a Adriatykiem.",
+          "center": [52.2, 19.2],
+          "zoom": 6,
+          "markers": [
+            { "lat": 54.4, "lng": 18.7, "label": "Port Gdańsk", "text": "Największy port Polski i jeden z największych na Bałtyku. Głębokowodny terminal kontenerowy (Baltic Hub) przyjmuje największe kontenerowce oceaniczne, co uczyniło Gdańsk **bramą morską Europy Środkowej**. Działa tu też Naftoport — kluczowy dla dywersyfikacji dostaw ropy." },
+            { "lat": 54.52, "lng": 18.53, "label": "Port Gdynia", "text": "Port zbudowany od podstaw w latach 20. XX w., gdy II RP nie miała dostępu do Gdańska. Obsługuje kontenery, ładunki drobnicowe i ruch promowy; ograniczeniem jest mniejsza głębokość podejścia niż w Gdańsku." },
+            { "lat": 53.91, "lng": 14.25, "label": "Świnoujście i Szczecin", "text": "Zespół portowy obsługujący zaplecze zachodniej Polski i Niemiec. W Świnoujściu działa **terminal LNG (gazoport)** oraz terminal promowy do Skandynawii — to element polityki dywersyfikacji dostaw surowców energetycznych." },
+            { "lat": 52.17, "lng": 20.97, "label": "Lotnisko Chopina w Warszawie", "text": "Największy port lotniczy w Polsce i główny **hub przesiadkowy** dla ruchu w Europie Środkowo-Wschodniej. Jego przepustowość jest głównym argumentem za budową Centralnego Portu Komunikacyjnego pod Baranowem." },
+            { "lat": 50.08, "lng": 19.79, "label": "Kraków-Balice", "text": "Drugi port lotniczy Polski pod względem liczby pasażerów. Rozwinął się dzięki turystyce przyjazdowej i tanim liniom lotniczym — dowód na to, jak silnie lotnictwo pasażerskie zależy od funkcji turystycznej miasta." },
+            { "lat": 50.47, "lng": 19.08, "label": "Katowice-Pyrzowice", "text": "Największy port **cargo** poza Warszawą i baza tanich linii. Atutem jest położenie w centrum konurbacji, przy skrzyżowaniu autostrad A1 i A4 — czyli w miejscu o najlepszej dostępności drogowej w kraju." },
+            { "lat": 51.9, "lng": 19.4, "label": "Skrzyżowanie A1 i A2 — węzeł łódzki", "text": "Przecięcie głównego korytarza północ-południe (A1: Gdańsk-Katowice) z korytarzem wschód-zachód (A2: Berlin-Warszawa). Dzięki temu region łódzki stał się **centrum logistycznym Polski**, co częściowo zrekompensowało upadek przemysłu włókienniczego." },
+            { "lat": 52.09, "lng": 20.62, "label": "Baranów — Centralny Port Komunikacyjny", "text": "Planowany port lotniczy z węzłem kolejowym, mający połączyć ruch lotniczy z siecią szybkich kolei. Projekt ma przebudować układ transportowy kraju z promienistego (wszystko przez Warszawę) na bardziej równomierny." }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Główni odbiorcy polskiego eksportu (udział w wartości eksportu, %)",
+          "caption": "Uderzająca jest skala uzależnienia od jednego partnera: do Niemiec trafia ponad czwarta część polskiego eksportu — więcej niż do pięciu kolejnych krajów razem wziętych. Dane przybliżone dla ostatnich lat.",
+          "labels": ["Niemcy", "Czechy", "Francja", "Wielka Brytania", "Włochy", "Holandia"],
+          "series": [
+            { "name": "Udział w eksporcie [%]", "values": [28, 6, 6, 5, 5, 5] }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "table",
+          "title": "Handel zagraniczny Polski — struktura i cechy",
+          "caption": "Zwróć uwagę na logikę: Polska importuje surowce i podzespoły, a eksportuje wyroby gotowe — to typowa struktura kraju o gospodarce przetwórczej, wbudowanego w łańcuchy dostaw Europy Zachodniej.",
+          "headers": ["Element", "Charakterystyka", "Wyjaśnienie"],
+          "rows": [
+            ["Kierunki wymiany", "ok. 3/4 obrotów przypada na kraje Unii Europejskiej, na czele z Niemcami", "skutek jednolitego rynku, bliskości geograficznej i włączenia polskich firm w niemieckie łańcuchy produkcyjne"],
+            ["Struktura eksportu", "dominują wyroby przemysłu elektromaszynowego (maszyny, urządzenia, pojazdy i części) — ok. 40% wartości; dalej artykuły rolno-spożywcze (ok. 13%), meble, chemikalia", "efekt inwestycji zagranicznych w przemysł przetwórczy i konkurencyjności polskiej żywności"],
+            ["Struktura importu", "surowce energetyczne (ropa, gaz), elektronika, podzespoły do produkcji, chemikalia, samochody", "Polska jest uboga w ropę i gaz, a przemysł montażowy z definicji importuje komponenty"],
+            ["Saldo obrotów", "przez większość lat po 1989 r. ujemne (deficyt), w niektórych latach — jak 2023 — dodatnie", "deficyt jest typowy dla kraju szybko doganiającego, który dużo inwestuje i importuje maszyny; poprawa salda to efekt wzrostu konkurencyjności eksportu"],
+            ["Handel rolno-spożywczy", "trwała **nadwyżka** eksportu nad importem", "jeden z najbardziej spektakularnych skutków wejścia do UE — zniesienie ceł otworzyło rynek 500 mln konsumentów"],
+            ["Główne zagrożenie", "silne uzależnienie od koniunktury w Niemczech", "spowolnienie u głównego partnera natychmiast przekłada się na spadek polskiego eksportu — to argument za dywersyfikacją rynków zbytu"]
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Regiony turystyczne Polski i ich walory",
+          "caption": "Pamiętaj o podziale walorów na **przyrodnicze** (ukształtowane przez naturę) i **antropogeniczne** (wytworzone przez człowieka) — CKE pyta o to bardzo często, a większość regionów łączy oba typy.",
+          "groups": [
+            {
+              "name": "Region nadmorski",
+              "description": "Walory przyrodnicze: plaże, wydmy, klif, mikroklimat nadmorski. Największa **sezonowość** ruchu turystycznego w Polsce — z czego wynika sezonowe bezrobocie w powiatach nadmorskich.",
+              "examples": ["Trójmiasto", "Kołobrzeg, Świnoujście, Ustka (uzdrowiska)", "Łeba i ruchome wydmy Słowińskiego PN", "Półwysep Helski", "Wolin i klif w Międzyzdrojach"]
+            },
+            {
+              "name": "Region pojezierny",
+              "description": "Jeziora polodowcowe, lasy i rzeki — baza turystyki wodnej i wypoczynkowej. Coraz większe znaczenie ma turystyka weekendowa mieszkańców Warszawy i Trójmiasta.",
+              "examples": ["Wielkie Jeziora Mazurskie (Mikołajki, Giżycko, Węgorzewo)", "Suwalszczyzna i Wigierski PN", "Pojezierze Drawskie i Bory Tucholskie", "Kraina Wielkich Dolin — spływy kajakowe Krutynią i Czarną Hańczą"]
+            },
+            {
+              "name": "Region górski",
+              "description": "Jedyny region o **dwóch sezonach** — letnim (turystyka piesza) i zimowym (narciarstwo), co czyni go najbardziej odpornym na sezonowość. Najsilniejsza koncentracja ruchu turystycznego w Polsce przypada na Tatry.",
+              "examples": ["Tatry i Zakopane (Tatrzański PN — najliczniej odwiedzany park narodowy)", "Karkonosze: Karpacz, Szklarska Poręba", "Beskidy: Wisła, Szczyrk, Krynica", "Bieszczady — turystyka kwalifikowana i walory przyrodnicze"]
+            },
+            {
+              "name": "Region wyżynny i jurajski",
+              "description": "Krajobrazy krasowe, ostańce wapienne, jaskinie oraz gęsta sieć zabytków — typowy przykład **przenikania się walorów przyrodniczych i kulturowych**.",
+              "examples": ["Wyżyna Krakowsko-Częstochowska i Szlak Orlich Gniazd", "Ojcowski PN", "Kopalnia soli w Wieliczce i Bochni (UNESCO)", "Góry Świętokrzyskie i Krzemionki (UNESCO)"]
+            },
+            {
+              "name": "Miasta i walory kulturowe",
+              "description": "Turystyka miejska, kulturowa, pielgrzymkowa i biznesowa — najmniej sezonowa i najbardziej dochodowa. Polska ma kilkanaście obiektów na liście światowego dziedzictwa UNESCO.",
+              "examples": ["Kraków (Stare Miasto i Wawel — UNESCO)", "Warszawa (Starówka — UNESCO)", "Toruń, Zamość, Wrocław (Hala Stulecia)", "Zamek w Malborku", "Auschwitz-Birkenau", "Częstochowa (turystyka pielgrzymkowa)"]
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj walor turystyczny do regionu",
+          "instruction": "Połącz obiekt lub walor z regionem, w którym się znajduje.",
+          "pairs": [
+            { "left": "Ruchome wydmy i Słowiński Park Narodowy", "right": "Wybrzeże Słowińskie koło Łeby" },
+            { "left": "Szlak Orlich Gniazd i ostańce wapienne", "right": "Wyżyna Krakowsko-Częstochowska" },
+            { "left": "Największy zamek ceglany w Europie, wpisany na listę UNESCO", "right": "Malbork nad Nogatem" },
+            { "left": "Szlak Wielkich Jezior i turystyka żeglarska", "right": "Pojezierze Mazurskie" },
+            { "left": "Najliczniej odwiedzany park narodowy w Polsce", "right": "Tatrzański Park Narodowy" },
+            { "left": "Podziemna trasa turystyczna w wyrobiskach solnych na liście UNESCO", "right": "Wieliczka" }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Polska A i Polska B",
+          "leftLabel": "Polska A (zachód, centrum, metropolie)",
+          "rightLabel": "Polska B (wschód i obszary peryferyjne)",
+          "rows": [
+            { "aspect": "PKB na mieszkańca", "left": "powyżej średniej krajowej — mazowieckie ok. 160%, dolnośląskie i wielkopolskie ok. 106-109%", "right": "wyraźnie poniżej — podkarpackie, lubelskie, warmińsko-mazurskie ok. 69-72% średniej krajowej" },
+            { "aspect": "Struktura zatrudnienia", "left": "wysoki udział usług, w tym metropolitalnych; rozwinięty przemysł przetwórczy", "right": "wysoki udział rolnictwa (miejscami powyżej 20% pracujących), słabo rozwinięty sektor IV" },
+            { "aspect": "Inwestycje zagraniczne", "left": "silna koncentracja — bliskość granicy zachodniej, autostrady, duże rynki pracy", "right": "napływ znacznie mniejszy; bariery: dostępność transportowa i mniejszy rynek pracy" },
+            { "aspect": "Procesy demograficzne", "left": "napływ migracyjny do metropolii i stref podmiejskich, wolniejsze starzenie się", "right": "depopulacja, odpływ młodych (zwłaszcza kobiet), zaawansowane starzenie się" },
+            { "aspect": "Korzenie historyczne", "left": "dawne zabory pruski i częściowo austriacki (Śląsk), wcześniejsza industrializacja, gęstsza sieć kolejowa", "right": "dawny **zabór rosyjski i Galicja** — zapóźnienie industrializacji, rzadsza sieć kolei, przeludnienie agrarne" },
+            { "aspect": "Jak to widać na mapie", "left": "granica biegnie mniej więcej wzdłuż Wisły — najlepiej widoczna w gęstości linii kolejowych i rozmieszczeniu dużych miast", "right": "brak dużych miast na wschód od Wisły poza Białymstokiem, Lublinem i Rzeszowem" }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "PKB na mieszkańca w wybranych województwach (Polska = 100)",
+          "caption": "Rozpiętość ponad dwukrotna. Uwaga metodologiczna: wysoką wartość mazowieckiego generuje niemal wyłącznie region warszawski stołeczny — pozostała część województwa mieści się poniżej średniej krajowej. Dane przybliżone (ok. 2021 r.).",
+          "labels": ["mazowieckie", "dolnośląskie", "wielkopolskie", "pomorskie", "śląskie", "warmińsko-mazurskie", "lubelskie", "podkarpackie"],
+          "series": [
+            { "name": "PKB per capita [Polska = 100]", "values": [161, 109, 106, 98, 96, 72, 70, 69] }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego różnice regionalne w Polsce są tak trwałe",
+          "caption": "Mechanizm błędnego koła. Zrozumienie go pozwala odpowiedzieć na pytanie, dlaczego dwie dekady funduszy unijnych nie zlikwidowały podziału na Polskę A i B.",
+          "steps": [
+            { "title": "1. Punkt startowy: dziedzictwo zaborów", "text": "Zabór pruski został zindustrializowany i wyposażony w gęstą sieć kolei już w XIX w., a zabór rosyjski i Galicja pozostały rolnicze i przeludnione. **Ta granica jest do dziś czytelna** na mapie gęstości linii kolejowych i rozmieszczenia miast — zmiany infrastrukturalne mają bezwładność liczoną w stuleciach." },
+            { "title": "2. Kumulacja przewag (efekt aglomeracji)", "text": "Inwestor wybiera miejsce, gdzie są już pracownicy, dostawcy, uczelnie i autostrada. Każda kolejna inwestycja **zwiększa** te przewagi, przyciągając następne. Regiony silne rosną szybciej — to mechanizm samowzmacniający się, opisywany jako **efekt aglomeracji**." },
+            { "title": "3. Selektywny odpływ migracyjny", "text": "Z regionów peryferyjnych wyjeżdżają przede wszystkim osoby młode i lepiej wykształcone. Region traci nie tylko ludzi, lecz **kapitał ludzki** — a wraz z nim zdolność do tworzenia nowych miejsc pracy. Pozostaje starsza ludność, więc maleje popyt i opłacalność usług." },
+            { "title": "4. Zanik usług i błędne koło", "text": "Mniej mieszkańców → mniej uczniów, pacjentów i klientów → zamykane szkoły, przychodnie i połączenia autobusowe → **wykluczenie transportowe** i jeszcze silniejszy bodziec do wyjazdu. Koło się zamyka i samo się napędza." },
+            { "title": "5. Efekt netto polityki spójności", "text": "Fundusze UE realnie zmniejszyły dystans **Polski do średniej UE** (konwergencja zewnętrzna: z ok. 50% do ok. 80% PKB per capita UE), ale nie zlikwidowały różnic **wewnątrz kraju**. Co więcej, część środków trafiła do metropolii, gdzie łatwiej o gotowe projekty i wkład własny — najsilniej rosła Warszawa. Zjawisko nazywa się **dywergencją wewnętrzną przy konwergencji zewnętrznej**." }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Fundusze Unii Europejskiej w Polsce",
+          "caption": "Polska od 2004 r. jest największym beneficjentem polityki spójności w historii Unii Europejskiej. Kwoty podano orientacyjnie.",
+          "events": [
+            { "period": "2004-2006", "label": "Okres przejściowy", "text": "Pierwsze, jeszcze niewielkie środki tuż po akcesji. Głównym doświadczeniem było **nauczenie się systemu**: przygotowywania wniosków, montażu finansowego i rozliczania projektów — na czym najbardziej skorzystały duże miasta z rozbudowaną administracją." },
+            { "period": "2007-2013", "label": "Pierwsza pełna perspektywa (ok. 67 mld euro)", "text": "Skok infrastrukturalny: autostrady A1, A2 i A4, modernizacja linii kolejowych, oczyszczalnie ścieków i wodociągi, stadiony na EURO 2012, uczelniane laboratoria. Program **Infrastruktura i Środowisko** był największym programem operacyjnym w całej UE." },
+            { "period": "2014-2020", "label": "Druga perspektywa (ok. 82,5 mld euro)", "text": "Przesunięcie akcentu z „betonu” na **innowacje, badania i rozwój oraz kapitał ludzki**: Program Inteligentny Rozwój, wsparcie startupów, cyfryzacja, kształcenie zawodowe, a także kontynuacja programu **Polska Wschodnia** adresowanego do pięciu najsłabszych województw." },
+            { "period": "2021-2027", "label": "Trzecia perspektywa (ok. 76 mld euro)", "text": "Priorytety: **transformacja energetyczna i klimatyczna**, gospodarka o obiegu zamkniętym, cyfryzacja i innowacje. Nowym instrumentem jest **Fundusz Sprawiedliwej Transformacji**, kierowany do regionów górniczych (Śląsk, Wielkopolska Wschodnia, Bełchatów, Turów, Lubelskie)." },
+            { "period": "przez cały okres", "label": "Wspólna Polityka Rolna", "text": "Równolegle do polityki spójności działa drugi wielki strumień środków: **dopłaty bezpośrednie i PROW**. Trafiają one na obszary wiejskie, w tym do Polski wschodniej — i są tam często głównym źródłem dochodu rolniczych gospodarstw domowych." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Polityka spójności i konwergencja",
+          "text": "**Polityka spójności** to unijna polityka zmniejszania różnic w poziomie rozwoju regionów, finansowana z Europejskiego Funduszu Rozwoju Regionalnego, Europejskiego Funduszu Społecznego Plus i Funduszu Spójności. Regiony o PKB na mieszkańca poniżej **75% średniej unijnej** (mierzonego według parytetu siły nabywczej) są traktowane priorytetowo — w Polsce należy do nich większość województw. **Konwergencja** to proces zbliżania się poziomu rozwoju obszarów słabszych do silniejszych; jej przeciwieństwem jest **dywergencja**, czyli narastanie różnic.",
+          "note": "Zapamiętaj kluczowe rozróżnienie do zadań przekrojowych: Polska jako całość szybko **konwerguje** do średniej UE, ale wewnątrz kraju następuje **dywergencja** — dystans metropolii do reszty kraju rośnie, a nie maleje."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy rzeczy, na których łatwo się potknąć. **Podział na Polskę A i B jest uproszczeniem**: obok wschód-zachód działa równie silny podział metropolie-peryferie, a wewnątrz „bogatego” mazowieckiego leżą powiaty o wskaźnikach typowych dla Polski B (np. radomski). **Nie myl PKB z PKB na mieszkańca** — śląskie ma wysoki PKB ogółem przy przeciętnym PKB per capita, bo ma dużo mieszkańców. I ostatnie: **fundusze UE to nie tylko polityka spójności** — dopłaty bezpośrednie w ramach Wspólnej Polityki Rolnej to osobny, ogromny strumień pieniędzy, trafiający przede wszystkim na obszary wiejskie."
+        },
+        {
+          "type": "quiz",
+          "question": "Sieć kolejowa jest wyraźnie gęstsza w zachodniej i południowej Polsce niż na Podlasiu i Lubelszczyźnie. Jak najtrafniej wyjaśnić tę różnicę?",
+          "options": [
+            "Wynika z warunków naturalnych — na wschodzie bagna i wysoczyzny uniemożliwiły budowę linii kolejowych",
+            "Wynika z dziedzictwa zaborów: kolej rozbudowywano najintensywniej w zaborze pruskim, a najsłabiej w rosyjskim i w Galicji",
+            "Wynika z decyzji podjętych po 1989 r. o likwidacji linii kolejowych na zachodzie kraju",
+            "Wynika z większej gęstości zaludnienia wschodniej Polski, która wymusiła transport drogowy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sieć kolejowa Polski to w znacznej mierze infrastruktura **odziedziczona po XIX w.**, kiedy ziemie polskie należały do trzech różnych państw o odmiennym poziomie industrializacji. Prusy rozbudowały kolej najgęściej, Rosja traktowała ziemie polskie jako obszar przygraniczny i budowała linie oszczędnie. Bagna Biebrzy nie tłumaczą różnicy w skali regionu, a wschodnia Polska jest zaludniona **rzadziej**, nie gęściej."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko najlepiej opisuje efekt dwudziestu lat członkostwa Polski w UE w wymiarze regionalnym?",
+          "options": [
+            "Konwergencja zewnętrzna (Polska zbliżyła się do średniej UE) przy jednoczesnej dywergencji wewnętrznej (dystans metropolii do reszty kraju wzrósł)",
+            "Pełne wyrównanie poziomu rozwoju między województwami wschodnimi a zachodnimi",
+            "Dywergencja zewnętrzna — polskie PKB per capita oddaliło się od średniej unijnej",
+            "Zanik znaczenia metropolii na rzecz równomiernego rozwoju obszarów wiejskich"
+          ],
+          "correctIndex": 0,
+          "explanation": "PKB na mieszkańca Polski wzrósł z ok. 50% średniej unijnej w 2004 r. do ok. 80% obecnie — to wyraźna konwergencja zewnętrzna. Wewnątrz kraju natomiast najszybciej rosły obszary metropolitalne (zwłaszcza warszawski), bo to tam koncentrują się usługi wyższego rzędu, inwestycje i kapitał ludzki. Podział na Polskę A i B nie zniknął, choć infrastruktura wschodu bardzo się poprawiła."
+        },
+        {
+          "type": "quiz",
+          "question": "Region górski jest mniej narażony na skutki sezonowości ruchu turystycznego niż region nadmorski. Dlaczego?",
+          "options": [
+            "Ponieważ w górach jest więcej obiektów wpisanych na listę UNESCO",
+            "Ponieważ region górski ma dwa sezony turystyczne — letni (turystyka piesza) i zimowy (narciarstwo)",
+            "Ponieważ do gór dojeżdża się wyłącznie koleją, która działa cały rok",
+            "Ponieważ ceny noclegów w górach nie zmieniają się w ciągu roku"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dwusezonowość to podstawowa przewaga gospodarcza regionów górskich: baza noclegowa, wyciągi i gastronomia pracują zimą i latem, więc zatrudnienie jest bardziej stabilne. Na wybrzeżu ruch koncentruje się w lipcu i sierpniu, co powoduje **sezonowe bezrobocie** i niską rentowność bazy przez większą część roku (częściowo łagodzoną przez funkcję uzdrowiskową Kołobrzegu czy Ustki)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "**Wskazówka maturalna.** Zadania z tego zakresu najczęściej opierają się na mapie lub tabeli ze zróżnicowaniem województw i brzmią: „wyjaśnij przyczyny zróżnicowania” albo „podaj argumenty za tezą, że...”. Odpowiedź na maksymalną liczbę punktów łączy zwykle **trzy warstwy przyczyn**: (1) **historyczną** — zabory, industrializacja XIX w., likwidacja PGR-ów; (2) **strukturalną** — udział rolnictwa i usług wyższego rzędu, obecność metropolii; (3) **współczesną** — dostępność transportowa, napływ inwestycji, kierunki migracji. Przy zadaniach o transporcie i turystyce zawsze rozdzielaj **walory** (to, co dany obszar ma) od **zagospodarowania turystycznego** (baza noclegowa, wyciągi, szlaki, dostępność komunikacyjna) — CKE często pyta wprost, dlaczego region o wybitnych walorach ma mały ruch turystyczny, a odpowiedzią jest właśnie słabe zagospodarowanie i dostępność."
+        }
+      ]
+    }
+  ]
+}
