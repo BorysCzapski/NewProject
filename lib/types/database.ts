@@ -1056,6 +1056,51 @@ export interface MaturaWritingSubmission {
   created_at: string;
 }
 
+// ----------------------------------------------------------------------------
+// Gramatyka i słownictwo (0015_matura_theory.sql) — the actual THEORY behind
+// the practice-only sections above. Grammar exercises/progress reuse the
+// existing GrammarExercise type (structurally identical columns) so
+// components/grammar/grammar-exercise-stepper.tsx works unchanged via its
+// onAttempt/onComplete override props — see that file's header comment.
+// ----------------------------------------------------------------------------
+
+export interface MaturaGrammarTopic {
+  id: string;
+  level: MaturaLevel;
+  slug: string;
+  title: string;
+  // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
+  // to avoid a client-type <-> db-type import cycle, same pattern as
+  // MaturaLesson.content elsewhere in this file; cast at the call site.
+  blocks: unknown[];
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaVocabularyWord {
+  id: string;
+  level: MaturaLevel;
+  /** CKE "krąg tematyczny" (thematic circle), e.g. "Podróżowanie i turystyka". */
+  category: string;
+  word_en: string;
+  translation_pl: string;
+  example_sentence: string | null;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturaVocabularyProgress {
+  id: string;
+  user_id: string;
+  word_id: string;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  updated_at: string;
+}
+
 export interface BottleCounter {
   user_id: string;
   count: number;
