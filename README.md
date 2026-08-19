@@ -72,6 +72,38 @@ słuchanie. Schemat bazy (`supabase/migrations/0013_matura.sql`, `0014_matura_wr
 przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
 przydzielanie ćwiczeń uczniom — czekają na UI w kolejnych sesjach.
 
+Mini-aplikacja **Modlitwa** (`/modlitwa`, sekcja Wiara) — codzienna praktyka modlitewna po
+polsku: **werset dnia** w oprawie graficznej w kolorze szat liturgicznych, losowany
+deterministycznie (hash `user_id` + data, zapisywany w `daily_verse_picks`, więc nie zmienia się
+przy odświeżeniu strony) z kuratorowanej puli cytatów, z osobnymi pulami na Adwent, Boże
+Narodzenie, Wielki Post i Wielkanoc; **czytania liturgiczne na dziś** (I czytanie, psalm z
+refrenem, II czytanie w niedziele i święta, aklamacja, Ewangelia) pobierane z
+`mateusz.pl/czytania` i cache'owane globalnie w `daily_readings` — przy braku sieci aplikacja
+pokazuje ostatnie zapisane czytania z wyraźną informacją, że nie są dzisiejsze; **liturgia
+godzin** — pięć godzin brewiarza (Godzina czytań, Jutrznia, Modlitwa w ciągu dnia, Nieszpory,
+Kompleta) prowadzonych krok po kroku, z tekstami stałymi (Ojcze nasz, Chwała Ojcu, akt pokuty,
+antyfony maryjne zmieniające się wraz z okresem), siglami psalmów i czytaniem z dzisiejszej
+liturgii słowa; **streak modlitewny** z własną tabelą (świadomie niezależny od streaka nauki w
+Linguo), paskiem ostatnich 7 dni i notatką do dnia; **intencje** — lista osób, za które
+użytkownik obiecał się modlić, z powodem, datą obietnicy, licznikiem modlitw, notatkami i
+oznaczaniem „wysłuchana”; **kalendarz** — miesięczny widok dni modlitwy nałożony na kalendarz
+liturgiczny.
+
+Dwie decyzje projektowe warte odnotowania. **Kalendarz liturgiczny liczony jest lokalnie**
+(`lib/modlitwa/liturgical-calendar.ts`): data Wielkanocy algorytmem Meeusa, z niej wszystkie
+święta ruchome, okresy, tydzień psałterza i kolor szat, plus polskie uroczystości stałe —
+działa bez internetu i bez zewnętrznego API. **Integracja z kalendarzem Google/Apple jest
+odwrócona względem pierwotnego pomysłu**: zamiast prosić o OAuth i czytać prywatny kalendarz
+użytkownika (skąd i tak nie dowiedzielibyśmy się o liturgii nic, czego sami nie umiemy
+policzyć), aplikacja *publikuje* własny feed iCalendar pod tokenowanym adresem
+`/api/modlitwa/kalendarz.ics?token=…`, który subskrybuje się jednym kliknięciem w Kalendarzu
+Google, Apple albo Outlooku — bez zgód na odczyt cudzych danych, z możliwością unieważnienia
+adresu w każdej chwili. Powiadomienia działają, gdy aplikacja jest otwarta (Notification API);
+pełny push wymagałby service workera i serwera wysyłkowego i świadomie nie jest udawany.
+Czego tu nie ma z rozmysłem: pełnych tekstów Pisma i hymnów Liturgii Godzin (chronione
+tłumaczenia) — zamiast nich sigla, incipity i odesłanie do `brewiarz.pl`. Schemat:
+`supabase/migrations/0017_modlitwa.sql`, seed wersetów: `supabase/seed/modlitwa/01_bible_verses.sql`.
+
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
 w pełni osobny realm dla scholi kościelnej: własna rejestracja/logowanie (`/schola/logowanie`,
