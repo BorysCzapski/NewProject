@@ -16,14 +16,14 @@
 
 delete from matura_tasks
 where source = 'curated'
-  and section_id in (select id from matura_sections where slug = 'sluchanie');
+  and section_id in (select id from matura_sections where language = 'en' and slug = 'sluchanie');
 
 -- ----------------------------------------------------------------------------
 -- Poziom podstawowy — zadanie 1: "Are you addicted to your smartphone?"
 -- (BBC Learning English, 6 Minute English)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'sluchanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'sluchanie'),
   $c$
   {
     "instructions": "Obejrzyj/wysłuchaj nagrania (możesz odtworzyć je maksymalnie dwa razy, tak jak na egzaminie). Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D).",
@@ -45,7 +45,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- (BBC Learning English, 6 Minute English)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'sluchanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'sluchanie'),
   $c$
   {
     "instructions": "Obejrzyj/wysłuchaj nagrania (możesz odtworzyć je maksymalnie dwa razy, tak jak na egzaminie). Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D).",
@@ -67,7 +67,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- (BBC Learning English, 6 Minute English)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'sluchanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'sluchanie'),
   $c$
   {
     "instructions": "Obejrzyj/wysłuchaj nagrania (możesz odtworzyć je maksymalnie dwa razy, tak jak na egzaminie). Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D).",
@@ -89,7 +89,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- (BBC Learning English, 6 Minute English)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'sluchanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'sluchanie'),
   $c$
   {
     "instructions": "Obejrzyj/wysłuchaj nagrania (możesz odtworzyć je maksymalnie dwa razy, tak jak na egzaminie). Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D).",

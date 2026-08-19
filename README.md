@@ -38,9 +38,13 @@ posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla G
 zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
 z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
 
-Piąta mini-aplikacja to **Matura Angielski** (`/matura`) — przygotowanie do matury z języka
-angielskiego (CKE), poziom podstawowy lub rozszerzony (wybór na starcie, zmienialny w każdej
-chwili). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
+Piąta mini-aplikacja to **Matura z języka** (`/matura`) — przygotowanie do matury z języka
+obcego (CKE): **angielskiego albo hiszpańskiego**, poziom podstawowy lub rozszerzony (język
+i poziom wybierasz na starcie, oba zmienialne w każdej chwili; przełączenie języka niczego nie
+kasuje — postęp każdego języka czeka tam, gdzie go zostawiłeś). Jeden moduł obsługuje oba
+języki, bo CKE ustala **ten sam format egzaminu dla wszystkich języków obcych nowożytnych** —
+te same cztery części, te same 60/50 punktów, te same kryteria wypowiedzi pisemnej; różni się
+wyłącznie treść (patrz `0016_matura_language.sql`). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
 tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
 (edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie.
 Wszystkie cztery działy działają już dziś, każdy z lekcją (kryteria CKE, typy zadań, strategie,
@@ -222,7 +226,7 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       importuje je administrator jednorazowym skryptem z panelu `/matma/admin/import`
       (patrz `lib/matma/import-past-exams.ts`), nie jest to część standardowego seedowania.
 
-   **Seed — Matura Angielski:**
+   **Seed — Matura (angielski):**
    17. `supabase/seed/matura/01_sections.sql` — 4 części egzaminu × 2 poziomy
       (`matura_sections`), z wagami punktowymi (przybliżenie, patrz opis aplikacji wyżej).
    18. `supabase/seed/matura/02_lessons_srodki_jezykowe.sql` — po jednej lekcji na poziom
@@ -249,6 +253,28 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       osadzające prawdziwe nagranie BBC Learning English („6 Minute English",
       `content.youtubeVideoId`) — pytania zweryfikowane względem faktycznie pobranej
       transkrypcji nagrania, nie zgadywane. Uruchom `01_sections.sql` wcześniej.
+
+   **Seed — Matura (hiszpański):** komplet niezależny od angielskiego, w katalogu
+   `supabase/seed/matura-es/`. Wymaga wcześniej migracji `0016_matura_language.sql`.
+   24. `matura-es/01_sections.sql` — te same 4 części × 2 poziomy, tym razem z
+      `language = 'es'`. **Uruchom przed pozostałymi plikami z tego katalogu.**
+   25. `matura-es/02_lessons_srodki_jezykowe.sql` i `03_tasks_srodki_jezykowe.sql` — lekcja
+      + bank zadań dla „Znajomości środków językowych" (3 zadania na podstawie, 4 na
+      rozszerzeniu): słowotwórstwo, ser/estar, por/para, subjuntivo vs indicativo,
+      indefinido vs imperfecto, parafrazy i tłumaczenie fragmentów.
+   26. `matura-es/04_lessons_pisanie.sql`, `05_writing_tasks_podstawowa.sql`,
+      `06_writing_tasks_rozszerzona.sql` — lekcja + po 3 zadania na poziom, każde z własną
+      oryginalną wzorcową odpowiedzią. Wszystkie oznaczone `source: 'curated'` (nie
+      `past_exam`) — są pisane w formacie CKE, ale nie są przepisanymi arkuszami, więc
+      etykieta „prawdziwe zadanie CKE" byłaby nieuczciwa.
+   27. `matura-es/07_lessons_czytanie.sql` i `08_tasks_czytanie.sql` — lekcja + po 2 zadania
+      na poziom, oryginalne teksty w formatach CKE (wybór wielokrotny, dobieranie nagłówków,
+      intencja autora, uzupełnianie luk zdaniami).
+   28. `matura-es/09_lessons_sluchanie.sql` — **tylko lekcja, bez zadań.** Zadanie ze słuchu
+      wymaga `content.youtubeVideoId` wskazującego na realne, wciąż dostępne nagranie;
+      wymyślony identyfikator dałby uczniowi martwy odtwarzacz, co jest gorsze niż uczciwy
+      stan „brak zadań". Zadania hiszpańskie dodaj tak samo jak angielskie: wybierz
+      nagranie, zweryfikuj identyfikator, dopiero potem napisz pytania.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -400,8 +426,9 @@ lib/
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
-                     # 0013 = Matura Angielski)
-  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/)
+                     # 0013 = Matura, 0016 = wymiar języka w Maturze)
+  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
+                     # matura-es/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
