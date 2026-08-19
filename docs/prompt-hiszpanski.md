@@ -12,6 +12,10 @@
 > Dlatego zadanie brzmi: **dodać wymiar języka do istniejącego modułu `matura` i dopisać
 > treść hiszpańską** — a nie budować drugą aplikację od zera. Rozdział 1 pokazuje, ile
 > dokładnie kodu jest zaszyte pod angielski (odpowiedź: pięć miejsc).
+>
+> **Stan na dziś: etapy 1 i 2 z rozdziału 9 są zrobione i wdrożone w tym repo.** Moduł
+> `/matura` obsługuje angielski i hiszpański, a hiszpańska treść jest zaseedowana dla obu
+> poziomów. Reszta rozdziału 9 to lista tego, co zostało.
 
 ---
 
@@ -369,12 +373,28 @@ sam, bez wystawiania projektu.
 | JWT pisane ręcznie | Supabase Auth + RLS | Bezpieczeństwo w bazie, nie w kodzie aplikacji. |
 | „szyfrowanie plików" | Prywatny bucket + podpisane URL-e | Standard Supabase; własne szyfrowanie zepsułoby podgląd. |
 
-### 7.5. Dwie rzeczy do Twojej decyzji
+### 7.5. Dwie decyzje — rozstrzygnięte
 
-- **DOCX** wymaga nowej zależności (`mammoth`). PDF i CSV robimy bez niej. Domyślnie
-  **pomijam DOCX** w wersji 1 — powiedz, jeśli jest potrzebny.
-- **Obrazki do gry „matching"** — nie ma dziś ani źródła obrazków, ani budżetu na generowanie.
-  Domyślnie **dopasowywanie fraza↔definicja/kolokacja**, bez obrazków.
+- **DOCX: nie robimy.** Decyzja podjęta. Obsługujemy PDF (`pdf-parse`, już w zależnościach)
+  i CSV (parsujemy sami). Bez zależności `mammoth`.
+- **Obrazki do gry „matching": są darmowe źródła.** Trzy realne opcje, w kolejności
+  malejącego tarcia:
+  1. **Openverse** (`api.openverse.org`) — agreguje materiały na licencjach CC,
+     **działa bez klucza API** dla podstawowego wyszukiwania. Najmniejsze tarcie.
+  2. **Wikimedia Commons** (`commons.wikimedia.org/w/api.php`) — bez klucza, domena
+     publiczna i CC, świetne dla rzeczowników konkretnych (zwierzęta, przedmioty, miejsca).
+  3. **Pexels / Pixabay** — ładniejsze zdjęcia i wygodniejsze API, ale **wymagają darmowego
+     klucza** w `.env.local`, dokładnie jak `GROQ_API_KEY`.
+
+  Rekomendacja: **Openverse albo Wikimedia**, bo nie dokładają sekretu do konfiguracji.
+  Trzy rzeczy do zrobienia niezależnie od wyboru: (a) **cache'uj URL-e w bazie**, nie odpytuj
+  API przy każdej partii; (b) dodaj host do `images.remotePatterns` w `next.config.ts` —
+  inaczej `next/image` odmówi; (c) **zapisuj autora i licencję** razem z URL-em i pokazuj
+  atrybucję, bo tego wymaga CC.
+
+  Uwaga praktyczna: obrazki mają sens dla słownictwa konkretnego. Dla materiału maturalnego
+  na poziomie rozszerzonym (parafrazy, kolokacje, subjuntivo) obrazek niczego nie doda —
+  tam zostaje dopasowanie fraza↔definicja.
 
 ### 7.6. Kryteria sukcesu — uściślone
 
@@ -419,18 +439,27 @@ i słusznie. Zostaje wynik w `matura_game_sessions`, bo to zasila powtórki i st
 
 Każdy etap samodzielnie użyteczny; po każdym aplikacja działa.
 
-1. **Wymiar języka** — `0016_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
-   pięciu miejsc z 1.2, wybór języka w `/matura/ustawienia`, nowa nazwa w rejestrze.
-   *Po tym etapie moduł jest wielojęzyczny, choć treści hiszpańskiej jeszcze nie ma.*
-2. **Treść hiszpańska, poziom rozszerzony** — `supabase/seed/matura-es/`, wszystkie cztery
-   części. *Po tym etapie produkt z Twojego promptu jest w minimalnej wersji gotowy.*
-3. **Symulacja arkusza + plan nauki** — interfejs do istniejących tabel.
-4. **Powtórki** — `next_review_date` + kolejka na dashboardzie.
-5. **Wgrywanie własnych arkuszy** — Route Handler, ekstrakcja, ekran korekty, Storage.
-6. **Gry** — quiz i dopasowywanie (recykling `matching-game.tsx`), potem escape room.
-7. **Mowa** — słuchanie z Whisper, wymowa, na końcu część ustna (nowa sekcja + 30 pkt osobno).
-8. **Treść hiszpańska, poziom podstawowy.**
-9. **(Opcjonalnie) PWA/offline** — decyzja na poziomie całego Phoenixa.
+- [x] **1. Wymiar języka** — `0016_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
+  wszystkich miejsc z 1.2, wybór języka na `/matura` i `/matura/ustawienia`, wybór języka
+  w panelu importu, nowa nazwa w rejestrze Phoenixa.
+- [x] **2. Treść hiszpańska** — `supabase/seed/matura-es/`, oba poziomy: sekcje, lekcje
+  i banki zadań dla środków językowych, czytania i pisania; dla słuchania sama lekcja
+  (uzasadnienie w nagłówku `09_lessons_sluchanie.sql`).
+- [x] **2a. Pasek znaków hiszpańskich** — nieplanowany, ale konieczny: ocena nie usuwa
+  akcentów, więc bez niego uczeń na polskiej klawiaturze tracił punkty za układ klawiatury,
+  a nie za hiszpański (`components/matura/accent-bar.tsx`).
+- [ ] **3. Symulacja arkusza + plan nauki** — interfejs do istniejących tabel
+  (`matura_mock_exams`, `matura_study_plans` — tabele są, tras `/matura/egzamin`
+  i `/matura/plan` nadal nie ma).
+- [ ] **4. Powtórki** — `next_review_date` + kolejka na dashboardzie.
+- [ ] **5. Wgrywanie własnych arkuszy przez ucznia** — Route Handler, ekstrakcja, ekran
+  korekty, Storage. (Import admiński już działa i zna teraz język.)
+- [ ] **6. Gry** — quiz i dopasowywanie (recykling `matching-game.tsx`), potem escape room.
+- [ ] **7. Mowa** — słuchanie z Whisper, wymowa, na końcu część ustna (nowa sekcja,
+  30 pkt liczonych osobno).
+- [ ] **8. Zadania ze słuchu po hiszpańsku** — wymagają wybrania i zweryfikowania realnych
+  nagrań YouTube.
+- [ ] **9. (Opcjonalnie) PWA/offline** — decyzja na poziomie całego Phoenixa.
 
 ---
 
