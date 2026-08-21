@@ -6,9 +6,9 @@
 // serwerowy mógł ten moduł importować) na komponenty lucide-react.
 // Ten sam wzorzec co components/phoenix/app-icon.tsx.
 // ============================================================================
-import { BookOpen, Moon, Sun, Sunrise, Sunset, type LucideIcon } from "lucide-react";
+import { Bell, BookOpen, Moon, Sun, Sunrise, Sunset, type LucideIcon } from "lucide-react";
 
-const ICONS: Record<string, LucideIcon> = { BookOpen, Moon, Sun, Sunrise, Sunset };
+const ICONS: Record<string, LucideIcon> = { Bell, BookOpen, Moon, Sun, Sunrise, Sunset };
 
 export function HourIcon({ name, className }: { name: string; className?: string }) {
   const Icon = ICONS[name] ?? Sun;

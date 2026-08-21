@@ -1,44 +1,17 @@
-"use client";
-
 // ============================================================================
 // components/modlitwa/hour-view.tsx
-// Przebieg jednej godziny brewiarza: kolejne części jako karty, na końcu
-// przycisk „Odmówiłem tę godzinę”, który dopisuje ją do dzisiejszego wpisu
-// w dzienniku (i tym samym podbija streak, jeśli to pierwsza modlitwa dnia).
+// Przewodnik po strukturze godziny — ścieżka AWARYJNA, używana gdy nie mamy
+// pełnych tekstów z ILG (patrz components/modlitwa/breviary-view.tsx).
+//
+// Pokazuje kolejne części godziny z tekstami stałymi, siglami psalmów i
+// czytaniem z dzisiejszej liturgii słowa. Przycisk odhaczenia jest osobnym
+// komponentem (hour-done-button.tsx), bo wspólny dla obu ścieżek.
 // ============================================================================
-import { useState, useTransition } from "react";
-import { Check, ExternalLink } from "lucide-react";
-import { markPrayed } from "@/lib/modlitwa/prayer-actions";
+import { ExternalLink } from "lucide-react";
 import type { AssembledHour } from "@/lib/modlitwa/hours";
-import type { HourId } from "@/lib/modlitwa/hours";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-export function HourView({
-  hour,
-  dateKey,
-  initiallyDone,
-}: {
-  hour: AssembledHour;
-  dateKey: string;
-  initiallyDone: boolean;
-}) {
-  const [done, setDone] = useState(initiallyDone);
-  const [error, setError] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
-
-  function handleDone() {
-    setError(null);
-    setDone(true);
-    startTransition(async () => {
-      const result = await markPrayed(dateKey, hour.definition.id as HourId);
-      if (!result.ok) {
-        setDone(false);
-        setError(result.error);
-      }
-    });
-  }
-
+export function HourView({ hour }: { hour: AssembledHour }) {
   return (
     <div className="flex flex-col gap-3">
       <p className="text-sm text-foreground-muted">{hour.definition.description}</p>
@@ -52,9 +25,7 @@ export function HourView({
                 <h2 className="text-base font-semibold text-foreground">{step.title}</h2>
               </div>
 
-              {step.citation && (
-                <p className="text-sm font-medium text-foreground-muted">{step.citation}</p>
-              )}
+              {step.citation && <p className="text-sm font-medium text-foreground-muted">{step.citation}</p>}
 
               {step.text && (
                 <p className="whitespace-pre-line text-[1.0625rem] leading-relaxed text-foreground">
@@ -81,19 +52,6 @@ export function HourView({
         <ExternalLink className="h-4 w-4" />
         Pełne teksty na brewiarz.pl
       </a>
-
-      {done ? (
-        <div className="flex h-12 items-center justify-center gap-2 rounded-(--radius-control) bg-accent-soft text-base font-medium text-foreground">
-          <Check className="h-5 w-5 text-accent" />
-          Odmówione dzisiaj
-        </div>
-      ) : (
-        <Button size="lg" onClick={handleDone} isLoading={isPending} className="w-full">
-          Odmówiłem {hour.definition.name.toLowerCase()}
-        </Button>
-      )}
-
-      {error && <p className="text-sm text-danger">{error}</p>}
     </div>
   );
 }
