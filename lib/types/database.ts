@@ -1359,3 +1359,28 @@ export interface PrayerSettings {
   large_text: boolean;
   updated_at: string;
 }
+
+// ----------------------------------------------------------------------------
+// Modlitwa — cache pełnych tekstów Liturgii Godzin z brewiarz.pl.
+// Mirrors supabase/migrations/0019_modlitwa_brewiarz.sql. Tabele globalne:
+// SELECT dla zalogowanych, zapis wyłącznie przez service-role.
+// ----------------------------------------------------------------------------
+export interface BreviaryHourRow {
+  hour_date: string;
+  hour_id: string;
+  variant: string;
+  title: string | null;
+  subtitle: string | null;
+  /** BreviarySection[] — patrz lib/modlitwa/breviary-source.ts. */
+  sections: unknown;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface BreviaryDayRow {
+  day_date: string;
+  /** BreviaryVariant[] */
+  variants: unknown;
+  source_url: string;
+  fetched_at: string;
+}

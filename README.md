@@ -80,10 +80,11 @@ Narodzenie, Wielki Post i Wielkanoc; **czytania liturgiczne na dziś** (I czytan
 refrenem, II czytanie w niedziele i święta, aklamacja, Ewangelia) pobierane z
 `mateusz.pl/czytania` i cache'owane globalnie w `daily_readings` — przy braku sieci aplikacja
 pokazuje ostatnie zapisane czytania z wyraźną informacją, że nie są dzisiejsze; **liturgia
-godzin** — pięć godzin brewiarza (Godzina czytań, Jutrznia, Modlitwa w ciągu dnia, Nieszpory,
-Kompleta) prowadzonych krok po kroku, z tekstami stałymi (Ojcze nasz, Chwała Ojcu, akt pokuty,
-antyfony maryjne zmieniające się wraz z okresem), siglami psalmów i czytaniem z dzisiejszej
-liturgii słowa; **streak modlitewny** z własną tabelą (świadomie niezależny od streaka nauki w
+godzin z PEŁNYMI tekstami** — osiem godzin brewiarza (Wezwanie, Godzina czytań, Jutrznia, trzy
+Modlitwy w ciągu dnia, Nieszpory, Kompleta) pobieranych z serwisu `brewiarz.pl` (Internetowa
+Liturgia Godzin) razem z hymnem, psalmodią z antyfonami, czytaniem, responsorium, kantykiem,
+prośbami i modlitwą dnia; rubryki („K.”, „W.”, wskazówki) renderowane na czerwono jak w druku,
+przełącznik pory dnia nad tekstem i wybór obchodu, gdy dzień ma kilka formularzy; **streak modlitewny** z własną tabelą (świadomie niezależny od streaka nauki w
 Linguo), paskiem ostatnich 7 dni i notatką do dnia; **intencje** — lista osób, za które
 użytkownik obiecał się modlić, z powodem, datą obietnicy, licznikiem modlitw, notatkami i
 oznaczaniem „wysłuchana”; **kalendarz** — miesięczny widok dni modlitwy nałożony na kalendarz
@@ -100,9 +101,17 @@ policzyć), aplikacja *publikuje* własny feed iCalendar pod tokenowanym adresem
 Google, Apple albo Outlooku — bez zgód na odczyt cudzych danych, z możliwością unieważnienia
 adresu w każdej chwili. Powiadomienia działają, gdy aplikacja jest otwarta (Notification API);
 pełny push wymagałby service workera i serwera wysyłkowego i świadomie nie jest udawany.
-Czego tu nie ma z rozmysłem: pełnych tekstów Pisma i hymnów Liturgii Godzin (chronione
-tłumaczenia) — zamiast nich sigla, incipity i odesłanie do `brewiarz.pl`. Schemat:
-`supabase/migrations/0017_modlitwa.sql`, seed wersetów: `supabase/seed/modlitwa/01_bible_verses.sql`.
+**Teksty Liturgii Godzin pochodzą wyłącznie z ILG** (`brewiarz.pl`) — aplikacja ich nie
+przepisuje ani nie redaguje: pobiera je, cache'uje globalnie w `breviary_hours` (jedno pobranie
+na dzień i godzinę dla całej instancji) i przy każdym ekranie pokazuje źródło oraz notę
+copyright (teksty © Konferencja Episkopatu Polski i Wydawnictwo Pallottinum, opracowanie © ILG).
+ILG udostępnia tylko bieżący okres — dla starszych i odległych dni aplikacja schodzi do
+przewodnika po strukturze godziny z tekstami stałymi (`lib/modlitwa/hours.ts`), zamiast pokazać
+pusty ekran. Dwie pułapki tego źródła są obsłużone w `lib/modlitwa/breviary-source.ts`: strony
+deklarują ISO-8859-2, ale mają wstawki w UTF-8 (stąd `repairMixedEncoding`), a treść trzeba brać
+z tabel `width=490`, nie z komórek `td.ww` — część kotwic (czytanie, kantyk) leży poza nimi.
+Schemat: `supabase/migrations/0017_modlitwa.sql` i `0019_modlitwa_brewiarz.sql`, seed wersetów:
+`supabase/seed/modlitwa/01_bible_verses.sql`.
 
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To

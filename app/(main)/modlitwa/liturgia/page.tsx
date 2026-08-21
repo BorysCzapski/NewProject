@@ -1,7 +1,8 @@
 // ============================================================================
 // app/(main)/modlitwa/liturgia/page.tsx
-// Liturgia godzin — lista godzin brewiarza na dziś, z zaznaczeniem tych już
-// odmówionych i podpowiedzią, która wypada teraz.
+// Liturgia godzin — osiem godzin brewiarza na dziś, z zaznaczeniem tych już
+// odmówionych i podpowiedzią, która wypada o tej porze. Pełne teksty są na
+// ekranie pojedynczej godziny (pobierane z ILG).
 // ============================================================================
 import Link from "next/link";
 import { Check, ChevronRight } from "lucide-react";
@@ -23,6 +24,7 @@ export default async function LiturgiaPage() {
   const day = getLiturgicalDay(today);
   const entry = await getTodayLogEntry(supabase, profile.id, today);
   const done = new Set(entry?.hours ?? []);
+  const suggested = suggestedHour(currentWarsawHour());
 
   return (
     <div>
@@ -31,16 +33,20 @@ export default async function LiturgiaPage() {
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
         <LiturgicalDayCard day={day} />
 
-        <SuggestedHourHint hourId={suggestedHour(currentWarsawHour())} />
+        <SuggestedHourHint hourId={suggested} />
 
         <ul className="flex flex-col gap-2">
           {HOURS.map((hour) => {
             const isDone = done.has(hour.id);
+            const isSuggested = hour.id === suggested;
             return (
               <li key={hour.id}>
                 <Link
                   href={`/modlitwa/liturgia/${hour.id}`}
-                  className="flex items-center justify-between gap-3 rounded-(--radius-card) border border-border bg-surface px-4 py-4 active:opacity-80"
+                  className={[
+                    "flex items-center justify-between gap-3 rounded-(--radius-card) border bg-surface px-4 py-4 active:opacity-80",
+                    isSuggested && !isDone ? "border-primary" : "border-border",
+                  ].join(" ")}
                 >
                   <span className="flex items-center gap-3">
                     <span
@@ -63,12 +69,12 @@ export default async function LiturgiaPage() {
         </ul>
 
         <p className="text-xs text-foreground-muted">
-          Aplikacja prowadzi przez układ godziny i podaje teksty stałe. Pełne hymny, psalmy i kantyki na
-          dziś znajdziesz w{" "}
+          Pełne teksty (hymn, psalmy z antyfonami, czytanie, kantyk, prośby i modlitwa) pochodzą z serwisu{" "}
           <a href="https://brewiarz.pl/" target="_blank" rel="noreferrer" className="underline">
             brewiarz.pl
-          </a>
-          .
+          </a>{" "}
+          — Internetowej Liturgii Godzin. Teksty Liturgii Godzin © Konferencja Episkopatu Polski i
+          Wydawnictwo Pallottinum.
         </p>
       </div>
     </div>
