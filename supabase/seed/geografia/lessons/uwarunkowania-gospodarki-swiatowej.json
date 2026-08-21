@@ -25,22 +25,47 @@
             {
               "name": "Sektor I — pierwotny",
               "description": "Bezpośrednie **pozyskiwanie zasobów ze środowiska przyrodniczego**, bez ich głębokiego przetwarzania. Silnie zależny od warunków naturalnych, dlatego jego wydajność rośnie najwolniej.",
-              "examples": ["rolnictwo", "leśnictwo", "rybactwo i rybołówstwo", "łowiectwo", "w części ujęć także górnictwo"]
+              "examples": [
+                "rolnictwo",
+                "leśnictwo",
+                "rybactwo i rybołówstwo",
+                "łowiectwo",
+                "w części ujęć także górnictwo"
+              ]
             },
             {
               "name": "Sektor II — wtórny",
               "description": "**Przetwarzanie surowców w wyroby gotowe** oraz wytwarzanie energii i wznoszenie obiektów. To sektor, w którym postęp techniczny najsilniej podnosi wydajność pracy.",
-              "examples": ["przemysł przetwórczy", "energetyka", "budownictwo", "górnictwo (ujęcie stosowane najczęściej w Polsce)"]
+              "examples": [
+                "przemysł przetwórczy",
+                "energetyka",
+                "budownictwo",
+                "górnictwo (ujęcie stosowane najczęściej w Polsce)"
+              ]
             },
             {
               "name": "Sektor III — usługi",
               "description": "Działalność, której efektem nie jest rzecz, lecz **świadczenie zaspokajające potrzebę**. Rośnie wraz z zamożnością społeczeństwa, bo popyt na usługi jest bardzo wrażliwy na wzrost dochodu.",
-              "examples": ["handel", "transport", "turystyka", "edukacja", "ochrona zdrowia", "administracja"]
+              "examples": [
+                "handel",
+                "transport",
+                "turystyka",
+                "edukacja",
+                "ochrona zdrowia",
+                "administracja"
+              ]
             },
             {
               "name": "Sektor IV — oparty na wiedzy",
               "description": "Wydzielona z usług grupa działalności, których produktem jest **informacja, wiedza i decyzja**. Koncentruje się w największych metropoliach, bo wymaga bliskości specjalistów i ośrodków decyzyjnych.",
-              "examples": ["badania i rozwój (B+R)", "informatyka", "usługi finansowe wysokiego szczebla", "doradztwo", "media", "zarządzanie korporacjami"]
+              "examples": [
+                "badania i rozwój (B+R)",
+                "informatyka",
+                "usługi finansowe wysokiego szczebla",
+                "doradztwo",
+                "media",
+                "zarządzanie korporacjami"
+              ]
             }
           ]
         },
@@ -77,9 +102,18 @@
           "title": "Udział sektora w strukturze zatrudnienia",
           "expression": "U_i = \\frac{Z_i}{Z} \\cdot 100\\%",
           "variables": [
-            { "symbol": "U_i", "meaning": "udział sektora i w strukturze zatrudnienia (w %)" },
-            { "symbol": "Z_i", "meaning": "liczba pracujących w sektorze i" },
-            { "symbol": "Z", "meaning": "ogólna liczba pracujących w gospodarce" }
+            {
+              "symbol": "U_i",
+              "meaning": "udział sektora i w strukturze zatrudnienia (w %)"
+            },
+            {
+              "symbol": "Z_i",
+              "meaning": "liczba pracujących w sektorze i"
+            },
+            {
+              "symbol": "Z",
+              "meaning": "ogólna liczba pracujących w gospodarce"
+            }
           ],
           "caption": "Tę samą formułę stosujesz do struktury PKB, podstawiając wartość dodaną brutto zamiast liczby pracujących. Suma udziałów wszystkich sektorów zawsze wynosi 100%."
         },
@@ -87,14 +121,56 @@
           "type": "table",
           "title": "Struktura zatrudnienia według sektorów w wybranych krajach",
           "caption": "Wartości przybliżone, ok. 2021 r. (dane Banku Światowego, ujęcie trzysektorowe). Kraje ułożono według malejącego udziału sektora I — i jednocześnie według rosnącego poziomu rozwoju.",
-          "headers": ["Kraj", "Sektor I (%)", "Sektor II (%)", "Sektor III (%)", "Faza wg Clarka-Fishera"],
+          "headers": [
+            "Kraj",
+            "Sektor I (%)",
+            "Sektor II (%)",
+            "Sektor III (%)",
+            "Faza wg Clarka-Fishera"
+          ],
           "rows": [
-            ["Etiopia", "ok. 62", "ok. 10", "ok. 28", "preindustrialna"],
-            ["Indie", "ok. 44", "ok. 25", "ok. 31", "przejście do industrialnej"],
-            ["Chiny", "ok. 24", "ok. 28", "ok. 48", "industrialna"],
-            ["Polska", "ok. 9", "ok. 31", "ok. 60", "postindustrialna (wczesna)"],
-            ["Niemcy", "ok. 1", "ok. 27", "ok. 72", "postindustrialna"],
-            ["USA", "ok. 2", "ok. 19", "ok. 79", "informacyjna"]
+            [
+              "Etiopia",
+              "ok. 62",
+              "ok. 10",
+              "ok. 28",
+              "preindustrialna"
+            ],
+            [
+              "Indie",
+              "ok. 44",
+              "ok. 25",
+              "ok. 31",
+              "przejście do industrialnej"
+            ],
+            [
+              "Chiny",
+              "ok. 24",
+              "ok. 28",
+              "ok. 48",
+              "industrialna"
+            ],
+            [
+              "Polska",
+              "ok. 9",
+              "ok. 31",
+              "ok. 60",
+              "postindustrialna (wczesna)"
+            ],
+            [
+              "Niemcy",
+              "ok. 1",
+              "ok. 27",
+              "ok. 72",
+              "postindustrialna"
+            ],
+            [
+              "USA",
+              "ok. 2",
+              "ok. 19",
+              "ok. 79",
+              "informacyjna"
+            ]
           ]
         },
         {
@@ -103,11 +179,44 @@
           "title": "Przemiany struktury zatrudnienia w Polsce (1950-2022)",
           "caption": "Wartości przybliżone. Zwróć uwagę na kształt krzywej sektora II: rośnie do lat 80., a potem opada — to podręcznikowy „garb” fazy industrialnej z modelu Clarka-Fishera.",
           "unit": "%",
-          "labels": ["1950", "1970", "1990", "2010", "2022"],
+          "labels": [
+            "1950",
+            "1970",
+            "1990",
+            "2010",
+            "2022"
+          ],
           "series": [
-            { "name": "Sektor I", "values": [57, 39, 25, 13, 9] },
-            { "name": "Sektor II", "values": [21, 29, 37, 31, 31] },
-            { "name": "Sektor III", "values": [22, 32, 38, 56, 60] }
+            {
+              "name": "Sektor I",
+              "values": [
+                57,
+                39,
+                25,
+                13,
+                9
+              ]
+            },
+            {
+              "name": "Sektor II",
+              "values": [
+                21,
+                29,
+                37,
+                31,
+                31
+              ]
+            },
+            {
+              "name": "Sektor III",
+              "values": [
+                22,
+                32,
+                38,
+                56,
+                60
+              ]
+            }
           ]
         },
         {
@@ -116,12 +225,36 @@
           "leftLabel": "Preindustrialna",
           "rightLabel": "Postindustrialna",
           "rows": [
-            { "aspect": "Dominujący sektor", "left": "I — rolnictwo, często ponad 50% pracujących", "right": "III i IV — usługi, zwykle 65-80% pracujących" },
-            { "aspect": "Źródło wartości", "left": "Ziemia i praca fizyczna", "right": "**Wiedza, kapitał i informacja**" },
-            { "aspect": "Wydajność pracy", "left": "Bardzo niska, silnie zależna od pogody", "right": "Wysoka, oparta na automatyzacji" },
-            { "aspect": "Struktura osadnicza", "left": "Przewaga ludności wiejskiej", "right": "Wysoki wskaźnik urbanizacji, rola metropolii" },
-            { "aspect": "Przyrost naturalny", "left": "Wysoki (I-II faza przejścia demograficznego)", "right": "Niski lub ujemny (IV-V faza)" },
-            { "aspect": "Handel zagraniczny", "left": "Eksport surowców i płodów rolnych", "right": "Eksport wyrobów zaawansowanych i usług" }
+            {
+              "aspect": "Dominujący sektor",
+              "left": "I — rolnictwo, często ponad 50% pracujących",
+              "right": "III i IV — usługi, zwykle 65-80% pracujących"
+            },
+            {
+              "aspect": "Źródło wartości",
+              "left": "Ziemia i praca fizyczna",
+              "right": "**Wiedza, kapitał i informacja**"
+            },
+            {
+              "aspect": "Wydajność pracy",
+              "left": "Bardzo niska, silnie zależna od pogody",
+              "right": "Wysoka, oparta na automatyzacji"
+            },
+            {
+              "aspect": "Struktura osadnicza",
+              "left": "Przewaga ludności wiejskiej",
+              "right": "Wysoki wskaźnik urbanizacji, rola metropolii"
+            },
+            {
+              "aspect": "Przyrost naturalny",
+              "left": "Wysoki (I-II faza przejścia demograficznego)",
+              "right": "Niski lub ujemny (IV-V faza)"
+            },
+            {
+              "aspect": "Handel zagraniczny",
+              "left": "Eksport surowców i płodów rolnych",
+              "right": "Eksport wyrobów zaawansowanych i usług"
+            }
           ]
         },
         {
@@ -136,17 +269,35 @@
           "title": "Przyporządkuj działalność do sektora",
           "instruction": "Połącz opis działalności z sektorem gospodarki, do którego należy.",
           "pairs": [
-            { "left": "Uprawa pszenicy i połów dorsza na Bałtyku", "right": "Sektor I" },
-            { "left": "Montaż samochodów w fabryce i budowa mostu", "right": "Sektor II" },
-            { "left": "Obsługa hotelu, sprzedaż biletów, nauczanie w szkole", "right": "Sektor III" },
-            { "left": "Laboratorium B+R koncernu farmaceutycznego i centrala banku inwestycyjnego", "right": "Sektor IV" }
+            {
+              "left": "Uprawa pszenicy i połów dorsza na Bałtyku",
+              "right": "Sektor I"
+            },
+            {
+              "left": "Montaż samochodów w fabryce i budowa mostu",
+              "right": "Sektor II"
+            },
+            {
+              "left": "Obsługa hotelu, sprzedaż biletów, nauczanie w szkole",
+              "right": "Sektor III"
+            },
+            {
+              "left": "Laboratorium B+R koncernu farmaceutycznego i centrala banku inwestycyjnego",
+              "right": "Sektor IV"
+            }
           ]
         },
         {
           "type": "ordering",
           "title": "Uporządkuj kraje według udziału sektora I w zatrudnieniu",
           "instruction": "Ustaw kraje od NAJWYŻSZEGO do NAJNIŻSZEGO udziału sektora I (skorzystaj z tabeli powyżej).",
-          "items": ["Etiopia", "Indie", "Chiny", "Polska", "Niemcy"],
+          "items": [
+            "Etiopia",
+            "Indie",
+            "Chiny",
+            "Polska",
+            "Niemcy"
+          ],
           "explanation": "Ta kolejność jest jednocześnie kolejnością **rosnącego poziomu rozwoju gospodarczego** — udział sektora I w zatrudnieniu jest odwrotnie skorelowany z zamożnością kraju. Dlatego CKE tak często daje strukturę zatrudnienia jako materiał źródłowy do rozpoznania państwa."
         },
         {
@@ -204,17 +355,36 @@
             {
               "name": "Nieodnawialne (wyczerpywalne)",
               "description": "Powstawały przez miliony lat, a tempo ich odtwarzania jest **praktycznie zerowe** w skali ludzkiego życia. Każda wydobyta tona bezpowrotnie zmniejsza zasób — jedynym sposobem ich „odzyskania” jest **recykling**.",
-              "examples": ["węgiel kamienny i brunatny", "ropa naftowa", "gaz ziemny", "rudy metali", "sole", "surowce skalne"]
+              "examples": [
+                "węgiel kamienny i brunatny",
+                "ropa naftowa",
+                "gaz ziemny",
+                "rudy metali",
+                "sole",
+                "surowce skalne"
+              ]
             },
             {
               "name": "Odnawialne (warunkowo odnawialne)",
               "description": "Odtwarzają się w cyklach przyrodniczych, ale **tylko wtedy, gdy eksploatacja nie przekracza tempa odnowy**. Przekroczenie progu zamienia je w zasób wyczerpywalny — tak dzieje się przy przełowieniu łowisk czy nadmiernej eksploatacji wód podziemnych.",
-              "examples": ["lasy", "gleby", "zasoby wodne", "populacje ryb", "zwierzyna łowna"]
+              "examples": [
+                "lasy",
+                "gleby",
+                "zasoby wodne",
+                "populacje ryb",
+                "zwierzyna łowna"
+              ]
             },
             {
               "name": "Niewyczerpywalne (nieograniczone)",
               "description": "Ich wielkość **nie zależy od tego, ile zużyjemy** — wykorzystanie energii wiatru dziś nie zmniejsza jej dostępności jutro. Ograniczeniem nie jest ilość zasobu, lecz **technologia i koszt jego przechwycenia**.",
-              "examples": ["energia słoneczna", "energia wiatru", "energia geotermalna", "energia pływów", "energia spadku wód"]
+              "examples": [
+                "energia słoneczna",
+                "energia wiatru",
+                "energia geotermalna",
+                "energia pływów",
+                "energia spadku wód"
+              ]
             }
           ]
         },
@@ -256,11 +426,31 @@
           "leftLabel": "Zasoby geologiczne",
           "rightLabel": "Rezerwy",
           "rows": [
-            { "aspect": "Co obejmują", "left": "Całą kopalinę stwierdzoną w złożu", "right": "Tylko część **opłacalną do wydobycia**" },
-            { "aspect": "Od czego zależą", "left": "Wyłącznie od budowy geologicznej", "right": "Od geologii **oraz** ceny surowca, techniki i prawa" },
-            { "aspect": "Zmienność w czasie", "left": "Rosną tylko dzięki nowym odkryciom", "right": "Mogą wzrosnąć bez odkryć — gdy rosną ceny lub tanieje technologia" },
-            { "aspect": "Wielkość", "left": "Zawsze większe", "right": "Zawsze mniejsze — to podzbiór zasobów geologicznych" },
-            { "aspect": "Zastosowanie", "left": "Ocena potencjału geologicznego kraju", "right": "Podstawa liczenia **wystarczalności** i planów wydobycia" }
+            {
+              "aspect": "Co obejmują",
+              "left": "Całą kopalinę stwierdzoną w złożu",
+              "right": "Tylko część **opłacalną do wydobycia**"
+            },
+            {
+              "aspect": "Od czego zależą",
+              "left": "Wyłącznie od budowy geologicznej",
+              "right": "Od geologii **oraz** ceny surowca, techniki i prawa"
+            },
+            {
+              "aspect": "Zmienność w czasie",
+              "left": "Rosną tylko dzięki nowym odkryciom",
+              "right": "Mogą wzrosnąć bez odkryć — gdy rosną ceny lub tanieje technologia"
+            },
+            {
+              "aspect": "Wielkość",
+              "left": "Zawsze większe",
+              "right": "Zawsze mniejsze — to podzbiór zasobów geologicznych"
+            },
+            {
+              "aspect": "Zastosowanie",
+              "left": "Ocena potencjału geologicznego kraju",
+              "right": "Podstawa liczenia **wystarczalności** i planów wydobycia"
+            }
           ]
         },
         {
@@ -268,9 +458,18 @@
           "title": "Wskaźnik wystarczalności zasobów (R/P)",
           "expression": "W = \\frac{R}{P}",
           "variables": [
-            { "symbol": "W", "meaning": "wystarczalność zasobów w latach" },
-            { "symbol": "R", "meaning": "wielkość rezerw (zasobów przemysłowych)" },
-            { "symbol": "P", "meaning": "roczne wydobycie" }
+            {
+              "symbol": "W",
+              "meaning": "wystarczalność zasobów w latach"
+            },
+            {
+              "symbol": "R",
+              "meaning": "wielkość rezerw (zasobów przemysłowych)"
+            },
+            {
+              "symbol": "P",
+              "meaning": "roczne wydobycie"
+            }
           ],
           "caption": "Przykład: rezerwy 5000 mln t przy wydobyciu 100 mln t rocznie dają $W = 50$ lat. Pamiętaj o interpretacji: to NIE jest prognoza „za tyle lat surowiec się skończy”, lecz odpowiedź na pytanie „na ile lat wystarczyłyby dzisiejsze rezerwy przy dzisiejszym tempie wydobycia”. Oba założenia w praktyce się zmieniają — dlatego wystarczalność ropy naftowej od dziesięcioleci oscyluje wokół 40-50 lat, mimo że ropę wydobywa się cały czas."
         },
@@ -282,22 +481,53 @@
             {
               "name": "Energetyczne",
               "description": "Nośniki energii chemicznej lub jądrowej. Powstawały głównie w **basenach sedymentacyjnych** — węgiel w wilgotnych lasach karbonu i trzeciorzędu, ropa i gaz z materii organicznej mórz. Dlatego ich rozmieszczenie wyznaczają dawne strefy sedymentacji, a nie dzisiejsza geografia.",
-              "examples": ["węgiel kamienny", "węgiel brunatny", "ropa naftowa", "gaz ziemny", "rudy uranu", "torf", "łupki bitumiczne"]
+              "examples": [
+                "węgiel kamienny",
+                "węgiel brunatny",
+                "ropa naftowa",
+                "gaz ziemny",
+                "rudy uranu",
+                "torf",
+                "łupki bitumiczne"
+              ]
             },
             {
               "name": "Metaliczne (rudy)",
               "description": "Skały o zawartości metalu na tyle wysokiej, by opłacało się go wytopić. Ich powstanie wiąże się przede wszystkim z **procesami magmowymi i hydrotermalnymi na granicach płyt** oraz z wietrzeniem w klimacie gorącym i wilgotnym (boksyty, rudy laterytowe).",
-              "examples": ["rudy żelaza", "rudy miedzi", "boksyty (glin)", "rudy cynku i ołowiu", "rudy niklu i kobaltu", "złoto", "lit", "metale ziem rzadkich"]
+              "examples": [
+                "rudy żelaza",
+                "rudy miedzi",
+                "boksyty (glin)",
+                "rudy cynku i ołowiu",
+                "rudy niklu i kobaltu",
+                "złoto",
+                "lit",
+                "metale ziem rzadkich"
+              ]
             },
             {
               "name": "Chemiczne",
               "description": "Surowce do produkcji nawozów, kwasów i tworzyw. Duża ich część to **osady ewaporatowe** — powstałe z odparowania płytkich, silnie zasolonych zbiorników wodnych (sól kamienna, sole potasowe, gips).",
-              "examples": ["sól kamienna", "sole potasowe", "siarka", "fosforyty", "saletra chilijska", "gips i anhydryt"]
+              "examples": [
+                "sól kamienna",
+                "sole potasowe",
+                "siarka",
+                "fosforyty",
+                "saletra chilijska",
+                "gips i anhydryt"
+              ]
             },
             {
               "name": "Skalne",
               "description": "Surowce budowlane i drogowe. Charakteryzują się **niską wartością jednostkową i wysokim kosztem transportu**, dlatego prawie nie wchodzą do handlu międzynarodowego, a ich wydobycie jest rozproszone — kopalnia lokuje się blisko rynku zbytu.",
-              "examples": ["piaski i żwiry", "wapienie", "granity i bazalty", "gliny ceramiczne", "marmury", "kreda"]
+              "examples": [
+                "piaski i żwiry",
+                "wapienie",
+                "granity i bazalty",
+                "gliny ceramiczne",
+                "marmury",
+                "kreda"
+              ]
             }
           ]
         },
@@ -305,34 +535,127 @@
           "type": "map-explore",
           "title": "Wielkie regiony surowcowe świata",
           "caption": "Kliknij znaczniki. Zwróć uwagę, że regiony rud metali układają się wzdłuż dawnych i współczesnych granic płyt litosfery, a złoża ropy i węgla — w basenach osadowych.",
-          "center": [15, 25],
+          "center": [
+            15,
+            25
+          ],
           "zoom": 2,
           "markers": [
-            { "lat": 25.5, "lng": 49.5, "label": "Zatoka Perska (Ghawar, Arabia Saudyjska)", "text": "Największa koncentracja **ropy naftowej** na świecie. Powód geologiczny: rozległy, płytki basen sedymentacyjny na przedpolu orogenezy alpejskiej, z idealnym układem skały macierzystej, zbiornikowej i **nieprzepuszczalnego nadkładu solnego**. Region skupia ponad połowę udokumentowanych zasobów ropy." },
-            { "lat": -22.5, "lng": 118.5, "label": "Pilbara, Australia Zachodnia", "text": "Największy region wydobycia **rud żelaza**. Złoża typu BIF (wstęgowe formacje żelaziste) powstały ok. 2,5 mld lat temu, gdy tlen z pierwszych sinic wytrącał żelazo z praoceanu. Australia to czołowy producent i eksporter rudy żelaza (gł. do Chin)." },
-            { "lat": -22.3, "lng": -68.9, "label": "Chuquicamata, Chile", "text": "Serce chilijskiego **pasa miedziowego** w Andach. Rudy miedzi porfirowej powstały nad **strefą subdukcji płyty Nazca** pod płytę południowoamerykańską. Chile jest największym producentem miedzi na świecie, Peru drugim — oba na tej samej strukturze." },
-            { "lat": -12.8, "lng": 28.2, "label": "Pas Miedzionośny (Zambia / DR Konga)", "text": "Copperbelt — **miedź i kobalt**. DR Konga dostarcza ok. 70% światowego wydobycia **kobaltu** (2023), kluczowego dla akumulatorów. Przykład skrajnej koncentracji surowca strategicznego w jednym, niestabilnym politycznie państwie." },
-            { "lat": 37.9, "lng": 112.5, "label": "Shanxi / Ordos, Chiny", "text": "Największy region wydobycia **węgla kamiennego** na świecie. Chiny odpowiadają za około połowę globalnego wydobycia węgla — surowiec jest tu podstawą energetyki, co przekłada się na pozycję kraju jako największego emitenta $CO_2$." },
-            { "lat": 31.8, "lng": -102.4, "label": "Basen permski (Teksas / Nowy Meksyk, USA)", "text": "Centrum amerykańskiej **rewolucji łupkowej**. Dzięki szczelinowaniu hydraulicznemu i wierceniom poziomym skała wcześniej pozbawiona wartości stała się zasobem — USA awansowały na pozycję największego producenta ropy i gazu na świecie. Podręcznikowy dowód, że technologia tworzy zasoby." },
-            { "lat": 41.77, "lng": 109.97, "label": "Bajan Obo, Mongolia Wewnętrzna (Chiny)", "text": "Największe złoże **metali ziem rzadkich**. Pierwiastki te są w skorupie ziemskiej wcale nierzadkie, ale rzadko występują w stężeniach opłacalnych, a ich przerób jest bardzo uciążliwy dla środowiska — dlatego Chiny zdobyły niemal monopol na etapie rafinacji." },
-            { "lat": -23.5, "lng": -68.2, "label": "Salar de Atacama, Chile", "text": "Solnisko będące jednym z głównych źródeł **litu** (tzw. trójkąt litowy Chile-Argentyna-Boliwia). Lit odzyskuje się z solanki przez odparowanie w klimacie skrajnie suchym — tu warunkiem istnienia złoża jest **klimat**, a nie tylko geologia." }
+            {
+              "lat": 25.5,
+              "lng": 49.5,
+              "label": "Zatoka Perska (Ghawar, Arabia Saudyjska)",
+              "text": "Największa koncentracja **ropy naftowej** na świecie. Powód geologiczny: rozległy, płytki basen sedymentacyjny na przedpolu orogenezy alpejskiej, z idealnym układem skały macierzystej, zbiornikowej i **nieprzepuszczalnego nadkładu solnego**. Region skupia ponad połowę udokumentowanych zasobów ropy."
+            },
+            {
+              "lat": -22.5,
+              "lng": 118.5,
+              "label": "Pilbara, Australia Zachodnia",
+              "text": "Największy region wydobycia **rud żelaza**. Złoża typu BIF (wstęgowe formacje żelaziste) powstały ok. 2,5 mld lat temu, gdy tlen z pierwszych sinic wytrącał żelazo z praoceanu. Australia to czołowy producent i eksporter rudy żelaza (gł. do Chin)."
+            },
+            {
+              "lat": -22.3,
+              "lng": -68.9,
+              "label": "Chuquicamata, Chile",
+              "text": "Serce chilijskiego **pasa miedziowego** w Andach. Rudy miedzi porfirowej powstały nad **strefą subdukcji płyty Nazca** pod płytę południowoamerykańską. Chile jest największym producentem miedzi na świecie, Peru drugim — oba na tej samej strukturze."
+            },
+            {
+              "lat": -12.8,
+              "lng": 28.2,
+              "label": "Pas Miedzionośny (Zambia / DR Konga)",
+              "text": "Copperbelt — **miedź i kobalt**. DR Konga dostarcza ok. 70% światowego wydobycia **kobaltu** (2023), kluczowego dla akumulatorów. Przykład skrajnej koncentracji surowca strategicznego w jednym, niestabilnym politycznie państwie."
+            },
+            {
+              "lat": 37.9,
+              "lng": 112.5,
+              "label": "Shanxi / Ordos, Chiny",
+              "text": "Największy region wydobycia **węgla kamiennego** na świecie. Chiny odpowiadają za około połowę globalnego wydobycia węgla — surowiec jest tu podstawą energetyki, co przekłada się na pozycję kraju jako największego emitenta $CO_2$."
+            },
+            {
+              "lat": 31.8,
+              "lng": -102.4,
+              "label": "Basen permski (Teksas / Nowy Meksyk, USA)",
+              "text": "Centrum amerykańskiej **rewolucji łupkowej**. Dzięki szczelinowaniu hydraulicznemu i wierceniom poziomym skała wcześniej pozbawiona wartości stała się zasobem — USA awansowały na pozycję największego producenta ropy i gazu na świecie. Podręcznikowy dowód, że technologia tworzy zasoby."
+            },
+            {
+              "lat": 41.77,
+              "lng": 109.97,
+              "label": "Bajan Obo, Mongolia Wewnętrzna (Chiny)",
+              "text": "Największe złoże **metali ziem rzadkich**. Pierwiastki te są w skorupie ziemskiej wcale nierzadkie, ale rzadko występują w stężeniach opłacalnych, a ich przerób jest bardzo uciążliwy dla środowiska — dlatego Chiny zdobyły niemal monopol na etapie rafinacji."
+            },
+            {
+              "lat": -23.5,
+              "lng": -68.2,
+              "label": "Salar de Atacama, Chile",
+              "text": "Solnisko będące jednym z głównych źródeł **litu** (tzw. trójkąt litowy Chile-Argentyna-Boliwia). Lit odzyskuje się z solanki przez odparowanie w klimacie skrajnie suchym — tu warunkiem istnienia złoża jest **klimat**, a nie tylko geologia."
+            }
           ]
         },
         {
           "type": "table",
           "title": "Czołowi producenci wybranych surowców",
           "caption": "Stan orientacyjny, ok. 2022-2023. Kolejność bywa zmienna, ale skład czołówki jest trwały — to on jest sprawdzany na maturze.",
-          "headers": ["Surowiec", "Grupa", "Czołowi producenci", "Uwaga"],
+          "headers": [
+            "Surowiec",
+            "Grupa",
+            "Czołowi producenci",
+            "Uwaga"
+          ],
           "rows": [
-            ["Ropa naftowa", "energetyczny", "USA, Arabia Saudyjska, Rosja", "Największe **zasoby**: Wenezuela i Arabia Saudyjska — nie mylić z wydobyciem"],
-            ["Gaz ziemny", "energetyczny", "USA, Rosja, Iran", "Handel wymaga gazociągów lub terminali LNG"],
-            ["Węgiel kamienny", "energetyczny", "Chiny, Indie, Indonezja", "Chiny wydobywają ok. połowy światowej produkcji"],
-            ["Rudy żelaza", "metaliczny", "Australia, Brazylia, Chiny", "Australia i Brazylia dominują w **eksporcie**"],
-            ["Rudy miedzi", "metaliczny", "Chile, Peru, DR Konga", "Andy i Copperbelt"],
-            ["Kobalt", "metaliczny", "DR Konga (ok. 70%)", "Surowiec krytyczny dla akumulatorów"],
-            ["Boksyty", "metaliczny", "Australia, Gwinea, Chiny", "Wietrzenie laterytowe w klimacie gorącym i wilgotnym"],
-            ["Fosforyty", "chemiczny", "Chiny, Maroko, USA", "Maroko ma zdecydowanie największe **zasoby**"],
-            ["Sole potasowe", "chemiczny", "Kanada, Rosja, Białoruś", "Podstawa nawozów potasowych"]
+            [
+              "Ropa naftowa",
+              "energetyczny",
+              "USA, Arabia Saudyjska, Rosja",
+              "Największe **zasoby**: Wenezuela i Arabia Saudyjska — nie mylić z wydobyciem"
+            ],
+            [
+              "Gaz ziemny",
+              "energetyczny",
+              "USA, Rosja, Iran",
+              "Handel wymaga gazociągów lub terminali LNG"
+            ],
+            [
+              "Węgiel kamienny",
+              "energetyczny",
+              "Chiny, Indie, Indonezja",
+              "Chiny wydobywają ok. połowy światowej produkcji"
+            ],
+            [
+              "Rudy żelaza",
+              "metaliczny",
+              "Australia, Brazylia, Chiny",
+              "Australia i Brazylia dominują w **eksporcie**"
+            ],
+            [
+              "Rudy miedzi",
+              "metaliczny",
+              "Chile, Peru, DR Konga",
+              "Andy i Copperbelt"
+            ],
+            [
+              "Kobalt",
+              "metaliczny",
+              "DR Konga (ok. 70%)",
+              "Surowiec krytyczny dla akumulatorów"
+            ],
+            [
+              "Boksyty",
+              "metaliczny",
+              "Australia, Gwinea, Chiny",
+              "Wietrzenie laterytowe w klimacie gorącym i wilgotnym"
+            ],
+            [
+              "Fosforyty",
+              "chemiczny",
+              "Chiny, Maroko, USA",
+              "Maroko ma zdecydowanie największe **zasoby**"
+            ],
+            [
+              "Sole potasowe",
+              "chemiczny",
+              "Kanada, Rosja, Białoruś",
+              "Podstawa nawozów potasowych"
+            ]
           ]
         },
         {
@@ -347,17 +670,37 @@
           "title": "Surowiec a region wydobycia",
           "instruction": "Połącz surowiec z regionem, który jest jego głównym światowym dostawcą.",
           "pairs": [
-            { "left": "Rudy żelaza", "right": "Pilbara w Australii Zachodniej" },
-            { "left": "Rudy miedzi", "right": "Andy Środkowe w Chile i Peru" },
-            { "left": "Kobalt", "right": "Pas Miedzionośny w DR Konga" },
-            { "left": "Metale ziem rzadkich", "right": "Złoże Bajan Obo w Chinach" },
-            { "left": "Fosforyty", "right": "Maroko i Sahara Zachodnia" }
+            {
+              "left": "Rudy żelaza",
+              "right": "Pilbara w Australii Zachodniej"
+            },
+            {
+              "left": "Rudy miedzi",
+              "right": "Andy Środkowe w Chile i Peru"
+            },
+            {
+              "left": "Kobalt",
+              "right": "Pas Miedzionośny w DR Konga"
+            },
+            {
+              "left": "Metale ziem rzadkich",
+              "right": "Złoże Bajan Obo w Chinach"
+            },
+            {
+              "left": "Fosforyty",
+              "right": "Maroko i Sahara Zachodnia"
+            }
           ]
         },
         {
           "type": "quiz",
           "question": "Rezerwy pewnego surowca wynoszą 12 mld ton, a roczne wydobycie 150 mln ton. Jaka jest wystarczalność zasobów?",
-          "options": ["8 lat", "80 lat", "800 lat", "18 lat"],
+          "options": [
+            "8 lat",
+            "80 lat",
+            "800 lat",
+            "18 lat"
+          ],
           "correctIndex": 1,
           "explanation": "Podstawiamy do wzoru $W = \\frac{R}{P}$, pamiętając o **ujednoliceniu jednostek**: 12 mld t = 12 000 mln t. Zatem $W = \\frac{12\\,000}{150} = 80$ lat. Najczęstszy błąd w tym zadaniu to zgubienie rzędu wielkości przy przeliczaniu miliardów na miliony — zawsze zapisuj obie liczby w tej samej jednostce, zanim podzielisz."
         },
@@ -404,17 +747,38 @@
             {
               "name": "Przyrodnicze",
               "description": "Wynikają z **cech środowiska geograficznego** i są w zasadzie niezmienne w krótkim okresie. Ich znaczenie maleje wraz z rozwojem transportu i przesyłu energii, ale w branżach surowco-, wodo- i energochłonnych pozostaje decydujące.",
-              "examples": ["baza surowcowa", "zasoby wodne", "źródła energii", "ukształtowanie i nośność terenu", "klimat", "walory przyrodnicze (turystyka)"]
+              "examples": [
+                "baza surowcowa",
+                "zasoby wodne",
+                "źródła energii",
+                "ukształtowanie i nośność terenu",
+                "klimat",
+                "walory przyrodnicze (turystyka)"
+              ]
             },
             {
               "name": "Ekonomiczne",
               "description": "Dotyczą **kosztów i dostępności czynników produkcji** oraz zbytu. To one dziś najczęściej rozstrzygają o lokalizacji, bo różnice między krajami w kosztach pracy czy dostępie do kapitału są ogromne.",
-              "examples": ["rynek zbytu", "zasoby i koszt siły roboczej", "dostępność kapitału", "infrastruktura transportowa", "korzyści aglomeracji", "zaplecze naukowo-badawcze"]
+              "examples": [
+                "rynek zbytu",
+                "zasoby i koszt siły roboczej",
+                "dostępność kapitału",
+                "infrastruktura transportowa",
+                "korzyści aglomeracji",
+                "zaplecze naukowo-badawcze"
+              ]
             },
             {
               "name": "Społeczno-polityczne i ekologiczne",
               "description": "Tworzone przez **decyzje państwa i postawy społeczeństwa**. Są najbardziej zmienne — jedna ustawa może uczynić region atrakcyjnym albo zamkniętym dla inwestycji.",
-              "examples": ["ulgi podatkowe i specjalne strefy ekonomiczne", "stabilność polityczna", "przepisy o ochronie środowiska", "obszary chronione", "protesty mieszkańców (efekt NIMBY)", "tradycje przemysłowe regionu"]
+              "examples": [
+                "ulgi podatkowe i specjalne strefy ekonomiczne",
+                "stabilność polityczna",
+                "przepisy o ochronie środowiska",
+                "obszary chronione",
+                "protesty mieszkańców (efekt NIMBY)",
+                "tradycje przemysłowe regionu"
+              ]
             }
           ]
         },
@@ -422,16 +786,52 @@
           "type": "table",
           "title": "Osiem kluczowych czynników lokalizacji",
           "caption": "Kolumna „mechanizm” to dokładnie to, czego oczekuje polecenie „wyjaśnij, dlaczego”.",
-          "headers": ["Czynnik", "Mechanizm działania", "Branże, dla których jest decydujący"],
+          "headers": [
+            "Czynnik",
+            "Mechanizm działania",
+            "Branże, dla których jest decydujący"
+          ],
           "rows": [
-            ["Surowcowy", "Gdy surowiec jest **ciężki, tani i traci masę w produkcji**, taniej jest przewieźć gotowy wyrób niż surowiec", "hutnictwo, cementownie, cukrownie, przemysł drzewny"],
-            ["Transportowy", "Miejsce **przeładunku między gałęziami transportu** eliminuje jeden kosztowny etap przewozu", "rafinerie i huty nadmorskie, centra logistyczne, przemysł portowy"],
-            ["Rynkowy", "Gdy wyrób jest **nietrwały, kruchy lub zyskuje masę** (np. przez dodanie wody), musi powstawać blisko odbiorcy", "piekarnie, mleczarnie, browary, poligrafia, meblarstwo"],
-            ["Siły roboczej", "Rozstrzyga albo **niski koszt pracy**, albo **wysokie kwalifikacje** — dwa przeciwne bieguny tego samego czynnika", "odzieżowy i obuwniczy (tania praca), farmacja i lotnictwo (kwalifikacje)"],
-            ["Kapitału", "Duże inwestycje wymagają dostępu do **finansowania i inwestorów zagranicznych**; kapitał płynie tam, gdzie ryzyko jest niskie", "przemysł zaawansowanych technologii, motoryzacja, usługi finansowe"],
-            ["Aglomeracji", "Skupienie firm daje **korzyści zewnętrzne**: wspólni dostawcy, rynek specjalistów, szybki przepływ wiedzy (klastry)", "elektronika, informatyka, motoryzacja, przemysł filmowy"],
-            ["Polityczny", "Państwo **zmienia opłacalność** przez ulgi, dotacje, cła i strefy ekonomiczne albo przez zakazy i niestabilność", "inwestycje zagraniczne w SSE, przemysł zbrojeniowy"],
-            ["Ekologiczny", "Normy emisji, obszary chronione i sprzeciw mieszkańców **wykluczają część terenu** albo podnoszą koszty inwestycji", "energetyka, przemysł chemiczny, składowiska, zakłady uciążliwe"]
+            [
+              "Surowcowy",
+              "Gdy surowiec jest **ciężki, tani i traci masę w produkcji**, taniej jest przewieźć gotowy wyrób niż surowiec",
+              "hutnictwo, cementownie, cukrownie, przemysł drzewny"
+            ],
+            [
+              "Transportowy",
+              "Miejsce **przeładunku między gałęziami transportu** eliminuje jeden kosztowny etap przewozu",
+              "rafinerie i huty nadmorskie, centra logistyczne, przemysł portowy"
+            ],
+            [
+              "Rynkowy",
+              "Gdy wyrób jest **nietrwały, kruchy lub zyskuje masę** (np. przez dodanie wody), musi powstawać blisko odbiorcy",
+              "piekarnie, mleczarnie, browary, poligrafia, meblarstwo"
+            ],
+            [
+              "Siły roboczej",
+              "Rozstrzyga albo **niski koszt pracy**, albo **wysokie kwalifikacje** — dwa przeciwne bieguny tego samego czynnika",
+              "odzieżowy i obuwniczy (tania praca), farmacja i lotnictwo (kwalifikacje)"
+            ],
+            [
+              "Kapitału",
+              "Duże inwestycje wymagają dostępu do **finansowania i inwestorów zagranicznych**; kapitał płynie tam, gdzie ryzyko jest niskie",
+              "przemysł zaawansowanych technologii, motoryzacja, usługi finansowe"
+            ],
+            [
+              "Aglomeracji",
+              "Skupienie firm daje **korzyści zewnętrzne**: wspólni dostawcy, rynek specjalistów, szybki przepływ wiedzy (klastry)",
+              "elektronika, informatyka, motoryzacja, przemysł filmowy"
+            ],
+            [
+              "Polityczny",
+              "Państwo **zmienia opłacalność** przez ulgi, dotacje, cła i strefy ekonomiczne albo przez zakazy i niestabilność",
+              "inwestycje zagraniczne w SSE, przemysł zbrojeniowy"
+            ],
+            [
+              "Ekologiczny",
+              "Normy emisji, obszary chronione i sprzeciw mieszkańców **wykluczają część terenu** albo podnoszą koszty inwestycji",
+              "energetyka, przemysł chemiczny, składowiska, zakłady uciążliwe"
+            ]
           ]
         },
         {
@@ -439,9 +839,18 @@
           "title": "Wskaźnik materiałowy Webera",
           "expression": "W_m = \\frac{M_s}{M_p}",
           "variables": [
-            { "symbol": "W_m", "meaning": "wskaźnik materiałowy" },
-            { "symbol": "M_s", "meaning": "masa surowców zużytych do wytworzenia wyrobu" },
-            { "symbol": "M_p", "meaning": "masa gotowego wyrobu" }
+            {
+              "symbol": "W_m",
+              "meaning": "wskaźnik materiałowy"
+            },
+            {
+              "symbol": "M_s",
+              "meaning": "masa surowców zużytych do wytworzenia wyrobu"
+            },
+            {
+              "symbol": "M_p",
+              "meaning": "masa gotowego wyrobu"
+            }
           ],
           "caption": "Reguła Alfreda Webera: jeśli $W_m > 1$ (produkcja **traci masę**), opłaca się lokalizować zakład **przy surowcu** — nie ma sensu wozić odpadu. Jeśli $W_m < 1$ (produkcja **zyskuje masę**, np. przez dolanie wody), opłaca się lokalizacja **przy rynku zbytu**. Przykład: z ok. 7 ton buraków cukrowych powstaje 1 tona cukru, więc $W_m \\approx 7$ — dlatego cukrownie stoją wśród pól buraczanych, a nie w wielkich miastach."
         },
@@ -451,11 +860,31 @@
           "leftLabel": "Przy surowcu (materiałochłonna)",
           "rightLabel": "Przy rynku zbytu",
           "rows": [
-            { "aspect": "Wskaźnik materiałowy", "left": "$W_m > 1$ — produkcja traci masę", "right": "$W_m < 1$ — produkcja zyskuje masę" },
-            { "aspect": "Co taniej przewieźć", "left": "Gotowy wyrób", "right": "Surowiec (albo składniki lekkie i trwałe)" },
-            { "aspect": "Cecha wyrobu", "left": "Trwały, znoszący transport", "right": "Nietrwały, kruchy albo o dużej objętości" },
-            { "aspect": "Przykłady", "left": "Cementownia, cukrownia, huta, tartak", "right": "Piekarnia, mleczarnia, browar, rozlewnia wód" },
-            { "aspect": "Skutek przestrzenny", "left": "Zakłady skupione w regionach surowcowych", "right": "Zakłady **rozproszone** — po jednym przy każdym większym mieście" }
+            {
+              "aspect": "Wskaźnik materiałowy",
+              "left": "$W_m > 1$ — produkcja traci masę",
+              "right": "$W_m < 1$ — produkcja zyskuje masę"
+            },
+            {
+              "aspect": "Co taniej przewieźć",
+              "left": "Gotowy wyrób",
+              "right": "Surowiec (albo składniki lekkie i trwałe)"
+            },
+            {
+              "aspect": "Cecha wyrobu",
+              "left": "Trwały, znoszący transport",
+              "right": "Nietrwały, kruchy albo o dużej objętości"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Cementownia, cukrownia, huta, tartak",
+              "right": "Piekarnia, mleczarnia, browar, rozlewnia wód"
+            },
+            {
+              "aspect": "Skutek przestrzenny",
+              "left": "Zakłady skupione w regionach surowcowych",
+              "right": "Zakłady **rozproszone** — po jednym przy każdym większym mieście"
+            }
           ]
         },
         {
@@ -513,12 +942,30 @@
           "title": "Zakład a dominujący czynnik lokalizacji",
           "instruction": "Dopasuj przedsiębiorstwo do czynnika, który w jego przypadku rozstrzyga o lokalizacji.",
           "pairs": [
-            { "left": "Cukrownia w rejonie Kujaw", "right": "Czynnik surowcowy" },
-            { "left": "Huta aluminium przy elektrowni wodnej w Norwegii", "right": "Czynnik energetyczny" },
-            { "left": "Szwalnia odzieży w Bangladeszu", "right": "Czynnik taniej siły roboczej" },
-            { "left": "Mleczarnia i piekarnia przy dużym mieście", "right": "Czynnik rynkowy" },
-            { "left": "Firmy informatyczne w Dolinie Krzemowej", "right": "Czynnik aglomeracji i zaplecza naukowo-badawczego" },
-            { "left": "Rafineria w Gdańsku", "right": "Czynnik transportowy" }
+            {
+              "left": "Cukrownia w rejonie Kujaw",
+              "right": "Czynnik surowcowy"
+            },
+            {
+              "left": "Huta aluminium przy elektrowni wodnej w Norwegii",
+              "right": "Czynnik energetyczny"
+            },
+            {
+              "left": "Szwalnia odzieży w Bangladeszu",
+              "right": "Czynnik taniej siły roboczej"
+            },
+            {
+              "left": "Mleczarnia i piekarnia przy dużym mieście",
+              "right": "Czynnik rynkowy"
+            },
+            {
+              "left": "Firmy informatyczne w Dolinie Krzemowej",
+              "right": "Czynnik aglomeracji i zaplecza naukowo-badawczego"
+            },
+            {
+              "left": "Rafineria w Gdańsku",
+              "right": "Czynnik transportowy"
+            }
           ]
         },
         {
@@ -549,6 +996,904 @@
           "type": "tip",
           "variant": "exam",
           "text": "Schemat odpowiedzi, który daje punkty w zadaniach o lokalizację. **Krok 1** — sprawdź, czy surowiec jest ciężki i czy produkcja traci masę; jeśli tak, odpowiedź brzmi „lokalizacja przysurowcowa”. **Krok 2** — sprawdź cechy wyrobu: nietrwały, kruchy albo zyskujący masę oznacza lokalizację przyrynkową. **Krok 3** — jeśli ani surowiec, ani wyrób niczego nie narzucają, szukaj czynnika **pozaprzyrodniczego**: koszt lub kwalifikacje pracy, ulgi podatkowe, bliskość kooperantów. Formułując zdanie, zawsze łącz czynnik ze **skutkiem ekonomicznym**: nie „bo tam jest tania siła robocza”, lecz „bo niskie koszty pracy obniżają koszt jednostkowy wyrobu w branży pracochłonnej”. I pamiętaj o poleceniach typu „podaj po jednym argumencie za i przeciw” — czynnik ekologiczny oraz protesty mieszkańców to najczęściej pomijana, a punktowana strona medalu."
+        }
+      ]
+    },
+    {
+      "slug": "globalizacja-gospodarki-swiatowej",
+      "title": "Globalizacja gospodarki światowej",
+      "summary": "Istota globalizacji, jej przyczyny techniczne, ekonomiczne i polityczne, przejawy w gospodarce i kulturze, mechanizm samonapędzania się procesu oraz bilans skutków pozytywnych i negatywnych wraz z krytyką antyglobalistów.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Sto lat temu gospodarka światowa była zbiorem w dużej mierze **zamkniętych gospodarek narodowych**, które wymieniały między sobą głównie surowce i wyroby gotowe. Dziś smartfon zaprojektowany w Kalifornii powstaje z układów wyprodukowanych na Tajwanie, matrycy z Korei Południowej i kamery z Japonii, jest składany w Chinach, a obsługę klienta zapewnia call center w Indiach. Żaden kraj nie wytwarza go samodzielnie — wytwarza go **sieć**. Ta zmiana ma nazwę: **globalizacja**. Na maturze rozszerzonej nie wystarczy jej zdefiniować: trzeba umieć wskazać jej **przyczyny** (dlaczego akurat w XX w.), **przejawy** (po czym ją poznajemy) i **skutki** — zawsze z obu stron bilansu, bo polecenia CKE bardzo często brzmią „podaj po dwa argumenty za i przeciw”."
+        },
+        {
+          "type": "definition",
+          "term": "Globalizacja",
+          "text": "Proces postępującego **zacieśniania powiązań i współzależności** między państwami, gospodarkami i społeczeństwami, prowadzący do powstania jednego, ogólnoświatowego systemu gospodarczego, w którym kapitał, towary, usługi, informacje i ludzie przemieszczają się coraz swobodniej, a **granice państwowe tracą znaczenie gospodarcze**. Kluczowa jest tu **współzależność**: zdarzenie w jednym punkcie systemu (bankructwo banku, susza, zamknięcie portu) natychmiast oddziałuje na cały świat.",
+          "note": "Globalizacja jest procesem **żywiołowym i wielowymiarowym** — nikt jej nie zaplanował ani nią nie steruje. To odróżnia ją od integracji regionalnej, która jest świadomą decyzją polityczną konkretnych państw."
+        },
+        {
+          "type": "timeline",
+          "title": "Etapy globalizacji — dlaczego dopiero XX wiek?",
+          "caption": "Powiązania międzykontynentalne istniały od wieków, ale dopiero spadek kosztów transportu i łączności zmienił je z wymiany luksusowej w codzienną współzależność.",
+          "events": [
+            {
+              "period": "XV-XVI w.",
+              "label": "Wielkie odkrycia geograficzne",
+              "text": "Powstają pierwsze **trwałe połączenia między kontynentami** i gospodarka kolonialna. Wymiana obejmuje jednak wyłącznie towary o bardzo wysokiej wartości w stosunku do masy — przyprawy, kruszce, jedwab, później cukier i bawełnę. Koszt przewozu jest tak wysoki, że handel zwykłymi dobrami nie ma sensu ekonomicznego."
+            },
+            {
+              "period": "1870-1914",
+              "label": "Pierwsza fala globalizacji",
+              "text": "Statek parowy, kolej, Kanał Sueski (1869) i **telegraf** radykalnie skracają czas i koszt przewozu. Udział handlu w światowym PKB osiąga poziom, do którego świat wróci dopiero w latach 70. XX w. Falę przerywają I wojna światowa i **protekcjonizm wielkiego kryzysu lat 30.** — państwa podnoszą cła, a obroty handlu światowego załamują się."
+            },
+            {
+              "period": "1944-1947",
+              "label": "Ład z Bretton Woods i GATT",
+              "text": "Powstają instytucje mające zapobiec powtórce lat 30.: **Międzynarodowy Fundusz Walutowy**, **Bank Światowy** oraz **GATT** — układ ogólny w sprawie taryf celnych i handlu, przekształcony w 1995 r. w **WTO**. Kolejne rundy negocjacji systematycznie obniżają cła, z kilkudziesięciu procent do kilku."
+            },
+            {
+              "period": "lata 60.-80. XX w.",
+              "label": "Kontenery i mikroelektronika",
+              "text": "**Kontenaryzacja** ujednolica ładunek i pozwala przeładować statek w godziny zamiast tygodni, a wielkie kontenerowce i masowce obniżają koszt jednostkowy przewozu do ułamka dawnego poziomu. Równolegle tanieje łączność. To wtedy zaczyna się masowe przenoszenie produkcji do Azji Wschodniej — najpierw do Japonii, potem do **azjatyckich tygrysów**."
+            },
+            {
+              "period": "1989-1991",
+              "label": "Koniec podziału dwublokowego",
+              "text": "Upadek bloku wschodniego i rozpad ZSRR włączają do gospodarki rynkowej kraje zamieszkane przez znaczną część ludności świata. W tym samym czasie powstaje **World Wide Web** (1991), a informacja zaczyna krążyć natychmiast i niemal bezkosztowo. Rynek staje się globalny w sensie dosłownym."
+            },
+            {
+              "period": "2001",
+              "label": "Chiny wstępują do WTO",
+              "text": "Największy rezerwuar taniej siły roboczej na świecie zyskuje gwarantowany dostęp do rynków krajów rozwiniętych. Następuje **eksplozja offshoringu** — Chiny w ciągu dwóch dekad stają się „fabryką świata” i największym eksporterem towarów."
+            },
+            {
+              "period": "po 2008 r.",
+              "label": "Spowolnienie (slowbalisation)",
+              "text": "Kryzys finansowy, wojny handlowe USA-Chiny, pandemia COVID-19 i wojna w Ukrainie obnażają **kruchość długich łańcuchów dostaw**. Udział handlu w PKB przestaje rosnąć, firmy skracają łańcuchy (**reshoring**, **nearshoring**, **friendshoring**), a bezpieczeństwo dostaw zaczyna liczyć się nie mniej niż sam koszt."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Przejawy globalizacji — po czym ją rozpoznajemy",
+          "caption": "W zadaniu „podaj trzy przejawy globalizacji” bezpiecznie jest wziąć po jednym z różnych grup — odpowiedź nie zostanie wtedy uznana za powtórzenie tej samej myśli.",
+          "groups": [
+            {
+              "name": "Gospodarcze",
+              "description": "Handel, produkcja i kapitał przestają mieścić się w granicach państw. Rośnie udział handlu w PKB, a znaczną część obrotów stanowią **dobra pośrednie** — półprodukty krążące między krajami w trakcie wytwarzania jednego wyrobu.",
+              "examples": [
+                "globalne łańcuchy dostaw",
+                "bezpośrednie inwestycje zagraniczne (BIZ)",
+                "korporacje transnarodowe",
+                "powiązane rynki finansowe i giełdy działające na okrągło",
+                "outsourcing i offshoring usług"
+              ]
+            },
+            {
+              "name": "Technologiczno-informacyjne",
+              "description": "Odległość przestaje być barierą dla informacji — to zjawisko określa się jako **kurczenie się przestrzeni** (kompresja czasoprzestrzeni). Umożliwia zarządzanie fabryką z drugiej półkuli i eksport usług, które wcześniej musiały być świadczone na miejscu.",
+              "examples": [
+                "internet i światłowody transoceaniczne",
+                "telefonia komórkowa i satelitarna",
+                "praca zdalna i telekonferencje",
+                "platformy cyfrowe o zasięgu światowym"
+              ]
+            },
+            {
+              "name": "Polityczno-instytucjonalne",
+              "description": "Państwa dobrowolnie **ograniczają część suwerenności gospodarczej**, przekazując kompetencje organizacjom międzynarodowym i wiążąc się wspólnymi regułami handlu.",
+              "examples": [
+                "WTO, MFW, Bank Światowy",
+                "ONZ i jej agendy",
+                "ugrupowania integracyjne: UE, ASEAN, USMCA, Mercosur",
+                "międzynarodowe porozumienia klimatyczne"
+              ]
+            },
+            {
+              "name": "Kulturowe",
+              "description": "Upowszechniają się te same wzorce konsumpcji, mody i rozrywki — to **homogenizacja kultury**, czyli jej ujednolicanie. Reakcją bywa odruch przeciwny: wzrost znaczenia tożsamości lokalnej i regionalnej.",
+              "examples": [
+                "globalne marki i sieci gastronomiczne",
+                "angielski jako lingua franca",
+                "kultura masowa: filmy, muzyka, sport",
+                "glokalizacja — globalny produkt w lokalnej wersji"
+              ]
+            },
+            {
+              "name": "Społeczno-demograficzne i środowiskowe",
+              "description": "Globalny staje się nie tylko rynek, lecz także **ruch ludzi i problemy środowiskowe**, których żadne państwo nie rozwiąże w pojedynkę.",
+              "examples": [
+                "masowe migracje zarobkowe",
+                "turystyka międzynarodowa",
+                "globalne ocieplenie i handel emisjami",
+                "pandemie rozprzestrzeniające się w ciągu tygodni"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Przyczyny globalizacji i mechanizm ich działania",
+          "caption": "Kolumna trzecia to gotowy materiał na polecenie „wyjaśnij, dlaczego dany czynnik przyspieszył globalizację”.",
+          "headers": [
+            "Grupa przyczyn",
+            "Czynnik",
+            "Mechanizm — dlaczego przyspiesza globalizację"
+          ],
+          "rows": [
+            [
+              "Techniczne",
+              "Kontenaryzacja, wielkie kontenerowce i masowce",
+              "Koszt przewozu jednostki ładunku spadł tak bardzo, że **przestał być barierą lokalizacyjną** — opłaca się produkować 10 tys. km od odbiorcy, jeśli produkcja jest tam tańsza"
+            ],
+            [
+              "Techniczne",
+              "Internet, światłowody, telefonia komórkowa",
+              "Informacja i usługa przemieszczają się natychmiast i niemal bezkosztowo, co umożliwia **zarządzanie rozproszoną produkcją** i eksport usług na odległość"
+            ],
+            [
+              "Ekonomiczne",
+              "Dążenie korporacji do obniżki kosztów i korzyści skali",
+              "Wielokrotne różnice płac między krajami tworzą **motyw przenoszenia produkcji pracochłonnej**, a produkcja na rynek globalny obniża koszt jednostkowy wyrobu"
+            ],
+            [
+              "Ekonomiczne",
+              "Swoboda przepływu kapitału i deregulacja rynków finansowych",
+              "Kapitał płynie tam, gdzie stopa zwrotu jest najwyższa; **BIZ** finansują fabryki i usługi poza krajem macierzystym inwestora"
+            ],
+            [
+              "Polityczne",
+              "GATT/WTO i kolejne rundy liberalizacji handlu",
+              "Systematyczna redukcja **ceł i barier pozataryfowych** obniża koszt przekraczania granicy przez towar"
+            ],
+            [
+              "Polityczne",
+              "Upadek bloku wschodniego i wejście Chin do WTO",
+              "Do gospodarki rynkowej włączyły się kraje o ogromnym potencjale ludnościowym — **gwałtownie wzrosła światowa podaż siły roboczej**, co obniżyło koszt pracy"
+            ],
+            [
+              "Polityczne",
+              "Integracja regionalna i specjalne strefy ekonomiczne",
+              "Znoszą granice gospodarcze na dużych obszarach albo tworzą **punktowe enklawy** o preferencyjnych warunkach dla inwestora zagranicznego"
+            ],
+            [
+              "Społeczno-kulturowe",
+              "Upodobnienie wzorców konsumpcji, angielski jako lingua franca",
+              "Popyt na **ten sam, standardowy produkt** na całym świecie umożliwia masową produkcję dla rynku globalnego zamiast wielu wersji krajowych"
+            ]
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Dlaczego globalizacja sama się napędza",
+          "caption": "To sprzężenie zwrotne dodatnie: każdy obrót pętli obniża koszty i czyni kolejny krok łatwiejszym. Zrozumienie tej pętli tłumaczy, dlaczego proces przez pół wieku przyspieszał.",
+          "stages": [
+            {
+              "name": "Spadek kosztów transportu i łączności",
+              "text": "Kontener, wielki statek i światłowód sprawiają, że **odległość przestaje kosztować**. Znika główna przeszkoda, która wcześniej zmuszała do produkowania blisko rynku zbytu."
+            },
+            {
+              "name": "Fragmentacja procesu produkcji",
+              "text": "Skoro przewóz jest tani, wyrobu nie trzeba wytwarzać w jednym zakładzie. Proces dzieli się na etapy, a **każdy etap lokuje się tam, gdzie jest najtańszy** lub najlepiej wykonywany — powstaje globalny łańcuch dostaw."
+            },
+            {
+              "name": "Wzrost handlu i przepływów kapitału",
+              "text": "Półprodukty wielokrotnie przekraczają granice, więc obroty handlowe rosną **szybciej niż światowa produkcja**. Za przenoszeniem etapów produkcji podążają bezpośrednie inwestycje zagraniczne."
+            },
+            {
+              "name": "Korzyści skali i ostrzejsza konkurencja",
+              "text": "Produkcja na rynek światowy obniża koszt jednostkowy, a firmy z różnych kontynentów konkurują ze sobą bezpośrednio. **Ceny spadają**, ale presja na dalsze cięcie kosztów rośnie."
+            },
+            {
+              "name": "Nacisk na dalszą liberalizację i innowacje",
+              "text": "Korporacje zabiegają o znoszenie kolejnych barier, państwa konkurują o inwestorów ulgami, a firmy inwestują w technologię, by wygrać cenowo. Efektem jest **kolejny spadek kosztów** — i pętla zaczyna się od nowa."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Udział eksportu towarów i usług w światowym PKB",
+          "caption": "Dane Banku Światowego, wartości zaokrąglone. Zwróć uwagę na dwa momenty: szybki wzrost w latach 1990-2008 (wejście Chin i Europy Środkowej do gospodarki światowej) oraz zahamowanie po kryzysie 2008 r. — to właśnie slowbalisation.",
+          "labels": [
+            "1970",
+            "1980",
+            "1990",
+            "2000",
+            "2010",
+            "2020",
+            "2022"
+          ],
+          "series": [
+            {
+              "name": "Eksport towarów i usług",
+              "values": [
+                13,
+                19,
+                19,
+                26,
+                29,
+                28,
+                31
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "compare",
+          "title": "Globalizacja — dwie strony tego samego bilansu",
+          "leftLabel": "Skutki pozytywne",
+          "rightLabel": "Skutki negatywne",
+          "rows": [
+            {
+              "aspect": "Ubóstwo i dochody",
+              "left": "Kraje, które weszły w globalne łańcuchy dostaw (Chiny, Wietnam, Bangladesz), wyciągnęły setki milionów ludzi ze **skrajnego ubóstwa** dzięki miejscom pracy w przemyśle eksportowym",
+              "right": "Kraje pozostające poza głównym nurtem wymiany — zwłaszcza w Afryce Subsaharyjskiej — **oddalają się** od czołówki; to dywergencja, czyli pogłębianie różnic rozwojowych"
+            },
+            {
+              "aspect": "Ceny i dostęp do dóbr",
+              "left": "Konkurencja i korzyści skali **obniżają ceny**; konsument ma dostęp do towarów z całego świata przez cały rok",
+              "right": "Tani import **wypiera lokalną produkcję i rzemiosło**, zwłaszcza w krajach słabiej rozwiniętych"
+            },
+            {
+              "aspect": "Technologia i wiedza",
+              "left": "Wraz z BIZ następuje **transfer technologii, know-how i standardów zarządzania** do krajów przyjmujących inwestycje",
+              "right": "Najbardziej dochodowe ogniwa (badania i rozwój, projektowanie, marka) pozostają w krajach macierzystych korporacji — kraje montażu grzęzną w **pułapce średniego dochodu**"
+            },
+            {
+              "aspect": "Rynek pracy krajów wysoko rozwiniętych",
+              "left": "Powstają nowe miejsca pracy w usługach wyższego rzędu, sektorze IV i logistyce, a taniejący import podnosi realną wartość płac",
+              "right": "**Dezindustrializacja** — likwidacja miejsc pracy w przemyśle pracochłonnym, upadek starych okręgów przemysłowych (pas rdzy w USA), presja na obniżkę płac"
+            },
+            {
+              "aspect": "Warunki pracy i środowisko",
+              "left": "Międzynarodowe standardy i presja opinii publicznej wymuszają na korporacjach kodeksy etyczne i certyfikaty",
+              "right": "**Wyścig na dno** — państwa konkurują o inwestora obniżaniem podatków oraz standardów pracy i ochrony środowiska; brudne gałęzie produkcji przenoszone są do krajów o łagodnym prawie"
+            },
+            {
+              "aspect": "Kultura",
+              "left": "Wymiana kulturowa, dostęp do dorobku innych narodów, **glokalizacja** dopasowująca globalne produkty do lokalnych tradycji",
+              "right": "**Homogenizacja** kultury, zanik języków i tradycji lokalnych, poczucie utraty tożsamości"
+            },
+            {
+              "aspect": "Odporność gospodarki",
+              "left": "Dywersyfikacja rynków zbytu — załamanie popytu w jednym kraju nie musi oznaczać upadku eksportera",
+              "right": "**Efekt domina**: kryzys, pandemia lub zablokowanie jednego szlaku paraliżują produkcję na całym świecie, bo łańcuch dostaw jest długi i pozbawiony zapasów"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kryzys 2008 — jak lokalny problem stał się światowy",
+          "region": "USA → gospodarka światowa",
+          "text": "Bezpośrednią przyczyną było załamanie amerykańskiego rynku kredytów hipotecznych o podwyższonym ryzyku. Gdyby świat nie był zglobalizowany, byłby to problem amerykański. Ale ryzykowne kredyty zostały **przepakowane w instrumenty finansowe i sprzedane bankom w Europie i Azji**, więc upadek banku Lehman Brothers we wrześniu 2008 r. w ciągu tygodni zamroził zaufanie na rynkach całego świata. Dalej zadziałał kanał handlowy: spadek popytu w USA i UE natychmiast uderzył w **eksporterów z Azji Wschodniej**, ci zaś ograniczyli zakupy surowców, co obniżyło ceny ropy i metali i pogorszyło sytuację gospodarek surowcowych Afryki i Ameryki Południowej. W 2009 r. światowy handel skurczył się znacznie silniej niż światowe PKB — bo w łańcuchach dostaw ten sam półprodukt przekracza granicę wielokrotnie i wielokrotnie liczy się w statystykach.",
+          "takeaway": "Globalizacja przenosi nie tylko towary, kapitał i technologię, ale też **ryzyko** — im gęstsza sieć powiązań, tym szybciej i dalej rozchodzi się zaburzenie. To główny argument krytyków długich łańcuchów dostaw."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć mylone na maturze. **Globalizacja ≠ integracja regionalna**: globalizacja jest procesem żywiołowym i ogólnoświatowym, którego nikt nie zaplanował, a integracja (UE, ASEAN, Mercosur) to świadoma, umowna decyzja grupy państw o zniesieniu barier między sobą. **Globalizacja ≠ westernizacja**: upowszechnianie wzorców zachodnich to tylko jeden z kulturowych przejawów procesu, a przepływ działa też w drugą stronę (kuchnia azjatycka, K-pop, chińskie platformy zakupowe). **Antyglobalizm ≠ alterglobalizm**: pierwszy odrzuca sam proces, drugi go akceptuje, ale domaga się sprawiedliwszych reguł."
+        },
+        {
+          "type": "definition",
+          "term": "Antyglobalizm i alterglobalizm",
+          "text": "**Antyglobalizm** to ruch społeczny sprzeciwiający się globalizacji w obecnym kształcie — zarzuca jej, że służy przede wszystkim **korporacjom transnarodowym i krajom wysoko rozwiniętym**, pogłębia nierówności, niszczy środowisko i osłabia demokrację, bo decyzje o losie całych regionów zapadają w zarządach firm, a nie w wybieranych parlamentach. **Alterglobalizm** (hasło „inny świat jest możliwy”) nie odrzuca samego procesu, lecz domaga się innych jego reguł: sprawiedliwego handlu (**fair trade**), umorzenia długów krajów najuboższych, egzekwowania standardów pracy i opodatkowania przepływów kapitału.",
+          "note": "Symbolem początku ruchu są protesty podczas szczytu WTO w **Seattle w 1999 r.**, a jego forum — Światowe Forum Społeczne, organizowane jako przeciwwaga dla Światowego Forum Ekonomicznego w Davos."
+        },
+        {
+          "type": "matching",
+          "title": "Pojęcia opisujące globalizację",
+          "instruction": "Dopasuj termin do jego istoty — te pięć pojęć wraca w zadaniach otwartych najczęściej.",
+          "pairs": [
+            {
+              "left": "Glokalizacja",
+              "right": "Dostosowanie globalnego produktu lub marki do lokalnych gustów, przepisów i tradycji"
+            },
+            {
+              "left": "Alterglobalizm",
+              "right": "Ruch nieodrzucający globalizacji, lecz domagający się sprawiedliwszych jej reguł"
+            },
+            {
+              "left": "Slowbalisation",
+              "right": "Zahamowanie wzrostu obrotów handlowych i skracanie łańcuchów dostaw po 2008 r."
+            },
+            {
+              "left": "Wykluczenie cyfrowe",
+              "right": "Nierówny dostęp do internetu, który pogłębia dystans rozwojowy między regionami"
+            },
+            {
+              "left": "Wyścig na dno",
+              "right": "Konkurowanie państw o inwestora obniżaniem podatków oraz standardów pracy i ekologicznych"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Który czynnik najlepiej wyjaśnia, dlaczego globalizacja przyspieszyła dopiero w drugiej połowie XX w., choć powiązania międzykontynentalne istniały od wieków?",
+          "options": [
+            "Dopiero wtedy odkryto nowe surowce mineralne, które trzeba było przewozić między kontynentami",
+            "Radykalny spadek kosztu transportu (kontenaryzacja, wielkie statki) i łączności sprawił, że odległość przestała być barierą ekonomiczną",
+            "Dopiero wtedy liczba ludności świata przekroczyła poziom pozwalający na handel międzynarodowy",
+            "Dopiero wtedy powstały pierwsze przedsiębiorstwa produkujące na eksport"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wcześniej przewóz był tak drogi, że opłacało się transportować tylko towary o **bardzo wysokiej wartości w stosunku do masy** — przyprawy, kruszce, jedwab. Kontener, wielki kontenerowiec i tania łączność obniżyły koszt pokonania odległości do poziomu, przy którym opłaca się rozdzielić produkcję jednego wyrobu między kilka kontynentów. Dopiero wtedy możliwa stała się **fragmentacja produkcji**, czyli istota dzisiejszej globalizacji."
+        },
+        {
+          "type": "quiz",
+          "question": "Uczeń napisał: „Przykładem globalizacji jest utworzenie strefy Schengen w Unii Europejskiej”. Dlaczego ta odpowiedź jest nietrafna?",
+          "options": [
+            "Bo strefa Schengen dotyczy tylko ruchu osób, a globalizacja obejmuje wyłącznie towary",
+            "Bo Schengen to przykład integracji regionalnej — świadomej umowy ograniczonej grupy państw, a nie żywiołowego procesu o zasięgu ogólnoświatowym",
+            "Bo Unia Europejska nie jest ugrupowaniem gospodarczym",
+            "Bo globalizacja zakończyła się przed powstaniem strefy Schengen"
+          ],
+          "correctIndex": 1,
+          "explanation": "Integracja regionalna i globalizacja są procesami pokrewnymi, ale **nietożsamymi**. Integracja to sformalizowana, dobrowolna umowa **konkretnych państw** o zniesieniu barier między sobą — i często o utrzymaniu wspólnych barier wobec reszty świata, jak w unii celnej UE. Globalizacja jest procesem **ogólnoświatowym, żywiołowym i niesterowanym**. Integrację można wskazać co najwyżej jako **czynnik sprzyjający** globalizacji, nie jako jej przejaw."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy nawyki, które podnoszą punktację w zadaniach o globalizacji. **Po pierwsze** — gdy polecenie brzmi „podaj przejawy”, wybieraj je z **różnych grup** (gospodarcza, technologiczna, kulturowa); trzy przykłady tej samej natury bywają liczone jak jeden. **Po drugie** — skutki zawsze podawaj z określeniem, **kogo dotyczą**: „w krajach wysoko rozwiniętych — dezindustrializacja i utrata miejsc pracy w przemyśle pracochłonnym”, „w krajach rozwijających się — wzrost zatrudnienia, ale niskie płace i słabe standardy pracy”. Ta sama zmiana bywa dla jednych korzyścią, dla drugich stratą. **Po trzecie** — w wyjaśnieniach nazywaj **mechanizm**, nie skutek: nie „bo jest globalizacja”, lecz „bo spadek kosztu transportu umożliwił ulokowanie pracochłonnego etapu produkcji w kraju o niskich płacach”."
+        }
+      ]
+    },
+    {
+      "slug": "korporacje-transnarodowe-biz-i-lancuchy-dostaw",
+      "title": "Korporacje transnarodowe, BIZ i globalne łańcuchy dostaw",
+      "summary": "Korporacje transnarodowe jako główny podmiot gospodarki światowej, etapy umiędzynarodowienia firmy, bezpośrednie inwestycje zagraniczne i ich skutki, offshoring i outsourcing, krzywa uśmiechu wartości dodanej oraz nowy międzynarodowy podział pracy.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Globalizacja nie dzieje się sama — ma swojego głównego wykonawcę. Jest nim **korporacja transnarodowa**: firma, która nie tyle sprzedaje za granicę, ile **produkuje w wielu krajach naraz**, traktując świat jak jedną mapę kosztów. To ona decyduje, w którym państwie stanie fabryka, w którym centrum badawcze, a w którym call center — i tym samym w dużej mierze wyznacza, gdzie powstają miejsca pracy i gdzie zostaje zysk. W tej lekcji prześledzimy, jak firma staje się korporacją, czym bezpośrednia inwestycja różni się od zwykłego eksportu kapitału, dlaczego montaż jest najmniej dochodowym ogniwem łańcucha i co dokładnie oznacza **nowy międzynarodowy podział pracy**."
+        },
+        {
+          "type": "definition",
+          "term": "Korporacja transnarodowa (KTN)",
+          "text": "Wielkie przedsiębiorstwo, które oprócz **siedziby (centrali) w kraju macierzystym** prowadzi działalność produkcyjną lub usługową przez filie i zakłady w co najmniej kilku innych państwach, a swoją strategię układa dla całego świata, a nie dla pojedynczego rynku krajowego. Kluczowe jest to, że korporacja **rozdziela funkcje przestrzennie**: zarząd, badania i rozwój oraz marketing zostają zwykle w kraju macierzystym lub w innym kraju wysoko rozwiniętym, a pracochłonny montaż trafia tam, gdzie płace są najniższe.",
+          "note": "Spotkasz też nazwy **korporacja międzynarodowa** i **ponadnarodowa** — w szkolnej praktyce używa się ich zamiennie. Największe KTN dysponują przychodami przewyższającymi PKB wielu państw średniej wielkości, co daje im realną siłę przetargową wobec rządów."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala zjawiska",
+          "items": [
+            {
+              "value": "ok. 1,3",
+              "unit": "bln USD",
+              "label": "światowy napływ bezpośrednich inwestycji zagranicznych (2023)",
+              "note": "Szacunek UNCTAD. Strumień ten silnie waha się z roku na rok — reaguje na kryzysy, stopy procentowe i napięcia polityczne."
+            },
+            {
+              "value": "ok. 80",
+              "unit": "%",
+              "label": "udział światowego handlu realizowanego w sieciach powiązanych z korporacjami transnarodowymi",
+              "note": "Obejmuje handel wewnątrz korporacji (między jej filiami) oraz z jej dostawcami — stąd tak wysoki udział."
+            },
+            {
+              "value": "ok. 50",
+              "unit": "%",
+              "label": "udział dóbr pośrednich (półproduktów) w światowym handlu towarami",
+              "note": "Dowód fragmentacji produkcji: przedmiotem handlu coraz częściej nie jest gotowy wyrób, lecz jego część w drodze do kolejnego zakładu."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak firma krajowa staje się korporacją transnarodową",
+          "caption": "Etapy umiędzynarodowienia układają się w rosnący poziom zaangażowania kapitału i ryzyka — i dopiero ostatnie dwa oznaczają BIZ.",
+          "steps": [
+            {
+              "title": "1. Eksport pośredni i bezpośredni",
+              "text": "Firma produkuje wyłącznie w kraju i sprzedaje nadwyżkę za granicę. Ryzyko jest małe, ale rośnie koszt transportu, a **cła i bariery pozataryfowe** obcinają marżę. Nie ma tu jeszcze żadnej inwestycji zagranicznej."
+            },
+            {
+              "title": "2. Licencja lub franczyza",
+              "text": "Firma sprzedaje zagranicznemu partnerowi prawo do wytwarzania jej produktu lub używania marki. Kapitał nie wypływa, ale **kontrola nad jakością i technologią słabnie**, a partner może w przyszłości stać się konkurentem."
+            },
+            {
+              "title": "3. Joint venture — spółka z partnerem lokalnym",
+              "text": "Wspólne przedsiębiorstwo z firmą z kraju przyjmującego. Pozwala obejść ograniczenia prawne (w wielu krajach to warunek wejścia na rynek) i korzystać ze znajomości lokalnych realiów, ale **zysk i decyzje trzeba dzielić**."
+            },
+            {
+              "title": "4. Filia zagraniczna — bezpośrednia inwestycja",
+              "text": "Firma buduje własny zakład (**inwestycja typu greenfield**) albo kupuje przedsiębiorstwo już istniejące (**fuzja lub przejęcie**). Uzyskuje pełną kontrolę, omija cła i koszty transportu, a przede wszystkim korzysta z **niższych kosztów produkcji na miejscu**."
+            },
+            {
+              "title": "5. Sieć globalna i wewnętrzny podział funkcji",
+              "text": "Filie przestają być kopiami centrali. Każda dostaje przypisaną **rolę w łańcuchu wartości**: jedna montuje, druga prowadzi badania, trzecia obsługuje klientów regionu. Handel między nimi (obrót wewnątrzkorporacyjny) staje się częścią statystyk handlu zagranicznego państw."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Bezpośrednie inwestycje zagraniczne (BIZ)",
+          "text": "Lokowanie kapitału za granicą w sposób dający inwestorowi **trwały wpływ na zarządzanie** przedsiębiorstwem — przez budowę własnego zakładu od podstaw (**greenfield**), rozbudowę istniejącego (**brownfield**) albo zakup pakietu udziałów w firmie zagranicznej (fuzja lub przejęcie). Umownie przyjmuje się próg **10% udziałów**. BIZ odróżnia od inwestycji portfelowych to, że inwestor chce **kontrolować firmę i produkować**, a nie tylko zarobić na wzroście kursu akcji.",
+          "note": "Dlatego BIZ uchodzą za kapitał „stabilny”, a inwestycje portfelowe za **kapitał spekulacyjny** — ten drugi może odpłynąć z kraju w ciągu jednego dnia, fabryki wywieźć się nie da."
+        },
+        {
+          "type": "table",
+          "title": "Skutki napływu BIZ dla kraju przyjmującego",
+          "caption": "Typowe polecenie CKE: „podaj po dwa pozytywne i negatywne skutki napływu kapitału zagranicznego”. Odpowiadaj zawsze przez mechanizm, nie hasłowo.",
+          "headers": [
+            "Obszar",
+            "Skutek pozytywny",
+            "Skutek negatywny"
+          ],
+          "rows": [
+            [
+              "Rynek pracy",
+              "Nowe miejsca pracy, także pośrednio u lokalnych kooperantów; podnoszenie kwalifikacji załogi",
+              "Zatrudnienie **wrażliwe na decyzje centrali** — przy wzroście płac zakład bywa przenoszony do tańszego kraju"
+            ],
+            [
+              "Technologia",
+              "**Transfer technologii**, standardów jakości i metod zarządzania do gospodarki krajowej",
+              "Prace badawczo-rozwojowe zwykle zostają w kraju macierzystym — kraj przyjmujący pozostaje **wykonawcą, nie twórcą**"
+            ],
+            [
+              "Budżet i bilans płatniczy",
+              "Wpływy podatkowe, wzrost eksportu i napływ dewiz, poprawa salda obrotów kapitałowych",
+              "**Transfer zysków** za granicę oraz optymalizacja podatkowa (ceny transferowe) uszczuplają dochody państwa"
+            ],
+            [
+              "Struktura gospodarki",
+              "Modernizacja przestarzałych branż, wejście kraju do globalnych łańcuchów dostaw",
+              "Wypieranie firm krajowych przez silniejszego konkurenta; **uzależnienie regionu od jednego inwestora**"
+            ],
+            [
+              "Środowisko i przestrzeń",
+              "Nowoczesne instalacje bywają czystsze od zastępowanych zakładów krajowych",
+              "Przenoszenie **branż uciążliwych** tam, gdzie normy są łagodniejsze, oraz presja na obniżanie standardów"
+            ]
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Offshoring a outsourcing — dwa różne pytania",
+          "leftLabel": "Offshoring (GDZIE?)",
+          "rightLabel": "Outsourcing (KTO?)",
+          "rows": [
+            {
+              "aspect": "Istota",
+              "left": "Przeniesienie działalności **za granicę**, do innego kraju",
+              "right": "Zlecenie działalności **firmie zewnętrznej**, wydzielenie jej z własnej struktury"
+            },
+            {
+              "aspect": "Kryterium podziału",
+              "left": "Zmienia się **lokalizacja** zadania",
+              "right": "Zmienia się **właściciel** wykonującego zadanie"
+            },
+            {
+              "aspect": "Główny motyw",
+              "left": "Niższe koszty pracy, ulgi podatkowe, bliskość rynku lub surowca",
+              "right": "Skupienie się na **kluczowej działalności**, niższy koszt u wyspecjalizowanego dostawcy"
+            },
+            {
+              "aspect": "Przykład",
+              "left": "Niemiecki koncern otwiera **własną** fabrykę w Czechach",
+              "right": "Bank zleca obsługę informatyczną **innej firmie** w tym samym mieście"
+            },
+            {
+              "aspect": "Połączenie obu",
+              "left": "Gdy zadanie trafia do własnej filii za granicą, mówimy o **offshoringu wewnętrznym (captive)**",
+              "right": "Gdy trafia do obcej firmy za granicą — to **offshoring outsourcingowy**, dziś najczęstszy wariant"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: mylenie **offshoringu** z **outsourcingiem**. To odpowiedzi na dwa różne pytania — offshoring mówi *gdzie* (za granicą), outsourcing *u kogo* (w obcej firmie). Można je łączyć i można stosować osobno. Drugi błąd: **BIZ ≠ inwestycje portfelowe** — o BIZ mówimy tylko wtedy, gdy inwestor zyskuje trwały wpływ na zarządzanie. Trzeci: **reshoring** (powrót produkcji do kraju macierzystego) to nie to samo co **nearshoring** (przeniesienie jej bliżej, np. z Azji do Europy Środkowej)."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Krzywa uśmiechu — gdzie w łańcuchu powstaje wartość",
+          "caption": "Wartości umowne, ilustrujące kształt zależności. Wykres czyta się tak: ogniwa na obu końcach łańcucha (wiedza i marka) dają wysoką wartość dodaną, a ogniwo środkowe — sam montaż — najniższą. Dlatego kraj, który tylko montuje, zarabia najmniej, mimo że w statystykach eksportuje najwięcej.",
+          "labels": [
+            "Badania i rozwój",
+            "Projektowanie",
+            "Produkcja komponentów",
+            "Montaż",
+            "Marketing i marka",
+            "Dystrybucja",
+            "Serwis"
+          ],
+          "series": [
+            {
+              "name": "Względna wartość dodana",
+              "values": [
+                90,
+                75,
+                45,
+                15,
+                70,
+                60,
+                80
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "case-study",
+          "title": "Kto naprawdę zarabia na smartfonie",
+          "region": "Chiny — Azja Wschodnia — USA",
+          "text": "Smartfon montowany w Chinach zawiera podzespoły z Korei Południowej, Japonii, Tajwanu i Stanów Zjednoczonych. Badania nad podziałem wartości pokazały, że **na chiński montaż przypada zaledwie kilka procent** ceny końcowej urządzenia — resztę pochłaniają komponenty oraz, przede wszystkim, wartość niematerialna: patenty, oprogramowanie, projekt i marka, pozostające w krajach wysoko rozwiniętych. Statystyka handlu tego nie widzi: w danych celnych **cała wartość urządzenia zapisuje się jako eksport Chin**, choć Chiny wytworzyły z niej niewielką część. Stąd bierze się część spektakularnego deficytu handlowego USA z Chinami — a także wniosek, że tradycyjne miary handlu zawyżają rolę krajów montażu, dlatego uzupełnia się je pomiarem **wartości dodanej**.",
+          "takeaway": "W globalnym łańcuchu dostaw wielkość eksportu nie równa się wielkości korzyści. O zamożności decyduje **ogniwo, które kraj obsadza**, a nie masa towarów przekraczających jego granicę."
+        },
+        {
+          "type": "classification",
+          "title": "Nowy międzynarodowy podział pracy — model centrum i peryferii",
+          "caption": "Stary podział pracy (kolonialny): peryferie dostarczały surowców, centrum wytwarzało wyroby przemysłowe. Nowy jest subtelniejszy — peryferie też produkują przemysłowo, ale wykonują ogniwa o najniższej wartości dodanej.",
+          "groups": [
+            {
+              "name": "Centrum (rdzeń)",
+              "description": "Kraje wysoko rozwinięte, w których mieszczą się **centrale korporacji, ośrodki badawcze i projektowe** oraz zaawansowane usługi. Kontrolują technologię, marki i kapitał, a więc przechwytują największą część wartości dodanej.",
+              "examples": [
+                "USA",
+                "Niemcy",
+                "Japonia",
+                "Korea Południowa",
+                "Szwajcaria"
+              ]
+            },
+            {
+              "name": "Półperyferie",
+              "description": "Kraje o średnim poziomie rozwoju, łączące produkcję przemysłową na eksport z rosnącym własnym zapleczem technologicznym. **Awansują w łańcuchu wartości** — od prostego montażu ku produkcji komponentów i własnym markom.",
+              "examples": [
+                "Polska i kraje Europy Środkowej",
+                "Chiny",
+                "Meksyk",
+                "Malezja",
+                "Turcja"
+              ]
+            },
+            {
+              "name": "Peryferie",
+              "description": "Kraje słabo rozwinięte, dostarczające **surowców i pracy o najniższym koszcie**, wykonujące ogniwa najprostsze i najsłabiej opłacane, często bez powiązań z resztą własnej gospodarki (enklawy eksportowe).",
+              "examples": [
+                "Bangladesz",
+                "Etiopia",
+                "Demokratyczna Republika Konga",
+                "Kambodża"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Wędrówka przemysłu odzieżowego po Azji",
+          "instruction": "Uporządkuj kraje i regiony według kolejności, w jakiej stawały się głównym miejscem taniej produkcji odzieży — od najwcześniejszego do najpóźniejszego.",
+          "items": [
+            "Japonia (lata 50.-60. XX w.)",
+            "Korea Południowa, Tajwan, Hongkong (lata 70.-80. XX w.)",
+            "Nadmorskie prowincje Chin (lata 90. XX w.)",
+            "Wietnam i wnętrze Chin (po 2000 r.)",
+            "Bangladesz, Kambodża, Etiopia (po 2010 r.)"
+          ],
+          "explanation": "To mechanizm nazywany modelem **„klucza lecących gęsi”**. Kraj, który przyciągnął produkcję pracochłonną, bogaci się, więc **rosną w nim płace** — i traci przewagę kosztową w branżach najprostszych. Przenoszą się one do kolejnego, uboższego kraju, a kraj poprzedni awansuje do produkcji bardziej zaawansowanej. Dlatego przemysł odzieżowy przesuwa się od Japonii, przez tygrysy azjatyckie i Chiny, aż po Bangladesz i Afrykę Wschodnią."
+        },
+        {
+          "type": "quiz",
+          "question": "Koncern z Niemiec zamyka dział księgowości w Monachium i przekazuje te zadania niezależnej firmie usługowej w Krakowie. Jak najtrafniej nazwać tę decyzję?",
+          "options": [
+            "Wyłącznie outsourcing, bo zadania wykonuje inna firma",
+            "Wyłącznie offshoring, bo zadania trafiły do innego kraju",
+            "Jednocześnie offshoring i outsourcing — zadanie zmieniło i kraj, i wykonawcę",
+            "Reshoring, bo koncern skrócił swój łańcuch wartości"
+          ],
+          "correctIndex": 2,
+          "explanation": "Oba kryteria zostały spełnione naraz: zadanie **opuściło firmę** (outsourcing — wykonuje je podmiot zewnętrzny) i **opuściło kraj** (offshoring — trafiło do Polski). To dziś najczęstszy wariant przenoszenia usług dla biznesu. Gdyby koncern otworzył w Krakowie **własne** centrum usług, byłby to offshoring bez outsourcingu (tzw. offshoring wewnętrzny)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego kraj, który montuje elektronikę na eksport, może mimo ogromnej wartości eksportu pozostawać stosunkowo ubogi?",
+          "options": [
+            "Bo eksport elektroniki jest obłożony najwyższymi cłami na świecie",
+            "Bo montaż to ogniwo o najniższej wartości dodanej — wartość komponentów, patentów i marki przechwytują inne kraje, choć w statystykach cała kwota liczy się jako eksport kraju montażu",
+            "Bo elektronika szybko traci na wartości, więc eksport nie przynosi żadnych wpływów",
+            "Bo kraje montażu nie mają dostępu do morza i ponoszą wysokie koszty transportu"
+          ],
+          "correctIndex": 1,
+          "explanation": "To wniosek z **krzywej uśmiechu**: wartość dodana koncentruje się na końcach łańcucha — w badaniach, projektowaniu i marce z jednej strony oraz w dystrybucji i serwisie z drugiej. Środek, czyli sam montaż, wymaga najmniej wiedzy, więc jest najłatwiejszy do zastąpienia i najsłabiej opłacany. Statystyka celna przypisuje jednak krajowi montażu **pełną wartość** wywożonego towaru, co zniekształca obraz — dlatego stosuje się dodatkowo pomiar handlu w kategoriach wartości dodanej."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o korporacjach i BIZ punktuje się **konkret i kierunek zależności**. Pisząc o motywach lokalizacji filii, nazwij czynnik (koszt pracy, dostęp do rynku, ulgi w SSE, kwalifikacje kadr) i dodaj skutek dla firmy: „niższy koszt jednostkowy wyrobu”, „ominięcie cła przy wejściu na rynek UE”. Oceniając skutki dla kraju przyjmującego, **zawsze rozdziel korzyści i koszty** i wskaż, kto je ponosi — pracownik, budżet państwa, lokalna konkurencja. Uważaj też na kierunek strumienia BIZ: kraj może być **odbiorcą** inwestycji (napływ) i jednocześnie **inwestorem** za granicą (odpływ); polecenie zwykle precyzuje, o który przepływ chodzi."
+        }
+      ]
+    },
+    {
+      "slug": "handel-miedzynarodowy-i-polityka-handlowa",
+      "title": "Handel międzynarodowy, bilanse i polityka handlowa",
+      "summary": "Struktura handlu światowego, bilans handlowy i płatniczy, wskaźnik pokrycia importu eksportem, terms of trade i pułapka monokultury surowcowej oraz spór o wolny handel i protekcjonizm wraz z cłami, barierami pozataryfowymi i rolą WTO.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Handel jest najstarszym i wciąż najlepiej mierzalnym przejawem powiązań między gospodarkami. Kraj sprzedaje to, co wytwarza taniej lub lepiej niż inni, a kupuje to, czego mu brakuje — na tym polega **specjalizacja**, czyli praktyczna strona międzynarodowego podziału pracy. Ale wymiana nigdy nie jest neutralna: jedni na niej zyskują więcej, inni mniej, a państwa od stuleci próbują przechylić bilans na swoją stronę cłami i innymi barierami. W tej lekcji nauczysz się **liczyć i interpretować** salda wymiany oraz odróżniać dwa przeciwstawne modele polityki handlowej: **wolny handel** i **protekcjonizm**."
+        },
+        {
+          "type": "definition",
+          "term": "Handel międzynarodowy, eksport, import, obroty",
+          "text": "**Handel międzynarodowy** to wymiana towarów i usług między podmiotami z różnych krajów. **Eksport** to sprzedaż za granicę (przynosi krajowi dewizy), **import** — zakup za granicą (dewizy wypływają), a suma obu to **obroty handlu zagranicznego**. O intensywności powiązań kraju ze światem najlepiej mówi nie sama wartość eksportu, lecz jej **relacja do PKB**: małe, otwarte gospodarki (Holandia, Belgia, Singapur) mają ten udział bardzo wysoki, wielkie i samowystarczalne (USA, Japonia, Brazylia) — znacznie niższy.",
+          "note": "Rozróżnij też **handel międzynarodowy** (wymiana w skali świata, ujęcie globalne) i **handel zagraniczny** (wymiana jednego konkretnego kraju z resztą świata). W poleceniach CKE oba pojęcia bywają używane precyzyjnie."
+        },
+        {
+          "type": "formula",
+          "title": "Saldo bilansu handlowego i wskaźnik pokrycia importu eksportem",
+          "expression": "S = E - I \\qquad\\qquad W = \\frac{E}{I} \\cdot 100\\%",
+          "variables": [
+            {
+              "symbol": "S",
+              "meaning": "saldo bilansu handlowego (dodatnie = nadwyżka, ujemne = deficyt)"
+            },
+            {
+              "symbol": "E",
+              "meaning": "wartość eksportu towarów"
+            },
+            {
+              "symbol": "I",
+              "meaning": "wartość importu towarów"
+            },
+            {
+              "symbol": "W",
+              "meaning": "wskaźnik pokrycia importu eksportem w procentach"
+            }
+          ],
+          "caption": "Interpretacja: $W > 100\\%$ oznacza nadwyżkę handlową (eksport przewyższa import), $W < 100\\%$ — deficyt. Wskaźnik pozwala porównywać kraje o różnej skali gospodarki, czego samo saldo w miliardach dolarów nie umożliwia."
+        },
+        {
+          "type": "layers",
+          "title": "Bilans płatniczy — co się w nim naprawdę mieści",
+          "caption": "Bilans handlowy to tylko jedna pozycja wewnątrz znacznie szerszego zestawienia. Rozłóż tę strukturę na czynniki, zanim odpowiesz na pytanie o „bilans” — od tego zależy poprawność odpowiedzi.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Rachunek bieżący (obroty bieżące)",
+              "range": "najważniejsza część",
+              "text": "Zawiera **bilans handlowy** (towary), **bilans usług** (transport, turystyka, usługi dla biznesu), **dochody pierwotne** (m.in. zyski korporacji transnarodowych transferowane za granicę) oraz **dochody wtórne** (przekazy pieniężne emigrantów, składki i dotacje unijne). Kraj może mieć deficyt w towarach i mimo to dodatni rachunek bieżący — tak działają np. gospodarki turystyczne.",
+              "tone": "water"
+            },
+            {
+              "name": "Rachunek kapitałowy",
+              "range": "niewielki udział",
+              "text": "Obejmuje transfery kapitałowe — w przypadku Polski przede wszystkim **środki unijne na inwestycje** — oraz obrót aktywami niefinansowymi, np. prawami i licencjami.",
+              "tone": "earth"
+            },
+            {
+              "name": "Rachunek finansowy",
+              "range": "przepływy kapitału",
+              "text": "Rejestruje **bezpośrednie inwestycje zagraniczne**, inwestycje portfelowe, kredyty i zmiany rezerw walutowych banku centralnego. To tutaj widać, czym kraj finansuje deficyt obrotów bieżących: napływem kapitału albo uszczuplaniem rezerw.",
+              "tone": "rock"
+            },
+            {
+              "name": "Saldo błędów i opuszczeń",
+              "range": "pozycja domykająca",
+              "text": "Techniczna korekta wyrównująca zestawienie. Bilans płatniczy z definicji **musi się bilansować** — każdej wypłacie odpowiada gdzieś zapis po drugiej stronie, a rozbieżności statystyczne trafiają właśnie tutaj.",
+              "tone": "neutral"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Terms of trade — warunki wymiany",
+          "expression": "ToT = \\frac{I_{ce}}{I_{ci}} \\cdot 100",
+          "variables": [
+            {
+              "symbol": "I_{ce}",
+              "meaning": "indeks cen towarów eksportowanych przez dany kraj"
+            },
+            {
+              "symbol": "I_{ci}",
+              "meaning": "indeks cen towarów importowanych przez dany kraj"
+            }
+          ],
+          "caption": "$ToT > 100$ oznacza **poprawę warunków wymiany**: za tę samą ilość wywiezionego towaru kraj może kupić więcej towarów z importu. $ToT < 100$ to **pogorszenie** — trzeba wywieźć więcej, by kupić tyle samo. Uwaga: to wskaźnik relacji **cen**, a nie ilości sprzedanych towarów."
+        },
+        {
+          "type": "table",
+          "title": "Struktura eksportu a warunki wymiany",
+          "caption": "Reguła jest wyraźna: im wyżej przetworzony eksport, tym stabilniejsze i korzystniejsze terms of trade. To jeden z głównych mechanizmów utrwalających różnice rozwojowe.",
+          "headers": [
+            "Typ gospodarki",
+            "Dominujący eksport",
+            "Zachowanie terms of trade",
+            "Przykłady"
+          ],
+          "rows": [
+            [
+              "Monokultura surowcowa",
+              "Jeden surowiec mineralny lub jedno płodozmienne dobro rolne",
+              "**Skrajnie niestabilne** — ceny surowców wahają się gwałtownie, a w długim okresie rosną wolniej niż ceny wyrobów przemysłowych",
+              "Zambia (miedź), Nigeria (ropa), Wybrzeże Kości Słoniowej (kakao)"
+            ],
+            [
+              "Gospodarka surowcowo-rolnicza",
+              "Kilka surowców i płodów rolnych",
+              "Niestabilne, ale dywersyfikacja łagodzi wahania cen pojedynczego towaru",
+              "Chile, Indonezja, Argentyna"
+            ],
+            [
+              "Gospodarka montażowo-przemysłowa",
+              "Wyroby przemysłowe montowane z importowanych komponentów",
+              "Umiarkowanie stabilne, ale marża niska — o wyniku decyduje **koszt komponentów z importu**",
+              "Wietnam, Meksyk, Bangladesz"
+            ],
+            [
+              "Gospodarka wysoko rozwinięta",
+              "Wyroby zaawansowane technologicznie, usługi, patenty i licencje",
+              "**Stabilne i korzystne** — ceny dóbr chronionych patentem i marką nie podlegają presji konkurencji cenowej",
+              "Niemcy, Japonia, Szwajcaria, USA"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Zambia i miedź — pułapka monokultury eksportowej",
+          "region": "Afryka Południowa — Pas Miedziowy (Copperbelt)",
+          "text": "Miedź i wyroby miedziane odpowiadają za **około 70% wartości zambijskiego eksportu**, a wydobycie skupia się w jednym regionie — Copperbelt. Dla budżetu i bilansu płatniczego oznacza to całkowite uzależnienie od jednej ceny notowanej na giełdzie w Londynie, na którą Zambia nie ma żadnego wpływu. Gdy koniunktura na miedź rośnie, wpływy dewizowe i dochody państwa gwałtownie się zwiększają; gdy cena spada, w tym samym tempie załamują się eksport, kurs waluty i możliwość obsługi długu zagranicznego — kraj musi wtedy wywieźć **więcej ton miedzi za mniej importowanych dóbr**, czyli doświadcza pogorszenia terms of trade. Dodatkowo znaczna część zysków kopalni należących do inwestorów zagranicznych wypływa z kraju jako dochody pierwotne w rachunku bieżącym. Wyjście z pułapki wymaga **dywersyfikacji eksportu** i przetwarzania surowca na miejscu, co zwiększa wartość dodaną pozostającą w kraju.",
+          "takeaway": "Monokultura eksportowa jest podwójnie niebezpieczna: uzależnia gospodarkę od **wahań ceny jednego towaru** i utrwala pozycję kraju na najsłabiej opłacanym ogniwie łańcucha wartości."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. **Bilans handlowy ≠ bilans płatniczy**: pierwszy obejmuje wyłącznie obrót **towarami**, drugi — całość rozliczeń kraju z zagranicą, łącznie z usługami, dochodami i przepływami kapitału. **Deficyt handlowy nie zawsze jest zły**: jeśli kraj importuje głównie maszyny i technologie, deficyt jest kosztem modernizacji i zapowiedzią przyszłego eksportu; groźny jest deficyt wynikający z importu dóbr konsumpcyjnych finansowanego długiem. **Terms of trade to relacja cen, nie ilości** — poprawa wskaźnika nie oznacza, że kraj sprzedał więcej, lecz że za jednostkę eksportu może kupić więcej importu."
+        },
+        {
+          "type": "compare",
+          "title": "Wolny handel a protekcjonizm",
+          "leftLabel": "Wolny handel (liberalizm)",
+          "rightLabel": "Protekcjonizm",
+          "rows": [
+            {
+              "aspect": "Założenie",
+              "left": "Każdy kraj powinien specjalizować się w tym, co wytwarza względnie najtaniej, i wymieniać się z resztą świata",
+              "right": "Państwo powinno **chronić własną produkcję** przed konkurencją zagraniczną, bo rynek sam nie zadba o interes narodowy"
+            },
+            {
+              "aspect": "Narzędzia",
+              "left": "Znoszenie ceł, umowy o wolnym handlu, wspólne rynki, arbitraż WTO",
+              "right": "**Cła**, kontyngenty, subsydia, normy techniczne, zamówienia publiczne zastrzeżone dla firm krajowych"
+            },
+            {
+              "aspect": "Skutki dla konsumenta",
+              "left": "Niższe ceny, szerszy wybór, dostęp do nowości technicznych",
+              "right": "**Wyższe ceny** — cło doliczane jest do ceny towaru, a osłabiona konkurencja pozwala firmom krajowym utrzymywać wysokie marże"
+            },
+            {
+              "aspect": "Skutki dla producenta krajowego",
+              "left": "Presja konkurencyjna wymusza innowacje, ale słabsze firmy upadają",
+              "right": "Ochrona daje czas na rozwój (argument **przemysłu raczkującego**), lecz utrwala nieefektywność, gdy trwa zbyt długo"
+            },
+            {
+              "aspect": "Skutki dla budżetu i zatrudnienia",
+              "left": "Utrata wpływów celnych, ale wzrost wpływów z rosnącej wymiany i zatrudnienia w eksporcie",
+              "right": "Wpływy z ceł i doraźna ochrona miejsc pracy, ale ryzyko **retorsji** — partnerzy odpowiadają własnymi cłami i cierpi eksport"
+            },
+            {
+              "aspect": "Typowe zastosowanie",
+              "left": "Kraje o silnej, konkurencyjnej gospodarce oraz ugrupowania integracyjne wewnątrz swojego obszaru",
+              "right": "Kraje broniące rolnictwa lub branż strategicznych oraz gospodarki wschodzące w fazie industrializacji"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Narzędzia polityki handlowej",
+          "caption": "Podział na bariery taryfowe i pozataryfowe jest kluczowy: cła są jawne i mierzalne, dlatego WTO potrafiła je skutecznie obniżyć — bariery pozataryfowe są trudniejsze do wykazania i dlatego dziś to one stanowią główną przeszkodę w handlu.",
+          "groups": [
+            {
+              "name": "Bariery taryfowe — cła",
+              "description": "Opłata pobierana przy przekroczeniu granicy celnej, doliczana do ceny towaru. Pełni funkcję **fiskalną** (dochód budżetu) i **ochronną** (podniesienie ceny importu ponad cenę wyrobu krajowego). Cło może być liczone od wartości (*ad valorem*) albo od jednostki masy czy ilości.",
+              "examples": [
+                "cło importowe — najczęstsze",
+                "cło eksportowe — rzadkie, hamuje wywóz deficytowego surowca",
+                "cło tranzytowe",
+                "cło antydumpingowe — odpowiedź na sprzedaż poniżej kosztów"
+              ]
+            },
+            {
+              "name": "Bariery ilościowe",
+              "description": "Bezpośrednie ograniczenie **wielkości obrotu**, niezależnie od ceny. Działają skuteczniej i szybciej niż cła, ale są jawnie sprzeczne z zasadami WTO, więc bywają zastępowane „dobrowolnymi” ograniczeniami eksportu.",
+              "examples": [
+                "kontyngent (kwota importowa)",
+                "licencje i pozwolenia na przywóz",
+                "embargo — całkowity zakaz obrotu z danym krajem",
+                "dobrowolne ograniczenia eksportu"
+              ]
+            },
+            {
+              "name": "Bariery techniczne, sanitarne i administracyjne",
+              "description": "Wymogi formalnie uzasadnione bezpieczeństwem lub ochroną zdrowia, ale w praktyce często **stosowane w celu utrudnienia dostępu** obcym towarom — kosztowne badania, atestacje i procedury odsiewają mniejszych dostawców.",
+              "examples": [
+                "normy techniczne i certyfikaty",
+                "wymogi sanitarne i fitosanitarne",
+                "przepisy dotyczące etykietowania i opakowań",
+                "przewlekłe procedury celne"
+              ]
+            },
+            {
+              "name": "Wsparcie własnych producentów",
+              "description": "Zamiast utrudniać import, państwo **obniża koszty eksporterowi krajowemu** — efekt dla konkurencji jest podobny, a formalnie nie ma tu bariery na granicy.",
+              "examples": [
+                "subsydia i dopłaty eksportowe",
+                "dopłaty bezpośrednie w rolnictwie",
+                "kredyty preferencyjne i gwarancje eksportowe",
+                "zamówienia publiczne zastrzeżone dla firm krajowych"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Światowa Organizacja Handlu (WTO)",
+          "text": "Organizacja powołana **1 stycznia 1995 r.** w miejsce działającego od 1947 r. układu **GATT**, z siedzibą w Genewie; zrzesza ponad 160 państw wytwarzających zdecydowaną większość światowego PKB. Jej zadaniem jest liberalizacja handlu i pilnowanie wspólnych reguł. Filary działania to **klauzula najwyższego uprzywilejowania** (ulga przyznana jednemu członkowi musi objąć wszystkich pozostałych), **zasada traktowania narodowego** (towar zagraniczny po ocleniu nie może być traktowany gorzej niż krajowy) oraz **mechanizm rozstrzygania sporów**, pozwalający poszkodowanemu państwu legalnie zastosować środki odwetowe.",
+          "note": "Rozpoczęta w 2001 r. **runda z Ad-Dauhy (Doha)** nie została zakończona — kraje rozwijające się domagają się ograniczenia subsydiów rolnych w krajach bogatych, te zaś szerszego otwarcia rynku usług. Impas w WTO tłumaczy, dlaczego liberalizacja przeniosła się do umów dwustronnych i regionalnych."
+        },
+        {
+          "type": "matching",
+          "title": "Bariery w handlu — rozpoznaj narzędzie",
+          "instruction": "Dopasuj nazwę instrumentu polityki handlowej do jego opisu.",
+          "pairs": [
+            {
+              "left": "Kontyngent",
+              "right": "Górny limit ilości lub wartości towaru, jaką wolno przywieźć w danym okresie"
+            },
+            {
+              "left": "Cło antydumpingowe",
+              "right": "Dodatkowa opłata nakładana, gdy zagraniczny dostawca sprzedaje towar poniżej kosztów wytworzenia"
+            },
+            {
+              "left": "Embargo",
+              "right": "Całkowity zakaz wymiany handlowej z określonym państwem, zwykle z przyczyn politycznych"
+            },
+            {
+              "left": "Subsydium eksportowe",
+              "right": "Dopłata dla producenta krajowego obniżająca cenę jego towaru na rynkach zagranicznych"
+            },
+            {
+              "left": "Bariera sanitarna",
+              "right": "Wymóg badań i atestów formalnie chroniący zdrowie, w praktyce utrudniający wejście obcym dostawcom"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Eksport pewnego kraju wyniósł 240 mld USD, a import 300 mld USD. Jak opisać jego sytuację handlową?",
+          "options": [
+            "Nadwyżka handlowa, wskaźnik pokrycia importu eksportem wynosi 125%",
+            "Deficyt handlowy w wysokości 60 mld USD, wskaźnik pokrycia importu eksportem wynosi 80%",
+            "Deficyt handlowy w wysokości 60 mld USD, wskaźnik pokrycia importu eksportem wynosi 125%",
+            "Bilans zrównoważony, bo obroty wynoszą 540 mld USD"
+          ],
+          "correctIndex": 1,
+          "explanation": "Saldo to $S = E - I = 240 - 300 = -60$ mld USD, czyli **deficyt**. Wskaźnik pokrycia: $W = \\frac{240}{300} \\cdot 100\\% = 80\\%$ — eksport pokrywa tylko cztery piąte wartości importu. Zwróć uwagę na kolejność w ułamku: w liczniku zawsze **eksport**. Odwrócenie ułamka daje 125% i jest najczęstszym błędem rachunkowym w tym typie zadania."
+        },
+        {
+          "type": "quiz",
+          "question": "Kraj eksportujący głównie kawę zauważył, że przy niezmienionej wielkości zbiorów i wywozu może kupić za granicą coraz mniej maszyn. Jak nazwać to zjawisko i jaka jest jego przyczyna?",
+          "options": [
+            "Deficyt bilansu płatniczego wywołany odpływem inwestycji portfelowych",
+            "Pogorszenie terms of trade — ceny eksportowanego surowca rolnego rosną wolniej niż ceny importowanych wyrobów przemysłowych",
+            "Wzrost protekcjonizmu, ponieważ partnerzy handlowi podnieśli cła na kawę",
+            "Poprawa terms of trade, ponieważ kraj utrzymał wielkość eksportu na stałym poziomie"
+          ],
+          "correctIndex": 1,
+          "explanation": "To klasyczne **pogorszenie warunków wymiany**: $ToT < 100$, bo indeks cen eksportu rośnie wolniej niż indeks cen importu. Mechanizm jest typowy dla krajów o eksporcie surowcowym — ceny surowców i płodów rolnych podlegają silnej konkurencji i wahaniom, natomiast ceny maszyn, leków czy licencji są chronione technologią, patentem i marką. W efekcie za tę samą tonę kawy kraj kupuje z roku na rok mniej dóbr przemysłowych, mimo że **wielkość eksportu wcale nie spadła**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Cztery rzeczy, które w zadaniach o handlu decydują o punktach. **Po pierwsze** — przy obliczeniach zawsze zapisz działanie i jednostkę; wskaźnik pokrycia to eksport przez import razy 100%, nigdy odwrotnie. **Po drugie** — oceniając saldo, dodaj **strukturę wymiany**: deficyt spowodowany importem maszyn oceniaj inaczej niż deficyt z importu dóbr konsumpcyjnych. **Po trzecie** — w zadaniach o protekcjonizmie podawaj skutki dla **trzech różnych podmiotów**: konsumenta (wyższa cena), producenta krajowego (ochrona, ale i spadek presji na innowacje) oraz eksportera (ryzyko retorsji). **Po czwarte** — nazwy narzędzi używaj precyzyjnie: cło to opłata, kontyngent to limit ilościowy, embargo to zakaz; zamiana tych pojęć kosztuje punkt nawet przy poprawnym rozumowaniu."
         }
       ]
     }

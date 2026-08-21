@@ -797,6 +797,988 @@
           "text": "W zadaniach o integracji CKE często podaje opis ugrupowania i każe je rozpoznać — kluczem jest zwrot wskazujący **szczebel drabiny**: „wspólna taryfa celna” to unia celna, „swobodny przepływ osób i kapitału” to wspólny rynek, „wspólna polityka pieniężna” to unia walutowa. Przy pytaniach o skutki członkostwa Polski w UE pisz konkretnie: fundusze strukturalne i spójności, dostęp do jednolitego rynku, swoboda podejmowania pracy oraz odpływ wykwalifikowanych pracowników (**drenaż mózgów**) jako skutek negatywny."
         }
       ]
+    },
+    {
+      "slug": "mierniki-ekonomiczne-pkb-pnb-i-struktura-zatrudnienia",
+      "title": "Ekonomiczne mierniki rozwoju: PKB, PNB, parytet siły nabywczej i struktura zatrudnienia",
+      "summary": "Jak mierzy się wielkość gospodarki, czym PKB różni się od PNB, po co przelicza się dochód według parytetu siły nabywczej i dlaczego udział trzech sektorów w zatrudnieniu zdradza poziom rozwoju kraju.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Zdanie \"Chiny są bogatsze od Szwajcarii\" jest jednocześnie prawdziwe i fałszywe — wszystko zależy od tego, którym miernikiem się posłużymy. Gospodarka Chin jest kilkanaście razy większa od szwajcarskiej, ale ta przypadająca na jednego mieszkańca jest kilkakrotnie mniejsza. Dlatego na maturze nigdy nie wystarczy powiedzieć \"PKB\": trzeba wiedzieć, czy chodzi o **wielkość całej gospodarki**, czy o **dochód na mieszkańca**, czy liczymy **na terytorium** czy **dla obywateli** i czy przeliczamy po kursie walutowym, czy według **parytetu siły nabywczej**. Ta lekcja porządkuje mierniki ekonomiczne; mierniki społeczne (HDI, wskaźnik Giniego) to temat kolejnej."
+        },
+        {
+          "type": "definition",
+          "term": "Produkt krajowy brutto (PKB)",
+          "text": "Łączna wartość rynkowa wszystkich **dóbr i usług finalnych** wytworzonych na **terytorium** danego państwa w ciągu roku, niezależnie od tego, kto jest właścicielem czynników produkcji. Kluczowe słowo to *finalnych*: liczy się wartość produktu gotowego, żeby nie policzyć dwa razy tej samej stali — raz w hucie, raz w samochodzie. Formalnie sumuje się **wartość dodaną** wytworzoną na każdym etapie produkcji.",
+          "note": "Kryterium PKB jest **geograficzne** — liczy się miejsce wytworzenia, a nie narodowość właściciela fabryki."
+        },
+        {
+          "type": "definition",
+          "term": "Produkt narodowy brutto (PNB), dziś częściej: dochód narodowy brutto (DNB)",
+          "text": "Łączna wartość dóbr i usług wytworzonych przez **podmioty krajowe** (obywateli i firmy danego państwa) w ciągu roku, niezależnie od tego, gdzie na świecie zostały wytworzone. Otrzymujemy go, dodając do PKB dochody uzyskane przez podmioty krajowe za granicą i odejmując dochody uzyskane w kraju przez podmioty zagraniczne — czyli uwzględniając **saldo dochodów z zagranicy**.",
+          "note": "Kryterium PNB jest **własnościowe** — liczy się to, do kogo dochód ostatecznie trafia."
+        },
+        {
+          "type": "compare",
+          "title": "PKB a PNB (DNB) — dwa różne pytania o tę samą gospodarkę",
+          "leftLabel": "PKB — produkt krajowy brutto",
+          "rightLabel": "PNB / DNB — produkt (dochód) narodowy brutto",
+          "rows": [
+            {
+              "aspect": "Odpowiada na pytanie",
+              "left": "Ile wytworzono **na terytorium** kraju?",
+              "right": "Ile zarobili **obywatele i firmy** danego kraju, gdziekolwiek pracowali?"
+            },
+            {
+              "aspect": "Zysk niemieckiej fabryki działającej w Polsce",
+              "left": "Wlicza się do PKB Polski — powstał w Polsce",
+              "right": "Wlicza się do PNB Niemiec — należy do niemieckiego właściciela"
+            },
+            {
+              "aspect": "Wynagrodzenie Polaka pracującego w Niemczech",
+              "left": "Wlicza się do PKB Niemiec",
+              "right": "Wlicza się do PNB Polski"
+            },
+            {
+              "aspect": "Kiedy jest wyższy",
+              "left": "Gdy w kraju działa dużo kapitału zagranicznego transferującego zyski za granicę — **Polska**, **Czechy**, **Węgry**, skrajnie **Irlandia**",
+              "right": "Gdy wielu obywateli pracuje za granicą i przesyła pieniądze do kraju (**transfery emigrantów**) — **Filipiny**, **Nepal**, **Tadżykistan**, kraje Ameryki Środkowej"
+            },
+            {
+              "aspect": "Do czego lepiej służy",
+              "left": "Ocena **aktywności gospodarczej** prowadzonej na obszarze kraju",
+              "right": "Ocena **zamożności mieszkańców** i realnych dochodów społeczeństwa"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Dochód na mieszkańca",
+          "expression": "\\text{PKB per capita} = \\frac{\\text{PKB}}{L}",
+          "variables": [
+            {
+              "symbol": "PKB",
+              "meaning": "produkt krajowy brutto kraju w danym roku (w USD lub w walucie krajowej)"
+            },
+            {
+              "symbol": "L",
+              "meaning": "liczba ludności kraju w tym samym roku"
+            }
+          ],
+          "caption": "Ten sam zabieg stosuje się do PNB. Dopiero przeliczenie **na mieszkańca** pozwala porównywać kraje o różnej wielkości: Indie mają PKB kilkakrotnie większe od Szwajcarii, ale PKB per capita kilkadziesiąt razy niższe."
+        },
+        {
+          "type": "definition",
+          "term": "Parytet siły nabywczej (PPP, ang. purchasing power parity)",
+          "text": "Sposób przeliczania dochodu, który uwzględnia **różnice poziomu cen** między krajami. Zamiast dzielić PKB przez bieżący kurs walutowy, przelicza się go tak, by za daną kwotę można było kupić w każdym kraju taki sam koszyk dóbr i usług; wynik podaje się w **dolarach międzynarodowych**. Ponieważ w krajach uboższych usługi, żywność i mieszkania są tańsze niż w USA, ich PKB per capita według PPP jest **wyższy** niż nominalny; w krajach o wysokim poziomie cen (Szwajcaria, Norwegia, Dania) — **niższy**.",
+          "note": "Kurs walutowy kształtują głównie towary będące przedmiotem handlu międzynarodowego, a fryzjera, czynszu czy przejazdu autobusem nie da się wyeksportować — stąd rozjazd między wartością nominalną a PPP."
+        },
+        {
+          "type": "table",
+          "title": "PKB na mieszkańca: nominalnie i według parytetu siły nabywczej",
+          "caption": "Dane orientacyjne za 2023 r. (Bank Światowy), zaokrąglone. Wartości nominalne przeliczono po kursie walutowym, wartości PPP podano w dolarach międzynarodowych.",
+          "headers": [
+            "Kraj",
+            "PKB per capita nominalnie (USD)",
+            "PKB per capita wg PPP (USD międz.)",
+            "Wniosek"
+          ],
+          "rows": [
+            [
+              "Szwajcaria",
+              "ok. 100 000",
+              "ok. 84 000",
+              "PPP niższe — bardzo wysoki poziom cen krajowych"
+            ],
+            [
+              "Stany Zjednoczone",
+              "ok. 82 000",
+              "ok. 82 000",
+              "Kraj odniesienia — obie wartości praktycznie równe"
+            ],
+            [
+              "Niemcy",
+              "ok. 53 000",
+              "ok. 66 000",
+              "PPP wyższe — ceny niższe niż w USA"
+            ],
+            [
+              "Polska",
+              "ok. 22 000",
+              "ok. 45 000",
+              "PPP ponad dwukrotnie wyższe — dystans do Zachodu mniejszy, niż sugeruje kurs walutowy"
+            ],
+            [
+              "Indie",
+              "ok. 2 500",
+              "ok. 9 000",
+              "PPP ok. 3,5 razy wyższe — bardzo niski poziom cen"
+            ],
+            [
+              "Etiopia",
+              "ok. 1 300",
+              "ok. 3 500",
+              "PPP prawie 3 razy wyższe, ale kraj i tak pozostaje wśród najuboższych"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pomyłki, które kosztują punkty najczęściej. **(1)** PKB (wielkość gospodarki) to nie to samo co PKB per capita (zamożność statystycznego mieszkańca) — Indie mają ogromne PKB i niskie PKB per capita, Luksemburg odwrotnie. **(2)** Wzrost PKB (o ile procent urosła gospodarka) to nie to samo co poziom PKB — kraj o najszybszym wzroście może wciąż być bardzo ubogi. **(3)** PKB i PNB nie są synonimami: jeśli w zadaniu pojawia się kapitał zagraniczny albo emigracja zarobkowa, prawie na pewno chodzi o różnicę między nimi."
+        },
+        {
+          "type": "classification",
+          "title": "Sektory gospodarki — podstawa analizy struktury zatrudnienia",
+          "caption": "Na maturze najczęściej stosuje się podział trójsektorowy; sektor IV wydziela się z usług.",
+          "groups": [
+            {
+              "name": "Sektor I — pierwotny",
+              "description": "Pozyskiwanie surowców i wytwarzanie żywności bezpośrednio ze środowiska. Wysoki udział w zatrudnieniu (powyżej ok. 40%) świadczy o **niskim poziomie rozwoju**: przy niskiej wydajności pracy trzeba zatrudnić bardzo wielu ludzi, by wyżywić społeczeństwo.",
+              "examples": [
+                "rolnictwo",
+                "leśnictwo",
+                "rybactwo",
+                "górnictwo (w części klasyfikacji)"
+              ]
+            },
+            {
+              "name": "Sektor II — wtórny",
+              "description": "Przetwarzanie surowców w wyroby gotowe. Jego udział rośnie w fazie **industrializacji**, a w krajach najwyżej rozwiniętych spada wskutek automatyzacji i przenoszenia produkcji do państw o tańszej sile roboczej (**dezindustrializacja**).",
+              "examples": [
+                "przemysł przetwórczy",
+                "budownictwo",
+                "energetyka"
+              ]
+            },
+            {
+              "name": "Sektor III — usługi",
+              "description": "Zaspokajanie potrzeb bez wytwarzania dóbr materialnych. Dominuje w krajach wysoko rozwiniętych (65–80% zatrudnionych), bo rosnące dochody kierują popyt ku usługom, a rolnictwo i przemysł potrzebują coraz mniej rąk do pracy.",
+              "examples": [
+                "handel",
+                "transport",
+                "turystyka",
+                "edukacja",
+                "ochrona zdrowia",
+                "administracja"
+              ]
+            },
+            {
+              "name": "Sektor IV — usługi wyspecjalizowane",
+              "description": "Wydzielona z usług część oparta na wiedzy i informacji. To ona decyduje dziś o **przewadze konkurencyjnej** gospodarek: kraj, który jedynie montuje cudze wynalazki, zatrzymuje niewielką część wartości dodanej.",
+              "examples": [
+                "badania naukowe (B+R)",
+                "informatyka",
+                "finanse i ubezpieczenia",
+                "doradztwo",
+                "szkolnictwo wyższe"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Model trzech sektorów (Clarka–Fishera): jak zmienia się struktura zatrudnienia w miarę rozwoju",
+          "caption": "Każdy kraj przechodzi przez kolejne fazy — dlatego ze struktury zatrudnienia można odczytać poziom rozwoju gospodarczego.",
+          "steps": [
+            {
+              "title": "Faza przedindustrialna — dominacja sektora I",
+              "text": "Rolnictwo jest **ekstensywne** i mało wydajne, więc zatrudnia 60–80% pracujących, a i tak ledwie zaspokaja potrzeby żywnościowe. Przemysł i usługi są szczątkowe, bo brakuje nadwyżki żywności i kapitału, które pozwoliłyby zwolnić ludzi z pracy na roli. Dziś tak wygląda gospodarka m.in. **Burundi**, **Nigru** i **Etiopii**."
+            },
+            {
+              "title": "Mechanizm przejścia — wzrost wydajności w rolnictwie",
+              "text": "Mechanizacja, nawozy i wydajniejsze odmiany sprawiają, że ta sama produkcja wymaga coraz mniej rąk. Powstaje **nadwyżka siły roboczej**, która odpływa ze wsi do miast — to jest właśnie mechanizm napędzający urbanizację i uprzemysłowienie. Bez rewolucji agrarnej nie ma industrializacji."
+            },
+            {
+              "title": "Faza industrialna — maksimum sektora II",
+              "text": "Fabryki wchłaniają ludzi zwolnionych z rolnictwa. Udział sektora II w zatrudnieniu osiąga szczyt (ok. 30–45%), szybko rośnie PKB per capita i przyspiesza urbanizacja. Współcześnie tę fazę przechodzą m.in. **Wietnam**, **Bangladesz** i **Indonezja**."
+            },
+            {
+              "title": "Faza postindustrialna — dominacja sektorów III i IV",
+              "text": "Automatyzacja i przenoszenie produkcji za granicę zmniejszają zatrudnienie w przemyśle, choć jego **produkcja** nadal rośnie — spada liczba pracowników, nie wielkość wytwarzania. Zamożniejsze społeczeństwo zgłasza popyt na usługi: zdrowie, edukację, turystykę, finanse. Usługi przekraczają 70% zatrudnionych, jak w **Niemczech**, **Francji** czy **USA**."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura zatrudnienia według sektorów w wybranych krajach",
+          "caption": "Szacunki Międzynarodowej Organizacji Pracy (ILO), ok. 2022 r., udziały zaokrąglone do pełnych procent. Kraje uszeregowano od najniższego do najwyższego poziomu rozwoju — widać systematyczne przesuwanie się zatrudnienia z sektora I do III.",
+          "labels": [
+            "Etiopia",
+            "Indie",
+            "Polska",
+            "Niemcy",
+            "USA"
+          ],
+          "unit": "%",
+          "series": [
+            {
+              "name": "Sektor I (rolnictwo)",
+              "values": [
+                63,
+                44,
+                8,
+                1,
+                2
+              ]
+            },
+            {
+              "name": "Sektor II (przemysł)",
+              "values": [
+                10,
+                25,
+                32,
+                27,
+                19
+              ]
+            },
+            {
+              "name": "Sektor III (usługi)",
+              "values": [
+                27,
+                31,
+                60,
+                72,
+                79
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do jego znaczenia",
+          "instruction": "Połącz każdy miernik lub sektor z właściwym opisem.",
+          "pairs": [
+            {
+              "left": "PKB",
+              "right": "Wartość dóbr i usług finalnych wytworzonych na terytorium kraju"
+            },
+            {
+              "left": "PNB (DNB)",
+              "right": "Dochód wypracowany przez podmioty krajowe, także poza granicami państwa"
+            },
+            {
+              "left": "PPP",
+              "right": "Przeliczenie dochodu uwzględniające różnice poziomu cen między krajami"
+            },
+            {
+              "left": "Sektor I",
+              "right": "Rolnictwo, leśnictwo i rybactwo"
+            },
+            {
+              "left": "Sektor IV",
+              "right": "Badania naukowe, informatyka i finanse — usługi oparte na wiedzy"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W Polsce PKB jest od lat wyraźnie wyższy niż PNB (DNB). Co jest główną przyczyną tej różnicy?",
+          "options": [
+            "Polacy pracujący za granicą przesyłają do kraju duże kwoty pieniędzy",
+            "Przedsiębiorstwa z kapitałem zagranicznym wytwarzają w Polsce dochód, który następnie transferują do central za granicą",
+            "Polska notuje ujemne saldo w handlu zagranicznym",
+            "Znaczna część gospodarki Polski funkcjonuje w szarej strefie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zyski zagranicznych firm powstają **na terytorium Polski**, więc wchodzą do polskiego PKB, ale należą do właścicieli zagranicznych, więc do polskiego PNB już nie. Pierwsza odpowiedź opisuje mechanizm działający **odwrotnie** — transfery emigrantów podnoszą PNB ponad PKB (tak jest na Filipinach). Saldo handlu zagranicznego i szara strefa nie decydują o relacji PKB–PNB."
+        },
+        {
+          "type": "quiz",
+          "question": "PKB per capita Indii liczony według parytetu siły nabywczej jest ok. 3,5 raza wyższy od nominalnego. Dlaczego?",
+          "options": [
+            "Ponieważ Indie mają bardzo dużą liczbę ludności, co zawyża przelicznik PPP",
+            "Ponieważ rupia indyjska jest walutą silniejszą od dolara amerykańskiego",
+            "Ponieważ poziom cen dóbr i usług nietransferowalnych (usług, żywności, mieszkań) jest w Indiach znacznie niższy niż w USA, więc za tę samą kwotę można kupić więcej",
+            "Ponieważ przy przeliczaniu na PPP dolicza się dochody Hindusów pracujących za granicą"
+          ],
+          "correctIndex": 2,
+          "explanation": "PPP koryguje wyłącznie **różnicę poziomu cen**. Kurs walutowy kształtują głównie towary będące przedmiotem wymiany międzynarodowej, a usługi i czynsze — najtańsze w krajach o niskich płacach — do niego nie wchodzą. Liczba ludności jest już uwzględniona w dzieleniu \"per capita\", a doliczanie dochodów z zagranicy prowadzi od PKB do PNB, a nie do PPP."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Na maturze te mierniki pojawiają się w trzech typach zadań. **Obliczeniowe**: podane PKB i liczba ludności — dziel i pilnuj jednostek oraz rzędów wielkości (mld USD ÷ mln osób = tys. USD na osobę). **Interpretacyjne**: wykres trójkątny lub słupkowy struktury zatrudnienia — z wysokiego udziału sektora I wnioskuj o niskim poziomie rozwoju, z dominacji sektora III o gospodarce postindustrialnej. **Wyjaśniające**: uzasadnij, dlaczego PKB per capita według PPP lepiej oddaje poziom życia niż wartość nominalna — w odpowiedzi musi paść argument o **różnicach poziomu cen**, a nie ogólnik \"bo jest dokładniejszy\"."
+        }
+      ]
+    },
+    {
+      "slug": "hdi-wskaznik-giniego-i-spoleczne-mierniki-rozwoju",
+      "title": "Społeczne mierniki rozwoju: HDI, wskaźnik Giniego i wskaźniki uzupełniające",
+      "summary": "Dlaczego sam dochód nie wystarcza do oceny rozwoju, z czego zbudowany jest wskaźnik rozwoju społecznego HDI, jak wskaźnik Giniego i krzywa Lorenza opisują nierówności dochodowe oraz co mierzą IHDI, GII i MPI.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gwinea Równikowa ma dzięki ropie naftowej PKB per capita porównywalne z krajami Europy Środkowej, a mimo to przeciętny mieszkaniec żyje tam krócej niż 62 lata i często nie kończy szkoły podstawowej. To najkrótszy dowód na to, że **dochód i rozwój to nie jest to samo**: pieniądze mogą trafiać do wąskiej grupy albo za granicę, zamiast zamieniać się w dłuższe życie i lepszą edukację. Dlatego ONZ zbudowała mierniki, które pytają nie \"ile kraj wytwarza\", lecz **\"jak długo, jak zdrowo i jak świadomie żyją jego mieszkańcy\"** — oraz jak równo dzielą się owocami wzrostu."
+        },
+        {
+          "type": "definition",
+          "term": "Wskaźnik rozwoju społecznego (HDI, ang. Human Development Index)",
+          "text": "Syntetyczny miernik publikowany od 1990 r. przez **UNDP** (Program Narodów Zjednoczonych ds. Rozwoju) w corocznym *Raporcie o rozwoju społecznym*. Przyjmuje wartości od **0 do 1** (im bliżej 1, tym wyżej rozwinięty kraj) i łączy trzy wymiary rozwoju: **zdrowie (długie życie)**, **wiedzę** i **godziwy poziom życia**. Jego siła polega na tym, że dochód traktuje jedynie jako **środek** do rozwoju człowieka, a nie jako jego cel.",
+          "note": "HDI jest liczbą niemianowaną z przedziału 0–1 — nie podaje się go w procentach ani w dolarach."
+        },
+        {
+          "type": "layers",
+          "title": "Trzy wymiary HDI i mierzące je zmienne",
+          "caption": "Każdy wymiar ma tę samą wagę — dlatego kraj bogaty, ale z krótkim trwaniem życia i słabą edukacją, nie osiągnie wysokiego HDI.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Zdrowie — długie i zdrowe życie",
+              "range": "oczekiwana długość życia w chwili urodzenia (lata)",
+              "text": "Jedna zmienna, która streszcza jakość wyżywienia, dostęp do wody pitnej, opiekę medyczną i bezpieczeństwo. Rośnie najszybciej tam, gdzie spada **umieralność niemowląt** — dlatego postęp w tym wymiarze jest tani i szybki nawet w krajach ubogich (szczepienia, kanalizacja, sole nawadniające).",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Wiedza — dostęp do edukacji",
+              "range": "średnia liczba lat nauki dorosłych + oczekiwana liczba lat nauki dzieci",
+              "text": "Dwie zmienne uśrednia się do jednego indeksu. Pierwsza opisuje **stan obecny** (ile lat nauki ma za sobą przeciętny dorosły), druga — **kierunek zmiany** (ile lat nauki czeka dziecko rozpoczynające edukację). Rozjazd między nimi zdradza kraj, który dopiero niedawno rozbudował system szkolny.",
+              "tone": "sky"
+            },
+            {
+              "name": "Dochód — godziwy poziom życia",
+              "range": "DNB (PNB) na mieszkańca według PPP",
+              "text": "Do obliczeń bierze się **logarytm** dochodu, a nie samą kwotę. To celowe: dodatkowe 1000 dolarów zmienia życie mieszkańca Czadu ogromnie, a mieszkańca Norwegii prawie wcale (**malejąca użyteczność krańcowa dochodu**). Dzięki logarytmowi bardzo bogate kraje nie odrywają się od reszty skali.",
+              "tone": "earth"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Indeks cząstkowy — jak sprowadza się lata i dolary do skali 0–1",
+          "expression": "I = \\frac{x - x_{min}}{x_{max} - x_{min}}",
+          "variables": [
+            {
+              "symbol": "x",
+              "meaning": "rzeczywista wartość zmiennej w danym kraju (np. oczekiwana długość życia)"
+            },
+            {
+              "symbol": "x_{min}",
+              "meaning": "przyjęte przez UNDP minimum skali (dla długości życia — 20 lat)"
+            },
+            {
+              "symbol": "x_{max}",
+              "meaning": "przyjęte maksimum skali (dla długości życia — 85 lat)"
+            }
+          ],
+          "caption": "Normalizacja pozwala dodać do siebie wielkości mierzone w zupełnie różnych jednostkach — latach, latach nauki i dolarach. Przykład: przy oczekiwanej długości życia 78 lat indeks zdrowia wynosi $\\frac{78-20}{85-20} \\approx 0{,}89$."
+        },
+        {
+          "type": "formula",
+          "title": "Złożenie trzech wymiarów w jeden wskaźnik",
+          "expression": "\\text{HDI} = \\sqrt[3]{I_{zdrowia} \\cdot I_{edukacji} \\cdot I_{dochodu}}",
+          "variables": [
+            {
+              "symbol": "I_{zdrowia}",
+              "meaning": "indeks oczekiwanej długości życia"
+            },
+            {
+              "symbol": "I_{edukacji}",
+              "meaning": "indeks edukacji (średnia dwóch zmiennych oświatowych)"
+            },
+            {
+              "symbol": "I_{dochodu}",
+              "meaning": "indeks dochodu, liczony z logarytmu DNB per capita wg PPP"
+            }
+          ],
+          "caption": "Od 2010 r. UNDP stosuje **średnią geometryczną**, a nie arytmetyczną. Powód jest merytoryczny: przy średniej geometrycznej słaby wynik w jednym wymiarze **nie da się w pełni zrekompensować** świetnym wynikiem w innym — kraj bogaty, ale z fatalną edukacją, wyraźnie traci na wskaźniku. Gdy którykolwiek indeks cząstkowy dąży do zera, całe HDI też dąży do zera."
+        },
+        {
+          "type": "table",
+          "title": "Klasy krajów według HDI",
+          "caption": "Progi stosowane przez UNDP; wartości przykładowe za 2022 r. (Raport o rozwoju społecznym 2023/2024).",
+          "headers": [
+            "Klasa",
+            "Zakres HDI",
+            "Przykłady",
+            "Typowa charakterystyka"
+          ],
+          "rows": [
+            [
+              "Bardzo wysoki",
+              "0,800 i więcej",
+              "Szwajcaria 0,967; Norwegia 0,966; Polska 0,881",
+              "Długość życia powyżej 78 lat, powszechne wykształcenie średnie, dominacja usług"
+            ],
+            [
+              "Wysoki",
+              "0,700–0,799",
+              "Chiny 0,788; Brazylia 0,760",
+              "Kraje szybko doganiające, silny przemysł, rosnące miasta, duże kontrasty wewnętrzne"
+            ],
+            [
+              "Średni",
+              "0,550–0,699",
+              "Indie 0,644; Bangladesz 0,670; Kenia 0,601",
+              "Wciąż wysoki udział rolnictwa, edukacja powszechna, ale krótka; duże zróżnicowanie regionalne"
+            ],
+            [
+              "Niski",
+              "poniżej 0,550",
+              "Niger 0,394; Czad 0,394; Somalia 0,380",
+              "Głównie Afryka Subsaharyjska, wysoka umieralność, konflikty, zwykle także status LDC"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**HDI to średnia — i to jest jego największa słabość.** Kraj może mieć przyzwoite HDI, a jednocześnie ogromne różnice między regionami, płciami czy grupami etnicznymi; średnia je zamazuje. Dlatego UNDP liczy dodatkowo **IHDI** (HDI skorygowany o nierówności): im większe rozwarstwienie, tym mocniej IHDI spada poniżej HDI — w Norwegii różnica to kilka procent, w wielu krajach Afryki i Ameryki Łacińskiej ponad 20%. Pamiętaj też, że HDI **nie uwzględnia** stanu środowiska, bezpieczeństwa ani swobód politycznych, więc nie jest miarą \"szczęścia\" ani jakości rządzenia."
+        },
+        {
+          "type": "definition",
+          "term": "Współczynnik (wskaźnik) Giniego",
+          "text": "Miara **nierówności rozkładu dochodów** w społeczeństwie, przyjmująca wartości od **0** (idealna równość — każdy zarabia tyle samo) do **1**, czyli 100% (skrajna nierówność — cały dochód trafia do jednej osoby). Oblicza się go z **krzywej Lorenza** jako stosunek pola między przekątną idealnej równości a krzywą do całego pola pod przekątną. Uwaga: wskaźnik mówi wyłącznie o **podziale** dochodu, a nie o jego wysokości — kraj ubogi i kraj zamożny mogą mieć identyczny współczynnik Giniego.",
+          "note": "Podawany bywa zarówno w skali 0–1 (np. 0,29), jak i 0–100 (np. 29) — sens jest ten sam."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Krzywa Lorenza — jak odczytać nierówność z wykresu",
+          "caption": "Oś pozioma: skumulowany odsetek ludności uszeregowanej od najuboższych. Oś pionowa: skumulowany odsetek dochodu. Im bardziej krzywa rzeczywista odchyla się od przekątnej, tym większa nierówność — pole między liniami, odniesione do pola pod przekątną, daje właśnie współczynnik Giniego. Dane przykładowe.",
+          "labels": [
+            "0%",
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "90%",
+            "100%"
+          ],
+          "unit": "% dochodu",
+          "series": [
+            {
+              "name": "Idealna równość",
+              "values": [
+                0,
+                10,
+                20,
+                30,
+                40,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100
+              ]
+            },
+            {
+              "name": "Rozkład rzeczywisty",
+              "values": [
+                0,
+                2,
+                5,
+                9,
+                14,
+                20,
+                28,
+                38,
+                51,
+                68,
+                100
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Współczynnik Giniego w wybranych krajach (skala 0–100)",
+          "caption": "Dane orientacyjne Banku Światowego z lat ok. 2018–2021. Najniższe wartości notują kraje Europy Środkowej i Skandynawii z rozbudowaną redystrybucją podatkową, najwyższe — kraje o dziedzictwie skrajnie nierównego dostępu do ziemi i wykształcenia.",
+          "labels": [
+            "Słowacja",
+            "Czechy",
+            "Polska",
+            "Niemcy",
+            "USA",
+            "Brazylia",
+            "RPA"
+          ],
+          "unit": "pkt",
+          "series": [
+            {
+              "name": "Współczynnik Giniego",
+              "values": [
+                24,
+                26,
+                29,
+                32,
+                41,
+                52,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Wskaźniki uzupełniające — kiedy HDI to za mało",
+          "caption": "Wszystkie publikuje UNDP; każdy odpowiada na inne pytanie o rozwój.",
+          "groups": [
+            {
+              "name": "IHDI — HDI skorygowany o nierówności",
+              "description": "Obniża wartość HDI proporcjonalnie do skali nierówności w każdym z trzech wymiarów. **Różnica HDI − IHDI** to gotowa miara \"straty rozwojowej\" spowodowanej rozwarstwieniem społecznym.",
+              "examples": [
+                "duża strata: Brazylia, RPA, Indie",
+                "mała strata: Norwegia, Czechy, Słowenia"
+              ]
+            },
+            {
+              "name": "GII — wskaźnik nierówności płci",
+              "description": "Łączy umieralność okołoporodową, odsetek nastoletnich matek, udział kobiet w parlamencie, wykształcenie średnie kobiet i ich aktywność zawodową. Tu **im niższa wartość, tym lepiej** — odwrotnie niż w HDI.",
+              "examples": [
+                "najniższy: Dania, Norwegia, Szwajcaria",
+                "najwyższy: Jemen, Nigeria, Czad"
+              ]
+            },
+            {
+              "name": "MPI — wielowymiarowy wskaźnik ubóstwa",
+              "description": "Zamiast pytać o dochód, sprawdza faktyczne **deprywacje** gospodarstwa domowego: brak dostępu do wody, elektryczności, kanalizacji, paliwa do gotowania, lat nauki dzieci, niedożywienie. Pokazuje ubóstwo, którego próg dochodowy nie wychwytuje.",
+              "examples": [
+                "Afryka Subsaharyjska",
+                "Azja Południowa"
+              ]
+            },
+            {
+              "name": "Ubóstwo skrajne (próg Banku Światowego)",
+              "description": "Odsetek ludności żyjącej poniżej ustalonej kwoty dziennie liczonej według PPP (od 2022 r. próg to 2,15 USD dziennie). Prosty, porównywalny miernik, który pozwala śledzić globalny postęp — w skali świata odsetek ten spadł z ok. 38% w 1990 r. do niecałych 10% obecnie.",
+              "examples": [
+                "największy spadek: Chiny, Wietnam",
+                "koncentracja obecnie: Afryka Subsaharyjska"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uszereguj kraje od najwyższego do najniższego HDI",
+          "instruction": "Ustaw państwa w kolejności malejącej wartości wskaźnika rozwoju społecznego (dane za 2022 r.).",
+          "items": [
+            "Norwegia (0,966)",
+            "Polska (0,881)",
+            "Chiny (0,788)",
+            "Indie (0,644)",
+            "Niger (0,394)"
+          ],
+          "explanation": "Kolejność odpowiada klasom HDI: dwa pierwsze kraje należą do grupy o bardzo wysokim rozwoju, Chiny do wysokiego, Indie do średniego, a Niger — z najkrótszym trwaniem życia i najniższą liczbą lat nauki na świecie — do niskiego."
+        },
+        {
+          "type": "quiz",
+          "question": "Kraj A i kraj B mają niemal identyczne PKB per capita według PPP, ale HDI kraju A wynosi 0,88, a kraju B — 0,62. Co najlepiej wyjaśnia tę różnicę?",
+          "options": [
+            "Kraj A ma znacznie mniejszą liczbę ludności niż kraj B",
+            "W kraju A dochód jest w większym stopniu przeznaczany na ochronę zdrowia i edukację, dzięki czemu jego mieszkańcy żyją dłużej i dłużej się uczą",
+            "Kraj A ma wyższy współczynnik Giniego niż kraj B",
+            "Kraj B eksportuje więcej surowców mineralnych niż kraj A"
+          ],
+          "correctIndex": 1,
+          "explanation": "Skoro wymiar dochodowy obu krajów jest taki sam, cała różnica musi pochodzić z pozostałych dwóch wymiarów: **zdrowia** i **edukacji**. To typowa sytuacja państw naftowych — wysoki dochód nie przekłada się na rozwój człowieka, jeśli nie zostanie zainwestowany w szpitale i szkoły. Liczba ludności jest już uwzględniona w przeliczeniu per capita, a wysoki Gini obniżałby raczej IHDI niż samo HDI."
+        },
+        {
+          "type": "quiz",
+          "question": "W kraju X współczynnik Giniego wynosi 0,25, a w kraju Y — 0,60. Które stwierdzenie jest poprawne?",
+          "options": [
+            "Kraj X jest zamożniejszy od kraju Y",
+            "W kraju Y dochody są rozdzielone bardziej równomiernie niż w kraju X",
+            "W kraju Y rozwarstwienie dochodowe jest większe niż w kraju X, ale z samego wskaźnika nie wynika, który kraj jest zamożniejszy",
+            "W kraju X 25% ludności żyje poniżej granicy ubóstwa"
+          ],
+          "correctIndex": 2,
+          "explanation": "Wyższa wartość współczynnika Giniego oznacza **większą nierówność**, a nie większą równość — stąd błąd odpowiedzi drugiej. Wskaźnik opisuje wyłącznie **sposób podziału** dochodu i milczy o jego poziomie, więc ubogi kraj o egalitarnym podziale może mieć niższy Gini niż kraj zamożny. Odsetek osób ubogich to zupełnie inny miernik."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Najczęstsze polecenia CKE z tego zakresu. **\"Wymień składowe HDI\"** — trzy wymiary z ich zmiennymi: oczekiwana długość życia, lata nauki (średnia i oczekiwana) oraz DNB per capita wg PPP; sama nazwa wymiaru bez zmiennej często nie wystarcza na pełny punkt. **\"Wyjaśnij, dlaczego kraj o wysokim PKB per capita może mieć niskie HDI\"** — wskaż konkretny mechanizm: dochód z eksportu surowców trafia do wąskiej elity lub za granicę i nie jest inwestowany w zdrowie i edukację. **Zadania z krzywą Lorenza** — im dalej krzywa od przekątnej, tym wyższy Gini. I zapamiętaj kierunki skal: HDI **im wyżej, tym lepiej**, Gini i GII **im niżej, tym lepiej**."
+        }
+      ]
+    },
+    {
+      "slug": "podzial-swiata-wedlug-poziomu-rozwoju-i-jego-przyczyny",
+      "title": "Podział świata według poziomu rozwoju. Północ–Południe, G7, BRICS i przyczyny zróżnicowania",
+      "summary": "Kraje wysoko rozwinięte, rozwijające się i najsłabiej rozwinięte (LDC), umowna linia Brandta, grupy G7 i BRICS oraz mechanizmy — przyrodnicze, historyczne, polityczne i gospodarcze — które utrwalają przepaść rozwojową.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mierniki z poprzednich lekcji dają liczby; teraz trzeba je ułożyć w **mapę świata**. Okazuje się, że kraje nie rozkładają się równomiernie na skali rozwoju — tworzą wyraźne skupienia, oddzielone luką, którą od lat 80. nazywa się podziałem **Północ–Południe**. Najważniejsze pytanie brzmi jednak nie \"kto jest gdzie\", lecz **dlaczego** dystans utrzymuje się od pokoleń, mimo że niektóre kraje — jak Korea Południowa czy Chiny — potrafiły go w kilkadziesiąt lat pokonać. Odpowiedź nigdy nie jest jednoczynnikowa: składają się na nią uwarunkowania przyrodnicze, dziedzictwo kolonialne, jakość instytucji i miejsce kraju w międzynarodowym podziale pracy."
+        },
+        {
+          "type": "classification",
+          "title": "Typy państw według poziomu rozwoju społeczno-gospodarczego",
+          "caption": "Podział umowny — nie ma jednej urzędowej klasyfikacji; ONZ, Bank Światowy i MFW stosują nieco inne kryteria.",
+          "groups": [
+            {
+              "name": "Kraje wysoko rozwinięte",
+              "description": "Wysokie PKB per capita, HDI powyżej 0,800, dominacja usług i sektora IV, ujemny lub bliski zeru przyrost naturalny, wysoki poziom urbanizacji, przewaga eksportu **wyrobów przetworzonych i technologii**. To one wyznaczają światowe standardy technologiczne i kontrolują największe korporacje transnarodowe.",
+              "examples": [
+                "USA",
+                "Kanada",
+                "Japonia",
+                "Niemcy",
+                "Francja",
+                "Australia",
+                "Korea Południowa"
+              ]
+            },
+            {
+              "name": "Kraje nowo uprzemysłowione (NIC) i wschodzące gospodarki",
+              "description": "Państwa, które w ciągu kilku dekad przeszły od gospodarki rolniczej do **masowego eksportu wyrobów przemysłowych**, wykorzystując tanią, ale wykształconą siłę roboczą i napływ kapitału zagranicznego. Szybki wzrost PKB idzie tu w parze z dużymi kontrastami wewnętrznymi między metropoliami a wsią.",
+              "examples": [
+                "Chiny",
+                "Indie",
+                "Brazylia",
+                "Meksyk",
+                "Malezja",
+                "Tajlandia",
+                "Wietnam",
+                "Turcja"
+              ]
+            },
+            {
+              "name": "Kraje rozwijające się",
+              "description": "Grupa najliczniejsza i skrajnie **niejednorodna**: mieści się w niej zarówno naftowy Katar, jak i rolnicza Kenia. Cechy typowe to duży udział sektora I w zatrudnieniu, wysoki przyrost naturalny, uzależnienie eksportu od kilku surowców i niedobór kapitału krajowego.",
+              "examples": [
+                "Kenia",
+                "Egipt",
+                "Boliwia",
+                "Filipiny",
+                "Nigeria",
+                "Katar (odrębny przypadek — wysoki dochód, niska dywersyfikacja)"
+              ]
+            },
+            {
+              "name": "Kraje najsłabiej rozwinięte (LDC)",
+              "description": "Wyodrębniona przez ONZ grupa państw o najniższym dochodzie, najsłabszym kapitale ludzkim i największej podatności na wstrząsy. Objęte są preferencjami handlowymi i pomocą rozwojową. Ok. 3/4 z nich leży w **Afryce Subsaharyjskiej**.",
+              "examples": [
+                "Niger",
+                "Czad",
+                "Mali",
+                "Etiopia",
+                "Somalia",
+                "Afganistan",
+                "Haiti",
+                "Jemen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Kraje najsłabiej rozwinięte (LDC, ang. least developed countries)",
+          "text": "Kategoria ustanowiona przez ONZ w 1971 r., obejmująca obecnie ok. 45 państw (2024 r.). O zaliczeniu decydują **trzy kryteria** rozpatrywane łącznie: **niski dochód narodowy na mieszkańca**, **słaby kapitał ludzki** (wskaźnik obejmujący stan wyżywienia, umieralność, poziom edukacji) oraz **wysoka podatność ekonomiczno-środowiskowa** — czyli zależność od kilku towarów eksportowych i narażenie na klęski żywiołowe. Kraj może z tej listy **wyjść**: udało się to m.in. Botswanie, Malediwom, Samoa, Vanuatu i Bhutanowi.",
+          "note": "LDC to **podzbiór** krajów rozwijających się, a nie ich synonim — do rozwijających się zalicza się także Chiny czy Brazylię."
+        },
+        {
+          "type": "definition",
+          "term": "Podział Północ–Południe (linia Brandta)",
+          "text": "Umowny podział świata na zamożną **Północ** i uboższe **Południe**, spopularyzowany raportem Komisji Willy'ego Brandta z 1980 r. Granica biegnie mniej więcej wzdłuż **30° szerokości geograficznej północnej**, ale ma charakter **gospodarczy, a nie geograficzny**: opływa Meksyk od północy, a na Pacyfiku schodzi na południe, żeby objąć Północą **Australię i Nową Zelandię**. Podział pokazuje kluczową dysproporcję: kraje Północy skupiają ok. 1/5 ludności świata, a wytwarzają ok. 4/5 światowego PKB.",
+          "note": "Podział jest coraz mniej precyzyjny — awans Chin, Korei Południowej czy państw Zatoki Perskiej rozmył prostą linię, dlatego dziś częściej mówi się o *kontinuum* poziomów rozwoju."
+        },
+        {
+          "type": "compare",
+          "title": "Bogata Północ a uboższe Południe — kontrasty strukturalne",
+          "leftLabel": "Północ (kraje wysoko rozwinięte)",
+          "rightLabel": "Południe (kraje rozwijające się)",
+          "rows": [
+            {
+              "aspect": "Ludność a wytwarzany produkt",
+              "left": "Ok. 1/5 ludności świata, ok. 4/5 światowego PKB",
+              "right": "Ok. 4/5 ludności świata, ok. 1/5 światowego PKB"
+            },
+            {
+              "aspect": "Struktura eksportu",
+              "left": "Wyroby przetworzone, technologie, usługi finansowe i licencje — o **wysokiej wartości dodanej**",
+              "right": "Surowce mineralne i płody rolne — o niskiej i **niestabilnej cenowo** wartości"
+            },
+            {
+              "aspect": "Struktura zatrudnienia",
+              "left": "Dominacja sektorów III i IV (70–80% pracujących w usługach)",
+              "right": "Wysoki udział sektora I — w krajach LDC nawet 60–70% pracujących"
+            },
+            {
+              "aspect": "Procesy demograficzne",
+              "left": "Niski przyrost naturalny, starzenie się społeczeństw, imigracja",
+              "right": "Wysoki przyrost naturalny, społeczeństwa młode, emigracja zarobkowa"
+            },
+            {
+              "aspect": "Kapitał i technologia",
+              "left": "Nadwyżka kapitału, siedziby korporacji transnarodowych, wysokie nakłady na B+R",
+              "right": "Niedobór kapitału krajowego, zadłużenie zagraniczne, technologie importowane"
+            },
+            {
+              "aspect": "Rola w podziale pracy",
+              "left": "Projektowanie, marka, sprzedaż — najbardziej dochodowe ogniwa łańcucha wartości",
+              "right": "Wydobycie i montaż — ogniwa o najniższej marży (**pułapka średniego dochodu**)"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "G7 i BRICS — dwa bieguny gospodarczej mapy świata",
+          "caption": "Ani G7, ani BRICS nie są ugrupowaniami integracyjnymi: nie znoszą ceł ani nie tworzą wspólnego rynku. To fora współpracy i uzgadniania stanowisk.",
+          "headers": [
+            "Cecha",
+            "G7",
+            "BRICS"
+          ],
+          "rows": [
+            [
+              "Skład podstawowy",
+              "USA, Japonia, Niemcy, Wielka Brytania, Francja, Włochy, Kanada (w obradach uczestniczy też UE)",
+              "Brazylia, Rosja, Indie, Chiny, RPA; od 2024 r. m.in. Egipt, Etiopia, Iran i Zjednoczone Emiraty Arabskie"
+            ],
+            [
+              "Charakter grupy",
+              "Nieformalne forum najwyżej rozwiniętych demokracji Zachodu i Japonii",
+              "Nieformalne ugrupowanie największych gospodarek wschodzących z trzech kontynentów"
+            ],
+            [
+              "Podstawa pozycji",
+              "Wysokie PKB per capita, kapitał, technologie, waluty rezerwowe",
+              "Wielka liczba ludności, zasoby surowcowe, szybkie tempo wzrostu PKB, rosnący rynek zbytu"
+            ],
+            [
+              "Cel działania",
+              "Uzgadnianie polityki gospodarczej, klimatycznej i bezpieczeństwa; sankcje i pomoc rozwojowa",
+              "Zwiększenie wpływu krajów Południa w gospodarce światowej, wspólny Nowy Bank Rozwoju, rozliczenia poza dolarem"
+            ],
+            [
+              "Powiązana, szersza grupa",
+              "G20 — forum łączące oba bieguny, odpowiadające za ok. 4/5 światowego PKB",
+              "G20 (wszystkie państwa BRICS pierwotnej piątki są jego członkami)"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Kto gdzie leży: G7, BRICS i wybrane kraje LDC",
+          "caption": "Zwróć uwagę na rozmieszczenie — G7 skupia się na półkuli północnej powyżej 40°N, kraje LDC koncentrują się w strefie międzyzwrotnikowej, a BRICS rozciąga się przez wszystkie zamieszkane kontynenty.",
+          "center": [
+            15,
+            25
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 38.9,
+              "lng": -77.04,
+              "label": "Waszyngton, USA (G7)",
+              "text": "Największa gospodarka świata i główny ośrodek sektora IV — technologie, finanse, badania."
+            },
+            {
+              "lat": 35.68,
+              "lng": 139.69,
+              "label": "Tokio, Japonia (G7)",
+              "text": "Kraj niemal pozbawiony surowców, który zbudował pozycję na imporcie surowców i eksporcie wyrobów wysoko przetworzonych."
+            },
+            {
+              "lat": 52.52,
+              "lng": 13.4,
+              "label": "Berlin, Niemcy (G7)",
+              "text": "Największa gospodarka Unii Europejskiej, eksporter maszyn i pojazdów."
+            },
+            {
+              "lat": 39.9,
+              "lng": 116.4,
+              "label": "Pekin, Chiny (BRICS)",
+              "text": "Kraj, który w cztery dekady przeszedł od gospodarki rolniczej do roli \"fabryki świata\", a dziś inwestuje w technologie własne."
+            },
+            {
+              "lat": 28.61,
+              "lng": 77.21,
+              "label": "Nowe Delhi, Indie (BRICS)",
+              "text": "Najludniejsze państwo świata, potęga usług informatycznych, ale wciąż ok. 44% pracujących w rolnictwie."
+            },
+            {
+              "lat": -15.79,
+              "lng": -47.88,
+              "label": "Brasília, Brazylia (BRICS)",
+              "text": "Potęga rolnicza i surowcowa Ameryki Południowej, z jednym z najwyższych na świecie współczynników Giniego."
+            },
+            {
+              "lat": -25.75,
+              "lng": 28.19,
+              "label": "Pretoria, RPA (BRICS)",
+              "text": "Najbardziej uprzemysłowiona gospodarka Afryki, obciążona dziedzictwem apartheidu i skrajnymi nierównościami."
+            },
+            {
+              "lat": 13.51,
+              "lng": 2.11,
+              "label": "Niamey, Niger (LDC)",
+              "text": "Kraj śródlądowy w strefie Sahelu — jedno z najniższych HDI na świecie, bardzo wysoki przyrost naturalny, postępujące pustynnienie."
+            },
+            {
+              "lat": 9.03,
+              "lng": 38.74,
+              "label": "Addis Abeba, Etiopia (LDC)",
+              "text": "Szybko rosnąca gospodarka, ale wciąż ponad 60% pracujących w rolnictwie i brak dostępu do morza po odłączeniu Erytrei."
+            },
+            {
+              "lat": 23.81,
+              "lng": 90.41,
+              "label": "Dhaka, Bangladesz (LDC)",
+              "text": "Przykład awansu: eksport odzieży wyciągnął kraj z najgłębszego ubóstwa, a Bangladesz przygotowuje się do wyjścia z listy LDC."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny zróżnicowania poziomu rozwoju",
+          "caption": "Na maturze prawie zawsze trzeba wskazać czynniki z **różnych grup** — odpowiedź oparta wyłącznie na klimacie albo wyłącznie na kolonializmie rzadko dostaje komplet punktów.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Klimat strefy międzyzwrotnikowej sprzyja chorobom (malaria, śpiączka) i ogranicza wydajność rolnictwa na wyługowanych glebach ferralitowych. **Brak dostępu do morza** (Czad, Mali, Niger, Nepal) podnosi koszty transportu i uzależnia handel od sąsiadów. Susze, powodzie i cyklony niszczą dorobek kilku lat w kilka dni.",
+              "examples": [
+                "Sahel — pustynnienie",
+                "kraje śródlądowe Afryki",
+                "Bangladesz — powodzie"
+              ]
+            },
+            {
+              "name": "Historyczne",
+              "description": "Kolonizatorzy budowali gospodarkę **monokulturową**, nastawioną na wywóz jednego surowca, oraz linie kolejowe prowadzące od kopalni do portu, a nie łączące kraj. Nie tworzyli przemysłu przetwórczego ani elit administracyjnych. **Sztuczne granice** rozdzieliły ludy i wtłoczyły w jedno państwo wspólnoty wrogie sobie, co owocuje konfliktami do dziś.",
+              "examples": [
+                "gospodarka plantacyjna",
+                "granice geometryczne w Afryce",
+                "handel niewolnikami"
+              ]
+            },
+            {
+              "name": "Polityczne i instytucjonalne",
+              "description": "Bez stabilnego państwa, sprawnego sądownictwa i ochrony własności **nikt nie inwestuje** — ani kapitał zagraniczny, ani miejscowi przedsiębiorcy. Wojny domowe i korupcja pochłaniają środki, które mogłyby sfinansować szkoły. Paradoksem jest **klątwa surowcowa**: bogactwo złóż bywa źródłem konfliktów i korupcji zamiast rozwoju.",
+              "examples": [
+                "Demokratyczna Republika Konga",
+                "Somalia",
+                "Wenezuela"
+              ]
+            },
+            {
+              "name": "Gospodarcze",
+              "description": "Eksport surowców przy imporcie wyrobów przetworzonych oznacza **pogarszające się warunki wymiany** (terms of trade): ceny surowców są niestabilne i rosną wolniej niż ceny maszyn. Do tego dochodzi zadłużenie zagraniczne, którego obsługa pochłania budżet, oraz brak kapitału na inwestycje.",
+              "examples": [
+                "zależność od jednego surowca",
+                "spirala zadłużenia",
+                "bariery celne rynków Północy"
+              ]
+            },
+            {
+              "name": "Społeczne i demograficzne",
+              "description": "Wysoki przyrost naturalny sprawia, że wzrost PKB **rozkłada się na coraz większą liczbę osób** i PKB per capita stoi w miejscu. Niski poziom edukacji, zwłaszcza kobiet, utrwala wysoką dzietność i niską wydajność pracy. **Drenaż mózgów** zabiera najlepiej wykształconych — właśnie tych, którzy byli najdroższą inwestycją kraju.",
+              "examples": [
+                "analfabetyzm",
+                "wczesne małżeństwa",
+                "emigracja lekarzy i inżynierów"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Błędne koło ubóstwa — dlaczego bieda sama się utrwala",
+          "caption": "Mechanizm samowzmacniający się: każdy element wynika z poprzedniego i zarazem go podtrzymuje. Przerwać go może dopiero impuls z zewnątrz — inwestycja, pomoc rozwojowa albo reforma instytucji.",
+          "stages": [
+            {
+              "name": "Niskie dochody",
+              "text": "Dochód gospodarstw domowych i wpływy podatkowe państwa ledwie pokrywają bieżące potrzeby — przede wszystkim żywność."
+            },
+            {
+              "name": "Znikome oszczędności",
+              "text": "Skoro cały dochód idzie na konsumpcję, w kraju nie powstaje pula kapitału, z której można by finansować inwestycje."
+            },
+            {
+              "name": "Niskie inwestycje",
+              "text": "Brakuje pieniędzy na maszyny, nawozy, drogi, elektryczność, szkoły i szpitale. Kapitał zagraniczny omija kraj, bo ryzyko jest wysokie, a rynek mały."
+            },
+            {
+              "name": "Niska wydajność pracy",
+              "text": "Praca opiera się na sile mięśni i przestarzałych narzędziach; słabo wykształcony pracownik nie obsłuży nowoczesnej technologii, nawet gdyby ją dostał."
+            },
+            {
+              "name": "Niska produkcja i wartość dodana",
+              "text": "Kraj wytwarza mało i wyłącznie rzeczy proste — surowce, płody rolne — więc zarabia niewiele na jednostce eksportu. I koło zamyka się na powrót niskim dochodem."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Korea Południowa: z poziomu najuboższych krajów Afryki do G7 technologii",
+          "region": "Azja Wschodnia",
+          "text": "Na początku lat 60. XX w. Korea Południowa miała PKB na mieszkańca porównywalne z Ghaną czy Sudanem, była zniszczona wojną, przeludniona i praktycznie pozbawiona surowców mineralnych. W ciągu jednego pokolenia stała się jedną z najbardziej zaawansowanych technologicznie gospodarek świata (HDI 0,929 w 2022 r.). Zadziałało kilka mechanizmów naraz: **reforma rolna** rozdrobniła wielką własność i uwolniła siłę roboczą, państwo skierowało ogromne środki na **powszechną edukację** — najpierw podstawową, potem techniczną i wyższą — a politykę gospodarczą oparto na **industrializacji nastawionej na eksport**: najpierw tekstylia, potem stal i statki, wreszcie elektronika i motoryzacja. Konsekwentnie wspinano się po **łańcuchu wartości**: od montażu cudzych projektów do własnych patentów i marek, finansowanych z jednych z najwyższych na świecie nakładów na badania i rozwój.",
+          "takeaway": "Poziom rozwoju **nie jest zdeterminowany** zasobami przyrodniczymi ani przeszłością kolonialną — o awansie decydują inwestycje w kapitał ludzki, sprawne instytucje i konsekwentne przechodzenie do produkcji o wyższej wartości dodanej."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery uproszczenia, które psują odpowiedzi. **(1)** \"Kraje rozwijające się\" to nie grupa jednorodna — mieszczą się w niej Katar i Czad, więc unikaj zdań typu \"w krajach rozwijających się panuje głód\". **(2)** LDC to **podgrupa** krajów rozwijających się, nie ich synonim. **(3)** Określenie **\"Trzeci Świat\"** pochodzi z okresu zimnej wojny (kraje spoza bloku zachodniego i wschodniego) i dziś jest uznawane za przestarzałe — na maturze pisz \"kraje słabo rozwinięte\" lub \"Południe\". **(4)** G7 i BRICS **nie są ugrupowaniami integracyjnymi** — nie mają wspólnej taryfy celnej ani swobody przepływu osób; mylenie ich z UE czy USMCA to typowy błąd."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj nazwę do opisu",
+          "instruction": "Połącz każde pojęcie z odpowiadającą mu charakterystyką.",
+          "pairs": [
+            {
+              "left": "G7",
+              "right": "Forum siedmiu najwyżej rozwiniętych gospodarek Zachodu i Japonii"
+            },
+            {
+              "left": "BRICS",
+              "right": "Nieformalne ugrupowanie największych gospodarek wschodzących z trzech kontynentów"
+            },
+            {
+              "left": "LDC",
+              "right": "Kategoria ONZ obejmująca kraje najsłabiej rozwinięte, objęte preferencjami handlowymi"
+            },
+            {
+              "left": "Linia Brandta",
+              "right": "Umowna granica dzieląca świat na zamożną Północ i uboższe Południe"
+            },
+            {
+              "left": "Kraje NIC",
+              "right": "Państwa, które w kilka dekad przeszły od rolnictwa do eksportu wyrobów przemysłowych"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego kraje, których eksport opiera się niemal wyłącznie na nieprzetworzonych surowcach, tak trudno nadrabiają dystans do państw wysoko rozwiniętych?",
+          "options": [
+            "Ponieważ surowce mineralne nie są przedmiotem handlu międzynarodowego",
+            "Ponieważ ceny surowców silnie się wahają i rosną wolniej niż ceny wyrobów przetworzonych, więc za tę samą ilość eksportu można kupić coraz mniej importowanych maszyn",
+            "Ponieważ Światowa Organizacja Handlu zakazuje krajom rozwijającym się eksportu surowców",
+            "Ponieważ wydobycie surowców wymaga zatrudnienia większości mieszkańców kraju"
+          ],
+          "correctIndex": 1,
+          "explanation": "To mechanizm **pogarszających się warunków wymiany (terms of trade)**. Surowiec ma niską wartość dodaną, a jego cena zależy od koniunktury i pogody; wyrób przetworzony zawiera pracę, technologię i markę, więc drożeje szybciej i stabilniej. Efektem jest strukturalna nierównowaga w handlu, którą przerywa dopiero rozwój własnego przetwórstwa — tak jak zrobiła to Korea Południowa."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie dotyczące podziału Północ–Południe jest prawdziwe?",
+          "options": [
+            "Granica podziału przebiega dokładnie wzdłuż równika",
+            "Australię i Nową Zelandię zalicza się do Północy mimo położenia na półkuli południowej, ponieważ podział ma charakter gospodarczy, a nie geograficzny",
+            "Wszystkie kraje Południa mają HDI poniżej 0,550",
+            "Podział wprowadziła ONZ w 2000 r. wraz z ogłoszeniem Milenijnych Celów Rozwoju"
+          ],
+          "correctIndex": 1,
+          "explanation": "Linia Brandta biegnie w przybliżeniu wzdłuż 30°N, ale celowo odchyla się tak, by objąć Północą Australię i Nową Zelandię — kryterium jest **poziom rozwoju**, nie szerokość geograficzna. Kraje Południa mają bardzo różne HDI (od 0,38 w Somalii po ponad 0,80 w państwach Zatoki Perskiej), a sam podział spopularyzował raport Komisji Brandta z 1980 r."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z tego zakresu są zwykle **wyjaśniające**, a nie odtwórcze. Gdy polecenie brzmi \"podaj dwie przyczyny niskiego poziomu rozwoju kraju X\", sięgnij po czynniki z **dwóch różnych grup** (np. przyrodniczy: położenie śródlądowe podnoszące koszty transportu, oraz polityczny: konflikt zbrojny zniechęcający inwestorów) i zawsze dopisz **skutek** — sama nazwa czynnika to za mało. Przy zadaniach z mapą lub tabelą HDI uzasadniaj wnioski danymi ze źródła, a nie wiedzą ogólną. I miej gotowy **kontrprzykład awansu** (Korea Południowa, Chiny, Bangladesz) — przydaje się w poleceniach typu \"oceń, czy zróżnicowanie rozwoju jest trwałe\"."
+        }
+      ]
     }
   ]
 }

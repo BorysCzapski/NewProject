@@ -564,6 +564,627 @@
           "text": "Zadania o uprawach niemal zawsze mają formę „wyjaśnij, dlaczego roślina X jest uprawiana w regionie Y” albo „wskaż region na mapie”. Odpowiedź buduj z **trzech elementów**: (1) konkretne wymaganie rośliny (temperatura, suma i rozkład opadów, typ gleby, rzeźba), (2) cecha środowiska regionu, która to wymaganie spełnia, (3) spójnik przyczynowy między nimi. Nie pisz „bo tam jest ciepło” — napisz „bo średnia temperatura powyżej 20 °C przez cały okres wegetacji umożliwia dwa zbiory ryżu w roku”."
         }
       ]
+    },
+    {
+      "slug": "zielona-rewolucja-gmo-i-problem-glodu",
+      "title": "Zielona rewolucja, GMO i problem wyżywienia świata",
+      "summary": "Jak w pół wieku podwojono plony zbóż, czym naprawdę jest GMO, dlaczego mimo nadprodukcji setki milionów ludzi głodują, ile żywności marnujemy i jak rolnictwo niszczy własną podstawę — glebę.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "W latach 60. XX w. demografowie ostrzegali, że wzrost liczby ludności Azji przegoni możliwości produkcji żywności i skończy się klęskami głodu na niespotykaną skalę. Prognoza się nie sprawdziła — nie dlatego, że ludzi przybyło mniej, lecz dlatego, że **plony zbóż rosły szybciej niż liczba ludności**. Stało za tym wielkie przedsięwzięcie hodowlano-technologiczne zwane **zieloną rewolucją**, a później inżynieria genetyczna. Ta lekcja pokazuje, jak działał ten mechanizm, jaką cenę środowiskową i społeczną za niego zapłacono i dlaczego świat, który produkuje żywności z nadmiarem, wciąż nie potrafi wszystkich nakarmić. Kluczowa myśl matury rozszerzonej: **głód nie jest dziś problemem wielkości produkcji, lecz dostępu, dochodu i strat**."
+        },
+        {
+          "type": "timeline",
+          "title": "Zielona rewolucja — przebieg",
+          "caption": "Zwróć uwagę, że rewolucja zaczęła się od pszenicy w Meksyku, a nie od ryżu w Azji — Azja przejęła gotową metodę.",
+          "events": [
+            {
+              "period": "lata 40.–50. XX w.",
+              "label": "Meksyk — program hodowlany Normana Borlauga",
+              "text": "Zespół Borlauga krzyżuje pszenicę, wybierając odmiany **karłowe** (o krótkim, sztywnym źdźble) i **odporne na rdzę**. Meksyk, dotąd importer pszenicy, w ciągu kilkunastu lat staje się jej eksporterem. Powstaje wzorzec: nowa odmiana plus pakiet agrotechniczny."
+            },
+            {
+              "period": "1966 r.",
+              "label": "Filipiny — „cudowny ryż” IR8",
+              "text": "Międzynarodowy Instytut Badań nad Ryżem (IRRI) wprowadza wysokoplenną odmianę **IR8**: krótka słoma, krótszy okres dojrzewania (możliwe dwa zbiory rocznie), silna reakcja na nawożenie azotowe. Stąd metoda rozchodzi się po monsunowej Azji."
+            },
+            {
+              "period": "przełom lat 60. i 70.",
+              "label": "Indie — od klęski głodu do samowystarczalności zbożowej",
+              "text": "Po dotkliwych suszach połowy lat 60. Indie wdrażają zieloną rewolucję przede wszystkim w **Pendżabie i Hariana**, gdzie istniała już sieć kanałów nawadniających. W ciągu dekady kraj przestaje być zależny od zagranicznej pomocy żywnościowej w zbożach."
+            },
+            {
+              "period": "1970 r.",
+              "label": "Pokojowa Nagroda Nobla dla Borlauga",
+              "text": "Nagrodę przyznano za wkład w pokój przez zwiększenie produkcji żywności — było to uznanie, że wyżywienie stanowi warunek stabilności politycznej państw."
+            },
+            {
+              "period": "od lat 90. XX w.",
+              "label": "Druga fala: inżynieria genetyczna",
+              "text": "Klasyczna hodowla krzyżówkowa wyczerpuje łatwe rezerwy plonu. Pojawiają się **rośliny transgeniczne** (soja odporna na herbicyd, kukurydza i bawełna z genem Bt), a tempo wzrostu plonów wyraźnie zwalnia."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego zielona rewolucja podniosła plony — mechanizm krok po kroku",
+          "caption": "Żaden element nie działa sam. To pakiet: nowa odmiana bez nawodnienia i nawozu daje plon niewiele lepszy od starej.",
+          "steps": [
+            {
+              "title": "Skrócenie źdźbła (odmiany karłowe)",
+              "text": "Stara pszenica przy silnym nawożeniu rosła w słomę i **wylegała** (kładła się przed żniwami), tracąc plon. Odmiana karłowa kieruje wytworzone asymilaty do **ziarna zamiast do słomy** — rośnie udział ziarna w masie rośliny."
+            },
+            {
+              "title": "Nawożenie mineralne",
+              "text": "Dopiero krótkie, sztywne źdźbło pozwala bezpiecznie podać duże dawki **azotu**. Nowe odmiany są „żarłoczne”: bez nawozu plonują słabo, z nawozem — rekordowo. Stąd nierozerwalny związek zielonej rewolucji z przemysłem chemicznym."
+            },
+            {
+              "title": "Nawadnianie",
+              "text": "Wysoki plon wymaga stabilnej wody w fazach krytycznych rozwoju. Dlatego rewolucja objęła obszary z kanałami i studniami głębinowymi (Pendżab, delty rzek Azji), a **ominęła rolnictwo zależne wyłącznie od deszczu**."
+            },
+            {
+              "title": "Ochrona chemiczna",
+              "text": "Gęsty łan jednej odmiany to dogodne warunki dla chorób i szkodników — konieczne stały się **pestycydy**. Jednolitość genetyczna zwiększa ryzyko: jedna nowa rasa patogenu zagraża od razu ogromnym areałom."
+            },
+            {
+              "title": "Mechanizacja i kapitał",
+              "text": "Dwa zbiory w roku wymagają szybkiego sprzętu i siewu, czyli maszyn, a cały pakiet — **kredytu**. Dlatego korzystali na nim przede wszystkim rolnicy zamożniejsi, co pogłębiło rozwarstwienie majątkowe wsi."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Nie myl pojęć: **zielona rewolucja** to intensyfikacja oparta na nawozach, pestycydach i nawadnianiu — jest przeciwieństwem **rolnictwa ekologicznego**, mimo mylącego przymiotnika „zielona”. Nie myl jej też z **rewolucją agrarną** (przemiany własnościowe i uwłaszczenie chłopów) ani z **rewolucją biotechnologiczną** (GMO), która jest jej późniejszą kontynuacją."
+        },
+        {
+          "type": "case-study",
+          "title": "Dlaczego zielona rewolucja ominęła Afrykę Subsaharyjską",
+          "region": "Afryka Subsaharyjska",
+          "text": "Sukces w Azji opierał się na trzech warunkach, których w Afryce zabrakło. Po pierwsze **woda**: przeważa tam rolnictwo zależne od opadów, a udział gruntów nawadnianych jest bardzo niski — pakiet „odmiana + azot” bez wody nie działa. Po drugie **rodzaj upraw**: podstawą wyżywienia są sorgo, proso, maniok, jams i bataty, a międzynarodowe prace hodowlane skupiały się na pszenicy, ryżu i kukurydzy. Po trzecie **otoczenie gospodarcze**: brak dróg i magazynów, słaby dostęp do kredytu i nawozów, niepewność praw do ziemi oraz konflikty zbrojne sprawiają, że nawet dostępna technologia nie trafia na pole. Efekt: w tym regionie wzrost produkcji żywności następował głównie przez **powiększanie areału** (a więc wylesianie i skracanie odłogów), a nie przez wzrost plonów z hektara.",
+          "takeaway": "Technologia rolnicza jest bezużyteczna bez wody, infrastruktury, kapitału i pokoju — dlatego mapa głodu pokrywa się z mapą państw niestabilnych, a nie z mapą najgorszych gleb."
+        },
+        {
+          "type": "definition",
+          "term": "GMO (organizm zmodyfikowany genetycznie)",
+          "text": "Organizm, którego materiał genetyczny zmieniono metodami **inżynierii genetycznej** — najczęściej przez wprowadzenie pojedynczego genu o znanej funkcji, także pochodzącego z innego gatunku (**transgeniczność**). To odróżnia GMO od klasycznej hodowli, w której nowe cechy uzyskuje się przez krzyżowanie i selekcję, mieszając tysiące genów naraz.",
+          "note": "Najczęstsze modyfikacje: odporność na **herbicyd** (soja, rzepak — ułatwia odchwaszczanie), odporność na szkodniki dzięki genowi bakterii Bacillus thuringiensis (**kukurydza i bawełna Bt**) oraz cechy jakościowe, jak „złoty ryż” z prowitaminą A. Największe areały upraw GMO mają USA, Brazylia, Argentyna, Indie i Kanada; w Unii Europejskiej uprawa jest silnie ograniczona, choć import pasz sojowych powszechny."
+        },
+        {
+          "type": "compare",
+          "title": "Spór o GMO — argumenty stron",
+          "leftLabel": "Zwolennicy",
+          "rightLabel": "Krytycy",
+          "rows": [
+            {
+              "aspect": "Plon i areał",
+              "left": "Wyższe plony i mniejsze straty od szkodników pozwalają wyżywić więcej ludzi **bez zajmowania nowych gruntów**, czyli bez wylesiania",
+              "right": "Wzrost plonów nie usuwa głodu, bo jego przyczyną jest **brak dochodu i dostępu**, a nie brak ziarna w skali świata"
+            },
+            {
+              "aspect": "Chemizacja",
+              "left": "Odmiany Bt zmniejszają zużycie insektycydów — wyraźnie w uprawie bawełny w Indiach",
+              "right": "Odmiany odporne na herbicyd zachęcają do **częstszych oprysków** i sprzyjają powstawaniu odpornych chwastów"
+            },
+            {
+              "aspect": "Środowisko",
+              "left": "Gen wprowadzany jest celowo i precyzyjnie, a odmiany przechodzą wieloletnie badania przed dopuszczeniem do obrotu",
+              "right": "Ryzyko **przepływu genów** do odmian tradycyjnych i dzikich krewnych oraz dalszego zubożenia różnorodności odmian uprawnych"
+            },
+            {
+              "aspect": "Zdrowie",
+              "left": "Dotychczasowe badania nie wykazały szkodliwości dopuszczonych odmian dla konsumentów",
+              "right": "Zasada przezorności: skutki długookresowe trudno przewidzieć, stąd postulat obowiązkowego **znakowania żywności**"
+            },
+            {
+              "aspect": "Ekonomia i społeczeństwo",
+              "left": "Rolnik kupuje nasiona, bo mu się to opłaca — decyduje rachunek ekonomiczny gospodarstwa",
+              "right": "**Patenty na nasiona** uzależniają rolników od kilku koncernów i utrudniają wysiew własnego materiału siewnego"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Głód, niedożywienie i głód ukryty",
+          "text": "**Niedożywienie (głód jawny)** to trwałe spożycie energii poniżej zapotrzebowania organizmu. **Głód ukryty (utajony)** to niedobór **mikroskładników**: żelaza, jodu, cynku czy witaminy A — dieta dostarcza wtedy dość kalorii, ale jest jednostajna (oparta na jednym zbożu lub bulwach), więc organizm choruje mimo pełnego żołądka. Odrębnym zjawiskiem jest **klęska głodu** — nagły, lokalny kryzys wywołany zwykle wojną lub suszą.",
+          "note": "Skala (2022, FAO): chronicznie niedożywionych jest ok. **735 mln ludzi**, a głód ukryty dotyczy **ponad 2 mld**. Jednocześnie liczba osób z nadwagą i otyłością przewyższa liczbę głodujących — to paradoks współczesnego wyżywienia."
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny głodu — cztery grupy",
+          "caption": "Na maturze rzadko wystarczy jedna przyczyna: typowe polecenie brzmi „podaj po jednej przyczynie przyrodniczej i pozaprzyrodniczej”.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Ograniczają produkcję lokalnie i najczęściej **wyzwalają** kryzys, ale rzadko go same podtrzymują: susze, powodzie, cyklony, gradacje szkodników, ubogie gleby, krótki okres wegetacyjny.",
+              "examples": [
+                "susze w Sahelu",
+                "plagi szarańczy w Rogu Afryki",
+                "powodzie monsunowe w Bangladeszu"
+              ]
+            },
+            {
+              "name": "Polityczne",
+              "description": "Najgroźniejsze współcześnie — konflikty niszczą zbiory, blokują dostawy pomocy i wypędzają rolników z pól; głód bywa też świadomie używany jako **narzędzie walki**.",
+              "examples": [
+                "wojny domowe w Sudanie i Jemenie",
+                "blokady transportów humanitarnych",
+                "wysiedlenia ludności rolniczej"
+              ]
+            },
+            {
+              "name": "Ekonomiczne i społeczne",
+              "description": "Człowiek głoduje, bo **nie stać go na żywność**, która fizycznie jest dostępna: niskie dochody, wzrost cen zbóż, zadłużenie, bezrolność, niski status kobiet ograniczający dostęp do kredytu i edukacji.",
+              "examples": [
+                "skoki cen żywności na giełdach",
+                "bezrolność w Azji Południowej",
+                "brak dostępu do rynków zbytu"
+              ]
+            },
+            {
+              "name": "Techniczno-organizacyjne",
+              "description": "Żywność powstaje, ale **nie dociera do stołu**: brak magazynów i chłodni, złe drogi, straty w transporcie, słaba administracja i korupcja przy rozdziale pomocy.",
+              "examples": [
+                "wysokie straty pożniwne w Afryce",
+                "brak łańcucha chłodniczego",
+                "zerwane łańcuchy dostaw"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Straty i marnotrawstwo żywności",
+          "items": [
+            {
+              "value": "ok. 1/3",
+              "label": "wyprodukowanej żywności na świecie zostaje utracona lub zmarnowana",
+              "note": "szacunek FAO — od pola aż po talerz konsumenta"
+            },
+            {
+              "value": "ok. 17",
+              "unit": "%",
+              "label": "żywności dostępnej dla konsumentów trafia do odpadów",
+              "note": "raport UNEP Food Waste Index (2021); większość powstaje w gospodarstwach domowych"
+            },
+            {
+              "value": "ok. 60",
+              "unit": "%",
+              "label": "polskiego marnotrawstwa żywności powstaje w domach",
+              "note": "reszta w handlu, gastronomii i przetwórstwie"
+            },
+            {
+              "value": "ok. 8–10",
+              "unit": "%",
+              "label": "światowych emisji gazów cieplarnianych wiąże się z żywnością, która nigdy nie została zjedzona",
+              "note": "produkcja, transport i rozkład odpadów na składowiskach"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Degradacja gleb — rolnictwo niszczące własną podstawę",
+          "caption": "Gleba odnawia się w tempie milimetrów na stulecie, więc w skali ludzkiego życia jest zasobem **nieodnawialnym**.",
+          "headers": [
+            "Forma degradacji",
+            "Mechanizm",
+            "Gdzie szczególnie groźna"
+          ],
+          "rows": [
+            [
+              "Erozja wodna",
+              "Spływ po zaoranych stokach pozbawionych okrywy roślinnej zmywa poziom próchniczny; sprzyja jej orka wzdłuż stoku i usuwanie miedz",
+              "Wyżyna Lessowa w Chinach, Wyżyna Abisyńska, polskie obszary lessowe (Wyżyna Lubelska)"
+            ],
+            [
+              "Erozja wietrzna (eoliczna)",
+              "Wywiewanie suchej, pylastej gleby z wielkich pól pozbawionych zadrzewień śródpolnych",
+              "Wielkie Równiny w USA, stepy Kazachstanu, Sahel"
+            ],
+            [
+              "Zasolenie wtórne",
+              "Nawadnianie w klimacie suchym: woda paruje, a rozpuszczone w niej sole zostają i gromadzą się w warstwie ornej",
+              "Kotlina Aralska, dolina Indusu, doliny Eufratu i Tygrysu"
+            ],
+            [
+              "Wyjałowienie (utrata próchnicy)",
+              "Ciągła uprawa bez nawozów organicznych i płodozmianu wyczerpuje składniki i próchnicę, a monokultura obniża aktywność biologiczną gleby",
+              "Afryka Subsaharyjska, obszary intensywnej monokultury zbożowej"
+            ],
+            [
+              "Zakwaszenie i zanieczyszczenie",
+              "Nadmiar nawozów azotowych obniża pH; ścieki, osady i pyły wnoszą metale ciężkie",
+              "okolice okręgów przemysłowych, m.in. Górny Śląsk"
+            ],
+            [
+              "Zasklepienie gleb",
+              "Trwałe zabudowanie i uszczelnienie powierzchni — całkowita utrata funkcji produkcyjnej",
+              "strefy podmiejskie wielkich miast, korytarze transportowe"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Połącz termin z mechanizmem, którego dotyczy.",
+          "pairs": [
+            {
+              "left": "Odmiany karłowe",
+              "right": "Krótkie źdźbło nie wylega przy dużych dawkach azotu i kieruje asymilaty do ziarna"
+            },
+            {
+              "left": "IR8",
+              "right": "Wysokoplenna odmiana ryżu z lat 60., która umożliwiła dwa zbiory rocznie"
+            },
+            {
+              "left": "Kukurydza Bt",
+              "right": "Roślina transgeniczna z genem bakterii, wytwarzająca własne białko owadobójcze"
+            },
+            {
+              "left": "Głód ukryty",
+              "right": "Niedobór żelaza, jodu czy witaminy A przy wystarczającej liczbie kalorii"
+            },
+            {
+              "left": "Zasolenie wtórne",
+              "right": "Nagromadzenie soli w warstwie ornej po wieloletnim nawadnianiu w klimacie suchym"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego wprowadzenie karłowych odmian pszenicy było warunkiem wykorzystania wysokich dawek nawozów azotowych?",
+          "options": [
+            "Ponieważ krótkie odmiany pobierają z gleby mniej azotu, więc nawóz się nie marnuje",
+            "Ponieważ krótkie i sztywne źdźbło nie wylega, a rośliny przeznaczają więcej asymilatów na ziarno niż na słomę",
+            "Ponieważ odmiany karłowe mają głębszy system korzeniowy i nie wymagają nawadniania",
+            "Ponieważ niskie łany są mniej narażone na choroby grzybowe i nie trzeba stosować pestycydów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Silne nawożenie azotem starych, wysokich odmian powodowało bujny wzrost słomy i **wyleganie** łanu przed żniwami — plon spadał zamiast rosnąć. Karłowatość rozwiązała problem mechanicznie (sztywne źdźbło) i fizjologicznie (większy udział ziarna w masie rośliny). Gęsty łan jednej odmiany był natomiast **bardziej**, a nie mniej podatny na choroby, dlatego pakiet zielonej rewolucji zawierał również pestycydy."
+        },
+        {
+          "type": "quiz",
+          "question": "Świat produkuje dziś więcej kalorii, niż wynosi zapotrzebowanie jego mieszkańców, a mimo to setki milionów ludzi są niedożywione. Które wyjaśnienie jest zgodne ze współczesną wiedzą?",
+          "options": [
+            "Gleby świata są już tak wyjałowione, że produkcja globalna nie pokrywa potrzeb",
+            "Głód wynika przede wszystkim z braku dostępu ekonomicznego i fizycznego do żywności: niskich dochodów, wojen, złej infrastruktury i strat w łańcuchu dostaw",
+            "Przyczyną jest wyłącznie zbyt szybki przyrost naturalny w krajach rozwijających się",
+            "Żywność jest w skali globalnej rozdzielana równo, ale mieszkańcy krajów ubogich mają wyższe zapotrzebowanie energetyczne"
+          ],
+          "correctIndex": 1,
+          "explanation": "To kluczowa teza egzaminacyjna: **głód jest dziś problemem dystrybucji i ubóstwa, a nie globalnej wielkości produkcji**. Ta sama planeta, na której ok. 735 mln ludzi było niedożywionych (2022), marnuje około jednej trzeciej wytworzonej żywności. Przyrost naturalny zwiększa presję, lecz sam nie tłumaczy, dlaczego głodują konkretne regiony — pokrywają się one z obszarami konfliktów i skrajnego ubóstwa."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Częste polecenia CKE z tego zakresu: (1) „Wyjaśnij, dlaczego zielona rewolucja przyniosła większe efekty w Azji Południowej niż w Afryce Subsaharyjskiej” — odpowiadaj przez **nawadnianie, rodzaj upraw objętych pracami hodowlanymi i dostęp do kapitału**, nie ogólnikami o zacofaniu. (2) „Podaj skutki pozytywne i negatywne zielonej rewolucji” — po dwa z każdej strony, a negatywne rozbij na **środowiskowe** (zasolenie, obniżenie zwierciadła wód podziemnych, eutrofizacja, spadek różnorodności odmian) i **społeczne** (rozwarstwienie wsi, zadłużenie drobnych rolników). (3) W zadaniach o głodzie zawsze rozdziel **przyczyny przyrodnicze od pozaprzyrodniczych** i pamiętaj, że te drugie są dziś ważniejsze."
+        }
+      ]
+    },
+    {
+      "slug": "lesnictwo-funkcje-lasow-i-wylesianie",
+      "title": "Leśnictwo — funkcje lasów, lesistość i wylesianie",
+      "summary": "Dlaczego las jest jednocześnie surowcem i urządzeniem ochronnym środowiska, jak liczyć i porównywać lesistość, na czym polega trwale zrównoważona gospodarka leśna oraz gdzie i z jakich powodów lasy dziś znikają.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Lasy zajmują ok. **31% powierzchni lądów** (ok. 4,06 mld ha, FAO 2020), ale ich znaczenie daleko wykracza poza dostarczanie drewna. Ten sam hektar lasu równocześnie produkuje surowiec, hamuje erozję, zatrzymuje wodę, pochłania dwutlenek węgla, daje schronienie gatunkom i miejsce wypoczynku ludziom — i właśnie dlatego decyzje o jego wycięciu są tak sporne. **Leśnictwo** to dział gospodarki zajmujący się hodowlą, ochroną i użytkowaniem lasu; jego podstawową zasadą jest **trwałość lasu**: nie wolno pozyskać więcej drewna, niż przyrasta. W skali świata zasada ta bywa łamana — tam, gdzie las nie jest wart tyle, co ziemia pod nim, znika bezpowrotnie."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje lasu — trzy grupy",
+          "caption": "Na maturze bardzo częste polecenie: „podaj po dwie funkcje pozaprodukcyjne”. Rozdzielaj wtedy funkcje ekologiczne od społecznych.",
+          "groups": [
+            {
+              "name": "Produkcyjne (gospodarcze)",
+              "description": "Dostarczanie surowców i dochodu: **drewno** dla budownictwa, przemysłu meblarskiego, celulozowo-papierniczego i energetyki, a także żywica, runo leśne, zwierzyna łowna i miejsca pracy na obszarach wiejskich.",
+              "examples": [
+                "drewno tartaczne i papierówka",
+                "grzyby i owoce leśne",
+                "gospodarka łowiecka",
+                "żywica i kora"
+              ]
+            },
+            {
+              "name": "Ekologiczne (ochronne)",
+              "description": "Las stabilizuje warunki środowiska: funkcja **glebochronna** (korzenie wiążą glebę na stokach i wydmach), **wodochronna** (ściółka zwiększa wsiąkanie i retencję, spłaszczając fale wezbraniowe), **klimatyczna** (pochłanianie $CO_2$, obniżanie amplitud temperatury, wzrost wilgotności powietrza) oraz ochrona **różnorodności biologicznej**.",
+              "examples": [
+                "lasy wodochronne wokół zbiorników",
+                "pasy wiatrochronne na stepach",
+                "lasy górskie chroniące przed lawinami",
+                "zwiększanie retencji w zlewni"
+              ]
+            },
+            {
+              "name": "Społeczne (socjalne)",
+              "description": "Funkcje związane bezpośrednio z człowiekiem: **rekreacja i turystyka**, edukacja przyrodnicza, walory zdrowotne i krajobrazowe, a w wielu krajach rozwijających się także **drewno opałowe** jako podstawowe źródło energii gospodarstw domowych.",
+              "examples": [
+                "lasy miejskie i podmiejskie",
+                "ścieżki dydaktyczne",
+                "uzdrowiska i lecznictwo klimatyczne",
+                "opał i węgiel drzewny w Afryce"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Lesistość",
+          "text": "**Lesistość** to udział powierzchni lasów w powierzchni ogólnej danego obszaru, wyrażony w procentach. Jest wskaźnikiem **względnym**, więc kraj o ogromnej powierzchni lasów może mieć niską lesistość i odwrotnie.",
+          "note": "Największą powierzchnię lasów mają Rosja, Brazylia, Kanada, USA i Chiny — łącznie ponad połowę lasów świata. Najwyższą lesistością odznaczają się natomiast małe kraje strefy równikowej (Surinam, Gujana, Gabon) oraz Finlandia i Szwecja."
+        },
+        {
+          "type": "formula",
+          "title": "Wskaźnik lesistości",
+          "expression": "L = \\frac{P_l}{P} \\cdot 100\\%",
+          "variables": [
+            {
+              "symbol": "L",
+              "meaning": "lesistość [%]"
+            },
+            {
+              "symbol": "P_l",
+              "meaning": "powierzchnia lasów [km² lub ha]"
+            },
+            {
+              "symbol": "P",
+              "meaning": "powierzchnia ogólna obszaru [km² lub ha]"
+            }
+          ],
+          "caption": "Pilnuj jednakowych jednostek w liczniku i mianowniku — najczęstszy błąd rachunkowy w zadaniach to mieszanie ha z km² (1 km² = 100 ha)."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Lesistość wybranych krajów",
+          "caption": "Dane FAO (ok. 2020), wartości zaokrąglone. Zestaw pokazuje, że lesistość zależy przede wszystkim od **strefy klimatycznej** oraz od historii wylesiania: Wielka Brytania wykarczowała swoje lasy stulecia temu, a Chiny odbudowują je dopiero od kilku dekad.",
+          "unit": "%",
+          "labels": [
+            "Surinam",
+            "Finlandia",
+            "Szwecja",
+            "Brazylia",
+            "Rosja",
+            "Kanada",
+            "Polska",
+            "Chiny",
+            "Wielka Brytania"
+          ],
+          "series": [
+            {
+              "name": "Lesistość",
+              "values": [
+                97,
+                74,
+                69,
+                59,
+                50,
+                39,
+                31,
+                23,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Wielkie strefy leśne świata i ich rola gospodarcza",
+          "caption": "Kliknij kolejne strefy: zwróć uwagę, że najintensywniej użytkowane gospodarczo są lasy borealne i umiarkowane, a najsilniej wylesiane — równikowe.",
+          "zones": [
+            {
+              "name": "Wilgotne lasy równikowe",
+              "latitude": "ok. 10°N – 10°S",
+              "text": "Największa różnorodność biologiczna i ogromny zapas węgla, ale gleby pod nimi (ferralitowe) są **ubogie** — składniki krążą w biomasie, nie w glebie. Drewno gatunków liściastych twardych (mahoń, teak) jest cenne, lecz drzewa rosną w rozproszeniu, co utrudnia pozyskanie. Tu koncentruje się dziś wylesianie.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Lasy monsunowe i suche lasy zwrotnikowe",
+              "latitude": "ok. 10° – 25°",
+              "text": "Zrzucają liście w porze suchej. Silnie przekształcone przez wypas i rolnictwo żarowe, w Afryce dodatkowo przez pozyskanie **drewna opałowego i węgla drzewnego** — ich ubytek prowadzi wprost do pustynnienia Sahelu.",
+              "tone": "heat"
+            },
+            {
+              "name": "Lasy i zarośla twardolistne",
+              "latitude": "ok. 30° – 40°",
+              "text": "Strefa śródziemnomorska: wiecznie zielone dęby korkowe i ostrolistne, często zdegradowane do zarośli typu makia. Głównym zagrożeniem są **pożary** i zabudowa turystyczna wybrzeży, a nie pozyskanie drewna.",
+              "tone": "earth"
+            },
+            {
+              "name": "Lasy strefy umiarkowanej (liściaste i mieszane)",
+              "latitude": "ok. 40° – 55°",
+              "text": "Niemal w całości **wtórne** — pierwotne lasy Europy i wschodu USA wycięto pod uprawy setki lat temu. Dziś ich powierzchnia jest stabilna lub rośnie, bo grunty marginalne są zalesiane. To strefa najstarszej, uregulowanej gospodarki leśnej — należy do niej Polska.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Tajga (borealne lasy iglaste)",
+              "latitude": "ok. 50° – 70°N",
+              "text": "Największy zwarty kompleks leśny świata (Rosja, Kanada, Skandynawia). Drewno iglaste, jednorodne i łatwe w pozyskaniu, zasila przemysł tartaczny i celulozowo-papierniczy. Wolny wzrost w chłodnym klimacie oznacza jednak **bardzo długi okres odnowienia** i dużą wrażliwość na pożary.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Cykl hodowlany w gospodarce leśnej",
+          "caption": "Cykl zamyka się dopiero po kilkudziesięciu, a w tajdze nawet po ponad stu latach — dlatego leśnictwo planuje się w dziesięcioleciach, a nie w sezonach jak rolnictwo.",
+          "stages": [
+            {
+              "name": "Odnowienie",
+              "text": "Powstaje nowe pokolenie drzew — **naturalnie** (z nasion drzew macierzystych) lub sztucznie, przez sadzenie z hodowanego materiału. Odnowienie naturalne daje drzewostan lepiej dostosowany do siedliska."
+            },
+            {
+              "name": "Pielęgnacja upraw i młodników",
+              "text": "Czyszczenia usuwają egzemplarze chore, wadliwe i nadmiernie zagęszczone, dzięki czemu pozostałe drzewa mają dość światła i wody."
+            },
+            {
+              "name": "Trzebież",
+              "text": "Systematyczne przerzedzanie starszego drzewostanu. Daje **drewno użytkowe już w trakcie wzrostu lasu** i jednocześnie przyspiesza przyrost drzew pozostawionych."
+            },
+            {
+              "name": "Wiek rębności",
+              "text": "Drzewostan osiąga dojrzałość (dla sosny w Polsce zwykle ok. 100 lat, dla dębu znacznie więcej). Przyrost roczny zaczyna maleć, a funkcje ochronne i przyrodnicze są największe."
+            },
+            {
+              "name": "Rębnia i pozyskanie",
+              "text": "Wycinka: **zupełna** (cała powierzchnia naraz — tania, ale odsłania glebę) lub **złożona** (stopniowa, pod osłoną starego drzewostanu — droższa, lecz chroni glebę i sprzyja odnowieniu naturalnemu). Powierzchnia musi zostać odnowiona, więc cykl zaczyna się od nowa."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie las znika, a gdzie przybywa",
+          "caption": "Sprawdź, czy potrafisz przypisać każdemu obszarowi jego główną przyczynę zmian — to typowe zadanie z mapą.",
+          "center": [
+            8,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -10.5,
+              "lng": -63,
+              "label": "Amazonia (Rondônia, Brazylia)",
+              "text": "Klasyczny „łuk wylesiania”. Kolejność: droga — wyrąb cennych drzew — wypalanie — pastwiska dla bydła — uprawa soi. Wylesianie napędza tu **eksportowy agrobiznes**, nie potrzeby miejscowej ludności."
+            },
+            {
+              "lat": 0.5,
+              "lng": 22,
+              "label": "Kotlina Konga",
+              "text": "Drugi co do wielkości kompleks lasów równikowych. Ubytek wolniejszy niż w Amazonii, wywołany głównie **rolnictwem żarowo-odłogowym** i pozyskaniem drewna opałowego przy szybkim wzroście liczby ludności."
+            },
+            {
+              "lat": 0,
+              "lng": 114,
+              "label": "Borneo i Sumatra (Indonezja, Malezja)",
+              "text": "Wylesianie pod **plantacje palmy oleistej**. Szczególnie dotkliwe na podłożu torfowym: osuszenie i wypalanie torfu uwalnia ogromne ilości $CO_2$ i wywołuje transgraniczne zadymienie."
+            },
+            {
+              "lat": -22,
+              "lng": -61.5,
+              "label": "Gran Chaco (Argentyna, Paragwaj)",
+              "text": "Suchy las zwrotnikowy karczowany maszynowo pod **soję i pastwiska** — jedno z najszybciej wylesianych miejsc świata poza strefą równikową."
+            },
+            {
+              "lat": -19,
+              "lng": 47,
+              "label": "Madagaskar",
+              "text": "Wylesianie z ubóstwa: rolnictwo żarowe (tavy) i węgiel drzewny. Skutkiem jest katastrofalna **erozja gleb** — rzeki wynoszą do oceanu czerwoną zwietrzelinę, dobrze widoczną na zdjęciach satelitarnych."
+            },
+            {
+              "lat": 40,
+              "lng": 110,
+              "label": "Północne Chiny — pas ochronny",
+              "text": "Przykład odwrotny: od 1978 r. trwa zakrojony na dekady program zalesiania („Trzy Północne Pasy Ochronne”), mający hamować **erozję wietrzną i postęp pustyni**. Lesistość Chin wyraźnie wzrosła, choć monokultury sadzone w klimacie suchym są krytykowane za zużycie wody."
+            },
+            {
+              "lat": 14,
+              "lng": 5,
+              "label": "Sahel — Wielki Zielony Mur",
+              "text": "Międzynarodowy projekt pasa zieleni na południowym skraju Sahary, łączący sadzenie drzew z odbudową pastwisk i małą retencją. Cel: powstrzymanie **pustynnienia** i poprawa bezpieczeństwa żywnościowego."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Przyczyny wylesiania — inne w każdym regionie",
+          "caption": "Reguła: w krajach o wysokich dochodach lasu ubywa rzadko, bo grunty rolne są porzucane; w krajach ubogich las ustępuje polu, pastwisku lub paleniskom.",
+          "headers": [
+            "Grupa przyczyn",
+            "Mechanizm",
+            "Przykładowe regiony"
+          ],
+          "rows": [
+            [
+              "Ekspansja rolnictwa towarowego",
+              "Las ustępuje, gdy hektar pastwiska lub plantacji daje wyższy dochód niż hektar lasu; decyduje popyt **rynków zagranicznych**",
+              "Amazonia (bydło, soja), Gran Chaco, Borneo (palma oleista)"
+            ],
+            [
+              "Rolnictwo żarowo-odłogowe",
+              "Przy rosnącej liczbie ludności skraca się odłóg i las nie zdąża się odtworzyć — system z odnawialnego staje się rabunkowy",
+              "Kotlina Konga, Madagaskar, wnętrze Azji Południowo-Wschodniej"
+            ],
+            [
+              "Pozyskanie drewna opałowego i węgla drzewnego",
+              "Podstawowe źródło energii gospodarstw domowych w krajach ubogich; wycinka koncentruje się wokół miast i dróg",
+              "Sahel, Afryka Wschodnia, Haiti"
+            ],
+            [
+              "Wyrąb rabunkowy (w tym nielegalny)",
+              "Selektywne wycinanie najcenniejszych gatunków plus drogi zrywkowe otwierające las dla osadników — częściej **degradacja** niż całkowite wylesienie",
+              "Azja Południowo-Wschodnia, dorzecze Amazonki, Syberia"
+            ],
+            [
+              "Górnictwo, energetyka i urbanizacja",
+              "Kopalnie odkrywkowe, zbiorniki zaporowe, drogi i rozlewanie się miast trwale zmieniają użytkowanie terenu",
+              "Amazonia (złoto), Indie, Afryka Zachodnia"
+            ],
+            [
+              "Pożary",
+              "Naturalny czynnik w tajdze i strefie śródziemnomorskiej, ale nasilany przez ocieplenie, susze i wypalanie — pożar sam w sobie nie musi oznaczać wylesienia, o ile las się odnowi",
+              "Syberia, Kanada, basen Morza Śródziemnego, Australia"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Amazonia — dlaczego las przegrywa z pastwiskiem",
+          "region": "Brazylia, dorzecze Amazonki",
+          "text": "Wylesianie w Amazonii ma powtarzalny scenariusz. Najpierw powstaje **droga** — bez niej las jest nieopłacalny do zagospodarowania. Wzdłuż niej wchodzą ekipy wycinające najcenniejsze drzewa, a resztę drzewostanu wypala się w porze suchej. Popiół użyźnia glebę na kilka lat, więc powstaje **pastwisko dla bydła** — najtańszy sposób „zajęcia” ziemi i potwierdzenia prawa do niej. Po wyjałowieniu gleby teren bywa sprzedawany pod mechaniczną uprawę **soi**, a hodowca przesuwa się głębiej w las. Kluczowy jest jednak mechanizm gospodarczy: dochód z hektara pastwiska lub pola jest natychmiastowy i trafia do właściciela, natomiast korzyści z zachowania lasu (retencja wody, pochłanianie $CO_2$, bioróżnorodność) są **rozproszone w skali świata i nikt za nie właścicielowi nie płaci**. Dochodzi do tego sprzężenie zwrotne: Amazonia sama wytwarza znaczną część własnych opadów przez ewapotranspirację, więc zmniejszanie powierzchni lasu **osusza** obszary jeszcze zalesione, ułatwiając kolejne pożary.",
+          "takeaway": "Wylesianie tropikalne jest problemem ekonomicznym: dopóki las żywy jest dla właściciela mniej wart niż las wycięty, chronią go tylko przepisy, kontrola i płatności za usługi ekosystemowe."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. (1) **Wylesianie to trwała zmiana sposobu użytkowania ziemi** (las → pole, pastwisko, kopalnia), a nie każda wycinka: zrąb w gospodarce leśnej, który zostaje odnowiony, wylesianiem nie jest. (2) **Degradacja lasu** (przerzedzenie, wybranie najcenniejszych drzew, pożar) obniża jakość lasu, choć powierzchnia leśna formalnie pozostaje — dlatego statystyki FAO bywają mylące. (3) **Lesistość** to udział procentowy, a **powierzchnia lasów** to wartość bezwzględna: Kanada ma wielokrotnie więcej lasu niż Finlandia, ale znacznie niższą lesistość."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj etapy przejścia leśnego",
+          "instruction": "„Przejście leśne” to typowy przebieg zmian lesistości kraju wraz z rozwojem gospodarczym. Ustaw etapy od najwcześniejszego do najpóźniejszego.",
+          "items": [
+            "Rozległe lasy pierwotne przy niskiej gęstości zaludnienia i rolnictwie na własne potrzeby",
+            "Karczowanie lasów pod uprawy i osadnictwo w miarę szybkiego wzrostu liczby ludności",
+            "Minimum lesistości: deficyt drewna, nasilona erozja gleb i powodzie",
+            "Odpływ ludności ze wsi do miast, porzucanie gruntów marginalnych i pierwsze zalesienia",
+            "Wzrost lesistości oraz przewaga funkcji ochronnych i społecznych lasu nad produkcyjnymi"
+          ],
+          "explanation": "Tę ścieżkę przeszły m.in. Europa Zachodnia, Polska i Korea Południowa: minimum lesistości Polski przypadło na okres po II wojnie światowej (ok. 21%), po czym zalesienia gruntów najsłabszych podniosły ją do ok. 30%. Kraje Afryki Subsaharyjskiej znajdują się dziś w fazie drugiej — dlatego globalne wylesianie i globalne zalesianie zachodzą jednocześnie, w różnych częściach świata."
+        },
+        {
+          "type": "quiz",
+          "question": "Rosja ma największą na świecie powierzchnię lasów, a jednak jej lesistość jest niższa niż Finlandii. Jak to wyjaśnić?",
+          "options": [
+            "Lasy Rosji są młodsze, więc statystyki ich nie uwzględniają",
+            "Lesistość jest wskaźnikiem względnym — liczy udział lasów w powierzchni kraju, a znaczną część Rosji zajmują tundra, stepy i góry, na których las nie rośnie",
+            "Fińskie lasy są gęstsze, więc dają wyższy wskaźnik lesistości",
+            "Rosja zalicza tajgę do gruntów nieleśnych ze względu na jej gospodarcze wykorzystanie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lesistość to iloraz: $L = \\frac{P_l}{P} \\cdot 100\\%$. Rosja ma ogromny licznik, ale jeszcze większy mianownik — poza strefą tajgi leżą rozległe obszary tundry, stepów, pustyń i wysokich gór, gdzie las nie występuje z przyczyn klimatycznych. Finlandia niemal w całości mieści się w strefie borealnej, więc niemal cała jej powierzchnia nadaje się dla lasu. Gęstość drzewostanu nie wchodzi do tego wskaźnika w ogóle."
+        },
+        {
+          "type": "quiz",
+          "question": "Jak wylesienie górnej części zlewni wpłynie na reżim rzeki i stan gleb?",
+          "options": [
+            "Wezbrania staną się wyższe i gwałtowniejsze, przepływy niżówkowe niższe, a erozja gleb i zamulanie zbiorników — silniejsze",
+            "Rzeka wyrówna przepływ, bo woda nie będzie już pobierana przez drzewa",
+            "Wezbrania się zmniejszą, ponieważ zniknie ściółka zatrzymująca wodę na stokach",
+            "Reżim rzeki się nie zmieni, bo o przepływie decydują wyłącznie opady"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las działa jak **gąbka i hamulec**: korony przechwytują część opadu, a porowata ściółka zwiększa wsiąkanie, dzięki czemu woda spływa powoli, w dużej mierze podziemnie. Po wylesieniu rośnie udział szybkiego **spływu powierzchniowego** — fala wezbraniowa jest wyższa i przychodzi wcześniej, a ponieważ zasilanie podziemne słabnie, w okresach bezopadowych przepływy są niższe (amplituda stanów wody rośnie). Odsłonięta gleba na stoku jest jednocześnie zmywana, więc rzeka niesie więcej materiału, który zamula koryta i zbiorniki zaporowe."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Co powtórzyć przed egzaminem: (1) potrafisz **obliczyć lesistość** z danych w tabeli i porównać ją z powierzchnią lasów — pilnuj jednostek (1 km² = 100 ha); (2) umiesz podać po dwie funkcje **produkcyjne, ekologiczne i społeczne** lasu i przypisać je do konkretnej sytuacji z mapy (las wodochronny nad zbiornikiem, pas wiatrochronny na Wielkich Równinach); (3) przy zadaniu „wyjaśnij przyczyny wylesiania na obszarze X” zawsze podawaj **mechanizm ekonomiczny**, a nie samo zjawisko — soja i bydło w Amazonii, palma oleista na Borneo, drewno opałowe w Sahelu; (4) znasz skutki wylesiania w trzech skalach: **lokalnej** (erozja, wezbrania), **regionalnej** (spadek opadów, pustynnienie) i **globalnej** (emisja $CO_2$, utrata bioróżnorodności)."
+        }
+      ]
     }
   ]
 }

@@ -874,6 +874,685 @@
      "text": "W zadaniach o okręgach przemysłowych klucz oczekuje odróżnienia **czynników genezy** (dlaczego okręg powstał *wtedy*) od **czynników współczesnych** (dlaczego trwa albo upada *dziś*) — to zwykle dwa różne zestawy. Dla Ruhry: geneza = węgiel kamienny i transport po Renie, współcześnie = kadry, uczelnie, położenie w centrum Europy i węzeł logistyczny. Przy porównaniach dwóch okręgów pisz **równolegle** („w okręgu A…, natomiast w okręgu B…”), bo za wypisanie cech tylko jednego z nich zwykle nie ma punktu. I nie zamieniaj pojęć: **technopolia ≠ park technologiczny ≠ klaster** — to jeden z częstszych błędów w arkuszach."
     }
    ]
+  },
+  {
+   "slug": "energetyka-swiata-zrodla-konwencjonalne",
+   "title": "Energetyka świata i źródła konwencjonalne",
+   "summary": "Z czego świat naprawdę czerpie energię, jak w elektrowni cieplnej węgiel zamienia się w prąd, dlaczego węgiel brunatny nigdy nie odjeżdża daleko od kopalni oraz na czym polega bezpieczeństwo energetyczne państwa.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Każda gałąź przemysłu potrzebuje jednego wspólnego wsadu — **energii**. Dlatego energetyka jest gałęzią szczególną: jej wyrób nie da się magazynować w prosty sposób ani odłożyć na później, a bez niej nie ruszy żadna huta, walcownia ani serwerownia. W tej lekcji patrzymy na **strukturę światowej produkcji energii**, na cztery **źródła konwencjonalne** (węgiel, ropa naftowa, gaz ziemny, paliwo jądrowe) oraz na to, jak z nich powstaje prąd. Zwróć uwagę na myśl przewodnią: o miejscu elektrowni prawie zawsze decyduje **relacja kosztu transportu nośnika do kosztu przesyłu energii** — jeśli taniej przewieźć paliwo, elektrownia stoi przy odbiorcy; jeśli taniej przesłać prąd, elektrownia stoi przy złożu."
+    },
+    {
+     "type": "definition",
+     "term": "Nośnik energii pierwotnej",
+     "text": "Substancja lub zjawisko występujące w przyrodzie w stanie nieprzetworzonym, z którego można uzyskać energię: **węgiel, ropa naftowa, gaz ziemny, ruda uranu, energia wody, wiatru, Słońca, wnętrza Ziemi, biomasa**. Po przetworzeniu — spaleniu, rozszczepieniu, przepuszczeniu przez turbinę — otrzymujemy **nośniki energii wtórnej**: energię elektryczną, ciepło sieciowe, benzynę, koks, wodór.",
+     "note": "Nośniki konwencjonalne dzielimy na **nieodnawialne paliwa kopalne** (węgiel, ropa, gaz) oraz **paliwo jądrowe** (uran). Paliwo jądrowe także jest nieodnawialne, ale — w odróżnieniu od kopalnych — jego wykorzystanie **nie powoduje emisji dwutlenku węgla**, dlatego w zestawieniach klimatycznych bywa liczone razem ze źródłami bezemisyjnymi."
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Struktura światowej produkcji energii elektrycznej według źródeł (ok. 2023)",
+     "caption": "Wartości przybliżone, zaokrąglone do pełnych procent. Zapamiętaj przede wszystkim kolejność i rzędy wielkości, a nie dokładne liczby — na maturze zwykle wystarczy stwierdzić, że **węgiel wciąż jest źródłem nr 1 w elektroenergetyce świata**, choć jego udział systematycznie maleje.",
+     "labels": [
+      "Węgiel",
+      "Gaz ziemny",
+      "Wodna",
+      "Jądrowa",
+      "Wiatrowa",
+      "Słoneczna",
+      "Pozostałe"
+     ],
+     "series": [
+      {
+       "name": "Udział w produkcji energii elektrycznej",
+       "values": [
+        36,
+        23,
+        14,
+        9,
+        8,
+        5,
+        5
+       ]
+      }
+     ],
+     "unit": "%"
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Nie myl **struktury zużycia energii pierwotnej** ze **strukturą produkcji energii elektrycznej** — to dwa różne wykresy i jedna z częstszych pułapek w zadaniach. W energii pierwotnej (całe paliwo zużywane również w transporcie, ogrzewaniu i przemyśle) pierwsze miejsce na świecie zajmuje **ropa naftowa** — około jednej trzeciej — bo napędza samochody, statki i samoloty. W samej elektroenergetyce ropa jest niemal nieobecna, a prym wiedzie **węgiel**. Zanim odpowiesz, sprawdź w poleceniu, czy chodzi o „energię pierwotną”, czy o „energię elektryczną”."
+    },
+    {
+     "type": "classification",
+     "title": "Cztery konwencjonalne źródła energii",
+     "caption": "Dla każdego zapamiętaj triadę: **gdzie występuje — jak trafia do elektrowni — co ogranicza jego użycie**. Z tych trzech elementów da się zbudować odpowiedź na większość poleceń typu „wyjaśnij, dlaczego w kraju X dominuje źródło Y”.",
+     "groups": [
+      {
+       "name": "Węgiel kamienny i brunatny",
+       "description": "Najbardziej rozpowszechnione paliwo elektroenergetyki. Jego przewagą jest **duża dostępność zasobów i niska cena jednostki energii**, wadą — najwyższa spośród paliw **emisja $CO_2$ na jednostkę wytworzonej energii** oraz emisja tlenków siarki, tlenków azotu i pyłów. Wydobycie skupia się w kilku państwach, a same Chiny odpowiadają za około połowę światowego wydobycia.",
+       "examples": [
+        "Chiny (Shanxi, Mongolia Wewnętrzna)",
+        "Indie",
+        "Indonezja",
+        "USA (Wyoming — Powder River Basin)",
+        "Australia",
+        "Polska (Górnośląskie Zagłębie Węglowe)"
+       ]
+      },
+      {
+       "name": "Ropa naftowa",
+       "description": "Paliwo o **bardzo wysokiej wartości energetycznej w jednostce objętości** i łatwe do transportu (tankowce, rurociągi), dlatego zdominowało transport. W elektroenergetyce jest zbyt drogie i używa się go głównie tam, gdzie jest tanie na miejscu albo gdzie brak alternatyw — w krajach Zatoki Perskiej, na wyspach, w agregatach awaryjnych. Rynek ropy jest **silnie upolityczniony**: część produkcji koordynuje kartel **OPEC**.",
+       "examples": [
+        "USA (Basen Permski — ropa łupkowa)",
+        "Arabia Saudyjska (złoże Ghawar)",
+        "Rosja (Syberia Zachodnia)",
+        "Kanada (piaski roponośne Alberty)",
+        "Irak i Iran",
+        "szelf Zatoki Meksykańskiej"
+       ]
+      },
+      {
+       "name": "Gaz ziemny",
+       "description": "**Najczystsze z paliw kopalnych** — przy spalaniu emituje mniej więcej o połowę mniej $CO_2$ niż węgiel na jednostkę energii i praktycznie nie emituje siarki ani pyłów. Bloki gazowo-parowe mają **najwyższą sprawność** spośród elektrowni cieplnych i **bardzo szybko zmieniają moc**, dlatego dobrze uzupełniają niestabilne źródła odnawialne. Wada: transport wymaga **gazociągu albo skroplenia do postaci LNG** i terminala, co wiąże odbiorcę z dostawcą.",
+       "examples": [
+        "USA (gaz łupkowy)",
+        "Rosja (Jamał, Urengoj)",
+        "Katar (Pole Północne, eksport LNG)",
+        "Iran",
+        "Norwegia (szelf Morza Północnego)"
+       ]
+      },
+      {
+       "name": "Paliwo jądrowe (uran)",
+       "description": "Energia pochodzi z **rozszczepienia jąder uranu-235**, a nie ze spalania — stąd **brak emisji $CO_2$ i zanieczyszczeń powietrza** oraz znikome zapotrzebowanie na masę paliwa: kilogram uranu zastępuje setki ton węgla, więc **transport paliwa nie ma tu znaczenia lokalizacyjnego**. Elektrownia jądrowa pracuje stabilnie przez cały rok, ale wymaga **ogromnego kapitału początkowego, długiej budowy, dużych ilości wody do chłodzenia** i rozwiązania problemu **odpadów promieniotwórczych**.",
+       "examples": [
+        "USA (największa produkcja)",
+        "Francja (największy udział w miksie)",
+        "Chiny (najwięcej reaktorów w budowie)",
+        "Rosja",
+        "Korea Południowa",
+        "Kazachstan, Kanada, Australia — wydobycie uranu"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "process",
+     "title": "Jak w elektrowni cieplnej węgiel zamienia się w prąd",
+     "caption": "Cały ten łańcuch to w istocie jedna zasada: **energia chemiczna → cieplna → mechaniczna → elektryczna**. Elektrownia jądrowa różni się wyłącznie pierwszym etapem — zamiast kotła jest reaktor, reszta drogi jest identyczna.",
+     "steps": [
+      {
+       "title": "Przygotowanie paliwa",
+       "text": "Węgiel jest kruszony i mielony na **pył węglowy**. Rozdrobnienie zwiększa powierzchnię kontaktu z tlenem, dzięki czemu paliwo spala się szybciej i pełniej — rośnie sprawność, maleje ilość niedopału."
+      },
+      {
+       "title": "Spalanie w kotle",
+       "text": "W komorze paleniskowej pył spala się w temperaturze rzędu 1400–1600°C. **Energia chemiczna paliwa zamienia się w cieplną**, która przez ściany rur kotła ogrzewa wodę."
+      },
+      {
+       "title": "Wytworzenie pary o wysokich parametrach",
+       "text": "Woda zamienia się w **parę przegrzaną** o bardzo wysokim ciśnieniu i temperaturze. Im wyższe te parametry, tym większa sprawność obiegu — dlatego nowoczesne bloki nadkrytyczne osiągają ok. 45%, a stare, wysłużone jednostki ledwie ok. 30%."
+      },
+      {
+       "title": "Praca turbiny",
+       "text": "Para rozpręża się na łopatkach **turbiny parowej** i wprawia jej wał w ruch obrotowy — energia cieplna staje się **mechaniczną**."
+      },
+      {
+       "title": "Wytworzenie prądu",
+       "text": "Wał turbiny napędza **generator (prądnicę)**: wirujące pole magnetyczne wzbudza w uzwojeniach prąd. Transformator podnosi napięcie do setek kilowoltów, bo **przesył pod wysokim napięciem oznacza mniejsze straty**."
+      },
+      {
+       "title": "Skraplanie i chłodzenie",
+       "text": "Zużyta para musi zostać **skroplona w skraplaczu**, żeby obieg mógł się zamknąć. Ciepło odbiera od niej woda z rzeki, jeziora lub morza albo **chłodnia kominowa** — i to jest właśnie powód, dla którego elektrownia cieplna zawsze stoi nad dużym zbiornikiem wody."
+      },
+      {
+       "title": "Oczyszczanie spalin",
+       "text": "Zanim spaliny opuszczą komin, przechodzą przez **elektrofiltry** (pyły), **instalację odsiarczania** (tlenki siarki) i **instalację odazotowania** (tlenki azotu). Urządzenia te nie usuwają jednak dwutlenku węgla — stąd nierozwiązany problem klimatyczny energetyki węglowej."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Węgiel kamienny a węgiel brunatny — dwa różne modele lokalizacji",
+     "leftLabel": "Węgiel kamienny",
+     "rightLabel": "Węgiel brunatny",
+     "rows": [
+      {
+       "aspect": "Wartość opałowa",
+       "left": "Wysoka, rzędu **25–30 MJ/kg** — dużo energii w jednej tonie.",
+       "right": "Niska, rzędu **7–11 MJ/kg**; aby uzyskać tę samą energię, trzeba spalić kilka razy więcej surowca."
+      },
+      {
+       "aspect": "Zawartość wody",
+       "left": "Wilgotność kilkuprocentowa; węgiel jest zwięzły i dobrze znosi transport.",
+       "right": "Wilgotność sięga **40–60%** — wożąc go, transportuje się głównie wodę, co czyni przewóz ekonomicznie bezsensownym."
+      },
+      {
+       "aspect": "Sposób wydobycia",
+       "left": "Przeważnie **głębinowy** (szyby, chodniki) — kosztowny i niebezpieczny, ale mniej ingerujący w powierzchnię.",
+       "right": "Przeważnie **odkrywkowy** — tańszy i wydajniejszy, ale niszczy rzeźbę, gleby i stosunki wodne na wielkim obszarze."
+      },
+      {
+       "aspect": "Lokalizacja elektrowni",
+       "left": "**Swobodna** — węgiel opłaca się wozić koleją i drogą morską, więc elektrownia może stanąć przy odbiorcy albo w porcie.",
+       "right": "**Sztywno przy odkrywce** — kopalnia i elektrownia tworzą jeden kompleks paliwowo-energetyczny połączony taśmociągiem."
+      },
+      {
+       "aspect": "Przykłady w Polsce",
+       "left": "Elektrownie Kozienice, Połaniec, Opole — zaopatrywane koleją z Górnego Śląska.",
+       "right": "Zespoły Bełchatów, Turów oraz Pątnów–Adamów–Konin, każdy przy własnej odkrywce."
+      },
+      {
+       "aspect": "Skutki środowiskowe wydobycia",
+       "left": "Osiadanie terenu i szkody górnicze, zasolone wody kopalniane, hałdy skały płonnej.",
+       "right": "**Lej depresyjny** sięgający kilkunastu kilometrów, trwałe obniżenie zwierciadła wód gruntowych, konieczność rekultywacji wyrobiska."
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Zalety i wady źródeł konwencjonalnych",
+     "caption": "W zadaniach typu „podaj dwie zalety i dwie wady” najwyżej punktowane są argumenty **konkretne i mierzalne** (emisja, sprawność, koszt, dyspozycyjność), a nie ogólniki w rodzaju „szkodzi środowisku”.",
+     "headers": [
+      "Źródło",
+      "Zalety",
+      "Wady"
+     ],
+     "rows": [
+      [
+       "Węgiel",
+       "Duże i dobrze rozpoznane zasoby; niska cena paliwa; niezależność od importu w krajach z własnymi złożami; praca niezależna od pogody i pory dnia",
+       "Najwyższa emisja $CO_2$ na jednostkę energii; emisja $SO_2$, $NO_x$ i pyłów; niska sprawność starych bloków; degradacja terenu przez wydobycie; duże zużycie wody"
+      ],
+      [
+       "Ropa naftowa",
+       "Bardzo wysoka wartość energetyczna; łatwy transport i magazynowanie; niezastąpiona w transporcie i jako surowiec petrochemiczny",
+       "Wysoka cena; koncentracja zasobów w regionach niestabilnych politycznie; emisja $CO_2$; ryzyko katastrof ekologicznych przy wydobyciu i przewozie morskim"
+      ],
+      [
+       "Gaz ziemny",
+       "Najniższa emisja $CO_2$ i zanieczyszczeń wśród paliw kopalnych; najwyższa sprawność elektrowni cieplnych; błyskawiczna regulacja mocy wspierająca OZE; mała powierzchnia zajmowana przez elektrownię",
+       "Zależność od gazociągu lub terminala LNG; bardzo zmienna cena; podatność na wykorzystanie jako narzędzie nacisku politycznego; ulatniający się metan jest silnym gazem cieplarnianym"
+      ],
+      [
+       "Paliwo jądrowe",
+       "Brak emisji $CO_2$ i zanieczyszczeń powietrza; ogromna gęstość energii w paliwie; najwyższa dyspozycyjność (praca ok. 90% czasu w roku); niewielkie zużycie surowca i zajętej powierzchni",
+       "Bardzo wysoki koszt i długi czas budowy; odpady promieniotwórcze wymagające składowania przez tysiące lat; ryzyko awarii (Czarnobyl 1986, Fukushima 2011); duże zapotrzebowanie na wodę chłodzącą; opór społeczny"
+      ]
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Francja — państwo zbudowane na atomie",
+     "region": "Francja, Europa Zachodnia",
+     "text": "Francja nie ma znaczących złóż węgla, ropy ani gazu. Gdy kryzys naftowy 1973 r. gwałtownie podniósł ceny ropy, rząd uznał **uzależnienie od importu paliw za zagrożenie dla suwerenności** i uruchomił program budowy elektrowni jądrowych (tzw. plan Messmera). W ciągu dwóch dekad powstało kilkadziesiąt reaktorów, dzięki czemu dziś **około dwóch trzecich francuskiej energii elektrycznej pochodzi z atomu** — to najwyższy taki udział na świecie. Skutki są wielorakie: Francja ma jedną z **najniższych w Europie emisji $CO_2$ przypadających na jednostkę wytworzonej energii elektrycznej** i bywa jej stałym eksporterem do sąsiadów. Ujawniły się jednak i słabości modelu. Reaktory budowane w tym samym czasie **starzeją się jednocześnie**, przez co remonty kumulują się w jednym okresie, a w suche, upalne lata rzeki — Rodan czy Garonna — bywają zbyt ciepłe i zbyt płytkie, by odbierać ciepło ze skraplaczy, co zmusza do ograniczania mocy właśnie wtedy, gdy zapotrzebowanie rośnie.",
+     "takeaway": "Struktura miksu energetycznego państwa jest w dużej mierze **decyzją polityczną podjętą pod presją konkretnej sytuacji surowcowej** — a raz podjęta wiąże kraj na pół wieku, bo elektrownia to inwestycja na 40–60 lat."
+    },
+    {
+     "type": "map-explore",
+     "title": "Geografia energetyki konwencjonalnej",
+     "caption": "Kliknij znaczniki. Zwróć uwagę, jak silnie **skoncentrowana** jest produkcja paliw — i jak niewiele punktów na mapie wystarczy, by zachwiać dostawami dla całego świata.",
+     "center": [
+      30,
+      45
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 37.87,
+       "lng": 112.55,
+       "label": "Shanxi (Chiny)",
+       "text": "Serce największego zagłębia węglowego świata. Chiny wydobywają około **połowy światowego węgla** i zużywają go niemal w całości u siebie — to główny powód, dla którego węgiel wciąż jest źródłem nr 1 w elektroenergetyce świata."
+      },
+      {
+       "lat": 31.85,
+       "lng": -102.37,
+       "label": "Basen Permski (USA, Teksas)",
+       "text": "Dzięki **szczelinowaniu hydraulicznemu** złóż łupkowych USA stały się po 2010 r. największym producentem ropy i gazu na świecie, przechodząc z pozycji importera do eksportera — podręcznikowy przykład tego, jak technologia przebudowuje geografię polityczną."
+      },
+      {
+       "lat": 25.43,
+       "lng": 49.62,
+       "label": "Ghawar (Arabia Saudyjska)",
+       "text": "Największe konwencjonalne złoże ropy naftowej świata, eksploatowane od lat 50. XX w. Bardzo niskie koszty wydobycia sprawiają, że Arabia Saudyjska pełni rolę **producenta regulującego** — może zwiększać lub ograniczać podaż, wpływając na światowe ceny."
+      },
+      {
+       "lat": 26.57,
+       "lng": 56.25,
+       "label": "Cieśnina Ormuz",
+       "text": "Wąskie gardło o szerokości niespełna 40 km, przez które przepływa około **jednej piątej ropy będącej przedmiotem światowego handlu**. Jej zablokowanie natychmiast podniosłoby ceny na wszystkich kontynentach — modelowy przykład zagrożenia bezpieczeństwa energetycznego."
+      },
+      {
+       "lat": 70.4,
+       "lng": 68.3,
+       "label": "Półwysep Jamał (Rosja)",
+       "text": "Jedno z największych zagłębi gazowych świata, położone za kołem podbiegunowym. Gaz płynie stąd tysiące kilometrów gazociągami, a **gazociąg wiąże dostawcę z odbiorcą na dziesięciolecia** — dlatego gaz jest paliwem najbardziej podatnym na wykorzystanie politycznie."
+      },
+      {
+       "lat": 50.99,
+       "lng": 2.14,
+       "label": "Elektrownia jądrowa Gravelines (Francja)",
+       "text": "Sześć reaktorów o łącznej mocy ponad 5 GW, chłodzonych wodą morską — typowa dla Francji lokalizacja **nad wodą i blisko uprzemysłowionego odbiorcy**. Nadmorskie położenie uniezależnia elektrownię od letnich niżówek na rzekach."
+      },
+      {
+       "lat": 51.27,
+       "lng": 19.33,
+       "label": "Elektrownia Bełchatów (Polska)",
+       "text": "Największa elektrownia na węgiel brunatny w Europie, zasilana taśmociągami wprost z sąsiedniej odkrywki, a zarazem **największe pojedyncze źródło emisji $CO_2$ w Unii Europejskiej**. Wzorcowy kompleks paliwowo-energetyczny: kopalnia i elektrownia jako jeden organizm."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Bezpieczeństwo energetyczne",
+     "text": "Zdolność państwa do **pokrycia bieżącego i przewidywanego zapotrzebowania odbiorców na energię** w sposób technicznie i ekonomicznie uzasadniony, przy zachowaniu wymagań ochrony środowiska. W praktyce opiera się na czterech filarach: **dostępności** surowca, **niezawodności** dostaw, **akceptowalnej cenie** oraz **dywersyfikacji** źródeł i kierunków importu.",
+     "note": "Stąd bierze się sens takich inwestycji jak terminal LNG w Świnoujściu czy gazociąg Baltic Pipe: nie powiększają one krajowych zasobów, lecz **mnożą kierunki, z których gaz może przyjść** — a im więcej niezależnych kierunków, tym mniejsza siła przetargowa pojedynczego dostawcy."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj państwo do cechy jego energetyki",
+     "instruction": "Za każdym razem pytaj: jakie surowce ten kraj ma na miejscu, a czego musi szukać za granicą? To pytanie prawie zawsze wystarcza, by odtworzyć strukturę miksu.",
+     "pairs": [
+      {
+       "left": "Francja",
+       "right": "około dwie trzecie energii elektrycznej z elektrowni jądrowych — odpowiedź na brak własnych paliw kopalnych"
+      },
+      {
+       "left": "Polska",
+       "right": "miks wciąż zdominowany przez węgiel kamienny i brunatny, oparty na własnych złożach"
+      },
+      {
+       "left": "Katar",
+       "right": "gospodarka oparta na eksporcie skroplonego gazu ziemnego z jednego olbrzymiego złoża"
+      },
+      {
+       "left": "Norwegia",
+       "right": "prąd niemal wyłącznie z elektrowni wodnych, a ropa i gaz z szelfu idą na eksport"
+      },
+      {
+       "left": "Chiny",
+       "right": "największy na świecie producent i konsument węgla, a zarazem lider mocy wiatrowych i słonecznych"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego elektrownie opalane węglem brunatnym lokalizuje się bezpośrednio przy odkrywce, a elektrownie na węgiel kamienny — niekoniecznie?",
+     "options": [
+      "Ponieważ węgiel brunatny zapala się samoczynnie i nie wolno go przewozić koleją",
+      "Ponieważ węgiel brunatny ma niską wartość opałową i bardzo wysoką wilgotność, więc jego transport na większe odległości jest nieopłacalny",
+      "Ponieważ złoża węgla brunatnego leżą zawsze nad dużymi rzekami, a kamiennego — z dala od nich",
+      "Ponieważ elektrownie na węgiel brunatny nie potrzebują wody chłodzącej"
+     ],
+     "correctIndex": 1,
+     "explanation": "Węgiel brunatny ma wartość opałową rzędu 7–11 MJ/kg i wilgotność sięgającą 40–60%, więc przewożąc go, transportuje się w dużej mierze **wodę i balast mineralny**. Koszt przewozu szybko przewyższa wartość zawartej w nim energii, dlatego opłaca się **spalić go na miejscu i przesłać gotową energię elektryczną linią wysokiego napięcia**. Węgiel kamienny (25–30 MJ/kg, niska wilgotność) znosi transport bez problemu, więc elektrownia może stanąć tam, gdzie jest odbiorca albo woda chłodząca."
+    },
+    {
+     "type": "quiz",
+     "question": "Które zestawienie poprawnie opisuje elektrownię jądrową na tle konwencjonalnej elektrowni cieplnej?",
+     "options": [
+      "Nie emituje $CO_2$, ma bardzo wysoką dyspozycyjność, ale wymaga ogromnych nakładów początkowych i wody do chłodzenia",
+      "Nie emituje $CO_2$ i nie wymaga wody chłodzącej, dzięki czemu można ją postawić na pustyni bez dodatkowych warunków",
+      "Emituje mniej $CO_2$ niż elektrownia węglowa, ale za to znacznie więcej tlenków siarki",
+      "Jest tania w budowie, lecz jej moc trzeba stale dostosowywać do warunków pogodowych"
+     ],
+     "correctIndex": 0,
+     "explanation": "Energia powstaje z **rozszczepienia jąder uranu**, a nie ze spalania, więc nie ma emisji $CO_2$, $SO_2$ ani pyłów. Reaktor pracuje przy stałym obciążeniu przez większość roku (dyspozycyjność ok. 90%), co czyni go typowym źródłem **podstawy obciążenia** systemu. Dalsza część układu jest jednak identyczna jak w elektrowni węglowej — para, turbina, skraplacz — więc **woda do chłodzenia jest niezbędna**, a koszt i czas budowy należą do najwyższych w całej energetyce."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Zadania o energetyce niemal zawsze każą **powiązać strukturę miksu z warunkami danego kraju**. Trzymaj się schematu: *jakie surowce są na miejscu → co trzeba importować → jaka jest polityka i historia (kryzysy, awarie, zobowiązania klimatyczne) → jakie z tego wynikają mocne i słabe strony*. Odpowiedź „bo tak jest taniej” nie wystarczy — punktowany jest **konkretny mechanizm**, np. „w Norwegii dominują elektrownie wodne, **ponieważ** wysokie opady i znaczne różnice wysokości w górach zapewniają duże i stałe przepływy, co pozwala uzyskać tanią energię bez importu paliwa”."
+    }
+   ]
+  },
+  {
+   "slug": "odnawialne-zrodla-energii-i-transformacja-energetyczna",
+   "title": "Odnawialne źródła energii i transformacja energetyczna",
+   "summary": "Pięć rodzajów OZE i warunki, jakich każdy z nich wymaga, dlaczego megawat megawatowi nierówny, po co elektrowniom szczytowo-pompowym nocna dziura w zapotrzebowaniu oraz na czym polega transformacja energetyczna i jakie stawia przed geografią wyzwania.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Źródła konwencjonalne mają jedną wspólną cechę: **człowiek decyduje, kiedy je uruchomić**. Odnawialne źródła energii odwracają tę zależność — to przyroda decyduje, kiedy wieje, kiedy świeci i ile wody niesie rzeka, a system elektroenergetyczny musi się do tego dostosować. Dlatego geografia OZE to nie tylko pytanie „gdzie są dobre warunki”, ale też „co zrobić, gdy warunków akurat nie ma”. W tej lekcji poznasz **pięć głównych rodzajów OZE** wraz z warunkami, jakich wymagają, nauczysz się liczyć, ile energii naprawdę daje zainstalowany megawat, i zrozumiesz, dlaczego **transformacja energetyczna** jest procesem nie tylko technicznym, lecz także społecznym i przestrzennym."
+    },
+    {
+     "type": "definition",
+     "term": "Odnawialne źródła energii (OZE)",
+     "text": "Źródła, których zasób **odtwarza się w krótkim czasie w procesach naturalnych** — szybciej, niż jest zużywany. Zdecydowana większość z nich to w istocie **przetworzona energia słoneczna**: nierównomierne nagrzewanie powierzchni Ziemi napędza wiatr, wiatr wzbudza falowanie, parowanie i opady zasilają rzeki, a fotosynteza gromadzi energię w biomasie. Poza tym schematem stoją tylko **energia geotermalna** (ciepło wnętrza Ziemi, głównie z rozpadu pierwiastków promieniotwórczych) i **energia pływów** (grawitacja Księżyca i Słońca).",
+     "note": "Odnawialny **nie znaczy automatycznie bezemisyjny ani nieszkodliwy**: spalanie biomasy emituje $CO_2$ i pyły, a zbiornik zaporowy zatapia dolinę i zatrzymuje rumowisko. Odwrotnie — energia jądrowa jest bezemisyjna, ale **nieodnawialna**. Te dwie osie podziału są niezależne i mylenie ich jest częstym błędem."
+    },
+    {
+     "type": "classification",
+     "title": "Pięć głównych rodzajów OZE i ich warunki",
+     "caption": "Przy każdym źródle zapamiętaj przede wszystkim **warunek przyrodniczy**, który przesądza o lokalizacji — właśnie o niego pyta większość poleceń typu „wyjaśnij, dlaczego akurat tam”.",
+     "groups": [
+      {
+       "name": "Energia wodna",
+       "description": "Wykorzystuje **energię potencjalną wody spiętrzonej zaporą**. Warunki: duże i wyrównane przepływy oraz znaczny **spad**, czyli różnica poziomów — stąd przewaga obszarów górskich i wyżynnych o wysokich opadach. Największa zaleta to **pełna sterowalność**: turbinę wodną uruchamia się w kilkadziesiąt sekund, dlatego elektrownie wodne stabilizują cały system. Wada: zatopienie doliny, przerwanie ciągłości rzeki dla ryb i zatrzymanie rumowiska powyżej zapory.",
+       "examples": [
+        "Norwegia — prąd niemal wyłącznie z wody",
+        "Brazylia i Paragwaj — Itaipú na Paranie",
+        "Chiny — Zapora Trzech Przełomów",
+        "Polska — Włocławek, Solina, Żarnowiec (szczytowo-pompowa)"
+       ]
+      },
+      {
+       "name": "Energia wiatru",
+       "description": "Moc turbiny rośnie **z trzecią potęgą prędkości wiatru**, dlatego niewielki wzrost prędkości daje ogromny przyrost energii — i dlatego liczy się nie tyle „czy wieje”, ile **jak mocno i jak regularnie**. Najlepsze warunki mają wybrzeża, przełęcze, otwarte równiny i przede wszystkim obszary morskie, gdzie brak przeszkód terenowych daje wiatr silniejszy i mniej porywisty. Wady: zmienność produkcji, hałas i infradźwięki, zagrożenie dla ptaków i nietoperzy, ingerencja w krajobraz.",
+       "examples": [
+        "Dania — pionier energetyki wiatrowej",
+        "Niemcy, Wielka Brytania — farmy na Morzu Północnym",
+        "Chiny i USA — największe moce zainstalowane",
+        "Polska — Pomorze, Kujawy, Suwalszczyzna oraz farmy planowane na Bałtyku"
+       ]
+      },
+      {
+       "name": "Energia słoneczna",
+       "description": "Wykorzystywana **fotowoltaicznie** (bezpośrednia zamiana światła na prąd w ogniwie) lub **termicznie** (kolektory i elektrownie słoneczne skupiające promienie na zbiorniku z czynnikiem roboczym). Warunek podstawowy to **duże usłonecznienie i wysoka roczna suma promieniowania** — najkorzystniejsze są strefy zwrotnikowe z klimatem suchym: mało chmur i mała wilgotność. Zaleta: instalacja skalowalna od dachu domu po park o mocy gigawata. Wada: **zero produkcji nocą** i wyraźny spadek zimą w umiarkowanych szerokościach.",
+       "examples": [
+        "Chiny — największa moc zainstalowana na świecie",
+        "Indie — park słoneczny Bhadla na pustyni Thar",
+        "USA — Kalifornia, pustynia Mojave",
+        "Hiszpania, Maroko (Ouarzazate)"
+       ]
+      },
+      {
+       "name": "Energia geotermalna",
+       "description": "Ciepło wnętrza Ziemi, dostępne opłacalnie tam, gdzie **stopień geotermiczny jest niski**, czyli temperatura rośnie z głębokością wyjątkowo szybko — na granicach płyt litosfery, w strefach wulkanicznych i ryftowych. Jest to źródło **stałe i całkowicie niezależne od pogody i pory roku**. Ograniczenie ma charakter czysto geologiczny: tam, gdzie nie ma anomalii cieplnej, opłaca się co najwyżej ciepłownictwo i balneologia, a nie produkcja prądu.",
+       "examples": [
+        "Islandia — grzbiet śródatlantycki",
+        "Włochy — Larderello, pierwsza taka elektrownia świata",
+        "Nowa Zelandia, Filipiny, Kenia (Ryft Wschodnioafrykański)",
+        "Polska — Podhale, Uniejów: ciepłownictwo, nie elektroenergetyka"
+       ]
+      },
+      {
+       "name": "Biomasa i biogaz",
+       "description": "Materia pochodzenia roślinnego i zwierzęcego: drewno i odpady drzewne, słoma, rośliny energetyczne (wierzba, miskant), a także **biogaz** z fermentacji odpadów w oczyszczalniach, na składowiskach i w gospodarstwach. Jedyne OZE, które jest **magazynowalne i sterowalne jak paliwo kopalne** — można je spalić dokładnie wtedy, gdy potrzeba. Wady: niska gęstość energii wymusza transport dużych objętości, spalanie emituje pyły, a uprawy energetyczne konkurują o ziemię z produkcją żywności.",
+       "examples": [
+        "Szwecja i Finlandia — biomasa drzewna w ciepłownictwie",
+        "Brazylia — bioetanol z trzciny cukrowej",
+        "Niemcy — sieć biogazowni rolniczych",
+        "Polska — współspalanie biomasy i biogazownie przy oczyszczalniach"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "OZE — warunki, zalety, wady",
+     "caption": "Kolumna „warunek rozstrzygający” to zwykle klucz do zadania z mapą: jeśli w treści pojawia się region górski o dużych opadach, obszar wulkaniczny albo wybrzeże, źródło odpowiada się niemal samo.",
+     "headers": [
+      "Źródło",
+      "Warunek rozstrzygający",
+      "Główne zalety",
+      "Główne wady"
+     ],
+     "rows": [
+      [
+       "Wodna",
+       "Duży spad i wyrównany, obfity przepływ",
+       "Pełna sterowalność, długa żywotność, funkcja przeciwpowodziowa i retencyjna",
+       "Zatopienie doliny i przesiedlenia, bariera dla ryb, zatrzymanie rumowiska i erozja poniżej zapory"
+      ],
+      [
+       "Wiatrowa",
+       "Wysoka średnia prędkość wiatru i brak przeszkód terenowych",
+       "Brak emisji i zużycia wody, niski koszt energii, teren pod turbinami nadal rolniczy",
+       "Zmienność produkcji, hałas, kolizje ptaków i nietoperzy, konflikt krajobrazowy"
+      ],
+      [
+       "Słoneczna",
+       "Duże usłonecznienie i wysoka roczna suma promieniowania",
+       "Skalowalność od dachu po wielki park, produkcja w szczycie letniego zapotrzebowania, brak części ruchomych",
+       "Brak produkcji nocą, silna sezonowość w klimacie umiarkowanym, duża zajętość terenu"
+      ],
+      [
+       "Geotermalna",
+       "Niski stopień geotermiczny — strefy wulkaniczne i ryftowe",
+       "Praca ciągła niezależnie od pogody, bardzo mała zajętość terenu, wykorzystanie także w ciepłownictwie",
+       "Ścisłe ograniczenie geologiczne, wysoki koszt odwiertów, wody mineralizowane i korozyjne, uwalnianie $H_2S$"
+      ],
+      [
+       "Biomasa i biogaz",
+       "Dostępność taniego surowca w promieniu opłacalnego dowozu",
+       "Magazynowalna i sterowalna, zagospodarowuje odpady, wspiera lokalną gospodarkę",
+       "Emisja pyłów i $CO_2$ przy spalaniu, konkurencja o grunty rolne, kosztowny transport dużych objętości"
+      ]
+     ]
+    },
+    {
+     "type": "formula",
+     "title": "Współczynnik wykorzystania mocy",
+     "expression": "CF = \\frac{E}{P \\cdot t} \\cdot 100\\%",
+     "variables": [
+      {
+       "symbol": "CF",
+       "meaning": "współczynnik wykorzystania mocy (ang. capacity factor), w procentach"
+      },
+      {
+       "symbol": "E",
+       "meaning": "energia faktycznie wyprodukowana w danym okresie, np. w MWh"
+      },
+      {
+       "symbol": "P",
+       "meaning": "moc zainstalowana elektrowni, np. w MW"
+      },
+      {
+       "symbol": "t",
+       "meaning": "liczba godzin w okresie — dla roku 8760 h"
+      }
+     ],
+     "caption": "To najważniejszy wzór całej lekcji, bo tłumaczy, dlaczego **1 MW w fotowoltaice i 1 MW w elektrowni jądrowej to nie to samo**. Orientacyjne wartości roczne: elektrownia jądrowa ok. 80–90%, elektrownia węglowa ok. 50–60%, morska farma wiatrowa ok. 40–50%, lądowa farma wiatrowa ok. 25–35%, fotowoltaika w Polsce ok. 10–12%. Dlatego zestawienia mocy zainstalowanej i zestawienia produkcji energii dają zupełnie różne obrazy tego samego systemu."
+    },
+    {
+     "type": "cycle",
+     "title": "Doba pracy elektrowni szczytowo-pompowej",
+     "caption": "Elektrownia szczytowo-pompowa **niczego nie produkuje w bilansie** — zwraca mniej energii, niż pobiera (sprawność ok. 70–80%). Jest **magazynem**, a nie źródłem, i to właśnie czyni ją tak cenną w systemie z dużym udziałem niesterowalnych OZE.",
+     "stages": [
+      {
+       "name": "Nocna nadwyżka",
+       "text": "W nocy zapotrzebowanie spada, ale elektrownie jądrowe i węglowe nie mogą łatwo zmniejszyć mocy, a farmy wiatrowe pracują dalej. W systemie pojawia się **tania nadwyżka energii**."
+      },
+      {
+       "name": "Pompowanie",
+       "text": "Nadwyżka napędza pompy, które tłoczą wodę ze zbiornika dolnego do górnego. Energia elektryczna zamienia się w **energię potencjalną wody** — system właśnie się „naładował”."
+      },
+      {
+       "name": "Postój i gotowość",
+       "text": "Woda czeka w zbiorniku górnym. Elektrownia jest w **stanie gotowości**: od decyzji do pełnej mocy potrzebuje zwykle mniej niż dwie minuty, znacznie mniej niż jakikolwiek blok cieplny."
+      },
+      {
+       "name": "Szczyt zapotrzebowania",
+       "text": "W godzinach porannego i wieczornego szczytu — albo gdy nagle ustanie wiatr — brakuje mocy, a ceny energii są najwyższe. To moment na rozładowanie magazynu."
+      },
+      {
+       "name": "Generowanie",
+       "text": "Woda spływa rurociągiem do zbiornika dolnego, napędzając turbiny. Energia potencjalna wraca do sieci jako **energia elektryczna sprzedawana po najwyższej cenie** — na tej różnicy cen opiera się cała opłacalność inwestycji."
+      },
+      {
+       "name": "Powrót do stanu wyjściowego",
+       "text": "Zbiornik górny jest pusty, dolny pełny — układ czeka na kolejną nadwyżkę. Cykl powtarza się codziennie, a przy dużym udziale fotowoltaiki coraz częściej **w środku dnia**, gdy to słońce, a nie noc, daje nadwyżkę."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Farmy wiatrowe na lądzie a na morzu",
+     "leftLabel": "Lądowe (on-shore)",
+     "rightLabel": "Morskie (off-shore)",
+     "rows": [
+      {
+       "aspect": "Warunki wiatrowe",
+       "left": "Wiatr osłabiany i zaburzany przez rzeźbę, lasy i zabudowę — bardziej porywisty, produkcja mniej wyrównana.",
+       "right": "Nad gładką powierzchnią morza wiatr jest **silniejszy i bardziej wyrównany**, więc turbina pracuje dłużej i stabilniej."
+      },
+      {
+       "aspect": "Współczynnik wykorzystania mocy",
+       "left": "Zwykle ok. 25–35%.",
+       "right": "Zwykle ok. 40–50% — z tej samej mocy zainstalowanej powstaje wyraźnie więcej energii."
+      },
+      {
+       "aspect": "Koszt budowy",
+       "left": "Niższy: droga dojazdowa, fundament, przyłącze do istniejącej sieci.",
+       "right": "Znacznie wyższy: fundamenty w dnie morskim, statki instalacyjne, kable podmorskie, kosztowna eksploatacja."
+      },
+      {
+       "aspect": "Konflikty społeczne i przestrzenne",
+       "left": "Duże — hałas, migotanie cienia, protesty mieszkańców, w Polsce dodatkowo ograniczenia odległościowe od zabudowy.",
+       "right": "Mniejsze wobec mieszkańców, ale pojawiają się konflikty z **rybołówstwem, żeglugą i ochroną przyrody morskiej**."
+      },
+      {
+       "aspect": "Wielkość turbin",
+       "left": "Ograniczona możliwościami transportu drogowego elementów.",
+       "right": "Elementy dowozi się statkami, więc turbiny są **znacznie większe**, a większa średnica wirnika to więcej energii z jednego fundamentu."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Islandia — energetyka napisana przez tektonikę",
+     "region": "Islandia, północny Atlantyk",
+     "text": "Islandia leży na **grzbiecie śródatlantyckim**, w strefie rozchodzenia się płyt litosfery, gdzie gorąca magma podchodzi niemal pod powierzchnię. Stopień geotermiczny jest tu wyjątkowo niski, więc wodę o temperaturze przekraczającej 200°C wydobywa się z niewielkich głębokości. Do tego dochodzi drugi dar środowiska: obfite opady znad Atlantyku i lodowce zasilają rwące rzeki spływające z wyżynnego wnętrza wyspy, co daje **duży spad i stały przepływ**. W rezultacie **praktycznie cała islandzka energia elektryczna pochodzi z OZE** — w większości z elektrowni wodnych, w pozostałej części z geotermalnych — a ciepło geotermalne ogrzewa niemal wszystkie budynki w kraju, wraz z chodnikami odśnieżanymi zimą i basenami czynnymi cały rok. Tania i bezemisyjna energia przyciągnęła na wyspę przemysł skrajnie energochłonny: **huty aluminium**, do których rudę (boksyt lub tlenek glinu) dowozi się statkami z drugiego końca świata, bo koszt energii przewyższa koszt transportu surowca.",
+     "takeaway": "Warunki przyrodnicze mogą przesądzić nie tylko o miksie energetycznym, ale i o **strukturze całego przemysłu kraju** — tania energia sama przyciąga zakłady energochłonne, nawet jeśli surowiec trzeba przywieźć z innego kontynentu."
+    },
+    {
+     "type": "map-explore",
+     "title": "Gdzie OZE mają najlepsze warunki",
+     "caption": "Kliknij znaczniki i za każdym razem nazwij **warunek przyrodniczy**, który zdecydował o wyborze miejsca. To dokładnie ta operacja myślowa, której wymagają zadania z mapą.",
+     "center": [
+      25,
+      10
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 64.04,
+       "lng": -21.4,
+       "label": "Hellisheiði (Islandia)",
+       "text": "Elektrownia geotermalna na aktywnym wulkanicznie polu w strefie ryftowej. Warunek rozstrzygający: **niezwykle niski stopień geotermiczny** na granicy rozchodzących się płyt — para o wysokiej temperaturze jest osiągalna płytkim odwiertem."
+      },
+      {
+       "lat": 30.82,
+       "lng": 111,
+       "label": "Zapora Trzech Przełomów (Chiny)",
+       "text": "Największa elektrownia świata pod względem mocy zainstalowanej, na Jangcy. Warunki: **ogromny przepływ rzeki i przełomowy odcinek doliny**, który pozwolił zbudować wysoką zaporę. Kosztem były przesiedlenia ponad miliona osób i zatrzymanie rumowiska niesionego do delty."
+      },
+      {
+       "lat": -25.41,
+       "lng": -54.59,
+       "label": "Itaipú (Brazylia i Paragwaj)",
+       "text": "Elektrownia na Paranie, wspólna inwestycja dwóch państw. Pokrywa większość zapotrzebowania Paragwaju — modelowy przykład tego, jak **jedna inwestycja hydroenergetyczna może zdefiniować bilans energetyczny całego kraju**."
+      },
+      {
+       "lat": 27.54,
+       "lng": 71.91,
+       "label": "Park słoneczny Bhadla (Indie)",
+       "text": "Jeden z największych parków fotowoltaicznych świata na pustyni Thar. Warunki idealne: **bardzo wysokie usłonecznienie, znikome zachmurzenie i tanie, nieprzydatne rolniczo grunty**. Problemem jest zapylenie — panele trzeba regularnie czyścić."
+      },
+      {
+       "lat": 54.75,
+       "lng": 2,
+       "label": "Dogger Bank i Morze Północne",
+       "text": "Płytka ławica na Morzu Północnym: **silny, wyrównany wiatr i niewielka głębokość** pozwalająca posadowić fundamenty w dnie. Stąd największe skupienie morskich farm wiatrowych na świecie."
+      },
+      {
+       "lat": 43.4,
+       "lng": 10.87,
+       "label": "Larderello (Włochy)",
+       "text": "Miejsce, gdzie w 1904 r. po raz pierwszy wytworzono prąd z pary geotermalnej. Warunek ten sam co na Islandii — **anomalia cieplna w obszarze aktywnym tektonicznie**, tu związana z młodym wulkanizmem Toskanii."
+      },
+      {
+       "lat": 54.78,
+       "lng": 18.09,
+       "label": "Elektrownia szczytowo-pompowa Żarnowiec (Polska)",
+       "text": "Największa polska elektrownia szczytowo-pompowa, wykorzystująca różnicę poziomów między wysoczyzną a Jeziorem Żarnowieckim. Nie produkuje energii netto — **magazynuje ją**, przenosząc z nocnej doliny do porannego i wieczornego szczytu."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Transformacja energetyczna",
+     "text": "Długotrwały proces **zmiany struktury miksu energetycznego** — odchodzenia od paliw kopalnych na rzecz źródeł niskoemisyjnych — połączony ze wzrostem efektywności energetycznej, rozwojem magazynów i sieci oraz z **rozproszeniem produkcji**: zamiast kilkudziesięciu wielkich elektrowni pojawiają się setki tysięcy małych źródeł, w tym prosumenckich instalacji na dachach.",
+     "note": "Transformacja ma wyraźny wymiar **przestrzenny i społeczny**. Energetyka konwencjonalna była skupiona w kilku okręgach i dawała tam dziesiątki tysięcy miejsc pracy; energetyka odnawialna jest rozproszona i mniej pracochłonna w eksploatacji. Dlatego regionom górniczym towarzyszy program **sprawiedliwej transformacji** — wsparcia dla obszarów, które tracą swoją gospodarczą podstawę."
+    },
+    {
+     "type": "timeline",
+     "title": "Kamienie milowe polityki klimatyczno-energetycznej",
+     "caption": "Daty warto znać, bo zadania często proszą o **wskazanie przyczyny zmiany widocznej na wykresie** — a wykresy udziału OZE łamią się dokładnie w tych momentach.",
+     "events": [
+      {
+       "period": "1973",
+       "label": "Pierwszy kryzys naftowy",
+       "text": "Skokowy wzrost cen ropy uświadomił państwom importującym skalę uzależnienia od jednego surowca. To wtedy ruszają pierwsze programy oszczędzania energii, francuski program jądrowy i duńskie badania nad energetyką wiatrową."
+      },
+      {
+       "period": "1997",
+       "label": "Protokół z Kioto",
+       "text": "Pierwsze porozumienie międzynarodowe nakładające na kraje rozwinięte **wiążące limity emisji gazów cieplarnianych**. Krajów rozwijających się nie objęto zobowiązaniami, co stało się jego główną słabością."
+      },
+      {
+       "period": "2015",
+       "label": "Porozumienie paryskie",
+       "text": "Niemal wszystkie państwa świata zgadzają się dążyć do zatrzymania wzrostu średniej temperatury **wyraźnie poniżej 2°C, a w miarę możliwości na poziomie 1,5°C** względem epoki przedprzemysłowej. Każdy kraj deklaruje własny wkład — stąd polityki niskoemisyjne trafiają do prawa krajowego."
+      },
+      {
+       "period": "2019",
+       "label": "Europejski Zielony Ład",
+       "text": "Unia Europejska przyjmuje cel **neutralności klimatycznej do 2050 r.** i podporządkowuje mu politykę przemysłową, transportową i rolną. Powstaje Fundusz Sprawiedliwej Transformacji dla regionów górniczych."
+      },
+      {
+       "period": "2021",
+       "label": "Pakiet „Gotowi na 55”",
+       "text": "Zestaw przepisów mających obniżyć emisje UE o **co najmniej 55% do 2030 r.** względem 1990 r.: zaostrzenie systemu handlu uprawnieniami do emisji, wyższe cele dla OZE i efektywności energetycznej."
+      },
+      {
+       "period": "2022",
+       "label": "Kryzys energetyczny w Europie",
+       "text": "Gwałtowne ograniczenie dostaw gazu z Rosji podnosi ceny energii i przesuwa akcent debaty z klimatu na **bezpieczeństwo dostaw** — okazuje się, że oba cele prowadzą do tego samego wniosku: mniej importowanych paliw kopalnych, więcej źródeł własnych."
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Uważaj na trzy klasyczne pomyłki. Po pierwsze, **moc zainstalowana (MW) to nie produkcja (MWh)** — 1 MW fotowoltaiki daje w Polsce w ciągu roku około trzy razy mniej energii niż 1 MW farmy wiatrowej i około ośmiokrotnie mniej niż 1 MW w elektrowni jądrowej. Po drugie, **elektrownia szczytowo-pompowa nie jest źródłem energii, lecz jej magazynem** — oddaje mniej, niż pobrała. Po trzecie, **„odnawialne” nie znaczy „bezemisyjne”**: biomasa przy spalaniu emituje $CO_2$ i pyły, a energia jądrowa jest bezemisyjna, choć nieodnawialna."
+    },
+    {
+     "type": "quiz",
+     "question": "Farma wiatrowa o mocy zainstalowanej 50 MW wyprodukowała w ciągu roku 131 400 MWh energii. Ile wynosi jej współczynnik wykorzystania mocy?",
+     "options": [
+      "Około 15%",
+      "Około 30%",
+      "Około 45%",
+      "Około 60%"
+     ],
+     "correctIndex": 1,
+     "explanation": "Energia możliwa do uzyskania przy pracy z mocą maksymalną przez cały rok to $50\\ \\text{MW} \\cdot 8760\\ \\text{h} = 438\\ 000$ MWh. Zatem $CF = \\frac{131\\,400}{438\\,000} \\cdot 100\\% = 30\\%$. Taki wynik jest typowy dla **lądowej farmy wiatrowej** — morska osiągnęłaby ok. 40–50%, a fotowoltaika w Polsce zaledwie ok. 10–12%. Właśnie dlatego z zestawienia mocy zainstalowanej nie wolno wprost wnioskować o udziale danego źródła w produkcji energii."
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego elektrownie geotermalne wytwarzające energię elektryczną budowane są na Islandii, we Włoszech czy na Filipinach, a w Polsce energię geotermalną wykorzystuje się niemal wyłącznie do ogrzewania?",
+     "options": [
+      "Ponieważ w Polsce obowiązuje zakaz wykonywania głębokich odwiertów",
+      "Ponieważ w Polsce nie ma wód podziemnych na dużych głębokościach",
+      "Ponieważ tamte obszary leżą w strefach aktywnych tektonicznie, gdzie stopień geotermiczny jest niski i płytko występuje woda o wysokiej temperaturze, a w Polsce temperatura rośnie z głębokością znacznie wolniej",
+      "Ponieważ polskie wody geotermalne są zbyt mało zmineralizowane, by napędzać turbinę"
+     ],
+     "correctIndex": 2,
+     "explanation": "O opłacalności geotermii decyduje **stopień geotermiczny** — liczba metrów, o którą trzeba zejść, by temperatura wzrosła o 1°C. Na granicach płyt litosfery i w obszarach wulkanicznych magma podchodzi blisko powierzchni, więc płytkim odwiertem sięga się wody i pary o temperaturze grubo ponad 150°C, wystarczającej do napędzenia turbiny. Polska leży wewnątrz płyty, na starych, spokojnych strukturach — temperatura rośnie tu wolno, a wody z Podhala czy Uniejowa mają kilkadziesiąt stopni, co wystarcza do **ciepłownictwa, balneologii i rekreacji, ale nie do produkcji prądu**."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Gdy polecenie brzmi „oceń zasadność budowy elektrowni X w regionie Y”, buduj odpowiedź trzytorowo: **warunek przyrodniczy** (wiatr, spad, usłonecznienie, stopień geotermiczny), **warunek techniczno-ekonomiczny** (sieć przesyłowa, odbiorca, dostępność terenu, koszt) i **skutek uboczny** (krajobraz, hałas, zatopienie doliny, konflikt z rolnictwem lub rybołówstwem). Argumenty za i przeciw wyprowadzaj z tych samych warunków — np. „nadmorskie położenie zapewnia silny i wyrównany wiatr, **ale zarazem** oznacza konflikt z rybołówstwem i szlakami migracji ptaków”. Takie zestawienie jest w kluczu punktowane jako pełna ocena."
+    }
+   ]
   }
  ]
 }
