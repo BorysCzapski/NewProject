@@ -1,5 +1,5 @@
 -- ============================================================================
--- 0016_matura_language.sql
+-- 0020_matura_language.sql
 -- Makes the "Matura" mini-app multilingual: the same CKE exam-prep module now
 -- serves English AND Spanish. This is a schema change, not a new app, because
 -- the CKE format for języki obce nowożytne is IDENTICAL across languages —

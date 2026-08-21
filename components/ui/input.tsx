@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import type { ComponentPropsWithRef } from "react";
 
 // ComponentPropsWithRef, not InputHTMLAttributes: callers need to hold a ref
-// to the underlying input (e.g. components/matura/accent-bar.tsx inserts a
+// to the underlying input (e.g. components/ui/accent-bar.tsx inserts a
 // character at the caret). React 19 passes `ref` through as an ordinary prop
 // for function components, so this needs no forwardRef — only the type.
 export function Input({ className, ...props }: ComponentPropsWithRef<"input">) {

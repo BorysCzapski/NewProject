@@ -17,12 +17,26 @@ interface LanguageInfo {
   en: string;
   /** The single-language code the AI should think in. */
   code: TargetLanguage;
+  /**
+   * Characters a Polish keyboard cannot type directly, offered as an insert
+   * bar beside answer fields (components/ui/accent-bar.tsx). Empty when the
+   * Polish layout already covers the language (English) or when a full
+   * on-screen keyboard exists instead (Russian —
+   * components/ui/cyrillic-keyboard.tsx).
+   */
+  specialChars: string[];
 }
 
 const LANGUAGE_INFO: Record<TargetLanguage, LanguageInfo> = {
-  en: { pl: "angielski", plLocative: "angielskim", en: "English", code: "en" },
-  es: { pl: "hiszpański", plLocative: "hiszpańskim", en: "Spanish", code: "es" },
-  ru: { pl: "rosyjski", plLocative: "rosyjskim", en: "Russian", code: "ru" },
+  en: { pl: "angielski", plLocative: "angielskim", en: "English", code: "en", specialChars: [] },
+  es: {
+    pl: "hiszpański",
+    plLocative: "hiszpańskim",
+    en: "Spanish",
+    code: "es",
+    specialChars: ["á", "é", "í", "ó", "ú", "ü", "ñ", "¿", "¡"],
+  },
+  ru: { pl: "rosyjski", plLocative: "rosyjskim", en: "Russian", code: "ru", specialChars: [] },
 };
 
 export function langInfo(language: TargetLanguage): LanguageInfo {

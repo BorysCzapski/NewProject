@@ -4,7 +4,7 @@
 // components/matura/exam-preferences-form.tsx
 // Wraps the język + poziom pickers in one Server-Action-backed form
 // (useActionState), same shape as components/profile/level-change-form.tsx.
-// Replaces the old level-only form: since 0016_matura_language.sql the module
+// Replaces the old level-only form: since 0020_matura_language.sql the module
 // serves two languages, and asking for the poziom without asking which exam
 // it belongs to would scope every query to a half-specified target.
 // ============================================================================

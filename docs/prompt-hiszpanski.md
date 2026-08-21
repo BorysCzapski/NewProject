@@ -13,9 +13,11 @@
 > treść hiszpańską** — a nie budować drugą aplikację od zera. Rozdział 1 pokazuje, ile
 > dokładnie kodu jest zaszyte pod angielski (odpowiedź: pięć miejsc).
 >
-> **Stan na dziś: etapy 1 i 2 z rozdziału 9 są zrobione i wdrożone w tym repo.** Moduł
-> `/matura` obsługuje angielski i hiszpański, a hiszpańska treść jest zaseedowana dla obu
-> poziomów. Reszta rozdziału 9 to lista tego, co zostało.
+> **Stan na dziś: etapy 1, 2 i 4 z rozdziału 9 są zrobione i wdrożone w tym repo.** Moduł
+> `/matura` obsługuje angielski i hiszpański, obie treści są zaseedowane dla obu poziomów,
+> a do tego doszła biblioteka teorii (75 lekcji z ćwiczeniami w środku) i bank słownictwa
+> (938 haseł, powtórki na pudełkach Leitnera) — patrz `0021_matura_theory.sql`. Reszta
+> rozdziału 9 to lista tego, co zostało.
 
 ---
 
@@ -149,7 +151,7 @@ Ikona zostaje — `ScrollText` jest już na whiteliście w `components/phoenix/a
 
 ---
 
-## 3. Migracja: `0016_matura_language.sql`
+## 3. Migracja: `0020_matura_language.sql`
 
 Nowy plik, idempotentny, **bez edytowania `0013`/`0014`** (żelazna zasada tego repo).
 
@@ -295,11 +297,24 @@ Zapisujemy **wynik**, w nowej tabeli `matura_game_sessions` (`user_id`, `game_ty
 
 Każda gra po zakończeniu **zasila powtórki**: przegrane elementy wracają z krótszym interwałem.
 
-### 6.3. Powtórki rozłożone w czasie
+### 6.3. Powtórki rozłożone w czasie — ZROBIONE, ale inaczej niż tu zaplanowano
 
-Dodaj `next_review_date` do `matura_section_progress` i port logiki z
-`lib/matma/spaced-review.ts`. Jednostką powtórki jest sekcja/zagadnienie, nie pojedyncze
-słówko — od słówek jest Linguo. Kolejka na dziś to pierwszy kafelek dashboardu `/matura`.
+Pierwotny plan brzmiał: `next_review_date` w `matura_section_progress`, jednostką powtórki
+sekcja, a od słówek jest Linguo. Wdrożone jest coś innego i warto zapisać dlaczego.
+
+Jednostką powtórki jest **hasło**, nie sekcja — bo powstał bank słownictwa maturalnego,
+którego wcześniej nie było, i to on jest materiałem, którego fizycznie nie da się powtarzać
+liniowo (938 haseł). „Od słówek jest Linguo" okazało się nieprawdą przy bliższym spojrzeniu:
+`vocabulary_words` jest kluczowane poziomem CEFR, nie maturalnym, i nie ma w nim miejsca na
+tłumaczenie przykładu ani notatkę o pułapce — a to jest większość wartości listy maturalnej.
+
+Zamiast stałego interwału (jak `lib/matma/spaced-review.ts` i `lib/geografia/spaced-review.ts`)
+użyte są **pudełka Leitnera** z rosnącym interwałem, `lib/matura/vocab-review.ts`. Tamte dwa
+moduły przypominają garstkę opanowanych DZIAŁÓW, więc „cokolwiek starszego niż pięć dni" im
+wystarcza; tu jednostek są tysiące i interwał musi rosnąć wraz z tym, jak hasło się utrwala.
+
+Kolejka „na dziś" żyje pod `/matura/slownictwo/powtorka`, a licznik zaległych pokazuje się
+na `/matura/nauka` i na liście bloków.
 
 ### 6.4. Symulacja egzaminu i plan nauki
 
@@ -439,7 +454,7 @@ i słusznie. Zostaje wynik w `matura_game_sessions`, bo to zasila powtórki i st
 
 Każdy etap samodzielnie użyteczny; po każdym aplikacja działa.
 
-- [x] **1. Wymiar języka** — `0016_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
+- [x] **1. Wymiar języka** — `0020_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
   wszystkich miejsc z 1.2, wybór języka na `/matura` i `/matura/ustawienia`, wybór języka
   w panelu importu, nowa nazwa w rejestrze Phoenixa.
 - [x] **2. Treść hiszpańska** — `supabase/seed/matura-es/`, oba poziomy: sekcje, lekcje
@@ -447,11 +462,33 @@ Każdy etap samodzielnie użyteczny; po każdym aplikacja działa.
   (uzasadnienie w nagłówku `09_lessons_sluchanie.sql`).
 - [x] **2a. Pasek znaków hiszpańskich** — nieplanowany, ale konieczny: ocena nie usuwa
   akcentów, więc bez niego uczeń na polskiej klawiaturze tracił punkty za układ klawiatury,
-  a nie za hiszpański (`components/matura/accent-bar.tsx`).
+  a nie za hiszpański. Przeniesiony potem do `components/ui/accent-bar.tsx`, bo to ta sama
+  kategoria co `cyrillic-keyboard.tsx` i korzystają z niego też bloki lekcji.
+- [x] **2b. Biblioteka teorii** — `0021_matura_theory.sql`. `matura_lessons` dostaje `slug`
+  (własny adres), `summary`, `kind` i szacowany czas; dochodzi znacznik „przerobione".
+  Sekcja pokazuje LISTĘ lekcji zamiast sklejać wszystkie na jednej stronie — do przełknięcia
+  przy jednej lekcji, nie do użycia przy kilkunastu. 75 lekcji: oba języki, oba poziomy,
+  wszystkie cztery działy. Trasy zadań przeniesione pod `zadanie/`, żeby `teoria/` nie
+  była statycznym rodzeństwem segmentu dynamicznego.
+- [x] **2c. Interaktywność teorii** — sześć nowych typów `GrammarBlock`: `fillGap`,
+  `matchPairs`, `orderWords`, `conjugation`, `flashcards`, `keyPhrases`. Wcześniej jedynym
+  interaktywnym blokiem był `quiz` z jednym pytaniem ABC. Na 543 bloki treści 168 to
+  ćwiczenia. Tasowanie jest deterministyczne (`lib/grammar/shuffle.ts`) — `Math.random`
+  rozjechałby hydratację, bo bloki renderują się najpierw na serwerze.
+- [x] **2d. Bank słownictwa** — `/matura/slownictwo`, 15 bloków tematycznych z podstawy
+  programowej, 938 haseł (513 ES + 425 EN) z przykładem, jego tłumaczeniem i notatką
+  o pułapce. Osobne tabele od `vocabulary_words` Linguo — uzasadnienie w nagłówku migracji.
+  Słownictwo stoi POZA `nauka/`, bo nie jest jedną z czterech części arkusza; zasila
+  wszystkie cztery.
+- [x] **4. Powtórki** — zrobione przy okazji słownictwa: pudełka Leitnera
+  (`lib/matura/vocab-review.ts`), `next_review_at` w `matura_vocab_progress` i kolejka
+  „na dziś" pod `/matura/slownictwo/powtorka`. Bank tej wielkości nie da się powtarzać
+  liniowo, więc bez tego byłby martwy. Pomyłka cofa hasło o DWA pudełka, a nie do zera:
+  jedno potknięcie na słowie znanym od miesiąca nie powinno wypychać z kolejki słów,
+  których uczeń naprawdę nie zna.
 - [ ] **3. Symulacja arkusza + plan nauki** — interfejs do istniejących tabel
   (`matura_mock_exams`, `matura_study_plans` — tabele są, tras `/matura/egzamin`
   i `/matura/plan` nadal nie ma).
-- [ ] **4. Powtórki** — `next_review_date` + kolejka na dashboardzie.
 - [ ] **5. Wgrywanie własnych arkuszy przez ucznia** — Route Handler, ekstrakcja, ekran
   korekty, Storage. (Import admiński już działa i zna teraz język.)
 - [ ] **6. Gry** — quiz i dopasowywanie (recykling `matching-game.tsx`), potem escape room.
