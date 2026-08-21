@@ -1487,3 +1487,30 @@ export interface BreviaryDayRow {
   source_url: string;
   fetched_at: string;
 }
+
+// ---------------------------------------------------------------------------
+// Godziny — rejestr czasu nauki (supabase/migrations/0020_godziny.sql)
+// ---------------------------------------------------------------------------
+
+export interface StudyTopic {
+  id: string;
+  user_id: string;
+  name: string;
+  category: string | null;
+  /** Slot palety --chart-1..8 (0-7), patrz lib/paragony/chart-colors.ts. */
+  color_index: number;
+  is_archived: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface StudySession {
+  id: string;
+  user_id: string;
+  topic_id: string;
+  study_date: string;
+  duration_minutes: number;
+  note: string | null;
+  created_at: string;
+  updated_at: string;
+}

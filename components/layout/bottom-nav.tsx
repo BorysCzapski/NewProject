@@ -30,6 +30,8 @@ import {
   Sparkles,
   Church,
   HeartHandshake,
+  Timer,
+  ListChecks,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -54,6 +56,8 @@ const ICONS = {
   Sparkles,
   Church,
   HeartHandshake,
+  Timer,
+  ListChecks,
 };
 
 export function BottomNav() {

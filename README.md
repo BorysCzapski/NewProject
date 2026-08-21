@@ -101,46 +101,40 @@ na UI w kolejnych sesjach.
 > hiszpański, i tak dostawał angielską teorię i angielskie słówka. Obecna wersja rozdziela treść
 > językiem od pierwszego dnia.
 
-Mini-aplikacja **Modlitwa** (`/modlitwa`, sekcja Wiara) — codzienna praktyka modlitewna po
-polsku: **werset dnia** w oprawie graficznej w kolorze szat liturgicznych, losowany
-deterministycznie (hash `user_id` + data, zapisywany w `daily_verse_picks`, więc nie zmienia się
-przy odświeżeniu strony) z kuratorowanej puli cytatów, z osobnymi pulami na Adwent, Boże
-Narodzenie, Wielki Post i Wielkanoc; **czytania liturgiczne na dziś** (I czytanie, psalm z
-refrenem, II czytanie w niedziele i święta, aklamacja, Ewangelia) pobierane z
-`mateusz.pl/czytania` i cache'owane globalnie w `daily_readings` — przy braku sieci aplikacja
-pokazuje ostatnie zapisane czytania z wyraźną informacją, że nie są dzisiejsze; **liturgia
-godzin z PEŁNYMI tekstami** — osiem godzin brewiarza (Wezwanie, Godzina czytań, Jutrznia, trzy
-Modlitwy w ciągu dnia, Nieszpory, Kompleta) pobieranych z serwisu `brewiarz.pl` (Internetowa
-Liturgia Godzin) razem z hymnem, psalmodią z antyfonami, czytaniem, responsorium, kantykiem,
-prośbami i modlitwą dnia; rubryki („K.”, „W.”, wskazówki) renderowane na czerwono jak w druku,
-przełącznik pory dnia nad tekstem i wybór obchodu, gdy dzień ma kilka formularzy; **streak modlitewny** z własną tabelą (świadomie niezależny od streaka nauki w
-Linguo), paskiem ostatnich 7 dni i notatką do dnia; **intencje** — lista osób, za które
-użytkownik obiecał się modlić, z powodem, datą obietnicy, licznikiem modlitw, notatkami i
-oznaczaniem „wysłuchana”; **kalendarz** — miesięczny widok dni modlitwy nałożony na kalendarz
-liturgiczny.
+**Godziny** (`/godziny`) — dziennik czasu nauki: ile minut i **czego** się dziś uczyłeś.
+Wpis to data + długość sesji + temat z własnej listy (+ opcjonalna notatka), a ekran główny
+odpowiada na jedno pytanie — „ile dziś zrobiłem i co ostatnio robiłem": kafelki dziś/tydzień/
+miesiąc, seria dni z rzędu i stream ostatnich wpisów pogrupowany po dniach, z edycją i
+kasowaniem w miejscu. `/godziny/historia` daje ten sam materiał w przekroju: przełącznik
+dni/tygodnie/miesiące, filtr po temacie (oba trzymane w URL-u, więc dają się zapisać w
+zakładkach), wykres słupkowy sumy czasu w kolejnych okresach oraz rozbicie „na co poszedł czas".
+Listą tematów zarządza się na `/godziny/tematy` — startowy zestaw (przedmioty szkolne, rozwój
+własny oraz **aplikacje edukacyjne z samego Phoenixa**, czytane z `lib/phoenix/apps.ts`) wchodzi
+na jedno kliknięcie i jest w całości edytowalny.
 
-Dwie decyzje projektowe warte odnotowania. **Kalendarz liturgiczny liczony jest lokalnie**
-(`lib/modlitwa/liturgical-calendar.ts`): data Wielkanocy algorytmem Meeusa, z niej wszystkie
-święta ruchome, okresy, tydzień psałterza i kolor szat, plus polskie uroczystości stałe —
-działa bez internetu i bez zewnętrznego API. **Integracja z kalendarzem Google/Apple jest
-odwrócona względem pierwotnego pomysłu**: zamiast prosić o OAuth i czytać prywatny kalendarz
-użytkownika (skąd i tak nie dowiedzielibyśmy się o liturgii nic, czego sami nie umiemy
-policzyć), aplikacja *publikuje* własny feed iCalendar pod tokenowanym adresem
-`/api/modlitwa/kalendarz.ics?token=…`, który subskrybuje się jednym kliknięciem w Kalendarzu
-Google, Apple albo Outlooku — bez zgód na odczyt cudzych danych, z możliwością unieważnienia
-adresu w każdej chwili. Powiadomienia działają, gdy aplikacja jest otwarta (Notification API);
-pełny push wymagałby service workera i serwera wysyłkowego i świadomie nie jest udawany.
-**Teksty Liturgii Godzin pochodzą wyłącznie z ILG** (`brewiarz.pl`) — aplikacja ich nie
-przepisuje ani nie redaguje: pobiera je, cache'uje globalnie w `breviary_hours` (jedno pobranie
-na dzień i godzinę dla całej instancji) i przy każdym ekranie pokazuje źródło oraz notę
-copyright (teksty © Konferencja Episkopatu Polski i Wydawnictwo Pallottinum, opracowanie © ILG).
-ILG udostępnia tylko bieżący okres — dla starszych i odległych dni aplikacja schodzi do
-przewodnika po strukturze godziny z tekstami stałymi (`lib/modlitwa/hours.ts`), zamiast pokazać
-pusty ekran. Dwie pułapki tego źródła są obsłużone w `lib/modlitwa/breviary-source.ts`: strony
-deklarują ISO-8859-2, ale mają wstawki w UTF-8 (stąd `repairMixedEncoding`), a treść trzeba brać
-z tabel `width=490`, nie z komórek `td.ww` — część kotwic (czytanie, kantyk) leży poza nimi.
-Schemat: `supabase/migrations/0017_modlitwa.sql` i `0019_modlitwa_brewiarz.sql`, seed wersetów:
-`supabase/seed/modlitwa/01_bible_verses.sql`.
+Dwie decyzje, które warto znać przed grzebaniem w tym module. Po pierwsze: **wiele wpisów tego
+samego dnia jest dozwolone**, także dla tego samego tematu — spec zostawiała ten wybór otwarty,
+a nauka realnie rozbija się na sesje (rano 30 min, wieczorem 45 min) i notatka opisuje sesję, nie
+dzień; sumowanie jest sprawą widoku, nie schematu. Po drugie: **temat z zapisanymi godzinami da
+się tylko zarchiwizować, nie skasować** — historia nigdy nie zostaje z dziurą po nazwie. Klucz
+obcy `study_sessions.topic_id` ma mimo to `on delete cascade`, a nie `restrict`, wyłącznie po to,
+żeby kasowanie profilu nie wywracało się na kolejności kaskad; regułę egzekwuje `deleteTopic()`
+w `lib/godziny/topic-actions.ts` (uzasadnienie w komentarzu w `0020_godziny.sql`). Walidacji
+„data nie z przyszłości" nie da się zapisać jako `CHECK` (`current_date` jest STABLE, a Postgres
+wymaga tam funkcji IMMUTABLE), więc pilnuje jej `lib/godziny/actions.ts` — w strefie
+`Europe/Warsaw`, żeby wpis zrobiony o 23:30 nie wyglądał na jutrzejszy. Schemat:
+`supabase/migrations/0020_godziny.sql` — numer `0020`, a nie kolejny wolny w repo, bo wersje
+`0018` i `0019` są już zajęte na bazie deweloperskiej przez migracje wdrożone równolegle z innych
+sesji/worktree (`geografia_lessons`, `modlitwa_brewiarz`), których pliki nie trafiły jeszcze na
+`main`. Runner z `scripts/db.mjs` rozpoznaje migracje po **numerze wersji**, nie po pełnej nazwie
+pliku, więc plik z zajętym numerem nie zgłosiłby konfliktu — zostałby po cichu uznany za „już
+wgrany" i **nigdy by się nie wykonał**. Dlatego przed dodaniem migracji zawsze `npm run db status`.
+
+
+> ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
+> wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
+> teorii Matury nosi numer `0016`, nie `0015`. Przed dodaniem kolejnej migracji sprawdź
+> `npm run db status`, żeby uniknąć podobnej kolizji numeracji.
 
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To
@@ -495,6 +489,10 @@ app/
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
     kuznia/            # KUŹNIA — kreator promptów
+    godziny/           # GODZINY — licznik czasu nauki
+      page.tsx          # „Dziś": sumy dzień/tydzień/miesiąc + stream wpisów
+      historia/          # historia wg dni/tygodni/miesięcy + filtr po temacie
+      tematy/            # lista tematów (zestaw startowy, archiwum)
     matma/             # MATMA — matura rozszerzona z matematyki
       page.tsx          # dashboard: szacowany wynik, mastery per dział, trend, plan
       nauka/             # hub działów, lekcje interaktywne, ćwiczenia
@@ -552,10 +550,13 @@ lib/
                      # bank słownictwa (vocab.ts) i powtórki Leitnera (vocab-review.ts)
   grammar/           # typy bloków lekcji (lesson-blocks.ts) + deterministyczne
                      # tasowanie ćwiczeń (shuffle.ts — Math.random rozjechałby hydratację)
+  godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
+                     # i sumowanie historii, akcje wpisów i tematów
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
-                     # 0013 = Matura, 0016 = wymiar języka, 0017 = teoria i słownictwo)
+                     # 0013 = Matura, 0016 = wymiar języka, 0017 = teoria i słownictwo,
+                     # 0020 = Godziny)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
                      # matura-es/)
 scripts/
