@@ -68,6 +68,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/geografia",
   },
   {
+    id: "godziny",
+    name: "Godziny",
+    description: "Licznik czasu nauki: ile i czego się uczysz",
+    section: "nauka",
+    icon: "Timer",
+    href: "/godziny",
+  },
+  {
     id: "kuznia",
     name: "Kuźnia",
     description: "Kreator promptów do budowy kolejnych aplikacji",

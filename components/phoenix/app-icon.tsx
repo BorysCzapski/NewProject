@@ -18,6 +18,7 @@ import {
   Recycle,
   ScrollText,
   Sparkles,
+  Timer,
   Wrench,
   type LucideIcon,
 } from "lucide-react";
@@ -34,6 +35,7 @@ const ICONS: Record<string, LucideIcon> = {
   Recycle,
   ScrollText,
   Sparkles,
+  Timer,
   Wrench,
 };
 

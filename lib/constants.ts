@@ -63,7 +63,9 @@ export interface NavItem {
     | "Upload"
     | "Sparkles"
     | "Church"
-    | "HeartHandshake";
+    | "HeartHandshake"
+    | "Timer"
+    | "ListChecks";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -126,6 +128,13 @@ export const MODLITWA_NAV: NavItem[] = [
   { href: "/modlitwa/kalendarz", label: "Kalendarz", icon: "Calendar" },
 ];
 
+export const GODZINY_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/godziny", label: "Dziś", icon: "Timer", exact: true },
+  { href: "/godziny/historia", label: "Historia", icon: "Calendar" },
+  { href: "/godziny/tematy", label: "Tematy", icon: "ListChecks" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
@@ -135,6 +144,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },
+  { prefix: "/godziny", items: GODZINY_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 

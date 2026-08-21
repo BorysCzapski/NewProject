@@ -85,6 +85,36 @@ samym sposobem co funkcja Podręcznika. Poziom rozszerzony widzi ZAWSZE treści 
 już przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
 przydzielanie ćwiczeń uczniom — czekają na UI w kolejnych sesjach.
 
+**Godziny** (`/godziny`) — dziennik czasu nauki: ile minut i **czego** się dziś uczyłeś.
+Wpis to data + długość sesji + temat z własnej listy (+ opcjonalna notatka), a ekran główny
+odpowiada na jedno pytanie — „ile dziś zrobiłem i co ostatnio robiłem": kafelki dziś/tydzień/
+miesiąc, seria dni z rzędu i stream ostatnich wpisów pogrupowany po dniach, z edycją i
+kasowaniem w miejscu. `/godziny/historia` daje ten sam materiał w przekroju: przełącznik
+dni/tygodnie/miesiące, filtr po temacie (oba trzymane w URL-u, więc dają się zapisać w
+zakładkach), wykres słupkowy sumy czasu w kolejnych okresach oraz rozbicie „na co poszedł czas".
+Listą tematów zarządza się na `/godziny/tematy` — startowy zestaw (przedmioty szkolne, rozwój
+własny oraz **aplikacje edukacyjne z samego Phoenixa**, czytane z `lib/phoenix/apps.ts`) wchodzi
+na jedno kliknięcie i jest w całości edytowalny.
+
+Dwie decyzje, które warto znać przed grzebaniem w tym module. Po pierwsze: **wiele wpisów tego
+samego dnia jest dozwolone**, także dla tego samego tematu — spec zostawiała ten wybór otwarty,
+a nauka realnie rozbija się na sesje (rano 30 min, wieczorem 45 min) i notatka opisuje sesję, nie
+dzień; sumowanie jest sprawą widoku, nie schematu. Po drugie: **temat z zapisanymi godzinami da
+się tylko zarchiwizować, nie skasować** — historia nigdy nie zostaje z dziurą po nazwie. Klucz
+obcy `study_sessions.topic_id` ma mimo to `on delete cascade`, a nie `restrict`, wyłącznie po to,
+żeby kasowanie profilu nie wywracało się na kolejności kaskad; regułę egzekwuje `deleteTopic()`
+w `lib/godziny/topic-actions.ts` (uzasadnienie w komentarzu w `0020_godziny.sql`). Walidacji
+„data nie z przyszłości" nie da się zapisać jako `CHECK` (`current_date` jest STABLE, a Postgres
+wymaga tam funkcji IMMUTABLE), więc pilnuje jej `lib/godziny/actions.ts` — w strefie
+`Europe/Warsaw`, żeby wpis zrobiony o 23:30 nie wyglądał na jutrzejszy. Schemat:
+`supabase/migrations/0020_godziny.sql` — numer `0020`, a nie kolejny wolny w repo, bo wersje
+`0018` i `0019` są już zajęte na bazie deweloperskiej przez migracje wdrożone równolegle z innych
+sesji/worktree (`geografia_lessons`, `modlitwa_brewiarz`), których pliki nie trafiły jeszcze na
+`main`. Runner z `scripts/db.mjs` rozpoznaje migracje po **numerze wersji**, nie po pełnej nazwie
+pliku, więc plik z zajętym numerem nie zgłosiłby konfliktu — zostałby po cichu uznany za „już
+wgrany" i **nigdy by się nie wykonał**. Dlatego przed dodaniem migracji zawsze `npm run db status`.
+
+
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
 > teorii Matury nosi numer `0016`, nie `0015`. Przed dodaniem kolejnej migracji sprawdź
@@ -415,6 +445,10 @@ app/
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
     kuznia/            # KUŹNIA — kreator promptów
+    godziny/           # GODZINY — licznik czasu nauki
+      page.tsx          # „Dziś": sumy dzień/tydzień/miesiąc + stream wpisów
+      historia/          # historia wg dni/tygodni/miesięcy + filtr po temacie
+      tematy/            # lista tematów (zestaw startowy, archiwum)
     matma/             # MATMA — matura rozszerzona z matematyki
       page.tsx          # dashboard: szacowany wynik, mastery per dział, trend, plan
       nauka/             # hub działów, lekcje interaktywne, ćwiczenia
@@ -458,10 +492,13 @@ lib/
   matura/            # silnik Matury Angielski: sekcje, ocena programistyczna
                      # środków językowych (bez AI), ocena AI wypowiedzi pisemnej wg
                      # kryteriów CKE, mastery per część, szacowany wynik, akcje
+  godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
+                     # i sumowanie historii, akcje wpisów i tematów
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
-                     # 0013 = Matura, 0016 = wymiar języka w Maturze)
+                     # 0013 = Matura, 0016 = wymiar języka w Maturze,
+                     # 0020 = Godziny)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
                      # matura-es/)
 scripts/
