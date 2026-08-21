@@ -8,7 +8,7 @@
 -- on purpose: CKE publishes one exam format for all języki obce nowożytne, so
 -- a Spanish maturzysta sits the same structure for the same points. Only the
 -- CONTENT of the lessons and tasks differs — which is exactly why the module
--- carries a `language` column instead of being forked (0016_matura_language.sql).
+-- carries a `language` column instead of being forked (0020_matura_language.sql).
 -- exam_weight stays an editable admin approximation, NOT an official CKE split.
 --
 -- Idempotent: deletes by (language, level, slug) first. The language scope is

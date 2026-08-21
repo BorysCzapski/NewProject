@@ -14,7 +14,7 @@
 // it are not: telling a Spanish grader to reward "what is more/nevertheless"
 // and to penalise "don't/can't" would be nonsense, and the mistakes a Polish
 // learner actually makes differ per language. So the rubric text is one
-// shared template filled from LANGUAGE_NOTES below — see 0016_matura_language.sql
+// shared template filled from LANGUAGE_NOTES below — see 0020_matura_language.sql
 // for why this module is parameterized rather than forked.
 // ============================================================================
 import "server-only";

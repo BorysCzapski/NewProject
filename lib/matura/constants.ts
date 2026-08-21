@@ -10,7 +10,7 @@
 // the same structure, the same duration and the same point totals, and are
 // marked against the same rubric. That is precisely why the module carries a
 // `language` column instead of being forked per language
-// (see 0016_matura_language.sql).
+// (see 0020_matura_language.sql).
 // ============================================================================
 import type { MaturaLanguage, MaturaLevel, MaturaWritingFormType } from "@/lib/types/database";
 

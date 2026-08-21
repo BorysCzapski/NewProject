@@ -16,7 +16,7 @@
 > **Stan na dziś: etapy 1, 2 i 4 z rozdziału 9 są zrobione i wdrożone w tym repo.** Moduł
 > `/matura` obsługuje angielski i hiszpański, obie treści są zaseedowane dla obu poziomów,
 > a do tego doszła biblioteka teorii (75 lekcji z ćwiczeniami w środku) i bank słownictwa
-> (938 haseł, powtórki na pudełkach Leitnera) — patrz `0017_matura_theory.sql`. Reszta
+> (938 haseł, powtórki na pudełkach Leitnera) — patrz `0021_matura_theory.sql`. Reszta
 > rozdziału 9 to lista tego, co zostało.
 
 ---
@@ -151,7 +151,7 @@ Ikona zostaje — `ScrollText` jest już na whiteliście w `components/phoenix/a
 
 ---
 
-## 3. Migracja: `0016_matura_language.sql`
+## 3. Migracja: `0020_matura_language.sql`
 
 Nowy plik, idempotentny, **bez edytowania `0013`/`0014`** (żelazna zasada tego repo).
 
@@ -454,7 +454,7 @@ i słusznie. Zostaje wynik w `matura_game_sessions`, bo to zasila powtórki i st
 
 Każdy etap samodzielnie użyteczny; po każdym aplikacja działa.
 
-- [x] **1. Wymiar języka** — `0016_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
+- [x] **1. Wymiar języka** — `0020_matura_language.sql`, typ `MaturaLanguage`, parametryzacja
   wszystkich miejsc z 1.2, wybór języka na `/matura` i `/matura/ustawienia`, wybór języka
   w panelu importu, nowa nazwa w rejestrze Phoenixa.
 - [x] **2. Treść hiszpańska** — `supabase/seed/matura-es/`, oba poziomy: sekcje, lekcje
@@ -464,7 +464,7 @@ Każdy etap samodzielnie użyteczny; po każdym aplikacja działa.
   akcentów, więc bez niego uczeń na polskiej klawiaturze tracił punkty za układ klawiatury,
   a nie za hiszpański. Przeniesiony potem do `components/ui/accent-bar.tsx`, bo to ta sama
   kategoria co `cyrillic-keyboard.tsx` i korzystają z niego też bloki lekcji.
-- [x] **2b. Biblioteka teorii** — `0017_matura_theory.sql`. `matura_lessons` dostaje `slug`
+- [x] **2b. Biblioteka teorii** — `0021_matura_theory.sql`. `matura_lessons` dostaje `slug`
   (własny adres), `summary`, `kind` i szacowany czas; dochodzi znacznik „przerobione".
   Sekcja pokazuje LISTĘ lekcji zamiast sklejać wszystkie na jednej stronie — do przełknięcia
   przy jednej lekcji, nie do użycia przy kilkunastu. 75 lekcji: oba języki, oba poziomy,

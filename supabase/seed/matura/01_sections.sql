@@ -7,7 +7,7 @@
 -- comment), NOT an official CKE point distribution.
 --
 -- Idempotent: deletes by (language, level, slug) first. The language scope is
--- load-bearing since 0016_matura_language.sql — without it this file would
+-- load-bearing since 0020_matura_language.sql — without it this file would
 -- delete the Spanish sections too, cascading away every Spanish lesson, task
 -- and student progress row. Run this BEFORE any
 -- 02_lessons_<slug>.sql / 03_tasks_<slug>.sql file (they look up section_id

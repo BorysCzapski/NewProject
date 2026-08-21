@@ -44,11 +44,11 @@ i poziom wybierasz na starcie, oba zmienialne w każdej chwili; przełączenie j
 kasuje — postęp każdego języka czeka tam, gdzie go zostawiłeś). Jeden moduł obsługuje oba
 języki, bo CKE ustala **ten sam format egzaminu dla wszystkich języków obcych nowożytnych** —
 te same cztery części, te same 60/50 punktów, te same kryteria wypowiedzi pisemnej; różni się
-wyłącznie treść (patrz `0016_matura_language.sql`). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
+wyłącznie treść (patrz `0020_matura_language.sql`). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
 tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
 (edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie.
 Wszystkie cztery działy działają już dziś, każdy z **biblioteką teorii** i bankiem zadań. Teoria to
-75 lekcji (`matura_lessons`, patrz `0017_matura_theory.sql`) rozłożonych na oba języki, oba poziomy
+75 lekcji (`matura_lessons`, patrz `0021_matura_theory.sql`) rozłożonych na oba języki, oba poziomy
 i wszystkie cztery działy, pogrupowanych na gramatykę, słownictwo i strategię egzaminacyjną. Każda
 ma własny adres, szacowany czas czytania i znacznik „przerobione". Kolejność lekcji nie jest
 podręcznikowa, tylko podyktowana tym, na czym Polak realnie traci punkty: po hiszpańsku najpierw
@@ -216,12 +216,12 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       `matura_writing_submissions` (oceniane analitycznie przez AI wg 4 kryteriów CKE,
       patrz opis aplikacji wyżej) — osobne tabele od `matura_tasks`/`matura_task_attempts`
       z 0013, bo ocena jest holistyczna, nie dopasowaniem pojedynczych odpowiedzi.
-   12. `supabase/migrations/0016_matura_language.sql` — wymiar języka w Maturze: kolumna
+   12. `supabase/migrations/0020_matura_language.sql` — wymiar języka w Maturze: kolumna
       `language` w `matura_sections` i w tabelach per-użytkownik, które trzymają poziom bez
       `section_id`. Wszystko, co wisi na `section_id`, język DZIEDZICZY, zamiast trzymać
       kopię, która mogłaby się rozjechać. Domyślne `'en'` sprawia, że istniejąca treść
       i postęp uczniów przechodzą migrację bez backfillu.
-   13. `supabase/migrations/0017_matura_theory.sql` — biblioteka teorii i bank słownictwa:
+   13. `supabase/migrations/0021_matura_theory.sql` — biblioteka teorii i bank słownictwa:
       `matura_lessons` dostaje `slug` (własny adres lekcji), `summary`, `kind`
       (gramatyka/słownictwo/strategia) i szacowany czas; dochodzi `matura_lesson_progress`
       (znacznik „przerobione") oraz `matura_vocab_topics` / `_entries` / `_progress`
@@ -302,7 +302,7 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       (`sympathetic`, `novel`, `prejudice`, `pension`).
 
    **Seed — Matura (hiszpański):** komplet niezależny od angielskiego, w katalogu
-   `supabase/seed/matura-es/`. Wymaga wcześniej migracji `0016_matura_language.sql`.
+   `supabase/seed/matura-es/`. Wymaga wcześniej migracji `0020_matura_language.sql`.
    26. `matura-es/01_sections.sql` — te same 4 części × 2 poziomy, tym razem z
       `language = 'es'`. **Uruchom przed pozostałymi plikami z tego katalogu.**
    27. `matura-es/02_lessons_srodki_jezykowe.sql` (podstawowa, 10 lekcji),

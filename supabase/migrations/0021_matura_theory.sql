@@ -1,5 +1,5 @@
 -- ============================================================================
--- 0017_matura_theory.sql
+-- 0021_matura_theory.sql
 -- "Teoria" for the Matura module: a browsable library of grammar/strategy
 -- lessons per exam part, and a vocabulary bank organised by the CKE thematic
 -- blocks — the two things a maturzysta actually revises from, which 0013 only

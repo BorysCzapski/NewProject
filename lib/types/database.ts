@@ -804,7 +804,7 @@ export interface TextbookGrammarExercise {
 // ============================================================================
 // Matura — CKE foreign-language matura exam prep (poziom podstawowy /
 // rozszerzony), for English and Spanish. Mirrors supabase/migrations/
-// 0013_matura.sql + 0016_matura_language.sql. Sibling to Matma (lib/matma/*),
+// 0013_matura.sql + 0020_matura_language.sql. Sibling to Matma (lib/matma/*),
 // same shape: shared content (sections/lessons/task bank) + per-user attempts,
 // mastery-per-section, mock exams, study plan.
 // ============================================================================
@@ -813,7 +813,7 @@ export type MaturaLevel = "podstawowa" | "rozszerzona";
 
 /** Languages the matura module actually has content for. Deliberately NOT
  * TargetLanguage from lib/languages.ts — that one includes 'ru', for which
- * there is no matura content and none planned. See 0016_matura_language.sql. */
+ * there is no matura content and none planned. See 0020_matura_language.sql. */
 export type MaturaLanguage = "en" | "es";
 export type MaturaTaskSource = "topic" | "past_exam" | "curated" | "ai_generated";
 export type MaturaMockExamStatus = "in_progress" | "completed" | "abandoned";
@@ -873,7 +873,7 @@ export interface MaturaLessonProgress {
 }
 
 // ----------------------------------------------------------------------------
-// Matura — vocabulary bank (0017_matura_theory.sql)
+// Matura — vocabulary bank (0021_matura_theory.sql)
 // ----------------------------------------------------------------------------
 
 /** One of the podstawa programowa's thematic blocks, per language. */

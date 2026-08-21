@@ -4,7 +4,7 @@
 -- zamieszkania, Edukacja. Run 11_vocab_topics.sql first.
 --
 -- `level` is the level FROM WHICH an entry is expected — a rozszerzona student
--- gets both slices, a podstawowa student only the first (0017_matura_theory.sql).
+-- gets both slices, a podstawowa student only the first (0021_matura_theory.sql).
 --
 -- The `note` column carries what a translation pair cannot. For English that
 -- means: collocations (make/do, take an exam), countability (advice, furniture,
