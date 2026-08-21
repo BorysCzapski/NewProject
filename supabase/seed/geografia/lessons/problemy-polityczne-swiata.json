@@ -1,0 +1,1007 @@
+{
+  "topicSlug": "problemy-polityczne-swiata",
+  "lessons": [
+    {
+      "slug": "zrodla-i-rodzaje-konfliktow",
+      "title": "Źródła i rodzaje konfliktów zbrojnych",
+      "summary": "Dlaczego wybuchają wojny: podłoże etniczne, religijne, terytorialne, surowcowe i postkolonialne. Podział na konflikty międzypaństwowe, wewnętrzne i separatyzmy oraz mechanizm klątwy surowcowej.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa polityczna świata wygląda na stabilną tylko z daleka. W rzeczywistości w każdej chwili toczy się kilkadziesiąt **konfliktów zbrojnych**, a zdecydowana ich większość to konflikty **wewnętrzne** — wojny domowe, powstania i ruchy separatystyczne — a nie klasyczne wojny między państwami. Na maturze rozszerzonej rzadko pyta się o daty bitew. Pyta się o **podłoże geograficzne**: dlaczego akurat tu, dlaczego akurat teraz i który czynnik — etniczny, religijny, surowcowy czy graniczny — jest przyczyną, a który tylko paliwem podtrzymującym walki. Ta lekcja porządkuje źródła i rodzaje konfliktów; kolejne pokazują konkretne regiony."
+        },
+        {
+          "type": "definition",
+          "term": "Konflikt zbrojny",
+          "text": "Sprzeczność interesów co najmniej dwóch stron (państw, grup etnicznych, organizacji zbrojnych) rozwiązywana z użyciem **przemocy zbrojnej**. W statystykach międzynarodowych za konflikt zbrojny uznaje się starcie, w którym w ciągu roku ginie co najmniej **25 osób** w walkach, a mianem **wojny** określa się konflikt o co najmniej **1000 ofiar** rocznie.",
+          "note": "Próg liczbowy jest umowny, ale pozwala porównywać konflikty między sobą i śledzić ich nasilenie w czasie."
+        },
+        {
+          "type": "classification",
+          "title": "Źródła konfliktów — sześć głównych grup",
+          "caption": "W praktyce przyczyny nakładają się na siebie: konflikt „etniczny” niemal zawsze ma też wymiar ekonomiczny lub surowcowy.",
+          "groups": [
+            {
+              "name": "Etniczne i narodowościowe",
+              "description": "Wynikają z niezgodności **granic politycznych z granicami etnicznymi**: jeden naród żyje w kilku państwach albo w jednym państwie zamknięto kilkadziesiąt zwaśnionych grup. Zapalne są zwłaszcza obszary, gdzie mniejszość jest liczna i skupiona terytorialnie.",
+              "examples": [
+                "Kurdowie podzieleni między 4 państwa",
+                "Tutsi i Hutu w regionie Wielkich Jezior",
+                "rozpad Jugosławii"
+              ]
+            },
+            {
+              "name": "Religijne",
+              "description": "Spór o **dominację jednej religii lub odłamu** w państwie, o kontrolę nad miejscami świętymi albo o prawo religijne jako prawo państwowe. Często pokrywa się z podziałem etnicznym i wzmacnia go.",
+              "examples": [
+                "sunnici a szyici w Iraku i Syrii",
+                "Jerozolima jako miasto trzech religii",
+                "północna i południowa Nigeria"
+              ]
+            },
+            {
+              "name": "Terytorialne",
+              "description": "Spór o **przynależność obszaru** — lądowego lub morskiego. Rośnie znaczenie sporów o akweny, bo wraz z szelfem przejmuje się złoża, łowiska i szlaki żeglugowe.",
+              "examples": [
+                "Kaszmir",
+                "Wyspy Kurylskie",
+                "Morze Południowochińskie"
+              ]
+            },
+            {
+              "name": "Surowcowe",
+              "description": "Walka o kontrolę nad złożami **ropy naftowej, gazu, minerałów** (diamenty, koltan, złoto) lub o **wodę**. Surowiec bywa przyczyną wojny, ale znacznie częściej jest jej **finansowaniem** — sprzedaż złóż opłaca broń.",
+              "examples": [
+                "diamenty w Sierra Leone",
+                "koltan we wschodnim Kongu",
+                "wody Nilu"
+              ]
+            },
+            {
+              "name": "Ekonomiczne i społeczne",
+              "description": "Głębokie **nierówności dochodów**, ubóstwo, bezrobocie młodych i wykluczenie całych regionów. Kraj biedny, o gospodarce opartej na jednym surowcu i słabym państwie ma wielokrotnie wyższe ryzyko wojny domowej niż kraj zamożny.",
+              "examples": [
+                "Arabska Wiosna 2011",
+                "rebelie w Sahelu",
+                "konflikt w Jemenie"
+              ]
+            },
+            {
+              "name": "Postkolonialne",
+              "description": "Skutek **sztucznego wytyczenia granic** przez mocarstwa kolonialne bez uwzględnienia podziałów plemiennych i religijnych, a także spuścizna gospodarki nastawionej na eksport surowców do metropolii.",
+              "examples": [
+                "granice geometryczne w Afryce",
+                "Sudan i Sudan Południowy",
+                "Zachodnia Sahara"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa częste błędy. Po pierwsze — **konflikt etniczny to nie to samo co religijny**: w byłej Jugosławii Serbowie, Chorwaci i Bośniacy mówią praktycznie tym samym językiem, a dzieli ich religia i pamięć historyczna; z kolei Kurdowie i Turcy to w większości sunnici, a spór między nimi jest czysto etniczny. Po drugie — obecność surowca **nie dowodzi**, że to on wywołał wojnę. Poprawna odpowiedź maturalna brzmi zwykle: surowiec *podtrzymuje* konflikt, bo daje stronom pieniądze na broń."
+        },
+        {
+          "type": "case-study",
+          "title": "Granice wykreślone linijką",
+          "region": "Afryka Subsaharyjska",
+          "text": "Na **konferencji berlińskiej (1884–1885)** mocarstwa europejskie podzieliły Afrykę, nie mając map etnicznych ani wiedzy o wnętrzu kontynentu. Granice poprowadzono wzdłuż południków i równoleżników — dziś ok. **44% granic w Afryce** to linie geometryczne. Skutek jest podwójny: jedne narody **rozdzielono** między kilka państw (Somalijczycy żyją w Somalii, Etiopii, Kenii i Dżibuti), a inne, wzajemnie wrogie, **zamknięto w jednym organizmie państwowym**. Nigeria liczy ponad **250 grup etnicznych**, z muzułmańską północą (Hausa i Fulanie) i chrześcijańskim południem (Jorubowie, Igbo); próba oderwania się Igbo doprowadziła do wojny o **Biafrę (1967–1970)** i śmierci ponad miliona ludzi, głównie z głodu. Po dekolonizacji Organizacja Jedności Afrykańskiej przyjęła zasadę **nienaruszalności granic kolonialnych** — uznano, że ich rewizja wywołałaby wojnę wszystkich ze wszystkimi.",
+          "takeaway": "Sztuczna granica sama nie strzela, ale tworzy państwo bez wspólnej tożsamości — a takie państwo łatwo pęka wzdłuż linii plemiennych, gdy słabnie władza centralna lub pojawia się nagroda w postaci złóż."
+        },
+        {
+          "type": "map-explore",
+          "title": "Granice postkolonialne i ruchy separatystyczne",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że separatyzmy występują zarówno w krajach biednych, jak i w bogatej Europie — różni je jednak forma: zbrojna albo polityczna.",
+          "center": [
+            20,
+            10
+          ],
+          "zoom": 3,
+          "markers": [
+            {
+              "lat": 27.15,
+              "lng": -13.2,
+              "label": "Zachodnia Sahara",
+              "text": "Dawna kolonia hiszpańska, od 1975 r. w większości kontrolowana przez **Maroko**, a niepodległości domaga się **Front Polisario**. Klasyczny spór **postkolonialny i terytorialny**: w grę wchodzą złoża fosforytów i bogate łowiska Prądu Kanaryjskiego. Referendum ONZ wielokrotnie odkładano z powodu sporu, kto ma prawo głosować."
+            },
+            {
+              "lat": 6.44,
+              "lng": 7.5,
+              "label": "Biafra (Nigeria)",
+              "text": "Wschodnia Nigeria zamieszkana przez chrześcijańskich **Igbo**, z bogatymi polami naftowymi delty Nigru. Secesja z 1967 r. została stłumiona blokadą i głodem. Ropa sprawiła, że rząd centralny nie mógł pozwolić na odejście regionu — to podręcznikowy przykład **surowcowego podłoża separatyzmu**."
+            },
+            {
+              "lat": 4.85,
+              "lng": 31.58,
+              "label": "Sudan Południowy",
+              "text": "Jedyny przypadek uznanej secesji w Afryce po dekolonizacji (**2011**, po referendum). Podział przebiegł wzdłuż granicy religijno-etnicznej: muzułmańska, arabska północ i chrześcijańsko-animistyczne, czarnoafrykańskie południe. Napięcia trwały dalej, bo **złoża ropy leżą na południu, a rurociągi i port — na północy**."
+            },
+            {
+              "lat": 9.56,
+              "lng": 44.07,
+              "label": "Somaliland",
+              "text": "Północna część Somalii ogłosiła niepodległość w 1991 r. Ma własny rząd, walutę i względny spokój, ale **nie jest uznawana** przez społeczność międzynarodową. Pokazuje różnicę między **państwem faktycznym (de facto)** a **uznanym międzynarodowo (de iure)**."
+            },
+            {
+              "lat": 41.39,
+              "lng": 2.17,
+              "label": "Katalonia",
+              "text": "Separatyzm w bogatym regionie Hiszpanii, o podłożu **etniczno-językowym i ekonomicznym**: Katalonia wpłaca do budżetu państwa więcej, niż z niego otrzymuje. Konflikt toczy się środkami **politycznymi i prawnymi**, nie zbrojnymi — to typ separatyzmu charakterystyczny dla państw demokratycznych i zamożnych."
+            },
+            {
+              "lat": 43.26,
+              "lng": -2.93,
+              "label": "Kraj Basków",
+              "text": "Baskowie posługują się językiem niespokrewnionym z żadnym europejskim. Organizacja **ETA** prowadziła walkę zbrojną, ale w 2011 r. ogłosiła jej zaprzestanie, a w 2018 r. — samorozwiązanie. Przykład **wygaszenia** separatyzmu przez szeroką autonomię."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Wojna międzypaństwowa a konflikt wewnętrzny",
+          "leftLabel": "Konflikt międzypaństwowy",
+          "rightLabel": "Konflikt wewnętrzny (domowy)",
+          "rows": [
+            {
+              "aspect": "Strony",
+              "left": "Dwa lub więcej **suwerennych państw** i ich regularne armie",
+              "right": "Rząd kontra **ugrupowania zbrojne** własnych obywateli albo grupy zbrojne między sobą"
+            },
+            {
+              "aspect": "Częstość dziś",
+              "left": "Rzadkie — stanowią niewielką część współczesnych konfliktów",
+              "right": "Dominujące — przytłaczająca większość toczących się wojen"
+            },
+            {
+              "aspect": "Linia frontu",
+              "left": "Wyraźna, przesuwa się wzdłuż granicy",
+              "right": "Rozmyta, walki toczą się **wśród ludności cywilnej**, często o miasta"
+            },
+            {
+              "aspect": "Ofiary",
+              "left": "Przeważają żołnierze, choć rosną straty cywilne",
+              "right": "Zdecydowanie przeważają **cywile**; typowe są masowe ucieczki i głód"
+            },
+            {
+              "aspect": "Czas trwania",
+              "left": "Zwykle krótszy, kończy się traktatem pokojowym",
+              "right": "Długotrwały i **nawracający** — po rozejmie walki często wybuchają ponownie"
+            },
+            {
+              "aspect": "Przykład",
+              "left": "Wojna iracko-irańska (1980–1988)",
+              "right": "Wojna domowa w Syrii (od 2011 r.)"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Separatyzm",
+          "text": "Dążenie grupy zamieszkującej część terytorium państwa do **oderwania się i utworzenia własnego państwa** lub do przyłączenia do innego. Odróżnij od **autonomizmu** (żądanie samorządu w granicach państwa, bez secesji) i od **irredentyzmu** — dążenia państwa do **przyłączenia obszarów zamieszkanych przez rodaków**, leżących po drugiej stronie granicy.",
+          "note": "Separatyzm patrzy „od środka na zewnątrz” (region chce wyjść), irredentyzm „od zewnątrz do środka” (państwo chce zabrać sąsiadowi region zamieszkany przez własną mniejszość)."
+        },
+        {
+          "type": "process",
+          "title": "Klątwa surowcowa — jak bogactwo złóż napędza wojnę",
+          "caption": "Mechanizm tłumaczy paradoks: kraje o największych zasobach mineralnych bywają najbiedniejsze i najbardziej niestabilne.",
+          "steps": [
+            {
+              "title": "1. Renta surowcowa zamiast podatków",
+              "text": "Państwo utrzymuje się z **eksportu jednego surowca**, a nie z podatków od obywateli. Władza przestaje być zależna od społeczeństwa, więc nie musi budować sprawnej administracji ani liczyć się z wyborcami."
+            },
+            {
+              "title": "2. Zaniedbanie reszty gospodarki",
+              "text": "Napływ walut z eksportu podnosi kurs waluty krajowej i **osłabia konkurencyjność rolnictwa oraz przemysłu** (tzw. choroba holenderska). Zanikają miejsca pracy poza sektorem wydobywczym."
+            },
+            {
+              "title": "3. Nagroda warta wojny",
+              "text": "Kto przejmie kopalnię lub pole naftowe, przejmuje **główne źródło dochodu państwa**. Kontrola nad złożem staje się celem samym w sobie — dla rządu, rebeliantów i sąsiadów."
+            },
+            {
+              "title": "4. Surowce konfliktowe finansują walki",
+              "text": "Rebelianci sprzedają **diamenty, koltan czy złoto** na czarnym rynku i za uzyskane środki kupują broń oraz najemników. Konflikt zaczyna się sam finansować i przestaje potrzebować pierwotnej przyczyny politycznej."
+            },
+            {
+              "title": "5. Utrwalenie konfliktu",
+              "text": "Powstaje **gospodarka wojenna**: dla dowódców pokój oznacza utratę dochodów, więc walki trwają mimo kolejnych porozumień. Państwo słabnie i osuwa się w stronę **państwa upadłego**."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Surowce jako paliwo konfliktów",
+          "caption": "Zwróć uwagę na kolumnę „rola surowca” — na maturze to ona odróżnia odpowiedź poprawną od powierzchownej.",
+          "headers": [
+            "Region",
+            "Surowiec",
+            "Rola surowca w konflikcie"
+          ],
+          "rows": [
+            [
+              "Sierra Leone, Liberia, Angola",
+              "diamenty",
+              "„Diamenty krwi” — łatwe do przemytu, finansowały zakup broni przez rebeliantów; stąd **Proces Kimberley** (2003) certyfikujący legalne kamienie"
+            ],
+            [
+              "Wschodnie Kongo (DRK)",
+              "koltan, cyna, złoto, kobalt",
+              "Kopalnie kontrolowane przez bojówki opłacają walki; surowce trafiają do elektroniki użytkowej przez nieprzejrzyste łańcuchy dostaw"
+            ],
+            [
+              "Zatoka Perska",
+              "ropa naftowa i gaz ziemny",
+              "Region skupia blisko połowę udokumentowanych zasobów ropy świata — stąd **zaangażowanie mocarstw** i strategiczne znaczenie cieśniny Ormuz"
+            ],
+            [
+              "Delta Nigru (Nigeria)",
+              "ropa naftowa",
+              "Zyski trafiają do rządu i koncernów, a lokalna ludność ponosi koszty skażeń — źródło rebelii i kradzieży ropy z rurociągów"
+            ],
+            [
+              "Dorzecza Nilu, Tygrysu i Eufratu",
+              "woda",
+              "Surowiec **niezastępowalny**: budowa zapory w górnym biegu zmniejsza przepływ w dolnym i grozi konfliktem międzypaństwowym"
+            ]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto zapamiętać",
+          "items": [
+            {
+              "value": "1884–1885",
+              "label": "konferencja berlińska",
+              "note": "podział Afryki bez map etnicznych"
+            },
+            {
+              "value": "44",
+              "unit": "%",
+              "label": "granic Afryki to linie geometryczne",
+              "note": "południki, równoleżniki i proste odcinki"
+            },
+            {
+              "value": "250",
+              "unit": "+",
+              "label": "grup etnicznych w Nigerii",
+              "note": "najludniejsze państwo Afryki"
+            },
+            {
+              "value": "2011",
+              "label": "powstanie Sudanu Południowego",
+              "note": "jedyna uznana secesja w Afryce po dekolonizacji"
+            },
+            {
+              "value": "25",
+              "label": "ofiar rocznie — próg konfliktu zbrojnego",
+              "note": "1000 ofiar to już wojna"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj konflikt do jego głównego podłoża",
+          "instruction": "Wskaż czynnik, który najlepiej tłumaczy genezę danego sporu.",
+          "pairs": [
+            {
+              "left": "Wojna o Biafrę (1967–1970)",
+              "right": "separatyzm etniczny wzmocniony obecnością ropy"
+            },
+            {
+              "left": "Zachodnia Sahara",
+              "right": "spór postkolonialny o terytorium dawnej kolonii"
+            },
+            {
+              "left": "Konflikt w Sierra Leone (lata 90. XX w.)",
+              "right": "złoża diamentów finansujące rebelię"
+            },
+            {
+              "left": "Rozpad Jugosławii",
+              "right": "podziały religijne i historyczne przy wspólnym języku"
+            },
+            {
+              "left": "Napięcia wokół Wielkiej Tamy Etiopskiej",
+              "right": "spór o podział wód rzeki transgranicznej"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie najlepiej opisuje strukturę współczesnych konfliktów zbrojnych?",
+          "options": [
+            "Dominują klasyczne wojny między regularnymi armiami suwerennych państw",
+            "Przeważają konflikty wewnętrzne, w których większość ofiar stanowi ludność cywilna",
+            "Konflikty zbrojne występują niemal wyłącznie w państwach wysoko rozwiniętych",
+            "Wszystkie współczesne konflikty mają podłoże wyłącznie religijne"
+          ],
+          "correctIndex": 1,
+          "explanation": "Po zimnej wojnie zdecydowanie przeważają **konflikty wewnętrzne** — wojny domowe, rebelie i separatyzmy. Front jest rozmyty, walki toczą się wśród ludności, więc **cywile stanowią większość ofiar**, a do strat bezpośrednich dochodzą zgony z głodu i chorób. Wojny międzypaństwowe są dziś rzadkie, a konflikty koncentrują się w krajach o niskim poziomie rozwoju i słabych instytucjach."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego geografowie mówią, że bogate złoża surowców mineralnych bywają dla kraju rozwijającego się „przekleństwem”?",
+          "options": [
+            "Ponieważ wydobycie surowców zawsze wyczerpuje się w ciągu kilku lat",
+            "Ponieważ surowce mineralne występują wyłącznie na obszarach pustynnych",
+            "Ponieważ dochód z jednego surowca uniezależnia władzę od podatników, osłabia pozostałe działy gospodarki i daje stronom konfliktu środki na broń",
+            "Ponieważ eksport surowców jest zakazany przez prawo międzynarodowe"
+          ],
+          "correctIndex": 2,
+          "explanation": "**Klątwa surowcowa** to splot trzech mechanizmów: renta z eksportu zastępuje podatki, więc władza nie musi być rozliczana przez obywateli; napływ walut osłabia rolnictwo i przemysł (choroba holenderska); a łatwy do przemytu surowiec pozwala rebeliantom finansować walki. Powstaje **gospodarka wojenna**, w której pokój jest dla dowódców nieopłacalny."
+        },
+        {
+          "type": "quiz",
+          "question": "Który opis dotyczy irredentyzmu, a nie separatyzmu?",
+          "options": [
+            "Region domaga się oderwania od państwa i utworzenia własnego, niepodległego organizmu",
+            "Państwo dąży do przyłączenia sąsiedniego obszaru zamieszkanego przez ludność mówiącą jego językiem",
+            "Mniejszość narodowa żąda szerszej autonomii i własnego parlamentu regionalnego",
+            "Grupa etniczna domaga się nauczania w języku ojczystym w szkołach publicznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Irredentyzm** to dążenie państwa do **włączenia** terytoriów zamieszkanych przez rodaków, leżących poza jego granicami. Odpowiedź 1. opisuje **separatyzm** (region chce wyjść), odpowiedź 3. — **autonomizm** (samorząd bez secesji), a odpowiedź 4. dotyczy praw kulturowych mniejszości, a nie zmiany granic."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu „podaj **dwie przyczyny** konfliktu w podanym regionie” nie wystarczy napisać „przyczyny etniczne”. Punktuje odpowiedź wiążąca czynnik z **konkretną geografią**: „granica państwowa dzieli obszar zamieszkany przez Kurdów między cztery państwa” albo „złoża ropy leżą na terytorium mniejszości, a dochody trafiają do rządu centralnego”. Zapamiętaj schemat odpowiedzi: **przyczyna strukturalna** (granica, złoże, podział etniczny) + **czynnik zapalny** (upadek władzy, susza, interwencja z zewnątrz)."
+        }
+      ]
+    },
+    {
+      "slug": "bliski-wschod-i-spory-o-wode",
+      "title": "Bliski Wschód: konflikty i walka o wodę",
+      "summary": "Konflikt izraelsko-palestyński, wojna w Syrii i sprawa kurdyjska w ujęciu geograficznym. Spory o wody rzek transgranicznych: Nilu, Tygrysu, Eufratu i Jordanu oraz mechanizm konfliktu góra–dół rzeki.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bliski Wschód to region, w którym nakładają się na siebie **wszystkie źródła konfliktów** z poprzedniej lekcji: styk trzech religii monoteistycznych, granice wykreślone po I wojnie światowej przez Francję i Wielką Brytanię, blisko połowa udokumentowanych zasobów ropy naftowej świata i jednocześnie **dotkliwy deficyt wody**. Do tego dochodzi położenie na styku trzech kontynentów, przez które biegną kluczowe szlaki żeglugowe. Ta lekcja pokazuje, jak te warunki przekładają się na konkretne konflikty — izraelsko-palestyński, syryjski i kurdyjski — oraz jak z rywalizacji o wodę rzek transgranicznych rodzą się napięcia międzypaństwowe."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Bliski Wschód w liczbach",
+          "items": [
+            {
+              "value": "≈ 48",
+              "unit": "%",
+              "label": "udokumentowanych zasobów ropy naftowej świata",
+              "note": "stąd trwałe zainteresowanie mocarstw regionem"
+            },
+            {
+              "value": "1/5",
+              "label": "światowej ropy przepływa cieśniną Ormuz",
+              "note": "najwęższe miejsce ma ok. 40 km — łatwo je zablokować"
+            },
+            {
+              "value": "6650",
+              "unit": "km",
+              "label": "długość Nilu",
+              "note": "najdłuższa rzeka Afryki, dorzecze w 11 państwach"
+            },
+            {
+              "value": "> 90",
+              "unit": "%",
+              "label": "wody słodkiej Egiptu pochodzi z Nilu",
+              "note": "kraj niemal bez opadów, całkowicie zależny od rzeki tranzytowej"
+            },
+            {
+              "value": "25–35",
+              "unit": "mln",
+              "label": "szacowana liczba Kurdów",
+              "note": "największy naród świata bez własnego państwa"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Punkty zapalne Bliskiego Wschodu i doliny Nilu",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, jak często w opisie pojawia się woda albo ropa — to nie przypadek, lecz cecha geograficzna regionu.",
+          "center": [
+            28,
+            38
+          ],
+          "zoom": 4,
+          "markers": [
+            {
+              "lat": 31.78,
+              "lng": 35.22,
+              "label": "Jerozolima",
+              "text": "Miasto święte dla **judaizmu, chrześcijaństwa i islamu**, skupione wokół Wzgórza Świątynnego. Izrael uznaje je za swoją stolicę, Palestyńczycy — Jerozolimę Wschodnią za stolicę przyszłego państwa. Spór o miasto jest najtrudniejszym punktem każdych negocjacji, bo dotyczy **symboli religijnych**, których nie da się podzielić „po połowie”."
+            },
+            {
+              "lat": 31.42,
+              "lng": 34.38,
+              "label": "Strefa Gazy",
+              "text": "Wąski pas nadmorski o powierzchni ok. 365 km², jeden z **najgęściej zaludnionych obszarów świata**. Izrael wycofał stamtąd wojsko i osadników w 2005 r., a od 2007 r. terytorium kontroluje **Hamas**; obowiązuje blokada lądowa i morska. Nadmierna eksploatacja przybrzeżnej warstwy wodonośnej doprowadziła do jej **zasolenia**."
+            },
+            {
+              "lat": 33,
+              "lng": 35.75,
+              "label": "Wzgórza Golan",
+              "text": "Wyżynny płaskowyż zajęty przez Izrael w 1967 r. Syrii. O jego znaczeniu decyduje **geografia**: górują nad doliną Jordanu (przewaga militarna) i leżą w zlewni zasilającej **Jezioro Tyberiadzkie** — główny zbiornik słodkiej wody Izraela."
+            },
+            {
+              "lat": 36.19,
+              "lng": 44.01,
+              "label": "Irbil — Kurdystan iracki",
+              "text": "Stolica **Regionu Kurdystanu**, jedynego obszaru z realną autonomią kurdyjską. Region ma własny rząd i siły zbrojne (peszmergowie), a spór z Bagdadem dotyczy głównie **podziału dochodów z ropy** i przynależności okręgu naftowego Kirkuku. Referendum niepodległościowe z 2017 r. nie zostało uznane przez żadne państwo."
+            },
+            {
+              "lat": 26.57,
+              "lng": 56.25,
+              "label": "Cieśnina Ormuz",
+              "text": "Jedyne wyjście z **Zatoki Perskiej** na ocean. Przepływa nią około jedna piąta ropy zużywanej na świecie. Groźba zamknięcia cieśniny jest narzędziem nacisku politycznego — to podręcznikowy przykład **wąskiego gardła (choke point)** w geografii transportu."
+            },
+            {
+              "lat": 37.49,
+              "lng": 38.32,
+              "label": "Zapora Atatürka (Eufrat)",
+              "text": "Element tureckiego programu **GAP** (Południowo-Wschodnia Anatolia): kilkadziesiąt zapór na Eufracie i Tygrysie. Turcja, leżąc w **górnym biegu**, może regulować przepływ do Syrii i Iraku — a wraz z nim ilość wody do nawadniania i produkcji energii u sąsiadów."
+            },
+            {
+              "lat": 11.21,
+              "lng": 35.09,
+              "label": "Wielka Tama Etiopskiego Odrodzenia (GERD)",
+              "text": "Zapora na **Nilu Błękitnym**, największa elektrownia wodna Afryki. Etiopia widzi w niej szansę na elektryfikację kraju, Egipt i Sudan — zagrożenie dla przepływu w dolnym biegu, zwłaszcza w okresie napełniania zbiornika."
+            },
+            {
+              "lat": 23.97,
+              "lng": 32.88,
+              "label": "Wysoka Tama Asuańska",
+              "text": "Ukończona w 1970 r., utworzyła **Jezioro Nasera**. Uniezależniła Egipt od kaprysów wezbrań Nilu, ale zatrzymała **żyzne muły**, przez co delta cofa się pod naporem morza, a rolnicy muszą stosować nawozy sztuczne. Egipt broni swojego „prawa historycznego” do wody Nilu właśnie dlatego, że nie ma żadnej alternatywy."
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Konflikt izraelsko-palestyński — kalendarium",
+          "caption": "Zauważ, że każdy etap zmienia mapę: to konflikt przede wszystkim o **terytorium i jego granice**.",
+          "events": [
+            {
+              "period": "1947",
+              "label": "Plan podziału ONZ",
+              "text": "Zgromadzenie Ogólne ONZ uchwala podział brytyjskiego mandatu Palestyny na **państwo żydowskie i arabskie**, z Jerozolimą pod zarządem międzynarodowym. Strona arabska planu nie przyjmuje."
+            },
+            {
+              "period": "1948–1949",
+              "label": "Powstanie Izraela i pierwsza wojna",
+              "text": "Proklamacja **Państwa Izrael** i wojna z państwami arabskimi. Izrael zajmuje obszar większy niż przewidywał plan ONZ; ok. **700 tys. Palestyńczyków** opuszcza domy (nakba), tworząc trwały problem uchodźczy."
+            },
+            {
+              "period": "1967",
+              "label": "Wojna sześciodniowa",
+              "text": "Izrael zajmuje **Zachodni Brzeg** i Jerozolimę Wschodnią (od Jordanii), **Strefę Gazy** i Półwysep Synaj (od Egiptu) oraz **Wzgórza Golan** (od Syrii). Powstaje dzisiejsza geografia sporu — łącznie z kontrolą nad zasobami wodnymi."
+            },
+            {
+              "period": "1979",
+              "label": "Pokój egipsko-izraelski",
+              "text": "Po wojnie Jom Kipur (1973) Egipt jako pierwsze państwo arabskie zawiera pokój z Izraelem i odzyskuje **Synaj**. Dowód, że spór terytorialny między państwami da się rozwiązać — inaczej niż konflikt o to samo terytorium między dwiema wspólnotami."
+            },
+            {
+              "period": "1993–1994",
+              "label": "Porozumienia z Oslo",
+              "text": "Powstaje **Autonomia Palestyńska** ze stopniowanym zakresem władzy (strefy A, B i C). Kluczowe kwestie — Jerozolima, osiedla, uchodźcy i **woda** — odłożono na później i nigdy nie rozstrzygnięto."
+            },
+            {
+              "period": "2002–2007",
+              "label": "Bariera, wycofanie z Gazy i podział władzy",
+              "text": "Izrael buduje **barierę oddzielającą** wzdłuż i wewnątrz Zachodniego Brzegu, w 2005 r. wycofuje się z Gazy, a od 2007 r. terytoriami palestyńskimi rządzą **dwa ośrodki**: Fatah na Zachodnim Brzegu i Hamas w Gazie."
+            },
+            {
+              "period": "2012",
+              "label": "Palestyna w ONZ",
+              "text": "Zgromadzenie Ogólne przyznaje Palestynie status **nieczłonkowskiego państwa obserwatora**. Symboliczne uznanie państwowości nie zmienia jednak faktycznej kontroli nad terytorium."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Zachodni Brzeg a Strefa Gazy",
+          "leftLabel": "Zachodni Brzeg",
+          "rightLabel": "Strefa Gazy",
+          "rows": [
+            {
+              "aspect": "Położenie i powierzchnia",
+              "left": "Wyżynny obszar na zachód od **Jordanu**, ok. 5,6 tys. km²",
+              "right": "Wąski pas nad **Morzem Śródziemnym**, ok. 365 km²"
+            },
+            {
+              "aspect": "Władza",
+              "left": "**Autonomia Palestyńska** (Fatah), obok izraelskiej kontroli wojskowej w strefie C",
+              "right": "**Hamas** od 2007 r., przy blokadzie zewnętrznej"
+            },
+            {
+              "aspect": "Osadnictwo izraelskie",
+              "left": "Rozbudowane osiedla, rozdrabniające terytorium palestyńskie",
+              "right": "Zlikwidowane w 2005 r. wraz z wycofaniem wojsk"
+            },
+            {
+              "aspect": "Zasoby wody",
+              "left": "**Górska warstwa wodonośna** — najcenniejsze źródło wody w regionie, spór o dostęp",
+              "right": "Przybrzeżna warstwa wodonośna, **przeeksploatowana i zasolona** wskutek intruzji wód morskich"
+            },
+            {
+              "aspect": "Gęstość zaludnienia",
+              "left": "Umiarkowana, osadnictwo rozproszone w dolinach i na grzbietach",
+              "right": "Skrajnie wysoka — jeden z najgęściej zaludnionych obszarów świata"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy mylone pary. **Palestyna (państwo uznawane przez większość członków ONZ)** to nie to samo co **Autonomia Palestyńska** (władze administrujące częścią terytoriów). **Sunnici i szyici** to odłamy islamu, a nie odrębne religie — a jednak podział ten wyznacza linie sojuszy (Arabia Saudyjska–Iran). I wreszcie: **Kurdowie nie są Arabami** — to odrębny naród irański językowo, choć w większości sunnicki, tak jak Turcy czy Arabowie wokół nich."
+        },
+        {
+          "type": "case-study",
+          "title": "Syria: od suszy do wojny zastępczej",
+          "region": "Syria i Lewant",
+          "text": "Wojna domowa w Syrii jest pokazowym przykładem konfliktu, w którym **czynnik środowiskowy uruchomił łańcuch społeczny**. W latach 2006–2010 północno-wschodnią Syrię dotknęła najdotkliwsza od dziesięcioleci **susza**; upadek rolnictwa — dodatkowo osłabionego nadmiernym poborem wód podziemnych do nawadniania — wypchnął setki tysięcy ludzi ze wsi do przeludnionych przedmieść miast. Gdy w 2011 r. fala **Arabskiej Wiosny** dotarła do Syrii, protesty spotkały się z brutalną odpowiedzią władz i przerodziły w wojnę domową. Konflikt szybko stał się **wojną zastępczą (proxy war)**: rząd wspierały Rosja i Iran, opozycję — państwa Zatoki i Turcja, Kurdowie z północy uzyskali wsparcie USA w walce z **Państwem Islamskim**, które między 2014 a 2017 r. kontrolowało znaczne obszary Syrii i Iraku. Skutkiem był największy kryzys uchodźczy XXI wieku: **ponad 5 mln uchodźców** za granicą (głównie w Turcji, Libanie i Jordanii) i miliony przesiedlonych wewnątrz kraju. W grudniu 2024 r. rządzący od dekad reżim upadł, ale kraj pozostał podzielony na strefy wpływów.",
+          "takeaway": "Susza nie „wywołała” wojny — wywołał ją splot ustroju politycznego, nierówności i represji. Środowisko zadziałało jako **czynnik zapalny**, który przyspieszył migrację ze wsi do miast i zwiększył napięcie społeczne."
+        },
+        {
+          "type": "definition",
+          "term": "Naród bez państwa",
+          "text": "Wspólnota o wyraźnej odrębności etnicznej, językowej i kulturowej, która **nie ma własnego państwa**, bo jej obszar osadniczy został podzielony granicami innych państw. Kurdowie zamieszkują zwarty obszar górski na styku **Turcji, Iranu, Iraku i Syrii** — granice narzucono tam po rozpadzie Imperium Osmańskiego, a obiecane w traktacie z Sèvres (1920) państwo kurdyjskie nigdy nie powstało.",
+          "note": "Właśnie dlatego żadne z czterech państw nie chce niepodległego Kurdystanu: jego powstanie oznaczałoby oderwanie części terytorium każdego z nich — a w przypadku Iraku również okręgu naftowego Kirkuku."
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje spór o rzekę transgraniczną",
+          "caption": "Ten sam schemat opisuje Nil, Eufrat, Indus i Mekong — warto go opanować jako gotowy model odpowiedzi.",
+          "steps": [
+            {
+              "title": "1. Asymetria położenia",
+              "text": "Państwo **górnego biegu** kontroluje źródła i przepływ; państwo **dolnego biegu** jest odbiorcą tego, co dopłynie. Przewaga jest z natury nierówna i nie zależy od wielkości armii."
+            },
+            {
+              "title": "2. Wzrost zapotrzebowania",
+              "text": "Przyrost ludności, rozwój nawadniania i potrzeba energii sprawiają, że **zapotrzebowanie rośnie po obu stronach** granicy szybciej niż zasoby, które są stałe lub malejące wskutek zmian klimatu."
+            },
+            {
+              "title": "3. Inwestycja w górnym biegu",
+              "text": "Powstaje **zapora lub system nawadniający**. Napełnianie zbiornika czasowo zmniejsza odpływ, a stałe pobory na nawadnianie ograniczają go trwale — i pogarszają jakość wody (zasolenie po spływie z pól)."
+            },
+            {
+              "title": "4. Zderzenie zasad prawnych",
+              "text": "Dolny bieg powołuje się na **prawa historyczne** („zawsze korzystaliśmy z tej wody”), górny — na **suwerenność** nad zasobami na własnym terytorium. Prawo międzynarodowe zaleca „sprawiedliwe i racjonalne korzystanie”, ale nie ma skutecznego egzekutora."
+            },
+            {
+              "title": "5. Eskalacja albo umowa",
+              "text": "Bez porozumienia spór przenosi się na poziom polityczny i wojskowy (groźby, presja dyplomatyczna). Rozwiązaniem bywa **umowa o podziale wód** wraz z wymianą korzyści — np. tania energia z zapory w zamian za gwarancje przepływu."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Trzy najważniejsze spory o wodę w regionie",
+          "headers": [
+            "Rzeka / dorzecze",
+            "Górny bieg (przewaga)",
+            "Dolny bieg (zależność)",
+            "Istota sporu"
+          ],
+          "rows": [
+            [
+              "Nil",
+              "**Etiopia** (Wyżyna Abisyńska dostarcza ok. 85% wód Nilu przez Nil Błękitny, Atbarę i Sobat)",
+              "**Sudan i Egipt**",
+              "Budowa i napełnianie **GERD** wobec umów z 1929 i 1959 r., które dzieliły wodę wyłącznie między Egipt i Sudan, pomijając Etiopię"
+            ],
+            [
+              "Tygrys i Eufrat",
+              "**Turcja** (źródła w górach Wyżyny Armeńskiej, program zapór GAP)",
+              "**Syria i Irak**",
+              "Zmniejszony przepływ i **zasolenie** gleb w Mezopotamii, wysychanie bagien w dolnym biegu, spadek produkcji rolnej Iraku"
+            ],
+            [
+              "Jordan",
+              "**Izrael, Syria, Liban** (zlewnia Jeziora Tyberiadzkiego)",
+              "**Jordania i Autonomia Palestyńska**",
+              "Pobór wody na nawadnianie i zaopatrzenie miast; skutek uboczny — **kurczenie się Morza Martwego** o około metr rocznie"
+            ]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Odnawialne zasoby wodne na 1 mieszkańca (wartości przybliżone)",
+          "caption": "Progi Falkenmarka: poniżej 1700 m³/osobę/rok mówimy o **stresie wodnym**, poniżej 1000 m³ — o **niedoborze wody**, poniżej 500 m³ — o niedoborze skrajnym.",
+          "labels": [
+            "Turcja",
+            "Irak",
+            "Polska",
+            "Egipt",
+            "Izrael"
+          ],
+          "series": [
+            {
+              "name": "m³ na osobę rocznie",
+              "values": [
+                2900,
+                2100,
+                1600,
+                550,
+                220
+              ]
+            }
+          ],
+          "unit": "m³"
+        },
+        {
+          "type": "ordering",
+          "title": "Ułóż obiekty zgodnie z biegiem Nilu — od źródeł do ujścia",
+          "instruction": "Przeciągnij elementy tak, aby odtworzyć kolejność wzdłuż rzeki (z uwzględnieniem Nilu Błękitnego).",
+          "items": [
+            "Jezioro Tana na Wyżynie Abisyńskiej — źródło Nilu Błękitnego",
+            "Wielka Tama Etiopskiego Odrodzenia (GERD)",
+            "Chartum — połączenie Nilu Białego i Nilu Błękitnego",
+            "Wysoka Tama Asuańska i Jezioro Nasera",
+            "Kair i delta Nilu",
+            "Morze Śródziemne"
+          ],
+          "explanation": "Nil Błękitny wypływa z **Jeziora Tana** i już w Etiopii przecina go zapora **GERD** — to właśnie dlatego Egipt tak ostro reaguje na inwestycję. W **Chartumie** łączy się z Nilem Białym, płynącym z rejonu Jeziora Wiktorii. Dalej rzeka wkracza w pustynię, zostaje spiętrzona w **Asuanie**, a na końcu rozdziela się w **deltę** i uchodzi do Morza Śródziemnego."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego Wzgórza Golan mają dla Izraela znaczenie wykraczające poza kwestię prestiżu terytorialnego?",
+          "options": [
+            "Znajdują się tam największe złoża ropy naftowej Bliskiego Wschodu",
+            "Górują nad doliną Jordanu i leżą w zlewni zasilającej Jezioro Tyberiadzkie, główny zbiornik wody słodkiej",
+            "Przebiega przez nie jedyna droga łącząca Izrael z Morzem Czerwonym",
+            "Jest to obszar święty dla trzech religii monoteistycznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "O znaczeniu Golanu decyduje **rzeźba i hydrologia**: wyżynny płaskowyż daje przewagę wojskową nad niżej położoną doliną Jordanu, a jego zlewnia zasila **Jezioro Tyberiadzkie**. W regionie o deficycie wody kontrola nad obszarem zasilania jest równie ważna jak kontrola nad samym zbiornikiem. Miejscem świętym dla trzech religii jest Jerozolima, a nie Golan."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega istota sporu Egiptu i Etiopii o Wielką Tamę Etiopskiego Odrodzenia?",
+          "options": [
+            "Etiopia leży w dolnym biegu Nilu i chce ograniczyć pobór wody przez Egipt",
+            "Zapora ma zatrzymywać zanieczyszczenia płynące z Egiptu w górę rzeki",
+            "Etiopia jako państwo górnego biegu może regulować odpływ, a Egipt, zależny od Nilu w ponad 90%, powołuje się na prawa historyczne wynikające z dawnych umów",
+            "Obydwa państwa spierają się o granicę przebiegającą wzdłuż koryta Nilu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczowa jest **asymetria położenia**: Etiopia leży w **górnym biegu** Nilu Błękitnego, z którego pochodzi większość wód rzeki, więc kontroluje odpływ. Egipt, praktycznie pozbawiony opadów i zależny od Nilu w ponad 90%, odwołuje się do umów z 1929 i 1959 r., zawartych bez udziału Etiopii. Woda nie płynie „w górę”, więc odpowiedzi 1. i 2. są geograficznie niemożliwe."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie opisuje sytuację Kurdów?",
+          "options": [
+            "Naród arabski zamieszkujący Półwysep Arabski, dążący do utworzenia federacji z Irakiem",
+            "Naród podzielony granicami Turcji, Iranu, Iraku i Syrii, mający autonomię jedynie w północnym Iraku",
+            "Grupa religijna wyznająca chrześcijaństwo, skupiona w Libanie i Syrii",
+            "Ludność koczownicza Sahelu, przemieszczająca się między Mali a Nigrem"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kurdowie to odrębny naród (językowo irański, w większości sunnicki), zamieszkujący **zwarty obszar górski** rozdzielony granicami czterech państw wytyczonymi po rozpadzie Imperium Osmańskiego. Realną autonomię — z własnym rządem i siłami zbrojnymi — mają wyłącznie w **północnym Iraku (Region Kurdystanu ze stolicą w Irbilu)**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o Bliskim Wschodzie egzaminator nagradza **argument geograficzny**, nie relację historyczną. Trenuj trzy schematy: (1) **położenie tranzytowe** — cieśnina Ormuz, Kanał Sueski, ropociągi; (2) **asymetria góra–dół rzeki** — kto trzyma źródła, ten trzyma sąsiada za gardło; (3) **zgodność mapy etniczno-religijnej z mapą polityczną** — im większa rozbieżność, tym większe ryzyko separatyzmu. Jeśli w poleceniu jest mapa, zawsze wskaż konkretny obiekt (rzekę, zaporę, cieśninę, wyżynę), a nie samą nazwę państwa."
+        }
+      ]
+    },
+    {
+      "slug": "konflikty-w-afryce-sahel-rog-wielkie-jeziora",
+      "title": "Konflikty w Afryce: Sahel, Róg Afryki i Wielkie Jeziora",
+      "summary": "Trzy najbardziej zapalne regiony Afryki i ich podłoże geograficzne: pustynnienie i rebelie w Sahelu, państwo upadłe w Somalii oraz wojny o surowce w regionie Wielkich Jezior.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Afryka skupia dziś najwięcej długotrwałych konfliktów zbrojnych na świecie, ale ich rozmieszczenie nie jest przypadkowe. Trzy zapalne regiony — **Sahel**, **Róg Afryki** i **region Wielkich Jezior** — łączy to samo: słabe państwo, granice odziedziczone po kolonializmie i **presja środowiskowa lub surowcowa**. Różni je natomiast mechanizm: w Sahelu wojnę napędza pustynnienie i konkurencja o pastwiska, w Rogu Afryki — rozpad struktur państwowych i położenie przy jednym z najważniejszych szlaków morskich świata, a nad Wielkimi Jeziorami — pamięć ludobójstwa i najbogatsze na kontynencie złoża metali."
+        },
+        {
+          "type": "zones",
+          "title": "Dlaczego Sahel leży akurat tam, gdzie leży",
+          "caption": "Pasy roślinne Afryki Zachodniej układają się **równoleżnikowo**, bo o wszystkim decyduje suma opadów malejąca ku północy — to bezpośredni skutek wędrówki strefy zbieżności międzyzwrotnikowej.",
+          "zones": [
+            {
+              "name": "Sahara",
+              "latitude": "ok. 18°–30°N",
+              "text": "Pustynia zwrotnikowa pod wpływem **wyżu zwrotnikowego** i osiadających mas powietrza. Opady poniżej 100 mm rocznie, rolnictwo możliwe tylko w oazach i dolinach rzek.",
+              "tone": "heat"
+            },
+            {
+              "name": "Sahel",
+              "latitude": "ok. 12°–18°N",
+              "text": "Pas przejściowy o szerokości kilkuset kilometrów i długości ok. **5000 km** — od Atlantyku po Morze Czerwone. Opady **200–600 mm**, skupione w jednej krótkiej porze deszczowej (lipiec–wrzesień) i skrajnie zmienne z roku na rok. Roślinność: sucha sawanna i step, podstawą gospodarki jest **koczownicza hodowla** i uprawa prosa.",
+              "tone": "earth"
+            },
+            {
+              "name": "Sawanny wilgotne (Sudan)",
+              "latitude": "ok. 8°–12°N",
+              "text": "Opady **600–1000 mm** i dłuższa pora deszczowa pozwalają na **rolnictwo osiadłe** (sorgo, orzeszki ziemne, bawełna). To tutaj, na pola rolników, schodzą w porze suchej stada pasterzy z północy.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa lasów i wybrzeża Zatoki Gwinejskiej",
+              "latitude": "0°–8°N",
+              "text": "Klimat równikowy wilgotny, opady powyżej 1500 mm, wilgotne lasy i uprawy plantacyjne (kakao, olejowiec). Region najgęściej zaludniony i najbogatszy — **kontrast z ubogą północą** jest w wielu państwach Sahelu źródłem napięć politycznych.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Sahel",
+          "text": "Strefa przejściowa między Saharą a sawannami wilgotnymi; nazwa pochodzi od arabskiego słowa oznaczającego **brzeg** — brzeg pustyni. Obejmuje m.in. Mauretanię, Senegal, Mali, Burkina Faso, Niger, Czad i Sudan. Cechą kluczową jest **skrajna zmienność opadów**: różnica między rokiem wilgotnym a suchym sięga kilkuset procent, więc gospodarka balansuje na granicy przetrwania.",
+          "note": "Nie myl Sahelu z Saharą. Sahel **nie jest pustynią** — jest obszarem, który pod wpływem susz i presji człowieka **staje się pustynią** (pustynnienie)."
+        },
+        {
+          "type": "process",
+          "title": "Od suszy do rebelii — łańcuch przyczynowy w Sahelu",
+          "caption": "Ten ciąg zdarzeń to najczęściej punktowany model odpowiedzi w zadaniach o Sahelu.",
+          "steps": [
+            {
+              "title": "1. Susza i pustynnienie",
+              "text": "Ciąg lat suchych (wielkie susze lat 70. i 80. XX w.) w połączeniu z **nadmiernym wypasem, wyrębem drzew na opał i uprawą gleb marginalnych** prowadzi do degradacji pokrywy roślinnej i utraty gruntów użytkowych."
+            },
+            {
+              "title": "2. Presja demograficzna",
+              "text": "Państwa Sahelu mają jedne z **najwyższych na świecie przyrostów naturalnych**. Ziemi i wody ubywa, a ludzi przybywa — zapotrzebowanie rośnie dokładnie wtedy, gdy zasoby maleją."
+            },
+            {
+              "title": "3. Konflikt rolnicy–pasterze",
+              "text": "Pasterze (m.in. Fulanie) przesuwają stada **na południe**, na pola rolników. Zniszczone uprawy, zajęte wodopoje i szlaki przepędu wywołują lokalne starcia, które szybko nabierają charakteru **etnicznego i religijnego**."
+            },
+            {
+              "title": "4. Próżnia władzy",
+              "text": "Rządy słabo kontrolują rozległe, słabo zaludnione tereny północne. W tej próżni osadzają się **grupy dżihadystyczne i przemytnicze** (broń, narkotyki, migranci), oferując ochronę i zarobek tam, gdzie państwa nie ma."
+            },
+            {
+              "title": "5. Destabilizacja państwa",
+              "text": "Armia, obwiniana o porażki, sięga po władzę: w latach 2020–2023 przez Mali, Burkina Faso, Niger, Gwineę i Czad przetoczyła się seria **zamachów stanu**, a siły zachodnie i misje pokojowe wycofano. Konflikt rozlewa się na sąsiednie państwa Zatoki Gwinejskiej."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Mali, Azawad i Boko Haram",
+          "region": "Sahel Zachodni i basen Jeziora Czad",
+          "text": "W 2012 r. koczowniczy **Tuaregowie** — lud saharyjski rozdzielony granicami Mali, Nigru, Algierii i Libii — wykorzystali napływ broni po upadku reżimu w Libii i ogłosili niepodległość **Azawadu** w północnym Mali. Ruch świecki został jednak szybko wyparty przez **ugrupowania dżihadystyczne**, które zajęły m.in. Timbuktu. Interwencja francuska (2013) i misja ONZ powstrzymały marsz na stolicę, ale nie usunęły przyczyn; po zamachach stanu z lat 2020–2021 wojska francuskie i misję ONZ wycofano. Równolegle w basenie **Jeziora Czad**, na styku Nigerii, Nigru, Czadu i Kamerunu, działa **Boko Haram** — organizacja terrorystyczna, która od 2009 r. prowadzi walkę zbrojną w najbiedniejszej, muzułmańskiej północy Nigerii. Region ten dotknęło jednocześnie **kurczenie się Jeziora Czad**: utrata rybołówstwa i pastwisk pozbawiła pracy setki tysięcy ludzi, ułatwiając werbunek.",
+          "takeaway": "W Sahelu granice państwowe przecinają obszary koczownicze w poprzek szlaków wędrówek. Państwo jest tam obecne w stolicy, a nieobecne na peryferiach — i to właśnie peryferie stają się bazą rebelii."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Kurczenie się Jeziora Czad",
+          "caption": "Powierzchnia otwartego lustra wody, wartości przybliżone i silnie zmienne sezonowo. Jezioro jest **bezodpływowe i bardzo płytkie**, więc nawet niewielki spadek zasilania i pobór wody na nawadnianie dają ogromną zmianę powierzchni.",
+          "labels": [
+            "1963",
+            "1973",
+            "1987",
+            "2000",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "powierzchnia",
+              "values": [
+                25000,
+                15000,
+                3900,
+                1350,
+                1500
+              ]
+            }
+          ],
+          "unit": "km²"
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. **Pustynnienie** to proces degradacji obszarów suchych, a nie „przesuwanie się piasków Sahary” — powstaje głównie na miejscu, wskutek utraty roślinności. **Sahel to nie Sahara**, lecz strefa przejściowa. I najważniejsze: susza sama nie wywołuje wojny — działa **przez gospodarkę i migracje wewnętrzne**, uderzając w kraje, które i tak mają słabe państwo oraz wysoki przyrost naturalny."
+        },
+        {
+          "type": "definition",
+          "term": "Państwo upadłe (failed state)",
+          "text": "Państwo, którego władze **utraciły kontrolę nad znaczną częścią terytorium** i przestały pełnić podstawowe funkcje: zapewniać bezpieczeństwo, ściągać podatki, świadczyć usługi publiczne i strzec granic. Faktyczną władzę przejmują klany, bojówki lub organizacje zbrojne, a gospodarka przenosi się do szarej strefy.",
+          "note": "Skutki wykraczają poza granice: z państwa upadłego promieniują **piractwo, przemyt, terroryzm i fale uchodźstwa**, dlatego jego rozpad staje się problemem całego regionu."
+        },
+        {
+          "type": "case-study",
+          "title": "Róg Afryki: Somalia, Erytrea i Tigraj",
+          "region": "Róg Afryki",
+          "text": "**Somalia** jest podręcznikowym państwem upadłym: po obaleniu dyktatury w 1991 r. kraj rozpadł się na obszary kontrolowane przez klany, na północy powstał nieuznawany **Somaliland**, a na południu przez lata operowała islamistyczna organizacja **asz-Szabab**; stabilizację wspiera misja **Unii Afrykańskiej**. Brak państwa uruchomił mechanizm o zasięgu globalnym: u wybrzeży rozwinęło się **piractwo morskie**, bo Somalia leży przy **Zatoce Adeńskiej**, na szlaku Kanał Sueski–cieśnina Ormuz, którym płynie ropa i kontenery między Azją a Europą. Głębiej w lądzie napięcia mają podłoże terytorialne i etniczne: **Erytrea** uzyskała niepodległość w 1993 r., odcinając Etiopię od morza i czyniąc z niej najludniejsze państwo śródlądowe świata; spór graniczny doprowadził do wojny w latach 1998–2000, zakończonej dopiero porozumieniem z 2018 r. Dwa lata później Etiopia pogrążyła się w wojnie domowej w prowincji **Tigraj** (2020–2022), a całość dopełniają powracające susze wywołujące klęski głodu.",
+          "takeaway": "W Rogu Afryki kluczem jest **dostęp do morza**: to on tłumaczy zarówno determinację Etiopii w sporze z Erytreą, jak i skalę reakcji świata na somalijskie piractwo."
+        },
+        {
+          "type": "timeline",
+          "title": "Region Wielkich Jezior — od ludobójstwa do wojny o surowce",
+          "caption": "Zwróć uwagę, jak konflikt **przekracza granice**: skutki wydarzeń w Rwandzie przeniosły się do Konga i uruchomiły wojnę o zasięgu kontynentalnym.",
+          "events": [
+            {
+              "period": "okres kolonialny",
+              "label": "Utrwalenie podziału Hutu–Tutsi",
+              "text": "Administracja kolonialna usztywniła płynny wcześniej podział społeczny, wpisując przynależność do grupy w **dokumenty tożsamości** i faworyzując mniejszość Tutsi. Powstała trwała linia podziału politycznego."
+            },
+            {
+              "period": "1994",
+              "label": "Ludobójstwo w Rwandzie",
+              "text": "W ciągu ok. **100 dni** zamordowano około **800 tys. osób**, głównie Tutsi i umiarkowanych Hutu. Świat nie zareagował skutecznie — to wydarzenie do dziś jest głównym argumentem w dyskusji o **odpowiedzialności ONZ za ochronę ludności**."
+            },
+            {
+              "period": "1996–1997",
+              "label": "Pierwsza wojna kongijska",
+              "text": "Do wschodniego Zairu uciekają setki tysięcy Hutu wraz ze sprawcami ludobójstwa. Rwanda i Uganda wspierają rebelię, która obala wieloletni reżim w Kinszasie; państwo przyjmuje nazwę **Demokratyczna Republika Konga**."
+            },
+            {
+              "period": "1998–2003",
+              "label": "Druga wojna kongijska",
+              "text": "Nazywana **wielką wojną afrykańską** — zaangażowało się w nią kilka państw regionu, a liczbę ofiar (głównie wskutek głodu i chorób, nie walk) szacuje się w milionach. Motywem stała się kontrola nad **złożami wschodniego Konga**."
+            },
+            {
+              "period": "od 2004",
+              "label": "Konflikt w Kiwu",
+              "text": "Walki bojówek o kopalnie **koltanu, cyny, złota i kobaltu** trwają mimo obecności jednej z największych misji pokojowych ONZ. Surowce sprzedawane na czarnym rynku finansują kolejne fazy walk — to klasyczna **gospodarka wojenna**."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa konfliktów afrykańskich",
+          "caption": "Kliknij znaczniki i sprawdź, czy potrafisz przypisać każdemu z nich mechanizm: pustynnienie, upadek państwa czy walkę o surowce.",
+          "center": [
+            8,
+            25
+          ],
+          "zoom": 3,
+          "markers": [
+            {
+              "lat": 18.44,
+              "lng": 1.41,
+              "label": "Azawad (północne Mali)",
+              "text": "Rozległy, słabo zaludniony obszar saharyjsko-sahelski zamieszkany m.in. przez **Tuaregów**. Powstanie z 2012 r. zostało przejęte przez ugrupowania dżihadystyczne. Przykład **peryferii poza kontrolą państwa**."
+            },
+            {
+              "lat": 13,
+              "lng": 14.2,
+              "label": "Basen Jeziora Czad",
+              "text": "Styk czterech państw i obszar działania **Boko Haram**. Kurczenie się jeziora zniszczyło rybołówstwo i pastwiska, pozbawiając pracy setki tysięcy ludzi — bieda ułatwia werbunek do organizacji zbrojnych."
+            },
+            {
+              "lat": 2.04,
+              "lng": 45.34,
+              "label": "Mogadiszu (Somalia)",
+              "text": "Stolica **państwa upadłego**: od 1991 r. brak trwałej władzy centralnej, faktyczna kontrola należy do klanów i bojówek, a stabilizację wspiera misja Unii Afrykańskiej."
+            },
+            {
+              "lat": 12.5,
+              "lng": 48,
+              "label": "Zatoka Adeńska",
+              "text": "Odcinek szlaku **Kanał Sueski–Morze Czerwone–Ocean Indyjski**. Rozkwit piractwa u wybrzeży Somalii pokazał, jak upadek jednego państwa może zagrozić **handlowi światowemu** i wymusić międzynarodowe operacje morskie."
+            },
+            {
+              "lat": 13.49,
+              "lng": 39.47,
+              "label": "Tigraj (Etiopia)",
+              "text": "Północna prowincja Etiopii, w której w latach 2020–2022 toczyła się wyniszczająca wojna domowa. Nakładający się kryzys żywnościowy pogłębiły **susze** typowe dla Rogu Afryki."
+            },
+            {
+              "lat": -1.94,
+              "lng": 30.06,
+              "label": "Kigali (Rwanda)",
+              "text": "Kraj o **najwyższej gęstości zaludnienia w Afryce kontynentalnej**, co przy rolniczym charakterze gospodarki oznacza ogromną presję na ziemię. To tło ludobójstwa z 1994 r., którego skutki przeniosły się do sąsiedniego Konga."
+            },
+            {
+              "lat": -1.68,
+              "lng": 29.22,
+              "label": "Kiwu Północne (DRK)",
+              "text": "Wschodnie Kongo — region **koltanu, cyny, złota i kobaltu**. Bojówki kontrolują kopalnie i sprzedają urobek poza oficjalnym obiegiem, dzięki czemu konflikt sam się finansuje mimo obecności sił pokojowych."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Afryka konfliktów w liczbach",
+          "items": [
+            {
+              "value": "5000",
+              "unit": "km",
+              "label": "długość pasa Sahelu",
+              "note": "od Oceanu Atlantyckiego po Morze Czerwone"
+            },
+            {
+              "value": "200–600",
+              "unit": "mm",
+              "label": "roczna suma opadów w Sahelu",
+              "note": "skupiona w jednej krótkiej porze deszczowej"
+            },
+            {
+              "value": "> 90",
+              "unit": "%",
+              "label": "spadek powierzchni Jeziora Czad od lat 60. XX w.",
+              "note": "susze i pobór wody na nawadnianie"
+            },
+            {
+              "value": "≈ 800",
+              "unit": "tys.",
+              "label": "ofiar ludobójstwa w Rwandzie (1994)",
+              "note": "w ciągu około 100 dni"
+            },
+            {
+              "value": "1991",
+              "label": "rozpad państwa somalijskiego",
+              "note": "modelowy przykład państwa upadłego"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj region do mechanizmu konfliktu",
+          "instruction": "Każdemu obszarowi przypisz czynnik, który najlepiej tłumaczy trwałość konfliktu.",
+          "pairs": [
+            {
+              "left": "Sahel (Mali, Niger, Burkina Faso)",
+              "right": "pustynnienie i konkurencja pasterzy z rolnikami o ziemię"
+            },
+            {
+              "left": "Somalia i Zatoka Adeńska",
+              "right": "upadek państwa przy strategicznym szlaku morskim"
+            },
+            {
+              "left": "Kiwu we wschodniej DRK",
+              "right": "kontrola bojówek nad kopalniami metali rzadkich"
+            },
+            {
+              "left": "Etiopia i Erytrea",
+              "right": "spór graniczny państwa pozbawionego dostępu do morza"
+            },
+            {
+              "left": "Rwanda",
+              "right": "utrwalony w okresie kolonialnym podział etniczny przy ogromnej gęstości zaludnienia"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Który ciąg przyczynowo-skutkowy najlepiej opisuje mechanizm konfliktów w Sahelu?",
+          "options": [
+            "Wzrost opadów → nadmiar plonów → walka o rynki zbytu → wojna handlowa",
+            "Susza i pustynnienie → utrata pastwisk → wędrówka pasterzy na południe → starcia z rolnikami → wypełnienie próżni władzy przez grupy zbrojne",
+            "Odkrycie ropy naftowej → napływ inwestycji → wzrost zamożności → protesty przeciw imigrantom",
+            "Topnienie lodowców → podniesienie poziomu morza → zalanie wybrzeży → migracje do wnętrza kontynentu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sahel to strefa **skrajnie zmiennych opadów**. Ciąg suchych lat wraz z nadmiernym wypasem i wysokim przyrostem naturalnym niszczy pastwiska, co spycha pasterzy na południe, na pola rolników. Lokalne starcia o wodopoje i ziemię nabierają charakteru etnicznego, a słabo kontrolowane peryferie stają się bazą **grup zbrojnych i przemytniczych**."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego upadek państwa w Somalii wywołał skutki odczuwalne dla gospodarki światowej?",
+          "options": [
+            "Somalia była największym producentem ropy naftowej w Afryce",
+            "Somalia kontrolowała źródła Nilu Błękitnego",
+            "Somalia leży przy Zatoce Adeńskiej, na szlaku łączącym Kanał Sueski z Oceanem Indyjskim, gdzie rozwinęło się piractwo morskie",
+            "Somalia dostarczała większość światowego wydobycia koltanu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Decyduje **położenie tranzytowe**. Wybrzeże Somalii ciągnie się wzdłuż Zatoki Adeńskiej i Oceanu Indyjskiego, przy szlaku Azja–Kanał Sueski–Europa. Gdy zniknęła władza zdolna kontrolować wybrzeże, rozwinęło się **piractwo**, podnosząc koszty ubezpieczeń i wymuszając międzynarodowe operacje morskie. Koltan pochodzi ze wschodniego Konga, a źródła Nilu Błękitnego leżą w Etiopii."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko najlepiej tłumaczy, dlaczego konflikt we wschodniej Demokratycznej Republice Konga trwa mimo wielokrotnych porozumień pokojowych?",
+          "options": [
+            "Region jest bezludny, więc nie ma z kim zawierać porozumień",
+            "Bojówki czerpią dochody z kontrolowanych kopalń, więc pokój oznaczałby dla nich utratę źródła utrzymania",
+            "Konflikt dotyczy wyłącznie sporu o przebieg granicy z Ugandą",
+            "Państwa sąsiednie zakazały wywozu surowców z regionu, co uniemożliwia negocjacje"
+          ],
+          "correctIndex": 1,
+          "explanation": "We wschodnim Kongu wykształciła się **gospodarka wojenna**: kontrola nad kopalniami koltanu, cyny, złota i kobaltu daje bojówkom stały dochód ze sprzedaży poza oficjalnym obiegiem. Skoro walka jest opłacalna, a pokój oznacza utratę kopalni, kolejne porozumienia okazują się nietrwałe — konflikt **sam się finansuje**, niezależnie od pierwotnych przyczyn etnicznych."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o Afryce często pojawia się mapa z zasięgiem stref roślinnych albo z izohietami. Wykorzystaj to: pokaż, że konflikty sahelskie leżą w **pasie 200–600 mm opadów**, czyli tam, gdzie rolnictwo i hodowla są najbardziej wrażliwe na suszę. Buduj odpowiedź trójdzielnie: **warunek środowiskowy** (opady, kurczące się jezioro, złoża) → **skutek gospodarczy i społeczny** (utrata pastwisk, bezrobocie, migracja) → **skutek polityczny** (rebelia, terroryzm, zamach stanu). Zapamiętaj też trzy słowa klucze przypisane do regionów: Sahel — **pustynnienie**, Róg Afryki — **państwo upadłe**, Wielkie Jeziora — **surowce konfliktowe**."
+        }
+      ]
+    }
+  ]
+}

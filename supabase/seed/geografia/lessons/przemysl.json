@@ -1,0 +1,879 @@
+{
+ "topicSlug": "przemysl",
+ "lessons": [
+  {
+   "slug": "podzial-przemyslu-i-czynniki-lokalizacji",
+   "title": "Podział przemysłu i czynniki lokalizacji",
+   "summary": "Czym jest przemysł, jak dzieli się go według fazy produkcji i stopnia zaawansowania techniki oraz dlaczego zakład powstaje akurat tam, gdzie powstaje — czynniki lokalizacji, orientacje lokalizacyjne i ich zmienność od XIX w. do dziś.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Fabryka nie stoi tam, gdzie stoi, przez przypadek. Za każdą lokalizacją kryje się **rachunek kosztów**: gdzie taniej dowieźć surowiec, gdzie tańsza jest energia, gdzie znajdą się ludzie umiejący obsłużyć maszyny, gdzie jest komu sprzedać wyrób. W tej lekcji najpierw uporządkujesz **podział przemysłu** — bez niego nie da się precyzyjnie mówić o niczym dalej — a potem poznasz **czynniki lokalizacji** i ich najważniejszą cechę: to, że **zmieniają się w czasie**. Zakład zbudowany sto lat temu przy kopalni dziś stanąłby zupełnie gdzie indziej, bo to, co kiedyś przesądzało (węgiel), bywa dziś nieistotne wobec tego, co przesądza teraz (kadry i wiedza)."
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł",
+     "text": "Dział **sektora II (wtórnego)** gospodarki polegający na **masowym wytwarzaniu dóbr materialnych za pomocą maszyn**, w oparciu o podział pracy i zorganizowaną, powtarzalną produkcję. Od rzemiosła odróżnia go nie rodzaj wyrobu, lecz **skala, mechanizacja i standaryzacja** — szewc i fabryka obuwia robią to samo, ale zupełnie inaczej.",
+     "note": "W polskiej statystyce (PKD) „przemysł” obejmuje trzy sekcje: **górnictwo i wydobywanie**, **przetwórstwo przemysłowe** oraz **wytwarzanie i zaopatrywanie w energię elektryczną, gaz i wodę**. Budownictwo liczone jest osobno, choć także należy do sektora II — dlatego dane o „produkcji przemysłowej” zwykle budownictwa nie obejmują."
+    },
+    {
+     "type": "classification",
+     "title": "Podział przemysłu według fazy produkcji",
+     "caption": "To podział stosowany w statystyce (PKD, NACE) — opierają się na nim niemal wszystkie dane liczbowe pojawiające się w zadaniach maturalnych.",
+     "groups": [
+      {
+       "name": "Przemysł wydobywczy (górnictwo)",
+       "description": "**Pozyskuje surowce mineralne wprost ze skorupy ziemskiej.** Jego cechą szczególną jest całkowite **przywiązanie do złoża** — kopalni nie da się przenieść, a jej żywotność kończy się wraz z wyczerpaniem zasobów. Stąd bierze się problem **miast jednofunkcyjnych**, które po zamknięciu kopalni tracą rację bytu.",
+       "examples": [
+        "górnictwo węgla kamiennego i brunatnego",
+        "wydobycie ropy naftowej i gazu ziemnego",
+        "górnictwo rud metali",
+        "eksploatacja surowców skalnych i soli"
+       ]
+      },
+      {
+       "name": "Przemysł przetwórczy",
+       "description": "**Przetwarza surowce i półprodukty w wyroby gotowe.** Zdecydowanie największy dział — odpowiada za większość wartości produkcji i zatrudnienia w przemyśle. To tutaj powstaje najwięcej **wartości dodanej**, bo im dalej od surowca, tym większy udział pracy i wiedzy w cenie wyrobu.",
+       "examples": [
+        "hutnictwo żelaza i metali nieżelaznych",
+        "przemysł chemiczny",
+        "przemysł elektromaszynowy",
+        "przemysł spożywczy",
+        "przemysł włókienniczy i odzieżowy",
+        "przemysł drzewno-papierniczy"
+       ]
+      },
+      {
+       "name": "Wytwarzanie i zaopatrywanie w energię",
+       "description": "**Przetwarza nośniki energii w energię elektryczną i cieplną** oraz dostarcza ją odbiorcom. Dział specyficzny, bo jego „wyrób” jest **niemagazynowalny w dużej skali** — energię elektryczną trzeba wytwarzać dokładnie wtedy, gdy jest zużywana, co narzuca całą logikę pracy systemu elektroenergetycznego.",
+       "examples": [
+        "elektrownie cieplne i elektrociepłownie",
+        "elektrownie jądrowe",
+        "elektrownie wodne, wiatrowe i słoneczne",
+        "gazownictwo i ciepłownictwo sieciowe"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Przemysł lekki a przemysł ciężki",
+     "leftLabel": "Przemysł lekki",
+     "rightLabel": "Przemysł ciężki",
+     "rows": [
+      {
+       "aspect": "Co wytwarza",
+       "left": "Wyroby **konsumpcyjne**, trafiające wprost do odbiorcy indywidualnego: tkaniny, odzież, obuwie, żywność, meble, papier, kosmetyki.",
+       "right": "Wyroby **zaopatrzeniowe** dla innych działów gospodarki: stal, metale, nawozy, cement, maszyny, tabor, statki."
+      },
+      {
+       "aspect": "Materiało- i energochłonność",
+       "left": "Niska — na tonę wyrobu przypada niewiele surowca i energii.",
+       "right": "Bardzo wysoka — na 1 t stali potrzeba kilku ton wsadu (ruda, koks, topniki) i dużych ilości energii."
+      },
+      {
+       "aspect": "Wielkość zakładu i nakłady",
+       "left": "Zakłady mniejsze i tańsze w budowie, stosunkowo łatwe do uruchomienia lub przeniesienia.",
+       "right": "Wielkie kombinaty, ogromny kapitał początkowy i długi okres zwrotu — stąd silna **inercja lokalizacyjna**: zakład trwa w miejscu, którego dziś by nie wybrano."
+      },
+      {
+       "aspect": "Decydujący czynnik lokalizacji",
+       "left": "**Siła robocza** (liczna, tania, często kobieca) oraz **rynek zbytu**.",
+       "right": "**Baza surowcowa i energetyczna** oraz dostęp do **transportu masowego** (kolej, port, droga wodna)."
+      },
+      {
+       "aspect": "Wpływ na środowisko",
+       "left": "Umiarkowany — głównie ścieki (barwniki, garbniki, detergenty) i odpady stałe.",
+       "right": "Bardzo duży — emisje pyłów, SO₂, NOₓ i CO₂, żużle i hałdy, ogromny pobór wody do chłodzenia."
+      },
+      {
+       "aspect": "Podatność na delokalizację",
+       "left": "Wysoka — to pierwszy dział, który przenosi się do krajów o niskich płacach.",
+       "right": "Niska — przeniesienie kombinatu jest praktycznie niewykonalne, zamiast tego buduje się nowy."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł zaawansowanych technologii (high-tech)",
+     "text": "Część przemysłu przetwórczego o **najwyższej naukochłonności** — wydatki na badania i rozwój (**B+R**) stanowią w niej od kilku do kilkunastu procent wartości produkcji, a znaczący odsetek zatrudnionych to inżynierowie i naukowcy. O wartości wyrobu decyduje nie surowiec, lecz **wiedza**: w cenie procesora koszt materiału to ułamek procenta.",
+     "note": "Zalicza się tu m.in. przemysł elektroniczny i komputerowy, farmaceutyczny, lotniczy i kosmiczny, precyzyjny, aparatury medycznej oraz biotechnologię. Bywa nazywany **przemysłem naukochłonnym**."
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pułapki pojęciowe, na których najłatwiej stracić punkt. **(1) Przemysł ciężki ≠ przemysł wydobywczy** — hutnictwo, cementownie czy produkcja maszyn ciężkich to *przetwórstwo*, a nie górnictwo. **(2) „Lekki” nie znaczy „mało ważny”** — kryterium jest masa i materiałochłonność wyrobu, a nie jego znaczenie gospodarcze. **(3) High-tech nie jest osobną sekcją statystyczną** — to wyodrębniona ze względu na naukochłonność część przetwórstwa, więc produkcja komputerów należy *jednocześnie* do przemysłu przetwórczego i do high-tech."
+    },
+    {
+     "type": "definition",
+     "term": "Czynnik lokalizacji",
+     "text": "Warunek, dzięki któremu **koszt wytworzenia i zbytu wyrobu jest w danym miejscu niższy** (albo osiągalny zysk wyższy) niż gdzie indziej — i który z tego powodu przyciąga tam zakład. **Lokalizacja optymalna** to nie miejsce „najbogatsze przyrodniczo”, lecz takie, w którym **suma kosztów: dowozu surowca + produkcji + dostarczenia wyrobu na rynek jest najmniejsza**.",
+     "note": "Rozróżniaj **lokalizację ogólną** (wybór regionu lub miasta) i **lokalizację szczegółową** (wybór konkretnej działki — z uwzględnieniem nośności gruntu, dostępu do bocznicy kolejowej czy położenia osiedli względem kierunku wiatrów)."
+    },
+    {
+     "type": "classification",
+     "title": "Cztery grupy czynników lokalizacji",
+     "caption": "Na maturze bardzo często pojawia się polecenie typu „podaj po dwa czynniki przyrodnicze i pozaprzyrodnicze” — trzeba więc umieć czynnik nie tylko wymienić, ale i poprawnie zaklasyfikować.",
+     "groups": [
+      {
+       "name": "Przyrodnicze",
+       "description": "Warunki dane przez środowisko, **nieprzenośne**. Ich znaczenie maleje wraz z tanieniem transportu, ale dla zakładów silnie materiało-, wodo- i energochłonnych pozostaje decydujące.",
+       "examples": [
+        "baza surowcowa (złoża)",
+        "zasoby wody do chłodzenia i procesów technologicznych",
+        "ukształtowanie i nośność terenu",
+        "warunki klimatyczne, np. zdolność do rozpraszania zanieczyszczeń"
+       ]
+      },
+      {
+       "name": "Techniczno-ekonomiczne",
+       "description": "To, co człowiek w danym miejscu już zbudował. Nowy zakład chętnie **dołącza do gotowej infrastruktury**, bo nie musi płacić za nią od zera — działa tu efekt **korzyści aglomeracji**.",
+       "examples": [
+        "dostęp do energii i sieci przesyłowych",
+        "węzły transportowe: kolej, autostrada, port, rurociąg",
+        "zaplecze kooperacyjne — poddostawcy, usługi remontowe",
+        "uzbrojenie terenu i istniejące hale"
+       ]
+      },
+      {
+       "name": "Społeczno-ekonomiczne",
+       "description": "Ludzie i pieniądze. W krajach wysoko rozwiniętych to **ta grupa decyduje dziś najczęściej**, bo koszty pracy i dostęp do kwalifikacji różnicują rentowność silniej niż koszty surowca.",
+       "examples": [
+        "zasoby i kwalifikacje siły roboczej",
+        "koszt pracy",
+        "rynek zbytu i siła nabywcza ludności",
+        "kapitał oraz zaplecze naukowo-badawcze — uczelnie, instytuty"
+       ]
+      },
+      {
+       "name": "Polityczne i prawne",
+       "description": "Wynikają z **decyzji władz**, a nie z rachunku rynkowego. Potrafią całkowicie odwrócić wynik kalkulacji ekonomicznej — i tak właśnie działały w gospodarce centralnie planowanej.",
+       "examples": [
+        "specjalne strefy ekonomiczne i ulgi podatkowe",
+        "dotacje oraz zamówienia publiczne",
+        "normy ochrony środowiska i plany zagospodarowania przestrzennego",
+        "cła, sankcje, względy obronne"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Orientacje lokalizacyjne — który czynnik przeważa",
+     "caption": "Reguła praktyczna: jeśli w procesie produkcyjnym **ubywa masy**, zakład idzie do surowca; jeśli masy **przybywa** albo wyrób jest nietrwały i kruchy — idzie do rynku zbytu.",
+     "headers": [
+      "Orientacja",
+      "Kiedy dominuje",
+      "Mechanizm (dlaczego)",
+      "Przykłady branż"
+     ],
+     "rows": [
+      [
+       "Surowcowa (materiałowa)",
+       "Surowiec jest ciężki i **traci masę** w procesie produkcji",
+       "Taniej przewieźć lekki wyrób niż tony wsadu, z którego większość stanie się odpadem — zakład przesuwa się **do złoża**",
+       "cementownie, cukrownie, zakłady wzbogacania rud, koksownie"
+      ],
+      [
+       "Energetyczna",
+       "Proces jest skrajnie **energochłonny**",
+       "Koszt energii przewyższa koszt transportu surowca, więc opłaca się wozić surowiec **do taniego prądu**",
+       "huty aluminium, elektrolityczna produkcja metali, produkcja karbidu"
+      ],
+      [
+       "Transportowa (portowa)",
+       "Surowiec pochodzi z importu drogą morską",
+       "Najdroższy jest przeładunek, więc surowiec przerabia się **tam, gdzie schodzi ze statku**",
+       "rafinerie i huty nadmorskie, przemysł stoczniowy, tłuszczowy"
+      ],
+      [
+       "Rynkowa (konsumpcyjna)",
+       "Wyrób jest **nietrwały, kruchy lub obszerny**",
+       "Transport gotowego wyrobu jest droższy i ryzykowniejszy niż surowca — zakład idzie **do odbiorcy**",
+       "piekarnie, mleczarnie, rozlewnie napojów, poligrafia, produkcja mebli"
+      ],
+      [
+       "Na siłę roboczą",
+       "Płace stanowią wysoki udział w koszcie, a praca jest prosta",
+       "Zakład szuka **licznej i taniej siły roboczej**, nawet z dala od surowca i rynku",
+       "przemysł odzieżowy i obuwniczy, montaż elektroniki użytkowej"
+      ],
+      [
+       "Naukowa (na zaplecze B+R)",
+       "O wartości wyrobu decyduje **wiedza**, nie materiał",
+       "Firma musi mieć pod ręką uczelnie, laboratoria i wysoko wykwalifikowane kadry",
+       "farmacja, elektronika, lotnictwo, biotechnologia"
+      ]
+     ]
+    },
+    {
+     "type": "timeline",
+     "title": "Zmienność czynników lokalizacji",
+     "caption": "Czynniki nie „znikają” — tracą względną wagę, bo zmienia się to, co w produkcji jest najdroższe. Prześledź, jak przesuwał się ciężar decyzji.",
+     "events": [
+      {
+       "period": "XIX w.",
+       "label": "Dyktat węgla i rudy",
+       "text": "Transport lądowy był drogi, a maszyna parowa zużywała ogromne ilości węgla, którego nie opłacało się wozić. Przemysł musiał powstawać **na złożu** — tak narodziły się wielkie okręgi na zagłębiach węglowych: Ruhra, Górny Śląsk, Appalachy, Donbas."
+      },
+      {
+       "period": "1. połowa XX w.",
+       "label": "Elektryfikacja i kolej",
+       "text": "Przesył energii elektrycznej **oderwał fabrykę od kopalni**: prąd można doprowadzić linią wysokiego napięcia na setki kilometrów, a gęsta sieć kolejowa potaniła transport masowy. Rośnie waga czynnika transportowego i rynku zbytu."
+      },
+      {
+       "period": "2. połowa XX w.",
+       "label": "Rewolucja transportowa i zwrot ku portom",
+       "text": "Masowce, supertankowce, rurociągi i konteneryzacja obniżyły koszt przewozu surowców tak bardzo, że opłacało się budować huty i rafinerie **przy porcie**, tysiące kilometrów od kopalni — jak w Japonii, we Włoszech czy w Holandii."
+      },
+      {
+       "period": "Od lat 70.–80. XX w.",
+       "label": "Kadry, wiedza i środowisko",
+       "text": "W krajach wysoko rozwiniętych decydują **wykwalifikowane kadry, zaplecze naukowe, jakość środowiska i restrykcyjne przepisy ekologiczne**. Produkcja pracochłonna i uciążliwa przenosi się do krajów o taniej sile roboczej — to **delokalizacja**."
+      },
+      {
+       "period": "XXI w.",
+       "label": "Automatyzacja i skracanie łańcuchów dostaw",
+       "text": "Robotyzacja zmniejsza znaczenie taniej pracy (robot kosztuje podobnie w każdym kraju), a doświadczenie zerwanych łańcuchów dostaw skłania firmy do **reshoringu** — przenoszenia produkcji z powrotem bliżej rynku zbytu."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Nowa Huta — lokalizacja wbrew rachunkowi ekonomicznemu",
+     "region": "Kraków, Polska",
+     "text": "Budowę kombinatu metalurgicznego pod Krakowem rozpoczęto w 1949 r., a pierwszy wielki piec uruchomiono w 1954 r. Z punktu widzenia klasycznych czynników lokalizacji wybór był zły: zakład stanął na **żyznych glebach lessowych**, w kotlinie o słabym przewietrzaniu, z dala od złóż rudy (sprowadzanej koleją z ZSRR) i w oddaleniu od górnośląskiego węgla koksującego. Zanieczyszczenia gromadziły się nad miastem, przyspieszając niszczenie zabytków Krakowa. Zadecydowały **czynniki polityczne** — plan szybkiego uprzemysłowienia kraju oraz chęć zbudowania wielkiego ośrodka klasy robotniczej w konserwatywnym, uniwersyteckim mieście. Po 1989 r. huta przeszła głęboką **restrukturyzację**: wygaszono część surowcową, produkcję ograniczono do przetwórstwa, a zatrudnienie spadło z kilkudziesięciu tysięcy osób do kilku tysięcy.",
+     "takeaway": "Decyzja polityczna potrafi utrwalić zakład na dekady w miejscu, którego rachunek ekonomiczny nigdy by nie wybrał — a koszty tej decyzji ponoszą środowisko, mieszkańcy i budżet, gdy po latach trzeba przeprowadzić restrukturyzację."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj zakład do czynnika, który przesądził o jego lokalizacji",
+     "instruction": "Za każdym razem zadaj sobie jedno pytanie: co w tej produkcji jest najdroższe lub najtrudniejsze do przewiezienia?",
+     "pairs": [
+      {
+       "left": "Cementownia",
+       "right": "bliskość złoża wapieni — surowiec traci masę w procesie wypalania"
+      },
+      {
+       "left": "Huta aluminium",
+       "right": "dostęp do bardzo taniej energii elektrycznej dla elektrolizy"
+      },
+      {
+       "left": "Rafineria w Rotterdamie",
+       "right": "port zdolny przyjąć tankowce z importowaną ropą"
+      },
+      {
+       "left": "Piekarnia przemysłowa",
+       "right": "bliskość dużego rynku zbytu — wyrób błyskawicznie traci świeżość"
+      },
+      {
+       "left": "Szwalnia w Bangladeszu",
+       "right": "tania i liczna siła robocza przy prostych czynnościach"
+      },
+      {
+       "left": "Zakład biotechnologiczny",
+       "right": "sąsiedztwo uniwersytetu, laboratoriów i wysoko wykwalifikowanych kadr"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Zakład przerabia 3 t rudy na 1 t koncentratu. Gdzie najkorzystniej go zlokalizować i dlaczego?",
+     "options": [
+      "Przy złożu rudy, bo w procesie ubywa masy — taniej przewieźć lżejszy koncentrat niż cały wsad",
+      "Przy rynku zbytu, bo koncentrat ma wyższą cenę jednostkową niż ruda",
+      "W dowolnym miejscu, bo koszt transportu nie zależy od masy przewożonego ładunku",
+      "Zawsze przy porcie morskim, bo ruda w całości pochodzi z importu"
+     ],
+     "correctIndex": 0,
+     "explanation": "Decyduje **relacja mas**, a nie wartości. Skoro z 3 t wsadu powstaje 1 t wyrobu, przewiezienie surowca kosztuje trzykrotnie więcej niż przewiezienie gotowego koncentratu — zakład opłaca się więc postawić **przy złożu**. To klasyczna **orientacja surowcowa**, ta sama, która trzyma cementownie przy wapieniach, a cukrownie w rejonie uprawy buraka. Wysoka cena wyrobu niczego tu nie zmienia, bo przewoźnik rozlicza się od tony, a nie od złotówki."
+    },
+    {
+     "type": "quiz",
+     "question": "Które zestawienie poprawnie przypisuje czynniki lokalizacji do grup?",
+     "options": [
+      "Zasoby wody — czynnik przyrodniczy; ulgi w specjalnej strefie ekonomicznej — czynnik polityczny",
+      "Zasoby wody — czynnik ekonomiczny; kwalifikacje kadr — czynnik przyrodniczy",
+      "Rynek zbytu — czynnik przyrodniczy; złoża surowców — czynnik polityczny",
+      "Korzyści aglomeracji — czynnik przyrodniczy; warunki klimatyczne — czynnik społeczny"
+     ],
+     "correctIndex": 0,
+     "explanation": "Do czynników **przyrodniczych** należy to, co daje środowisko i czego nie da się przenieść: złoża, woda, ukształtowanie terenu, klimat. Czynniki **polityczne** wynikają z decyzji władz — specjalne strefy ekonomiczne, ulgi podatkowe, dotacje, normy emisyjne. Kwalifikacje kadr, rynek zbytu i korzyści aglomeracji to czynniki **społeczno-ekonomiczne** (dwa ostatnie bywają zaliczane do techniczno-ekonomicznych), ale w żadnym ujęciu nie są przyrodnicze."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W poleceniach typu „wyjaśnij, dlaczego zakład X zlokalizowano w miejscu Y” **samo wymienienie czynnika nie wystarcza** — trzeba pokazać mechanizm. Buduj odpowiedź według schematu: *czynnik → co dzięki niemu tanieje albo staje się możliwe → skutek dla zakładu*. Porównaj: „bo tania energia” (odpowiedź niepełna) oraz „hutę aluminium zlokalizowano w Norwegii, **ponieważ** energia z elektrowni wodnych jest tam tania, a elektroliza tlenku glinu pochłania około jednej trzeciej kosztów produkcji — obniża to koszt jednostkowy wyrobu”. Druga wersja zawiera czynnik, mechanizm i skutek, czyli wszystko, czego szuka klucz odpowiedzi."
+    }
+   ]
+  },
+  {
+   "slug": "rewolucje-przemyslowe-i-deindustrializacja",
+   "title": "Rewolucje przemysłowe I–IV i deindustrializacja",
+   "summary": "Cztery przewroty techniczne, które stworzyły dzisiejszy przemysł — od maszyny parowej po Przemysł 4.0 — oraz mechanizm deindustrializacji: dlaczego w krajach wysoko rozwiniętych fabryki produkują coraz więcej, a pracuje w nich coraz mniej ludzi.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Historia przemysłu nie jest ciągiem drobnych ulepszeń — to cztery gwałtowne przełomy, po każdym z których **gospodarka wyglądała inaczej niż przed nim**. Za każdym razem zmieniał się nośnik energii, technologia i wiodąca gałąź, a razem z nimi przesuwały się okręgi przemysłowe i przebudowywało się całe społeczeństwo. W tej lekcji prześledzisz cztery rewolucje przemysłowe i zobaczysz ich najważniejszy współczesny skutek: **deindustrializację**. To pojęcie brzmi jak diagnoza upadku, a bardzo często oznacza dokładnie odwrotność — przemysł, który produkuje rekordowo dużo, potrzebując rekordowo mało rąk."
+    },
+    {
+     "type": "definition",
+     "term": "Rewolucja przemysłowa",
+     "text": "**Gwałtowna, trwała zmiana sposobu wytwarzania**, wywołana upowszechnieniem nowego nośnika energii i nowej technologii, która skokowo podnosi **wydajność pracy** i pociąga za sobą przebudowę gospodarki, przestrzeni i struktury społecznej. O rewolucji mówimy dopiero wtedy, gdy wynalazek przestaje być ciekawostką, a **staje się podstawą masowej produkcji**.",
+     "note": "Sam wynalazek nie tworzy rewolucji. Maszyny parowe konstruowano już przed Wattem, ale dopiero gdy stały się tanie, niezawodne i powszechne, zmieniły gospodarkę. Podobnie sztuczna inteligencja: istniała dekady przed tym, nim zaczęto mówić o IV rewolucji."
+    },
+    {
+     "type": "timeline",
+     "title": "Cztery rewolucje przemysłowe",
+     "caption": "Przy każdej zwróć uwagę na trzy rzeczy: skąd bierze się energia, jaka technologia jest kluczowa i która gałąź prowadzi. To właśnie ta triada jest najczęściej punktowana na maturze.",
+     "events": [
+      {
+       "period": "ok. 1760–1840",
+       "label": "I rewolucja — para, węgiel i bawełna",
+       "text": "Rozpoczęła się w **Wielkiej Brytanii**. Przełomem było udoskonalenie **maszyny parowej przez Jamesa Watta** (1769): po raz pierwszy energia nie pochodziła z mięśni, wiatru ani koła wodnego, więc fabryka mogła stanąć **z dala od rzeki, za to blisko węgla**. Wiodące gałęzie: **włókiennictwo bawełniane**, hutnictwo żelaza, górnictwo węgla. Powstaje system fabryczny, kolej parowa (1825) i pierwsze wielkie okręgi przemysłowe — a wraz z nimi gwałtowna **urbanizacja**."
+      },
+      {
+       "period": "ok. 1870–1914",
+       "label": "II rewolucja — elektryczność, stal i chemia",
+       "text": "Nowe nośniki energii: **energia elektryczna i ropa naftowa**. Nowe technologie: **masowa produkcja stali** (konwertor, piec martenowski), silnik spalinowy, chemia syntetyczna — nawozy, barwniki, tworzywa. Henry Ford uruchamia **ruchomą taśmę produkcyjną** (1913), czyli produkcję masową i standaryzowaną. Centrum przemysłu przesuwa się do **Niemiec i USA**, a przesył prądu zaczyna odrywać fabrykę od kopalni."
+      },
+      {
+       "period": "od lat 70. XX w.",
+       "label": "III rewolucja — elektronika i automatyzacja",
+       "text": "W polskich podręcznikach nazywana też **rewolucją naukowo-techniczną**. Podstawą są **układy scalone, komputer i sterowniki programowalne**, dzięki którym można **zautomatyzować maszynę i całą linię produkcyjną**. Rozwijają się przemysł high-tech, energetyka jądrowa i telekomunikacja. W krajach rozwiniętych zatrudnienie w przemyśle zaczyna spadać — rusza **deindustrializacja**, a produkcja pracochłonna wędruje do Azji."
+      },
+      {
+       "period": "od ok. 2011",
+       "label": "IV rewolucja — Przemysł 4.0",
+       "text": "Termin **Industrie 4.0** ogłoszono na targach w Hanowerze w 2011 r. Nowością nie jest sama automatyzacja, lecz **połączenie maszyn, wyrobów i systemów w jedną sieć**: urządzenia wymieniają dane w czasie rzeczywistym, a decyzje zapadają na podstawie analizy wielkich zbiorów danych i algorytmów uczenia maszynowego. Efekt gospodarczy: produkcja **elastyczna i personalizowana** przy kosztach zbliżonych do masowej."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Dlaczego I rewolucja zaczęła się właśnie w Anglii",
+     "region": "Wielka Brytania, XVIII w.",
+     "text": "Anglia nie miała jednej przewagi, lecz **komplet ogniw naraz**. Po pierwsze — zasoby: bogate i płytkie złoża **węgla kamiennego leżące blisko rud żelaza**, często niedaleko wybrzeża. Po drugie — transport: wyspiarskie położenie, żeglowne rzeki i gęsta sieć kanałów sprawiały, że przewóz towarów masowych był tani, a żaden punkt kraju nie leżał daleko od portu. Po trzecie — kapitał: zyski z handlu zamorskiego i kolonii dały pieniądze na budowę maszyn. Po czwarte — ludzie: **grodzenia (enclosures)** i przewrót agrarny pozbawiły ziemi drobnych rolników, którzy ruszyli do miast, tworząc **tanią, liczną siłę roboczą**. Po piąte — rynek: kolonie dostarczały bawełny i jednocześnie **kupowały gotowe tkaniny**. Do tego doszedł stabilny system prawny z ochroną patentową, opłacający się wynalazcom.",
+     "takeaway": "Rewolucja przemysłowa nie wybuchła tam, gdzie był jeden korzystny czynnik, lecz tam, gdzie **surowiec, kapitał, siła robocza, transport i rynek zbytu spotkały się jednocześnie w jednym miejscu**. To ten sam mechanizm, który później zdecyduje o narodzinach każdego okręgu przemysłowego."
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł 4.0",
+     "text": "Model produkcji oparty na **systemach cyberfizycznych** — maszynach wyposażonych w czujniki i połączonych siecią, które **wymieniają dane i podejmują decyzje bez bieżącego udziału człowieka**. Fabryka przestaje być zbiorem osobnych maszyn i staje się jednym systemem informacyjnym, w którym sam wyrób „niesie” dane o tym, jak ma zostać wykonany.",
+     "note": "Najważniejszy skutek gospodarczy to **masowa personalizacja**: możliwość wytwarzania krótkich, indywidualnie dopasowanych serii po koszcie zbliżonym do produkcji masowej. Osłabia to klasyczną **korzyść skali**, która od czasów Forda była głównym argumentem za wielkimi zakładami."
+    },
+    {
+     "type": "classification",
+     "title": "Filary technologiczne Przemysłu 4.0",
+     "caption": "Żadna z tych technologii sama nie tworzy Przemysłu 4.0 — rewolucyjne jest dopiero ich **połączenie w jeden obieg danych**: czujnik mierzy, chmura analizuje, algorytm decyduje, maszyna wykonuje.",
+     "groups": [
+      {
+       "name": "Internet rzeczy (IoT) i systemy cyberfizyczne",
+       "description": "Czujniki wbudowane w maszyny i wyroby **generują strumień danych** o temperaturze, drganiach, zużyciu narzędzi. Dzięki temu awarię można przewidzieć, zanim nastąpi (**utrzymanie predykcyjne**).",
+       "examples": [
+        "czujniki drgań w łożyskach obrabiarek",
+        "znaczniki RFID na częściach",
+        "inteligentne liczniki energii"
+       ]
+      },
+      {
+       "name": "Big data, chmura i cyfrowy bliźniak",
+       "description": "Dane z tysięcy czujników przetwarza się w chmurze, a proces produkcyjny odwzorowuje w **cyfrowym bliźniaku** — wirtualnej kopii zakładu, na której można przetestować zmianę, nie zatrzymując produkcji.",
+       "examples": [
+        "symulacja linii montażowej przed przezbrojeniem",
+        "optymalizacja zużycia energii w czasie rzeczywistym"
+       ]
+      },
+      {
+       "name": "Sztuczna inteligencja i uczenie maszynowe",
+       "description": "Algorytmy **wykrywają w danych zależności niedostrzegalne dla człowieka** — same dobierają parametry procesu, rozpoznają wady wyrobu na obrazie z kamery, prognozują popyt.",
+       "examples": [
+        "automatyczna kontrola jakości",
+        "planowanie produkcji i zapasów"
+       ]
+      },
+      {
+       "name": "Robotyka współpracująca i automatyzacja",
+       "description": "**Koboty** pracują obok ludzi bez klatek ochronnych, a pojazdy autonomiczne (AGV) same rozwożą materiał po hali. Praca fizyczna przechodzi na maszyny, człowiekowi zostaje nadzór i programowanie.",
+       "examples": [
+        "roboty montażowe współpracujące z operatorem",
+        "autonomiczne wózki magazynowe"
+       ]
+      },
+      {
+       "name": "Wytwarzanie przyrostowe (druk 3D)",
+       "description": "Wyrób powstaje przez **dodawanie materiału warstwa po warstwie**, a nie przez skrawanie. Koszt nie rośnie wraz ze skomplikowaniem kształtu, a produkcja jednej sztuki przestaje być nieopłacalna — to argument za **skracaniem łańcuchów dostaw**.",
+       "examples": [
+        "części zamienne drukowane na miejscu",
+        "implanty i protezy dopasowane do pacjenta",
+        "prototypy w lotnictwie"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Najczęstsza pomyłka: **III i IV rewolucja**. Komputery, roboty i automatyzacja to **III rewolucja** — maszyna wykonuje zaprogramowany przez człowieka ciąg czynności, ale nic nie „wie” o reszcie fabryki. **IV rewolucja** zaczyna się dopiero tam, gdzie maszyny **komunikują się ze sobą i z wyrobem**, a system sam koryguje proces na podstawie danych. Nie myl też **rewolucji przemysłowej** z **przewrotem agrarnym** (zmiana w rolnictwie, która ją poprzedziła i uwolniła ręce do pracy w fabrykach); z kolei **rewolucja naukowo-techniczna** to w polskiej terminologii szkolnej po prostu inna nazwa III rewolucji przemysłowej."
+    },
+    {
+     "type": "definition",
+     "term": "Deindustrializacja",
+     "text": "**Trwały spadek udziału przemysłu w zatrudnieniu i w wartości PKB** kraju lub regionu. Występuje w dwóch odmianach: **pozornej**, gdy produkcja przemysłowa nadal rośnie, a zatrudnienie spada dzięki automatyzacji (Niemcy, Japonia), oraz **rzeczywistej (regresywnej)**, gdy zakłady upadają lub przenoszą się za granicę i nic nie powstaje w ich miejsce (Appalachy, część Górnego Śląska po 1989 r.).",
+     "note": "Spadek udziału przemysłu sam w sobie nie jest kryzysem — w gospodarce rozwiniętej to **naturalny etap** opisany modelem Clarka-Fishera. Niepokojące jest dopiero połączenie go z **bezrobociem strukturalnym, odpływem ludności i degradacją terenów poprzemysłowych**."
+    },
+    {
+     "type": "process",
+     "title": "Mechanizm deindustrializacji — krok po kroku",
+     "caption": "Prześledź łańcuch przyczynowo-skutkowy. Zwróć uwagę, że pierwsze dwa kroki to sukces gospodarczy, a dopiero od trzeciego zaczyna się problem społeczny.",
+     "steps": [
+      {
+       "title": "Skokowy wzrost wydajności pracy",
+       "text": "Automatyzacja, robotyzacja i nowe technologie sprawiają, że **ta sama produkcja wymaga coraz mniej rąk**. Jeden pracownik obsługuje dziś linię, przy której kiedyś stało kilkudziesięciu ludzi. Sam w sobie to nie kryzys, lecz postęp techniczny."
+      },
+      {
+       "title": "Rozejście się produkcji i zatrudnienia",
+       "text": "Wartość produkcji przemysłowej rośnie, a liczba pracujących w przemyśle **spada**. Udział sektora II w zatrudnieniu maleje, mimo że fabryki wytwarzają więcej niż kiedykolwiek — to właśnie **deindustrializacja pozorna**."
+      },
+      {
+       "title": "Delokalizacja działów pracochłonnych",
+       "text": "Gałęzie, w których płace stanowią dużą część kosztu (odzież, obuwie, montaż elektroniki), **przenoszą się do krajów o niskich kosztach pracy**. W kraju macierzystym znikają nie pojedyncze zakłady, lecz całe branże."
+      },
+      {
+       "title": "Bezrobocie strukturalne",
+       "text": "Zwolniony górnik czy hutnik ma kwalifikacje, na które **nie ma już popytu**. Nie brakuje miejsc pracy w ogóle — brakuje takich, które pasują do jego umiejętności. Bez **przekwalifikowania** bezrobocie utrwala się na lata."
+      },
+      {
+       "title": "Zapaść przestrzenna i społeczna",
+       "text": "Powstają rozległe **tereny poprzemysłowe (brownfields)**, spada wartość nieruchomości, młodzi i wykształceni emigrują, a budżety miast tracą wpływy podatkowe — co uniemożliwia inwestycje mogące przyciągnąć nowe firmy. Bez **restrukturyzacji** region wpada w samonapędzającą się spiralę zapaści, jak amerykański **Pas Rdzy**."
+      }
+     ]
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Udział pracujących w sektorze II (przemysł i budownictwo)",
+     "caption": "Dane szacunkowe, ok. 2021 r. (Bank Światowy). Zwróć uwagę na paradoks: kraje o **najdłuższej** historii przemysłowej mają dziś **najniższy** udział zatrudnienia w przemyśle. Deindustrializacja jest etapem rozwoju, a nie porażką.",
+     "labels": [
+      "Wielka Brytania",
+      "Francja",
+      "USA",
+      "Japonia",
+      "Niemcy",
+      "Chiny",
+      "Polska"
+     ],
+     "series": [
+      {
+       "name": "udział pracujących",
+       "values": [
+        18,
+        20,
+        20,
+        24,
+        27,
+        29,
+        32
+       ]
+      }
+     ],
+     "unit": "%"
+    },
+    {
+     "type": "compare",
+     "title": "Dwa oblicza tej samej zmiany",
+     "leftLabel": "Kraje wysoko rozwinięte — deindustrializacja",
+     "rightLabel": "Kraje rozwijające się — industrializacja",
+     "rows": [
+      {
+       "aspect": "Kierunek zmian strukturalnych",
+       "left": "Udział przemysłu w zatrudnieniu spada, rośnie udział usług i sektora IV (informacja, B+R).",
+       "right": "Udział przemysłu rośnie kosztem rolnictwa — kraj wchodzi w fazę industrializacji opisaną modelem Clarka-Fishera."
+      },
+      {
+       "aspect": "Co decyduje o przepływie kapitału",
+       "left": "Wysokie płace, kosztowne normy środowiskowe i podatki **wypychają** produkcję pracochłonną.",
+       "right": "Niskie koszty pracy, ulgi w specjalnych strefach ekonomicznych i łagodniejsze normy **przyciągają** kapitał zagraniczny."
+      },
+      {
+       "aspect": "Jaka produkcja zostaje lub przybywa",
+       "left": "Zostaje to, co naukochłonne i zautomatyzowane: high-tech, farmacja, przemysł precyzyjny, centra B+R.",
+       "right": "Przybywa to, co pracochłonne i technologicznie proste: montaż, odzież, obuwie, przetwórstwo surowców."
+      },
+      {
+       "aspect": "Skutki społeczne",
+       "left": "Bezrobocie strukturalne w starych okręgach, ale też czystsze środowisko i wyższe dochody w usługach.",
+       "right": "Nowe miejsca pracy i wzrost dochodów, lecz także niskie płace, wypadki przy pracy i gwałtownie rosnące zanieczyszczenie."
+      },
+      {
+       "aspect": "Typowe przykłady",
+       "left": "Zagłębie Ruhry, Appalachy, północna Anglia, Górny Śląsk po 1989 r.",
+       "right": "Chiny, Wietnam, Bangladesz, Meksyk, Etiopia"
+      }
+     ]
+    },
+    {
+     "type": "ordering",
+     "title": "Uporządkuj wydarzenia chronologicznie",
+     "instruction": "Przeciągnij tak, by powstał ciąg od najstarszego do najmłodszego. Podpowiedź: każde dwa kolejne elementy należą do tej samej rewolucji.",
+     "items": [
+      "udoskonalenie maszyny parowej przez Jamesa Watta",
+      "uruchomienie pierwszej publicznej linii kolejowej z trakcją parową",
+      "upowszechnienie masowej produkcji stali i silnika elektrycznego",
+      "uruchomienie ruchomej taśmy produkcyjnej w fabryce Forda",
+      "wprowadzenie obrabiarek sterowanych komputerowo i robotów przemysłowych",
+      "ogłoszenie koncepcji Przemysłu 4.0 na targach w Hanowerze"
+     ],
+     "explanation": "Kolejność odpowiada czterem rewolucjom: maszyna parowa (1769) i kolej (1825) to **I rewolucja**; stal, silnik elektryczny i taśma Forda (1913) — **II**; obrabiarki sterowane komputerowo i roboty — **III** (od lat 70. XX w.); koncepcja Przemysłu 4.0 (2011) — **IV**."
+    },
+    {
+     "type": "quiz",
+     "question": "W pewnym kraju wartość produkcji przemysłowej wzrosła w ciągu 20 lat o 40%, a liczba pracujących w przemyśle spadła o jedną czwartą. Jak najtrafniej opisać to zjawisko?",
+     "options": [
+      "Deindustrializacja pozorna — spadek zatrudnienia wynika ze wzrostu wydajności pracy, a nie z upadku przemysłu",
+      "Deindustrializacja rzeczywista — przemysł tego kraju wyraźnie się załamał",
+      "Reindustrializacja — skoro produkcja rośnie, przemysł jest właśnie odbudowywany",
+      "Delokalizacja — cały przemysł przeniósł się do krajów o tańszej sile roboczej"
+     ],
+     "correctIndex": 0,
+     "explanation": "Jeżeli **produkcja rośnie, a zatrudnienie maleje**, jedynym możliwym wyjaśnieniem jest **wzrost wydajności pracy** — czyli automatyzacja i robotyzacja. Udział przemysłu w zatrudnieniu spada, więc formalnie jest to deindustrializacja, ale **pozorna**: przemysł ma się dobrze, po prostu potrzebuje mniej ludzi. Przy deindustrializacji rzeczywistej spadłyby *obie* wielkości — i zatrudnienie, i produkcja."
+    },
+    {
+     "type": "quiz",
+     "question": "Na czym polega zasadnicza różnica między III a IV rewolucją przemysłową?",
+     "options": [
+      "W III zautomatyzowano pojedyncze maszyny, a w IV maszyny i wyroby wymieniają dane i na bieżąco korygują proces produkcji",
+      "III opierała się na energii elektrycznej, a IV na energii pary wodnej",
+      "III dotyczyła wyłącznie rolnictwa, a IV — przemysłu przetwórczego",
+      "W III po raz pierwszy zastosowano taśmę produkcyjną, a w IV — silnik spalinowy"
+     ],
+     "correctIndex": 0,
+     "explanation": "III rewolucja przyniosła **automatyzację**: maszyna sterowana komputerem wykonuje zaprogramowany ciąg czynności, ale działa w izolacji. IV rewolucja dokłada **łączność i dane** — systemy cyberfizyczne komunikują się między sobą, a analiza danych pozwala zmieniać parametry procesu w czasie rzeczywistym; stąd możliwość **masowej personalizacji**. Para to I rewolucja, elektryczność, silnik spalinowy i taśma Forda — II."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Przy pytaniach o rewolucje przemysłowe klucz odpowiedzi zwykle premiuje **triadę: nośnik energii — kluczowa technologia — wiodąca gałąź**. Zapamiętaj ją jako cztery pary: **I** — węgiel i maszyna parowa (włókiennictwo, hutnictwo); **II** — elektryczność i ropa, stal i chemia (motoryzacja); **III** — energetyka jądrowa i elektronika (informatyka, high-tech); **IV** — dane i sieć (produkcja spersonalizowana). A gdy w poleceniu pada słowo „skutki”, obok gospodarczych podaj koniecznie **społeczne** (urbanizacja, migracje ze wsi do miast, powstanie nowych grup społecznych) i **środowiskowe** — za samą gospodarkę rzadko przyznaje się komplet punktów."
+    }
+   ]
+  },
+  {
+   "slug": "okregi-przemyslowe-swiata-i-restrukturyzacja",
+   "title": "Okręgi przemysłowe świata i ich przekształcenia",
+   "summary": "Jak powstawały wielkie okręgi przemysłowe — od węglowej Ruhry i Appalachów po Dolinę Krzemową i Bangalore — dlaczego jedne z nich udało się przebudować, a inne zapadły się razem z kopalniami, oraz czym różnią się technopolia, park technologiczny i klaster.",
+   "readingMinutes": 14,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Przemysł nigdy nie rozkłada się równomiernie — **skupia się**, bo zakład woli stanąć tam, gdzie już są drogi, poddostawcy, wykwalifikowani ludzie i odbiorcy. Tak rodzą się **okręgi przemysłowe**: obszary, w których przemysł decyduje o wszystkim — o zabudowie, o rynku pracy, o powietrzu, którym oddycha się rano. W tej lekcji zobaczysz, jak okręgi powstawały i co się z nimi dzieje, gdy ich pierwotna podstawa — złoże, port albo zamówienie wojskowe — przestaje mieć znaczenie. Zestawimy dwa okręgi węglowe o tej samej diagnozie i przeciwnym finale, a potem przyjrzymy się okręgom nowego typu, w których o lokalizacji nie decyduje już ani surowiec, ani port, lecz **uniwersytet**."
+    },
+    {
+     "type": "definition",
+     "term": "Okręg przemysłowy",
+     "text": "Obszar o **dużej koncentracji zakładów przemysłowych powiązanych kooperacją**, obejmujący zwykle kilka sąsiadujących ze sobą ośrodków, w którym przemysł jest **funkcją dominującą** i decyduje o sposobie zagospodarowania przestrzeni oraz o strukturze zatrudnienia.",
+     "note": "Zapamiętaj hierarchię według rosnącej skali: **zakład przemysłowy → ośrodek przemysłowy** (jedno miasto z zakładami) **→ okręg przemysłowy** (zespół sąsiadujących ośrodków) **→ region przemysłowy** (kilka okręgów w obrębie większego obszaru). Terminem **węzeł przemysłowy** określa się duży ośrodek o szczególnie rozwiniętej kooperacji między zakładami."
+    },
+    {
+     "type": "classification",
+     "title": "Typy okręgów według genezy",
+     "caption": "Każdy typ powstał w innej epoce i pod dyktando innego czynnika lokalizacji — dlatego kolejność grup odpowiada w przybliżeniu kolejności historycznej.",
+     "groups": [
+      {
+       "name": "Okręgi surowcowe (na zagłębiach)",
+       "description": "Najstarsze, z okresu I i II rewolucji przemysłowej. Powstały **bezpośrednio na złożach** węgla lub rud, bo transport surowca był wtedy zbyt drogi. Dominuje w nich przemysł ciężki, a dziś niemal wszystkie wymagają restrukturyzacji, bo ich podstawa się wyczerpała lub przestała być opłacalna.",
+       "examples": [
+        "Zagłębie Ruhry",
+        "Górnośląski Okręg Przemysłowy",
+        "Appalachy",
+        "Zagłębie Donieckie",
+        "Zagłębie Kuźnieckie"
+       ]
+      },
+      {
+       "name": "Okręgi portowe (nadmorskie)",
+       "description": "Wyrosły w XX w. wraz z **rewolucją transportu morskiego**. Przerabiają surowce sprowadzane z całego świata tam, gdzie schodzą ze statku, co pozwala uniknąć najdroższego elementu — przeładunku i dowozu w głąb lądu.",
+       "examples": [
+        "Rotterdam–Europoort",
+        "okręg Keihin (Tokio–Jokohama)",
+        "Marsylia–Fos",
+        "Taranto",
+        "okręg gdański i szczeciński"
+       ]
+      },
+      {
+       "name": "Okręgi wielkomiejskie (rynkowe)",
+       "description": "Rozwinęły się wokół wielkich miast, gdzie o lokalizacji zdecydowały **rynek zbytu, wykwalifikowane kadry i zaplecze usługowe**. Przeważa przemysł lekki, precyzyjny, poligraficzny, spożywczy i elektromaszynowy — czyli branże mało materiałochłonne.",
+       "examples": [
+        "Okręg Warszawski",
+        "Okręg Paryski",
+        "Okręg Londyński",
+        "Okręg Moskiewski",
+        "Okręg Mediolański"
+       ]
+      },
+      {
+       "name": "Okręgi zaawansowanych technologii",
+       "description": "Najmłodsze, powstałe od 2. połowy XX w. Lokują się **przy uczelniach i instytutach badawczych**, z dala od surowców, najczęściej w miejscach o wysokiej jakości środowiska, które przyciąga wysoko wykwalifikowaną kadrę.",
+       "examples": [
+        "Dolina Krzemowa",
+        "Bangalore",
+        "Sophia Antipolis",
+        "Tsukuba",
+        "okręg Cambridge"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "map-explore",
+     "title": "Wielkie okręgi przemysłowe świata",
+     "caption": "Kliknij znaczniki i porównaj genezę. Zwróć uwagę na prawidłowość: okręgi surowcowe leżą w głębi lądu, portowe — na wybrzeżu, a high-tech tam, gdzie są uczelnie i przyjemny klimat.",
+     "center": [
+      30,
+      10
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 51.5,
+       "lng": 7.1,
+       "label": "Zagłębie Ruhry (Niemcy)",
+       "text": "Największy okręg przemysłowy Europy, zbudowany na **złożach węgla kamiennego** i na transporcie po Renie. Po zamknięciu ostatniej kopalni w 2018 r. funkcjonuje dzięki wieloletniej restrukturyzacji — uczelniom, logistyce i usługom."
+      },
+      {
+       "lat": 50.27,
+       "lng": 19.02,
+       "label": "Górnośląski Okręg Przemysłowy (Polska)",
+       "text": "Największy okręg Polski, powstały na węglu kamiennym; opierał się na triadzie kopalnia–koksownia–huta. Od 1989 r. w trakcie głębokiej **restrukturyzacji** — z rozwojem motoryzacji, logistyki i usług dla biznesu."
+      },
+      {
+       "lat": 37.8,
+       "lng": -81.6,
+       "label": "Appalachy (USA)",
+       "text": "Największy amerykański okręg wydobycia **węgla kamiennego**, dziś w regresie: przegrał z tanim węglem z odkrywek Wyoming i z gazem łupkowym. Przykład restrukturyzacji, która się nie powiodła."
+      },
+      {
+       "lat": 51.92,
+       "lng": 4.48,
+       "label": "Rotterdam–Europoort (Holandia)",
+       "text": "Wzorcowy **okręg portowy**: rafinerie i przemysł chemiczny przerabiają ropę prosto z tankowców, a największy port Europy zapewnia zbyt na całe zaplecze kontynentu."
+      },
+      {
+       "lat": 35.55,
+       "lng": 139.72,
+       "label": "Okręg Keihin (Japonia)",
+       "text": "Pas przemysłowy Tokio–Jokohama, oparty niemal wyłącznie na **surowcach importowanych**. Huty i rafinerie stoją na terenach osuszonych i nasypowych tuż przy nabrzeżach."
+      },
+      {
+       "lat": 37.39,
+       "lng": -122.08,
+       "label": "Dolina Krzemowa (USA)",
+       "text": "**Klaster** elektroniczno-informatyczny, który wyrósł wokół Uniwersytetu Stanforda i kapitału wysokiego ryzyka. Brak jakichkolwiek złóż surowców nie miał znaczenia — o wartości wyrobu decyduje wiedza."
+      },
+      {
+       "lat": 12.97,
+       "lng": 77.59,
+       "label": "Bangalore / Bengaluru (Indie)",
+       "text": "Największe indyjskie centrum **usług informatycznych i outsourcingu**, położone na wyżynie Dekan (ok. 900 m n.p.m.). Kluczowe czynniki: tania, anglojęzyczna kadra inżynierska i dogodna różnica czasu wobec USA."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Zagłębie Ruhry — od węgla do nauki i kultury",
+     "region": "Nadrenia Północna-Westfalia, Niemcy",
+     "text": "Okręg powstał w XIX w. na **najbogatszych w Europie złożach węgla kamiennego**, w tym koksującego, przy Renie zapewniającym tani transport wodny i wodę technologiczną. Przez sto lat opierał się na triadzie **kopalnia — koksownia — huta**, a Essen, Dortmund, Duisburg i Bochum zrosły się w jedną z największych aglomeracji Europy. Kryzys nadszedł w latach 60. i 70. XX w.: tańszy węgiel importowany, przechodzenie energetyki na ropę i gaz oraz światowa nadprodukcja stali sprawiły, że wydobycie stało się trwale nierentowne — **ostatnią kopalnię węgla kamiennego zamknięto w 2018 r.** Restrukturyzację rozłożono jednak na dziesięciolecia i prowadzono równolegle na kilku frontach: **przekwalifikowywano górników**, zakładano uniwersytety (Bochum, Dortmund, Duisburg-Essen) i parki technologiczne, rekultywowano hałdy i zwałowiska, a obiekty pokopalniane adaptowano na cele kultury — **kopalnia Zollverein w Essen trafiła na Listę światowego dziedzictwa UNESCO**.",
+     "takeaway": "Restrukturyzacja udaje się wtedy, gdy jest **rozłożona na dziesięciolecia i prowadzona jednocześnie na czterech frontach**: gospodarczym, edukacyjnym, środowiskowym i wizerunkowym. Samo zamknięcie kopalń zostawia po sobie wyłącznie bezrobocie."
+    },
+    {
+     "type": "definition",
+     "term": "Restrukturyzacja",
+     "text": "**Głęboka, świadomie sterowana przebudowa struktury gospodarczej** okręgu lub przedsiębiorstwa: wygaszanie gałęzi nierentownych i przestarzałych oraz wprowadzanie w ich miejsce nowych — mniej materiałochłonnych, bardziej naukochłonnych, a także usług. Celem nie jest zamknięcie starych zakładów, lecz **zastąpienie utraconych miejsc pracy nowymi**.",
+     "note": "Odróżniaj **restrukturyzację** od **deindustrializacji**: deindustrializacja to *proces* spadku znaczenia przemysłu, który zachodzi także wtedy, gdy nikt nic nie robi; restrukturyzacja to *odpowiedź* na niego — kosztowna, wieloletnia i wymagająca pieniędzy publicznych."
+    },
+    {
+     "type": "process",
+     "title": "Etapy restrukturyzacji okręgu przemysłowego",
+     "caption": "Kolejność ma znaczenie, ale etapy 2–5 muszą biec **równolegle** z pierwszym. Wykonanie samego kroku pierwszego to nie restrukturyzacja, tylko likwidacja.",
+     "steps": [
+      {
+       "title": "Diagnoza i wygaszanie nierentownej produkcji",
+       "text": "Zamyka się kopalnie i wydziały, których koszt wydobycia lub wytworzenia jest trwale wyższy od ceny rynkowej. Krok konieczny, ale **sam w sobie generujący bezrobocie** — dlatego nigdy nie może pozostać jedynym."
+      },
+      {
+       "title": "Osłona socjalna i przekwalifikowanie",
+       "text": "Odprawy, świadczenia przedemerytalne i przede wszystkim **kursy zawodowe** mają zamienić bezrobocie strukturalne w przepływ pracowników do nowych branż. Bez tego kwalifikacje całego pokolenia stają się bezużyteczne, a bezrobocie dziedziczy się w rodzinach."
+      },
+      {
+       "title": "Rekultywacja i uzbrojenie terenów poprzemysłowych",
+       "text": "Hałdy, zwałowiska i skażone grunty trzeba oczyścić, ustabilizować i przygotować pod nowe funkcje. Zagospodarowany **brownfield** jest atutem inwestycyjnym — zaniedbany odstrasza inwestora skuteczniej niż wysokie podatki."
+      },
+      {
+       "title": "Przyciąganie nowych, zróżnicowanych branż",
+       "text": "**Specjalne strefy ekonomiczne**, ulgi podatkowe, parki technologiczne i inwestycje w uczelnie mają sprowadzić przemysł lżejszy, logistykę i usługi. Kluczowa jest **dywersyfikacja**: region nie może ponownie oprzeć się na jednej gałęzi, bo powtórzy ten sam błąd."
+      },
+      {
+       "title": "Zmiana funkcji i wizerunku regionu",
+       "text": "Obiekty poprzemysłowe adaptuje się na muzea, sale koncertowe i centra nauki, rozwijając **turystykę poprzemysłową** — jak Szlak Zabytków Techniki na Górnym Śląsku czy Zollverein w Essen. Region przestaje być kojarzony z brudem i schyłkiem, dzięki czemu łatwiej zatrzymać młodych mieszkańców i przyciągnąć specjalistów."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Appalachy — okręg, który nie zdążył się przebudować",
+     "region": "Wschodnie USA: Wirginia Zachodnia, Kentucky, Pensylwania",
+     "text": "Appalaskie zagłębie węglowe było **największym obszarem wydobycia węgla kamiennego w USA**, a jego rozkwit przypadł na przełom XIX i XX w., gdy węgiel zasilał huty Pittsburgha i całą amerykańską kolej. Załamanie przyszło z kilku stron naraz: **konkurencja taniego węgla z odkrywek w Wyoming**, przejście energetyki na **tani gaz ziemny z łupków**, zaostrzenie norm emisji oraz mechanizacja wydobycia, która radykalnie zmniejszyła zapotrzebowanie na górników. Region jest przy tym górzysty i słabo dostępny komunikacyjnie, o niskim przeciętnym poziomie wykształcenia i słabym zapleczu akademickim — brakowało więc dokładnie tego, na czym można byłoby oprzeć nową gospodarkę. Skutki utrzymują się do dziś: wysokie bezrobocie, odpływ ludności, jedne z najniższych dochodów w USA i środowisko zdegradowane przez odkrywkowe zdejmowanie wierzchołków gór (**mountaintop removal**).",
+     "takeaway": "Porównaj z Ruhrą: **ta sama diagnoza, przeciwny finał**. O powodzeniu restrukturyzacji decyduje nie sam upadek starej gałęzi, lecz to, czy region dysponuje kadrami, dostępnością transportową, kapitałem i konsekwentną polityką publiczną, na których da się zbudować nową funkcję."
+    },
+    {
+     "type": "classification",
+     "title": "Formy przestrzenne przemysłu zaawansowanych technologii",
+     "caption": "Uporządkowane od największej do najmniejszej skali — z wyjątkiem klastra, który nie ma z góry określonych granic, bo nikt go nie projektuje.",
+     "groups": [
+      {
+       "name": "Technopolia",
+       "description": "**Planowo zbudowane miasto lub dzielnica nauki**, w której skupiono uczelnie, instytuty badawcze i zakłady high-tech. Powstaje zwykle z inicjatywy państwa, w miejscu atrakcyjnym środowiskowo i z dala od starych okręgów. Celem jest **maksymalne skrócenie drogi od laboratorium do wdrożenia**.",
+       "examples": [
+        "Tsukuba (Japonia)",
+        "Sophia Antipolis (Francja)",
+        "Daedeok (Korea Południowa)",
+        "Akademgorodok (Rosja)"
+       ]
+      },
+      {
+       "name": "Park technologiczny (naukowo-technologiczny)",
+       "description": "Wydzielony i uzbrojony teren z gotowymi halami oraz laboratoriami, powiązany z uczelnią, gdzie firmy technologiczne **wynajmują powierzchnię i korzystają ze wspólnego zaplecza** — aparatury, doradztwa, obsługi patentowej. To obiekt, a nie miasto: skala znacznie mniejsza niż technopolii.",
+       "examples": [
+        "Cambridge Science Park",
+        "Krakowski Park Technologiczny",
+        "Poznański Park Naukowo-Technologiczny"
+       ]
+      },
+      {
+       "name": "Inkubator przedsiębiorczości",
+       "description": "Instytucja wspierająca **najmłodsze firmy (start-upy)** przez pierwsze, najbardziej ryzykowne lata: tanie biuro, obsługa księgowa i prawna, mentoring, kontakt z inwestorami. Ma obniżyć próg wejścia i zmniejszyć „śmiertelność” nowych przedsiębiorstw.",
+       "examples": [
+        "akademickie inkubatory przedsiębiorczości przy uczelniach",
+        "inkubatory przy parkach technologicznych"
+       ]
+      },
+      {
+       "name": "Klaster (grono) przemysłowy",
+       "description": "**Geograficzne skupienie firm z jednej lub pokrewnych branż wraz z dostawcami, uczelniami i instytucjami otoczenia biznesu**, które jednocześnie ze sobą konkurują i współpracują. Cechą kluczową jest to, że klaster **najczęściej nie jest zaplanowany** — powstaje samorzutnie, a jego siłą jest swobodny przepływ wiedzy, wykwalifikowanych pracowników i wyspecjalizowanych poddostawców, czyli **korzyści aglomeracji**.",
+       "examples": [
+        "Dolina Krzemowa (elektronika, IT)",
+        "Hollywood (film)",
+        "Dolina Lotnicza w rejonie Rzeszowa",
+        "klaster meblarski w Wielkopolsce"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Dwa okręgi high-tech: Dolina Krzemowa a Bangalore",
+     "caption": "Oba żyją z informatyki, ale zajmują **różne miejsca w łańcuchu wartości**: jeden tworzy technologie, drugi świadczy usługi na zlecenie. Stąd zupełnie inne czynniki lokalizacji.",
+     "headers": [
+      "Cecha",
+      "Dolina Krzemowa (USA)",
+      "Bangalore (Indie)"
+     ],
+     "rows": [
+      [
+       "Geneza",
+       "Zaczęła się od **Uniwersytetu Stanforda**, który w 1951 r. udostępnił swoje grunty firmom technologicznym; wcześniej ważne były wojskowe zamówienia na elektronikę",
+       "Rozwój od lat 80. i 90. XX w. na bazie **państwowych instytutów** (lotnictwo, elektronika, program kosmiczny) oraz liberalizacji gospodarki Indii po 1991 r."
+      ],
+      [
+       "Kluczowy czynnik lokalizacji",
+       "Zaplecze naukowe i **kapitał wysokiego ryzyka (venture capital)** finansujący ryzykowne przedsięwzięcia",
+       "**Tania, liczna i anglojęzyczna kadra inżynierska** oraz różnica czasu wobec USA, pozwalająca pracować „na drugą zmianę”"
+      ],
+      [
+       "Specjalizacja",
+       "**Tworzenie** nowych technologii: półprzewodniki, oprogramowanie, internet, sztuczna inteligencja",
+       "**Świadczenie usług** dla klientów zagranicznych: offshoring i outsourcing programowania, obsługa systemów, centra usług wspólnych"
+      ],
+      [
+       "Rola warunków środowiskowych",
+       "Łagodny klimat śródziemnomorski i wysoka jakość życia przyciągające wysoko wykwalifikowaną kadrę",
+       "Położenie na wyżynie Dekan (ok. 900 m n.p.m.) łagodzi upały typowe dla nizinnych Indii — stąd dawne miano „miasta-ogrodu”"
+      ],
+      [
+       "Główny problem",
+       "Skrajnie wysokie koszty mieszkań i życia, wypychające pracowników poza region",
+       "Przeciążona infrastruktura miejska, deficyt wody i energii elektrycznej, rosnące koszty pracy"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pary pojęć, które trzeba rozdzielić. **(1) Ośrodek — okręg — region**: ośrodek to jedno miasto, okręg to zespół sąsiadujących ośrodków, region to zespół okręgów; przy zadaniu z mapą to rozróżnienie decyduje o punkcie. **(2) Technopolia a park technologiczny**: technopolia to całe, planowo zbudowane miasto nauki (zwykle dzieło państwa), park to wydzielony teren z halami i laboratoriami — różni je skala i inicjator. **(3) Klaster a park technologiczny**: klaster **powstaje samorzutnie**, nie ma granic ani zarządcy, park jest **zaplanowany, ogrodzony i administrowany**. Dolina Krzemowa jest więc klastrem, a **nie** parkiem technologicznym ani technopolią."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj okręg do cechy, która go definiuje",
+     "instruction": "Skup się na tym, co przesądziło o jego powstaniu, a nie na tym, co się w nim produkuje dzisiaj.",
+     "pairs": [
+      {
+       "left": "Zagłębie Ruhry",
+       "right": "okręg węglowy, w którym wieloletnia restrukturyzacja się powiodła"
+      },
+      {
+       "left": "Appalachy",
+       "right": "okręg węglowy, w którym restrukturyzacja się nie powiodła"
+      },
+      {
+       "left": "Okręg Keihin",
+       "right": "przerób surowców importowanych drogą morską, na terenach nadmorskich"
+      },
+      {
+       "left": "Dolina Krzemowa",
+       "right": "samorzutny klaster wyrosły wokół uniwersytetu i kapitału wysokiego ryzyka"
+      },
+      {
+       "left": "Bangalore",
+       "right": "outsourcing usług informatycznych oparty na taniej kadrze anglojęzycznej"
+      },
+      {
+       "left": "Tsukuba",
+       "right": "technopolia zbudowana planowo z inicjatywy państwa"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Który zestaw czynników najlepiej wyjaśnia powstanie Doliny Krzemowej z dala od jakichkolwiek złóż surowców?",
+     "options": [
+      "Bliskość uniwersytetu, dostęp do kapitału wysokiego ryzyka i wykwalifikowane kadry — w high-tech o wartości wyrobu decyduje wiedza, a nie surowiec",
+      "Bliskość bogatych złóż krzemionki, z której wytwarza się półprzewodniki",
+      "Tania siła robocza i wyjątkowo niskie koszty życia w Kalifornii",
+      "Bliskość portu morskiego, umożliwiająca import ciężkich surowców hutniczych"
+     ],
+     "correctIndex": 0,
+     "explanation": "Przemysł high-tech ma **orientację naukową**: udział materiału w koszcie wyrobu jest znikomy, więc położenie złóż nie ma tu żadnego znaczenia. Decydują uczelnia (Stanford), kadra i **kapitał wysokiego ryzyka**, bez którego nie da się finansować przedsięwzięć o dużym prawdopodobieństwie porażki. Nazwa „krzemowa” pochodzi od krzemu jako materiału półprzewodników, a **nie od miejscowych złóż** — to klasyczna pułapka. Koszty życia w Dolinie Krzemowej należą zaś do najwyższych w USA."
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego restrukturyzacja Zagłębia Ruhry powiodła się lepiej niż przebudowa gospodarki Appalachów?",
+     "options": [
+      "W Ruhrze zamykaniu kopalń towarzyszyły przez dekady inwestycje w uczelnie, przekwalifikowanie górników i rekultywacja terenów, czego w Appalachach zabrakło",
+      "W Ruhrze nie zamknięto żadnej kopalni, więc nie pojawiło się bezrobocie",
+      "Appalachy nigdy nie miały przemysłu wydobywczego, więc nie było czego restrukturyzować",
+      "W Ruhrze odkryto nowe, bogatsze złoża węgla, które zastąpiły złoża wyczerpane"
+     ],
+     "correctIndex": 0,
+     "explanation": "Przyczyny kryzysu były w obu okręgach niemal identyczne — nierentowne wydobycie, konkurencja tańszych nośników energii, mechanizacja. Różniła się **odpowiedź**. W Ruhrze restrukturyzację prowadzono przez kilkadziesiąt lat równolegle na wielu frontach: nowe uniwersytety i parki technologiczne, osłony socjalne i kursy zawodowe, rekultywacja hałd, turystyka poprzemysłowa. Appalachom zabrakło kadr, dostępności transportowej i konsekwentnej polityki publicznej, więc po upadku górnictwa nie powstała żadna nowa funkcja. Kopalnie w Ruhrze zamykano jak najbardziej — ostatnią w 2018 r. — tylko nie zostawiono regionu samemu sobie."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W zadaniach o okręgach przemysłowych klucz oczekuje odróżnienia **czynników genezy** (dlaczego okręg powstał *wtedy*) od **czynników współczesnych** (dlaczego trwa albo upada *dziś*) — to zwykle dwa różne zestawy. Dla Ruhry: geneza = węgiel kamienny i transport po Renie, współcześnie = kadry, uczelnie, położenie w centrum Europy i węzeł logistyczny. Przy porównaniach dwóch okręgów pisz **równolegle** („w okręgu A…, natomiast w okręgu B…”), bo za wypisanie cech tylko jednego z nich zwykle nie ma punktu. I nie zamieniaj pojęć: **technopolia ≠ park technologiczny ≠ klaster** — to jeden z częstszych błędów w arkuszach."
+    }
+   ]
+  }
+ ]
+}

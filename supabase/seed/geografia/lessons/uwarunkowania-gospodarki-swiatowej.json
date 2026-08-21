@@ -1,0 +1,556 @@
+{
+  "topicSlug": "uwarunkowania-gospodarki-swiatowej",
+  "lessons": [
+    {
+      "slug": "sektory-gospodarki-i-model-clarka-fishera",
+      "title": "Sektory gospodarki i model Clarka-Fishera",
+      "summary": "Podział gospodarki na sektory I-IV, prawidłowości przemian struktury zatrudnienia i PKB oraz model Clarka-Fishera jako narzędzie oceny poziomu rozwoju kraju.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gospodarka każdego państwa to tysiące różnych rodzajów działalności, ale geografia porządkuje je w kilka **sektorów**. **Struktura sektorowa** — czyli to, jaka część pracujących albo jaka część PKB przypada na rolnictwo, przemysł i usługi — jest jednym z najlepszych **mierników poziomu rozwoju gospodarczego**. Kraj, w którym połowa ludzi pracuje na roli, i kraj, w którym trzy czwarte pracuje w usługach, funkcjonują według zupełnie innej logiki. W tej lekcji zobaczysz, jak zbudowany jest podział na sektory i — co ważniejsze — **dlaczego** gospodarki przechodzą przez nie w tej samej, powtarzalnej kolejności. Opisuje to **model Clarka-Fishera**."
+        },
+        {
+          "type": "definition",
+          "term": "Sektor gospodarki",
+          "text": "Zbiór działów gospodarki połączonych **podobnym stosunkiem do surowca i do wiedzy**: sektor I pozyskuje surowce wprost ze środowiska, sektor II je przetwarza, sektor III świadczy usługi, a sektor IV wytwarza i przetwarza informację. Kryterium podziału nie jest więc branża, lecz **charakter wykonywanej pracy**.",
+          "note": "Podziału sektorowego nie myl z podziałem własnościowym (sektor publiczny i prywatny) — to zupełnie inne kryterium, mimo identycznego słowa."
+        },
+        {
+          "type": "classification",
+          "title": "Cztery sektory gospodarki",
+          "caption": "Im wyższy numer sektora, tym większy udział wiedzy, a mniejszy udział surowca w wytwarzanej wartości.",
+          "groups": [
+            {
+              "name": "Sektor I — pierwotny",
+              "description": "Bezpośrednie **pozyskiwanie zasobów ze środowiska przyrodniczego**, bez ich głębokiego przetwarzania. Silnie zależny od warunków naturalnych, dlatego jego wydajność rośnie najwolniej.",
+              "examples": ["rolnictwo", "leśnictwo", "rybactwo i rybołówstwo", "łowiectwo", "w części ujęć także górnictwo"]
+            },
+            {
+              "name": "Sektor II — wtórny",
+              "description": "**Przetwarzanie surowców w wyroby gotowe** oraz wytwarzanie energii i wznoszenie obiektów. To sektor, w którym postęp techniczny najsilniej podnosi wydajność pracy.",
+              "examples": ["przemysł przetwórczy", "energetyka", "budownictwo", "górnictwo (ujęcie stosowane najczęściej w Polsce)"]
+            },
+            {
+              "name": "Sektor III — usługi",
+              "description": "Działalność, której efektem nie jest rzecz, lecz **świadczenie zaspokajające potrzebę**. Rośnie wraz z zamożnością społeczeństwa, bo popyt na usługi jest bardzo wrażliwy na wzrost dochodu.",
+              "examples": ["handel", "transport", "turystyka", "edukacja", "ochrona zdrowia", "administracja"]
+            },
+            {
+              "name": "Sektor IV — oparty na wiedzy",
+              "description": "Wydzielona z usług grupa działalności, których produktem jest **informacja, wiedza i decyzja**. Koncentruje się w największych metropoliach, bo wymaga bliskości specjalistów i ośrodków decyzyjnych.",
+              "examples": ["badania i rozwój (B+R)", "informatyka", "usługi finansowe wysokiego szczebla", "doradztwo", "media", "zarządzanie korporacjami"]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa klasyczne miejsca pomyłek. **(1) Górnictwo** — w polskiej praktyce szkolnej i w statystyce GUS zalicza się je do **sektora II** (przemysł wydobywczy), choć logika „pozyskiwania wprost ze środowiska” bywa argumentem za sektorem I; w zadaniu kieruj się treścią materiału źródłowego. **(2) Sektor III a IV** — sektor IV nie jest osobną częścią gospodarki obok usług, tylko **wykrojoną z nich górną warstwą**; dlatego w statystykach międzynarodowych najczęściej widzisz tylko trzy sektory, a usługi wiedzochłonne siedzą wewnątrz sektora III."
+        },
+        {
+          "type": "process",
+          "title": "Model Clarka-Fishera — mechanizm przesuwania się pracujących",
+          "caption": "Colin Clark i Allan Fisher opisali prawidłowość: wraz ze wzrostem poziomu rozwoju zatrudnienie przesuwa się z sektora I przez II do III i IV.",
+          "steps": [
+            {
+              "title": "Faza preindustrialna (agrarna)",
+              "text": "W sektorze I pracuje **ponad połowa ludności**. Wydajność rolnictwa jest tak niska, że niemal wszystkie ręce są potrzebne do wyprodukowania żywności — nie ma nadwyżki siły roboczej, którą można przenieść gdzie indziej. Przemysł ogranicza się do rzemiosła, usługi do handlu targowego. Przykład: Etiopia, Niger, Czad."
+            },
+            {
+              "title": "Faza industrialna (uprzemysłowienia)",
+              "text": "Mechanizacja i nawożenie podnoszą **wydajność pracy w rolnictwie**: ta sama żywność powstaje przy mniejszej liczbie rąk. Uwolniona siła robocza migruje do miast i zasila sektor II, który dodatkowo przyciąga ludzi wyższymi płacami. Udział sektora I gwałtownie spada, udział sektora II osiąga **maksimum**. Przykład: Chiny, Wietnam, Polska w latach 60. i 70. XX w."
+            },
+            {
+              "title": "Faza postindustrialna (serwicyzacja)",
+              "text": "Automatyzacja oraz **przenoszenie produkcji do krajów tańszych** sprawiają, że sektor II również zaczyna zwalniać pracowników. Jednocześnie rosnące dochody uruchamiają popyt na usługi — od ochrony zdrowia po turystykę — bo popyt na nie rośnie **szybciej niż dochód**. Sektor III przekracza 60-70% pracujących. Przykład: Niemcy, Francja, Japonia."
+            },
+            {
+              "title": "Faza informacyjna",
+              "text": "Wewnątrz usług wyodrębnia się **sektor IV**: badania, informatyka, finanse, zarządzanie globalnymi korporacjami. Wartość dodana przenosi się z wytwarzania rzeczy na **projektowanie, markę i przetwarzanie danych**. Przykład: USA, Wielka Brytania, Singapur, Korea Południowa."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Udział sektora w strukturze zatrudnienia",
+          "expression": "U_i = \\frac{Z_i}{Z} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "U_i", "meaning": "udział sektora i w strukturze zatrudnienia (w %)" },
+            { "symbol": "Z_i", "meaning": "liczba pracujących w sektorze i" },
+            { "symbol": "Z", "meaning": "ogólna liczba pracujących w gospodarce" }
+          ],
+          "caption": "Tę samą formułę stosujesz do struktury PKB, podstawiając wartość dodaną brutto zamiast liczby pracujących. Suma udziałów wszystkich sektorów zawsze wynosi 100%."
+        },
+        {
+          "type": "table",
+          "title": "Struktura zatrudnienia według sektorów w wybranych krajach",
+          "caption": "Wartości przybliżone, ok. 2021 r. (dane Banku Światowego, ujęcie trzysektorowe). Kraje ułożono według malejącego udziału sektora I — i jednocześnie według rosnącego poziomu rozwoju.",
+          "headers": ["Kraj", "Sektor I (%)", "Sektor II (%)", "Sektor III (%)", "Faza wg Clarka-Fishera"],
+          "rows": [
+            ["Etiopia", "ok. 62", "ok. 10", "ok. 28", "preindustrialna"],
+            ["Indie", "ok. 44", "ok. 25", "ok. 31", "przejście do industrialnej"],
+            ["Chiny", "ok. 24", "ok. 28", "ok. 48", "industrialna"],
+            ["Polska", "ok. 9", "ok. 31", "ok. 60", "postindustrialna (wczesna)"],
+            ["Niemcy", "ok. 1", "ok. 27", "ok. 72", "postindustrialna"],
+            ["USA", "ok. 2", "ok. 19", "ok. 79", "informacyjna"]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Przemiany struktury zatrudnienia w Polsce (1950-2022)",
+          "caption": "Wartości przybliżone. Zwróć uwagę na kształt krzywej sektora II: rośnie do lat 80., a potem opada — to podręcznikowy „garb” fazy industrialnej z modelu Clarka-Fishera.",
+          "unit": "%",
+          "labels": ["1950", "1970", "1990", "2010", "2022"],
+          "series": [
+            { "name": "Sektor I", "values": [57, 39, 25, 13, 9] },
+            { "name": "Sektor II", "values": [21, 29, 37, 31, 31] },
+            { "name": "Sektor III", "values": [22, 32, 38, 56, 60] }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Gospodarka preindustrialna a postindustrialna",
+          "leftLabel": "Preindustrialna",
+          "rightLabel": "Postindustrialna",
+          "rows": [
+            { "aspect": "Dominujący sektor", "left": "I — rolnictwo, często ponad 50% pracujących", "right": "III i IV — usługi, zwykle 65-80% pracujących" },
+            { "aspect": "Źródło wartości", "left": "Ziemia i praca fizyczna", "right": "**Wiedza, kapitał i informacja**" },
+            { "aspect": "Wydajność pracy", "left": "Bardzo niska, silnie zależna od pogody", "right": "Wysoka, oparta na automatyzacji" },
+            { "aspect": "Struktura osadnicza", "left": "Przewaga ludności wiejskiej", "right": "Wysoki wskaźnik urbanizacji, rola metropolii" },
+            { "aspect": "Przyrost naturalny", "left": "Wysoki (I-II faza przejścia demograficznego)", "right": "Niski lub ujemny (IV-V faza)" },
+            { "aspect": "Handel zagraniczny", "left": "Eksport surowców i płodów rolnych", "right": "Eksport wyrobów zaawansowanych i usług" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Deindustrializacja Wielkiej Brytanii",
+          "region": "Anglia Północna, Midlands, Walia Południowa",
+          "text": "W latach 60. XX w. w brytyjskim przemyśle pracowało ok. 40% zatrudnionych; dziś **poniżej 20%**. Zamykanie kopalń węgla, hut i zakładów włókienniczych w latach 70. i 80. nie wynikało z braku popytu na stal czy tkaniny — te wyroby nadal kupowano, tyle że **taniej wytwarzane w Azji**. Równolegle londyńskie City rozwijało usługi finansowe, czyli sektor IV. Efekt: kraj jako całość awansował w modelu Clarka-Fishera, ale **przestrzennie zysk i strata rozłożyły się skrajnie nierówno** — bezrobociu i depopulacji starych okręgów przemysłowych towarzyszył boom południowego wschodu.",
+          "takeaway": "Deindustrializacja jest **normalnym etapem** modelu Clarka-Fishera, a nie regresem gospodarki — ale jej koszty społeczne ponoszą konkretne regiony, nie „gospodarka” w abstrakcji. To dlatego stare okręgi przemysłowe wymagają celowej restrukturyzacji."
+        },
+        {
+          "type": "matching",
+          "title": "Przyporządkuj działalność do sektora",
+          "instruction": "Połącz opis działalności z sektorem gospodarki, do którego należy.",
+          "pairs": [
+            { "left": "Uprawa pszenicy i połów dorsza na Bałtyku", "right": "Sektor I" },
+            { "left": "Montaż samochodów w fabryce i budowa mostu", "right": "Sektor II" },
+            { "left": "Obsługa hotelu, sprzedaż biletów, nauczanie w szkole", "right": "Sektor III" },
+            { "left": "Laboratorium B+R koncernu farmaceutycznego i centrala banku inwestycyjnego", "right": "Sektor IV" }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj kraje według udziału sektora I w zatrudnieniu",
+          "instruction": "Ustaw kraje od NAJWYŻSZEGO do NAJNIŻSZEGO udziału sektora I (skorzystaj z tabeli powyżej).",
+          "items": ["Etiopia", "Indie", "Chiny", "Polska", "Niemcy"],
+          "explanation": "Ta kolejność jest jednocześnie kolejnością **rosnącego poziomu rozwoju gospodarczego** — udział sektora I w zatrudnieniu jest odwrotnie skorelowany z zamożnością kraju. Dlatego CKE tak często daje strukturę zatrudnienia jako materiał źródłowy do rozpoznania państwa."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w modelu Clarka-Fishera udział sektora II najpierw rośnie, a następnie maleje?",
+          "options": [
+            "Bo surowce mineralne wyczerpują się i nie ma z czego produkować",
+            "Bo wzrost wydajności pracy w rolnictwie uwalnia siłę roboczą dla przemysłu, a później automatyzacja i przenoszenie produkcji za granicę uwalniają ją z samego przemysłu",
+            "Bo w krajach wysoko rozwiniętych ludzie przestają kupować wyroby przemysłowe",
+            "Bo rządy krajów rozwiniętych zakazują budowy nowych fabryk ze względów ekologicznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mechanizm jest dwustopniowy. Najpierw **mechanizacja rolnictwa** sprawia, że mniej rąk wystarcza do wyżywienia społeczeństwa — nadwyżka pracowników przechodzi do przemysłu (faza wzrostu). Potem **automatyzacja i offshoring** powodują, że przemysł rozwija się już bez wzrostu zatrudnienia — produkcja może rosnąć, a liczba pracujących spadać (faza spadku udziału). Uwaga: spada **udział** sektora II, a nie wielkość produkcji przemysłowej — to nie to samo."
+        },
+        {
+          "type": "quiz",
+          "question": "W pewnym kraju sektor I daje 18% zatrudnienia, ale tylko 4% PKB. Co z tego wynika?",
+          "options": [
+            "Rolnictwo tego kraju jest bardzo wydajne i towarowe",
+            "W statystyce popełniono błąd — oba udziały muszą być równe",
+            "Wydajność pracy w rolnictwie jest niska; prawdopodobnie występuje rozdrobnienie gospodarstw i ukryte bezrobocie agrarne",
+            "Kraj znajduje się w fazie informacyjnej modelu Clarka-Fishera"
+          ],
+          "correctIndex": 2,
+          "explanation": "Udział w zatrudnieniu **wyraźnie wyższy** niż udział w PKB oznacza, że jeden pracownik tego sektora wytwarza mniej wartości niż przeciętny pracownik gospodarki — czyli **niską wydajność pracy**. W rolnictwie typowe przyczyny to rozdrobnienie gospodarstw, słabe wyposażenie techniczne i **ukryte bezrobocie agrarne**. Relacja odwrotna (udział w PKB wyższy niż w zatrudnieniu) świadczy o wysokiej wydajności — tak wygląda np. przemysł w Niemczech."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Na maturze rozszerzonej struktura sektorowa pojawia się najczęściej w trzech formach. **(1) Wykres trójkątny (trójkąt Ossanna)** — każdy wierzchołek to 100% jednego sektora, a punkt położony bliżej wierzchołka usług oznacza kraj wyżej rozwinięty; ćwicz odczyt, bo wielu zdających myli kierunki osi. **(2) Rozpoznanie kraju** po trzech liczbach — najpierw sprawdzaj udział sektora I: powyżej 40% to kraj słabo rozwinięty, poniżej 5% — wysoko rozwinięty. **(3) Polecenie „wyjaśnij przyczyny”** — nie wystarczy napisać, że „kraj jest rozwinięty”; trzeba wskazać **mechanizm**: wzrost wydajności rolnictwa, automatyzację przemysłu, wzrost dochodów napędzający popyt na usługi. Zawsze porównuj też strukturę **zatrudnienia** ze strukturą **PKB** — różnica między nimi to gotowa informacja o wydajności pracy."
+        }
+      ]
+    },
+    {
+      "slug": "zasoby-naturalne-i-surowce-mineralne",
+      "title": "Zasoby naturalne i rozmieszczenie surowców mineralnych",
+      "summary": "Podział zasobów na odnawialne, nieodnawialne i niewyczerpywalne, różnica między zasobami geologicznymi a rezerwami, wskaźnik wystarczalności oraz rozmieszczenie surowców energetycznych, metalicznych, chemicznych i skalnych.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Żadna gospodarka nie działa w próżni — każdy wyrób zaczyna się od **zasobu pobranego ze środowiska**. Ale zasoby są rozmieszczone na Ziemi skrajnie nierównomiernie: ponad połowa udokumentowanych zasobów ropy naftowej leży wokół jednego akwenu, a ponad dwie trzecie światowego wydobycia kobaltu pochodzi z jednego państwa. Ta nierównomierność jest **przyczyną handlu międzynarodowego, ale też konfliktów i zależności politycznych**. W tej lekcji nauczysz się odróżniać zasoby od rezerw, liczyć wystarczalność złóż i wyjaśniać, dlaczego surowce leżą tam, gdzie leżą."
+        },
+        {
+          "type": "definition",
+          "term": "Zasoby naturalne",
+          "text": "Wszystkie elementy przyrody, które człowiek potrafi **wykorzystać gospodarczo przy obecnym poziomie techniki i po opłacalnych kosztach**. Kluczowe są tu dwa zastrzeżenia: technika i opłacalność. Ten sam pokład łupków był w 1980 r. bezużyteczną skałą, a po opanowaniu **szczelinowania hydraulicznego** stał się zasobem — zbiór zasobów nie jest więc dany raz na zawsze przez geologię, lecz **przesuwa się wraz z technologią i cenami**.",
+          "note": "Dlatego mówi się, że zasoby są kategorią ekonomiczno-techniczną, a nie czysto przyrodniczą."
+        },
+        {
+          "type": "classification",
+          "title": "Podział zasobów według odnawialności",
+          "caption": "Kryterium: czy i jak szybko zasób odtwarza się w skali czasu istotnej dla gospodarki człowieka.",
+          "groups": [
+            {
+              "name": "Nieodnawialne (wyczerpywalne)",
+              "description": "Powstawały przez miliony lat, a tempo ich odtwarzania jest **praktycznie zerowe** w skali ludzkiego życia. Każda wydobyta tona bezpowrotnie zmniejsza zasób — jedynym sposobem ich „odzyskania” jest **recykling**.",
+              "examples": ["węgiel kamienny i brunatny", "ropa naftowa", "gaz ziemny", "rudy metali", "sole", "surowce skalne"]
+            },
+            {
+              "name": "Odnawialne (warunkowo odnawialne)",
+              "description": "Odtwarzają się w cyklach przyrodniczych, ale **tylko wtedy, gdy eksploatacja nie przekracza tempa odnowy**. Przekroczenie progu zamienia je w zasób wyczerpywalny — tak dzieje się przy przełowieniu łowisk czy nadmiernej eksploatacji wód podziemnych.",
+              "examples": ["lasy", "gleby", "zasoby wodne", "populacje ryb", "zwierzyna łowna"]
+            },
+            {
+              "name": "Niewyczerpywalne (nieograniczone)",
+              "description": "Ich wielkość **nie zależy od tego, ile zużyjemy** — wykorzystanie energii wiatru dziś nie zmniejsza jej dostępności jutro. Ograniczeniem nie jest ilość zasobu, lecz **technologia i koszt jego przechwycenia**.",
+              "examples": ["energia słoneczna", "energia wiatru", "energia geotermalna", "energia pływów", "energia spadku wód"]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: utożsamianie **odnawialnych** z **niewyczerpywalnymi**. Las jest odnawialny, ale można go całkowicie wyciąć; wodę w warstwie wodonośnej można wyczerpać, jeśli pobiera się ją szybciej, niż się zasila (tak dzieje się z warstwą Ogallala w USA). Niewyczerpywalne są tylko te zasoby, na których wielkość **nasze zużycie w ogóle nie wpływa**. Drugi błąd: mylenie **surowca** (pozyskany, jeszcze nieprzetworzony materiał) z **zasobem** (to, co tkwi w środowisku) — surowiec to zasób już wydobyty."
+        },
+        {
+          "type": "process",
+          "title": "Od skały w ziemi do rezerwy przemysłowej",
+          "caption": "Ta sama masa kopaliny może być albo bezwartościową skałą, albo rezerwą — decyduje o tym rozpoznanie geologiczne, technika i cena.",
+          "steps": [
+            {
+              "title": "1. Zasoby prognostyczne",
+              "text": "Geolodzy **przypuszczają**, że w danej strukturze występuje kopalina, na podstawie budowy geologicznej i analogii do złóż znanych. Nie ma jeszcze wierceń — jest hipoteza. Na tym etapie nie da się liczyć wystarczalności."
+            },
+            {
+              "title": "2. Zasoby geologiczne udokumentowane",
+              "text": "Wiercenia i badania geofizyczne pozwalają **określić wielkość i jakość złoża**. To całkowita ilość kopaliny w złożu — bez pytania, czy jej wydobycie się opłaca."
+            },
+            {
+              "title": "3. Zasoby bilansowe",
+              "text": "Ta część zasobów geologicznych, która spełnia **kryteria bilansowości**: odpowiednia miąższość pokładu, zawartość pierwiastka użytecznego, głębokość zalegania, warunki hydrogeologiczne. Reszta to zasoby pozabilansowe — dziś nieopłacalne, ale możliwe do przekwalifikowania."
+            },
+            {
+              "title": "4. Zasoby przemysłowe (rezerwy)",
+              "text": "Część zasobów bilansowych, których wydobycie jest **opłacalne w konkretnych warunkach ekonomicznych i prawnych** — po odjęciu filarów ochronnych, obszarów chronionych i strat eksploatacyjnych. To właśnie te liczby podają raporty typu BP Statistical Review."
+            },
+            {
+              "title": "5. Wydobycie",
+              "text": "Faktycznie wydobyta kopalina. Uwaga na sprzężenie zwrotne: **wzrost ceny surowca powiększa rezerwy bez żadnego nowego odkrycia**, bo złoża wcześniej nieopłacalne stają się opłacalne. Spadek ceny działa odwrotnie."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Zasoby geologiczne a rezerwy (zasoby przemysłowe)",
+          "leftLabel": "Zasoby geologiczne",
+          "rightLabel": "Rezerwy",
+          "rows": [
+            { "aspect": "Co obejmują", "left": "Całą kopalinę stwierdzoną w złożu", "right": "Tylko część **opłacalną do wydobycia**" },
+            { "aspect": "Od czego zależą", "left": "Wyłącznie od budowy geologicznej", "right": "Od geologii **oraz** ceny surowca, techniki i prawa" },
+            { "aspect": "Zmienność w czasie", "left": "Rosną tylko dzięki nowym odkryciom", "right": "Mogą wzrosnąć bez odkryć — gdy rosną ceny lub tanieje technologia" },
+            { "aspect": "Wielkość", "left": "Zawsze większe", "right": "Zawsze mniejsze — to podzbiór zasobów geologicznych" },
+            { "aspect": "Zastosowanie", "left": "Ocena potencjału geologicznego kraju", "right": "Podstawa liczenia **wystarczalności** i planów wydobycia" }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Wskaźnik wystarczalności zasobów (R/P)",
+          "expression": "W = \\frac{R}{P}",
+          "variables": [
+            { "symbol": "W", "meaning": "wystarczalność zasobów w latach" },
+            { "symbol": "R", "meaning": "wielkość rezerw (zasobów przemysłowych)" },
+            { "symbol": "P", "meaning": "roczne wydobycie" }
+          ],
+          "caption": "Przykład: rezerwy 5000 mln t przy wydobyciu 100 mln t rocznie dają $W = 50$ lat. Pamiętaj o interpretacji: to NIE jest prognoza „za tyle lat surowiec się skończy”, lecz odpowiedź na pytanie „na ile lat wystarczyłyby dzisiejsze rezerwy przy dzisiejszym tempie wydobycia”. Oba założenia w praktyce się zmieniają — dlatego wystarczalność ropy naftowej od dziesięcioleci oscyluje wokół 40-50 lat, mimo że ropę wydobywa się cały czas."
+        },
+        {
+          "type": "classification",
+          "title": "Surowce mineralne według zastosowania",
+          "caption": "To podstawowa klasyfikacja szkolna — pojawia się w poleceniach typu „przyporządkuj surowiec do grupy”.",
+          "groups": [
+            {
+              "name": "Energetyczne",
+              "description": "Nośniki energii chemicznej lub jądrowej. Powstawały głównie w **basenach sedymentacyjnych** — węgiel w wilgotnych lasach karbonu i trzeciorzędu, ropa i gaz z materii organicznej mórz. Dlatego ich rozmieszczenie wyznaczają dawne strefy sedymentacji, a nie dzisiejsza geografia.",
+              "examples": ["węgiel kamienny", "węgiel brunatny", "ropa naftowa", "gaz ziemny", "rudy uranu", "torf", "łupki bitumiczne"]
+            },
+            {
+              "name": "Metaliczne (rudy)",
+              "description": "Skały o zawartości metalu na tyle wysokiej, by opłacało się go wytopić. Ich powstanie wiąże się przede wszystkim z **procesami magmowymi i hydrotermalnymi na granicach płyt** oraz z wietrzeniem w klimacie gorącym i wilgotnym (boksyty, rudy laterytowe).",
+              "examples": ["rudy żelaza", "rudy miedzi", "boksyty (glin)", "rudy cynku i ołowiu", "rudy niklu i kobaltu", "złoto", "lit", "metale ziem rzadkich"]
+            },
+            {
+              "name": "Chemiczne",
+              "description": "Surowce do produkcji nawozów, kwasów i tworzyw. Duża ich część to **osady ewaporatowe** — powstałe z odparowania płytkich, silnie zasolonych zbiorników wodnych (sól kamienna, sole potasowe, gips).",
+              "examples": ["sól kamienna", "sole potasowe", "siarka", "fosforyty", "saletra chilijska", "gips i anhydryt"]
+            },
+            {
+              "name": "Skalne",
+              "description": "Surowce budowlane i drogowe. Charakteryzują się **niską wartością jednostkową i wysokim kosztem transportu**, dlatego prawie nie wchodzą do handlu międzynarodowego, a ich wydobycie jest rozproszone — kopalnia lokuje się blisko rynku zbytu.",
+              "examples": ["piaski i żwiry", "wapienie", "granity i bazalty", "gliny ceramiczne", "marmury", "kreda"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Wielkie regiony surowcowe świata",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że regiony rud metali układają się wzdłuż dawnych i współczesnych granic płyt litosfery, a złoża ropy i węgla — w basenach osadowych.",
+          "center": [15, 25],
+          "zoom": 2,
+          "markers": [
+            { "lat": 25.5, "lng": 49.5, "label": "Zatoka Perska (Ghawar, Arabia Saudyjska)", "text": "Największa koncentracja **ropy naftowej** na świecie. Powód geologiczny: rozległy, płytki basen sedymentacyjny na przedpolu orogenezy alpejskiej, z idealnym układem skały macierzystej, zbiornikowej i **nieprzepuszczalnego nadkładu solnego**. Region skupia ponad połowę udokumentowanych zasobów ropy." },
+            { "lat": -22.5, "lng": 118.5, "label": "Pilbara, Australia Zachodnia", "text": "Największy region wydobycia **rud żelaza**. Złoża typu BIF (wstęgowe formacje żelaziste) powstały ok. 2,5 mld lat temu, gdy tlen z pierwszych sinic wytrącał żelazo z praoceanu. Australia to czołowy producent i eksporter rudy żelaza (gł. do Chin)." },
+            { "lat": -22.3, "lng": -68.9, "label": "Chuquicamata, Chile", "text": "Serce chilijskiego **pasa miedziowego** w Andach. Rudy miedzi porfirowej powstały nad **strefą subdukcji płyty Nazca** pod płytę południowoamerykańską. Chile jest największym producentem miedzi na świecie, Peru drugim — oba na tej samej strukturze." },
+            { "lat": -12.8, "lng": 28.2, "label": "Pas Miedzionośny (Zambia / DR Konga)", "text": "Copperbelt — **miedź i kobalt**. DR Konga dostarcza ok. 70% światowego wydobycia **kobaltu** (2023), kluczowego dla akumulatorów. Przykład skrajnej koncentracji surowca strategicznego w jednym, niestabilnym politycznie państwie." },
+            { "lat": 37.9, "lng": 112.5, "label": "Shanxi / Ordos, Chiny", "text": "Największy region wydobycia **węgla kamiennego** na świecie. Chiny odpowiadają za około połowę globalnego wydobycia węgla — surowiec jest tu podstawą energetyki, co przekłada się na pozycję kraju jako największego emitenta $CO_2$." },
+            { "lat": 31.8, "lng": -102.4, "label": "Basen permski (Teksas / Nowy Meksyk, USA)", "text": "Centrum amerykańskiej **rewolucji łupkowej**. Dzięki szczelinowaniu hydraulicznemu i wierceniom poziomym skała wcześniej pozbawiona wartości stała się zasobem — USA awansowały na pozycję największego producenta ropy i gazu na świecie. Podręcznikowy dowód, że technologia tworzy zasoby." },
+            { "lat": 41.77, "lng": 109.97, "label": "Bajan Obo, Mongolia Wewnętrzna (Chiny)", "text": "Największe złoże **metali ziem rzadkich**. Pierwiastki te są w skorupie ziemskiej wcale nierzadkie, ale rzadko występują w stężeniach opłacalnych, a ich przerób jest bardzo uciążliwy dla środowiska — dlatego Chiny zdobyły niemal monopol na etapie rafinacji." },
+            { "lat": -23.5, "lng": -68.2, "label": "Salar de Atacama, Chile", "text": "Solnisko będące jednym z głównych źródeł **litu** (tzw. trójkąt litowy Chile-Argentyna-Boliwia). Lit odzyskuje się z solanki przez odparowanie w klimacie skrajnie suchym — tu warunkiem istnienia złoża jest **klimat**, a nie tylko geologia." }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Czołowi producenci wybranych surowców",
+          "caption": "Stan orientacyjny, ok. 2022-2023. Kolejność bywa zmienna, ale skład czołówki jest trwały — to on jest sprawdzany na maturze.",
+          "headers": ["Surowiec", "Grupa", "Czołowi producenci", "Uwaga"],
+          "rows": [
+            ["Ropa naftowa", "energetyczny", "USA, Arabia Saudyjska, Rosja", "Największe **zasoby**: Wenezuela i Arabia Saudyjska — nie mylić z wydobyciem"],
+            ["Gaz ziemny", "energetyczny", "USA, Rosja, Iran", "Handel wymaga gazociągów lub terminali LNG"],
+            ["Węgiel kamienny", "energetyczny", "Chiny, Indie, Indonezja", "Chiny wydobywają ok. połowy światowej produkcji"],
+            ["Rudy żelaza", "metaliczny", "Australia, Brazylia, Chiny", "Australia i Brazylia dominują w **eksporcie**"],
+            ["Rudy miedzi", "metaliczny", "Chile, Peru, DR Konga", "Andy i Copperbelt"],
+            ["Kobalt", "metaliczny", "DR Konga (ok. 70%)", "Surowiec krytyczny dla akumulatorów"],
+            ["Boksyty", "metaliczny", "Australia, Gwinea, Chiny", "Wietrzenie laterytowe w klimacie gorącym i wilgotnym"],
+            ["Fosforyty", "chemiczny", "Chiny, Maroko, USA", "Maroko ma zdecydowanie największe **zasoby**"],
+            ["Sole potasowe", "chemiczny", "Kanada, Rosja, Białoruś", "Podstawa nawozów potasowych"]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Klątwa surowcowa w Nigerii",
+          "region": "Delta Nigru, Nigeria",
+          "text": "Nigeria jest największym producentem ropy naftowej w Afryce, a surowce dają jej **ponad 80% wpływów z eksportu**. Mimo to PKB per capita pozostaje niskie, a znaczna część mieszkańców delty żyje w ubóstwie. Mechanizm zwany **klątwą surowcową** ma trzy elementy. Po pierwsze, **choroba holenderska**: napływ dewiz z ropy umacnia walutę, przez co rodzime rolnictwo i przemysł tracą konkurencyjność w eksporcie. Po drugie, **renta surowcowa** trafia do budżetu i wąskich grup, co sprzyja korupcji i osłabia bodziec do budowania innych gałęzi gospodarki. Po trzecie, gospodarka staje się **zakładnikiem cen na giełdach światowych** — spadek notowań ropy natychmiast przekłada się na kryzys budżetowy. Do tego dochodzą wycieki ropy i wypalanie gazu towarzyszącego, które zniszczyły łowiska i pola uprawne delty.",
+          "takeaway": "Bogactwo surowcowe **nie gwarantuje rozwoju** — decyduje o nim to, czy renta surowcowa zostanie zainwestowana w inne sektory. Kontrprzykłady: Norwegia (fundusz naftowy, dywersyfikacja) i Botswana (diamenty). Klątwa jest więc problemem instytucji, nie geologii."
+        },
+        {
+          "type": "matching",
+          "title": "Surowiec a region wydobycia",
+          "instruction": "Połącz surowiec z regionem, który jest jego głównym światowym dostawcą.",
+          "pairs": [
+            { "left": "Rudy żelaza", "right": "Pilbara w Australii Zachodniej" },
+            { "left": "Rudy miedzi", "right": "Andy Środkowe w Chile i Peru" },
+            { "left": "Kobalt", "right": "Pas Miedzionośny w DR Konga" },
+            { "left": "Metale ziem rzadkich", "right": "Złoże Bajan Obo w Chinach" },
+            { "left": "Fosforyty", "right": "Maroko i Sahara Zachodnia" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Rezerwy pewnego surowca wynoszą 12 mld ton, a roczne wydobycie 150 mln ton. Jaka jest wystarczalność zasobów?",
+          "options": ["8 lat", "80 lat", "800 lat", "18 lat"],
+          "correctIndex": 1,
+          "explanation": "Podstawiamy do wzoru $W = \\frac{R}{P}$, pamiętając o **ujednoliceniu jednostek**: 12 mld t = 12 000 mln t. Zatem $W = \\frac{12\\,000}{150} = 80$ lat. Najczęstszy błąd w tym zadaniu to zgubienie rzędu wielkości przy przeliczaniu miliardów na miliony — zawsze zapisuj obie liczby w tej samej jednostce, zanim podzielisz."
+        },
+        {
+          "type": "quiz",
+          "question": "Wystarczalność zasobów ropy naftowej na świecie od kilkudziesięciu lat utrzymuje się na poziomie ok. 40-50 lat, choć przez cały ten czas ropę intensywnie wydobywano. Jak to wyjaśnić?",
+          "options": [
+            "Ropa naftowa jest zasobem odnawialnym i odtwarza się w tempie zbliżonym do wydobycia",
+            "Rezerwy rosną wraz z nowymi odkryciami oraz wzrostem cen i postępem technicznym, które przekwalifikowują złoża nieopłacalne w opłacalne",
+            "Statystyki wystarczalności są zafałszowane przez kraje OPEC i nie mają wartości poznawczej",
+            "Zużycie ropy naftowej na świecie systematycznie spada, więc mianownik wskaźnika maleje"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Rezerwy nie są liczbą stałą.** Ich wielkość zależy nie tylko od geologii, ale też od ceny surowca i dostępnej technologii. Wzrost cen oraz takie wynalazki jak szczelinowanie hydrauliczne czy wiercenia głębokomorskie przenoszą złoża z kategorii pozabilansowych do przemysłowych — rezerwy rosną **bez odkrycia ani jednej nowej kropli ropy**. Do tego dochodzą realne odkrycia. Dlatego wskaźnik R/P należy czytać jako fotografię obecnej sytuacji, a nie prognozę końca surowca."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy rzeczy, które CKE sprawdza w tym temacie najchętniej. **(1) Wystarczalność** — zadanie obliczeniowe plus polecenie „oceń, czy oznacza to wyczerpanie surowca za tyle lat”; poprawna odpowiedź zawsze wskazuje na **zmienność rezerw i tempa wydobycia**. **(2) Wyjaśnienie rozmieszczenia** — nie pisz „bo tam są złoża”, tylko wskaż **proces geologiczny**: baseny sedymentacyjne dla węgla i ropy, strefy subdukcji dla rud miedzi, wietrzenie laterytowe dla boksytów, ewaporaty dla soli. **(3) Skutki gospodarki surowcowej** — umiej podać po dwa argumenty za i przeciw (wpływy z eksportu, miejsca pracy kontra klątwa surowcowa, degradacja środowiska, zależność od cen światowych). Przy okazji zapamiętaj różnicę: **największe zasoby a największe wydobycie to zwykle inne kraje** (np. ropa: zasoby — Wenezuela, wydobycie — USA)."
+        }
+      ]
+    },
+    {
+      "slug": "czynniki-lokalizacji-dzialalnosci-gospodarczej",
+      "title": "Czynniki lokalizacji działalności gospodarczej",
+      "summary": "Przyrodnicze i pozaprzyrodnicze czynniki lokalizacji, wskaźnik materiałowy Webera, historyczna zmiana znaczenia poszczególnych czynników oraz rola specjalnych stref ekonomicznych.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Dlaczego huta stoi akurat tam, gdzie stoi? Dlaczego piekarnia jest w każdym mieście, a fabryka mikroprocesorów tylko w kilku miejscach na świecie? Decyzja o **lokalizacji zakładu** nigdy nie jest przypadkowa — przedsiębiorca szuka miejsca, w którym **suma kosztów wytworzenia i dostarczenia wyrobu do klienta będzie najmniejsza**. Zestaw okoliczności, które o tym rozstrzygają, nazywamy **czynnikami lokalizacji**. W tej lekcji poznasz je po kolei, nauczysz się rozpoznawać, który z nich w danym przypadku decyduje, i zobaczysz, dlaczego ich hierarchia zmieniła się w ciągu ostatnich dwustu lat niemal na odwrót."
+        },
+        {
+          "type": "definition",
+          "term": "Czynniki lokalizacji",
+          "text": "Ogół warunków, które sprawiają, że umieszczenie danej działalności w konkretnym miejscu jest **korzystniejsze niż w innym**. Dzieli się je na **przyrodnicze** (niezależne od człowieka: surowce, woda, energia, ukształtowanie terenu, klimat) i **pozaprzyrodnicze**, czyli społeczno-ekonomiczne i polityczne (rynek zbytu, siła robocza, kapitał, transport, prawo, ekologia).",
+          "note": "Rozróżniaj też lokalizację **przymusową** (zakład musi stać w jednym konkretnym miejscu — kopalnia, elektrownia wodna, uzdrowisko), **związaną** (dopuszczalny jest ograniczony obszar — cukrownia w rejonie upraw buraka) i **swobodną** (może stanąć praktycznie wszędzie — montownia elektroniki, call center)."
+        },
+        {
+          "type": "classification",
+          "title": "Czynniki lokalizacji według rodzaju",
+          "caption": "W zadaniach maturalnych zwykle trzeba wskazać jeden czynnik DOMINUJĄCY — ten, bez którego zakład w danym miejscu byłby nieopłacalny.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Wynikają z **cech środowiska geograficznego** i są w zasadzie niezmienne w krótkim okresie. Ich znaczenie maleje wraz z rozwojem transportu i przesyłu energii, ale w branżach surowco-, wodo- i energochłonnych pozostaje decydujące.",
+              "examples": ["baza surowcowa", "zasoby wodne", "źródła energii", "ukształtowanie i nośność terenu", "klimat", "walory przyrodnicze (turystyka)"]
+            },
+            {
+              "name": "Ekonomiczne",
+              "description": "Dotyczą **kosztów i dostępności czynników produkcji** oraz zbytu. To one dziś najczęściej rozstrzygają o lokalizacji, bo różnice między krajami w kosztach pracy czy dostępie do kapitału są ogromne.",
+              "examples": ["rynek zbytu", "zasoby i koszt siły roboczej", "dostępność kapitału", "infrastruktura transportowa", "korzyści aglomeracji", "zaplecze naukowo-badawcze"]
+            },
+            {
+              "name": "Społeczno-polityczne i ekologiczne",
+              "description": "Tworzone przez **decyzje państwa i postawy społeczeństwa**. Są najbardziej zmienne — jedna ustawa może uczynić region atrakcyjnym albo zamkniętym dla inwestycji.",
+              "examples": ["ulgi podatkowe i specjalne strefy ekonomiczne", "stabilność polityczna", "przepisy o ochronie środowiska", "obszary chronione", "protesty mieszkańców (efekt NIMBY)", "tradycje przemysłowe regionu"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Osiem kluczowych czynników lokalizacji",
+          "caption": "Kolumna „mechanizm” to dokładnie to, czego oczekuje polecenie „wyjaśnij, dlaczego”.",
+          "headers": ["Czynnik", "Mechanizm działania", "Branże, dla których jest decydujący"],
+          "rows": [
+            ["Surowcowy", "Gdy surowiec jest **ciężki, tani i traci masę w produkcji**, taniej jest przewieźć gotowy wyrób niż surowiec", "hutnictwo, cementownie, cukrownie, przemysł drzewny"],
+            ["Transportowy", "Miejsce **przeładunku między gałęziami transportu** eliminuje jeden kosztowny etap przewozu", "rafinerie i huty nadmorskie, centra logistyczne, przemysł portowy"],
+            ["Rynkowy", "Gdy wyrób jest **nietrwały, kruchy lub zyskuje masę** (np. przez dodanie wody), musi powstawać blisko odbiorcy", "piekarnie, mleczarnie, browary, poligrafia, meblarstwo"],
+            ["Siły roboczej", "Rozstrzyga albo **niski koszt pracy**, albo **wysokie kwalifikacje** — dwa przeciwne bieguny tego samego czynnika", "odzieżowy i obuwniczy (tania praca), farmacja i lotnictwo (kwalifikacje)"],
+            ["Kapitału", "Duże inwestycje wymagają dostępu do **finansowania i inwestorów zagranicznych**; kapitał płynie tam, gdzie ryzyko jest niskie", "przemysł zaawansowanych technologii, motoryzacja, usługi finansowe"],
+            ["Aglomeracji", "Skupienie firm daje **korzyści zewnętrzne**: wspólni dostawcy, rynek specjalistów, szybki przepływ wiedzy (klastry)", "elektronika, informatyka, motoryzacja, przemysł filmowy"],
+            ["Polityczny", "Państwo **zmienia opłacalność** przez ulgi, dotacje, cła i strefy ekonomiczne albo przez zakazy i niestabilność", "inwestycje zagraniczne w SSE, przemysł zbrojeniowy"],
+            ["Ekologiczny", "Normy emisji, obszary chronione i sprzeciw mieszkańców **wykluczają część terenu** albo podnoszą koszty inwestycji", "energetyka, przemysł chemiczny, składowiska, zakłady uciążliwe"]
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Wskaźnik materiałowy Webera",
+          "expression": "W_m = \\frac{M_s}{M_p}",
+          "variables": [
+            { "symbol": "W_m", "meaning": "wskaźnik materiałowy" },
+            { "symbol": "M_s", "meaning": "masa surowców zużytych do wytworzenia wyrobu" },
+            { "symbol": "M_p", "meaning": "masa gotowego wyrobu" }
+          ],
+          "caption": "Reguła Alfreda Webera: jeśli $W_m > 1$ (produkcja **traci masę**), opłaca się lokalizować zakład **przy surowcu** — nie ma sensu wozić odpadu. Jeśli $W_m < 1$ (produkcja **zyskuje masę**, np. przez dolanie wody), opłaca się lokalizacja **przy rynku zbytu**. Przykład: z ok. 7 ton buraków cukrowych powstaje 1 tona cukru, więc $W_m \\approx 7$ — dlatego cukrownie stoją wśród pól buraczanych, a nie w wielkich miastach."
+        },
+        {
+          "type": "compare",
+          "title": "Lokalizacja przysurowcowa a przyrynkowa",
+          "leftLabel": "Przy surowcu (materiałochłonna)",
+          "rightLabel": "Przy rynku zbytu",
+          "rows": [
+            { "aspect": "Wskaźnik materiałowy", "left": "$W_m > 1$ — produkcja traci masę", "right": "$W_m < 1$ — produkcja zyskuje masę" },
+            { "aspect": "Co taniej przewieźć", "left": "Gotowy wyrób", "right": "Surowiec (albo składniki lekkie i trwałe)" },
+            { "aspect": "Cecha wyrobu", "left": "Trwały, znoszący transport", "right": "Nietrwały, kruchy albo o dużej objętości" },
+            { "aspect": "Przykłady", "left": "Cementownia, cukrownia, huta, tartak", "right": "Piekarnia, mleczarnia, browar, rozlewnia wód" },
+            { "aspect": "Skutek przestrzenny", "left": "Zakłady skupione w regionach surowcowych", "right": "Zakłady **rozproszone** — po jednym przy każdym większym mieście" }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Jak zmieniała się hierarchia czynników lokalizacji",
+          "caption": "Kierunek zmian jest jednoznaczny: od przymusu narzuconego przez przyrodę do swobody, w której decydują koszt pracy, kapitał i polityka.",
+          "events": [
+            {
+              "period": "XVIII-XIX w.",
+              "label": "Dyktat węgla i wody",
+              "text": "Energii nie dało się przesyłać, więc fabryka musiała stanąć **na złożu węgla lub przy rzece**. Tak powstały wielkie okręgi przemysłowe na zagłębiach węglowych: Zagłębie Ruhry, angielskie Black Country, Górnośląski Okręg Przemysłowy. Dominują czynniki **surowcowy i energetyczny**."
+            },
+            {
+              "period": "1. połowa XX w.",
+              "label": "Elektryczność i kolej rozluźniają więzy",
+              "text": "Prąd można przesłać linią wysokiego napięcia, a kolej i statki parowe obniżają koszt przewozu. Zakład nie musi już stać na węglu — rośnie znaczenie czynników **transportowego i rynkowego**, przemysł zaczyna wychodzić poza zagłębia."
+            },
+            {
+              "period": "Lata 60.-80. XX w.",
+              "label": "Konteneryzacja i lokalizacja przymorska",
+              "text": "Radykalny spadek kosztów transportu morskiego sprawia, że **własne surowce przestają być warunkiem rozwoju przemysłu ciężkiego**. Japonia buduje huty na wybrzeżu, oparte w całości na rudzie i węglu importowanych z Australii i Brazylii. Zaczyna się przenoszenie produkcji do krajów tańszych."
+            },
+            {
+              "period": "Przełom XX i XXI w.",
+              "label": "Globalizacja: praca, kapitał, polityka",
+              "text": "Korporacje transnarodowe lokują fabryki tam, gdzie **koszt pracy jest najniższy, a państwo oferuje ulgi**. Rozkwitają specjalne strefy ekonomiczne, a w krajach rozwiniętych rośnie znaczenie czynników **aglomeracji, zaplecza naukowego i ekologicznego**."
+            },
+            {
+              "period": "Lata 20. XXI w.",
+              "label": "Bezpieczeństwo dostaw i zielona energia",
+              "text": "Pandemia i napięcia geopolityczne pokazały kruchość długich łańcuchów dostaw, więc rośnie znaczenie **nearshoringu** (przenoszenia produkcji bliżej rynku) i stabilności politycznej. Nowym czynnikiem staje się dostęp do **taniej energii niskoemisyjnej** — istotny np. przy lokalizacji centrów danych i hut aluminium."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Specjalna strefa ekonomiczna (SSE)",
+          "text": "Wyodrębniony administracyjnie obszar, na którym działalność gospodarcza prowadzona jest na **preferencyjnych warunkach** — przede wszystkim ze zwolnieniem z podatku dochodowego, często także z przygotowaną infrastrukturą i uproszczonymi procedurami. SSE to **sztucznie wzmocniony czynnik polityczny**: państwo świadomie zmienia rachunek opłacalności, by przyciągnąć inwestora tam, gdzie sam by nie przyszedł.",
+          "note": "Cel SSE jest zwykle podwójny: przyciągnąć kapitał zagraniczny oraz **ograniczyć bezrobocie w regionach problemowych** — starych okręgach przemysłowych i obszarach o niskim poziomie rozwoju."
+        },
+        {
+          "type": "case-study",
+          "title": "Specjalne strefy ekonomiczne w Polsce",
+          "region": "Polska — Mielec, Górny Śląsk",
+          "text": "Pierwszą polską SSE utworzono w **1995 r. w Mielcu**, gdzie po załamaniu produkcji lotniczej bezrobocie sięgnęło kilkunastu procent. Inwestorom zaoferowano zwolnienie z podatku dochodowego, uzbrojone tereny i gotowe hale — czyli obniżono koszt wejścia. W kolejnych latach powstało 14 stref; największą, **katowicką**, zdominowała motoryzacja: fabryki samochodów w Gliwicach i Tychach ściągnęły za sobą dziesiątki kooperantów, uruchamiając **korzyści aglomeracji**. Bilans jest jednak dyskusyjny: część inwestycji powstałaby i bez ulg, a niektóre firmy jedynie przeniosły się z sąsiednich gmin, więc korzyść dla kraju była mniejsza niż dla samej strefy. W **2018 r.** system przebudowano — ustawa o wspieraniu nowych inwestycji objęła preferencjami **całe terytorium Polski** (tzw. Polska Strefa Inwestycji), a wsparcie uzależniono od jakości inwestycji i stopy bezrobocia w powiecie.",
+          "takeaway": "SSE pokazują, że **czynnik polityczny potrafi przeważyć nad przyrodniczym** — inwestycja trafia tam, gdzie nie ma ani surowca, ani rynku, tylko ulga podatkowa. Ale skuteczność takiego narzędzia mierzy się nie liczbą inwestycji w strefie, lecz tym, ile z nich **nie powstałoby bez niej**."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. **(1) Korzyści aglomeracji a niekorzyści aglomeracji** — skupienie firm najpierw obniża koszty (wspólni dostawcy, rynek pracy), ale po przekroczeniu pewnej wielkości zaczyna je podnosić (drogie grunty, kongestia, zanieczyszczenie) i uruchamia **deglomerację**, czyli wypychanie działalności poza miasto. **(2) Czynnik siły roboczej nie znaczy „tania siła robocza”** — dla przemysłu odzieżowego decyduje niski koszt, ale dla farmacji czy lotnictwa **wysokie kwalifikacje**, i to mimo wysokich płac. **(3) Lokalizacja przymusowa nie jest tym samym co lokalizacja związana** — kopalnia musi stać na złożu (przymusowa), cukrownia może stanąć w dowolnym miejscu regionu buraczanego (związana)."
+        },
+        {
+          "type": "matching",
+          "title": "Zakład a dominujący czynnik lokalizacji",
+          "instruction": "Dopasuj przedsiębiorstwo do czynnika, który w jego przypadku rozstrzyga o lokalizacji.",
+          "pairs": [
+            { "left": "Cukrownia w rejonie Kujaw", "right": "Czynnik surowcowy" },
+            { "left": "Huta aluminium przy elektrowni wodnej w Norwegii", "right": "Czynnik energetyczny" },
+            { "left": "Szwalnia odzieży w Bangladeszu", "right": "Czynnik taniej siły roboczej" },
+            { "left": "Mleczarnia i piekarnia przy dużym mieście", "right": "Czynnik rynkowy" },
+            { "left": "Firmy informatyczne w Dolinie Krzemowej", "right": "Czynnik aglomeracji i zaplecza naukowo-badawczego" },
+            { "left": "Rafineria w Gdańsku", "right": "Czynnik transportowy" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Do wyprodukowania 1 tony cementu zużywa się ok. 1,6 tony surowców skalnych. Gdzie należy lokalizować cementownię i dlaczego?",
+          "options": [
+            "Przy rynku zbytu, bo cement kupują głównie mieszkańcy dużych miast",
+            "Przy złożu wapienia i margli, bo wskaźnik materiałowy jest większy od 1 — produkcja traci masę, więc taniej jest przewozić gotowy cement niż surowiec",
+            "W porcie morskim, bo cement jest towarem eksportowym o wysokiej wartości jednostkowej",
+            "W dowolnym miejscu, bo koszt transportu surowców skalnych jest pomijalnie mały"
+          ],
+          "correctIndex": 1,
+          "explanation": "Skoro $W_m = \\frac{1,6}{1,0} = 1,6 > 1$, produkcja **traci masę** — z każdej przewiezionej tony surowca 0,6 tony i tak trafiłoby do odpadu. Przewiezienie gotowego cementu jest więc tańsze niż przewiezienie surowca. Dodatkowym argumentem jest **niska wartość jednostkowa** surowców skalnych: koszt transportu szybko przewyższa wartość samego materiału. Dlatego cementownie w Polsce leżą tam, gdzie wapienie — na Wyżynie Krakowsko-Częstochowskiej, Kielecczyźnie i Lubelszczyźnie, a nie przy największych rynkach zbytu."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw czynników najlepiej wyjaśnia, dlaczego korporacje ulokowały fabryki odzieży w Bangladeszu, a centra badawcze w Kalifornii?",
+          "options": [
+            "W obu wypadkach zdecydował czynnik surowcowy — bawełna i krzem",
+            "W Bangladeszu — niski koszt siły roboczej i ulgi w strefach eksportowych; w Kalifornii — wysokie kwalifikacje kadr, zaplecze naukowe i korzyści aglomeracji",
+            "W obu wypadkach zdecydował czynnik transportowy, bo oba regiony leżą nad oceanem",
+            "W Bangladeszu — czynnik rynkowy, bo to duży rynek zbytu; w Kalifornii — czynnik ekologiczny"
+          ],
+          "correctIndex": 1,
+          "explanation": "To ten sam czynnik — **siła robocza** — działający dwoma przeciwnymi końcami. Przemysł odzieżowy jest **pracochłonny i technologicznie prosty**, więc o jego lokalizacji decyduje wyłącznie koszt pracy, wzmocniony ulgami w strefach przetwórstwa eksportowego. Działalność badawczo-rozwojowa jest **wiedzochłonna**, więc opłaca się płacić wysokie wynagrodzenia w miejscu, gdzie są uniwersytety, kapitał wysokiego ryzyka i gęsta sieć firm wymieniających się specjalistami (korzyści aglomeracji). Zauważ też, że w obu przypadkach czynniki przyrodnicze nie odgrywają praktycznie żadnej roli — to typowe dla współczesnej gospodarki."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Schemat odpowiedzi, który daje punkty w zadaniach o lokalizację. **Krok 1** — sprawdź, czy surowiec jest ciężki i czy produkcja traci masę; jeśli tak, odpowiedź brzmi „lokalizacja przysurowcowa”. **Krok 2** — sprawdź cechy wyrobu: nietrwały, kruchy albo zyskujący masę oznacza lokalizację przyrynkową. **Krok 3** — jeśli ani surowiec, ani wyrób niczego nie narzucają, szukaj czynnika **pozaprzyrodniczego**: koszt lub kwalifikacje pracy, ulgi podatkowe, bliskość kooperantów. Formułując zdanie, zawsze łącz czynnik ze **skutkiem ekonomicznym**: nie „bo tam jest tania siła robocza”, lecz „bo niskie koszty pracy obniżają koszt jednostkowy wyrobu w branży pracochłonnej”. I pamiętaj o poleceniach typu „podaj po jednym argumencie za i przeciw” — czynnik ekologiczny oraz protesty mieszkańców to najczęściej pomijana, a punktowana strona medalu."
+        }
+      ]
+    }
+  ]
+}

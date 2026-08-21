@@ -1,0 +1,1950 @@
+{
+  "topicSlug": "hydrosfera",
+  "lessons": [
+    {
+      "slug": "zasoby-wodne-i-obieg-wody",
+      "title": "Zasoby wodne Ziemi i obieg wody w przyrodzie",
+      "summary": "Ile wody jest na Ziemi, w jakiej postaci występuje i jak krąży między oceanem, atmosferą i lądem — z bilansem wodnym jako narzędziem obliczeniowym.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Woda jest jedyną substancją, która w warunkach panujących na powierzchni Ziemi występuje jednocześnie w **trzech stanach skupienia** — i właśnie dlatego może krążyć. Ocean, chmura, lodowiec, rzeka i wilgotna gleba to nie osobne zbiorniki, lecz kolejne przystanki tej samej wody, która od miliardów lat porusza się w zamkniętym obiegu napędzanym energią Słońca i siłą ciężkości. W tej lekcji ustalisz najpierw, **ile** tej wody jest i **gdzie** się znajduje (bo intuicja zwykle myli — słodkiej wody dostępnej dla człowieka jest zaskakująco mało), a potem prześledzisz **mechanizm** jej krążenia i nauczysz się zapisywać go równaniem bilansu wodnego. Bilans wodny wraca na maturze rozszerzonej w zadaniach obliczeniowych i w poleceniach „wyjaśnij, dlaczego odpływ z tego obszaru jest tak mały” — bez niego reszta działu wisi w powietrzu."
+        },
+        {
+          "type": "definition",
+          "term": "Hydrosfera",
+          "text": "**Wodna powłoka Ziemi** — ogół wód występujących na powierzchni planety, pod nią i w atmosferze, niezależnie od stanu skupienia. Obejmuje wszechocean, wody powierzchniowe lądów (rzeki, jeziora, bagna), lodowce i lądolody, wody podziemne, wodę zawartą w glebie oraz parę wodną i wodę chmurową w atmosferze. Hydrosfera przenika pozostałe powłoki: kontaktuje się z atmosferą (parowanie, opad), z litosferą (infiltracja, wietrzenie) i z biosferą (transpiracja, woda w organizmach).",
+          "note": "Uwaga terminologiczna: **hydrosfera** to cała woda Ziemi, a **wszechocean** — tylko jej słona część powierzchniowa. W kluczach CKE te pojęcia nie są wymienne."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Zasoby wodne Ziemi w liczbach",
+          "items": [
+            {
+              "value": "ok. 1386 mln",
+              "unit": "km³",
+              "label": "Całkowita objętość hydrosfery",
+              "note": "Gdyby rozlać tę wodę równomiernie po całej powierzchni Ziemi, warstwa miałaby ok. 2,7 km grubości."
+            },
+            {
+              "value": "96,5",
+              "unit": "%",
+              "label": "Udział wód słonych wszechoceanu",
+              "note": "Do wód słonych dolicza się jeszcze ok. 1% słonych wód podziemnych i jezior bezodpływowych."
+            },
+            {
+              "value": "ok. 2,5",
+              "unit": "%",
+              "label": "Udział wód słodkich w hydrosferze"
+            },
+            {
+              "value": "ok. 0,3",
+              "unit": "%",
+              "label": "Udział wód łatwo dostępnych (jeziora i rzeki) w zasobach wody słodkiej",
+              "note": "To z tej mikroskopijnej części zasobów korzysta praktycznie cała gospodarka człowieka."
+            },
+            {
+              "value": "71",
+              "unit": "%",
+              "label": "Udział powierzchni Ziemi zajęty przez wody wszechoceanu"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura zasobów wody słodkiej na Ziemi",
+          "unit": "%",
+          "labels": [
+            "Lodowce i pokrywy lodowe",
+            "Wody podziemne",
+            "Wieloletnia zmarzlina",
+            "Jeziora i bagna",
+            "Wilgotność gleby",
+            "Atmosfera",
+            "Rzeki"
+          ],
+          "series": [
+            {
+              "name": "Udział w zasobach wód słodkich",
+              "values": [
+                68.7,
+                30.1,
+                0.35,
+                0.29,
+                0.05,
+                0.04,
+                0.006
+              ]
+            }
+          ],
+          "caption": "Dwa pierwsze słupki to razem ok. 99% wody słodkiej — i obydwa są trudno dostępne: lód leży głównie na Antarktydzie i Grenlandii, a znaczna część wód podziemnych zalega zbyt głęboko, by opłacało się je wydobywać. Zwróć uwagę na ostatni słupek: rzeki, z których człowiek czerpie najwięcej, to zaledwie sześć tysięcznych procenta zasobów słodkiej wody."
+        },
+        {
+          "type": "cycle",
+          "title": "Obieg wody w przyrodzie",
+          "caption": "Kliknij kolejne etapy. Obieg jest zamknięty: ilość wody na Ziemi praktycznie się nie zmienia, zmienia się tylko jej rozmieszczenie między zbiornikami. Napędzają go dwie siły — **energia słoneczna** (unosi wodę wbrew ciężkości, zmieniając ją w parę) i **siła ciężkości** (sprowadza ją z powrotem w dół).",
+          "stages": [
+            {
+              "name": "Parowanie i transpiracja",
+              "text": "**Parowanie (ewaporacja)** to przechodzenie wody ze stanu ciekłego w parę wodną z powierzchni oceanów, jezior, rzek i wilgotnej gleby. **Transpiracja** to oddawanie pary wodnej przez rośliny, głównie przez aparaty szparkowe liści. Razem tworzą **ewapotranspirację**. Proces pochłania ogromne ilości ciepła (ok. 2,45 MJ na 1 kg wody), więc parowanie schładza powierzchnię, a energia zostaje zmagazynowana jako **ciepło utajone**. Ok. 86% pary wodnej pochodzi z wszechoceanu."
+            },
+            {
+              "name": "Unoszenie i kondensacja",
+              "text": "Wilgotne powietrze unosi się (konwekcja, wypiętrzanie na froncie lub na stoku górskim) i adiabatycznie się ochładza. Po osiągnięciu **temperatury punktu rosy** para wodna skrapla się na jądrach kondensacji — powstają chmury. Uwalnia się przy tym zmagazynowane wcześniej ciepło utajone, które ogrzewa atmosferę. Poniżej 0 °C zachodzi **resublimacja** i powstają kryształki lodu."
+            },
+            {
+              "name": "Opad i adwekcja pary",
+              "text": "Gdy krople lub kryształki urosną na tyle, że opór powietrza przestaje je utrzymywać, spadają jako **opad atmosferyczny** — deszcz, śnieg, grad. Kluczowe dla obiegu jest to, że między parowaniem a opadem para wodna zostaje przeniesiona przez wiatr (**adwekcja**) — dzięki temu woda wyparowana nad oceanem może spaść nad wnętrzem kontynentu. Przeciętnie cząsteczka wody spędza w atmosferze zaledwie ok. 9 dni."
+            },
+            {
+              "name": "Rozdział opadu na powierzchni lądu",
+              "text": "Woda, która spadła na ląd, dzieli się na trzy drogi: część **paruje** z powrotem (także z powierzchni liści — to intercepcja), część **infiltruje** w głąb gruntu, a część odpływa po powierzchni jako **spływ powierzchniowy**. O proporcjach decydują: przepuszczalność podłoża, nachylenie stoku, pokrycie roślinnością, natężenie opadu i stopień nasycenia gleby wodą — dlatego ten sam deszcz nad lasem i nad miastem daje zupełnie inne skutki."
+            },
+            {
+              "name": "Odpływ powierzchniowy i podziemny",
+              "text": "Spływ powierzchniowy koncentruje się w korytach i tworzy **odpływ powierzchniowy** rzek. Woda zinfiltrowana zasila **wody podziemne** i przemieszcza się znacznie wolniej, tworząc **odpływ podziemny**, który wraca do rzek przez źródła i wysięki — i to on utrzymuje przepływ rzek w okresie bezopadowym. Suma obu składników to **odpływ całkowity**."
+            },
+            {
+              "name": "Powrót do oceanu i retencja",
+              "text": "Odpływ rzeczny i podziemny wraca do wszechoceanu i obieg się zamyka. Po drodze część wody zostaje czasowo zatrzymana — to **retencja**: w jeziorach, bagnach, pokrywie śnieżnej, lodowcach, glebie i warstwach wodonośnych. Retencja spłaszcza wahania: opóźnia falę wezbraniową i podtrzymuje przepływ w czasie suszy. Im dłuższy czas przebywania wody w zbiorniku, tym wolniej reaguje on na zmiany klimatu."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Mały i duży obieg wody",
+          "leftLabel": "Mały (lokalny) obieg wody",
+          "rightLabel": "Duży (globalny) obieg wody",
+          "rows": [
+            {
+              "aspect": "Przebieg",
+              "left": "Woda paruje i wraca opadem **w obrębie tej samej powierzchni** — nad oceanem albo nad lądem, bez przekraczania linii brzegowej.",
+              "right": "Woda wyparowana nad **oceanem** zostaje przeniesiona przez wiatr nad **ląd**, tam spada jako opad i wraca do oceanu odpływem rzecznym i podziemnym."
+            },
+            {
+              "aspect": "Liczba ogniw",
+              "left": "Parowanie → kondensacja → opad (3 ogniwa).",
+              "right": "Parowanie → adwekcja → kondensacja → opad → spływ i infiltracja → odpływ (6 ogniw)."
+            },
+            {
+              "aspect": "Rola w bilansie",
+              "left": "Dominuje ilościowo: większość opadu nad oceanem pochodzi z parowania oceanicznego, a znaczna część opadu nad wielkimi kontynentami — z lokalnego recyklingu wilgoci (np. dorzecze Amazonki).",
+              "right": "Odpowiada za **nadwyżkę opadu nad parowaniem na lądach**: ok. 47 tys. km³ rocznie. To dokładnie ta woda, która odpływa rzekami do oceanu."
+            },
+            {
+              "aspect": "Znaczenie praktyczne",
+              "left": "Wyjaśnia, dlaczego wylesienie zmniejsza opady lokalne — usunięcie lasu wyłącza transpirację, czyli źródło pary wodnej.",
+              "right": "Wyjaśnia zaopatrzenie kontynentów w wodę słodką i pozwala policzyć odnawialne zasoby wodne państwa."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Równanie bilansu wodnego",
+          "expression": "P = E + H + \\Delta R",
+          "variables": [
+            {
+              "symbol": "P",
+              "meaning": "opad atmosferyczny (mm lub km³) — przychód wody"
+            },
+            {
+              "symbol": "E",
+              "meaning": "parowanie terenowe, czyli ewapotranspiracja — rozchód"
+            },
+            {
+              "symbol": "H",
+              "meaning": "odpływ całkowity: powierzchniowy + podziemny — rozchód"
+            },
+            {
+              "symbol": "\\Delta R",
+              "meaning": "zmiana retencji w rozpatrywanym okresie"
+            }
+          ],
+          "caption": "**Bilans wodny** to zestawienie przychodów i rozchodów wody dla wybranego obszaru i okresu. Dla wielolecia przyjmuje się $\\Delta R = 0$ (retencja się odtwarza), więc równanie upraszcza się do $P = E + H$. Iloraz $\\alpha = H/P$ to **współczynnik odpływu** — mówi, jaka część opadu odpłynęła. W Polsce wynosi średnio ok. 0,27, czyli odpływa nieco ponad ćwierć opadu, a reszta paruje."
+        },
+        {
+          "type": "table",
+          "title": "Globalny bilans wodny — wartości roczne",
+          "headers": [
+            "Obszar",
+            "Opad (tys. km³)",
+            "Parowanie (tys. km³)",
+            "Bilans (P − E)"
+          ],
+          "rows": [
+            [
+              "Wszechocean",
+              "458",
+              "505",
+              "−47 tys. km³ (deficyt)"
+            ],
+            [
+              "Lądy",
+              "119",
+              "72",
+              "+47 tys. km³ (nadwyżka)"
+            ],
+            [
+              "Cała Ziemia",
+              "577",
+              "577",
+              "0 — obieg zamknięty"
+            ]
+          ],
+          "caption": "Nad oceanem paruje więcej wody, niż na niego spada — nadwyżka pary jest przenoszona nad lądy. Nad lądami spada więcej, niż paruje, a różnica **47 tys. km³** wraca do oceanu odpływem rzecznym i podziemnym. To jest jednocześnie miara **odnawialnych zasobów wody słodkiej** świata."
+        },
+        {
+          "type": "definition",
+          "term": "Retencja i czas wymiany wody",
+          "text": "**Retencja** to czasowe zatrzymanie wody w danym elemencie środowiska. **Czas wymiany (odnowy)** to średni czas przebywania cząsteczki wody w zbiorniku. Wynosi on ok. **9 dni w atmosferze**, ok. **16 dni w rzekach**, ok. **17 lat w jeziorach**, od setek do tysięcy lat w wodach podziemnych, ok. **2500 lat w oceanie** i ok. **9700 lat w lodowcach**. Zasada jest prosta: **im mniejszy zbiornik i większy przepływ przez niego, tym szybsza wymiana**.",
+          "note": "Praktyczny wniosek: zanieczyszczenie rzeki „wypłucze się” w tygodnie, ale skażenie głębokiej warstwy wodonośnej utrzyma się przez pokolenia. Dlatego ochrona wód podziemnych jest ważniejsza niż ich rekultywacja — rekultywacja bywa po prostu niemożliwa."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć mylonych na maturze. (1) **Spływ powierzchniowy** to ruch wody po stoku, a **odpływ** to woda odprowadzona z całej zlewni — odpływ obejmuje też składnik podziemny. (2) **Parowanie** to proces fizyczny z każdej wilgotnej powierzchni, **transpiracja** zachodzi wyłącznie przez rośliny, a **ewapotranspiracja** to ich suma; w bilansie wodnym obszaru lądowego zawsze podstawia się ewapotranspirację. (3) **Parowanie wskaźnikowe (potencjalne)** to ilość wody, która **mogłaby** wyparować przy nieograniczonym jej dostępie, a **parowanie terenowe (rzeczywiste)** — ilość, która **faktycznie** wyparowała. Na Saharze potencjalne jest ogromne, a rzeczywiste bliskie zeru, bo nie ma czego odparowywać."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Połącz termin z obiegu wody z jego poprawną definicją.",
+          "pairs": [
+            {
+              "left": "Infiltracja",
+              "right": "Wsiąkanie wody opadowej w głąb przepuszczalnego podłoża"
+            },
+            {
+              "left": "Transpiracja",
+              "right": "Oddawanie pary wodnej do atmosfery przez aparaty szparkowe roślin"
+            },
+            {
+              "left": "Kondensacja",
+              "right": "Skraplanie pary wodnej na jądrach kondensacji, prowadzące do powstania chmury"
+            },
+            {
+              "left": "Adwekcja pary wodnej",
+              "right": "Poziome przenoszenie wilgoci przez wiatr znad oceanu nad ląd"
+            },
+            {
+              "left": "Retencja",
+              "right": "Czasowe zatrzymanie wody w jeziorze, glebie, śniegu lub warstwie wodonośnej"
+            },
+            {
+              "left": "Współczynnik odpływu",
+              "right": "Stosunek odpływu do opadu na danym obszarze"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W zlewni o powierzchni 1000 km² roczna suma opadów wyniosła 700 mm, a parowanie terenowe 480 mm. Zakładając, że retencja nie uległa zmianie, jaki był odpływ i współczynnik odpływu?",
+          "options": [
+            "Odpływ 220 mm, współczynnik odpływu ok. 0,31",
+            "Odpływ 1180 mm, współczynnik odpływu ok. 1,69",
+            "Odpływ 220 mm, współczynnik odpływu ok. 0,69",
+            "Odpływ 480 mm, współczynnik odpływu ok. 0,69"
+          ],
+          "correctIndex": 0,
+          "explanation": "Z równania $P = E + H + \\Delta R$ przy $\\Delta R = 0$ mamy $H = P - E = 700 - 480 = 220$ mm. Współczynnik odpływu to $\\alpha = H/P = 220/700 \\approx 0{,}31$. Uwaga: powierzchnia zlewni nie jest potrzebna do obliczenia współczynnika — przydałaby się dopiero, gdyby polecenie kazało podać objętość odpływu (220 mm = 0,22 m; 0,22 m × 10⁹ m² = 2,2 × 10⁸ m³)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego mimo że wody słodkie stanowią ok. 2,5% hydrosfery, człowiek realnie korzysta z ułamka tej ilości?",
+          "options": [
+            "Ponieważ większość wód słodkich jest zbyt zanieczyszczona, by dało się ją uzdatnić",
+            "Ponieważ ok. 69% wód słodkich jest uwięzione w lodowcach i lądolodach, a ok. 30% to wody podziemne, w dużej części zbyt głębokie i trudno dostępne",
+            "Ponieważ wody słodkie parują szybciej niż słone i nie zdążają się odnowić",
+            "Ponieważ prawo międzynarodowe zakazuje eksploatacji wód lodowcowych i podziemnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje struktura zasobów: lodowce i pokrywy lodowe (ok. 68,7%) leżą głównie na Antarktydzie i Grenlandii, a wody podziemne (ok. 30,1%) często zalegają na dużych głębokościach lub są silnie zmineralizowane. Na łatwo dostępne wody powierzchniowe — jeziora i rzeki — zostaje ok. 0,3% zasobów słodkich, czyli mniej niż 0,01% całej hydrosfery."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie opisuje przepływ wody w globalnym obiegu?",
+          "options": [
+            "Nad lądami parowanie przewyższa opad, a nadwyżka pary jest przenoszona nad ocean",
+            "Opad i parowanie równoważą się osobno nad oceanem i osobno nad lądem, więc odpływ rzeczny nie jest potrzebny do domknięcia bilansu",
+            "Nad oceanem parowanie przewyższa opad, nad lądami opad przewyższa parowanie, a różnica ok. 47 tys. km³ wraca do oceanu odpływem",
+            "Cała woda opadowa nad lądami pochodzi z parowania lokalnych jezior i rzek"
+          ],
+          "correctIndex": 2,
+          "explanation": "To sedno dużego obiegu wody. Ocean ma ujemny bilans (505 tys. km³ parowania wobec 458 tys. km³ opadu), lądy dodatni (119 wobec 72 tys. km³). Nadwyżka nad lądami, ok. 47 tys. km³ rocznie, spływa rzekami i wodami podziemnymi z powrotem do oceanu — i to ona stanowi odnawialne zasoby wody słodkiej świata."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach obliczeniowych z bilansu wodnego pilnuj **jednostek**: opad i parowanie CKE podaje zwykle w **milimetrach** (czyli w litrach na m², bo 1 mm = 1 dm³/m²), a odpływ bywa podany w **m³/s** albo w **km³/rok**. Przeliczenie: warstwa 1 mm na obszarze 1 km² to 1000 m³. Jeżeli w poleceniu pojawia się słowo „**w wieloleciu**” lub „**średnio w roku**”, wolno przyjąć $\\Delta R = 0$ i liczyć z $P = E + H$; jeżeli zadanie dotyczy **jednego miesiąca lub sezonu**, tego założenia przyjąć NIE wolno — wtedy zmiana retencji (np. gromadzenie się pokrywy śnieżnej zimą i jej topnienie wiosną) jest właśnie tym, o co pytają."
+        }
+      ]
+    },
+    {
+      "slug": "wszechocean-podzial-zasolenie-temperatura",
+      "title": "Wszechocean — podział, zasolenie i temperatura wód",
+      "summary": "Budowa wszechoceanu, prawo stałości składu soli oraz mechanizmy rządzące zróżnicowaniem zasolenia i temperatury wód morskich w poziomie i w pionie.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wszechocean zajmuje **ok. 71% powierzchni Ziemi** i mieści 96,5% całej wody planety. Dla geografa nie jest jednak jednorodną kałużą: ma wyraźną budowę poziomą (oceany, morza, zatoki, cieśniny) i bardzo wyraźną budowę pionową, w której gęstość, zasolenie i temperatura układają się warstwami. Cała ta lekcja opiera się na jednym mechanizmie: **woda morska zmienia swoje właściwości tam, gdzie zyskuje albo traci wodę słodką i ciepło**. Parowanie zabiera wodę, a zostawia sól. Opad, rzeka i topniejący lód dostarczają wody słodkiej i sól rozcieńczają. Jeśli zapamiętasz tę jedną zasadę, potrafisz wyjaśnić każdą mapę zasolenia, jaką CKE może ci podsunąć."
+        },
+        {
+          "type": "table",
+          "title": "Oceany wszechoceanu",
+          "headers": [
+            "Ocean",
+            "Powierzchnia (mln km²)",
+            "Średnia głębokość (m)",
+            "Największa głębokość"
+          ],
+          "rows": [
+            [
+              "Spokojny (Pacyfik)",
+              "ok. 180",
+              "ok. 4000",
+              "Głębia Challengera w Rowie Mariańskim, ok. 11 000 m"
+            ],
+            [
+              "Atlantycki",
+              "ok. 106",
+              "ok. 3300",
+              "Rów Portoryko, ok. 8400 m"
+            ],
+            [
+              "Indyjski",
+              "ok. 75",
+              "ok. 3900",
+              "Rów Sundajski (Jawajski), ok. 7450 m"
+            ],
+            [
+              "Południowy (Antarktyczny)",
+              "ok. 20",
+              "ok. 3300",
+              "Rów Sandwicha Południowego, ok. 7200 m"
+            ],
+            [
+              "Arktyczny (Lodowaty Północny)",
+              "ok. 14",
+              "ok. 1200",
+              "Basen Eurazjatycki, ok. 5500 m"
+            ]
+          ],
+          "caption": "Razem ok. **361 mln km²** i średnia głębokość ok. **3700 m**. Zwróć uwagę na Ocean Arktyczny: jest najpłytszy, bo w większości leży na **szelfie kontynentalnym** Eurazji i Ameryki Północnej. Ocean Południowy wydzielono jako osobny, bo opływa go bez przeszkód **Prąd Okołobiegunowy Antarktyczny** — jedyny prąd okrążający całą Ziemię."
+        },
+        {
+          "type": "classification",
+          "title": "Podział wód wszechoceanu",
+          "caption": "Kryterium jest zawsze to samo: **stopień izolacji od otwartego oceanu**. Im większa izolacja, tym silniej właściwości wody odbiegają od oceanicznych — i tym bardziej lokalny klimat decyduje o zasoleniu.",
+          "groups": [
+            {
+              "name": "Morza przybrzeżne (otwarte)",
+              "description": "Przylegają do kontynentu, oddzielone od oceanu tylko półwyspami, wyspami lub podwodnym progiem; wymiana wód jest **swobodna**, więc zasolenie i temperatura są zbliżone do oceanicznych.",
+              "examples": [
+                "Morze Norweskie",
+                "Morze Beringa",
+                "Morze Arabskie",
+                "Morze Ochockie"
+              ]
+            },
+            {
+              "name": "Morza śródziemne międzykontynentalne",
+              "description": "Wcinają się **między kontynenty** i łączą z oceanem wąską cieśniną. Ograniczona wymiana wód sprawia, że o zasoleniu decyduje lokalny bilans opad–parowanie.",
+              "examples": [
+                "Morze Śródziemne",
+                "Morze Czerwone",
+                "Morze Karaibskie"
+              ]
+            },
+            {
+              "name": "Morza śródziemne wewnątrzkontynentalne",
+              "description": "Wcinają się **w głąb jednego kontynentu**. Najsilniej odbiegają właściwościami od oceanu — przy dużym dopływie rzecznym silnie się wysładzają.",
+              "examples": [
+                "Morze Bałtyckie",
+                "Morze Białe",
+                "Zatoka Hudsona"
+              ]
+            },
+            {
+              "name": "Zatoki i cieśniny",
+              "description": "**Zatoka** to część morza lub oceanu wcinająca się w ląd, szeroko z nim połączona. **Cieśnina** to wąskie połączenie dwóch zbiorników wodnych, zwykle rozdzielające dwa obszary lądowe — miejsce najintensywniejszej wymiany wód.",
+              "examples": [
+                "Zatoka Meksykańska",
+                "Zatoka Perska",
+                "Cieśnina Gibraltarska",
+                "Cieśnina Beringa",
+                "Cieśniny Duńskie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Zasolenie wody morskiej",
+          "text": "**Łączna masa soli mineralnych rozpuszczonych w 1 kg wody morskiej**, wyrażana w **promilach (‰)**, czyli w gramach na kilogram. Średnie zasolenie wszechoceanu wynosi **ok. 35‰** — w każdym kilogramie wody morskiej jest ok. 35 g soli. Obowiązuje **prawo stałości składu chemicznego wód oceanicznych** (prawo Dittmara–Marceta): niezależnie od tego, czy woda ma 32‰, czy 38‰, **wzajemne proporcje głównych soli pozostają takie same** — zmienia się tylko ich stężenie. To dlatego wystarczy zmierzyć zawartość jednego jonu (np. chlorkowego) albo przewodność elektryczną, by obliczyć całe zasolenie.",
+          "note": "Zasolenie zwiększa gęstość wody i **obniża temperaturę zamarzania**: woda o zasoleniu 35‰ zamarza dopiero przy ok. −1,9 °C. Dlatego przy tej samej temperaturze powietrza Bałtyk zamarza, a Morze Norweskie nie."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Skład soli rozpuszczonych w wodzie morskiej",
+          "unit": "% masy soli",
+          "labels": [
+            "Chlorek sodu NaCl",
+            "Chlorek magnezu MgCl₂",
+            "Siarczan magnezu MgSO₄",
+            "Siarczan wapnia CaSO₄",
+            "Siarczan potasu K₂SO₄",
+            "Pozostałe"
+          ],
+          "series": [
+            {
+              "name": "Udział w masie soli",
+              "values": [
+                77.8,
+                10.9,
+                4.7,
+                3.6,
+                2.5,
+                0.5
+              ]
+            }
+          ],
+          "caption": "Ponad ¾ soli morskiej to zwykła sól kuchenna — stąd charakterystyczny słony smak. Gorzkawy posmak wody morskiej dają sole magnezu. Te proporcje są **takie same w każdym punkcie wszechoceanu**, co jest treścią prawa stałości składu chemicznego."
+        },
+        {
+          "type": "compare",
+          "title": "Czynniki kształtujące zasolenie",
+          "leftLabel": "Podwyższają zasolenie",
+          "rightLabel": "Obniżają zasolenie",
+          "rows": [
+            {
+              "aspect": "Wymiana wody z atmosferą",
+              "left": "**Intensywne parowanie** — woda odchodzi w postaci pary, a sól zostaje. To najsilniejszy czynnik podwyższający zasolenie.",
+              "right": "**Obfite opady atmosferyczne** — dostarczają wody praktycznie pozbawionej soli i rozcieńczają wodę morską."
+            },
+            {
+              "aspect": "Kontakt z lądem",
+              "left": "Brak większych rzek uchodzących do zbiornika (wybrzeża pustynne, np. Morze Czerwone, Zatoka Perska).",
+              "right": "**Duży dopływ rzeczny** — rzeki wnoszą wodę słodką; najsilniej wysładzają zbiorniki małe i płytkie (Bałtyk, Zatoka Obska)."
+            },
+            {
+              "aspect": "Procesy lodowe",
+              "left": "**Zamarzanie wody morskiej** — do kryształów lodu wbudowuje się prawie czysta woda, a sól zostaje wypchnięta do wody pod lodem (**wysalanie**).",
+              "right": "**Topnienie lodu morskiego i gór lodowych** oraz spływ z lądolodów — dostarcza wody słodkiej w wysokich szerokościach."
+            },
+            {
+              "aspect": "Krążenie wód",
+              "left": "Napływ **ciepłych prądów** ze stref zwrotnikowych o wysokim zasoleniu (np. Prąd Zatokowy nad Atlantykiem Północnym).",
+              "right": "Napływ **zimnych prądów** z obszarów polarnych oraz swobodna wymiana z otwartym oceanem, wyrównująca skrajne wartości."
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefowość zasolenia wód powierzchniowych — od bieguna do równika",
+          "caption": "Kliknij kolejne strefy. Zwróć uwagę na najważniejszy szczegół: **maksimum zasolenia NIE leży na równiku**, tylko w okolicach zwrotników. Powodem jest bilans parowania i opadu, wynikający wprost ze stref ciśnienia atmosferycznego.",
+          "zones": [
+            {
+              "name": "Strefa okołobiegunowa",
+              "latitude": "powyżej 60°",
+              "text": "**Ok. 32–33‰ — minimum globalne.** Parowanie znikome (niska temperatura), a wody słodkiej dużo: topniejący lód morski, cielenie się lodowców i wielkie rzeki syberyjskie oraz kanadyjskie uchodzące do Oceanu Arktycznego.",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa umiarkowana",
+              "latitude": "40–60°",
+              "text": "**Ok. 34–35‰.** Strefa niżów i wiatrów zachodnich: opady wyraźnie przewyższają parowanie, a rzeki dostarczają dużo wody słodkiej. Zasolenie nieco poniżej średniej oceanicznej.",
+              "tone": "water"
+            },
+            {
+              "name": "Strefa zwrotnikowa",
+              "latitude": "20–35°",
+              "text": "**Ok. 36–37‰ — maksimum globalne.** Panują tu **wyże zwrotnikowe**: powietrze osiada, ogrzewa się adiabatycznie, opady są minimalne, a bezchmurne niebo i wysokie temperatury dają ogromne parowanie. Woda ubywa, sól zostaje.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa podrównikowa i równikowa",
+              "latitude": "0–10°",
+              "text": "**Ok. 34–35‰ — lokalny spadek.** Parowanie jest wysokie, ale przewyższają je jeszcze obfitsze opady strefy zbieżności pasatów (ITCZ), przekraczające 2000 mm rocznie. Dodatkowo uchodzą tu największe rzeki świata: Amazonka i Kongo.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Rekordy zasolenia — gdzie i dlaczego",
+          "caption": "Kliknij punkty. Przy każdym spróbuj samodzielnie odtworzyć wyjaśnienie z bilansu: parowanie kontra opad plus dopływ rzeczny plus wymiana wód.",
+          "center": [
+            20,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 20.0,
+              "lng": 38.5,
+              "label": "Morze Czerwone — ok. 40–42‰",
+              "text": "**Najbardziej zasolone morze świata.** Leży w strefie zwrotnikowej, otoczone pustyniami: parowanie ogromne, opady niemal zerowe, do morza nie uchodzi żadna stała rzeka. Wymiana z Oceanem Indyjskim odbywa się przez wąską i płytką cieśninę Bab al-Mandab."
+            },
+            {
+              "lat": 27.0,
+              "lng": 51.0,
+              "label": "Zatoka Perska — ok. 40‰",
+              "text": "Bardzo płytka (średnio ok. 35 m) i silnie nagrzana zatoka w klimacie zwrotnikowym suchym. Ogromne parowanie przy znikomych opadach; wymiana z Morzem Arabskim przez wąską cieśninę Ormuz."
+            },
+            {
+              "lat": 25.0,
+              "lng": -40.0,
+              "label": "Atlantyk zwrotnikowy — ok. 37‰",
+              "text": "Najwyższe zasolenie **otwartego oceanu**. Obszar stałego wyżu azorskiego: powietrze osiada, opadów prawie nie ma, a suche pasaty potęgują parowanie."
+            },
+            {
+              "lat": 0.0,
+              "lng": -50.0,
+              "label": "Ujście Amazonki — poniżej 30‰",
+              "text": "Amazonka wnosi do oceanu ok. 1/5 całego rzecznego odpływu świata. Wysłodzona, mniej gęsta woda utrzymuje się na powierzchni i tworzy „słodki jęzor” sięgający setek kilometrów w głąb Atlantyku."
+            },
+            {
+              "lat": 63.0,
+              "lng": 20.5,
+              "label": "Zatoka Botnicka — ok. 2–4‰",
+              "text": "Najsłabiej zasolony akwen morski świata. Bałtyk jest morzem wewnątrzkontynentalnym: opad i dopływ rzeczny przewyższają parowanie, a wymiana z Morzem Północnym odbywa się przez płytkie i wąskie Cieśniny Duńskie. Zasolenie rośnie stopniowo z 2–4‰ na północy do 15–20‰ przy Cieśninach Duńskich."
+            },
+            {
+              "lat": 31.5,
+              "lng": 35.5,
+              "label": "Morze Martwe — ok. 340‰ (to JEZIORO!)",
+              "text": "Bezodpływowe jezioro w rowie tektonicznym Jordanu, ok. 430 m p.p.m. Woda odpływa stąd wyłącznie przez parowanie, więc sole kumulują się od tysięcy lat. Uwaga: nie jest częścią wszechoceanu — nie porównuj go z morzami w zadaniach o zasoleniu wód morskich."
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Pionowy rozkład temperatury wód oceanicznych",
+          "orientation": "top-down",
+          "caption": "Kliknij kolejne warstwy. Ten układ trzech warstw obowiązuje w niskich i średnich szerokościach geograficznych; w strefach polarnych termoklina praktycznie zanika, bo woda jest zimna od powierzchni po dno.",
+          "layers": [
+            {
+              "name": "Warstwa powierzchniowa (warstwa mieszania)",
+              "range": "0–100 (200) m",
+              "text": "Woda dokładnie wymieszana przez falowanie, prądy i konwekcję, więc temperatura jest w niej niemal jednakowa i odpowiada temperaturze powierzchni. Tu docierają promienie słoneczne (strefa eufotyczna do ok. 200 m) i tu zachodzi praktycznie cała **fotosynteza fitoplanktonu** — czyli tu jest życie oceanu.",
+              "tone": "sky"
+            },
+            {
+              "name": "Termoklina (warstwa skoku termicznego)",
+              "range": "ok. 100–1000 m",
+              "text": "**Warstwa gwałtownego spadku temperatury** — z ok. 20 °C do ok. 4–5 °C na przestrzeni kilkuset metrów. Skok temperatury oznacza skok gęstości, więc termoklina działa jak **bariera hamująca mieszanie pionowe**: zatrzymuje ciepło u góry, a substancje odżywcze na dole. To dlatego ciepłe morza zwrotnikowe są ubogie w plankton — składniki pokarmowe nie mogą przebić się przez termoklinę.",
+              "tone": "water"
+            },
+            {
+              "name": "Warstwa głębinowa",
+              "range": "poniżej 1000 m",
+              "text": "Temperatura niemal stała: **od 0 do 4 °C**, niezależnie od szerokości geograficznej i pory roku. Panuje tu całkowita ciemność (strefa afotyczna) i ogromne ciśnienie. Wody tej warstwy powstały na powierzchni w obszarach polarnych, gdzie schłodziły się i opadły — a potem powoli rozpłynęły po dnie całego wszechoceanu.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Temperatura wód wszechoceanu",
+          "items": [
+            {
+              "value": "ok. 17,5",
+              "unit": "°C",
+              "label": "Średnia temperatura wód powierzchniowych wszechoceanu",
+              "note": "O ok. 3 °C wyżej niż średnia temperatura powietrza przy powierzchni Ziemi — ocean jest globalnym magazynem ciepła."
+            },
+            {
+              "value": "ok. 3,5",
+              "unit": "°C",
+              "label": "Średnia temperatura całej masy wód oceanicznych",
+              "note": "Niska, bo ponad 90% objętości oceanu to zimna warstwa głębinowa."
+            },
+            {
+              "value": "28–30",
+              "unit": "°C",
+              "label": "Temperatura wód powierzchniowych w strefie międzyzwrotnikowej"
+            },
+            {
+              "value": "−1,9",
+              "unit": "°C",
+              "label": "Temperatura zamarzania wody o zasoleniu 35‰"
+            },
+            {
+              "value": "ok. 4200",
+              "unit": "J/(kg·K)",
+              "label": "Ciepło właściwe wody — ok. 5 razy większe niż skał",
+              "note": "Dlatego roczna amplituda temperatury wód jest kilkakrotnie mniejsza niż lądu i dlatego morze łagodzi klimat wybrzeży."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki. (1) **Morze Martwe i Morze Kaspijskie to jeziora bezodpływowe**, nie morza — mimo nazwy nie należą do wszechoceanu i nie wolno ich używać jako przykładu „najbardziej zasolonego morza”; tym jest **Morze Czerwone**. (2) Zasolenie podaje się w **promilach**, nie w procentach: 35‰ to 3,5%, więc odpowiedź „zasolenie oceanu wynosi 35%” jest błędem rzeczowym. (3) **Góra lodowa** to oderwany fragment lodowca lądowego, zbudowany ze **słodkiego** lodu, natomiast **pak lodowy (lód morski)** powstaje z zamarzania wody morskiej — te dwie formy mają odwrotny wpływ na zasolenie: topniejąca góra lodowa je obniża, a zamarzanie wody morskiej podwyższa."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego maksymalne zasolenie wód powierzchniowych oceanu występuje w okolicach zwrotników, a nie na równiku, gdzie temperatura jest równie wysoka?",
+          "options": [
+            "Ponieważ w okolicach zwrotników uchodzi najwięcej rzek niosących sole mineralne",
+            "Ponieważ w strefie zwrotnikowej panują wyże, opady są znikome i parowanie znacznie przewyższa opad, a na równiku bardzo obfite opady strefy zbieżności pasatów rozcieńczają wodę",
+            "Ponieważ na równiku prądy morskie mieszają wodę intensywniej niż w strefie zwrotnikowej",
+            "Ponieważ na równiku woda jest zbyt ciepła, by sole mogły się w niej rozpuścić"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zasolenie zależy od **bilansu wody słodkiej**, nie od samej temperatury. W strefie zwrotnikowej osiadające powietrze wyżów daje pogodę bezchmurną i suchą — parowanie jest ogromne, opadu prawie nie ma, więc sól się koncentruje (36–37‰). Na równiku parowanie jest równie duże, ale opady w strefie zbieżności pasatów przekraczają 2000 mm rocznie i przeważają nad parowaniem, obniżając zasolenie do 34–35‰."
+        },
+        {
+          "type": "quiz",
+          "question": "Statek badawczy mierzy temperaturę wody w tropikalnej części Oceanu Indyjskiego. Na jakiej głębokości zanotuje najszybszy spadek temperatury na metr głębokości?",
+          "options": [
+            "W warstwie 0–50 m, tuż pod powierzchnią",
+            "W warstwie ok. 100–1000 m, w termoklinie",
+            "W warstwie 1000–3000 m, w wodach głębinowych",
+            "Bezpośrednio przy dnie, gdzie woda styka się z chłodnymi osadami"
+          ],
+          "correctIndex": 1,
+          "explanation": "Warstwa powierzchniowa jest wymieszana przez falowanie i prądy, więc temperatura jest w niej niemal stała. Poniżej 1000 m woda jest już jednolicie zimna (0–4 °C). Cały spadek — z ok. 25 °C do ok. 4 °C — mieści się w **termoklinie**, czyli warstwie skoku termicznego między nimi. Skok gęstości, który jej towarzyszy, blokuje mieszanie pionowe i ogranicza dopływ substancji odżywczych z głębin."
+        },
+        {
+          "type": "quiz",
+          "question": "Które wyjaśnienie niskiego zasolenia Morza Bałtyckiego jest w pełni poprawne?",
+          "options": [
+            "Bałtyk jest morzem wewnątrzkontynentalnym: opad i duży dopływ rzeczny przewyższają parowanie, a wymiana z Morzem Północnym jest utrudniona przez płytkie i wąskie Cieśniny Duńskie",
+            "Bałtyk leży w strefie umiarkowanej, więc paruje z niego więcej wody, niż do niego dopływa",
+            "Bałtyk jest morzem przybrzeżnym o swobodnej wymianie wód z Oceanem Atlantyckim",
+            "Bałtyk zamarza zimą, a lód morski zawiera całą sól, którą pozostawia po sobie na dnie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Poprawne wyjaśnienie musi łączyć trzy elementy: **dodatni bilans wody słodkiej** (opad plus dopływ rzeczny z rozległego dorzecza Wisły, Odry, Newy i Niemna przewyższa parowanie), **typ morza** (wewnątrzkontynentalne, wcinające się głęboko w ląd) oraz **utrudnioną wymianę** przez płytkie Cieśniny Duńskie. Odpowiedź D myli kierunek procesu: przy zamarzaniu sól jest wypychana do wody pod lodem, więc zamarzanie zasolenie **podwyższa**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o zasoleniu prawie zawsze proszą o **wyjaśnienie przyczyny**, a nie o podanie liczby, i punktowane są za **wskazanie kierunku bilansu**. Buduj odpowiedź według schematu: „Zasolenie jest wysokie/niskie, ponieważ **parowanie przewyższa opad / opad i dopływ rzeczny przewyższają parowanie**, a dodatkowo **wymiana wód z otwartym oceanem jest utrudniona/swobodna**”. Samo „bo jest gorąco” lub „bo jest zimno” nie daje punktu — temperatura działa wyłącznie przez parowanie i trzeba to napisać wprost."
+        }
+      ]
+    },
+    {
+      "slug": "ruchy-wod-oceanicznych",
+      "title": "Ruchy wód oceanicznych — falowanie, pływy i prądy morskie",
+      "summary": "Mechanizmy falowania i tsunami, przyczyny pływów syzygijnych i kwadraturowych oraz układ prądów morskich wraz z ich wpływem na klimat, upwellingiem i zjawiskiem El Niño.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Woda w oceanie nigdy nie stoi w miejscu, ale porusza się na trzy zupełnie różne sposoby, napędzane przez trzy różne siły. **Falowanie** to ruch drgający wywołany tarciem wiatru o powierzchnię wody. **Pływy** to okresowe wahania poziomu wody wywołane grawitacją Księżyca i Słońca. **Prądy morskie** to ruch postępowy — rzeczywisty transport ogromnych mas wody, napędzany przez wiatry stałe i przez różnice gęstości. Ostatni z tych ruchów jest dla geografii najważniejszy: prądy morskie przenoszą ok. **jedną czwartą całego ciepła** wędrującego z równika ku biegunom, przez co decydują o tym, że Norwegia jest zielona, a chilijskie wybrzeże na tej samej szerokości geograficznej — pustynne."
+        },
+        {
+          "type": "process",
+          "title": "Od podmuchu wiatru do fali rozbijającej się o brzeg",
+          "caption": "Kliknij kolejne etapy. Kluczowy wniosek jest w etapie 4: fala „przewraca się” nie dlatego, że rośnie jej energia, lecz dlatego, że dno hamuje jej dolną część.",
+          "steps": [
+            {
+              "title": "1. Tarcie wiatru o powierzchnię wody",
+              "text": "Wiatr wiejący nad gładką wodą przekazuje jej energię przez **tarcie**. Powstają najpierw drobne zmarszczki, a te — mając już własne „stoki” — dają wiatrowi większą powierzchnię do naporu. Wysokość fali zależy od trzech czynników: **prędkości wiatru**, **czasu jego wiania** oraz **rozbiegu fali (fetch)**, czyli długości odcinka otwartej wody, nad którym wiatr działa. Dlatego na Bałtyku fale są niższe niż na Atlantyku — brakuje rozbiegu."
+            },
+            {
+              "title": "2. Elementy fali",
+              "text": "**Grzbiet** to najwyższy punkt fali, **dolina** — najniższy. **Wysokość fali** to różnica poziomów grzbietu i doliny, **długość fali** — odległość między dwoma sąsiednimi grzbietami, a **okres** — czas przejścia dwóch kolejnych grzbietów przez ten sam punkt. Na otwartym oceanie fale wiatrowe osiągają zwykle 2–5 m wysokości, a w sztormach powyżej 15 m."
+            },
+            {
+              "title": "3. Ruch orbitalny cząsteczek",
+              "text": "To najczęściej mylony fakt: **woda nie płynie razem z falą**. Każda cząsteczka zatacza koło — na grzbiecie porusza się w kierunku biegu fali, w dolinie w przeciwnym. Promienie tych orbit maleją z głębokością i zanikają na głębokości równej mniej więcej **połowie długości fali**. Poniżej tej granicy (**podstawa falowania**) woda jest nieruchoma, a fale sztormowe nie ruszają osadów dennych."
+            },
+            {
+              "title": "4. Załamanie fali i przybój",
+              "text": "Gdy fala wchodzi na płytką wodę (głębokość mniejsza niż połowa długości fali), dno zaczyna hamować jej dolną część. Fala **skraca się i piętrzy**, orbity spłaszczają się w elipsy, aż grzbiet — poruszający się szybciej niż podstawa — przewraca się do przodu. Powstaje **przybój**: strefa, w której energia fali zamienia się w pracę mechaniczną, niszcząc klif i przemieszczając materiał wzdłuż brzegu."
+            },
+            {
+              "title": "5. Prąd przybrzeżny i transport materiału",
+              "text": "Fale podchodzą do brzegu zwykle **ukośnie**, a cofają się prostopadle do linii brzegowej. Ziarna piasku wędrują więc zygzakiem wzdłuż plaży — to **transport wzdłużbrzegowy (prąd przybrzeżny)**. Ten mechanizm buduje mierzeje i kosy, odcinając zatoki od morza i tworząc jeziora przybrzeżne — wrócimy do niego przy genezie jezior."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Tsunami (fala sejsmiczna)",
+          "text": "**Fala wywołana nagłym pionowym przemieszczeniem dna morskiego** — najczęściej przez podmorskie trzęsienie ziemi w strefie subdukcji, rzadziej przez osuwisko podmorskie, wybuch wulkanu lub upadek meteorytu. Tsunami nie ma nic wspólnego z wiatrem, więc porusza całą kolumnę wody od dna po powierzchnię. Na otwartym oceanie ma **wysokość poniżej 1 m**, ale **długość 100–200 km** i prędkość **700–800 km/h** — statek jej nie zauważy. Przy brzegu, na płytkiej wodzie, fala gwałtownie hamuje i cała jej energia przechodzi w wysokość: ściana wody osiąga kilkanaście do kilkudziesięciu metrów.",
+          "note": "Charakterystyczne ostrzeżenie naturalne: tuż przed uderzeniem tsunami morze często **gwałtownie się cofa**, odsłaniając dno — to nadchodzi dolina fali. Najbardziej zagrożone jest wybrzeże Oceanu Spokojnego, otoczone strefami subdukcji tworzącymi tzw. ognisty pierścień."
+        },
+        {
+          "type": "definition",
+          "term": "Pływy morskie",
+          "text": "**Okresowe wahania poziomu wód oceanicznych** wywołane siłami pływotwórczymi Księżyca i Słońca. Powstają jako wypadkowa **siły przyciągania grawitacyjnego** i **siły odśrodkowej** obiegu układu Ziemia–Księżyc wokół wspólnego środka masy. Po stronie zwróconej do Księżyca przeważa przyciąganie, po stronie przeciwnej — siła odśrodkowa, dlatego powstają **dwa wybrzuszenia wodne po przeciwnych stronach Ziemi**. Ziemia obraca się pod nimi, więc w danym miejscu w ciągu doby księżycowej (**24 h 50 min**) występują **dwa przypływy i dwa odpływy**, co ok. **12 h 25 min**. Różnicę poziomów wody między przypływem a odpływem nazywamy **amplitudą (skokiem) pływu**.",
+          "note": "Choć Słońce ma nieporównanie większą masę, jest znacznie dalej — jego siła pływotwórcza stanowi tylko ok. **46%** siły Księżyca. Siła pływotwórcza maleje z **sześcianem** odległości, dlatego bliski Księżyc wygrywa z odległym Słońcem."
+        },
+        {
+          "type": "compare",
+          "title": "Pływy syzygijne i kwadraturowe",
+          "leftLabel": "Pływy syzygijne (żywe)",
+          "rightLabel": "Pływy kwadraturowe (martwe)",
+          "rows": [
+            {
+              "aspect": "Układ ciał niebieskich",
+              "left": "Słońce, Ziemia i Księżyc leżą w **jednej linii** (syzygia).",
+              "right": "Kierunki ku Słońcu i ku Księżycowi tworzą **kąt prosty** względem Ziemi."
+            },
+            {
+              "aspect": "Faza Księżyca",
+              "left": "**Nów i pełnia.**",
+              "right": "**Pierwsza i ostatnia kwadra.**"
+            },
+            {
+              "aspect": "Składanie sił",
+              "left": "Siły pływotwórcze Księżyca i Słońca **dodają się** — wybrzuszenie jest najwyższe.",
+              "right": "Siły pływotwórcze działają **prostopadle i częściowo się znoszą** — wybrzuszenie jest najniższe."
+            },
+            {
+              "aspect": "Amplituda pływu",
+              "left": "**Największa** w miesiącu — ok. 20% powyżej średniej.",
+              "right": "**Najmniejsza** w miesiącu — ok. 20% poniżej średniej."
+            },
+            {
+              "aspect": "Częstość",
+              "left": "Dwa razy w miesiącu księżycowym, co ok. 14,8 doby.",
+              "right": "Dwa razy w miesiącu księżycowym, w połowie odstępu między syzygiami."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Amplitudy pływów — skrajności",
+          "items": [
+            {
+              "value": "do 16",
+              "unit": "m",
+              "label": "Zatoka Fundy w Kanadzie — najwyższe pływy świata",
+              "note": "Rekord wynika z kształtu zatoki: klinowate, zwężające się i płytkiejące dno spiętrza falę pływową, a jej okres własny jest bliski okresowi pływu — zachodzi rezonans."
+            },
+            {
+              "value": "do 14",
+              "unit": "m",
+              "label": "Zatoka Mont-Saint-Michel we Francji",
+              "note": "Woda cofa się na kilkanaście kilometrów, odsłaniając rozległe równiny pływowe (wattowe)."
+            },
+            {
+              "value": "ok. 1",
+              "unit": "m",
+              "label": "Typowa amplituda na otwartym oceanie, z dala od brzegów"
+            },
+            {
+              "value": "kilka",
+              "unit": "cm",
+              "label": "Morze Bałtyckie",
+              "note": "Bałtyk jest małym, płytkim i niemal zamkniętym zbiornikiem — fala pływowa nie ma się gdzie rozwinąć. Znacznie większe wahania poziomu wywołuje tu wiatr (spiętrzenia sztormowe)."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak powstają prądy morskie i dlaczego układają się w wielkie wiry",
+          "caption": "Kliknij kolejne etapy. Etapy 1–3 wyjaśniają układ prądów powierzchniowych, etap 4 — prądy głębinowe. Na maturze przydają się obydwa.",
+          "steps": [
+            {
+              "title": "1. Napęd: wiatry stałe",
+              "text": "Prądy powierzchniowe są w istocie **efektem tarcia wiatru o powierzchnię oceanu**, więc ich układ odtwarza układ wiatrów stałych. W strefie międzyzwrotnikowej **pasaty** pchają wodę ze wschodu na zachód (prądy równikowe), a w strefie umiarkowanej **wiatry zachodnie** — z zachodu na wschód (dryf wiatrów zachodnich)."
+            },
+            {
+              "title": "2. Odchylenie: siła Coriolisa",
+              "text": "Wskutek ruchu obrotowego Ziemi każdy poruszający się obiekt jest odchylany: **w prawo na półkuli północnej, w lewo na południowej**. Prąd nie płynie więc dokładnie w kierunku wiatru, lecz pod kątem do niego, a odchylenie narasta z głębokością (**spirala Ekmana**)."
+            },
+            {
+              "title": "3. Zamknięcie w wiry przez kontynenty",
+              "text": "Płynąca woda napotyka bariery lądowe i zawraca. Powstają wielkie zamknięte kręgi — **wiry oceaniczne (gyry)**: na półkuli północnej krążące **zgodnie z ruchem wskazówek zegara**, na południowej **przeciwnie**. Zachodnia strona każdego wiru niesie ciepłą wodę ku biegunowi (**prądy ciepłe**), wschodnia — chłodną ku równikowi (**prądy zimne**). To reguła, którą warto umieć odtworzyć z mapy: przy zachodnich brzegach oceanów prądy ciepłe, przy wschodnich — zimne."
+            },
+            {
+              "title": "4. Prądy głębinowe: cyrkulacja termohalinowa",
+              "text": "Poza wiatrem działa drugi napęd — **różnice gęstości**. W Morzu Norweskim i wokół Antarktydy woda silnie się ochładza, a zamarzanie lodu morskiego podnosi jej zasolenie. Zimna i słona woda jest bardzo gęsta, więc **opada na dno** i płynie wolno ku równikowi. Gdzie indziej wznosi się i wraca prądami powierzchniowymi. Ten globalny układ nazywamy **wielką taśmą oceaniczną**; pojedyncza cząsteczka wody pokonuje go w ok. 1000 lat."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Prądy morskie i ich skutki na wybrzeżach",
+          "caption": "Kliknij punkty. Za każdym razem porównaj miejsce z innym leżącym na tej samej szerokości geograficznej — to właśnie różnica, o którą pyta CKE.",
+          "center": [
+            15,
+            -20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 68.2,
+              "lng": 14.6,
+              "label": "Lofoty, Norwegia — ciepły Prąd Norweski",
+              "text": "**Powyżej koła podbiegunowego, a porty nie zamarzają.** Prąd Zatokowy przechodzi w Prąd Północnoatlantycki i Norweski, dostarczając ciepła aż za 70°N. Średnia stycznia to ok. 0 °C, podczas gdy na tej samej szerokości na Syberii spada poniżej −30 °C. Ciepła woda podnosi też parowanie, więc opady są obfite, a klimat morski."
+            },
+            {
+              "lat": -23.5,
+              "lng": -70.4,
+              "label": "Antofagasta, pustynia Atakama — zimny Prąd Peruwiański",
+              "text": "**Najsuchsze miejsce na Ziemi.** Zimny prąd ochładza powietrze od dołu, powstaje **inwersja temperatury**: powietrze przy powierzchni jest chłodniejsze niż nad nim, więc nie może się unosić i nie tworzą się chmury deszczowe. Zamiast opadu powstają **mgły adwekcyjne (camanchaca)**. Do tego wybrzeże leży w zasięgu wyżu zwrotnikowego."
+            },
+            {
+              "lat": -22.9,
+              "lng": 14.5,
+              "label": "Walvis Bay, pustynia Namib — zimny Prąd Benguelski",
+              "text": "Bliźniaczy przypadek Atakamy na drugiej półkuli i po drugiej stronie Atlantyku: zimny prąd wzdłuż zachodniego wybrzeża, inwersja, mgły zamiast deszczu. Powtarzalność tego układu na obu półkulach dowodzi, że działa tu **mechanizm**, a nie przypadek."
+            },
+            {
+              "lat": -12.1,
+              "lng": -77.2,
+              "label": "Callao, Peru — upwelling i wielkie łowisko",
+              "text": "Zimny Prąd Peruwiański plus **wznoszenie wód głębinowych** dają wody wyjątkowo bogate w azotany i fosforany. Zakwit fitoplanktonu żywi ławice sardeli peruwiańskiej — jedno z najwydajniejszych łowisk świata, choć obszar ten stanowi ułamek procenta powierzchni oceanów."
+            },
+            {
+              "lat": 46.5,
+              "lng": -50.0,
+              "label": "Ławica Nowej Fundlandii — zimny Prąd Labradorski",
+              "text": "Spotkanie zimnego Prądu Labradorskiego z ciepłym Prądem Zatokowym. Ciepłe i wilgotne powietrze nad zimną wodą ochładza się poniżej punktu rosy — powstają **gęste mgły adwekcyjne**, najczęstsze na świecie. Mieszanie wód daje jednocześnie bogate łowiska dorsza."
+            },
+            {
+              "lat": 33.0,
+              "lng": 137.0,
+              "label": "Wybrzeże Japonii — ciepłe Kuro Siwo",
+              "text": "Ciepły prąd po zachodniej stronie Pacyfiku, odpowiednik Prądu Zatokowego. Ogrzewa i nawilża monsun letni, podnosząc opady, a na północy spotyka się z zimnym Oja Siwo, tworząc bardzo zasobne łowiska."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Upwelling (wznoszenie wód głębinowych)",
+          "text": "**Wynoszenie ku powierzchni zimnych wód z głębin oceanu**, zachodzące głównie przy **zachodnich wybrzeżach kontynentów** w strefie zwrotnikowej. Mechanizm: pasat wieje **wzdłuż wybrzeża**, a siła Coriolisa odchyla wprawioną w ruch wodę powierzchniową **w stronę otwartego oceanu**. Ubytek wody przy brzegu musi zostać uzupełniony — z głębokości 100–300 m wznosi się woda zimna i **bogata w sole odżywcze** (azotany, fosforany), które gromadzą się tam z opadających szczątków organicznych. Skutki są dwa: **ochłodzenie i osuszenie klimatu wybrzeża** oraz **eksplozja produkcji biologicznej** — obszary upwellingu zajmują ułamek powierzchni oceanów, a dają ok. 20% światowych połowów.",
+          "note": "Najważniejsze obszary upwellingu: wybrzeże **Peru i Chile**, **Namibii i Angoli**, **Kalifornii**, **północno-zachodniej Afryki** oraz sezonowo **Somalii**. Zjawisko odwrotne, spychanie wód powierzchniowych w głąb, to **downwelling**."
+        },
+        {
+          "type": "case-study",
+          "title": "El Niño — gdy pasaty słabną i ocean odwraca się o 180°",
+          "region": "Ocean Spokojny, strefa równikowa (Peru, Ekwador, Indonezja, Australia)",
+          "text": "**Stan normalny.** Pasaty wschodnie stale pchają ciepłą wodę powierzchniową z wybrzeży Ameryki Południowej ku Azji. Nad Indonezją gromadzi się **ciepły basen** (woda ok. 29–30 °C, poziom morza nawet o pół metra wyższy) — powietrze silnie się tam wznosi i daje obfite opady. U wybrzeży Peru wodę odpływającą na zachód zastępuje **upwelling**: woda jest chłodna (ok. 20 °C), powietrze nad nią osiada, panuje susza, a łowiska są rekordowo bogate.\n\n**Faza El Niño (co 2–7 lat).** Pasaty słabną lub zmieniają kierunek. Ciepła woda, nie podpierana już wiatrem, przelewa się falą w kierunku **wschodnim**. U wybrzeży Peru gruba warstwa ciepłej wody **przykrywa** zimne wody głębinowe — upwelling zostaje odcięty. Wraz z ciepłą wodą przemieszcza się na wschód obszar wznoszenia powietrza, a z nim strefa opadów.\n\n**Skutki.** U wybrzeży Peru i Ekwadoru: załamanie połowów sardeli (brak soli odżywczych), **ulewy i powodzie** na zwykle pustynnym wybrzeżu. Nad Australią, Indonezją i Nową Gwineą: odwrotnie — powietrze zaczyna osiadać, przychodzą **susze i wielkie pożary buszu**. Zaburzenia sięgają dalej: zmiany opadów w Indiach, Afryce Południowej i Ameryce Północnej. Faza przeciwna, w której pasaty są silniejsze niż zwykle i upwelling się nasila, nosi nazwę **La Niña**.",
+          "takeaway": "El Niño to podręcznikowy dowód **sprzężenia ocean–atmosfera**: osłabienie wiatru zmienia rozkład ciepła w oceanie, a zmieniony ocean przesuwa strefę opadów — i pociąga za sobą skutki gospodarcze (rybołówstwo, rolnictwo) na dwóch przeciwległych brzegach Pacyfiku jednocześnie. Nazwa („Dzieciątko”) pochodzi od peruwiańskich rybaków, bo zjawisko nasila się zwykle w okolicach Bożego Narodzenia."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery częste pomyłki. (1) **Fala nie przenosi wody, tylko energię** — cząsteczki krążą po orbitach; napisanie, że „woda przypływa z fali z drugiego końca oceanu”, to błąd rzeczowy. (2) **Tsunami nie jest falą pływową ani sztormową** — nie ma z wiatrem nic wspólnego, a angielskie „tidal wave” jest nazwą mylącą. (3) **Pływy syzygijne występują przy nowiu I pełni**, nie tylko przy pełni — w obu przypadkach trzy ciała leżą w jednej linii. (4) Prądy ciepłe i zimne nazywa się tak **względem otaczających wód**, a nie w wartościach bezwzględnych: Prąd Peruwiański przy równiku bywa cieplejszy niż Prąd Norweski za kołem podbiegunowym, a mimo to jest prądem zimnym, bo jest chłodniejszy od wód, przez które płynie."
+        },
+        {
+          "type": "quiz",
+          "question": "Na wybrzeżu Peru i na wybrzeżu Namibii, mimo położenia nad oceanem, występują pustynie. Które wyjaśnienie jest pełne?",
+          "options": [
+            "Zimne prądy ochładzają dolne warstwy powietrza, powstaje inwersja temperatury blokująca konwekcję, więc zamiast opadów tworzą się mgły; dodatkowo oba wybrzeża leżą w zasięgu wyżów zwrotnikowych",
+            "Nad zimną wodą nie zachodzi parowanie, więc w powietrzu w ogóle nie ma pary wodnej",
+            "Oba wybrzeża są odgrodzone od oceanu wysokimi górami, które zatrzymują wilgoć",
+            "Zimne prądy niosą wodę o tak wysokim zasoleniu, że nie może ona parować"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kluczowy jest mechanizm **inwersji**: powietrze schłodzone od dołu przez zimną wodę jest gęstsze od powietrza nad nim, więc nie może się unosić — a bez wznoszenia nie ma ochładzania adiabatycznego, kondensacji i chmur deszczowych. Para wodna w powietrzu jest (skrapla się w postaci mgieł adwekcyjnych), ale nie tworzy opadu. Do tego dochodzi położenie w strefie osiadania powietrza wyżów zwrotnikowych."
+        },
+        {
+          "type": "quiz",
+          "question": "W pewnym porcie zanotowano w ciągu miesiąca najwyższą amplitudę pływu. Jaka była wtedy faza Księżyca i jaki układ ciał niebieskich?",
+          "options": [
+            "Pierwsza kwadra; Słońce i Księżyc widziane z Ziemi pod kątem prostym",
+            "Pełnia lub nów; Słońce, Ziemia i Księżyc w jednej linii",
+            "Ostatnia kwadra; Księżyc w najbliższym Ziemi punkcie orbity",
+            "Dowolna faza — amplituda pływu zależy wyłącznie od siły wiatru"
+          ],
+          "correctIndex": 1,
+          "explanation": "Najwyższe amplitudy dają **pływy syzygijne**, występujące przy nowiu i pełni, gdy Słońce, Ziemia i Księżyc leżą w jednej linii, a ich siły pływotwórcze się **sumują**. Przy kwadrach siły działają prostopadle i częściowo się znoszą — to pływy kwadraturowe o najmniejszej amplitudzie."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w czasie El Niño załamują się połowy u wybrzeży Peru?",
+          "options": [
+            "Ponieważ ulewne deszcze wysładzają wodę morską na tyle, że ryby morskie w niej giną",
+            "Ponieważ osłabienie pasatów pozwala ciepłej wodzie przemieścić się na wschód i przykryć wody zimne, przez co ustaje upwelling i przestają napływać sole odżywcze",
+            "Ponieważ silniejsze pasaty spychają ławice ryb na otwarty ocean, poza zasięg kutrów",
+            "Ponieważ podwyższone zasolenie wód uniemożliwia rozwój fitoplanktonu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Łańcuch przyczynowy: słabsze pasaty → ciepła woda przelewa się na wschód → warstwa ciepłej wody przykrywa zimne wody głębinowe → **upwelling zanika** → brak azotanów i fosforanów → brak zakwitu fitoplanktonu → brak pokarmu dla sardeli → załamanie połowów. Cała przyczyna leży w odcięciu dopływu **soli odżywczych**, nie w samej temperaturze wody."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o prądach morskich rozpoznasz po poleceniu „**wyjaśnij wpływ prądu morskiego na klimat/gospodarkę wybrzeża**”. Odpowiedź musi zawierać **trzy ogniwa**: (1) prąd zmienia **temperaturę wody**, (2) woda zmienia **temperaturę i stabilność powietrza** nad sobą, (3) to zmienia **opady**. Dla prądu ciepłego: ogrzewa powietrze → rośnie parowanie i chwiejność → więcej opadów, łagodniejsza zima, niezamarzające porty. Dla prądu zimnego: ochładza powietrze → inwersja → brak konwekcji → mgły zamiast opadów, pustynie na wybrzeżu. Odpowiedź „bo prąd jest ciepły, więc jest cieplej” pomija ogniwa 2 i 3 i zwykle nie dostaje kompletu punktów."
+        }
+      ]
+    },
+    {
+      "slug": "rzeki-siec-rzeczna-rezimy-i-praca-rzeki",
+      "title": "Rzeki — sieć rzeczna, reżimy i rzeźbotwórcza praca wody płynącej",
+      "summary": "Dorzecze, zlewnia i dział wodny, obliczanie przepływu, ustroje zasilania i reżimy rzeczne oraz formy powstające z erozji i akumulacji rzecznej — od przełomu po deltę.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rzeki mieszczą zaledwie **ok. 0,0002% wody hydrosfery**, a mimo to są najważniejszym ogniwem lądowej części obiegu wody i najskuteczniejszym czynnikiem rzeźbotwórczym na lądach. Woda płynąca robi trzy rzeczy naraz: **odprowadza** nadwyżkę opadu do morza, **niszczy** podłoże (erozja) oraz **przenosi** i **osadza** materiał (transport i akumulacja). O tym, ile wody rzeka niesie i kiedy, decyduje klimat zlewni; o tym, co robi z podłożem — spadek koryta i ilość niesionego materiału. W tej lekcji łączymy obie strony: hydrologiczną (przepływ, reżim) i geomorfologiczną (formy erozyjne i akumulacyjne)."
+        },
+        {
+          "type": "definition",
+          "term": "Dorzecze, zlewnia, zlewisko, dział wodny",
+          "text": "**Zlewnia** to obszar, z którego wody powierzchniowe spływają do jednego punktu — do wybranego przekroju rzeki, do jeziora, do potoku. **Dorzecze** to zlewnia całej rzeki wraz ze wszystkimi jej dopływami, zamknięta w jej ujściu (np. dorzecze Wisły). **Zlewisko** to obszar, z którego wody spływają do jednego morza lub oceanu (np. zlewisko Bałtyku obejmuje dorzecza Wisły, Odry, Niemna i wielu innych rzek). **Dział wodny** to linia rozgraniczająca sąsiednie zlewnie lub dorzecza; poprowadzona jest przez punkty o największej wysokości, więc w górach jest wyraźna (biegnie grzbietami), a na nizinach i obszarach krasowych bywa nieostra.",
+          "note": "Dział wodny **powierzchniowy** (wyznaczony przez rzeźbę terenu) nie musi pokrywać się z **podziemnym** (wyznaczonym przez układ warstw wodonośnych) — woda podziemna może „przeciekać” pod grzbietem do sąsiedniej zlewni. Obszary, z których woda w ogóle nie odpływa do oceanu, to **obszary bezodpływowe** (np. Kotlina Kaspijska, znaczna część Sahary i wnętrza Australii)."
+        },
+        {
+          "type": "map-explore",
+          "title": "Zlewiska i działy wodne Polski",
+          "caption": "Ok. 99,7% powierzchni Polski leży w zlewisku Morza Bałtyckiego, a niemal 88% przypada na dorzecza Wisły i Odry. Kliknij punkty, żeby zobaczyć miejsca, w których woda z Polski odpływa do innych mórz.",
+          "center": [
+            50.2,
+            19.3
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 49.6117,
+              "lng": 19.0011,
+              "label": "Barania Góra — źródła Wisły",
+              "text": "Wisła zaczyna bieg na wysokości ok. 1100 m n.p.m. i po ok. 1047 km uchodzi do Bałtyku. Jej dorzecze zajmuje ok. 54% powierzchni Polski — to największe dorzecze zlewiska Bałtyku."
+            },
+            {
+              "lat": 54.35,
+              "lng": 18.95,
+              "label": "Ujście Wisły (Świbno)",
+              "text": "Bałtyk jest morzem niemal **bezpływowym**, więc materiał niesiony przez Wisłę osadza się przy ujściu zamiast być wypłukiwany — dlatego powstały tu **Żuławy Wiślane**, czyli delta o powierzchni ok. 1700 km²."
+            },
+            {
+              "lat": 49.4767,
+              "lng": 19.6947,
+              "label": "Czarna Orawa (Jabłonka)",
+              "text": "Zlewisko **Morza Czarnego**. Czarna Orawa płynie na południe, do Wagu i dalej do Dunaju. Dział wodny biegnie tu grzbietem Beskidów — kilkaset metrów decyduje, czy woda popłynie do Bałtyku, czy do Morza Czarnego."
+            },
+            {
+              "lat": 49.4297,
+              "lng": 22.5936,
+              "label": "Strwiąż (Ustrzyki Dolne)",
+              "text": "Drugi polski fragment zlewiska Morza Czarnego: Strwiąż jest dopływem Dniestru. Dobry przykład na to, że dział wodny I rzędu nie pokrywa się z granicą państwa."
+            },
+            {
+              "lat": 50.4436,
+              "lng": 16.2447,
+              "label": "Okolice Kudowy-Zdroju",
+              "text": "Niewielki skrawek Sudetów należy do zlewiska **Morza Północnego** — wody spływają stąd do dorzecza Łaby. To najmniejsze z trzech zlewisk Polski."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Przepływ i odpływ jednostkowy",
+          "expression": "Q = F \\cdot v \\qquad \\text{oraz} \\qquad q = \\frac{Q}{A}",
+          "variables": [
+            {
+              "symbol": "Q",
+              "meaning": "przepływ — objętość wody przechodząca przez przekrój koryta w jednostce czasu [m³/s]"
+            },
+            {
+              "symbol": "F",
+              "meaning": "pole przekroju poprzecznego koryta (szerokość × średnia głębokość) [m²]"
+            },
+            {
+              "symbol": "v",
+              "meaning": "średnia prędkość wody w przekroju [m/s]"
+            },
+            {
+              "symbol": "q",
+              "meaning": "odpływ jednostkowy — przepływ przypadający na 1 km² zlewni [dm³/(s·km²)]"
+            },
+            {
+              "symbol": "A",
+              "meaning": "powierzchnia zlewni zamkniętej danym przekrojem [km²]"
+            }
+          ],
+          "caption": "Z wieloletnich pomiarów buduje się charakterystyki przepływu: **SNQ** (średni niski), **SSQ** (średni roczny) i **SWQ** (średni wysoki). Iloraz przepływu maksymalnego i minimalnego nazywamy **współczynnikiem nieregularności** — im większy, tym bardziej „kapryśna” rzeka i tym trudniejsza żegluga. Wisła ma go bardzo wysoki."
+        },
+        {
+          "type": "classification",
+          "title": "Ustroje (typy) zasilania rzek",
+          "caption": "Ustrój zasilania mówi, SKĄD rzeka bierze wodę. **Reżim rzeczny** mówi, JAK rozkłada się jej przepływ w ciągu roku — i wynika bezpośrednio z ustroju zasilania oraz z klimatu zlewni.",
+          "groups": [
+            {
+              "name": "Deszczowe (pluwialne)",
+              "description": "Rzeka zasilana głównie opadem deszczu, więc hydrogram jest wiernym odbiciem rocznego rozkładu opadów. W klimacie równikowym przepływ jest wysoki i wyrównany, w monsunowym i śródziemnomorskim — skrajnie nierównomierny.",
+              "examples": [
+                "Kongo — klimat równikowy, przepływ wyrównany",
+                "Ganges — monsunowy, maksimum latem",
+                "Ebro — śródziemnomorski, maksimum zimą"
+              ]
+            },
+            {
+              "name": "Śnieżne (niwalne)",
+              "description": "Głównym źródłem wody jest **topniejąca pokrywa śnieżna**. Maksimum przepływu przypada na wiosnę (wezbranie roztopowe), minimum na koniec lata i jesień, gdy parowanie jest największe, a zapas śniegu wyczerpany.",
+              "examples": [
+                "Ob i Jenisej",
+                "Dwina",
+                "górna Wisła w latach śnieżnych"
+              ]
+            },
+            {
+              "name": "Lodowcowe (glacjalne)",
+              "description": "Rzeka wypływa spod lodowca i żyje z jego **ablacji**. Maksimum przypada na lipiec i sierpień — najcieplejsze miesiące — a zimą przepływ niemal zanika, bo przy temperaturze poniżej 0 °C topnienie ustaje.",
+              "examples": [
+                "górny Rodan",
+                "Inn w Alpach",
+                "rzeki Islandii i Alaski"
+              ]
+            },
+            {
+              "name": "Podziemne",
+              "description": "Zasilanie z wód podziemnych daje przepływ najbardziej wyrównany w roku: warstwa wodonośna działa jak naturalny zbiornik retencyjny, który wygładza wahania opadu i opóźnia je o tygodnie lub miesiące.",
+              "examples": [
+                "rzeki krasowe zasilane wywierzyskami",
+                "Nida i Nidzica na odcinkach źródłowych"
+              ]
+            },
+            {
+              "name": "Złożone (mieszane)",
+              "description": "Najczęstszy przypadek w klimacie umiarkowanym przejściowym: rzeka ma **dwa maksima** — wiosenne roztopowe i letnie opadowe (od deszczów nawalnych i frontalnych). Tak zachowuje się większość rzek Polski.",
+              "examples": [
+                "Wisła w Warszawie — wezbranie roztopowe III–IV i opadowe VI–VII",
+                "Odra",
+                "Dunaj"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Hydrogramy trzech reżimów — przepływ miesięczny jako % przepływu średniorocznego",
+          "caption": "Porównaj kształt krzywych. Reżim **niwalny** ma ostry szczyt wiosenny, **pluwialny oceaniczny** — szczyt zimowy (latem parowanie zabiera znaczną część opadu), **glacjalny** — szczyt w pełni lata i przepływ bliski zeru zimą.",
+          "labels": [
+            "I",
+            "II",
+            "III",
+            "IV",
+            "V",
+            "VI",
+            "VII",
+            "VIII",
+            "IX",
+            "X",
+            "XI",
+            "XII"
+          ],
+          "unit": "% SSQ",
+          "series": [
+            {
+              "name": "Niwalny (rzeka nizinna Europy Środkowej)",
+              "values": [
+                90,
+                95,
+                160,
+                175,
+                120,
+                100,
+                95,
+                75,
+                70,
+                70,
+                80,
+                90
+              ]
+            },
+            {
+              "name": "Pluwialny oceaniczny (Europa Zachodnia)",
+              "values": [
+                170,
+                165,
+                145,
+                115,
+                85,
+                65,
+                50,
+                42,
+                48,
+                70,
+                110,
+                155
+              ]
+            },
+            {
+              "name": "Glacjalny (rzeka alpejska)",
+              "values": [
+                25,
+                20,
+                20,
+                35,
+                90,
+                190,
+                240,
+                220,
+                150,
+                90,
+                50,
+                30
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Bieg górny a bieg dolny rzeki",
+          "leftLabel": "Bieg górny",
+          "rightLabel": "Bieg dolny",
+          "rows": [
+            {
+              "aspect": "Spadek koryta i prędkość",
+              "left": "Duży spadek, duża prędkość, duża energia wody",
+              "right": "Mały spadek, mała prędkość, energia zużywana głównie na transport"
+            },
+            {
+              "aspect": "Dominujący proces",
+              "left": "**Erozja wgłębna** (pogłębianie koryta) i **wsteczna** (cofanie się źródeł w górę stoku)",
+              "right": "**Akumulacja** oraz **erozja boczna** (podcinanie brzegów, poszerzanie dna doliny)"
+            },
+            {
+              "aspect": "Kształt doliny",
+              "left": "Wąska, o stromych zboczach — dolina V-kształtna, jar, kanion, przełom",
+              "right": "Szeroka, płaskodenna, z terasami i rozległą równiną zalewową"
+            },
+            {
+              "aspect": "Materiał w korycie",
+              "left": "Głazy, otoczaki i żwir — gruby materiał wleczony po dnie",
+              "right": "Piaski, mułki i iły — drobny materiał niesiony w zawiesinie"
+            },
+            {
+              "aspect": "Charakterystyczne formy",
+              "left": "Wodospady, progi skalne, kotły eworsyjne, stożki napływowe u wylotu dolin",
+              "right": "Meandry, starorzecza, łachy i odsypiska, wały przykorytowe, delta lub estuarium"
+            },
+            {
+              "aspect": "Odległość od bazy erozyjnej",
+              "left": "Duża — rzeka ma jeszcze wiele metrów „zapasu” w dół, więc intensywnie się wcina",
+              "right": "Mała — koryto zbliża się do poziomu morza, poniżej którego rzeka nie może pogłębiać dna, więc erozja wgłębna praktycznie ustaje"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Od zakola do starorzecza — jak rzeka odcina własny meander",
+          "caption": "Kluczem jest **asymetria prędkości w zakolu**: nurt, czyli pas najszybciej płynącej wody, dociska do brzegu zewnętrznego, a przy wewnętrznym woda zwalnia.",
+          "steps": [
+            {
+              "title": "1. Nurt przesuwa się do brzegu wklęsłego",
+              "text": "W zakręcie woda pod wpływem bezwładności napiera na brzeg zewnętrzny, czyli **wklęsły**. Prędkość jest tam największa, więc dominuje **erozja boczna** — brzeg zostaje podcięty i jest stromy, a koryto w tym miejscu najgłębsze."
+            },
+            {
+              "title": "2. Akumulacja przy brzegu wypukłym",
+              "text": "Przy brzegu wewnętrznym (**wypukłym**) woda płynie wolno i traci zdolność transportu, więc osadza piasek i żwir. Powstaje **łacha meandrowa** — łagodnie nachylone odsypisko. Zakole jednocześnie się powiększa i wędruje w dół biegu rzeki."
+            },
+            {
+              "title": "3. Szyja meandra zwęża się",
+              "text": "Erozja po zewnętrznych stronach dwóch sąsiednich zakoli zbliża je do siebie. Wąski pas lądu, który je rozdziela — **szyja meandra** — staje się coraz cieńszy."
+            },
+            {
+              "title": "4. Przerwanie szyi podczas wezbrania",
+              "text": "Przy wysokim stanie wody rzeka przelewa się przez szyję i wybiera drogę krótszą, a więc o większym spadku i większej energii. Nowe koryto natychmiast się pogłębia i przejmuje cały przepływ."
+            },
+            {
+              "title": "5. Powstaje starorzecze",
+              "text": "Odcięte zakole zostaje zamknięte osadami od strony rzeki i tworzy **starorzecze** — jezioro w kształcie podkowy. Pozbawione przepływu wypłyca się, zarasta roślinnością i przechodzi w torfowisko lub podmokłą łąkę. To modelowy przykład **sukcesji** zbiornika wodnego."
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Terasy rzeczne w przekroju poprzecznym doliny",
+          "caption": "Terasy powstają przez **odmłodzenie rzeki**: obniżenie bazy erozyjnej (np. spadek poziomu morza) albo wypiętrzenie terenu zwiększa spadek koryta, więc rzeka wznawia erozję wgłębną i wcina się we własne dawne dno. Jego resztki zostają po bokach jako stopnie. Reguła egzaminacyjna: **im wyżej położona terasa, tym starsza**.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Terasa nadzalewowa III (najwyższa)",
+              "range": "kilkanaście–kilkadziesiąt m nad korytem",
+              "text": "Najstarszy poziom — ślad dna doliny sprzed najdawniejszego odmłodzenia. Nigdy nie jest zalewana, zwykle zachowana już tylko we fragmentach, bo później niszczyła ją erozja boczna.",
+              "tone": "rock"
+            },
+            {
+              "name": "Terasa nadzalewowa II",
+              "range": "kilka–kilkanaście m nad korytem",
+              "text": "Powstała po kolejnym wcięciu się rzeki. Sucha i stabilna — właśnie na terasach nadzalewowych lokowano miasta, drogi i linie kolejowe, bo są bezpieczne w czasie powodzi.",
+              "tone": "earth"
+            },
+            {
+              "name": "Terasa nadzalewowa I",
+              "range": "2–6 m nad korytem",
+              "text": "Poziom zalewany wyłącznie podczas największych, katastrofalnych wezbrań. Zbudowana z piasków i żwirów rzecznych, często z wydmami śródlądowymi usypanymi na niej po ustąpieniu lądolodu.",
+              "tone": "earth"
+            },
+            {
+              "name": "Terasa zalewowa (równina zalewowa)",
+              "range": "0–2 m nad korytem",
+              "text": "**Najmłodsza** część doliny, zalewana przy każdym większym wezbraniu. Osadzają się na niej drobne **mady** — bardzo żyzne gleby napływowe. Tu znajdują się starorzecza i wały przykorytowe.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Koryto rzeki",
+              "range": "poziom aktualnego dna doliny",
+              "text": "Miejsce, w którym rzeka pracuje dzisiaj: eroduje brzegi wklęsłe, akumuluje łachy przy wypukłych i przemieszcza materiał w dół biegu.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Delta czy estuarium — od czego zależy typ ujścia",
+          "leftLabel": "Delta (ujście deltowe)",
+          "rightLabel": "Estuarium (ujście lejkowate)",
+          "rows": [
+            {
+              "aspect": "Warunki w strefie ujścia",
+              "left": "Morze płytkie, **bezpływowe lub o małej amplitudzie pływów**, słabe prądy przybrzeżne",
+              "right": "Morze o **dużej amplitudzie pływów**, silne prądy i falowanie"
+            },
+            {
+              "aspect": "Bilans materiału",
+              "left": "Rzeka dostarcza więcej materiału, niż morze zdoła usunąć → przewaga **akumulacji**",
+              "right": "Prąd pływowy dwa razy na dobę wypłukuje osady w głąb morza → przewaga **erozji**"
+            },
+            {
+              "aspect": "Kształt ujścia",
+              "left": "Koryto rozgałęzia się na **ramiona (odnogi)** rozdzielone wyspami z osadów, a ujście stopniowo wysuwa się w morze",
+              "right": "Pojedyncze koryto **rozszerzające się lejkowato**, ujście cofnięte w głąb lądu"
+            },
+            {
+              "aspect": "Woda w ujściu",
+              "left": "Przeważnie słodka, z wyraźną granicą wód rzecznych i morskich",
+              "right": "Silnie **wysłodzona woda morska**, którą przypływ wpycha dziesiątki kilometrów w górę rzeki"
+            },
+            {
+              "aspect": "Znaczenie gospodarcze",
+              "left": "Bardzo żyzne mady i gęste zaludnienie, ale stałe zagrożenie powodziami i zasoleniem gleb",
+              "right": "Doskonałe warunki dla **portów morskich** — duże statki wpływają głęboko w ląd"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Nil, Missisipi, Ganges i Brahmaputra, Wołga, Wisła (Żuławy)",
+              "right": "Tamiza, Łaba, Sekwana, Św. Wawrzyńca, La Plata, Ob"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Pięć pułapek. (1) **Zlewnia – dorzecze – zlewisko** to trzy różne skale: zlewnia dowolnego przekroju, dorzecze całej rzeki z dopływami, zlewisko całego morza. Odra ma dorzecze, ale nie ma własnego zlewiska. (2) **Erozja wgłębna** pogłębia koryto w dół, **wsteczna** cofa źródło w górę stoku (i może doprowadzić do **kaptażu**, czyli przechwycenia sąsiedniej rzeki) — to nie są synonimy. (3) W meandrze brzeg **wklęsły** jest stromy i podcinany (erozja), a **wypukły** łagodny, z łachą (akumulacja) — nie odwrotnie. (4) Terasa **zalewowa jest najniższa i najmłodsza**, najwyższa terasa jest najstarsza. (5) O powstaniu delty decyduje przede wszystkim **brak silnych pływów**, a nie sama ilość niesionego materiału — Amazonka niesie go najwięcej na świecie, a ma ujście lejkowate."
+        },
+        {
+          "type": "quiz",
+          "question": "W przekroju wodowskazowym rzeka ma szerokość 40 m, średnią głębokość 2,5 m, a średnia prędkość wody wynosi 0,8 m/s. Zlewnia zamknięta tym przekrojem ma powierzchnię 4000 km². Jaki jest przepływ i odpływ jednostkowy?",
+          "options": [
+            "Q = 80 m³/s, q = 20 dm³/(s·km²)",
+            "Q = 100 m³/s, q = 25 dm³/(s·km²)",
+            "Q = 80 m³/s, q = 0,02 dm³/(s·km²)",
+            "Q = 8 m³/s, q = 2 dm³/(s·km²)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Pole przekroju $F = 40 \\cdot 2{,}5 = 100$ m². Przepływ $Q = F \\cdot v = 100 \\cdot 0{,}8 = 80$ m³/s. Odpływ jednostkowy: 80 m³/s to 80 000 dm³/s, więc $80\\,000 : 4000 = 20$ dm³/(s·km²). Uwaga na przeliczenie m³ na dm³ (×1000) — pominięcie go daje odpowiedź trzecią i jest najczęstszym błędem w tym typie zadania."
+        },
+        {
+          "type": "quiz",
+          "question": "Hydrogram pewnej rzeki płynącej w klimacie umiarkowanym chłodnym pokazuje wyraźne maksimum przepływu w lipcu i sierpniu oraz przepływ bliski zeru od grudnia do marca. Jaki ustrój zasilania ma ta rzeka i dlaczego?",
+          "options": [
+            "Deszczowy monsunowy — latem napływa wilgotne powietrze znad oceanu",
+            "Lodowcowy — maksimum przypada na miesiące o najwyższej temperaturze, gdy ablacja lodowca jest największa, a zimą topnienie całkowicie ustaje",
+            "Śnieżny — pokrywa śnieżna topnieje najintensywniej w pełni lata",
+            "Podziemny — latem zwierciadło wód gruntowych podnosi się najwyżej"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rozstrzyga **zimowy przepływ bliski zeru**. Reżim niwalny daje szczyt wiosną (III–IV), bo śnieg topnieje przy pierwszym trwałym ociepleniu, a nie w lipcu. Reżim monsunowy występuje w klimacie ciepłym i nie prowadzi do zaniku przepływu zimą. Zasilanie podziemne daje przepływ wyrównany, a nie skrajnie zmienny. Tylko lodowiec przestaje zasilać rzekę całkowicie, gdy temperatura spada poniżej 0 °C, i topnieje najsilniej w najcieplejszym miesiącu."
+        },
+        {
+          "type": "quiz",
+          "question": "Amazonka niesie największą na świecie ilość materiału i uchodzi do stosunkowo płytkiego szelfu, a mimo to nie ma klasycznej delty, lecz ujście lejkowate. Które wyjaśnienie jest poprawne?",
+          "options": [
+            "Woda Amazonki jest zbyt ciepła, by materiał mógł się osadzać",
+            "Ocean Atlantycki ma w tym miejscu tak wysokie zasolenie, że rozpuszcza osady",
+            "Silne pływy i prąd przybrzeżny stale wypłukują osady z ujścia, więc akumulacja nie przeważa nad erozją",
+            "Amazonka ma zbyt mały przepływ, by zbudować deltę"
+          ],
+          "correctIndex": 2,
+          "explanation": "O typie ujścia rozstrzyga **bilans między dostawą materiału przez rzekę a jego usuwaniem przez morze**. W ujściu Amazonki amplituda pływów sięga kilku metrów, a prąd przybrzeżny rozprowadza zawiesinę setki kilometrów wzdłuż wybrzeża, więc osady nie utrwalają się przy ujściu. Przepływ Amazonki jest największy na świecie (ok. 200 tys. m³/s), zatem odpowiedź czwarta jest fałszywa, a temperatura i zasolenie nie mają tu znaczenia."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy typy poleceń, które wracają co roku. (1) **Oblicz przepływ lub odpływ jednostkowy** — zawsze zapisz najpierw pole przekroju jako iloczyn szerokości i średniej głębokości, a potem pilnuj zamiany m³ na dm³. (2) **Rozpoznaj reżim na podstawie hydrogramu lub klimatogramu** — patrz na MIESIĄC maksimum: wiosna to roztopy (niwalny), pełnia lata przy zerowym przepływie zimą to glacjalny, lato w klimacie ciepłym to monsunowy, zima w Europie Zachodniej to pluwialny oceaniczny. (3) **Wyjaśnij powstanie formy** — buduj pełny łańcuch: warunek (spadek, pływy, wezbranie) → proces (erozja wgłębna / boczna / akumulacja) → forma. Samo nazwanie formy („to jest starorzecze”) bez opisania procesu nie daje punktu za wyjaśnienie."
+        }
+      ]
+    },
+    {
+      "slug": "wody-podziemne-jeziora-i-bagna",
+      "title": "Wody podziemne, jeziora i bagna — ukryta i stojąca część hydrosfery",
+      "summary": "Pionowy układ wód podziemnych i mechanizm samowypływu artezyjskiego, typy źródeł, geneza mis jeziornych oraz sukcesja jeziora prowadząca do powstania torfowiska.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rzeki widać, ale to nie one przechowują lądową wodę słodką. Ogromna jej część tkwi **pod ziemią** — w porach piasków i żwirów oraz w szczelinach skał litych — a reszta stoi w misach jeziornych i nasyca torfowiska. Te trzy zbiorniki mają wspólną cechę, której brakuje rzekom: **wolną wymianę wody**. Woda w rzece wymienia się w kilkanaście dni, w jeziorze w lata lub dziesięciolecia, a w głębokiej warstwie wodonośnej — w setki i tysiące lat. To dlatego zanieczyszczenie rzeki da się „wypłukać”, a skażonej warstwy wodonośnej praktycznie nie. Ta lekcja tłumaczy, gdzie ta woda siedzi, dlaczego czasem sama wypływa na powierzchnię i co się dzieje z jeziorem, kiedy zostawić je samemu sobie."
+        },
+        {
+          "type": "definition",
+          "term": "Wody podziemne i warstwa wodonośna",
+          "text": "**Wody podziemne** to wody wypełniające wolne przestrzenie w skałach skorupy ziemskiej: pory (skały okruchowe), szczeliny (skały lite) i kawerny (skały krasowiejące). Pochodzą przede wszystkim z **infiltracji**, czyli wsiąkania wody opadowej. **Warstwa wodonośna** to warstwa skał **przepuszczalnych** (piaski, żwiry, piaskowce, skrasowiałe wapienie) wypełniona wodą i spoczywająca na warstwie **nieprzepuszczalnej** (iły, gliny, łupki, niespękane skały krystaliczne), która nie pozwala wodzie odpłynąć niżej.",
+          "note": "Górną granicę wody nazywamy **zwierciadłem**. Jest ono **swobodne**, gdy nad wodą znajdują się skały przepuszczalne i woda pozostaje pod zwykłym ciśnieniem atmosferycznym, albo **napięte (naporowe)**, gdy warstwa wodonośna jest przykryta warstwą nieprzepuszczalną i woda znajduje się pod ciśnieniem większym od atmosferycznego."
+        },
+        {
+          "type": "layers",
+          "title": "Pionowy układ wód podziemnych",
+          "caption": "Czytaj od góry: im głębiej, tym starsza woda, tym lepiej chroniona przed zanieczyszczeniem i tym wolniej wymieniana. Powyżej zwierciadła leży **strefa aeracji** (pory zawierają powietrze), poniżej — **strefa saturacji** (pory całkowicie wypełnione wodą).",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Strefa aeracji (napowietrzania)",
+              "range": "od powierzchni do zwierciadła wód gruntowych",
+              "text": "Pory skalne wypełnione są jednocześnie powietrzem i przesiąkającą w dół wodą. Woda nie tworzy tu ciągłego poziomu — jest w drodze z powierzchni w głąb.",
+              "tone": "earth"
+            },
+            {
+              "name": "Wody zaskórne (wierzchówki)",
+              "range": "zwykle 0,5–3 m p.p.t.",
+              "text": "Zbierają się w strefie aeracji nad **lokalną, nieciągłą** soczewką skał nieprzepuszczalnych. Zwierciadło swobodne, silnie reagujące na opad — po suszy potrafią całkowicie zaniknąć. Nie są izolowane od powierzchni, więc **łatwo je zanieczyścić** i nie nadają się do picia.",
+              "tone": "water"
+            },
+            {
+              "name": "Wody gruntowe",
+              "range": "od kilku do kilkudziesięciu metrów",
+              "text": "**Pierwszy ciągły** poziom wodonośny, leżący na pierwszej ciągłej warstwie nieprzepuszczalnej. Zwierciadło swobodne, zasilane bezpośrednio infiltracją opadu. To z nich czerpią studnie kopane i z nich wypływa większość źródeł; one też zasilają rzeki w okresach bezopadowych.",
+              "tone": "water"
+            },
+            {
+              "name": "Warstwa nieprzepuszczalna (iły, gliny)",
+              "range": "miąższość od metrów do dziesiątek metrów",
+              "text": "Bariera, która zatrzymuje wodę i **oddziela poziomy wodonośne** od siebie. Im grubsza i bardziej ciągła, tym lepiej chroni głębsze wody przed zanieczyszczeniami z powierzchni.",
+              "tone": "rock"
+            },
+            {
+              "name": "Wody wgłębne",
+              "range": "od kilkudziesięciu do kilkuset metrów",
+              "text": "Leżą **między dwiema warstwami nieprzepuszczalnymi**, więc mają zwierciadło **napięte**. Zasilane są wyłącznie tam, gdzie warstwa wodonośna wychodzi na powierzchnię (na **wychodniach**), czasem oddalonych o dziesiątki kilometrów. Izolacja sprawia, że są czyste i to na nich opierają się ujęcia wody dla miast.",
+              "tone": "water"
+            },
+            {
+              "name": "Wody głębinowe",
+              "range": "setki i tysiące metrów",
+              "text": "Wymiana trwa setki i tysiące lat, więc praktycznie nie uczestniczą w obiegu wody. Długi kontakt ze skałami sprawia, że są **silnie zmineralizowane**, a wraz z głębokością (stopień geotermiczny) także gorące — to zaplecze wód leczniczych i energetyki geotermalnej.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Wody artezyjskie i subartezyjskie",
+          "text": "**Wody artezyjskie** to wody wgłębne uwięzione w **niecce artezyjskiej** — warstwie wodonośnej wygiętej ku dołowi (synklinalnie) i zamkniętej z góry i z dołu warstwami nieprzepuszczalnymi. Woda infiltruje na wyżej położonych skrzydłach niecki, a w jej środku znajduje się pod dużym ciśnieniem hydrostatycznym. Jeżeli **zwierciadło ciśnieniowe leży powyżej powierzchni terenu**, to po nawierceniu warstwy woda wypływa **samoczynnie**, bez pompowania — to samowypływ artezyjski. Gdy woda podnosi się w otworze, ale nie sięga powierzchni, mówimy o wodach **subartezyjskich**.",
+          "note": "Największy na świecie zbiornik tego typu to **Wielki Basen Artezyjski** w Australii (ok. 1,7 mln km²) — bez niego hodowla bydła i owiec w interiorze byłaby niemożliwa. W Polsce wody artezyjskie i subartezyjskie występują m.in. w **niecce mazowieckiej** i **niecce lubelskiej**."
+        },
+        {
+          "type": "classification",
+          "title": "Typy źródeł",
+          "caption": "**Źródło** to naturalny, skoncentrowany wypływ wód podziemnych na powierzchnię. O typie źródła decyduje mechanizm: czy woda spływa w dół siłą ciężkości, czy jest wypychana w górę przez ciśnienie.",
+          "groups": [
+            {
+              "name": "Zstępujące (descensyjne, warstwowe)",
+              "description": "Woda spływa **grawitacyjnie** i wypływa tam, gdzie powierzchnia terenu przecina warstwę wodonośną — najczęściej na zboczu doliny lub u podnóża stoku. Najpospolitszy typ źródła.",
+              "examples": [
+                "źródła u podnóża krawędzi wysoczyzn",
+                "źródliska rzek na stokach gór"
+              ]
+            },
+            {
+              "name": "Wstępujące (ascensyjne)",
+              "description": "Woda **pod ciśnieniem** wydostaje się ku górze wzdłuż uskoku, szczeliny lub otworu w warstwie nieprzepuszczalnej. Wypływ jest zwykle bardzo stały, bo zasilanie pochodzi z głębokiego, izolowanego poziomu.",
+              "examples": [
+                "źródła uskokowe w Sudetach",
+                "naturalne wypływy artezyjskie"
+              ]
+            },
+            {
+              "name": "Krasowe (wywierzyska)",
+              "description": "Potężny wypływ z systemu podziemnych kanałów rozpuszczonych w wapieniach. Charakterystyczna jest **bardzo duża i bardzo zmienna wydajność** — po ulewie wywierzysko potrafi zwielokrotnić wypływ w kilka godzin.",
+              "examples": [
+                "Wywierzysko Chochołowskie i Lodowe Źródło w Tatrach",
+                "Fontaine de Vaucluse we Francji"
+              ]
+            },
+            {
+              "name": "Mineralne",
+              "description": "Woda zawiera ponad **1 g składników mineralnych w 1 dm³**, rozpuszczonych podczas długiej wędrówki przez skały. Stanowią podstawę uzdrowisk.",
+              "examples": [
+                "szczawy w Krynicy-Zdroju",
+                "wody siarczkowe w Busku-Zdroju",
+                "solanki w Ciechocinku"
+              ]
+            },
+            {
+              "name": "Termalne (cieplice)",
+              "description": "Wypływ o temperaturze wyraźnie wyższej niż średnia roczna temperatura powietrza w danym miejscu — woda nagrzewa się na dużej głębokości zgodnie ze **stopniem geotermicznym** lub w sąsiedztwie ognisk magmy.",
+              "examples": [
+                "Cieplice Śląskie-Zdrój",
+                "wody geotermalne Podhala",
+                "Bania w Białce Tatrzańskiej"
+              ]
+            },
+            {
+              "name": "Gejzery",
+              "description": "Pulsacyjny wyrzut wrzącej wody i pary: woda w podziemnym kanale nagrzewa się powyżej 100 °C pod ciśnieniem słupa wody, a gdy część odparuje, następuje gwałtowna erupcja. Występują tylko na obszarach **aktywnych wulkanicznie**.",
+              "examples": [
+                "Islandia (Strokkur)",
+                "Yellowstone w USA",
+                "Kamczatka",
+                "Nowa Zelandia"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pomyłki przy wodach podziemnych. (1) **Zaskórne kontra gruntowe**: zaskórne leżą w strefie aeracji nad *nieciągłą* soczewką i wysychają, gruntowe to pierwszy *ciągły* poziom wodonośny — to nie synonimy. (2) **Nie każda woda wgłębna jest artezyjska**: potrzebna jest jeszcze niecka i zwierciadło ciśnieniowe powyżej powierzchni terenu. Jeśli trzeba pompować — to woda subartezyjska. (3) **Źródło to wypływ naturalny**; woda z odwiertu lub studni źródłem nie jest, choćby wypływała sama. (4) **Wywierzysko to źródło krasowe, a nie gejzer** — nie ma nic wspólnego z wulkanizmem ani z wysoką temperaturą."
+        },
+        {
+          "type": "classification",
+          "title": "Geneza mis jeziornych",
+          "caption": "**Jezioro** to naturalne zagłębienie terenu wypełnione wodą, nieposiadające bezpośredniego połączenia z oceanem. O jego kształcie, głębokości i trwałości decyduje przede wszystkim to, **co wyżłobiło misę jeziorną**.",
+          "groups": [
+            {
+              "name": "Tektoniczne",
+              "description": "Wypełniają **rowy tektoniczne i zapadliska**. Są bardzo głębokie, wydłużone, o stromych brzegach i prostej linii brzegowej — a że powstają na uskokach, wiele z nich leży w strefach aktywnych sejsmicznie.",
+              "examples": [
+                "Bajkał — 1642 m, najgłębsze na świecie",
+                "Tanganika i Niasa w Rowie Wschodnioafrykańskim",
+                "Morze Martwe",
+                "Morze Kaspijskie"
+              ]
+            },
+            {
+              "name": "Polodowcowe",
+              "description": "Najliczniejsza grupa w Polsce. **Rynnowe** — wąskie, długie i głębokie, wyżłobione przez wody płynące pod ciśnieniem w tunelach pod lądolodem. **Morenowe** — płytkie, o bardzo rozwiniętej linii brzegowej, w zagłębieniach między wzgórzami morenowymi. **Wytopiskowe (oczka)** — po wytopieniu brył martwego lodu. **Cyrkowe (karowe)** — w kotłach wyżłobionych przez lodowce górskie.",
+              "examples": [
+                "Hańcza — rynnowe, 108,5 m",
+                "Śniardwy i Mamry — morenowe",
+                "Morskie Oko i Wielki Staw — cyrkowe"
+              ]
+            },
+            {
+              "name": "Krasowe",
+              "description": "Powstają w lejach i zapadliskach utworzonych po **rozpuszczeniu** wapieni, gipsów lub soli przez wodę z rozpuszczonym dwutlenkiem węgla. Są zwykle niewielkie, okrągłe i głębokie w stosunku do powierzchni; bywają nietrwałe, bo woda potrafi odpłynąć podziemnym kanałem.",
+              "examples": [
+                "część Jezior Łęczyńsko-Włodawskich",
+                "Jeziora Plitwickie w Chorwacji",
+                "cenoty Jukatanu"
+              ]
+            },
+            {
+              "name": "Wulkaniczne",
+              "description": "**Kraterowe i kalderowe** — woda wypełnia zagłębienie po eksplozji lub zapadnięciu się komory magmowej wygasłego wulkanu; misa jest okrągła i stroma. **Zaporowe wulkaniczne** — potok lawy tarasuje dolinę rzeczną.",
+              "examples": [
+                "Toba na Sumatrze — największe jezioro kalderowe świata",
+                "Crater Lake w USA",
+                "Laacher See w Niemczech"
+              ]
+            },
+            {
+              "name": "Przybrzeżne (nadmorskie)",
+              "description": "Dawne **zatoki morskie odcięte od morza mierzeją** usypaną przez prąd przybrzeżny. Są bardzo płytkie, o wyrównanej linii brzegowej, a woda bywa w nich **słonawa**, bo podczas sztormów morze wdziera się do jeziora.",
+              "examples": [
+                "Łebsko i Gardno w Słowińskim PN",
+                "Jamno",
+                "Sarbsko i Bukowo"
+              ]
+            },
+            {
+              "name": "Sztuczne (zaporowe i antropogeniczne)",
+              "description": "Powstają przez **przegrodzenie doliny rzecznej zaporą** albo przez zalanie wyrobisk górniczych i zapadlisk po eksploatacji surowców. Pełnią funkcje przeciwpowodziowe, retencyjne, energetyczne i rekreacyjne.",
+              "examples": [
+                "Jezioro Solińskie — największa objętość w Polsce",
+                "Jezioro Włocławskie",
+                "Jezioro Nasera na Nilu",
+                "zbiornik Zapory Trzech Przełomów"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Polskie jeziora według genezy",
+          "caption": "Polska ma ok. 7 tys. jezior o powierzchni powyżej 1 ha, skupionych głównie na pojezierzach — to ślad po ostatnim zlodowaceniu. Kliknij punkty i porównaj kształt mis o różnej genezie.",
+          "center": [
+            52.4,
+            20.5
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 54.2617,
+              "lng": 22.8158,
+              "label": "Hańcza — jezioro rynnowe",
+              "text": "Najgłębsze jezioro Polski (108,5 m) i całej Niziny Środkowoeuropejskiej. Wąskie, wydłużone, o stromych zboczach misy — typowa **rynna subglacjalna**, wyżłobiona przez wody płynące pod ciśnieniem w tunelu pod lądolodem."
+            },
+            {
+              "lat": 53.7667,
+              "lng": 21.7333,
+              "label": "Śniardwy — jezioro morenowe",
+              "text": "Największe jezioro Polski (113,8 km²), a przy tym płytkie (średnio ok. 6 m) i bardzo nieregularne, z licznymi wyspami i zatokami. Misa to zagłębienie w **morenie dennej** — porównaj: duża powierzchnia, mała głębokość, odwrotnie niż w Hańczy."
+            },
+            {
+              "lat": 49.1975,
+              "lng": 20.0708,
+              "label": "Morskie Oko — jezioro cyrkowe",
+              "text": "Wypełnia **kocioł (cyrk) polodowcowy** wyżłobiony przez lodowiec górski w Dolinie Rybiego Potoku. Charakterystyczny półkolisty kształt i stroma ściana skalna od strony przeciwnej do wylotu doliny."
+            },
+            {
+              "lat": 54.7,
+              "lng": 17.4167,
+              "label": "Łebsko — jezioro przybrzeżne",
+              "text": "Trzecie co do wielkości jezioro Polski, dawna zatoka Bałtyku odcięta **mierzeją**. Głębokość zaledwie ok. 6 m, woda okresowo słonawa, bo przy sztormach morze wdziera się przez ujście Łeby."
+            },
+            {
+              "lat": 51.5292,
+              "lng": 23.5069,
+              "label": "Jeziora Łęczyńsko-Włodawskie — geneza krasowa",
+              "text": "Na Polesiu Lubelskim wody rozpuściły podłoże węglanowe, tworząc zagłębienia o kolistych zarysach. Część jezior tego obszaru ma genezę **krasową**, co jest wyjątkiem na tle polodowcowych pojezierzy północnej Polski."
+            },
+            {
+              "lat": 54.05,
+              "lng": 19.45,
+              "label": "Druzno — jezioro deltowe",
+              "text": "Płytki, silnie zarastający zbiornik w delcie Wisły, pozostałość dawnej zatoki Zalewu Wiślanego. Podręcznikowy przykład jeziora w **zaawansowanym stadium sukcesji** — miejscami trudno wskazać granicę wody i lądu."
+            },
+            {
+              "lat": 49.38,
+              "lng": 22.46,
+              "label": "Jezioro Solińskie — zbiornik zaporowy",
+              "text": "Sztuczne jezioro utworzone przez przegrodzenie Sanu zaporą (1968). Ok. 472 mln m³ pojemności — największa objętość spośród polskich zbiorników. Kształt dendrytyczny, bo woda zalała dolinę rzeczną wraz z dolinami dopływów."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Rekordy jeziorne",
+          "items": [
+            {
+              "value": "1642",
+              "unit": "m",
+              "label": "Głębokość Bajkału",
+              "note": "Najgłębsze jezioro świata; mieści ok. 20% niezamarzniętej wody słodkiej powierzchniowej Ziemi."
+            },
+            {
+              "value": "371 000",
+              "unit": "km²",
+              "label": "Powierzchnia Morza Kaspijskiego",
+              "note": "Największe jezioro świata — bezodpływowe i słone, mimo „morskiej” nazwy."
+            },
+            {
+              "value": "82 100",
+              "unit": "km²",
+              "label": "Powierzchnia Jeziora Górnego",
+              "note": "Największe jezioro słodkowodne świata pod względem powierzchni (Wielkie Jeziora Ameryki Płn.)."
+            },
+            {
+              "value": "113,8",
+              "unit": "km²",
+              "label": "Powierzchnia Śniardw",
+              "note": "Największe jezioro Polski, ale płytkie — średnio ok. 6 m."
+            },
+            {
+              "value": "108,5",
+              "unit": "m",
+              "label": "Głębokość Hańczy",
+              "note": "Najgłębsze jezioro Polski — misa rynnowa na Pojezierzu Suwalskim."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Sukcesja jeziora — od czystej wody do torfowiska",
+          "caption": "Każde jezioro jest formą **przejściową w skali geologicznej**: od chwili powstania zaczyna się wypłycać. Tempo zależy od dopływu materiału i związków biogennych, a działalność człowieka (ścieki, nawozy) potrafi skrócić ten proces z tysięcy lat do dziesięcioleci.",
+          "steps": [
+            {
+              "title": "1. Dopływ materiału i biogenów",
+              "text": "Dopływy wnoszą do misy zawiesinę mineralną oraz związki **azotu i fosforu**. Rośnie żyzność wody (**eutrofizacja**), a wraz z nią produkcja glonów i planktonu."
+            },
+            {
+              "title": "2. Odkładanie osadów na dnie",
+              "text": "Materiał mineralny i obumarła materia organiczna gromadzą się na dnie szybciej, niż są rozkładane — jezioro **wypłyca się**, a przy dnie ubywa tlenu, co dodatkowo hamuje rozkład."
+            },
+            {
+              "title": "3. Roślinność wkracza od brzegów",
+              "text": "W płytszej wodzie rozwijają się kolejne pasy roślinności: rośliny **wynurzone** (trzcina, pałka, oczeret) przy brzegu, dalej o **liściach pływających** (grzybienie, grążel), najgłębiej **zanurzone** (moczarka, ramienice). Pierścień zwęża się ku środkowi."
+            },
+            {
+              "title": "4. Powstaje pło",
+              "text": "Nad lustrem wody rozrasta się pływający kożuch turzyc i **torfowców** — tzw. **pło**. Pod nim, w warunkach beztlenowych, obumarła materia nie ulega pełnemu rozkładowi i odkłada się jako **torf**."
+            },
+            {
+              "title": "5. Torfowisko, a potem las",
+              "text": "Otwarte lustro wody zanika i powstaje **torfowisko niskie**. Gdy warstwa torfu urośnie tak, że powierzchnia straci kontakt z wodami gruntowymi, przekształca się w **torfowisko wysokie**. Ostatnim ogniwem bywa las bagienny (ols lub bór bagienny)."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Torfowisko niskie a torfowisko wysokie",
+          "leftLabel": "Torfowisko niskie",
+          "rightLabel": "Torfowisko wysokie",
+          "rows": [
+            {
+              "aspect": "Źródło wody",
+              "left": "Wody **gruntowe i powierzchniowe**, przepływające przez torfowisko i przynoszące składniki mineralne",
+              "right": "Wyłącznie **opad atmosferyczny** — powierzchnia jest odcięta od wód gruntowych warstwą torfu"
+            },
+            {
+              "aspect": "Żyzność (troficzność)",
+              "left": "Eutroficzne — zasobne w wapń, azot i fosfor",
+              "right": "Oligotroficzne — skrajnie ubogie w składniki pokarmowe"
+            },
+            {
+              "aspect": "Odczyn",
+              "left": "Obojętny lub lekko zasadowy",
+              "right": "Silnie **kwaśny** (pH ok. 3–4), bo torfowce zakwaszają otoczenie"
+            },
+            {
+              "aspect": "Roślinność",
+              "left": "Turzyce, trzciny, olsza czarna, wierzby — bujna i wysoka",
+              "right": "**Torfowce (mchy Sphagnum)**, wełnianka, żurawina, rosiczka i sosna błotna — niska, wyspecjalizowana"
+            },
+            {
+              "aspect": "Kształt powierzchni",
+              "left": "Płaska, zajmuje dna dolin i zagłębienia terenu",
+              "right": "**Wypukła, kopulasta** — środek leży wyżej niż brzegi, bo torfowce rosną najszybciej w centrum"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Bagna Biebrzańskie, dolina Narwi",
+              "right": "Torfowiska bałtyckie na Pomorzu, torfowiska w Borach Tucholskich i na Polesiu"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W środkowej części rozległej niecki wywiercono otwór do warstwy piasków zamkniętej od góry i od dołu iłami. Woda samoczynnie wypłynęła kilka metrów ponad powierzchnię terenu. Które wyjaśnienie jest poprawne?",
+          "options": [
+            "To wody gruntowe — ich swobodne zwierciadło zawsze leży powyżej terenu w obniżeniach",
+            "To wody zaskórne — po opadach ich ciśnienie rośnie na tyle, że wypychają je na powierzchnię",
+            "To wody artezyjskie — zasilanie na wyżej położonych skrzydłach niecki wytwarza ciśnienie hydrostatyczne, a zwierciadło ciśnieniowe leży powyżej powierzchni terenu",
+            "To wody subartezyjskie — w nieckach woda zawsze wypływa samoczynnie"
+          ],
+          "correctIndex": 2,
+          "explanation": "Decydują trzy przesłanki naraz: **niecka**, **warstwa wodonośna zamknięta z góry i z dołu** (zwierciadło napięte) oraz **samowypływ**. Wody gruntowe mają zwierciadło swobodne i nigdy nie tworzą naporu, wody zaskórne leżą w strefie aeracji i zanikają w czasie suszy. Wody subartezyjskie występują w takiej samej strukturze, ale ich zwierciadło ciśnieniowe leży *poniżej* powierzchni terenu, więc trzeba je pompować — a tu woda sama wybiła ponad teren."
+        },
+        {
+          "type": "quiz",
+          "question": "Na Pojezierzu Pomorskim leży jezioro o długości 12 km, szerokości nieprzekraczającej 800 m i głębokości 60 m, o stromych zboczach misy i prostej linii brzegowej. Jaka jest jego geneza i jaki proces ją wyjaśnia?",
+          "options": [
+            "Morenowa — misa to zagłębienie między wzgórzami moreny dennej",
+            "Rynnowa — misę wyżłobiły wody roztopowe płynące pod ciśnieniem w tunelu pod lądolodem",
+            "Krasowa — woda rozpuściła wydłużoną strefę wapieni",
+            "Tektoniczna — misa powstała w rowie tektonicznym"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zestaw cech „bardzo długie, wąskie, głębokie, o stromych zboczach” jest podpisem **rynny subglacjalnej**. Wody roztopowe uwięzione pod lądolodem płynęły pod ciśnieniem, więc miały ogromną energię i żłobiły wąskie, głębokie tunele. Jeziora morenowe są odwrotnością: rozległe, płytkie i o silnie rozwiniętej linii brzegowej. Krasu na Pojezierzu Pomorskim praktycznie nie ma, a rowy tektoniczne nie występują w tej części Niżu."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego na torfowisku wysokim rosną rosiczki — rośliny zdobywające azot przez chwytanie owadów?",
+          "options": [
+            "Bo torf blokuje dostęp światła i rośliny nie mogą prowadzić fotosyntezy",
+            "Bo torfowisko wysokie jest zasilane wyłącznie opadem atmosferycznym, więc jest skrajnie ubogie w składniki mineralne, a dodatkowo silnie kwaśne — azot trzeba pozyskać inaczej",
+            "Bo wysokie położenie torfowiska oznacza niską temperaturę, która uniemożliwia pobieranie wody przez korzenie",
+            "Bo torfowce zużywają cały tlen, więc korzenie nie mogą oddychać i roślina musi się odżywiać liśćmi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nazwa „wysokie” dotyczy **wypukłego kształtu**, a nie wysokości nad poziomem morza. Kluczem jest **ombrogeniczne zasilanie**: skoro woda pochodzi tylko z opadu, nie dostarcza wapnia, azotu ani fosforu, a torfowce dodatkowo zakwaszają podłoże do pH ok. 3–4, co blokuje rozkład materii i uwalnianie azotu. W takich warunkach przewagę mają rośliny owadożerne, które omijają glebę jako źródło azotu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Jak odpowiadać na typowe polecenia. (1) **„Określ genezę jeziora na podstawie mapy/opisu”** — czytaj proporcje misy: długie, wąskie i głębokie = rynnowe; rozległe, płytkie, poszarpane = morenowe; okrągłe i głębokie w górach = cyrkowe; okrągłe na nizinie z wapieniami = krasowe; wydłużone równolegle do brzegu morza i płytkie = przybrzeżne; dendrytyczne z zaporą = sztuczne. (2) **„Wyjaśnij, dlaczego woda wypłynęła sama”** — trzeba wymienić WSZYSTKIE trzy warunki artezyjskości (niecka, izolacja warstwy z dwóch stron, zwierciadło ciśnieniowe powyżej terenu); pominięcie jednego kosztuje punkt. (3) **„Uzasadnij, dlaczego wody wgłębne są lepszej jakości”** — chodzi o izolującą warstwę nieprzepuszczalną i długą drogę filtracji, a nie o samą głębokość."
+        }
+      ]
+    },
+    {
+      "slug": "lodowce-ladolody-i-gospodarowanie-woda",
+      "title": "Lodowce i lądolody oraz gospodarowanie zasobami wodnymi",
+      "summary": "Granica wiecznego śniegu, przemiana śniegu w lód lodowcowy i bilans masy lodowca, różnice między lodowcem górskim a lądolodem oraz problem deficytu wody, jej racjonalnego wykorzystania i ochrony.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Lód to **największy zbiornik wody słodkiej na Ziemi** — mieści ok. 68% jej zasobów, czyli wielokrotnie więcej niż wszystkie jeziora i rzeki razem wzięte. Ale to zbiornik szczególny: przez tysiące lat wyłączony z obiegu, a od kilku dekad gwałtownie uwalniany. Dlatego lodowce łączą dwa tematy, które na maturze zwykle stoją osobno: **fizykę kriosfery** (dlaczego lód powstaje, płynie i zanika) oraz **gospodarkę wodną** (skąd ludzie biorą wodę, gdy jej brakuje). Zaczniemy od granicy, powyżej której śnieg przestaje topnieć, a skończymy na tym, dlaczego Polska ma jedne z najmniejszych zasobów wodnych w Europie."
+        },
+        {
+          "type": "definition",
+          "term": "Lodowiec i granica wiecznego śniegu",
+          "text": "**Lodowiec** to naturalna masa lodu powstała z przeobrażenia śniegu, poruszająca się pod wpływem własnego ciężaru. Warunkiem jego powstania jest istnienie obszaru leżącego powyżej **granicy wiecznego (wieloletniego) śniegu** — czyli dolnej granicy obszaru, na którym śnieg nie topnieje całkowicie w ciągu lata i może się kumulować z roku na rok. Wysokość tej granicy zależy od dwóch czynników naraz: **temperatury** (a więc szerokości geograficznej i wysokości nad poziomem morza) oraz **wielkości opadu śniegu**. Znaczenie ma też ekspozycja stoku — na półkuli północnej granica leży niżej na stokach północnych, zacienionych.",
+          "note": "Lód pokrywa dziś ok. **10% powierzchni lądów**, a podczas maksimum ostatniego zlodowacenia było to ok. 30%. Gdyby stopniał cały lodowy zapas Ziemi, poziom oceanu światowego podniósłby się o ok. 65 m."
+        },
+        {
+          "type": "zones",
+          "title": "Wysokość granicy wiecznego śniegu — od bieguna do równika",
+          "caption": "Uwaga na kształt tej zależności: granica **nie rośnie równomiernie** w stronę równika. Najwyżej leży nad zwrotnikami, a nad równikiem opada — bo o akumulacji śniegu decyduje nie tylko ciepło, ale i to, czy w ogóle pada.",
+          "zones": [
+            {
+              "name": "Obszary okołobiegunowe",
+              "latitude": "powyżej 70°N i S",
+              "text": "Granica sięga **poziomu morza** — śnieg utrzymuje się cały rok nawet na wybrzeżu. Lądolody Antarktydy i Grenlandii schodzą wprost do oceanu, gdzie odłamują się od nich góry lodowe (**cielenie**).",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa subpolarna",
+              "latitude": "ok. 60–70°",
+              "text": "Ok. **300–900 m n.p.m.** Lodowce sięgają nisko, aż do fiordów i dolin — stąd potężne lodowce Spitsbergenu, Islandii i Alaski, mimo umiarkowanych wysokości gór.",
+              "tone": "ice"
+            },
+            {
+              "name": "Szerokości umiarkowane",
+              "latitude": "ok. 45–50°",
+              "text": "Ok. **2500–3200 m n.p.m.** — dlatego Alpy i Kaukaz mają lodowce, a Tatry (do 2655 m) już nie, choć zachowały doskonale wykształcone formy polodowcowe z plejstocenu.",
+              "tone": "sky"
+            },
+            {
+              "name": "Strefa zwrotnikowa",
+              "latitude": "ok. 20–30°",
+              "text": "**Najwyżej na Ziemi — ok. 5500–6000 m n.p.m.** Panuje tu wyż zwrotnikowy: opady śniegu są znikome, powietrze suche, nasłonecznienie ogromne, więc ablacja przez topnienie i **sublimację** jest bardzo silna. Ojos del Salado (6893 m) w Andach ma lód dopiero na samym szczycie.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa równikowa",
+              "latitude": "0–10°",
+              "text": "Ok. **4500–5000 m n.p.m.** — a więc **niżej niż nad zwrotnikami**, mimo wyższej temperatury u podnóża gór. Decydują ogromne opady: akumulacja jest tak duża, że przeważa nad topnieniem już na mniejszej wysokości. Lodowce mają Kilimandżaro, Andy Ekwadoru i góry Nowej Gwinei.",
+              "tone": "vegetation"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Od płatka śniegu do jęzora lodowcowego",
+          "caption": "Przemiana śniegu w lód lodowcowy to **diageneza**: kolejne warstwy opadu wywierają nacisk, który usuwa powietrze i zwiększa gęstość materiału ponad dziewięciokrotnie.",
+          "steps": [
+            {
+              "title": "1. Akumulacja w polu firnowym",
+              "text": "Powyżej granicy wiecznego śniegu, w zagłębieniu zwanym **polem firnowym**, opad śniegu przewyższa topnienie. Śnieżna pokrywa narasta z roku na rok, a każda kolejna warstwa dociska poprzednie."
+            },
+            {
+              "title": "2. Powstanie firnu",
+              "text": "Pod ciśnieniem i przy wielokrotnym częściowym topnieniu i zamarzaniu delikatne, gwiazdkowate kryształki tracą ramiona i zaokrąglają się. Powstaje **firn** — ziarnisty śnieg o gęstości ok. 0,4–0,6 g/cm³, jeszcze przepuszczalny dla powietrza."
+            },
+            {
+              "title": "3. Lód lodowcowy",
+              "text": "Dalszy nacisk zamyka i usuwa pęcherzyki powietrza. Powstaje zwarty, niebieskawy **lód lodowcowy** o gęstości ok. 0,9 g/cm³. W wilgotnym i ciepłym klimacie trwa to kilka–kilkanaście lat, w suchym wnętrzu Antarktydy — setki lat."
+            },
+            {
+              "title": "4. Lód zaczyna płynąć",
+              "text": "Gdy miąższość przekroczy kilkadziesiąt metrów, lód pod własnym ciężarem traci sztywność i **płynie plastycznie**, a na warstewce wody roztopowej dodatkowo ślizga się po podłożu. Prędkość waha się od kilku centymetrów do kilku metrów na dobę. Górna, krucha warstwa pęka, tworząc **szczeliny lodowcowe**."
+            },
+            {
+              "title": "5. Jęzor i strefa ablacji",
+              "text": "Lód wypływa poniżej granicy wiecznego śniegu, gdzie zaczyna dominować **ablacja** — topnienie, parowanie, sublimacja i (nad morzem) cielenie. Jęzor kończy się **czołem lodowca**, spod którego wypływa rzeka roztopowa. Czoło stoi w miejscu tylko wtedy, gdy dopływ lodu równoważy ablację."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Bilans masy lodowca",
+          "expression": "B = A - M",
+          "variables": [
+            {
+              "symbol": "B",
+              "meaning": "bilans masy — roczna zmiana zasobu lodu, wyrażana w metrach ekwiwalentu wodnego"
+            },
+            {
+              "symbol": "A",
+              "meaning": "akumulacja — przyrost masy: opad śniegu, szron, lawiny, zamarzająca woda"
+            },
+            {
+              "symbol": "M",
+              "meaning": "ablacja — ubytek masy: topnienie, parowanie i sublimacja, wywiewanie śniegu, cielenie gór lodowych"
+            }
+          ],
+          "caption": "Interpretacja jest prosta i punktowana na maturze: $B > 0$ → **transgresja** (lodowiec przyrasta, czoło przesuwa się w dół doliny), $B < 0$ → **recesja** (czoło się cofa), $B \\approx 0$ → **stagnacja**. Granicę między strefą akumulacji a strefą ablacji nazywamy **linią równowagi (ELA)** — jest to miejsce, w którym bilans wynosi zero. Ocieplenie klimatu **podnosi ELA**, więc strefa akumulacji się kurczy, strefa ablacji rośnie, a bilans staje się trwale ujemny."
+        },
+        {
+          "type": "compare",
+          "title": "Lodowiec górski a lądolód",
+          "leftLabel": "Lodowiec górski",
+          "rightLabel": "Lądolód (lodowiec kontynentalny)",
+          "rows": [
+            {
+              "aspect": "Powierzchnia i miąższość",
+              "left": "Od ułamków do setek km², miąższość od kilkudziesięciu do kilkuset metrów",
+              "right": "Miliony km² i miąższość dochodząca do ponad 4000 m (Antarktyda)"
+            },
+            {
+              "aspect": "Zależność od rzeźby",
+              "left": "Kształt **narzucony przez rzeźbę** — lód wypełnia kocioł i dolinę, którą już zastał",
+              "right": "Lód **przykrywa rzeźbę** i sam narzuca jej kierunek zmian; podłoże ugina się pod jego ciężarem"
+            },
+            {
+              "aspect": "Kierunek ruchu",
+              "left": "W dół doliny, zgodnie ze spadkiem terenu",
+              "right": "**Promieniście** od centrum kopuły lodowej ku peryferiom, niezależnie od nachylenia podłoża"
+            },
+            {
+              "aspect": "Formy erozyjne",
+              "left": "Kotły (cyrki), doliny U-kształtne (żłoby), doliny zawieszone, ostre granie i **karlingi** (np. Matterhorn)",
+              "right": "Wygłady i rysy lodowcowe, rynny subglacjalne, misy jezior polodowcowych, fiordy"
+            },
+            {
+              "aspect": "Formy akumulacyjne",
+              "left": "Moreny **boczne, środkowe i czołowe**, stożki napływowe u wylotu doliny",
+              "right": "Morena denna i czołowa, **sandry, ozy, kemy, drumliny**, głazy narzutowe"
+            },
+            {
+              "aspect": "Występowanie dziś",
+              "left": "Alpy, Himalaje i Karakorum, Kaukaz, Andy, Alaska, Skandynawia",
+              "right": "Antarktyda (ok. 14 mln km²) i Grenlandia (ok. 1,7 mln km²) — tylko te dwa"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Znikające lodowce Himalajów i Karakorum — wodociąg Azji",
+          "region": "Azja Południowa, Wschodnia i Środkowa",
+          "text": "Z lodowców pasma Hindukusz–Karakorum–Himalaje biorą początek Indus, Ganges, Brahmaputra, Mekong, Jangcy i Huang He — rzeki, od których zależy życie i rolnictwo ok. **2 mld ludzi**. Lodowiec działa tu jak **naturalny zbiornik retencyjny**: zatrzymuje zimowy opad w postaci lodu i oddaje go jako wodę roztopową latem, czyli dokładnie wtedy, gdy przed nadejściem monsunu jest najsuchszej. Ocieplenie klimatu przesunęło bilans masy tych lodowców na trwale ujemny i uruchomiło pułapkę dwuetapową. Najpierw przepływ letni **rośnie**, bo topi się więcej lodu, niż przybywa — i można odnieść mylne wrażenie, że wody jest pod dostatkiem. Potem, gdy zapas lodu się kurczy, przepływ **trwale spada**, a rzeka zaczyna zależeć wyłącznie od bieżącego opadu. Najsilniej odczuje to dorzecze Indusu w Pakistanie, gdzie zasilanie lodowcowo-śnieżne jest kluczowe w porze suchej. Do tego dochodzi ryzyko doraźne: woda roztopowa gromadzi się w jeziorach zaporowych za wałami moren czołowych, a przerwanie takiego wału wywołuje gwałtowną powódź lodowcową niszczącą doliny na dziesiątki kilometrów.",
+          "takeaway": "Lodowiec to nie tylko forma rzeźby — to zbiornik retencyjny przesuwający opad zimowy na letni sezon suchy. Jego zanik nie tylko zmniejsza ilość wody, ale też przesuwa ją na niewłaściwą porę roku, a to pogłębia deficyt dokładnie wtedy, gdy woda jest najbardziej potrzebna."
+        },
+        {
+          "type": "definition",
+          "term": "Deficyt wody i stres wodny",
+          "text": "**Zasoby wodne odnawialne** to ilość wody, jaką rocznie dostarcza obieg wody na danym obszarze; przelicza się je na jednego mieszkańca. Przyjmuje się, że poniżej ok. **1700 m³/osobę/rok** obszar znajduje się w stanie **stresu wodnego**, poniżej **1000 m³** mówimy o **niedoborze (deficycie) wody**, a poniżej **500 m³** o niedoborze skrajnym. Wyróżnia się przy tym deficyt **fizyczny** (wody po prostu nie ma, np. na Bliskim Wschodzie i w Afryce Północnej) oraz **ekonomiczny** (woda jest, ale brakuje kapitału i infrastruktury, by ją ująć i uzdatnić — tak jest w znacznej części Afryki Subsaharyjskiej).",
+          "note": "Polska ma ok. **1,6 tys. m³ na mieszkańca rocznie** — jedne z najniższych zasobów w Unii Europejskiej, ok. trzykrotnie mniej niż średnia europejska. Przyczyny są trzy: umiarkowane opady (ok. 600 mm rocznie), wysokie parowanie terenowe oraz **bardzo mała retencja** — w zbiornikach zatrzymujemy zaledwie kilka procent rocznego odpływu, podczas gdy w wielu krajach Europy jest to kilkanaście–kilkadziesiąt procent."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura poboru wody — świat a Polska (wartości przybliżone)",
+          "caption": "Na świecie zdecydowanie dominuje **rolnictwo** (nawodnienia), bo to ono zużywa wodę **bezzwrotnie** — odparowuje ona z pól. W Polsce największy pobór ma **przemysł**, ale w ogromnej większości jest to woda do chłodzenia elektrowni, wracająca do rzek. To ważne rozróżnienie: duży pobór nie zawsze oznacza duże zużycie.",
+          "labels": [
+            "Rolnictwo",
+            "Przemysł",
+            "Gospodarka komunalna"
+          ],
+          "unit": "%",
+          "series": [
+            {
+              "name": "Świat",
+              "values": [
+                70,
+                19,
+                11
+              ]
+            },
+            {
+              "name": "Polska",
+              "values": [
+                10,
+                70,
+                20
+              ]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Sposoby racjonalnego gospodarowania wodą i jej ochrony",
+          "caption": "Uporządkuj je według logiki: najpierw **zatrzymaj** wodę, którą już masz, potem **zużywaj jej mniej**, potem **użyj jej ponownie**, a dopiero na końcu sięgaj po nowe, kosztowne źródła.",
+          "groups": [
+            {
+              "name": "Zwiększanie retencji",
+              "description": "Spowolnienie odpływu, żeby woda dłużej pozostała w zlewni. Obok dużych zbiorników zaporowych coraz większą rolę przypisuje się **małej retencji** i rozwiązaniom opartym na przyrodzie, które są tańsze i nie zaburzają ciągłości rzeki.",
+              "examples": [
+                "zbiorniki retencyjne i suche poldery",
+                "renaturyzacja uregulowanych rzek i odtwarzanie meandrów",
+                "ochrona mokradeł i torfowisk",
+                "zadrzewienia śródpolne, oczka wodne, zatrzymywanie wody w glebie"
+              ]
+            },
+            {
+              "name": "Ograniczanie zużycia",
+              "description": "Najtańsza „nowa woda” to woda niezużyta. Największy potencjał tkwi w rolnictwie, bo tam zużycie jest bezzwrotne, oraz w ograniczaniu strat w przesyle.",
+              "examples": [
+                "nawodnienia kropelkowe zamiast zalewowych",
+                "zamknięte obiegi chłodzenia w przemyśle",
+                "usuwanie nieszczelności sieci wodociągowych",
+                "urządzenia wodooszczędne i taryfy motywujące do oszczędzania"
+              ]
+            },
+            {
+              "name": "Powtórne wykorzystanie",
+              "description": "Ta sama woda używana kilkakrotnie zmniejsza pobór ze środowiska i jednocześnie ładunek zanieczyszczeń trafiający do rzek.",
+              "examples": [
+                "recykling ścieków oczyszczonych do nawodnień i celów przemysłowych",
+                "wykorzystanie wody szarej w budynkach",
+                "zbieranie i wykorzystanie wody deszczowej"
+              ]
+            },
+            {
+              "name": "Pozyskiwanie nowych zasobów",
+              "description": "Rozwiązania skuteczne, ale drogie i obarczone skutkami ubocznymi — dlatego stosuje się je tam, gdzie tańsze metody już nie wystarczają.",
+              "examples": [
+                "odsalanie wody morskiej (kraje Zatoki Perskiej, Izrael) — bardzo energochłonne i wytwarza solankę",
+                "przerzuty wody między dorzeczami",
+                "ujmowanie wód wgłębnych — grozi przeeksploatowaniem poziomu i powstaniem leja depresyjnego"
+              ]
+            },
+            {
+              "name": "Ochrona jakości wód",
+              "description": "Zasób, którego nie da się użyć, praktycznie nie istnieje — dlatego ochrona jakości jest równie ważna jak ochrona ilości.",
+              "examples": [
+                "strefy ochronne wokół ujęć wody",
+                "ograniczenie nawożenia i pestycydów w zlewni (przeciw eutrofizacji)",
+                "oczyszczalnie ścieków i kanalizacja",
+                "przeciwdziałanie intruzji wód morskich do warstw wodonośnych na wybrzeżach"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Pięć pułapek. (1) Granica wiecznego śniegu leży **najwyżej nad zwrotnikami, a nie nad równikiem** — decyduje suchość wyżu zwrotnikowego, a nie sama temperatura. (2) **Ujemny bilans masy nie zatrzymuje lodowca**: lód nadal płynie w dół, cofa się tylko jego czoło. Zdanie „lodowiec przestał się poruszać, więc się cofa” jest błędne. (3) **Lądolód, lodowiec szelfowy i góra lodowa** to trzy różne rzeczy: lodowiec szelfowy pływa, będąc przedłużeniem lądolodu, a góra lodowa jest już od niego oderwana. (4) **Zasoby wody na mieszkańca to nie to samo co zużycie wody na mieszkańca** — kraj o dużych zasobach może zużywać mało i odwrotnie. (5) **Pobór wody to nie zużycie**: woda pobrana do chłodzenia elektrowni w większości wraca do rzeki, natomiast woda pobrana do nawodnień odparowuje i jest stracona bezpowrotnie."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego granica wiecznego śniegu przebiega wyżej nad zwrotnikami (ok. 5500–6000 m) niż nad równikiem (ok. 4500–5000 m), mimo że nad równikiem średnia roczna temperatura powietrza u podnóża gór jest wyższa?",
+          "options": [
+            "Bo nad zwrotnikami góry są wyższe, więc granica musi leżeć wyżej",
+            "Bo w strefie zwrotnikowej panuje wyż baryczny: opady śniegu są znikome, powietrze suche, a nasłonecznienie i sublimacja bardzo silne — akumulacja jest więc mała, a ablacja duża",
+            "Bo nad równikiem promienie słoneczne padają pod mniejszym kątem, więc jest chłodniej",
+            "Bo nad zwrotnikami gradient termiczny w troposferze jest odwrócony"
+          ],
+          "correctIndex": 1,
+          "explanation": "Granica wiecznego śniegu wynika z **bilansu akumulacji i ablacji**, a nie z samej temperatury. W strefie zwrotnikowej osiadające powietrze wyżu daje pogodę bezchmurną i suchą: śniegu pada niewiele, a to, co spadnie, intensywnie topnieje i sublimuje. Nad równikiem opady są ogromne, więc akumulacja przeważa nad ablacją już kilkaset metrów niżej. Odpowiedź 3 jest fałszem fizycznym — to nad równikiem kąt padania promieni jest największy."
+        },
+        {
+          "type": "quiz",
+          "question": "Na lodowcu alpejskim zmierzono w ciągu roku bilansowego akumulację równą 2,4 m ekwiwalentu wodnego i ablację równą 3,1 m. Jaki jest bilans masy i co się będzie działo z lodowcem?",
+          "options": [
+            "B = +0,7 m — lodowiec przyrasta, jego czoło przesuwa się w dół doliny",
+            "B = −0,7 m — lodowiec traci masę, linia równowagi przesuwa się w górę, a czoło się cofa",
+            "B = −0,7 m — lodowiec natychmiast zatrzymuje ruch i zamiera w miejscu",
+            "B = 5,5 m — lodowiec jest w stanie stagnacji"
+          ],
+          "correctIndex": 1,
+          "explanation": "$B = A - M = 2{,}4 - 3{,}1 = -0{,}7$ m ekwiwalentu wodnego, czyli bilans jest **ujemny** i lodowiec znajduje się w fazie **recesji**. Ubytek największy jest w dolnej części jęzora, więc strefa ablacji się powiększa, a linia równowagi (ELA) wędruje w górę. Lód jednak nadal płynie w dół doliny pod własnym ciężarem — cofa się wyłącznie położenie czoła, bo topnienie przewyższa dostawę lodu z góry."
+        },
+        {
+          "type": "quiz",
+          "question": "Polska leży w klimacie umiarkowanym, ma ok. 600 mm opadu rocznie i gęstą sieć rzeczną, a mimo to należy do krajów Unii Europejskiej o najmniejszych zasobach wody na mieszkańca. Które zestawienie przyczyn jest pełne i poprawne?",
+          "options": [
+            "Bardzo duże zużycie wody przez ludność i najwyższe w Europie zużycie w gospodarstwach domowych",
+            "Umiarkowane opady przy dużym parowaniu terenowym, brak zasilania lodowcowego oraz bardzo mała retencja — woda szybko odpływa do Bałtyku",
+            "Wysokie zasolenie wód podziemnych na całym obszarze kraju",
+            "Zbyt gęsta sieć rzeczna, przez którą woda zbyt szybko wsiąka w głąb ziemi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zasoby odnawialne to różnica między opadem a parowaniem, rozłożona na liczbę mieszkańców. W Polsce opad jest umiarkowany, parowanie terenowe wysokie (zwłaszcza latem, gdy woda jest najbardziej potrzebna), a rzeki nie mają zasilania lodowcowego, które w Alpach czy Skandynawii podtrzymuje przepływ w porze suchej. Do tego dochodzi **niska retencja** — zatrzymujemy zaledwie kilka procent rocznego odpływu, więc woda z wezbrań wiosennych bezpowrotnie odpływa do morza. Zużycie na mieszkańca w Polsce jest natomiast niskie na tle Europy, więc odpowiedź 1 jest fałszywa."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy sprawdzone schematy odpowiedzi. (1) **„Wyjaśnij, dlaczego granica wiecznego śniegu leży na wysokości X”** — zawsze podaj DWA czynniki: temperaturę (szerokość geograficzna, wysokość) i opad; odpowiedź oparta wyłącznie na temperaturze nie tłumaczy anomalii zwrotnikowej. (2) **„Podaj skutki zaniku lodowców”** — porządkuj je w czasie: krótkookresowo wzrost przepływu i ryzyko powodzi z jezior morenowych, długookresowo trwały spadek przepływu w porze suchej, wzrost poziomu oceanu i utrata dodatniego sprzężenia albedo. (3) **„Zaproponuj działania ograniczające deficyt wody”** — nie wymieniaj samych zbiorników zaporowych; podaj po jednym rozwiązaniu z różnych grup (retencja, oszczędzanie, powtórne wykorzystanie, ochrona jakości) i **uzasadnij mechanizm** każdego, bo punktowane jest wyjaśnienie, a nie lista haseł."
+        }
+      ]
+    }
+  ]
+}

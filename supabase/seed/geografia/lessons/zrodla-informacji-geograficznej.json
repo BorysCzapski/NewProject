@@ -1,0 +1,1435 @@
+{
+  "topicSlug": "zrodla-informacji-geograficznej",
+  "lessons": [
+    {
+      "slug": "mapa-skala-i-odwzorowania",
+      "title": "Mapa: skala, generalizacja i odwzorowania kartograficzne",
+      "summary": "Czym jest mapa jako model rzeczywistości oraz jak działają jej trzy filary: skala, generalizacja i odwzorowanie kartograficzne.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Każda mapa to **model** rzeczywistości — zmniejszony, płaski i uproszczony. Te trzy cechy nie są wadami, lecz warunkami, bez których mapa nie mogłaby powstać. Zmniejszenie opisuje **skala**, spłaszczenie kuli do płaszczyzny — **odwzorowanie kartograficzne**, a uproszczenie treści — **generalizacja**. Z każdej z tych trzech rzeczy wynikają na maturze rozszerzonej konkretne obliczenia i konkretne pułapki. Ta lekcja przechodzi je po kolei."
+        },
+        {
+          "type": "definition",
+          "term": "Mapa",
+          "text": "**Mapa** to zmniejszony, uogólniony i matematycznie określony obraz powierzchni Ziemi (lub jej części) przeniesiony na płaszczyznę za pomocą umownych znaków. W tej definicji ukryte są cztery cechy mapy: **zmniejszenie** (opisuje je skala), **matematyczne określenie** (odwzorowanie i siatka kartograficzna), **uogólnienie** (generalizacja) oraz **umowność znaków** (objaśniona w legendzie).",
+          "note": "Plan różni się od mapy tym, że obejmuje niewielki obszar w bardzo dużej skali (zwykle 1:5000 i większej) i pomija krzywiznę Ziemi — powierzchnię traktuje się na nim jako płaską."
+        },
+        {
+          "type": "classification",
+          "title": "Trzy sposoby zapisu tej samej skali",
+          "caption": "Skala mapy to stosunek długości odcinka na mapie do odpowiadającej mu długości w terenie. Każdy z trzech zapisów mówi dokładnie to samo — różnią się wygodą użycia.",
+          "groups": [
+            {
+              "name": "Skala liczbowa",
+              "description": "Zapis w postaci proporcji, np. **1:50 000**. Oznacza, że 1 dowolna jednostka na mapie odpowiada 50 000 takim samym jednostkom w terenie. Jest **bezwymiarowa** — działa tak samo dla centymetrów, milimetrów i cali, dlatego to zapis uniwersalny i najczęściej spotykany.",
+              "examples": ["1:25 000", "1:500 000", "1:10 000 000"]
+            },
+            {
+              "name": "Skala mianowana",
+              "description": "Ten sam stosunek zapisany słownie, z jednostkami: **1 cm — 500 m**. Wygodna w obliczeniach, bo od razu podaje, ile metrów lub kilometrów terenu przypada na centymetr mapy, i eliminuje najczęstszy błąd rachunkowy — pominięcie zamiany jednostek.",
+              "examples": ["1 cm — 250 m (dla skali 1:25 000)", "1 cm — 5 km (dla skali 1:500 000)"]
+            },
+            {
+              "name": "Skala liniowa (podziałka liniowa)",
+              "description": "Odcinek z naniesionymi podziałami opisanymi w jednostkach terenowych. Jej przewaga jest praktyczna: **pozostaje poprawna po powiększeniu lub pomniejszeniu mapy** (np. przy kopiowaniu albo powiększaniu na ekranie), bo skaluje się razem z rysunkiem, podczas gdy skala liczbowa staje się wtedy nieprawdziwa.",
+              "examples": ["podziałka na mapie turystycznej", "podziałka pod mapą w atlasie"]
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Przeliczanie odległości z mapy na teren",
+          "expression": "d_{rz} = d_{m} \\cdot M",
+          "variables": [
+            { "symbol": "d_{rz}", "meaning": "odległość rzeczywista w terenie (w tych samych jednostkach, w których zmierzono mapę)" },
+            { "symbol": "d_{m}", "meaning": "odległość zmierzona na mapie, zwykle w centymetrach" },
+            { "symbol": "M", "meaning": "mianownik skali, np. 50 000 dla skali 1:50 000" }
+          ],
+          "caption": "Uwaga na **pola powierzchni** — one skalują się z kwadratem: $P_{rz} = P_{m} \\cdot M^2$. Na mapie 1:50 000 jeden centymetr kwadratowy odpowiada 2 500 000 000 cm², czyli 250 000 m² = 25 ha = 0,25 km²."
+        },
+        {
+          "type": "process",
+          "title": "Od centymetrów na mapie do kilometrów w terenie",
+          "caption": "Schemat, który działa w każdym zadaniu obliczeniowym z mapą topograficzną.",
+          "steps": [
+            {
+              "title": "Zmierz odcinek na mapie",
+              "text": "Linijką odczytaj odległość w **centymetrach** z dokładnością do 1 mm, np. 4,5 cm. Jeżeli polecenie mówi o odległości wzdłuż drogi lub rzeki, mierz krzywomierzem albo nitką dopasowaną do przebiegu linii, a dopiero potem przyłóż ją do linijki."
+            },
+            {
+              "title": "Pomnóż przez mianownik skali",
+              "text": "Dla skali 1:200 000: 4,5 cm × 200 000 = 900 000 cm. Wynik jest **wciąż w centymetrach** — to najczęstsze miejsce, w którym uczniowie tracą punkty, podając 900 000 jako liczbę kilometrów."
+            },
+            {
+              "title": "Zamień jednostki",
+              "text": "1 km = 100 000 cm, więc dzielisz przez 100 000: 900 000 : 100 000 = **9 km**. Praktyczny skrót: aby przejść od centymetrów na mapie do kilometrów w terenie, skreśl w mianowniku skali pięć zer i pomnóż (4,5 × 2 = 9)."
+            },
+            {
+              "title": "Sprawdź sensowność wyniku",
+              "text": "9 km trasy pieszej to około 2 godziny marszu — wynik jest realny. Gdyby wyszło 900 km albo 0,09 km, to sygnał, że pomylono się o rząd wielkości przy zamianie jednostek. Ten jednosekundowy test wyłapuje większość błędów rachunkowych."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Skala a szczegółowość mapy",
+          "caption": "Im **mniejszy mianownik**, tym **większa skala**, tym **więcej szczegółów** i tym **mniejszy obszar** mieści się na arkuszu.",
+          "headers": ["Skala", "1 cm na mapie to", "Rodzaj opracowania", "Typowe zastosowanie"],
+          "rows": [
+            ["1:5000", "50 m", "plan", "mapa zasadnicza, plan zabudowy działki"],
+            ["1:10 000", "100 m", "mapa topograficzna", "mapa do zadań maturalnych, planowanie przestrzenne gminy"],
+            ["1:25 000", "250 m", "mapa topograficzna", "mapa turystyczna parku narodowego"],
+            ["1:100 000", "1 km", "mapa topograficzna", "mapa samochodowa regionu"],
+            ["1:500 000", "5 km", "mapa przeglądowo-topograficzna", "mapa drogowa kraju"],
+            ["1:5 000 000", "50 km", "mapa przeglądowa", "mapa kontynentu w atlasie"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Największa pułapka nazewnicza całego działu: skala **1:10 000 jest WIĘKSZA** niż 1:1 000 000, mimo że liczba w mianowniku jest mniejsza. Myśl o skali jak o ułamku — 1/10 000 to więcej niż 1/1 000 000. Mapa w większej skali pokazuje **mniejszy obszar, ale dokładniej**. Gdy polecenie brzmi „uporządkuj mapy od największej do najmniejszej skali”, porządkujesz od najmniejszego do największego mianownika."
+        },
+        {
+          "type": "definition",
+          "term": "Generalizacja kartograficzna",
+          "text": "**Generalizacja** to celowe uproszczenie i uogólnienie treści mapy, konieczne przy przejściu do mniejszej skali. Obejmuje pięć operacji: **wybór** (pominięcie obiektów mało istotnych, np. dróg gruntowych), **uproszczenie** kształtów (wygładzenie linii brzegowej i meandrów rzeki), **łączenie** obiektów (kilka sąsiadujących wsi jako jedna sygnatura), **przesunięcie** (rozsunięcie drogi i rzeki biegnących tuż obok siebie, by obie były widoczne) oraz **przejście do symbolu** (miasto pokazane kółkiem zamiast konturu zabudowy).",
+          "note": "Generalizacja jest tym silniejsza, im mniejsza skala. Dlatego linia brzegowa Polski na mapie ściennej jest wyraźnie prostsza niż na mapie topograficznej — i dlatego z mapy przeglądowej nie wolno mierzyć długości linii brzegowej."
+        },
+        {
+          "type": "classification",
+          "title": "Odwzorowania kartograficzne według powierzchni odwzorowawczej",
+          "caption": "Kuli nie da się rozwinąć na płaszczyznę bez zniekształceń — można je jedynie przesunąć w wybrane miejsce mapy. O tym, gdzie zniekształceń nie ma, decyduje powierzchnia pomocnicza: walec, stożek albo płaszczyzna.",
+          "groups": [
+            {
+              "name": "Odwzorowania walcowe (cylindryczne)",
+              "description": "Siatkę rzutuje się na **walec** styczny zwykle wzdłuż równika, a następnie rozwija go na płaszczyznę. Południki i równoleżniki tworzą prostokątną kratę przecinającą się pod kątem prostym. Zniekształcenia są **zerowe na równiku** i rosną gwałtownie ku biegunom, dlatego odwzorowania walcowe stosuje się do map całego świata i obszarów międzyzwrotnikowych.",
+              "examples": ["odwzorowanie Mercatora", "odwzorowanie Gaussa-Krügera (walcowe poprzeczne)", "mapy świata w atlasach"]
+            },
+            {
+              "name": "Odwzorowania stożkowe",
+              "description": "Powierzchnią pomocniczą jest **stożek** styczny wzdłuż wybranego równoleżnika. Równoleżniki są łukami koncentrycznymi, a południki — prostymi zbiegającymi się w jednym punkcie poza mapą. Najmniejsze zniekształcenia występują w **szerokościach umiarkowanych**, dlatego to standardowe odwzorowanie map Polski i Europy.",
+              "examples": ["mapy Polski w atlasie szkolnym", "odwzorowanie stożkowe Lamberta", "mapy Europy"]
+            },
+            {
+              "name": "Odwzorowania azymutalne (płaszczyznowe)",
+              "description": "Rzut na **płaszczyznę** styczną w jednym punkcie — najczęściej na biegunie. Zniekształcenia rosną promieniście od punktu styczności, a wszystkie **azymuty liczone z tego punktu są prawdziwe**. Stąd zastosowanie do map obszarów okołobiegunowych oraz map nawigacyjnych i lotniczych.",
+              "examples": ["mapy Arktyki i Antarktydy", "godło ONZ (rzut azymutalny bieguna północnego)", "mapy tras lotniczych"]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Odwzorowania według zachowywanej wielkości",
+          "caption": "Drugi, niezależny podział: nie „na czym rzutujemy”, tylko „co zostaje wierne”. Żadne odwzorowanie nie zachowuje jednocześnie kątów i pól.",
+          "groups": [
+            {
+              "name": "Wiernokątne (równokątne, konforemne)",
+              "description": "Zachowują **kąty** i kształty małych obszarów, ale drastycznie zniekształcają **pola powierzchni**. Wybiera się je wszędzie tam, gdzie liczy się kierunek: w nawigacji morskiej i lotniczej oraz na mapach topograficznych.",
+              "examples": ["odwzorowanie Mercatora", "odwzorowanie Gaussa-Krügera (polski układ PL-1992)"]
+            },
+            {
+              "name": "Wiernopowierzchniowe (równopolowe, ekwiwalentne)",
+              "description": "Zachowują **stosunki pól powierzchni** kosztem kątów i kształtów — kontynenty przy brzegach mapy wyglądają na ściśnięte. Obowiązkowe na mapach, z których odczytuje się powierzchnie i gęstości: gęstości zaludnienia, użytkowania ziemi, zasięgu upraw.",
+              "examples": ["odwzorowanie Mollweidego", "odwzorowanie azymutalne równopolowe Lamberta", "mapy tematyczne świata"]
+            },
+            {
+              "name": "Wiernoodległościowe (równoodległościowe)",
+              "description": "Zachowują **odległości**, ale tylko wzdłuż wybranych linii — np. wzdłuż wszystkich południków albo od jednego wyróżnionego punktu. Odwzorowanie zachowujące wszystkie odległości jednocześnie **nie istnieje**.",
+              "examples": ["azymutalne równoodległościowe (mapy sejsmologiczne)", "walcowe równoodległościowe (plate carrée)"]
+            },
+            {
+              "name": "Dowolne (kompensacyjne)",
+              "description": "Nie zachowują wiernie żadnej wielkości, za to **rozkładają wszystkie rodzaje zniekształceń** tak, by żadne nie było bardzo duże. To kompromis stosowany na ogólnych mapach świata, które mają po prostu wyglądać wiarygodnie.",
+              "examples": ["odwzorowanie Robinsona", "odwzorowanie Winkla"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Dlaczego Grenlandia wygląda jak Afryka",
+          "region": "Odwzorowanie Mercatora, 1569 r.",
+          "text": "Gerard Merkator zaprojektował swoje odwzorowanie dla żeglarzy. Rozciągnął siatkę tak, aby **loksodroma** — linia stałego kursu, przecinająca wszystkie południki pod jednakowym kątem — była na mapie **linią prostą**. Nawigator mógł połączyć linijką port wyjścia z portem docelowym i odczytać jeden kurs kompasowy na całą podróż. Ceną było rozciągnięcie równoleżników: na szerokości 60° równoleżnik jest w rzeczywistości dwa razy krótszy od równika, a na mapie Mercatora ma tę samą długość, więc skala rośnie tam dwukrotnie, a **pola powierzchni czterokrotnie**. Dlatego Grenlandia (2,2 mln km²) wygląda podobnie do Afryki (30,3 mln km²), choć jest od niej około **14 razy mniejsza**. Na biegunach zniekształcenie rośnie do nieskończoności i mapa jest tam obcinana.",
+          "takeaway": "Odwzorowanie Mercatora jest wiernokątne, więc świetnie nadaje się do wyznaczania kursu, ale **nie wolno** z niego odczytywać ani porównywać powierzchni. Do map gęstości zjawisk i zasięgów używa się odwzorowań wiernopowierzchniowych."
+        },
+        {
+          "type": "compare",
+          "title": "Siatka geograficzna a siatka kartograficzna",
+          "leftLabel": "Siatka geograficzna",
+          "rightLabel": "Siatka kartograficzna",
+          "rows": [
+            {
+              "aspect": "Gdzie istnieje",
+              "left": "Na globusie i na kuli ziemskiej — to układ południków i równoleżników na powierzchni **kulistej**.",
+              "right": "Na mapie — to **obraz** siatki geograficznej przeniesiony na płaszczyznę przez odwzorowanie."
+            },
+            {
+              "aspect": "Południki",
+              "left": "Półokręgi o jednakowej długości (ok. 20 004 km), zbiegające się w obu biegunach.",
+              "right": "Zależnie od odwzorowania: proste równoległe, proste zbieżne albo łuki i krzywe."
+            },
+            {
+              "aspect": "Równoleżniki",
+              "left": "Okręgi, których długość maleje od równika (40 075 km) ku biegunom (punkt).",
+              "right": "Odcinki proste, łuki lub krzywe; ich wzajemne proporcje mogą być zmienione przez odwzorowanie."
+            },
+            {
+              "aspect": "Kąt przecięcia",
+              "left": "Południki i równoleżniki **zawsze** przecinają się pod kątem prostym.",
+              "right": "Kąt prosty tylko w odwzorowaniach wiernokątnych; w równopolowych bywa inny."
+            },
+            {
+              "aspect": "Zniekształcenia",
+              "left": "**Brak** — kąty, pola i odległości są wierne, bo to rzeczywista powierzchnia kuli.",
+              "right": "**Zawsze występują**; można jedynie wybrać, która wielkość zostanie zachowana i gdzie zniekształcenia będą najmniejsze."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na mapie w skali 1:250 000 odległość między dwiema miejscowościami wynosi 6,4 cm. Jaka jest odległość rzeczywista?",
+          "options": ["16 km", "160 km", "1,6 km", "64 km"],
+          "correctIndex": 0,
+          "explanation": "6,4 cm × 250 000 = 1 600 000 cm. Zamiana na kilometry: dzielimy przez 100 000, co daje **16 km**. Szybki sposób: skreśl pięć zer w mianowniku (250 000 → 2,5) i pomnóż: 6,4 × 2,5 = 16 km."
+        },
+        {
+          "type": "quiz",
+          "question": "Do wykonania mapy przedstawiającej powierzchnię zasiewów pszenicy w państwach Europy należy wybrać odwzorowanie:",
+          "options": [
+            "wiernokątne, np. Mercatora — zachowuje kształty państw",
+            "wiernopowierzchniowe, np. Mollweidego — zachowuje stosunki pól",
+            "wiernoodległościowe azymutalne — zachowuje odległości od bieguna",
+            "dowolne walcowe — rozkłada zniekształcenia równomiernie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mapa dotyczy **powierzchni**, więc odwzorowanie musi zachować stosunki pól — to odwzorowanie **wiernopowierzchniowe (równopolowe)**. Mercator zawyżyłby obszary w wysokich szerokościach geograficznych (Skandynawia, Rosja) i mapa sugerowałaby fałszywe proporcje zasiewów."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach z pomiaru odległości CKE podaje zwykle **tolerancję** (np. ±0,5 km) — punkt dostajesz za poprawną metodę i wynik mieszczący się w przedziale, więc mierz starannie, ale nie walcz o drugie miejsce po przecinku. Zawsze **zapisz całe działanie z jednostkami** (6,4 cm × 250 000 = 1 600 000 cm = 16 km): za poprawny tok obliczeń bywa przyznawany punkt nawet przy pomyłce rachunkowej. Czytaj też uważnie, czy mierzysz „w linii prostej”, czy „wzdłuż drogi” — to dwa różne wyniki."
+        }
+      ]
+    },
+    {
+      "slug": "wspolrzedne-geograficzne",
+      "title": "Współrzędne geograficzne i obliczenia na siatce",
+      "summary": "Jak odczytywać szerokość i długość geograficzną oraz obliczać odległości i rozciągłość obszarów na podstawie współrzędnych.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Siatka geograficzna to **adres każdego punktu na Ziemi**. Dwie liczby — szerokość i długość geograficzna — wystarczą, by jednoznacznie wskazać miejsce z dokładnością do metrów. Na maturze rozszerzonej ten temat pojawia się w dwóch postaciach: jako **odczyt** współrzędnych z mapy i jako **obliczenia** — odległości między punktami, rozciągłości obszaru, a w innych działach także czasu słonecznego i wysokości Słońca. Wszystkie te rachunki opierają się na kilku stałych, które warto znać na pamięć."
+        },
+        {
+          "type": "definition",
+          "term": "Szerokość geograficzna (φ)",
+          "text": "**Szerokość geograficzna** to kąt między płaszczyzną równika a promieniem Ziemi poprowadzonym do danego punktu. Mierzy się ją **od równika ku biegunom**, w zakresie od $0°$ do $90°$, z oznaczeniem półkuli: **N** (północna) lub **S** (południowa). Punkty o tej samej szerokości leżą na jednym **równoleżniku** — okręgu równoległym do równika, którego długość maleje w kierunku biegunów.",
+          "note": "Równik (0°) jest jedynym równoleżnikiem będącym kołem wielkim — dzieli Ziemię na dwie równe półkule. Wszystkie pozostałe równoleżniki to koła małe."
+        },
+        {
+          "type": "definition",
+          "term": "Długość geograficzna (λ)",
+          "text": "**Długość geograficzna** to kąt dwuścienny między płaszczyzną **południka zerowego** (Greenwich) a płaszczyzną południka przechodzącego przez dany punkt. Mierzy się ją **od południka 0° na wschód i na zachód**, w zakresie od $0°$ do $180°$, z oznaczeniem **E** (wschodnia) lub **W** (zachodnia). Wszystkie południki są półokręgami o jednakowej długości, zbiegającymi się w biegunach.",
+          "note": "Standardowy zapis to szerokość przed długością, np. Warszawa: 52°13′N, 21°01′E. 1° dzieli się na 60′ (minut), a 1′ na 60″ (sekund)."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Stałe, które trzeba znać na pamięć",
+          "items": [
+            { "value": "111,2", "unit": "km", "label": "długość 1° na południku (i na równiku wzdłuż niego)", "note": "Wynika z obwodu południkowego Ziemi: 40 008 km : 360° ≈ 111,1 km. CKE przyjmuje 111,2 km." },
+            { "value": "1,85", "unit": "km", "label": "długość 1′ (minuty) na południku", "note": "To definicja mili morskiej — 1852 m." },
+            { "value": "111,3", "unit": "km", "label": "długość 1° równoleżnika NA RÓWNIKU", "note": "Obwód równika 40 075 km : 360° = 111,32 km. Na innych szerokościach jest krótszy." },
+            { "value": "40 075", "unit": "km", "label": "obwód Ziemi wzdłuż równika" },
+            { "value": "40 008", "unit": "km", "label": "obwód Ziemi wzdłuż południka", "note": "Południkowy jest krótszy, bo Ziemia jest spłaszczona na biegunach (geoida)." },
+            { "value": "6371", "unit": "km", "label": "średni promień Ziemi" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak odczytać współrzędne punktu z mapy",
+          "caption": "Procedura z arkusza maturalnego — mapa topograficzna z ramką opisaną w stopniach i minutach.",
+          "steps": [
+            {
+              "title": "Zlokalizuj najbliższe linie siatki",
+              "text": "Znajdź równoleżnik przebiegający **poniżej** punktu i południk przebiegający **na lewo** od niego. Odczytaj ich wartości z ramki mapy — na mapach topograficznych podpisy są w rogach i przy krawędziach, zwykle co 1′ lub co 5′."
+            },
+            {
+              "title": "Zmierz odległość punktu od tych linii",
+              "text": "Linijką zmierz, ile milimetrów dzieli punkt od równoleżnika (w pionie) i od południka (w poziomie). Zmierz też pełny odstęp między sąsiednimi liniami siatki — to twój wzorzec."
+            },
+            {
+              "title": "Przelicz proporcję na minuty i sekundy",
+              "text": "Jeżeli odstęp między równoleżnikami odpowiada 1′, a punkt leży w 3/5 tego odstępu, to dodajesz 36″ (bo 3/5 z 60″ = 36″). Zaokrąglaj do pełnych sekund lub — jeśli polecenie tak mówi — do pełnych minut."
+            },
+            {
+              "title": "Zapisz z kierunkiem półkuli",
+              "text": "Kolejność: **szerokość, potem długość**, każda z literą półkuli, np. 50°03′24″N, 19°56′12″E. Brak litery N/S/E/W to najczęstszy powód utraty punktu — sam zapis liczbowy nie określa jednoznacznie miejsca na Ziemi."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Odległość między punktami leżącymi na tym samym południku",
+          "expression": "d = \\Delta\\varphi \\cdot 111{,}2 \\text{ km}",
+          "variables": [
+            { "symbol": "d", "meaning": "odległość w kilometrach mierzona po łuku południka" },
+            { "symbol": "\\Delta\\varphi", "meaning": "różnica szerokości geograficznych wyrażona w stopniach (minuty zamień na ułamek stopnia)" }
+          ],
+          "caption": "Jeśli oba punkty leżą na **tej samej półkuli**, szerokości **odejmujesz**. Jeśli na **różnych półkulach** — **dodajesz**. Minuty przeliczasz dzieląc przez 60: 30′ = 0,5°, 20′ ≈ 0,33°."
+        },
+        {
+          "type": "formula",
+          "title": "Długość 1° równoleżnika na szerokości φ",
+          "expression": "L_{\\varphi} = 111{,}3 \\cdot \\cos\\varphi \\text{ km}",
+          "variables": [
+            { "symbol": "L_{\\varphi}", "meaning": "długość jednego stopnia wzdłuż równoleżnika o szerokości φ" },
+            { "symbol": "\\varphi", "meaning": "szerokość geograficzna równoleżnika" }
+          ],
+          "caption": "To dlatego odległości w kierunku wschód–zachód **nie da się** policzyć jedną stałą liczbą. Na równiku 1° to 111,3 km, na 60° już tylko 55,7 km, a na biegunie 0 km."
+        },
+        {
+          "type": "table",
+          "title": "Długość 1° równoleżnika w zależności od szerokości geograficznej",
+          "caption": "Wartości wyliczone ze wzoru $111{,}3 \\cdot \\cos\\varphi$. Warto zapamiętać trzy: równik 111 km, 52°N (Polska) ok. 68,5 km, 60° dokładnie połowa równika.",
+          "headers": ["Szerokość geograficzna", "cos φ", "Długość 1° równoleżnika"],
+          "rows": [
+            ["0° (równik)", "1,000", "111,3 km"],
+            ["20°", "0,940", "104,6 km"],
+            ["30°", "0,866", "96,4 km"],
+            ["40°", "0,766", "85,3 km"],
+            ["50°", "0,643", "71,5 km"],
+            ["52° (środkowa Polska)", "0,616", "68,5 km"],
+            ["60°", "0,500", "55,7 km"],
+            ["70°", "0,342", "38,1 km"],
+            ["80°", "0,174", "19,3 km"],
+            ["90° (biegun)", "0,000", "0 km"]
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Rozciągłość obszaru",
+          "expression": "\\Delta\\varphi = \\varphi_{N} \\pm \\varphi_{S} \\qquad \\Delta\\lambda = \\lambda_{E} \\pm \\lambda_{W}",
+          "variables": [
+            { "symbol": "\\Delta\\varphi", "meaning": "rozciągłość południkowa — mierzona WZDŁUŻ południka, czyli z północy na południe" },
+            { "symbol": "\\Delta\\lambda", "meaning": "rozciągłość równoleżnikowa — mierzona WZDŁUŻ równoleżnika, czyli z zachodu na wschód" }
+          ],
+          "caption": "Znak **minus**, gdy skrajne punkty leżą na tej samej półkuli; **plus**, gdy na różnych. Wynik podaje się w stopniach i minutach, a dopiero na wyraźne polecenie zamienia na kilometry."
+        },
+        {
+          "type": "map-explore",
+          "title": "Skrajne punkty Polski",
+          "caption": "Kliknij pinezkę, aby poznać współrzędne. Rozciągłość południkowa Polski: 54°50′ − 49°00′ = **5°50′** (ok. 649 km). Rozciągłość równoleżnikowa: 24°09′ − 14°07′ = **10°02′** (ok. 690 km na szerokości 52°N).",
+          "center": [52.0, 19.2],
+          "zoom": 5,
+          "markers": [
+            { "lat": 54.83, "lng": 18.33, "label": "Przylądek Rozewie / Jastrzębia Góra — punkt N", "text": "Najdalej na północ wysunięty punkt Polski: **54°50′N**. Leży na wybrzeżu Morza Bałtyckiego, na Pobrzeżu Kaszubskim." },
+            { "lat": 49.0, "lng": 22.86, "label": "Szczyt Opołonek — punkt S", "text": "Najdalej na południe wysunięty punkt Polski: **49°00′N**, w Bieszczadach, przy granicy z Ukrainą. Różnica z punktem N daje rozciągłość południkową 5°50′." },
+            { "lat": 52.84, "lng": 14.12, "label": "Kolano Odry koło Cedyni — punkt W", "text": "Najdalej na zachód wysunięty punkt Polski: **14°07′E**, na zakolu Odry w pobliżu Osinowa Dolnego." },
+            { "lat": 50.87, "lng": 24.15, "label": "Kolano Bugu koło Zosina — punkt E", "text": "Najdalej na wschód wysunięty punkt Polski: **24°09′E**, na zakolu Bugu. Różnica z punktem W daje rozciągłość równoleżnikową 10°02′." }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa błędy, które kosztują najwięcej punktów. **Pierwszy — nazewnictwo:** rozciągłość **południkowa** to rozciągłość mierzona wzdłuż południka, czyli **północ–południe**; rozciągłość **równoleżnikowa** to wschód–zachód. Intuicja podpowiada odwrotnie, bo słowo „południe” kojarzy się z kierunkiem. **Drugi — półkule:** przy punktach na różnych półkulach współrzędne się **dodaje**, a nie odejmuje. Punkt 20°N i punkt 10°S dzieli 30°, a nie 10°."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj etapy obliczania rozciągłości południkowej",
+          "instruction": "Ustaw kroki w kolejności, w jakiej wykonuje się je w zadaniu maturalnym.",
+          "items": [
+            "Odczytaj szerokość geograficzną najdalej na północ wysuniętego punktu obszaru",
+            "Odczytaj szerokość geograficzną najdalej na południe wysuniętego punktu obszaru",
+            "Sprawdź, czy oba punkty leżą na tej samej półkuli, czy na różnych",
+            "Odejmij szerokości (ta sama półkula) lub dodaj je (różne półkule)",
+            "Zamień minuty na ułamek stopnia i pomnóż różnicę przez 111,2 km"
+          ],
+          "explanation": "Ostatni krok wykonujesz **tylko wtedy**, gdy polecenie prosi o wynik w kilometrach. Jeśli pyta o samą rozciągłość, odpowiedź w stopniach i minutach jest odpowiedzią pełną."
+        },
+        {
+          "type": "quiz",
+          "question": "Punkt A leży na 40°N, punkt B na 15°S. Oba znajdują się na tym samym południku. Jaka jest odległość między nimi?",
+          "options": ["ok. 2780 km", "ok. 6116 km", "ok. 6560 km", "ok. 4448 km"],
+          "correctIndex": 1,
+          "explanation": "Punkty leżą na **różnych półkulach**, więc szerokości **dodajemy**: 40° + 15° = 55°. Następnie 55° × 111,2 km = **6116 km**. Odpowiedź 2780 km to wynik odjęcia szerokości (25° × 111,2) — najczęstszy błąd w tym typie zadania."
+        },
+        {
+          "type": "quiz",
+          "question": "Rozciągłość równoleżnikowa Polski wynosi 10°02′, a rozciągłość południkowa 5°50′. Które stwierdzenie jest poprawne?",
+          "options": [
+            "Polska jest bardziej rozciągła z zachodu na wschód — zarówno w mierze kątowej, jak i w kilometrach",
+            "Polska jest bardziej rozciągła z północy na południe, bo 1° równoleżnika jest krótszy niż 1° południka",
+            "Obie rozciągłości odpowiadają tej samej odległości w kilometrach",
+            "Rozciągłość południkowa Polski jest mierzona wzdłuż równoleżnika"
+          ],
+          "correctIndex": 0,
+          "explanation": "W mierze kątowej 10°02′ > 5°50′. W kilometrach: z północy na południe 5°50′ ≈ 5,83° × 111,2 km ≈ **649 km**, z zachodu na wschód 10°02′ ≈ 10,03° × 68,5 km (długość 1° równoleżnika na 52°N) ≈ **690 km**. Choć stopień równoleżnika jest tu o ponad jedną trzecią krótszy, przewaga kątowa jest na tyle duża, że Polska pozostaje bardziej rozciągła równoleżnikowo."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy zadanie każe obliczyć odległość w kierunku **wschód–zachód**, nigdy nie mnóż przez 111,2 km — musisz najpierw wyznaczyć długość 1° równoleżnika dla podanej szerokości ($111{,}3 \\cdot \\cos\\varphi$) albo odczytać ją z tabeli w arkuszu, którą CKE często dołącza. Odległość w kierunku **północ–południe** liczysz zawsze przez 111,2 km, niezależnie od długości geograficznej. I zapisuj minuty jako ułamek stopnia dopiero na końcu — 5°50′ to 5,83°, a nie 5,50°."
+        }
+      ]
+    },
+    {
+      "slug": "rzezba-terenu-na-mapie",
+      "title": "Rzeźba terenu na mapie: poziomice, profil i spadek",
+      "summary": "Jak czytać wysokości i formy terenu z poziomic, rysować profil hipsometryczny oraz obliczać spadek terenu.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa jest płaska, a teren nie. Trzeci wymiar zapisuje się na niej za pomocą **poziomic**, **punktów wysokościowych** i **barw hipsometrycznych**. Umiejętność odczytania z tego zapisu, gdzie jest szczyt, gdzie dolina i jak strome jest zbocze, to jedno z najczęściej sprawdzanych zadań na maturze rozszerzonej — a **profil hipsometryczny** i **spadek terenu** to dwa polecenia, które wracają niemal w każdym arkuszu z mapą topograficzną."
+        },
+        {
+          "type": "compare",
+          "title": "Wysokość bezwzględna a wysokość względna",
+          "leftLabel": "Wysokość bezwzględna",
+          "rightLabel": "Wysokość względna",
+          "rows": [
+            {
+              "aspect": "Punkt odniesienia",
+              "left": "**Poziom morza** przyjęty za zero. W Polsce obowiązuje układ PL-EVRF2007-NH, oparty na poziomie morza w Amsterdamie; wcześniej stosowano układ Kronsztadt.",
+              "right": "**Inny punkt terenu** — podnóże stoku, dno doliny, poziom sąsiedniej równiny."
+            },
+            {
+              "aspect": "Oznaczenie",
+              "left": "m n.p.m. (metrów nad poziomem morza), a przy depresjach m p.p.m.",
+              "right": "Same metry — bez dopisku „n.p.m.”, bo to różnica, a nie położenie."
+            },
+            {
+              "aspect": "Jak się ją wyznacza",
+              "left": "Odczytuje się bezpośrednio z poziomicy albo z punktu wysokościowego (koty) na mapie.",
+              "right": "Odejmuje się dwie wysokości bezwzględne: $H_{wzgl} = H_{1} - H_{2}$."
+            },
+            {
+              "aspect": "Przykład",
+              "left": "Rysy mają **2501 m n.p.m.**",
+              "right": "Rysy wznoszą się ok. **1100 m** ponad taflę Morskiego Oka (1395 m n.p.m.)."
+            },
+            {
+              "aspect": "Do czego służy",
+              "left": "Porównywanie położenia punktów w skali kraju i świata; podstawa map hipsometrycznych.",
+              "right": "Ocena, jak wysoko forma wznosi się ponad otoczenie — czyli czy jest to pagórek, czy góra."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Poziomica (izohipsa)",
+          "text": "**Poziomica** to linia łącząca na mapie punkty o **jednakowej wysokości bezwzględnej**. Jest to izolinia — przekrój terenu płaszczyzną poziomą. Z układu poziomic odczytuje się nie tylko wysokość, lecz także **nachylenie** (im gęściej biegną, tym stromiej) i **kształt formy** (zamknięte pętle to wzniesienia lub zagłębienia, litery V to doliny i grzbiety).",
+          "note": "Poziomice **nigdy się nie przecinają ani nie rozgałęziają** — punkt terenu ma tylko jedną wysokość. Zlewają się w jedną linię wyłącznie na pionowych urwiskach. Ich odpowiednikiem pod wodą są **izobaty**."
+        },
+        {
+          "type": "definition",
+          "term": "Cięcie poziomicowe (interwał)",
+          "text": "**Cięcie poziomicowe** to stała różnica wysokości między sąsiednimi poziomicami na danej mapie, podana w legendzie. Jeżeli wynosi 10 m, to każda kolejna poziomica oznacza 10 m różnicy wysokości — i to właśnie ta liczba pozwala policzyć wysokość punktu leżącego między podpisanymi liniami oraz wyznaczyć różnicę wysokości potrzebną do obliczenia spadku.",
+          "note": "Co piąta poziomica jest zwykle pogrubiona i podpisana (**poziomica główna**), a przy formach zbyt płaskich rysuje się dodatkowe **poziomice pomocnicze** linią przerywaną, zwykle co połowę cięcia."
+        },
+        {
+          "type": "table",
+          "title": "Cięcie poziomicowe a skala mapy",
+          "caption": "Im mniejsza skala, tym większe cięcie — to bezpośredni skutek generalizacji: drobnych form po prostu nie da się już czytelnie narysować.",
+          "headers": ["Skala mapy", "Typowe cięcie poziomicowe", "Co z tego wynika w praktyce"],
+          "rows": [
+            ["1:10 000", "1,25 m lub 2,5 m", "widoczne są nawet niewielkie wały, skarpy i wydmy"],
+            ["1:25 000", "5 m", "standard map turystycznych i arkuszy maturalnych"],
+            ["1:50 000", "10 m", "drobne formy zanikają wskutek generalizacji"],
+            ["1:100 000", "20 m", "czytelny pozostaje tylko ogólny układ rzeźby"],
+            ["1:500 000 i mniejsze", "poziomic brak — stosuje się barwy hipsometryczne", "wysokość odczytuje się ze skali barw w legendzie"]
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Układ poziomic a forma terenu",
+          "instruction": "Dopasuj opis rysunku poziomicowego do formy rzeźby, którą przedstawia.",
+          "pairs": [
+            { "left": "Poziomice zamknięte, wartości rosną ku środkowi", "right": "Wzniesienie (pagórek, szczyt)" },
+            { "left": "Poziomice zamknięte, wartości maleją ku środkowi, kreski skierowane do wnętrza pętli", "right": "Zagłębienie bezodpływowe lub kotlina" },
+            { "left": "Poziomice tworzą litery V zwrócone ostrzem w stronę wyższych wartości", "right": "Dolina rzeczna" },
+            { "left": "Poziomice tworzą litery V zwrócone ostrzem w stronę niższych wartości", "right": "Grzbiet (ostroga górska)" },
+            { "left": "Dwie pary poziomic układające się w kształt ósemki między dwoma wzniesieniami", "right": "Siodło (przełęcz)" },
+            { "left": "Poziomice biegną bardzo gęsto, miejscami niemal się stykając", "right": "Stok bardzo stromy lub urwisko" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Litera V mylona jest najczęściej. Zapamiętaj mechanizm, a nie regułkę: rzeka **wcina się** w stok, więc poziomica omijając dolinę musi się cofnąć **w górę** stoku — ostrze V wskazuje zawsze **pod prąd rzeki**, czyli w stronę wyższych wartości. Przy grzbiecie jest odwrotnie, bo teren **wysuwa się** w dół. Drugi częsty błąd: gęste poziomice to stok **stromy**, nie łagodny — ta sama różnica wysokości przypada tam na krótszy odcinek poziomy."
+        },
+        {
+          "type": "process",
+          "title": "Jak narysować profil hipsometryczny",
+          "caption": "Profil hipsometryczny to przekrój pionowy terenu wzdłuż wyznaczonej linii. Kolejność kroków jest ta sama w każdym zadaniu.",
+          "steps": [
+            {
+              "title": "Przyłóż pasek papieru do linii profilu",
+              "text": "Na mapie zaznacz odcinek A–B i przyłóż wzdłuż niego krawędź paska papieru. Pasek będzie przenośnikiem odległości — dzięki niemu oś pozioma profilu zachowa skalę mapy."
+            },
+            {
+              "title": "Zaznacz przecięcia z poziomicami",
+              "text": "Na krawędzi paska zaznacz kreską każde miejsce, w którym linia profilu przecina poziomicę, i podpisz jej wysokość. Osobno zaznacz **punkty charakterystyczne**: cieki, szczyty z kotą, drogi i granice lasu — CKE często każe je nanieść na gotowy profil."
+            },
+            {
+              "title": "Przygotuj układ współrzędnych",
+              "text": "Oś pozioma — odległość w skali mapy. Oś pionowa — wysokość n.p.m. z podziałką dobraną tak, by rzeźba była czytelna. Zakres osi pionowej ustaw od wartości nieco niższej niż najniższa poziomica na profilu do nieco wyższej niż najwyższa."
+            },
+            {
+              "title": "Przenieś punkty z paska na wykres",
+              "text": "Przyłóż pasek do osi poziomej tak, aby punkt A trafił w początek osi. Z każdej kreski poprowadź pionową linię do wysokości odczytanej z podpisu i zaznacz punkt."
+            },
+            {
+              "title": "Połącz punkty gładką linią",
+              "text": "Linia profilu ma być **płynna**, nie łamana. Między dwiema poziomicami o tej samej wartości po obu stronach szczytu narysuj wypukłość **powyżej** ich poziomu (jest tam kulminacja), a w dolinie — wklęsłość **poniżej**. Na końcu podpisz obie osie z jednostkami."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Przykładowy profil hipsometryczny wzdłuż linii A–B",
+          "caption": "Odczytaj z profilu: wysokość maksymalna ok. 340 m n.p.m. (na 2,0 km), minimalna 180 m n.p.m. w punkcie A, więc **deniwelacja** wzdłuż profilu wynosi ok. 160 m. Najbardziej stromy jest odcinek 2,5–3,5 km, gdzie na 1 km przypada 90 m różnicy wysokości.",
+          "labels": ["0,0", "0,5", "1,0", "1,5", "2,0", "2,5", "3,0", "3,5", "4,0"],
+          "series": [{ "name": "Wysokość n.p.m.", "values": [180, 215, 260, 310, 340, 325, 280, 235, 200] }],
+          "unit": "m n.p.m."
+        },
+        {
+          "type": "definition",
+          "term": "Przewyższenie profilu",
+          "text": "**Przewyższenie** to stosunek skali pionowej profilu do skali poziomej. Jeśli oś odległości ma skalę 1:50 000, a oś wysokości 1:5000, przewyższenie wynosi **10×** — rzeźba na rysunku jest dziesięciokrotnie bardziej stroma niż w rzeczywistości. Stosuje się je celowo: bez przewyższenia różnica 200 m na odcinku 10 km byłaby na profilu praktycznie niewidoczna.",
+          "note": "Z przewyższonego profilu **nie wolno** odczytywać rzeczywistego nachylenia stoku ani „na oko” oceniać stromizny. Spadek zawsze liczy się z danych liczbowych: różnicy wysokości i odległości w terenie."
+        },
+        {
+          "type": "formula",
+          "title": "Spadek terenu",
+          "expression": "i = \\frac{\\Delta h}{d} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "i", "meaning": "spadek (nachylenie) terenu w procentach" },
+            { "symbol": "\\Delta h", "meaning": "różnica wysokości między punktami, w metrach" },
+            { "symbol": "d", "meaning": "odległość między punktami mierzona w poziomie (na mapie), w metrach" }
+          ],
+          "caption": "Obie wielkości muszą być w **tych samych jednostkach**. Przykład: Δh = 120 m, d = 3 km = 3000 m, więc $i = 120 : 3000 \\cdot 100\\% = 4\\%$. Ten sam spadek w promilach to 40‰. Spadek podaje się też w stopniach, ale wtedy potrzebna jest funkcja $\\mathrm{tg}$, więc CKE prosi zwykle o procenty lub promile."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Wysokości w Polsce — liczby warte zapamiętania",
+          "items": [
+            { "value": "2501", "unit": "m n.p.m.", "label": "Rysy — najwyższy punkt Polski", "note": "Tatry Wysokie, granica ze Słowacją." },
+            { "value": "-1,8", "unit": "m p.p.m.", "label": "okolice Raczek Elbląskich — najniższy punkt Polski", "note": "Depresja na Żuławach Wiślanych." },
+            { "value": "2503", "unit": "m", "label": "deniwelacja Polski", "note": "Różnica między punktem najwyższym a najniższym: 2501 − (−1,8) ≈ 2503 m." },
+            { "value": "173", "unit": "m n.p.m.", "label": "średnia wysokość Polski", "note": "Średnia dla całego świata to ok. 875 m — Polska jest krajem wyraźnie nizinnym." },
+            { "value": "91,3", "unit": "%", "label": "udział powierzchni Polski poniżej 300 m n.p.m." }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Punkt A leży na wysokości 240 m n.p.m., punkt B na wysokości 180 m n.p.m. Odległość między nimi w terenie wynosi 1,5 km. Jaki jest średni spadek terenu na odcinku A–B?",
+          "options": ["4%", "0,4%", "2,5%", "6%"],
+          "correctIndex": 0,
+          "explanation": "Δh = 240 − 180 = 60 m; d = 1,5 km = **1500 m**. Spadek: 60 : 1500 × 100% = **4%** (czyli 40‰). Wynik 0,4% powstaje, gdy zapomni się zamienić kilometry na metry i podzieli 60 przez 15 000."
+        },
+        {
+          "type": "quiz",
+          "question": "Na mapie w skali 1:25 000 o cięciu poziomicowym 5 m poziomice na zboczu A biegną co 2 mm, a na zboczu B co 8 mm. Które stwierdzenie jest poprawne?",
+          "options": [
+            "Zbocze A jest bardziej strome — ta sama różnica wysokości przypada na krótszy odcinek w terenie",
+            "Zbocze B jest bardziej strome, bo poziomice są tam rzadsze",
+            "Oba zbocza mają jednakowy spadek, bo cięcie poziomicowe jest takie samo",
+            "Porównanie jest niemożliwe bez znajomości wysokości bezwzględnych obu zboczy"
+          ],
+          "correctIndex": 0,
+          "explanation": "2 mm na mapie 1:25 000 to 50 m w terenie, a 8 mm to 200 m. Różnica wysokości między sąsiednimi poziomicami jest w obu przypadkach taka sama (5 m), więc spadek zbocza A wynosi 5 : 50 × 100% = **10%**, a zbocza B 5 : 200 × 100% = **2,5%**. Gęste poziomice zawsze oznaczają stromy stok."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Rysując profil w arkuszu maturalnym, punkty stawiaj **dokładnie tam, gdzie linia profilu przecina poziomicę** — ocenia się zgodność z siatką, nie estetykę. Zawsze podpisz osie z jednostkami (odległość w km, wysokość w m n.p.m.) i połącz punkty linią ciągłą. Gdy polecenie każe zaznaczyć na profilu obiekt (rzekę, drogę, granicę lasu), zrób to strzałką z podpisem — to zwykle osobny punkt. A gdy pyta o **deniwelację**, odejmij wysokość najniższą od najwyższej i podaj wynik w metrach, bez „n.p.m.”."
+        }
+      ]
+    },
+    {
+      "slug": "rodzaje-map-i-metody-prezentacji",
+      "title": "Rodzaje map i metody prezentacji zjawisk",
+      "summary": "Podział map ogólnogeograficznych i tematycznych oraz sześć metod kartograficznych: sygnatury, zasięgi, kartogram, kartodiagram, izolinie i metoda kropkowa.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa tematyczna jest **argumentem, a nie fotografią**. Ta sama tabela danych, przedstawiona dwiema różnymi metodami kartograficznymi, prowadzi czytelnika do dwóch różnych wniosków — i właśnie dlatego CKE tak często pyta nie tylko „co przedstawia mapa”, ale też „jaką metodą” i „dlaczego akurat tą”. Ta lekcja porządkuje najpierw **rodzaje map**, a potem sześć metod prezentacji, które trzeba umieć rozpoznać na pierwszy rzut oka i dobrać do rodzaju danych."
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje map",
+          "caption": "Pierwszy podział dotyczy treści (ogólnogeograficzne kontra tematyczne), drugi — stopnia szczegółowości, czyli skali.",
+          "groups": [
+            {
+              "name": "Mapy ogólnogeograficzne",
+              "description": "Przedstawiają **ogół elementów** środowiska geograficznego — rzeźbę, wody, roślinność, osadnictwo, sieć komunikacyjną, granice — bez wyróżniania żadnego z nich. Wszystkie elementy pokazane są z porównywalną szczegółowością, żaden nie jest tematem wiodącym.",
+              "examples": ["mapa fizyczna Polski w atlasie", "mapa hipsometryczna Europy", "mapa samochodowa"]
+            },
+            {
+              "name": "Mapy topograficzne",
+              "description": "Najbardziej szczegółowa odmiana map ogólnogeograficznych, w skalach od **1:10 000 do 1:200 000**, opracowywana na podstawie pomiarów geodezyjnych i zdjęć lotniczych. Zawierają poziomice, punkty wysokościowe, pełną sieć dróg, zabudowy i pokrycia terenu. To właśnie one są podstawą zadań maturalnych z mapą.",
+              "examples": ["arkusz mapy 1:50 000", "mapa turystyczna Tatr 1:25 000", "mapa do zadań w arkuszu CKE"]
+            },
+            {
+              "name": "Mapy przeglądowe",
+              "description": "Skale **mniejsze niż ok. 1:1 000 000**, treść silnie zgeneralizowana. Służą do pokazania ogólnego obrazu dużych obszarów — kontynentu lub świata. Nie nadają się do pomiaru rzeczywistych odległości ani powierzchni, bo generalizacja zniekształciła przebieg linii.",
+              "examples": ["mapa świata w atlasie", "mapa ścienna Europy", "mapa polityczna Afryki"]
+            },
+            {
+              "name": "Mapy tematyczne",
+              "description": "Eksponują **jedno lub kilka wybranych zjawisk** na uproszczonym podkładzie ogólnogeograficznym. Dzielą się na **fizycznogeograficzne** (geologiczne, klimatyczne, hydrologiczne, glebowe, geomorfologiczne) oraz **społeczno-gospodarcze** (ludnościowe, gospodarcze, komunikacyjne, polityczne, turystyczne).",
+              "examples": ["mapa gleb Polski", "mapa gęstości zaludnienia", "mapa synoptyczna", "mapa surowców mineralnych"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Metody prezentacji zjawisk",
+          "text": "**Metody prezentacji** to sposoby graficznego przedstawienia zjawiska na mapie. Wybór metody zależy od dwóch rzeczy: od **charakteru przestrzennego** zjawiska (punktowe — kopalnia; liniowe — rzeka, droga; powierzchniowe — kompleks leśny; ciągłe — temperatura) oraz od tego, czy dane są **jakościowe** (jaki rodzaj?), czy **ilościowe** (ile?). Źle dobrana metoda nie tylko utrudnia odczyt — potrafi doprowadzić czytelnika do wniosku fałszywego.",
+          "note": "Metody jakościowe: sygnatur, zasięgów, powierzchniowa (chorochromatyczna). Metody ilościowe: kartogramu, kartodiagramu, izolinii, kropkowa. Jedna mapa często łączy kilka metod naraz."
+        },
+        {
+          "type": "classification",
+          "title": "Metody jakościowe — pokazują RODZAJ zjawiska",
+          "groups": [
+            {
+              "name": "Metoda sygnatur",
+              "description": "Umowne znaki umieszczone **dokładnie w miejscu** występowania obiektu punktowego. Sygnatury dzielą się na **geometryczne** (kółko, kwadrat, trójkąt), **obrazkowe** (symbol przypominający obiekt) i **literowe** (np. Fe dla rudy żelaza). Odmianą są sygnatury liniowe, którymi rysuje się drogi, granice i linie kolejowe.",
+              "examples": ["zamki i muzea na mapie turystycznej", "symbole surowców mineralnych", "znaki drogowe i kolejowe na mapie topograficznej"]
+            },
+            {
+              "name": "Metoda zasięgów",
+              "description": "Wyznacza **obszar występowania** zjawiska — granicą, barwą, szrafem, napisem lub powtarzanym znakiem. Jej cechą charakterystyczną jest to, że zasięgi **mogą się nakładać** i nie muszą pokrywać całej mapy: poza nimi zjawisko po prostu nie występuje.",
+              "examples": ["zasięg uprawy winorośli w Europie", "zasięg zlodowacenia bałtyckiego", "obszar występowania wiecznej zmarzliny"]
+            },
+            {
+              "name": "Metoda powierzchniowa (chorochromatyczna)",
+              "description": "Każdy fragment powierzchni otrzymuje barwę lub deseń odpowiadający rodzajowi zjawiska. W odróżnieniu od zasięgów pola **nie nakładają się** i **pokrywają cały** przedstawiany obszar — każdy punkt należy dokładnie do jednej kategorii.",
+              "examples": ["mapa typów gleb", "mapa formacji roślinnych", "mapa użytkowania ziemi"]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Metody ilościowe — pokazują WIELKOŚĆ zjawiska",
+          "groups": [
+            {
+              "name": "Kartogram (choropleta)",
+              "description": "Pola odniesienia — najczęściej jednostki administracyjne — wypełnia się barwą lub szrafem o intensywności odpowiadającej wartości wskaźnika. Wolno w nim stosować **wyłącznie wielkości względne**: przeliczone na jednostkę powierzchni, na mieszkańca albo wyrażone w procentach.",
+              "examples": ["gęstość zaludnienia w województwach", "lesistość powiatów w %", "plony pszenicy z 1 ha"]
+            },
+            {
+              "name": "Kartodiagram",
+              "description": "Diagramy (słupki, koła, kwadraty) o wielkości **proporcjonalnej do wartości bezwzględnej**, umieszczone w polu odniesienia albo w konkretnym punkcie. Odmiany: prosty, **strukturalny** (koło podzielone na części pokazuje strukturę), sumaryczny oraz liniowy (wstęgowy) — do natężenia ruchu na trasach.",
+              "examples": ["liczba ludności miast", "wielkość wydobycia w kopalniach", "przeładunek w portach", "natężenie ruchu na autostradach"]
+            },
+            {
+              "name": "Metoda izolinii",
+              "description": "Linie łączące punkty o jednakowej wartości zjawiska. Stosowana wyłącznie do zjawisk **ciągłych**, mających wartość w każdym punkcie przestrzeni i zmieniających się stopniowo. Zagęszczenie izolinii pokazuje, gdzie zjawisko zmienia się najszybciej.",
+              "examples": ["mapa średnich temperatur", "mapa synoptyczna z izobarami", "mapa hipsometryczna"]
+            },
+            {
+              "name": "Metoda kropkowa",
+              "description": "Jedna kropka odpowiada ustalonej liczbie jednostek (np. 1 kropka = 1000 mieszkańców), a kropki rozmieszcza się tam, gdzie zjawisko faktycznie występuje. Pokazuje **rozproszenie i koncentrację** zjawiska lepiej niż kartogram, bo nie uśrednia go w granicach jednostek administracyjnych.",
+              "examples": ["rozmieszczenie ludności wiejskiej", "rozmieszczenie pogłowia bydła", "rozmieszczenie plantacji"]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Kartogram a kartodiagram — para najczęściej mylona",
+          "leftLabel": "Kartogram",
+          "rightLabel": "Kartodiagram",
+          "rows": [
+            {
+              "aspect": "Rodzaj danych",
+              "left": "Wielkości **względne** — wskaźniki odniesione do powierzchni, liczby ludności lub innej podstawy.",
+              "right": "Wielkości **bezwzględne** — sumy, liczby i wielkości całkowite."
+            },
+            {
+              "aspect": "Forma graficzna",
+              "left": "Barwa lub deseń wypełniający **całe pole odniesienia**; im ciemniej, tym większa wartość.",
+              "right": "Diagram o wielkości **proporcjonalnej do wartości**, wstawiony w pole odniesienia lub w punkt."
+            },
+            {
+              "aspect": "Odczyt wartości",
+              "left": "Przez porównanie odcienia ze skalą barw w legendzie — zawsze w przedziale, nie dokładnie.",
+              "right": "Przez porównanie wielkości diagramu ze skalą wielkości w legendzie."
+            },
+            {
+              "aspect": "Przykład",
+              "left": "Gęstość zaludnienia w województwach (os./km²), udział użytków rolnych w %.",
+              "right": "Liczba mieszkańców miast, wielkość produkcji energii w elektrowniach."
+            },
+            {
+              "aspect": "Typowy błąd",
+              "left": "Pokazanie kartogramem **liczby ludności** — duże jednostki wychodzą ciemne wyłącznie dlatego, że są duże.",
+              "right": "Rysowanie diagramów o polu niedopasowanym do wartości, przez co odczyt wielkości jest mylący."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Reguła, która rozstrzyga większość zadań: **kartogram tylko dla wielkości względnych**. Jeśli w danych są sztuki, tony, osoby albo złotówki — to wielkość bezwzględna i należy użyć kartodiagramu lub metody kropkowej. Jeśli w danych jest „na km²”, „na 1000 mieszkańców”, „w %” albo „z 1 ha” — to wielkość względna i właściwy jest kartogram. Uzasadnienie w odpowiedzi musi odwoływać się właśnie do tego, a nie do wyglądu mapy."
+        },
+        {
+          "type": "definition",
+          "term": "Izolinia",
+          "text": "**Izolinia** to linia łącząca punkty o jednakowej wartości przedstawianego zjawiska. Warunkiem jej zastosowania jest **ciągłość** zjawiska — musi ono mieć określoną wartość w każdym punkcie i zmieniać się stopniowo. Odstęp między izoliniami (cięcie) jest stały na całej mapie, dzięki czemu ich zagęszczenie od razu pokazuje wielkość **gradientu**: gęste izobary to silny wiatr, gęste poziomice to stromy stok, gęste izotermy to front atmosferyczny.",
+          "note": "Przestrzeń między izoliniami bywa wypełniona barwą (metoda izarytmiczna z warstwami barwnymi) — tak powstają mapy hipsometryczne i mapy temperatury w prognozach pogody."
+        },
+        {
+          "type": "table",
+          "title": "Najważniejsze izolinie",
+          "caption": "Wszystkie zaczynają się od greckiego „izo-” = równy. Druga część słowa mówi, co jest równe.",
+          "headers": ["Nazwa", "Łączy punkty o jednakowej…", "Gdzie ją spotkasz"],
+          "rows": [
+            ["izohipsa (poziomica)", "wysokości bezwzględnej", "mapy topograficzne i hipsometryczne"],
+            ["izobata", "głębokości", "mapy batymetryczne mórz i jezior"],
+            ["izoterma", "temperaturze powietrza", "mapy klimatyczne, prognozy pogody"],
+            ["izohieta", "sumie opadów atmosferycznych", "mapy klimatyczne"],
+            ["izobara", "wartości ciśnienia atmosferycznego", "mapy synoptyczne"],
+            ["izohalina", "zasoleniu wody", "mapy oceanograficzne, mapy Bałtyku"],
+            ["izohela", "usłonecznieniu (liczbie godzin ze Słońcem)", "mapy klimatyczne"],
+            ["izosejsta", "sile wstrząsów sejsmicznych", "mapy skutków trzęsień ziemi"],
+            ["izochrona", "czasie dojazdu lub jednoczesnym wystąpieniu zjawiska", "mapy dostępności transportowej"]
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak dobrać metodę prezentacji do danych",
+          "caption": "Cztery pytania, które prowadzą do jednoznacznej odpowiedzi w każdym zadaniu typu „zaproponuj metodę i uzasadnij wybór”.",
+          "steps": [
+            {
+              "title": "Jaki jest charakter przestrzenny zjawiska?",
+              "text": "**Punktowe** (kopalnia, miasto, zabytek) → sygnatury lub kartodiagram punktowy. **Liniowe** (droga, rzeka, szlak) → sygnatury liniowe lub kartodiagram wstęgowy. **Powierzchniowe** (gleby, lasy) → metoda powierzchniowa lub zasięgów. **Ciągłe** (temperatura, wysokość) → izolinie."
+            },
+            {
+              "title": "Jakościowe czy ilościowe?",
+              "text": "Jeśli dane mówią **jaki to rodzaj** (typ gleby, rodzaj uprawy, obecność zjawiska), wybierasz metodę jakościową: sygnatur, zasięgów albo powierzchniową. Jeśli mówią **ile** — przechodzisz dalej."
+            },
+            {
+              "title": "Względne czy bezwzględne?",
+              "text": "Dane **względne** (na km², na mieszkańca, w %) → **kartogram**. Dane **bezwzględne** (osoby, tony, sztuki) → **kartodiagram**, a przy zjawisku silnie rozproszonym w przestrzeni → **metoda kropkowa**."
+            },
+            {
+              "title": "Zmienia się skokowo czy płynnie?",
+              "text": "Jeśli wartość jest przypisana do jednostki administracyjnej i na jej granicy zmienia się skokowo — kartogram lub kartodiagram. Jeśli zmienia się **płynnie w przestrzeni**, niezależnie od granic — **izolinie**. To ostatnie kryterium rozstrzyga np. między kartogramem opadów a mapą izohiet."
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dobierz metodę do zjawiska",
+          "instruction": "Połącz opis danych z metodą kartograficzną, która przedstawi je poprawnie.",
+          "pairs": [
+            { "left": "Gęstość zaludnienia województw Polski w osobach na km²", "right": "Kartogram" },
+            { "left": "Wielkość rocznej produkcji energii w poszczególnych elektrowniach", "right": "Kartodiagram" },
+            { "left": "Średnia roczna temperatura powietrza na obszarze Europy", "right": "Metoda izolinii" },
+            { "left": "Rozmieszczenie ludności wiejskiej, gdzie jeden znak odpowiada 1000 mieszkańców", "right": "Metoda kropkowa" },
+            { "left": "Obszar występowania wiecznej zmarzliny na półkuli północnej", "right": "Metoda zasięgów" },
+            { "left": "Położenie zamków i muzeów na mapie turystycznej regionu", "right": "Metoda sygnatur" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Ta sama tabela, dwie mapy, dwa wnioski",
+          "region": "Polska — dane wojewódzkie",
+          "text": "Wyobraź sobie dwie mapy Polski wykonane z tych samych danych o ludności. Pierwsza to **kartogram gęstości zaludnienia**: najciemniejsze jest województwo śląskie (ponad 350 os./km²), najjaśniejsze — warmińsko-mazurskie i podlaskie (poniżej 60 os./km²). Druga to **kartodiagram liczby ludności**: największe koło dostaje mazowieckie, bo mieszka tam najwięcej ludzi w liczbach bezwzględnych, choć jego gęstość zaludnienia jest wyraźnie niższa niż śląskiego. Obie mapy są poprawne i obie mówią co innego — kartogram odpowiada na pytanie „jak gęsto”, kartodiagram „ilu ludzi”. Gdyby ktoś użył kartogramu do pokazania liczby ludności, najciemniejsze byłyby województwa największe powierzchniowo, wyłącznie z powodu swojej wielkości.",
+          "takeaway": "Wybór metody prezentacji jest **decyzją merytoryczną, nie estetyczną** — zmienia wniosek, który czytelnik wyciągnie z mapy. W zadaniu „uzasadnij wybór metody” zawsze odwołaj się do charakteru danych: względne czy bezwzględne, ciągłe czy skokowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Na mapie przedstawiono udział gruntów ornych w powierzchni poszczególnych powiatów za pomocą coraz ciemniejszych odcieni brązu. Zastosowano metodę:",
+          "options": ["kartodiagramu", "kartogramu", "kropkową", "zasięgów"],
+          "correctIndex": 1,
+          "explanation": "Cała powierzchnia pola odniesienia (powiatu) jest wypełniona barwą o intensywności zależnej od wartości wskaźnika — to definicja **kartogramu**. Dodatkowo dane są **względne** (udział w %), co jest warunkiem poprawnego użycia tej metody."
+        },
+        {
+          "type": "quiz",
+          "question": "Które z poniższych zjawisk należy przedstawić metodą izolinii?",
+          "options": [
+            "Liczbę turystów odwiedzających poszczególne parki narodowe",
+            "Średnią roczną sumę opadów atmosferycznych na obszarze Polski",
+            "Zasięg występowania gleb bielicowych",
+            "Rozmieszczenie hut żelaza w Polsce"
+          ],
+          "correctIndex": 1,
+          "explanation": "Izolinie stosuje się wyłącznie do zjawisk **ciągłych**, mających określoną wartość w każdym punkcie i zmieniających się stopniowo — suma opadów spełnia ten warunek (izohiety). Liczba turystów jest przypisana do konkretnych obiektów (kartodiagram), zasięg gleb to metoda zasięgów lub powierzchniowa, a huty to obiekty punktowe (sygnatury)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W poleceniach „podaj nazwę metody kartograficznej zastosowanej na mapie” klucz CKE wymaga **pełnej nazwy**: metoda kartogramu (choropleta), metoda kartodiagramu, metoda izolinii, metoda zasięgów, metoda sygnatur, metoda kropkowa. Odpowiedź „kolorami” albo „słupkami” nie jest punktowana. A gdy zadanie każe **uzasadnić** wybór metody, w uzasadnieniu musi paść informacja o charakterze danych, np. „ponieważ gęstość zaludnienia jest wielkością względną odniesioną do jednostki powierzchni”."
+        }
+      ]
+    },
+    {
+      "slug": "gis-gnss-i-teledetekcja",
+      "title": "Technologie geoinformacyjne: GIS, GNSS i teledetekcja",
+      "summary": "Jak działają systemy informacji geograficznej, w jaki sposób odbiornik GNSS wyznacza pozycję metodą trilateracji oraz co daje geografowi zdalne obrazowanie Ziemi.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Papierowa mapa jest **statycznym obrazem** — pokazuje to, co kartograf zdecydował się pokazać, i nic ponadto. Współczesna geografia pracuje inaczej: dane o przestrzeni są przechowywane w **bazie danych**, a mapa jest tylko jednym z wielu możliwych sposobów ich wyświetlenia. Ta zmiana opiera się na trzech filarach: **GIS** — systemie, który gromadzi i analizuje dane przestrzenne, **GNSS** — technologii, która nadaje obiektom współrzędne, oraz **teledetekcji** — technologii, która dostarcza obrazu Ziemi bez dotykania jej powierzchni. Razem tworzą **technologie geoinformacyjne** i to one odpowiadają na maturalne pytanie: skąd geograf bierze dane."
+        },
+        {
+          "type": "definition",
+          "term": "GIS (System Informacji Geograficznej)",
+          "text": "System służący do **pozyskiwania, gromadzenia, przetwarzania, analizowania i wizualizacji danych przestrzennych**. Jego istotą jest to, że każdy obiekt ma dwie strony: **geometrię** — gdzie jest, czyli współrzędne w określonym układzie odniesienia, oraz **atrybuty** — czym jest, czyli wiersz w tabeli: nazwa, wysokość, liczba mieszkańców, typ użytkowania. To rozdzielenie sprawia, że GIS odpowiada na pytania, na które mapa papierowa nie odpowie, np. „ilu mieszkańców mieszka bliżej niż 500 m od drogi ekspresowej”.",
+          "note": "Dane muszą mieć **georeferencję**, czyli być osadzone w układzie współrzędnych. W Polsce urzędowe są układy **PL-1992** i **PL-2000**, globalnie — **WGS-84** (ten sam, którego używa GPS). Nałożenie na siebie warstw w różnych układach bez transformacji daje przesunięcie sięgające setek metrów."
+        },
+        {
+          "type": "layers",
+          "title": "Warstwowa budowa projektu GIS",
+          "caption": "Każde zjawisko ma własną warstwę. Analiza polega na tym, że warstwy nakłada się na siebie i sprawdza, co z czym się pokrywa.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Warstwa punktowa",
+              "range": "geometria: punkt",
+              "text": "Obiekty, których powierzchnia jest w danej skali pomijalna: **szkoły, przystanki, punkty pomiaru wód, wierzchołki**. Każdy punkt to jedna para współrzędnych i jeden wiersz atrybutów.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Warstwa liniowa",
+              "range": "geometria: linia",
+              "text": "Obiekty wydłużone: **rzeki, drogi, linie kolejowe, izolinie, granice**. Do analiz sieciowych — najkrótsza trasa, czas dojazdu — potrzebna jest dodatkowo **topologia**, czyli informacja o tym, które linie łączą się w węzłach.",
+              "tone": "water"
+            },
+            {
+              "name": "Warstwa poligonowa",
+              "range": "geometria: powierzchnia",
+              "text": "Obiekty o mierzalnej powierzchni: **granice gmin, jeziora, klasy użytkowania ziemi, obszary chronione**. GIS liczy ich pole automatycznie, dzięki czemu z liczby ludności i powierzchni natychmiast otrzymujemy **gęstość zaludnienia**.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Warstwa rastrowa — NMT",
+              "range": "siatka pikseli",
+              "text": "**Numeryczny model terenu**: regularna siatka, w której każdy piksel ma wartość wysokości. Komputer wylicza z niego **spadki, ekspozycję stoków, analizę widoczności i przebieg działów wodnych** — te same wielkości, które ręcznie wyznaczasz z poziomic.",
+              "tone": "rock"
+            },
+            {
+              "name": "Podkład — ortofotomapa",
+              "range": "raster obrazowy",
+              "text": "Zdjęcie lotnicze przetworzone tak, by usunąć **zniekształcenia perspektywiczne i wpływ rzeźby terenu** — dopiero wtedy można na nim mierzyć odległości jak na mapie. Służy jako tło i jako źródło do aktualizacji pozostałych warstw.",
+              "tone": "earth"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwa modele danych przestrzennych",
+          "leftLabel": "Model wektorowy",
+          "rightLabel": "Model rastrowy",
+          "rows": [
+            {
+              "aspect": "Sposób zapisu",
+              "left": "Obiekty opisane **współrzędnymi wierzchołków** — punkt, linia, poligon",
+              "right": "Regularna **siatka pikseli**, każdy z jedną wartością (wysokość, temperatura, jasność)"
+            },
+            {
+              "aspect": "Do czego pasuje",
+              "left": "Zjawiska o **wyraźnych granicach**: granice administracyjne, drogi, budynki",
+              "right": "Zjawiska **ciągłe**, zmieniające się płynnie: rzeźba, temperatura, opad, obraz satelitarny"
+            },
+            {
+              "aspect": "Dokładność",
+              "left": "Niezależna od skali — obiekt można powiększać bez utraty ostrości",
+              "right": "Ograniczona **rozdzielczością piksela**; powiększenie ujawnia „schodkowanie” krawędzi"
+            },
+            {
+              "aspect": "Rozmiar pliku",
+              "left": "Zwykle mały — zapisuje się tylko wierzchołki i tabelę atrybutów",
+              "right": "Duży — wartość trzeba zapisać dla **każdego** piksela obszaru"
+            },
+            {
+              "aspect": "Typowe operacje",
+              "left": "Buforowanie, przecinanie warstw, zapytania atrybutowe, analiza sieciowa",
+              "right": "Algebra map, klasyfikacja obrazu, obliczanie spadków, interpolacja"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Analizy przestrzenne — co GIS potrafi policzyć",
+          "caption": "W zadaniach maturalnych chodzi o wskazanie właściwego narzędzia do postawionego problemu, a nie o obsługę konkretnego programu.",
+          "groups": [
+            {
+              "name": "Buforowanie (analiza strefowa)",
+              "description": "Wyznaczenie **strefy o zadanej odległości** wokół obiektu. Odpowiada na pytania o zasięg oddziaływania i o dostępność.",
+              "examples": [
+                "strefa ochronna 500 m wokół ujęcia wody",
+                "obszar uciążliwości hałasu 300 m od lotniska",
+                "budynki w promieniu 1 km od szkoły"
+              ]
+            },
+            {
+              "name": "Nakładanie warstw (overlay)",
+              "description": "Sprawdzenie, **co pokrywa się z czym** — przecięcie lub suma dwóch warstw poligonowych. Podstawowa operacja przy wyborze lokalizacji.",
+              "examples": [
+                "gleby klasy I–II leżące w granicach parku krajobrazowego",
+                "działki budowlane w zasięgu wody stuletniej",
+                "lasy na stokach o spadku ponad 15°"
+              ]
+            },
+            {
+              "name": "Zapytania atrybutowe i przestrzenne",
+              "description": "Wybór obiektów spełniających warunek **liczbowy** (wartość atrybutu) albo **położeniowy** (relacja w przestrzeni).",
+              "examples": [
+                "miasta powyżej 100 tys. mieszkańców",
+                "jeziora leżące w obrębie dorzecza Wisły",
+                "gminy stykające się z granicą państwa"
+              ]
+            },
+            {
+              "name": "Analiza sieciowa",
+              "description": "Obliczenia na sieci połączonych linii z uwzględnieniem **kosztu przejazdu**: długości, czasu, ograniczeń ruchu.",
+              "examples": [
+                "najkrótsza trasa karetki do miejsca wypadku",
+                "izochrony 15-minutowego dojazdu do szpitala",
+                "optymalna trasa objazdu zamkniętego odcinka"
+              ]
+            },
+            {
+              "name": "Interpolacja i analizy NMT",
+              "description": "Uzupełnienie wartości **między punktami pomiarowymi** oraz obliczenia wykonywane na modelu wysokościowym.",
+              "examples": [
+                "mapa opadów z danych ze stacji meteorologicznych",
+                "mapa spadków terenu i ekspozycji stoków",
+                "analiza widoczności z wieży widokowej"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "GNSS (Globalny System Nawigacji Satelitarnej)",
+          "text": "Zbiorcza nazwa **satelitarnych systemów wyznaczania pozycji**. Nie jest to jeden system, lecz kilka niezależnych: amerykański **GPS**, rosyjski **GLONASS**, europejski **Galileo** i chiński **BeiDou**. Każdy składa się z trzech segmentów: **kosmicznego** — satelitów krążących na orbitach na wysokości ok. 20 tys. km, wyposażonych w zegary atomowe; **kontrolnego** — naziemnych stacji śledzących, które korygują parametry orbit i zegarów; oraz **użytkownika** — odbiorników, od smartfona po geodezyjny odbiornik RTK.",
+          "note": "Odbiornik **wyłącznie odbiera** sygnał — niczego do satelity nie nadaje. Dlatego z jednego systemu może korzystać nieograniczona liczba użytkowników jednocześnie, a satelita „nie wie”, że ktoś go używa."
+        },
+        {
+          "type": "process",
+          "title": "Trilateracja — jak odbiornik wylicza swoją pozycję",
+          "caption": "Cała nawigacja satelitarna sprowadza się do pomiaru czasu: odległość powstaje z opóźnienia sygnału, a położenie — z przecięcia sfer.",
+          "steps": [
+            {
+              "title": "1. Satelita nadaje sygnał ze znacznikiem czasu",
+              "text": "Sygnał radiowy zawiera informację, **kiedy dokładnie** został wysłany — według zegara atomowego satelity — oraz **gdzie satelita wtedy był**, czyli efemerydę opisującą jego orbitę."
+            },
+            {
+              "title": "2. Odbiornik mierzy opóźnienie sygnału",
+              "text": "Porównuje czas nadania z czasem odbioru i otrzymuje $\\Delta t$. Fala radiowa biegnie z prędkością światła, więc odległość do satelity wynosi $d = c \\cdot \\Delta t$, gdzie $c \\approx 300\\,000$ km/s. Błąd pomiaru czasu o **jedną milionową sekundy** daje błąd położenia ok. 300 m — stąd konieczność zegarów atomowych na pokładzie."
+            },
+            {
+              "title": "3. Jeden satelita wyznacza sferę",
+              "text": "Znając odległość $d$, wiemy jedynie, że odbiornik leży **gdzieś na powierzchni kuli** o promieniu $d$ i środku w satelicie. To wciąż nieskończenie wiele możliwych miejsc."
+            },
+            {
+              "title": "4. Trzy satelity zawężają wynik do punktu",
+              "text": "Przecięcie dwóch sfer daje **okrąg**, przecięcie trzech — **dwa punkty**. Jeden z nich leży zwykle w kosmosie albo poruszałby się z absurdalną prędkością, więc zostaje odrzucony. Trzy satelity wystarczają do pozycji na płaszczyźnie, czyli **2D**."
+            },
+            {
+              "title": "5. Czwarty satelita usuwa błąd zegara",
+              "text": "Odbiornik ma tani zegar kwarcowy, nieporównywalnie gorszy od atomowego. Czwarte równanie pozwala potraktować **poprawkę zegara jako czwartą niewiadomą** obok $x$, $y$ i $z$. Dlatego do pozycji **3D, razem z wysokością**, potrzebne są co najmniej **cztery satelity**."
+            },
+            {
+              "title": "6. Poprawki zwiększają dokładność",
+              "text": "Sygnał jest opóźniany przez **jonosferę i troposferę** oraz odbijany od budynków (efekt wielodrożności). Systemy poprawek — **EGNOS** w Europie, **DGPS**, a w geodezji **RTK** ze stacji referencyjnych — redukują błąd z kilku metrów do **kilku centymetrów**."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć regularnie mylone na maturze. **GPS to nie to samo co GNSS** — GPS jest jednym z systemów GNSS, tym amerykańskim; pisząc „system GNSS” nigdy się nie pomylisz. **Trilateracja to nie triangulacja** — trilateracja opiera się na pomiarze **odległości** i tak właśnie działa nawigacja satelitarna, triangulacja na pomiarze **kątów** i jest dawną metodą geodezyjną. **NMT to nie NMPT** — numeryczny model terenu opisuje samą **powierzchnię gruntu**, a numeryczny model pokrycia terenu uwzględnia także **budynki i korony drzew**."
+        },
+        {
+          "type": "definition",
+          "term": "Teledetekcja",
+          "text": "**Zdalne pozyskiwanie informacji o obiekcie bez bezpośredniego kontaktu z nim**, poprzez rejestrację promieniowania elektromagnetycznego, które obiekt odbija lub emituje. Dzieli się na **pasywną** — rejestrującą promieniowanie pochodzące z zewnątrz: odbite światło słoneczne albo własne promieniowanie termalne Ziemi (klasyczne zdjęcia, kanały podczerwieni termalnej), oraz **aktywną**, w której sensor **sam wysyła sygnał** i mierzy jego echo (**radar SAR**, **skaning laserowy LiDAR**, echosonda).",
+          "note": "Przewaga teledetekcji aktywnej: działa **w nocy i przez chmury**, bo mikrofale radaru przenikają zachmurzenie. Dlatego zasięg powodzi czy osuwiska mapuje się radarem, a nie zwykłym zdjęciem — w czasie katastrofy niebo prawie zawsze jest zachmurzone."
+        },
+        {
+          "type": "table",
+          "title": "Zdjęcia lotnicze a satelitarne",
+          "caption": "Wybór nośnika to zawsze kompromis między szczegółowością a zasięgiem i częstotliwością rejestracji.",
+          "headers": [
+            "Cecha",
+            "Zdjęcie lotnicze",
+            "Zdjęcie satelitarne"
+          ],
+          "rows": [
+            [
+              "Pułap rejestracji",
+              "od kilkuset metrów do kilku km (dron, samolot)",
+              "od ok. 200 km (orbita niska) do ponad 35 tys. km (orbita geostacjonarna)"
+            ],
+            [
+              "Rozdzielczość przestrzenna",
+              "bardzo duża — piksel rzędu kilku do kilkudziesięciu cm",
+              "od ok. 0,3 m (satelity komercyjne) przez 10 m (Sentinel-2) do 30 m (Landsat)"
+            ],
+            [
+              "Zasięg jednej sceny",
+              "kilka do kilkunastu km², konieczne mozaikowanie wielu zdjęć",
+              "dziesiątki tysięcy km² w jednym ujęciu"
+            ],
+            [
+              "Powtarzalność",
+              "nalot na zamówienie, zwykle co kilka lat",
+              "regularna i automatyczna — Sentinel-2 nad tym samym miejscem co ok. 5 dni"
+            ],
+            [
+              "Zakres spektralny",
+              "najczęściej światło widzialne i bliska podczerwień",
+              "wielokanałowy: widzialny, podczerwień bliska i termalna, mikrofale"
+            ],
+            [
+              "Typowe zastosowanie",
+              "ortofotomapa, ewidencja gruntów i budynków, plany miejscowe",
+              "monitoring upraw, lodowców, wylesiania, klęsk żywiołowych i klimatu"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Copernicus — europejskie oko nad Ziemią",
+          "region": "Unia Europejska, satelity Sentinel",
+          "text": "Copernicus to unijny program obserwacji Ziemi oparty na rodzinie satelitów **Sentinel**, których dane są **bezpłatne i otwarte dla każdego**. **Sentinel-1** to radar SAR: obrazuje niezależnie od pory doby i zachmurzenia, dzięki czemu w czasie powodzi dostarcza mapę zalanego obszaru w ciągu godzin. Gładka tafla wody odbija mikrofale „na bok”, od radaru wraca więc bardzo słaby sygnał i powierzchnie zalane wychodzą na obrazie jako **jednolicie ciemne plamy**. **Sentinel-2** rejestruje w kilkunastu kanałach optycznych z pikselem 10 m, a jego kluczowy kanał **bliskiej podczerwieni** wykorzystuje fakt, że zdrowa roślinność bardzo silnie odbija promieniowanie NIR, a pochłania czerwone. Z zestawienia tych dwóch kanałów liczy się wskaźnik $NDVI = \\frac{NIR - RED}{NIR + RED}$, po którym rozpoznaje się susze, choroby upraw i tempo wylesiania — na długo zanim zmiana stanie się widoczna gołym okiem.",
+          "takeaway": "Siłą teledetekcji satelitarnej nie jest pojedyncze zdjęcie, lecz **regularna seria czasowa** tego samego obszaru: dopiero porównanie obrazów z różnych dat ujawnia proces — cofanie się lodowca, ubytek lasu, zasięg zalewu."
+        },
+        {
+          "type": "matching",
+          "title": "Dobierz technologię do zadania",
+          "instruction": "Połącz narzędzie geoinformacyjne z problemem, który rozwiązuje ono najlepiej.",
+          "pairs": [
+            {
+              "left": "Skaning laserowy LiDAR",
+              "right": "Numeryczny model terenu spod koron drzew, o dokładności centymetrowej"
+            },
+            {
+              "left": "Radar SAR (Sentinel-1)",
+              "right": "Mapa zasięgu powodzi wykonana nocą, przez gęstą pokrywę chmur"
+            },
+            {
+              "left": "Kanał bliskiej podczerwieni",
+              "right": "Ocena kondycji upraw wskaźnikiem NDVI"
+            },
+            {
+              "left": "Analiza buforowa w GIS",
+              "right": "Wyznaczenie strefy ochronnej 500 m wokół ujęcia wody"
+            },
+            {
+              "left": "Odbiornik GNSS z poprawką RTK",
+              "right": "Pomiar granicy działki z dokładnością do kilku centymetrów"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Ile satelitów musi jednocześnie odbierać odbiornik GNSS, aby wyznaczyć swoje położenie w trzech wymiarach, czyli razem z wysokością?",
+          "options": [
+            "Dwa — po jednym dla szerokości i dla długości geograficznej",
+            "Trzy — bo trzy sfery przecinają się dokładnie w jednym punkcie",
+            "Cztery — czwarty pomiar eliminuje błąd zegara odbiornika",
+            "Sześć — po jednym dla każdej płaszczyzny orbitalnej systemu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Niewiadome są cztery: współrzędne $x$, $y$, $z$ oraz **poprawka niedokładnego zegara odbiornika**. Cztery niewiadome wymagają czterech równań, czyli pomiarów odległości do czterech satelitów. Trzy satelity wystarczą tylko do pozycji 2D, gdy wysokość przyjmie się jako znaną, np. poziom morza."
+        },
+        {
+          "type": "quiz",
+          "question": "Gmina chce wskazać wszystkie działki rolne leżące nie dalej niż 100 m od planowanej obwodnicy i jednocześnie położone na glebach klasy I–II. Jakich analiz GIS należy użyć?",
+          "options": [
+            "Interpolacji przestrzennej i generalizacji kartograficznej",
+            "Buforowania wokół linii obwodnicy, a następnie nakładania warstw (overlay) bufora z warstwą działek i warstwą klas gleb",
+            "Fotointerpretacji zdjęcia ukośnego oraz analizy widoczności",
+            "Wyłącznie zapytania atrybutowego w tabeli działek"
+          ],
+          "correctIndex": 1,
+          "explanation": "Warunek odległościowy realizuje **bufor** 100 m wokół warstwy liniowej, a warunek „jednocześnie” — **nakładanie, czyli przecięcie warstw**: bufora, działek rolnych i klas bonitacyjnych. Samo zapytanie atrybutowe nie wystarczy, bo odległość od obwodnicy nie jest zapisana w tabeli — trzeba ją dopiero wyliczyć z geometrii."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z technologii geoinformacyjnych mają na rozszerzeniu trzy powtarzalne formaty. **Pierwszy: „wskaż technologię i uzasadnij wybór”** — uzasadnienie musi odwoływać się do **właściwości fizycznej** narzędzia („radar, ponieważ mikrofale przenikają chmury i rejestracja nie zależy od oświetlenia”), a nie do jego popularności. **Drugi: „podaj zalety GIS w porównaniu z mapą papierową”** — punktowane są: łatwa i szybka **aktualizacja** danych, możliwość **łączenia i nakładania** warstw z różnych źródeł, wykonywanie **obliczeń i analiz przestrzennych** oraz dowolna zmiana sposobu prezentacji tych samych danych. **Trzeci: interpretacja zdjęcia lotniczego lub satelitarnego** — opisując, po czym rozpoznałeś obiekt, powołaj się na **cechy fotointerpretacyjne**: kształt, wielkość, ton i barwę, teksturę, cień, wzór rozmieszczenia oraz kontekst otoczenia."
+        }
+      ]
+    },
+    {
+      "slug": "wykresy-i-dane-statystyczne",
+      "title": "Wykresy i dane statystyczne: odczyt, obliczenia, interpretacja",
+      "summary": "Jak czytać wykres słupkowy, liniowy i kołowy, jak rozszyfrować klimatogram i piramidę wieku oraz jak poprawnie liczyć i interpretować wskaźniki statystyczne.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Na maturze rozszerzonej z geografii **prawie żadne zadanie nie prosi o samo odtworzenie wiedzy** — prosi o pracę na materiale źródłowym: wykresie, tabeli, klimatogramie, piramidzie wieku. Umiejętność, którą sprawdza CKE, składa się z trzech kroków: **odczytać** wartość z właściwej osi, **obliczyć** z niej wskaźnik oraz **zinterpretować**, czyli powiedzieć, jaki proces geograficzny za tą liczbą stoi. Ta lekcja porządkuje wszystkie trzy kroki — a przy okazji pokazuje, gdzie wykres potrafi wprowadzić w błąd."
+        },
+        {
+          "type": "classification",
+          "title": "Który wykres do jakich danych",
+          "caption": "Wybór typu wykresu nie jest kwestią gustu — wynika z tego, czy dane opisują porównanie, zmianę w czasie, strukturę czy zależność.",
+          "groups": [
+            {
+              "name": "Wykres słupkowy (kolumnowy)",
+              "description": "**Porównanie wielkości między kategoriami**, które nie tworzą ciągu czasowego. Długość słupka jest proporcjonalna do wartości, więc oś wartości **musi zaczynać się od zera** — inaczej proporcje kłamią.",
+              "examples": [
+                "powierzchnia kontynentów",
+                "wydobycie węgla w wybranych krajach",
+                "liczba ludności największych miast Polski"
+              ]
+            },
+            {
+              "name": "Wykres liniowy",
+              "description": "**Zmiana wielkości w czasie** — pokazuje trend, tempo i punkty zwrotne. Linia sugeruje ciągłość zjawiska między pomiarami, więc nadaje się tylko do wielkości zmieniających się płynnie.",
+              "examples": [
+                "liczba ludności świata w latach 1950–2020",
+                "przebieg roczny temperatury",
+                "stan wody na wodowskazie w czasie wezbrania"
+              ]
+            },
+            {
+              "name": "Wykres kołowy (strukturalny)",
+              "description": "**Struktura całości** — udziały składników sumujące się do 100%. Kąt wycinka odpowiada udziałowi: 1% to $3{,}6°$, bo $360° : 100 = 3{,}6°$.",
+              "examples": [
+                "struktura użytkowania ziemi w Polsce",
+                "struktura zatrudnienia według sektorów gospodarki",
+                "struktura produkcji energii elektrycznej"
+              ]
+            },
+            {
+              "name": "Wykres punktowy (korelacyjny)",
+              "description": "**Zależność między dwiema cechami** — każdy punkt to jeden obiekt opisany dwiema wartościami. Układ punktów pokazuje kierunek i siłę związku.",
+              "examples": [
+                "PKB na mieszkańca a oczekiwana długość życia",
+                "wysokość n.p.m. a średnia temperatura",
+                "dzietność a wskaźnik skolaryzacji kobiet"
+              ]
+            },
+            {
+              "name": "Wykresy złożone",
+              "description": "Łączą **dwa różne typy lub dwie osie** w jednym rysunku, bo zjawisko wymaga zestawienia wielkości o różnych jednostkach.",
+              "examples": [
+                "klimatogram — słupki opadu i linia temperatury",
+                "piramida wieku i płci — dwa poziome wykresy słupkowe",
+                "wykres słupkowo-liniowy: produkcja i cena surowca"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Powierzchnia kontynentów",
+          "caption": "Klasyczne zadanie na odczyt: podaj wartość dla wskazanej kategorii, wskaż różnicę między dwiema kategoriami, oblicz udział jednej z nich w całości lądów (ok. 149 mln km²).",
+          "labels": [
+            "Azja",
+            "Afryka",
+            "Ameryka Płn.",
+            "Ameryka Płd.",
+            "Antarktyda",
+            "Europa",
+            "Australia i Oceania"
+          ],
+          "series": [
+            {
+              "name": "Powierzchnia",
+              "values": [
+                44.6,
+                30.3,
+                24.2,
+                17.8,
+                14,
+                10.5,
+                8.5
+              ]
+            }
+          ],
+          "unit": "mln km²"
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Liczba ludności świata w latach 1950–2020",
+          "caption": "Ten sam wykres odpowiada na dwa różne pytania: o wzrost bezwzględny (o ile mld przybyło) i o tempo wzrostu (o ile procent w stosunku do stanu wyjściowego). Nachylenie linii jest największe w latach 60. i 70. XX w. — to okres eksplozji demograficznej.",
+          "labels": [
+            "1950",
+            "1960",
+            "1970",
+            "1980",
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "Ludność świata",
+              "values": [
+                2.5,
+                3,
+                3.7,
+                4.4,
+                5.3,
+                6.1,
+                6.9,
+                7.8
+              ]
+            }
+          ],
+          "unit": "mld"
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pułapki, które kosztują punkty. **Po pierwsze:** wykres kołowy przedstawia wyłącznie **strukturę** jednej całości — nie wolno z niego odczytywać wielkości bezwzględnych ani porównywać nim dwóch różnych całości bez podania ich rozmiaru. **Po drugie:** oś wartości nierozpoczynająca się od zera **wyolbrzymia różnice** — zawsze sprawdź, gdzie zaczyna się skala, zanim napiszesz „gwałtowny wzrost”. **Po trzecie:** wzrost udziału z 40% do 45% to wzrost o **5 punktów procentowych**, ale o **12,5%** — to nie są synonimy. **Po czwarte:** **spadek tempa wzrostu to nie spadek wartości** — ludności świata przybywa nadal, mimo że tempo przyrostu maleje od lat 60. XX w.; linia rośnie wolniej, ale wciąż rośnie."
+        },
+        {
+          "type": "definition",
+          "term": "Klimatogram (diagram klimatyczny)",
+          "text": "Wykres złożony, który zestawia **roczny przebieg dwóch elementów klimatu** dla jednej stacji: **średnie miesięczne temperatury powietrza** — linia, oś opisana w °C, oraz **miesięczne sumy opadów** — słupki, oś opisana w mm. Miesiące zawsze biegną w kolejności od I do XII. Z klimatogramu odczytuje się cztery wielkości diagnostyczne: **średnią roczną temperaturę**, **roczną amplitudę temperatury**, **roczną sumę opadów** oraz **rozkład opadów w ciągu roku**.",
+          "note": "Roczna amplituda temperatury to różnica między średnią miesiąca najcieplejszego a najchłodniejszego — **nie** między pojedynczymi rekordami. To ona odróżnia klimat morski (amplituda mała, poniżej ok. 15°C) od kontynentalnego (duża, powyżej ok. 25°C)."
+        },
+        {
+          "type": "climate-chart",
+          "station": "Warszawa (ok. 52°N, 21°E)",
+          "title": "Klimatogram do samodzielnej analizy",
+          "caption": "Zanim spojrzysz na rozwiązanie, odczytaj: miesiąc najcieplejszy i najchłodniejszy, amplitudę roczną, sumę opadów i miesiąc o opadzie maksymalnym.",
+          "temps": [
+            -1.8,
+            -0.6,
+            3,
+            8.8,
+            14.2,
+            17.4,
+            19.4,
+            18.8,
+            13.9,
+            8.7,
+            3.6,
+            -0.4
+          ],
+          "precip": [
+            27,
+            26,
+            31,
+            38,
+            56,
+            69,
+            76,
+            64,
+            49,
+            39,
+            38,
+            33
+          ],
+          "answer": {
+            "climate": "umiarkowany ciepły przejściowy",
+            "reasoning": "Maksimum temperatury przypada na **lipiec**, a minimum na **styczeń**, więc stacja leży na **półkuli północnej**. Średnia roczna temperatura to ok. **8,8°C**, a amplituda roczna wynosi $19{,}4°C - (-1{,}8°C) = 21{,}2°C$ — wartość **pośrednia** między klimatem morskim a kontynentalnym, typowa dla klimatu **przejściowego**. Suma opadów to ok. **546 mm**, czyli umiarkowanie, z wyraźnym **maksimum letnim** (VI–VIII) wynikającym z opadów konwekcyjnych i frontalnych oraz z minimum zimowym. Opady występują przez cały rok, więc **nie ma pory suchej** — to wyklucza klimat śródziemnomorski i monsunowy."
+          }
+        },
+        {
+          "type": "process",
+          "title": "Rozpoznawanie klimatu z klimatogramu — kolejność kroków",
+          "caption": "Trzymanie się tej kolejności eliminuje najczęstszy błąd: nazwanie klimatu „na oko”, zanim odczyta się dane.",
+          "steps": [
+            {
+              "title": "1. Ustal półkulę",
+              "text": "Sprawdź, na które miesiące przypada **maksimum temperatury**. Czerwiec–sierpień oznacza **półkulę północną**, grudzień–luty — **południową**. Przebieg temperatury bez wyraźnego maksimum (linia niemal płaska) wskazuje na strefę **okołorównikową**, gdzie kryterium półkuli nie zadziała."
+            },
+            {
+              "title": "2. Odczytaj temperaturę: średnią i amplitudę",
+              "text": "Średnia roczna określa **strefę termiczną**: powyżej 20°C — strefa gorąca, 0–20°C — umiarkowana, poniżej 0°C — okołobiegunowa. Amplituda wskazuje **stopień kontynentalizmu**: mała (poniżej 15°C) — wpływ morza, duża (powyżej 25°C) — wnętrze kontynentu. Temperatura najzimniejszego miesiąca powyżej **18°C** to sygnatura klimatu **równikowego**."
+            },
+            {
+              "title": "3. Zsumuj opady roczne",
+              "text": "Dodaj wartości dwunastu słupków. Powyżej **2000 mm** — klimat równikowy wilgotny; **500–1000 mm** — typowy dla strefy umiarkowanej; poniżej **250 mm** — klimat suchy, pustynny lub półpustynny."
+            },
+            {
+              "title": "4. Zbadaj rozkład opadów w roku",
+              "text": "To krok, który rozstrzyga o **typie** klimatu w obrębie strefy. **Lato suche, zima wilgotna** — klimat śródziemnomorski (podzwrotnikowy). **Lato bardzo wilgotne, zima sucha** — klimat monsunowy lub sawannowy. **Opady równomierne przez cały rok** — klimat morski lub przejściowy. **Maksimum letnie bez pory suchej** — klimat kontynentalny lub przejściowy."
+            },
+            {
+              "title": "5. Połącz wnioski i nazwij klimat",
+              "text": "Dopiero zestawienie wszystkich czterech odczytów daje jednoznaczną odpowiedź. W uzasadnieniu **przytocz konkretne liczby** z klimatogramu („amplituda 21°C”, „suma opadów 546 mm z maksimum w lipcu”) — CKE punktuje odwołanie do danych, a nie samą nazwę klimatu."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Piramida wieku i płci",
+          "text": "Podwójny **poziomy wykres słupkowy** przedstawiający strukturę ludności: po lewej mężczyźni, po prawej kobiety, w pięcioletnich grupach wieku ułożonych od najmłodszej na dole do najstarszej na górze. Długość słupka to liczebność lub udział grupy. Wyróżnia się trzy typy: **progresywną** — szeroka podstawa i szybkie zwężanie ku górze (społeczeństwo młode, wysoki przyrost naturalny), **zastojową** — boki niemal pionowe, kolejne roczniki podobnie liczne (przyrost bliski zeru), oraz **regresywną** — podstawa węższa od środkowej części (społeczeństwo starzejące się, dzietność poniżej zastępowalności pokoleń).",
+          "note": "Piramida jest **zapisem historii demograficznej**: wcięcie oznacza rocznik urodzony w czasie wojny, kryzysu lub załamania dzietności, a wybrzuszenie — wyż demograficzny. Wyże powracają co ok. 25–30 lat jako **echo wyżu**, gdy liczne roczniki wchodzą w wiek rozrodczy."
+        },
+        {
+          "type": "population-pyramid",
+          "country": "Polska (dane przybliżone, ok. 2022)",
+          "title": "Piramida wieku Polski — rozpoznaj typ",
+          "caption": "Wartości w % ogółu ludności, zaokrąglone. Zwróć uwagę na trzy rzeczy: szerokość podstawy, dwa wybrzuszenia w środkowej części oraz różnicę długości słupków męskich i żeńskich u góry.",
+          "male": [
+            2.36,
+            2.67,
+            2.82,
+            2.41,
+            2.36,
+            2.82,
+            3.5,
+            4.05,
+            4.2,
+            3.65,
+            2.94,
+            2.79,
+            3.2,
+            3,
+            2.4,
+            1.35,
+            1.55
+          ],
+          "female": [
+            2.24,
+            2.53,
+            2.68,
+            2.29,
+            2.24,
+            2.68,
+            3.35,
+            3.9,
+            4.08,
+            3.6,
+            2.96,
+            2.91,
+            3.6,
+            3.6,
+            3.1,
+            2.05,
+            3.05
+          ],
+          "ageLabels": [
+            "0–4",
+            "5–9",
+            "10–14",
+            "15–19",
+            "20–24",
+            "25–29",
+            "30–34",
+            "35–39",
+            "40–44",
+            "45–49",
+            "50–54",
+            "55–59",
+            "60–64",
+            "65–69",
+            "70–74",
+            "75–79",
+            "80+"
+          ],
+          "answer": {
+            "shape": "piramida regresywna (zwężona u podstawy)",
+            "reasoning": "Podstawa jest **wyraźnie węższa** niż część środkowa — rodzi się mniej dzieci, niż wynosi liczebność roczników rodziców, więc **dzietność jest poniżej poziomu zastępowalności pokoleń**. Wybrzuszenie w grupach 35–49 lat to **echo wyżu demograficznego lat 80. XX w.**, a drugie zgrubienie w grupach 60–69 lat odpowiada **wyżowi powojennemu**. Wcięcie w grupach 20–29 lat to niż demograficzny lat 90., gdy transformacja gospodarcza zbiegła się z odkładaniem decyzji o dziecku. U szczytu piramidy słupki kobiet są znacznie dłuższe od męskich — to skutek **nadumieralności mężczyzn** i wyższej oczekiwanej długości życia kobiet. Całość oznacza **starzenie się społeczeństwa**: rosnący udział grupy poprodukcyjnej przy kurczącej się grupie przedprodukcyjnej."
+          }
+        },
+        {
+          "type": "table",
+          "title": "Miary statystyczne — którą wybrać i dlaczego",
+          "caption": "W zadaniach obliczeniowych CKE zwykle nie chodzi o trudny rachunek, lecz o świadomy wybór miary i poprawną jednostkę.",
+          "headers": [
+            "Miara",
+            "Jak ją obliczyć",
+            "Kiedy jest lepsza od pozostałych"
+          ],
+          "rows": [
+            [
+              "Średnia arytmetyczna",
+              "suma wszystkich wartości podzielona przez ich liczbę",
+              "gdy dane są w miarę symetryczne i nie ma wartości skrajnych"
+            ],
+            [
+              "Mediana",
+              "wartość środkowa szeregu uporządkowanego rosnąco",
+              "gdy występują wartości skrajne — np. dochody, bo kilku bardzo bogatych zawyża średnią"
+            ],
+            [
+              "Dominanta (moda)",
+              "wartość powtarzająca się najczęściej",
+              "gdy pytamy o sytuację typową, np. najczęstszy kierunek wiatru w róży wiatrów"
+            ],
+            [
+              "Rozstęp (amplituda)",
+              "różnica między wartością największą a najmniejszą",
+              "gdy oceniamy zróżnicowanie zjawiska, np. roczną amplitudę temperatury"
+            ],
+            [
+              "Wielkość bezwzględna",
+              "liczba w jednostkach naturalnych: mieszkańcy, tony, km²",
+              "gdy oceniamy **skalę** zjawiska w danym miejscu"
+            ],
+            [
+              "Wielkość względna (wskaźnik)",
+              "wielkość odniesiona do powierzchni, ludności lub czasu, np. gęstość zaludnienia $G = \\frac{L}{P}$",
+              "gdy **porównujemy** jednostki różnej wielkości — bez odniesienia porównanie jest bezwartościowe"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Zmiana względna — najczęstsze obliczenie na maturze",
+          "expression": "\\Delta\\% = \\frac{W_1 - W_0}{W_0} \\cdot 100\\%",
+          "variables": [
+            {
+              "symbol": "\\Delta\\%",
+              "meaning": "zmiana względna, czyli o ile procent wartość wzrosła (wynik dodatni) lub spadła (ujemny)"
+            },
+            {
+              "symbol": "W_1",
+              "meaning": "wartość w roku końcowym"
+            },
+            {
+              "symbol": "W_0",
+              "meaning": "wartość w roku wyjściowym (bazowym) — zawsze ona stoi w mianowniku"
+            }
+          ],
+          "caption": "Przykład na danych z wykresu liniowego: ludność świata wzrosła z 5,3 mld (1990 r.) do 7,8 mld (2020 r.), zatem $\\Delta\\% = \\frac{7{,}8 - 5{,}3}{5{,}3} \\cdot 100\\% \\approx 47\\%$. Wzrost bezwzględny wyniósł 2,5 mld osób, ale to dopiero wartość względna pozwala porównać to tempo z innym okresem lub innym regionem."
+        },
+        {
+          "type": "quiz",
+          "question": "Udział ludności miejskiej w pewnym kraju wzrósł w ciągu dekady z 40% do 45%. Które sformułowanie jest w pełni poprawne?",
+          "options": [
+            "Udział ludności miejskiej wzrósł o 5%",
+            "Udział wzrósł o 5 punktów procentowych, co oznacza wzrost o 12,5% w stosunku do stanu wyjściowego",
+            "Udział wzrósł o 12,5 punktu procentowego",
+            "Liczba mieszkańców miast wzrosła o 5%"
+          ],
+          "correctIndex": 1,
+          "explanation": "Różnica arytmetyczna dwóch wartości procentowych to **punkty procentowe**: $45\\% - 40\\% = 5$ p.p. Zmianę **względną** liczy się w odniesieniu do wartości wyjściowej: $\\frac{45 - 40}{40} \\cdot 100\\% = 12{,}5\\%$. Odpowiedź o liczbie mieszkańców miast jest błędna, bo zmienił się także mianownik — ludność ogółem — więc z samego udziału nie da się wyliczyć zmiany liczby ludności miejskiej."
+        },
+        {
+          "type": "quiz",
+          "question": "Piramida wieku pewnego państwa ma bardzo szeroką podstawę i gwałtownie zwęża się już w grupach wieku średniego. Jaki to typ piramidy i co z niej wynika?",
+          "options": [
+            "Regresywna — społeczeństwo starzejące się o dzietności poniżej zastępowalności pokoleń",
+            "Zastojowa — liczebność kolejnych roczników jest zbliżona, przyrost naturalny bliski zeru",
+            "Progresywna — wysoka dzietność i wciąż wysoka umieralność, społeczeństwo bardzo młode",
+            "Progresywna — długie trwanie życia i wysoki udział osób w wieku poprodukcyjnym"
+          ],
+          "correctIndex": 2,
+          "explanation": "Szeroka podstawa oznacza **liczne roczniki najmłodsze**, czyli wysoką dzietność, a gwałtowne zwężanie się już w wieku średnim — **wysoką umieralność i krótkie przeciętne trwanie życia**. To piramida **progresywna**, charakterystyczna dla państw Afryki Subsaharyjskiej znajdujących się we wczesnej fazie przejścia demograficznego. Odpowiedź czwarta jest wewnętrznie sprzeczna: przy długim trwaniu życia szczyt piramidy byłby szeroki, a nie wąski."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Cztery nawyki, które ratują punkty w zadaniach na materiale źródłowym. **Pierwszy: odczytując wartość, zawsze podaj jednostkę i sprawdź, z której osi ją bierzesz** — w klimatogramie i wykresach złożonych osie po lewej i po prawej mają różne jednostki, a zamiana ich miejscami to typowy błąd. **Drugi: polecenie „sformułuj prawidłowość” wymaga zdania złożonego z trzech elementów** — kierunku zmian, zakresu (czasu lub obszaru) oraz przynajmniej jednej liczby z materiału; samo „rośnie” punktu nie dostanie. **Trzeci: w obliczeniach zapisz działanie, nie tylko wynik** — za poprawną metodę z błędem rachunkowym często przyznaje się punkt, za samą liczbę bez działania nie ma go wcale; zaokrąglaj dokładnie tak, jak każe polecenie. **Czwarty: gdy zadanie każe wyjaśnić przyczynę zaobserwowanej zależności, opisz mechanizm** — czynnik, jego działanie i skutek — a nie ponownie to samo, co widać na wykresie."
+        }
+      ]
+    }
+  ]
+}

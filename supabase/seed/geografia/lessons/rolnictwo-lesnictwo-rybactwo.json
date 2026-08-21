@@ -1,0 +1,569 @@
+{
+  "topicSlug": "rolnictwo-lesnictwo-rybactwo",
+  "lessons": [
+    {
+      "slug": "funkcje-i-uwarunkowania-rolnictwa",
+      "title": "Funkcje rolnictwa i warunki jego rozwoju",
+      "summary": "Po co światu rolnictwo, jak klimat, gleby, rzeźba i woda wyznaczają granice upraw oraz dlaczego w krajach wysoko rozwiniętych o plonach decyduje dziś kapitał, a nie przyroda.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo zajmuje ok. **38% powierzchni lądów** i zużywa ok. **70% pobieranej przez człowieka wody słodkiej** — żaden inny dział gospodarki nie przekształca powierzchni Ziemi na taką skalę. Jednocześnie jest to dział **najsilniej uzależniony od środowiska przyrodniczego**: fabrykę można postawić na pustyni, pola pszenicy — nie. Na maturze rozszerzonej najczęściej nie pyta się „jakie warunki ma dany kraj”, lecz **dlaczego akurat te warunki decydują o tym, co i jak się tam uprawia**. W tej lekcji rozdzielamy dwie grupy czynników — **przyrodnicze** (których rolnik nie wybiera) i **pozaprzyrodnicze** (będące wynikiem decyzji ludzi) — i pokazujemy, że wraz z rozwojem gospodarczym ciężar przesuwa się z pierwszej grupy na drugą."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje rolnictwa",
+          "caption": "Rolnictwo to nie tylko produkcja żywności — w zadaniach maturalnych funkcje pozażywnościowe pojawiają się równie często.",
+          "groups": [
+            {
+              "name": "Funkcja żywieniowa (aprowizacyjna)",
+              "description": "Podstawowa: dostarczenie żywności w odpowiedniej ilości i o odpowiedniej wartości odżywczej. Jej niewypełnienie oznacza **niedożywienie** i konieczność importu żywności, co uzależnia kraj od cen światowych.",
+              "examples": ["zboża chlebowe", "warzywa i owoce", "mleko, mięso, jaja"]
+            },
+            {
+              "name": "Funkcja surowcowa",
+              "description": "Dostarczanie surowców dla **przemysłu spożywczego, włókienniczego, chemicznego i farmaceutycznego** oraz — coraz częściej — energetyki (biopaliwa). To ta funkcja łączy rolnictwo z przemysłem przetwórczym.",
+              "examples": ["burak cukrowy dla cukrowni", "bawełna dla przędzalni", "rzepak i trzcina cukrowa na biopaliwa"]
+            },
+            {
+              "name": "Funkcja gospodarcza (dochodowa i eksportowa)",
+              "description": "Tworzenie PKB, miejsc pracy i wpływów z eksportu. W krajach **monokultury rolniczej** jeden produkt potrafi dawać większość wpływów dewizowych, co czyni gospodarkę wrażliwą na wahania cen światowych.",
+              "examples": ["kakao w Wybrzeżu Kości Słoniowej", "kawa w Etiopii", "soja w Brazylii"]
+            },
+            {
+              "name": "Funkcja społeczna",
+              "description": "Zatrudnienie i utrzymanie ludności wiejskiej, a przez to **hamowanie migracji do miast**. W krajach o niskim PKB rolnictwo bywa jedynym sektorem zdolnym wchłonąć nadwyżkę siły roboczej.",
+              "examples": ["ponad 60% zatrudnionych w rolnictwie w części państw Afryki Subsaharyjskiej"]
+            },
+            {
+              "name": "Funkcja środowiskowa i krajobrazowa",
+              "description": "Utrzymanie **mozaiki krajobrazu rolniczego**, ochrona bioróżnorodności obszarów półnaturalnych (łąki, miedze), a także funkcje pozaprodukcyjne wsi: turystyka, agroturystyka, dziedzictwo kulturowe.",
+              "examples": ["łąki kośne w Karpatach", "winnice tarasowe", "programy rolno-środowiskowe UE"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Użytki rolne a grunty orne",
+          "text": "**Użytki rolne** to cała powierzchnia wykorzystywana rolniczo: **grunty orne** (regularnie orane i obsiewane), **sady i uprawy trwałe**, **łąki** (koszone) oraz **pastwiska** (spasane). **Grunty orne są więc tylko jedną — choć najcenniejszą — częścią użytków rolnych.**",
+          "note": "Miarą jakości środowiska rolniczego jest nie sama powierzchnia użytków, lecz **udział gruntów ornych w użytkach rolnych** — im wyższy, tym korzystniejsze warunki (w górach i strefie suchej przeważają pastwiska)."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura użytkowania ziemi na świecie",
+          "caption": "Udział w powierzchni lądów bez Antarktydy, dane szacunkowe FAO (ok. 2020). Zwróć uwagę: pod uprawę polową nadaje się zaledwie ok. 1/9 lądów — reszta to bariery klimatyczne, glebowe i rzeźby terenu.",
+          "labels": ["Grunty orne", "Uprawy trwałe (sady, plantacje)", "Łąki i pastwiska", "Lasy", "Pozostałe (pustynie, lodowce, zabudowa)"],
+          "series": [{ "name": "Udział w powierzchni lądów", "values": [11, 1, 26, 31, 31] }],
+          "unit": "%"
+        },
+        {
+          "type": "zones",
+          "title": "Bariery rozwoju rolnictwa według szerokości geograficznej",
+          "caption": "Kliknij strefę. Zauważ, że barierą jest zawsze czynnik **najbardziej ograniczający** — tam, gdzie ciepła jest pod dostatkiem, brakuje wody albo składników pokarmowych w glebie.",
+          "zones": [
+            {
+              "name": "Strefa równikowa wilgotna",
+              "latitude": "0–10° N/S",
+              "text": "Wegetacja trwa **cały rok** (temperatura stale powyżej 20 °C, opady ponad 2000 mm). Barierą nie jest klimat, lecz **gleba**: intensywne wietrzenie i **wymywanie (ługowanie)** dają ubogie, kwaśne **gleby ferralitowe**, a próchnica rozkłada się szybciej, niż powstaje. Po wycięciu lasu żyzność spada w 2–3 lata.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa zwrotnikowa sucha",
+              "latitude": "20–30° N/S",
+              "text": "**Bariera wodna**: wyże zwrotnikowe i osiadające powietrze dają opady poniżej 250 mm rocznie. Uprawa możliwa wyłącznie przy **nawadnianiu** — w dolinach rzek allochtonicznych (Nil, Indus) lub z wód kopalnych. Skutkiem ubocznym bywa **zasolenie gleb** wskutek silnego parowania.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa podzwrotnikowa (śródziemnomorska)",
+              "latitude": "30–40° N/S",
+              "text": "Zimy łagodne i wilgotne, **lata gorące i suche** — barierą jest **letni deficyt wody** w szczycie wegetacji. Stąd przewaga roślin o głębokim systemie korzeniowym i twardych, ograniczających transpirację liściach: **oliwka, winorośl, cytrusy, figowiec**.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa umiarkowana ciepła",
+              "latitude": "40–50° N/S",
+              "text": "Najkorzystniejsze warunki na Ziemi: okres wegetacyjny **220–300 dni**, opady 500–800 mm rozłożone w miarę równomiernie, a w części stepowej **czarnoziemy** o miąższym poziomie próchnicznym. Tu leżą główne spichlerze świata.",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa umiarkowana chłodna",
+              "latitude": "50–60° N",
+              "text": "Okres wegetacyjny skraca się do **150–210 dni**, co eliminuje rośliny ciepłolubne (kukurydza na ziarno, winorośl). Dominują **żyto, owies, ziemniaki, len** oraz — wobec przewagi łąk — chów bydła.",
+              "tone": "water"
+            },
+            {
+              "name": "Strefa subpolarna i piętra wysokogórskie",
+              "latitude": "powyżej 60° N oraz wysokie góry",
+              "text": "**Bariera termiczna**: okres wegetacyjny poniżej 100 dni, a **wieloletnia zmarzlina** uniemożliwia głęboką orkę i odprowadzanie wody. Rolnictwo ogranicza się do pasterstwa (renifery, jaki) i upraw pod osłonami.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Okres wegetacyjny",
+          "text": "Część roku, w której warunki termiczne pozwalają roślinom na wzrost — umownie **liczba dni ze średnią dobową temperaturą powietrza równą lub wyższą niż 5 °C**. Wyznacza on **liczbę i rodzaj możliwych upraw**: każda roślina ma określone **wymagania termiczne**, np. kukurydza na ziarno potrzebuje ok. 180 dni, a jęczmień jary — ok. 90.",
+          "note": "Okres wegetacyjny skraca się wraz ze **wzrostem szerokości geograficznej** i **wysokości n.p.m.** (średnio o ok. 5–6 dni na każde 100 m wzniesienia)."
+        },
+        {
+          "type": "table",
+          "title": "Przyrodnicze czynniki rozwoju rolnictwa",
+          "caption": "W zadaniu typu „wyjaśnij, dlaczego…” zawsze wskazuj **mechanizm**, a nie sam czynnik: nie „bo jest sucho”, lecz „bo niedobór wody w fazie kłoszenia obniża plon ziarna”.",
+          "headers": ["Czynnik", "Mechanizm wpływu na produkcję", "Przykład bariery"],
+          "rows": [
+            ["Temperatura i okres wegetacyjny", "Decyduje o tempie fotosyntezy i o tym, czy roślina zdąży dojrzeć przed przymrozkami; wyznacza **północną i wysokościową granicę upraw**.", "Kanada, Rosja — północna granica uprawy pszenicy"],
+            ["Opady i stosunki wodne", "Woda jest nośnikiem składników pokarmowych; kluczowy jest **rozkład opadów w czasie**, a nie tylko ich suma roczna.", "Sahel — susze i nieregularność monsunu"],
+            ["Gleby", "Decydują o zasobności w składniki, pojemności wodnej i odczynie. **Żyzność** to naturalne właściwości gleby, **urodzajność** — jej rzeczywista zdolność do dawania plonów po zabiegach człowieka.", "Gleby bielicowe i ferralitowe — kwaśne i wyjałowione"],
+            ["Rzeźba terenu", "Nachylenie powyżej ok. 10° uniemożliwia **mechanizację** i sprzyja **erozji wodnej**; wysokość n.p.m. tworzy **piętra upraw**.", "Himalaje, Andy — konieczność terasowania stoków"],
+            ["Nasłonecznienie i wiatr", "Ilość energii dla fotosyntezy oraz zawartość cukru w owocach; silne wiatry powodują **wyleganie zbóż** i **erozję eoliczną** gleb.", "Wielkie Równiny — burze pyłowe (Dust Bowl)"]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto pamiętać",
+          "items": [
+            { "value": "5", "unit": "°C", "label": "próg średniej dobowej temperatury wyznaczający okres wegetacyjny" },
+            { "value": "200–220", "unit": "dni", "label": "okres wegetacyjny w Polsce", "note": "najdłuższy na Nizinie Śląskiej (ok. 225 dni), najkrótszy na Pojezierzu Suwalskim i w górach" },
+            { "value": "ok. 11", "unit": "%", "label": "udział gruntów ornych w powierzchni lądów", "note": "użytki rolne łącznie z pastwiskami — ok. 38%" },
+            { "value": "ok. 70", "unit": "%", "label": "udział rolnictwa w globalnym poborze wody słodkiej", "note": "głównie nawodnienia w strefie suchej i monsunowej" },
+            { "value": "ok. 1000", "unit": "mm", "label": "minimalna roczna suma opadów przy uprawie ryżu bez sztucznego nawadniania" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Pozaprzyrodnicze czynniki rozwoju rolnictwa",
+          "caption": "To one tłumaczą, dlaczego dwa kraje o podobnym klimacie mogą mieć plony różniące się kilkakrotnie.",
+          "groups": [
+            {
+              "name": "Struktura agrarna",
+              "description": "Wielkość, liczba i rozmieszczenie gospodarstw oraz struktura własności. **Rozdrobnienie** (małe, rozproszone działki) utrudnia mechanizację i obniża towarowość; **latyfundia** bywają z kolei uprawiane ekstensywnie mimo dużego areału.",
+              "examples": ["rozdrobnienie w Polsce południowo-wschodniej", "latyfundia w Ameryce Łacińskiej", "komasacja gruntów"]
+            },
+            {
+              "name": "Poziom agrotechniki",
+              "description": "**Mechanizacja** (podnosi wydajność pracy), **chemizacja** (nawozy i środki ochrony roślin — podnoszą plony z hektara), **melioracje** i **nawodnienia**, jakość materiału siewnego i odmiany hodowlane.",
+              "examples": ["liczba ciągników na 100 ha", "zużycie NPK w kg/ha", "nawadnianie kroplowe"]
+            },
+            {
+              "name": "Polityka rolna państwa",
+              "description": "Dopłaty bezpośrednie, limity produkcji, cła, skup interwencyjny i regulacje środowiskowe. **Wspólna Polityka Rolna UE** stabilizuje dochody rolników, ale bywa krytykowana za sprzyjanie nadprodukcji i utrudnianie eksportu krajom rozwijającym się.",
+              "examples": ["WPR i dopłaty obszarowe", "reforma rolna", "kolektywizacja i jej skutki"]
+            },
+            {
+              "name": "Rynek zbytu i otoczenie gospodarcze",
+              "description": "Popyt, ceny skupu, bliskość dużych miast i zakładów przetwórczych, **infrastruktura transportowa i chłodnicza**. Bez zbytu nadwyżka produkcji nie zamienia się w dochód — to jedna z głównych przyczyn utrzymywania się rolnictwa samozaopatrzeniowego.",
+              "examples": ["podmiejskie strefy warzywnicze", "straty pozbiorcze z braku chłodni w Afryce"]
+            },
+            {
+              "name": "Czynniki społeczno-kulturowe",
+              "description": "Wykształcenie i wiek rolników, tradycja, **uwarunkowania religijne** wpływające na strukturę chowu i spożycia, a także dostęp do kredytu i prawo własności ziemi.",
+              "examples": ["święte krowy w hinduizmie", "zakaz spożycia wieprzowiny w islamie i judaizmie", "doradztwo rolnicze"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Holandia — jak pokonać barierę przyrodniczą kapitałem",
+          "region": "Europa Zachodnia, Holandia",
+          "text": "Holandia ma powierzchnię mniejszą niż dwa duże polskie województwa, znaczną część terytorium poniżej poziomu morza, ubogie **gleby piaszczyste i poldery** wymagające stałego odwadniania oraz niewiele słońca. Mimo to od lat jest **drugim po USA eksporterem produktów rolno-spożywczych na świecie pod względem wartości**. Sposób: rezygnacja z konkurowania powierzchnią i przeniesienie produkcji do **szklarni z doświetlaniem, uprawą hydroponiczną i sterowanym stężeniem CO₂**, ścisłe powiązanie z ośrodkiem badawczym w Wageningen, specjalizacja w produktach o wysokiej wartości jednostkowej (kwiaty cięte, nasiona, pomidory, papryka) oraz gęsta sieć portów i chłodni pozwalająca dostarczyć towar w ciągu godzin.",
+          "takeaway": "Im wyższy poziom rozwoju gospodarczego, tym **mniejsza rola czynników przyrodniczych, a większa pozaprzyrodniczych** — bariery środowiskowe da się obejść kapitałem i technologią, ale kosztem ogromnego zużycia energii."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć mylone na maturze: (1) **użytki rolne** ≠ **grunty orne** — grunty orne są ich częścią; (2) **żyzność** (naturalna zasobność gleby) ≠ **urodzajność** (rzeczywista zdolność plonowania, zależna od zabiegów człowieka — gleba żyzna, ale zaniedbana, może być nieurodzajna); (3) **plon** (z jednostki powierzchni, np. dt/ha — miara intensywności) ≠ **zbiór** (produkcja całkowita, np. mln ton — zależy także od areału)."
+        },
+        {
+          "type": "matching",
+          "title": "Zabieg a jego skutek",
+          "instruction": "Połącz zabieg stosowany w rolnictwie z efektem, który ma wywołać.",
+          "pairs": [
+            { "left": "Wapnowanie", "right": "Zmniejszenie kwasowości gleby i poprawa przyswajalności składników" },
+            { "left": "Melioracja odwadniająca", "right": "Obniżenie poziomu wód gruntowych na terenach podmokłych" },
+            { "left": "Komasacja gruntów", "right": "Scalenie rozproszonych działek jednego gospodarstwa" },
+            { "left": "Terasowanie stoków", "right": "Ograniczenie erozji wodnej na terenach o dużym nachyleniu" },
+            { "left": "Płodozmian", "right": "Zaplanowana zmiana gatunków roślin na tym samym polu w kolejnych latach" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W Polsce najdłuższy okres wegetacyjny występuje:",
+          "options": [
+            "na Nizinie Śląskiej i w Kotlinie Sandomierskiej",
+            "na Pojezierzu Suwalskim",
+            "w Kotlinie Kłodzkiej",
+            "na Wybrzeżu Słowińskim"
+          ],
+          "correctIndex": 0,
+          "explanation": "Okres wegetacyjny wydłuża się w Polsce z północnego wschodu na południowy zachód, zgodnie z **przejściowością klimatu** — im dalej na zachód, tym silniejszy wpływ mas oceanicznych i tym wcześniejsze wiosenne przekroczenie progu 5 °C. Najdłuższy (ok. 220–230 dni) jest na **Nizinie Śląskiej i w Kotlinie Sandomierskiej**, najkrótszy na **Pojezierzu Suwalskim** (ok. 190 dni) i w górach, gdzie skraca go wysokość n.p.m."
+        },
+        {
+          "type": "quiz",
+          "question": "W strefie równikowej wegetacja trwa cały rok, a mimo to plony w rolnictwie żarowo-odłogowym są niskie. Główną przyczyną jest:",
+          "options": [
+            "zbyt krótki okres wegetacyjny wynikający z długiej pory suchej",
+            "silne wymywanie składników pokarmowych i szybki rozkład próchnicy w glebach ferralitowych",
+            "zbyt niskie średnie temperatury powietrza w ciągu roku",
+            "brak dostępu do wód powierzchniowych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wysoka temperatura i obfite opady przyspieszają jednocześnie **mineralizację próchnicy** i **ługowanie** — składniki pokarmowe są wypłukiwane w głąb profilu, zanim rośliny zdążą je pobrać. W lesie równikowym obieg materii zachodzi niemal w całości w biomasie, a nie w glebie; po wypaleniu lasu żyzność (dzięki popiołowi) utrzymuje się tylko 2–3 lata, po czym pole trzeba porzucić."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Klasyczne polecenie CKE brzmi: „Wykaż, że w kraju X o wielkości plonów decydują czynniki pozaprzyrodnicze”. Schemat odpowiedzi: (1) wskaż, że **warunki przyrodnicze są przeciętne lub niekorzystne** (podaj konkret: gleby, opady, okres wegetacyjny), (2) wskaż **konkretny czynnik pozaprzyrodniczy** (np. zużycie nawozów na hektar, udział gruntów nawadnianych, dopłaty), (3) **połącz je zdaniem przyczynowo-skutkowym** z wielkością plonu. Sama lista czynników bez związku przyczynowego nie otrzyma punktu."
+        }
+      ]
+    },
+    {
+      "slug": "typy-i-systemy-rolnictwa",
+      "title": "Typy i systemy rolnictwa świata",
+      "summary": "Samozaopatrzeniowe czy towarowe, ekstensywne czy intensywne — dwa niezależne kryteria, które porządkują wszystkie systemy rolnicze świata: od żarowo-odłogowego po precyzyjne.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo świata jest ogromnie zróżnicowane, ale da się je uporządkować **dwoma niezależnymi kryteriami**. Pierwsze — **na co idzie produkcja** — dzieli rolnictwo na samozaopatrzeniowe i towarowe. Drugie — **ile nakładów przypada na 1 ha** — dzieli je na ekstensywne i intensywne. Te dwa kryteria **krzyżują się**, dlatego istnieje rolnictwo towarowe, a zarazem ekstensywne (ranczerstwo), i samozaopatrzeniowe, a zarazem intensywne (rolnictwo monsunowe drobnych gospodarstw). Zrozumienie tego skrzyżowania to najczęstsza różnica między odpowiedzią za 2 punkty a odpowiedzią za 0."
+        },
+        {
+          "type": "definition",
+          "term": "Towarowość i intensywność",
+          "text": "**Towarowość** to udział produkcji przeznaczonej na sprzedaż w produkcji całkowitej — mówi, **dokąd trafia plon**. **Intensywność** to wielkość nakładów (pracy, kapitału, środków produkcji) przypadająca na **jednostkę powierzchni** — mówi, **ile w ziemię włożono**. Miarą efektu intensywności jest **plon z hektara**, a miarą efektu mechanizacji — **wydajność pracy** (produkcja na jednego zatrudnionego).",
+          "note": "Wysokie plony z hektara nie oznaczają wysokiej wydajności pracy: w Chinach plony ryżu są bardzo wysokie, ale osiągane pracą milionów rąk, więc produkcja na jednego rolnika pozostaje niska."
+        },
+        {
+          "type": "compare",
+          "title": "Rolnictwo samozaopatrzeniowe a towarowe",
+          "leftLabel": "Samozaopatrzeniowe (naturalne)",
+          "rightLabel": "Towarowe",
+          "rows": [
+            { "aspect": "Przeznaczenie produkcji", "left": "Zaspokojenie potrzeb rodziny rolnika; na rynek trafiają jedynie przypadkowe nadwyżki", "right": "Sprzedaż na rynek — produkcja planowana pod popyt i cenę" },
+            { "aspect": "Struktura upraw", "left": "Wielokierunkowa — „po trochu wszystkiego”, aby zabezpieczyć całą dietę", "right": "**Specjalizacja**, często jedna–dwie gałęzie o najwyższej opłacalności" },
+            { "aspect": "Powiązanie z gospodarką", "left": "Słabe; rolnik kupuje i sprzedaje niewiele, obieg pieniądza minimalny", "right": "Silne — rolnictwo jest ogniwem **agrobiznesu**: nasiona i nawozy z zewnątrz, plon do przetwórstwa" },
+            { "aspect": "Reakcja na nieurodzaj", "left": "Bezpośrednie zagrożenie **głodem** rodziny", "right": "Spadek dochodu, amortyzowany ubezpieczeniem, kredytem lub dopłatą" },
+            { "aspect": "Typowe regiony", "left": "Afryka Subsaharyjska, wnętrze Azji Południowo-Wschodniej, Andy", "right": "Ameryka Północna, Europa Zachodnia, Australia, Argentyna" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Rolnictwo ekstensywne a intensywne",
+          "caption": "Uwaga na rozróżnienie dwóch dróg intensyfikacji: **pracą** (Azja Południowo-Wschodnia) i **kapitałem** (Europa Zachodnia). Efekt — wysoki plon z hektara — jest podobny, ale koszty społeczne zupełnie różne.",
+          "headers": ["Cecha", "Ekstensywne", "Intensywne pracą", "Intensywne kapitałem"],
+          "rows": [
+            ["Nakłady na 1 ha", "bardzo niskie", "bardzo wysokie nakłady **pracy ludzkiej**", "bardzo wysokie nakłady **kapitału** (maszyny, nawozy, nawodnienia)"],
+            ["Plon z 1 ha", "niski", "wysoki", "bardzo wysoki"],
+            ["Wydajność pracy", "zróżnicowana — wysoka przy mechanizacji, niska przy pasterstwie", "**niska** — plon dzieli się na wielu pracujących", "**bardzo wysoka**"],
+            ["Powierzchnia gospodarstwa", "duża lub bardzo duża", "bardzo mała (często poniżej 1 ha)", "średnia, ale silnie skapitalizowana"],
+            ["Przykład", "ranczerstwo w Australii, uprawa pszenicy na Wielkich Równinach", "uprawa ryżu w delcie Mekongu", "ogrodnictwo szklarniowe w Holandii, chów trzody w Danii"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: utożsamianie **intensywne = nowoczesne = towarowe**. To nieprawda. Uprawa ryżu w Bangladeszu jest **skrajnie intensywna** (kilka zbiorów rocznie, ręczne sadzenie), a jednocześnie w dużej mierze **samozaopatrzeniowa** i technicznie prymitywna. Odwrotnie — farma zbożowa w Kanadzie jest **ekstensywna** (niskie nakłady na hektar, plony poniżej europejskich), a przy tym **wysokotowarowa i w pełni zmechanizowana**. Intensywność mierzy się **na hektar**, a nie na pracownika."
+        },
+        {
+          "type": "classification",
+          "title": "Systemy rolnicze świata",
+          "caption": "Każdy system to trwałe połączenie warunków przyrodniczych, struktury agrarnej i sposobu zbytu. Ucz się ich razem z regionem występowania.",
+          "groups": [
+            {
+              "name": "Żarowo-odłogowe (wypaleniskowe)",
+              "description": "Najbardziej **ekstensywny** system uprawy. Las wycina się i wypala, popiół użyźnia glebę na 2–3 sezony, po czym pole porzuca się na kilkanaście lat **odłogu** dla regeneracji. Działa tylko przy **niskiej gęstości zaludnienia** — skrócenie odłogu prowadzi do trwałej degradacji.",
+              "examples": ["Amazonia (roça)", "dorzecze Konga (chitemene)", "Indonezja (ladang)", "Meksyk (milpa)"]
+            },
+            {
+              "name": "Plantacyjne",
+              "description": "Wielkoobszarowa **monokultura** roślin strefy międzyzwrotnikowej, prowadzona na eksport, z reguły z udziałem **kapitału zagranicznego** i taniej siły najemnej. Wysokotowarowe, ale uzależniające kraj od jednego produktu i cen na giełdach.",
+              "examples": ["kakao", "kawa", "herbata", "banany", "trzcina cukrowa", "kauczuk", "olej palmowy"]
+            },
+            {
+              "name": "Ranczerskie (ekstensywny chów)",
+              "description": "Chów bydła lub owiec na wielkich, ogrodzonych pastwiskach stref suchych i półsuchych. **Towarowe, lecz ekstensywne** — mała obsada zwierząt na hektar, minimalne nakłady, produkcja mięsa i wełny na eksport.",
+              "examples": ["Wielkie Równiny w USA", "Pampa argentyńska", "Outback australijski", "Wielkie Karru w RPA"]
+            },
+            {
+              "name": "Śródziemnomorskie",
+              "description": "Drobne gospodarstwa z przewagą **upraw trwałych** odpornych na letnią suszę, uzupełniane nawadnianiem i wczesnymi warzywami pod osłonami. Wysoka wartość produkcji z hektara, dogodne położenie względem rynków Europy Zachodniej.",
+              "examples": ["oliwka", "winorośl", "cytrusy", "warzywa spod folii w Almerii"]
+            },
+            {
+              "name": "Monsunowe (ryżowe)",
+              "description": "Skrajnie **intensywne pracą** rolnictwo drobnych gospodarstw w regionach o letnich opadach monsunowych. Pola zalewane, często **tarasowane**, dwa–trzy zbiory ryżu rocznie. Ogromne plony z hektara przy znikomej wydajności pracy.",
+              "examples": ["delta Gangesu", "delta Mekongu", "Jawa", "Nizina Chińska"]
+            },
+            {
+              "name": "Farmerskie (towarowe wysokotowarowe)",
+              "description": "Rodzinne, ale w pełni rynkowe gospodarstwa o wysokiej mechanizacji i specjalizacji, wspierane doradztwem, kredytem i polityką rolną. Podstawa produkcji żywności w krajach wysoko rozwiniętych.",
+              "examples": ["Kukurydziany Pas USA", "Niż Środkowoeuropejski", "Kanada", "Nowa Zelandia"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie występują poszczególne systemy rolnicze",
+          "caption": "Kliknij znacznik. Sprawdź, jak system rolniczy odpowiada strefie klimatycznej i poziomowi rozwoju gospodarczego regionu.",
+          "center": [15, 10],
+          "zoom": 2,
+          "markers": [
+            { "lat": -3.5, "lng": -62.0, "label": "Amazonia — żarowo-odłogowe", "text": "Wilgotny las równikowy, gleby ferralitowe. Uprawa manioku i kukurydzy przez 2–3 lata po wypaleniu, potem porzucenie pola. Skracanie odłogu wskutek wzrostu zaludnienia prowadzi do trwałego wylesienia." },
+            { "lat": 6.8, "lng": -5.3, "label": "Wybrzeże Kości Słoniowej — plantacje kakao", "text": "Największy producent ziarna kakaowego na świecie. Klimat równikowy wilgotny, produkcja niemal w całości na eksport, przetwórstwo poza krajem — klasyczny przykład uzależnienia od monokultury." },
+            { "lat": -35.0, "lng": -60.0, "label": "Pampa — ranczerstwo i uprawa soi", "text": "Trawiaste równiny o żyznych glebach i klimacie umiarkowanym ciepłym. Historycznie ekstensywny chów bydła na wołowinę, dziś coraz częściej wypierany przez towarową uprawę soi na eksport." },
+            { "lat": 37.4, "lng": -4.8, "label": "Andaluzja — rolnictwo śródziemnomorskie", "text": "Gorące, suche lato i łagodna wilgotna zima. Gaje oliwne i winnice na terenach nienawadnianych, a w Almerii tysiące hektarów szklarni i tuneli foliowych z wczesnymi warzywami na rynek północnoeuropejski." },
+            { "lat": 10.0, "lng": 105.8, "label": "Delta Mekongu — rolnictwo monsunowe", "text": "Zalewane pola ryżowe na żyznych madach delty, letni monsun daje ponad 1500 mm opadów. Dwa–trzy zbiory rocznie przy gospodarstwach rzędu 0,5–2 ha — intensywność osiągana pracą, nie kapitałem." },
+            { "lat": 38.5, "lng": -98.0, "label": "Kansas — ekstensywne rolnictwo zbożowe", "text": "Step preriowy, opady 500–700 mm, wielkie łanowe pola pszenicy. Nakłady na hektar niskie, plony niższe niż w Europie Zachodniej, ale wydajność pracy jedna z najwyższych na świecie." },
+            { "lat": 52.0, "lng": 4.3, "label": "Westland — ogrodnictwo szklarniowe", "text": "Rolnictwo intensywne kapitałowo: szklarnie z doświetlaniem i hydroponiką, produkcja pomidorów, papryki i kwiatów ciętych niemal niezależna od pogody, w całości na eksport." }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Cykl rolnictwa żarowo-odłogowego",
+          "caption": "Zwróć uwagę, że system jest **zrównoważony tylko wtedy**, gdy faza odłogu jest wielokrotnie dłuższa od fazy uprawy.",
+          "stages": [
+            { "name": "Karczowanie", "text": "Wycięcie i podsuszenie roślinności na niewielkiej działce w porze suchej. Największe drzewa często pozostawia się jako źródło nasion." },
+            { "name": "Wypalanie", "text": "Spalenie biomasy uwalnia zmagazynowane w niej składniki pokarmowe. **Popiół** dostarcza potasu, wapnia i fosforu oraz podnosi odczyn kwaśnej gleby ferralitowej." },
+            { "name": "Uprawa", "text": "Sadzenie motyką bez orki — maniok, jams, kukurydza, ryż górski. Plony w pierwszym roku są wysokie, bo rośliny korzystają z zapasu z popiołu." },
+            { "name": "Spadek żyzności", "text": "Ulewne opady **wymywają** składniki, próchnica szybko się mineralizuje, pojawiają się chwasty i szkodniki. Po 2–3 latach plony spadają poniżej opłacalności." },
+            { "name": "Porzucenie pola", "text": "Rolnik przenosi się na nową działkę. Stare pole zostaje **odłogiem**, na którym rozwija się roślinność wtórna." },
+            { "name": "Regeneracja", "text": "Przez 10–20 lat las wtórny odbudowuje zapas biomasy i próchnicy, po czym cykl może się powtórzyć. **Skrócenie odłogu poniżej ok. 10 lat przerywa regenerację** i prowadzi do wyjałowienia oraz erozji." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kakao w Wybrzeżu Kości Słoniowej — cena monokultury plantacyjnej",
+          "region": "Afryka Zachodnia, Wybrzeże Kości Słoniowej",
+          "text": "Wybrzeże Kości Słoniowej dostarcza ok. **40% światowej produkcji ziarna kakaowego** i wraz z Ghaną odpowiada za ponad połowę globalnej podaży. Uprawa daje utrzymanie setkom tysięcy drobnych gospodarstw, ale kraj eksportuje głównie **surowiec nieprzetworzony** — wartość dodana z przerobu na masę kakaową, czekoladę i wyroby powstaje w Europie i Ameryce Północnej. Skutki: dochody rolników zależą od notowań giełdowych, na które kraj nie ma wpływu; presja na powiększanie plantacji napędza **wylesianie** (Wybrzeże Kości Słoniowej straciło większość pierwotnych lasów wilgotnych); a rozszerzanie monokultury zwiększa wrażliwość na choroby i szkodniki.",
+          "takeaway": "Rolnictwo plantacyjne jest wysokotowarowe, ale **nie równa się rozwojowi**: bez przetwórstwa na miejscu kraj zostaje w roli dostawcy surowca, w najsłabiej opłacanym ogniwie łańcucha wartości."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie drogi „rolnictwa przyszłości”",
+          "leftLabel": "Rolnictwo ekologiczne",
+          "rightLabel": "Rolnictwo precyzyjne",
+          "rows": [
+            { "aspect": "Podstawowa idea", "left": "Rezygnacja z **syntetycznych nawozów, pestycydów i GMO**; żyzność odbudowywana płodozmianem, obornikiem i roślinami motylkowymi", "right": "Zachowanie chemii, ale **dawkowanie jej dokładnie tam i tyle, ile potrzeba**, dzięki danym o zmienności pola" },
+            { "aspect": "Narzędzia", "left": "Certyfikacja i kontrola, kompostowanie, biologiczna ochrona roślin, międzyplony", "right": "**GPS/GNSS**, mapy zasobności gleby, czujniki, drony i zdjęcia satelitarne, siewniki i opryskiwacze o zmiennej dawce" },
+            { "aspect": "Plon z hektara", "left": "Zwykle **o kilkanaście–kilkadziesiąt procent niższy** niż w rolnictwie konwencjonalnym", "right": "Zbliżony lub wyższy niż konwencjonalny przy mniejszym zużyciu środków" },
+            { "aspect": "Bariera wdrożenia", "left": "Wyższa cena produktu i ryzyko strat — opłacalne tylko przy popycie na żywność certyfikowaną", "right": "Wysoki **koszt technologii** i wymóg dużej powierzchni oraz kompetencji cyfrowych" },
+            { "aspect": "Główna korzyść środowiskowa", "left": "Brak pozostałości pestycydów, wyższa bioróżnorodność i zawartość próchnicy", "right": "Ograniczenie **eutrofizacji** i emisji dzięki mniejszym dawkom nawozów i paliwa" }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj według rosnących nakładów na 1 ha",
+          "instruction": "Ustaw systemy rolnicze od najbardziej ekstensywnego do najbardziej intensywnego.",
+          "items": [
+            "Pasterstwo koczownicze w Sahelu",
+            "Ranczerstwo na Pampie",
+            "Ekstensywna uprawa pszenicy na Wielkich Równinach",
+            "Rolnictwo śródziemnomorskie w Andaluzji",
+            "Uprawa ryżu w delcie Mekongu",
+            "Ogrodnictwo szklarniowe w Holandii"
+          ],
+          "explanation": "Kryterium to **nakłady na jednostkę powierzchni**, a nie nowoczesność ani towarowość. Pasterstwo koczownicze praktycznie nie wymaga nakładów, ranczerstwo dodaje ogrodzenia i ujęcia wody, uprawa pszenicy na Wielkich Równinach — maszyny i nawozy, ale rozłożone na ogromny areał. Rolnictwo śródziemnomorskie wymaga nawadniania i pracy przy uprawach trwałych, ryżowe — ogromnych nakładów pracy przy każdym hektarze, a szklarnie — najwyższych na świecie nakładów kapitału i energii."
+        },
+        {
+          "type": "quiz",
+          "question": "Farma pszenicy w Saskatchewan (Kanada) ma 800 ha, plon ok. 30 dt/ha i całą produkcję sprzedaje na eksport. To rolnictwo:",
+          "options": [
+            "intensywne i samozaopatrzeniowe",
+            "ekstensywne i wysokotowarowe",
+            "intensywne i wysokotowarowe",
+            "ekstensywne i samozaopatrzeniowe"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Ekstensywne**, bo nakłady przypadające na 1 ha są niskie, a plon (ok. 30 dt/ha) wyraźnie niższy niż w intensywnym rolnictwie Europy Zachodniej (60–90 dt/ha). Zarazem **wysokotowarowe**, bo praktycznie cała produkcja trafia na rynek. Wysoki dochód gospodarstwa bierze się z **areału i wydajności pracy**, a nie z plonu z hektara — to dowód, że oba kryteria są od siebie niezależne."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego rolnictwo żarowo-odłogowe przestaje być zrównoważone przy wzroście gęstości zaludnienia?",
+          "options": [
+            "Bo rośnie zapotrzebowanie na maszyny rolnicze, których brakuje",
+            "Bo skraca się faza odłogu i las wtórny nie zdąży odbudować zapasu składników pokarmowych",
+            "Bo wypalanie staje się zakazane przez prawo międzynarodowe",
+            "Bo gleby ferralitowe ulegają zasoleniu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cały system opiera się na **przeniesieniu składników pokarmowych z biomasy do gleby** (popiół) i na długiej regeneracji. Więcej ludzi na tym samym obszarze oznacza więcej pól jednocześnie w uprawie, więc czas odłogu skraca się z 15–20 lat do kilku. Las wtórny nie zdąży odbudować biomasy, kolejne wypalenie daje mniej popiołu, plony spadają, a odsłonięta gleba ulega **erozji i wyjałowieniu** — z systemu cyklicznego robi się trwałe wylesienie."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy zadanie podaje dane liczbowe o gospodarstwie (powierzchnia, plon, udział sprzedaży, liczba zatrudnionych), CKE prawie zawsze chce **klasyfikacji według dwóch kryteriów naraz**. Wykonaj dwa niezależne kroki: (1) plon z hektara i nakłady → ekstensywne czy intensywne; (2) udział produkcji sprzedanej → samozaopatrzeniowe czy towarowe. Dopiero potem nazwij system (np. „towarowe ekstensywne rolnictwo zbożowe typu farmerskiego”). Uzasadnienie **musi powoływać się na liczbę z materiału źródłowego**."
+        }
+      ]
+    },
+    {
+      "slug": "glowne-uprawy-i-chow-zwierzat",
+      "title": "Główne uprawy świata i chów zwierząt",
+      "summary": "Wymagania i rejony uprawy zbóż, roślin oleistych, bulwiastych, włóknistych i używek oraz geografia chowu bydła, trzody i owiec — z naciskiem na to, dlaczego dana roślina rośnie akurat tam.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Każda roślina uprawna ma **wymagania termiczne, wodne i glebowe**, które razem wyznaczają obszar jej opłacalnej uprawy — tzw. **optimum uprawy**. Dlatego mapa upraw świata nie jest przypadkowa: pas pszenicy biegnie przez strefę umiarkowaną, ryż koncentruje się w monsunowej Azji, a kakao w wąskim pasie wokół równika. W tej lekcji dla każdej ważnej grupy roślin łączymy **wymaganie → rejon → przeznaczenie**, a następnie robimy to samo dla chowu zwierząt, gdzie do czynników przyrodniczych dochodzą **uwarunkowania religijne i rynkowe**."
+        },
+        {
+          "type": "classification",
+          "title": "Podział roślin uprawnych według przeznaczenia",
+          "caption": "Ta sama roślina może należeć do kilku grup — kukurydza jest jednocześnie zbożem konsumpcyjnym, rośliną pastewną i surowcem do produkcji etanolu.",
+          "groups": [
+            {
+              "name": "Rośliny alimentacyjne (żywieniowe)",
+              "description": "Dostarczają bezpośrednio pokarmu. Należą tu **zboża** (podstawa wyżywienia ludzkości — ok. połowy spożywanych kalorii) oraz **rośliny bulwiaste i korzeniowe**, ważne zwłaszcza tam, gdzie zboża plonują słabo.",
+              "examples": ["pszenica", "ryż", "kukurydza", "ziemniak", "maniok", "jams"]
+            },
+            {
+              "name": "Rośliny przemysłowe",
+              "description": "Uprawiane na surowiec dla przemysłu, nie do bezpośredniego spożycia: **oleiste** (tłuszcze i biopaliwa), **włókniste** (tkaniny, liny), **cukrodajne** (cukier i etanol), **kauczukodajne**.",
+              "examples": ["soja", "rzepak", "palma oleista", "bawełna", "juta", "trzcina cukrowa", "burak cukrowy"]
+            },
+            {
+              "name": "Używki",
+              "description": "Rośliny dostarczające substancji pobudzających lub aromatycznych, o **niewielkiej wartości odżywczej, lecz wysokiej wartości rynkowej**. To klasyczne uprawy plantacyjne strefy międzyzwrotnikowej, silnie uzależnione od cen giełdowych.",
+              "examples": ["kawa", "herbata", "kakao", "tytoń", "mate"]
+            },
+            {
+              "name": "Rośliny pastewne",
+              "description": "Uprawiane na paszę dla zwierząt — decydują o możliwości rozwinięcia intensywnego chowu. Ich udział w strukturze zasiewów rośnie wraz z zamożnością społeczeństwa i spożyciem mięsa.",
+              "examples": ["kukurydza na kiszonkę", "lucerna", "koniczyna", "buraki pastewne"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Wielka trójka zbóż",
+          "caption": "Te trzy gatunki dają ok. **90% światowych zbiorów zbóż**. Ucz się ich zawsze w układzie: wymaganie → rejon → przeznaczenie.",
+          "headers": ["Zboże", "Wymagania termiczne i wodne", "Gleby i rzeźba", "Główne rejony uprawy", "Przeznaczenie"],
+          "rows": [
+            ["**Pszenica**", "Umiarkowane: okres wegetacyjny od ok. 100 dni (odmiany jare), opady 300–700 mm; źle znosi nadmiar wilgoci w czasie żniw", "Żyzne i zasobne w wapń — **czarnoziemy**, gleby brunatne, mady; teren równinny sprzyjający mechanizacji", "Pas od Wielkich Równin przez Europę i stepy Ukrainy i Rosji po Nizinę Chińską; Indie, Australia, Argentyna", "Głównie **konsumpcja bezpośrednia** (mąka, pieczywo, makarony); najważniejsze zboże w handlu światowym"],
+            ["**Ryż**", "Wysokie: średnia temperatura powyżej 20 °C w okresie wegetacji, ponad 1000 mm opadów lub **stałe nawadnianie**", "Gleby aluwialne (**mady**) o dużej pojemności wodnej; teren płaski lub **tarasowany**, pola zalewane wodą", "Monsunowa i równikowa Azja: Chiny, Indie, Bangladesz, Indonezja, Wietnam, Tajlandia — ok. 90% produkcji świata", "Niemal w całości **konsumpcja bezpośrednia**; podstawa wyżywienia ponad połowy ludzkości, mały udział w eksporcie"],
+            ["**Kukurydza**", "Ciepłolubna: okres wegetacyjny ok. 150–180 dni dla uprawy na ziarno, opady 500–800 mm w okresie wzrostu, dużo słońca", "Gleby żyzne, przewiewne, dobrze nagrzewające się; wrażliwa na przymrozki i zastoiska mrozowe", "**Kukurydziany Pas USA**, Brazylia, Argentyna, Chiny, a na paszę i kiszonkę także cała Europa Środkowa", "W krajach rozwiniętych głównie **pasza i etanol**; w Ameryce Łacińskiej i Afryce także podstawowy pokarm człowieka"]
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat i dopasuj uprawę",
+          "station": "Kolkata (Indie, 22°N)",
+          "caption": "Zanim spojrzysz na odpowiedź: policz roczną amplitudę temperatury i sprawdź, w których miesiącach mieści się większość opadów.",
+          "temps": [20, 23, 28, 30, 30, 30, 29, 29, 29, 28, 24, 20],
+          "precip": [12, 25, 35, 60, 140, 290, 400, 350, 290, 160, 25, 7],
+          "answer": {
+            "climate": "Klimat zwrotnikowy monsunowy",
+            "reasoning": "Temperatura przez cały rok powyżej 20 °C, a roczna amplituda wynosi ok. 10 °C — to strefa zwrotnikowa. Rozkład opadów jest skrajnie nierównomierny: ok. 80% sumy rocznej (blisko 1800 mm) przypada na miesiące VI–IX, czyli okres **monsunu letniego**, gdy wilgotne powietrze znad Oceanu Indyjskiego napływa nad silnie nagrzany ląd. Zimą kierunek napływu powietrza się odwraca i nastaje pora sucha. Taki układ jest idealny dla **ryżu** uprawianego w porze deszczowej; w porze suchej to samo pole obsiewa się pszenicą lub roślinami strączkowymi przy wykorzystaniu nawadniania."
+          }
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Światowe zbiory wybranych roślin uprawnych",
+          "caption": "Wartości przybliżone dla roku 2022 wg FAO. Uwaga: pierwsze miejsce kukurydzy **nie oznacza**, że najwięcej jej zjadamy — większość trafia na paszę i do produkcji etanolu.",
+          "labels": ["Kukurydza", "Pszenica", "Ryż niełuskany", "Soja", "Jęczmień"],
+          "series": [{ "name": "Zbiory", "values": [1160, 810, 780, 350, 155] }],
+          "unit": "mln t"
+        },
+        {
+          "type": "layers",
+          "title": "Piętra upraw w Andach",
+          "caption": "Przykład z Peru i Boliwii. Kliknij piętro. Mechanizm jest ten sam co przy strefowości szerokościowej — o granicach decyduje **spadek temperatury z wysokością** (ok. 0,6 °C na 100 m).",
+          "orientation": "bottom-up",
+          "layers": [
+            { "name": "Tierra caliente (ziemia gorąca)", "range": "0–1000 m n.p.m.", "text": "Średnia temperatura powyżej 24 °C. Uprawy typowo międzyzwrotnikowe: **trzcina cukrowa, banany, kakao, ryż, maniok**.", "tone": "heat" },
+            { "name": "Tierra templada (ziemia umiarkowana)", "range": "1000–2000 m n.p.m.", "text": "Temperatura 17–24 °C, brak przymrozków, wysoka wilgotność — **optimum dla kawy arabiki**, a także kukurydzy i cytrusów.", "tone": "vegetation" },
+            { "name": "Tierra fría (ziemia zimna)", "range": "2000–3500 m n.p.m.", "text": "Temperatura 12–17 °C, okresowe przymrozki. Uprawia się rośliny strefy umiarkowanej: **pszenicę, jęczmień, ziemniaki**, oraz komosę ryżową (quinoa).", "tone": "earth" },
+            { "name": "Tierra helada / puna", "range": "3500–4500 m n.p.m.", "text": "Zbyt chłodno na uprawę polową — dominuje **pasterstwo lam i alpak** na wysokogórskich pastwiskach oraz mrozoodporne odmiany ziemniaka.", "tone": "rock" },
+            { "name": "Piętro wieczystego śniegu", "range": "powyżej ok. 4800 m n.p.m.", "text": "Temperatura stale poniżej 0 °C — **granica rolnictwa**; brak roślinności użytkowej.", "tone": "ice" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Używki",
+          "text": "Rośliny (i produkty z nich) o **znikomej wartości odżywczej, ale zawierające substancje pobudzające lub aromatyczne** — kofeinę, teinę, teobrominę, nikotynę. Uprawiane niemal wyłącznie w strefie międzyzwrotnikowej, przeważnie w systemie **plantacyjnym na eksport** do krajów wysoko rozwiniętych.",
+          "note": "Kawa **arabika** wymaga chłodniejszych, wilgotnych stoków na wysokości 600–2000 m n.p.m., a **robusta** rośnie na nizinach i jest odporniejsza na choroby — stąd arabika dominuje w górzystej Kolumbii i Etiopii, a robusta w nizinnym Wietnamie."
+        },
+        {
+          "type": "table",
+          "title": "Pozostałe grupy roślin uprawnych",
+          "caption": "Zwróć uwagę, że w każdym wierszu rejon uprawy wynika **wprost z wymagania** wpisanego w kolumnie obok.",
+          "headers": ["Grupa", "Przykłady", "Kluczowe wymagania", "Główne rejony uprawy"],
+          "rows": [
+            ["**Oleiste**", "soja, rzepak, palma oleista, słonecznik, oliwka", "Bardzo zróżnicowane: palma oleista wymaga klimatu równikowego, rzepak — chłodniejszej i wilgotnej części strefy umiarkowanej, słonecznik — dużo słońca i odporność na suszę", "Soja: USA, Brazylia, Argentyna; palma oleista: Indonezja, Malezja; rzepak: Kanada, Chiny, Indie, Europa; słonecznik: Ukraina, Rosja"],
+            ["**Bulwiaste i korzeniowe**", "ziemniak, maniok, bataty, jams, taro", "Ziemniak — gleby lekkie i przewiewne, chłodniejszy klimat umiarkowany; maniok — odporny na suszę i **ubogie gleby strefy międzyzwrotnikowej**", "Ziemniak: Chiny, Indie, Rosja, Ukraina, Polska; maniok: Nigeria, DR Konga, Tajlandia, Brazylia"],
+            ["**Włókniste**", "bawełna, juta, len, sizal, konopie", "Bawełna — dużo ciepła i słońca podczas dojrzewania oraz woda w fazie wzrostu, stąd częste **nawadnianie**; juta — gorące i bardzo wilgotne delty; len — chłodny i wilgotny klimat umiarkowany", "Bawełna: Indie, Chiny, USA, Brazylia, Pakistan, Uzbekistan; juta: Bangladesz i Indie (delta Gangesu); len: Rosja, Białoruś, Francja"],
+            ["**Używki**", "kawa, herbata, kakao, tytoń", "Kakao — stale wilgotno i ciepło w pasie do 20° od równika, uprawa w półcieniu; herbata — ponad 1500 mm opadów, kwaśne gleby stoków, zbiór ręczny", "Kawa: Brazylia, Wietnam, Kolumbia, Etiopia; herbata: Chiny, Indie, Kenia, Sri Lanka; kakao: Wybrzeże Kości Słoniowej, Ghana, Indonezja, Ekwador"],
+            ["**Cukrodajne**", "trzcina cukrowa, burak cukrowy", "Trzcina — strefa międzyzwrotnikowa, dużo ciepła i wody, daje ok. 4/5 światowego cukru; burak — strefa umiarkowana, gleby żyzne i próchniczne", "Trzcina: Brazylia, Indie, Chiny, Tajlandia; burak: Rosja, Francja, Niemcy, USA, Polska"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwie pułapki terminologiczne: (1) **chów** to utrzymywanie i żywienie zwierząt w celu uzyskania produktów, a **hodowla** to celowe doskonalenie cech dziedzicznych przez dobór i selekcję — na maturze najczęściej opisujesz **chów**, nie hodowlę; (2) **pszenica ozima** siana jest jesienią i wymaga łagodnej zimy oraz pokrywy śnieżnej chroniącej przed wymarzaniem, a **jara** — siana wiosną, ma niższy plon, lecz umożliwia uprawę tam, gdzie zimy są zbyt surowe (Kanada, Syberia). To dlatego udział pszenicy jarej rośnie ku północy."
+        },
+        {
+          "type": "compare",
+          "title": "Chów ekstensywny a intensywny",
+          "leftLabel": "Ekstensywny (pastwiskowy, koczowniczy)",
+          "rightLabel": "Intensywny (alkierzowy, przemysłowy)",
+          "rows": [
+            { "aspect": "Obsada zwierząt", "left": "Bardzo mała liczba sztuk na 1 ha — pastwisko musi się samo odnawiać", "right": "Bardzo duża, często bez dostępu do pastwiska (**fermy przemysłowe**)" },
+            { "aspect": "Żywienie", "left": "Naturalna roślinność pastwisk, sezonowe wędrówki za paszą", "right": "**Pasze treściwe** kupowane z zewnątrz (soja, kukurydza), bilansowane pod przyrost lub mleczność" },
+            { "aspect": "Lokalizacja", "left": "Obszary suche, górskie i o niskiej jakości gleb — nienadające się pod uprawę polową", "right": "Blisko **rynków zbytu**, zakładów przetwórczych i zaplecza paszowego" },
+            { "aspect": "Wydajność jednostkowa", "left": "Niska mleczność i powolne przyrosty masy", "right": "Bardzo wysoka — możliwa dzięki genetyce, paszom i kontroli warunków" },
+            { "aspect": "Skutki środowiskowe", "left": "Przy nadmiernym wypasie: **degradacja pastwisk i pustynnienie** (Sahel)", "right": "Koncentracja odchodów → **eutrofizacja** wód, emisja metanu i amoniaku, ryzyko epidemii" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Indie — największe pogłowie bydła, a znikoma produkcja wołowiny",
+          "region": "Azja Południowa, Indie",
+          "text": "Indie mają **największe na świecie pogłowie bydła** (łącznie z bawołami) i są **największym producentem mleka**, którego produkcja wzrosła kilkakrotnie po programie spółdzielczości mleczarskiej znanym jako „biała rewolucja” (Operation Flood, od 1970 r.). Jednocześnie spożycie i produkcja wołowiny są bardzo niskie: w **hinduizmie krowa jest zwierzęciem świętym**, a ubój bydła w wielu stanach jest prawnie zakazany. Efektem jest struktura chowu nieporównywalna z żadnym krajem zachodnim — ogromne pogłowie o **niskiej wydajności jednostkowej**, utrzymywane głównie dla mleka oraz jako siła pociągowa i źródło obornika, żywione w dużej mierze resztkami pożniwnymi.",
+          "takeaway": "O geografii chowu zwierząt decydują nie tylko pastwiska i klimat, lecz także **czynniki kulturowo-religijne** — obok zakazu uboju bydła w hinduizmie klasycznym przykładem jest brak chowu trzody chlewnej w krajach islamu i judaizmu."
+        },
+        {
+          "type": "matching",
+          "title": "Roślina a jej wymagania",
+          "instruction": "Dopasuj roślinę uprawną do warunków, które decydują o jej rozmieszczeniu.",
+          "pairs": [
+            { "left": "Ryż", "right": "Zalewane pola na terenie płaskim, ponad 1000 mm opadów i temperatura powyżej 20 °C" },
+            { "left": "Bawełna", "right": "Dużo słońca i ciepła w okresie dojrzewania, zwykle konieczne nawadnianie" },
+            { "left": "Maniok", "right": "Ubogie gleby strefy międzyzwrotnikowej i odporność na okresową suszę" },
+            { "left": "Rzepak", "right": "Chłodniejsza, wilgotna część strefy umiarkowanej i gleby zasobne w wapń" },
+            { "left": "Kawa arabika", "right": "Stoki w strefie międzyzwrotnikowej na wysokości 600–2000 m n.p.m." }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Kukurydza ma najwyższe światowe zbiory spośród zbóż, a mimo to ryż i pszenica mają większe znaczenie w bezpośrednim wyżywieniu ludności. Wynika to głównie z tego, że:",
+          "options": [
+            "kukurydza ma znacznie niższą wartość energetyczną niż pszenica i ryż",
+            "większość zbiorów kukurydzy przeznacza się na paszę dla zwierząt i produkcję etanolu",
+            "kukurydza jest uprawiana wyłącznie w krajach o bardzo małej liczbie ludności",
+            "kukurydza nie nadaje się do długiego przechowywania"
+          ],
+          "correctIndex": 1,
+          "explanation": "W USA, Brazylii czy Chinach kukurydza to przede wszystkim **surowiec paszowy i energetyczny** — trafia do tuczu bydła i trzody oraz do gorzelni produkujących bioetanol. Do człowieka dociera więc **pośrednio**, w postaci mięsa i mleka, a przy tej konwersji traci się większość energii. Bezpośrednim pokarmem kukurydza pozostaje głównie w Ameryce Środkowej, części Ameryki Południowej i Afryce."
+        },
+        {
+          "type": "quiz",
+          "question": "Chów owiec dominuje na obszarach takich jak Wyżyna Tybetańska, Outback australijski czy Wyżyna Anatolijska, ponieważ:",
+          "options": [
+            "owce wymagają bardzo żyznych gleb i wysokich opadów",
+            "owce dobrze znoszą suche i chłodne warunki oraz wykorzystują ubogie pastwiska nienadające się pod uprawę polową",
+            "obszary te leżą blisko największych rynków zbytu na wełnę",
+            "owce nie mogą być chowane na terenach nizinnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Owca jest zwierzęciem o **najmniejszych wymaganiach paszowych** spośród hodowanych zwierząt gospodarskich: zjada niską, twardą roślinność stepów, półpustyń i hal górskich, znosi duże amplitudy temperatury i niedobór wody. Dlatego zajmuje obszary, na których **uprawa polowa i chów bydła są niemożliwe** — to klasyczny przykład dostosowania kierunku produkcji do bariery przyrodniczej, a nie do bliskości rynku."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o uprawach niemal zawsze mają formę „wyjaśnij, dlaczego roślina X jest uprawiana w regionie Y” albo „wskaż region na mapie”. Odpowiedź buduj z **trzech elementów**: (1) konkretne wymaganie rośliny (temperatura, suma i rozkład opadów, typ gleby, rzeźba), (2) cecha środowiska regionu, która to wymaganie spełnia, (3) spójnik przyczynowy między nimi. Nie pisz „bo tam jest ciepło” — napisz „bo średnia temperatura powyżej 20 °C przez cały okres wegetacji umożliwia dwa zbiory ryżu w roku”."
+        }
+      ]
+    }
+  ]
+}

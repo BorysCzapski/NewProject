@@ -1,0 +1,471 @@
+{
+  "topicSlug": "uwarunkowania-przyrodnicze-gospodarki",
+  "lessons": [
+    {
+      "slug": "rzezba-terenu-a-gospodarka",
+      "title": "Rzeźba terenu a rolnictwo, transport i osadnictwo",
+      "summary": "Jak nachylenie stoków, deniwelacje i wysokość nad poziomem morza decydują o tym, gdzie opłaca się orać, budować drogi i zakładać miasta — od Niziny Padańskiej po tarasy Banaue.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Środowisko przyrodnicze niczego człowiekowi nie **nakazuje**, ale bardzo wyraźnie **wycenia** jego decyzje. Hektar pszenicy na płaskiej nizinie i hektar pszenicy na stoku o nachyleniu 15° to ta sama roślina i ten sam klimat, ale zupełnie inny koszt paliwa, inne ryzyko utraty gleby i inna wydajność pracy. Spośród wszystkich elementów środowiska to właśnie **rzeźba terenu** przekłada się na pieniądze najbardziej bezpośrednio: przez nachylenie, przez **deniwelację** i przez wysokość nad poziomem morza. W tej lekcji prześledzimy trzy dziedziny, w których ten rachunek widać najlepiej: **rolnictwo**, **transport** i **osadnictwo**."
+        },
+        {
+          "type": "definition",
+          "term": "Nachylenie (spadek) stoku",
+          "text": "Kąt między powierzchnią stoku a płaszczyzną poziomą, podawany w stopniach lub w procentach. To **najważniejszy parametr rzeźby z punktu widzenia gospodarki**: wraz z nim rośnie koszt uprawy i budowy drogi, spada wydajność maszyn, a przede wszystkim gwałtownie rośnie **zagrożenie erozją wodną gleb**.",
+          "note": "Spadek 100% to nachylenie 45°, a nie kąt prosty — procent wyraża stosunek przewyższenia do odległości poziomej, a nie część kąta pełnego."
+        },
+        {
+          "type": "formula",
+          "title": "Spadek terenu",
+          "expression": "i = \\frac{\\Delta h}{l} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "i", "meaning": "spadek (nachylenie) w procentach" },
+            { "symbol": "\\Delta h", "meaning": "deniwelacja, czyli różnica wysokości między dwoma punktami (m)" },
+            { "symbol": "l", "meaning": "odległość między punktami mierzona w poziomie, czyli odczytana z mapy (m)" }
+          ],
+          "caption": "Wzór, którym na maturze liczy się spadek odcinka drogi lub rzeki z mapy topograficznej. Uwaga: $l$ to odległość w poziomie, a nie długość stoku."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Rzeźba w liczbach, które warto pamiętać",
+          "items": [
+            { "value": "3", "unit": "°", "label": "Nachylenie, powyżej którego na gruncie ornym zaczyna się odczuwalne spłukiwanie gleby", "note": "Poniżej tej wartości erozja wodna praktycznie nie zagraża uprawom polowym" },
+            { "value": "12", "unit": "°", "label": "Praktyczna granica opłacalnej mechanizacji upraw polowych", "note": "Powyżej zaleca się trwałe użytki zielone, sady, tarasy lub zalesienie" },
+            { "value": "91", "unit": "%", "label": "Udział terenów poniżej 300 m n.p.m. (nizin) w powierzchni Polski" },
+            { "value": "173", "unit": "m n.p.m.", "label": "Średnia wysokość Polski — jednego z najniżej położonych krajów Europy Środkowej" },
+            { "value": "57", "unit": "km", "label": "Długość tunelu bazowego św. Gotarda (otwarty w 2016 r.), najdłuższego tunelu kolejowego świata" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Nachylenie stoku a sposób użytkowania ziemi",
+          "caption": "Progi orientacyjne — w praktyce przesuwa je rodzaj gleby, suma opadów i cena ziemi.",
+          "headers": ["Nachylenie", "Zagrożenie erozją", "Racjonalne użytkowanie", "Przykład regionu"],
+          "rows": [
+            ["do 3°", "znikome", "dowolne uprawy polowe, pełna mechanizacja", "Nizina Wielkopolska, Nizina Padańska"],
+            ["3–6°", "słabe", "uprawy polowe, ale orka w poprzek stoku", "Wyżyna Lubelska"],
+            ["6–12°", "umiarkowane", "uprawy z pasami ochronnymi, sady, płodozmian przeciwerozyjny", "Pogórze Karpackie"],
+            ["12–20°", "silne", "trwałe użytki zielone, sady tarasowe, winnice", "stoki doliny Mozeli, Roztocze"],
+            ["powyżej 20°", "bardzo silne", "las ochronny lub tarasy budowane ręcznie", "Kordyliera Środkowa na Luzonie, Wyżyna Lessowa"]
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Piętrowość gospodarowania w Alpach",
+          "caption": "Ta sama dolina, pięć różnych gospodarek — o tym, co się opłaca, decyduje wysokość. Kliknij w piętro, aby zobaczyć szczegóły.",
+          "orientation": "bottom-up",
+          "layers": [
+            { "name": "Dno doliny", "range": "do ok. 800 m n.p.m.", "text": "Uprawy polowe i sady, największe miasta (Innsbruck, Bolzano), autostrady i linie kolejowe. Płasko, ciepło i dostępnie — ale zimą **inwersja temperatury** zatrzymuje chłodne powietrze i zanieczyszczenia przy dnie.", "tone": "earth" },
+            { "name": "Stoki dolin i regiel dolny", "range": "800–1400 m n.p.m.", "text": "Wsie o układzie łańcuchowym, sady i winnice zakładane głównie na stokach o **ekspozycji południowej**, które otrzymują więcej promieniowania. Powyżej pól — lasy liściaste i mieszane.", "tone": "vegetation" },
+            { "name": "Regiel górny", "range": "1400–1900 m n.p.m.", "text": "Bory świerkowe i gospodarka leśna, dolne stacje kolei linowych, schroniska. Stałe osadnictwo już praktycznie zanika — zima trwa tu ponad pół roku.", "tone": "vegetation" },
+            { "name": "Piętro hal alpejskich", "range": "1900–2500 m n.p.m.", "text": "Powyżej **górnej granicy lasu**. Murawy wykorzystywane do letniego wypasu (**transhumancja** — sezonowe wyprowadzanie stad w góry), zimą trasy narciarskie. Gospodarka wyłącznie sezonowa.", "tone": "rock" },
+            { "name": "Piętro turni i lodowców", "range": "powyżej 2500 m n.p.m.", "text": "Brak osadnictwa i rolnictwa. Wartość gospodarcza to turystyka wysokogórska oraz woda: lodowce i śnieg zasilają zbiorniki **elektrowni wodnych**, które dają Austrii i Szwajcarii większość produkcji energii elektrycznej.", "tone": "ice" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego stok wypycha rolnictwo — łańcuch przyczynowy",
+          "caption": "Bariera rzeźby nie działa jednym skokiem, tylko przez ciąg następstw. Na maturze punktuje się właśnie ten ciąg.",
+          "steps": [
+            { "title": "Nachylenie zwiększa energię spływu", "text": "Woda opadowa, która nie zdążyła wsiąknąć, spływa po powierzchni tym szybciej, im większe nachylenie. **Siła erozyjna strugi rośnie szybciej niż jej prędkość** — dwukrotnie szybszy spływ przenosi wielokrotnie więcej materiału." },
+            { "title": "Spłukiwanie zdziera poziom próchniczny", "text": "Najpierw znika najdrobniejsza i najbardziej wartościowa frakcja — cząstki ilaste i **próchnica**. Powstają żłobiny i wąwozy, a na wypukłościach stoku odsłania się jaśniejsza skała macierzysta." },
+            { "title": "Gleba płytsza — plony niższe", "text": "Cieńszy poziom próchniczny gorzej magazynuje wodę i składniki pokarmowe, więc plony spadają i stają się bardziej wrażliwe na suszę. Rolnik musi nadrabiać nawozami, co podnosi koszt produkcji." },
+            { "title": "Maszyny pracują wolniej i niebezpiecznie", "text": "Na stromym stoku ciągnik zużywa więcej paliwa, traci przyczepność, a przy nachyleniu powyżej ok. 12° rośnie ryzyko wywrotki. **Wydajność pracy spada, a koszt jednostkowy rośnie** — nawet gdy plon jeszcze jest przyzwoity." },
+            { "title": "Rolnik wycofuje grunt orny", "text": "Pole zamienia się w łąkę, pastwisko lub las — albo, jeśli ziemi jest za mało, w **tarasy**. To ostatni etap: bariera nie znika, tylko zostaje wykupiona ogromnym nakładem pracy." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Tarasy ryżowe Banaue — stok zamieniony w schody",
+          "region": "Kordyliera Środkowa, wyspa Luzon, Filipiny",
+          "text": "Lud Ifugao od stuleci (wg tradycji ok. 2000 lat) przekształca strome stoki na wysokości 700–1500 m n.p.m. w system poziomych tarasów podpartych murkami z kamienia i ubitej ziemi. Mechanizm jest prosty i genialny: **taras redukuje nachylenie pola do zera**, więc spływ powierzchniowy zamienia się w kontrolowane przelewanie wody z tarasu na taras, a gleba nie jest zdzierana, tylko zatrzymywana. Woda pochodzi z lasu na grzbietach, który działa jak gąbka — dlatego wylesienie szczytów natychmiast rozregulowuje cały system. Cena tego rozwiązania jest jednak wysoka: pola są za wąskie dla jakiejkolwiek maszyny, cała praca wykonywana jest ręcznie, a utrzymanie murków pochłania więcej roboczogodzin niż sam zbiór. Tarasy wpisano na listę światowego dziedzictwa UNESCO w 1995 r., a głównym zagrożeniem jest dziś **porzucanie ich przez młodych migrujących do miast**.",
+          "takeaway": "Tarasowanie to podręcznikowy przykład **posybilizmu**: ograniczenie rzeźby nie zostaje zniesione, lecz przesunięte — kosztem gigantycznego nakładu pracy, który opłaca się tylko przy dużej gęstości zaludnienia i braku alternatywnej ziemi."
+        },
+        {
+          "type": "compare",
+          "title": "Nizina Padańska i Alpy Centralne — ten sam kraj, inny rachunek",
+          "leftLabel": "Nizina Padańska (dolina Padu)",
+          "rightLabel": "Alpy Centralne",
+          "rows": [
+            { "aspect": "Rolnictwo", "left": "Intensywna produkcja polowa: ryż, kukurydza, rośliny pastewne, hodowla mleczna. Pełna mechanizacja, duże pola, nawadnianie wodą z Alp.", "right": "Gospodarka pastwiskowo-hodowlana. Grunty orne tylko na dnach dolin, produkcja roślinna praktycznie zanika powyżej regla dolnego." },
+            { "aspect": "Transport", "left": "Gęsta sieć autostrad i kolei, trasy prowadzone niemal prostoliniowo, koszt budowy kilometra najniższy we Włoszech.", "right": "Trasy wymuszone przez doliny i przełęcze, konieczne tunele, wiadukty i galerie przeciwlawinowe — kilometr drogi kosztuje wielokrotnie więcej." },
+            { "aspect": "Osadnictwo", "left": "Najgęściej zaludniony region Włoch, zwarte miasta i ciągła zabudowa wzdłuż osi Turyn–Mediolan–Wenecja.", "right": "Osadnictwo **liniowe** — wsie ciągną się wzdłuż potoków i dróg w dnie doliny; grzbiety i strome stoki pozostają puste." },
+            { "aspect": "Energetyka", "left": "Elektrownie cieplne i gazowe blisko odbiorców przemysłowych; brak własnych spadków wody.", "right": "Duże **elektrownie wodne i szczytowo-pompowe** — wysokie deniwelacje i obfite opady dają darmową energię potencjalną wody." },
+            { "aspect": "Główne ograniczenie", "left": "Zimowe **inwersje temperatury** w kotlinie zamkniętej Alpami i Apeninami: smog i wysokie stężenia pyłów.", "right": "Krótki okres wegetacyjny, lawiny, spływy błotne, wysoki koszt każdej inwestycji liniowej." }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Rzeźba, która kosztuje — sześć miejsc na mapie",
+          "caption": "Kliknij znacznik, aby zobaczyć, jak konkretna forma rzeźby przełożyła się na decyzję gospodarczą.",
+          "center": [30, 55],
+          "zoom": 2,
+          "markers": [
+            { "lat": 46.62, "lng": 8.59, "label": "Tunel bazowy św. Gotarda (Szwajcaria)", "text": "57 km tunelu poprowadzonego na wysokości ok. 550 m n.p.m., czyli **na poziomie dna doliny**. Pociąg nie musi już pokonywać podjazdu na przełęcz — może być dłuższy, cięższy i szybszy, a trasa nie jest zamykana przez zimę." },
+            { "lat": 47.0, "lng": 11.51, "label": "Przełęcz Brenner (Austria–Włochy)", "text": "Najniższa (ok. 1370 m n.p.m.) i dlatego najstarsza droga tranzytowa przez Alpy Wschodnie. **Przełęcz to obniżenie w grzbiecie** — naturalny korytarz, który od czasów rzymskich skupia cały ruch transalpejski." },
+            { "lat": 16.91, "lng": 121.06, "label": "Tarasy ryżowe Banaue (Filipiny)", "text": "Stok o nachyleniu ponad 20° przekształcony w tysiące poziomych półek. Rzeźba została pokonana, ale kosztem wykluczenia jakiejkolwiek mechanizacji." },
+            { "lat": 36.0, "lng": 109.5, "label": "Wyżyna Lessowa (Chiny)", "text": "Miąższe pokrywy lessu — bardzo żyzne, ale skrajnie podatne na rozmywanie. Wylesienie i orka doprowadziły do powstania gęstej sieci wąwozów; to stąd **Huang He (Rzeka Żółta) bierze swój ładunek zawiesiny** i swoją nazwę." },
+            { "lat": -16.5, "lng": -68.15, "label": "La Paz i El Alto (Boliwia)", "text": "Aglomeracja rozciągnięta między 3200 a 4100 m n.p.m. Rozrzedzone powietrze zmniejsza siłę nośną skrzydeł, dlatego lotnisko w El Alto potrzebuje wyjątkowo długiego pasa startowego, a samoloty startują z ograniczonym ładunkiem." },
+            { "lat": 45.46, "lng": 9.19, "label": "Mediolan i Nizina Padańska (Włochy)", "text": "Płaskie, dobrze nawodnione dno kotliny — najgęściej zaludniony i najbogatszy region Włoch. Ta sama zamknięta rzeźba, która ułatwia transport, zatrzymuje zimą zanieczyszczenia powietrza." }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pomyłki, które kosztują punkty. **Wysokość bezwzględna** to wysokość nad poziomem morza, a **deniwelacja (wysokość względna)** to różnica wysokości między dwoma punktami — teren na wysokości 2000 m n.p.m. może być płaski (Wyżyna Tybetańska), a teren na wysokości 300 m n.p.m. bardzo stromy (odcinki przełomowe dolin). Po drugie: **nie mieszaj stopni z procentami** — nachylenie 100% to 45°. Po trzecie: zdanie „góry są barierą transportową” nie znaczy „przez góry się nie jeździ” — jeździ się, tylko **drożej i wolniej**, a ruch koncentruje się w wąskich korytarzach dolin i przełęczy."
+        },
+        {
+          "type": "matching",
+          "title": "Forma rzeźby a jej gospodarcza konsekwencja",
+          "instruction": "Połącz element rzeźby z następstwem, które wywołuje w gospodarce.",
+          "pairs": [
+            { "left": "Kotlina śródgórska zimą", "right": "Inwersja temperatury, przymrozki i kumulacja zanieczyszczeń powietrza" },
+            { "left": "Stok o ekspozycji południowej w dolinie Mozeli", "right": "Wyższa suma promieniowania — opłacalna uprawa winorośli" },
+            { "left": "Przełęcz w grzbiecie górskim", "right": "Naturalny korytarz transportowy skupiający ruch tranzytowy" },
+            { "left": "Terasa zalewowa w dolinie dużej rzeki", "right": "Bardzo żyzne mady, ale stałe ryzyko zalania zabudowy" },
+            { "left": "Stok o nachyleniu powyżej 12°", "right": "Praktyczne wykluczenie mechanizacji upraw polowych" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Rolnik na Wyżynie Lubelskiej gospodaruje na polu o nachyleniu ok. 15°, na glebie wytworzonej z lessu. Które rozwiązanie najskuteczniej ograniczy degradację gleby, nie eliminując całkowicie produkcji?",
+          "options": [
+            "Orka wzdłuż linii największego spadku, aby ułatwić szybki odpływ wody z pola",
+            "Zwiększenie dawek nawozów mineralnych, które odbudują utracony poziom próchniczny",
+            "Zamiana pola na trwałe użytki zielone lub założenie uprawy tarasowej z orką w poprzek stoku",
+            "Pogłębienie orki jesiennej, aby woda wsiąkała w rozluźnioną warstwę"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczem jest **skrócenie i spowolnienie spływu powierzchniowego**. Trwała darń chroni glebę przez cały rok, a tarasy i orka w poprzek stoku zamieniają ciągły spadek na serię przeszkód, więc woda nie rozpędza się. Orka wzdłuż spadku (opcje 1 i 4) tworzy gotowe bruzdy odprowadzające wodę i **przyspiesza** erozję, a nawozy (opcja 2) nie odtwarzają zdartego poziomu próchnicznego — uzupełniają tylko składniki pokarmowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego kraje alpejskie budują kosztowne **tunele bazowe** (Gotard, Brenner) zamiast rozbudowywać drogi biegnące przez przełęcze?",
+          "options": [
+            "Tunel bazowy prowadzi trasę na poziomie dna doliny, więc likwiduje strome podjazdy, pozwala prowadzić dłuższe i cięższe składy i działa niezależnie od zimy",
+            "Budowa tunelu jest tańsza niż budowa drogi o tej samej długości",
+            "Przełęcze alpejskie leżą powyżej granicy wiecznego śniegu i są nieprzekraczalne",
+            "Tunele nie wymagają bieżącego utrzymania, w przeciwieństwie do dróg górskich"
+          ],
+          "correctIndex": 0,
+          "explanation": "Barierą nie jest sama obecność gór, lecz **deniwelacja i nachylenie trasy**. Pociąg pokonuje pochylenia rzędu kilkunastu promili, więc podjazd na przełęcz wymusza krótkie składy, dodatkowe lokomotywy i pętle rozwinięć. Tunel bazowy przebija masyw u jego podstawy i zamienia trasę górską w praktycznie płaską, a przy okazji uniezależnia ją od lawin i zamieci. Jest przy tym bardzo drogi (opcja 2 jest fałszywa), a przełęcze takie jak Brenner (1370 m n.p.m.) leżą znacznie poniżej granicy wiecznego śniegu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu „wyjaśnij wpływ rzeźby terenu na…” CKE oczekuje **łańcucha przyczynowo-skutkowego z nazwanym mechanizmem**, a nie samego stwierdzenia „bo są góry”. Buduj odpowiedź w schemacie: *cecha rzeźby (duże nachylenie / znaczne deniwelacje / brak przełęczy) → mechanizm fizyczny lub ekonomiczny (szybszy spływ i erozja / większy koszt budowy i eksploatacji / krótszy okres wegetacyjny) → skutek gospodarczy (mniejsze plony, rzadsza sieć drogowa, osadnictwo liniowe w dolinach)*. Pamiętaj też o argumentach „na plus”: rzeźba górska daje **energię wodną**, **surowce odsłonięte przez erozję** i **rentę turystyczną** — pytanie o wpływ rzeźby prawie nigdy nie oznacza wyliczania samych utrudnień."
+        }
+      ]
+    },
+    {
+      "slug": "klimat-a-dzialalnosc-gospodarcza",
+      "title": "Klimat jako czynnik gospodarczy: okres wegetacyjny, opady i ekstrema",
+      "summary": "Dlaczego ta sama roślina rodzi w Wielkopolsce, a nie na Suwalszczyźnie, dlaczego Norylsk buduje się na palach, a Grecja żyje z bezdeszczowego lata — klimat jako rachunek kosztów w rolnictwie, turystyce, energetyce i budownictwie.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rzeźba terenu jest widoczna gołym okiem, klimat trzeba przeliczyć — i właśnie dlatego jego wpływ na gospodarkę bywa niedoceniany. Tymczasem to klimat decyduje, **ile dni w roku roślina w ogóle rośnie**, czy pole trzeba nawadniać, czy fundament trzeba wbić w wieczną zmarzlinę i czy stok narciarski utrzyma śnieg bez armatek. W tej lekcji rozbierzemy klimat na trzy „śrubki”, o które CKE pyta najczęściej: **warunki termiczne** (okres wegetacyjny), **warunki opadowe** (bilans wodny) oraz **zjawiska ekstremalne** — a każdą z nich przełożymy na konkretny sektor gospodarki."
+        },
+        {
+          "type": "definition",
+          "term": "Okres wegetacyjny",
+          "text": "Liczba dni w roku, w których średnia dobowa temperatura powietrza jest równa lub wyższa niż **5°C** — czyli tyle dni, ile rośliny strefy umiarkowanej faktycznie mogą przyrastać. To **podstawowy termiczny wskaźnik przydatności rolniczej klimatu**: im dłuższy okres wegetacyjny, tym więcej gatunków wchodzi w grę, tym pewniejsze dojrzewanie odmian późnych i tym realniejszy drugi plon w sezonie.",
+          "note": "Nie myl go z **okresem bezprzymrozkowym** (liczbą dni bez spadków poniżej 0°C) — ten drugi decyduje o ryzyku dla sadów i warzyw, a bywa krótszy nawet o kilka tygodni."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Klimatyczne progi, które rządzą gospodarką",
+          "items": [
+            { "value": "5", "unit": "°C", "label": "Próg średniej dobowej temperatury, od którego liczy się okres wegetacyjny" },
+            { "value": "ok. 200", "unit": "dni", "label": "Przeciętna długość okresu wegetacyjnego w Polsce", "note": "Od ok. 225 dni na Nizinie Śląskiej po niespełna 150 dni w wyższych partiach gór" },
+            { "value": "ok. 600", "unit": "mm", "label": "Przeciętny roczny opad w Polsce — jeden z najniższych w Europie", "note": "W Tatrach ponad 1700 mm, a na Kujawach miejscami poniżej 500 mm" },
+            { "value": "250", "unit": "mm/rok", "label": "Umowna granica opadowa obszarów pustynnych", "note": "Poniżej niej rolnictwo bez nawadniania jest niemożliwe" }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Klimatogram, który tłumaczy grecką gospodarkę",
+          "station": "Ateny (Grecja), ok. 100 m n.p.m.",
+          "caption": "Przeanalizuj rozkład temperatur i opadów, zanim odsłonisz odpowiedź. Zwróć uwagę na to, w którym miesiącu wypada minimum opadowe.",
+          "temps": [10.2, 10.6, 12.7, 16.3, 21.4, 26.1, 28.8, 28.6, 24.7, 19.7, 15.4, 11.8],
+          "precip": [56, 47, 41, 30, 23, 11, 6, 7, 14, 53, 68, 71],
+          "answer": {
+            "climate": "Klimat podzwrotnikowy śródziemnomorski (Csa)",
+            "reasoning": "Maksimum opadów przypada na chłodną porę roku, a lato jest niemal bezdeszczowe (poniżej 15 mm w lipcu i sierpniu) — to skutek letniego przesunięcia **wyżu zwrotnikowego** nad basen Morza Śródziemnego. Gospodarczo daje to dwa przeciwstawne skutki: **rolnictwo musi być nawadniane latem** (stąd oliwka i winorośl — gatunki o głębokich korzeniach i twardych liściach), ale **turystyka zyskuje gwarancję bezdeszczowego sezonu** od czerwca do września, co pozwala budować cały model gospodarczy na wypoczynku nadmorskim."
+          }
+        },
+        {
+          "type": "table",
+          "title": "Jeden element klimatu — cztery różne sektory gospodarki",
+          "caption": "Tabela do nauki „w poprzek”: dla każdego elementu klimatu warto umieć podać skutek w więcej niż jednej gałęzi.",
+          "headers": ["Element klimatu", "Rolnictwo", "Energetyka i budownictwo", "Turystyka"],
+          "rows": [
+            ["Długość okresu wegetacyjnego", "decyduje o doborze gatunków i liczbie zbiorów w roku", "krótszy sezon budowlany, wyższe koszty ogrzewania", "krótszy sezon letni w wyższych szerokościach"],
+            ["Roczna suma i rozkład opadów", "przesądza o konieczności nawadniania lub melioracji odwadniającej", "warunkuje opłacalność **hydroenergetyki**", "opady letnie obniżają atrakcyjność wypoczynku plażowego"],
+            ["Usłonecznienie", "wpływa na zawartość cukru w owocach i na dojrzewanie zbóż", "decyduje o wydajności **fotowoltaiki i elektrowni CSP**", "podstawa produktu turystycznego „3S”"],
+            ["Prędkość i stałość wiatru", "wiatry suche nasilają **erozję wietrzną** gleb", "warunek opłacalności **farm wiatrowych**, zwłaszcza morskich", "sporty wodne, ale też ryzyko zamknięcia plaż"],
+            ["Zjawiska ekstremalne", "susze, przymrozki i grad niszczą plony w skali roku", "konieczne droższe konstrukcje odporne na cyklony, śnieg, zmarzlinę", "przerwy sezonu, wyższe składki ubezpieczeniowe"]
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Klimat morski a kontynentalny — dwie strategie rolne",
+          "leftLabel": "Irlandia (klimat umiarkowany ciepły morski)",
+          "rightLabel": "Północny Kazachstan (klimat umiarkowany chłodny kontynentalny)",
+          "rows": [
+            { "aspect": "Amplituda roczna temperatury", "left": "Bardzo mała — łagodne zimy bez trwałej pokrywy śnieżnej.", "right": "Bardzo duża — mroźne zimy i gorące lata, wysokie ryzyko przymrozków wiosennych." },
+            { "aspect": "Opady", "left": "Wysokie i rozłożone równomiernie przez cały rok, częste dni z opadem.", "right": "Niskie (ok. 300 mm), z maksimum letnim, ale przy dużym parowaniu — częste **susze glebowe**." },
+            { "aspect": "Dominujący kierunek produkcji", "left": "Trwałe użytki zielone i **hodowla bydła** — trawa rośnie niemal cały rok.", "right": "Ekstensywna uprawa **pszenicy jarej** na czarnoziemach i kasztanoziemach." },
+            { "aspect": "Ograniczenie", "left": "Mało dni słonecznych i chłodne lato — zboża trudno dojrzewają, brakuje ciepła.", "right": "Brakuje wody, a nie ciepła; plony wahają się z roku na rok o kilkadziesiąt procent." },
+            { "aspect": "Sposób radzenia sobie", "left": "Melioracje **odwadniające**, wypas przez większość roku, tanie utrzymanie stad.", "right": "Ugorowanie, zatrzymywanie śniegu na polach, pasy wiatrochronne przeciw erozji wietrznej." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak susza atmosferyczna zamienia się w stratę gospodarczą",
+          "caption": "Ścieżka od anomalii pogodowej do rachunku ekonomicznego — dokładnie ta, o którą pyta zadanie „wyjaśnij skutki suszy”.",
+          "steps": [
+            { "title": "Susza atmosferyczna", "text": "Przez kilka tygodni brakuje opadów, a nad obszarem utrzymuje się **układ wyżowy** z bezchmurnym niebem. Silne usłonecznienie podnosi temperaturę i zwiększa parowanie." },
+            { "title": "Susza glebowa", "text": "Zapas wody dostępnej dla roślin w warstwie korzeniowej wyczerpuje się. Rośliny zamykają aparaty szparkowe, aby ograniczyć transpirację — i tym samym **przerywają fotosyntezę**, więc przestają przyrastać." },
+            { "title": "Susza hydrologiczna", "text": "Spada poziom wód gruntowych i przepływy w rzekach. Nawadnianie staje się niemożliwe lub zostaje administracyjnie ograniczone, a elektrownie tracą wodę chłodzącą." },
+            { "title": "Straty w plonach", "text": "Największe wtedy, gdy niedobór wody trafi w **fazę krytyczną** rośliny (u zbóż — strzelanie w źdźbło i kłoszenie). Ta sama susza w innym miesiącu może być niemal nieszkodliwa." },
+            { "title": "Reakcja gospodarki", "text": "Rosną ceny płodów rolnych i pasz, spada pogłowie zwierząt, państwo uruchamia dopłaty klęskowe, a rolnicy przesuwają się w stronę odmian odpornych na suszę i nawodnień — co podnosi trwały koszt produkcji." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Budować na zmarzlinie — Norylsk i Jakuck",
+          "region": "Syberia Środkowa i Wschodnia (Rosja)",
+          "text": "W strefie **wieloletniej zmarzliny** grunt jest zamarznięty na dziesiątki, a lokalnie setki metrów w głąb; latem odmarza jedynie cienka **warstwa czynna**. Ciepło budynku postawionego bezpośrednio na takim podłożu przenika w dół, roztapia lód zawarty w gruncie i zamienia go w błotnistą maź — konstrukcja osiada nierównomiernie i pęka. Dlatego bloki, rurociągi i drogi buduje się tu **na palach wbitych poniżej warstwy czynnej**, z przewietrzaną pustką pod podłogą, która nie pozwala ciepłu dotrzeć do zmarzliny. Do tego dochodzą: krótki, kilkumiesięczny sezon budowlany, konieczność prowadzenia instalacji wodociągowych nad ziemią w ocieplanych kanałach oraz zaopatrzenie możliwe głównie w czasie krótkiej nawigacji rzecznej lub zimowymi drogami lodowymi. Efekt: koszt tej samej inwestycji jest tu wielokrotnie wyższy niż w strefie umiarkowanej, a **jedynym uzasadnieniem takiej lokalizacji są bogate złoża** (w Norylsku — niklu, miedzi i metali z grupy platynowców).",
+          "takeaway": "W warunkach ekstremalnych klimat nie zamyka drogi rozwojowi, ale **radykalnie podnosi próg opłacalności**: gospodarka pojawia się tam tylko wtedy, gdy renta z surowca przewyższa narzut kosztów przyrodniczych."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Orientacyjna długość okresu wegetacyjnego w Polsce",
+          "caption": "Wartości przeciętne z wielolecia. Widać dwa nakładające się gradienty: z południowego zachodu ku północnemu wschodowi (rosnący kontynentalizm) oraz malejący wraz z wysokością.",
+          "labels": ["Wrocław", "Poznań", "Warszawa", "Białystok", "Zakopane"],
+          "series": [{ "name": "Dni ze średnią dobową temperaturą ≥ 5°C", "values": [225, 220, 210, 195, 160] }],
+          "unit": "dni"
+        },
+        {
+          "type": "classification",
+          "title": "Bariery przyrodnicze osadnictwa (bariery ekumeny)",
+          "caption": "Cztery klasyczne bariery, które CKE każe rozpoznawać na mapie świata. Trzy z nich mają podłoże klimatyczne, czwarta — wysokościowe.",
+          "groups": [
+            { "name": "Bariera termiczna (zimna)", "description": "Zbyt niska temperatura: krótki lub żaden okres wegetacyjny, wieloletnia zmarzlina, ogromne koszty ogrzewania i budownictwa. Rolnictwo praktycznie niemożliwe, gospodarka opiera się na surowcach i usługach specjalnych.", "examples": ["Arktyka kanadyjska", "Grenlandia", "Syberia Wschodnia", "Antarktyda"] },
+            { "name": "Bariera wodna (sucha)", "description": "Opady poniżej ok. 250 mm rocznie przy bardzo wysokim parowaniu. Osadnictwo skupia się wyłącznie w oazach i dolinach **rzek tranzytowych**, poza nimi możliwe jest tylko koczownicze pasterstwo.", "examples": ["Sahara", "Rub al-Chali", "Atakama", "pustynie Australii Zachodniej"] },
+            { "name": "Bariera świetlna", "description": "Noc polarna i długi okres bardzo małego usłonecznienia w wysokich szerokościach. Ogranicza fotosyntezę, obniża wydajność pracy i pogarsza samopoczucie mieszkańców; wymusza całoroczne oświetlenie sztuczne.", "examples": ["Svalbard", "północna Grenlandia", "północne wybrzeża Syberii"] },
+            { "name": "Bariera grawitacyjna (wysokościowa)", "description": "Powyżej ok. 5000 m n.p.m. rozrzedzone powietrze i niskie ciśnienie parcjalne tlenu uniemożliwiają stały pobyt bez aklimatyzacji. Spada wydajność silników i ludzi, rośnie koszt każdej operacji.", "examples": ["Wyżyna Tybetańska", "Himalaje", "najwyższe partie Andów"] }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy klasyczne pułapki. Po pierwsze: **pogoda to nie klimat** — jedno suche lato nie zmienia typu klimatu i nie jest argumentem w zadaniu o warunkach gospodarowania; klimat to stan przeciętny z wielolecia. Po drugie: **okres wegetacyjny ≠ okres bezprzymrozkowy** — Wielkopolska ma długi okres wegetacyjny, ale wiosenne przymrozki wciąż zagrażają sadom. Po trzecie: sama **roczna suma opadów niczego nie przesądza** — 600 mm rozłożone równomiernie w Irlandii daje bujne łąki, a 600 mm spadłe w trzy miesiące pory deszczowej oznacza pół roku suszy; zawsze analizuj **rozkład opadów w roku i ich stosunek do parowania**."
+        },
+        {
+          "type": "matching",
+          "title": "Cecha klimatu a decyzja gospodarcza",
+          "instruction": "Połącz warunek klimatyczny z inwestycją lub rozwiązaniem, które w danym miejscu staje się opłacalne albo konieczne.",
+          "pairs": [
+            { "left": "Roczna suma opadów poniżej 250 mm", "right": "Rolnictwo możliwe wyłącznie z nawadnianiem — w oazach i dolinach rzek" },
+            { "left": "Ponad 300 dni słonecznych w roku i niska wilgotność", "right": "Wysoka opłacalność elektrowni fotowoltaicznych i słonecznych elektrowni termicznych" },
+            { "left": "Wieloletnia zmarzlina w podłożu", "right": "Budynki i rurociągi stawiane na palach, z przewietrzaną pustką pod podłogą" },
+            { "left": "Stały, silny wiatr zachodni nad płytkim szelfem", "right": "Morskie farmy wiatrowe o wysokim współczynniku wykorzystania mocy" },
+            { "left": "Pokrywa śnieżna utrzymująca się ponad 100 dni", "right": "Sezon narciarski rentowny bez kosztownego naśnieżania" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na Nizinie Śląskiej okres wegetacyjny trwa ok. 225 dni, a na Suwalszczyźnie ok. 190. Które wyjaśnienie tej różnicy jest poprawne i najpełniejsze?",
+          "options": [
+            "Na Suwalszczyźnie jest znacznie wyżej nad poziomem morza, więc temperatura spada zgodnie z gradientem pionowym",
+            "Rosnący ku północnemu wschodowi kontynentalizm i szerokość geograficzna dają chłodniejsze, dłuższe zimy, a lokalnie wzmacnia to wyższe położenie pojezierzy",
+            "Na Suwalszczyźnie roczna suma opadów jest wyższa, a opady bezpośrednio skracają okres wegetacyjny",
+            "Nizina Śląska leży w cieniu opadowym Sudetów, co podnosi jej średnią roczną temperaturę"
+          ],
+          "correctIndex": 1,
+          "explanation": "Okres wegetacyjny to wskaźnik **termiczny**, więc tłumaczą go czynniki wpływające na temperaturę. W Polsce działają jednocześnie: **wzrost kontynentalizmu ku wschodowi** (chłodniejsze, dłuższe zimy z dala od Atlantyku), **szerokość geograficzna** oraz **wysokość** — Suwalszczyzna leży kilkadziesiąt do ponad stu metrów wyżej niż Nizina Śląska, ale to czynnik dodatkowy, a nie główny (dlatego opcja 1 jest niepełna). Opady nie skracają okresu wegetacyjnego (opcja 3), a cień opadowy Sudetów zmniejsza opady, a nie podnosi temperatury w sposób decydujący (opcja 4)."
+        },
+        {
+          "type": "quiz",
+          "question": "Inwestor rozważa budowę ośrodka narciarskiego. Który zestaw warunków klimatycznych jest dla tej inwestycji najkorzystniejszy?",
+          "options": [
+            "Duża roczna suma opadów przy średniej temperaturze zimy powyżej 0°C i częstych odwilżach",
+            "Bardzo mroźna, ale sucha zima w klimacie kontynentalnym, z pokrywą śnieżną poniżej 10 cm",
+            "Obfite opady zimowe przy temperaturach utrzymujących się poniżej 0°C oraz stoki o ekspozycji północnej",
+            "Częste zimowe inwersje temperatury w kotlinie, dające ciepłe powietrze na stokach"
+          ],
+          "correctIndex": 2,
+          "explanation": "Potrzebne są **dwa warunki naraz**: dużo opadu zimą (żeby śnieg w ogóle spadł) i temperatura trwale poniżej 0°C (żeby pokrywa się utrzymała). Sama wysoka suma opadów przy odwilżach (opcja 1) daje deszcz i zanik pokrywy, a sam mróz bez opadu (opcja 2) — goły stok. **Ekspozycja północna** na półkuli północnej dodatkowo pomaga: stok otrzymuje mniej promieniowania, więc śnieg topnieje wolniej i sezon trwa dłużej. Inwersja (opcja 4) działa odwrotnie — zatrzymuje mróz w dnie doliny, a ociepla wyższe partie stoku."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy zadanie brzmi „przedstaw wpływ warunków klimatycznych na rozwój (rolnictwa / turystyki / energetyki) w regionie X”, nie wystarczy opisać klimat — trzeba **wskazać konkretny element klimatu i przypisać mu konkretny skutek**. Sprawdzona lista kontrolna: (1) warunki termiczne — okres wegetacyjny, przymrozki, sumy temperatur; (2) warunki opadowe — suma, **rozkład w roku**, stosunek do parowania; (3) usłonecznienie i wiatr — jako **zasób energetyczny**, nie tylko jako pogoda; (4) zjawiska ekstremalne — susze, cyklony, gradobicia, zmarzlina. Odpowiedź na pełne punkty niemal zawsze zawiera przynajmniej jeden **argument za** i jeden **przeciw**, bo CKE ocenia umiejętność ważenia czynników, a nie wyliczankę."
+        }
+      ]
+    },
+    {
+      "slug": "woda-i-gleby-a-produkcja-rolna",
+      "title": "Zasoby wodne i gleby a produkcja rolna",
+      "summary": "Rolnictwo nawadniane Egiptu i Azji Południowej, strefy deficytu wody i cena, jaką się za nawodnienia płaci — oraz trzy najżyźniejsze regiony świata: czarnoziemy Ukrainy, Wielkie Równiny i wulkaniczne gleby Jawy.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo to w gruncie rzeczy przemysł przetwarzający **wodę, światło i składniki pokarmowe** w biomasę. Klimat dostarcza dwóch pierwszych składników, gleba trzeciego — i to na styku tych dwóch zasobów rozstrzyga się, gdzie na świecie produkuje się żywność taniej niż gdzie indziej. W tej lekcji zobaczysz obie strony medalu: **jak brak wody da się obejść** (Egipt, Pendżab, Wielkie Równiny) i **ile to kosztuje** (zasolenie, zanik Jeziora Aralskiego, drenaż warstw wodonośnych), a także **dlaczego niektóre gleby są tak żyzne**, że wokół nich narastają jedne z najgęściej zaludnionych regionów Ziemi."
+        },
+        {
+          "type": "definition",
+          "term": "Stres wodny i niedobór wody (skala Falkenmarka)",
+          "text": "Miara zasobów wody słodkiej przypadających na jednego mieszkańca w ciągu roku. Poniżej **1700 m³/os./rok** mówimy o **stresie wodnym** — pojawiają się okresowe konflikty między rolnictwem, przemysłem i komunalnym poborem wody. Poniżej **1000 m³/os./rok** występuje **chroniczny niedobór wody**, który staje się realnym hamulcem rozwoju gospodarczego.",
+          "note": "Polska ma ok. 1600 m³/os./rok, a w latach suchych spada poniżej 1000 — mimo klimatu umiarkowanego należy do krajów najuboższych w wodę w Europie."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Woda i gleba w liczbach",
+          "items": [
+            { "value": "ok. 70", "unit": "%", "label": "Udział rolnictwa w globalnym poborze wody słodkiej", "note": "To dlatego każdy kryzys wodny jest przede wszystkim kryzysem rolnym" },
+            { "value": "ok. 20", "unit": "%", "label": "Udział gruntów nawadnianych w powierzchni gruntów ornych świata", "note": "Dają jednak ok. 40% światowej produkcji żywności — nawadnianie zwielokrotnia plon z hektara" },
+            { "value": "ok. 4", "unit": "%", "label": "Część powierzchni Egiptu, na której mieszka ponad 95% jego ludności — dolina i delta Nilu" },
+            { "value": "1700", "unit": "m³/os./rok", "label": "Próg stresu wodnego wg skali Falkenmarka" }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefy deficytu wody na świecie",
+          "caption": "Suchość nie rozkłada się przypadkowo — układa się w pasy wyznaczone przez cyrkulację atmosfery i odległość od oceanu. Kliknij strefę, aby zobaczyć jej mechanizm.",
+          "zones": [
+            { "name": "Pas suchy zwrotnikowy półkuli północnej", "latitude": "15–35°N", "text": "Sahara, Półwysep Arabski, pustynie Iranu i Thar. Panuje tu **wyż zwrotnikowy** — osiadające, osuszające się adiabatycznie powietrze zstępującej gałęzi komórki Hadleya. Rolnictwo wyłącznie nawadniane; gospodarka opiera się na wodach rzek tranzytowych i wodach kopalnych.", "tone": "heat" },
+            { "name": "Sahel — strefa przejściowa", "latitude": "10–20°N", "text": "Opady 200–600 mm, ale skrajnie **zmienne z roku na rok**, bo zależą od zasięgu letniej wędrówki międzyzwrotnikowej strefy zbieżności. Kilka suchych lat z rzędu oznacza klęskę głodu — to najbardziej wrażliwa gospodarczo strefa świata.", "tone": "earth" },
+            { "name": "Wnętrza kontynentów strefy umiarkowanej", "latitude": "35–50°N", "text": "Azja Środkowa, południowa Syberia, zachodnie Wielkie Równiny. Suchość wynika tu z **oddalenia od oceanów** oraz z **cienia opadowego** wysokich gór. Rolnictwo jest możliwe, ale ekstensywne i uzależnione od nawodnień lub od zapasu wilgoci w glebie.", "tone": "earth" },
+            { "name": "Pas suchy zwrotnikowy półkuli południowej", "latitude": "15–35°S", "text": "Kalahari, Atakama, Wielka Pustynia Wiktorii. Ten sam mechanizm wyżowy co na półkuli północnej, lokalnie wzmocniony przez **zimne prądy morskie** (Peruwiański, Benguelski), które wychładzają dolne warstwy powietrza i blokują konwekcję.", "tone": "heat" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Sześć regionów, w których o rolnictwie decyduje woda albo gleba",
+          "caption": "Kliknij znacznik i zwróć uwagę, czy dany region żyje z **zasobu wodnego**, czy z **zasobu glebowego** — a także jaką cenę za to płaci.",
+          "center": [25, 30],
+          "zoom": 2,
+          "markers": [
+            { "lat": 24.09, "lng": 32.9, "label": "Tama Asuańska i dolina Nilu (Egipt)", "text": "Nil to **rzeka tranzytowa (allochtoniczna)** — powstaje w strefie deszczowej Etiopii i Afryki Równikowej, a przez Egipt jedynie przepływa. Bez niego kraj byłby pustynią; z nim możliwe są trzy zbiory rocznie na wąskim pasie mad." },
+            { "lat": 30.2, "lng": 71.47, "label": "Pendżab i dolina Indusu (Pakistan)", "text": "Największy spójny system kanałów nawadniających świata, zasilany wodą z topnienia śniegu i lodowców Himalajów oraz Karakorum. To zaplecze **zielonej rewolucji**, ale też obszar postępującego **zasolenia wtórnego** gleb." },
+            { "lat": 48.5, "lng": 32.3, "label": "Czarnoziemy stepów Ukrainy", "text": "Gleby wykształcone na **lessach** pod roślinnością stepową, z poziomem próchnicznym sięgającym metra i zawartością próchnicy rzędu 3–6%. Ograniczeniem nie jest tu żyzność, lecz **woda** — susze i sucha wiosna." },
+            { "lat": 37.97, "lng": -100.87, "label": "Wielkie Równiny i warstwa Ogallala (USA)", "text": "Rolnictwo oparte na **wodzie kopalnej** z rozległej warstwy wodonośnej, wypompowywanej przez deszczownie obrotowe (stąd charakterystyczne zielone koła na zdjęciach satelitarnych). Pobór przewyższa zasilanie — to zasób w praktyce nieodnawialny." },
+            { "lat": -7.8, "lng": 110.36, "label": "Jawa i wulkan Merapi (Indonezja)", "text": "Popioły wulkaniczne wietrzeją w **andosole** — gleby bardzo zasobne w fosfor, potas i wapń, w dodatku odnawiane przez kolejne erupcje. Przy klimacie równikowym daje to 2–3 zbiory ryżu rocznie i jedną z najwyższych gęstości zaludnienia na świecie." },
+            { "lat": 45.0, "lng": 59.5, "label": "Jezioro Aralskie (Kazachstan–Uzbekistan)", "text": "Rozbudowa nawodnień w dorzeczach **Amu-darii i Syr-darii** pod uprawę bawełny odcięła dopływ wody do bezodpływowego jeziora. Zbiornik skurczył się o większość powierzchni, a odsłonięte dno stało się źródłem słonych burz pyłowych." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Nawadnianie i jego ukryta cena — mechanizm zasolenia wtórnego",
+          "caption": "Ten łańcuch tłumaczy, dlaczego wiele obszarów nawadnianych po kilkudziesięciu latach wypada z produkcji. To jeden z ulubionych mechanizmów CKE.",
+          "steps": [
+            { "title": "Pobór wody i wzrost plonów", "text": "Kanały doprowadzają wodę na pola, które wcześniej były zbyt suche. Plony rosną skokowo, pojawia się możliwość dwóch lub trzech zbiorów w roku — nawodnienie wygląda na czysty zysk." },
+            { "title": "Nadmiar wody podnosi zwierciadło wód gruntowych", "text": "Nawadnianie **grawitacyjne (zalewowe)** dostarcza znacznie więcej wody, niż rośliny pobierają. Nadwyżka przesiąka w głąb i stopniowo podnosi poziom wód gruntowych — czasem o kilka metrów w ciągu dekady." },
+            { "title": "Podsiąkanie kapilarne", "text": "Gdy zwierciadło zbliży się do powierzchni, woda zaczyna wznosić się **kapilarnie** ku górze, niosąc rozpuszczone sole zawarte w glebie i w samej wodzie nawadniającej." },
+            { "title": "Parowanie zostawia sole na powierzchni", "text": "W klimacie suchym parowanie jest bardzo intensywne: woda odparowuje, a **sole zostają**. Na powierzchni pojawia się biały nalot, a stężenie soli w warstwie korzeniowej rośnie z roku na rok." },
+            { "title": "Zasolenie wtórne i wyłączenie gruntu", "text": "Wysokie stężenie soli obniża potencjał osmotyczny roztworu glebowego — rośliny **nie mogą pobrać wody, mimo że gleba jest wilgotna** (susza fizjologiczna). Plony spadają, a w skrajnych przypadkach pole trzeba porzucić. Ratunkiem jest kosztowny drenaż i przepłukiwanie gleby albo przejście na nawadnianie kropelkowe." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Tama Asuańska — bilans, który trzeba umieć podać z obu stron",
+          "region": "Asuan, Górny Egipt",
+          "text": "Wysoka Tama w Asuanie (ukończona w 1970 r.) spiętrzyła Nil w **Jezioro Nasera** — jeden z największych zbiorników zaporowych świata. Korzyści były ogromne: koniec niszczycielskich wylewów i katastrofalnych susz, możliwość nawadniania przez cały rok (a więc dwa–trzy zbiory rocznie zamiast jednego), powiększenie areału upraw oraz duża elektrownia wodna. Ale ten sam mur, który zatrzymał wodę, zatrzymał też **muł (żyzne namuły)**, który przez tysiące lat co roku użyźniał pola i zasilał deltę. Skutki: rolnicy musieli przejść na **nawozy sztuczne**, delta Nilu przestała być zasilana materiałem i jest **niszczona przez abrazję** oraz zasalana wodą morską, w Jeziorze Nasera ubywa pojemności wskutek zamulania, a duże parowanie z jego powierzchni pochłania część zgromadzonych zasobów. Rozwój stałych nawodnień sprzyjał też szerzeniu się chorób przenoszonych przez wodę, m.in. **schistosomatozy**.",
+          "takeaway": "Wielka inwestycja hydrotechniczna nie „znosi” uwarunkowań przyrodniczych — ona **zamienia jeden zestaw ograniczeń na inny**. Odpowiedź maturalna o Asuanie bez wymienienia skutków negatywnych zwykle nie dostaje kompletu punktów."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie drogi do wysokiej żyzności: czarnoziemy Ukrainy i andosole Jawy",
+          "leftLabel": "Czarnoziemy stepowej Ukrainy",
+          "rightLabel": "Gleby wulkaniczne (andosole) Jawy",
+          "rows": [
+            { "aspect": "Skała macierzysta i geneza", "left": "**Less** — pylasta skała naniesiona przez wiatr w plejstocenie; gleba powstała pod roślinnością **stepową**, której korzenie rok po roku dostarczały masy organicznej.", "right": "**Popioły i tufy wulkaniczne** świeżo dostarczane przez erupcje; szybkie wietrzenie chemiczne w gorącym i wilgotnym klimacie uwalnia składniki pokarmowe." },
+            { "aspect": "Źródło żyzności", "left": "Bardzo miąższy (do ok. 1 m) poziom próchniczny o zawartości próchnicy rzędu 3–6% i doskonałej strukturze gruzełkowatej.", "right": "Duża zasobność w **fosfor, potas, wapń i magnez** oraz świetna zdolność zatrzymywania wody; poziom próchniczny cieńszy, ale stale odnawiany." },
+            { "aspect": "Klimat i ograniczenie", "left": "Umiarkowany kontynentalny, opady ok. 400–500 mm — **wodą, nie glebą, ograniczone są plony**; typowe są susze i sucha wiosna.", "right": "Równikowy wilgotny i monsunowy — wody pod dostatkiem; ograniczeniem jest **ryzyko erupcji** i wymywanie składników z gleb położonych dalej od wulkanów." },
+            { "aspect": "Typ rolnictwa", "left": "Wielkoobszarowe, silnie zmechanizowane: pszenica, kukurydza, słonecznik, burak cukrowy. Region eksportowy — „spichlerz Europy”.", "right": "Drobnotowarowe i pracochłonne: **ryż mokry na tarasowanych polach**, 2–3 zbiory rocznie, w dużej części na własne potrzeby." },
+            { "aspect": "Główne zagrożenie", "left": "Erozja wietrzna i wodna po zaoraniu stepu, przesuszenie, utrata próchnicy przy monokulturach.", "right": "Erupcje i **lahary** niszczące pola i wsie — a mimo to gęstość zaludnienia wokół wulkanów należy do najwyższych na świecie." }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Cztery typy gleb wysokoprodukcyjnych i ich rolnicze konsekwencje",
+          "caption": "Do każdego typu warto umieć podać region i uprawę — CKE bardzo często łączy glebę z konkretnym obszarem na mapie.",
+          "headers": ["Typ gleby", "Skała macierzysta / geneza", "Region", "Charakterystyczna produkcja"],
+          "rows": [
+            ["Czarnoziemy", "less pod roślinnością stepową", "stepy Ukrainy, Wyżyna Lubelska, prerie środkowe USA", "pszenica, kukurydza, burak cukrowy"],
+            ["Mady (gleby aluwialne)", "namuły rzeczne osadzane podczas wylewów", "delta i dolina Nilu, Nizina Gangesu, Żuławy Wiślane", "ryż, bawełna, warzywa, pszenica"],
+            ["Andosole (gleby wulkaniczne)", "wietrzejące popioły i tufy wulkaniczne", "Jawa, Wyżyna Meksykańska, wyżyny Ameryki Środkowej", "ryż, kawa, trzcina cukrowa"],
+            ["Kasztanoziemy", "less i utwory pylaste pod stepem suchym", "północny Kazachstan, zachodnie Wielkie Równiny", "pszenica jara, ekstensywna hodowla"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Rozróżniaj pojęcia, na których najłatwiej stracić punkt. **Żyzność** to naturalna zasobność gleby w składniki pokarmowe, wodę i powietrze — cecha samej gleby. **Urodzajność** to zdolność do dawania plonu z uwzględnieniem **działalności człowieka** (nawożenia, melioracji, uprawy), więc gleba mało żyzna może być urodzajna, a bardzo żyzna — zaniedbana i mało urodzajna. Nie myl też **zasolenia pierwotnego** (naturalnego, np. na dnach słonych jezior i w sołonczakach) z **zasoleniem wtórnym**, wywołanym przez nadmierne i źle odwadniane nawadnianie. I wreszcie: **rzeka tranzytowa (allochtoniczna)** to taka, która przepływa przez obszar suchy, a swoje zasilanie czerpie spoza niego (Nil, Niger w środkowym biegu, Indus) — to nie to samo co rzeka okresowa."
+        },
+        {
+          "type": "matching",
+          "title": "Region a jego kluczowy zasób wodny lub glebowy",
+          "instruction": "Połącz region z czynnikiem przyrodniczym, który przesądza o jego rolnictwie.",
+          "pairs": [
+            { "left": "Wielkie Równiny w Kansas", "right": "Wody kopalne z warstwy Ogallala i deszczownie obrotowe" },
+            { "left": "Dolina i delta Nilu", "right": "Rolnictwo w całości oparte na rzece tranzytowej i jej madach" },
+            { "left": "Stepy Ukrainy", "right": "Czarnoziemy wykształcone na lessach pod roślinnością stepową" },
+            { "left": "Jawa", "right": "Andosole odnawiane przez popioły z czynnych wulkanów" },
+            { "left": "Dorzecza Amu-darii i Syr-darii", "right": "Nadmierny pobór na nawodnienia i zanik jeziora bezodpływowego" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na nawadnianych polach bawełny w Azji Środkowej po kilkudziesięciu latach użytkowania pojawił się biały nalot na powierzchni gleby, a plony wyraźnie spadły. Który ciąg przyczynowy poprawnie wyjaśnia to zjawisko?",
+          "options": [
+            "Nadmierne nawożenie mineralne zakwasiło glebę, przez co wapń wytrącił się na powierzchni",
+            "Nadmiar wody z nawodnień podniósł zwierciadło wód gruntowych, sole wzniosły się kapilarnie, a intensywne parowanie pozostawiło je w warstwie korzeniowej",
+            "Erozja wietrzna nawiała na pola pył z odsłoniętego dna Jeziora Aralskiego, który przykrył glebę warstwą piasku",
+            "Zbyt głęboka orka odsłoniła jasną skałę macierzystą, co obniżyło zawartość próchnicy"
+          ],
+          "correctIndex": 1,
+          "explanation": "To klasyczne **zasolenie wtórne**. Kluczowe są trzy ogniwa, które muszą pojawić się w odpowiedzi: (1) nadmiar wody z nawadniania grawitacyjnego podnosi **zwierciadło wód gruntowych**, (2) woda **podsiąka kapilarnie** ku powierzchni, niosąc rozpuszczone sole, (3) w suchym klimacie woda **paruje, a sole zostają**. Skutkiem jest susza fizjologiczna — roślina nie pobiera wody mimo wilgotnej gleby. Słone burze pyłowe znad dna Aralu (opcja 3) rzeczywiście występują, ale są **skutkiem** tego samego nadmiernego poboru, a nie przyczyną nalotu na polach."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego gęstość zaludnienia na Jawie należy do najwyższych na świecie, mimo że wyspa leży w strefie bardzo aktywnego wulkanizmu?",
+          "options": [
+            "Erupcje są tam na tyle rzadkie, że praktycznie nie stanowią zagrożenia dla ludności",
+            "Wulkany osłaniają wyspę przed cyklonami, co pozwala na całoroczną uprawę roślin",
+            "Popioły wulkaniczne wietrzeją w gleby bardzo zasobne w składniki pokarmowe i stale je odnawiają, co przy klimacie równikowym daje 2–3 zbiory ryżu w roku",
+            "Podłoże wulkaniczne jest tak twarde, że pozwala na tanią budowę wielopiętrowych miast"
+          ],
+          "correctIndex": 2,
+          "explanation": "To sztandarowy przykład **kalkulacji ryzyka wpisanej w gospodarkę**: ludzie osiedlają się w miejscu niebezpiecznym, bo bieżąca korzyść przewyższa rozłożone w czasie ryzyko. Popioły wulkaniczne, wietrzejąc, uwalniają fosfor, potas, wapń i magnez, a kolejne erupcje **odnawiają** ten zasób, którego w wilgotnym klimacie równikowym normalnie szybko by ubywało wskutek wymywania. W połączeniu z całorocznym ciepłem i wodą daje to kilka zbiorów ryżu rocznie, czyli wyżywienie bardzo dużej liczby osób z hektara. Erupcje wcale nie są rzadkie (Merapi należy do najaktywniejszych wulkanów świata), więc opcja 1 jest fałszywa."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o rolnictwie nawadnianym jest **prawdziwe**?",
+          "options": [
+            "Grunty nawadniane zajmują ok. 20% gruntów ornych świata, ale dostarczają ok. 40% produkcji żywności",
+            "Nawadnianie kropelkowe zużywa więcej wody niż zalewowe, ale daje wyższe plony",
+            "Rolnictwo odpowiada za mniej niż jedną czwartą globalnego poboru wody słodkiej",
+            "Nawadnianie jest stosowane wyłącznie w strefie klimatów suchych, poza nią nie ma uzasadnienia ekonomicznego"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nawadnianie **zwielokrotnia plon z hektara**, dlatego stosunkowo niewielki areał daje nieproporcjonalnie dużą część produkcji — to podstawowy argument w zadaniach o bezpieczeństwie żywnościowym. Nawadnianie **kropelkowe** podaje wodę bezpośrednio pod korzenie i **zużywa jej znacznie mniej** niż zalewowe (opcja 2 jest odwrócona). Rolnictwo pochłania ok. 70% globalnego poboru wody słodkiej, a nie jedną czwartą (opcja 3). Nawadnianie stosuje się także w strefie umiarkowanej — w Polsce m.in. w sadach, na plantacjach warzyw i na glebach lekkich w latach suchych (opcja 4)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o wodzie i glebach opłaca się myśleć **bilansem, a nie listą zalet**. Trzy schematy, które zwracają punkty najczęściej: (1) *rzeka tranzytowa → woda w strefie suchej → nawadnianie → wysokie plony na małym areale → koncentracja ludności* (Nil, Indus, Niger w środkowym biegu); (2) *inwestycja hydrotechniczna → korzyść (kontrola wylewów, energia, kilka zbiorów) + koszt środowiskowy (zatrzymanie mułu, zasolenie, abrazja delty, zamulanie zbiornika)*; (3) *cecha gleby → mechanizm (miąższy poziom próchniczny / zasobność w składniki / zdolność retencyjna) → typ produkcji i gęstość zaludnienia*. Pilnuj też słownictwa: **żyzność ≠ urodzajność**, **zasolenie wtórne ≠ pierwotne**, **wody kopalne ≠ wody odnawialne**."
+        }
+      ]
+    }
+  ]
+}
