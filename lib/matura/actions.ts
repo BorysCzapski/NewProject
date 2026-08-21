@@ -2,7 +2,7 @@
 
 // ============================================================================
 // lib/matura/actions.ts
-// Server Actions for Matura Angielski: picking/changing poziom matury, and
+// Server Actions for Matura: picking/changing the exam język + poziom, and
 // submitting a task attempt (graded server-side from the stored task
 // content, never trusting a client-supplied "correct" answer).
 // ============================================================================
@@ -12,10 +12,16 @@ import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { gradeTask } from "@/lib/matura/grading";
 import { recomputeSectionProgress } from "@/lib/matura/progress";
-import { MATURA_LEVELS } from "@/lib/matura/constants";
+import { MATURA_LANGUAGES, MATURA_LEVELS } from "@/lib/matura/constants";
 import { ACTIVITY_TYPES } from "@/lib/constants";
 import { actionFailure, type ActionResult } from "@/lib/action-result";
-import type { MaturaLevel, MaturaTask, MaturaTaskAttempt, MaturaTaskContent } from "@/lib/types/database";
+import type {
+  MaturaLanguage,
+  MaturaLevel,
+  MaturaTask,
+  MaturaTaskAttempt,
+  MaturaTaskContent,
+} from "@/lib/types/database";
 
 export interface ActionState {
   error?: string;
@@ -25,10 +31,22 @@ function isMaturaLevel(v: string): v is MaturaLevel {
   return (MATURA_LEVELS as string[]).includes(v);
 }
 
-/** Sets/changes the student's poziom matury. Used by useActionState forms
- * (first-run picker on the dashboard, and the settings page). */
-export async function setExamLevel(_prevState: ActionState, formData: FormData): Promise<ActionState> {
+function isMaturaLanguage(v: string): v is MaturaLanguage {
+  return (MATURA_LANGUAGES as string[]).includes(v);
+}
+
+/** Sets/changes which exam the student is preparing for — język AND poziom,
+ * saved together because they are picked together in one form (first-run
+ * picker on the dashboard, and the settings page).
+ *
+ * Switching language destroys nothing: mastery and attempts hang off
+ * section-scoped rows, and matura_settings only records the CURRENT choice,
+ * so a student can move between angielski and hiszpański and find each one's
+ * progress exactly as they left it. */
+export async function setExamPreferences(_prevState: ActionState, formData: FormData): Promise<ActionState> {
   const level = String(formData.get("level") ?? "");
+  const language = String(formData.get("language") ?? "");
+  if (!isMaturaLanguage(language)) return { error: "Wybierz język, aby kontynuować." };
   if (!isMaturaLevel(level)) return { error: "Wybierz poziom, aby kontynuować." };
 
   const profile = await requireProfile();
@@ -36,10 +54,10 @@ export async function setExamLevel(_prevState: ActionState, formData: FormData):
 
   const { error } = await supabase
     .from("matura_settings")
-    .upsert({ user_id: profile.id, level }, { onConflict: "user_id" });
+    .upsert({ user_id: profile.id, language, level }, { onConflict: "user_id" });
   if (error) {
-    console.error("[matura] setExamLevel failed:", error);
-    return { error: "Nie udało się zapisać poziomu matury." };
+    console.error("[matura] setExamPreferences failed:", error);
+    return { error: "Nie udało się zapisać ustawień matury." };
   }
 
   revalidatePath("/matura");

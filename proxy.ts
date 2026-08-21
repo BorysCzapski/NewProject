@@ -11,7 +11,15 @@ import type { User } from "@supabase/supabase-js";
 import { cleanEnv, cleanUrlEnv } from "@/lib/env";
 
 const GUEST_ONLY_PATHS = ["/login", "/register"];
-const PUBLIC_PATHS = [...GUEST_ONLY_PATHS, "/auth/callback", "/api/health"];
+// /api/modlitwa/kalendarz.ics jest publiczna z rozmysłem: subskrybuje ją
+// Google/Apple Calendar własnym klientem HTTP, bez ciasteczek sesji.
+// Autoryzuje ją token z prayer_settings.calendar_token (patrz sam handler).
+const PUBLIC_PATHS = [
+  ...GUEST_ONLY_PATHS,
+  "/auth/callback",
+  "/api/health",
+  "/api/modlitwa/kalendarz.ics",
+];
 
 // Schola is a fully separate realm on the same Supabase project — see
 // supabase/migrations/0009_schola.sql and lib/schola/*. It gets its own

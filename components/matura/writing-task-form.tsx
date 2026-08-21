@@ -7,14 +7,16 @@
 // rubric breakdown from lib/matura/writing-grading.ts) and the student can
 // freely resubmit a revised version — writing is iterative, not one-shot.
 // ============================================================================
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { submitWritingTask } from "@/lib/matura/writing-actions";
 import { MATURA_WRITING_WORD_RANGE } from "@/lib/matura/constants";
-import type { MaturaLevel, MaturaWritingSubmission, MaturaWritingTask } from "@/lib/types/database";
+import { langInfo } from "@/lib/languages";
+import { AccentBar } from "@/components/ui/accent-bar";
+import type { MaturaLanguage, MaturaLevel, MaturaWritingSubmission, MaturaWritingTask } from "@/lib/types/database";
 
 function countWords(text: string): number {
   const trimmed = text.trim();
@@ -23,10 +25,12 @@ function countWords(text: string): number {
 
 export function WritingTaskForm({
   task,
+  language,
   level,
   initialSubmission,
 }: {
   task: MaturaWritingTask;
+  language: MaturaLanguage;
   level: MaturaLevel;
   initialSubmission: MaturaWritingSubmission | null;
 }) {
@@ -35,19 +39,22 @@ export function WritingTaskForm({
   if (submission) {
     return <SubmissionReview task={task} submission={submission} onRewrite={() => setSubmission(null)} />;
   }
-  return <ComposeForm task={task} level={level} onSubmitted={setSubmission} />;
+  return <ComposeForm task={task} language={language} level={level} onSubmitted={setSubmission} />;
 }
 
 function ComposeForm({
   task,
+  language,
   level,
   onSubmitted,
 }: {
   task: MaturaWritingTask;
+  language: MaturaLanguage;
   level: MaturaLevel;
   onSubmitted: (submission: MaturaWritingSubmission) => void;
 }) {
   const [content, setContent] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const range = MATURA_WRITING_WORD_RANGE[level];
@@ -83,17 +90,35 @@ function ComposeForm({
       <Card>
         <CardTitle>Twoja odpowiedź</CardTitle>
         <textarea
+          ref={textareaRef}
           value={content}
           onChange={(e) => setContent(e.target.value)}
           disabled={pending}
           rows={10}
-          placeholder="Napisz swoją odpowiedź po angielsku…"
+          placeholder={`Napisz swoją odpowiedź w języku ${langInfo(language).plLocative}…`}
           className={cn(
             "mt-3 w-full rounded-(--radius-control) border border-border bg-surface px-4 py-3 text-base text-foreground",
             "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
             "disabled:opacity-70"
           )}
         />
+        {language === "es" && (
+          <AccentBar
+            disabled={pending}
+            onInsert={(char) => {
+              const el = textareaRef.current;
+              const start = el?.selectionStart ?? content.length;
+              const end = el?.selectionEnd ?? content.length;
+              setContent(content.slice(0, start) + char + content.slice(end));
+              requestAnimationFrame(() => {
+                if (!el) return;
+                el.focus();
+                const caret = start + char.length;
+                el.setSelectionRange(caret, caret);
+              });
+            }}
+          />
+        )}
         <p
           className={cn(
             "mt-1.5 text-xs font-medium",

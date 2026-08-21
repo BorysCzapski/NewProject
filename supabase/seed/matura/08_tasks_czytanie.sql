@@ -15,13 +15,13 @@
 
 delete from matura_tasks
 where source = 'curated'
-  and section_id in (select id from matura_sections where slug = 'czytanie');
+  and section_id in (select id from matura_sections where language = 'en' and slug = 'czytanie');
 
 -- ----------------------------------------------------------------------------
 -- Poziom podstawowy — zadanie 1: wybór wielokrotny
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst. Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D).",
@@ -41,7 +41,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom podstawowy — zadanie 2: dopasowanie nagłówków do akapitów
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst podzielony na akapity A-D. Do każdego akapitu dopasuj pasujący nagłówek z listy. Jeden nagłówek nie pasuje do żadnego akapitu.",
@@ -61,7 +61,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom podstawowy — zadanie 3: prawda/fałsz
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst. Zdecyduj, czy poniższe zdania są zgodne (True) czy niezgodne (False) z treścią tekstu.",
@@ -82,7 +82,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 1: tekst z lukami zdaniowymi
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst, z którego usunięto cztery zdania. Do każdej luki [1]-[4] dopasuj właściwe zdanie z listy A-E. Jedno zdanie nie pasuje do żadnej luki.",
@@ -102,7 +102,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 2: dopasowanie pytań do fragmentów tekstu
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst podzielony na cztery fragmenty A-D. Do każdego pytania dopasuj fragment, w którym znajduje się odpowiedź.",
@@ -122,7 +122,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 3: wybór wielokrotny (wnioskowanie)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'czytanie'),
   $c$
   {
     "instructions": "Przeczytaj tekst. Do każdego pytania dopasuj właściwą odpowiedź (A, B, C lub D). Niektóre pytania wymagają wywnioskowania odpowiedzi z kontekstu.",

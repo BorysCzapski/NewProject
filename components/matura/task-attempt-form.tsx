@@ -12,7 +12,7 @@
 // YoutubePlayer Linguo's listening module uses — no seek/gap-sync needed
 // here, just playback.
 // ============================================================================
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,12 +20,24 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { YoutubePlayer } from "@/components/listening/youtube-player";
+import { AccentBar } from "@/components/ui/accent-bar";
 import { cn } from "@/lib/utils";
 import { submitTaskAttempt } from "@/lib/matura/actions";
-import type { MaturaTask, MaturaTaskItemResult } from "@/lib/types/database";
+import type { MaturaLanguage, MaturaTask, MaturaTaskItemResult } from "@/lib/types/database";
 
-export function TaskAttemptForm({ task, backHref }: { task: MaturaTask; backHref: string }) {
+export function TaskAttemptForm({
+  task,
+  backHref,
+  language,
+}: {
+  task: MaturaTask;
+  backHref: string;
+  language: MaturaLanguage;
+}) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  // One ref per gap_fill input, so AccentBar can insert at the caret instead
+  // of appending to the end of whatever the student has typed so far.
+  const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<{ pointsAwarded: number; maxPoints: number; itemResults: MaturaTaskItemResult[] } | null>(null);
@@ -46,6 +58,22 @@ export function TaskAttemptForm({ task, backHref }: { task: MaturaTask; backHref
       pointsAwarded: res.data.points_awarded,
       maxPoints: res.data.max_points,
       itemResults: res.data.item_results,
+    });
+  }
+
+  /** Inserts `char` into one item's answer at the caret, then restores focus. */
+  function insertChar(itemId: string, char: string) {
+    const input = inputRefs.current[itemId];
+    const current = answers[itemId] ?? "";
+    const start = input?.selectionStart ?? current.length;
+    const end = input?.selectionEnd ?? current.length;
+    const next = current.slice(0, start) + char + current.slice(end);
+    setAnswers((prev) => ({ ...prev, [itemId]: next }));
+    requestAnimationFrame(() => {
+      if (!input) return;
+      input.focus();
+      const caret = start + char.length;
+      input.setSelectionRange(caret, caret);
     });
   }
 
@@ -99,11 +127,17 @@ export function TaskAttemptForm({ task, backHref }: { task: MaturaTask; backHref
                 <Label htmlFor={`item-${item.id}`}>Twoja odpowiedź</Label>
                 <Input
                   id={`item-${item.id}`}
+                  ref={(el) => {
+                    inputRefs.current[item.id] = el;
+                  }}
                   value={answers[item.id] ?? ""}
                   onChange={(e) => setAnswers((prev) => ({ ...prev, [item.id]: e.target.value }))}
                   disabled={!!result}
                   placeholder="wpisz odpowiedź…"
                 />
+                {language === "es" && (
+                  <AccentBar disabled={!!result} onInsert={(char) => insertChar(item.id, char)} />
+                )}
               </div>
             )}
 

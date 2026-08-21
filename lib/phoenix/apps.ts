@@ -53,8 +53,8 @@ export const PHOENIX_APPS: PhoenixApp[] = [
   },
   {
     id: "matura",
-    name: "Matura Angielski",
-    description: "Przygotowanie do matury z języka angielskiego (CKE)",
+    name: "Matura z języka",
+    description: "Przygotowanie do matury z angielskiego i hiszpańskiego (CKE)",
     section: "nauka",
     icon: "ScrollText",
     href: "/matura",
@@ -96,11 +96,10 @@ export const PHOENIX_APPS: PhoenixApp[] = [
   {
     id: "modlitwa",
     name: "Modlitwa",
-    description: "Refleksje, werset dnia i liturgia słowa",
+    description: "Werset dnia, czytania, liturgia godzin i intencje",
     section: "wiara",
     icon: "Sparkles",
     href: "/modlitwa",
-    comingSoon: true,
   },
 ];
 

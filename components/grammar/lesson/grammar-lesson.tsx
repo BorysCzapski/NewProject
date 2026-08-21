@@ -15,19 +15,34 @@ import { TimelineBlock } from "@/components/grammar/lesson/timeline-block";
 import { ExamplesBlock } from "@/components/grammar/lesson/examples-block";
 import { QuizBlock } from "@/components/grammar/lesson/quiz-block";
 import { CompareBlock } from "@/components/grammar/lesson/compare-block";
+import { FillGapBlock } from "@/components/grammar/lesson/fill-gap-block";
+import { MatchPairsBlock } from "@/components/grammar/lesson/match-pairs-block";
+import { OrderWordsBlock } from "@/components/grammar/lesson/order-words-block";
+import { ConjugationBlock } from "@/components/grammar/lesson/conjugation-block";
+import { FlashcardsBlock } from "@/components/grammar/lesson/flashcards-block";
+import { KeyPhrasesBlock } from "@/components/grammar/lesson/key-phrases-block";
 import type { GrammarBlock } from "@/lib/grammar/lesson-blocks";
 
-export function GrammarLesson({ blocks }: { blocks: GrammarBlock[] }) {
+export function GrammarLesson({
+  blocks,
+  accentChars,
+}: {
+  blocks: GrammarBlock[];
+  /** Characters the student's keyboard cannot type, offered next to type-in
+   * gaps — pass langInfo(language).specialChars. Omitted for languages the
+   * Polish layout already covers. */
+  accentChars?: string[];
+}) {
   return (
     <div className="flex flex-col gap-4">
       {blocks.map((block, i) => (
-        <LessonBlock key={i} block={block} />
+        <LessonBlock key={i} block={block} accentChars={accentChars} />
       ))}
     </div>
   );
 }
 
-function LessonBlock({ block }: { block: GrammarBlock }) {
+function LessonBlock({ block, accentChars }: { block: GrammarBlock; accentChars?: string[] }) {
   switch (block.type) {
     case "intro":
       return <p className="text-base leading-relaxed text-foreground">{block.text}</p>;
@@ -118,5 +133,38 @@ function LessonBlock({ block }: { block: GrammarBlock }) {
           explanation={block.explanation}
         />
       );
+
+    case "fillGap":
+      return (
+        <FillGapBlock
+          title={block.title}
+          instruction={block.instruction}
+          items={block.items}
+          accentChars={accentChars}
+        />
+      );
+
+    case "matchPairs":
+      return <MatchPairsBlock title={block.title} instruction={block.instruction} pairs={block.pairs} />;
+
+    case "orderWords":
+      return <OrderWordsBlock title={block.title} instruction={block.instruction} items={block.items} />;
+
+    case "conjugation":
+      return (
+        <ConjugationBlock
+          title={block.title}
+          caption={block.caption}
+          persons={block.persons}
+          columns={block.columns}
+          highlight={block.highlight}
+        />
+      );
+
+    case "flashcards":
+      return <FlashcardsBlock title={block.title} cards={block.cards} />;
+
+    case "keyPhrases":
+      return <KeyPhrasesBlock title={block.title} caption={block.caption} groups={block.groups} />;
   }
 }

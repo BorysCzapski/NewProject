@@ -802,13 +802,19 @@ export interface TextbookGrammarExercise {
 }
 
 // ============================================================================
-// Matura Angielski — CKE English matura exam prep (poziom podstawowy /
-// rozszerzony). Mirrors supabase/migrations/0013_matura.sql. Sibling to
-// Matma (lib/matma/*), same shape: shared content (sections/lessons/task
-// bank) + per-user attempts, mastery-per-section, mock exams, study plan.
+// Matura — CKE foreign-language matura exam prep (poziom podstawowy /
+// rozszerzony), for English and Spanish. Mirrors supabase/migrations/
+// 0013_matura.sql + 0020_matura_language.sql. Sibling to Matma (lib/matma/*),
+// same shape: shared content (sections/lessons/task bank) + per-user attempts,
+// mastery-per-section, mock exams, study plan.
 // ============================================================================
 
 export type MaturaLevel = "podstawowa" | "rozszerzona";
+
+/** Languages the matura module actually has content for. Deliberately NOT
+ * TargetLanguage from lib/languages.ts — that one includes 'ru', for which
+ * there is no matura content and none planned. See 0020_matura_language.sql. */
+export type MaturaLanguage = "en" | "es";
 export type MaturaTaskSource = "topic" | "past_exam" | "curated" | "ai_generated";
 export type MaturaMockExamStatus = "in_progress" | "completed" | "abandoned";
 export type MaturaStudyPlanWeekStatus =
@@ -823,6 +829,7 @@ export type MaturaSectionSlug = "sluchanie" | "czytanie" | "srodki-jezykowe" | "
 
 export interface MaturaSection {
   id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   slug: MaturaSectionSlug;
   title: string;
@@ -833,16 +840,85 @@ export interface MaturaSection {
   updated_at: string;
 }
 
+/** How a theory lesson is filed within its exam part — drives grouping on the
+ * section page. "strategia" is technique rather than language knowledge (how
+ * to skim a text, what to listen for on the second play). */
+export type MaturaLessonKind = "gramatyka" | "slownictwo" | "strategia";
+
 export interface MaturaLesson {
   id: string;
   section_id: string;
+  /** Unique within a section — the lesson's own URL segment. */
+  slug: string;
   title: string;
+  /** One-line description for the lesson index, so listing lessons never has
+   * to parse `content`. */
+  summary: string;
+  kind: MaturaLessonKind;
+  estimated_minutes: number;
   // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
   // to avoid a client-type <-> db-type import cycle; cast at the call site
   // (same pattern as MathLesson.content / TextbookGrammarTopic.blocks).
   content: unknown[];
   order_index: number;
   created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaLessonProgress {
+  id: string;
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Matura — vocabulary bank (0021_matura_theory.sql)
+// ----------------------------------------------------------------------------
+
+/** One of the podstawa programowa's thematic blocks, per language. */
+export interface MaturaVocabTopic {
+  id: string;
+  language: MaturaLanguage;
+  slug: string;
+  /** Polish name of the block ("Podróżowanie i turystyka"). */
+  title: string;
+  /** The same block named in the target language. */
+  title_target: string;
+  description: string;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaVocabEntry {
+  id: string;
+  topic_id: string;
+  /** The level from which this entry is expected — a rozszerzona student is
+   * responsible for podstawowa entries too. See lib/matura/vocab.ts. */
+  level: MaturaLevel;
+  term: string;
+  part_of_speech: string;
+  translation_pl: string;
+  example: string;
+  example_pl: string;
+  /** Collocations, register, false friends, irregular forms. */
+  note: string;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturaVocabProgress {
+  id: string;
+  user_id: string;
+  entry_id: string;
+  /** Leitner box 0-5; the interval per box lives in lib/matura/vocab-review.ts. */
+  box: number;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  next_review_at: string | null;
   updated_at: string;
 }
 
@@ -929,6 +1005,7 @@ export interface MaturaMockExamBreakdownEntry {
 export interface MaturaMockExam {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   task_ids: string[];
   time_limit_seconds: number;
@@ -955,6 +1032,7 @@ export interface MaturaSectionProgress {
 export interface MaturaProgressSnapshot {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   snapshot_at: string;
   estimated_score: number;
@@ -965,6 +1043,7 @@ export interface MaturaProgressSnapshot {
 export interface MaturaStudyPlan {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   exam_date: string | null;
   weekly_hours_target: number | null;
@@ -995,6 +1074,7 @@ export interface MaturaAssignedPractice {
 
 export interface MaturaSettings {
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   created_at: string;
   updated_at: string;
@@ -1280,4 +1360,130 @@ export interface GeoAnnotation {
   color: string | null;
   created_at: string;
   updated_at: string;
+}
+
+// ============================================================================
+// Modlitwa — aplikacja modlitewna. Mirrors supabase/migrations/0017_modlitwa.sql.
+// Treści wspólne (wersety, czytania, kalendarz liturgiczny) + dane prywatne
+// (streak, dziennik, intencje, ustawienia). Kalendarz liturgiczny NIE jest
+// przechowywany jako źródło prawdy — wylicza go lib/modlitwa/liturgical-calendar.ts,
+// a tabela special_liturgical_dates jest tylko cache'em dla widoku miesiąca i
+// feedu ICS.
+// ============================================================================
+export type BibleVerseSeason = "adwent" | "boze_narodzenie" | "wielki_post" | "wielkanoc" | "zwykly";
+export type LiturgicalRankRow = "uroczystosc" | "swieto" | "wspomnienie" | "niedziela";
+export type LiturgicalColorRow = "bialy" | "czerwony" | "zielony" | "fioletowy" | "rozowy";
+
+export interface BibleVerse {
+  id: string;
+  reference: string;
+  text: string;
+  translation: string;
+  themes: string[];
+  season: BibleVerseSeason | null;
+  is_active: boolean;
+  created_at: string;
+}
+
+export interface DailyVersePick {
+  user_id: string;
+  verse_date: string;
+  verse_id: string;
+  created_at: string;
+}
+
+export interface DailyReading {
+  reading_date: string;
+  day_name: string | null;
+  first_reading_citation: string | null;
+  first_reading_text: string | null;
+  psalm_citation: string | null;
+  psalm_refrain: string | null;
+  psalm_text: string | null;
+  second_reading_citation: string | null;
+  second_reading_text: string | null;
+  acclamation_citation: string | null;
+  acclamation_text: string | null;
+  gospel_citation: string | null;
+  gospel_text: string | null;
+  source_url: string | null;
+  fetched_at: string;
+}
+
+export interface SpecialLiturgicalDate {
+  observance_date: string;
+  name: string;
+  rank: LiturgicalRankRow;
+  color: LiturgicalColorRow;
+  season: string;
+  is_holy_day_of_obligation: boolean;
+  created_at: string;
+}
+
+export interface PrayerStreakRow {
+  user_id: string;
+  current_streak: number;
+  longest_streak: number;
+  total_days: number;
+  last_prayer_date: string | null;
+  updated_at: string;
+}
+
+export interface PrayerLogEntry {
+  user_id: string;
+  prayer_date: string;
+  hours: string[];
+  note: string | null;
+  created_at: string;
+}
+
+export interface PrayerRequest {
+  id: string;
+  user_id: string;
+  person_name: string;
+  reason: string | null;
+  promise_date: string;
+  fulfilled: boolean;
+  fulfilled_at: string | null;
+  notes: string | null;
+  last_prayed_at: string | null;
+  prayed_count: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PrayerSettings {
+  user_id: string;
+  notifications_enabled: boolean;
+  reminder_time: string;
+  calendar_sync_enabled: boolean;
+  calendar_token: string;
+  include_intentions_in_calendar: boolean;
+  large_text: boolean;
+  updated_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Modlitwa — cache pełnych tekstów Liturgii Godzin z brewiarz.pl.
+// Mirrors supabase/migrations/0019_modlitwa_brewiarz.sql. Tabele globalne:
+// SELECT dla zalogowanych, zapis wyłącznie przez service-role.
+// ----------------------------------------------------------------------------
+export interface BreviaryHourRow {
+  hour_date: string;
+  hour_id: string;
+  variant: string;
+  title: string | null;
+  subtitle: string | null;
+  /** BreviarySection[] — patrz lib/modlitwa/breviary-source.ts. */
+  sections: unknown;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface BreviaryDayRow {
+  day_date: string;
+  /** BreviaryVariant[] */
+  variants: unknown;
+  source_url: string;
+  fetched_at: string;
 }

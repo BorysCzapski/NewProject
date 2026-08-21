@@ -1,16 +1,20 @@
 // ============================================================================
 // lib/matura/sections.ts
-// Canonical list of the 4 CKE exam parts, once per poziom (see
-// supabase/seed/matura/01_sections.sql — this file is the reference the seed
-// was authored from, same relationship as lib/matma/topics.ts to
-// 01_topics.sql). Only "srodki-jezykowe" has an authored lesson + task bank
-// today — the other 3 are seeded as rows (so the nav/dashboard has something
-// real to point at) but show "wkrótce" in the UI (see
-// app/(main)/matura/nauka/page.tsx).
+// Canonical list of the 4 CKE exam parts, once per (język, poziom) — see
+// supabase/seed/matura/01_sections.sql (angielski) and
+// supabase/seed/matura-es/01_sections.sql (hiszpański). This file is the
+// reference those seeds were authored from, same relationship as
+// lib/matma/topics.ts to 01_topics.sql.
+//
+// The four parts, their order and their weights are IDENTICAL across
+// languages — CKE publishes one format for all języki obce nowożytne — so the
+// per-language lists are generated from one shared shape rather than
+// hand-copied. Only the seeded CONTENT (lessons/tasks) differs per language.
 // ============================================================================
-import type { MaturaLevel, MaturaSectionSlug } from "@/lib/types/database";
+import type { MaturaLanguage, MaturaLevel, MaturaSectionSlug } from "@/lib/types/database";
 
 export interface MaturaSectionSeed {
+  language: MaturaLanguage;
   level: MaturaLevel;
   slug: MaturaSectionSlug;
   title: string;
@@ -43,16 +47,39 @@ const SHARED_TITLES: Record<MaturaSectionSlug, string> = {
   pisanie: "Wypowiedź pisemna",
 };
 
-export const MATURA_SECTIONS: MaturaSectionSeed[] = [
-  // Poziom podstawowy — ok. 60 pkt: I 15 / II 20 / III 15 / IV 10 (przybliżenie, patrz komentarz w 0013_matura.sql).
-  { level: "podstawowa", slug: "sluchanie", title: SHARED_TITLES.sluchanie, description: SHARED_DESCRIPTIONS.sluchanie, orderIndex: 1, examWeight: 0.25 },
-  { level: "podstawowa", slug: "czytanie", title: SHARED_TITLES.czytanie, description: SHARED_DESCRIPTIONS.czytanie, orderIndex: 2, examWeight: 0.33 },
-  { level: "podstawowa", slug: "srodki-jezykowe", title: SHARED_TITLES["srodki-jezykowe"], description: SHARED_DESCRIPTIONS["srodki-jezykowe"], orderIndex: 3, examWeight: 0.25 },
-  { level: "podstawowa", slug: "pisanie", title: SHARED_TITLES.pisanie, description: SHARED_DESCRIPTIONS.pisanie, orderIndex: 4, examWeight: 0.17 },
+interface SectionShape {
+  level: MaturaLevel;
+  slug: MaturaSectionSlug;
+  orderIndex: number;
+  examWeight: number;
+}
+
+// Weights are an ADMIN APPROXIMATION, not an official CKE split — see the
+// matura_sections comment in 0013_matura.sql.
+const SECTION_SHAPES: SectionShape[] = [
+  // Poziom podstawowy — ok. 60 pkt: I 15 / II 20 / III 15 / IV 10 (przybliżenie).
+  { level: "podstawowa", slug: "sluchanie", orderIndex: 1, examWeight: 0.25 },
+  { level: "podstawowa", slug: "czytanie", orderIndex: 2, examWeight: 0.33 },
+  { level: "podstawowa", slug: "srodki-jezykowe", orderIndex: 3, examWeight: 0.25 },
+  { level: "podstawowa", slug: "pisanie", orderIndex: 4, examWeight: 0.17 },
 
   // Poziom rozszerzony — ok. 50 pkt: I 11 / II 14 / III 9 / IV 16 (przybliżenie).
-  { level: "rozszerzona", slug: "sluchanie", title: SHARED_TITLES.sluchanie, description: SHARED_DESCRIPTIONS.sluchanie, orderIndex: 1, examWeight: 0.22 },
-  { level: "rozszerzona", slug: "czytanie", title: SHARED_TITLES.czytanie, description: SHARED_DESCRIPTIONS.czytanie, orderIndex: 2, examWeight: 0.28 },
-  { level: "rozszerzona", slug: "srodki-jezykowe", title: SHARED_TITLES["srodki-jezykowe"], description: SHARED_DESCRIPTIONS["srodki-jezykowe"], orderIndex: 3, examWeight: 0.18 },
-  { level: "rozszerzona", slug: "pisanie", title: SHARED_TITLES.pisanie, description: SHARED_DESCRIPTIONS.pisanie, orderIndex: 4, examWeight: 0.32 },
+  { level: "rozszerzona", slug: "sluchanie", orderIndex: 1, examWeight: 0.22 },
+  { level: "rozszerzona", slug: "czytanie", orderIndex: 2, examWeight: 0.28 },
+  { level: "rozszerzona", slug: "srodki-jezykowe", orderIndex: 3, examWeight: 0.18 },
+  { level: "rozszerzona", slug: "pisanie", orderIndex: 4, examWeight: 0.32 },
 ];
+
+function sectionsFor(language: MaturaLanguage): MaturaSectionSeed[] {
+  return SECTION_SHAPES.map((shape) => ({
+    language,
+    level: shape.level,
+    slug: shape.slug,
+    title: SHARED_TITLES[shape.slug],
+    description: SHARED_DESCRIPTIONS[shape.slug],
+    orderIndex: shape.orderIndex,
+    examWeight: shape.examWeight,
+  }));
+}
+
+export const MATURA_SECTIONS: MaturaSectionSeed[] = [...sectionsFor("en"), ...sectionsFor("es")];

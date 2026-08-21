@@ -187,3 +187,33 @@ body {
     display: none !important;
   }
 }
+
+/* Modlitwa: tryb dużej czcionki (prayer_settings.large_text). Aplikacja ma być
+   przyjazna dla osób starszych, więc zamiast osobnych wariantów komponentów
+   podbijamy skalę tekstu w obrębie /modlitwa — klasę ustawia
+   app/(main)/modlitwa/layout.tsx. Skalujemy tylko klasy tekstowe Tailwinda,
+   żeby układ (odstępy, tap-targety) pozostał nietknięty. */
+.modlitwa-large {
+  font-size: 1.125rem;
+}
+.modlitwa-large .text-xs {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+}
+.modlitwa-large .text-sm {
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
+}
+.modlitwa-large .text-base {
+  font-size: 1.1875rem;
+  line-height: 1.75rem;
+}
+.modlitwa-large .text-lg {
+  font-size: 1.375rem;
+}
+.modlitwa-large .text-xl {
+  font-size: 1.5rem;
+}
+.modlitwa-large .text-2xl {
+  font-size: 1.875rem;
+}
