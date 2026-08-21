@@ -88,9 +88,59 @@ zadaniach zamkniętych) — AI wyodrębnia z niego zadania środków językowych
 pipeline Matmy, bo nie da się algorytmicznie zweryfikować, że wgrany PDF to naprawdę niezmieniony
 arkusz CKE — patrz `lib/matura/import-pdf.ts`). „Rozumienie ze słuchu" jest z tego importu świadomie
 wykluczone: arkusz to sam tekst, bez nagrania, a CKE nawet nie drukuje transkrypcji zadań na
-słuchanie. Schemat bazy (`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`) jest już
-przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
-przydzielanie ćwiczeń uczniom — czekają na UI w kolejnych sesjach.
+słuchanie. Schemat bazy (`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`,
+`0020_matura_language.sql`, `0021_matura_theory.sql`) jest już przygotowany na resztę docelowego
+zakresu: symulacje egzaminu, plan nauki do dnia matury, przydzielanie ćwiczeń uczniom — czekają
+na UI w kolejnych sesjach.
+
+> **Uwaga historyczna.** Przez pewien czas w repo istniała druga, równoległa implementacja teorii
+> i słownictwa dla matury (`matura_grammar_topics`, `matura_vocabulary_words`, trasy
+> `/matura/nauka/gramatyka` i `/matura/nauka/slownictwo`), zbudowana w innej sesji. Została
+> wycofana migracją `0022`, bo **nie miała wymiaru języka** — jej tabele nie mają kolumny
+> `language`, a kolumna z hasłem nazywa się `word_en`. Skutek był taki, że uczeń, który wybrał
+> hiszpański, i tak dostawał angielską teorię i angielskie słówka. Obecna wersja rozdziela treść
+> językiem od pierwszego dnia.
+
+Mini-aplikacja **Modlitwa** (`/modlitwa`, sekcja Wiara) — codzienna praktyka modlitewna po
+polsku: **werset dnia** w oprawie graficznej w kolorze szat liturgicznych, losowany
+deterministycznie (hash `user_id` + data, zapisywany w `daily_verse_picks`, więc nie zmienia się
+przy odświeżeniu strony) z kuratorowanej puli cytatów, z osobnymi pulami na Adwent, Boże
+Narodzenie, Wielki Post i Wielkanoc; **czytania liturgiczne na dziś** (I czytanie, psalm z
+refrenem, II czytanie w niedziele i święta, aklamacja, Ewangelia) pobierane z
+`mateusz.pl/czytania` i cache'owane globalnie w `daily_readings` — przy braku sieci aplikacja
+pokazuje ostatnie zapisane czytania z wyraźną informacją, że nie są dzisiejsze; **liturgia
+godzin z PEŁNYMI tekstami** — osiem godzin brewiarza (Wezwanie, Godzina czytań, Jutrznia, trzy
+Modlitwy w ciągu dnia, Nieszpory, Kompleta) pobieranych z serwisu `brewiarz.pl` (Internetowa
+Liturgia Godzin) razem z hymnem, psalmodią z antyfonami, czytaniem, responsorium, kantykiem,
+prośbami i modlitwą dnia; rubryki („K.”, „W.”, wskazówki) renderowane na czerwono jak w druku,
+przełącznik pory dnia nad tekstem i wybór obchodu, gdy dzień ma kilka formularzy; **streak modlitewny** z własną tabelą (świadomie niezależny od streaka nauki w
+Linguo), paskiem ostatnich 7 dni i notatką do dnia; **intencje** — lista osób, za które
+użytkownik obiecał się modlić, z powodem, datą obietnicy, licznikiem modlitw, notatkami i
+oznaczaniem „wysłuchana”; **kalendarz** — miesięczny widok dni modlitwy nałożony na kalendarz
+liturgiczny.
+
+Dwie decyzje projektowe warte odnotowania. **Kalendarz liturgiczny liczony jest lokalnie**
+(`lib/modlitwa/liturgical-calendar.ts`): data Wielkanocy algorytmem Meeusa, z niej wszystkie
+święta ruchome, okresy, tydzień psałterza i kolor szat, plus polskie uroczystości stałe —
+działa bez internetu i bez zewnętrznego API. **Integracja z kalendarzem Google/Apple jest
+odwrócona względem pierwotnego pomysłu**: zamiast prosić o OAuth i czytać prywatny kalendarz
+użytkownika (skąd i tak nie dowiedzielibyśmy się o liturgii nic, czego sami nie umiemy
+policzyć), aplikacja *publikuje* własny feed iCalendar pod tokenowanym adresem
+`/api/modlitwa/kalendarz.ics?token=…`, który subskrybuje się jednym kliknięciem w Kalendarzu
+Google, Apple albo Outlooku — bez zgód na odczyt cudzych danych, z możliwością unieważnienia
+adresu w każdej chwili. Powiadomienia działają, gdy aplikacja jest otwarta (Notification API);
+pełny push wymagałby service workera i serwera wysyłkowego i świadomie nie jest udawany.
+**Teksty Liturgii Godzin pochodzą wyłącznie z ILG** (`brewiarz.pl`) — aplikacja ich nie
+przepisuje ani nie redaguje: pobiera je, cache'uje globalnie w `breviary_hours` (jedno pobranie
+na dzień i godzinę dla całej instancji) i przy każdym ekranie pokazuje źródło oraz notę
+copyright (teksty © Konferencja Episkopatu Polski i Wydawnictwo Pallottinum, opracowanie © ILG).
+ILG udostępnia tylko bieżący okres — dla starszych i odległych dni aplikacja schodzi do
+przewodnika po strukturze godziny z tekstami stałymi (`lib/modlitwa/hours.ts`), zamiast pokazać
+pusty ekran. Dwie pułapki tego źródła są obsłużone w `lib/modlitwa/breviary-source.ts`: strony
+deklarują ISO-8859-2, ale mają wstawki w UTF-8 (stąd `repairMixedEncoding`), a treść trzeba brać
+z tabel `width=490`, nie z komórek `td.ww` — część kotwic (czytanie, kantyk) leży poza nimi.
+Schemat: `supabase/migrations/0017_modlitwa.sql` i `0019_modlitwa_brewiarz.sql`, seed wersetów:
+`supabase/seed/modlitwa/01_bible_verses.sql`.
 
 **Schola** (`/schola`) jest inna niż powyższe — to NIE jest mini-aplikacja Phoenixa (nie ma
 wpisu w `lib/phoenix/apps.ts`, nie pojawia się na `/aplikacje` ani na launcherze `/`). To

@@ -1338,3 +1338,129 @@ export interface GeoAnnotation {
   created_at: string;
   updated_at: string;
 }
+
+// ============================================================================
+// Modlitwa — aplikacja modlitewna. Mirrors supabase/migrations/0017_modlitwa.sql.
+// Treści wspólne (wersety, czytania, kalendarz liturgiczny) + dane prywatne
+// (streak, dziennik, intencje, ustawienia). Kalendarz liturgiczny NIE jest
+// przechowywany jako źródło prawdy — wylicza go lib/modlitwa/liturgical-calendar.ts,
+// a tabela special_liturgical_dates jest tylko cache'em dla widoku miesiąca i
+// feedu ICS.
+// ============================================================================
+export type BibleVerseSeason = "adwent" | "boze_narodzenie" | "wielki_post" | "wielkanoc" | "zwykly";
+export type LiturgicalRankRow = "uroczystosc" | "swieto" | "wspomnienie" | "niedziela";
+export type LiturgicalColorRow = "bialy" | "czerwony" | "zielony" | "fioletowy" | "rozowy";
+
+export interface BibleVerse {
+  id: string;
+  reference: string;
+  text: string;
+  translation: string;
+  themes: string[];
+  season: BibleVerseSeason | null;
+  is_active: boolean;
+  created_at: string;
+}
+
+export interface DailyVersePick {
+  user_id: string;
+  verse_date: string;
+  verse_id: string;
+  created_at: string;
+}
+
+export interface DailyReading {
+  reading_date: string;
+  day_name: string | null;
+  first_reading_citation: string | null;
+  first_reading_text: string | null;
+  psalm_citation: string | null;
+  psalm_refrain: string | null;
+  psalm_text: string | null;
+  second_reading_citation: string | null;
+  second_reading_text: string | null;
+  acclamation_citation: string | null;
+  acclamation_text: string | null;
+  gospel_citation: string | null;
+  gospel_text: string | null;
+  source_url: string | null;
+  fetched_at: string;
+}
+
+export interface SpecialLiturgicalDate {
+  observance_date: string;
+  name: string;
+  rank: LiturgicalRankRow;
+  color: LiturgicalColorRow;
+  season: string;
+  is_holy_day_of_obligation: boolean;
+  created_at: string;
+}
+
+export interface PrayerStreakRow {
+  user_id: string;
+  current_streak: number;
+  longest_streak: number;
+  total_days: number;
+  last_prayer_date: string | null;
+  updated_at: string;
+}
+
+export interface PrayerLogEntry {
+  user_id: string;
+  prayer_date: string;
+  hours: string[];
+  note: string | null;
+  created_at: string;
+}
+
+export interface PrayerRequest {
+  id: string;
+  user_id: string;
+  person_name: string;
+  reason: string | null;
+  promise_date: string;
+  fulfilled: boolean;
+  fulfilled_at: string | null;
+  notes: string | null;
+  last_prayed_at: string | null;
+  prayed_count: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PrayerSettings {
+  user_id: string;
+  notifications_enabled: boolean;
+  reminder_time: string;
+  calendar_sync_enabled: boolean;
+  calendar_token: string;
+  include_intentions_in_calendar: boolean;
+  large_text: boolean;
+  updated_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Modlitwa — cache pełnych tekstów Liturgii Godzin z brewiarz.pl.
+// Mirrors supabase/migrations/0019_modlitwa_brewiarz.sql. Tabele globalne:
+// SELECT dla zalogowanych, zapis wyłącznie przez service-role.
+// ----------------------------------------------------------------------------
+export interface BreviaryHourRow {
+  hour_date: string;
+  hour_id: string;
+  variant: string;
+  title: string | null;
+  subtitle: string | null;
+  /** BreviarySection[] — patrz lib/modlitwa/breviary-source.ts. */
+  sections: unknown;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface BreviaryDayRow {
+  day_date: string;
+  /** BreviaryVariant[] */
+  variants: unknown;
+  source_url: string;
+  fetched_at: string;
+}

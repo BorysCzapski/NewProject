@@ -60,7 +60,10 @@ export interface NavItem {
     | "Target"
     | "GraduationCap"
     | "Compass"
-    | "Upload";
+    | "Upload"
+    | "Sparkles"
+    | "Church"
+    | "HeartHandshake";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -115,6 +118,14 @@ export const GEOGRAFIA_NAV: NavItem[] = [
   { href: "/geografia/wgraj", label: "Wgraj", icon: "Upload" },
 ];
 
+export const MODLITWA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/modlitwa", label: "Dziś", icon: "Sparkles", exact: true },
+  { href: "/modlitwa/liturgia", label: "Liturgia", icon: "Church" },
+  { href: "/modlitwa/intencje", label: "Intencje", icon: "HeartHandshake" },
+  { href: "/modlitwa/kalendarz", label: "Kalendarz", icon: "Calendar" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
@@ -123,6 +134,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/paragony", items: PARAGONY_NAV },
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
+  { prefix: "/modlitwa", items: MODLITWA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 

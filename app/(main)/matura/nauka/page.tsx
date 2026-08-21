@@ -1,10 +1,11 @@
 // ============================================================================
 // app/(main)/matura/nauka/page.tsx
-// "Nauka" hub: the 4 exam parts for the student's chosen poziom. Redirects
-// to the dashboard (which shows the picker) if no poziom is set yet.
+// "Nauka" hub: the 4 exam parts for the student's chosen język + poziom, plus
+// the vocabulary bank. Redirects to the dashboard (which shows the picker) if
+// nothing is set yet.
 // ============================================================================
-import { redirect } from "next/navigation";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { BookA, ChevronRight } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
@@ -12,8 +13,8 @@ import { getMaturaSettings } from "@/lib/matura/settings";
 import { getSectionsWithProgress } from "@/lib/matura/progress";
 import { getVocabTopicsWithProgress } from "@/lib/matura/vocab";
 import { PageHeader } from "@/components/layout/page-header";
-import { SectionList } from "@/components/matura/section-list";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
+import { SectionList } from "@/components/matura/section-list";
 
 export default async function MaturaNaukaPage() {
   const profile = await requireProfile();
@@ -32,12 +33,16 @@ export default async function MaturaNaukaPage() {
 
   return (
     <div>
-      <PageHeader title="Nauka" subtitle="Wybierz część egzaminu, żeby zacząć" />
+      <PageHeader title="Nauka" subtitle="Zacznij od teorii, potem ćwicz zadania z egzaminu" />
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
+        <h2 className="text-sm font-semibold text-foreground-muted">Części egzaminu</h2>
         <SectionList sections={sections} />
 
         {/* Vocabulary is not one of the four exam parts — it feeds all of them
-            — so it gets its own entry point rather than a fifth section row. */}
+            — so it gets its own entry point rather than a fifth section row.
+            The theory itself lives inside each section, not here: it is scoped
+            to a part of the exam, and a student revising czytanie should not
+            have to hunt for reading strategy in a separate tree. */}
         {vocabTotal > 0 && (
           <Link href="/matura/slownictwo">
             <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">
