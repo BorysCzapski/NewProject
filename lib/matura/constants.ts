@@ -68,4 +68,6 @@ export const MATURA_WRITING_FORM_LABELS: Record<MaturaWritingFormType, string> =
   blog_post: "Wpis na blogu",
   forum_post: "Wpis na forum",
   rozprawka_za_i_przeciw: "Rozprawka za i przeciw",
+  artykul: "Artykuł publicystyczny",
+  list_formalny: "List formalny",
 };

@@ -57,6 +57,24 @@ blokami wyjaśniającymi (tabela, oś czasu, formuła, porównanie) mają bloki 
 uzupełnianie luk z natychmiastowym sprawdzeniem, łączenie w pary, układanie zdania z rozsypanki,
 tabele odmiany z ukrytymi formami, fiszki i banki zwrotów (`lib/grammar/lesson-blocks.ts`,
 komponenty w `components/grammar/lesson/`). Na 543 bloki treści 168 to ćwiczenia.
+
+Zadania są zorganizowane wokół **typów zadań CKE**, nie wokół ponumerowanej listy. Wcześniej dział
+pokazywał „Zadanie 1..N" prosto z banku i każde z nich było jednorazowe — po czterech podejściach
+dział nie miał już nic do zaoferowania. Egzamin tak nie działa: CKE nie sprawdza „zadania 3", tylko
+niewielki, stały zestaw **typów** (słowotwórstwo, parafraza, odmiana czasownika, dobieranie, test
+wyboru, tłumaczenie fragmentów, prawda/fałsz), które wracają w każdej sesji z inną treścią. Dział
+listuje więc typy, każdy z **licznikiem wykonań** i średnią skutecznością, a wejście w typ wydaje
+zadanie, którego jeszcze nie rozwiązywałeś. Kiedy zapas się kończy, kolejne dopisuje AI
+(`lib/matura/task-stock.ts`, `lib/matura/generate-tasks.ts`) — w tle, przez `after()` z `next/server`,
+więc czekasz na swoje zadanie, a nie na generator. Wyjątkiem jest **rozumienie ze słuchu**: te
+zadania wiszą na prawdziwym nagraniu (`youtubeVideoId`), którego model nie wymyśli, więc ten typ
+rotuje po kuratorowanym banku zamiast się dogenerowywać. Wypowiedź pisemna chodzi tak samo, tyle że
+jej typem jest forma (`matura_writing_tasks.form_type`, `lib/matura/writing-stock.ts`) — a poziom
+rozszerzony dostał przy okazji dwie brakujące formy tekstu argumentacyjnego: artykuł publicystyczny
+i list formalny. Katalog typów wraz z briefami dla generatora: `lib/matura/task-types.ts`;
+przypisanie typu do istniejących zadań: `0023_matura_task_types.sql` (funkcja
+`matura_infer_task_type` plus trigger, żeby ponowne odpalenie seedów nie zgubiło klasyfikacji).
+
 Osobno stoi **słownictwo** (`/matura/slownictwo`) — 938 haseł w 15 blokach tematycznych z zakresu
 podstawy programowej, każde z tłumaczeniem, przykładowym zdaniem, jego tłumaczeniem i notatką o
 tym, co w danym haśle jest pułapką (kolokacja, rodzaj, fałszywy przyjaciel, składnia typu
@@ -275,6 +293,17 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       trener fiszek Linguo (wgranie tam haseł maturalnych zmieniłoby po cichu, czego uczy
       inna aplikacja). Uwaga: `matura_lessons.slug` jest `NOT NULL`, więc seedy lekcji
       trzeba uruchomić po tej migracji.
+   14. `supabase/migrations/0023_matura_task_types.sql` — typ zadania CKE na każdym wierszu
+      `matura_tasks` (kolumna `task_type`), czyli oś, wokół której ćwiczy się zamiast
+      ponumerowanej listy. Klasyfikacja siedzi w funkcji `matura_infer_task_type`
+      (polecenie + kształt itemów) i w triggerze `BEFORE INSERT/UPDATE`, a nie w jednorazowym
+      `UPDATE` — seedy kasują i wstawiają swoje wiersze przy każdym uruchomieniu, więc
+      jednorazowy backfill zgubiłby klasyfikację przy najbliższym `npm run db seed`. Reguły
+      sprawdzono na komplecie `supabase/seed/matura/` i `matura-es/`: każde zaseedowane zadanie
+      trafia we właściwy typ. Wypowiedź pisemna nie dostaje kolumny — jej typem jest
+      `form_type`, ta migracja tylko poszerza dopuszczalne wartości o `artykul`
+      i `list_formalny`. **Numer `0023` sprawdź przez `npm run db status` przed wgraniem** —
+      patrz ostrzeżenie o kolizjach numeracji wyżej.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -531,6 +560,9 @@ components/
   matura/            # komponenty Matury: język i poziom, dashboard, lista części,
                      # próba zadania, trenażer słownictwa, lista haseł, stopka lekcji
                      # (treść lekcji renderuje components/grammar/lesson)
+  practice/          # kafelek typu zadania z licznikiem wykonań i przycisk „kolejne
+                     # zadanie tego typu" — wspólne dla Matury i Geografii; formularze,
+                     # nie linki, bo wydanie zadania bywa mutacją (generuje nowe)
   grammar/lesson/    # renderer bloków lekcji — wspólny dla Linguo i Matury. Bloki
                      # objaśniające (tabela, oś czasu, formuła, porównanie) plus
                      # ćwiczeniowe: fill-gap, match-pairs, order-words, conjugation,
@@ -547,7 +579,10 @@ lib/
   matura/            # silnik Matury: sekcje, ocena programistyczna środków językowych
                      # (bez AI), ocena AI wypowiedzi pisemnej wg kryteriów CKE, mastery
                      # per część, szacowany wynik, biblioteka teorii (theory.ts),
-                     # bank słownictwa (vocab.ts) i powtórki Leitnera (vocab-review.ts)
+                     # bank słownictwa (vocab.ts) i powtórki Leitnera (vocab-review.ts);
+                     # katalog typów zadań CKE (task-types.ts), kolejka ćwiczeń per typ
+                     # (task-stock.ts, writing-stock.ts) i generatory świeżej treści
+                     # (generate-tasks.ts)
   grammar/           # typy bloków lekcji (lesson-blocks.ts) + deterministyczne
                      # tasowanie ćwiczeń (shuffle.ts — Math.random rozjechałby hydratację)
   godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
