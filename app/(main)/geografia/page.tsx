@@ -11,7 +11,9 @@ import { createClient } from "@/lib/supabase/server";
 import { getTopicsWithProgress, getWeakestTopics } from "@/lib/geografia/progress";
 import { computeEstimatedPercent, getProgressTrend } from "@/lib/geografia/dashboard";
 import { getSpacedReviewCandidate } from "@/lib/geografia/spaced-review";
+import { getNextLesson } from "@/lib/geografia/content";
 import { StreakBadge } from "@/components/dashboard/streak-badge";
+import { NextLessonCard } from "@/components/geografia/dashboard/next-lesson-card";
 import { EstimatedScoreCard } from "@/components/geografia/dashboard/estimated-score-card";
 import { SpacedReviewCard } from "@/components/geografia/dashboard/spaced-review-card";
 import { TopicMasteryBars } from "@/components/geografia/dashboard/topic-mastery-bars";
@@ -22,10 +24,11 @@ export default async function GeografiaDashboardPage() {
   const profile = await requireProfile();
   const supabase = await createClient();
 
-  const [topics, snapshots, spacedReviewCandidate] = await Promise.all([
+  const [topics, snapshots, spacedReviewCandidate, nextLesson] = await Promise.all([
     getTopicsWithProgress(supabase, profile.id),
     getProgressTrend(supabase, profile.id),
     getSpacedReviewCandidate(supabase, profile.id),
+    getNextLesson(supabase, profile.id),
   ]);
 
   const percent = computeEstimatedPercent(topics);
@@ -43,6 +46,8 @@ export default async function GeografiaDashboardPage() {
         </div>
         <StreakBadge streak={profile.current_streak} size="lg" />
       </div>
+
+      {nextLesson && <NextLessonCard next={nextLesson} />}
 
       <EstimatedScoreCard percent={percent} />
 

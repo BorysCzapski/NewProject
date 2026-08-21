@@ -1,0 +1,1245 @@
+{
+  "topicSlug": "atmosfera",
+  "lessons": [
+    {
+      "slug": "sklad-i-budowa-atmosfery",
+      "title": "Skład i pionowa budowa atmosfery. Bilans radiacyjny Ziemi",
+      "summary": "Z czego zbudowana jest powłoka gazowa Ziemi, dlaczego temperatura zmienia się w niej zygzakiem i jak Ziemia rozlicza się z energią słoneczną.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Atmosfera waży około 5,15 · 10¹⁸ kg, ale połowa tej masy mieści się w warstwie o grubości zaledwie **5,5 km** — cieńszej niż wysokość Mount Everestu. To bardzo cienka błona wokół planety o promieniu 6371 km: gdyby Ziemię pomniejszyć do rozmiaru jabłka, cała atmosfera byłaby cieńsza od jego skórki. A jednak to właśnie ta błona decyduje, że średnia temperatura powierzchni wynosi +15 °C, a nie −18 °C, że promieniowanie ultrafioletowe nie sterylizuje lądów i że w ogóle istnieje pogoda. W tej lekcji zbudujesz fundament całego działu: poznasz **skład powietrza**, **pionową budowę atmosfery** wraz z charakterystycznym zygzakiem temperatury oraz **bilans radiacyjny** — księgowość energii, z której wynika wszystko, o czym będą kolejne lekcje: temperatura, ciśnienie, wiatr i opady."
+        },
+        {
+          "type": "table",
+          "title": "Skład powietrza atmosferycznego (suchego, przy powierzchni Ziemi)",
+          "caption": "Udziały podano objętościowo. Zapamiętaj kolejność i rzędy wielkości — CKE pyta o nie w zadaniach zamkniętych.",
+          "headers": ["Składnik", "Udział objętościowy", "Znaczenie w środowisku"],
+          "rows": [
+            ["Azot N₂", "78,08%", "Gaz chemicznie mało aktywny; wiązany z powietrza przez bakterie brodawkowe i wyładowania atmosferyczne, wchodzi w obieg azotu"],
+            ["Tlen O₂", "20,95%", "Niezbędny do oddychania i spalania; produkt fotosyntezy, w stratosferze przekształcany w ozon"],
+            ["Argon Ar", "0,93%", "Gaz szlachetny, chemicznie bierny; najobfitszy z gazów śladowych"],
+            ["Dwutlenek węgla CO₂", "ok. 0,04% (ok. 420 ppm, 2023 r.)", "Substrat fotosyntezy i kluczowy **gaz cieplarniany**; jego udział systematycznie rośnie od rewolucji przemysłowej"],
+            ["Neon, hel, metan, krypton, wodór, podtlenek azotu, ozon", "łącznie ok. 0,003%", "Śladowe, ale część z nich (CH₄, N₂O, O₃) to silne gazy cieplarniane"],
+            ["Para wodna H₂O", "0–4% (zmienna, poza składem suchym)", "Nośnik ciepła utajonego, źródło chmur i opadów, **najważniejszy naturalny gaz cieplarniany**"]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto mieć w pamięci",
+          "items": [
+            { "value": "5,5", "unit": "km", "label": "Wysokość, poniżej której znajduje się połowa masy atmosfery", "note": "Ok. 80% masy mieści się w troposferze, ok. 99% poniżej 30 km." },
+            { "value": "0,6", "unit": "°C/100 m", "label": "Średni pionowy gradient temperatury w troposferze" },
+            { "value": "1361", "unit": "W/m²", "label": "Stała słoneczna — gęstość strumienia energii na granicy atmosfery", "note": "Mierzona prostopadle do promieni, w średniej odległości Ziemi od Słońca." },
+            { "value": "ok. 0,30", "label": "Albedo planetarne Ziemi", "note": "Ziemia odbija w kosmos ok. 30% docierającego promieniowania." },
+            { "value": "100", "unit": "km", "label": "Umowna granica kosmosu (linia Kármána)", "note": "Fizycznie atmosfera sięga znacznie dalej — egzosfera przechodzi w przestrzeń kosmiczną stopniowo." },
+            { "value": "33", "unit": "°C", "label": "Wkład naturalnego efektu cieplarnianego w temperaturę powierzchni Ziemi" }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Pionowa budowa atmosfery",
+          "caption": "Kliknij kolejne warstwy od dołu. Granice (tropopauza, stratopauza, mezopauza) wyznacza się tam, gdzie ZMIENIA SIĘ KIERUNEK zmian temperatury z wysokością — to jest kryterium podziału.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Troposfera",
+              "range": "0–12 km (8 km nad biegunami, do 18 km nad równikiem)",
+              "text": "Warstwa, w której **rozgrywa się pogoda**. Zawiera ok. **80% masy atmosfery** i niemal całą parę wodną, a więc wszystkie chmury i opady. Temperatura **spada** z wysokością średnio o **0,6 °C na 100 m**, bo powietrze ogrzewa się od ogrzanego promieniowaniem podłoża, a nie bezpośrednio od Słońca. Jest grubsza nad równikiem, gdzie silna konwekcja wypycha ją wysoko, a cieńsza nad biegunami. Kończy się **tropopauzą**, w której temperatura przestaje spadać (ok. −56 °C nad umiarkowanymi szerokościami).",
+              "tone": "sky"
+            },
+            {
+              "name": "Stratosfera",
+              "range": "12–50 km",
+              "text": "Temperatura **rośnie** z wysokością — od ok. −56 °C do ok. 0 °C przy **stratopauzie**. Przyczyna: na wysokości 15–35 km leży **ozonosfera**, która pochłania promieniowanie ultrafioletowe i zamienia je w ciepło. Wzrost temperatury z wysokością oznacza bardzo dużą stabilność (brak konwekcji pionowej), dlatego nie ma tu chmur pogodowych, za to wieją silne, poziome prądy strumieniowe i tędy prowadzą trasy samolotów rejsowych.",
+              "tone": "sky"
+            },
+            {
+              "name": "Mezosfera",
+              "range": "50–85 km",
+              "text": "Temperatura znów **spada** i przy **mezopauzie** osiąga **najniższe wartości w całej atmosferze — ok. −90 °C**. Powietrze jest już bardzo rozrzedzone, ale wystarczająco gęste, by w nim spalała się większość **meteorów** („spadające gwiazdy”). Występują tu najwyżej położone chmury Ziemi — **obłoki srebrzyste** (nocne świecące), zbudowane z kryształków lodu.",
+              "tone": "ice"
+            },
+            {
+              "name": "Termosfera",
+              "range": "85–500 km",
+              "text": "Temperatura gwałtownie **rośnie**, w maksimum aktywności słonecznej przekracza 1000 °C — ale jest to temperatura kinetyczna nielicznych cząsteczek: gaz jest tak rozrzedzony, że nie odczuwalibyśmy gorąca. Silne promieniowanie słoneczne jonizuje gazy, tworząc **jonosferę**, która odbija fale radiowe. To tutaj powstają **zorze polarne** i tu krążą satelity oraz stacja ISS.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Egzosfera",
+              "range": "powyżej 500 km",
+              "text": "Zewnętrzna, skrajnie rozrzedzona warstwa, w której zderzenia między cząsteczkami są rzadkością, a najlżejsze atomy — **wodoru i helu** — osiągają prędkość ucieczki i bezpowrotnie **uciekają w przestrzeń kosmiczną**. Nie ma tu wyraźnej górnej granicy: egzosfera stopniowo przechodzi w ośrodek międzyplanetarny.",
+              "tone": "neutral"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Przebieg temperatury powietrza z wysokością",
+          "caption": "Wartości wg atmosfery wzorcowej. Zwróć uwagę na zygzak: spadek (troposfera) — wzrost (stratosfera) — spadek (mezosfera) — wzrost (termosfera). Ten kształt jest ulubionym materiałem źródłowym CKE: z wykresu trzeba odczytać granice warstw jako punkty zmiany kierunku krzywej.",
+          "labels": ["0 km", "12 km", "20 km", "30 km", "40 km", "50 km", "60 km", "70 km", "85 km", "100 km"],
+          "unit": "°C",
+          "series": [
+            { "name": "Temperatura powietrza", "values": [15, -56, -56, -46, -22, -2, -27, -55, -90, -78] }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Ozonosfera (warstwa ozonowa)",
+          "text": "Część stratosfery na wysokości **15–35 km** (maksimum koncentracji ok. 25 km), w której występuje podwyższone stężenie **ozonu O₃**. Ozon powstaje tam, gdzie promieniowanie ultrafioletowe rozbija cząsteczki tlenu ($O_2 \\rightarrow 2O$), a pojedyncze atomy łączą się z kolejnymi cząsteczkami ($O + O_2 \\rightarrow O_3$). Ozonosfera pochłania niemal całe promieniowanie **UV-C** i większość **UV-B**, chroniąc organizmy przed uszkodzeniami DNA — a energia pochłonięta w tym procesie jest przyczyną **wzrostu temperatury w stratosferze**.",
+          "note": "Gdyby cały ozon atmosferyczny sprowadzić do warunków normalnych przy powierzchni, utworzyłby warstwę grubości zaledwie ok. 3 mm."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: mylenie **dziury ozonowej** z **efektem cieplarnianym**. To dwa różne problemy, o różnych przyczynach, w różnych warstwach. Dziura ozonowa to ubytek ozonu w **stratosferze**, wywołany przez **freony (CFC) i halony**, a jej skutkiem jest wzrost dawki UV przy powierzchni. Efekt cieplarniany zachodzi w **troposferze**, odpowiadają za niego **para wodna, CO₂, CH₄, N₂O**, a jego wzmocnienie prowadzi do ocieplenia klimatu. Zdanie „dziura ozonowa powoduje globalne ocieplenie” jest w kluczu CKE traktowane jako błąd merytoryczny."
+        },
+        {
+          "type": "process",
+          "title": "Droga promieniowania słonecznego przez atmosferę",
+          "caption": "Wartości są uśrednione dla całej planety i całego roku. Kliknij etapy po kolei — to jest mechanizm, którym tłumaczy się i albedo, i efekt cieplarniany.",
+          "steps": [
+            {
+              "title": "1. Na górną granicę atmosfery dociera 100% energii",
+              "text": "Strumień o gęstości **1361 W/m²** (stała słoneczna) pada na oświetlony przekrój Ziemi. Po rozłożeniu na całą kulistą powierzchnię planety daje to średnio ok. 340 W/m². Dopływ jest silnie zróżnicowany w zależności od **kąta padania promieni**, czyli od szerokości geograficznej i pory roku."
+            },
+            {
+              "title": "2. Około 30% zostaje odbite — to albedo planetarne",
+              "text": "Największy udział ma odbicie od **chmur** (ok. 20%), mniejszy — od powierzchni Ziemi, zwłaszcza od śniegu i lodu (ok. 4%), oraz rozproszenie wsteczne przez atmosferę i aerozole (ok. 6%). Ta część energii **nigdy nie ogrzewa Ziemi** — wraca w kosmos jako promieniowanie krótkofalowe."
+            },
+            {
+              "title": "3. Około 20% pochłania sama atmosfera",
+              "text": "Ultrafiolet zatrzymuje **ozon** w stratosferze, a podczerwień bliską — **para wodna** i **krople w chmurach** w troposferze. Dlatego atmosfera jest w niewielkim stopniu ogrzewana bezpośrednio przez Słońce: to podłoże jest jej głównym piecem."
+            },
+            {
+              "title": "4. Około 50% pochłania powierzchnia Ziemi",
+              "text": "Promieniowanie **bezpośrednie** (Q) i **rozproszone** (q) razem tworzą promieniowanie całkowite, które ogrzewa lądy i oceany. Ogrzana powierzchnia staje się źródłem ciepła dla powietrza — przez **promieniowanie długofalowe**, **konwekcję** (unoszenie ciepłego powietrza) i **parowanie** (ciepło utajone)."
+            },
+            {
+              "title": "5. Ziemia wypromieniowuje energię jako podczerwień, a atmosfera część zwraca",
+              "text": "Ciepła powierzchnia (ok. +15 °C) emituje promieniowanie **długofalowe (podczerwone)**. Gazy cieplarniane pochłaniają je i emitują w różnych kierunkach, w tym z powrotem ku Ziemi — to **promieniowanie zwrotne atmosfery**. Różnica między tym, co powierzchnia wysyła, a tym, co dostaje z powrotem, to **promieniowanie efektywne** $E_{ef}$."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Albedo wybranych powierzchni",
+          "caption": "Albedo = stosunek promieniowania odbitego do padającego, podawany w % lub ułamku. Im jaśniejsza i gładsza powierzchnia, tym wyższe albedo — a więc tym mniej energii zostaje w systemie.",
+          "headers": ["Powierzchnia", "Albedo", "Konsekwencja"],
+          "rows": [
+            ["Świeży śnieg", "80–90%", "Silne wychłodzenie obszarów pokrytych śniegiem — **dodatnie sprzężenie zwrotne lód–albedo**"],
+            ["Lód morski", "30–40%", "Topnienie odsłania ciemny ocean i przyspiesza ocieplanie Arktyki"],
+            ["Chmury", "40–90% (zależnie od grubości)", "Chmury w dzień chłodzą (odbijają), nocą ogrzewają (zatrzymują promieniowanie zwrotne)"],
+            ["Piasek pustynny", "25–40%", "Wysokie albedo mimo silnego nasłonecznienia; noce na pustyni są chłodne"],
+            ["Trawa, pola uprawne", "15–25%", "Zmiana użytkowania ziemi zmienia lokalny bilans cieplny"],
+            ["Las iglasty", "8–15%", "Ciemna korona pochłania niemal całą energię — tajga ociepla się szybciej niż tundra"],
+            ["Woda przy wysokim położeniu Słońca", "5–10%", "Ocean jest głównym pochłaniaczem energii słonecznej na Ziemi"],
+            ["Woda przy niskim położeniu Słońca (świt, zmierzch, wysokie szerokości)", "do 70%", "Dlatego oceany polarne pochłaniają mało energii nawet w dniu polarnym"]
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Bilans radiacyjny powierzchni Ziemi",
+          "expression": "R = (Q + q)\\,(1 - A) - E_{ef}",
+          "variables": [
+            { "symbol": "R", "meaning": "bilans (saldo) radiacyjny — nadwyżka lub niedobór energii promienistej w danym miejscu" },
+            { "symbol": "Q", "meaning": "promieniowanie słoneczne bezpośrednie docierające do powierzchni" },
+            { "symbol": "q", "meaning": "promieniowanie rozproszone (od nieba i chmur)" },
+            { "symbol": "A", "meaning": "albedo powierzchni (ułamek odbity)" },
+            { "symbol": "E_{ef}", "meaning": "promieniowanie efektywne — różnica między długofalowym promieniowaniem Ziemi a promieniowaniem zwrotnym atmosfery" }
+          ],
+          "caption": "Roczny bilans radiacyjny jest **dodatni między ok. 40°N a 40°S** i **ujemny** w wyższych szerokościach. Ta nierównowaga nie prowadzi jednak do wygotowania tropików i zamarznięcia biegunów, ponieważ nadwyżkę ciepła przenoszą ku biegunom **cyrkulacja atmosfery i prądy morskie** — o tym będą kolejne lekcje."
+        },
+        {
+          "type": "compare",
+          "title": "Efekt cieplarniany naturalny a wzmocniony (antropogeniczny)",
+          "leftLabel": "Naturalny",
+          "rightLabel": "Wzmocniony",
+          "rows": [
+            { "aspect": "Przyczyna", "left": "Naturalna obecność pary wodnej, CO₂, CH₄, N₂O i O₃ w troposferze", "right": "Wzrost stężenia gazów cieplarnianych wskutek spalania paliw kopalnych, wylesiania, hodowli i rolnictwa" },
+            { "aspect": "Czas trwania", "left": "Działa od miliardów lat, odkąd Ziemia ma atmosferę", "right": "Wyraźny od rewolucji przemysłowej (od ok. 1850 r.), gwałtowny od połowy XX w." },
+            { "aspect": "Skutek dla temperatury", "left": "Podnosi średnią temperaturę powierzchni z **−18 °C do +15 °C**, czyli o **33 °C**", "right": "Dokłada kolejne dziesiąte części stopnia — wzrost średniej globalnej o ok. 1,1–1,2 °C względem epoki przedprzemysłowej" },
+            { "aspect": "Ocena", "left": "**Zjawisko korzystne i konieczne** — bez niego woda w stanie ciekłym i życie na lądach byłyby niemożliwe", "right": "Zjawisko niekorzystne — topnienie lodowców, wzrost poziomu morza, częstsze zjawiska ekstremalne" },
+            { "aspect": "Mechanizm fizyczny", "left": "Przepuszczanie promieniowania krótkofalowego i pochłanianie długofalowego przez gazy cieplarniane", "right": "Ten sam mechanizm — zmienia się tylko **stężenie gazów**, a więc siła pochłaniania" }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Warstwa atmosfery a jej cecha rozpoznawcza",
+          "instruction": "Połącz warstwę z opisem, po którym można ją bezbłędnie rozpoznać w zadaniu maturalnym.",
+          "pairs": [
+            { "left": "Troposfera", "right": "Zawiera ok. 80% masy atmosfery i niemal całą parę wodną; temperatura spada z wysokością" },
+            { "left": "Stratosfera", "right": "Temperatura rośnie z wysokością dzięki pochłanianiu UV przez ozon" },
+            { "left": "Mezosfera", "right": "Najniższa temperatura w całej atmosferze (ok. −90 °C); spalają się w niej meteory" },
+            { "left": "Termosfera", "right": "Zjonizowane gazy odbijają fale radiowe, powstają zorze polarne" },
+            { "left": "Egzosfera", "right": "Najlżejsze atomy osiągają prędkość ucieczki i uciekają w przestrzeń kosmiczną" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na jakiej podstawie wyznacza się granice między warstwami atmosfery (tropopauzę, stratopauzę, mezopauzę)?",
+          "options": [
+            "Na podstawie spadku ciśnienia atmosferycznego o połowę",
+            "Na podstawie zmiany kierunku zmian temperatury z wysokością",
+            "Na podstawie zaniku pary wodnej",
+            "Na podstawie zmiany składu chemicznego powietrza"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kryterium podziału pionowego atmosfery jest **przebieg temperatury**. Granicę stanowi poziom, na którym temperatura przestaje spadać i zaczyna rosnąć (tropopauza, mezopauza) albo odwrotnie (stratopauza). Ciśnienie spada monotonicznie i nie wyznacza granic, a skład powietrza w homosferze (do ok. 100 km) jest w zasadzie stały."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego temperatura powietrza w troposferze spada wraz z wysokością?",
+          "options": [
+            "Bo im wyżej, tym dalej od Słońca, więc dociera mniej energii",
+            "Bo w górnej troposferze ozon pochłania promieniowanie ultrafioletowe",
+            "Bo powietrze ogrzewa się głównie od nagrzanego podłoża, a nie bezpośrednio od Słońca, i dodatkowo rozpręża się przy wznoszeniu",
+            "Bo w górnych partiach troposfery jest więcej pary wodnej, która pochłania ciepło"
+          ],
+          "correctIndex": 2,
+          "explanation": "Powietrze jest niemal przezroczyste dla promieniowania krótkofalowego — ogrzewa je **promieniowanie długofalowe nagrzanej powierzchni Ziemi** oraz konwekcja i ciepło utajone parowania. Im dalej od tego źródła, tym chłodniej. Dodatkowo wznoszące się powietrze rozpręża się i **ochładza adiabatycznie**. Różnica odległości od Słońca (kilkanaście kilometrów wobec 150 mln km) jest zupełnie bez znaczenia."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o bilansie radiacyjnym CKE nagradza **łańcuch przyczynowo-skutkowy**, a nie samo nazwanie zjawiska. Wzorcowa odpowiedź brzmi: „Świeży śnieg ma wysokie albedo (80–90%), więc odbija większość promieniowania słonecznego, przez co powierzchnia pochłania mało energii, a bilans radiacyjny jest ujemny — temperatura powietrza pozostaje niska”. Zapamiętaj też schemat: **albedo ↑ → pochłonięta energia ↓ → temperatura ↓**, oraz to, że w wyjaśnieniach należy rozróżniać promieniowanie **krótkofalowe** (od Słońca) i **długofalowe** (od Ziemi) — użycie właściwego przymiotnika bywa punktowane."
+        }
+      ]
+    },
+    {
+      "slug": "temperatura-powietrza",
+      "title": "Temperatura powietrza — gradient, inwersja i czynniki termiczne",
+      "summary": "Jak zmienia się temperatura w pionie i w poziomie oraz od czego zależy, że dwa miejsca na tej samej szerokości geograficznej mają klimat cieplny nie do poznania.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bergen w Norwegii i Jakuck w Rosji leżą prawie na tej samej szerokości geograficznej — około 60–62°N. W styczniu w Bergen jest średnio **+1,5 °C**, a w Jakucku **−38 °C**. Czterdzieści stopni różnicy przy identycznym kącie padania promieni słonecznych. To najlepszy dowód, że sama szerokość geograficzna nie wystarcza do wyjaśnienia rozkładu temperatury: pracuje na nią jeszcze wysokość nad poziomem morza, odległość od oceanu, prądy morskie, rzeźba terenu i to, co rośnie albo stoi na powierzchni. W tej lekcji nauczysz się liczyć temperaturę w pionie, rozpoznawać **inwersję** i jej skutki, czytać **izotermy** oraz uzasadniać wielkość **amplitudy** — czyli robić dokładnie to, czego wymaga polecenie „wyjaśnij, dlaczego w miejscowości A jest cieplej niż w B”."
+        },
+        {
+          "type": "definition",
+          "term": "Pionowy gradient temperatury",
+          "text": "**Zmiana temperatury powietrza przypadająca na 100 m wysokości.** W troposferze temperatura spada średnio o **0,6 °C na każde 100 m** wzniesienia (czyli o 6 °C na kilometr). Jest to wartość **średnia i statyczna** — opisuje realny stan atmosfery zmierzony np. sondą, a nie zachowanie konkretnej porcji powietrza. Gradient bywa większy w upalne popołudnie nad rozgrzanym podłożem, a w skrajnych sytuacjach staje się ujemny — wtedy mówimy o inwersji.",
+          "note": "Rzadziej używa się gradientu poziomego (zmiana temperatury na 100 km w poziomie) — pojawia się on przy opisie stref frontowych."
+        },
+        {
+          "type": "formula",
+          "title": "Obliczanie temperatury na zadanej wysokości",
+          "expression": "t_h = t_0 - 0{,}6\\,^\\circ\\text{C} \\cdot \\frac{\\Delta h}{100\\ \\text{m}}",
+          "variables": [
+            { "symbol": "t_h", "meaning": "temperatura na wysokości docelowej [°C]" },
+            { "symbol": "t_0", "meaning": "temperatura na wysokości wyjściowej [°C]" },
+            { "symbol": "\\Delta h", "meaning": "różnica wysokości między punktami [m]" }
+          ],
+          "caption": "Przykład maturalny: w Zakopanem (830 m n.p.m.) jest 12 °C. Jaka temperatura panuje na Kasprowym Wierchu (1987 m n.p.m.)? Różnica wysokości to 1157 m, czyli 11,57 setek metrów; spadek wynosi $11{,}57 \\cdot 0{,}6 \\approx 6{,}9$ °C, więc $t_h \\approx 12 - 6{,}9 = 5{,}1$ °C. Pamiętaj o jednostkach: różnicę wysokości zawsze dziel przez 100."
+        },
+        {
+          "type": "compare",
+          "title": "Gradient suchoadiabatyczny a wilgotnoadiabatyczny",
+          "leftLabel": "Suchoadiabatyczny",
+          "rightLabel": "Wilgotnoadiabatyczny",
+          "rows": [
+            { "aspect": "Wartość", "left": "**1 °C / 100 m**", "right": "ok. **0,5–0,6 °C / 100 m** (zależnie od temperatury i wilgotności)" },
+            { "aspect": "Kiedy obowiązuje", "left": "Gdy wznoszące się powietrze jest nienasycone — para wodna nie kondensuje", "right": "Gdy powietrze osiągnęło stan nasycenia i para wodna skrapla się, tworząc chmurę" },
+            { "aspect": "Dlaczego tyle", "left": "Ochłodzenie wynika wyłącznie z rozprężania powietrza przy spadku ciśnienia", "right": "Rozprężanie chłodzi tak samo, ale **kondensacja uwalnia ciepło utajone**, które część tego ochłodzenia rekompensuje" },
+            { "aspect": "Gdzie to zobaczysz", "left": "Poniżej podstawy chmury oraz po zawietrznej stronie gór (opadanie powietrza — wiatr fenowy)", "right": "Wewnątrz chmury, po dowietrznej stronie gór powyżej poziomu kondensacji" },
+            { "aspect": "Rola w zadaniach", "left": "Używany do obliczeń temperatury po **zawietrznej** stronie grzbietu", "right": "Używany do obliczeń temperatury po **dowietrznej** stronie, powyżej poziomu kondensacji" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Typy inwersji temperatury",
+          "caption": "**Inwersja** to wzrost temperatury powietrza wraz z wysokością — sytuacja odwrotna do normalnej. Warstwa inwersyjna działa jak szczelna pokrywa: cieplejsze, lżejsze powietrze leży na chłodniejszym, cięższym, więc ruchy pionowe zanikają.",
+          "groups": [
+            {
+              "name": "Inwersja radiacyjna (z wypromieniowania)",
+              "description": "Powstaje nocą, przy bezchmurnym niebie i słabym wietrze: podłoże szybko traci ciepło przez wypromieniowanie i wychładza przylegającą warstwę powietrza. Najsilniejsza nad ranem, zanika po wschodzie Słońca. Zimą w Polsce może utrzymywać się całymi dobami.",
+              "examples": ["Poranne mgły radiacyjne", "Przymrozki przygruntowe wiosną", "Szron na trawie przy dodatniej temperaturze na wysokości 2 m"]
+            },
+            {
+              "name": "Inwersja dolinna (terenowa, ze spływu)",
+              "description": "Chłodne, gęste powietrze spływa nocą po stokach i gromadzi się na dnie kotlin i dolin — powstaje **zastoisko chłodnego powietrza**. Dlatego w kotlinach bywa zimniej niż na otaczających je stokach, a rolnicy sadzą sady na zboczach, nie w dolinach.",
+              "examples": ["Kotlina Żywiecka i Kotlina Jeleniogórska", "Zakopane i Kotlina Orawsko-Nowotarska — polski biegun zimna", "Kotlina Kłodzka"]
+            },
+            {
+              "name": "Inwersja osiadania (dynamiczna)",
+              "description": "Występuje w **wyżu**: powietrze osiadające z wyższych warstw ogrzewa się adiabatycznie (1 °C/100 m) i tworzy ciepłą warstwę nad chłodnym powietrzem przy gruncie. Obejmuje duże obszary i utrzymuje się wiele dni — to ona odpowiada za długotrwałe epizody smogowe.",
+              "examples": ["Wyż zimowy nad Europą Środkową", "Trwałe inwersje nad Kalifornią (smog fotochemiczny w Los Angeles)"]
+            },
+            {
+              "name": "Inwersja frontalna i adwekcyjna",
+              "description": "Frontalna — na granicy mas powietrza, gdzie ciepłe powietrze wślizguje się nad chłodne (front ciepły). Adwekcyjna — gdy ciepła masa powietrza napływa nad wychłodzone podłoże, np. nad śnieg lub chłodny prąd morski; skutkiem są uporczywe mgły adwekcyjne.",
+              "examples": ["Mgły nad Nową Fundlandią (ciepłe powietrze nad Prądem Labradorskim)", "Mgły adwekcyjne nad wybrzeżem Namibii"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Inwersja, kotlina i smog — dlaczego Kraków i Zakopane duszą się zimą",
+          "region": "Polska południowa",
+          "text": "Kraków leży w **Bramie Krakowskiej**, w obniżeniu doliny Wisły osłoniętym od zachodu i południa wzniesieniami; Zakopane — w kotlinie u stóp Tatr. Zimą, przy pogodzie wyżowej, nakładają się na siebie dwa mechanizmy: **inwersja osiadania** tworzy ciepłą pokrywę na wysokości kilkuset metrów, a **inwersja dolinna** wypełnia dno kotliny chłodnym powietrzem spływającym ze stoków. Powietrze przestaje się mieszać w pionie, wiatr jest bardzo słaby, a wszystko, co emitują piece na paliwa stałe, transport i przemysł — pył zawieszony PM10 i PM2,5, benzo(a)piren, tlenki azotu — gromadzi się w kilkudziesięciometrowej warstwie przy gruncie. Stężenia potrafią wielokrotnie przekraczać normy dobowe. Dopiero **zmiana układu barycznego** — nadejście niżu z wiatrem i opadem — przewietrza kotlinę w kilka godzin.",
+          "takeaway": "Smog zimowy w Polsce to iloczyn trzech czynników: **emisji** (niska emisja z palenisk), **rzeźby** (kotlina utrudniająca przewietrzanie) i **sytuacji synoptycznej** (wyż z inwersją i ciszą wietrzną). W odpowiedzi maturalnej musisz wymienić czynnik meteorologiczny, a nie tylko emisję."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uwaga na trzy pułapki. (1) **Inwersja** to wzrost temperatury z wysokością, a nie „bardzo niska temperatura” — w warstwie inwersyjnej jest cieplej u góry. (2) Nie myl inwersji z **izotermią**: izotermia to brak zmian temperatury z wysokością (poziomy odcinek na wykresie), inwersja to odwrócenie kierunku. (3) Wysoko w górach jest chłodniej **nie dlatego, że bliżej Słońca jest zimniej**, tylko dlatego, że powietrze jest rzadsze, słabiej zatrzymuje ciepło i jest dalej od nagrzanego podłoża, które je ogrzewa."
+        },
+        {
+          "type": "definition",
+          "term": "Amplituda temperatury powietrza",
+          "text": "**Różnica między najwyższą a najniższą wartością temperatury w danym okresie**: $A = t_{max} - t_{min}$. Amplitudę **dobową** liczy się z temperatury maksymalnej i minimalnej w ciągu doby, a **roczną** — ze średnich temperatur miesiąca najcieplejszego i najchłodniejszego (w Polsce zwykle lipca i stycznia). Amplituda jest najczulszym wskaźnikiem **kontynentalizmu klimatu**: rośnie w głąb lądu i maleje w pobliżu oceanów.",
+          "note": "Amplitudę dobową zwiększają: bezchmurne niebo, suche powietrze, piaszczyste podłoże i słaby wiatr (dlatego jest ogromna na pustyniach zwrotnikowych — nawet 40–50 °C). Zmniejszają ją: zachmurzenie, duża wilgotność, bliskość zbiornika wodnego i silny wiatr."
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "**Jak czytać mapę izoterm.** Izotermy to linie łączące punkty o jednakowej temperaturze. Na mapach klimatycznych podaje się je **zredukowane do poziomu morza** (usuwa się wpływ wysokości), żeby były porównywalne — dlatego góry nie „psują” obrazu, a przebieg izoterm ujawnia wpływ oceanów i prądów morskich. Reguły odczytu: izotermy przebiegają z grubsza **równoleżnikowo**; największe wygięcia mają w **styczniu na półkuli północnej** (nad ciepłym Atlantykiem wyginają się ku północy, nad wychłodzoną Syberią i Kanadą — ku południowi); na półkuli południowej, gdzie dominuje ocean, biegną niemal prosto. Zagęszczenie izoterm oznacza duży poziomy gradient temperatury, czyli najczęściej strefę frontu."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Roczna amplituda temperatury wybranych stacji",
+          "caption": "Wszystkie stacje poza Singapurem leżą w umiarkowanych i wysokich szerokościach — różnice biorą się więc głównie z odległości od oceanu. Singapur pokazuje, że w strefie równikowej amplituda roczna jest praktycznie zerowa, bo dopływ energii jest tam przez cały rok taki sam.",
+          "labels": ["Singapur", "Valentia (Irlandia)", "Warszawa", "Irkuck", "Jakuck"],
+          "unit": "°C",
+          "series": [
+            { "name": "Amplituda roczna temperatury", "values": [1.7, 8.5, 21.2, 36.1, 58.1] }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Czynniki wpływające na rozkład temperatury powietrza",
+          "caption": "W zadaniu typu „podaj dwa czynniki, które decydują o różnicy temperatury między A i B” zawsze przebiegnij tę listę od góry — pierwszy pasujący czynnik zwykle jest tym, o który chodzi.",
+          "groups": [
+            {
+              "name": "Szerokość geograficzna",
+              "description": "Decyduje o kącie padania promieni słonecznych i długości dnia, a więc o dopływie energii. Im dalej od równika, tym mniejszy kąt padania, dłuższa droga promieni w atmosferze i niższa średnia roczna temperatura. To czynnik **strefowy** — tworzy strefy klimatyczne.",
+              "examples": ["Singapur (1°N): 27 °C średniej rocznej", "Warszawa (52°N): ok. 8–9 °C", "Longyearbyen (78°N): ok. −5 °C"]
+            },
+            {
+              "name": "Wysokość nad poziomem morza",
+              "description": "Spadek o ok. 0,6 °C na 100 m sprawia, że wysokie góry są chłodne nawet na równiku — powstaje **piętrowość klimatyczna**, odpowiednik strefowości w pionie.",
+              "examples": ["Kilimandżaro (3°S) z lodowcem na szczycie", "Quito (2850 m n.p.m.) — chłodne mimo położenia na równiku"]
+            },
+            {
+              "name": "Odległość od morza (kontynentalizm i oceanizm)",
+              "description": "Woda ma bardzo duże ciepło właściwe: ogrzewa się i stygnie wolno, dodatkowo miesza ciepło w pionie i zużywa energię na parowanie. Ląd ogrzewa się i stygnie szybko. Dlatego obszary nadmorskie mają **chłodne lata, łagodne zimy i małą amplitudę**, a wnętrza kontynentów — gorące lata, mroźne zimy i amplitudę ogromną.",
+              "examples": ["Bergen: amplituda ok. 14 °C", "Jakuck: amplituda ok. 58 °C", "Rekordowe amplitudy Wierchojańska i Ojmiakonu"]
+            },
+            {
+              "name": "Prądy morskie",
+              "description": "Ciepłe prądy ogrzewają i nawilżają napływające nad nie powietrze, zimne — wychładzają i osuszają. Efekt jest tak silny, że przesuwa izotermy o tysiące kilometrów w poprzek równoleżników.",
+              "examples": ["Prąd Norweski — niezamarzający port w Murmańsku za kołem podbiegunowym", "Prąd Peruwiański — chłodne wybrzeże i pustynia Atakama", "Prąd Labradorski — surowa zima Labradoru na szerokości Wielkiej Brytanii"]
+            },
+            {
+              "name": "Rzeźba terenu i ekspozycja stoków",
+              "description": "Bariery górskie zatrzymują masy powietrza, kotliny sprzyjają zastoiskom chłodu i inwersjom, a **stoki o wystawie południowej** (na półkuli północnej) otrzymują znacznie więcej energii niż północne — stąd sady i winnice na południowych zboczach.",
+              "examples": ["Ciepłe zbocza Wyżyny Lubelskiej i Kotliny Sandomierskiej", "Alpy jako bariera dla mas arktycznych chroniąca Włochy"]
+            },
+            {
+              "name": "Pokrycie terenu, zachmurzenie i działalność człowieka",
+              "description": "Albedo podłoża decyduje, ile energii zostaje pochłonięte; zachmurzenie zmniejsza amplitudę dobową (w dzień odbija promieniowanie, nocą hamuje wypromieniowanie); zabudowa tworzy **miejską wyspę ciepła** — miasto bywa o 1–3 °C cieplejsze od otoczenia, a w bezwietrzne noce nawet o 5–10 °C, bo beton i asfalt magazynują ciepło, brakuje parowania z roślin, a do tego dochodzi ciepło odpadowe.",
+              "examples": ["Miejska wyspa ciepła Warszawy i Łodzi", "Wysokie albedo pól śnieżnych utrwalające mróz", "Fale upałów wzmacniane w gęstej zabudowie śródmieść"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Pięć stacji na tej samej szerokości geograficznej — pięć różnych zim",
+          "caption": "Wszystkie punkty leżą między 59° a 65°N, a więc otrzymują niemal identyczną porcję energii słonecznej. Kliknij markery i porównaj średnią temperaturę stycznia — różnica sięga 40 °C i jest dziełem wyłącznie prądów morskich oraz odległości od oceanu.",
+          "center": [63, 25],
+          "zoom": 2,
+          "markers": [
+            { "lat": 60.39, "lng": 5.32, "label": "Bergen (Norwegia) — styczeń ok. +1,5 °C", "text": "Wybrzeże omywane ciepłym **Prądem Norweskim** (przedłużenie Golfsztromu). Napływające znad Atlantyku powietrze polarne morskie jest ogrzewane i nasycane wilgocią, więc zima jest łagodna, a opady bardzo wysokie. Amplituda roczna zaledwie ok. 14 °C." },
+            { "lat": 64.13, "lng": -21.9, "label": "Reykjavík (Islandia) — styczeń ok. −0,5 °C", "text": "Mimo położenia tuż przy kole podbiegunowym średnia stycznia jest bliska zeru, bo wyspę opływa ciepły Prąd Północnoatlantycki, a klimat jest skrajnie oceaniczny. Lipiec ma zaledwie ok. 11 °C — lato jest równie „nijakie” jak zima." },
+            { "lat": 64.18, "lng": -51.72, "label": "Nuuk (Grenlandia) — styczeń ok. −8 °C", "text": "Ta sama szerokość co Reykjavík, ale wybrzeże chłodzone przez zimny **Prąd Zachodniogrenlandzki** i sąsiedztwo lądolodu. Efekt: zima o 7–8 °C chłodniejsza niż na Islandii i znacznie krótszy sezon wegetacyjny." },
+            { "lat": 59.94, "lng": 30.31, "label": "Sankt Petersburg (Rosja) — styczeń ok. −6 °C", "text": "Ląd oddalony od otwartego oceanu, a Bałtyk w tej części zamarza. Wpływ oceanu wyraźnie osłabiony, klimat przejściowy z przewagą cech kontynentalnych; amplituda roczna ok. 25 °C." },
+            { "lat": 62.03, "lng": 129.73, "label": "Jakuck (Rosja) — styczeń ok. −38 °C", "text": "Wnętrze Syberii, ponad 5000 km od Atlantyku, zimą pod panowaniem **Wyżu Azjatyckiego (syberyjskiego)** z silną inwersją osiadania. Klimat skrajnie kontynentalny: lipiec ok. +19,5 °C, amplituda roczna ok. 58 °C — jedna z największych na Ziemi." }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W miejscowości położonej na wysokości 200 m n.p.m. zmierzono 21 °C. Jaka temperatura panuje w tym samym czasie na szczycie o wysokości 1700 m n.p.m., przy przeciętnym gradiencie w troposferze?",
+          "options": ["6 °C", "12 °C", "15 °C", "9 °C"],
+          "correctIndex": 1,
+          "explanation": "Różnica wysokości wynosi $1700 - 200 = 1500$ m, czyli 15 razy po 100 m. Spadek temperatury: $15 \\cdot 0{,}6 = 9$ °C. Zatem $21 - 9 = 12$ °C. Typowy błąd to pomnożenie przez 0,6 całej wysokości szczytu albo pominięcie wysokości stacji wyjściowej."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie tłumaczy, dlaczego w Bergen (60°N, wybrzeże Norwegii) styczeń jest cieplejszy niż w Jakucku (62°N, wnętrze Syberii)?",
+          "options": [
+            "Bergen leży bliżej równika, więc otrzymuje więcej energii słonecznej",
+            "Nad Bergen napływa powietrze znad ciepłego Prądu Norweskiego, a woda o dużym cieple właściwym łagodzi zimę; Jakuck leży w głębi lądu, który szybko wypromieniowuje ciepło, i zimą znajduje się pod wpływem Wyżu Azjatyckiego",
+            "W Jakucku występuje wyższe albedo, ponieważ leży on wyżej nad poziomem morza",
+            "W Bergen działa silniejszy efekt cieplarniany, bo powietrze jest wilgotniejsze"
+          ],
+          "correctIndex": 1,
+          "explanation": "Różnica 2° szerokości geograficznej jest nieistotna — decyduje **oceanizm i ciepły prąd morski** po jednej stronie oraz **kontynentalizm i wyż z inwersją** po drugiej. Odpowiedź musi zawierać oba człony: właściwość wody (duże ciepło właściwe, wolne stygnięcie) i wpływ prądu morskiego na napływającą masę powietrza."
+        },
+        {
+          "type": "quiz",
+          "question": "Na profilu pionowym atmosfery zaobserwowano: przy gruncie −5 °C, na 300 m −1 °C, na 800 m −4 °C. Jak nazwiemy sytuację w warstwie 0–300 m i jaki będzie jej skutek?",
+          "options": [
+            "Izotermia; brak wpływu na jakość powietrza",
+            "Normalny gradient; sprzyja rozpraszaniu zanieczyszczeń",
+            "Inwersja temperatury; hamuje ruchy pionowe i sprzyja gromadzeniu zanieczyszczeń przy gruncie",
+            "Gradient suchoadiabatyczny; sprzyja powstawaniu chmur konwekcyjnych"
+          ],
+          "correctIndex": 2,
+          "explanation": "W warstwie 0–300 m temperatura **rośnie** z wysokością (−5 °C → −1 °C), a więc mamy **inwersję**. Cieplejsze, lżejsze powietrze leży nad chłodniejszym i cięższym, co blokuje konwekcję: zanieczyszczenia nie są wynoszone w górę i kumulują się przy powierzchni. Powyżej 300 m temperatura znów spada, czyli warstwa inwersyjna ma tu miąższość ok. 300 m."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania obliczeniowe z gradientu to najpewniejsze punkty w tym dziale — pod warunkiem trzymania procedury: (1) policz **różnicę wysokości**, (2) podziel ją przez 100, (3) pomnóż przez gradient, (4) **odejmij** przy wznoszeniu i **dodaj** przy opadaniu, (5) zapisz wynik z jednostką. Gdy w zadaniu pojawia się grzbiet górski, sprawdź, po której stronie liczysz: dowietrzna to zwykle 0,6 °C/100 m (albo 1 °C/100 m poniżej poziomu kondensacji), zawietrzna zawsze **1 °C/100 m** — na tym opiera się cały mechanizm wiatru fenowego. W poleceniach „wyjaśnij różnicę temperatury” nigdy nie poprzestawaj na nazwie czynnika: napisz, **jak** on działa („ciepły prąd morski ogrzewa napływające powietrze, dlatego…”)."
+        }
+      ]
+    },
+    {
+      "slug": "cisnienie-i-cyrkulacja-atmosfery",
+      "title": "Ciśnienie atmosferyczne i ogólna cyrkulacja atmosfery",
+      "summary": "Skąd biorą się wyże i niże, dlaczego wiatr nie wieje prosto oraz jak trzy komórki cyrkulacyjne układają na Ziemi pasy ciśnień i wiatrów stałych.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Poprzednia lekcja skończyła się na nierównowadze: między 40°N a 40°S Ziemia ma **nadwyżkę energii**, w wyższych szerokościach — **niedobór**. Gdyby nic tej nierównowagi nie wyrównywało, tropiki byłyby coraz gorętsze, a bieguny coraz zimniejsze. Nie są, bo różnice temperatury natychmiast tworzą różnice **ciśnienia**, a różnice ciśnienia uruchamiają **wiatr** — czyli maszynę, która nieustannie transportuje ciepło ku biegunom. W tej lekcji rozłożysz tę maszynę na części: zrozumiesz, czym jest ciśnienie i jak je przedstawiać na mapie, dlaczego w niżu pada, a w wyżu świeci Słońce, dlaczego wiatr skręca zamiast wiać prosto oraz jak z tego wszystkiego powstaje strefowy układ pasów ciśnienia i wiatrów stałych — fundament, na którym opiera się rozkład opadów, stref klimatycznych i pustyń na całej planecie."
+        },
+        {
+          "type": "definition",
+          "term": "Ciśnienie atmosferyczne",
+          "text": "**Nacisk słupa powietrza na jednostkę powierzchni**, wywołany ciężarem atmosfery. Mierzy się je barometrem i podaje w **hektopaskalach (hPa)**; ciśnienie normalne na poziomie morza wynosi **1013,25 hPa** (dawniej: 760 mm Hg). Ciśnienie **maleje z wysokością**, bo nad danym punktem pozostaje coraz cieńszy słup powietrza — przy powierzchni spadek wynosi ok. **1 hPa na każde 8 m** wzniesienia. Ciśnienie zależy też od temperatury i wilgotności: powietrze ciepłe i wilgotne jest lżejsze (para wodna ma mniejszą masę cząsteczkową niż azot i tlen), więc wywiera mniejsze ciśnienie.",
+          "note": "Wartości podawane w prognozach są zawsze **zredukowane do poziomu morza** — inaczej Zakopane zawsze miałoby „niż”, a Hel „wyż”, i mapa synoptyczna nie miałaby sensu."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Ciśnienie w liczbach",
+          "items": [
+            { "value": "1013,25", "unit": "hPa", "label": "Ciśnienie normalne na poziomie morza (0 °C)" },
+            { "value": "ok. 8", "unit": "m", "label": "Wzniesienie powodujące spadek ciśnienia o 1 hPa (przy powierzchni)", "note": "Wyżej gradient słabnie — na 5 km trzeba już ok. 15 m na 1 hPa." },
+            { "value": "870", "unit": "hPa", "label": "Najniższe ciśnienie zmierzone na poziomie morza — tajfun Tip, Pacyfik, 1979 r." },
+            { "value": "1083,8", "unit": "hPa", "label": "Najwyższe zmierzone ciśnienie — Agata, Syberia, grudzień 1968 r.", "note": "Rekord należy do zimowego Wyżu Azjatyckiego, najpotężniejszego wyżu na Ziemi." },
+            { "value": "ok. 500", "unit": "hPa", "label": "Ciśnienie na wysokości ok. 5,5 km — połowa masy atmosfery jest już poniżej" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Izobary i gradient baryczny",
+          "text": "**Izobary** to linie łączące na mapie punkty o jednakowym ciśnieniu (zredukowanym do poziomu morza). Ich układ tworzy obraz **układów barycznych**: zamknięte izobary z najniższą wartością w środku to **niż (cyklon)**, z najwyższą — **wyż (antycyklon)**; poza tym wyróżnia się zatokę niskiego ciśnienia, klin wysokiego ciśnienia i siodło baryczne. **Poziomy gradient baryczny** to różnica ciśnienia przypadająca na jednostkę odległości — im **gęściej** ułożone izobary, tym większy gradient i tym **silniejszy wiatr**.",
+          "note": "To najczęstsze pytanie do mapy synoptycznej: „w którym z zaznaczonych punktów wiatr był najsilniejszy?”. Odpowiedź: tam, gdzie izobary leżą najciaśniej."
+        },
+        {
+          "type": "compare",
+          "title": "Niż (cyklon) a wyż (antycyklon)",
+          "leftLabel": "Niż baryczny",
+          "rightLabel": "Wyż baryczny",
+          "rows": [
+            { "aspect": "Ciśnienie", "left": "Najniższe w środku układu, rośnie ku obrzeżom", "right": "Najwyższe w środku układu, maleje ku obrzeżom" },
+            { "aspect": "Ruch poziomy powietrza", "left": "**Konwergencja** — powietrze napływa do środka", "right": "**Dywergencja** — powietrze odpływa od środka" },
+            { "aspect": "Ruch pionowy powietrza", "left": "**Wznoszenie** (prądy wstępujące)", "right": "**Osiadanie** (prądy zstępujące)" },
+            { "aspect": "Skutek termodynamiczny", "left": "Powietrze rozpręża się i ochładza adiabatycznie, para wodna kondensuje", "right": "Powietrze spręża się i ogrzewa adiabatycznie, wilgotność względna maleje" },
+            { "aspect": "Pogoda", "left": "Duże zachmurzenie, opady, silniejszy i porywisty wiatr, mniejsza amplituda dobowa", "right": "Małe zachmurzenie lub bezchmurnie, brak opadów, słaby wiatr, duża amplituda dobowa; zimą mgły i inwersje" },
+            { "aspect": "Kierunek krążenia (półkula północna)", "left": "**Przeciwnie do ruchu wskazówek zegara**, ku środkowi", "right": "**Zgodnie z ruchem wskazówek zegara**, od środka" },
+            { "aspect": "Kierunek krążenia (półkula południowa)", "left": "Zgodnie z ruchem wskazówek zegara, ku środkowi", "right": "Przeciwnie do ruchu wskazówek zegara, od środka" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje wiatr — od różnicy ciśnienia do róży wiatrów",
+          "caption": "Kliknij kolejne etapy. Ten łańcuch tłumaczy zarówno wiatr lokalny, jak i pasaty — różnica polega tylko na skali.",
+          "steps": [
+            {
+              "title": "1. Nierówne ogrzanie tworzy różnicę ciśnienia",
+              "text": "Nad obszarem silniej ogrzanym powietrze rozszerza się i unosi — przy powierzchni powstaje **niż termiczny**. Nad obszarem chłodniejszym powietrze osiada i tworzy **wyż termiczny**. Pojawia się poziomy gradient baryczny."
+            },
+            {
+              "title": "2. Siła gradientu barycznego wprawia powietrze w ruch",
+              "text": "Powietrze przemieszcza się **zawsze od wyższego ciśnienia do niższego**, prostopadle do izobar. Im większa różnica ciśnienia na tym samym dystansie, tym większe przyspieszenie — i tym silniejszy wiatr."
+            },
+            {
+              "title": "3. Siła Coriolisa odchyla tor ruchu",
+              "text": "Ponieważ Ziemia obraca się wokół osi, każde ciało poruszające się nad jej powierzchnią jest **pozornie odchylane: w prawo na półkuli północnej, w lewo na południowej**. Siła Coriolisa rośnie wraz z szerokością geograficzną i z prędkością ruchu, a **na równiku wynosi zero** — dlatego nad samym równikiem nie powstają cyklony tropikalne."
+            },
+            {
+              "title": "4. Na wysokości powstaje wiatr geostroficzny",
+              "text": "Powyżej ok. 1 km, gdzie tarcie o podłoże znika, siła gradientu i siła Coriolisa równoważą się, a wiatr wieje **równolegle do izobar**. Tak działają m.in. **prądy strumieniowe (jet streams)** — wąskie wstęgi wiatru o prędkości 100–300 km/h na granicach mas powietrza pod tropopauzą."
+            },
+            {
+              "title": "5. Przy gruncie tarcie zawraca wiatr ku niżowi",
+              "text": "Tarcie o powierzchnię hamuje ruch, osłabia siłę Coriolisa i sprawia, że wiatr przecina izobary pod kątem ok. 20–45° (mniejszym nad gładkim morzem, większym nad lądem). Dlatego przy powierzchni powietrze **spiralnie napływa do niżu** i **spiralnie wypływa z wyżu**."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy klasyczne pomyłki. (1) Kierunek wiatru podaje się zawsze **stamtąd, skąd wieje** — wiatr zachodni wieje **z** zachodu **na** wschód. (2) Siła Coriolisa **nie napędza** wiatru, tylko **zmienia jego kierunek** — napędza go różnica ciśnienia. (3) Nie przenoś automatycznie schematów z półkuli północnej na południową: na półkuli południowej niż krąży **zgodnie** z ruchem wskazówek zegara, a pasat wieje z południowego wschodu, nie z północnego."
+        },
+        {
+          "type": "zones",
+          "title": "Strefowe pasy ciśnienia — od bieguna do równika",
+          "caption": "Podane szerokości są przybliżone; cały układ przesuwa się w ciągu roku o kilka–kilkanaście stopni za zenitalnym położeniem Słońca (latem na północ, zimą na południe). Kliknij pasy i zwróć uwagę na regularność: niż — wyż — niż — wyż.",
+          "zones": [
+            {
+              "name": "Wyż okołobiegunowy",
+              "latitude": "ok. 90°",
+              "text": "Nad wychłodzonymi czapami lodowymi powietrze jest bardzo zimne i gęste, więc **osiada** — powstaje wyż o charakterze termicznym. Skutek: minimalne opady i klimat pustyni lodowej mimo obecności ogromnych zasobów wody w stanie stałym.",
+              "tone": "ice"
+            },
+            {
+              "name": "Pas niskiego ciśnienia umiarkowanych szerokości",
+              "latitude": "ok. 60°",
+              "text": "Tutaj zderzają się chłodne masy polarne z cieplejszymi masami zwrotnikowymi — wzdłuż **frontu polarnego** nieustannie powstają wędrujące niże. To najbardziej zmienna pogodowo strefa Ziemi i źródło niżów, które przechodzą nad Polską.",
+              "tone": "water"
+            },
+            {
+              "name": "Wyże zwrotnikowe (podzwrotnikowe)",
+              "latitude": "ok. 30°",
+              "text": "Powietrze wyniesione nad równikiem, po utracie wilgoci, płynie na wysokości ku biegunom i tu **osiada**, ogrzewając się adiabatycznie. Wilgotność względna spada, chmury nie powstają. To jest przyczyna istnienia **wielkich pustyń zwrotnikowych**: Sahary, Pustyni Arabskiej, Kalahari, Wielkiej Pustyni Wiktorii i Atakamy.",
+              "tone": "heat"
+            },
+            {
+              "name": "Równikowy pas niskiego ciśnienia (bruzda równikowa, ITCZ)",
+              "latitude": "0–10°",
+              "text": "Najsilniej ogrzewany obszar Ziemi: powietrze silnie się **wznosi**, tworząc potężne chmury Cumulonimbus i codzienne, gwałtowne opady zenitalne. Roczna suma opadów przekracza tu zwykle 2000 mm, a wiatr przy powierzchni jest słaby i zmienny (strefa **ciszy równikowej**).",
+              "tone": "vegetation"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Trzy komórki ogólnej cyrkulacji atmosfery",
+          "caption": "Model trójkomórkowy opisuje uśredniony, strefowy obraz krążenia powietrza na każdej półkuli. Kliknij komórki po kolei — zapamiętaj, gdzie powietrze się wznosi (opady), a gdzie osiada (susza).",
+          "steps": [
+            {
+              "title": "Komórka Hadleya (0–30°)",
+              "text": "Najsilniejsza i najlepiej wykształcona. Ogrzane powietrze **wznosi się nad równikiem**, w górnej troposferze płynie ku zwrotnikom, po drodze wypromieniowuje ciepło i ochładza się, a około **30°** **osiada**, tworząc wyże zwrotnikowe. Przy powierzchni wraca ku równikowi jako **pasat** — odchylany przez siłę Coriolisa. To komórka termicznie bezpośrednia: napędza ją bezpośrednio różnica temperatury."
+            },
+            {
+              "title": "Komórka Ferrela (30–60°)",
+              "text": "Komórka **pośrednia (termicznie niebezpośrednia)** — obraca się „wleczona” przez sąsiednie komórki, jak koło zębate między dwoma innymi. Przy powierzchni powietrze płynie od wyżów zwrotnikowych ku pasowi niżów 60°, dając **wiatry zachodnie**; w górze wraca ku zwrotnikom. Jest najsłabsza i najbardziej zaburzana przez wędrujące niże i wyże, dlatego pogoda w umiarkowanych szerokościach jest tak zmienna."
+            },
+            {
+              "title": "Komórka okołobiegunowa (60–90°)",
+              "text": "Bardzo zimne powietrze **osiada nad biegunem**, przy powierzchni płynie ku niższym szerokościom jako **wschodni wiatr polarny** i około 60° **wznosi się** wzdłuż frontu polarnego, gdzie zderza się z cieplejszym powietrzem umiarkowanych szerokości. Nad tym frontem, pod tropopauzą, wieje **prąd strumieniowy polarny**."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Wiatry stałe",
+          "caption": "Wiatry stałe wieją przez cały rok z tego samego kierunku, bo wynikają z trwałego, strefowego układu pasów ciśnienia. Ich kierunek to zawsze wypadkowa: **ruch od wyżu do niżu + odchylenie Coriolisa**.",
+          "groups": [
+            {
+              "name": "Pasaty",
+              "description": "Wieją od wyżów zwrotnikowych ku równikowemu pasowi niskiego ciśnienia. Na półkuli północnej są odchylane w prawo, więc wieją z **północnego wschodu**; na południowej w lewo, czyli z **południowego wschodu**. Są stałe, suche i regularne (dawniej nazywano je wiatrami handlowymi, bo napędzały żaglowce). W górnej troposferze wieje przeciwnie skierowany **antypasat**.",
+              "examples": ["Pasat północno-wschodni nad Saharą i Atlantykiem", "Pasat południowo-wschodni nad Amazonią", "Wilgotne wschodnie wybrzeża Madagaskaru i Ameryki Środkowej, gdzie pasat po drodze nad oceanem nasyca się parą wodną"]
+            },
+            {
+              "name": "Wiatry zachodnie",
+              "description": "Wieją w umiarkowanych szerokościach (ok. 30–60°) od wyżów zwrotnikowych ku niżom okołobiegunowym, odchylane na kierunek zachodni. Przenoszą wilgotne powietrze znad oceanów w głąb kontynentów i to one decydują o **oceanicznym klimacie Europy Zachodniej** oraz o tym, że w Polsce przeważa wiatr z sektora zachodniego.",
+              "examples": ["Niże znad Atlantyku wędrujące z zachodu na wschód nad Polską", "„Ryczące czterdziestki” — najsilniejsze wiatry zachodnie nad Oceanem Południowym, gdzie nie hamują ich kontynenty"]
+            },
+            {
+              "name": "Wschodnie wiatry polarne",
+              "description": "Wieją od wyżów okołobiegunowych ku pasowi niżów około 60°, odchylane na kierunek wschodni. Są zimne i suche, a ich zderzenie z wiatrami zachodnimi tworzy **front polarny** — najaktywniejszą strefę frontową na Ziemi.",
+              "examples": ["Napływ powietrza arktycznego nad Skandynawię i Polskę zimą", "Zimne wiatry katabatyczne spływające z lądolodu Antarktydy"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Międzyzwrotnikowa strefa zbieżności (ITCZ)",
+          "text": "**Strefa, w której zbiegają się pasaty obu półkul**, wymuszając silne wznoszenie powietrza. Towarzyszą jej rozbudowane chmury burzowe i największe opady na Ziemi. ITCZ **wędruje w ciągu roku za zenitalnym położeniem Słońca**: w lipcu przesuwa się na północ (nad Sahelem sięga ok. 15–20°N), w styczniu na południe. To wędrówka ITCZ tłumaczy **dwie pory deszczowe w strefie równikowej**, **jedną porę deszczową w strefie sawann** i to, dlaczego klimat śródziemnomorski ma suche lato (latem obejmuje go wyż zwrotnikowy) i wilgotną zimę (zimą docierają tam wiatry zachodnie z niżami).",
+          "note": "Skrót pochodzi od angielskiego Intertropical Convergence Zone; w polskich podręcznikach spotkasz też nazwy „bruzda równikowa” i „strefa ciszy równikowej”."
+        },
+        {
+          "type": "ordering",
+          "title": "Uszereguj pasy ciśnienia od równika w kierunku bieguna północnego",
+          "instruction": "Ustaw elementy w kolejności, w jakiej mijałbyś je, lecąc z równika na biegun północny.",
+          "items": [
+            "Równikowy pas niskiego ciśnienia (0°) — wznoszenie powietrza, obfite opady zenitalne",
+            "Zwrotnikowy pas wysokiego ciśnienia (ok. 30°N) — osiadanie powietrza, pustynie",
+            "Pas niskiego ciśnienia umiarkowanych szerokości (ok. 60°N) — front polarny, wędrujące niże",
+            "Biegunowy pas wysokiego ciśnienia (ok. 90°N) — osiadanie zimnego powietrza, pustynia lodowa"
+          ],
+          "explanation": "Pasy układają się naprzemiennie: niż — wyż — niż — wyż. Zapamiętaj regułę: **tam, gdzie powietrze się wznosi (0° i 60°), jest niskie ciśnienie i opady; tam, gdzie osiada (30° i 90°), jest wysokie ciśnienie i sucho**. Ta jedna zasada wyjaśnia rozmieszczenie lasów równikowych, pustyń zwrotnikowych i pustyń lodowych."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego wielkie pustynie gorące świata (Sahara, Pustynia Arabska, Kalahari, Wielka Pustynia Wiktorii) leżą w pobliżu zwrotników?",
+          "options": [
+            "Bo nad zwrotnikami Słońce znajduje się w zenicie przez cały rok i wysusza powierzchnię",
+            "Bo w komórce Hadleya powietrze osiada tam, ogrzewa się adiabatycznie, jego wilgotność względna maleje i nie tworzą się chmury",
+            "Bo pasaty przynoszą w te rejony chłodne i suche powietrze polarne",
+            "Bo w tej strefie panuje niskie ciśnienie, a przy niskim ciśnieniu nie ma opadów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Za pustynie zwrotnikowe odpowiada **osiadająca gałąź komórki Hadleya**: powietrze, które wcześniej straciło wilgoć nad równikiem, opada w okolicach 30°, spręża się i ogrzewa (1 °C/100 m), przez co jego wilgotność względna maleje — kondensacja jest niemożliwa. W zwrotnikach panuje więc **wysokie**, a nie niskie ciśnienie; Słońce jest tam w zenicie tylko raz w roku."
+        },
+        {
+          "type": "quiz",
+          "question": "Na mapie synoptycznej półkuli północnej zaznaczono ośrodek niżowy. Jak przy powierzchni Ziemi zachowuje się w nim powietrze?",
+          "options": [
+            "Napływa do środka, skręcając przeciwnie do ruchu wskazówek zegara, i wznosi się",
+            "Napływa do środka, skręcając zgodnie z ruchem wskazówek zegara, i osiada",
+            "Odpływa od środka, skręcając przeciwnie do ruchu wskazówek zegara, i wznosi się",
+            "Odpływa od środka, skręcając zgodnie z ruchem wskazówek zegara, i osiada"
+          ],
+          "correctIndex": 0,
+          "explanation": "W niżu ciśnienie jest najniższe w centrum, więc powietrze przy powierzchni **napływa ku środkowi** (konwergencja). Siła Coriolisa odchyla je na półkuli północnej w prawo, co daje ruch **przeciwny do wskazówek zegara**. Napływające powietrze musi gdzieś ujść — **wznosi się**, ochładza adiabatycznie, para wodna kondensuje i pojawiają się chmury oraz opady. Ostatnia odpowiedź opisuje wyż na półkuli północnej."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Ten model to najbardziej „opłacalna” wiedza w dziale — wraca w zadaniach o pustyniach, o strefach klimatycznych, o rozkładzie opadów i o sawannach. Naucz się go jako **schematu przekroju południkowego**: narysuj na brudnopisie oś od równika do bieguna, zaznacz N–W–N–W (0°, 30°, 60°, 90°), strzałki wznoszące przy niżach i opadające przy wyżach, a między nimi wiatry: pasaty, zachodnie, wschodnie polarne. Z takiego rysunku odpowiesz na pytanie o niemal każdy element strefowy. Pilnuj przy tym języka: w kluczu punktowane jest sformułowanie „powietrze **osiada i ogrzewa się adiabatycznie**, przez co jego **wilgotność względna maleje**”, a nie samo „jest tam wyż”."
+        }
+      ]
+    },
+    {
+      "slug": "wiatry-okresowe-i-lokalne",
+      "title": "Wiatry okresowe i lokalne oraz gwałtowne zjawiska wiatrowe",
+      "summary": "Monsun, bryza, fen, bora i mistral — te same prawa fizyki w mniejszej skali; a na koniec cyklony tropikalne i tornada.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wiatry stałe wynikają ze strefowego układu ciśnienia i wieją tak samo przez cały rok. Ale nad konkretnym wybrzeżem, doliną czy grzbietem górskim nakładają się na nie wiatry, które zmieniają kierunek **z porą roku** (wiatry okresowe: monsun) albo **z porą doby** (wiatry lokalne: bryza), lub które powstają dopiero wtedy, gdy masa powietrza natrafi na barierę górską (fen, bora, mistral). Mechanizm jest za każdym razem ten sam, co w poprzedniej lekcji — **różnica ogrzewania tworzy różnicę ciśnienia, a powietrze płynie od wyżu do niżu** — zmienia się tylko skala: setki kilometrów zamiast tysięcy, doba zamiast roku. Na końcu lekcji zajmiemy się dwoma najbardziej gwałtownymi zjawiskami wiatrowymi na Ziemi: cyklonami tropikalnymi i tornadami."
+        },
+        {
+          "type": "process",
+          "title": "Bryza — wiatr, który zmienia kierunek dwa razy na dobę",
+          "caption": "Bryza to najczystszy przykład wiatru termicznego. Cała jej przyczyna mieści się w jednym zdaniu: woda ma znacznie większe ciepło właściwe niż ląd.",
+          "steps": [
+            {
+              "title": "1. Dzień: ląd nagrzewa się szybciej niż morze",
+              "text": "Promieniowanie słoneczne ogrzewa cienką warstwę gruntu, a w wodzie rozprasza się w głąb i częściowo zużywa na parowanie. Po kilku godzinach ląd bywa o kilka–kilkanaście stopni cieplejszy od powierzchni morza."
+            },
+            {
+              "title": "2. Nad lądem tworzy się niż, nad morzem wyż",
+              "text": "Ciepłe powietrze nad lądem rozszerza się i unosi — ciśnienie przy powierzchni spada. Nad chłodniejszym morzem powietrze jest gęstsze, więc ciśnienie jest wyższe. Powstaje lokalny gradient baryczny skierowany od morza ku lądowi."
+            },
+            {
+              "title": "3. Wieje bryza morska (dzienna)",
+              "text": "Powietrze płynie **z morza na ląd**, zwykle od późnego przedpołudnia do wieczora, z prędkością kilku m/s i zasięgiem kilkunastu–kilkudziesięciu kilometrów w głąb lądu. Przynosi chłód i wilgoć: nad Bałtykiem w upalny dzień temperatura na plaży bywa o 5 °C niższa niż 20 km w głębi lądu, a nad brzegiem często rozwijają się chmury kłębiaste."
+            },
+            {
+              "title": "4. Noc: sytuacja się odwraca — bryza lądowa",
+              "text": "Po zachodzie Słońca ląd szybko wypromieniowuje ciepło i staje się chłodniejszy od morza, które ostygło nieznacznie. Teraz to nad lądem jest wyż, a nad morzem niż, więc wiatr wieje **z lądu na morze**. Bryza lądowa jest słabsza od morskiej, bo nocna różnica temperatur jest mniejsza."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Monsun letni a monsun zimowy (Azja Południowa i Południowo-Wschodnia)",
+          "leftLabel": "Monsun letni",
+          "rightLabel": "Monsun zimowy",
+          "rows": [
+            { "aspect": "Pora roku", "left": "Od czerwca do września", "right": "Od października/listopada do marca" },
+            { "aspect": "Rozkład ciśnienia", "left": "Silnie nagrzany kontynent tworzy **niż azjatycki (irański)**, nad chłodniejszym oceanem panuje wyż", "right": "Wychłodzony kontynent tworzy potężny **Wyż Azjatycki (syberyjski)**, nad cieplejszym oceanem — niż" },
+            { "aspect": "Kierunek wiatru", "left": "Z oceanu na ląd — w Indiach z południowego zachodu", "right": "Z lądu na ocean — w Indiach z północnego wschodu" },
+            { "aspect": "Właściwości masy powietrza", "left": "Wilgotna, nasycona nad Oceanem Indyjskim; wymuszone wznoszenie na stokach Himalajów i Ghatów Zachodnich", "right": "Sucha, kontynentalna, osiadająca w wyżu" },
+            { "aspect": "Pogoda", "left": "**Pora deszczowa** — ulewne opady, 80–90% rocznej sumy w kilka miesięcy, powodzie", "right": "**Pora sucha** — bezchmurnie, opady znikome, w Indiach Północnych chłodne noce" },
+            { "aspect": "Dodatkowy mechanizm", "left": "Wraz z monsunem letnim przesuwa się na północ **ITCZ**, wzmacniając wznoszenie powietrza", "right": "ITCZ cofa się na południe, nad kontynentem dominuje osiadanie powietrza" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Monsun indyjski — kalendarz, od którego zależy życie miliarda ludzi",
+          "region": "Azja Południowa (Indie, Bangladesz, Pakistan)",
+          "text": "Monsun letni dociera do południowego krańca Indii zwykle na przełomie maja i czerwca i w ciągu sześciu tygodni obejmuje cały subkontynent. Ghaty Zachodnie i południowe stoki Himalajów wymuszają wznoszenie wilgotnego powietrza, dając ekstremalne **opady orograficzne**: w Czerapundżi i Mawsynram na Wyżynie Szillong roczne sumy przekraczają średnio **11 000 mm**, z czego zdecydowana większość spada w cztery miesiące. Od tego deszczu zależy zasiew ryżu, poziom wód w Gangesie i Brahmaputrze oraz produkcja energii w elektrowniach wodnych. Odchylenia są jednak duże: monsun spóźniony lub słabszy oznacza suszę i utratę plonów, a monsun nadmiernie obfity — powodzie w deltach, gdzie mieszkają dziesiątki milionów ludzi. Na zmienność monsunu wpływa m.in. **zjawisko El Niño**, które zwykle osłabia opady monsunowe w Indiach.",
+          "takeaway": "Monsun to najbardziej spektakularny przykład zależności gospodarki od jednego elementu klimatu. W zadaniu maturalnym opisując monsun letni zawsze podaj **trzy człony**: różnica ogrzewania ląd–ocean → układ ciśnienia (niż nad lądem) → kierunek wiatru z oceanu na ląd i skutek w postaci opadów."
+        },
+        {
+          "type": "process",
+          "title": "Fen (w Polsce: wiatr halny) — jak wiatr staje się ciepły i suchy",
+          "caption": "Prześledź losy jednej porcji powietrza przechodzącej przez grzbiet górski. Cała tajemnica fenu tkwi w tym, że po dowietrznej stronie działają dwa różne gradienty, a po zawietrznej tylko jeden.",
+          "steps": [
+            {
+              "title": "1. Powietrze napiera na barierę górską",
+              "text": "Warunkiem powstania halnego jest **układ baryczny z dużym gradientem w poprzek gór**: niż po jednej stronie łańcucha (nad Polską), wyż po drugiej (nad Kotliną Panońską). Powietrze jest zmuszone wznosić się po stoku dowietrznym."
+            },
+            {
+              "title": "2. Wznoszenie i ochładzanie suchoadiabatyczne",
+              "text": "Dopóki powietrze pozostaje nienasycone, ochładza się o **1 °C na 100 m**. Wilgotność względna rośnie, aż na pewnej wysokości — **poziomie kondensacji** — osiąga 100%."
+            },
+            {
+              "title": "3. Kondensacja, chmury i opad po stronie dowietrznej",
+              "text": "Powyżej poziomu kondensacji para wodna skrapla się i **uwalnia ciepło utajone**, więc dalsze ochładzanie jest wolniejsze: **ok. 0,6 °C na 100 m**. Powstają chmury i pada deszcz lub śnieg — powietrze **traci wodę**."
+            },
+            {
+              "title": "4. Opadanie po stronie zawietrznej i ogrzewanie suchoadiabatyczne",
+              "text": "Za grzbietem powietrze jest już osuszone, więc opadając ogrzewa się przez cały czas według gradientu **suchoadiabatycznego: 1 °C na 100 m**. Ponieważ w górę chłodziło się wolniej, niż w dół się ogrzewa, **u podnóża zawietrznego jest cieplej niż na tej samej wysokości po stronie dowietrznej**."
+            },
+            {
+              "title": "5. Skutki: ciepło, sucho, porywiście",
+              "text": "Halny w Zakopanem potrafi podnieść temperaturę o kilkanaście stopni w ciągu godziny, w porywach osiąga ponad 150 km/h, wysusza powietrze i błyskawicznie topi śnieg (w Ameryce Północnej odpowiednik fenu — **chinook** — nazywany jest „pożeraczem śniegu”). Towarzyszą mu wiatrołomy, zagrożenie lawinowe i charakterystyczna **chmura fenowa** zawieszona nad grzbietem."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Zadanie fenowe — obliczanie temperatury po stronie zawietrznej",
+          "expression": "t_z = t_d - \\gamma_{d}\\cdot\\frac{h_1}{100} - \\gamma_{w}\\cdot\\frac{h_2}{100} + \\gamma_{d}\\cdot\\frac{H}{100}",
+          "variables": [
+            { "symbol": "t_d", "meaning": "temperatura u podnóża po stronie dowietrznej" },
+            { "symbol": "h_1", "meaning": "wysokość wznoszenia do poziomu kondensacji [m]" },
+            { "symbol": "h_2", "meaning": "wysokość wznoszenia od poziomu kondensacji do szczytu [m]" },
+            { "symbol": "H", "meaning": "wysokość opadania od szczytu do podnóża po stronie zawietrznej [m]" },
+            { "symbol": "\\gamma_{d}", "meaning": "gradient suchoadiabatyczny = 1 °C/100 m" },
+            { "symbol": "\\gamma_{w}", "meaning": "gradient wilgotnoadiabatyczny ≈ 0,6 °C/100 m" }
+          ],
+          "caption": "Przykład: u podnóża dowietrznego (500 m n.p.m.) jest 10 °C, poziom kondensacji leży na 1000 m, szczyt na 2000 m, a podnóże zawietrzne na 600 m. Wznoszenie do 1000 m: $10 - 5 \\cdot 1 = 5$ °C. Od 1000 do 2000 m: $5 - 10 \\cdot 0{,}6 = -1$ °C na szczycie. Opadanie z 2000 do 600 m: $-1 + 14 \\cdot 1 = 13$ °C. Po zawietrznej jest **13 °C**, czyli o 3 °C cieplej niż po dowietrznej — i znacznie bardziej sucho."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uczniowie regularnie mieszają dwa „wiatry spadające”. **Fen (halny) jest CIEPŁY i suchy**, bo powietrze wznosiło się wysoko, straciło wilgoć i ogrzało się przy opadaniu. **Bora jest ZIMNA**, bo zbiornikiem powietrza jest chłodny płaskowyż tuż nad wybrzeżem: powietrze nie musi się wysoko wznosić, a spadek na krótkim dystansie nie zdąża go ogrzać na tyle, by przestało być mroźne. Druga pułapka: fen powstaje **po stronie zawietrznej**, nie dowietrznej — po dowietrznej mamy chmury i opad."
+        },
+        {
+          "type": "compare",
+          "title": "Fen (halny) a bora",
+          "leftLabel": "Fen / halny",
+          "rightLabel": "Bora",
+          "rows": [
+            { "aspect": "Temperatura", "left": "**Ciepły** — wyraźnie podnosi temperaturę, nawet o kilkanaście stopni w ciągu godziny", "right": "**Zimny** — gwałtownie obniża temperaturę, przynosi mróz nad ciepłe wybrzeże" },
+            { "aspect": "Wilgotność", "left": "Bardzo suchy, wilgotność względna spada nawet poniżej 20%", "right": "Suchy, ale wyraźnie chłodniejszy od powietrza, które wypiera; przy wybrzeżu daje zamarzającą mgłę wodną" },
+            { "aspect": "Mechanizm", "left": "Wznoszenie z opadem po dowietrznej + ogrzewanie suchoadiabatyczne przy opadaniu", "right": "Grawitacyjny spływ zalegającego, bardzo zimnego i gęstego powietrza przez niski grzbiet (**wiatr katabatyczny**)" },
+            { "aspect": "Obszar występowania", "left": "Alpy (nazwa pierwotna), Tatry (halny), Sudety, Góry Skaliste (chinook), Andy (zonda)", "right": "Wschodnie wybrzeże Adriatyku (Chorwacja, Triest), Morze Czarne, Nowa Ziemia" },
+            { "aspect": "Skutki", "left": "Topnienie śniegu, zagrożenie lawinowe, wiatrołomy, dolegliwości meteoropatyczne", "right": "Uszkodzenia upraw i sadów przez mróz, oblodzenie statków i nabrzeży, wstrzymanie promów" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Wiatry lokalne — trzy rodziny",
+          "caption": "Wiatr lokalny to wiatr o ograniczonym zasięgu, wywołany rzeźbą terenu lub lokalnym rozkładem ciśnienia. Nazwy własne są w geografii pytane wprost, dlatego warto je przypisać do mechanizmu.",
+          "groups": [
+            {
+              "name": "Ciepłe wiatry fenowe (spadające po zawietrznej)",
+              "description": "Powietrze przechodzi przez grzbiet górski, traci wilgoć po stronie dowietrznej i ogrzewa się suchoadiabatycznie przy opadaniu. Są ciepłe, suche i porywiste.",
+              "examples": ["Halny — Tatry i Karpaty", "Fen — Alpy", "Chinook — wschodnie stoki Gór Skalistych", "Zonda — wschodnia strona Andów w Argentynie"]
+            },
+            {
+              "name": "Zimne wiatry spadające (katabatyczne) i kanalizowane",
+              "description": "Zimne, gęste powietrze zgromadzone nad wyżyną, lodowcem lub lądolodem spływa grawitacyjnie ku dolinie lub morzu; czasem dodatkowo przyspiesza, przeciskając się przez zwężenie terenu (efekt kanalizacji).",
+              "examples": ["Bora — wybrzeże Adriatyku", "Mistral — dolina Rodanu ku Zatoce Lwiej", "Wiatry katabatyczne Antarktydy i Grenlandii, osiągające ponad 200 km/h"]
+            },
+            {
+              "name": "Gorące wiatry pustynne",
+              "description": "Wieją od strony pustyń ku obszarom sąsiednim, wynosząc gorące powietrze i ogromne ilości pyłu. Powstają najczęściej na przedniej stronie niżu wędrującego nad basenem Morza Śródziemnego.",
+              "examples": ["Sirocco — z Sahary ku Włochom i Grecji, po drodze nad morzem wilgotnieje", "Chamsin — Egipt i Bliski Wschód, wiosną", "Harmattan — z Sahary ku Zatoce Gwinejskiej, skrajnie suchy, przynosi mgłę pyłową"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa wiatrów okresowych i lokalnych",
+          "caption": "Kliknij markery. Zwróć uwagę, że każdy z tych wiatrów jest przypisany do konkretnej sytuacji terenowej: bariera górska, obniżenie kanalizujące przepływ albo kontrast ląd–ocean.",
+          "center": [40, 45],
+          "zoom": 3,
+          "markers": [
+            { "lat": 49.3, "lng": 19.95, "label": "Zakopane — halny", "text": "Gdy nad Kotliną Panońską zalega wyż, a nad Polską niż, powietrze przewala się przez główny grzbiet Tatr. Po polskiej, zawietrznej stronie spada, ogrzewając się o 1 °C/100 m: w Zakopanem w środku zimy notowano wówczas kilkanaście stopni powyżej zera." },
+            { "lat": 45.65, "lng": 13.77, "label": "Triest i wybrzeże Adriatyku — bora", "text": "Za wąskim pasem wybrzeża wznosi się kraso­wy płaskowyż, na którym zimą gromadzi się bardzo zimne powietrze kontynentalne. Gdy nad Adriatykiem pojawia się niż, powietrze przelewa się przez niską krawędź i spada ku morzu — porywy przekraczają 150 km/h." },
+            { "lat": 43.7, "lng": 4.63, "label": "Dolina Rodanu — mistral", "text": "Zimne powietrze znad Francji jest **kanalizowane** w obniżeniu między Masywem Centralnym a Alpami i przyspiesza, płynąc ku Zatoce Lwiej. Wieje najczęściej zimą i wiosną, wysusza glebę i wymusza sadzenie żywopłotów oraz szpalerów cyprysów jako wiatrochronów; jednocześnie zapewnia Prowansji wyjątkowo dużo dni słonecznych." },
+            { "lat": 19.08, "lng": 72.88, "label": "Mumbaj — monsun letni", "text": "Od czerwca do września wilgotne powietrze znad Oceanu Indyjskiego napiera na Ghaty Zachodnie tuż za miastem. Wymuszone wznoszenie daje ulewy: w Mumbaju spada wtedy zdecydowana większość rocznej sumy opadów wynoszącej ok. 2200 mm." },
+            { "lat": 25.28, "lng": 91.72, "label": "Czerapundżi (Sohra) — rekordowe opady monsunowe", "text": "Miejscowość na skraju Wyżyny Szillong, wystawiona wprost na monsun znad Zatoki Bengalskiej. Średnia roczna suma opadów przekracza 11 000 mm, a rekordy miesięczne i roczne należą do najwyższych zmierzonych na Ziemi — a mimo to w porze suchej brakuje tam wody pitnej." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Cyklon tropikalny",
+          "text": "**Rozbudowany, wirujący układ niżowy strefy międzyzwrotnikowej**, w którym średnia prędkość wiatru przekracza 33 m/s (ok. 120 km/h). Powstaje wyłącznie tam, gdzie spełnione są warunki: temperatura wody **co najmniej 26,5 °C** w warstwie kilkudziesięciu metrów (źródło ciepła utajonego), szerokość geograficzna **powyżej ok. 5°** (potrzebna siła Coriolisa, by uruchomić wirowanie), duża wilgotność powietrza oraz **słabe zmiany wiatru z wysokością**, które nie rozrywają rodzącego się wiru. W centrum tworzy się **oko cyklonu** (20–60 km, powietrze osiada, jest bezchmurnie i cicho), otoczone **ścianą oka** — pierścieniem chmur Cumulonimbus z najsilniejszym wiatrem i najintensywniejszym opadem. Największe zniszczenia powoduje zwykle nie sam wiatr, lecz **fala sztormowa** wdzierająca się na niskie wybrzeże.",
+          "note": "Nazwy regionalne: **huragan** (Atlantyk i wschodni Pacyfik), **tajfun** (zachodni Pacyfik), **cyklon** (Ocean Indyjski i okolice Australii). Siłę ocenia się w **skali Saffira-Simpsona** (kategorie 1–5). Cyklon zanika po wejściu nad ląd lub nad chłodniejszą wodę, bo traci dopływ ciepła i wilgoci."
+        },
+        {
+          "type": "compare",
+          "title": "Cyklon tropikalny a tornado",
+          "leftLabel": "Cyklon tropikalny",
+          "rightLabel": "Tornado (trąba powietrzna)",
+          "rows": [
+            { "aspect": "Średnica", "left": "Setki kilometrów (typowo 300–800 km)", "right": "Od kilkudziesięciu metrów do ok. 2 km" },
+            { "aspect": "Czas trwania", "left": "Od kilku dni do ponad dwóch tygodni", "right": "Od kilku minut do ok. godziny" },
+            { "aspect": "Źródło energii", "left": "**Ciepło utajone** parowania z ciepłego oceanu", "right": "Energia pojedynczej **superkomórki burzowej** i silne skręcanie wiatru z wysokością" },
+            { "aspect": "Gdzie powstaje", "left": "Nad ciepłymi oceanami strefy międzyzwrotnikowej, ok. 5–20° szerokości", "right": "Nad lądem, najczęściej w umiarkowanych szerokościach, na styku kontrastowych mas powietrza" },
+            { "aspect": "Maksymalna prędkość wiatru", "left": "Do ok. 300 km/h", "right": "Do ok. 480 km/h — najsilniejszy wiatr notowany przy powierzchni Ziemi" },
+            { "aspect": "Skala oceny", "left": "Skala Saffira-Simpsona (1–5)", "right": "Rozszerzona skala Fujity (EF0–EF5)" },
+            { "aspect": "Klasyczny obszar występowania", "left": "Karaiby i Zatoka Meksykańska, Filipiny i Japonia, Zatoka Bengalska", "right": "**Tornado Alley** w USA, gdzie spotykają się wilgotne powietrze znad Zatoki Meksykańskiej, suche znad Gór Skalistych i chłodne znad Kanady" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Powietrze o temperaturze 12 °C u podnóża dowietrznego (0 m n.p.m.) wznosi się; poziom kondensacji leży na 800 m, a szczyt na 1800 m. Jaka będzie temperatura po zawietrznej stronie na poziomie morza?",
+          "options": ["12 °C", "16 °C", "20 °C", "14 °C"],
+          "correctIndex": 1,
+          "explanation": "Do poziomu kondensacji: $12 - 8 \\cdot 1 = 4$ °C. Od 800 do 1800 m (już z kondensacją): $4 - 10 \\cdot 0{,}6 = -2$ °C na szczycie. Opadanie z 1800 m do 0 m wyłącznie suchoadiabatycznie: $-2 + 18 \\cdot 1 = 16$ °C. Powietrze po zawietrznej jest o **4 °C cieplejsze** niż wyjściowo — to jest istota efektu fenowego."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego cyklony tropikalne nie powstają nad samym równikiem ani nad Atlantykiem u wybrzeży Namibii?",
+          "options": [
+            "Bo nad równikiem jest zbyt duże zachmurzenie, a u wybrzeży Namibii zbyt wysokie ciśnienie",
+            "Nad równikiem siła Coriolisa wynosi zero, więc wir nie może się uformować; u wybrzeży Namibii zimny Prąd Benguelski utrzymuje temperaturę wody poniżej 26,5 °C",
+            "Bo nad równikiem wieją zbyt silne pasaty, a u wybrzeży Namibii nie ma pary wodnej w atmosferze",
+            "Bo w obu miejscach panuje zbyt duży pionowy uskok wiatru"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cyklon tropikalny wymaga jednocześnie **ciepłej wody (≥ 26,5 °C)** jako źródła ciepła utajonego i **niezerowej siły Coriolisa**, która nada napływającemu powietrzu ruch wirowy. Na równiku brakuje drugiego warunku, nad zimnymi prądami wschodnich wybrzeży oceanów (Benguelski, Peruwiański, Kanaryjski) — pierwszego."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko NIE jest przyczyną powstania monsunu letniego w Azji Południowej?",
+          "options": [
+            "Silne nagrzanie kontynentu azjatyckiego i wytworzenie się nad nim niżu barycznego",
+            "Przesunięcie międzyzwrotnikowej strefy zbieżności (ITCZ) na północ",
+            "Napływ wilgotnego powietrza znad Oceanu Indyjskiego ku lądowi",
+            "Osiadanie powietrza w zimowym Wyżu Azjatyckim nad Syberią"
+          ],
+          "correctIndex": 3,
+          "explanation": "Wyż Azjatycki (syberyjski) to układ **zimowy** — odpowiada za monsun zimowy, czyli za suchy wiatr wiejący z lądu na ocean. Monsun letni jest skutkiem nagrzania kontynentu (niż), przesunięcia ITCZ na północ i napływu wilgotnego powietrza znad oceanu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania fenowe są w arkuszach rozszerzonych niemal pewne, a punktuje się w nich **poprawne przypisanie gradientów do odcinków trasy**. Zawsze rysuj profil: podnóże dowietrzne → poziom kondensacji (1 °C/100 m) → szczyt (0,6 °C/100 m) → podnóże zawietrzne (1 °C/100 m w dół). Przy wiatrach lokalnych naucz się par „nazwa – region – cecha”: halny/Tatry/ciepły, bora/Adriatyk/zimny, mistral/dolina Rodanu/zimny i kanalizowany, sirocco/Sahara–Włochy/gorący z pyłem. A w pytaniach o cyklony tropikalne zawsze zaczynaj od **warunków powstawania** — to najczęściej punktowany element odpowiedzi."
+        }
+      ]
+    },
+    {
+      "slug": "wilgotnosc-chmury-i-opady",
+      "title": "Wilgotność powietrza, chmury i opady atmosferyczne",
+      "summary": "Od parowania do kropli deszczu: jak para wodna zamienia się w chmurę, czym różnią się opady konwekcyjne, orograficzne i frontalne oraz skąd bierze się pasowy rozkład opadów na Ziemi.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Para wodna stanowi najwyżej **4% objętości powietrza**, a mimo to odpowiada za niemal wszystko, co widzimy na niebie: chmury, mgłę, deszcz, śnieg i burzę. Jest też najważniejszym **naturalnym gazem cieplarnianym** i głównym nośnikiem energii w atmosferze — parując nad oceanem, zabiera ciepło, a skraplając się kilka kilometrów wyżej i tysiące kilometrów dalej, oddaje je jako **ciepło utajone**. Kluczowa zasada, z której wynika cała ta lekcja, brzmi: **ciepłe powietrze może zawierać znacznie więcej pary wodnej niż zimne**. Dlatego wystarczy powietrze ochłodzić — najczęściej przez wzniesienie go do góry — aby para wodna zaczęła się skraplać. W tej lekcji prześledzisz drogę od parowania do opadu, nauczysz się rozpoznawać rodzaje chmur, rozróżniać trzy genetyczne typy opadów i wyjaśniać, dlaczego roczne sumy opadów na Ziemi układają się w wyraźne pasy."
+        },
+        {
+          "type": "definition",
+          "term": "Wilgotność powietrza — bezwzględna i względna",
+          "text": "**Wilgotność bezwzględna** to masa pary wodnej zawarta w 1 m³ powietrza (w g/m³); jej odpowiednikiem wyrażonym w hektopaskalach jest **prężność pary wodnej** $e$, czyli ciśnienie cząstkowe pary. Ilość pary, jaką powietrze może pomieścić, jest ograniczona: stan graniczny nazywamy **nasyceniem**, a odpowiadającą mu **prężność maksymalną** $E$ wyznacza **wyłącznie temperatura** — im cieplej, tym więcej pary się mieści, i to bardzo szybko (przy 0 °C ok. 4,8 g/m³, przy 20 °C ok. 17,3 g/m³, przy 30 °C ok. 30,4 g/m³). **Wilgotność względna** mówi natomiast, w ilu procentach powietrze wykorzystało tę swoją pojemność.",
+          "note": "Dlatego mroźne powietrze o wilgotności względnej 90% jest w liczbach bezwzględnych bardzo suche — po ogrzaniu w mieszkaniu do 20 °C jego wilgotność względna spada do kilkunastu procent i przesuszają się nam śluzówki."
+        },
+        {
+          "type": "formula",
+          "title": "Wilgotność względna powietrza",
+          "expression": "f = \\frac{e}{E} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "f", "meaning": "wilgotność względna [%]" },
+            { "symbol": "e", "meaning": "aktualna prężność pary wodnej — ile pary faktycznie jest w powietrzu" },
+            { "symbol": "E", "meaning": "prężność maksymalna, czyli prężność pary nasyconej w danej temperaturze — ile pary zmieściłoby się najwyżej" }
+          ],
+          "caption": "Przykład: w powietrzu o temperaturze 20 °C znajduje się 8,65 g/m³ pary wodnej, a przy nasyceniu zmieściłoby się 17,3 g/m³, więc $f = \\frac{8{,}65}{17{,}3}\\cdot 100\\% = 50\\%$. **Uwaga na mechanizm**: wilgotność względna rośnie na dwa sposoby — gdy do powietrza dostarczymy pary (rośnie $e$) albo gdy powietrze **ochłodzimy** (maleje $E$). Ten drugi sposób odpowiada za powstawanie niemal wszystkich chmur na Ziemi."
+        },
+        {
+          "type": "definition",
+          "term": "Punkt rosy i poziom kondensacji",
+          "text": "**Punkt rosy** to temperatura, do której należy ochłodzić powietrze — bez zmiany zawartości pary i ciśnienia — aby osiągnęło **stan nasycenia**, czyli $f = 100\\%$. Dalsze ochładzanie powoduje **kondensację**: nadmiar pary się skrapla. Gdy porcja powietrza wznosi się, ochładza się adiabatycznie i na pewnej wysokości osiąga punkt rosy — ta wysokość to **poziom kondensacji**. Właśnie tam tworzy się **podstawa chmury**, dlatego w pogodny letni dzień wszystkie chmury kłębiaste mają spody na tej samej wysokości: to widzialny poziom kondensacji.",
+          "note": "Im mniejsza różnica między temperaturą powietrza a punktem rosy (tzw. **depresja punktu rosy**), tym wilgotniejsze powietrze i tym niżej leży podstawa chmur. Gdy różnica ta spadnie do zera przy samym gruncie, powstaje **mgła**."
+        },
+        {
+          "type": "process",
+          "title": "Od parowania do kropli deszczu",
+          "caption": "Kliknij kolejne etapy. Zwróć uwagę, że sama kondensacja nie wystarcza — kropelka chmurowa jest o dwa rzędy wielkości za mała, żeby spaść na ziemię, i musi najpierw urosnąć.",
+          "steps": [
+            {
+              "title": "1. Parowanie — powietrze pobiera parę wodną",
+              "text": "Ze zbiorników wodnych, wilgotnej gleby i z roślin (**transpiracja**) woda przechodzi w stan gazowy, zużywając na to energię, czyli **ciepło utajone parowania**. Nad oceanami parowanie jest największe w strefie zwrotnikowej, gdzie jest gorąco, sucho i wietrznie — stamtąd pochodzi większość wilgoci atmosfery."
+            },
+            {
+              "title": "2. Ochładzanie — najczęściej przez wznoszenie",
+              "text": "Powietrze musi się ochłodzić, by osiągnąć nasycenie. W praktyce dzieje się to przez **ochładzanie adiabatyczne przy wznoszeniu** (konwekcja, bariera górska, front atmosferyczny, konwergencja w niżu), rzadziej przez kontakt z zimnym podłożem — wtedy powstają mgły radiacyjne i adwekcyjne."
+            },
+            {
+              "title": "3. Nasycenie i kondensacja na jądrach kondensacji",
+              "text": "Po osiągnięciu punktu rosy para się skrapla — ale nie w próżni: potrzebne są **jądra kondensacji**, czyli mikroskopijne cząstki aerozolu (kryształki soli morskiej, pyły mineralne, produkty spalania, pyłki roślin). Powstają **kropelki chmurowe** o średnicy zaledwie **0,01–0,02 mm**, tak lekkie, że utrzymują je w powietrzu nawet słabe prądy wstępujące. Ich zbiór widzimy jako **chmurę**."
+            },
+            {
+              "title": "4. Wzrost kropel — koalescencja albo proces Bergerona",
+              "text": "W chmurach ciepłych (tropikalnych) krople rosną przez **koalescencję**: większe spadają szybciej, doganiają mniejsze i zlewają się z nimi. W chmurach mieszanych umiarkowanych szerokości działa **proces Bergerona–Findeisena** — obok kryształków lodu współistnieją **przechłodzone krople wody**, a ponieważ prężność pary nasyconej nad lodem jest mniejsza niż nad wodą, kryształki rosną **kosztem parujących kropel**."
+            },
+            {
+              "title": "5. Opad — gdy ciężar pokona prądy wstępujące",
+              "text": "Kropla o średnicy od ok. **0,5 mm** spada już na tyle szybko, że opuszcza chmurę i nie zdąży po drodze wyparować — powstaje **opad**. Jedna kropla deszczu o średnicy 2 mm powstaje ze zlania się około **miliona** kropelek chmurowych. O tym, czy dotrze do ziemi jako deszcz, śnieg czy grad, decyduje przebieg temperatury w warstwie poniżej chmury."
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Piętra chmur i ich najważniejsi przedstawiciele",
+          "caption": "Podział na piętra odnosi się do umiarkowanych szerokości geograficznych (w tropikach wszystkie granice leżą wyżej, w strefie polarnej niżej). Kliknij piętra od góry. Nazwy łacińskie bywają pytane wprost, a każdy człon nazwy coś znaczy: cirro- (pierzasty), alto- (średni), strato- (warstwowy), cumulo- (kłębiasty), nimbo- (dający opad).",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Piętro wysokie (5–13 km)",
+              "range": "Cirrus (Ci), Cirrocumulus (Cc), Cirrostratus (Cs)",
+              "text": "Zbudowane wyłącznie z **kryształków lodu**, bo panuje tam temperatura głęboko poniżej zera. Są cienkie, białe i **nie dają opadu docierającego do ziemi**. **Cirrus** to włókniste, pierzaste pasma, a **Cirrostratus** — mleczna zasłona, przez którą wokół Słońca i Księżyca widać **halo**. To klasyczny zwiastun zbliżającego się **frontu ciepłego**, a więc pogorszenia pogody w ciągu kilkunastu godzin.",
+              "tone": "ice"
+            },
+            {
+              "name": "Piętro średnie (2–7 km)",
+              "range": "Altocumulus (Ac), Altostratus (As)",
+              "text": "Zbudowane z kropel wody, kryształków lodu albo z obu naraz — to **chmury mieszane**. **Altostratus** tworzy szarawą warstwę, przez którą Słońce prześwituje „jak przez matową szybę”; może dawać słaby opad, a przy nasuwającym się froncie ciepłym stopniowo obniża się i przechodzi w Nimbostratus. **Altocumulus** układa się w ławice kłębków, potocznie zwanych „barankami”.",
+              "tone": "sky"
+            },
+            {
+              "name": "Piętro niskie (0–2 km)",
+              "range": "Stratus (St), Stratocumulus (Sc), Nimbostratus (Ns)",
+              "text": "Zbudowane głównie z kropel wody. **Stratus** to jednolita, niska warstwa przypominająca uniesioną mgłę — daje najwyżej mżawkę. **Nimbostratus** to ciemna, bezpostaciowa chmura o dużej miąższości, dająca **ciągły, długotrwały opad** deszczu lub śniegu; to typowa chmura **frontu ciepłego** i jesienno-zimowej pogody niżowej w Polsce.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Chmury o budowie pionowej (od ok. 0,5 km nawet po tropopauzę)",
+              "range": "Cumulus (Cu), Cumulonimbus (Cb)",
+              "text": "Powstają w **prądach konwekcyjnych**, dlatego rozciągają się przez kilka pięter naraz. **Cumulus humilis** to białe „chmury pięknej pogody” nad nagrzanym lądem. Rozbudowany **Cumulonimbus** ma rozpłaszczony przy tropopauzie szczyt w kształcie **kowadła** i jest jedyną chmurą dającą **burze, ulewy, grad i trąby powietrzne**. Prądy wstępujące osiągają w nim kilkadziesiąt metrów na sekundę.",
+              "tone": "heat"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy klasyczne pomyłki. (1) **Wilgotność względna nie mówi, ile pary jest w powietrzu** — mroźne powietrze o $f = 95\\%$ zawiera kilkanaście razy mniej pary niż tropikalne o $f = 60\\%$. (2) **Chmura to nie para wodna**: para jest bezbarwna i niewidzialna, a chmurę widzimy dlatego, że składa się z **kropelek wody i kryształków lodu**, czyli z wody w stanie ciekłym i stałym. (3) Nie myl **opadów** z **osadami**: opad (deszcz, śnieg, grad) **spada z chmury**, natomiast osad (rosa, szron, szadź) **tworzy się bezpośrednio na powierzchni** przedmiotów i podłoża. Mgła zaś nie jest ani jednym, ani drugim — to zawiesina kropelek przy gruncie, czyli po prostu chmura leżąca na ziemi."
+        },
+        {
+          "type": "classification",
+          "title": "Genetyczne typy opadów — trzy sposoby na wzniesienie powietrza",
+          "caption": "Wszystkie opady powstają tak samo: wznoszenie → ochładzanie → kondensacja. Różni je **przyczyna wznoszenia** — i to właśnie po niej rozpoznaje się typ opadu w zadaniu maturalnym.",
+          "groups": [
+            {
+              "name": "Opady konwekcyjne (termiczne)",
+              "description": "Silnie nagrzane podłoże ogrzewa przylegające powietrze, które jako lżejsze gwałtownie się unosi. Rozwijają się chmury **Cumulonimbus**, a opad jest **krótkotrwały, bardzo intensywny i przelotny**, często z burzą i gradem. Typowe dla strefy równikowej (codzienne popołudniowe deszcze zenitalne) oraz dla letnich popołudni w umiarkowanych szerokościach.",
+              "examples": ["Deszcze zenitalne w Kotlinie Konga i Amazonii", "Lipcowe burze z gradem nad Polską", "Gwałtowne ulewy powodujące podtopienia w miastach"]
+            },
+            {
+              "name": "Opady orograficzne (wznoszenia)",
+              "description": "Masa powietrza napotyka **barierę górską** i jest zmuszona wznosić się po jej stoku. Opad pada po stronie **dowietrznej**, a jego suma rośnie z wysokością aż do pewnego poziomu. Po stronie **zawietrznej** powietrze opada, ogrzewa się i osusza — powstaje **cień opadowy**, czyli obszar ubogi w opady, często pustynny.",
+              "examples": ["Czerapundżi i Mawsynram na dowietrznych stokach Wyżyny Szillong", "Zachodnie stoki Andów w Chile i Gór Kaskadowych", "Cień opadowy: Patagonia za Andami, Wielka Kotlina za Sierra Nevada"]
+            },
+            {
+              "name": "Opady frontalne (cyklonalne)",
+              "description": "Na granicy dwóch mas powietrza cieplejsza i lżejsza masa **wślizguje się lub jest wypychana ku górze** ponad chłodniejszą. Opady frontu **ciepłego** są mniej intensywne, ale długotrwałe i obejmują szeroki pas; opady frontu **chłodnego** — krótkie, gwałtowne, w wąskiej strefie. To dominujący typ opadów w umiarkowanych szerokościach, w tym w Polsce.",
+              "examples": ["Kilkudniowe jesienne opady z Nimbostratusa nad Polską", "Linie szkwałów towarzyszące frontom chłodnym", "Opady w strefie frontu polarnego nad północnym Atlantykiem"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Opady i osady atmosferyczne",
+          "caption": "Kryterium podziału jest miejsce powstania: opad spada z chmury, osad powstaje na powierzchni. Zwróć uwagę na warunki termiczne — to one decydują, czy pojawi się rosa, czy szron.",
+          "headers": ["Zjawisko", "Grupa", "Jak powstaje"],
+          "rows": [
+            ["Deszcz", "Opad", "Krople wody o średnicy powyżej 0,5 mm spadające z chmury (Ns, As, Cb)"],
+            ["Mżawka", "Opad", "Bardzo drobne krople (poniżej 0,5 mm) wolno opadające ze Stratusa; typowa dla chłodnej, wilgotnej pogody"],
+            ["Śnieg", "Opad", "Kryształki lodu zlepione w gwiazdki i płatki; powstaje w chmurach mieszanych, gdy cała warstwa powietrza poniżej ma temperaturę ujemną"],
+            ["Grad", "Opad", "Bryłki lodu z Cumulonimbusa; wielokrotnie wynoszone przez prądy wstępujące ponad poziom zera stopni, za każdym razem obrastają kolejną warstwą lodu"],
+            ["Deszcz marznący i gołoledź", "Opad dający powłokę lodu", "Przechłodzone krople deszczu zamarzają w chwili zetknięcia z podłożem o temperaturze ujemnej, tworząc gładką, śliską warstwę lodu"],
+            ["Rosa", "Osad", "Para wodna **skrapla się** na wychłodzonym podłożu, gdy punkt rosy jest **dodatni**; typowa dla pogodnych, bezwietrznych nocy"],
+            ["Szron", "Osad", "Para wodna **resublimuje**, czyli przechodzi wprost w lód, na podłożu o temperaturze **ujemnej**"],
+            ["Szadź", "Osad", "Przechłodzone kropelki **mgły** zamarzają na przedmiotach od strony nawietrznej (gałęziach, drutach), tworząc puszyste, igiełkowate narosty"]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Strefowy rozkład rocznych sum opadów na Ziemi",
+          "caption": "Wartości orientacyjne — uśrednione dla pasów szerokości geograficznej. Rozkład ma **jedno główne maksimum** (równik: konwergencja i wznoszenie w ITCZ), **dwa minima zwrotnikowe** (osiadanie powietrza w wyżach zwrotnikowych), **dwa drugorzędne maksima w umiarkowanych szerokościach** (fronty i wędrujące niże) oraz **dwa minima polarne** — zimne powietrze mieści bardzo mało pary wodnej, dlatego obszary polarne bywają nazywane „zimnymi pustyniami”. Ten obraz jest bezpośrednim skutkiem ogólnej cyrkulacji atmosfery z wcześniejszej lekcji.",
+          "labels": ["70–90°N", "50–70°N", "30–50°N", "10–30°N", "10°N–10°S", "10–30°S", "30–50°S", "50–70°S", "70–90°S"],
+          "unit": "mm/rok",
+          "series": [
+            { "name": "Średnia roczna suma opadów", "values": [150, 550, 800, 650, 1900, 700, 950, 700, 100] }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Atakama — pustynia nad oceanem, na której deszcz pada raz na kilka lat",
+          "region": "Wybrzeże Chile i południowego Peru, Ameryka Południowa",
+          "text": "Pustynia Atakama leży tuż nad **oceanem**, a mimo to jest najsuchszym obszarem świata poza obszarami polarnymi — w niektórych stacjach średnia roczna suma opadów nie przekracza **1–2 mm**, a zdarzały się wieloletnie serie bez zmierzonego deszczu. Odpowiadają za to **trzy niezależne mechanizmy działające jednocześnie**. Po pierwsze, region leży w zasięgu **wyżu zwrotnikowego** południowego Pacyfiku, gdzie powietrze **osiada**, ogrzewa się adiabatycznie, a jego wilgotność względna maleje — kondensacja staje się niemożliwa. Po drugie, wzdłuż wybrzeża płynie zimny **Prąd Peruwiański**: ochładza on dolną warstwę powietrza i tworzy trwałą **inwersję adwekcyjną**, która działa jak pokrywa blokująca konwekcję. Powstaje wprawdzie gęsta mgła (miejscowa nazwa **camanchaca**), ale mgła nie jest opadem — mieszkańcy wyłapują z niej wodę na specjalnych siatkach. Po trzecie, od wschodu wznoszą się **Andy**, zatrzymujące wilgotne powietrze znad Amazonii: Atakama leży w ich **cieniu opadowym**.",
+          "takeaway": "Gdy w zadaniu pojawia się pustynia na wybrzeżu (Atakama, Namib, wybrzeże Peru), wzorcowa odpowiedź zawiera zawsze **dwa człony**: osiadanie powietrza w wyżu zwrotnikowym oraz zimny prąd morski wywołujący inwersję i blokujący konwekcję. Trzeci człon — cień opadowy — dodaje się tam, gdzie w pobliżu znajduje się bariera górska."
+        },
+        {
+          "type": "matching",
+          "title": "Chmura a jej cecha rozpoznawcza",
+          "instruction": "Połącz nazwę chmury z opisem, po którym rozpoznasz ją na zdjęciu lub w opisie sytuacji pogodowej.",
+          "pairs": [
+            { "left": "Cumulonimbus (Cb)", "right": "Ogromna chmura o budowie pionowej z kowadłem u szczytu; daje burze, ulewy i grad" },
+            { "left": "Nimbostratus (Ns)", "right": "Ciemna, bezpostaciowa warstwa dająca ciągły, długotrwały opad deszczu lub śniegu" },
+            { "left": "Cirrostratus (Cs)", "right": "Mleczna zasłona z kryształków lodu, przez którą wokół Słońca widać halo — zwiastun frontu ciepłego" },
+            { "left": "Stratus (St)", "right": "Jednolita, bardzo niska warstwa przypominająca uniesioną mgłę; daje najwyżej mżawkę" },
+            { "left": "Cumulus humilis (Cu)", "right": "Białe kłębki „pięknej pogody”, rozwijające się w południe nad nagrzanym lądem" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Wieczorem powietrze o temperaturze 20 °C miało wilgotność względną 50%. W ciągu nocy ochłodziło się do 10 °C, a zawartość pary wodnej w nim nie zmieniła się. Co stało się z wilgotnością względną i dlaczego?",
+          "options": [
+            "Zmalała, ponieważ chłodne powietrze zawiera mniej pary wodnej",
+            "Wzrosła, ponieważ wraz ze spadkiem temperatury maleje prężność maksymalna E, a prężność aktualna e pozostaje bez zmian",
+            "Nie zmieniła się, ponieważ nie zmieniła się zawartość pary wodnej w powietrzu",
+            "Wzrosła, ponieważ ochłodzone powietrze pobrało dodatkową parę wodną z gleby"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wilgotność względna to iloraz $f = \\frac{e}{E}\\cdot 100\\%$. Zawartość pary się nie zmieniła, więc **licznik $e$ jest stały**, natomiast **mianownik $E$ maleje**, bo prężność pary nasyconej zależy wyłącznie od temperatury i szybko spada wraz z ochłodzeniem. Iloraz zatem rośnie — i to jest przyczyna nocnych mgieł oraz rosy. Gdyby powietrze ochłodziło się aż do **punktu rosy**, wilgotność osiągnęłaby 100% i rozpoczęłaby się kondensacja."
+        },
+        {
+          "type": "quiz",
+          "question": "Na zawietrznych stokach i u podnóża wielu łańcuchów górskich rozciągają się obszary skrajnie suche (np. Patagonia za Andami). Który ciąg przyczynowo-skutkowy poprawnie to wyjaśnia?",
+          "options": [
+            "Po stronie zawietrznej powietrze wznosi się, ochładza i traci wilgoć, dlatego nie pada",
+            "Po stronie zawietrznej wieją silniejsze wiatry, które rozwiewają chmury, zanim zdążą dać opad",
+            "Powietrze oddało wilgoć w opadach po stronie dowietrznej, a opadając po zawietrznej ogrzewa się o 1 °C/100 m, więc jego wilgotność względna maleje i kondensacja nie zachodzi",
+            "Góry zasłaniają Słońce, więc po stronie zawietrznej parowanie jest zbyt małe, by powstały chmury"
+          ],
+          "correctIndex": 2,
+          "explanation": "To mechanizm **cienia opadowego**, ściśle powiązany z efektem fenowym. Kluczowe są dwa kroki: (1) po stronie **dowietrznej** wymuszone wznoszenie prowadzi do kondensacji i opadu, więc powietrze **traci parę wodną**; (2) po stronie **zawietrznej** to samo powietrze **opada i ogrzewa się suchoadiabatycznie**, przez co jego prężność maksymalna $E$ rośnie, wilgotność względna spada i chmury się rozpadają. Odpowiedź musi zawierać oba kroki — samo stwierdzenie „powietrze jest suche” nie wystarcza na punkt."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W tym fragmencie działu CKE pyta najczęściej o **trzy rzeczy**. Po pierwsze, o **typ genetyczny opadu na podstawie opisu sytuacji** — szukaj przyczyny wznoszenia: nagrzane podłoże (opad konwekcyjny), bariera górska (orograficzny), granica mas powietrza (frontalny). Po drugie, o **wyjaśnienie rozkładu opadów** na mapie lub klimatogramie — wyjaśnienie zawsze prowadź przez cyrkulację: „obszar leży w strefie wyżu zwrotnikowego, gdzie powietrze osiada i ogrzewa się, więc kondensacja nie zachodzi”. Po trzecie, o **rozróżnienie opad–osad** i warunki termiczne ich powstawania (rosa przy dodatnim punkcie rosy, szron przy ujemnym). Formułując wyjaśnienia, nie pisz „jest wilgotno” ani „jest sucho” — pisz, **co dzieje się z temperaturą powietrza i z jego wilgotnością względną**, bo punktowany jest właśnie ten łańcuch."
+        }
+      ]
+    },
+    {
+      "slug": "masy-powietrza-fronty-i-klimat",
+      "title": "Masy powietrza i fronty atmosferyczne. Pogoda a klimat i strefy klimatyczne",
+      "summary": "Dlaczego pogoda w Polsce zmienia się z dnia na dzień, co dokładnie dzieje się przy przejściu frontu, czym klimat różni się od pogody i jak rozpoznać strefę klimatyczną na podstawie klimatogramu.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska leży w miejscu, w którym ścierają się dwa światy: chłodne powietrze znad Arktyki i Atlantyku oraz ciepłe znad Azorów i Sahary. Właśnie dlatego w ciągu jednego tygodnia potrafimy mieć śnieg, odwilż z mgłą i wiosenne słońce, a prognoza na pięć dni bywa wróżeniem z fusów. Te gwałtowne zmiany nie są przypadkowe — to skutek wędrówki **mas powietrza** i przechodzenia **frontów atmosferycznych**, czyli granic między nimi. Kiedy jednak uśrednimy takie dni przez trzydzieści lat, chaos znika i pojawia się porządek: **klimat**, który układa się na Ziemi w regularne strefy dające się rozpoznać z jednego wykresu. Ta lekcja zamyka dział: najpierw zrozumiesz mechanikę codziennej pogody, a potem nauczysz się czytać z niej klimat — łącznie z tym, co dzieje się, gdy klimat pokazuje swoją skrajną twarz w postaci suszy i fali upałów."
+        },
+        {
+          "type": "classification",
+          "title": "Masy powietrza napływające nad Polskę",
+          "caption": "**Masa powietrza** to wielka objętość troposfery (setki tysięcy km²) o w miarę jednolitej temperaturze i wilgotności, którą uzyskała nad swoim **obszarem źródłowym**. Nazwa masy zawsze składa się z dwóch informacji: skąd pochodzi termicznie (arktyczne, polarne, zwrotnikowe, równikowe) i czy kształtowało się nad morzem, czy nad lądem.",
+          "groups": [
+            {
+              "name": "Powietrze arktyczne (PA)",
+              "description": "Kształtuje się nad Oceanem Arktycznym i pokrywą lodową. Bardzo zimne, o małej zawartości pary wodnej, ale **chwiejne** — nad cieplejszym podłożem szybko rozwija konwekcję. Napływa z sektora północnego, głównie wiosną i zimą.",
+              "examples": ["Wiosenne przymrozki niszczące kwitnące sady", "Zimowe mrozy z przelotnym śniegiem i przejaśnieniami", "Wyjątkowo dobra widzialność i czyste powietrze"]
+            },
+            {
+              "name": "Powietrze polarne morskie (PPm)",
+              "description": "Znad północnego Atlantyku — **najczęstsza masa nad Polską**, bo przynoszą ją wiatry zachodnie. Chłodne i **wilgotne**. Latem daje ochłodzenie, zachmurzenie i przelotne opady, zimą — odwilż, mżawkę i mgły. To ono odpowiada za łagodne, wilgotne zimy w zachodniej Polsce.",
+              "examples": ["Zimowa odwilż ze śniegiem z deszczem", "Chłodne, pochmurne lipcowe dni z przelotnymi opadami", "Duża zmienność pogody z dnia na dzień"]
+            },
+            {
+              "name": "Powietrze polarne kontynentalne (PPk)",
+              "description": "Znad Europy Wschodniej i Syberii. **Suche**, o małej wilgotności i dużej przejrzystości. Zimą przynosi **silne mrozy** przy bezchmurnym niebie, latem — upały bez opadów. Napływa razem z Wyżem Azjatyckim i jego wypustkami.",
+              "examples": ["Mroźne, słoneczne dni stycznia", "Suche, gorące fale upałów w lipcu i sierpniu", "Duże dobowe amplitudy temperatury"]
+            },
+            {
+              "name": "Powietrze zwrotnikowe (PZm i PZk)",
+              "description": "Z basenu Morza Śródziemnego, Azorów i Afryki Północnej. **Gorące**; odmiana morska jest wilgotna i chwiejna (gwałtowne burze), kontynentalna — sucha i zapylona. Nad Polskę dociera rzadko, ale to ona daje rekordy ciepła i najgroźniejsze burze.",
+              "examples": ["Upały powyżej 35 °C", "Burze z gradem i nawalnymi opadami", "Pył saharyjski barwiący niebo i osiadający na samochodach"]
+            },
+            {
+              "name": "Powietrze równikowe (PR)",
+              "description": "Gorące i skrajnie wilgotne, kształtowane w strefie ITCZ. **Nad Polskę praktycznie nie dociera** — wymieniamy je dla porządku klasyfikacji, bo jego obszarem źródłowym jest pas równikowy, a nie umiarkowane szerokości.",
+              "examples": ["Codzienne opady zenitalne w Kotlinie Konga", "Duszne, parne powietrze bez wyraźnych zmian dobowych"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Front atmosferyczny",
+          "text": "**Strefa graniczna między dwiema masami powietrza o różnych właściwościach** — przede wszystkim o różnej temperaturze i wilgotności. Masy nie mieszają się od razu, ponieważ różnią się gęstością: cieplejsza i lżejsza jest zawsze **wypychana ku górze** ponad chłodniejszą i cięższą. To wymuszone wznoszenie prowadzi do ochładzania adiabatycznego, kondensacji i **opadów frontalnych**. Powierzchnia frontu jest zawsze nachylona, a jej ślad na mapie synoptycznej to **linia frontu**. Najważniejszą stałą strefą frontową na Ziemi jest **front polarny**, oddzielający chłodne powietrze polarne od ciepłego zwrotnikowego w umiarkowanych szerokościach; to na nim rodzą się wędrujące niże, które decydują o pogodzie w Polsce.",
+          "note": "Przy przejściu frontu zmieniają się **wszystkie** elementy pogody naraz: temperatura, ciśnienie, kierunek i prędkość wiatru, zachmurzenie, wilgotność i opad. Dlatego opis takiej zmiany jest wdzięcznym materiałem na zadanie maturalne."
+        },
+        {
+          "type": "compare",
+          "title": "Front ciepły a front chłodny",
+          "leftLabel": "Front ciepły",
+          "rightLabel": "Front chłodny",
+          "rows": [
+            { "aspect": "Co się dzieje z masami", "left": "Ciepłe powietrze **nasuwa się (wślizguje) łagodnie** na wycofujące się chłodne", "right": "Chłodne powietrze **podsuwa się klinem** pod ciepłe i gwałtownie je wypycha w górę" },
+            { "aspect": "Nachylenie powierzchni frontu", "left": "Bardzo łagodne (rzędu 1:150) — strefa chmur i opadów rozciąga się na setki kilometrów", "right": "Strome (rzędu 1:70) — strefa opadu jest wąska, zwykle kilkadziesiąt kilometrów" },
+            { "aspect": "Prędkość przemieszczania", "left": "Wolniejszy", "right": "Szybszy — dlatego dogania front ciepły i tworzy okluzję" },
+            { "aspect": "Chmury", "left": "Kolejno: Cirrus → Cirrostratus → Altostratus → **Nimbostratus**", "right": "Przede wszystkim potężne **Cumulonimbus**, często ustawione w linię szkwału" },
+            { "aspect": "Opad", "left": "**Ciągły**, umiarkowany, długotrwały (nawet kilkanaście godzin), przed linią frontu", "right": "**Przelotny**, bardzo intensywny, krótki, z burzą, gradem i szkwałem, wzdłuż linii frontu" },
+            { "aspect": "Temperatura po przejściu", "left": "**Wzrasta** — napłynęła masa ciepła", "right": "**Gwałtownie spada**, czasem o kilkanaście stopni w ciągu godziny" },
+            { "aspect": "Ciśnienie", "left": "Spada przed frontem, po przejściu przestaje spadać", "right": "Osiąga minimum na linii frontu, po przejściu **wyraźnie rośnie**" },
+            { "aspect": "Po przejściu frontu", "left": "Zachmurzenie duże, mgły, mżawka, powietrze parne (wycinek ciepły niżu)", "right": "Przejaśnienia z chmurami Cumulus, dobra widzialność, porywisty i chłodny wiatr" }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Nadciąga front ciepły — uszereguj obserwacje w kolejności chronologicznej",
+          "instruction": "Stoisz w chłodnej masie powietrza, a od zachodu zbliża się front ciepły. Ustaw zjawiska w kolejności, w jakiej je zobaczysz — od pierwszych oznak po zmianę masy powietrza.",
+          "items": [
+            "Na niebie pojawiają się wysokie, włókniste chmury Cirrus",
+            "Niebo zasnuwa mleczna zasłona Cirrostratus, wokół Słońca widać halo",
+            "Chmury obniżają się i gęstnieją — Altostratus przesłania tarczę Słońca „jak matowa szyba”",
+            "Podstawa chmur opada jeszcze niżej, pojawia się Nimbostratus i zaczyna padać ciągły deszcz",
+            "Opad ustaje, temperatura wyraźnie wzrasta, ciśnienie przestaje spadać — dotarła masa ciepłego powietrza"
+          ],
+          "explanation": "Ponieważ powierzchnia frontu ciepłego jest bardzo łagodnie nachylona, **najwyższe chmury wyprzedzają linię frontu nawet o 700–1000 km**. Dlatego sekwencja chmur jest doskonałym prognostykiem: Cirrus na czystym niebie oznacza, że w ciągu kilkunastu godzin pogoda się popsuje. Zapamiętaj kierunek zmian — chmury stopniowo **obniżają się i grubieją**, aż dadzą ciągły opad."
+        },
+        {
+          "type": "process",
+          "title": "Życie niżu frontalnego — od fali na froncie polarnym do okluzji",
+          "caption": "Kliknij kolejne etapy. Cały ten cykl trwa zwykle 3–7 dni i powtarza się nad Atlantykiem kilkadziesiąt razy w roku — to on odpowiada za zmienność pogody w Polsce.",
+          "steps": [
+            {
+              "title": "1. Falowanie na froncie polarnym",
+              "text": "Na granicy chłodnego powietrza polarnego i ciepłego zwrotnikowego pojawia się zaburzenie — ciepłe powietrze wybrzusza się ku północy. Powstaje **fala frontowa**, a w jej wierzchołku ciśnienie zaczyna spadać: rodzi się ośrodek niżowy."
+            },
+            {
+              "title": "2. Młody niż z wycinkiem ciepłym",
+              "text": "Wokół ośrodka powietrze zaczyna krążyć **przeciwnie do ruchu wskazówek zegara** (półkula północna). Po wschodniej stronie niżu ciepłe powietrze nasuwa się na chłodne — to **front ciepły**; po zachodniej chłodne podsuwa się pod ciepłe — to **front chłodny**. Między nimi znajduje się klin ciepłego powietrza, czyli **wycinek ciepły**, w którym jest parno i pochmurno."
+            },
+            {
+              "title": "3. Front chłodny dogania ciepły — powstaje okluzja",
+              "text": "Front chłodny przemieszcza się szybciej, więc stopniowo **zwęża wycinek ciepły**, aż go domknie. Ciepłe powietrze zostaje całkowicie **wyparte ku górze** i traci kontakt z podłożem — powstaje **front zokludowany (okluzja)**. Na mapie synoptycznej rysuje się go naprzemiennie półkolami i trójkątami po tej samej stronie linii."
+            },
+            {
+              "title": "4. Pogoda okluzji — dwa fronty w jednym",
+              "text": "Front okluzji łączy cechy obu poprzedników: daje **rozległe, długotrwałe zachmurzenie i opad** typowy dla frontu ciepłego, a jednocześnie **spadek temperatury i porywisty wiatr** typowy dla chłodnego. Chmury Nimbostratus przeplatają się tu z wbudowanymi Cumulonimbusami."
+            },
+            {
+              "title": "5. Zanik niżu",
+              "text": "Ciepłe powietrze, będące źródłem energii układu, zostało zużyte — wyniesione w górę i wypromieniowane. Kontrasty temperatury zanikają, ciśnienie w centrum rośnie, wiatr słabnie i niż się **wypełnia**. Zwykle na froncie polarnym powstaje wtedy kolejna fala i cały cykl zaczyna się od nowa, często w postaci **rodziny niżów** wędrujących jeden za drugim."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pułapki tej lekcji. (1) Nazwa frontu mówi o **masie, która nadchodzi**, a nie o tej, która ustępuje: za frontem ciepłym robi się cieplej, za chłodnym — chłodniej. (2) **Okluzja to nie trzeci rodzaj masy powietrza**, tylko sytuacja, w której ciepłe powietrze zostało oderwane od gruntu przez dogonienie frontu ciepłego przez chłodny. (3) Nie utożsamiaj **niżu** z **frontem**: niż to układ baryczny, front to granica mas — front może istnieć bez niżu, ale w umiarkowanych szerokościach zwykle występują razem. (4) **Pogoda ≠ klimat**: „w tym roku była zimna wiosna” to zdanie o pogodzie i nie podważa ocieplenia klimatu, bo klimat opisuje się **średnimi z co najmniej 30 lat**."
+        },
+        {
+          "type": "compare",
+          "title": "Pogoda a klimat",
+          "leftLabel": "Pogoda",
+          "rightLabel": "Klimat",
+          "rows": [
+            { "aspect": "Definicja", "left": "**Chwilowy stan atmosfery** w danym miejscu i czasie", "right": "**Charakterystyczny, wieloletni przebieg pogody** typowy dla danego obszaru" },
+            { "aspect": "Skala czasu", "left": "Minuty, godziny, dni", "right": "Co najmniej **30 lat** — okres standardowy zalecany przez WMO (np. 1991–2020)" },
+            { "aspect": "Co się bada", "left": "Wartości aktualne i ich zmiany", "right": "Wartości **średnie, ekstremalne i częstość** zjawisk" },
+            { "aspect": "Nauka", "left": "**Meteorologia** (prognozy synoptyczne)", "right": "**Klimatologia** (klimatogramy, normy klimatyczne)" },
+            { "aspect": "Sposób przedstawienia", "left": "Mapa synoptyczna, prognoza, dane ze stacji z konkretnej doby", "right": "**Klimatogram**, mapa izoterm i izohiet, klasyfikacje klimatów" },
+            { "aspect": "Przykład zdania", "left": "„Wczoraj w Krakowie padał deszcz, było 8 °C, wiał wiatr z zachodu”", "right": "„Kraków ma klimat umiarkowany ciepły przejściowy: średnia roczna ok. 8–9 °C, opad ok. 700 mm z maksimum letnim”" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Elementy i czynniki klimatu — co opisujemy i co to wyjaśnia",
+          "caption": "Rozróżnienie tych dwóch pojęć jest w poleceniach CKE traktowane bardzo dosłownie. **Elementy** to mierzalne cechy, które opisują klimat. **Czynniki** to przyczyny, które nadają elementom konkretne wartości.",
+          "groups": [
+            {
+              "name": "Elementy klimatu (to, co mierzymy)",
+              "description": "Wielkości meteorologiczne uśrednione w wieloleciu. Zapisując odpowiedź, wymieniaj rzeczowniki: temperatura, opad, ciśnienie — a nie ich przyczyny.",
+              "examples": ["Temperatura powietrza i jej amplitudy", "Suma i rozkład roczny opadów", "Ciśnienie atmosferyczne", "Wilgotność powietrza i zachmurzenie", "Kierunek i prędkość wiatru", "Usłonecznienie"]
+            },
+            {
+              "name": "Czynniki strefowe (astronomiczne)",
+              "description": "Wynikają z kulistości Ziemi i jej ruchów, dlatego działają **równoleżnikowo** i tworzą strefy klimatyczne. To one wyjaśniają podstawowy porządek klimatu na Ziemi.",
+              "examples": ["Szerokość geograficzna i kąt padania promieni słonecznych", "Długość dnia i nocy", "Ogólna cyrkulacja atmosfery — pasy ciśnień i wiatry stałe"]
+            },
+            {
+              "name": "Czynniki astrefowe (niestrefowe)",
+              "description": "Zaburzają układ strefowy i tłumaczą, dlaczego dwa punkty na tej samej szerokości geograficznej mają różny klimat. To one odpowiadają za podział stref na **typy klimatów**.",
+              "examples": ["Rozkład lądów i oceanów (oceanizm i kontynentalizm)", "Prądy morskie", "Wysokość nad poziomem morza i piętrowość", "Ukształtowanie terenu i ekspozycja stoków", "Rodzaj podłoża i szata roślinna"]
+            },
+            {
+              "name": "Czynniki antropogeniczne",
+              "description": "Działalność człowieka, która zmienia skład atmosfery i właściwości powierzchni. Działa lokalnie (klimat miasta) i globalnie (wzmocniony efekt cieplarniany).",
+              "examples": ["Emisja gazów cieplarnianych i aerozoli", "Miejska wyspa ciepła", "Wylesianie i zmiana albedo powierzchni", "Osuszanie mokradeł i wielkoobszarowe nawadnianie"]
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefy klimatyczne Ziemi",
+          "caption": "Podział stosowany w polskiej szkole (za W. Okołowiczem) opiera się na **temperaturze powietrza**, a wewnętrzny podział stref na typy — na **rozkładzie opadów i wpływie oceanu**. Kliknij strefy i zwróć uwagę, że granice nie biegną dokładnie po równoleżnikach: przesuwają je prądy morskie, rozkład lądów i góry.",
+          "zones": [
+            {
+              "name": "Strefa klimatów równikowych",
+              "latitude": "ok. 0–20° N i S",
+              "text": "Średnia temperatura **każdego** miesiąca przekracza 20 °C, a amplituda roczna jest znikoma (często poniżej 3 °C) — dobowa bywa większa od rocznej. Typy: **wybitnie wilgotny** (opady przez cały rok, ponad 2000 mm, dwa maksima zenitalne) oraz **podrównikowy wilgotny i suchy**, w którym wraz z wędrówką ITCZ pojawia się wyraźna **pora deszczowa i sucha**.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa klimatów zwrotnikowych",
+              "latitude": "ok. 20–30° N i S",
+              "text": "Panują tu **wyże zwrotnikowe** z osiadającym powietrzem, dlatego opady są znikome, zachmurzenie małe, a **amplitudy dobowe ogromne** (na Saharze nawet ponad 40 °C). Typy: **skrajnie suchy i suchy** (wielkie pustynie gorące), **wilgotny** na wschodnich wybrzeżach kontynentów oraz **monsunowy** w Azji Południowej.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa klimatów podzwrotnikowych",
+              "latitude": "ok. 30–40° N i S",
+              "text": "Strefa **przejściowa i sezonowa**: latem znajduje się pod wpływem wyżów zwrotnikowych, zimą — wędrujących niżów strefy umiarkowanej. Stąd najbardziej charakterystyczny typ, **śródziemnomorski (morski)**: gorące i suche lato, łagodna i wilgotna zima. Poza nim występują typy **kontynentalny suchy** (stepy i pustynie Azji Środkowej) i **monsunowy** (wschodnie Chiny, Japonia).",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa klimatów umiarkowanych",
+              "latitude": "ok. 40–66,5° N i S",
+              "text": "Strefa **czterech pór roku** i największej zmienności pogody, bo tędy przebiega front polarny i wędrują niże. Dzieli się na **ciepłą** i **chłodną**, a w każdej z nich występują typy: **morski** (mała amplituda, opady przez cały rok), **przejściowy** (Polska), **kontynentalny** (duża amplituda, opady letnie) i **monsunowy**. Na półkuli południowej strefa ta jest niemal w całości oceaniczna.",
+              "tone": "water"
+            },
+            {
+              "name": "Strefa klimatów okołobiegunowych",
+              "latitude": "powyżej ok. 66,5° N i S",
+              "text": "Bardzo mały dopływ energii słonecznej: kąt padania promieni jest niewielki, a przez część roku trwa noc polarna. Typ **subpolarny** ma najcieplejszy miesiąc w przedziale 0–10 °C (tundra, wieczna zmarzlina), typ **polarny** — poniżej 0 °C przez cały rok (Antarktyda, wnętrze Grenlandii). Opady są bardzo małe, bo **zimne powietrze mieści mało pary wodnej** — to „zimne pustynie”.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Klimatogram do rozpoznania",
+          "station": "Ateny (38°N, Grecja)",
+          "caption": "Przećwicz procedurę czytania klimatogramu: (1) sprawdź **temperaturę najchłodniejszego i najcieplejszego miesiąca**, (2) policz **amplitudę roczną**, (3) sprawdź, **kiedy pada, a kiedy nie**, (4) oszacuj **sumę roczną opadów**, (5) po maksimum temperatury rozpoznaj **półkulę** (lipiec–sierpień = północna). Dopiero z tych pięciu obserwacji wyprowadź nazwę klimatu.",
+          "temps": [10.2, 10.6, 12.6, 16.2, 21.2, 26.0, 28.9, 28.7, 24.7, 19.5, 15.1, 11.6],
+          "precip": [56, 47, 41, 30, 23, 11, 6, 7, 16, 52, 59, 70],
+          "answer": {
+            "climate": "Klimat podzwrotnikowy morski (śródziemnomorski), półkula północna",
+            "reasoning": "Najcieplejszym miesiącem jest lipiec, a najchłodniejszym styczeń — to **półkula północna**. Żaden miesiąc nie ma temperatury ujemnej (minimum ok. 10 °C), a amplituda roczna wynosi ok. 19 °C, co wyklucza zarówno strefę równikową (amplituda byłaby minimalna), jak i klimat kontynentalny umiarkowany. Rozstrzygający jest **rozkład opadów odwrotny do temperatury**: maksimum przypada na chłodne półrocze (listopad–styczeń), a latem opad niemal zanika (lipiec ok. 6 mm), przy sumie rocznej ok. 420 mm. Mechanizm: **latem** obszar znajduje się w zasięgu **wyżu zwrotnikowego** z osiadającym powietrzem, które ogrzewa się i osusza; **zimą** pas wyżów przesuwa się ku równikowi, a nad Morze Śródziemne wkraczają **wędrujące niże strefy umiarkowanej** z frontami i opadami."
+          }
+        },
+        {
+          "type": "case-study",
+          "title": "Blokujący wyż — wspólna przyczyna suszy i fali upałów",
+          "region": "Europa Zachodnia i Środkowa",
+          "text": "Latem 2003 r. nad Europą Zachodnią na kilka tygodni **zablokował się rozległy wyż**. Normalnie wędrujące z zachodu niże przynoszą co kilka dni front i opad; wyż blokujący zmusza je do omijania kontynentu z północy. Skutki nakładają się lawinowo: powietrze **osiada i ogrzewa się adiabatycznie**, zachmurzenie zanika, więc do powierzchni dociera maksimum promieniowania słonecznego; gleba wysycha, a gdy zabraknie w niej wody, **energia przestaje być zużywana na parowanie** i w całości idzie na ogrzewanie powietrza — temperatura rośnie jeszcze szybciej. Tak **susza atmosferyczna** (brak opadu) przechodzi w **glebową** (deficyt wody dla roślin), a potem w **hydrologiczną** (niskie stany rzek i jezior) oraz **hydrogeologiczną** (opadające zwierciadło wód podziemnych). Falę upałów 2003 r. wiąże się w Europie z kilkudziesięcioma tysiącami nadmiarowych zgonów — najwięcej wśród osób starszych w wielkich miastach, gdzie **miejska wyspa ciepła** nie pozwalała powietrzu ochłodzić się nawet nocą. Ucierpiały też rolnictwo, żegluga śródlądowa i energetyka, której zabrakło wody do chłodzenia.",
+          "takeaway": "Susza i fala upałów to **nie dwa niezależne zjawiska**, lecz dwa skutki tej samej sytuacji synoptycznej: długotrwałego, blokującego układu wyżowego. W odpowiedzi maturalnej wymień łańcuch: **wyż → osiadanie powietrza → brak zachmurzenia i opadów → silne nasłonecznienie → wysychanie gleby → dalszy wzrost temperatury**. W Polsce za falę upałów uznaje się co najmniej trzy kolejne dni z temperaturą maksymalną 30 °C lub wyższą."
+        },
+        {
+          "type": "quiz",
+          "question": "Stacja meteorologiczna zanotowała w ciągu dwóch godzin: spadek temperatury z 27 °C do 17 °C, przejście burzy z gradem i szkwałem, chmury Cumulonimbus, wzrost ciśnienia po ustaniu opadu oraz zmianę kierunku wiatru z południowo-zachodniego na północno-zachodni. Jakie zjawisko przeszło nad stacją?",
+          "options": [
+            "Front ciepły",
+            "Front chłodny",
+            "Centrum wyżu barycznego",
+            "Front zokludowany o cechach frontu ciepłego"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zestaw objawów jest dla **frontu chłodnego** rozstrzygający: chłodne powietrze podsunęło się klinem pod ciepłe i **gwałtownie wypchnęło je w górę**, co dało chmury Cumulonimbus, burzę, grad i szkwał. Po przejściu linii frontu nad stacją zalega już chłodna masa — stąd **spadek temperatury o 10 °C** i **wzrost ciśnienia** (chłodne powietrze jest gęstsze). Front ciepły dałby odwrotny kierunek zmian temperatury, opad ciągły z Nimbostratusa i brak burzy, a w centrum wyżu w ogóle nie byłoby opadu."
+        },
+        {
+          "type": "quiz",
+          "question": "W stacji A najcieplejszym miesiącem jest styczeń (24 °C), najchłodniejszym lipiec (12 °C), a opady występują wyłącznie w miesiącach od maja do sierpnia i wynoszą łącznie ok. 500 mm. Co można o niej powiedzieć?",
+          "options": [
+            "Leży na półkuli północnej, w strefie klimatów umiarkowanych",
+            "Leży na półkuli południowej, w strefie klimatów podzwrotnikowych, w typie śródziemnomorskim",
+            "Leży na półkuli północnej, w strefie klimatów równikowych",
+            "Leży na półkuli południowej, w strefie klimatów okołobiegunowych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Maksimum temperatury w **styczniu** jednoznacznie wskazuje **półkulę południową**. Amplituda 12 °C i temperatura najchłodniejszego miesiąca wyraźnie powyżej 0 °C wykluczają strefę okołobiegunową, a zbyt duża amplituda i wyraźna pora sucha — strefę równikową. Opady skupione w **chłodnym półroczu** (maj–sierpień to na półkuli południowej zima) przy suchym lecie to definicyjna cecha klimatu **śródziemnomorskiego**, występującego m.in. w środkowym Chile, Kraju Przylądkowym i na południu Australii."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy nawyki, które ratują punkty w zadaniach z tej lekcji. (1) **Front rozpoznawaj po kierunku zmiany temperatury**, nie po opadzie: temperatura rośnie → ciepły, spada → chłodny; dopiero potem dobierz do tego chmury i charakter opadu. (2) **Klimatogram czytaj w stałej kolejności**: półkula (kiedy jest najcieplej) → temperatura najchłodniejszego miesiąca → amplituda roczna → rozkład i suma opadów. Dopiero z kompletu czterech obserwacji wyprowadzaj nazwę — sama „wysoka temperatura” nie odróżnia klimatu zwrotnikowego od równikowego, robi to **amplituda i rozkład opadów**. (3) W poleceniu „wyjaśnij, dlaczego w tym klimacie latem nie pada” podaj **układ baryczny i ruch pionowy powietrza**: „latem obszar jest w zasięgu wyżu zwrotnikowego, powietrze osiada i ogrzewa się, więc jego wilgotność względna maleje i kondensacja nie zachodzi”. Odpowiedź bez ruchu pionowego powietrza zwykle nie dostaje pełnej punktacji."
+        }
+      ]
+    }
+  ]
+}

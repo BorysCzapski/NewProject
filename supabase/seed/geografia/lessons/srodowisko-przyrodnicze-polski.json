@@ -1,0 +1,2963 @@
+{
+  "topicSlug": "srodowisko-przyrodnicze-polski",
+  "lessons": [
+    {
+      "slug": "polozenie-i-granice-polski",
+      "title": "Położenie i granice Polski",
+      "summary": "Położenie matematyczne, fizycznogeograficzne i polityczne Polski oraz konsekwencje rozciągłości kraju dla długości dnia, czasu i klimatu.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Każda cecha środowiska Polski — od klimatu przejściowego po to, że rzeki płyną ku północy — zaczyna się od **położenia**. Geograf opisuje je zawsze na trzy sposoby: **matematycznie** (współrzędnymi), **fizycznogeograficznie** (względem mórz, gór i wielkich jednostek przyrodniczych) i **politycznie** (względem sąsiadów i organizacji międzynarodowych). W tej lekcji nauczysz się nie tylko podawać skrajne punkty, ale przede wszystkim **wyprowadzać z nich konsekwencje** — bo o to pyta matura."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Polska w liczbach",
+          "items": [
+            {
+              "value": "ok. 312,7",
+              "unit": "tys. km²",
+              "label": "powierzchnia kraju",
+              "note": "9. miejsce w Europie"
+            },
+            {
+              "value": "5°50′",
+              "unit": "≈ 649 km",
+              "label": "rozciągłość południkowa (z północy na południe)"
+            },
+            {
+              "value": "10°02′",
+              "unit": "≈ 689 km",
+              "label": "rozciągłość równoleżnikowa (z zachodu na wschód)"
+            },
+            {
+              "value": "ok. 3511",
+              "unit": "km",
+              "label": "łączna długość granic",
+              "note": "w tym granica morska ok. 440 km"
+            },
+            {
+              "value": "7",
+              "label": "państw sąsiadujących z Polską"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Skrajne punkty Polski",
+          "caption": "Zapamiętaj współrzędne z dokładnością do minut — służą do obliczania rozciągłości i różnicy czasu słonecznego.",
+          "headers": [
+            "Kierunek",
+            "Punkt",
+            "Współrzędne",
+            "Region"
+          ],
+          "rows": [
+            [
+              "Północ",
+              "przylądek Rozewie (okolice Jastrzębiej Góry)",
+              "54°50′N",
+              "Pobrzeże Kaszubskie"
+            ],
+            [
+              "Południe",
+              "szczyt Opołonek w Bieszczadach",
+              "49°00′N",
+              "Karpaty Wschodnie"
+            ],
+            [
+              "Zachód",
+              "kolano Odry koło Osinowa Dolnego (na zachód od Cedyni)",
+              "14°07′E",
+              "Dolina Dolnej Odry"
+            ],
+            [
+              "Wschód",
+              "kolano Bugu koło Zosina pod Hrubieszowem",
+              "24°09′E",
+              "Kotlina Hrubieszowska"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Cztery krańce i jeden południk",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że najdalej na zachód wysunięty punkt leży pod Cedynią, a nie w Świnoujściu — decyduje długość geograficzna, nie wygląd mapy.",
+          "center": [
+            52,
+            19
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 54.83,
+              "lng": 18.33,
+              "label": "Przylądek Rozewie — 54°50′N",
+              "text": "Najdalej na północ wysunięty punkt lądowej części Polski; klif nad Bałtykiem na Kępie Swarzewskiej. W dniu przesilenia letniego dzień trwa tu ok. 17 godzin."
+            },
+            {
+              "lat": 49,
+              "lng": 22.86,
+              "label": "Opołonek — 49°00′N",
+              "text": "Szczyt w Bieszczadach Zachodnich przy granicy z Ukrainą. Najdalej na południe wysunięty punkt kraju — Słońce góruje tu o 5°50′ wyżej niż nad Rozewiem."
+            },
+            {
+              "lat": 52.84,
+              "lng": 14.12,
+              "label": "Kolano Odry koło Osinowa Dolnego — 14°07′E",
+              "text": "Najdalej na zachód wysunięty punkt Polski, na granicznym odcinku Odry pod Cedynią. Słońce góruje tu ok. 40 minut później niż nad Bugiem."
+            },
+            {
+              "lat": 50.86,
+              "lng": 24.15,
+              "label": "Kolano Bugu koło Zosina — 24°09′E",
+              "text": "Najdalej na wschód wysunięty punkt kraju, na granicy z Ukrainą. To tutaj w Polsce najwcześniej wschodzi Słońce."
+            },
+            {
+              "lat": 52.73,
+              "lng": 15.24,
+              "label": "Południk 15°E — okolice Gorzowa Wielkopolskiego",
+              "text": "Południk wyznaczający czas urzędowy w Polsce (czas środkowoeuropejski, UTC+1). Biegnie przez zachodnią część kraju, więc w większości Polski Słońce góruje po godzinie 12:00 czasu zegarowego."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Różnica czasu słonecznego",
+          "expression": "\\Delta t = \\Delta \\lambda \\cdot 4\\ \\text{min}",
+          "variables": [
+            {
+              "symbol": "\\Delta t",
+              "meaning": "różnica czasu słonecznego między dwoma miejscami"
+            },
+            {
+              "symbol": "\\Delta \\lambda",
+              "meaning": "różnica długości geograficznej w stopniach"
+            }
+          ],
+          "caption": "Ziemia obraca się o 15° w ciągu godziny, czyli o 1° w ciągu 4 minut. Dla Polski: 10°02′ × 4 min ≈ **40 minut** — o tyle wcześniej Słońce góruje nad Zosinem niż nad Odrą pod Cedynią."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie rozciągłości — dwa zestawy konsekwencji",
+          "leftLabel": "Rozciągłość południkowa (5°50′ ≈ 649 km)",
+          "rightLabel": "Rozciągłość równoleżnikowa (10°02′ ≈ 689 km)",
+          "rows": [
+            {
+              "aspect": "Punkty skrajne",
+              "left": "Rozewie (54°50′N) – Opołonek (49°00′N)",
+              "right": "kolano Odry (14°07′E) – Zosin (24°09′E)"
+            },
+            {
+              "aspect": "Wysokość Słońca w górowaniu",
+              "left": "różnica **5°50′** — ze wzoru $h = 90^\\circ - \\varphi + \\delta$ wynika, że na południu kraju Słońce zawsze świeci pod większym kątem",
+              "right": "bez znaczenia — długość geograficzna nie wpływa na kąt padania promieni"
+            },
+            {
+              "aspect": "Długość dnia",
+              "left": "22 VI na północy ok. 17 h, na południu ok. 16 h — różnica blisko **godziny**; 22 XII odwrotnie",
+              "right": "identyczna na całej szerokości kraju"
+            },
+            {
+              "aspect": "Czas słoneczny",
+              "left": "bez różnicy",
+              "right": "różnica ok. **40 minut** między wschodem a zachodem kraju"
+            },
+            {
+              "aspect": "Skutki przyrodnicze",
+              "left": "dłuższy okres wegetacyjny i wyższe sumy promieniowania na południu, jaśniejsze letnie noce na północy",
+              "right": "wzrost kontynentalizmu klimatu ku wschodowi — skutek rosnącej odległości od Atlantyku"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Trzy sposoby opisu położenia Polski",
+          "caption": "Polecenie „określ położenie” prawie zawsze wymaga wskazania, o który typ położenia chodzi.",
+          "groups": [
+            {
+              "name": "Położenie matematyczne (astronomiczne)",
+              "description": "Opisane współrzędnymi geograficznymi. Decyduje o kącie padania promieni słonecznych, długości dnia i czasie słonecznym. Cała Polska leży w **strefie umiarkowanej półkuli północnej**, na półkuli wschodniej.",
+              "examples": [
+                "49°00′N – 54°50′N",
+                "14°07′E – 24°09′E",
+                "cały kraj w strefie czasu środkowoeuropejskiego (UTC+1) wyznaczonej południkiem 15°E"
+              ]
+            },
+            {
+              "name": "Położenie fizycznogeograficzne",
+              "description": "Opisane względem wielkich jednostek przyrodniczych: Polska leży w **środkowej części Europy**, między Morzem Bałtyckim na północy a Sudetami i Karpatami na południu. Większą część kraju zajmuje prowincja **Niż Środkowoeuropejski** w regionalizacji Jerzego Kondrackiego.",
+              "examples": [
+                "99,7% powierzchni w zlewisku Morza Bałtyckiego",
+                "hierarchia jednostek Kondrackiego: obszar → podobszar → prowincja → podprowincja → makroregion → mezoregion",
+                "strefa klimatu umiarkowanego ciepłego przejściowego"
+              ]
+            },
+            {
+              "name": "Położenie polityczne",
+              "description": "Opisane względem państw i organizacji. Polska graniczy z **7 państwami**, a jej wschodnia granica jest zarazem zewnętrzną granicą **Unii Europejskiej i strefy Schengen**.",
+              "examples": [
+                "członkostwo w NATO (1999), UE (2004), strefie Schengen (2007)",
+                "granica z Rosją, Białorusią i Ukrainą jako zewnętrzna granica UE",
+                "dostęp do morza — własne porty i wyłączna strefa ekonomiczna na Bałtyku"
+              ]
+            },
+            {
+              "name": "Położenie komunikacyjne (tranzytowe)",
+              "description": "Skutek dwóch poprzednich: przez Polskę biegną korytarze transportowe łączące **zachód ze wschodem** oraz **północ z południem** Europy, w dodatku po terenie nizinnym, bez barier górskich.",
+              "examples": [
+                "autostrady A2 i A4 w relacji wschód–zachód",
+                "Via Baltica i Via Carpatia w relacji północ–południe",
+                "porty Gdańsk, Gdynia i Szczecin–Świnoujście jako brama morska Europy Środkowej"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Granice Polski",
+          "caption": "Łącznie ok. 3511 km. Większość granicy lądowej ma charakter naturalny — oparto ją o wyraźne elementy rzeźby: rzeki i grzbiety górskie.",
+          "headers": [
+            "Sąsiad",
+            "Długość granicy",
+            "Charakter granicy"
+          ],
+          "rows": [
+            [
+              "Czechy",
+              "ok. 796 km — najdłuższa",
+              "**naturalna górska** — grzbiety Sudetów i Karpat Zachodnich, w dużej części biegnie działem wodnym"
+            ],
+            [
+              "Słowacja",
+              "ok. 541 km",
+              "**naturalna górska** — Karpaty (Tatry, Beskidy), miejscami rzeczna (Dunajec w Pieninach)"
+            ],
+            [
+              "Ukraina",
+              "ok. 535 km",
+              "częściowo **rzeczna** (Bug, San), częściowo sztuczna; zewnętrzna granica UE"
+            ],
+            [
+              "Niemcy",
+              "ok. 467 km",
+              "**naturalna rzeczna** — Odra i Nysa Łużycka"
+            ],
+            [
+              "Białoruś",
+              "ok. 418 km",
+              "w znacznej części **rzeczna** (Bug); zewnętrzna granica UE"
+            ],
+            [
+              "Rosja — obwód kaliningradzki",
+              "ok. 210 km",
+              "**sztuczna** — wytyczona geometrycznie po 1945 r., niemal prosta linia"
+            ],
+            [
+              "Litwa",
+              "ok. 104 km — najkrótsza",
+              "**sztuczna**, najkrótszy odcinek granicy lądowej"
+            ],
+            [
+              "granica morska",
+              "ok. 440 km",
+              "linia brzegowa Bałtyku wraz z granicą morza terytorialnego (12 mil morskich)"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Położenie, które kosztuje i opłaca się",
+          "region": "Polska — Europa Środkowa",
+          "text": "Polska leży na najkrótszej drodze między Europą Zachodnią a Wschodnią, na **nizinnym pomoście** bez barier w kierunku wschód–zachód. Historycznie oznaczało to brak granic obronnych, dziś — ogromny **tranzyt drogowy i kolejowy**, rozwój centrów logistycznych wzdłuż A2 i A4 oraz portów Trójmiasta i Świnoujścia. Ta sama otwartość na zachód wpuszcza jednak w głąb kraju **masy powietrza polarnomorskiego** znad Atlantyku, a od wschodu — kontynentalnego znad Eurazji. Położenie fizycznogeograficzne i polityczne opisują więc tę samą cechę: **przejściowość**.",
+          "takeaway": "Położenie tranzytowe jest jednocześnie atutem gospodarczym (przewozy, logistyka, inwestycje) i obciążeniem (koszt infrastruktury, ochrona zewnętrznej granicy UE, zanieczyszczenia transportowe)."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Czas słoneczny to nie czas urzędowy.** W całej Polsce obowiązuje jeden czas urzędowy oparty na południku 15°E, mimo że czas słoneczny różni się między krańcami kraju o ok. 40 minut. Ponieważ południk 15°E przebiega przez zachodnią Polskę, w większości kraju Słońce góruje **po** godzinie 12:00 czasu zimowego, a latem, przy czasie letnim (UTC+2) — dopiero po 13:00."
+        },
+        {
+          "type": "matching",
+          "title": "Skrajne punkty i kluczowe linie",
+          "instruction": "Dopasuj opis do właściwego punktu lub południka.",
+          "pairs": [
+            {
+              "left": "Najdalej na północ",
+              "right": "przylądek Rozewie, 54°50′N"
+            },
+            {
+              "left": "Najdalej na południe",
+              "right": "szczyt Opołonek w Bieszczadach, 49°00′N"
+            },
+            {
+              "left": "Najdalej na zachód",
+              "right": "kolano Odry koło Osinowa Dolnego, 14°07′E"
+            },
+            {
+              "left": "Najdalej na wschód",
+              "right": "kolano Bugu koło Zosina, 24°09′E"
+            },
+            {
+              "left": "Wyznacza czas urzędowy w Polsce",
+              "right": "południk 15°E"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Sąsiedzi Polski według długości granicy",
+          "instruction": "Uporządkuj państwa od najdłuższej do najkrótszej granicy z Polską.",
+          "items": [
+            "Czechy (ok. 796 km)",
+            "Słowacja (ok. 541 km)",
+            "Ukraina (ok. 535 km)",
+            "Niemcy (ok. 467 km)",
+            "Białoruś (ok. 418 km)",
+            "Rosja — obwód kaliningradzki (ok. 210 km)",
+            "Litwa (ok. 104 km)"
+          ],
+          "explanation": "Zaskoczeniem bywa, że granica z Czechami jest dłuższa niż z Niemcami — decyduje jej kręty, górski przebieg wzdłuż Sudetów i łuku Karpat, a nie odległość w linii prostej."
+        },
+        {
+          "type": "quiz",
+          "question": "Ile wynosi różnica czasu słonecznego między najdalej na zachód i najdalej na wschód wysuniętym punktem Polski?",
+          "options": [
+            "ok. 20 minut",
+            "ok. 40 minut",
+            "ok. 1 godzina",
+            "ok. 1 godzina 20 minut"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rozciągłość równoleżnikowa wynosi 10°02′, a Ziemia obraca się o 1° w ciągu 4 minut, więc 10,03° × 4 min ≈ 40 minut. To różnica czasu SŁONECZNEGO — czas urzędowy jest w całym kraju taki sam."
+        },
+        {
+          "type": "quiz",
+          "question": "Która konsekwencja wynika bezpośrednio z rozciągłości POŁUDNIKOWEJ Polski?",
+          "options": [
+            "Różnica czasu słonecznego sięgająca 40 minut",
+            "Wzrost rocznej amplitudy temperatury powietrza z zachodu na wschód",
+            "Różnica długości dnia sięgająca ok. 1 godziny w dniu przesilenia",
+            "Przebieg zewnętrznej granicy Unii Europejskiej"
+          ],
+          "correctIndex": 2,
+          "explanation": "Rozciągłość południkowa to różnica szerokości geograficznej — przekłada się na kąt padania promieni słonecznych i długość dnia. Różnica czasu słonecznego wynika z rozciągłości równoleżnikowej, a wzrost amplitudy ku wschodowi — z odległości od Atlantyku."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zdanie o granicach Polski jest prawdziwe?",
+          "options": [
+            "Najdłuższą granicę lądową Polska ma z Niemcami, bo biegnie ona wzdłuż Odry i Nysy Łużyckiej",
+            "Najdłuższą granicę lądową Polska ma z Czechami — biegnie ona grzbietami Sudetów i Karpat Zachodnich",
+            "Granica z Rosją ma charakter naturalny, ponieważ w całości biegnie wzdłuż Zalewu Wiślanego",
+            "Wszystkie granice wschodnie Polski są granicami sztucznymi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Granica z Czechami (ok. 796 km) jest najdłuższa, bo kręto biegnie przez góry. Granica z Rosją jest typowo sztuczna (geometryczna), a granice z Białorusią i Ukrainą w dużej części naturalne — wzdłuż Bugu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach obliczeniowych zamieniaj **minuty kątowe na ułamek stopnia** (50′ = 0,83°) przed podstawieniem do wzoru — to najczęstsze źródło błędu rachunkowego. Pamiętaj o przelicznikach: 1° wzdłuż południka ≈ **111,2 km**, a 1° długości geograficznej = **4 minuty** czasu słonecznego. Gdy polecenie brzmi „wyjaśnij konsekwencje położenia”, w odpowiedzi musi pojawić się cały mechanizm (np. „większy kąt padania promieni → wyższe sumy promieniowania → dłuższy okres wegetacyjny”), a nie sama nazwa zjawiska."
+        }
+      ]
+    },
+    {
+      "slug": "budowa-geologiczna-i-surowce-mineralne",
+      "title": "Budowa geologiczna i surowce mineralne Polski",
+      "summary": "Trzy wielkie jednostki tektoniczne, dzieje geologiczne obszaru Polski i to, dlaczego złoża surowców leżą dokładnie tam, gdzie leżą.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska jest geologiczną mozaiką: na przestrzeni kilkuset kilometrów spotykają się tu **prekambryjska platforma** licząca prawie 2 mld lat, **sfałdowane w paleozoiku** Sudety i Góry Świętokrzyskie oraz **młode, alpejskie Karpaty**. Ta trójdzielność tłumaczy wszystko, co dalej: rozmieszczenie surowców, przebieg granicy gór i wyżyn, a nawet to, gdzie występują wody lecznicze. Kluczowa zasada tej lekcji brzmi: **złoże powstaje w określonym środowisku i w określonym czasie geologicznym** — dlatego węgiel kamienny znajdziemy w karbonie, a sól i miedź w permie."
+        },
+        {
+          "type": "definition",
+          "term": "Platforma",
+          "text": "Rozległy, **sztywny i ustabilizowany** fragment skorupy kontynentalnej, w którym ruchy górotwórcze dawno wygasły. Składa się z dwóch pięter: sfałdowanego **podłoża krystalicznego** (fundamentu) i leżącej na nim niezaburzonej, poziomej **pokrywy osadowej**. Przeciwieństwem platformy jest **orogen** — obszar aktywny tektonicznie, o skałach sfałdowanych i wypiętrzonych.",
+          "note": "Granicą między dwiema polskimi platformami jest **strefa Teisseyre’a–Tornquista (TTZ)** — jeden z najważniejszych szwów tektonicznych Europy. Biegnie z północnego zachodu (od Bałtyku koło Kołobrzegu) na południowy wschód, mniej więcej wzdłuż linii Koszalin – Toruń – Zamość."
+        },
+        {
+          "type": "classification",
+          "title": "Jednostki tektoniczne na obszarze Polski",
+          "caption": "Cztery jednostki, które musisz umieć wskazać na mapie i scharakteryzować.",
+          "groups": [
+            {
+              "name": "Platforma wschodnioeuropejska (prekambryjska)",
+              "description": "Północno-wschodnia Polska, na wschód od strefy TTZ. **Najstarsza i najsztywniejsza** część kraju: podłoże krystaliczne (gnejsy, granity) skonsolidowane w prekambrze, przykryte poziomo leżącą pokrywą osadową o miąższości od kilkuset metrów na Suwalszczyźnie do kilku kilometrów na zachodzie. Skały fundamentu nigdzie nie wychodzą tu na powierzchnię — znamy je tylko z wierceń.",
+              "examples": [
+                "Suwalszczyzna i Mazury",
+                "Podlasie",
+                "podłoże Niziny Północnopodlaskiej",
+                "złoże rud żelaza i tytanu koło Suwałk (niewydobywane)"
+              ]
+            },
+            {
+              "name": "Platforma zachodnioeuropejska (paleozoiczna)",
+              "description": "Środkowa i zachodnia Polska, na zachód od TTZ. Powstała ze **sfałdowanych w orogenezie kaledońskiej i hercyńskiej** struktur paleozoicznych, przykrytych następnie pokrywą permsko-mezozoiczną. Miejscami stary fundament został ponownie wydźwignięty i odsłonięty — tak powstały Sudety i Góry Świętokrzyskie.",
+              "examples": [
+                "Sudety i blok przedsudecki",
+                "Góry Świętokrzyskie",
+                "monoklina przedsudecka (złoża miedzi)",
+                "niecka szczecińsko-łódzko-miechowska",
+                "wał środkowopolski z wysadami solnymi"
+              ]
+            },
+            {
+              "name": "Karpaty — orogen alpejski",
+              "description": "Najmłodsza jednostka, sfałdowana i wypiętrzona w **orogenezie alpejskiej** (kreda–neogen). Zbudowana z **płaszczowin** — pakietów skał oderwanych od podłoża i nasuniętych ku północy na dziesiątki kilometrów.",
+              "examples": [
+                "Karpaty zewnętrzne (fliszowe): Beskidy, Pogórze, Bieszczady",
+                "pieniński pas skałkowy — wąska, silnie zaburzona strefa",
+                "Karpaty wewnętrzne: Tatry z granitowym trzonem krystalicznym i płaszczowinami wierchowymi oraz reglowymi"
+              ]
+            },
+            {
+              "name": "Zapadlisko przedkarpackie",
+              "description": "**Rów przedgórski** ugięty pod ciężarem nasuwających się Karpat i zalany przez płytkie morze mioceńskie. Wypełniają go iły, gipsy, sole i wapienie — a wraz z nimi bogaty zestaw surowców chemicznych.",
+              "examples": [
+                "Kotlina Sandomierska",
+                "Kotlina Oświęcimska",
+                "złoża soli kamiennej (Wieliczka, Bochnia)",
+                "złoża siarki rodzimej (Osiek, dawniej Tarnobrzeg)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwie platformy — jeden kraj",
+          "leftLabel": "Platforma wschodnioeuropejska",
+          "rightLabel": "Platforma zachodnioeuropejska (paleozoiczna)",
+          "rows": [
+            {
+              "aspect": "Wiek konsolidacji podłoża",
+              "left": "prekambr — najstarsze skały mają ok. 1,5–2 mld lat",
+              "right": "paleozoik — orogeneza kaledońska (sylur/dewon) i hercyńska (karbon)"
+            },
+            {
+              "aspect": "Zasięg",
+              "left": "północno-wschodnia Polska, na wschód od strefy TTZ",
+              "right": "środkowa, zachodnia i południowo-zachodnia Polska"
+            },
+            {
+              "aspect": "Budowa",
+              "left": "sztywny fundament krystaliczny + poziomo leżąca pokrywa osadowa",
+              "right": "sfałdowane struktury paleozoiczne + pokrywa permsko-mezozoiczna, miejscami przerwana wypiętrzeniami"
+            },
+            {
+              "aspect": "Ruchy tektoniczne w kenozoiku",
+              "left": "znikome — obszar bardzo stabilny",
+              "right": "wyraźne ruchy pionowe (zrębowe) w orogenezie alpejskiej — odmłodzenie Sudetów"
+            },
+            {
+              "aspect": "Odbicie w rzeźbie",
+              "left": "równiny i wysoczyzny; rzeźba niemal wyłącznie polodowcowa",
+              "right": "wyżyny i stare góry — Sudety, Góry Świętokrzyskie, Wyżyna Śląska"
+            },
+            {
+              "aspect": "Surowce",
+              "left": "praktycznie brak eksploatowanych złóż kopalin energetycznych i metalicznych",
+              "right": "węgiel kamienny, rudy miedzi, cynku i ołowiu, sól, surowce skalne — trzon polskiego górnictwa"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Dzieje geologiczne obszaru Polski",
+          "caption": "Kliknij kolejne etapy. Zwróć uwagę, że prawie każdy z nich zostawił po sobie konkretne złoże.",
+          "events": [
+            {
+              "period": "prekambr (przed 541 mln lat)",
+              "label": "Konsolidacja platformy wschodnioeuropejskiej",
+              "text": "Fałdowania prekambryjskie spajają fundament krystaliczny północno-wschodniej Polski. Od tego czasu obszar ten jest **tektonicznie spokojny** — stanowi sztywny blok, o który rozbijały się późniejsze ruchy górotwórcze."
+            },
+            {
+              "period": "kambr – sylur",
+              "label": "Morza paleozoiczne i orogeneza kaledońska",
+              "text": "Obszar dzisiejszej Polski pokrywają płytkie morza; osadzają się piaskowce, łupki i wapienie. Na przełomie syluru i dewonu **orogeneza kaledońska** fałduje część Gór Świętokrzyskich i zachodnie Sudety."
+            },
+            {
+              "period": "dewon – karbon",
+              "label": "Orogeneza hercyńska i lasy karbońskie",
+              "text": "**Orogeneza hercyńska (waryscyjska)** wypiętrza Sudety i domyka strukturę Gór Świętokrzyskich. W karbonie, w gorącym i wilgotnym klimacie, na rozległych bagnach rosną olbrzymie widłaki i skrzypy — z ich szczątków powstają pokłady **węgla kamiennego** Górnośląskiego, Lubelskiego i Dolnośląskiego Zagłębia Węglowego."
+            },
+            {
+              "period": "perm",
+              "label": "Pustynie i morze cechsztyńskie",
+              "text": "Zrównane góry hercyńskie otacza gorący, suchy klimat (czerwony spągowiec — piaskowce pustynne, wulkanizm: porfiry i melafiry). Później wkracza płytkie, parujące **morze cechsztyńskie**, z którego wytrącają się **sól kamienna, gipsy i anhydryty**, a na jego dnie osadzają się **łupki miedzionośne** — dzisiejsze złoża LGOM."
+            },
+            {
+              "period": "trias – jura – kreda",
+              "label": "Transgresje mezozoiczne",
+              "text": "Kolejne zalewy morskie zostawiają charakterystyczne skały: triasowe **dolomity kruszconośne** z rudami cynku i ołowiu, jurajskie **wapienie** budujące ostańce Wyżyny Krakowsko-Częstochowskiej oraz kredowe **opoki, margle i kredę piszącą** Wyżyny Lubelskiej i Roztocza."
+            },
+            {
+              "period": "paleogen – neogen",
+              "label": "Orogeneza alpejska",
+              "text": "Fałdowane i nasuwane ku północy płaszczowiny tworzą **Karpaty**, przed nimi ugina się **zapadlisko przedkarpackie** zalane morzem mioceńskim (sól, gips, **siarka**). Sudety zostają **odmłodzone** ruchami zrębowymi wzdłuż uskoków; w miejscach spękań wylewają się bazalty. Na niżu, w mioceńskich bagnach, powstaje **węgiel brunatny**; w paleogeńskich lasach nadbałtyckich — **bursztyn**."
+            },
+            {
+              "period": "czwartorzęd (ostatnie 2,6 mln lat)",
+              "label": "Zlodowacenia i pokrywy lessowe",
+              "text": "Lądolód skandynawski wielokrotnie wkracza na obszar Polski, zostawiając **gliny zwałowe, piaski i żwiry**, a poza swoim zasięgiem — nawiane przez wiatr **lessy**. To najmłodsza, ale najlepiej widoczna warstwa: kształtuje dzisiejszą rzeźbę i gleby."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak powstały Karpaty",
+          "caption": "Mechanizm, o który matura pyta najczęściej w formie „wyjaśnij powstanie fliszu i płaszczowin”.",
+          "steps": [
+            {
+              "title": "Basen sedymentacyjny oceanu Tetydy",
+              "text": "W kredzie i paleogenie w głębokim basenie morskim osadzają się naprzemianległe warstwy **piaskowców i łupków** — tzw. **flisz karpacki**. Rytmiczne przeławicenia to zapis podmorskich spływów osadów (prądów zawiesinowych)."
+            },
+            {
+              "title": "Zamykanie oceanu",
+              "text": "Płyta afrykańska zbliża się do euroazjatyckiej. Basen zwęża się, a osady są **ściskane** — powstają fałdy o osiach równoległych do łuku przyszłych gór."
+            },
+            {
+              "title": "Nasuwanie płaszczowin",
+              "text": "Ściskane serie fliszowe **odrywają się od podłoża** i zostają nasunięte ku północy o dziesiątki kilometrów, jedna na drugą (płaszczowiny: magurska, śląska, skolska). Dlatego w Karpatach zewnętrznych **nie ma trzonu krystalicznego** — leży pod nimi zwykłe podłoże platformy."
+            },
+            {
+              "title": "Ugięcie przedpola",
+              "text": "Pod ciężarem nasuwanych mas przedpole gór **ugina się**, tworząc **zapadlisko przedkarpackie**. Zalewa je płytkie morze mioceńskie, które w parującej lagunie zostawia sól, gips i siarkę."
+            },
+            {
+              "title": "Wypiętrzenie i rzeźbienie",
+              "text": "W neogenie całość zostaje **wypiętrzona**; rzeźbią ją rzeki, tworząc kratową sieć dolin. W plejstocenie w Tatrach działają lodowce górskie, tworząc kotły, doliny U-kształtne i moreny — jedyną w Polsce rzeźbę **wysokogórską**."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Surowce mineralne Polski — wiek i rozmieszczenie",
+          "caption": "Zapamiętuj parami: surowiec ↔ epoka geologiczna. To pozwala odtworzyć rozmieszczenie złóż nawet bez mapy.",
+          "headers": [
+            "Surowiec",
+            "Wiek złoża",
+            "Główne obszary występowania"
+          ],
+          "rows": [
+            [
+              "Węgiel kamienny",
+              "karbon",
+              "Górnośląskie Zagłębie Węglowe, Lubelskie ZW (Bogdanka), dawniej Dolnośląskie ZW (Wałbrzych, Nowa Ruda)"
+            ],
+            [
+              "Węgiel brunatny",
+              "neogen (miocen)",
+              "Bełchatów, rejon Konina i Turku, Turów koło Bogatyni; niezagospodarowane złoża Legnicy i Gubina"
+            ],
+            [
+              "Rudy miedzi i srebra",
+              "perm — łupki miedzionośne cechsztynu",
+              "Legnicko-Głogowski Okręg Miedziowy: Lubin, Polkowice, Rudna, Głogów"
+            ],
+            [
+              "Rudy cynku i ołowiu",
+              "trias — dolomity kruszconośne",
+              "okolice Olkusza, Bytomia i Chrzanowa na Wyżynie Śląskiej"
+            ],
+            [
+              "Siarka rodzima",
+              "miocen zapadliska przedkarpackiego",
+              "Osiek koło Staszowa; dawniej Tarnobrzeg (Machów, Piaseczno)"
+            ],
+            [
+              "Sól kamienna",
+              "perm (wysady solne) oraz miocen",
+              "Kłodawa, Inowrocław, Wapno — wysady cechsztyńskie; Wieliczka i Bochnia — sole mioceńskie"
+            ],
+            [
+              "Gaz ziemny i ropa naftowa",
+              "perm, miocen, flisz karpacki",
+              "Wielkopolska i Ziemia Lubuska, Podkarpacie (Bóbrka), szelf Bałtyku"
+            ],
+            [
+              "Surowce skalne",
+              "różny",
+              "granity Strzegomia i Strzelina, bazalty Dolnego Śląska, wapienie jurajskie i triasowe, gipsy Niecki Nidziańskiej, kruszywa w dolinach rzek"
+            ],
+            [
+              "Bursztyn",
+              "paleogen (eocen)",
+              "Wybrzeże Gdańskie i okolice Gdańska — tzw. błękitna ziemia; także Lubelszczyzna"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa złóż — gdzie i dlaczego właśnie tam",
+          "caption": "Kliknij znaczniki i przy każdym odtwórz w głowie: która jednostka tektoniczna, który wiek geologiczny.",
+          "center": [
+            51.5,
+            19
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 50.26,
+              "lng": 19.02,
+              "label": "Górnośląskie Zagłębie Węglowe",
+              "text": "Największe złoże **węgla kamiennego** w Polsce, karbońskie. Pokłady zapadają ku wschodowi, na zachodzie wychodzą blisko powierzchni — dlatego górnictwo zaczęło się tutaj najwcześniej."
+            },
+            {
+              "lat": 51.3,
+              "lng": 23.02,
+              "label": "Bogdanka — Lubelskie Zagłębie Węglowe",
+              "text": "Karbońskie złoże na skraju platformy wschodnioeuropejskiej. Węgiel zalega głęboko (ok. 900–1000 m), ale w korzystnych warunkach geologicznych — to najnowocześniejsza polska kopalnia węgla kamiennego."
+            },
+            {
+              "lat": 51.27,
+              "lng": 19.3,
+              "label": "Bełchatów",
+              "text": "Największa w Polsce odkrywka **węgla brunatnego** (neogen). Węgiel zalega w rowie tektonicznym; nadkład zdejmuje się maszynami, tworząc największe w kraju wyrobisko i zwałowisko (Góra Kamieńsk)."
+            },
+            {
+              "lat": 52.22,
+              "lng": 18.25,
+              "label": "Konin i Turek",
+              "text": "Zagłębie **węgla brunatnego** w Wielkopolsce. Odkrywki spowodowały powstanie leja depresyjnego — obniżenia zwierciadła wód podziemnych na dużym obszarze."
+            },
+            {
+              "lat": 50.91,
+              "lng": 14.95,
+              "label": "Turów koło Bogatyni",
+              "text": "Odkrywka **węgla brunatnego** w worku turoszowskim, tuż przy granicy z Czechami i Niemcami — złoże transgraniczne, źródło sporów o odwodnienie terenu."
+            },
+            {
+              "lat": 51.4,
+              "lng": 16.2,
+              "label": "Lubin — LGOM",
+              "text": "**Rudy miedzi** w permskich łupkach miedzionośnych, na monoklinie przedsudeckiej. Wraz z miedzią wydobywa się **srebro** — Polska należy do czołowych producentów tego metalu na świecie."
+            },
+            {
+              "lat": 50.28,
+              "lng": 19.56,
+              "label": "Olkusz",
+              "text": "**Rudy cynku i ołowiu** w triasowych dolomitach kruszconośnych, na pograniczu Wyżyny Śląskiej i Krakowsko-Częstochowskiej. Eksploatacja trwała tu z przerwami od średniowiecza."
+            },
+            {
+              "lat": 50.44,
+              "lng": 21.42,
+              "label": "Osiek koło Staszowa",
+              "text": "**Siarka rodzima** z osadów mioceńskich zapadliska przedkarpackiego. Wydobycie metodą **podziemnego wytapiania**: do złoża tłoczy się gorącą wodę, a stopiona siarka jest wypychana na powierzchnię."
+            },
+            {
+              "lat": 52.25,
+              "lng": 18.91,
+              "label": "Kłodawa",
+              "text": "**Wysad solny** — słup soli cechsztyńskiej, który dzięki mniejszej gęstości przebił się przez nadległe warstwy skalne, sięgając blisko powierzchni. Największa polska kopalnia soli kamiennej."
+            },
+            {
+              "lat": 49.98,
+              "lng": 20.06,
+              "label": "Wieliczka",
+              "text": "**Sól mioceńska** zapadliska przedkarpackiego, eksploatowana od średniowiecza. Dziś kopalnia to zabytek na liście UNESCO — wydobycie soli spożywczej zakończono, pozyskuje się solankę."
+            },
+            {
+              "lat": 49.6,
+              "lng": 21.72,
+              "label": "Bóbrka koło Krosna",
+              "text": "Kolebka światowego przemysłu naftowego — pierwsza kopalnia **ropy naftowej** założona w 1854 r. przez Ignacego Łukasiewicza. Ropa i gaz w Karpatach związane są z pułapkami w utworach fliszowych."
+            },
+            {
+              "lat": 50.96,
+              "lng": 16.35,
+              "label": "Strzegom",
+              "text": "Największy w Polsce rejon wydobycia **granitu** — hercyńskie intruzje bloku przedsudeckiego. Obok bazaltów Dolnego Śląska to zaplecze surowców drogowych i budowlanych kraju."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Legnicko-Głogowski Okręg Miedziowy",
+          "region": "Dolny Śląsk — monoklina przedsudecka",
+          "text": "Pod Lubinem i Polkowicami, na głębokości **600–1300 m**, leży cienka (ok. 0,5–2 m) warstwa **łupków miedzionośnych** — osadów dna morza cechsztyńskiego sprzed ok. 255 mln lat, w których w warunkach beztlenowych wytrąciły się siarczki miedzi i srebra. Złoże odkryto w 1957 r. dzięki wierceniom Jana Wyżykowskiego, w miejscu, gdzie na powierzchni nie było żadnych oznak rudy. Eksploatacja jest **głęboka, gorąca i wodochłonna**: temperatura w wyrobiskach przekracza 40°C, a urobek wymaga flotacji i hutnictwa. Odpady poflotacyjne gromadzi zbiornik **Żelazny Most** — jeden z największych obiektów tego typu na świecie.",
+          "takeaway": "Rozmieszczenie złóż wynika ze środowiska sedymentacji sprzed setek milionów lat, a nie z dzisiejszej rzeźby terenu — dlatego bogate złoże może leżeć pod płaską, rolniczą równiną."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy klasyczne pomyłki. **Po pierwsze**: węgiel *kamienny* to **karbon** i kopalnie głębinowe (Śląsk, Bogdanka), a węgiel *brunatny* to **neogen** i odkrywki (Bełchatów, Konin, Turów) — nie zamieniaj ich miejscami. **Po drugie**: Sudety powstały w orogenezie **hercyńskiej**, a jedynie zostały **odmłodzone** ruchami pionowymi w orogenezie alpejskiej — to nie są góry alpejskie. **Po trzecie**: sól występuje w Polsce w dwóch różnych wiekach — **permska** w wysadach (Kłodawa, Inowrocław) i **mioceńska** w zapadlisku przedkarpackim (Wieliczka, Bochnia)."
+        },
+        {
+          "type": "matching",
+          "title": "Złoże i jego geologiczna metryka",
+          "instruction": "Dopasuj obszar wydobycia do surowca i wieku złoża.",
+          "pairs": [
+            {
+              "left": "Górnośląskie Zagłębie Węglowe",
+              "right": "węgiel kamienny z karbonu"
+            },
+            {
+              "left": "Bełchatów",
+              "right": "węgiel brunatny z neogenu"
+            },
+            {
+              "left": "Lubin i Polkowice",
+              "right": "rudy miedzi i srebra z permskich łupków miedzionośnych"
+            },
+            {
+              "left": "Osiek koło Staszowa",
+              "right": "siarka rodzima z mioceńskich osadów zapadliska przedkarpackiego"
+            },
+            {
+              "left": "Kłodawa",
+              "right": "sól kamienna z wysadu cechsztyńskiego"
+            },
+            {
+              "left": "Okolice Olkusza",
+              "right": "rudy cynku i ołowiu z triasowych dolomitów"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Kalendarium geologiczne Polski",
+          "instruction": "Uporządkuj wydarzenia od najstarszego do najmłodszego.",
+          "items": [
+            "konsolidacja platformy wschodnioeuropejskiej w prekambrze",
+            "orogeneza kaledońska — fałdowanie części Gór Świętokrzyskich",
+            "powstanie pokładów węgla kamiennego w karbońskich bagnach",
+            "orogeneza hercyńska — wypiętrzenie Sudetów",
+            "zalew morza cechsztyńskiego i powstanie złóż soli oraz łupków miedzionośnych",
+            "osadzanie wapieni jurajskich Wyżyny Krakowsko-Częstochowskiej",
+            "orogeneza alpejska — sfałdowanie Karpat i ugięcie zapadliska przedkarpackiego",
+            "zlodowacenia plejstoceńskie i akumulacja glin zwałowych"
+          ],
+          "explanation": "Uwaga na kolejność w karbonie i permie: **najpierw** powstały pokłady węgla (karbon), **potem** ruchy hercyńskie i dopiero na zrównanych górach rozlało się morze cechsztyńskie — dlatego węgiel leży pod warstwami permskimi."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie jednostki tektonicznej z jej cechą jest poprawne?",
+          "options": [
+            "Platforma wschodnioeuropejska — sfałdowana w orogenezie hercyńskiej, budują ją Sudety",
+            "Karpaty zewnętrzne — zbudowane z fliszu, o budowie płaszczowinowej, bez trzonu krystalicznego",
+            "Zapadlisko przedkarpackie — wypełnione skałami krystalicznymi prekambru",
+            "Platforma zachodnioeuropejska — obszar bez jakichkolwiek ruchów tektonicznych w kenozoiku"
+          ],
+          "correctIndex": 1,
+          "explanation": "Karpaty zewnętrzne to typowy orogen fliszowy: naprzemianległe piaskowce i łupki oderwane od podłoża i nasunięte ku północy w postaci płaszczowin. Trzon krystaliczny mają dopiero Karpaty wewnętrzne (Tatry)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego złoża siarki rodzimej i soli kamiennej występują w Kotlinie Sandomierskiej?",
+          "options": [
+            "Bo powstały z produktów wulkanizmu towarzyszącego orogenezie alpejskiej",
+            "Bo to osady wytrącone z płytkiego, parującego morza mioceńskiego wypełniającego zapadlisko przedkarpackie",
+            "Bo naniósł je tam lądolód skandynawski w plejstocenie",
+            "Bo są to skały prekambryjskiego podłoża odsłonięte przez erozję"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zapadlisko przedkarpackie ugięło się przed nasuwającymi się Karpatami i zostało zalane płytkim morzem mioceńskim. Intensywne parowanie doprowadziło do wytrącania soli i gipsów, a przemiany bakteryjne gipsów dały siarkę rodzimą."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaż surowiec, którego złoża w Polsce są związane z permem.",
+          "options": [
+            "Węgiel brunatny",
+            "Rudy cynku i ołowiu",
+            "Rudy miedzi",
+            "Bursztyn"
+          ],
+          "correctIndex": 2,
+          "explanation": "Rudy miedzi występują w cechsztyńskich (permskich) łupkach miedzionośnych LGOM. Węgiel brunatny to neogen, rudy Zn-Pb — trias, a bursztyn — paleogen."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z tego działu prawie zawsze mają formę **„podaj i uzasadnij”**: wskaż region wydobycia, a następnie wyjaśnij, jaka jednostka tektoniczna i jakie środowisko sedymentacji za tym stoją. Ucz się więc **łańcuchami przyczynowymi**: „gorący, wilgotny klimat karbonu → bujna roślinność bagienna → nagromadzenie i uwęglenie szczątków → pokłady węgla kamiennego w GZW”. Warto też znać przekrój przez Polskę wzdłuż linii SW–NE: **Sudety → monoklina przedsudecka → niecka → wał środkowopolski → platforma prekambryjska** — pytania o profil geologiczny pojawiają się regularnie."
+        }
+      ]
+    },
+    {
+      "slug": "zlodowacenia-i-rzezba-polodowcowa",
+      "title": "Zlodowacenia i rzeźba polodowcowa Polski",
+      "summary": "Zasięgi kolejnych zlodowaceń, formy pozostawione przez lądolód i różnice między rzeźbą młodoglacjalną a staroglacjalną.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rzeźba prawie całej Polski to **dzieło ostatnich 2,5 mln lat** — czasu, w którym lądolód skandynawski wielokrotnie wkraczał na nasze ziemie i się z nich wycofywał. Im dalej na północ, tym rzeźba **młodsza i bardziej wyrazista**: jeziora, wały morenowe, płaskie sandry. Im dalej na południe — tym bardziej **złagodzona przez denudację**, aż do granicy, za którą lądolód nigdy nie dotarł, a klimat peryglacjalny zostawił lessy i gołoborza. W tej lekcji nauczysz się czytać krajobraz jak zapis kolejnych zlodowaceń."
+        },
+        {
+          "type": "timeline",
+          "title": "Zlodowacenia plejstoceńskie na obszarze Polski",
+          "caption": "Kliknij kolejne etapy. Datowania są przybliżone — na maturze liczy się kolejność, zasięg i skutki w rzeźbie.",
+          "events": [
+            {
+              "period": "ok. 950–800 tys. lat temu",
+              "label": "Zlodowacenia najstarsze (narwi)",
+              "text": "Pierwsze wkroczenie lądolodu na północno-wschodnią Polskę. Ślady są **szczątkowe i znane wyłącznie z wierceń** — późniejsze zlodowacenia i erozja usunęły je z powierzchni."
+            },
+            {
+              "period": "ok. 730–430 tys. lat temu",
+              "label": "Zlodowacenia południowopolskie (nidy, sanu)",
+              "text": "**Największy zasięg** — lądolód dotarł do podnóża Sudetów i Karpat, pokrywając ok. 90% powierzchni dzisiejszej Polski; wkroczył nawet w niższe partie kotlin podkarpackich. Po jego formach nie ma dziś śladu w rzeźbie — pozostały tylko **gliny zwałowe w podłożu**, przykryte młodszymi osadami."
+            },
+            {
+              "period": "ok. 300–130 tys. lat temu",
+              "label": "Zlodowacenia środkowopolskie (odry i warty)",
+              "text": "Lądolód sięgnął po **krawędź pasa wyżyn**: Wzniesienia Łódzkie, północną krawędź Wyżyny Lubelskiej i Roztocze. Jego formy istnieją w rzeźbie do dziś, ale są **złagodzone przez denudację** — to obszar **rzeźby staroglacjalnej** Nizin Środkowopolskich."
+            },
+            {
+              "period": "ok. 130–115 tys. lat temu",
+              "label": "Interglacjał eemski",
+              "text": "Okres cieplejszy niż dzisiejszy. Morze eemskie wkroczyło w obniżenia dzisiejszego wybrzeża, rozwinęły się lasy liściaste, powstały osady organiczne — ważny **poziom odniesienia** przy datowaniu warstw."
+            },
+            {
+              "period": "ok. 115–11,7 tys. lat temu",
+              "label": "Zlodowacenie północnopolskie (wisły, bałtyckie)",
+              "text": "Ostatnie zlodowacenie. Maksymalny zasięg ok. **20 tys. lat temu** (faza leszczyńska — linia Leszno–Głogów), potem recesja z postojami: fazy **poznańska, pomorska i gardzieńska**. Zostawiło **rzeźbę młodoglacjalną** pojezierzy — jeziora, ostre wały moren i sandry."
+            },
+            {
+              "period": "od ok. 11,7 tys. lat temu",
+              "label": "Holocen",
+              "text": "Ocieplenie kończy plejstocen. Wytapiają się bryły **martwego lodu** — powstają jeziora i zagłębienia bezodpływowe; rozwijają się torfowiska, gleby i sieć rzeczna, a podnoszący się poziom Bałtyku formuje mierzeje i jeziora przybrzeżne."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Zasięgi lądolodów i formy polodowcowe",
+          "caption": "Kliknij znaczniki — trzy pierwsze wyznaczają kolejne linie maksymalnych zasięgów, pozostałe pokazują charakterystyczne formy.",
+          "center": [
+            52.3,
+            19
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 51.84,
+              "lng": 16.58,
+              "label": "Leszno — faza leszczyńska",
+              "text": "Maksymalny zasięg **ostatniego zlodowacenia** (ok. 20 tys. lat temu). Na południe od tej linii nie ma już jezior polodowcowych — granica ta jest w krajobrazie doskonale czytelna."
+            },
+            {
+              "lat": 54.12,
+              "lng": 17.98,
+              "label": "Okolice Kościerzyny — faza pomorska",
+              "text": "Jeden z postojów czoła lądolodu podczas recesji. Powstały wtedy najwyższe wały morenowe Pojezierza Pomorskiego, w tym **Wieżyca (329 m n.p.m.)**."
+            },
+            {
+              "lat": 51.83,
+              "lng": 19.65,
+              "label": "Wzniesienia Łódzkie — zasięg środkowopolski",
+              "text": "Południowa granica **zlodowaceń środkowopolskich**. Formy z tego okresu przetrwały, ale są zaokrąglone i pozbawione jezior — typowa **rzeźba staroglacjalna**."
+            },
+            {
+              "lat": 50.06,
+              "lng": 19.94,
+              "label": "Podnóże Karpat pod Krakowem — zasięg południowopolski",
+              "text": "Najdalej na południe wysunięta granica lądolodu w Polsce, osiągnięta w czasie **zlodowaceń południowopolskich**. Ślady to wyłącznie gliny zwałowe i głazy narzutowe w podłożu."
+            },
+            {
+              "lat": 54.2136,
+              "lng": 18.1478,
+              "label": "Wieżyca (329 m n.p.m.)",
+              "text": "Najwyższe wzniesienie polskich pojezierzy — wał **moreny czołowej** na Pojezierzu Kaszubskim. Zbudowany z nieprzesortowanej gliny zwałowej z głazami."
+            },
+            {
+              "lat": 53.7,
+              "lng": 17.85,
+              "label": "Bory Tucholskie",
+              "text": "Rozległy **sandr** — równina zbudowana z piasków i żwirów wyniesionych przez wody roztopowe. Przepuszczalne podłoże, gleby bielicowe i bory sosnowe to bezpośredni skutek tej genezy."
+            },
+            {
+              "lat": 54.2667,
+              "lng": 22.8167,
+              "label": "Jezioro Hańcza",
+              "text": "Najgłębsze jezioro Polski (**108,5 m**), wypełniające **rynnę subglacjalną** wyżłobioną przez wody płynące pod ciśnieniem pod lądolodem. Stąd jego wąski, wydłużony kształt i strome brzegi."
+            },
+            {
+              "lat": 53.77,
+              "lng": 21.73,
+              "label": "Śniardwy",
+              "text": "Największe jezioro Polski (**113,8 km²**), typu **morenowego** — rozległe, płytkie (do 23 m), o silnie rozwiniętej linii brzegowej i licznych wyspach."
+            },
+            {
+              "lat": 50.89,
+              "lng": 21.05,
+              "label": "Łysogóry — gołoborza",
+              "text": "Rumowiska kwarcytowych bloków na stokach Gór Świętokrzyskich, **poza zasięgiem lądolodu**. Powstały w klimacie **peryglacjalnym** wskutek wietrzenia mrozowego i powolnego spełzywania (soliflukcji)."
+            },
+            {
+              "lat": 51.25,
+              "lng": 22.57,
+              "label": "Wyżyna Lubelska — pokrywy lessowe",
+              "text": "Kilkumetrowe warstwy **lessu** — pyłu wywianego z przedpola lądolodu i osadzonego na obszarach nieobjętych zlodowaceniem. Na lessach wykształciły się najżyźniejsze polskie gleby i głębokie wąwozy."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Krajobraz młodoglacjalny i staroglacjalny",
+          "leftLabel": "Rzeźba młodoglacjalna (pojezierza)",
+          "rightLabel": "Rzeźba staroglacjalna (Niziny Środkowopolskie)",
+          "rows": [
+            {
+              "aspect": "Wiek",
+              "left": "zlodowacenie północnopolskie — ostatnie 115–11,7 tys. lat",
+              "right": "zlodowacenia środkowopolskie — ok. 300–130 tys. lat temu"
+            },
+            {
+              "aspect": "Jeziora",
+              "left": "bardzo liczne — rynnowe, morenowe, wytopiskowe; wysoka jeziorność",
+              "right": "praktycznie brak — misy jeziorne **zostały zasypane osadami i osuszone**"
+            },
+            {
+              "aspect": "Moreny czołowe",
+              "left": "wyraźne, wysokie wały o stromych stokach (Wieżyca 329 m, Dylewska Góra 312 m)",
+              "right": "łagodne, rozmyte wzniesienia, często ledwo czytelne w terenie"
+            },
+            {
+              "aspect": "Doliny rzeczne",
+              "left": "słabo rozwinięte, młode, często wykorzystujące rynny i pradoliny",
+              "right": "szerokie, dojrzałe doliny z systemem teras rzecznych"
+            },
+            {
+              "aspect": "Obszary bezodpływowe",
+              "left": "liczne — sieć rzeczna nie zdążyła się jeszcze uporządkować",
+              "right": "prawie nieobecne — cały obszar ma odpływ powierzchniowy"
+            },
+            {
+              "aspect": "Deniwelacje i spadki",
+              "left": "duże jak na obszar nizinny, urozmaicona rzeźba w skali kilkuset metrów",
+              "right": "małe — przeważają równiny i płaskie wysoczyzny"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Pojezierze Mazurskie, Kaszubskie, Drawskie",
+              "right": "Nizina Mazowiecka, Wielkopolska, Podlaska"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Strefa marginalna lądolodu — jak powstaje krajobraz polodowcowy",
+          "caption": "Ten układ form powtarza się przy każdym dłuższym postoju czoła lądolodu — dlatego pojezierza mają budowę pasową.",
+          "steps": [
+            {
+              "title": "Postój czoła lądolodu",
+              "text": "Gdy tempo topnienia równoważy dopływ lodu, czoło stoi w miejscu, a lodowiec działa jak taśmociąg: nieustannie dostarcza materiał, który usypuje się w **wał moreny czołowej**. Materiał jest **nieprzesortowany** — glina, piasek i głazy razem."
+            },
+            {
+              "title": "Odpływ wód roztopowych",
+              "text": "Wody wypływające spod lodu niosą piasek i żwir; przed czołem budują z nich rozległe, lekko nachylone **stożki sandrowe**. Im dalej od czoła, tym drobniejszy materiał — to klucz do rozpoznania kierunku dawnego odpływu."
+            },
+            {
+              "title": "Ucieczka wód pradolinami",
+              "text": "Wody nie mogły płynąć na północ, bo drogę zagradzał lądolód. Płynęły więc **równoleżnikowo, ku zachodowi**, żłobiąc szerokie, płaskodenne **pradoliny** odprowadzające wodę do Morza Północnego."
+            },
+            {
+              "title": "Recesja i martwy lód",
+              "text": "Podczas ocieplenia czoło cofa się, a w zagłębieniach zostają odcięte bryły **martwego lodu**, przysypane osadami. Pod lodem i w szczelinach powstają wtedy **ozy** (wąskie wały warstwowanych żwirów) i **kemy** (pagórki piaszczysto-mułkowe)."
+            },
+            {
+              "title": "Wytapianie i powstanie jezior",
+              "text": "Bryły martwego lodu wytapiają się przez setki lat. W ich miejscu powstają **jeziora wytopiskowe i oczka**, a zalane wodą rynny subglacjalne dają **jeziora rynnowe**. Tak rodzi się krajobraz pojezierny."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Formy polodowcowe według genezy",
+          "caption": "Pytanie „podaj genezę formy” wymaga wskazania, czy działał lód, woda z lodu, czy dopiero jego wytopienie.",
+          "groups": [
+            {
+              "name": "Formy erozyjne (egzaracyjne) — wyżłobione przez lód i wody podlodowe",
+              "description": "Lądolód i płynące pod nim pod ciśnieniem wody **żłobią podłoże**, wykorzystując materiał skalny wmarznięty w spąg lodu.",
+              "examples": [
+                "rynny subglacjalne (jeziora Hańcza, Jeziorak, Gopło)",
+                "wygłady i rysy lodowcowe",
+                "mutony (barańce) w Tatrach",
+                "kotły (cyrki) lodowcowe i doliny U-kształtne w Tatrach i Karkonoszach"
+              ]
+            },
+            {
+              "name": "Formy akumulacji lodowcowej — usypane bezpośrednio przez lód",
+              "description": "Materiał **nieprzesortowany** i niewarstwowany — glina zwałowa z głazami różnej wielkości.",
+              "examples": [
+                "moreny czołowe (Wieżyca, Wzgórza Dylewskie, Szeskie Wzgórza)",
+                "morena denna tworząca wysoczyzny",
+                "drumliny (Pojezierze Suwalskie, okolice Zbójna)",
+                "głazy narzutowe (eratyki)"
+              ]
+            },
+            {
+              "name": "Formy akumulacji wodnolodowcowej (fluwioglacjalnej)",
+              "description": "Materiał **przesortowany i warstwowany** przez płynącą wodę — piaski i żwiry bez frakcji ilastej.",
+              "examples": [
+                "sandry (Bory Tucholskie, Równina Augustowska, Puszcza Piska)",
+                "ozy",
+                "kemy",
+                "pradoliny i wypełniające je terasy"
+              ]
+            },
+            {
+              "name": "Formy powstałe po wytopieniu lodu",
+              "description": "Zagłębienia w miejscu brył **martwego lodu** przysypanych osadami; wypełnione wodą lub zatorfione.",
+              "examples": [
+                "jeziora wytopiskowe i oczka polodowcowe",
+                "zagłębienia bezodpływowe",
+                "torfowiska wysokie i przejściowe"
+              ]
+            },
+            {
+              "name": "Formy peryglacjalne — poza zasięgiem lądolodu",
+              "description": "Powstały w **strefie zimnej tundry** przed czołem lądolodu, gdzie działały wietrzenie mrozowe, wiatr i soliflukcja.",
+              "examples": [
+                "pokrywy lessowe Wyżyny Lubelskiej, Sandomierskiej i Małopolskiej",
+                "gołoborza Łysogór",
+                "kliny mrozowe i struktury zmarzlinowe w osadach"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Jak rozpoznać formę w terenie",
+          "caption": "Trzy pytania kontrolne przy każdej formie: jaki kształt, jaki materiał, jakie położenie względem dawnego czoła lądolodu.",
+          "headers": [
+            "Forma",
+            "Kształt w terenie",
+            "Materiał",
+            "Przykład"
+          ],
+          "rows": [
+            [
+              "Morena czołowa",
+              "wał lub ciąg wzgórz równoległy do dawnego czoła lodu",
+              "glina zwałowa z głazami — nieprzesortowana",
+              "Wieżyca (329 m), Wzgórza Dylewskie (312 m)"
+            ],
+            [
+              "Morena denna",
+              "płaska lub falista wysoczyzna",
+              "glina zwałowa",
+              "Wysoczyzna Płocka, Wysoczyzna Siedlecka"
+            ],
+            [
+              "Sandr",
+              "rozległa, płaska równina nachylona od czoła lądolodu",
+              "piaski i żwiry przesortowane przez wodę",
+              "Bory Tucholskie, Równina Augustowska"
+            ],
+            [
+              "Oz",
+              "długi, wąski wał o krętym przebiegu, przypominający nasyp kolejowy",
+              "warstwowane piaski i żwiry",
+              "ozy Pojezierza Mazurskiego i Pomorskiego"
+            ],
+            [
+              "Kem",
+              "izolowany pagórek o stromych stokach i płaskim wierzchołku",
+              "piaski i mułki, warstwowane",
+              "pagórki kemowe Pojezierza Suwalskiego"
+            ],
+            [
+              "Drumlin",
+              "wydłużone, opływowe wzgórze o osi zgodnej z kierunkiem ruchu lodu",
+              "glina zwałowa z jądrem skalnym",
+              "pola drumlinowe Pojezierza Suwalskiego"
+            ],
+            [
+              "Rynna subglacjalna",
+              "długie, wąskie i głębokie obniżenie o stromych zboczach",
+              "wyżłobiona przez wody pod ciśnieniem",
+              "jeziora Hańcza, Jeziorak, Gopło"
+            ],
+            [
+              "Pradolina",
+              "szeroka dolina o płaskim dnie i przebiegu równoleżnikowym",
+              "piaski rzeczne, terasy, wydmy śródlądowe",
+              "Pradolina Toruńsko-Eberswaldzka, Warszawsko-Berlińska"
+            ]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto mieć w głowie",
+          "items": [
+            {
+              "value": "ok. 90",
+              "unit": "%",
+              "label": "powierzchni Polski pokrytej lądolodem w czasie zlodowaceń południowopolskich (największy zasięg)"
+            },
+            {
+              "value": "ok. 1/3",
+              "label": "powierzchni kraju objęta ostatnim zlodowaceniem — obszar rzeźby młodoglacjalnej"
+            },
+            {
+              "value": "ok. 20",
+              "unit": "tys. lat temu",
+              "label": "maksymalny zasięg ostatniego lądolodu (faza leszczyńska)"
+            },
+            {
+              "value": "11,7",
+              "unit": "tys. lat temu",
+              "label": "koniec plejstocenu i początek holocenu"
+            },
+            {
+              "value": "329",
+              "unit": "m n.p.m.",
+              "label": "Wieżyca — najwyższe wzniesienie morenowe polskich pojezierzy"
+            },
+            {
+              "value": "108,5",
+              "unit": "m",
+              "label": "głębokość Hańczy — najgłębszego jeziora w rynnie subglacjalnej"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Głaz narzutowy (eratyk)",
+          "text": "Blok skalny **przywleczony przez lądolód** z obszaru macierzystego i pozostawiony na zupełnie innym podłożu geologicznym. W Polsce są to najczęściej **granity, gnejsy i porfiry skandynawskie**, leżące na osadowych glinach i piaskach.",
+          "note": "Eratyki wskaźnikowe — o dającym się jednoznacznie określić miejscu pochodzenia — pozwalają odtworzyć **kierunek ruchu lądolodu** i przypisać osady do konkretnego zlodowacenia. Największy w Polsce to Trygław koło Tychowa na Pomorzu."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze pomyłki w zadaniach z rzeźby polodowcowej. **Morena czołowa** to wał wzgórz z nieprzesortowanej gliny, a **morena denna** to płaska wysoczyzna — nie mieszaj ich. **Sandr** leży *przed* czołem lądolodu i jest zbudowany z piasków i żwirów, natomiast **pradolina** to szeroka dolina o przebiegu równoleżnikowym, którą odpływały wody — sandr jest formą wypukłą (równiną akumulacyjną), pradolina wklęsłą. Wreszcie: **jeziora rynnowe** są długie, wąskie i głębokie, a **morenowe** — rozległe i płytkie."
+        },
+        {
+          "type": "case-study",
+          "title": "Sandr Borów Tucholskich — jak forma terenu decyduje o wszystkim innym",
+          "region": "Pojezierze Południowopomorskie, dorzecze Brdy i Wdy",
+          "text": "Bory Tucholskie leżą na jednym z największych **sandrów** w Polsce, usypanym przez wody roztopowe ostatniego lądolodu. Podłoże tworzą **przepuszczalne piaski i żwiry**, przez które woda opadowa szybko wsiąka. Skutki są łańcuchowe: rozwinęły się tu **ubogie gleby bielicowe** (klasy V–VI), na których jedynym opłacalnym użytkowaniem jest **bór sosnowy**; rolnictwo praktycznie nie istnieje, a gęstość zaludnienia jest niska. Przez sandr przecinają się **rynny subglacjalne** wypełnione jeziorami (Charzykowskie, Wdzydze), co uczyniło z regionu zaplecze turystyki i kajakarstwa.",
+          "takeaway": "Geneza formy terenu przekłada się bezpośrednio na przepuszczalność podłoża, typ gleby, roślinność i sposób zagospodarowania — to gotowy schemat odpowiedzi w zadaniach typu „wyjaśnij związek”."
+        },
+        {
+          "type": "matching",
+          "title": "Forma a jej geneza",
+          "instruction": "Dopasuj obiekt do właściwego wyjaśnienia jego powstania.",
+          "pairs": [
+            {
+              "left": "Wieżyca (329 m n.p.m.)",
+              "right": "wzgórze moreny czołowej usypane podczas postoju czoła lądolodu"
+            },
+            {
+              "left": "Bory Tucholskie",
+              "right": "rozległy sandr zbudowany z piasków wodnolodowcowych"
+            },
+            {
+              "left": "Jezioro Hańcza",
+              "right": "rynna subglacjalna wyżłobiona przez wody płynące pod lądolodem"
+            },
+            {
+              "left": "Pradolina Toruńsko-Eberswaldzka",
+              "right": "równoleżnikowa dolina odprowadzająca wody roztopowe na zachód"
+            },
+            {
+              "left": "Gołoborza Łysogór",
+              "right": "rumowisko skalne powstałe wskutek wietrzenia mrozowego w klimacie peryglacjalnym"
+            },
+            {
+              "left": "Pokrywy lessowe Wyżyny Lubelskiej",
+              "right": "pył nawiany przez wiatr z przedpola lądolodu"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Układ form w strefie marginalnej",
+          "instruction": "Uporządkuj formy tak, jak następują po sobie od obszaru pod lądolodem w stronę jego przedpola.",
+          "items": [
+            "morena denna — wysoczyzna z gliny zwałowej pod lądolodem",
+            "wał moreny czołowej wzdłuż linii postoju czoła",
+            "równina sandrowa usypana przez wody roztopowe",
+            "pradolina odprowadzająca wody równoleżnikowo ku zachodowi"
+          ],
+          "explanation": "Ten uporządkowany ciąg to najlepszy sposób na rozpoznanie kierunku, z którego nadszedł lądolód: sandr zawsze opada od moreny czołowej, a pradolina biegnie w poprzek tego kierunku."
+        },
+        {
+          "type": "quiz",
+          "question": "Na Nizinie Mazowieckiej praktycznie nie ma jezior, choć obszar ten był objęty zlodowaceniem. Dlaczego?",
+          "options": [
+            "Lądolód nigdy tam nie dotarł, więc jeziora nie mogły powstać",
+            "Był to obszar zlodowaceń środkowopolskich — misy jeziorne zdążyły zostać zasypane osadami i osuszone przez rozwijającą się sieć rzeczną",
+            "Jeziora osuszono w XX wieku w wyniku melioracji",
+            "Podłoże jest tam zbyt przepuszczalne, by utrzymać wodę"
+          ],
+          "correctIndex": 1,
+          "explanation": "Od zlodowaceń środkowopolskich minęło ponad 130 tys. lat. W tym czasie denudacja i erozja rzeczna wypełniły zagłębienia osadami, a rzeki wykształciły dojrzałe doliny — to istota rzeźby staroglacjalnej."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw form powstaje z materiału PRZESORTOWANEGO przez płynącą wodę?",
+          "options": [
+            "Morena czołowa i drumlin",
+            "Morena denna i głazy narzutowe",
+            "Sandr, oz i kem",
+            "Rynna subglacjalna i mutony"
+          ],
+          "correctIndex": 2,
+          "explanation": "Sandry, ozy i kemy to formy akumulacji wodnolodowcowej — zbudowane z warstwowanych, przesortowanych piasków i żwirów. Moreny i drumliny tworzy nieprzesortowana glina zwałowa, a rynny i mutony to formy erozyjne."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zlodowacenie miało największy zasięg na obszarze Polski?",
+          "options": [
+            "Zlodowacenia najstarsze (narwi)",
+            "Zlodowacenia południowopolskie (sanu)",
+            "Zlodowacenia środkowopolskie (odry i warty)",
+            "Zlodowacenie północnopolskie (wisły)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lądolód zlodowaceń południowopolskich dotarł aż do podnóża Sudetów i Karpat, pokrywając ok. 90% obszaru kraju. Paradoks polega na tym, że po najrozleglejszym zlodowaceniu zostało w rzeźbie najmniej śladów — usunęła je denudacja."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Klasyczne zadanie maturalne pokazuje **mapę poziomicową fragmentu pojezierza** i prosi o rozpoznanie form oraz uzasadnienie. Trzymaj się algorytmu: **zwarty ciąg wzgórz o dużych deniwelacjach → morena czołowa**; **płaska powierzchnia z rzadkimi poziomicami i piaszczystym podłożem → sandr**; **wąskie, długie jezioro o stromych brzegach → rynna subglacjalna**; **liczne zagłębienia bezodpływowe → obszar młodoglacjalny**. W uzasadnieniu zawsze podawaj **materiał budujący formę** — to najczęściej punktowany element odpowiedzi."
+        }
+      ]
+    },
+    {
+      "slug": "pasy-rzezby-terenu",
+      "title": "Ukształtowanie powierzchni — pasy rzeźby terenu",
+      "summary": "Sześć równoleżnikowych pasów rzeźby Polski, ich geneza, krainy geograficzne oraz różnice między Sudetami a Karpatami.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska ma rzeźbę **pasową i równoleżnikową**: idąc z północy na południe, przechodzimy kolejno przez pobrzeża, pojezierza, niziny, wyżyny, kotliny i góry. To układ nieprzypadkowy — jest wypadkową dwóch czynników poznanych w poprzednich lekcjach: **budowy geologicznej** (stara platforma na północy, młode orogeny na południu) oraz **zasięgów zlodowaceń** (świeża rzeźba na północy, coraz starsza ku południowi). Powierzchnia kraju wznosi się przy tym ku południowemu wschodowi — i dlatego niemal wszystkie polskie rzeki płyną ku północy."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Ukształtowanie powierzchni w liczbach",
+          "items": [
+            {
+              "value": "173",
+              "unit": "m n.p.m.",
+              "label": "średnia wysokość Polski",
+              "note": "dla Europy ok. 292 m — Polska jest krajem wyraźnie nizinnym"
+            },
+            {
+              "value": "2499",
+              "unit": "m n.p.m.",
+              "label": "Rysy — najwyższy szczyt Polski (Tatry Wysokie)"
+            },
+            {
+              "value": "−1,8",
+              "unit": "m n.p.m.",
+              "label": "Raczki Elbląskie na Żuławach — najniżej położony punkt kraju"
+            },
+            {
+              "value": "ok. 2501",
+              "unit": "m",
+              "label": "deniwelacja między najwyższym a najniższym punktem"
+            },
+            {
+              "value": "91,3",
+              "unit": "%",
+              "label": "powierzchni kraju to niziny — obszary poniżej 300 m n.p.m."
+            },
+            {
+              "value": "3,1",
+              "unit": "%",
+              "label": "powierzchni kraju leży powyżej 500 m n.p.m."
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Sześć pasów rzeźby terenu",
+          "caption": "Kliknij kolejne pasy, idąc z północy na południe. Przy każdym zapamiętaj trzy rzeczy: wysokości, genezę rzeźby i przykładowe krainy.",
+          "zones": [
+            {
+              "name": "Pas pobrzeży",
+              "latitude": "ok. 54°–54,8°N",
+              "text": "Nizinny pas wzdłuż Bałtyku, przeważnie **poniżej 100 m n.p.m.**, miejscami depresyjny. Rzeźbę tworzą procesy morskie i akumulacja rzeczna: **mierzeje** (Helska, Łebska, Wiślana), **jeziora przybrzeżne** (Łebsko, Gardno, Jamno), **zalewy** (Szczeciński, Wiślany), **klify** (Rozewie, Gosań na Wolinie), **wydmy ruchome** w Słowińskim PN oraz **delta Wisły z Żuławami**. Krainy: Pobrzeże Szczecińskie, Koszalińskie, Gdańskie.",
+              "tone": "water"
+            },
+            {
+              "name": "Pas pojezierzy",
+              "latitude": "ok. 52,5°–54,5°N",
+              "text": "Falisty, najbardziej urozmaicony pas nizinny, przeważnie **100–300 m n.p.m.** Typowa **rzeźba młodoglacjalna**: wały moren czołowych (Wieżyca 329 m, Dylewska Góra 312 m), wysoczyzny morenowe, sandry, rynny z jeziorami i liczne zagłębienia bezodpływowe. Krainy: Pojezierze Pomorskie, Wielkopolskie, Mazurskie.",
+              "tone": "ice"
+            },
+            {
+              "name": "Pas Nizin Środkowopolskich",
+              "latitude": "ok. 51,5°–53°N",
+              "text": "Najrozleglejszy pas kraju, zwykle **100–200 m n.p.m.**, o **rzeźbie staroglacjalnej**: płaskie i faliste wysoczyzny, szerokie doliny rzeczne i **pradoliny**, brak jezior. Miejscami wyspowe wzniesienia moren środkowopolskich (Wzniesienia Łódzkie). Krainy: Nizina Wielkopolska, Mazowiecka, Podlaska, Śląska, Polesie Lubelskie.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Pas wyżyn",
+              "latitude": "ok. 50°–51,5°N",
+              "text": "Obszary **200–500 m n.p.m.** zbudowane ze starszych skał: jurajskich wapieni, triasowych dolomitów, kredowych opok i karbońskich utworów, często przykrytych **lessem**. Rzeźba krasowa (jaskinie, ostańce), wąwozy lessowe, kuesty. Krainy: Wyżyna Śląska, Krakowsko-Częstochowska, Kielecka z Górami Świętokrzyskimi, Niecka Nidziańska, Wyżyna Lubelska, Roztocze.",
+              "tone": "earth"
+            },
+            {
+              "name": "Pas kotlin podkarpackich",
+              "latitude": "ok. 49,5°–50,3°N",
+              "text": "Wąskie, płaskie obniżenie u podnóża Karpat, **150–300 m n.p.m.**, odpowiadające **zapadlisku przedkarpackiemu** wypełnionemu osadami morza mioceńskiego i aluwiami. Szerokie doliny Wisły, Sanu i Dunajca, terasy rzeczne, wydmy śródlądowe. Krainy: Kotlina Sandomierska, Kotlina Oświęcimska, Brama Krakowska.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Pas gór",
+              "latitude": "ok. 49°–50,9°N (Sudety i Karpaty)",
+              "text": "Obszary **powyżej 500 m n.p.m.** przy południowej granicy kraju, rozdzielone Bramą Morawską. **Sudety** — stare góry zrębowe z kotlinami śródgórskimi (Śnieżka 1603 m). **Karpaty** — młode góry fałdowe: Beskidy, Bieszczady (Tarnica 1346 m), Pieniny i Tatry (Rysy 2499 m) z jedyną w Polsce rzeźbą wysokogórską.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Pasy rzeźby — zestawienie",
+          "caption": "Kolumna „geneza” jest najważniejsza: w zadaniach maturalnych to ona uzasadnia różnice w krajobrazie sąsiednich pasów.",
+          "headers": [
+            "Pas",
+            "Typowe wysokości",
+            "Geneza rzeźby",
+            "Przykładowe krainy"
+          ],
+          "rows": [
+            [
+              "Pobrzeża",
+              "0–100 m n.p.m., miejscami depresje",
+              "akumulacja morska i rzeczna, abrazja klifów, procesy eoliczne",
+              "Pobrzeże Szczecińskie, Koszalińskie, Gdańskie, Żuławy Wiślane"
+            ],
+            [
+              "Pojezierza",
+              "100–300 m n.p.m.",
+              "akumulacja ostatniego zlodowacenia — rzeźba młodoglacjalna",
+              "Pojezierze Pomorskie, Wielkopolskie, Mazurskie, Kaszubskie"
+            ],
+            [
+              "Niziny Środkowopolskie",
+              "100–200 m n.p.m.",
+              "zlodowacenia środkowopolskie przekształcone denudacją — rzeźba staroglacjalna",
+              "Nizina Wielkopolska, Mazowiecka, Podlaska, Śląska"
+            ],
+            [
+              "Wyżyny",
+              "200–500 m n.p.m.",
+              "budowa geologiczna starszych struktur (jura, trias, kreda, karbon) plus pokrywy lessowe",
+              "Wyżyna Śląska, Krakowsko-Częstochowska, Kielecka, Lubelska, Roztocze"
+            ],
+            [
+              "Kotliny podkarpackie",
+              "150–300 m n.p.m.",
+              "wypełnienie zapadliska przedkarpackiego osadami miocenu i aluwiami rzek",
+              "Kotlina Sandomierska, Kotlina Oświęcimska, Brama Krakowska"
+            ],
+            [
+              "Góry",
+              "powyżej 500 m n.p.m.",
+              "orogeneza hercyńska odmłodzona ruchami zrębowymi (Sudety) oraz orogeneza alpejska (Karpaty)",
+              "Sudety, Beskidy, Bieszczady, Pieniny, Tatry"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Punkty orientacyjne polskiej rzeźby",
+          "caption": "Kliknij znaczniki i przyporządkuj każdy obiekt do właściwego pasa rzeźby.",
+          "center": [
+            51.6,
+            19
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 49.179,
+              "lng": 20.088,
+              "label": "Rysy — 2499 m n.p.m.",
+              "text": "Najwyższy szczyt Polski w **Tatrach Wysokich**, zbudowany z granitoidów trzonu krystalicznego. Otacza go rzeźba wysokogórska: kotły polodowcowe, żleby, jeziora karowe (Czarny Staw pod Rysami)."
+            },
+            {
+              "lat": 50.736,
+              "lng": 15.74,
+              "label": "Śnieżka — 1603 m n.p.m.",
+              "text": "Najwyższy szczyt **Sudetów** (Karkonosze). Kopulasty kształt i spłaszczone grzbiety to ślad wielokrotnego zrównywania tych gór przed odmłodzeniem w orogenezie alpejskiej."
+            },
+            {
+              "lat": 49.5733,
+              "lng": 19.5292,
+              "label": "Babia Góra — 1725 m n.p.m.",
+              "text": "Najwyższy szczyt polskich **Beskidów**, zbudowany z odpornych piaskowców magurskich. To zarazem najwyższy szczyt Polski poza Tatrami — o 122 m wyższy od sudeckiej Śnieżki."
+            },
+            {
+              "lat": 49.075,
+              "lng": 22.726,
+              "label": "Tarnica — 1346 m n.p.m.",
+              "text": "Najwyższy szczyt polskich **Bieszczadów**. Charakterystyczne grzbiety o przebiegu NW–SE to bezpośredni zapis kierunku fałdowania fliszu."
+            },
+            {
+              "lat": 50.885,
+              "lng": 20.9,
+              "label": "Łysica — ok. 612 m n.p.m.",
+              "text": "Najwyższy szczyt **Gór Świętokrzyskich** — najstarszych gór Polski. Mimo nazwy region ten zalicza się do pasa **wyżyn**, bo góry te są niskie i zrównane."
+            },
+            {
+              "lat": 50.86,
+              "lng": 16.71,
+              "label": "Ślęża — 718 m n.p.m.",
+              "text": "Izolowany **masyw wyspowy** na Nizinie Śląskiej, zbudowany z odpornych skał (gabra, serpentynity). Klasyczny przykład ostańca denudacyjnego (twardzielca)."
+            },
+            {
+              "lat": 54.09,
+              "lng": 19.36,
+              "label": "Raczki Elbląskie — −1,8 m n.p.m.",
+              "text": "Najniżej położony punkt Polski, na **Żuławach Wiślanych**. Depresja utrzymywana sztucznie dzięki systemowi kanałów i stacji pomp."
+            },
+            {
+              "lat": 53.92,
+              "lng": 14.45,
+              "label": "Gosań na wyspie Wolin — 95 m n.p.m.",
+              "text": "Jeden z najwyższych **klifów** polskiego wybrzeża. Klif cofa się pod wpływem abrazji morskiej — brzeg jest tu niszczony, a nie budowany."
+            },
+            {
+              "lat": 54.75,
+              "lng": 17.42,
+              "label": "Wydma Łącka — Słowiński PN",
+              "text": "Jedna z **ruchomych wydm** Mierzei Łebskiej, przemieszczająca się o kilka metrów rocznie i zasypująca las. Unikatowy w Europie przykład aktywnych procesów eolicznych na wybrzeżu."
+            },
+            {
+              "lat": 54.2136,
+              "lng": 18.1478,
+              "label": "Wieżyca — 329 m n.p.m.",
+              "text": "Najwyższe wzniesienie polskich **pojezierzy** (Pojezierze Kaszubskie) i zarazem najwyższy punkt Niżu Środkowoeuropejskiego w Polsce — wał moreny czołowej fazy pomorskiej."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Sudety i Karpaty — dwa różne światy",
+          "leftLabel": "Sudety",
+          "rightLabel": "Karpaty",
+          "rows": [
+            {
+              "aspect": "Wiek fałdowania",
+              "left": "**hercyńskie** (karbon), później zrównane i **odmłodzone** ruchami pionowymi w orogenezie alpejskiej",
+              "right": "**alpejskie** (kreda–neogen) — góry młode"
+            },
+            {
+              "aspect": "Typ gór",
+              "left": "**zrębowe** — bloki wypiętrzone i obniżone wzdłuż uskoków, między nimi kotliny śródgórskie (Kłodzka, Jeleniogórska)",
+              "right": "**fałdowe i płaszczowinowe** — równoległe pasma i doliny o przebiegu zgodnym z osiami fałdów"
+            },
+            {
+              "aspect": "Budowa geologiczna",
+              "left": "bardzo urozmaicona: granity, gnejsy, łupki krystaliczne, bazalty, piaskowce, wapienie",
+              "right": "monotonna w Karpatach zewnętrznych — **flisz** (piaskowce i łupki); w Tatrach granity oraz wapienie i dolomity"
+            },
+            {
+              "aspect": "Rzeźba",
+              "left": "kopulaste szczyty, spłaszczone grzbiety, izolowane masywy, gęsta sieć uskoków",
+              "right": "wyraźne, długie pasma; w Tatrach jedyna w Polsce **rzeźba wysokogórska** (turnie, kotły, żleby)"
+            },
+            {
+              "aspect": "Najwyższy szczyt",
+              "left": "Śnieżka — 1603 m n.p.m. (Karkonosze)",
+              "right": "Rysy — 2499 m n.p.m. (Tatry Wysokie)"
+            },
+            {
+              "aspect": "Surowce i wody",
+              "left": "surowce skalne (granity, bazalty), dawniej węgiel kamienny; liczne **szczawy i wody radoczynne**",
+              "right": "ropa naftowa i gaz ziemny w utworach fliszowych; **szczawy i solanki** (Krynica, Iwonicz)"
+            },
+            {
+              "aspect": "Zagrożenia naturalne",
+              "left": "gwałtowne powodzie opadowe w kotlinach (Kotlina Kłodzka)",
+              "right": "osuwiska — flisz jest bardzo podatny na ruchy masowe"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Typy gór występujące w Polsce",
+          "caption": "Ta typologia bywa treścią całego zadania — warto znać po jednym pewnym przykładzie dla każdego typu.",
+          "groups": [
+            {
+              "name": "Góry fałdowe",
+              "description": "Powstały przez **sfałdowanie** warstw skalnych podczas ruchów górotwórczych; często z nasunięciami płaszczowinowymi.",
+              "examples": [
+                "Karpaty zewnętrzne — Beskidy, Bieszczady, Pogórze",
+                "Tatry (fałdowo-płaszczowinowe, z trzonem krystalicznym)"
+              ]
+            },
+            {
+              "name": "Góry zrębowe",
+              "description": "Stare, zrównane masywy **ponownie wydźwignięte wzdłuż uskoków** w postaci bloków (zrębów) rozdzielonych obniżeniami (rowami).",
+              "examples": [
+                "Karkonosze i Masyw Śnieżnika w Sudetach",
+                "Góry Sowie",
+                "kotliny śródgórskie jako obniżone rowy tektoniczne"
+              ]
+            },
+            {
+              "name": "Góry płytowe",
+              "description": "Zbudowane z **poziomo leżących warstw** skał osadowych; różna odporność ławic daje charakterystyczną, schodową rzeźbę i skalne labirynty.",
+              "examples": [
+                "Góry Stołowe ze Szczelińcem Wielkim (919 m n.p.m.)",
+                "Błędne Skały"
+              ]
+            },
+            {
+              "name": "Stare góry zrównane",
+              "description": "Wypiętrzone w paleozoiku, przez setki milionów lat **niemal całkowicie zdenudowane**; dziś niskie, o łagodnych, kopulastych grzbietach.",
+              "examples": [
+                "Góry Świętokrzyskie z Łysicą (ok. 612 m n.p.m.) i gołoborzami — najstarsze góry Polski"
+              ]
+            },
+            {
+              "name": "Formy pochodzenia wulkanicznego",
+              "description": "Pozostałości **neogeńskiego wulkanizmu**, głównie na Dolnym Śląsku — twarde bazalty odsłonięte przez denudację jako izolowane wzniesienia.",
+              "examples": [
+                "Ostrzyca Proboszczowicka",
+                "wzgórza bazaltowe Pogórza Kaczawskiego",
+                "Góra Świętej Anny na Wyżynie Śląskiej"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Żuławy Wiślane — kraj poniżej poziomu morza",
+          "region": "delta Wisły, Pobrzeże Gdańskie",
+          "text": "Żuławy to **delta Wisły** zbudowana z aluwiów osadzanych przez rzekę przy jej ujściu do Bałtyku. Ok. **28% powierzchni Żuław leży poniżej poziomu morza**, a najniższy punkt kraju — Raczki Elbląskie (−1,8 m n.p.m.) — znajduje się właśnie tutaj. Obszar istnieje w obecnej postaci wyłącznie dzięki **sztucznemu odwodnieniu**: gęstej sieci kanałów, wałom przeciwpowodziowym i kilkudziesięciu **stacjom pomp**, które nieustannie przerzucają wodę do rzek. Nagrodą za tę pracę są **mady** — najżyźniejsze gleby w Polsce (klasy I–II) i najwyższe plony zbóż oraz buraków cukrowych. Ceną jest stałe zagrożenie: **powódź sztormowa** (cofka od strony morza), zatorowa na dolnej Wiśle i awaryjne zalanie polderów.",
+          "takeaway": "Żuławy pokazują sprzężenie: forma terenu (delta) daje najlepsze gleby, ale wymusza kosztowną, nieprzerwaną ingerencję techniczną, a wzrost poziomu morza to ryzyko zwiększa."
+        },
+        {
+          "type": "definition",
+          "term": "Depresja",
+          "text": "Obszar lądu położony **poniżej poziomu morza**. W Polsce depresje zajmują niewielki odsetek powierzchni kraju i występują niemal wyłącznie na **Żuławach Wiślanych** oraz w niewielkich zagłębieniach nadmorskich.",
+          "note": "Nie myl depresji z **kryptodepresją** — ta ostatnia to zagłębienie, którego **dno leży poniżej poziomu morza, ale lustro wody nad nim już nie**. Kryptodepresje ma wiele głębokich polskich jezior, m.in. Hańcza, Miedwie i Drawsko."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Góry Świętokrzyskie zalicza się do pasa wyżyn, a nie do pasa gór** — mimo nazwy i mimo tego, że są to najstarsze góry Polski. Kryterium jest wysokość i stopień zrównania. Podobnie **Kotlina Kłodzka leży wewnątrz pasa gór** (jest obniżeniem śródgórskim w Sudetach), a nie w pasie kotlin podkarpackich. I jeszcze jedno: **Tatry są częścią Karpat**, a nie odrębnym pasmem — w zadaniu o łańcuchach górskich zawsze podawaj Karpaty jako jednostkę nadrzędną."
+        },
+        {
+          "type": "matching",
+          "title": "Kraina a pas rzeźby",
+          "instruction": "Przyporządkuj krainę geograficzną do właściwego pasa.",
+          "pairs": [
+            {
+              "left": "Żuławy Wiślane",
+              "right": "pas pobrzeży"
+            },
+            {
+              "left": "Pojezierze Kaszubskie",
+              "right": "pas pojezierzy"
+            },
+            {
+              "left": "Nizina Mazowiecka",
+              "right": "pas Nizin Środkowopolskich"
+            },
+            {
+              "left": "Wyżyna Krakowsko-Częstochowska",
+              "right": "pas wyżyn"
+            },
+            {
+              "left": "Kotlina Sandomierska",
+              "right": "pas kotlin podkarpackich"
+            },
+            {
+              "left": "Bieszczady",
+              "right": "pas gór"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Szczyty według wysokości",
+          "instruction": "Uporządkuj szczyty od najwyższego do najniższego.",
+          "items": [
+            "Rysy (2499 m n.p.m.)",
+            "Babia Góra (1725 m n.p.m.)",
+            "Śnieżka (1603 m n.p.m.)",
+            "Tarnica (1346 m n.p.m.)",
+            "Ślęża (718 m n.p.m.)",
+            "Łysica (ok. 612 m n.p.m.)",
+            "Wieżyca (329 m n.p.m.)"
+          ],
+          "explanation": "Warto zapamiętać tę listę jako „drabinę” polskich pasm: Tatry → Beskidy → Sudety → Bieszczady → masywy wyspowe → Góry Świętokrzyskie → moreny pojezierzy."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego zdecydowana większość polskich rzek płynie z południa i południowego wschodu ku północy i północnemu zachodowi?",
+          "options": [
+            "Bo tak ukształtowały je pradoliny w czasie zlodowaceń środkowopolskich",
+            "Bo powierzchnia Polski wznosi się ku południowemu wschodowi, a obniża ku Bałtykowi — zgodnie z tym nachyleniem układa się spadek rzek",
+            "Bo Bałtyk jest morzem o niskim zasoleniu, co przyspiesza odpływ wód",
+            "Bo tak biegną główne uskoki tektoniczne platformy paleozoicznej"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decyduje ogólne nachylenie powierzchni kraju z południowego wschodu ku północnemu zachodowi, odzwierciedlone w pasowym układzie rzeźby: od gór ponad 2000 m po depresje Żuław. Pradoliny wpłynęły na przebieg niektórych odcinków dolin, ale nie na sam kierunek odpływu."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw cech opisuje Sudety?",
+          "options": [
+            "Góry fałdowe wieku alpejskiego, zbudowane z fliszu, z rzeźbą wysokogórską",
+            "Góry zrębowe o hercyńskim fałdowaniu, odmłodzone ruchami pionowymi, z kotlinami śródgórskimi",
+            "Góry płytowe zbudowane wyłącznie z poziomo leżących piaskowców kredowych",
+            "Najstarsze góry Polski, zaliczane do pasa wyżyn"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sudety sfałdowano w orogenezie hercyńskiej, następnie zrównano, a w orogenezie alpejskiej wydźwignięto wzdłuż uskoków jako zręby — stąd kotliny śródgórskie i uskokowe krawędzie. Góry Stołowe to tylko ich część o budowie płytowej."
+        },
+        {
+          "type": "quiz",
+          "question": "Który pas rzeźby charakteryzuje się rzeźbą staroglacjalną: brakiem jezior, płaskimi wysoczyznami i szerokimi pradolinami?",
+          "options": [
+            "Pas pobrzeży",
+            "Pas pojezierzy",
+            "Pas Nizin Środkowopolskich",
+            "Pas kotlin podkarpackich"
+          ],
+          "correctIndex": 2,
+          "explanation": "Niziny Środkowopolskie ukształtowały zlodowacenia środkowopolskie. Przez ponad sto tysięcy lat denudacja złagodziła formy i zlikwidowała jeziora, zostawiając równiny i pradoliny."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Na maturze często pojawia się **profil hipsometryczny wzdłuż południka** przecinającego Polskę — trzeba przypisać odcinki wykresu do pasów rzeźby. Ćwicz odczyt w kolejności: od 0 m n.p.m. na wybrzeżu, przez wyraźny „garb” pojezierzy (do ok. 300 m), obniżenie nizin, ponowne wzniesienie wyżyn (200–500 m), wcięcie kotlin podkarpackich i gwałtowny wzrost w Karpatach. Pamiętaj też o typowym poleceniu **„podaj cechy rzeźby i wskaż ich genezę”** — sama nazwa formy nie wystarcza, potrzebny jest czynnik: lądolód, wody roztopowe, wiatr, procesy krasowe albo ruchy tektoniczne."
+        }
+      ]
+    },
+    {
+      "slug": "klimat-polski",
+      "title": "Klimat Polski",
+      "summary": "Przejściowość klimatu, masy powietrza, rozkład temperatur i opadów, wiatr halny oraz zjawiska ekstremalne.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska leży w strefie klimatu **umiarkowanego ciepłego przejściowego** — to znaczy, że ścierają się nad nią wpływy oceaniczne z zachodu i kontynentalne ze wschodu. Skutkiem nie jest „średnia” pogoda, lecz **duża zmienność**: z dnia na dzień, z roku na rok i z regionu na region. W tej lekcji nauczysz się wyjaśniać tę zmienność mechanizmem — poprzez **masy powietrza i cyrkulację atmosferyczną** — oraz czytać mapy izoterm i sum opadów, bo to najczęstsze zadania maturalne z klimatu Polski."
+        },
+        {
+          "type": "definition",
+          "term": "Przejściowość klimatu Polski",
+          "text": "Cecha polegająca na **naprzemiennym oddziaływaniu** mas powietrza znad Oceanu Atlantyckiego (klimat morski) i znad wnętrza Eurazji (klimat kontynentalny). Skutkiem jest brak roku typowego: raz zdarza się łagodna, deszczowa zima z częstymi odwilżami, innym razem mroźna i słoneczna; lata bywają chłodne i wilgotne albo upalne i suche.",
+          "note": "Wskaźnikiem przejściowości jest **roczna amplituda temperatury**: w klimacie morskim wynosi ok. 10–15°C, w kontynentalnym powyżej 25°C, a w Polsce **od ok. 17°C na zachodzie do ok. 23°C na wschodzie** — czyli dokładnie pomiędzy. Kontynentalizm rośnie więc w Polsce z zachodu na wschód."
+        },
+        {
+          "type": "classification",
+          "title": "Masy powietrza kształtujące pogodę w Polsce",
+          "caption": "Przy każdej masie pytaj o dwie rzeczy: skąd napływa (wilgotność) i o jakiej porze roku (temperatura).",
+          "groups": [
+            {
+              "name": "Powietrze polarnomorskie (PPm)",
+              "description": "Znad północnego Atlantyku — **najczęstsze, dominuje przez mniej więcej połowę dni w roku**. Wilgotne i o umiarkowanej temperaturze. Zimą przynosi **ocieplenie, odwilż, mżawkę i duże zachmurzenie**, latem — **ochłodzenie i przelotne opady**. Napływa z sektora zachodniego, wraz z niżami znad Islandii.",
+              "examples": [
+                "lipcowe ochłodzenie z deszczem po fali upałów",
+                "grudniowa odwilż, mgła i roztopy zamiast mrozu"
+              ]
+            },
+            {
+              "name": "Powietrze polarnokontynentalne (PPk)",
+              "description": "Znad wnętrza Eurazji — druga co do częstości masa (ok. jednej trzeciej dni). **Suche**, o dużej amplitudzie dobowej. Zimą **mroźne, słoneczne i bezchmurne**, latem **gorące i suche** — odpowiada za upały i susze. Napływa z sektora wschodniego, przy wyżach kontynentalnych.",
+              "examples": [
+                "kilkudniowe mrozy poniżej −20°C przy bezchmurnym niebie",
+                "sierpniowa fala upałów połączona z suszą rolniczą"
+              ]
+            },
+            {
+              "name": "Powietrze arktyczne (PA)",
+              "description": "Znad Arktyki i Morza Barentsa, kilka procent dni w roku. **Bardzo chłodne, suche i wyjątkowo czyste** (świetna widoczność). Napływa z północy. Wiosną jest szczególnie groźne dla rolnictwa — powoduje **przymrozki** niszczące kwitnące sady i wschody.",
+              "examples": [
+                "majowe przymrozki po pogodnej nocy",
+                "zimowe wtargnięcia mroźnego powietrza z północy"
+              ]
+            },
+            {
+              "name": "Powietrze zwrotnikowe (PZ)",
+              "description": "Znad północnej Afryki, Bałkanów i Morza Śródziemnego, kilka procent dni. **Bardzo ciepłe**; w wersji morskiej wilgotne (parne, burzowe), w kontynentalnej suche i zapylone. Odpowiada za rekordowe upały latem i za **złotą polską jesień** przy wyżu znad Bałkanów.",
+              "examples": [
+                "upały powyżej 35°C i gwałtowne burze",
+                "babie lato — ciepłe, słoneczne dni na przełomie września i października",
+                "napływ pyłu saharyjskiego"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat na podstawie klimatogramu",
+          "station": "Warszawa",
+          "caption": "Zanim odsłonisz odpowiedź, policz: roczną amplitudę temperatury, sumę opadów i miesiąc z maksimum opadowym.",
+          "temps": [
+            -2,
+            -1,
+            2.5,
+            8.5,
+            14,
+            17,
+            19,
+            18.5,
+            13.5,
+            8.5,
+            3.5,
+            -0.5
+          ],
+          "precip": [
+            27,
+            26,
+            32,
+            35,
+            55,
+            70,
+            78,
+            65,
+            47,
+            40,
+            38,
+            34
+          ],
+          "answer": {
+            "climate": "klimat umiarkowany ciepły przejściowy (odmiana kontynentalna Europy Środkowej)",
+            "reasoning": "Trzy miesiące ze średnią poniżej 0°C i lipiec z 19°C dają **amplitudę roczną ok. 21°C** — za dużo jak na klimat morski (10–15°C), za mało jak na kontynentalny (powyżej 25°C). Opady występują przez cały rok, ale z wyraźnym **maksimum letnim w lipcu** (opady konwekcyjne i frontowe) i minimum na przedwiośniu; roczna suma ok. **550 mm** jest typowa dla nizinnej Polski."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Styczeń i lipiec — dwa różne układy izoterm",
+          "leftLabel": "Styczeń",
+          "rightLabel": "Lipiec",
+          "rows": [
+            {
+              "aspect": "Przebieg izoterm",
+              "left": "**południkowy** (z północnego zachodu na południowy wschód)",
+              "right": "**równoleżnikowy** (z zachodu na wschód)"
+            },
+            {
+              "aspect": "Zakres temperatur na nizinach",
+              "left": "od ok. −1°C na wybrzeżu i zachodzie do ok. −4°C na Suwalszczyźnie",
+              "right": "od ok. 16–17°C nad Bałtykiem do ok. 19°C w Kotlinie Sandomierskiej"
+            },
+            {
+              "aspect": "Czynnik decydujący",
+              "left": "**odległość od Atlantyku** — im dalej na wschód, tym rzadziej dociera ocieplające powietrze polarnomorskie",
+              "right": "**szerokość geograficzna** — kąt padania promieni i dopływ promieniowania rosną ku południowi"
+            },
+            {
+              "aspect": "Rola Morza Bałtyckiego",
+              "left": "**ociepla** wybrzeże — woda oddaje ciepło zgromadzone latem",
+              "right": "**ochładza** wybrzeże — woda nagrzewa się wolniej niż ląd"
+            },
+            {
+              "aspect": "Obszary skrajne",
+              "left": "najzimniej w górach (Kasprowy Wierch ok. −7°C) i na Suwalszczyźnie — polski biegun zimna",
+              "right": "najchłodniej w górach (Kasprowy Wierch ok. 8°C), najcieplej w kotlinach podkarpackich i na Nizinie Śląskiej"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Roczna amplituda temperatury powietrza — wzrost kontynentalizmu ku wschodowi",
+          "caption": "Wartości przybliżone, ilustrujące prawidłowość. Im dalej od Atlantyku, tym słabszy łagodzący wpływ powietrza polarnomorskiego i tym większa różnica między latem a zimą.",
+          "labels": [
+            "Świnoujście",
+            "Poznań",
+            "Warszawa",
+            "Białystok",
+            "Terespol"
+          ],
+          "series": [
+            {
+              "name": "Roczna amplituda temperatury",
+              "values": [
+                17.5,
+                20,
+                21,
+                22,
+                23
+              ]
+            }
+          ],
+          "unit": "°C"
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Roczne sumy opadów wybranych stacji",
+          "caption": "Opady w Polsce rosną przede wszystkim **z wysokością nad poziomem morza** (opady orograficzne), a nie z zachodu na wschód. Najsuchszy region kraju to Kujawy i wschodnia Wielkopolska.",
+          "labels": [
+            "Koło (Kujawy)",
+            "Poznań",
+            "Warszawa",
+            "Kraków",
+            "Zakopane",
+            "Kasprowy Wierch"
+          ],
+          "series": [
+            {
+              "name": "Średnia roczna suma opadów",
+              "values": [
+                480,
+                520,
+                550,
+                670,
+                1100,
+                1750
+              ]
+            }
+          ],
+          "unit": "mm"
+        },
+        {
+          "type": "process",
+          "title": "Wiatr halny — mechanizm fenu",
+          "caption": "Najczęściej pytany mechanizm klimatyczny w polskiej maturze. Kluczowa jest różnica gradientów: wilgotnoadiabatycznego i suchoadiabatycznego.",
+          "steps": [
+            {
+              "title": "Układ ciśnienia po obu stronach gór",
+              "text": "Nad Bałtykiem lub Morzem Północnym zalega **niż**, a nad Kotliną Panońską i Słowacją — **wyż**. Powstaje duża różnica ciśnienia w poprzek Karpat, wymuszająca przepływ powietrza z południa na północ."
+            },
+            {
+              "title": "Wznoszenie po stronie nawietrznej",
+              "text": "Powietrze wtłaczane na barierę górską **wznosi się i ochładza** — początkowo o 1°C na 100 m (gradient suchoadiabatyczny). Po osiągnięciu poziomu kondensacji para wodna skrapla się, uwalniając ciepło, więc dalsze ochładzanie jest wolniejsze: ok. **0,6°C na 100 m** (gradient wilgotnoadiabatyczny)."
+            },
+            {
+              "title": "Opady i utrata wilgoci",
+              "text": "Na stokach nawietrznych powstają chmury i **obfite opady** — nad grzbietem widać charakterystyczny wał chmur (mur fenowy). Powietrze przekraczające grzbiet jest już **pozbawione znacznej części pary wodnej**."
+            },
+            {
+              "title": "Opadanie po stronie zawietrznej",
+              "text": "Suche powietrze spływa po polskiej stronie gór i **ogrzewa się szybciej — o 1°C na 100 m**, bo nie zachodzi już kondensacja. Dlatego u podnóża jest **cieplejsze i znacznie suchsze** niż na tej samej wysokości po stronie słowackiej."
+            },
+            {
+              "title": "Skutki w Podtatrzu",
+              "text": "Nagły wzrost temperatury (nawet o kilkanaście stopni w ciągu kilku godzin), gwałtowny spadek wilgotności, porywy wiatru przekraczające 100 km/h. Konsekwencje: **błyskawiczne topnienie pokrywy śnieżnej i wezbrania**, wiatrołomy w lasach świerkowych, zwiększone zagrożenie pożarowe i dolegliwości zdrowotne (tzw. choroba fenowa). Halny wieje najczęściej **jesienią i wiosną**."
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Sześć pór roku w klimacie Polski",
+          "caption": "Podział termiczny, oparty na średniej dobowej temperaturze powietrza. Dwie dodatkowe pory — przedwiośnie i przedzimie — to właśnie znak przejściowości klimatu.",
+          "events": [
+            {
+              "period": "średnia dobowa 0–5°C, wzrost (koniec lutego – marzec)",
+              "label": "Przedwiośnie",
+              "text": "Topnieje pokrywa śnieżna, rzeki niosą **wezbranie roztopowe**, gleba rozmarza. Pogoda bardzo zmienna: naprzemiennie napływa powietrze arktyczne i polarnomorskie."
+            },
+            {
+              "period": "5–15°C (kwiecień – maj)",
+              "label": "Wiosna",
+              "text": "Szybki rozwój roślinności, początek **okresu wegetacyjnego** (średnia dobowa powyżej 5°C). Częste przymrozki radiacyjne przy pogodnych nocach — największe ryzyko strat w sadownictwie."
+            },
+            {
+              "period": "powyżej 15°C (czerwiec – sierpień)",
+              "label": "Lato",
+              "text": "Najdłuższe w środkowej i zachodniej Polsce (ok. 90–100 dni), najkrótsze na Suwalszczyźnie i nad morzem. Maksimum opadów — **burze i deszcze konwekcyjne**; to także pora powodzi opadowych w górach."
+            },
+            {
+              "period": "15–5°C (wrzesień – październik)",
+              "label": "Jesień",
+              "text": "Stopniowe wychładzanie; częste **wyże z ciepłym powietrzem zwrotnikowym** dają babie lato. Najniższe stany wód w rzekach — jesienna niżówka."
+            },
+            {
+              "period": "5–0°C (listopad – grudzień)",
+              "label": "Przedzimie",
+              "text": "Pochmurna, wilgotna pora z mgłami i przymrozkami, bez trwałej pokrywy śnieżnej. Największe zachmurzenie w całym roku."
+            },
+            {
+              "period": "poniżej 0°C (grudzień – luty)",
+              "label": "Zima",
+              "text": "Trwa od ok. 60 dni na zachodzie kraju do ponad 110 dni na Suwalszczyźnie i ponad 200 dni w Tatrach. Pokrywa śnieżna zalega od ok. 40 dni na zachodzie do ok. 100 dni na północnym wschodzie."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Klimat Polski w liczbach",
+          "items": [
+            {
+              "value": "ok. 8",
+              "unit": "°C",
+              "label": "średnia roczna temperatura powietrza",
+              "note": "od ok. 6,5°C na Suwalszczyźnie do ponad 9°C na Nizinie Śląskiej"
+            },
+            {
+              "value": "ok. 600",
+              "unit": "mm",
+              "label": "średnia roczna suma opadów",
+              "note": "od poniżej 500 mm na Kujawach do ponad 1700 mm w Tatrach"
+            },
+            {
+              "value": "−41,0",
+              "unit": "°C",
+              "label": "najniższa zanotowana temperatura (Siedlce, 1940 r.)"
+            },
+            {
+              "value": "40,2",
+              "unit": "°C",
+              "label": "najwyższa zanotowana temperatura (Prószków koło Opola, 1921 r.)"
+            },
+            {
+              "value": "ok. 200",
+              "unit": "dni",
+              "label": "przeciętna długość okresu wegetacyjnego",
+              "note": "od ok. 190 dni na północnym wschodzie do ok. 225 dni na Nizinie Śląskiej"
+            },
+            {
+              "value": "ok. 60",
+              "unit": "%",
+              "label": "udział wiatrów z sektora zachodniego — dominująca cyrkulacja"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Inwersja temperatury i smog w kotlinach",
+          "region": "Kraków, Nowy Sącz, Rybnik, Zakopane",
+          "text": "Zimą, przy **rozbudowanym wyżu i bezwietrznej pogodzie**, powietrze przy dnie kotliny wychładza się w nocy przez wypromieniowanie ciepła szybciej niż warstwy wyżej położone. Powstaje **inwersja temperatury** — cieplejsze powietrze leży nad zimniejszym, co całkowicie blokuje ruchy pionowe. Zanieczyszczenia z tzw. niskiej emisji (indywidualne kotły, transport) nie mogą się rozproszyć i gromadzą się w warstwie przypowierzchniowej, dając **smog**. Kraków, leżący w obniżeniu Bramy Krakowskiej i otoczony wzniesieniami, ma dodatkowo bardzo słabe **naturalne przewietrzanie** — częste są tu cisze i wiatry o prędkości poniżej 2 m/s.",
+          "takeaway": "O stężeniu zanieczyszczeń decyduje nie tylko wielkość emisji, ale przede wszystkim **warunki meteorologiczne i rzeźba terenu** — ta sama emisja daje inne stężenia w kotlinie i na otwartej równinie."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Przejściowość nie oznacza „przeciętności”, lecz zmienność** — na maturze za odpowiedź typu „klimat umiarkowany, czyli średni” nie ma punktu; trzeba napisać o naprzemiennym napływie mas powietrza. Druga częsta pomyłka to kierunek izoterm: **w styczniu przebiegają południkowo** (decyduje odległość od Atlantyku), **w lipcu równoleżnikowo** (decyduje szerokość geograficzna). Trzecia: **halny to wiatr ciepły i suchy po stronie ZAWIETRZNEJ** — nie mieszaj go z bryzą ani z wiatrem dolinnym."
+        },
+        {
+          "type": "matching",
+          "title": "Zjawisko i jego przyczyna",
+          "instruction": "Dopasuj obserwowaną cechę klimatu Polski do mechanizmu, który ją wywołuje.",
+          "pairs": [
+            {
+              "left": "Wzrost rocznej amplitudy temperatury z zachodu na wschód",
+              "right": "słabnący w głąb lądu wpływ mas polarnomorskich znad Atlantyku"
+            },
+            {
+              "left": "Południkowy przebieg izoterm stycznia",
+              "right": "ocieplający wpływ Atlantyku i Bałtyku oddziałujący od zachodu"
+            },
+            {
+              "left": "Ponad 1700 mm opadów rocznie na Kasprowym Wierchu",
+              "right": "opady orograficzne wywołane wymuszonym wznoszeniem powietrza na barierze górskiej"
+            },
+            {
+              "left": "Mniej niż 500 mm opadów na Kujawach",
+              "right": "położenie w cieniu opadowym Pojezierza Pomorskiego, z dala od gór i wybrzeża"
+            },
+            {
+              "left": "Nagłe ocieplenie i wysuszenie powietrza w Zakopanem",
+              "right": "wiatr halny — opadanie i adiabatyczne ogrzewanie po zawietrznej stronie Tatr"
+            },
+            {
+              "left": "Majowe przymrozki niszczące sady",
+              "right": "napływ powietrza arktycznego i wypromieniowanie ciepła podczas pogodnej nocy"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Izotermy stycznia w Polsce przebiegają w przybliżeniu południkowo. Co jest tego przyczyną?",
+          "options": [
+            "Zróżnicowanie wysokości nad poziomem morza między północą a południem kraju",
+            "Malejący ku wschodowi wpływ ocieplających mas powietrza polarnomorskiego znad Atlantyku",
+            "Różnice w kącie padania promieni słonecznych między północą a południem",
+            "Przewaga wiatrów z sektora północnego w miesiącach zimowych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zimą o temperaturze decyduje przede wszystkim cyrkulacja: powietrze polarnomorskie ociepla zachód kraju, a jego wpływ słabnie ku wschodowi. Dlatego izotermy układają się z NW na SE, a nie równoleżnikowo jak w lipcu."
+        },
+        {
+          "type": "quiz",
+          "question": "Podczas halnego temperatura w Zakopanem gwałtownie rośnie, a wilgotność spada. Który mechanizm to wyjaśnia?",
+          "options": [
+            "Powietrze po stronie zawietrznej opada i ogrzewa się o 1°C na 100 m, wcześniej tracąc wilgoć w opadach po stronie nawietrznej",
+            "Powietrze napływa bezpośrednio znad Sahary, więc jest gorące i suche już u źródła",
+            "Wznoszące się powietrze ogrzewa się wskutek kondensacji pary wodnej",
+            "Wiatr przyspiesza parowanie śniegu, co podnosi temperaturę powietrza"
+          ],
+          "correctIndex": 0,
+          "explanation": "Istotą fenu jest różnica gradientów: wznoszące się powietrze ochładza się wolniej (0,6°C/100 m, bo kondensacja uwalnia ciepło), a opadające ogrzewa szybciej (1°C/100 m, bo jest już suche). Efektem jest nadwyżka ciepła i deficyt wilgoci po stronie zawietrznej."
+        },
+        {
+          "type": "quiz",
+          "question": "Która masa powietrza odpowiada w Polsce za zimowe, kilkudniowe mrozy poniżej −20°C przy bezchmurnym niebie?",
+          "options": [
+            "Powietrze polarnomorskie (PPm)",
+            "Powietrze polarnokontynentalne (PPk)",
+            "Powietrze zwrotnikowe morskie (PZm)",
+            "Powietrze równikowe (PR)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zimowe powietrze polarnokontynentalne znad Eurazji jest suche i bardzo zimne, a towarzyszący mu wyż daje bezchmurne niebo i silne wypromieniowanie ciepła. Powietrze równikowe nad Polskę w ogóle nie dociera."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy klimatogramie zawsze wykonaj **trzy odczyty**: amplitudę roczną (najcieplejszy minus najzimniejszy miesiąc), sumę roczną opadów i miesiąc maksimum opadowego — to gotowy zestaw argumentów w każdym uzasadnieniu. Przy mapie izoterm najpierw sprawdź **kierunek ich przebiegu**, bo on od razu wskazuje czynnik sprawczy. A w zadaniach o zjawiskach ekstremalnych podawaj zawsze **pełny łańcuch**: układ baryczny → masa powietrza lub mechanizm → skutek w środowisku (np. „niż genueński → długotrwały opad w Sudetach → gwałtowne wezbranie Nysy Kłodzkiej”)."
+        }
+      ]
+    },
+    {
+      "slug": "wody-polski",
+      "title": "Wody Polski — rzeki, jeziora i wody podziemne",
+      "summary": "Dorzecza Wisły i Odry, reżim polskich rzek, typy jezior, wody podziemne oraz zagrożenie powodziowe i susza.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Polska jest krajem **ubogim w wodę** — na jednego mieszkańca przypada jej u nas kilkakrotnie mniej niż wynosi średnia europejska. Jednocześnie nasze rzeki potrafią wywołać katastrofalne powodzie, a te same regiony cierpią latem na suszę. Ta pozorna sprzeczność ma jedno źródło: **duża zmienność przepływów** i mała naturalna retencja. W tej lekcji poznasz układ sieci rzecznej, reżim polskich rzek, genezę jezior i mechanizmy powodzi — czyli komplet zagadnień hydrologicznych, o które pyta matura."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Wody Polski w liczbach",
+          "items": [
+            {
+              "value": "1047",
+              "unit": "km",
+              "label": "długość Wisły — najdłuższej rzeki Polski"
+            },
+            {
+              "value": "854",
+              "unit": "km",
+              "label": "długość Odry",
+              "note": "w granicach Polski ok. 742 km"
+            },
+            {
+              "value": "54",
+              "unit": "%",
+              "label": "powierzchni kraju leży w dorzeczu Wisły",
+              "note": "w dorzeczu Odry ok. 34%"
+            },
+            {
+              "value": "99,7",
+              "unit": "%",
+              "label": "powierzchni Polski należy do zlewiska Morza Bałtyckiego"
+            },
+            {
+              "value": "ok. 7000",
+              "label": "jezior o powierzchni powyżej 1 ha",
+              "note": "jeziorność Polski to ok. 1% powierzchni kraju"
+            },
+            {
+              "value": "ok. 1600",
+              "unit": "m³/rok",
+              "label": "zasoby wodne na 1 mieszkańca (wartość szacunkowa, silnie zmienna)",
+              "note": "ok. 3 razy mniej niż przeciętnie w Europie"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Dorzecze, zlewnia, zlewisko, dział wodny",
+          "text": "**Dorzecze** to obszar, z którego wody spływają do jednej rzeki głównej wraz z wszystkimi dopływami (dorzecze Wisły). **Zlewnia** to obszar zasilający dowolny ciek lub zbiornik — także pojedynczy dopływ (zlewnia Dunajca) albo jezioro. **Zlewisko** to obszar odwadniany do jednego morza lub oceanu (zlewisko Morza Bałtyckiego). **Dział wodny** to linia rozdzielająca sąsiednie dorzecza lub zlewiska, przebiegająca przez punkty najwyższe w terenie.",
+          "note": "Dorzecze jest zawsze zlewnią, ale nie każda zlewnia jest dorzeczem. Polska leży niemal w całości w zlewisku Bałtyku — poza nim pozostają jedynie niewielkie fragmenty dorzeczy Dunaju (zlewisko Morza Czarnego) i Łaby (Morze Północne) na południowej granicy."
+        },
+        {
+          "type": "compare",
+          "title": "Wisła i Odra",
+          "leftLabel": "Wisła",
+          "rightLabel": "Odra",
+          "rows": [
+            {
+              "aspect": "Źródła",
+              "left": "stoki **Baraniej Góry** w Beskidzie Śląskim, ok. 1107 m n.p.m. (Biała i Czarna Wisełka)",
+              "right": "**Góry Odrzańskie** w Sudetach Wschodnich, na terenie Czech, ok. 634 m n.p.m."
+            },
+            {
+              "aspect": "Ujście",
+              "left": "**Zatoka Gdańska** — Przekop Wisły pod Świbnem; przy ujściu delta i Żuławy Wiślane",
+              "right": "**Zalew Szczeciński** — rozwidlenie na Odrę Zachodnią i Regalicę, dalej Zatoka Pomorska"
+            },
+            {
+              "aspect": "Powierzchnia dorzecza",
+              "left": "ok. 194 tys. km² (w Polsce ok. 169 tys. km²)",
+              "right": "ok. 119 tys. km² (w Polsce ok. 106 tys. km²)"
+            },
+            {
+              "aspect": "Największe dopływy",
+              "left": "prawe: **Narew z Bugiem** (największy), Dunajec, Wisłoka, San, Wieprz; lewe: Nida, Pilica, Bzura, Brda",
+              "right": "prawe: **Warta z Notecią** (największy, 808 km), Barycz, Mała Panew; lewe: Nysa Kłodzka, Bystrzyca, Kaczawa, Bóbr, Nysa Łużycka"
+            },
+            {
+              "aspect": "Symetria dorzecza",
+              "left": "wyraźnie **asymetryczne** — przewaga dopływów prawych, zasilanych z Karpat",
+              "right": "bardziej symetryczne; zasilanie z Sudetów po lewej stronie, z nizin po prawej"
+            },
+            {
+              "aspect": "Stopień przekształcenia",
+              "left": "słabo uregulowana; jeden duży stopień wodny — **Włocławek**; zachowane naturalne, roztokowe odcinki koryta",
+              "right": "silnie uregulowana i **skanalizowana** w górnym biegu — Odrzańska Droga Wodna, Kanał Gliwicki, liczne stopnie"
+            },
+            {
+              "aspect": "Typowe zagrożenia",
+              "left": "powodzie **roztopowe** i **zatorowe** w dolnym biegu, powodzie sztormowe u ujścia",
+              "right": "powodzie **opadowe** z Sudetów (1997, 2024 — Nysa Kłodzka)"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Hydrologiczna mapa Polski",
+          "caption": "Kliknij znaczniki. Zwróć uwagę na kierunek biegu obu wielkich rzek — z południa ku północy, zgodnie z nachyleniem powierzchni kraju.",
+          "center": [
+            52.2,
+            18.5
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 49.61,
+              "lng": 19,
+              "label": "Barania Góra — źródła Wisły",
+              "text": "Wisła zaczyna bieg na wysokości ok. 1107 m n.p.m. w Beskidzie Śląskim. Górny bieg (do ujścia Sanu) ma charakter **górski i podgórski**: duże spadki, gwałtowne wezbrania."
+            },
+            {
+              "lat": 54.35,
+              "lng": 18.95,
+              "label": "Świbno — ujście Wisły",
+              "text": "**Przekop Wisły** — sztuczne ujście wykonane w 1895 r., które skróciło drogę wód do morza i ograniczyło zagrożenie powodziowe Żuław. Rzeka usypuje tu nowy stożek ujściowy, wysuwający się w głąb Zatoki Gdańskiej."
+            },
+            {
+              "lat": 53.75,
+              "lng": 14.45,
+              "label": "Zalew Szczeciński — ujście Odry",
+              "text": "Odra uchodzi do rozległego, płytkiego zalewu połączonego z Bałtykiem trzema cieśninami (Świna, Dziwna, Piana). To ujście typu **estuariowo-zalewowego**, a nie delta."
+            },
+            {
+              "lat": 51.11,
+              "lng": 17.03,
+              "label": "Wrocław",
+              "text": "Węzeł hydrologiczny środkowej Odry, przez który przechodzą fale wezbraniowe z Sudetów. Po powodzi 1997 r. rozbudowano tu **Wrocławski Węzeł Wodny** — system kanałów ulgi i polderów."
+            },
+            {
+              "lat": 50.44,
+              "lng": 16.66,
+              "label": "Kotlina Kłodzka",
+              "text": "Zlewnia **Nysy Kłodzkiej** — obszar o największym w Polsce zagrożeniu powodziami opadowymi. Strome, wylesione miejscami stoki i mało przepuszczalne podłoże dają błyskawiczny spływ powierzchniowy."
+            },
+            {
+              "lat": 52.62,
+              "lng": 19.33,
+              "label": "Zbiornik Włocławski",
+              "text": "Największy pod względem powierzchni (ok. 70 km²) zbiornik zaporowy w Polsce, jedyny duży stopień na Wiśle. Pełni funkcję energetyczną i żeglugową, ale zatrzymuje rumowisko i utrudnia migrację ryb."
+            },
+            {
+              "lat": 49.4,
+              "lng": 22.46,
+              "label": "Jezioro Solińskie",
+              "text": "Największy pod względem **pojemności** zbiornik w Polsce (ok. 472 mln m³), utworzony przez przegrodzenie doliny Sanu w Bieszczadach. Funkcje: przeciwpowodziowa, energetyczna (elektrownia szczytowo-pompowa) i rekreacyjna."
+            },
+            {
+              "lat": 53.77,
+              "lng": 21.73,
+              "label": "Śniardwy",
+              "text": "Największe jezioro Polski (113,8 km²) — typu **morenowego**: rozległe, płytkie, o rozwiniętej linii brzegowej. Element szlaku Wielkich Jezior Mazurskich."
+            },
+            {
+              "lat": 54.2667,
+              "lng": 22.8167,
+              "label": "Hańcza",
+              "text": "Najgłębsze jezioro Polski (108,5 m) i przykład **kryptodepresji** — dno leży poniżej poziomu morza. Wypełnia rynnę subglacjalną na Pojezierzu Suwalskim."
+            },
+            {
+              "lat": 54.7,
+              "lng": 17.42,
+              "label": "Łebsko",
+              "text": "Trzecie co do wielkości jezioro Polski, typu **przybrzeżnego** — dawna zatoka morska odcięta od Bałtyku mierzeją. Woda jest tu lekko słonawa; jezioro leży w Słowińskim Parku Narodowym."
+            },
+            {
+              "lat": 53.5,
+              "lng": 22.6,
+              "label": "Dolina Biebrzy",
+              "text": "Największy w Europie Środkowej kompleks **torfowisk i naturalnych rozlewisk** rzecznych. Wiosenne wylewy Biebrzy nie są klęską, lecz warunkiem istnienia tego ekosystemu."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Reżim rzeczny — średnie miesięczne przepływy Wisły w Warszawie",
+          "caption": "Wartości przybliżone, ilustrujące typowy przebieg roczny. Widać dwa wezbrania (wiosenne roztopowe i letnie opadowe) oraz dwie niżówki (jesienną i zimową).",
+          "labels": [
+            "I",
+            "II",
+            "III",
+            "IV",
+            "V",
+            "VI",
+            "VII",
+            "VIII",
+            "IX",
+            "X",
+            "XI",
+            "XII"
+          ],
+          "series": [
+            {
+              "name": "Średni przepływ",
+              "values": [
+                480,
+                540,
+                900,
+                890,
+                610,
+                560,
+                620,
+                470,
+                410,
+                420,
+                470,
+                520
+              ]
+            }
+          ],
+          "unit": "m³/s"
+        },
+        {
+          "type": "definition",
+          "term": "Reżim rzeczny polskich rzek",
+          "text": "Polskie rzeki mają reżim **śnieżno-deszczowy (niwalno-pluwialny)** z **dwoma wezbraniami** w roku: głównym **wiosennym roztopowym** (marzec–kwiecień, po stopnieniu pokrywy śnieżnej) i drugorzędnym **letnim opadowym** (czerwiec–lipiec, po intensywnych opadach). Niżówki przypadają na jesień (wrzesień–październik) i zimę, gdy woda jest uwięziona w pokrywie śnieżnej i lodzie.",
+          "note": "Rzeki **karpackie** mają reżim z przewagą zasilania deszczowego i wyraźnym maksimum letnim, a ich przepływy są bardzo nieregularne — stosunek przepływu maksymalnego do minimalnego bywa kilkusetkrotny. Rzeki **nizinne** są znacznie bardziej wyrównane, bo zasilają je wody podziemne."
+        },
+        {
+          "type": "classification",
+          "title": "Typy jezior Polski według genezy",
+          "caption": "Ponad 90% polskich jezior leży na pojezierzach i ma genezę polodowcową — to bezpośredni skutek zasięgu ostatniego zlodowacenia.",
+          "groups": [
+            {
+              "name": "Jeziora rynnowe",
+              "description": "Wypełniają **rynny subglacjalne** wyżłobione przez wody płynące pod ciśnieniem pod lądolodem. **Długie, wąskie, głębokie**, o stromych brzegach i wydłużonym kształcie.",
+              "examples": [
+                "Hańcza (108,5 m — najgłębsze w Polsce)",
+                "Jeziorak (najdłuższe — ok. 27,5 km)",
+                "Gopło",
+                "Wdzydze"
+              ]
+            },
+            {
+              "name": "Jeziora morenowe",
+              "description": "Zajmują zagłębienia w obrębie wysoczyzn i moren. **Rozległe, ale płytkie**, o bardzo rozwiniętej linii brzegowej i licznych wyspach.",
+              "examples": [
+                "Śniardwy (113,8 km²)",
+                "Mamry",
+                "Niegocin"
+              ]
+            },
+            {
+              "name": "Jeziora wytopiskowe",
+              "description": "Powstały po wytopieniu brył **martwego lodu** przysypanych osadami. Małe, okrągłe, często zarastające i przekształcające się w torfowiska.",
+              "examples": [
+                "oczka polodowcowe Pojezierza Suwalskiego i Mazurskiego"
+              ]
+            },
+            {
+              "name": "Jeziora przybrzeżne (zalewowe)",
+              "description": "Dawne **zatoki morskie odcięte mierzejami** usypanymi przez prądy przybrzeżne. Płytkie, o lekko słonawej wodzie.",
+              "examples": [
+                "Łebsko",
+                "Gardno",
+                "Jamno",
+                "Wicko"
+              ]
+            },
+            {
+              "name": "Jeziora deltowe",
+              "description": "Zagłębienia w obrębie **delty rzecznej**, często na terenach depresyjnych, silnie zarastające.",
+              "examples": [
+                "Druzno na Żuławach"
+              ]
+            },
+            {
+              "name": "Jeziora krasowe",
+              "description": "Powstałe w **lejach i zagłębieniach krasowych**, tam gdzie w podłożu zalegają skały rozpuszczalne (kreda, gipsy).",
+              "examples": [
+                "jeziora Pojezierza Łęczyńsko-Włodawskiego, m.in. Białe Włodawskie i Uściwierz"
+              ]
+            },
+            {
+              "name": "Jeziora górskie",
+              "description": "**Karowe (cyrkowe)** — w kotłach polodowcowych, oraz **zaporowe morenowe** — za wałem moreny w dolinie. Małe, ale bardzo głębokie i zimne.",
+              "examples": [
+                "Morskie Oko (zaporowe morenowe)",
+                "Czarny Staw pod Rysami (karowe)",
+                "Wielki Staw w Dolinie Pięciu Stawów"
+              ]
+            },
+            {
+              "name": "Sztuczne zbiorniki zaporowe",
+              "description": "Powstałe po **przegrodzeniu doliny rzecznej zaporą**; pełnią funkcje przeciwpowodziowe, energetyczne, zaopatrzeniowe i rekreacyjne.",
+              "examples": [
+                "Solińskie (największa pojemność)",
+                "Włocławskie (największa powierzchnia)",
+                "Czorsztyńskie",
+                "Jeziorsko",
+                "Goczałkowickie"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje wielka powódź opadowa na południu Polski",
+          "caption": "Ten sam mechanizm stał za powodziami w 1997, 2010 i 2024 roku — to najlepiej udokumentowany scenariusz katastrofy hydrologicznej w Polsce.",
+          "steps": [
+            {
+              "title": "Narodziny niżu genueńskiego",
+              "text": "Nad ciepłym Morzem Śródziemnym, po zawietrznej stronie Alp, formuje się głęboki **niż genueński**. Powietrze, które go wypełnia, jest wyjątkowo **wilgotne i ciepłe**."
+            },
+            {
+              "title": "Wędrówka szlakiem znad Adriatyku",
+              "text": "Niż przemieszcza się ku północnemu wschodowi — nad Węgry, Słowację i południową Polskę, wciągając kolejne porcje wilgotnego powietrza znad Adriatyku i Morza Czarnego."
+            },
+            {
+              "title": "Wymuszone wznoszenie na barierze gór",
+              "text": "Powietrze napiera od południa na Sudety i Karpaty, **wznosi się i oddaje wilgoć**. Opady są długotrwałe i bardzo wydajne — miejscami kilkaset milimetrów w ciągu dwóch–czterech dób, czyli tyle, ile zwykle pada przez pół roku."
+            },
+            {
+              "title": "Błyskawiczny spływ powierzchniowy",
+              "text": "Gleby nasiąkają i tracą zdolność wchłaniania wody. Strome stoki, mało przepuszczalne podłoże fliszowe oraz uszczelnione powierzchnie sprawiają, że woda **spływa do rzek w ciągu godzin**, a nie dni. Formuje się fala wezbraniowa."
+            },
+            {
+              "title": "Wędrówka fali w dół rzeki",
+              "text": "Fala przemieszcza się w dół biegu i **sumuje z falami dopływów**. W Raciborzu kulminacja pojawia się wcześniej, we Wrocławiu z kilkudniowym opóźnieniem — to okno czasowe na ostrzeżenia, ewakuację i sterowanie zbiornikami."
+            },
+            {
+              "title": "Reakcja techniczna i jej granice",
+              "text": "Zbiorniki retencyjne (Racibórz Dolny, Mietków, Nysa) i poldery **obniżają kulminację**, ale jej nie eliminują. Przy skrajnych opadach decyduje to, czy zbiorniki miały wolną rezerwę powodziową i czy tereny zalewowe nie zostały zabudowane."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Powódź tysiąclecia 1997 r.",
+          "region": "dorzecze Odry — Kotlina Kłodzka, Racibórz, Opole, Wrocław",
+          "text": "W lipcu 1997 r. dwa kolejne **niże genueńskie** przyniosły w Sudetach i na pogórzu opady sięgające miejscami kilkuset milimetrów w kilka dni. Wezbranie objęło całe dorzecze górnej i środkowej Odry: najpierw zalane zostało Kłodzko i Racibórz, po kilku dniach fala dotarła do Opola i Wrocławia. Zginęło ok. **55 osób**, a straty materialne sięgnęły kilkunastu miliardów złotych. Katastrofa obnażyła słabości ówczesnego systemu: brak zbiorników o dużej rezerwie powodziowej, przestarzały monitoring i **zabudowę terenów zalewowych**. Odpowiedzią były m.in. budowa polderu **Racibórz Dolny**, przebudowa Wrocławskiego Węzła Wodnego, rozwój sieci pomiarowej IMGW oraz obowiązkowe **mapy zagrożenia i ryzyka powodziowego**.",
+          "takeaway": "Powódź jest zjawiskiem naturalnym — klęską czyni ją dopiero sposób zagospodarowania doliny. Dlatego skuteczna ochrona łączy działania techniczne (zbiorniki, poldery) z planowaniem przestrzennym i renaturyzacją rzek."
+        },
+        {
+          "type": "table",
+          "title": "Wody podziemne i lecznicze — geologia decyduje o wszystkim",
+          "caption": "Największe zasoby zwykłych wód podziemnych kryją czwartorzędowe doliny kopalne i pradoliny oraz kredowe utwory Niecki Lubelskiej; najuboższe w wodę są Karpaty o mało przepuszczalnym podłożu fliszowym.",
+          "headers": [
+            "Region",
+            "Typ wód",
+            "Przykładowe uzdrowiska"
+          ],
+          "rows": [
+            [
+              "Sudety",
+              "szczawy i wody radoczynne w szczelinach skał krystalicznych",
+              "Kudowa-Zdrój, Polanica-Zdrój, Duszniki-Zdrój, Lądek-Zdrój, Świeradów-Zdrój"
+            ],
+            [
+              "Karpaty i Pogórze",
+              "szczawy i solanki związane z utworami fliszowymi",
+              "Krynica-Zdrój, Muszyna, Wysowa-Zdrój, Rabka-Zdrój, Iwonicz-Zdrój"
+            ],
+            [
+              "Niecka Nidziańska",
+              "wody siarczkowe i chlorkowe w osadach mioceńskich",
+              "Busko-Zdrój, Solec-Zdrój"
+            ],
+            [
+              "Kujawy i wybrzeże",
+              "solanki związane z wysadami solnymi i osadami morskimi",
+              "Ciechocinek, Inowrocław, Kołobrzeg"
+            ],
+            [
+              "Podhale i Niż Polski",
+              "wody termalne w przepuszczalnych utworach mezozoicznych",
+              "Zakopane, Bukowina Tatrzańska, Uniejów, Mszczonów"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Nie myl dorzecza ze zlewnią i zlewiskiem.** Dorzecze dotyczy rzeki głównej z dopływami, zlewnia — dowolnego cieku lub zbiornika, zlewisko — całego morza. Uważaj też na dwa rekordy jezior zaporowych: **Solińskie ma największą pojemność**, ale **Włocławskie największą powierzchnię** — pytania celowo mieszają te kryteria. I jeszcze jedno: **Łebsko to jezioro przybrzeżne, nie morenowe** — powstało przez odcięcie zatoki mierzeją, a nie przez akumulację lodowcową."
+        },
+        {
+          "type": "matching",
+          "title": "Obiekt hydrologiczny i jego cecha",
+          "instruction": "Dopasuj obiekt do wyróżniającej go cechy.",
+          "pairs": [
+            {
+              "left": "Śniardwy",
+              "right": "największe jezioro Polski (113,8 km²), typu morenowego"
+            },
+            {
+              "left": "Hańcza",
+              "right": "najgłębsze jezioro Polski (108,5 m), wypełniające rynnę subglacjalną"
+            },
+            {
+              "left": "Jezioro Solińskie",
+              "right": "sztuczny zbiornik o największej pojemności w kraju"
+            },
+            {
+              "left": "Łebsko",
+              "right": "jezioro przybrzeżne odcięte od morza mierzeją, o słonawej wodzie"
+            },
+            {
+              "left": "Warta",
+              "right": "najdłuższy dopływ Odry (808 km)"
+            },
+            {
+              "left": "Narew",
+              "right": "największy dopływ Wisły, uchodzący pod Nowym Dworem Mazowieckim"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Dopływy Wisły od źródeł do ujścia",
+          "instruction": "Uporządkuj dopływy w kolejności, w jakiej wpadają do Wisły, płynąc od źródeł ku ujściu.",
+          "items": [
+            "Soła",
+            "Dunajec",
+            "San",
+            "Wieprz",
+            "Narew",
+            "Brda"
+          ],
+          "explanation": "Kolejność odzwierciedla trzy odcinki biegu: **górna Wisła** (do ujścia Sanu) zasilana rzekami karpackimi, **środkowa** (do ujścia Narwi) — dopływami wyżynnymi i nizinnymi, **dolna** — rzekami pojezierzy."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego polskie rzeki mają główne wezbranie wiosną?",
+          "options": [
+            "Bo wtedy występują największe opady w skali roku",
+            "Bo topnieje pokrywa śnieżna, a zamarznięta jeszcze gleba nie wchłania wody roztopowej",
+            "Bo wiosną parowanie jest największe, co zwiększa zasilanie rzek",
+            "Bo wiosną otwierane są zapory na zbiornikach retencyjnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wezbranie roztopowe to skutek szybkiego topnienia śniegu przy jednoczesnym ograniczeniu wsiąkania — gleba jest jeszcze zmarznięta. Największe opady występują w lipcu, ale wtedy dużą ich część zużywa parowanie i roślinność, dlatego wezbranie letnie jest zwykle mniejsze."
+        },
+        {
+          "type": "quiz",
+          "question": "Jezioro jest długie, wąskie, ma stromo opadające brzegi i głębokość ponad 50 m. Jaka jest jego geneza?",
+          "options": [
+            "Morenowa — powstało w zagłębieniu wysoczyzny morenowej",
+            "Rynnowa — wypełnia rynnę wyżłobioną przez wody podlodowcowe",
+            "Przybrzeżna — to dawna zatoka morska odcięta mierzeją",
+            "Krasowa — powstało w leju krasowym"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wydłużony kształt, mała szerokość, duża głębokość i strome zbocza to zestaw cech diagnostycznych jeziora rynnowego. Jeziora morenowe są rozległe i płytkie, a przybrzeżne — bardzo płytkie i oddzielone od morza mierzeją."
+        },
+        {
+          "type": "quiz",
+          "question": "Które rozwiązanie NAJSKUTECZNIEJ ogranicza jednocześnie zagrożenie powodziowe i skutki suszy?",
+          "options": [
+            "Prostowanie i pogłębianie koryt rzecznych, by woda szybciej odpływała",
+            "Podnoszenie i wydłużanie wałów przeciwpowodziowych wzdłuż całego biegu rzeki",
+            "Zwiększanie retencji w zlewni — zalesianie, mała retencja, poldery i renaturyzacja dolin",
+            "Betonowanie brzegów w miastach, by ograniczyć erozję boczną"
+          ],
+          "correctIndex": 2,
+          "explanation": "Retencja spowalnia odpływ: obniża kulminację fali powodziowej, a zatrzymana woda zasila wody podziemne i podtrzymuje przepływy w okresie suszy. Regulacja i wały przyspieszają odpływ i przenoszą problem w dół rzeki."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z hydrogramem wymagają trzech odczytów: **kiedy wystąpiła kulminacja**, **ile trwało wezbranie** i **jaka jest różnica między przepływem maksymalnym a minimalnym**. Z tego wnioskuj o typie zasilania: wczesnowiosenne maksimum to zasilanie śnieżne, letnie — deszczowe, a bardzo ostra i krótka fala świadczy o zlewni górskiej o małej przepuszczalności. Przy pytaniach o suszę pamiętaj o rozróżnieniu: **atmosferyczna** (brak opadów), **glebowa** (deficyt wody w warstwie korzeniowej, uderza w rolnictwo) i **hydrologiczna** (niskie stany wód w rzekach i zbiornikach). Najbardziej narażone są **Kujawy i wschodnia Wielkopolska** — mało opadów, przepuszczalne gleby, niska lesistość i duże parowanie."
+        }
+      ]
+    },
+    {
+      "slug": "gleby-roslinnosc-i-ochrona-przyrody",
+      "title": "Gleby, szata roślinna i ochrona przyrody Polski",
+      "summary": "Typy gleb i ich rozmieszczenie, lasy i piętra roślinne gór oraz system parków narodowych i innych form ochrony przyrody.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gleba i roślinność to **warstwa wynikowa** środowiska: powstają tam, gdzie spotykają się skała macierzysta, klimat, woda i rzeźba poznane w poprzednich lekcjach. Dlatego mapa gleb Polski jest niemal kalką mapy geologicznej i zasięgów zlodowaceń, a mapa lasów — odwrotnością mapy najlepszych gruntów ornych. Na koniec działu poznasz **system ochrony przyrody**: 23 parki narodowe i pozostałe formy ochrony, które chronią najcenniejsze fragmenty tego, co zbudowaliśmy przez sześć lekcji."
+        },
+        {
+          "type": "classification",
+          "title": "Gleby Polski według genezy",
+          "caption": "Kluczowe pytanie diagnostyczne: czy o powstaniu gleby zdecydował **klimat i roślinność** (gleby strefowe), czy **skała macierzysta albo woda** (gleby niestrefowe).",
+          "groups": [
+            {
+              "name": "Gleby strefowe (zonalne)",
+              "description": "Powstały pod wpływem **klimatu umiarkowanego i lasów** strefy umiarkowanej. To one zajmują większość powierzchni kraju i decydują o przeciętnej, umiarkowanej jakości polskich gruntów.",
+              "examples": [
+                "**bielicowe** — na piaskach pod borami sosnowymi; kwaśne, ubogie w składniki, klasy V–VI",
+                "**rdzawe** — także na piaskach, ale żyźniejsze od bielic",
+                "**płowe** — na glinach zwałowych i lessach, najbardziej rozpowszechnione w Polsce",
+                "**brunatne** — na glinach i utworach pyłowych, dobre gleby orne"
+              ]
+            },
+            {
+              "name": "Gleby niestrefowe i śródstrefowe (azonalne)",
+              "description": "O ich powstaniu zdecydowały **skała macierzysta, woda gruntowa lub rzeźba**, a nie klimat. Zajmują niewielką powierzchnię, ale to wśród nich są najżyźniejsze gleby kraju.",
+              "examples": [
+                "**mady** — z namułów rzecznych, w dolinach i na Żuławach; najlepsze klasy bonitacyjne",
+                "**rędziny** — na wapieniach, marglach i gipsach, zasobne w wapń, kamieniste",
+                "**czarne ziemie** — na terenach pobagiennych po osuszeniu, bogate w próchnicę",
+                "**czarnoziemy** — na lessach, w Polsce **reliktowe** (pozostałość dawnego, suchszego klimatu), tylko wyspowo",
+                "**gleby bagienne: torfowe i mułowe** — w stale podmokłych zagłębieniach"
+              ]
+            },
+            {
+              "name": "Gleby górskie",
+              "description": "Młode, **płytkie i szkieletowe**, o słabo wykształconym profilu, stale odmładzane przez ruchy masowe i spływ powierzchniowy na stromych stokach.",
+              "examples": [
+                "gleby inicjalne i rankery powyżej górnej granicy lasu",
+                "gleby brunatne górskie w reglach",
+                "gleby bielicowe górskie pod borami świerkowymi"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Typy gleb i ich rozmieszczenie",
+          "caption": "Ucz się kolumnami: skała macierzysta → region → wartość rolnicza. Ten łańcuch wystarcza, by uzasadnić rozmieszczenie upraw w Polsce.",
+          "headers": [
+            "Gleba",
+            "Skała macierzysta / warunki",
+            "Gdzie w Polsce",
+            "Wartość rolnicza"
+          ],
+          "rows": [
+            [
+              "Bielicowe",
+              "piaski luźne, pod borami sosnowymi, klimat wilgotny",
+              "Bory Tucholskie, Puszcza Kampinoska, sandry Niziny Mazowieckiej i Podlaskiej",
+              "bardzo niska — klasy V–VI, wykorzystywane głównie leśnie"
+            ],
+            [
+              "Płowe i brunatne",
+              "gliny zwałowe, utwory pyłowe i lessy",
+              "pojezierza, Niziny Środkowopolskie, wyżyny — najbardziej rozpowszechnione w kraju",
+              "średnia i dobra — klasy III–IV"
+            ],
+            [
+              "Mady",
+              "aluwia (namuły rzeczne)",
+              "Żuławy Wiślane, doliny Wisły, Odry i Warty",
+              "bardzo wysoka na Żuławach — klasy I–II"
+            ],
+            [
+              "Rędziny",
+              "wapienie, margle, gipsy",
+              "Wyżyna Krakowsko-Częstochowska, Lubelska, Niecka Nidziańska, Góry Świętokrzyskie",
+              "zmienna; zasobne w wapń, dobre pod pszenicę i rzepak, trudne w uprawie"
+            ],
+            [
+              "Czarne ziemie",
+              "utwory pobagienne po osuszeniu terenu",
+              "Kujawy, Równina Wrocławska, okolice Pyrzyc, Wielkopolska",
+              "wysoka — klasy II–III"
+            ],
+            [
+              "Czarnoziemy",
+              "lessy, w warunkach dawnego suchego klimatu (gleby reliktowe)",
+              "Wyżyna Lubelska (okolice Hrubieszowa), Proszowice, Wyżyna Sandomierska",
+              "najwyższa — klasy I–II"
+            ],
+            [
+              "Gleby bagienne (torfowe, mułowe)",
+              "stale podmokłe zagłębienia i doliny",
+              "Kotlina Biebrzańska, Polesie Lubelskie, pradoliny",
+              "nieprzydatne pod uprawę, cenne przyrodniczo — użytki zielone"
+            ],
+            [
+              "Gleby górskie",
+              "zwietrzelina skalna na stromych stokach",
+              "Karpaty, Sudety, Góry Świętokrzyskie",
+              "niska — pastwiska i lasy"
+            ]
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Piętra roślinne w Tatrach",
+          "caption": "Kliknij kolejne piętra, idąc od dołu ku górze. Granice pięter są przybliżone i przebiegają wyżej na stokach południowych niż północnych.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Piętro pogórza",
+              "range": "do ok. 700 m n.p.m.",
+              "text": "Pierwotnie lasy liściaste (grądy, buczyny), dziś w większości zastąpione **polami, łąkami i zabudową**. Najcieplejsze i najdłużej wegetujące piętro.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel dolny",
+              "range": "ok. 700–1250 m n.p.m.",
+              "text": "**Buczyna karpacka** — las mieszany z bukiem, jodłą i świerkiem. Miejscami zastąpiona sztucznymi monokulturami świerkowymi, wyjątkowo podatnymi na wiatrołomy i gradacje kornika.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel górny",
+              "range": "ok. 1250–1550 m n.p.m.",
+              "text": "Jednogatunkowy **bór świerkowy**. Ku górnej granicy lasu drzewa są coraz niższe i rzadsze — decyduje krótki okres wegetacyjny, gruba pokrywa śnieżna i silny wiatr.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro kosodrzewiny",
+              "range": "ok. 1550–1800 m n.p.m.",
+              "text": "Zwarte zarośla **sosny górskiej (kosodrzewiny)**, płożącej się przy ziemi — taka forma wzrostu chroni ją przed wiatrem i pozwala przetrwać pod śniegiem. Kosówka wiąże stoki i ogranicza lawiny oraz erozję.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro hal",
+              "range": "ok. 1800–2300 m n.p.m.",
+              "text": "**Murawy wysokogórskie** i rośliny poduszkowe, przystosowane do silnego promieniowania i mrozu. Dawniej intensywnie wypasane — dziś wypas ma charakter wyłącznie kulturowo-ochronny.",
+              "tone": "earth"
+            },
+            {
+              "name": "Piętro turni",
+              "range": "powyżej ok. 2300 m n.p.m.",
+              "text": "Nagie skały, płaty śniegu, **porosty i mchy**; rośliny naczyniowe tylko w szczelinach z odrobiną zwietrzeliny. Piętro występujące w Polsce **wyłącznie w Tatrach Wysokich**.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Piętra roślinne w Tatrach i w Bieszczadach",
+          "leftLabel": "Tatry",
+          "rightLabel": "Bieszczady Zachodnie",
+          "rows": [
+            {
+              "aspect": "Najwyższy szczyt",
+              "left": "Rysy — 2499 m n.p.m.",
+              "right": "Tarnica — 1346 m n.p.m."
+            },
+            {
+              "aspect": "Górna granica lasu",
+              "left": "ok. 1550 m n.p.m.",
+              "right": "ok. 1150 m n.p.m. — wyjątkowo nisko jak na tę wysokość gór"
+            },
+            {
+              "aspect": "Piętro ponad lasem",
+              "left": "kosodrzewina, hale, turnie",
+              "right": "**połoniny** — bezleśne murawy zajmujące miejsce kosówki i hal"
+            },
+            {
+              "aspect": "Piętro kosodrzewiny",
+              "left": "zwarte, dobrze wykształcone (1550–1800 m)",
+              "right": "występuje tylko wyspowo, **nie tworzy odrębnego piętra**"
+            },
+            {
+              "aspect": "Przyczyny różnic",
+              "left": "duża wysokość bezwzględna i klimat wysokogórski z długo zalegającym śniegiem",
+              "right": "silne wiatry, specyficzny klimat oraz wielowiekowy **wypas obniżający granicę lasu**"
+            },
+            {
+              "aspect": "Ochrona",
+              "left": "Tatrzański Park Narodowy, rezerwat biosfery UNESCO",
+              "right": "Bieszczadzki Park Narodowy, część Międzynarodowego Rezerwatu Biosfery Karpaty Wschodnie"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Lesistość wybranych województw",
+          "caption": "Wartości przybliżone. Lasy skupiają się tam, gdzie gleby są najsłabsze (sandry, piaski Borów Dolnośląskich) albo teren jest górzysty; najmniej lasu jest tam, gdzie gleby najlepiej nadają się pod uprawę.",
+          "labels": [
+            "lubuskie",
+            "podkarpackie",
+            "pomorskie",
+            "Polska — średnio",
+            "łódzkie"
+          ],
+          "series": [
+            {
+              "name": "Lesistość",
+              "values": [
+                49,
+                38,
+                36,
+                30,
+                21
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "key-numbers",
+          "title": "Lasy i ochrona przyrody w liczbach",
+          "items": [
+            {
+              "value": "ok. 30",
+              "unit": "%",
+              "label": "lesistość Polski",
+              "note": "sosna zajmuje ok. 58% powierzchni lasów — skutek piaszczystych podłoży i XIX-wiecznych monokultur"
+            },
+            {
+              "value": "23",
+              "label": "parki narodowe w Polsce",
+              "note": "zajmują łącznie ok. 1% powierzchni kraju"
+            },
+            {
+              "value": "592",
+              "unit": "km²",
+              "label": "Biebrzański PN — największy park narodowy"
+            },
+            {
+              "value": "21,5",
+              "unit": "km²",
+              "label": "Ojcowski PN — najmniejszy park narodowy"
+            },
+            {
+              "value": "1932",
+              "label": "rok utworzenia dwóch najstarszych parków: Białowieskiego i Pienińskiego"
+            },
+            {
+              "value": "ok. 20",
+              "unit": "%",
+              "label": "powierzchni kraju objęte siecią Natura 2000"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Parki narodowe Polski",
+          "caption": "Kliknij znaczniki. Przy każdym parku zapamiętaj jedną rzecz, której nie chroni żaden inny — to najlepszy sposób nauki tej mapy.",
+          "center": [
+            52,
+            19.5
+          ],
+          "zoom": 6,
+          "markers": [
+            {
+              "lat": 49.25,
+              "lng": 19.95,
+              "label": "Tatrzański PN",
+              "text": "Jedyna w Polsce **rzeźba wysokogórska** i komplet pięter roślinnych z piętrem turni. Symbol parku — kozica. Ogromna presja turystyczna: kilka milionów odwiedzających rocznie."
+            },
+            {
+              "lat": 52.7,
+              "lng": 23.85,
+              "label": "Białowieski PN",
+              "text": "Najlepiej zachowany fragment **lasu pierwotnego** niżu europejskiego i wolne stado **żubra**. Wpisany na listę światowego dziedzictwa UNESCO."
+            },
+            {
+              "lat": 53.5,
+              "lng": 22.6,
+              "label": "Biebrzański PN",
+              "text": "**Największy park narodowy w Polsce** (592 km²). Chroni rozległe torfowiska i naturalne rozlewiska Biebrzy — jedną z najważniejszych w Europie ostoi ptaków wodno-błotnych."
+            },
+            {
+              "lat": 54.7,
+              "lng": 17.3,
+              "label": "Słowiński PN",
+              "text": "**Ruchome wydmy** Mierzei Łebskiej, przemieszczające się o kilka metrów rocznie, oraz jeziora przybrzeżne Łebsko i Gardno. Rezerwat biosfery UNESCO."
+            },
+            {
+              "lat": 53.93,
+              "lng": 14.46,
+              "label": "Woliński PN",
+              "text": "**Klify** nad Bałtykiem (Gosań), bory na wyspie Wolin i ostoja bielika. Pierwszy polski park narodowy obejmujący fragment wód morskich."
+            },
+            {
+              "lat": 50.78,
+              "lng": 15.62,
+              "label": "Karkonoski PN",
+              "text": "Piętrowość roślinna Sudetów z kotłami polodowcowymi i torfowiskami wysokimi na grzbietach. Piętra położone są tu **niżej niż w Tatrach**, a piętra turni brak."
+            },
+            {
+              "lat": 50.21,
+              "lng": 19.83,
+              "label": "Ojcowski PN",
+              "text": "**Najmniejszy park narodowy** (21,5 km²). Chroni wapienne wąwozy, ostańce (Maczuga Herkulesa) i **jaskinie** Wyżyny Krakowsko-Częstochowskiej wraz z ich nietoperzami."
+            },
+            {
+              "lat": 49.15,
+              "lng": 22.55,
+              "label": "Bieszczadzki PN",
+              "text": "**Połoniny** — bezleśne murawy powyżej ok. 1150 m n.p.m., oraz naturalne lasy bukowe. Ostoja dużych drapieżników: rysia, wilka i niedźwiedzia."
+            },
+            {
+              "lat": 52.3,
+              "lng": 20.6,
+              "label": "Kampinoski PN",
+              "text": "Unikatowe sąsiedztwo **wydm śródlądowych i bagien** w pradolinie Wisły, tuż przy granicy Warszawy. Rezerwat biosfery UNESCO; symbolem parku jest łoś."
+            },
+            {
+              "lat": 50.89,
+              "lng": 20.92,
+              "label": "Świętokrzyski PN",
+              "text": "Najstarsze góry Polski: kwarcytowe **gołoborza** Łysogór i lasy jodłowo-bukowe. Zapis rzeźby peryglacjalnej poza zasięgiem lądolodu."
+            },
+            {
+              "lat": 49.42,
+              "lng": 20.4,
+              "label": "Pieniński PN",
+              "text": "**Przełom Dunajca** przez wapienne skałki pienińskiego pasa skałkowego. Jeden z najstarszych parków (1932) i przykład ochrony krajobrazu wraz z tradycyjnym użytkowaniem łąk."
+            },
+            {
+              "lat": 50.48,
+              "lng": 16.34,
+              "label": "Park Narodowy Gór Stołowych",
+              "text": "Jedyne w Polsce **góry płytowe** — poziome warstwy piaskowców tworzą skalne labirynty (Błędne Skały) i schodową rzeźbę Szczelińca Wielkiego."
+            },
+            {
+              "lat": 50.6,
+              "lng": 23.05,
+              "label": "Roztoczański PN",
+              "text": "Lasy jodłowo-bukowe na pograniczu wyżyn, malownicze przełomy rzeczne i hodowla **konika polskiego** — potomka tarpana."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Formy ochrony przyrody w Polsce",
+          "caption": "Ustawa o ochronie przyrody wyróżnia dziesięć form; poniżej zebrano je w grupy według sposobu działania.",
+          "groups": [
+            {
+              "name": "Ochrona obszarowa najwyższej rangi",
+              "description": "Obszary o wybitnych walorach, z **planem ochrony** i ograniczonym dostępem; obejmują ochronę ścisłą (bez ingerencji), czynną (zabiegi podtrzymujące ekosystem) i krajobrazową.",
+              "examples": [
+                "parki narodowe — 23, ok. 1% powierzchni kraju",
+                "rezerwaty przyrody — ok. 1500 obiektów, zwykle niewielkich"
+              ]
+            },
+            {
+              "name": "Ochrona krajobrazu",
+              "description": "Obszary chronione, na których **dopuszcza się działalność gospodarczą** i zamieszkiwanie, ale z ograniczeniami służącymi zachowaniu walorów krajobrazowych.",
+              "examples": [
+                "parki krajobrazowe — ok. 125",
+                "obszary chronionego krajobrazu — kilkaset",
+                "zespoły przyrodniczo-krajobrazowe"
+              ]
+            },
+            {
+              "name": "Ochrona w ramach sieci europejskiej",
+              "description": "**Natura 2000** — sieć obszarów wyznaczonych według wspólnych kryteriów unijnych: obszary specjalnej ochrony **ptaków** oraz specjalne obszary ochrony **siedlisk**. Może pokrywać się z innymi formami ochrony.",
+              "examples": [
+                "ok. 20% powierzchni Polski",
+                "obszary ptasie, np. Dolina Biebrzy i Puszcza Kampinoska",
+                "obszary siedliskowe chroniące m.in. buczyny, torfowiska i murawy kserotermiczne"
+              ]
+            },
+            {
+              "name": "Ochrona pojedynczych obiektów",
+              "description": "Ochrona **konkretnego obiektu lub niewielkiego fragmentu terenu** o szczególnej wartości przyrodniczej, naukowej lub kulturowej.",
+              "examples": [
+                "pomniki przyrody (np. dąb Bartek)",
+                "stanowiska dokumentacyjne — odsłonięcia geologiczne",
+                "użytki ekologiczne — oczka wodne, śródpolne bagna, murawy"
+              ]
+            },
+            {
+              "name": "Ochrona gatunkowa",
+              "description": "Ochrona **wybranych gatunków** roślin, zwierząt i grzybów wraz z ich siedliskami; obejmuje także programy odbudowy populacji (restytucji).",
+              "examples": [
+                "restytucja żubra w Puszczy Białowieskiej",
+                "odbudowa populacji bobra i sokoła wędrownego",
+                "ochrona strefowa miejsc gniazdowania orła bielika"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Puszcza Białowieska — ostatni las pierwotny niżu",
+          "region": "Nizina Północnopodlaska, pogranicze polsko-białoruskie",
+          "text": "Puszcza Białowieska jest jedynym w Europie Środkowej fragmentem lasu, który **nigdy nie został w pełni przekształcony przez gospodarkę leśną**. Zawdzięcza to statusowi królewskiego i carskiego rewiru łowieckiego. O jej wyjątkowości decyduje przede wszystkim ogromna ilość **martwego drewna** — próchniejących kłód i stojących suchych drzew, które są siedliskiem tysięcy gatunków grzybów, owadów i ptaków niewystępujących w lasach gospodarczych. Żubr, wytępiony tu na wolności po I wojnie światowej, został **restytuowany z osobników hodowlanych** i od połowy XX wieku ponownie tworzy wolne stado. Ochrona puszczy jest przedmiotem sporu: czy w obliczu gradacji **kornika drukarza** należy usuwać martwe świerki, czy pozostawić las procesom naturalnym.",
+          "takeaway": "Wartością Puszczy Białowieskiej jest naturalny **proces**, a nie sam widok lasu — dlatego ochrona bierna (pozostawienie martwego drewna) chroni tu więcej gatunków niż jakikolwiek zabieg gospodarczy."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Park narodowy to nie park krajobrazowy.** Park narodowy tworzy się rozporządzeniem Rady Ministrów, ma powierzchnię powyżej 1000 ha, własną dyrekcję i Służbę Parku, a gospodarka jest w nim mocno ograniczona; park krajobrazowy powołuje sejmik województwa i **normalnie się w nim mieszka i gospodaruje**. Druga pułapka: **rędzina powstaje na wapieniu, a czarnoziem na lessie** — obie bywają żyzne, ale to zupełnie różne gleby o innej genezie. Trzecia: **czarne ziemie to nie czarnoziemy** — czarne ziemie powstały na terenach pobagiennych, czarnoziemy na lessach w dawnym, suchszym klimacie."
+        },
+        {
+          "type": "matching",
+          "title": "Park narodowy i przedmiot jego ochrony",
+          "instruction": "Dopasuj park do tego, co chroni w sposób wyjątkowy w skali kraju.",
+          "pairs": [
+            {
+              "left": "Tatrzański Park Narodowy",
+              "right": "jedyna w Polsce rzeźba wysokogórska wraz z piętrem turni"
+            },
+            {
+              "left": "Słowiński Park Narodowy",
+              "right": "ruchome wydmy i jeziora przybrzeżne odcięte mierzeją"
+            },
+            {
+              "left": "Biebrzański Park Narodowy",
+              "right": "największe w kraju torfowiska i naturalne rozlewiska rzeczne"
+            },
+            {
+              "left": "Ojcowski Park Narodowy",
+              "right": "najmniejszy park — wapienne wąwozy, ostańce i jaskinie"
+            },
+            {
+              "left": "Białowieski Park Narodowy",
+              "right": "fragment lasu pierwotnego i wolne stado żubrów"
+            },
+            {
+              "left": "Park Narodowy Gór Stołowych",
+              "right": "jedyne w Polsce góry płytowe ze skalnymi labiryntami"
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Piętra roślinne Tatr od dołu ku górze",
+          "instruction": "Uporządkuj piętra, zaczynając od najniżej położonego.",
+          "items": [
+            "piętro pogórza — pola i resztki lasów liściastych",
+            "regiel dolny — buczyna karpacka z jodłą i świerkiem",
+            "regiel górny — bór świerkowy",
+            "piętro kosodrzewiny",
+            "piętro hal — murawy wysokogórskie",
+            "piętro turni — skały, porosty i mchy"
+          ],
+          "explanation": "Kolejność wynika ze spadku temperatury o ok. 0,6°C na każde 100 m wysokości i skracania okresu wegetacyjnego. W Karkonoszach ten sam układ jest przesunięty o ok. 200–300 m w dół i kończy się na piętrze alpejskim — turni tam nie ma."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego na sandrach Borów Tucholskich dominują gleby bielicowe i bory sosnowe?",
+          "options": [
+            "Bo podłoże budują żyzne gliny zwałowe zatrzymujące wodę",
+            "Bo przepuszczalne piaski wodnolodowcowe łatwo ulegają wypłukiwaniu składników, dając gleby kwaśne i ubogie",
+            "Bo obszar ten leży poza zasięgiem zlodowaceń, na pokrywach lessowych",
+            "Bo jest to teren o najwyższych w Polsce sumach opadów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Na przepuszczalnym piasku woda przesiąka w głąb, wymywając składniki pokarmowe i tworząc charakterystyczny poziom wymywania. Powstaje uboga, kwaśna gleba bielicowa, na której z drzew radzi sobie przede wszystkim sosna."
+        },
+        {
+          "type": "quiz",
+          "question": "W Bieszczadach górna granica lasu przebiega na wysokości ok. 1150 m n.p.m., czyli znacznie niżej niż w Tatrach. Co jest główną przyczyną?",
+          "options": [
+            "Wyższe sumy opadów niż w Tatrach",
+            "Silne wiatry, specyficzne warunki klimatyczne oraz wielowiekowy wypas, który obniżył granicę lasu",
+            "Obecność wapiennego podłoża uniemożliwiającego wzrost drzew",
+            "Znacznie krótszy okres wegetacyjny niż w Tatrach Wysokich"
+          ],
+          "correctIndex": 1,
+          "explanation": "Połoniny to piętro po części pochodzenia antropogenicznego: wieloletni wypas w połączeniu z silnymi wiatrami i lokalnym klimatem obniżył granicę lasu. Dlatego w Bieszczadach brakuje pełnego piętra kosodrzewiny."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zdanie o ochronie przyrody w Polsce jest prawdziwe?",
+          "options": [
+            "Największym parkiem narodowym jest Tatrzański, a najmniejszym Biebrzański",
+            "Obszary Natura 2000 obejmują ok. 20% powierzchni kraju i mogą pokrywać się z innymi formami ochrony",
+            "W parkach krajobrazowych obowiązuje zakaz zamieszkiwania i prowadzenia działalności gospodarczej",
+            "Parki narodowe zajmują ok. 10% powierzchni Polski"
+          ],
+          "correctIndex": 1,
+          "explanation": "Natura 2000 to sieć obszarów ptasich i siedliskowych obejmująca ok. 20% kraju, często nakładająca się na parki i rezerwaty. Największy park to Biebrzański, najmniejszy — Ojcowski, a wszystkie parki narodowe razem zajmują ok. 1% powierzchni Polski."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o glebach niemal zawsze chodzi o **związek przyczynowy**, nie o samą nazwę: „piaski sandrowe → szybkie przesiąkanie i wymywanie składników → gleba bielicowa → bór sosnowy → niska gęstość zaludnienia”. Ćwicz też odczyt map: **żyzne gleby układają się pasami** — mady w dolinach i na Żuławach, czarnoziemy i rędziny na wyżynach lessowo-wapiennych, czarne ziemie na Kujawach i Równinie Wrocławskiej. Przy parkach narodowych naucz się przypisywać każdy park do **pasa rzeźby** i do jednego unikatowego waloru — to wystarcza, by odpowiedzieć na większość pytań, także tych z mapą konturową."
+        }
+      ]
+    }
+  ]
+}

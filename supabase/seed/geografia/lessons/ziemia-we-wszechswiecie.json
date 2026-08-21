@@ -1,0 +1,1314 @@
+{
+  "topicSlug": "ziemia-we-wszechswiecie",
+  "lessons": [
+    {
+      "slug": "wszechswiat-i-uklad-sloneczny",
+      "title": "Wszechświat, Droga Mleczna i Układ Słoneczny",
+      "summary": "Od Wielkiego Wybuchu przez galaktykę do rodziny Słońca: hierarchia obiektów Wszechświata, budowa Słońca, dwie grupy planet i prawa Keplera.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Geografia zaczyna się od pytania, gdzie właściwie jesteśmy. Odpowiedź jest hierarchiczna jak adres: Ziemia leży w **Układzie Słonecznym**, ten krąży w **Drodze Mlecznej**, a Droga Mleczna jest jedną z miliardów galaktyk **Wszechświata**. Ta hierarchia nie jest ciekawostką — z niej wynika wszystko, czym zajmuje się reszta geografii fizycznej. Odległość Ziemi od Słońca decyduje o tym, że woda występuje tu w trzech stanach skupienia. Masa Ziemi decyduje o tym, że utrzymała atmosferę. Kształt orbity i nachylenie osi decydują o porach roku. W tej lekcji zbudujesz szkielet: co jest czym we Wszechświecie, jak zbudowane jest Słońce, czym różnią się dwie grupy planet i jakie prawa rządzą ich ruchem."
+        },
+        {
+          "type": "definition",
+          "term": "Wszechświat",
+          "text": "**Ogół materii, energii, przestrzeni i czasu** — wszystko, co istnieje fizycznie. Zgodnie z powszechnie przyjętą **teorią Wielkiego Wybuchu** Wszechświat powstał ok. **13,8 mld lat temu** z niewyobrażalnie gęstego i gorącego stanu początkowego i od tego czasu nieprzerwanie się **rozszerza**. Dowodem rozszerzania jest **przesunięcie ku czerwieni** w widmach odległych galaktyk: im galaktyka jest dalej, tym szybciej się od nas oddala (prawo Hubble'a).",
+          "note": "Rozszerzanie Wszechświata nie oznacza, że Ziemia jest jego środkiem. Rozszerza się sama przestrzeń — każdy obserwator, w dowolnej galaktyce, widziałby dokładnie to samo oddalanie się sąsiadów."
+        },
+        {
+          "type": "timeline",
+          "title": "Wszechświat i Ziemia — kalendarium",
+          "caption": "Zwróć uwagę na proporcje: Układ Słoneczny powstał dopiero wtedy, gdy Wszechświat miał już 2/3 dzisiejszego wieku.",
+          "events": [
+            {
+              "period": "13,8 mld lat temu",
+              "label": "Wielki Wybuch",
+              "text": "Początek rozszerzania przestrzeni. W pierwszych minutach powstają jądra **wodoru** i **helu** — do dziś dwóch najpowszechniejszych pierwiastków Wszechświata."
+            },
+            {
+              "period": "ok. 13,4 mld lat temu",
+              "label": "Pierwsze gwiazdy i galaktyki",
+              "text": "Grawitacja skupia obłoki gazu; w ich wnętrzach rozpoczynają się **reakcje termojądrowe**. Gwiazdy zaczynają wytwarzać pierwiastki cięższe od helu, a wybuchy supernowych rozsiewają je w przestrzeni."
+            },
+            {
+              "period": "4,6 mld lat temu",
+              "label": "Powstanie Układu Słonecznego",
+              "text": "Z obłoku pyłowo-gazowego (mgławicy), wzbogaconego w ciężkie pierwiastki po wcześniejszych pokoleniach gwiazd, formuje się Słońce, a z wirującego dysku wokół niego — planety. Właśnie dlatego Ziemia mogła w ogóle zbudować się ze skał i metali."
+            },
+            {
+              "period": "4,54 mld lat temu",
+              "label": "Ziemia jako planeta",
+              "text": "Kończy się główna faza narastania (akrecji) planety. Wiek Ziemi i najstarszych meteorytów wyznaczono metodami **datowania izotopowego**. Wkrótce potem, wskutek zderzenia z ciałem wielkości Marsa, prawdopodobnie powstał Księżyc."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Hierarchia obiektów Wszechświata",
+          "caption": "Od największych do najmniejszych. W zadaniach maturalnych często trzeba wskazać, który obiekt zawiera się w którym.",
+          "groups": [
+            {
+              "name": "Galaktyki i ich zbiory",
+              "description": "**Galaktyka** to grawitacyjnie związany układ miliardów gwiazd, gazu i pyłu. Galaktyki tworzą **grupy**, **gromady** i **supergromady**. Ze względu na kształt dzieli się je na spiralne, eliptyczne i nieregularne.",
+              "examples": ["Droga Mleczna (spiralna z poprzeczką)", "Galaktyka Andromedy", "Grupa Lokalna", "Obłoki Magellana"]
+            },
+            {
+              "name": "Gwiazdy",
+              "description": "**Kuliste ciała niebieskie świecące własnym światłem**, w których wnętrzu zachodzą reakcje termojądrowe zamieniające wodór w hel. Różnią się masą, temperaturą i barwą — od czerwonych karłów po niebieskie olbrzymy.",
+              "examples": ["Słońce (żółty karzeł)", "Proxima Centauri", "Syriusz", "Gwiazda Polarna"]
+            },
+            {
+              "name": "Planety",
+              "description": "Ciała krążące wokół gwiazdy, **nieświecące własnym światłem**, o masie wystarczającej, by grawitacja nadała im kulisty kształt, i takie, które **oczyściły swoją orbitę** z innych ciał.",
+              "examples": ["Merkury", "Ziemia", "Jowisz", "Neptun"]
+            },
+            {
+              "name": "Planety karłowate",
+              "description": "Kuliste, ale **nieoczyszczające swojej orbity** — dzielą ją z rojem innych ciał. Od 2006 r. stanowią osobną kategorię, do której przesunięto Plutona.",
+              "examples": ["Pluton", "Ceres", "Eris", "Makemake", "Haumea"]
+            },
+            {
+              "name": "Małe ciała Układu Słonecznego",
+              "description": "**Planetoidy** (głównie w pasie między Marsem a Jowiszem), **komety** (lodowo-pyłowe, przy Słońcu tworzące warkocz) oraz **meteoroidy** — drobne okruchy skalne.",
+              "examples": ["pas planetoid", "kometa Halleya", "Pas Kuipera", "Obłok Oorta"]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skale i wielkości, które trzeba znać",
+          "items": [
+            { "value": "13,8", "unit": "mld lat", "label": "wiek Wszechświata", "note": "wartość szacunkowa, przyjmowana w podręcznikach" },
+            { "value": "149,6", "unit": "mln km", "label": "1 jednostka astronomiczna (j.a.)", "note": "średnia odległość Ziemia–Słońce; światło pokonuje ją w ok. 8 min 19 s" },
+            { "value": "9,46", "unit": "bln km", "label": "1 rok świetlny", "note": "droga światła w próżni w ciągu roku, przy prędkości ok. 300 000 km/s" },
+            { "value": "ok. 100", "unit": "tys. lat św.", "label": "średnica dysku Drogi Mlecznej" },
+            { "value": "ok. 27", "unit": "tys. lat św.", "label": "odległość Słońca od centrum Galaktyki", "note": "Słońce leży w Ramieniu Oriona, na obrzeżach dysku" },
+            { "value": "1 392 000", "unit": "km", "label": "średnica Słońca", "note": "ok. 109 średnic Ziemi" },
+            { "value": "99,86", "unit": "%", "label": "udział Słońca w masie Układu Słonecznego", "note": "cała reszta — planety, księżyce, planetoidy, komety — to ok. 0,14%" },
+            { "value": "1361", "unit": "W/m²", "label": "stała słoneczna", "note": "strumień energii docierający do górnej granicy atmosfery przy prostopadłym padaniu promieni" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Droga Mleczna",
+          "text": "**Galaktyka spiralna z poprzeczką**, w której znajduje się Układ Słoneczny. Składa się z płaskiego **dysku** z ramionami spiralnymi, wybrzuszonego **jądra (zgrubienia centralnego)** oraz kulistego **halo** z gromadami kulistymi i ciemną materią. Słońce leży ok. 27 tys. lat świetlnych od centrum i obiega je w ciągu ok. **225–250 mln lat** — jest to tzw. **rok galaktyczny**.",
+          "note": "Jasna smuga na nocnym niebie, od której galaktyka wzięła nazwę, to widok jej dysku oglądanego od środka — patrzymy wzdłuż płaszczyzny, w której sami leżymy."
+        },
+        {
+          "type": "concentric",
+          "title": "Budowa Słońca — od korony do jądra",
+          "caption": "Kliknij kolejne powłoki. Energia powstaje w jądrze, a na zewnątrz przedostaje się przez dwie strefy transportu.",
+          "shells": [
+            {
+              "name": "Korona słoneczna",
+              "range": "miliony km",
+              "text": "Zewnętrzna, bardzo rozrzedzona warstwa atmosfery Słońca o temperaturze **ponad 1 mln K**. Gołym okiem widoczna tylko podczas **całkowitego zaćmienia Słońca**. Z korony wypływa **wiatr słoneczny** — strumień naładowanych cząstek, który po dotarciu do Ziemi wywołuje **zorze polarne** i zaburzenia pola magnetycznego.",
+              "tone": "heat"
+            },
+            {
+              "name": "Chromosfera",
+              "range": "ok. 2 tys. km",
+              "text": "Warstwa nad fotosferą o czerwonawej barwie; temperatura rośnie w niej od ok. 4500 K do kilkudziesięciu tysięcy K. Obserwuje się tu **protuberancje** — ogromne wyrzuty materii wzdłuż linii pola magnetycznego.",
+              "tone": "heat"
+            },
+            {
+              "name": "Fotosfera",
+              "range": "ok. 400 km",
+              "text": "**Widzialna powierzchnia Słońca** o temperaturze ok. **5500°C (5778 K)** — stąd pochodzi praktycznie całe światło docierające do Ziemi. Widoczne są na niej ciemniejsze, chłodniejsze **plamy słoneczne**, których liczba zmienia się w cyklu ok. 11-letnim.",
+              "tone": "heat"
+            },
+            {
+              "name": "Warstwa konwektywna",
+              "range": "ok. 200 tys. km",
+              "text": "Energia jest tu przenoszona przez **ruchy konwekcyjne** rozgrzanej plazmy: gorąca materia unosi się, chłodniejsza opada. Ten sam mechanizm w atmosferze Ziemi tworzy chmury kłębiaste.",
+              "tone": "rock"
+            },
+            {
+              "name": "Warstwa promienista",
+              "range": "ok. 300 tys. km",
+              "text": "Energia wędruje tu wyłącznie w postaci **promieniowania**, wielokrotnie pochłanianego i wypromieniowywanego przez plazmę. Przejście fotonu przez tę warstwę zajmuje setki tysięcy lat.",
+              "tone": "rock"
+            },
+            {
+              "name": "Jądro",
+              "range": "do ok. 0,25 promienia Słońca",
+              "text": "Miejsce, gdzie przy temperaturze ok. **15 mln K** i gigantycznym ciśnieniu zachodzą **reakcje termojądrowe**: wodór łączy się w hel, a ubytek masy zamienia się w energię. To źródło całej energii, którą Słońce wysyła w przestrzeń.",
+              "tone": "heat"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwie grupy planet Układu Słonecznego",
+          "leftLabel": "Planety grupy ziemskiej (wewnętrzne)",
+          "rightLabel": "Planety olbrzymy (zewnętrzne)",
+          "rows": [
+            { "aspect": "Skład grupy", "left": "Merkury, Wenus, Ziemia, Mars", "right": "Jowisz i Saturn (gazowe olbrzymy), Uran i Neptun (lodowe olbrzymy)" },
+            { "aspect": "Budowa", "left": "**Skalisto-metaliczne**, ze stałą powierzchnią i żelaznym jądrem", "right": "**Gazowo-lodowe**, bez stałej powierzchni; głównie wodór i hel, głębiej lody i skalne jądro" },
+            { "aspect": "Rozmiary", "left": "Małe — średnice od 4879 km (Merkury) do 12 756 km (Ziemia)", "right": "Duże — od ok. 49 500 km (Neptun) do 142 984 km (Jowisz)" },
+            { "aspect": "Gęstość", "left": "**Duża** (ok. 4–5,5 g/cm³) — bo skały i metale", "right": "**Mała** (0,7–1,6 g/cm³); Saturn ma gęstość mniejszą niż woda" },
+            { "aspect": "Położenie", "left": "Bliżej Słońca, przed pasem planetoid", "right": "Za pasem planetoid, w chłodnej części Układu" },
+            { "aspect": "Księżyce i pierścienie", "left": "Brak lub pojedyncze (Ziemia — 1, Mars — 2); brak pierścieni", "right": "Liczne księżyce (dziesiątki) i **układy pierścieni** u wszystkich czterech" },
+            { "aspect": "Ruch obrotowy", "left": "Wolny (Wenus — 243 doby ziemskie, Merkury — 58,6)", "right": "Bardzo szybki (Jowisz — ok. 10 h), stąd wyraźne spłaszczenie tarcz" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Planety Układu Słonecznego — dane porównawcze",
+          "caption": "Kolejność planet zapamiętasz zdaniem: **M**oże **W**ojtek **Z**robi **M**amie **J**ajecznicę **S**olidnie **U**bitą **N**aprawdę. Zwróć uwagę na regułę: im dalej od Słońca, tym dłuższy okres obiegu — to bezpośrednia konsekwencja III prawa Keplera.",
+          "headers": ["Planeta", "Odległość od Słońca [j.a.]", "Średnica [km]", "Okres obiegu", "Okres obrotu"],
+          "rows": [
+            ["Merkury", "0,39", "4 879", "88 dni", "58,6 doby"],
+            ["Wenus", "0,72", "12 104", "225 dni", "243 doby (wsteczny)"],
+            ["Ziemia", "1,00", "12 756", "365,26 dnia", "23 h 56 min"],
+            ["Mars", "1,52", "6 792", "687 dni", "24 h 37 min"],
+            ["Jowisz", "5,20", "142 984", "11,9 roku", "9 h 55 min"],
+            ["Saturn", "9,54", "120 536", "29,5 roku", "10 h 33 min"],
+            ["Uran", "19,19", "51 118", "84,0 lata", "17 h 14 min (wsteczny)"],
+            ["Neptun", "30,07", "49 528", "164,8 roku", "16 h 06 min"]
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Trzy prawa Keplera — ujęcie jakościowe",
+          "caption": "Odsłaniaj kolejno. Na maturze rozszerzonej pytają najczęściej o wnioski z I i II prawa (peryhelium/aphelium) oraz o porównanie okresów obiegu.",
+          "steps": [
+            {
+              "title": "I prawo — prawo orbit",
+              "text": "Każda planeta krąży wokół Słońca po **elipsie**, w której **jednym z ognisk znajduje się Słońce**. Wniosek geograficzny: odległość planety od Słońca zmienia się w ciągu roku. Ziemia jest najbliżej Słońca w **peryhelium** (ok. 3 stycznia, 147,1 mln km), a najdalej w **aphelium** (ok. 4 lipca, 152,1 mln km). Orbita Ziemi jest jednak niemal kołowa — różnica wynosi zaledwie ok. 3%."
+            },
+            {
+              "title": "II prawo — prawo pól",
+              "text": "**Promień wodzący planety (odcinek Słońce–planeta) zakreśla w równych odstępach czasu równe pola.** Wniosek: planeta porusza się **szybciej w peryhelium, a wolniej w aphelium**. Dlatego półrocze zimowe półkuli północnej (23 IX – 21 III) jest o kilka dni **krótsze** niż letnie — Ziemia przechodzi wtedy przez okolice peryhelium i pędzi szybciej."
+            },
+            {
+              "title": "III prawo — prawo okresów",
+              "text": "**Kwadraty okresów obiegu planet mają się do siebie tak, jak sześciany wielkich półosi ich orbit.** Wniosek: im dalej od Słońca, tym dłuższy rok — i to nieproporcjonalnie dłuższy. Neptun jest 30 razy dalej od Słońca niż Ziemia, ale jego rok trwa nie 30, lecz aż ok. 165 lat ziemskich."
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "III prawo Keplera",
+          "expression": "\\frac{T_1^2}{T_2^2} = \\frac{a_1^3}{a_2^3}",
+          "variables": [
+            { "symbol": "T_1, T_2", "meaning": "okresy obiegu dwóch planet wokół Słońca" },
+            { "symbol": "a_1, a_2", "meaning": "wielkie półosie ich orbit (w przybliżeniu: średnie odległości od Słońca)" }
+          ],
+          "caption": "Jeśli odległość wyrazisz w j.a., a okres w latach ziemskich, wzór upraszcza się do $T^2 = a^3$. Sprawdź dla Jowisza: $a = 5{,}2$, więc $T = \\sqrt{5{,}2^3} \\approx 11{,}9$ roku."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj obiekt do opisu",
+          "instruction": "Połącz nazwę obiektu z jego charakterystyką.",
+          "pairs": [
+            { "left": "Gwiazda", "right": "Świeci własnym światłem dzięki reakcjom termojądrowym" },
+            { "left": "Planeta karłowata", "right": "Ma kulisty kształt, ale nie oczyściła swojej orbity" },
+            { "left": "Kometa", "right": "Ciało lodowo-pyłowe, w pobliżu Słońca tworzy warkocz" },
+            { "left": "Meteoryt", "right": "Okruch materii kosmicznej, który dotarł do powierzchni Ziemi" },
+            { "left": "Rok świetlny", "right": "Jednostka odległości równa ok. 9,46 bln km" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze pomyłki pojęciowe w tym dziale: **meteoroid** to okruch krążący w przestrzeni kosmicznej, **meteor** to zjawisko świetlne w atmosferze (tzw. spadająca gwiazda), a **meteoryt** to szczątek, który dotarł do powierzchni Ziemi. Nie myl też **planetoidy** (skalne ciało z pasa między Marsem a Jowiszem) z **kometą** (lodowo-pyłowa, z warkoczem) ani **galaktyki** (miliardy gwiazd) z **Układem Słonecznym** (jedna gwiazda i krążące wokół niej ciała)."
+        },
+        {
+          "type": "quiz",
+          "question": "Która cecha odróżnia planety grupy ziemskiej od planet olbrzymów?",
+          "options": [
+            "Planety grupy ziemskiej mają mniejszą gęstość, bo zbudowane są z wodoru i helu",
+            "Planety grupy ziemskiej mają większą gęstość i stałą powierzchnię, a olbrzymy są gazowo-lodowe i mniej gęste",
+            "Planety grupy ziemskiej mają liczne księżyce i rozbudowane układy pierścieni",
+            "Planety grupy ziemskiej obracają się wokół osi znacznie szybciej niż olbrzymy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Planety grupy ziemskiej (Merkury, Wenus, Ziemia, Mars) zbudowane są ze skał i metali, mają gęstość ok. 4–5,5 g/cm³ i stałą powierzchnię. Olbrzymy składają się głównie z wodoru, helu i lodów, mają gęstość 0,7–1,6 g/cm³, nie mają stałej powierzchni, za to mają liczne księżyce, pierścienie i bardzo szybki ruch obrotowy."
+        },
+        {
+          "type": "quiz",
+          "question": "Z II prawa Keplera wynika, że Ziemia porusza się po orbicie najszybciej:",
+          "options": [
+            "w aphelium, na początku lipca",
+            "w peryhelium, na początku stycznia",
+            "podczas równonocy wiosennej, 21 marca",
+            "przez cały rok jednakowo, ponieważ orbita jest niemal kołowa"
+          ],
+          "correctIndex": 1,
+          "explanation": "Promień wodzący zakreśla równe pola w równych czasach, więc gdy planeta jest bliżej Słońca, musi poruszać się szybciej. Ziemia przechodzi przez peryhelium (147,1 mln km) ok. 3 stycznia i osiąga wtedy największą prędkość orbitalną — ok. 30,3 km/s wobec ok. 29,3 km/s w aphelium."
+        },
+        {
+          "type": "quiz",
+          "question": "Hipotetyczna planeta krąży wokół Słońca w średniej odległości 4 j.a. Ile w przybliżeniu trwa jej rok?",
+          "options": ["4 lata ziemskie", "8 lat ziemskich", "12 lat ziemskich", "16 lat ziemskich"],
+          "correctIndex": 1,
+          "explanation": "Z III prawa Keplera w postaci $T^2 = a^3$ (dla odległości w j.a. i okresów w latach ziemskich): $T^2 = 4^3 = 64$, czyli $T = 8$ lat. Typowy błąd to odpowiedź 4 lata — okres obiegu rośnie szybciej niż odległość od Słońca."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach z tego zakresu CKE rzadko każe liczyć — znacznie częściej **wyjaśnić związek przyczynowo-skutkowy**. Ćwicz sformułowania typu: „Planety olbrzymy mają małą gęstość, ponieważ zbudowane są głównie z wodoru i helu, a nie ze skał i metali” albo „Ziemia porusza się szybciej w styczniu, ponieważ znajduje się wtedy w peryhelium, a zgodnie z II prawem Keplera promień wodzący zakreśla równe pola w równych czasach”. W odpowiedzi zawsze podawaj **mechanizm**, nie sam fakt — punktowana jest przyczyna."
+        }
+      ]
+    },
+    {
+      "slug": "ksztalt-wymiary-i-ruch-obrotowy",
+      "title": "Kształt i wymiary Ziemi oraz ruch obrotowy",
+      "summary": "Geoida i elipsoida, promienie i obwody Ziemi, a następnie ruch obrotowy: prędkość kątowa i liniowa oraz jego następstwa — od dnia i nocy po siłę Coriolisa.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Zdanie „Ziemia jest kulą” jest w geografii dopuszczalnym uproszczeniem, ale na maturze rozszerzonej trzeba wiedzieć, dlaczego jest to uproszczenie i co się za nim kryje. Ziemia jest **spłaszczona na biegunach**, a jej rzeczywista powierzchnia jest nieregularna — i obie te cechy mają konkretne, mierzalne konsekwencje. Spłaszczenie jest bezpośrednim skutkiem **ruchu obrotowego**: obracająca się plastyczna bryła sama się rozciąga w płaszczyźnie równika. Ten sam ruch obrotowy odpowiada za dobę, za rytm dnia i nocy, za odchylanie ciał w ruchu (siła Coriolisa) i za to, że każdy południk ma inną godzinę. W tej lekcji poznasz najpierw kształt i wymiary Ziemi, a potem mechanizm i wszystkie następstwa jej obrotu."
+        },
+        {
+          "type": "timeline",
+          "title": "Jak poznawano kształt i wymiary Ziemi",
+          "caption": "Kolejne etapy nie tyle obalały poprzednie, ile je uściślały: kula → elipsoida → geoida.",
+          "events": [
+            {
+              "period": "ok. 240 r. p.n.e.",
+              "label": "Eratostenes oblicza obwód Ziemi",
+              "text": "Zauważył, że w dniu przesilenia letniego Słońce góruje w Syene (dziś Asuan) **w zenicie**, a w oddalonej o ok. 800 km Aleksandrii jego promienie padają pod kątem odchylonym o ok. 7,2° od pionu. Ponieważ 7,2° to 1/50 pełnego kąta, obwód Ziemi musiał być 50 razy większy od odległości między miastami. Otrzymał wynik bliski **40 000 km** — pomyłka rzędu kilku procent."
+            },
+            {
+              "period": "1519–1522",
+              "label": "Wyprawa Magellana",
+              "text": "Pierwsze opłynięcie Ziemi dostarczyło **praktycznego dowodu kulistości**: płynąc stale na zachód, wyprawa wróciła do punktu wyjścia. Załoga odnotowała też zagadkowy brak jednego dnia w kalendarzu — pierwszy w historii praktyczny problem z linią zmiany daty."
+            },
+            {
+              "period": "1687 i lata 1735–1744",
+              "label": "Newton przewiduje spłaszczenie, pomiary je potwierdzają",
+              "text": "Newton wywnioskował z praw mechaniki, że wirująca Ziemia musi być **spłaszczona na biegunach**. Francuskie ekspedycje pomiarowe do Laponii i Peru zmierzyły długość 1° południka blisko bieguna i blisko równika: łuk okazał się **dłuższy w pobliżu bieguna**, co potwierdziło spłaszczenie."
+            },
+            {
+              "period": "od XX wieku",
+              "label": "Geodezja satelitarna i model geoidy",
+              "text": "Obserwacje zaburzeń orbit satelitów, systemy **GNSS (GPS, Galileo)** oraz misje pomiaru pola grawitacyjnego pozwoliły wyznaczyć rzeczywisty kształt Ziemi — **geoidę** — z dokładnością do centymetrów i opisać go elipsoidą odniesienia (np. WGS 84, używaną w nawigacji satelitarnej)."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Geoida",
+          "text": "**Bryła najlepiej opisująca rzeczywisty kształt Ziemi** — figura ograniczona powierzchnią, która w każdym punkcie jest **prostopadła do kierunku siły ciężkości** (do pionu wyznaczonego przez pion murarski). Pokrywa się ona ze średnim poziomem mórz i oceanów, myślowo przedłużonym pod kontynentami. Powierzchnia geoidy jest lekko pofalowana, bo gęstość skał w skorupie i płaszczu nie jest jednakowa — nad obszarami o większej gęstości siła ciężkości jest nieco większa i geoida się wznosi.",
+          "note": "Nazwę wprowadził w XIX w. J.B. Listing. Odchylenia geoidy od elipsoidy nie przekraczają ok. ±100 m — w skali globu to mniej niż grubość kartki papieru na szkolnym globusie."
+        },
+        {
+          "type": "compare",
+          "title": "Elipsoida a geoida — dwa modele kształtu Ziemi",
+          "leftLabel": "Elipsoida obrotowa",
+          "rightLabel": "Geoida",
+          "rows": [
+            { "aspect": "Czym jest", "left": "**Model matematyczny** — bryła powstała z obrotu elipsy wokół osi krótszej", "right": "**Model fizyczny** — powierzchnia ekwipotencjalna pola siły ciężkości Ziemi" },
+            { "aspect": "Kształt powierzchni", "left": "Idealnie gładka, opisana prostym równaniem", "right": "Nieregularnie pofalowana, bez wzoru matematycznego" },
+            { "aspect": "Przyczyna kształtu", "left": "Spłaszczenie biegunowe wywołane ruchem obrotowym", "right": "Spłaszczenie **plus** nierównomierny rozkład gęstości mas we wnętrzu Ziemi" },
+            { "aspect": "Zastosowanie", "left": "Podstawa **odwzorowań kartograficznych**, układów współrzędnych i nawigacji satelitarnej (WGS 84)", "right": "Podstawa **wysokości bezwzględnych** — poziom odniesienia dla n.p.m. i niwelacji" },
+            { "aspect": "Wzajemne odchylenie", "left": "Od geoidy różni się o nie więcej niż ok. ±100 m", "right": "Od rzeczywistej powierzchni terenu różni się o wysokość gór i głębokość oceanów" }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Wymiary Ziemi — wartości do zapamiętania",
+          "items": [
+            { "value": "6378", "unit": "km", "label": "promień równikowy", "note": "dokładniej 6378,1 km" },
+            { "value": "6357", "unit": "km", "label": "promień biegunowy", "note": "dokładniej 6356,8 km — o ok. 21 km krótszy od równikowego" },
+            { "value": "6371", "unit": "km", "label": "promień średni Ziemi", "note": "wartość używana w większości obliczeń szkolnych" },
+            { "value": "40 075", "unit": "km", "label": "obwód równika", "note": "obwód południkowy jest krótszy: ok. 40 009 km" },
+            { "value": "1 : 298", "label": "spłaszczenie biegunowe", "note": "stosunek różnicy promieni do promienia równikowego" },
+            { "value": "510", "unit": "mln km²", "label": "powierzchnia Ziemi", "note": "z czego ok. 71% zajmują oceany i morza" },
+            { "value": "111,2", "unit": "km", "label": "długość 1° łuku południka", "note": "dlatego 1 minuta łuku południka to ok. 1,85 km — jedna mila morska" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Ruch obrotowy (wirowy) Ziemi",
+          "text": "**Obrót Ziemi wokół własnej osi**, odbywający się **z zachodu na wschód** (przeciwnie do ruchu wskazówek zegara, patrząc znad bieguna północnego). Oś obrotu przechodzi przez bieguny geograficzne i jest nachylona do płaszczyzny orbity pod kątem **66°34'**. Pełny obrót względem gwiazd trwa **23 h 56 min 4 s** (doba gwiazdowa). Prędkość kątowa jest **jednakowa w każdym punkcie Ziemi** i wynosi **15° na godzinę**, natomiast prędkość liniowa maleje od równika ku biegunom.",
+          "note": "Kierunek obrotu z zachodu na wschód to przyczyna tego, że Słońce, Księżyc i gwiazdy pozornie wędrują po niebie w przeciwnym kierunku — ze wschodu na zachód."
+        },
+        {
+          "type": "compare",
+          "title": "Doba gwiazdowa a doba słoneczna",
+          "leftLabel": "Doba gwiazdowa (syderyczna)",
+          "rightLabel": "Doba słoneczna",
+          "rows": [
+            { "aspect": "Punkt odniesienia", "left": "Odległa gwiazda (kierunek praktycznie niezmienny)", "right": "Słońce" },
+            { "aspect": "Definicja", "left": "Czas pełnego obrotu Ziemi o **360°** wokół osi", "right": "Czas między dwoma kolejnymi górowaniami Słońca na tym samym południku" },
+            { "aspect": "Długość", "left": "**23 h 56 min 4 s**", "right": "**24 h** (średnia doba słoneczna)" },
+            { "aspect": "Dlaczego różne", "left": "Mierzy sam obrót — bez wpływu ruchu obiegowego", "right": "W ciągu doby Ziemia przesuwa się po orbicie o ok. 1°, więc musi się obrócić o **361°**, by Słońce znów górowało" },
+            { "aspect": "Zastosowanie", "left": "Astronomia, ustawianie teleskopów", "right": "**Rachuba czasu** — podstawa zegara i kalendarza" }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Prędkość liniowa ruchu obrotowego",
+          "expression": "v_\\varphi = v_r \\cdot \\cos\\varphi",
+          "variables": [
+            { "symbol": "v_\\varphi", "meaning": "prędkość liniowa na szerokości geograficznej φ [km/h]" },
+            { "symbol": "v_r", "meaning": "prędkość liniowa na równiku ≈ 1670 km/h (ok. 465 m/s)" },
+            { "symbol": "\\varphi", "meaning": "szerokość geograficzna miejsca" }
+          ],
+          "caption": "Mechanizm jest prosty: każdy punkt Ziemi wykonuje pełny obrót w tym samym czasie (stąd stała prędkość kątowa **15°/h**), ale punkt na równiku zakreśla przy tym okrąg o obwodzie 40 075 km, a punkt na 60°N — tylko o połowę krótszy. Dla Warszawy ($\\varphi \\approx 52^\\circ$): $v = 1670 \\cdot \\cos 52^\\circ \\approx 1028$ km/h."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Prędkość liniowa ruchu obrotowego a szerokość geograficzna",
+          "caption": "Prędkość kątowa (15°/h) jest wszędzie taka sama — zmienia się wyłącznie liniowa. Na biegunie punkt tylko obraca się w miejscu, więc jego prędkość liniowa wynosi zero.",
+          "labels": ["0° (równik)", "20°", "40°", "52° (Warszawa)", "60°", "80°", "90° (biegun)"],
+          "series": [{ "name": "Prędkość liniowa", "values": [1670, 1569, 1279, 1028, 835, 290, 0] }],
+          "unit": "km/h"
+        },
+        {
+          "type": "classification",
+          "title": "Następstwa ruchu obrotowego Ziemi",
+          "caption": "Klasyczne polecenie maturalne brzmi: „wymień/wyjaśnij następstwa ruchu obrotowego”. Naucz się ich razem z mechanizmem.",
+          "groups": [
+            {
+              "name": "Rytm dnia i nocy",
+              "description": "W danej chwili oświetlona jest zawsze połowa Ziemi. Obracająca się planeta wprowadza kolejne południki w strefę światła i cienia, co daje **dobowy rytm oświetlenia i nagrzewania**, a w ślad za nim dobową amplitudę temperatury, rytm bryzy i rytm dobowy organizmów.",
+              "examples": ["dobowa amplituda temperatury", "bryza dzienna i nocna", "rytm dobowy roślin i zwierząt"]
+            },
+            {
+              "name": "Pozorna (widoma) wędrówka Słońca i gwiazd",
+              "description": "Ponieważ Ziemia obraca się z zachodu na wschód, ciała niebieskie **pozornie przesuwają się ze wschodu na zachód**. Stąd wschód, górowanie i zachód Słońca oraz ruch gwiazd wokół Gwiazdy Polarnej.",
+              "examples": ["wschód i zachód Słońca", "górowanie w południe słoneczne", "pozorny obrót sfery niebieskiej"]
+            },
+            {
+              "name": "Doba jako jednostka czasu i różnice czasu",
+              "description": "Obrót o 360° w 24 h daje **15° na godzinę**, a więc każdy południk ma własny **czas słoneczny (miejscowy)**. Z tego wynika cały system stref czasowych i linia zmiany daty.",
+              "examples": ["czas słoneczny miejscowy", "strefy czasowe", "linia zmiany daty"]
+            },
+            {
+              "name": "Spłaszczenie biegunowe",
+              "description": "Siła odśrodkowa działająca na obracającą się plastyczną bryłę jest **największa na równiku, a zerowa na biegunach**. W skali geologicznej doprowadziło to do wybrzuszenia równikowego i skrócenia promienia biegunowego o ok. 21 km.",
+              "examples": ["promień równikowy > biegunowy", "mniejsze przyspieszenie ziemskie na równiku (9,78 m/s²) niż na biegunie (9,83 m/s²)"]
+            },
+            {
+              "name": "Siła Coriolisa",
+              "description": "Odchylanie toru ciał poruszających się swobodnie względem powierzchni Ziemi: **w prawo na półkuli północnej, w lewo na południowej**. Kształtuje kierunki wiatrów stałych, prądów morskich i krążenie w układach barycznych.",
+              "examples": ["pasaty", "cyrkulacja w niżach i wyżach", "prądy morskie", "prawo Baera"]
+            },
+            {
+              "name": "Rytm pływów (doba pływowa)",
+              "description": "Same pływy wywołuje przyciąganie Księżyca i Słońca, ale to **obrót Ziemi** sprawia, że wybrzuszenia pływowe „przesuwają się” wzdłuż wybrzeży, dając zwykle **dwa przypływy i dwa odpływy w ciągu doby**.",
+              "examples": ["doba pływowa 24 h 50 min", "dwa przypływy na dobę"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Siła Coriolisa",
+          "text": "**Pozorna siła bezwładności** działająca na ciała poruszające się nad powierzchnią wirującej Ziemi. Powoduje odchylanie ich torów **w prawo na półkuli północnej** i **w lewo na półkuli południowej** (patrząc w kierunku ruchu). Jej wartość rośnie wraz z **prędkością ciała** oraz z **szerokością geograficzną** — jest największa na biegunach, a **na równiku równa zeru**. Mechanizm: ciało zachowuje prędkość liniową miejsca, z którego wyruszyło, a podłoże pod nim porusza się z inną prędkością — stąd pozorne zbaczanie z prostej.",
+          "note": "**Prawo Baera**: rzeki płynące na półkuli północnej silniej podmywają brzeg prawy, a na południowej — lewy. To najczęściej przywoływany w zadaniach przykład działania siły Coriolisa na lądzie."
+        },
+        {
+          "type": "zones",
+          "title": "Siła Coriolisa a szerokość geograficzna",
+          "caption": "Kliknij strefy. Zależność opisuje czynnik $\\sin\\varphi$ — dlatego przy równiku siła zanika.",
+          "zones": [
+            {
+              "name": "Strefa okołobiegunowa",
+              "latitude": "60–90°",
+              "text": "**Siła Coriolisa osiąga maksimum.** Wiatry i prądy są tu silnie odchylane, a układy baryczne rotują bardzo wyraźnie. To m.in. dlatego wokół Antarktydy może utrzymywać się nieprzerwany, opasujący glob **Prąd Okołobiegunowy**.",
+              "tone": "ice"
+            },
+            {
+              "name": "Szerokości umiarkowane",
+              "latitude": "30–60°",
+              "text": "Siła jest **umiarkowanie duża** i decyduje o zachodnim kierunku wiatrów stałych: powietrze płynące od zwrotników ku biegunom zostaje odchylone w prawo (półkula N), przybierając kierunek z południowego zachodu. Tu też najsilniej rozwijają się **niże wędrujące** z charakterystycznym wirowym układem frontów.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa zwrotnikowa",
+              "latitude": "10–30°",
+              "text": "Siła jest **słabsza, ale wciąż wystarczająca**, by odchylić powietrze płynące od zwrotników ku równikowi — stąd pasaty wieją z północnego wschodu (półkula N) i południowego wschodu (półkula S). To także strefa powstawania **cyklonów tropikalnych**.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa okołorównikowa",
+              "latitude": "0–10°",
+              "text": "Siła Coriolisa **praktycznie zanika**, a na samym równiku wynosi zero. Konsekwencja egzaminacyjna: w pasie mniej więcej ±5° od równika **nie powstają cyklony tropikalne**, bo nie ma czego wprawić w ruch wirowy, mimo że temperatura wody jest tam odpowiednio wysoka.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy klasyczne pułapki. Po pierwsze: **prędkość kątowa jest wszędzie taka sama (15°/h)** — zmienia się tylko liniowa; w zadaniu „porównaj prędkość ruchu obrotowego w Warszawie i w Nairobi” trzeba wyraźnie zaznaczyć, o którą prędkość chodzi. Po drugie: siła Coriolisa **nie wpływa** na kierunek wirowania wody w umywalce — przy tak małej skali i prędkości jest zupełnie pomijalna. Po trzecie: **geoida to nie elipsoida** — elipsoida jest gładkim modelem matematycznym, geoida uwzględnia rzeczywisty rozkład mas i to od niej liczy się wysokości n.p.m."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj według malejącej prędkości liniowej ruchu obrotowego",
+          "instruction": "Ustaw miejsca od największej do najmniejszej prędkości liniowej. Podpowiedź: decyduje wyłącznie szerokość geograficzna.",
+          "items": [
+            "Quito, Ekwador (0°)",
+            "Hawana, Kuba (23°N)",
+            "Kair, Egipt (30°N)",
+            "Warszawa, Polska (52°N)",
+            "Reykjavik, Islandia (64°N)",
+            "Biegun północny (90°N)"
+          ],
+          "explanation": "Prędkość liniowa maleje wraz z cosinusem szerokości geograficznej: $v = 1670 \\cdot \\cos\\varphi$. Na równiku wynosi ok. 1670 km/h, w Kairze ok. 1446 km/h, w Warszawie ok. 1028 km/h, w Reykjaviku ok. 732 km/h, a na biegunie — zero, bo punkt biegunowy tylko obraca się wokół siebie. Uwaga: półkula nie ma znaczenia, liczy się wartość bezwzględna szerokości."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego doba gwiazdowa jest o niemal 4 minuty krótsza od doby słonecznej?",
+          "options": [
+            "Ponieważ prędkość obrotu Ziemi stopniowo maleje wskutek tarcia pływowego",
+            "Ponieważ Ziemia w czasie doby przesuwa się po orbicie o ok. 1° i musi obrócić się o 361°, aby Słońce ponownie górowało",
+            "Ponieważ oś Ziemi jest nachylona pod kątem 66°34' do płaszczyzny orbity",
+            "Ponieważ Ziemia porusza się szybciej w peryhelium niż w aphelium"
+          ],
+          "correctIndex": 1,
+          "explanation": "Doba gwiazdowa (23 h 56 min 4 s) to czas pełnego obrotu o 360° względem odległych gwiazd. W ciągu tego czasu Ziemia przesuwa się jednak po orbicie o ok. 1°, więc aby Słońce znów znalazło się na tym samym południku, planeta musi obrócić się o ok. 361°. Ta dodatkowa 1/360 obrotu to właśnie brakujące ok. 4 minuty."
+        },
+        {
+          "type": "quiz",
+          "question": "Statek płynie z Zatoki Gwinejskiej na północ, wzdłuż wybrzeża Afryki. Pod wpływem siły Coriolisa jego tor będzie odchylany:",
+          "options": [
+            "w lewo, czyli ku zachodowi, i odchylenie będzie rosło wraz ze wzrostem szerokości geograficznej",
+            "w prawo, czyli ku wschodowi, a odchylenie będzie rosło wraz ze wzrostem szerokości geograficznej",
+            "w prawo, ale odchylenie będzie największe tuż przy równiku",
+            "w ogóle nie będzie odchylany, ponieważ siła Coriolisa działa tylko na masy powietrza"
+          ],
+          "correctIndex": 1,
+          "explanation": "Na półkuli północnej siła Coriolisa odchyla ciała w prawo względem kierunku ruchu — przy ruchu na północ oznacza to odchylenie ku wschodowi. Siła rośnie z szerokością geograficzną (czynnik $\\sin\\varphi$), więc przy równiku jest znikoma, a w wyższych szerokościach coraz większa. Działa na wszystkie swobodnie poruszające się ciała, nie tylko na powietrze."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie opisuje wymiary Ziemi?",
+          "options": [
+            "Promień biegunowy 6378 km, promień równikowy 6357 km — Ziemia jest wydłużona wzdłuż osi obrotu",
+            "Promień równikowy 6378 km, promień biegunowy 6357 km — Ziemia jest spłaszczona na biegunach",
+            "Oba promienie wynoszą 6371 km, bo Ziemia jest idealną kulą",
+            "Promień równikowy 6371 km, obwód równika 40 009 km"
+          ],
+          "correctIndex": 1,
+          "explanation": "Promień równikowy (6378 km) jest o ok. 21 km dłuższy od biegunowego (6357 km), bo siła odśrodkowa ruchu obrotowego wybrzusza Ziemię w płaszczyźnie równika. Wartość 6371 km to promień średni, używany w obliczeniach. Obwód równika wynosi 40 075 km, a południkowy — 40 009 km."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W poleceniach typu „wyjaśnij wpływ ruchu obrotowego na…” pełną punktację daje **dwuczłonowa odpowiedź: mechanizm + skutek**. Wzorzec: „Ziemia obraca się z zachodu na wschód, dlatego na półkuli północnej ciała poruszające się swobodnie są odchylane w prawo, co powoduje, że pasaty wieją z północnego wschodu”. Do obliczeń zapamiętaj trzy liczby, które w tym dziale wracają w niemal każdym arkuszu: **15°/h**, **1670 km/h na równiku** i **111 km na 1° południka**."
+        }
+      ]
+    },
+    {
+      "slug": "czas-na-ziemi",
+      "title": "Czas na Ziemi: czas słoneczny, strefowy i linia zmiany daty",
+      "summary": "Jak z obrotu Ziemi wynika rachuba czasu: czas słoneczny miejscowy, strefy czasowe, UTC, linia zmiany daty i pełna metodyka obliczania różnicy czasu.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Zadania z obliczania czasu to najbardziej przewidywalna część tego działu — pojawiają się na maturze rozszerzonej niemal co roku i są w pełni algorytmiczne. Wystarczy zrozumieć jedną zależność: **Ziemia obraca się o 360° w ciągu 24 godzin, czyli o 15° na godzinę**. Z niej wynika wszystko pozostałe: dlaczego każdy południk ma własną godzinę, po co wprowadzono strefy czasowe, czym różni się czas strefowy od urzędowego i dlaczego przekraczając Pacyfik, trzeba przestawić kartkę w kalendarzu. W tej lekcji nie tylko poznasz pojęcia, ale przede wszystkim wyćwiczysz schemat obliczeń, który działa dla każdego zadania."
+        },
+        {
+          "type": "definition",
+          "term": "Czas słoneczny miejscowy (lokalny)",
+          "text": "**Czas wyznaczany przez rzeczywiste położenie Słońca nad danym południkiem.** Moment, w którym Słońce **góruje** (osiąga najwyższe położenie nad horyzontem), to **południe słoneczne — godzina 12:00** czasu miejscowego. Ponieważ Słońce góruje nad każdym południkiem w innej chwili, **każdy południk ma własny czas słoneczny**, a wszystkie punkty leżące na tym samym południku mają czas identyczny — niezależnie od szerokości geograficznej.",
+          "note": "Czas słoneczny miejscowy jest wygodny astronomicznie, ale niemożliwy do stosowania w życiu codziennym: dwa miasta oddalone o 100 km wzdłuż równoleżnika miałyby zegary różniące się o kilka minut. Dlatego w XIX w. wprowadzono czas strefowy."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Przeliczniki, które musisz umieć na pamięć",
+          "items": [
+            { "value": "360°", "unit": "/ 24 h", "label": "pełny obrót Ziemi w ciągu doby", "note": "źródło wszystkich pozostałych przeliczników" },
+            { "value": "15", "unit": "° / h", "label": "prędkość kątowa ruchu obrotowego" },
+            { "value": "4", "unit": "min", "label": "różnica czasu na 1° długości geograficznej" },
+            { "value": "1", "unit": "min", "label": "różnica czasu na 15' długości geograficznej" },
+            { "value": "4", "unit": "s", "label": "różnica czasu na 1' długości geograficznej" },
+            { "value": "15", "unit": "°", "label": "szerokość jednej strefy czasowej", "note": "24 strefy po 15° dają pełne 360°" }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Różnica czasu słonecznego",
+          "expression": "\\Delta t = \\Delta\\lambda \\cdot 4\\ \\text{min}",
+          "variables": [
+            { "symbol": "\\Delta t", "meaning": "różnica czasu słonecznego między dwoma miejscami" },
+            { "symbol": "\\Delta\\lambda", "meaning": "różnica długości geograficznej tych miejsc (w stopniach)" }
+          ],
+          "caption": "Kluczowa zasada wyznaczania $\\Delta\\lambda$: jeśli oba miejsca leżą **na tej samej półkuli** (obie długości E albo obie W) — długości **odejmujemy**; jeśli na **przeciwnych półkulach** (jedna E, druga W) — długości **dodajemy**. Przykład: Warszawa 21°E i Nowy Jork 74°W leżą po przeciwnych stronach południka zerowego, więc $\\Delta\\lambda = 21^\\circ + 74^\\circ = 95^\\circ$."
+        },
+        {
+          "type": "process",
+          "title": "Algorytm obliczania czasu słonecznego — cztery kroki",
+          "caption": "Ten sam schemat rozwiązuje każde zadanie tego typu. Przykład prowadzony: w Warszawie (21°E) jest 12:00 czasu słonecznego — która godzina jest wtedy w Nowym Jorku (74°W)?",
+          "steps": [
+            {
+              "title": "Krok 1 — wyznacz różnicę długości geograficznej",
+              "text": "Sprawdź, czy miejsca leżą na tej samej półkuli. Warszawa jest na wschód, Nowy Jork na zachód od południka zerowego, więc długości **dodajemy**: $\\Delta\\lambda = 21^\\circ + 74^\\circ = 95^\\circ$."
+            },
+            {
+              "title": "Krok 2 — zamień stopnie na czas",
+              "text": "Mnożymy przez 4 minuty na stopień: $95 \\cdot 4\\ \\text{min} = 380\\ \\text{min}$. Zamieniamy na godziny i minuty: $380 : 60 = 6$ godzin i 20 minut. Jeśli w zadaniu występują minuty łuku, przeliczaj je osobno: 1' łuku = 4 s."
+            },
+            {
+              "title": "Krok 3 — ustal kierunek i wykonaj działanie",
+              "text": "**Na wschód czas jest późniejszy — dodajemy; na zachód wcześniejszy — odejmujemy.** Nowy Jork leży na zachód od Warszawy, więc: $12{:}00 - 6{:}20 = 5{:}40$. To czas słoneczny miejscowy w Nowym Jorku."
+            },
+            {
+              "title": "Krok 4 — sprawdź datę i sens wyniku",
+              "text": "Jeśli po odjęciu wynik wychodzi ujemny, cofasz się na poprzednią dobę; jeśli po dodaniu przekracza 24:00 — przechodzisz na następną. Na koniec zawsze zadaj sobie kontrolne pytanie: „czy tam, gdzie Słońce jeszcze nie wzeszło, godzina powinna być wcześniejsza?”. W Nowym Jorku o 5:40 rano — logiczne, bo Słońce dopiero tam wschodzi."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Czas strefowy i czas urzędowy",
+          "text": "**Czas strefowy** to czas słoneczny **południka środkowego danej strefy**, obowiązujący na całym jej obszarze. Powierzchnię Ziemi podzielono na **24 strefy czasowe** o szerokości **15°**, których południkami środkowymi są 0°, 15°, 30°, 45° itd.; sąsiednie strefy różnią się o pełną godzinę. **Czas urzędowy** to czas strefowy zmodyfikowany decyzją administracyjną: granice stref biegną wzdłuż granic państw i regionów, a nie wzdłuż południków, część krajów wybiera strefę niezgodną z położeniem, niektóre stosują przesunięcia o pół godziny lub 45 minut, a wiele państw wprowadza sezonowy **czas letni**.",
+          "note": "Polska leży w strefie czasu środkowoeuropejskiego (CET) o południku środkowym **15°E**, czyli UTC+1. Latem obowiązuje czas letni środkowoeuropejski (CEST), czyli UTC+2."
+        },
+        {
+          "type": "definition",
+          "term": "Czas uniwersalny UTC",
+          "text": "**Uniwersalny czas koordynowany (UTC)** to czas odniesienia dla całego świata, odpowiadający czasowi słonecznemu średniemu **południka zerowego (Greenwich)**. Wszystkie strefy czasowe określa się jako przesunięcie względem UTC: UTC+1 (Polska zimą), UTC−5 (wschodnie wybrzeże USA zimą), UTC+9 (Japonia). UTC jest utrzymywany przez zegary atomowe, a różnica względem obrotu Ziemi jest korygowana **sekundami przestępnymi**.",
+          "note": "Starsza nazwa GMT (czas uniwersalny Greenwich) bywa używana zamiennie, ale formalnie GMT jest czasem astronomicznym, a UTC — atomowym. Na maturze można je traktować jako to samo."
+        },
+        {
+          "type": "table",
+          "title": "Przykładowe strefy czasowe — czas urzędowy zimą",
+          "caption": "Zwróć uwagę na wiersze, w których czas urzędowy wyraźnie rozmija się z położeniem geograficznym. To ulubiony materiał zadań maturalnych o różnicy między czasem słonecznym a urzędowym.",
+          "headers": ["Miejsce", "Długość geograficzna", "Czas urzędowy", "Uwagi"],
+          "rows": [
+            ["Londyn (Greenwich)", "0°", "UTC+0", "Południk zerowy — punkt odniesienia"],
+            ["Warszawa", "21°E", "UTC+1", "Czas słoneczny wyprzedza urzędowy o ok. 24 min"],
+            ["Kair", "31°E", "UTC+2", "Zgodność z południkiem środkowym strefy (30°E)"],
+            ["Nowe Delhi", "77°E", "UTC+5:30", "Cały kraj w jednej strefie o przesunięciu pół godziny"],
+            ["Katmandu", "85°E", "UTC+5:45", "Jedyne w świecie przesunięcie o 45 minut"],
+            ["Urumczi (Chiny zach.)", "88°E", "UTC+8", "Chiny mają jedną strefę dla całego kraju — Słońce góruje tu ok. 14:10"],
+            ["Tokio", "140°E", "UTC+9", "Zgodność z południkiem 135°E"],
+            ["Nowy Jork", "74°W", "UTC−5", "Czas wschodni USA"],
+            ["Kiritimati (Kiribati)", "157°W", "UTC+14", "Najbardziej wysunięta w przyszłość strefa świata"]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Ile czasu słonecznego mieści się w Polsce",
+          "region": "Polska",
+          "text": "Skrajne punkty Polski leżą na długościach ok. **14°07'E** (kolano Odry pod Cedynią) i ok. **24°09'E** (zakole Bugu koło Zosina). Różnica długości geograficznej wynosi zatem ok. **10°02'**, czyli w przeliczeniu na czas: $10 \\cdot 4\\ \\text{min} + 2 \\cdot 4\\ \\text{s} \\approx 40$ minut. Oznacza to, że gdy Słońce góruje nad wschodnią granicą kraju, nad zachodnią zrobi to dopiero **40 minut później** — mimo że zegary w obu miejscach wskazują tę samą godzinę urzędową. Ponieważ południkiem środkowym naszej strefy jest 15°E, w Warszawie (21°E) czas słoneczny **wyprzedza** urzędowy o $6 \\cdot 4 = 24$ minuty: gdy zegar wskazuje 12:00 czasu zimowego, Słońce górowało już o 11:36.",
+          "takeaway": "Różnica między czasem słonecznym a urzędowym to nie błąd, lecz nieunikniona konsekwencja umowy: cała strefa żyje według czasu jednego południka. Im dalej miejsce leży od południka środkowego strefy, tym większa rozbieżność."
+        },
+        {
+          "type": "definition",
+          "term": "Linia zmiany daty",
+          "text": "**Umowna linia biegnąca w przybliżeniu wzdłuż południka 180°**, po której przekroczeniu zmienia się data kalendarzowa. Jest konieczna, ponieważ idąc na wschód, dodajemy godziny, a idąc na zachód — odejmujemy; okrążając Ziemię, otrzymalibyśmy różnicę pełnej doby. Linia nie pokrywa się dokładnie z południkiem 180° — **omija zamieszkane wyspy i terytoria państw**, aby ten sam kraj nie miał dwóch różnych dat.",
+          "note": "Zasada praktyczna: **przekraczając linię z zachodu na wschód (z Azji do Ameryki) — cofamy datę o dobę; ze wschodu na zachód (z Ameryki do Azji) — dodajemy jedną dobę.** Godzina pozostaje w przybliżeniu ta sama, zmienia się dzień."
+        },
+        {
+          "type": "compare",
+          "title": "Przekraczanie linii zmiany daty",
+          "leftLabel": "Kierunek zachodni (np. z Hawajów do Japonii)",
+          "rightLabel": "Kierunek wschodni (np. z Japonii na Hawaje)",
+          "rows": [
+            { "aspect": "Zmiana daty", "left": "**Dodajemy jedną dobę** (przeskakujemy jeden dzień)", "right": "**Odejmujemy jedną dobę** (ten sam dzień przeżywamy dwa razy)" },
+            { "aspect": "Przykład", "left": "Wylot 10 maja wieczorem, przylot 12 maja rano — 11 maja w ogóle nie zaistniał", "right": "Wylot 10 maja rano, przylot 10 maja jeszcze wcześniej rano — tego samego dnia" },
+            { "aspect": "Kierunek liczenia godzin", "left": "Idąc na zachód, czas jest coraz wcześniejszy, więc doba musi zostać dodana, by kalendarz się zgadzał", "right": "Idąc na wschód, czas jest coraz późniejszy, więc doba musi zostać odjęta" },
+            { "aspect": "Historyczna anegdota", "left": "Wyprawie Magellana po powrocie „brakowało” jednego dnia w dzienniku — płynęła stale na zachód", "right": "Dziś linie lotnicze na trasach transpacyficznych podają w rozkładzie datę przylotu inną niż wylotu" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Czas na mapie świata — miejsca, które warto znać",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, jak bardzo czas urzędowy potrafi odbiegać od czasu słonecznego.",
+          "center": [20, 40],
+          "zoom": 2,
+          "markers": [
+            { "lat": 51.48, "lng": -0.0, "label": "Greenwich (0°)", "text": "Południk zerowy i punkt odniesienia dla **UTC**. Wybrany na konferencji w Waszyngtonie w 1884 r., gdy uzgadniano międzynarodowy system stref czasowych." },
+            { "lat": 52.23, "lng": 21.01, "label": "Warszawa (21°E)", "text": "Strefa **UTC+1** o południku środkowym 15°E. Czas słoneczny wyprzedza tu urzędowy o **24 minuty** — Słońce zimą góruje ok. 11:36." },
+            { "lat": 64.15, "lng": -21.94, "label": "Reykjavík (22°W)", "text": "Islandia leży w pobliżu południka 22°W, co odpowiadałoby strefie UTC−1, ale kraj stosuje **UTC+0** przez cały rok. Słońce góruje tu więc dopiero ok. 13:30." },
+            { "lat": 43.83, "lng": 87.62, "label": "Urumczi (88°E)", "text": "Chiny — mimo rozciągłości ok. 60° długości geograficznej — mają **jedną strefę czasową (UTC+8)** opartą na Pekinie. W Urumczi Słońce góruje ok. 14:10, a w zachodnim Sinciangu nawet ok. 15:00, więc życie zaczyna się tam późno." },
+            { "lat": 27.72, "lng": 85.32, "label": "Katmandu (85°E)", "text": "Nepal stosuje **UTC+5:45** — jedyne na świecie przesunięcie o 45 minut, przyjęte, by czas urzędowy odpowiadał południkowi przechodzącemu przez szczyt Gaurisankar." },
+            { "lat": 1.87, "lng": -157.4, "label": "Kiritimati (157°W)", "text": "Wyspa Bożego Narodzenia w Kiribati stosuje **UTC+14** — mimo położenia na półkuli zachodniej. Nowy Rok wita się tu jako w jednym z pierwszych miejsc na świecie." },
+            { "lat": 0.19, "lng": -176.48, "label": "Wyspa Baker (176°W)", "text": "Niezamieszkane terytorium USA w strefie **UTC−12** — najpóźniejszej na Ziemi. Różnica czasu między Wyspą Baker a Kiritimati sięga **26 godzin**, choć dzieli je niecałe 20° długości geograficznej." },
+            { "lat": -18.14, "lng": 178.44, "label": "Suva, Fidżi (178°E)", "text": "Archipelag leży niemal dokładnie na południku 180°, dlatego **linia zmiany daty została wygięta**, by wszystkie wyspy Fidżi znalazły się po tej samej stronie i miały tę samą datę." }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy błędy, które kosztują punkty. Po pierwsze: **czas słoneczny to nie czas urzędowy** — jeśli zadanie mówi „czas słoneczny”, licz z długości geograficznej miejsca, a nie z południka środkowego strefy. Po drugie: przy miejscach po przeciwnych stronach południka 0° długości geograficzne **dodajemy**, nie odejmujemy — pomyłka tutaj zmienia wynik o kilka godzin. Po trzecie: nie myl **linii zmiany daty** z **południkiem 180°** — linia jest umowna i wielokrotnie od niego odbiega, omijając wyspy i granice państw."
+        },
+        {
+          "type": "quiz",
+          "question": "W Warszawie (21°E) czas słoneczny miejscowy wskazuje 14:00. Która jest wtedy godzina czasu słonecznego w Londynie (0°)?",
+          "options": ["12:36", "13:36", "14:24", "15:24"],
+          "correctIndex": 0,
+          "explanation": "Różnica długości geograficznej wynosi 21° (oba miejsca na wschód od południka zerowego lub na nim, więc odejmujemy). Zamiana na czas: $21 \\cdot 4\\ \\text{min} = 84\\ \\text{min} = 1$ h 24 min. Londyn leży na zachód od Warszawy, więc czas jest tam wcześniejszy: $14{:}00 - 1{:}24 = 12{:}36$."
+        },
+        {
+          "type": "quiz",
+          "question": "Samolot leci z Los Angeles (UTC−8) do Tokio (UTC+9), przekraczając po drodze linię zmiany daty. Jak zmieni się data w trakcie lotu?",
+          "options": [
+            "Data cofnie się o jedną dobę, bo samolot leci na zachód",
+            "Data przesunie się o jedną dobę do przodu, bo samolot przekracza linię w kierunku zachodnim",
+            "Data nie zmieni się wcale, zmieni się tylko godzina",
+            "Data przesunie się o dwie doby, bo różnica stref wynosi 17 godzin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lot z Ameryki Północnej do Azji przez Pacyfik oznacza przekroczenie linii zmiany daty **ze wschodu na zachód**, a wtedy do daty dodajemy jedną dobę. Pasażer, który wystartuje w poniedziałek wieczorem, wyląduje w Tokio już we wtorek lub środę — mimo że lot trwa kilkanaście godzin."
+        },
+        {
+          "type": "quiz",
+          "question": "W pewnym mieście zegar czasu urzędowego (UTC+1, południk środkowy 15°E) wskazuje 12:00, a Słońce górowało tam 20 minut wcześniej. Na jakiej długości geograficznej leży to miasto?",
+          "options": ["10°E", "15°E", "20°E", "25°E"],
+          "correctIndex": 2,
+          "explanation": "Skoro Słońce górowało 20 minut przed godziną 12:00 czasu strefowego, czas słoneczny miasta **wyprzedza** czas południka 15°E o 20 minut, a więc miasto leży na **wschód** od niego. Przeliczamy: $20\\ \\text{min} : 4\\ \\text{min/}^\\circ = 5^\\circ$, zatem $15^\\circ\\text{E} + 5^\\circ = 20^\\circ\\text{E}$."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach obliczeniowych CKE punktuje **zapis toku rozumowania**, nie tylko wynik. Zawsze zapisz: (1) różnicę długości geograficznej wraz z uzasadnieniem, czy dodajesz, czy odejmujesz; (2) przeliczenie na czas; (3) kierunek zmiany (na wschód dodajemy, na zachód odejmujemy); (4) wynik z jednostką i — jeśli trzeba — z datą. Przy zadaniach o czasie urzędowym najpierw sprawdź, czy w treści pojawia się słowo „letni” — pominięcie dodatkowej godziny czasu letniego to najczęstsza przyczyna utraty punktu w tym typie zadań."
+        }
+      ]
+    },
+    {
+      "slug": "ruch-obiegowy-i-oswietlenie-ziemi",
+      "title": "Ruch obiegowy: pory roku i oświetlenie Ziemi",
+      "summary": "Nachylenie osi ziemskiej jako przyczyna pór roku: przesilenia i równonoce, zmienna długość dnia, dni i noce polarne oraz strefy oświetlenia Ziemi.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gdyby oś Ziemi była prostopadła do płaszczyzny jej orbity, na całej planecie panowałby wieczny, niezmienny rytm: dzień równy nocy przez cały rok, brak pór roku, brak stref klimatycznych w dzisiejszym kształcie. Cała różnorodność środowiska przyrodniczego Ziemi wynika z **jednej liczby — nachylenia osi ziemskiej o 23°26' od prostopadłej do płaszczyzny orbity**. To ona sprawia, że w ciągu roku raz jedna, raz druga półkula jest silniej zwrócona ku Słońcu. W tej lekcji prześledzisz mechanizm krok po kroku: od geometrii orbity, przez cztery kluczowe daty roku, po strefy oświetlenia i zjawisko nocy polarnej."
+        },
+        {
+          "type": "definition",
+          "term": "Ruch obiegowy Ziemi",
+          "text": "**Ruch Ziemi wokół Słońca po orbicie w kształcie elipsy**, odbywający się — podobnie jak obrót — **z zachodu na wschód** (przeciwnie do ruchu wskazówek zegara, patrząc znad bieguna północnego). Płaszczyzna orbity nosi nazwę **płaszczyzny ekliptyki**. Pełny obieg względem punktu równonocy wiosennej trwa **rok zwrotnikowy: 365 dni 5 h 48 min 46 s** — nadwyżka ponad 365 dni jest przyczyną wprowadzenia **lat przestępnych**.",
+          "note": "Oś ziemska jest nachylona do płaszczyzny ekliptyki pod kątem **66°34'**, co jest równoznaczne z nachyleniem płaszczyzny równika do ekliptyki pod kątem **23°26'**. Oba zapisy oznaczają to samo — sprawdź w zadaniu, o który kąt pyta polecenie."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Orbita Ziemi w liczbach",
+          "items": [
+            { "value": "365 d 5 h 48 min 46 s", "label": "rok zwrotnikowy", "note": "podstawa kalendarza; nadwyżka ~6 h daje 29 lutego co 4 lata" },
+            { "value": "149,6", "unit": "mln km", "label": "średnia odległość Ziemia–Słońce (1 j.a.)" },
+            { "value": "147,1", "unit": "mln km", "label": "odległość w peryhelium", "note": "ok. 3 stycznia — a więc w czasie zimy na półkuli północnej" },
+            { "value": "152,1", "unit": "mln km", "label": "odległość w aphelium", "note": "ok. 4 lipca — w czasie lata na półkuli północnej" },
+            { "value": "29,8", "unit": "km/s", "label": "średnia prędkość orbitalna Ziemi", "note": "ok. 107 000 km/h" },
+            { "value": "23°26'", "label": "nachylenie osi od prostopadłej do ekliptyki", "note": "równoważnie: oś nachylona do płaszczyzny orbity pod kątem 66°34'" },
+            { "value": "ok. 940", "unit": "mln km", "label": "długość drogi Ziemi w ciągu roku" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**Pory roku NIE wynikają ze zmiany odległości Ziemi od Słońca.** To najczęstszy błąd merytoryczny w wypowiedziach maturalnych. Dowód jest prosty: Ziemia jest **najbliżej** Słońca na początku stycznia, gdy na półkuli północnej trwa zima, a najdalej na początku lipca, gdy mamy lato. Gdyby decydowała odległość, pory roku na obu półkulach byłyby takie same, a przecież są odwrotne. Decyduje **kąt padania promieni słonecznych i długość dnia**, a te wynikają z nachylenia osi ziemskiej."
+        },
+        {
+          "type": "definition",
+          "term": "Niezmienność kierunku osi ziemskiej",
+          "text": "Podczas obiegu wokół Słońca oś ziemska **nie zmienia swojego kierunku w przestrzeni** — pozostaje stale skierowana w ten sam punkt sfery niebieskiej, w pobliżu **Gwiazdy Polarnej**, i pozostaje sama do siebie równoległa w każdym miejscu orbity. Właśnie dlatego w jednej części orbity ku Słońcu zwrócona jest półkula północna, a pół roku później — półkula południowa. Gdyby oś „podążała” za Słońcem, pory roku nie mogłyby powstać.",
+          "note": "W skali dziesiątek tysięcy lat kierunek osi jednak powoli się zmienia (**precesja**, cykl ok. 26 tys. lat), a kąt nachylenia oscyluje w przedziale ok. 22,1°–24,5°. Te zmiany, opisane w cyklach Milankovicia, współtworzą rytm epok lodowcowych — ale w skali jednego roku oś traktujemy jako niezmienną."
+        },
+        {
+          "type": "cycle",
+          "title": "Rok w czterech punktach orbity",
+          "caption": "Daty podano dla półkuli północnej; na południowej nazwy pór roku są odwrotne. Uwaga: daty mogą przesuwać się o dzień w zależności od roku.",
+          "stages": [
+            {
+              "name": "21 marca — równonoc wiosenna",
+              "text": "Słońce góruje **w zenicie nad równikiem**, a granica dnia i nocy przechodzi przez **oba bieguny**. Na całej Ziemi dzień trwa **tyle samo co noc (po 12 h)**. Na półkuli północnej zaczyna się astronomiczna wiosna, na południowej — jesień. Na biegunie północnym kończy się noc polarna i zaczyna półroczny dzień polarny."
+            },
+            {
+              "name": "22 czerwca — przesilenie letnie",
+              "text": "Słońce góruje **w zenicie nad Zwrotnikiem Raka (23°26'N)**. Na półkuli północnej przypada **najdłuższy dzień i najkrótsza noc** w roku, a dzień polarny obejmuje cały obszar na północ od koła podbiegunowego północnego (66°34'N). Jednocześnie na półkuli południowej trwa najkrótszy dzień, a za kołem podbiegunowym południowym — noc polarna."
+            },
+            {
+              "name": "23 września — równonoc jesienna",
+              "text": "Sytuacja lustrzana wobec 21 marca: Słońce ponownie góruje **w zenicie nad równikiem**, dzień równa się nocy na całej planecie. Na półkuli północnej zaczyna się astronomiczna jesień, a na biegunie północnym — półroczna noc polarna."
+            },
+            {
+              "name": "22 grudnia — przesilenie zimowe",
+              "text": "Słońce góruje **w zenicie nad Zwrotnikiem Koziorożca (23°26'S)**. Na półkuli północnej to **najkrótszy dzień i najdłuższa noc**, a obszar na północ od koła podbiegunowego północnego pogrążony jest w nocy polarnej. Na półkuli południowej trwa wtedy szczyt lata i dzień polarny wokół bieguna południowego."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Przesilenia i równonoce — zestawienie do zapamiętania",
+          "caption": "Tabela ułożona według dat. Kolumnę „półkula południowa” warto przećwiczyć osobno — zadania maturalne bardzo często dotyczą właśnie jej.",
+          "headers": ["Data", "Nazwa zjawiska", "Słońce w zenicie nad", "Półkula północna", "Półkula południowa"],
+          "rows": [
+            ["21 marca", "Równonoc wiosenna", "równikiem (0°)", "Początek wiosny; dzień = noc", "Początek jesieni; dzień = noc"],
+            ["22 czerwca", "Przesilenie letnie", "Zwrotnikiem Raka (23°26'N)", "Początek lata; najdłuższy dzień; dzień polarny za kołem podbiegunowym", "Początek zimy; najkrótszy dzień; noc polarna za kołem podbiegunowym"],
+            ["23 września", "Równonoc jesienna", "równikiem (0°)", "Początek jesieni; dzień = noc", "Początek wiosny; dzień = noc"],
+            ["22 grudnia", "Przesilenie zimowe", "Zwrotnikiem Koziorożca (23°26'S)", "Początek zimy; najkrótszy dzień; noc polarna za kołem podbiegunowym", "Początek lata; najdłuższy dzień; dzień polarny za kołem podbiegunowym"]
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego istnieją pory roku — mechanizm krok po kroku",
+          "caption": "To najczęściej sprawdzany łańcuch przyczynowo-skutkowy w całym dziale. Naucz się go odtwarzać w tej kolejności.",
+          "steps": [
+            {
+              "title": "1. Oś ziemska jest nachylona i zachowuje stały kierunek",
+              "text": "Oś tworzy z płaszczyzną orbity kąt **66°34'** i pozostaje równoległa do samej siebie przez cały rok. To warunek konieczny — bez nachylenia nie byłoby pór roku, a bez stałości kierunku nie byłoby ich naprzemienności."
+            },
+            {
+              "title": "2. W trakcie obiegu zmienia się półkula zwrócona ku Słońcu",
+              "text": "Przez pół roku ku Słońcu nachylona jest **półkula północna** (maksimum 22 czerwca), przez drugie pół — **południowa** (maksimum 22 grudnia). W momentach równonocy żadna z półkul nie jest uprzywilejowana."
+            },
+            {
+              "title": "3. Zmienia się kąt padania promieni słonecznych",
+              "text": "Im wyżej Słońce góruje, tym bardziej **prostopadle** padają promienie i tym mniejsza powierzchnia przypada na tę samą wiązkę energii. Latem w Warszawie Słońce góruje na wysokości ok. 61°, zimą tylko ok. 14° — ta sama ilość energii rozkłada się zimą na czterokrotnie większą powierzchnię, a dodatkowo przechodzi przez grubszą warstwę atmosfery."
+            },
+            {
+              "title": "4. Zmienia się długość dnia, czyli czas nasłonecznienia",
+              "text": "Latem dzień jest dłuższy, więc Ziemia dłużej pobiera energię, a krócej ją wypromieniowuje nocą. W Warszawie 22 czerwca dzień trwa ok. 16,5 h, a 22 grudnia tylko ok. 7,5 h. Oba efekty — **kąt padania i długość dnia** — działają w tę samą stronę i wzajemnie się wzmacniają."
+            },
+            {
+              "title": "5. Reakcja z opóźnieniem — bezwładność cieplna",
+              "text": "Największy dopływ energii przypada na przesilenie letnie (22 VI), ale najcieplejszy miesiąc to zwykle **lipiec, a nad oceanami nawet sierpień**. Powodem jest **bezwładność cieplna** lądów i wód, które muszą się najpierw nagrzać. Analogicznie najzimniejszy miesiąc to styczeń lub luty, a nie grudzień."
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefy oświetlenia Ziemi",
+          "caption": "Granice stref wyznaczają zwrotniki (23°26') i koła podbiegunowe (66°34'). Układ jest symetryczny względem równika — poniższe strefy powtarzają się na obu półkulach.",
+          "zones": [
+            {
+              "name": "Strefa podbiegunowa (polarna)",
+              "latitude": "66°34' – 90°",
+              "text": "Jedyna strefa, w której występują **dzień polarny i noc polarna**. Ich długość rośnie od jednej doby na kole podbiegunowym do **pół roku na biegunie**. Słońce nigdy nie góruje tu w zenicie, a jego maksymalna wysokość jest niewielka — na biegunie nie przekracza 23°26'. Skutkiem jest minimalny dopływ energii i strefa klimatów okołobiegunowych.",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa umiarkowana",
+              "latitude": "23°26' – 66°34'",
+              "text": "Słońce **nigdy nie góruje w zenicie**, ale też nie występują tu dni ani noce polarne. Za to **najsilniej w skali globu zmienia się w ciągu roku wysokość górowania Słońca i długość dnia** — i właśnie dlatego to strefa najwyraźniej zaznaczonych czterech pór roku. W Polsce różnica między najdłuższym a najkrótszym dniem sięga 9 godzin.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa międzyzwrotnikowa",
+              "latitude": "0° – 23°26'",
+              "text": "Jedyna strefa, w której Słońce **góruje w zenicie** — na zwrotnikach raz w roku, a między nimi **dwa razy w roku**. Wysokość górowania jest zawsze duża, a długość dnia zmienia się w ciągu roku bardzo niewiele (na równiku praktycznie stale ok. 12 h). Stały, wysoki dopływ energii daje tu największe roczne sumy promieniowania na Ziemi.",
+              "tone": "heat"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Dzień polarny i noc polarna",
+          "text": "**Dzień polarny** to okres, w którym Słońce **nie zachodzi poniżej horyzontu** przez całą dobę; **noc polarna** — okres, w którym Słońce przez całą dobę **nie wschodzi**. Zjawiska te występują wyłącznie na obszarach o szerokości geograficznej **równej lub większej niż 66°34'**, czyli za kołami podbiegunowymi. Ich długość rośnie wraz z szerokością geograficzną: na samym kole podbiegunowym trwają jedną dobę w roku (w dniach przesileń), na 70° po kilkadziesiąt dni, a na biegunach po **około pół roku**.",
+          "note": "Nawet w czasie nocy polarnej nie panuje pełna ciemność przez cały czas — w pobliżu koła podbiegunowego przez wiele godzin utrzymuje się zmierzch, bo Słońce chowa się tylko nieznacznie pod horyzontem."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Długość dnia w ciągu roku na różnych szerokościach geograficznych",
+          "caption": "Wartości przybliżone, dla połowy każdego miesiąca. Zwróć uwagę: na równiku linia jest niemal płaska, w Warszawie faluje z amplitudą ok. 9 h, a na 70°N dochodzi do wartości skrajnych 0 h (noc polarna) i 24 h (dzień polarny).",
+          "labels": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"],
+          "series": [
+            { "name": "Równik (0°)", "values": [12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1, 12.1] },
+            { "name": "Warszawa (52°N)", "values": [8.0, 9.8, 11.6, 13.7, 15.5, 16.5, 16.1, 14.5, 12.5, 10.6, 8.6, 7.5] },
+            { "name": "Hammerfest (70°N)", "values": [0, 6.9, 11.1, 15.8, 21.2, 24, 24, 17.6, 13.1, 8.9, 3.2, 0] }
+          ],
+          "unit": "h"
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj datę lub równoleżnik do zjawiska",
+          "instruction": "Połącz pojęcie z odpowiadającym mu opisem.",
+          "pairs": [
+            { "left": "22 czerwca", "right": "Słońce góruje w zenicie nad Zwrotnikiem Raka" },
+            { "left": "22 grudnia", "right": "Słońce góruje w zenicie nad Zwrotnikiem Koziorożca" },
+            { "left": "21 marca i 23 września", "right": "Słońce góruje w zenicie nad równikiem, a dzień równa się nocy na całej Ziemi" },
+            { "left": "Koło podbiegunowe północne (66°34'N)", "right": "Najniższa szerokość, na której występuje dzień polarny — trwający tam jedną dobę" },
+            { "left": "Równik (0°)", "right": "Miejsce, w którym Słońce góruje w zenicie dwa razy w roku, a dzień trwa niemal stale 12 godzin" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na dwie pułapki. Po pierwsze: **przesilenie letnie to nie najcieplejszy dzień roku** — to dzień największego dopływu energii, a najwyższe temperatury przychodzą z opóźnieniem kilku tygodni wskutek bezwładności cieplnej. Po drugie: **dzień polarny to nie to samo co „białe noce”** — białe noce (np. w Petersburgu, ok. 60°N) występują poniżej koła podbiegunowego i polegają na tym, że Słońce chowa się płytko pod horyzontem, przez co nie zapada prawdziwa ciemność, mimo że formalnie zachodzi."
+        },
+        {
+          "type": "quiz",
+          "question": "W dniu 22 grudnia w Sydney (34°S) obserwujemy:",
+          "options": [
+            "najkrótszy dzień w roku i początek zimy",
+            "najdłuższy dzień w roku i początek lata",
+            "zrównanie dnia z nocą i początek wiosny",
+            "noc polarną, ponieważ Sydney leży na półkuli południowej"
+          ],
+          "correctIndex": 1,
+          "explanation": "22 grudnia Słońce góruje w zenicie nad Zwrotnikiem Koziorożca, czyli na półkuli południowej — tam przypada wówczas przesilenie letnie: najdłuższy dzień i początek astronomicznego lata. Noc polarna nie może wystąpić w Sydney, bo leży ono na 34°S, a więc znacznie bliżej równika niż koło podbiegunowe (66°34'S)."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w strefie międzyzwrotnikowej długość dnia zmienia się w ciągu roku znacznie mniej niż w strefie umiarkowanej?",
+          "options": [
+            "Ponieważ w tej strefie Ziemia obraca się wokół osi szybciej",
+            "Ponieważ granica dnia i nocy przecina równoleżniki niskich szerokości blisko połowy, niezależnie od pory roku",
+            "Ponieważ w tej strefie oś ziemska jest ustawiona prostopadle do promieni słonecznych",
+            "Ponieważ w tej strefie nie występuje ruch obiegowy Ziemi"
+          ],
+          "correctIndex": 1,
+          "explanation": "Okrąg oświetlenia (granica dnia i nocy) zawsze dzieli równik dokładnie na pół — dlatego na równiku dzień trwa ok. 12 h przez cały rok. Im dalej od równika, tym bardziej niesymetrycznie granica ta przecina równoleżniki, więc różnice długości dnia rosną, aż do skrajnych przypadków dnia i nocy polarnej za kołami podbiegunowymi."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o strefach oświetlenia Ziemi jest prawdziwe?",
+          "options": [
+            "W strefie umiarkowanej Słońce góruje w zenicie raz w roku",
+            "W strefie podbiegunowej Słońce góruje w zenicie w dniu przesilenia",
+            "W strefie międzyzwrotnikowej Słońce góruje w zenicie na zwrotnikach raz w roku, a między nimi dwa razy w roku",
+            "Na równiku Słońce góruje w zenicie codziennie przez cały rok"
+          ],
+          "correctIndex": 2,
+          "explanation": "Zenitalne górowanie Słońca możliwe jest wyłącznie między zwrotnikami, bo deklinacja Słońca zmienia się tylko w zakresie od 23°26'S do 23°26'N. Na samych zwrotnikach zdarza się to raz w roku (w dniu przesilenia), a we wszystkich punktach między nimi — dwa razy w roku. Na równiku są to dokładnie dni równonocy: 21 marca i 23 września."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach z rysunkiem orbity (cztery położenia Ziemi wokół Słońca) rozpoznawaj datę **po tym, która półkula jest nachylona ku Słońcu**, a nie po odległości od Słońca na schemacie — rysunki są zwykle mocno przerysowane. Naucz się też odpowiadać na polecenia typu „podaj dwa następstwa ruchu obiegowego”: bezpieczny zestaw to **pory roku, zmienna w ciągu roku wysokość górowania Słońca, zmienna długość dnia i nocy, występowanie dni i nocy polarnych oraz strefy oświetlenia Ziemi**. Nie wpisuj tu dnia i nocy ani siły Coriolisa — to następstwa ruchu obrotowego."
+        }
+      ]
+    },
+    {
+      "slug": "wysokosc-gorowania-slonca",
+      "title": "Wysokość górowania Słońca i widoma wędrówka Słońca",
+      "summary": "Deklinacja Słońca i wzór na wysokość górowania: jak liczyć h, jak z niej odczytać szerokość geograficzną i długość cienia oraz jak wygląda pozorna wędrówka Słońca po niebie w kolejnych strefach Ziemi.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wiesz już, że oś ziemska jest nachylona i że dlatego w ciągu roku zmienia się kąt padania promieni słonecznych. Teraz zamienimy ten opis na **liczbę**. Wysokość górowania Słońca to jedyna wielkość astronomiczna, którą maturzysta musi umieć **policzyć** — i to w obie strony: z szerokości geograficznej i daty wyliczyć wysokość Słońca, a ze zmierzonej wysokości Słońca odtworzyć szerokość geograficzną. Ten sam rachunek stoi za długością cienia w południe, za tym, po której stronie nieba szukać Słońca, i za tym, dlaczego w Polsce grudniowe Słońce ledwie wystaje ponad dachy. W tej lekcji poznasz wzór, algorytm liczenia w stopniach i minutach oraz obraz **widomej (pozornej) wędrówki Słońca** po sklepieniu niebieskim w różnych strefach."
+        },
+        {
+          "type": "definition",
+          "term": "Górowanie (kulminacja) Słońca",
+          "text": "**Moment, w którym Słońce osiąga w ciągu doby największą wysokość nad horyzontem.** Zdarza się to w **południe słoneczne**, gdy Słońce przechodzi przez **południk lokalny** obserwatora. Wysokość górowania oznaczamy literą $h$ i mierzymy jako **kąt między kierunkiem do Słońca a płaszczyzną horyzontu** — od 0° (Słońce na horyzoncie) do 90° (Słońce w zenicie, dokładnie nad głową).",
+          "note": "Kąt padania promieni słonecznych na **powierzchnię poziomą** jest liczbowo równy wysokości górowania. Uwaga: w fizyce kąt padania mierzy się od prostopadłej do powierzchni, więc tam byłoby to $90^\\circ - h$. W geografii szkolnej obowiązuje wersja mierzona od horyzontu."
+        },
+        {
+          "type": "definition",
+          "term": "Deklinacja Słońca (δ)",
+          "text": "**Szerokość geograficzna miejsca, nad którym Słońce góruje w zenicie w danym dniu** — czyli szerokość punktu podsłonecznego. Deklinacja zmienia się w ciągu roku **wyłącznie w przedziale od 23°26'S do 23°26'N**, bo tyle wynosi nachylenie osi ziemskiej. To ona jest jedyną „datą”, która wchodzi do wzoru na wysokość Słońca.",
+          "note": "Wartości do zapamiętania: **21 III i 23 IX → δ = 0°** (równik), **22 VI → δ = 23°26'N**, **22 XII → δ = 23°26'S**. Między tymi datami deklinacja zmienia się płynnie: najszybciej wokół równonocy (ok. 0,4° na dobę), a najwolniej wokół przesileń — stąd zresztą nazwa „przesilenie”, czyli zatrzymanie wędrówki Słońca."
+        },
+        {
+          "type": "formula",
+          "title": "Wysokość górowania Słońca",
+          "expression": "h = 90^\\circ - |\\varphi - \\delta|",
+          "variables": [
+            { "symbol": "h", "meaning": "wysokość górowania Słońca nad horyzontem (w stopniach)" },
+            { "symbol": "\\varphi", "meaning": "szerokość geograficzna miejsca obserwacji (N dodatnia, S ujemna)" },
+            { "symbol": "\\delta", "meaning": "deklinacja Słońca w danym dniu (N dodatnia, S ujemna)" }
+          ],
+          "caption": "Wyrażenie $|\\varphi - \\delta|$ to **odległość kątowa** obserwatora od punktu podsłonecznego, mierzona wzdłuż południka. Im dalej jesteś od miejsca, nad którym Słońce stoi w zenicie, tym niżej je widzisz — dokładnie o tyle stopni, o ile stopni dzieli was po południku."
+        },
+        {
+          "type": "process",
+          "title": "Obliczanie wysokości górowania — pięć kroków",
+          "caption": "Ten sam schemat działa dla każdej daty i każdej półkuli. Klucz tkwi w kroku 3.",
+          "steps": [
+            {
+              "title": "1. Zapisz szerokość geograficzną ze znakiem",
+              "text": "Półkula północna → wartość **dodatnia**, południowa → **ujemna**. Warszawa: $\\varphi = +52^\\circ$, Sydney: $\\varphi = -34^\\circ$. Pominięcie znaku to najczęstsza przyczyna błędnego wyniku w zadaniach dotyczących półkuli południowej."
+            },
+            {
+              "title": "2. Odczytaj deklinację dla podanej daty",
+              "text": "Dla dat charakterystycznych znasz ją z pamięci ($0^\\circ$, $+23^\\circ26'$, $-23^\\circ26'$). Dla pozostałych dni arkusz maturalny podaje deklinację w treści zadania albo w tabeli — nigdy nie musisz jej wyliczać samodzielnie."
+            },
+            {
+              "title": "3. Policz odległość kątową od punktu podsłonecznego",
+              "text": "Wartość $|\\varphi - \\delta|$ najłatwiej ustalić słownie: jeśli miejsce i punkt podsłoneczny leżą na **tej samej półkuli**, wartości **odejmujesz**; jeśli na **różnych** — **dodajesz**. Warszawa 22 XII: 52° (N) i 23°26' (S) to różne półkule, więc $52^\\circ + 23^\\circ26' = 75^\\circ26'$."
+            },
+            {
+              "title": "4. Odejmij wynik od 90°",
+              "text": "$h = 90^\\circ - 75^\\circ26' = 14^\\circ34'$. Licząc w stopniach i minutach, pożycz $1^\\circ = 60'$, czyli zapisz $90^\\circ$ jako $89^\\circ60'$: $89^\\circ60' - 75^\\circ26' = 14^\\circ34'$. Alternatywnie zamień wszystko na ułamki dziesiętne ($23^\\circ26' \\approx 23{,}43^\\circ$) i wróć do minut dopiero na końcu."
+            },
+            {
+              "title": "5. Sprawdź sens wyniku",
+              "text": "Wynik musi mieścić się w przedziale $0^\\circ < h \\le 90^\\circ$. Wartość **powyżej 90° oznacza błąd rachunkowy** (najczęściej zgubioną wartość bezwzględną). Wynik **ujemny lub zerowy** to natomiast informacja fizyczna: Słońce w ogóle nie wschodzi — trwa **noc polarna**."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Wysokość górowania Słońca w trzech miastach",
+          "caption": "Prześledź, jak ta sama data daje przeciwne skutki na obu półkulach: w Warszawie grudzień to roczne minimum, a w Sydney — maksimum.",
+          "headers": ["Miejsce (szerokość)", "21 III (δ = 0°)", "22 VI (δ = 23°26'N)", "22 XII (δ = 23°26'S)", "Strona nieba przy górowaniu"],
+          "rows": [
+            ["Warszawa (52°N)", "38°00'", "61°26'", "14°34'", "zawsze południowa (S)"],
+            ["Kair (30°N)", "60°00'", "83°26'", "36°34'", "zawsze południowa (S)"],
+            ["Sydney (34°S)", "56°00'", "32°34'", "79°26'", "zawsze północna (N)"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki rachunkowe. Po pierwsze: **deklinacja to nie szerokość geograficzna obserwatora** — δ opisuje położenie Słońca, φ położenie człowieka; pomylenie ich daje bezsensowny wynik. Po drugie: **nie wolno opuszczać wartości bezwzględnej** — uproszczony zapis $h = 90^\\circ - \\varphi + \\delta$ działa wyłącznie wtedy, gdy obserwator leży na północ od punktu podsłonecznego, a w zadaniach o półkuli południowej zawodzi. Po trzecie: **roczna różnica wysokości górowania wynosi w strefie umiarkowanej — czyli poza strefą międzyzwrotnikową i podbiegunową — dokładnie $46^\\circ52'$** (dwa razy 23°26'); między zwrotnikami jest mniejsza, bo maksimum wynosi tam zawsze 90°. Jeśli w strefie umiarkowanej po obliczeniu maksimum i minimum wychodzi coś innego, gdzieś jest błąd."
+        },
+        {
+          "type": "formula",
+          "title": "Zadanie odwrotne: wyznaczanie szerokości geograficznej",
+          "expression": "|\\varphi - \\delta| = 90^\\circ - h \\quad \\Rightarrow \\quad \\varphi = \\delta \\pm (90^\\circ - h)",
+          "variables": [
+            { "symbol": "h", "meaning": "zmierzona wysokość górowania Słońca" },
+            { "symbol": "\\delta", "meaning": "deklinacja Słońca w dniu pomiaru (znana z daty)" },
+            { "symbol": "\\varphi", "meaning": "szukana szerokość geograficzna miejsca obserwacji" }
+          ],
+          "caption": "O znaku decyduje **strona nieba, po której Słońce górowało**. Jeśli po stronie **południowej**, obserwator leży na **północ** od punktu podsłonecznego, więc $\\varphi = \\delta + (90^\\circ - h)$; jeśli po stronie **północnej** — $\\varphi = \\delta - (90^\\circ - h)$. Dlatego zdanie „Słońce górowało nad południową częścią nieba” nigdy nie jest w zadaniu ozdobnikiem."
+        },
+        {
+          "type": "formula",
+          "title": "Długość cienia w południe słoneczne",
+          "expression": "l = \\dfrac{w}{\\mathrm{tg}\\,h}",
+          "variables": [
+            { "symbol": "l", "meaning": "długość cienia rzucanego przez pionowy obiekt (gnomon)" },
+            { "symbol": "w", "meaning": "wysokość obiektu" },
+            { "symbol": "h", "meaning": "wysokość górowania Słońca" }
+          ],
+          "caption": "Wniosek jakościowy wystarcza w większości zadań: **im niżej góruje Słońce, tym dłuższy cień**. Gdy $h = 45^\\circ$, cień jest równy wysokości obiektu; przy $h = 90^\\circ$ zanika zupełnie. Zależność jest silnie nieliniowa — przy $h = 14^\\circ34'$ (Warszawa, 22 XII) cień jest już prawie **czterokrotnie dłuższy** od obiektu, co tłumaczy zimowe zacienienie ulic i wymóg odpowiednich odstępów między budynkami."
+        },
+        {
+          "type": "compare",
+          "title": "Po której stronie nieba góruje Słońce",
+          "leftLabel": "Obserwator na północ od Zwrotnika Raka (np. Polska)",
+          "rightLabel": "Obserwator na południe od Zwrotnika Koziorożca (np. Sydney)",
+          "rows": [
+            { "aspect": "Kierunek górowania", "left": "Zawsze po stronie **południowej (S)** — punkt podsłoneczny leży zawsze na południe od obserwatora.", "right": "Zawsze po stronie **północnej (N)** — punkt podsłoneczny leży zawsze na północ od obserwatora." },
+            { "aspect": "Kierunek cienia w południe", "left": "Cień pionowego obiektu wskazuje **północ**", "right": "Cień pionowego obiektu wskazuje **południe**" },
+            { "aspect": "Pozorna wędrówka po niebie", "left": "Ze wschodu przez **południe** na zachód — pozornie **zgodnie z ruchem wskazówek zegara**", "right": "Ze wschodu przez **północ** na zachód — pozornie **przeciwnie do ruchu wskazówek zegara**" },
+            { "aspect": "Data najwyższego górowania", "left": "**22 czerwca** (minimum 22 grudnia)", "right": "**22 grudnia** (minimum 22 czerwca)" },
+            { "aspect": "Orientacja nocą", "left": "**Gwiazda Polarna** wskazuje północ, a jej wysokość nad horyzontem jest w przybliżeniu równa szerokości geograficznej miejsca", "right": "Gwiazda Polarna jest **niewidoczna**; do orientacji służy gwiazdozbiór **Krzyża Południa**" }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Widoma wędrówka Słońca w kolejnych strefach",
+          "caption": "Pozorna droga Słońca po sklepieniu niebieskim jest skutkiem ruchu obrotowego, ale jej nachylenie do horyzontu i wysokość zależą już od szerokości geograficznej.",
+          "zones": [
+            {
+              "name": "Równik",
+              "latitude": "0°",
+              "text": "Droga Słońca przebiega **prawie prostopadle do horyzontu**, dlatego Słońce wschodzi i zachodzi gwałtownie, a **zmierzch trwa zaledwie ok. 20 minut**. Przez cały rok wschód wypada blisko punktu E, a zachód blisko punktu W. Słońce góruje **w zenicie dwa razy w roku** (21 III i 23 IX), a między tymi datami przez pół roku góruje po stronie północnej, przez drugie pół — po południowej.",
+              "tone": "heat"
+            },
+            {
+              "name": "Wnętrze strefy międzyzwrotnikowej",
+              "latitude": "między 23°26'N a 23°26'S",
+              "text": "Jedyny obszar, na którym Słońce **góruje w zenicie — i to dwa razy w roku**, gdy deklinacja przechodzi przez szerokość danego miejsca (raz w drodze ku zwrotnikowi, raz w drodze powrotnej). W konsekwencji **strona górowania zmienia się w ciągu roku**, a południowy cień pada raz na północ, raz na południe. Górowanie zawsze jest wysokie, więc dopływ energii pozostaje przez cały rok duży.",
+              "tone": "heat"
+            },
+            {
+              "name": "Zwrotniki",
+              "latitude": "23°26'N i 23°26'S",
+              "text": "Przypadek graniczny: Słońce góruje w zenicie **dokładnie raz w roku**, w dniu przesilenia (Zwrotnik Raka — 22 VI, Zwrotnik Koziorożca — 22 XII). We wszystkie pozostałe dni góruje po tej samej stronie nieba — tej, po której leży przeciwny biegun.",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa umiarkowana",
+              "latitude": "23°26'–66°34' na obu półkulach",
+              "text": "Słońce **nigdy nie góruje w zenicie**, a jego droga biegnie **ukośnie do horyzontu**, przez co wschody i zachody trwają długo, a zmierzch jest wyraźny. To tutaj **roczna zmiana wysokości górowania jest najlepiej odczuwalna**: w Warszawie od 61°26' w czerwcu do 14°34' w grudniu. Punkt wschodu Słońca wędruje w ciągu roku daleko od kierunku E — latem ku NE, zimą ku SE.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa podbiegunowa i biegun",
+              "latitude": "66°34'–90°",
+              "text": "Podczas **dnia polarnego** Słońce nie zachodzi — zatacza pełny krąg wokół obserwatora, nisko nad horyzontem, i tylko faluje wysokością w rytmie doby. Na samym **biegunie** wysokość Słońca w ciągu doby praktycznie się nie zmienia, a jej maksimum w całym roku wynosi zaledwie **23°26'** (22 VI na biegunie północnym). Właśnie dlatego mimo półrocznego dnia bilans energetyczny biegunów pozostaje ujemny.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Wysokość górowania Słońca w ciągu roku: Warszawa a równik",
+          "caption": "Wartości obliczone dla 21. dnia każdego miesiąca. Porównaj kształt krzywych: warszawska ma jedno maksimum (czerwiec) i jedno minimum (grudzień), a równikowa — **dwa maksima** (marzec i wrzesień) oraz dwa minima (w dniach przesileń).",
+          "labels": ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"],
+          "series": [
+            { "name": "Warszawa (52°N)", "values": [18, 27, 38, 50, 58, 61, 58, 50, 38, 28, 18, 15] },
+            { "name": "Równik (0°)", "values": [70, 79, 90, 78, 70, 67, 70, 78, 89, 80, 70, 67] }
+          ],
+          "unit": "°"
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj według malejącej wysokości górowania Słońca 22 czerwca",
+          "instruction": "Ustaw miejsca od najwyżej do najniżej górującego Słońca w dniu przesilenia letniego (δ = 23°26'N).",
+          "items": [
+            "Zwrotnik Raka (23°26'N)",
+            "Kair (30°N)",
+            "Rzym (42°N)",
+            "Nairobi (1°S)",
+            "Warszawa (52°N)",
+            "Hammerfest (71°N)"
+          ],
+          "explanation": "Decyduje wyłącznie **odległość kątowa od równoleżnika 23°26'N**, a nie sama szerokość geograficzna — dlatego Nairobi (1°S), choć leży najbliżej równika, wypada dopiero na czwartym miejscu. Kolejno: Zwrotnik Raka 90°00', Kair 83°26', Rzym 71°26', Nairobi 65°34', Warszawa 61°26', Hammerfest 42°26'."
+        },
+        {
+          "type": "quiz",
+          "question": "Oblicz wysokość górowania Słońca w Gdańsku (54°N) w dniu 22 grudnia.",
+          "options": ["12°34'", "36°00'", "35°34'", "59°26'"],
+          "correctIndex": 0,
+          "explanation": "22 grudnia deklinacja wynosi 23°26'S, a Gdańsk leży na półkuli północnej — obserwator i punkt podsłoneczny są na różnych półkulach, więc wartości dodajemy: 54° + 23°26' = 77°26'. Stąd h = 90° − 77°26' = 89°60' − 77°26' = **12°34'**. Odpowiedź 59°26' powstaje po błędnym odjęciu deklinacji zamiast jej dodania."
+        },
+        {
+          "type": "quiz",
+          "question": "W pewnym miejscu 21 marca zmierzono wysokość górowania Słońca równą 55°, przy czym Słońce górowało nad południową częścią nieba. Na jakiej szerokości geograficznej leży to miejsce?",
+          "options": ["35°N", "55°N", "35°S", "55°S"],
+          "correctIndex": 0,
+          "explanation": "21 marca δ = 0°, więc |φ − 0°| = 90° − 55° = 35°, czyli miejsce leży 35° od równika. Ponieważ Słońce górowało po stronie **południowej**, obserwator znajduje się na **północ** od punktu podsłonecznego (równika), a zatem na **35°N**. Gdyby Słońce górowało po stronie północnej, poprawna byłaby odpowiedź 35°S — dlatego informacja o stronie nieba jest tu niezbędna."
+        },
+        {
+          "type": "quiz",
+          "question": "Obserwator w Buenos Aires (34°S) przez cały rok widzi górujące Słońce:",
+          "options": [
+            "zawsze nad południową częścią nieba",
+            "zawsze nad północną częścią nieba",
+            "przez pół roku nad północną, a przez pół roku nad południową częścią nieba",
+            "dwa razy w roku dokładnie w zenicie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Deklinacja Słońca nigdy nie przekracza 23°26'S, więc punkt podsłoneczny zawsze leży **na północ** od równoleżnika 34°S. Obserwator patrzy na górujące Słońce zawsze w stronę **północną**, a cień w południe pada u niego na południe. Odpowiedzi 3 i 4 byłyby prawdziwe wyłącznie dla miejsc położonych **między zwrotnikami**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach obliczeniowych CKE punktuje **zapis obliczeń, a nie sam wynik** — zawsze wypisz wzór $h = 90^\\circ - |\\varphi - \\delta|$, podstaw wartości, a odpowiedź podaj **w stopniach i minutach** (61°26', a nie 61,4°). Jeśli polecenie brzmi „uzasadnij”, dołóż zdanie o mechanizmie: „ponieważ 22 czerwca Słońce góruje w zenicie nad Zwrotnikiem Raka, a Warszawa leży 28°34' na północ od niego”. W zadaniach odwrotnych koniecznie wskaż, **po której stronie nieba** Słońce górowało — bez tego rozwiązanie jest niejednoznaczne i traci punkt."
+        }
+      ]
+    },
+    {
+      "slug": "ksiezyc-zacmienia-i-plywy",
+      "title": "Księżyc: fazy, zaćmienia i pływy",
+      "summary": "Ruch Księżyca i jego skutki obserwowane z Ziemi: obrót synchroniczny, miesiąc syderyczny i synodyczny, osiem faz, mechanizm zaćmień Słońca i Księżyca oraz powstawanie pływów morskich.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Księżyc jest jedynym naturalnym satelitą Ziemi i najbliższym nam ciałem niebieskim — a mimo swoich skromnych rozmiarów odpowiada za trzy zjawiska, o które CKE pyta regularnie: **fazy**, **zaćmienia** i **pływy**. Wszystkie trzy wynikają z tego samego faktu geometrycznego: Księżyc krąży wokół Ziemi po orbicie **nachylonej do płaszczyzny ekliptyki**, świecąc wyłącznie światłem odbitym. Zmienia się zatem kąt, pod jakim patrzymy na jego oświetloną półkulę (fazy), sporadycznie trzy ciała ustawiają się w jednej linii (zaćmienia), a jego przyciąganie nieustannie rozciąga ziemską hydrosferę (pływy). W tej lekcji zbudujesz z tych trzech wątków jeden spójny mechanizm."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Księżyc w liczbach",
+          "items": [
+            { "value": "3474", "unit": "km", "label": "średnica Księżyca", "note": "ok. 1/4 średnicy Ziemi — to nietypowo duży satelita w skali Układu Słonecznego" },
+            { "value": "384 400", "unit": "km", "label": "średnia odległość od Ziemi", "note": "orbita jest elipsą: od ok. 363 tys. km w perygeum do ok. 405 tys. km w apogeum" },
+            { "value": "27,32", "unit": "doby", "label": "miesiąc syderyczny (gwiazdowy)", "note": "pełny obieg wokół Ziemi względem gwiazd" },
+            { "value": "29,53", "unit": "doby", "label": "miesiąc synodyczny", "note": "okres powtarzania się faz — od nowiu do nowiu" },
+            { "value": "5°09'", "label": "nachylenie orbity Księżyca do ekliptyki", "note": "przyczyna tego, że zaćmienia nie zdarzają się co miesiąc" },
+            { "value": "1/81", "label": "masa Księżyca w masach Ziemi", "note": "przyspieszenie grawitacyjne 1,62 m/s², czyli ok. 1/6 ziemskiego — stąd brak atmosfery" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Obrót synchroniczny Księżyca",
+          "text": "**Okres obrotu Księżyca wokół własnej osi jest dokładnie równy okresowi jego obiegu wokół Ziemi** (27,32 doby). Skutek: z Ziemi widzimy zawsze **tę samą półkulę Księżyca**, a druga strona pozostaje niewidoczna z powierzchni naszej planety. Ten stan nie jest przypadkiem — to efekt **hamowania pływowego**: siły pływotwórcze Ziemi przez miliardy lat wytraciły obrót satelity aż do zsynchronizowania go z obiegiem.",
+          "note": "Sformułowanie „Księżyc się nie obraca” jest **błędne** — gdyby się nie obracał, w ciągu miesiąca pokazałby nam kolejno całą swoją powierzchnię. Błędna jest też „ciemna strona Księżyca”: niewidoczna z Ziemi półkula jest oświetlana przez Słońce dokładnie tak samo jak widoczna, tyle że w przeciwnym rytmie (podczas naszej pełni panuje tam noc)."
+        },
+        {
+          "type": "compare",
+          "title": "Miesiąc syderyczny a miesiąc synodyczny",
+          "leftLabel": "Miesiąc syderyczny (gwiazdowy)",
+          "rightLabel": "Miesiąc synodyczny",
+          "rows": [
+            { "aspect": "Definicja", "left": "Czas pełnego obiegu Księżyca wokół Ziemi **względem gwiazd** — obrót o pełne 360°", "right": "Czas między dwoma kolejnymi **tymi samymi fazami**, np. od nowiu do nowiu" },
+            { "aspect": "Długość", "left": "**27,32 doby**", "right": "**29,53 doby**" },
+            { "aspect": "Dlaczego różne", "left": "Mierzy sam obieg, bez uwzględnienia ruchu Ziemi wokół Słońca", "right": "W ciągu miesiąca Ziemia przesuwa się po orbicie o ok. 27°, więc Księżyc musi **dogonić** nowe ustawienie względem Słońca i przebyć dodatkowy odcinek drogi" },
+            { "aspect": "Do czego służy", "left": "Opis rzeczywistego ruchu orbitalnego w mechanice nieba", "right": "Podstawa **kalendarzy księżycowych** (m.in. muzułmańskiego) oraz rachuby faz" }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Osiem faz Księżyca",
+          "caption": "Pełny cykl trwa jeden miesiąc synodyczny, czyli 29,53 doby. Opisy stron tarczy dotyczą obserwatora na półkuli północnej.",
+          "stages": [
+            { "name": "Nów", "text": "Księżyc znajduje się **między Ziemią a Słońcem**, zwrócony ku nam nieoświetloną półkulą. Jest na niebie za dnia, więc ginie w blasku Słońca i pozostaje **niewidoczny**. To jedyna faza, w której możliwe jest zaćmienie Słońca." },
+            { "name": "Sierp przybywający", "text": "Wąski **rogal oświetlony po prawej stronie**, widoczny nisko na zachodzie tuż po zachodzie Słońca. Bywa widoczna także ciemna część tarczy, słabo rozświetlona **światłem popielatym** — czyli światłem odbitym od Ziemi." },
+            { "name": "Pierwsza kwadra", "text": "Widzimy dokładnie **połowę tarczy, oświetloną po prawej stronie**. Księżyc jest wtedy oddalony od Słońca o 90° i góruje około godziny 18:00 czasu słonecznego." },
+            { "name": "Garb przybywający", "text": "Oświetlone jest już ponad pół tarczy (Księżyc **wypukły**), a jasność szybko rośnie. Faza dobrze widoczna wieczorem i przez większą część nocy." },
+            { "name": "Pełnia", "text": "**Ziemia znajduje się między Słońcem a Księżycem**, więc widzimy całą oświetloną półkulę. Księżyc wschodzi o zachodzie Słońca, góruje o północy i zachodzi o wschodzie Słońca — świeci przez całą noc. To jedyna faza, w której możliwe jest zaćmienie Księżyca." },
+            { "name": "Garb ubywający", "text": "Oświetlona powierzchnia zaczyna się kurczyć, a **granica światła i cienia (terminator) przesuwa się** na drugą stronę tarczy. Księżyc wschodzi coraz później w nocy." },
+            { "name": "Ostatnia (trzecia) kwadra", "text": "Znów widoczna jest **połowa tarczy, ale oświetlona po lewej stronie**. Księżyc wschodzi około północy, góruje ok. 6:00 i pozostaje widoczny jeszcze przed południem." },
+            { "name": "Sierp ubywający", "text": "Cienki **rogal oświetlony po lewej stronie**, widoczny nad ranem nisko na wschodzie. Po kilku dniach Księżyc zbliża się do Słońca i cykl zamyka się kolejnym nowiem." }
+          ]
+        },
+        {
+          "type": "mnemonic",
+          "title": "Jak rozpoznać, czy Księżyca przybywa",
+          "text": "**D jak Dorastający, C jak Cofający się.**",
+          "expansion": "Na półkuli północnej Księżyc przybywający ma oświetloną prawą stronę i przypomina literę **D**, a ubywający — oświetloną lewą stronę, czyli literę **C**. Uwaga: na **półkuli południowej reguła działa odwrotnie**, bo obserwator patrzy na tarczę „do góry nogami”, a w strefie międzyzwrotnikowej sierp bywa ustawiony poziomo, jak łódka. To dobra ilustracja zasady, że wygląd nieba zależy od szerokości geograficznej."
+        },
+        {
+          "type": "table",
+          "title": "Cztery główne fazy a układ ciał i widoczność",
+          "caption": "Godziny podano w czasie słonecznym miejscowym i w przybliżeniu; opis oświetlonej strony tarczy dotyczy półkuli północnej.",
+          "headers": ["Faza", "Układ Słońce–Ziemia–Księżyc", "Widoczna oświetlona część tarczy", "Górowanie", "Kiedy widoczny"],
+          "rows": [
+            ["Nów", "Księżyc między Ziemią a Słońcem (elongacja 0°)", "0% — tarcza niewidoczna", "ok. 12:00", "na niebie za dnia, ginie w blasku Słońca"],
+            ["Pierwsza kwadra", "Księżyc 90° na wschód od Słońca", "50% — oświetlona prawa połowa", "ok. 18:00", "od popołudnia do północy"],
+            ["Pełnia", "Ziemia między Słońcem a Księżycem (elongacja 180°)", "100% — cała tarcza", "ok. 24:00", "przez całą noc"],
+            ["Ostatnia kwadra", "Księżyc 90° na zachód od Słońca", "50% — oświetlona lewa połowa", "ok. 6:00", "od północy do przedpołudnia"]
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego zaćmienia nie zdarzają się co miesiąc",
+          "caption": "To najczęściej sprawdzany mechanizm w tej części działu. Cały problem sprowadza się do kąta 5°09'.",
+          "steps": [
+            {
+              "title": "1. Warunek konieczny: syzygia",
+              "text": "Zaćmienie wymaga ustawienia Słońca, Ziemi i Księżyca **w jednej linii**. Taki układ (syzygia) powtarza się co miesiąc synodyczny: w **nowiu** — zaćmienie Słońca, w **pełni** — zaćmienie Księżyca."
+            },
+            {
+              "title": "2. Ale orbita Księżyca jest nachylona",
+              "text": "Płaszczyzna orbity Księżyca tworzy z płaszczyzną ekliptyki kąt **5°09'**. Dlatego w większości nowi i pełni Księżyc przechodzi **powyżej albo poniżej** tarczy Słońca lub stożka cienia Ziemi — i nic się nie dzieje."
+            },
+            {
+              "title": "3. Potrzebne jest przejście przez węzeł",
+              "text": "**Węzły** to dwa punkty, w których orbita Księżyca przecina płaszczyznę ekliptyki. Zaćmienie zachodzi tylko wtedy, gdy syzygia wypadnie **w pobliżu węzła** — czyli gdy wszystkie trzy ciała leżą naprawdę w jednej płaszczyźnie."
+            },
+            {
+              "title": "4. Sezony zaćmień",
+              "text": "Linia węzłów „celuje” w Słońce dwa razy w roku, otwierając kilkutygodniowe **sezony zaćmień** powtarzające się co ok. **173 doby**. W skali roku daje to od **4 do 7 zaćmień** łącznie, w tym zawsze co najmniej dwa zaćmienia Słońca."
+            },
+            {
+              "title": "5. Powtarzalność: cykl saros",
+              "text": "Po **18 latach i ok. 11 dniach** układ Słońce–Ziemia–Księżyc powtarza się niemal identycznie. Ten cykl, zwany **saros**, znany był już w starożytnej Mezopotamii i pozwalał przewidywać zaćmienia bez znajomości ich przyczyny."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje zaćmień",
+          "caption": "Kluczowe rozróżnienie: w zaćmieniu Słońca cień rzuca Księżyc na Ziemię, w zaćmieniu Księżyca — Ziemia na Księżyc.",
+          "groups": [
+            {
+              "name": "Zaćmienia Słońca (tylko w nowiu)",
+              "description": "**Księżyc przesłania tarczę Słońca**, rzucając na Ziemię stożek cienia i otaczający go półcień. Zjawisko widoczne jest wyłącznie z wąskiego pasa na powierzchni Ziemi — pas całkowitego zaćmienia ma najwyżej ok. **270 km** szerokości, a faza całkowita trwa maksymalnie ok. **7,5 minuty**.",
+              "examples": [
+                "całkowite — obserwator znajduje się w stożku cienia; widoczna korona słoneczna",
+                "obrączkowe — Księżyc jest blisko apogeum, jego tarcza nie zakrywa całego Słońca i zostaje świetlisty pierścień",
+                "częściowe — obserwator znajduje się tylko w półcieniu; zakryta jest część tarczy Słońca"
+              ]
+            },
+            {
+              "name": "Zaćmienia Księżyca (tylko w pełni)",
+              "description": "**Księżyc wchodzi w stożek cienia Ziemi**. Ponieważ zaciemniany jest sam Księżyc, zjawisko widzą jednocześnie wszyscy obserwatorzy na półkuli, nad którą jest on w danej chwili nad horyzontem. Faza całkowita może trwać nawet ok. **1 godziny 45 minut**, a obserwacja jest całkowicie bezpieczna dla oczu.",
+              "examples": [
+                "całkowite — cała tarcza w stożku cienia; Księżyc przybiera miedzianoczerwoną barwę („krwawy Księżyc”) od światła załamanego w atmosferze Ziemi",
+                "częściowe — w cieniu znajduje się tylko część tarczy",
+                "półcieniowe — Księżyc wchodzi wyłącznie w półcień; spadek jasności jest ledwie zauważalny"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery klasyczne pomyłki. Po pierwsze: **nów to nie zaćmienie Słońca** — nów zdarza się co miesiąc, zaćmienie tylko wtedy, gdy nów wypadnie blisko węzła. Po drugie: **zaćmienie Księżyca zachodzi w pełni, a nie w nowiu** — w nowiu Księżyc jest po stronie Słońca, więc nie może wejść w cień Ziemi. Po trzecie: czerwona barwa zaćmionego Księżyca **nie pochodzi z Marsa ani od korony** — to światło słoneczne załamane i rozproszone w ziemskiej atmosferze. Po czwarte: **zaćmienie obrączkowe nie jest „słabszym zaćmieniem całkowitym”** — decyduje o nim odległość Księżyca od Ziemi, a nie położenie obserwatora."
+        },
+        {
+          "type": "definition",
+          "term": "Pływy morskie",
+          "text": "**Rytmiczne, cykliczne wahania poziomu wód oceanicznych** wywołane siłami pływotwórczymi Księżyca i — w mniejszym stopniu — Słońca. Podniesienie poziomu wody nazywamy **przypływem**, obniżenie — **odpływem**, a różnicę poziomów między nimi **amplitudą (skokiem) pływu**. Siła pływotwórcza Słońca stanowi tylko ok. **46%** siły pływotwórczej Księżyca: Słońce ma ogromną masę, ale jest niewspółmiernie dalej, a siła pływotwórcza maleje z **trzecią** potęgą odległości.",
+          "note": "Pływy dotyczą nie tylko oceanów. Odkształceniu ulega także **skorupa ziemska** (pływy skorupowe, rzędu kilkudziesięciu centymetrów) oraz atmosfera. W wąskich, lejkowatych ujściach rzek fala przypływu może wchodzić w górę rzeki jako gwałtowny wał wodny — zjawisko to nosi nazwę **boru pływowego**."
+        },
+        {
+          "type": "process",
+          "title": "Jak powstają pływy — mechanizm krok po kroku",
+          "caption": "Zwróć uwagę na krok 2: to pytanie „dlaczego wybrzuszenia są dwa” najczęściej sprawia kłopot.",
+          "steps": [
+            {
+              "title": "1. Przyciąganie Księżyca słabnie z odległością",
+              "text": "Strona Ziemi zwrócona ku Księżycowi jest przyciągana **najsilniej**, środek Ziemi słabiej, a strona przeciwna — **najsłabiej**. To właśnie ta **różnica** sił, a nie samo przyciąganie, nazywa się **siłą pływotwórczą**."
+            },
+            {
+              "title": "2. Powstają dwa wybrzuszenia wodne",
+              "text": "Woda po stronie zwróconej ku Księżycowi jest „podciągana” ku niemu, a woda po stronie przeciwnej **pozostaje w tyle** za odsuwającą się ku Księżycowi Ziemią. Hydrosfera zostaje więc **rozciągnięta wzdłuż linii Ziemia–Księżyc** i tworzy **dwa wybrzuszenia po przeciwnych stronach planety**."
+            },
+            {
+              "title": "3. Ziemia obraca się pod wybrzuszeniami",
+              "text": "Wybrzuszenia pozostają skierowane ku Księżycowi, a **planeta obraca się pod nimi**. Dany punkt wybrzeża przechodzi w ciągu doby przez oba wybrzuszenia i oba przewężenia — stąd typowo **dwa przypływy i dwa odpływy** na dobę (pływ półdobowy)."
+            },
+            {
+              "title": "4. Doba pływowa jest dłuższa od słonecznej",
+              "text": "W ciągu doby Księżyc przesuwa się po orbicie o ok. **13°**, więc Ziemia musi obrócić się o tyle dodatkowo, by ustawić dany punkt ponownie naprzeciw satelity. Dlatego **doba pływowa trwa 24 h 50 min**, a moment przypływu przesuwa się każdego dnia o ok. **50 minut**."
+            },
+            {
+              "title": "5. O wysokości decyduje ukształtowanie wybrzeża",
+              "text": "Na otwartym oceanie amplituda pływu wynosi zaledwie ok. **0,5–1 m**. Dopiero **wąskie, lejkowate zatoki spiętrzają falę pływową** (Zatoka Fundy — do ok. 16 m), a morza śródlądowe o utrudnionej wymianie wód, jak **Bałtyk czy Morze Śródziemne**, mają pływy znikome — na polskim wybrzeżu rzędu kilku centymetrów."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Pływy syzygijne a pływy kwadraturowe",
+          "leftLabel": "Pływy syzygijne (żywe)",
+          "rightLabel": "Pływy kwadraturowe (martwe)",
+          "rows": [
+            { "aspect": "Układ ciał", "left": "Słońce, Ziemia i Księżyc **w jednej linii**", "right": "Kierunki ku Słońcu i ku Księżycowi tworzą **kąt prosty**" },
+            { "aspect": "Faza Księżyca", "left": "**Nów i pełnia**", "right": "**Pierwsza i ostatnia kwadra**" },
+            { "aspect": "Składanie sił pływotwórczych", "left": "Siły Księżyca i Słońca **sumują się**", "right": "Siły częściowo **znoszą się** — wybrzuszenie słoneczne wypada tam, gdzie księżycowe przewężenie" },
+            { "aspect": "Amplituda", "left": "**Największa** w miesiącu", "right": "**Najmniejsza** w miesiącu" },
+            { "aspect": "Częstość", "left": "Dwa razy w miesiącu synodycznym", "right": "Dwa razy w miesiącu synodycznym, w odstępie ok. tygodnia od syzygijnych" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Pływy na świecie — od rekordów do morza bez pływów",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że rekordowe amplitudy występują zawsze tam, gdzie fala pływowa wchodzi w zwężający się, płytki zbiornik.",
+          "center": [35, -20],
+          "zoom": 2,
+          "markers": [
+            { "lat": 45.3, "lng": -64.5, "label": "Zatoka Fundy (Kanada)", "text": "**Rekord świata** — amplituda pływu dochodzi do ok. **16 m**. Zatoka ma kształt zwężającego się lejka, a czas własnych oscylacji jej wód jest bliski okresowi fali pływowej, co daje efekt **rezonansu**." },
+            { "lat": 48.636, "lng": -1.511, "label": "Mont-Saint-Michel (Francja)", "text": "Amplituda do ok. **14 m** w zatoce Świętego Malo. Przy odpływie morze cofa się o kilkanaście kilometrów, odsłaniając rozległą **równinę pływową**, a przypływ wraca bardzo szybko — stąd sława tego miejsca jako niebezpiecznego dla spacerowiczów." },
+            { "lat": 51.45, "lng": -2.6, "label": "Ujście Severn (Wielka Brytania)", "text": "Amplituda ok. **14–15 m** — druga wartość na świecie. W górę rzeki wędruje tu **bor pływowy**, czyli wał wodny wysokości do ok. 2 m, pokonujący kilkadziesiąt kilometrów w głąb lądu. Takie ujścia są rozważane jako lokalizacje **elektrowni pływowych**; najbardziej znana z nich, na rzece Rance w Bretanii, pracuje od 1966 r." },
+            { "lat": 61.22, "lng": -149.9, "label": "Cook Inlet, Anchorage (Alaska)", "text": "Druga po Zatoce Fundy amplituda w Ameryce Północnej — ok. **9–10 m**. Długa, wąska i płytka zatoka wciska falę pływową na coraz mniejszą przestrzeń, co podnosi jej wysokość." },
+            { "lat": -51.62, "lng": -69.22, "label": "Rio Gallegos (Argentyna)", "text": "Wybrzeże Patagonii nad Atlantykiem ma amplitudy sięgające ok. **10 m** — jedne z największych na półkuli południowej. Sprzyja im szeroki, płytki **szelf kontynentalny**." },
+            { "lat": 54.35, "lng": 18.65, "label": "Gdańsk (Morze Bałtyckie)", "text": "Pływy praktycznie **niezauważalne — rzędu kilku centymetrów**. Bałtyk jest morzem śródlądowym, połączonym z oceanem wyłącznie przez płytkie i wąskie Cieśniny Duńskie, więc fala pływowa nie ma jak do niego wniknąć. Wahania poziomu wody wywołuje tu głównie **wiatr (spiętrzenia sztormowe)**, a nie Księżyc." }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Zaćmienie Słońca może wystąpić wyłącznie wtedy, gdy Księżyc jest w fazie:",
+          "options": ["nowiu", "pierwszej kwadry", "pełni", "ostatniej kwadry"],
+          "correctIndex": 0,
+          "explanation": "Aby Księżyc mógł przesłonić tarczę Słońca, musi znaleźć się **między Ziemią a Słońcem** — a taki układ odpowiada dokładnie fazie **nowiu**. Zaćmienie Księżyca jest zjawiskiem odwrotnym: Księżyc wchodzi w cień Ziemi, więc musi być po przeciwnej stronie niż Słońce, czyli w **pełni**. Zauważ jednak, że nów zdarza się co miesiąc, a zaćmienie tylko wtedy, gdy dodatkowo wypadnie ono blisko węzła orbity Księżyca."
+        },
+        {
+          "type": "quiz",
+          "question": "Największe w miesiącu amplitudy pływów (pływy syzygijne) występują, gdy Księżyc jest w fazie:",
+          "options": [
+            "pierwszej lub ostatniej kwadry",
+            "nowiu lub pełni",
+            "wyłącznie pełni",
+            "sierpa przybywającego"
+          ],
+          "correctIndex": 1,
+          "explanation": "W nowiu i w pełni Słońce, Ziemia i Księżyc leżą **w jednej linii**, więc siły pływotwórcze obu ciał **sumują się** i amplituda pływu jest największa. W kwadrach kierunki ku Słońcu i ku Księżycowi tworzą kąt prosty, siły częściowo się znoszą i powstają najsłabsze w miesiącu **pływy kwadraturowe (martwe)**. Uwaga: w nowiu i w pełni pływ jest wysoki niezależnie od tego, czy dochodzi wtedy do zaćmienia."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego z powierzchni Ziemi widzimy zawsze tę samą półkulę Księżyca?",
+          "options": [
+            "Ponieważ Księżyc nie obraca się wokół własnej osi",
+            "Ponieważ okres obrotu Księżyca wokół osi jest równy okresowi jego obiegu wokół Ziemi",
+            "Ponieważ druga półkula Księżyca nigdy nie jest oświetlana przez Słońce",
+            "Ponieważ orbita Księżyca jest nachylona do ekliptyki pod kątem 5°09'"
+          ],
+          "correctIndex": 1,
+          "explanation": "To skutek **obrotu synchronicznego**: Księżyc obraca się wokół osi dokładnie w tym samym czasie, w którym okrąża Ziemię (27,32 doby), więc stale zwraca ku nam tę samą stronę. Odpowiedź 1 jest błędna — gdyby Księżyc się nie obracał, pokazałby nam w ciągu miesiąca całą swoją powierzchnię. Odpowiedź 3 myli „niewidoczną stronę” z „ciemną stroną”: niewidoczna półkula jest oświetlana tak samo, tylko w przeciwnym rytmie."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W poleceniach typu „wyjaśnij, dlaczego zaćmienia Słońca nie występują co miesiąc” pełną punktację daje odpowiedź **dwuczłonowa: nachylenie orbity + węzły** — „orbita Księżyca jest nachylona do ekliptyki pod kątem 5°09', dlatego w większości nowi Księżyc przechodzi nad lub pod tarczą Słońca; zaćmienie zachodzi tylko wtedy, gdy nów wypada w pobliżu węzła orbity”. Przy pływach zawsze wskazuj **siłę pływotwórczą jako różnicę sił przyciągania**, bo samo „przyciąganie Księżyca” nie tłumaczy drugiego wybrzuszenia. A w zadaniach z rysunkiem układu Słońce–Ziemia–Księżyc najpierw ustal fazę, a dopiero potem odpowiadaj — faza rozstrzyga zarówno o rodzaju możliwego zaćmienia, jak i o typie pływu."
+        }
+      ]
+    }
+  ]
+}

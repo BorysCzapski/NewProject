@@ -1,0 +1,2084 @@
+{
+  "topicSlug": "pedosfera-i-biosfera",
+  "lessons": [
+    {
+      "slug": "gleba-sklad-i-czynniki-glebotworcze",
+      "title": "Gleba — czym jest, z czego się składa i co ją tworzy",
+      "summary": "Definicja i skład gleby, rola próchnicy oraz sześć czynników glebotwórczych, które decydują o tym, jaka gleba powstanie w danym miejscu.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Cała żywność, którą zjadła ludzkość w swojej historii, pochodzi z warstwy o grubości najczęściej kilkunastu–kilkudziesięciu centymetrów. **Gleba** to najcieńsza i zarazem najbardziej złożona powłoka Ziemi: powstaje na styku litosfery, atmosfery, hydrosfery i biosfery, i bez żadnej z nich by nie istniała. Dlatego **pedosfera** — powłoka glebowa — jest w geografii traktowana jako lustro środowiska: patrząc na glebę, potrafisz odczytać klimat, skałę, rzeźbę i historię danego miejsca. W tej lekcji zbudujesz fundament: dowiesz się, co odróżnia glebę od zwykłej zwietrzeliny, z jakich faz się składa, czym naprawdę jest próchnica i jakie sześć czynników decyduje o tym, że w Puszczy Białowieskiej powstała gleba brunatna, a 300 km dalej na Lubelszczyźnie — czarnoziem."
+        },
+        {
+          "type": "definition",
+          "term": "Gleba",
+          "text": "**Powierzchniowa, biologicznie czynna warstwa skorupy ziemskiej**, powstała ze skały macierzystej w wyniku długotrwałego oddziaływania czynników glebotwórczych i charakteryzująca się **żyznością**, czyli zdolnością do zaopatrywania roślin w wodę, powietrze i składniki pokarmowe. Gleba jest **układem trójfazowym** (faza stała, ciekła i gazowa) i **ciałem dynamicznym** — nieustannie zmienia się w czasie.",
+          "note": "W kluczach CKE decydujące jest słowo „żyzność”. Rozdrobniona skała bez zdolności do odżywiania roślin to dopiero **zwietrzelina**, a nie gleba."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skład objętościowy przeciętnej gleby uprawnej w stanie optymalnego uwilgotnienia",
+          "items": [
+            {
+              "value": "45",
+              "unit": "%",
+              "label": "cząstki mineralne",
+              "note": "produkt wietrzenia skały macierzystej — szkielet gleby"
+            },
+            {
+              "value": "5",
+              "unit": "%",
+              "label": "materia organiczna",
+              "note": "w tym próchnica, żywe organizmy i nierozłożone szczątki"
+            },
+            {
+              "value": "25",
+              "unit": "%",
+              "label": "woda glebowa (roztwór glebowy)",
+              "note": "nośnik składników pokarmowych"
+            },
+            {
+              "value": "25",
+              "unit": "%",
+              "label": "powietrze glebowe",
+              "note": "uboższe w tlen, bogatsze w CO₂ niż atmosferyczne"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Zapamiętaj kluczową zależność: **woda i powietrze konkurują o tę samą przestrzeń porową** (razem ok. 50% objętości). Po ulewie woda wypiera powietrze — korzenie i mikroorganizmy duszą się z braku tlenu. W czasie suszy jest odwrotnie. Optymalna dla roślin gleba to taka, w której **pory duże (napowietrzające) i małe (retencjonujące wodę)** są w równowadze — a to zapewnia struktura **gruzełkowata**."
+        },
+        {
+          "type": "table",
+          "title": "Frakcje granulometryczne i ich wpływ na właściwości gleby",
+          "caption": "Skład granulometryczny (mechaniczny) to udział ziaren o różnej średnicy. Decyduje o przepuszczalności, retencji wody i zwięzłości gleby — a więc o tym, czy gleba jest „lekka”, czy „ciężka”.",
+          "headers": [
+            "Frakcja",
+            "Średnica ziaren",
+            "Właściwości",
+            "Konsekwencja dla roślin"
+          ],
+          "rows": [
+            [
+              "Części szkieletowe (żwir, kamienie)",
+              "> 2 mm",
+              "nie zatrzymują wody ani składników",
+              "balast — utrudniają uprawę"
+            ],
+            [
+              "Piasek",
+              "0,05–2 mm",
+              "bardzo przepuszczalny, dobrze napowietrzony, mała pojemność wodna",
+              "gleby lekkie: łatwe w uprawie, ale przesuszone i ubogie"
+            ],
+            [
+              "Pył",
+              "0,002–0,05 mm",
+              "umiarkowana przepuszczalność i duża pojemność wodna",
+              "gleby średnie — najkorzystniejsze rolniczo (np. lessy)"
+            ],
+            [
+              "Ił (części spławialne < 0,002 mm)",
+              "< 0,002 mm",
+              "ogromna powierzchnia właściwa, zatrzymuje wodę i jony, pęcznieje",
+              "gleby ciężkie: żyzne chemicznie, ale zbite, zimne i trudne w uprawie"
+            ]
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Próchnica (humus)",
+          "text": "**Bezpostaciowa, ciemna substancja organiczna** powstająca w wyniku **humifikacji** — biochemicznego przetworzenia obumarłych szczątków roślin i zwierząt przez edafon (organizmy glebowe). To nie to samo co cała martwa materia organiczna: próchnica jest jej **trwałym, przetworzonym produktem końcowym**. Nadaje glebie ciemną barwę, skleja cząstki w **strukturę gruzełkowatą**, zwiększa pojemność wodną i sorpcyjną (zatrzymuje jony pokarmowe) oraz stopniowo uwalnia azot, fosfor i siarkę w procesie **mineralizacji**.",
+          "note": "Zawartość próchnicy: gleby bielicowe ok. 1–2%, brunatne 2–3%, czarnoziemy nawet 4–8% w poziomie próchnicznym."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pojęcia, które uczniowie regularnie mylą: **zwietrzelina** (rozdrobniona skała, brak życia i żyzności) → **gleba** (zwietrzelina + próchnica + organizmy + struktura) → **próchnica** (tylko organiczna część gleby). Mylona bywa też **humifikacja** (tworzenie próchnicy — sprzyja jej chłód i umiarkowana wilgoć) z **mineralizacją** (rozkład próchnicy do prostych związków — sprzyja jej ciepło i dobre natlenienie). W klimacie równikowym mineralizacja jest tak szybka, że próchnica praktycznie nie zdąży się nagromadzić."
+        },
+        {
+          "type": "process",
+          "title": "Od nagiej skały do dojrzałej gleby",
+          "caption": "Proces glebotwórczy w wersji ogólnej. Kliknij kolejne etapy — CKE często pyta o kolejność, zwłaszcza o rolę organizmów pionierskich.",
+          "steps": [
+            {
+              "title": "1. Wietrzenie skały macierzystej",
+              "text": "**Wietrzenie fizyczne** rozdrabnia litą skałę (zamróz, insolacja, rozrost korzeni), a **wietrzenie chemiczne** zmienia jej skład — rozpuszcza węglany, hydrolizuje skalenie do minerałów ilastych, utlenia związki żelaza. Powstaje **zwietrzelina**: luźny materiał mineralny, który ma już pory zdolne pomieścić wodę i powietrze, ale nie ma jeszcze próchnicy."
+            },
+            {
+              "title": "2. Kolonizacja przez organizmy pionierskie",
+              "text": "Na zwietrzelinę wkraczają **porosty, glony i mchy** — organizmy o minimalnych wymaganiach. Wydzielane przez nie kwasy przyspieszają wietrzenie chemiczne, a ich obumarłe szczątki dostarczają **pierwszej materii organicznej**. To moment, w którym zwietrzelina staje się glebą inicjalną."
+            },
+            {
+              "title": "3. Humifikacja i gromadzenie próchnicy",
+              "text": "Bakterie, grzyby, dżdżownice i inne organizmy **edafonu** rozkładają szczątki roślinne. Część ulega mineralizacji, część — humifikacji. Próchnica gromadzi się w stropie profilu, ciemniejąc go i tworząc **poziom próchniczny (A)**. Rośnie żyzność, więc możliwa staje się roślinność coraz bardziej wymagająca: trawy, krzewy, drzewa."
+            },
+            {
+              "title": "4. Przemieszczanie substancji i różnicowanie profilu",
+              "text": "Wsiąkająca woda opadowa **wymywa** związki z górnej części profilu i **wytrąca** je niżej (lub — w klimacie suchym — podsiąka i wynosi sole ku górze). Gleba dzieli się na wyraźnie różne warstwy — **poziomy genetyczne**. To one nadają glebie indywidualność i pozwalają zaklasyfikować ją do konkretnego typu."
+            },
+            {
+              "title": "5. Gleba dojrzała (klimaksowa)",
+              "text": "Po setkach–tysiącach lat gleba osiąga **stan równowagi dynamicznej** z klimatem i roślinnością: ubytek i przyrost próchnicy się równoważą, profil przestaje się zasadniczo zmieniać. Powstała gleba **strefowa**, typowa dla danej strefy klimatyczno-roślinnej. Zmiana klimatu lub ingerencja człowieka natychmiast wytrąca ją z tej równowagi."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Sześć czynników glebotwórczych",
+          "caption": "Klasyczny zestaw (za W. Dokuczajewem, twórcą gleboznawstwa genetycznego, uzupełniony o człowieka). Gleba to funkcja tych sześciu zmiennych — zmień jedną, a powstanie inna gleba.",
+          "groups": [
+            {
+              "name": "Skała macierzysta (podłoże)",
+              "description": "Dostarcza **materiału mineralnego** i decyduje o składzie granulometrycznym, zasobności w składniki pokarmowe oraz odczynie gleby. Jej wpływ jest największy w glebach młodych i w glebach astrefowych — z czasem maleje na rzecz klimatu.",
+              "examples": [
+                "granit → gleby kwaśne, piaszczyste, ubogie",
+                "less → gleby pyłowe, żyzne",
+                "wapień → rędziny o odczynie zasadowym",
+                "glina zwałowa → gleby brunatne i płowe"
+              ]
+            },
+            {
+              "name": "Klimat",
+              "description": "**Najważniejszy czynnik w skali globalnej** — dlatego gleby układają się strefowo. Temperatura steruje tempem wietrzenia chemicznego oraz humifikacji i mineralizacji, a stosunek opadu do parowania decyduje o kierunku ruchu wody w profilu (przemywanie w dół czy podsiąkanie w górę).",
+              "examples": [
+                "opady > parowanie → wymywanie, gleby kwaśne",
+                "opady < parowanie → podsiąkanie, gleby zasolone",
+                "wysoka temperatura → szybka mineralizacja, mało próchnicy"
+              ]
+            },
+            {
+              "name": "Organizmy żywe",
+              "description": "Roślinność dostarcza materii organicznej i decyduje o **typie próchnicy**, a **edafon** (bakterie, grzyby, dżdżownice, nicienie, drobne stawonogi) ją przetwarza, miesza i napowietrza glebę. Bez organizmów proces glebotwórczy w ogóle się nie zaczyna.",
+              "examples": [
+                "igliwie sosny → kwaśna próchnica surowa",
+                "trawy stepowe → gęsta darń i próchnica typu mull",
+                "dżdżownice → mieszanie i tworzenie gruzełków"
+              ]
+            },
+            {
+              "name": "Rzeźba terenu",
+              "description": "Steruje **lokalnym rozkładem wody i materiału**. Na stokach woda spływa i zabiera cząstki gleby (erozja) — profil jest płytki; w zagłębieniach materiał się gromadzi, a woda zalega — gleby są głębokie, często oglejone. Wpływa też na nasłonecznienie (ekspozycja).",
+              "examples": [
+                "wypukły stok → gleby zerodowane, płytkie",
+                "dno doliny → gleby napływowe i bagienne",
+                "stok S vs N → różnice wilgotności i temperatury gleby"
+              ]
+            },
+            {
+              "name": "Czas",
+              "description": "Gleba dojrzewa. Im dłużej działają pozostałe czynniki, tym wyraźniej wykształcony jest profil i tym silniej klimat „zaciera” wpływ skały macierzystej. **Wiek gleby** to czas od odsłonięcia podłoża — dlatego gleby Polski są młode (rozwijają się dopiero od ustąpienia lądolodu), a gleby tropików liczą miliony lat.",
+              "examples": [
+                "gleba inicjalna: dziesiątki lat",
+                "gleba wykształcona: tysiące lat",
+                "ferralsole tropików: miliony lat, profil kilkudziesięciometrowy"
+              ]
+            },
+            {
+              "name": "Działalność człowieka (czynnik antropogeniczny)",
+              "description": "Może glebę **ulepszać** (nawożenie, wapnowanie, melioracje, orka, płodozmian) albo **niszczyć** (erozja po wylesieniu, zasolenie po nieumiejętnym nawadnianiu, zakwaszenie przez kwaśne opady, zabetonowanie). Gleby całkowicie przekształcone przez człowieka nazywamy **antropogenicznymi**.",
+              "examples": [
+                "gleby industrioziemne na hałdach",
+                "terra preta w Amazonii",
+                "gleby ogrodowe (hortisole)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Skała macierzysta a powstająca gleba",
+          "caption": "Zestaw, który warto znać na pamięć — pytania typu „na jakim podłożu powstała ta gleba” pojawiają się regularnie.",
+          "headers": [
+            "Skała macierzysta",
+            "Typ gleby",
+            "Charakterystyczna cecha",
+            "Przykład regionu w Polsce"
+          ],
+          "rows": [
+            [
+              "Piaski i żwiry sandrowe",
+              "gleby bielicowe i rdzawe",
+              "kwaśne, ubogie, przepuszczalne",
+              "Bory Tucholskie, Puszcza Kampinoska"
+            ],
+            [
+              "Glina zwałowa (morenowa)",
+              "gleby brunatne i płowe",
+              "średnio zwięzłe, urodzajne",
+              "Pojezierze Wielkopolskie, Pojezierze Mazurskie"
+            ],
+            [
+              "Less",
+              "czarnoziemy i gleby brunatne",
+              "pyłowe, głęboki poziom próchniczny",
+              "Wyżyna Lubelska, Wyżyna Sandomierska, Płaskowyż Głubczycki"
+            ],
+            [
+              "Wapienie i margle",
+              "rędziny",
+              "płytkie, szkieletowe, odczyn zasadowy",
+              "Wyżyna Krakowsko-Częstochowska, Niecka Nidziańska"
+            ],
+            [
+              "Mułki i iły rzeczne (aluwia)",
+              "mady",
+              "warstwowane, bardzo żyzne",
+              "Żuławy Wiślane, doliny Wisły i Odry"
+            ],
+            [
+              "Torfy i osady jeziorne",
+              "gleby bagienne (torfowe, murszowe)",
+              "duża zawartość materii organicznej, nadmiar wody",
+              "Biebrzański Park Narodowy, Polesie Lubelskie"
+            ]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Gleba w liczbach — dlaczego to zasób nieodnawialny w skali życia człowieka",
+          "items": [
+            {
+              "value": "100–400",
+              "unit": "lat",
+              "label": "czas powstania 1 cm gleby w klimacie umiarkowanym",
+              "note": "erozja może zmyć tę warstwę w jeden gwałtowny opad"
+            },
+            {
+              "value": "1000–10 000",
+              "unit": "lat",
+              "label": "czas wykształcenia dojrzałego profilu glebowego"
+            },
+            {
+              "value": "ok. 12 000",
+              "unit": "lat",
+              "label": "maksymalny wiek gleb w Polsce",
+              "note": "liczony od ustąpienia lądolodu zlodowacenia północnopolskiego"
+            },
+            {
+              "value": "ok. 11",
+              "unit": "% pow. lądów",
+              "label": "grunty orne świata",
+              "note": "reszta jest zbyt sucha, zimna, stroma, zasolona lub skalista"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Czynnik glebotwórczy a jego przejaw",
+          "instruction": "Połącz opisaną sytuację z czynnikiem glebotwórczym, który za nią odpowiada.",
+          "pairs": [
+            {
+              "left": "Na Wyżynie Lubelskiej powstały czarnoziemy, a na sandrze obok — bielice, mimo podobnego klimatu",
+              "right": "Skała macierzysta"
+            },
+            {
+              "left": "Ta sama skała daje bielice w tajdze, a ferralsole w strefie równikowej",
+              "right": "Klimat"
+            },
+            {
+              "left": "Pod litą darnią stepową gromadzi się gruba, ciemna warstwa próchnicy",
+              "right": "Organizmy żywe"
+            },
+            {
+              "left": "Na stromym stoku profil ma 20 cm, a u jego podnóża — 120 cm",
+              "right": "Rzeźba terenu"
+            },
+            {
+              "left": "Gleba na 50-letniej hałdzie ma tylko zalążek poziomu próchnicznego",
+              "right": "Czas"
+            },
+            {
+              "left": "Po wapnowaniu odczyn pola wzrósł z pH 4,5 do 6,5 w ciągu kilku lat",
+              "right": "Działalność człowieka"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie najlepiej wyjaśnia, dlaczego w wilgotnym lesie równikowym gleby są ubogie w próchnicę mimo ogromnej produkcji biomasy?",
+          "options": [
+            "Rośliny tropikalne nie zrzucają liści, więc materia organiczna nie trafia do gleby",
+            "Wysoka temperatura i wilgotność powodują bardzo szybką mineralizację, a obfite opady wymywają uwolnione składniki",
+            "Skały macierzyste strefy równikowej nie zawierają węgla organicznego",
+            "Brak edafonu uniemożliwia humifikację szczątków roślinnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "W stałym cieple i wilgoci rozkład materii organicznej jest niemal ciągły i błyskawiczny — dominuje **mineralizacja** nad **humifikacją**. Uwolnione składniki są natychmiast pobierane przez roślinność lub **wymywane** przez ulewne opady w głąb profilu. Dlatego niemal cały zapas biogenów tkwi w żywej biomasie, a nie w glebie — i po wykarczowaniu lasu gleba wyjaławia się w kilka sezonów."
+        },
+        {
+          "type": "quiz",
+          "question": "Gleba o składzie: 25% piasku, 45% pyłu, 30% iłu, 3% próchnicy, struktura gruzełkowata. Które określenie jest najtrafniejsze?",
+          "options": [
+            "Gleba lekka, przepuszczalna, o małej pojemności wodnej",
+            "Gleba szkieletowa, powstała na zwietrzelinie granitowej",
+            "Gleba średnio zwięzła o dobrej pojemności wodnej i sorpcyjnej, korzystna rolniczo",
+            "Gleba organiczna, wytworzona z torfu niskiego"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dominacja **frakcji pyłowej** przy znacznym udziale iłu daje glebę **średnio zwięzłą**: zatrzymuje wodę i jony (duża pojemność sorpcyjna dzięki iłowi i próchnicy), a jednocześnie nie jest zbita dzięki **strukturze gruzełkowatej**. To profil typowy dla gleb lessowych — najbardziej urodzajnych w Polsce."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw poprawnie porządkuje etapy procesu glebotwórczego?",
+          "options": [
+            "wietrzenie skały → kolonizacja przez porosty i mchy → gromadzenie próchnicy → wykształcenie poziomów genetycznych",
+            "gromadzenie próchnicy → wietrzenie skały → wykształcenie poziomów genetycznych → kolonizacja przez porosty",
+            "kolonizacja przez drzewa → wietrzenie skały → gromadzenie próchnicy → erozja profilu",
+            "wykształcenie poziomów genetycznych → wietrzenie skały → humifikacja → kolonizacja przez mchy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kolejność jest logiczna i przyczynowa: najpierw musi powstać **zwietrzelina** (materiał mineralny z porami), dopiero wtedy mogą ją zasiedlić **organizmy pionierskie** o minimalnych wymaganiach. Ich szczątki dają początek **próchnicy**, a dopiero długotrwały ruch wody w takim ośrodku **różnicuje profil na poziomy genetyczne**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu „wyjaśnij wpływ czynnika X na powstawanie gleby” CKE oczekuje **łańcucha przyczynowo-skutkowego z co najmniej dwoma ogniwami**, a nie samego stwierdzenia. Za odpowiedź „klimat wpływa na glebę” nie dostaniesz punktu. Za: „wysokie opady przewyższające parowanie powodują przemywanie profilu w dół, co wymywa zasady i prowadzi do zakwaszenia gleby” — tak. Buduj zdania według schematu: **przyczyna (element klimatu/skały/rzeźby) → mechanizm (ruch wody, tempo rozkładu, spływ) → skutek w glebie (odczyn, miąższość, zawartość próchnicy)**."
+        }
+      ]
+    },
+    {
+      "slug": "procesy-glebotworcze-i-profil-glebowy",
+      "title": "Procesy glebotwórcze i profil glebowy",
+      "summary": "Bielicowanie, brunatnienie, płowienie, proces darniowy, glejowy i laterytyzacja oraz zapis ich działania w poziomach genetycznych profilu.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gdy gleboznawca kopie **odkrywkę glebową** — pionowy wykop o głębokości 1,5–2 m — na jej ścianie widzi coś, czego nie widać z powierzchni: glebę podzieloną na wyraźnie różniące się warstwy. Ciemna u góry, popielata poniżej, rdzawa jeszcze niżej. Te warstwy to nie przypadkowe smugi, lecz **zapis procesów**, które przez tysiące lat przemieszczały substancje w profilu. Umiejętność odczytania profilu — „jasny poziom pod ściółką, a pod nim rdzawy” = bielicowanie w klimacie umiarkowanym chłodnym na podłożu piaszczystym — jest jedną z najczęściej sprawdzanych umiejętności maturalnych z pedosfery. W tej lekcji nauczysz się nazywać poziomy genetyczne i rozpoznawać sześć głównych procesów glebotwórczych po ich śladach."
+        },
+        {
+          "type": "definition",
+          "term": "Profil glebowy i poziom genetyczny",
+          "text": "**Profil glebowy** to pionowy przekrój przez glebę od powierzchni do niezmienionej skały macierzystej. Składa się z **poziomów genetycznych** — warstw różniących się barwą, strukturą, składem i zawartością próchnicy, które **powstały w wyniku procesu glebotwórczego** (a nie zostały nasypane). Układ i miąższość poziomów to „metryka” gleby: pozwala określić jej typ i warunki, w jakich powstała.",
+          "note": "Warstwę odróżnia od poziomu geneza: **warstwa** została naniesiona z zewnątrz (np. kolejne wylewy rzeki w madzie), **poziom genetyczny** wykształcił się na miejscu."
+        },
+        {
+          "type": "layers",
+          "title": "Poziomy genetyczne profilu glebowego",
+          "caption": "Układ pełny — żadna gleba nie ma wszystkich poziomów naraz. Kliknij warstwę, aby zobaczyć, co ją tworzy.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "O — poziom organiczny (ściółka)",
+              "range": "0–10 cm",
+              "text": "Nagromadzenie **nierozłożonych i częściowo rozłożonych szczątków roślinnych** leżących na powierzchni gleby: igliwia, liści, gałązek, mchu. Najgrubszy w lasach iglastych strefy umiarkowanej chłodnej (wolny rozkład) i w glebach bagiennych; w stepie i pod uprawą praktycznie nie występuje. W glebach organicznych (torfowych) jego miąższość liczy się w metrach.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "A — poziom próchniczny (akumulacyjny)",
+              "range": "kilka–100 cm",
+              "text": "Poziom **wymieszania próchnicy z materiałem mineralnym** — najciemniejszy w całym profilu i najważniejszy dla rolnictwa, bo tu koncentrują się korzenie i składniki pokarmowe. W bielicy ma 5–10 cm, w glebie brunatnej 20–30 cm, w czarnoziemie nawet 80–100 cm. Jego miąższość i barwa to pierwsza rzecz, którą oceniasz na zdjęciu profilu.",
+              "tone": "earth"
+            },
+            {
+              "name": "E — poziom eluwialny (wymywania, przemywania)",
+              "range": "5–40 cm",
+              "text": "Poziom **zubożony**: wsiąkająca woda wyniosła z niego związki żelaza, glinu, próchnicę i minerały ilaste w głąb profilu. Pozostał głównie odporny na wietrzenie kwarc, dlatego poziom jest **jasny — popielaty, białawy lub jasnoszary**. Występuje tylko tam, gdzie opady wyraźnie przewyższają parowanie: w glebach bielicowych (wyniesione żelazo i próchnica) i płowych (wyniesiony ił).",
+              "tone": "ice"
+            },
+            {
+              "name": "B — poziom iluwialny (wmywania, wzbogacania)",
+              "range": "20–100 cm",
+              "text": "Poziom **wzbogacony** o to, co zostało wymyte z poziomu E: związki żelaza i glinu (barwa **rdzawa, brunatna, ochrowa**), próchnica (barwa kawowa) albo minerały ilaste (poziom zwięzły, zbity). W skrajnych przypadkach wytrącone związki cementują poziom w twardą **orsztynową** skorupę, nieprzepuszczalną dla wody i korzeni. W glebach brunatnych poziom B powstaje bez poziomu E — przez wietrzenie na miejscu (**poziom B brunatnienia**).",
+              "tone": "heat"
+            },
+            {
+              "name": "C — skała macierzysta",
+              "range": "poniżej 1 m",
+              "text": "**Luźny lub słabo zwietrzały materiał, z którego powstała gleba**, praktycznie nietknięty procesem glebotwórczym: glina zwałowa, piasek sandrowy, less, aluwia. Nie zawiera próchnicy i nie ma struktury glebowej. Jego skład wciąż jednak rzutuje na całą glebę powyżej — stąd znaczenie skały macierzystej jako czynnika glebotwórczego.",
+              "tone": "neutral"
+            },
+            {
+              "name": "R — podłoże skalne (lita skała)",
+              "range": "zmienna głębokość",
+              "text": "**Niezwietrzała, lita skała podścielająca profil** — granit, wapień, piaskowiec. Występuje płytko w glebach górskich i rędzinach (już 20–40 cm od powierzchni), a na obszarach nizinnych z grubą pokrywą osadów może leżeć dziesiątki metrów niżej i wtedy w profilu w ogóle się jej nie opisuje.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsza pomyłka: **E ≠ B**. Zapamiętaj przez skojarzenie: **E jak Eluwialny = Ekstrakcja, coś stąd wyjęto** (poziom jasny, zubożony), **B = coś tu Bogaci się** (poziom ciemniejszy, rdzawy, zwięzły). Druga pomyłka: nie każda gleba ma wszystkie poziomy. **Bielica: O–A–E–B–C. Brunatna: A–B–C (bez E!). Czarnoziem: A–C (bardzo gruby A, brak wyraźnego B). Mada: A i kolejne warstwy aluwialne. Gleba inicjalna: A–C lub A–R.** Zestaw poziomów jest w zadaniu wskazówką rozpoznawczą — nie ozdobnikiem."
+        },
+        {
+          "type": "ordering",
+          "title": "Ułóż poziomy genetyczne od powierzchni w głąb",
+          "instruction": "Uporządkuj poziomy pełnego profilu gleby bielicowej, zaczynając od tego, który leży najwyżej.",
+          "items": [
+            "O — ściółka z nierozłożonego igliwia",
+            "A — ciemny poziom próchniczny",
+            "E — jasny, popielaty poziom wymywania",
+            "B — rdzawy poziom wmywania związków żelaza",
+            "C — piasek sandrowy jako skała macierzysta"
+          ],
+          "explanation": "Kolejność wynika z kierunku ruchu wody: opad przesiąka od góry w dół, po drodze rozkłada ściółkę (O), miesza próchnicę z materiałem mineralnym (A), **wymywa** związki z poziomu E i **wytrąca** je w poziomie B, aż dociera do nienaruszonej skały macierzystej (C)."
+        },
+        {
+          "type": "definition",
+          "term": "Proces glebotwórczy",
+          "text": "**Zespół przemian fizycznych, chemicznych i biologicznych, które nadają glebie jej charakterystyczny profil i właściwości.** O tym, który proces dominuje w danym miejscu, decydują przede wszystkim **stosunek opadu do parowania** (kierunek ruchu wody w profilu), **temperatura** (tempo wietrzenia i rozkładu) oraz **typ roślinności** (rodzaj dostarczanej materii organicznej). Ten sam materiał macierzysty pod różnymi procesami da zupełnie różne gleby.",
+          "note": "W jednej glebie zwykle działa kilka procesów naraz — mówimy o procesie **dominującym**, który nadaje glebie nazwę."
+        },
+        {
+          "type": "process",
+          "title": "Bielicowanie — jak powstaje najbardziej charakterystyczny profil strefy tajgi",
+          "caption": "Klasyczny mechanizm, o który CKE pyta najczęściej. Zwróć uwagę na rolę kwasów organicznych — to one, a nie sama woda, wynoszą żelazo.",
+          "steps": [
+            {
+              "title": "1. Kwaśna ściółka iglasta",
+              "text": "Igliwie sosny i świerka jest ubogie w zasady (wapń, magnez), za to bogate w żywice i garbniki. Rozkłada się wolno i **głównie przy udziale grzybów**, dając **próchnicę surową (mor)** o odczynie silnie kwaśnym (pH 3,5–4,5). Powstają ruchliwe **kwasy fulwowe**."
+            },
+            {
+              "title": "2. Przemywanie profilu",
+              "text": "W klimacie umiarkowanym chłodnym **opady przewyższają parowanie**, więc woda stale przesiąka przez profil w dół. Przechodząc przez kwaśną ściółkę, nasyca się kwasami organicznymi i staje się agresywnym roztworem zdolnym rozpuszczać związki, które w wodzie obojętnej są nierozpuszczalne."
+            },
+            {
+              "title": "3. Rozkład minerałów i wynoszenie żelaza (proces bielicowy właściwy)",
+              "text": "Kwasy fulwowe **rozkładają minerały ilaste** i tworzą z uwolnionym żelazem i glinem ruchliwe **związki kompleksowe (chelaty)**. Razem z rozpuszczoną próchnicą wędrują one w dół. Górna część profilu traci wszystko poza kwarcem, przez co przybiera **barwę popielatą** — stąd nazwa (bielica, ros. „podzoł” = podobny do popiołu)."
+            },
+            {
+              "title": "4. Wytrącanie w poziomie iluwialnym",
+              "text": "Głębiej, gdzie odczyn jest mniej kwaśny i zmienia się wilgotność, chelaty ulegają rozpadowi. Żelazo, glin i próchnica **wytrącają się**, tworząc **rdzawo-brunatny poziom B**. Jeśli wytrącanie jest bardzo intensywne, poziom cementuje się w **orsztyn** — twardą warstwę blokującą przesiąkanie wody i wrastanie korzeni."
+            },
+            {
+              "title": "5. Skutek: gleba kwaśna i uboga",
+              "text": "Powstaje profil **O–A–E–B–C**: kwaśny (pH 4–5), ubogi w składniki pokarmowe, o małej pojemności sorpcyjnej i małej zawartości próchnicy (1–2%). Bielice mają w Polsce najczęściej **V i VI klasę bonitacyjną** — nadają się głównie pod uprawę żyta, łubinu i ziemniaka albo pod las."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Bielicowanie a brunatnienie — dwa procesy strefy umiarkowanej",
+          "leftLabel": "Bielicowanie",
+          "rightLabel": "Brunatnienie",
+          "rows": [
+            {
+              "aspect": "Klimat",
+              "left": "umiarkowany chłodny, opady wyraźnie > parowanie",
+              "right": "umiarkowany ciepły wilgotny, umiarkowany nadmiar opadu"
+            },
+            {
+              "aspect": "Roślinność",
+              "left": "bór iglasty, wrzosowisko — ściółka uboga w zasady",
+              "right": "las liściasty i mieszany — ściółka bogata w wapń"
+            },
+            {
+              "aspect": "Skała macierzysta",
+              "left": "piaski, żwiry, ubogie kwaśne skały (granit, piaskowiec)",
+              "right": "gliny zwałowe, lessy, skały bogate w zasady"
+            },
+            {
+              "aspect": "Typ próchnicy",
+              "left": "próchnica surowa (mor), pH 3,5–4,5",
+              "right": "próchnica typu mull, pH 5,5–6,5"
+            },
+            {
+              "aspect": "Mechanizm",
+              "left": "rozkład minerałów ilastych i wynoszenie żelaza w postaci chelatów",
+              "right": "wietrzenie glinokrzemianów na miejscu i uwalnianie wodorotlenków żelaza otaczających ziarna"
+            },
+            {
+              "aspect": "Profil",
+              "left": "O–A–E–B–C, wyraźny jasny poziom E",
+              "right": "A–B–C, brak poziomu E, stopniowe przejścia barw"
+            },
+            {
+              "aspect": "Barwa poziomu podpowierzchniowego",
+              "left": "popielata (E), pod nią rdzawa (B)",
+              "right": "jednolicie brunatna w całym poziomie B"
+            },
+            {
+              "aspect": "Żyzność i klasa bonitacyjna",
+              "left": "mała; V–VI klasa",
+              "right": "średnia i duża; II–IV klasa"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Sześć procesów glebotwórczych — warunki, mechanizm i efekt",
+          "caption": "Tabela do nauki „na zwrotnicę”: z opisu warunków wyprowadzasz proces, z procesu — typ gleby.",
+          "headers": [
+            "Proces",
+            "Warunki, w jakich zachodzi",
+            "Mechanizm",
+            "Ślad w profilu",
+            "Powstający typ gleby"
+          ],
+          "rows": [
+            [
+              "Bielicowanie",
+              "klimat umiarkowany chłodny, opady > parowanie, bór iglasty, podłoże piaszczyste",
+              "kwasy fulwowe rozpuszczają i wynoszą żelazo, glin i próchnicę w dół",
+              "jasny poziom E nad rdzawym B, czasem orsztyn",
+              "gleby bielicowe (bielice), gleby rdzawe"
+            ],
+            [
+              "Brunatnienie",
+              "klimat umiarkowany ciepły wilgotny, las liściasty, gliny i lessy",
+              "wietrzenie glinokrzemianów, uwolnione wodorotlenki żelaza otulają ziarna mineralne",
+              "jednolicie brunatny poziom B, brak poziomu E",
+              "gleby brunatne"
+            ],
+            [
+              "Płowienie (lessivage)",
+              "podobne do brunatnienia, ale przy większym przemywaniu i podłożu pylasto-ilastym",
+              "**mechaniczne** przemieszczanie cząstek ilastych z góry w dół (bez rozkładu minerałów)",
+              "poziom Eet zubożony w ił nad zwięzłym, ilastym poziomem Bt",
+              "gleby płowe (dawniej: pseudobielicowe)"
+            ],
+            [
+              "Proces darniowy (czarnoziemny)",
+              "klimat umiarkowany i kontynentalny, roślinność trawiasta o gęstym systemie korzeniowym, podłoże zasobne w wapń",
+              "corocznie obumierające korzenie traw dostarczają materii organicznej w całej strefie korzenienia; wapń wiąże próchnicę w trwałe kompleksy",
+              "bardzo gruby, ciemny poziom A o strukturze gruzełkowatej",
+              "czarnoziemy, czarne ziemie, gleby darniowe"
+            ],
+            [
+              "Proces glejowy (oglejenie)",
+              "nadmiar wody: wysoki poziom wód gruntowych, dna dolin, zagłębienia bezodpływowe",
+              "brak tlenu → bakterie beztlenowe **redukują** żelazo trójwartościowe (Fe³⁺) do dwuwartościowego (Fe²⁺)",
+              "poziom G o barwie **sinozielonej, niebieskawej lub szarej**, rdzawe plamy w strefie wahań wody",
+              "gleby glejowe, gleby bagienne, mursze"
+            ],
+            [
+              "Laterytyzacja (ferralityzacja)",
+              "klimat równikowy i podrównikowy wilgotny: stała wysoka temperatura i opady > 1500 mm",
+              "bardzo intensywne wietrzenie chemiczne wymywa krzemionkę i zasady, a w profilu pozostają **wodorotlenki żelaza i glinu**",
+              "czerwony lub ceglasty profil o miąższości nawet kilkudziesięciu metrów, ubogi w próchnicę; po odsłonięciu twardnieje w **laterytową skorupę**",
+              "gleby laterytowe (ferralsole), czerwonoziemy"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Orsztyn pod Puszczą Notecką — kiedy proces glebotwórczy staje się problemem gospodarczym",
+          "region": "Nizina Wielkopolska, sandry pradoliny Noteci i Warty",
+          "text": "Rozległe pola piasków sandrowych porośnięte litym borem sosnowym to warunki modelowe dla bielicowania: kwaśna ściółka igliwia, przepuszczalne podłoże i nadwyżka opadu nad parowaniem. Po wielu tysiącach lat wytrącania w poziomie iluwialnym związki żelaza i próchnicy scementowały się w **orsztyn** — twardą, rudobrunatną skorupę o miąższości od kilku do kilkudziesięciu centymetrów. Warstwa ta jest **niemal nieprzepuszczalna**: zatrzymuje wodę opadową nad sobą (okresowe podmokłości w piaskach!) i **blokuje wrastanie korzeni głębiej**, przez co drzewa są płytko ukorzenione i podatne na wywroty w czasie wichur. Dlatego przy zakładaniu upraw leśnych na takich siedliskach stosuje się **głęboszowanie** — mechaniczne rozerwanie orsztynu — a w rolnictwie takie gleby zalicza się do najsłabszych klas bonitacyjnych.",
+          "takeaway": "Poziom iluwialny nie jest tylko cechą opisową profilu — jego scementowanie zmienia stosunki wodne i głębokość ukorzenienia, a więc realną wartość gospodarczą terenu."
+        },
+        {
+          "type": "matching",
+          "title": "Rozpoznaj proces po opisie profilu",
+          "instruction": "Do każdej obserwacji z odkrywki glebowej dopasuj proces glebotwórczy, który ją wywołał.",
+          "pairs": [
+            {
+              "left": "Jasnopopielata warstwa pod ściółką, poniżej rdzawa i zbita",
+              "right": "Bielicowanie"
+            },
+            {
+              "left": "Sinozielona barwa profilu i rdzawe plamy na głębokości 60 cm",
+              "right": "Proces glejowy"
+            },
+            {
+              "left": "Ciemny poziom próchniczny o miąższości 90 cm, struktura gruzełkowata",
+              "right": "Proces darniowy"
+            },
+            {
+              "left": "Ceglastoczerwony profil o miąższości kilkunastu metrów, prawie bez próchnicy",
+              "right": "Laterytyzacja"
+            },
+            {
+              "left": "Brak poziomu jasnego, płynne przejście od poziomu próchnicznego do jednolicie brunatnego",
+              "right": "Brunatnienie"
+            },
+            {
+              "left": "Poziom zubożony w ił nad wyraźnie zwięzłym, ilastym poziomem podpowierzchniowym",
+              "right": "Płowienie"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W odkrywce stwierdzono: pod 4-centymetrową ściółką igliwia cienki ciemny poziom, pod nim 15 cm warstwy niemal białej, a poniżej rdzawobrunatna warstwa zwięzła. Jaki jest to typ gleby i jaki proces ją ukształtował?",
+          "options": [
+            "Gleba brunatna, brunatnienie",
+            "Gleba bielicowa, bielicowanie",
+            "Czarnoziem, proces darniowy",
+            "Mada, akumulacja aluwialna"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rozstrzyga **jasny poziom E nad rdzawym poziomem B** przy kwaśnej ściółce iglastej. Barwa popielata bierze się z wymycia związków żelaza i próchnicy przez kwasy fulwowe — pozostał sam kwarc. Gleba brunatna nie ma poziomu E, czarnoziem ma gruby poziom A i nie ma jasnej warstwy, a mada jest warstwowana i występuje w dolinach rzek."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego proces glejowy prowadzi do powstania sinozielonych i szarych barw w profilu?",
+          "options": [
+            "Nadmiar wody wypłukuje z profilu całą próchnicę, odsłaniając barwę skały macierzystej",
+            "Woda gruntowa dostarcza rozpuszczonych soli miedzi barwiących glebę na zielono",
+            "W warunkach beztlenowych bakterie redukują żelazo z Fe³⁺ do Fe²⁺, a związki żelaza dwuwartościowego są sinozielone i szare",
+            "Niska temperatura gleb podmokłych zatrzymuje wietrzenie chemiczne, więc minerały zachowują pierwotną barwę"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczem jest **brak tlenu** przy nadmiarze wody. Beztlenowe bakterie czerpią tlen ze związków mineralnych, **redukując Fe³⁺ (rdzawe, utlenione) do Fe²⁺ (sinozielone, zredukowane)**. W strefie wahań zwierciadła wód gruntowych, gdzie tlen bywa okresowo dostępny, obok szarego tła pojawiają się **rdzawe plamy** — to najpewniejszy wskaźnik okresowego oglejenia."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie warunków najpełniej tłumaczy bardzo małą zawartość próchnicy w glebach laterytowych?",
+          "options": [
+            "Niskie opady i rzadka roślinność, które ograniczają dopływ materii organicznej",
+            "Wysoka temperatura przez cały rok przyspieszająca mineralizację oraz obfite opady wymywające uwolnione składniki",
+            "Kwaśny odczyn hamujący działalność edafonu i uniemożliwiający humifikację",
+            "Płytkie zaleganie litej skały ograniczające miąższość profilu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Gleby laterytowe powstają tam, gdzie dopływ biomasy jest **największy na Ziemi**, a mimo to próchnicy jest mało. Powód jest podwójny: **stałe ciepło** utrzymuje mineralizację na maksymalnym poziomie przez cały rok (brak zimowej przerwy w rozkładzie), a **opady > 1500 mm** wymywają uwolnione jony w głąb profilu. Profil laterytowy jest przy tym bardzo głęboki, więc odpowiedź o płytkiej skale jest fałszywa."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z fotografią lub schematem profilu rozwiązuj zawsze w tej kolejności: **(1) policz i nazwij poziomy** (czy jest jasny poziom E? czy poziom A jest gruby czy cienki?), **(2) odczytaj barwy** (popielata = wymywanie, rdzawa = wmywanie żelaza, sina = oglejenie, czerwona = laterytyzacja, czarna i gruba = proces darniowy), **(3) dopiero teraz nazwij proces i typ gleby**, **(4) na końcu wywnioskuj klimat i roślinność**. Ta kolejność chroni cię przed najczęstszym błędem — zgadywaniem typu gleby „z regionu” zamiast z tego, co faktycznie widać w profilu."
+        }
+      ]
+    },
+    {
+      "slug": "gleby-strefowe-swiata",
+      "title": "Gleby strefowe świata — od tundry po strefę równikową",
+      "summary": "Osiem typów gleb strefowych, ich związek z klimatem i roślinnością oraz wartość rolnicza — od gleb tundrowych po laterytowe.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gdyby zdjąć z globusa roślinność i miasta, a zostawić samą glebę, mapa Ziemi wciąż byłaby pasiasta. **Gleby strefowe** układają się w równoleżnikowe pasy, bo powstają pod dyktando klimatu — tego samego czynnika, który rozkłada strefowo temperaturę, opady i formacje roślinne. Ta prawidłowość jest tak silna, że **znając strefę klimatyczną, potrafisz przewidzieć typ gleby**, a znając typ gleby — odtworzyć klimat. Ta lekcja daje ci komplet ośmiu gleb strefowych wraz z mechanizmem, który je tworzy, i — co dla matury równie ważne — z ich realną wartością rolniczą. Zwróć uwagę na paradoks, który regularnie wraca w zadaniach: **najbujniejsza roślinność świata rośnie na jednych z najuboższych gleb, a najżyźniejsze gleby powstały pod trawą.**"
+        },
+        {
+          "type": "definition",
+          "term": "Gleby strefowe (zonalne)",
+          "text": "Gleby, których rozmieszczenie na kuli ziemskiej ma **układ równoleżnikowy** i jest uwarunkowane przede wszystkim **klimatem i związaną z nim roślinnością**. Wykształcają się na obszarach o wyrównanej rzeźbie, przy dobrym odwodnieniu i przy dostatecznie długim czasie działania procesów — czyli tam, gdzie żaden czynnik lokalny nie „przekrzykuje” klimatu.",
+          "note": "Przeciwieństwem są **gleby astrefowe (azonalne)**, w których decyduje czynnik miejscowy — skała macierzysta lub woda. Poznasz je w następnej lekcji."
+        },
+        {
+          "type": "zones",
+          "title": "Gleby strefowe od bieguna do równika",
+          "caption": "Kliknij strefę, aby zobaczyć proces, jaki ją ukształtował, i wartość rolniczą gleby. Kolejność odpowiada malejącej szerokości geograficznej.",
+          "zones": [
+            {
+              "name": "Gleby tundrowe (glejowe)",
+              "latitude": "60–80° N",
+              "text": "Klimat okołobiegunowy: krótkie, chłodne lato i **wieloletnia zmarzlina** kilkadziesiąt centymetrów pod powierzchnią. Zmarzlina uniemożliwia odpływ wody w głąb, więc rozmarzająca latem warstwa jest przesycona wodą — dominuje **proces glejowy**. Rozkład szczątków jest bardzo wolny, dlatego materia organiczna gromadzi się jako **torf**, ale nie humifikuje. Profil jest **płytki (20–50 cm)**, sinoszary, kwaśny. Wartość rolnicza znikoma — możliwa jedynie hodowla renifera i uprawy szklarniowe.",
+              "tone": "ice"
+            },
+            {
+              "name": "Gleby bielicowe (bielice, podzoły)",
+              "latitude": "50–65° N",
+              "text": "Strefa **tajgi** i borów strefy umiarkowanej chłodnej: opady wyraźnie przewyższają parowanie, ściółka iglasta daje kwaśną próchnicę surową. Dominuje **bielicowanie** — jasny poziom E nad rdzawym B. Gleby kwaśne (pH 4–5), ubogie w składniki pokarmowe, o zawartości próchnicy 1–2%. To najsłabsze gleby strefy umiarkowanej: w Polsce zajmują ok. 1/4 powierzchni (sandry, Bory Tucholskie, Kampinos) i są zwykle pod lasem lub uprawą żyta i ziemniaka.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Gleby brunatne i płowe",
+              "latitude": "40–55° N",
+              "text": "Strefa **lasów liściastych i mieszanych** klimatu umiarkowanego ciepłego wilgotnego. Ściółka liściasta jest bogata w wapń, więc próchnica jest łagodna (mull), a zamiast bielicowania działa **brunatnienie** (albo — przy silniejszym przemywaniu — **płowienie**). Profil A–B–C, odczyn lekko kwaśny do obojętnego, próchnicy 2–3%. To **główne gleby rolnicze Europy Zachodniej i Środkowej**, w Polsce najbardziej rozpowszechniony typ (ok. 50% powierzchni) — pszenica, buraki cukrowe, rzepak.",
+              "tone": "earth"
+            },
+            {
+              "name": "Czarnoziemy",
+              "latitude": "45–55° N (wnętrza kontynentów)",
+              "text": "Strefa **stepów i lasostepów** klimatu umiarkowanego kontynentalnego, głównie na **lessach**. Opady (400–600 mm) mniej więcej równoważą parowanie, więc profil nie jest trwale przemywany, a **proces darniowy** gromadzi próchnicę w całej strefie korzenienia traw. Efekt: **poziom A o miąższości 60–100 cm i zawartości próchnicy 4–8%**, struktura gruzełkowata, odczyn obojętny, wysoka pojemność sorpcyjna. **Najżyźniejsze gleby świata** — czarnoziemy Ukrainy, Kubania, prerii USA i Pampy.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Gleby kasztanowe (kasztanoziemy)",
+              "latitude": "35–50° N",
+              "text": "Strefa **stepów suchych**, na przejściu do półpustyń — Kazachstan, południowa Syberia, Wielkie Równiny USA, Mongolia. Opady (250–400 mm) są już **mniejsze od parowania**, więc roślinność trawiasta jest rzadsza, dopływ materii organicznej mniejszy, a próchnicy tylko 2–4%. Barwa jaśniejsza, kasztanowobrunatna. W profilu pojawia się **poziom wzbogacenia w węglan wapnia**, a lokalnie sole — skutek okresowego **podsiąkania**. Uprawa możliwa tylko z nawadnianiem i obarczona ryzykiem **zasolenia**.",
+              "tone": "heat"
+            },
+            {
+              "name": "Gleby pustynne i półpustynne (szaroziemy, sołonczaki)",
+              "latitude": "15–35° N i S",
+              "text": "Klimat zwrotnikowy suchy: parowanie wielokrotnie przewyższa opad. Roślinności prawie nie ma, więc **próchnicy poniżej 1%**, a profil jest ledwo wykształcony (A–C), często szkieletowy lub piaszczysty. Woda porusza się w profilu **ku górze** — podsiąkanie wynosi rozpuszczone sole i odparowuje je przy powierzchni, tworząc **wykwity solne (sołonczaki)** albo scementowane skorupy węglanowe. Gleby te są zasobne w składniki mineralne, ale **bezużyteczne bez nawadniania**, które z kolei grozi wtórnym zasoleniem.",
+              "tone": "rock"
+            },
+            {
+              "name": "Czerwonoziemy i gleby czerwonobrunatne",
+              "latitude": "10–30° (sawanny i strefa podzwrotnikowa wilgotna)",
+              "text": "Strefa o **sezonowym rytmie opadów**: pora deszczowa uruchamia intensywne wietrzenie chemiczne i wymywanie krzemionki, a pora sucha powoduje wytrącanie i utlenianie związków żelaza — stąd **czerwona lub czerwonobrunatna barwa**. Próchnicy 1–3%, odczyn kwaśny, mała zasobność w fosfor. Występują pod sawanną (Brazylia, Sahel, Dekan, Australia) oraz w klimacie podzwrotnikowym wilgotnym (południowe Chiny, południowo-wschodnie USA). Wymagają nawożenia, ale przy nim dają wysokie plony (np. **terra roxa** pod kawę w Brazylii).",
+              "tone": "heat"
+            },
+            {
+              "name": "Gleby laterytowe (ferralsole)",
+              "latitude": "10° N – 10° S",
+              "text": "Strefa **wilgotnego lasu równikowego**: temperatura stale powyżej 24°C i opady ponad 1500–2000 mm. Wietrzenie chemiczne działa nieprzerwanie od milionów lat i sięga dziesiątków metrów, wymywając krzemionkę i wszystkie zasady — zostają **wodorotlenki żelaza i glinu** nadające glebie barwę ceglastą. Mineralizacja jest tak szybka, że próchnicy jest **poniżej 2%**, a **niemal cały zapas składników tkwi w żywej biomasie lasu**. Po wykarczowaniu gleba wyjaławia się w 2–4 sezony, a odsłonięty lateryt twardnieje w skorupę.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Zawartość próchnicy w poziomie próchnicznym wybranych gleb strefowych",
+          "caption": "Wartości typowe (%). Zwróć uwagę: maksimum przypada nie na strefę o największej produkcji biomasy, lecz tam, gdzie rozkład materii organicznej jest wystarczająco wolny, by próchnica zdążyła się nagromadzić.",
+          "labels": [
+            "laterytowe",
+            "bielicowe",
+            "pustynne",
+            "brunatne",
+            "kasztanowe",
+            "czarnoziemy"
+          ],
+          "series": [
+            {
+              "name": "zawartość próchnicy",
+              "values": [
+                1.5,
+                1.5,
+                0.5,
+                2.5,
+                3.0,
+                6.0
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat, w którym powstały czarnoziemy",
+          "station": "Woroneż (51,7°N; 39,2°E)",
+          "caption": "Stacja leży w sercu rosyjskiego pasa czarnoziemów. Odczytaj amplitudę roczną, sumę opadów i rozkład opadów w roku, a potem sprawdź, czy potrafisz z nich wyprowadzić proces glebotwórczy.",
+          "temps": [
+            -7.5,
+            -7.5,
+            -2.0,
+            8.0,
+            15.0,
+            19.0,
+            21.0,
+            19.5,
+            13.5,
+            6.5,
+            -0.5,
+            -5.0
+          ],
+          "precip": [
+            40,
+            32,
+            32,
+            37,
+            48,
+            65,
+            70,
+            50,
+            50,
+            45,
+            45,
+            45
+          ],
+          "answer": {
+            "climate": "Klimat umiarkowany ciepły kontynentalny (strefa stepów i lasostepów)",
+            "reasoning": "Amplituda roczna wynosi ok. **28,5°C** (od −7,5°C w styczniu do 21°C w lipcu), a więc jest bardzo duża — to cecha **kontynentalizmu**. Suma opadów to ok. **560 mm** z wyraźnym **maksimum letnim**, typowym dla wnętrza kontynentu. Kluczowa dla gleby jest relacja opadu do parowania: latem wysoka temperatura sprawia, że parowanie **dorównuje opadowi**, więc profil nie jest trwale przemywany w dół i zasady (zwłaszcza wapń) zostają w glebie. Zimą i wczesną wiosną rozkład materii organicznej jest zahamowany przez mróz, dzięki czemu **humifikacja przeważa nad mineralizacją**. To dokładnie warunki **procesu darniowego** — powstają czarnoziemy o grubym poziomie próchnicznym."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Czarnoziemy a gleby kasztanowe — bliscy sąsiedzi o różnej wartości",
+          "leftLabel": "Czarnoziemy",
+          "rightLabel": "Gleby kasztanowe",
+          "rows": [
+            {
+              "aspect": "Strefa roślinna",
+              "left": "step wysokotrawiasty i lasostep",
+              "right": "step suchy, przejście do półpustyni"
+            },
+            {
+              "aspect": "Roczna suma opadów",
+              "left": "400–600 mm",
+              "right": "250–400 mm"
+            },
+            {
+              "aspect": "Relacja opad – parowanie",
+              "left": "zbliżona równowaga",
+              "right": "parowanie wyraźnie przewyższa opad"
+            },
+            {
+              "aspect": "Zawartość próchnicy w poziomie A",
+              "left": "4–8%",
+              "right": "2–4%"
+            },
+            {
+              "aspect": "Miąższość poziomu próchnicznego",
+              "left": "60–100 cm",
+              "right": "25–45 cm"
+            },
+            {
+              "aspect": "Barwa",
+              "left": "czarna, głęboko jednolita",
+              "right": "kasztanowobrunatna, jaśniejąca w dół"
+            },
+            {
+              "aspect": "Zagrożenia",
+              "left": "erozja wodna i wietrzna po zaoraniu darni",
+              "right": "zasolenie wtórne przy nawadnianiu, pustynnienie"
+            },
+            {
+              "aspect": "Rolnictwo",
+              "left": "pszenica, kukurydza, burak cukrowy bez nawadniania",
+              "right": "ekstensywny wypas, zboża tylko przy nawadnianiu"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Czarnoziemy Ukrainy — dlaczego jedna gleba decyduje o globalnym rynku zboża",
+          "region": "Nizina Wschodnioeuropejska, Ukraina i południowa Rosja",
+          "text": "Na obszarze od Podola po Kubań lądolód zostawił po sobie **grube pokrywy lessowe**, a klimat umiarkowany kontynentalny z suchym, ciepłym latem utrzymywał przez tysiące lat step wysokotrawiasty. Połączenie tych trzech czynników — **żyznej, pylastej skały macierzystej, równowagi opadu i parowania oraz gęstej darni traw** — dało czarnoziemy o poziomie próchnicznym sięgającym miejscami 120 cm i zawartości próchnicy do 8%. Właśnie na tych glebach XIX-wieczny gleboznawca **Wasilij Dokuczajew** sformułował teorię czynników glebotwórczych. Region jest dziś jednym z filarów światowego eksportu pszenicy, kukurydzy i słonecznika, ale zarazem przykładem podatności: po zaoraniu naturalnej darni gleba straciła ochronę przed wiatrem, a suche stepowe wiatry wywołują **erozję wietrzną** i wywiewanie najcenniejszej, próchnicznej warstwy wierzchniej.",
+          "takeaway": "Czarnoziem nie jest „darem natury” działającym niezależnie od klimatu — to produkt trwałej równowagi opadu, parowania i roślinności trawiastej. Zniszczenie darni tę równowagę przerywa, a odbudowa 1 cm próchnicznej warstwy trwa stulecia."
+        },
+        {
+          "type": "map-explore",
+          "title": "Gleby strefowe na mapie świata",
+          "caption": "Kliknij znacznik, aby zobaczyć, jaka gleba dominuje w danym regionie i dlaczego akurat ta.",
+          "center": [
+            25,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 69.35,
+              "lng": 88.2,
+              "label": "Norylsk, Syberia — gleby tundrowe",
+              "text": "Wieloletnia zmarzlina blokuje odpływ wody, latem rozmarza tylko cienka warstwa czynna. Dominuje **oglejenie** i akumulacja torfu. Profil płytki, sinoszary, rolniczo bezwartościowy."
+            },
+            {
+              "lat": 61.67,
+              "lng": 50.84,
+              "label": "Syktywkar, tajga rosyjska — gleby bielicowe",
+              "text": "Bór świerkowy na podłożu polodowcowym, opady przewyższają parowanie. Kwaśna próchnica surowa uruchamia **bielicowanie**: jasny poziom E nad rdzawym B. Rolnictwo marginalne, dominuje leśnictwo."
+            },
+            {
+              "lat": 49.59,
+              "lng": 34.55,
+              "label": "Połtawa, Ukraina — czarnoziemy",
+              "text": "Lessy plus step wysokotrawiasty plus klimat kontynentalny z równowagą opadu i parowania. **Proces darniowy** dał poziom próchniczny sięgający metra i zawartość próchnicy do 8% — gleby najżyźniejsze na świecie."
+            },
+            {
+              "lat": 41.59,
+              "lng": -93.62,
+              "label": "Des Moines, USA — czarnoziemy prerii",
+              "text": "Amerykański odpowiednik ukraińskiego pasa czarnoziemów: preria wysokotrawiasta na osadach polodowcowych i lessach. To rdzeń **Kukurydzianego Pasa (Corn Belt)**."
+            },
+            {
+              "lat": -33.89,
+              "lng": -60.57,
+              "label": "Pergamino, Argentyna — czarnoziemy Pampy",
+              "text": "Trzeci wielki obszar czarnoziemów świata, na półkuli południowej. Pampa wilgotna: step trawiasty na lessach, klimat umiarkowany ciepły. Podstawa argentyńskiego eksportu soi, kukurydzy i wołowiny."
+            },
+            {
+              "lat": 24.18,
+              "lng": 23.29,
+              "label": "Al-Kufra, Libia — gleby pustynne",
+              "text": "Parowanie potencjalne wielokrotnie przewyższa opad, roślinności prawie nie ma. Próchnicy poniżej 1%, w profilu **wykwity soli i skorupy węglanowe** od podsiąkania. Uprawa wyłącznie na wodzie kopalnej z warstw wodonośnych."
+            },
+            {
+              "lat": 23.13,
+              "lng": 113.26,
+              "label": "Kanton (Guangzhou), Chiny — czerwonoziemy",
+              "text": "Klimat podzwrotnikowy wilgotny monsunowy: silne wietrzenie chemiczne w porze deszczowej, utlenianie żelaza w porze suchej. Gleby kwaśne, ubogie w fosfor, ale intensywnie użytkowane pod ryż po nawożeniu i wapnowaniu."
+            },
+            {
+              "lat": 0.52,
+              "lng": 25.2,
+              "label": "Kisangani, Kongo — gleby laterytowe",
+              "text": "Serce wilgotnego lasu równikowego. Wietrzenie sięga dziesiątków metrów, próchnicy poniżej 2%, składniki krążą niemal wyłącznie w biomasie. Po wykarczowaniu gleba wyjaławia się w 2–4 sezony — stąd gospodarka **żarowo-odłogowa**."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć, na których najłatwiej stracić punkt. **(1) Czarnoziem ≠ czarna ziemia** — czarnoziem jest glebą **strefową** stepu na lessie, czarna ziemia powstaje **lokalnie**, po osuszeniu terenów podmokłych (np. Kujawy, Wielkopolska), i jest glebą śródstrefową. **(2) Czerwonoziem ≠ gleba laterytowa** — czerwonoziemy powstają przy **sezonowej** suszy (sawanna, strefa podzwrotnikowa), gleby laterytowe przy opadach **całorocznych**, mają większą miąższość i są jeszcze uboższe. **(3) Bujna roślinność ≠ żyzna gleba** — las równikowy rośnie na glebach ubogich, bo jego zapas składników jest w biomasie, a nie w glebie."
+        },
+        {
+          "type": "matching",
+          "title": "Gleba strefowa a jej warunki powstania",
+          "instruction": "Do opisu warunków dopasuj typ gleby strefowej, który się w nich wykształca.",
+          "pairs": [
+            {
+              "left": "Opady 350 mm, parowanie większe od opadu, step suchy, węglan wapnia w profilu",
+              "right": "Gleby kasztanowe"
+            },
+            {
+              "left": "Wieloletnia zmarzlina, nadmiar wody latem, wolny rozkład szczątków",
+              "right": "Gleby tundrowe"
+            },
+            {
+              "left": "Temperatura stale powyżej 24°C, opad 2000 mm, wietrzenie sięgające dziesiątków metrów",
+              "right": "Gleby laterytowe"
+            },
+            {
+              "left": "Less, step wysokotrawiasty, opad ok. 500 mm równoważący parowanie",
+              "right": "Czarnoziemy"
+            },
+            {
+              "left": "Las liściasty na glinie zwałowej, umiarkowany nadmiar opadu, próchnica typu mull",
+              "right": "Gleby brunatne"
+            },
+            {
+              "left": "Bór świerkowy na piasku, kwaśna próchnica surowa, opad wyraźnie większy od parowania",
+              "right": "Gleby bielicowe"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na obszarze o rocznej sumie opadów 480 mm, amplitudzie temperatury 27°C i naturalnej roślinności stepowej wykształciły się gleby o poziomie próchnicznym miąższości 80 cm. Który mechanizm najlepiej to tłumaczy?",
+          "options": [
+            "Opady wielokrotnie przewyższają parowanie, więc próchnica jest wmywana głęboko w profil",
+            "Gęsta darń traw corocznie dostarcza materii organicznej w całej strefie korzenienia, a równowaga opadu i parowania nie pozwala na wymywanie zasad",
+            "Wysoka temperatura latem przyspiesza mineralizację, dzięki czemu powstaje więcej próchnicy",
+            "Wieloletnia zmarzlina zatrzymuje wodę i chroni próchnicę przed rozkładem"
+          ],
+          "correctIndex": 1,
+          "explanation": "To opis **procesu darniowego**. Trawy stepowe mają gęsty, wiązkowy system korzeniowy sięgający kilkudziesięciu centymetrów i **corocznie obumierają**, więc materia organiczna dostaje się do gleby nie tylko z powierzchni, ale w całym profilu korzenienia. Jednocześnie brak nadmiaru opadu oznacza brak trwałego przemywania — **wapń zostaje w glebie i wiąże próchnicę w trwałe kompleksy**. Uwaga na odpowiedź C: mineralizacja próchnicę **rozkłada**, a nie tworzy."
+        },
+        {
+          "type": "quiz",
+          "question": "Rolnik po wykarczowaniu fragmentu lasu równikowego uzyskał w pierwszym roku wysokie plony, a w czwartym plony spadły niemal do zera. Jaka jest tego bezpośrednia przyczyna?",
+          "options": [
+            "Gleba laterytowa uległa zasoleniu na skutek podsiąkania wód gruntowych",
+            "Wieloletnia zmarzlina uniemożliwiła korzeniom sięgnięcie po wodę",
+            "Pierwsze plony pochodziły ze składników z popiołu po wypaleniu biomasy, a te zostały szybko wymyte przez ulewne opady z gleby ubogiej w próchnicę",
+            "Zwiększone nasłonecznienie przyspieszyło humifikację i zablokowało pobieranie azotu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Zapas składników pokarmowych lasu równikowego znajduje się **w biomasie, a nie w glebie**. Wypalenie uwalnia go jednorazowo w postaci popiołu — stąd wysoki plon w pierwszym sezonie. Gleba laterytowa ma jednak **małą pojemność sorpcyjną** (mało próchnicy, minerały ilaste zniszczone przez wietrzenie), więc opady rzędu 2000 mm rocznie **wymywają te składniki w ciągu 2–4 lat**. To właśnie dlatego rolnictwo żarowo-odłogowe wymaga przenoszenia pól i długiego odłogowania."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie gleba – strefa roślinna – proces glebotwórczy jest w całości poprawne?",
+          "options": [
+            "gleby bielicowe – tajga – bielicowanie",
+            "czarnoziemy – wilgotny las równikowy – laterytyzacja",
+            "gleby brunatne – step suchy – proces darniowy",
+            "gleby laterytowe – tundra – proces glejowy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tylko pierwszy zestaw jest spójny: **tajga** dostarcza kwaśnej ściółki iglastej, klimat umiarkowany chłodny zapewnia nadwyżkę opadu nad parowaniem, a efektem jest **bielicowanie** i gleby bielicowe. W pozostałych opcjach pomieszano strefy: czarnoziemy tworzy step (nie las równikowy), gleby brunatne — las liściasty (nie step suchy), a gleby laterytowe — strefa równikowa (nie tundra)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Do zadań o glebach strefowych używaj jednego, uniwersalnego klucza: **relacji opadu do parowania**. Opad ≫ parowanie → przemywanie w dół → gleby **kwaśne i wymyte** (bielicowe, laterytowe). Opad ≈ parowanie → brak przemywania → gleby **zasobne w zasady i próchnicę** (czarnoziemy). Opad ≪ parowanie → **podsiąkanie ku górze** → gleby z **węglanami i solami** (kasztanowe, pustynne, sołonczaki). Ten jeden schemat pozwala poprawnie odpowiedzieć nawet wtedy, gdy nie pamiętasz nazwy gleby — a w poleceniach typu „uzasadnij” właśnie ten mechanizm jest punktowany."
+        }
+      ]
+    },
+    {
+      "slug": "gleby-astrefowe-zyznosc-i-degradacja",
+      "title": "Gleby astrefowe, żyzność i degradacja gleb",
+      "summary": "Mady, rędziny, gleby bagienne i wulkaniczne, różnica między żyznością a urodzajnością, bonitacja oraz zagrożenia gleb i sposoby ich ochrony.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa gleb strefowych to dopiero szkielet. W rzeczywistym krajobrazie klimat bywa **przekrzyczany przez czynnik lokalny**: przez wapienne podłoże, przez rzekę, która co roku zostawia świeży muł, przez wodę gruntową stojącą tuż pod powierzchnią albo przez popiół z wulkanu. Powstają wtedy gleby, które nie układają się w pasy — a bywają najżyźniejsze w całym regionie. W tej lekcji poznasz je, a potem nauczysz się **wyceniać glebę**: odróżniać jej naturalny potencjał od faktycznego plonu i czytać polskie klasy bonitacyjne. Na koniec zajmiemy się najpoważniejszym problemem pedosfery — tym, że gleba, która powstaje 400 lat, może zniknąć w ciągu jednego sezonu."
+        },
+        {
+          "type": "definition",
+          "term": "Gleby astrefowe (azonalne) i śródstrefowe (intrazonalne)",
+          "text": "**Gleby astrefowe** to gleby, o których charakterze decyduje **czynnik lokalny — skała macierzysta lub woda — a nie klimat**. Występują wyspowo, w różnych strefach klimatycznych, wszędzie tam, gdzie pojawi się dany czynnik: mady w każdej dolinie rzecznej, rędziny na każdym wychodni wapienia. **Gleby śródstrefowe** są odmianą pośrednią: występują **w obrębie określonej strefy**, ale tylko w miejscach o szczególnych warunkach miejscowych (np. czarne ziemie po osuszonych zagłębieniach, sołonczaki w obniżeniach strefy suchej).",
+          "note": "Test rozstrzygający: zapytaj, co się stanie, gdy zmienisz klimat, a zostawisz podłoże. Gleba strefowa zmieni się w inną. Gleba astrefowa — pozostanie sobą."
+        },
+        {
+          "type": "classification",
+          "title": "Główne gleby astrefowe i śródstrefowe",
+          "caption": "Zwróć uwagę, że aż trzy z nich należą do najżyźniejszych na Ziemi — mimo że powstały poza „normalnym” układem strefowym.",
+          "groups": [
+            {
+              "name": "Mady (gleby aluwialne, fluwisole)",
+              "description": "Powstają w **dolinach rzecznych i deltach** z materiału naniesionego przez wodę podczas wylewów. Ich profil jest **warstwowany** (kolejne wylewy = kolejne warstwy), a nie podzielony na poziomy genetyczne. Są zasobne w składniki pokarmowe i pył, mają dobre stosunki wodne — należą do **najżyźniejszych gleb świata**. Wadą jest ryzyko powodzi i, w madach ciężkich, trudna uprawa.",
+              "examples": [
+                "Żuławy Wiślane",
+                "doliny Wisły, Odry i Warty",
+                "delta Nilu",
+                "Nizina Gangesu i Brahmaputry",
+                "Nizina Chińska"
+              ]
+            },
+            {
+              "name": "Rędziny",
+              "description": "Wytworzone ze zwietrzeliny **skał węglanowych i gipsowych** — wapieni, margli, dolomitów, kredy. Są **płytkie i szkieletowe** (dużo okruchów skalnych), o odczynie obojętnym lub zasadowym i dużej zawartości wapnia, który wiąże próchnicę. Trudne w uprawie mechanicznej i podatne na przesuszenie, ale zasobne — dają dobre plony pszenicy, jęczmienia, rzepaku, a także winorośli i tytoniu.",
+              "examples": [
+                "Wyżyna Krakowsko-Częstochowska",
+                "Niecka Nidziańska",
+                "Góry Świętokrzyskie",
+                "Pieniny",
+                "region Szampanii we Francji"
+              ]
+            },
+            {
+              "name": "Gleby bagienne (torfowe, mułowe, murszowe)",
+              "description": "Powstają przy **stałym nadmiarze wody**, który blokuje dostęp tlenu. Materia organiczna nie rozkłada się do końca i gromadzi jako **torf**. Dominuje **proces glejowy** i akumulacja organiczna. W stanie naturalnym rolniczo bezużyteczne, ale po osuszeniu dają cenne łąki i pastwiska — kosztem **murszenia i zanikania torfu** oraz emisji dwutlenku węgla.",
+              "examples": [
+                "Bagna Biebrzańskie",
+                "Polesie Lubelskie",
+                "Bagna Wasiugańskie na Syberii",
+                "Pantanal w Ameryce Południowej"
+              ]
+            },
+            {
+              "name": "Gleby wulkaniczne (andosole)",
+              "description": "Rozwijają się na **popiołach, tufach i lawach wulkanicznych**. Świeży materiał piroklastyczny jest niezwykle bogaty w fosfor, potas, wapń i magnez oraz ma bardzo dobrą strukturę i pojemność wodną — stąd **wyjątkowa żyzność**. To ona tłumaczy, dlaczego ludzie osiedlają się gęsto u podnóży czynnych wulkanów mimo oczywistego zagrożenia.",
+              "examples": [
+                "Jawa i Bali w Indonezji",
+                "Wyżyna Meksykańska",
+                "okolice Wezuwiusza i Etny",
+                "Wyżyna Etiopska",
+                "Kostaryka i Gwatemala"
+              ]
+            },
+            {
+              "name": "Gleby inicjalne i słabo wykształcone",
+              "description": "Gleby **bardzo młode lub stale odmładzane** przez erozję, o profilu ograniczonym do cienkiego poziomu próchnicznego na skale (A–C lub A–R). Powstają na stromych stokach górskich, na wydmach, świeżych osuwiskach, hałdach i zwałowiskach. Mała żyzność wynika tu z **braku czasu**, a nie z klimatu.",
+              "examples": [
+                "gleby wysokogórskie w Tatrach",
+                "gleby wydmowe na mierzejach",
+                "gleby na hałdach pokopalnianych",
+                "gleby na świeżych osuwiskach"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Żyzność a urodzajność — dwa pojęcia, jedna gleba",
+          "leftLabel": "Żyzność",
+          "rightLabel": "Urodzajność",
+          "rows": [
+            {
+              "aspect": "Czym jest",
+              "left": "**naturalna zdolność gleby** do zaopatrywania roślin w wodę, powietrze i składniki pokarmowe",
+              "right": "**faktyczna zdolność do wydania plonu** w danych warunkach i przy danym sposobie gospodarowania"
+            },
+            {
+              "aspect": "Od czego zależy",
+              "left": "od cech samej gleby: zawartości próchnicy, składu granulometrycznego, struktury, odczynu, pojemności sorpcyjnej",
+              "right": "od żyzności **oraz** od klimatu, rzeźby, poziomu agrotechniki, nawożenia, melioracji i doboru roślin"
+            },
+            {
+              "aspect": "Czy człowiek może ją zmienić",
+              "left": "tak, ale wolno — przez nawożenie organiczne, wapnowanie, poprawę struktury",
+              "right": "tak, szybko — samą zmianą agrotechniki, nawadniania czy odmiany rośliny"
+            },
+            {
+              "aspect": "Przykład rozbieżności",
+              "left": "czarnoziem na suchym, wietrznym stepie bez nawadniania jest **żyzny**",
+              "right": "…ale mało **urodzajny**, bo brakuje wody w okresie wegetacji"
+            },
+            {
+              "aspect": "Przykład odwrotny",
+              "left": "gleba bielicowa w Holandii jest z natury **mało żyzna**",
+              "right": "…lecz bardzo **urodzajna** dzięki nawożeniu, melioracjom i wysokiej kulturze rolnej"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Bonitacja gleb",
+          "text": "**Urzędowa ocena jakości gleby** dokonywana na podstawie jej cech naturalnych: typu i rodzaju gleby, składu granulometrycznego, miąższości poziomu próchnicznego, stosunków wodnych oraz położenia w rzeźbie terenu. W Polsce grunty orne dzieli się na **klasy od I (najlepsze) do VI (najsłabsze)**, z podklasami IIIa, IIIb, IVa, IVb oraz klasą VIz (grunty pod zalesienie). Bonitacja jest podstawą podatku rolnego i przepisów o **ochronie gruntów rolnych** — wyłączenie gleb klas I–III z produkcji rolnej wymaga zgody i opłat.",
+          "note": "Uzupełnieniem bonitacji są **kompleksy przydatności rolniczej gleb** (np. pszenny bardzo dobry, żytni słaby), które mówią nie tylko „jak dobra”, ale i „pod co” nadaje się gleba."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Przybliżona struktura klas bonitacyjnych gruntów ornych w Polsce",
+          "caption": "Wartości przybliżone (udział w powierzchni gruntów ornych, %). Wniosek maturalny: w Polsce dominują gleby średnie i słabe — klasy I i II to razem ok. 3–4% gruntów ornych, głównie czarnoziemy Lubelszczyzny, mady Żuław i gleby lessowe Wyżyny Sandomierskiej.",
+          "labels": [
+            "klasa I",
+            "klasa II",
+            "klasa III",
+            "klasa IV",
+            "klasa V",
+            "klasa VI"
+          ],
+          "series": [
+            {
+              "name": "udział w gruntach ornych",
+              "values": [
+                0.4,
+                3.0,
+                22.0,
+                40.0,
+                22.0,
+                12.6
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uwaga na trzy pułapki. **(1) Żyzność ≠ urodzajność** — żyzność to potencjał gleby, urodzajność to efekt osiągany razem z klimatem i pracą człowieka. W poleceniu „wyjaśnij, dlaczego mimo żyznych gleb plony są niskie” szukaj przyczyn **poza glebą**: susza, brak nawozów, erozja, konflikt. **(2) Klasa bonitacyjna I to najlepsza, nie najgorsza** — numeracja jest odwrotna niż intuicja. **(3) Mada nie ma poziomów genetycznych, tylko warstwy** — jej profil jest efektem kolejnych wylewów, a nie procesu glebotwórczego działającego na miejscu."
+        },
+        {
+          "type": "table",
+          "title": "Formy degradacji gleb — przyczyny, mechanizm, skutki",
+          "caption": "Degradacja to pogorszenie właściwości gleby; jej skrajną postacią jest **dewastacja** — całkowita utrata zdolności produkcyjnej.",
+          "headers": [
+            "Forma degradacji",
+            "Bezpośrednia przyczyna",
+            "Mechanizm",
+            "Główne obszary występowania"
+          ],
+          "rows": [
+            [
+              "Erozja wodna",
+              "usunięcie okrywy roślinnej na stoku, orka wzdłuż spadku, ulewne opady",
+              "spływ powierzchniowy zmywa cząstki gleby (erozja powierzchniowa), a skoncentrowany strumień żłobi żłobiny i wąwozy (erozja liniowa)",
+              "Wyżyna Lubelska i Roztocze (wąwozy lessowe), Karpaty, Wyżyna Lessowa w Chinach, Etiopia, Haiti"
+            ],
+            [
+              "Erozja wietrzna (deflacja)",
+              "zaoranie darni na obszarach suchych i wietrznych, brak zadrzewień śródpolnych",
+              "wiatr wywiewa najdrobniejsze i najcenniejsze cząstki — pył i próchnicę — z odsłoniętej, przesuszonej gleby",
+              "Wielkie Równiny USA, Kazachstan, Sahel, w Polsce Wielkopolska i Kujawy"
+            ],
+            [
+              "Zasolenie",
+              "nadmierne nawadnianie bez drenażu w klimacie suchym",
+              "podniesienie wód gruntowych i podsiąkanie kapilarne wynoszą sole ku powierzchni, gdzie woda odparowuje, a sole zostają",
+              "Azja Środkowa (dorzecze Amu-darii i Syr-darii), Pakistan, dolina Indusu, Kalifornia, Irak"
+            ],
+            [
+              "Pustynnienie",
+              "wypas ponad pojemność pastwisk, wylesianie, uprawa na skraju strefy suchej, susze",
+              "utrata okrywy roślinnej → wzrost albedo i spadek retencji → mniejsze parowanie i opady lokalne → dalszy zanik roślinności (sprzężenie zwrotne dodatnie)",
+              "Sahel, obrzeża pustyni Gobi, Azja Środkowa, północno-wschodnia Brazylia"
+            ],
+            [
+              "Zakwaszenie",
+              "kwaśne opady (SO₂ i NO_x), nawozy amonowe, wymywanie wapnia",
+              "spadek pH uruchamia toksyczny glin ruchomy i pogarsza dostępność fosforu; ginie edafon, rozpada się struktura gruzełkowata",
+              "Polska (ok. połowa gleb wymaga wapnowania), Skandynawia, Europa Środkowa, wschodnie Chiny"
+            ],
+            [
+              "Degradacja chemiczna i mechaniczna",
+              "metale ciężkie z hutnictwa i transportu, wycieki, ubijanie ciężkim sprzętem, zabudowa",
+              "skażenie wchodzi do łańcucha pokarmowego; ugniecenie niszczy pory, a **uszczelnienie powierzchni** trwale wyłącza glebę z obiegu",
+              "okręg górnośląski, Legnicko-Głogowski Okręg Miedziowy, strefy podmiejskie"
+            ]
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Zasolenie wtórne — jak nawadnianie niszczy glebę, którą miało uratować",
+          "caption": "Modelowy przykład degradacji wywołanej działaniem, które w założeniu było ulepszaniem. Prześledź łańcuch — CKE pyta o niego przy Azji Środkowej i Jeziorze Aralskim.",
+          "steps": [
+            {
+              "title": "1. Woda do nawodnień zawsze zawiera sole",
+              "text": "Nawet „słodka” woda rzeczna zawiera rozpuszczone sole (rzędu 0,2–0,5 g na litr). Przy dawce nawodnieniowej rzędu tysiąca milimetrów rocznie na hektar trafia **kilka ton soli w ciągu roku**. Dopóki woda odpływa w głąb, sole są wymywane; problem zaczyna się, gdy odpływu nie ma."
+            },
+            {
+              "title": "2. Brak drenażu podnosi zwierciadło wód gruntowych",
+              "text": "Nadmiar wody podanej na pole, przy nieszczelnych kanałach i braku systemu odwadniającego, powoduje **stopniowe podnoszenie się zwierciadła wód gruntowych** — czasem o metr rocznie. Gdy zwierciadło zbliży się na 1–2 m do powierzchni, uruchamia się mechanizm z kolejnego kroku."
+            },
+            {
+              "title": "3. Podsiąkanie kapilarne wynosi roztwór ku górze",
+              "text": "W klimacie suchym **parowanie wielokrotnie przewyższa opad**. Ubytek wody przy powierzchni jest natychmiast uzupełniany przez wodę wciąganą siłami kapilarnymi z płytko leżącego zwierciadła. Kierunek ruchu wody w profilu odwraca się: zamiast w dół — **w górę**."
+            },
+            {
+              "title": "4. Woda odparowuje, sole zostają",
+              "text": "Przy powierzchni woda przechodzi w parę, ale **rozpuszczone sole nie parują**. Gromadzą się w poziomie próchnicznym i przy powierzchni, tworząc widoczne **białe wykwity solne**. Proces jest kumulatywny: każdy kolejny sezon nawodnień dokłada nową porcję."
+            },
+            {
+              "title": "5. Susza fizjologiczna i porzucenie pola",
+              "text": "Stężony roztwór glebowy ma wysokie **ciśnienie osmotyczne** — korzeń nie jest w stanie pobrać z niego wody, mimo że woda w glebie jest. Roślina więdnie w mokrej glebie (**susza fizjologiczna**). Plony spadają, a przy zasoleniu powyżej kilku promili pole trzeba porzucić. Odsalanie wymaga kosztownego drenażu i przepłukiwania — często droższego niż wartość ziemi."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Dust Bowl — jak zaoranie prerii zamieniło spichlerz w pustynię pyłową",
+          "region": "Wielkie Równiny, USA (Oklahoma, Teksas, Kansas, Kolorado), lata 30. XX w.",
+          "text": "Na przełomie XIX i XX w. na Wielkich Równinach zaorano miliony hektarów **prerii niskotrawiastej (suchej)**, aby uprawiać pszenicę. Przez kilkanaście stosunkowo wilgotnych lat wszystko wydawało się działać. Gdy jednak w latach 30. przyszła seria lat suchych, ujawniła się cena decyzji: **darń, która przez tysiące lat trzymała glebę i chroniła ją przed wiatrem, została usunięta**, a odsłonięta, przesuszona gleba nie miała żadnej ochrony. Silne wiatry stepowe wywiały wierzchnią, próchniczną warstwę czarnoziemów prerii, tworząc **burze pyłowe („black blizzards”)**, które zaciemniały niebo aż po Nowy Jork. Setki tysięcy ludzi porzuciły gospodarstwa. Odpowiedzią było powołanie w 1935 r. służby ochrony gleb (**Soil Conservation Service**) i wdrożenie na wielką skalę zabiegów przeciwerozyjnych: **pasów zadrzewień śródpolnych, uprawy pasowej, orki w poprzek kierunku wiatru, płodozmianu i utrzymywania resztek pożniwnych na powierzchni**.",
+          "takeaway": "Nawet najżyźniejsza gleba świata jest bezbronna bez okrywy roślinnej. Erozja nie zabiera gleby „w ogóle” — zabiera **warstwę najbardziej próchniczną, czyli najcenniejszą**, a jej odtworzenie trwa stulecia."
+        },
+        {
+          "type": "classification",
+          "title": "Ochrona gleb — cztery grupy działań",
+          "caption": "W zadaniach otwartych podawaj zabieg **wraz z mechanizmem**: nie „zadrzewienia śródpolne”, lecz „zadrzewienia śródpolne, które zmniejszają prędkość wiatru przy powierzchni i ograniczają wywiewanie cząstek gleby”.",
+          "groups": [
+            {
+              "name": "Przeciwdziałanie erozji",
+              "description": "Celem jest **utrzymanie okrywy roślinnej i przerwanie ciągłości spływu lub wiatru**. Im dłużej gleba jest przykryta i im krótszy odcinek spływu, tym mniejszy ubytek.",
+              "examples": [
+                "orka w poprzek stoku (wzdłuż warstwic)",
+                "tarasowanie stoków",
+                "pasy zadrzewień i zakrzewień śródpolnych",
+                "uprawa pasowa i płodozmian",
+                "uprawa bezorkowa i utrzymywanie resztek pożniwnych",
+                "zalesianie stoków o dużym nachyleniu"
+              ]
+            },
+            {
+              "name": "Poprawa właściwości chemicznych i próchnicy",
+              "description": "Odbudowa **odczynu, pojemności sorpcyjnej i zawartości próchnicy** — czyli tych cech, które decydują o żyzności i odporności gleby na degradację.",
+              "examples": [
+                "wapnowanie gleb kwaśnych",
+                "nawożenie obornikiem i kompostem",
+                "przyorywanie poplonów i nawozów zielonych",
+                "uprawa roślin motylkowych wiążących azot",
+                "ograniczenie nawożenia mineralnego do dawek zgodnych z potrzebami"
+              ]
+            },
+            {
+              "name": "Regulacja stosunków wodnych",
+              "description": "Utrzymanie właściwej **ilości wody w profilu i kierunku jej ruchu** — zarówno przeciw nadmiarowi, jak i niedoborowi.",
+              "examples": [
+                "melioracje odwadniające na terenach podmokłych",
+                "drenaż i przepłukiwanie profilu na obszarach nawadnianych (przeciw zasoleniu)",
+                "nawadnianie kropelkowe zamiast zalewowego",
+                "mała retencja i zwiększanie zdolności retencyjnych gleby przez próchnicę"
+              ]
+            },
+            {
+              "name": "Rekultywacja i ochrona prawna",
+              "description": "Przywracanie wartości użytkowej glebom zniszczonym oraz **prawne ograniczanie ubytku gruntów rolnych**, zwłaszcza najlepszych klas bonitacyjnych.",
+              "examples": [
+                "rekultywacja terenów pogórniczych (kierunek rolny, leśny, wodny, rekreacyjny)",
+                "fitoremediacja gleb skażonych metalami ciężkimi",
+                "ustawa o ochronie gruntów rolnych i leśnych — zgoda na wyłączenie gleb klas I–III",
+                "ograniczanie zabudowy najlepszych gleb i rozlewania się miast",
+                "monitoring chemizmu gleb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W dolinie rzeki w klimacie umiarkowanym stwierdzono glebę o profilu złożonym z kilku wyraźnie różniących się warstw materiału pylasto-ilastego, bez poziomu E i bez poziomu B. Jaki to typ gleby i dlaczego jest astrefowy?",
+          "options": [
+            "Rędzina — bo powstała ze skały węglanowej, niezależnie od klimatu",
+            "Mada — bo o jej cechach decyduje materiał naniesiony przez rzekę, a nie klimat",
+            "Czarnoziem — bo gruby poziom próchniczny powstał w procesie darniowym",
+            "Bielica — bo brak poziomu B świadczy o silnym przemywaniu profilu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rozstrzyga **warstwowanie** profilu: kolejne warstwy to kolejne wylewy rzeki, a nie poziomy genetyczne wykształcone na miejscu. Mada jest astrefowa, bo powstaje **wszędzie tam, gdzie rzeka wylewa** — w tundrze, w strefie umiarkowanej i nad Nilem — a jej cechy dyktuje skład niesionego materiału, nie klimat. Rędzina powstałaby na wapieniu i byłaby płytka i szkieletowa, a bielica ma zarówno poziom E, jak i B."
+        },
+        {
+          "type": "quiz",
+          "question": "W dolinie Amu-darii pola nawadniane od kilkudziesięciu lat pokryły się białym nalotem, a rośliny więdną mimo wilgotnej gleby. Który opis mechanizmu jest poprawny?",
+          "options": [
+            "Nadmiar opadów wymył z gleby wapń, przez co gleba uległa zakwaszeniu i uwolniła toksyczny glin",
+            "Nadmierne nawadnianie bez drenażu podniosło wody gruntowe; podsiąkanie i parowanie wyniosły sole ku powierzchni, a stężony roztwór uniemożliwia korzeniom pobieranie wody",
+            "Wieloletnie nawadnianie doprowadziło do oglejenia profilu, przez co żelazo uległo redukcji i zabarwiło glebę na biało",
+            "Erozja wietrzna wywiała warstwę próchniczną, odsłaniając biały poziom eluwialny"
+          ],
+          "correctIndex": 1,
+          "explanation": "To klasyczne **zasolenie wtórne**. Kluczem jest **susza fizjologiczna**: woda w glebie jest, ale ma tak wysokie ciśnienie osmotyczne, że korzeń nie może jej pobrać. Zakwaszenie (A) daje odwrotny objaw i występuje przy nadmiarze opadów, oglejenie (C) daje barwy sine, a nie białe, a poziom eluwialny (D) w klimacie suchym w ogóle się nie tworzy — tam woda porusza się ku górze."
+        },
+        {
+          "type": "quiz",
+          "question": "Gospodarstwo leży na stoku o nachyleniu 8°, na glebie lessowej, w rejonie o częstych ulewach letnich. Który zestaw zabiegów najskuteczniej ograniczy degradację tej gleby?",
+          "options": [
+            "Orka wzdłuż spadku stoku i pozostawianie gleby bez okrywy roślinnej przez zimę",
+            "Intensywne nawadnianie zalewowe i zwiększenie dawek nawozów azotowych",
+            "Orka w poprzek stoku, uprawa pasowa z międzyplonami i pasy zadrzewień śródpolnych",
+            "Głęboka orka jesienna i usuwanie wszystkich resztek pożniwnych z pola"
+          ],
+          "correctIndex": 2,
+          "explanation": "Na stoku lessowym głównym zagrożeniem jest **erozja wodna**, a lessy są na nią wyjątkowo podatne (drobne, luźne cząstki pyłu). Skuteczne są działania, które **przerywają spływ powierzchniowy i utrzymują okrywę roślinną**: bruzdy w poprzek stoku zatrzymują wodę zamiast ją prowadzić w dół, międzyplony chronią glebę poza sezonem wegetacyjnym, a zadrzewienia zmniejszają prędkość spływu i wiatru. Odpowiedzi A i D robią dokładnie odwrotnie, a B dotyczy innego problemu (obszarów suchych)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o degradacji gleb pilnuj **skali czasu i odwracalności** — to za nie przyznaje się punkty w poleceniach typu „oceń” i „uzasadnij”. Zakwaszenie jest odwracalne w kilka lat (wapnowanie), zasolenie — w kilkanaście, i to kosztownie (drenaż, przepłukiwanie), a **utrata warstwy próchnicznej przez erozję jest w praktyce nieodwracalna**, bo 1 cm gleby odtwarza się 100–400 lat. Dlatego w hierarchii zagrożeń erozję stawia się na pierwszym miejscu, a najlepszym zabiegiem ochronnym jest zawsze ten, który **nie dopuszcza do odsłonięcia gleby**, a nie ten, który usuwa skutki."
+        }
+      ]
+    },
+    {
+      "slug": "biosfera-czynniki-i-formacje-roslinne",
+      "title": "Biosfera — co decyduje o rozmieszczeniu życia i formacje roślinne świata",
+      "summary": "Zasięg biosfery, czynniki sterujące rozmieszczeniem organizmów oraz wielkie formacje roślinne świata — od wilgotnego lasu równikowego po tundrę.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Jeśli przelecisz samolotem z Kinszasy do Murmańska, przetniesz w kilkanaście godzin niemal wszystkie wielkie formacje roślinne Ziemi: wilgotny las równikowy, sawannę, Saharę, zarośla śródziemnomorskie, lasy liściaste, tajgę i tundrę. Ten pas zmian nie jest przypadkowy — to **zapis strefowego rozkładu temperatury i opadu** na powierzchni planety. Roślinność jest najczulszym „termometrem i deszczomierzem” klimatu: zanim postawiono stacje meteorologiczne, klimat odczytywano właśnie z niej. W tej lekcji zobaczysz, **dlaczego** organizmy rozmieszczone są tak, a nie inaczej, i nauczysz się rozpoznawać formacje po zestawie cech, a nie po nazwie."
+        },
+        {
+          "type": "definition",
+          "term": "Biosfera",
+          "text": "**Biosfera** to strefa Ziemi zamieszkana przez organizmy żywe — obejmuje dolną część atmosfery, całą hydrosferę oraz górną, zwietrzałą warstwę litosfery wraz z pedosferą. Nie jest osobną powłoką geometryczną: **przenika** pozostałe sfery, dlatego nazywa się ją powłoką „przecinającą”. Jej pionowy zasięg sięga około 20 km w górę (zarodniki i bakterie unoszone do stratosfery) i ponad 10 km w głąb oceanu, ale **strefa gęstego życia jest cienka** — to zaledwie kilkadziesiąt metrów: od koron drzew po zasięg korzeni i powierzchniową warstwę wód.",
+          "note": "Granice biosfery wyznaczają warunki brzegowe: obecność wody w stanie ciekłym, temperatura, ciśnienie i dostęp do energii — dlatego są nieostre i zmienne."
+        },
+        {
+          "type": "classification",
+          "title": "Czynniki decydujące o rozmieszczeniu organizmów",
+          "caption": "Na maturze prawie zawsze trzeba wskazać czynnik OGRANICZAJĄCY — czyli ten, którego w danym miejscu brakuje najbardziej.",
+          "groups": [
+            {
+              "name": "Klimatyczne (najważniejsze w skali globalnej)",
+              "description": "Temperatura decyduje o tempie reakcji biochemicznych i długości okresu wegetacyjnego, opad — o dostępności wody, nasłonecznienie — o ilości energii dla fotosyntezy. To one tworzą **strefowy, równoleżnikowy** układ formacji.",
+              "examples": [
+                "temperatura i jej roczna amplituda",
+                "roczna suma i rozkład opadów",
+                "usłonecznienie",
+                "wiatr wysuszający, np. na wybrzeżach pustynnych"
+              ]
+            },
+            {
+              "name": "Edaficzne (glebowe)",
+              "description": "Decydują lokalnie: żyzność, odczyn, uwilgotnienie i zasolenie gleby wybierają spośród gatunków klimatycznie możliwych te, które faktycznie wyrosną. Dlatego na tej samej szerokości geograficznej sąsiadują bór sosnowy na piasku i grąd na glebie brunatnej.",
+              "examples": [
+                "odczyn (pH)",
+                "zasobność w składniki pokarmowe",
+                "wilgotność i przewiewność",
+                "zasolenie — halofity na solniskach"
+              ]
+            },
+            {
+              "name": "Orograficzne i przestrzenne",
+              "description": "Wysokość n.p.m. tworzy **piętra roślinne**, ekspozycja stoku różnicuje nasłonecznienie, a bariery — łańcuchy górskie, oceany, pustynie — blokują migrację gatunków, prowadząc do izolacji i powstawania endemitów.",
+              "examples": [
+                "wysokość n.p.m.",
+                "ekspozycja i nachylenie stoku",
+                "izolacja wysp",
+                "bariery górskie i pustynne"
+              ]
+            },
+            {
+              "name": "Biotyczne",
+              "description": "Organizmy same modyfikują swoje rozmieszczenie: konkurują o światło i wodę, zjadają się, zapylają, rozsiewają nasiona i wchodzą w symbiozy (np. mikoryza drzew z grzybami). Gatunek często nie rośnie tam, gdzie mógłby, bo **przegrywa konkurencję**.",
+              "examples": [
+                "konkurencja o światło",
+                "roślinożerność i drapieżnictwo",
+                "symbioza i mikoryza",
+                "zapylanie oraz rozsiewanie nasion"
+              ]
+            },
+            {
+              "name": "Historyczne (paleogeograficzne)",
+              "description": "Współczesne zasięgi to także efekt przeszłości: zlodowaceń, rozpadu Pangei i dryfu kontynentów oraz dawnych połączeń lądowych. Torbacze dominują w Australii nie dlatego, że klimat najbardziej im sprzyja, lecz dlatego, że kontynent **wcześnie się odizolował**.",
+              "examples": [
+                "zlodowacenia plejstoceńskie",
+                "dryf kontynentów",
+                "dawne pomosty lądowe",
+                "refugia glacjalne"
+              ]
+            },
+            {
+              "name": "Antropogeniczne",
+              "description": "Człowiek wylesia, osusza, nawadnia i zabudowuje, ale też **przenosi gatunki** poza ich naturalne zasięgi. Gatunki inwazyjne (królik w Australii, barszcz Sosnowskiego w Polsce) dowodzą, że barierą bywa transport, a nie klimat.",
+              "examples": [
+                "wylesianie i uprawy",
+                "introdukcja gatunków obcych",
+                "urbanizacja i fragmentacja siedlisk",
+                "zmiana klimatu — przesuwanie zasięgów ku biegunom i w górę"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Formacja roślinna (biom)",
+          "text": "**Formacja roślinna** to zespół roślin o podobnej budowie i pokroju (fizjonomii) oraz podobnych przystosowaniach, ukształtowany przez określone warunki klimatyczne — **niezależnie od pokrewieństwa gatunków**. Formacja wraz ze związanym z nią światem zwierząt i glebą tworzy **biom**. Kluczowa idea: step Eurazji, preria Ameryki Północnej i pampa Ameryki Południowej mają inne gatunki, ale tę samą fizjonomię, bo powstały w tych samych warunkach — to **konwergencja**.",
+          "note": "Dlatego formację rozpoznaje się po zestawie cech (wysokość, liściste/iglaste, zwarte/luźne, sezonowość), a nie po nazwach gatunków."
+        },
+        {
+          "type": "zones",
+          "title": "Formacje roślinne od równika ku biegunowi",
+          "caption": "Kliknij strefę, by zobaczyć jej warunki i mechanizm, który ją kształtuje. Zauważ, że o granicach decyduje na przemian OPAD (strefa gorąca) i TEMPERATURA (strefa chłodna).",
+          "zones": [
+            {
+              "name": "Wilgotny las równikowy",
+              "latitude": "ok. 10°N–10°S",
+              "text": "Temperatura powyżej 20°C przez cały rok, opad ponad 2000 mm bez pory suchej — **brak czynnika ograniczającego**, więc roślinność osiąga maksimum: wielopiętrowy las zimozielony o największej produkcji pierwotnej i bioróżnorodności na Ziemi. Wieczna wegetacja oznacza jednak też błyskawiczny rozkład materii i **ubogie gleby laterytowe**.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Las monsunowy",
+              "latitude": "ok. 10–25°, głównie Azja Południowa i Południowo-Wschodnia",
+              "text": "Opady wysokie (1000–2000 mm), ale **skrajnie sezonowe** — cyrkulacja monsunowa daje kilka miesięcy suszy. Drzewa (tek, sal) bronią się przed nią, **zrzucając liście w porze suchej**, czyli odwrotnie niż nasze drzewa gubiące je na zimę. Las jest niższy i luźniejszy od równikowego, ma bujny podszyt, bo więcej światła dociera do dna.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Sawanna",
+              "latitude": "ok. 10–20°",
+              "text": "Opad 500–1500 mm skupiony w porze deszczowej, reszta roku sucha. Susza jest zbyt długa dla zwartego lasu, a zbyt krótka dla pustyni — dominują **trawy z pojedynczymi drzewami** (baobab, akacja). Im dalej od równika, tym krótsza pora deszczowa i tym mniej drzew: od sawanny wilgotnej, przez suchą, po ciernistą.",
+              "tone": "heat"
+            },
+            {
+              "name": "Pustynie i półpustynie zwrotnikowe",
+              "latitude": "ok. 20–30°",
+              "text": "Strefa wyżów zwrotnikowych z osiadaniem powietrza: opad poniżej 250 mm, a parowanie potencjalne wielokrotnie większe. Roślinność **skrajnie luźna**: sukulenty magazynujące wodę, gatunki o bardzo głębokim lub rozległym systemie korzeniowym oraz efemerofity przechodzące cały cykl życiowy w kilka tygodni po deszczu.",
+              "tone": "earth"
+            },
+            {
+              "name": "Twardolistne zarośla i lasy śródziemnomorskie",
+              "latitude": "ok. 30–40°, zachodnie części kontynentów",
+              "text": "Klimat o **odwróconym rytmie**: opad zimą, susza latem — woda przychodzi wtedy, gdy roślina najmniej jej potrzebuje. Stąd liście twarde, skórzaste, drobne, pokryte woskiem lub włoskami i bogate w olejki eteryczne. Formacje: **makia** (zwarte, wyższe zarośla) i **garig** (niska, luźna, na glebach zdegradowanych); z drzew dąb korkowy, oliwka, pinia.",
+              "tone": "heat"
+            },
+            {
+              "name": "Step",
+              "latitude": "ok. 40–55°, wnętrza kontynentów",
+              "text": "Klimat umiarkowany kontynentalny: opad 250–500 mm i duża amplituda roczna. Zbyt sucho na las, wystarczająco na zwartą darń traw. Trawy przetrwają suszę i pożar, bo ich **pąki odnawiające tkwią przy ziemi**, a większość biomasy jest w korzeniach — z ich rozkładu powstają **czarnoziemy**. Odpowiedniki: preria, pampa, puszta.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Lasy liściaste i mieszane strefy umiarkowanej",
+              "latitude": "ok. 40–58°",
+              "text": "Opad 500–1000 mm rozłożony równomiernie, ciepłe lato i mroźna zima. Ograniczeniem jest **zima**, nie susza: zamarznięta gleba uniemożliwia pobór wody, więc drzewa zrzucają liście, by ograniczyć transpirację. Efekt to wyraźna sezonowość, dobrze rozkładająca się ściółka liściasta oraz gleby brunatne i płowe.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Tajga (las borealny)",
+              "latitude": "ok. 55–70°",
+              "text": "Krótki okres wegetacyjny (2–4 miesiące) i mroźna zima. Wygrywają drzewa iglaste: **igły ograniczają transpirację i nie trzeba ich co roku odbudowywać**, stożkowa korona zsuwa śnieg, a zimozieloność pozwala ruszyć z fotosyntezą natychmiast po odwilży. Kwaśna, wolno rozkładająca się ściółka igliwia napędza bielicowanie.",
+              "tone": "ice"
+            },
+            {
+              "name": "Tundra",
+              "latitude": "powyżej ok. 70°",
+              "text": "Średnia temperatura najcieplejszego miesiąca poniżej 10°C — to klimatyczna **granica lasu**. Wieczna zmarzlina blokuje głębokie korzenie i odpływ wody, dlatego rośliny są niskie, płożące i poduchowate: mchy, porosty (chrobotki), turzyce, karłowate wierzby i brzozy. Niski wzrost chroni przed wiatrem i pozwala korzystać z cieplejszej warstwy powietrza przy gruncie.",
+              "tone": "ice"
+            },
+            {
+              "name": "Pustynia lodowa",
+              "latitude": "obszary okołobiegunowe",
+              "text": "Temperatura i pokrywa lodowa uniemożliwiają rozwój roślin naczyniowych; życie ogranicza się do glonów, porostów i mchów na wolnych od lodu skałach (oazy antarktyczne, nunataki). Czynnikiem ograniczającym jest jednocześnie temperatura i **brak wody w stanie ciekłym**.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Warstwowa budowa wilgotnego lasu równikowego",
+          "caption": "Piętra lasu to konkurencja o światło zapisana w pionie — do dna dociera mniej niż 2% promieniowania docierającego do koron.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Drzewa wystające (emergenty)",
+              "range": "45–60 m",
+              "text": "Pojedyncze olbrzymy górujące nad okapem, o parasolowatych koronach. Mają najwięcej światła, ale też najsilniejszy wiatr i największe parowanie — stabilizują je **korzenie szkarpowe (przyporowe)**, bo gleba jest płytka.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Okap (sklepienie koron)",
+              "range": "30–45 m",
+              "text": "Zwarta warstwa koron przechwytująca **większość promieniowania** — tu skupia się fotosynteza i większość gatunków zwierząt, owadów i ptaków. To ona tworzy cień, który rządzi całą resztą profilu.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Podszyt (warstwa podokapowa)",
+              "range": "10–30 m",
+              "text": "Młodsze i niższe drzewa czekające na **lukę w okapie** po powalonym olbrzymie. Wilgotność bardzo wysoka, wiatr znikomy; liście duże i cienkie, często z „okapnikiem” — wyciągniętym wierzchołkiem odprowadzającym wodę.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Warstwa krzewów i runa",
+              "range": "0–10 m",
+              "text": "Skrajnie zacieniona, dlatego uboga w rośliny zielne — obraz odwrotny do popularnego wyobrażenia „nieprzebytej dżungli”. Gęsty gąszcz pojawia się tylko tam, gdzie światło dociera do dna: przy rzekach, drogach i w lukach.",
+              "tone": "earth"
+            },
+            {
+              "name": "Dno lasu i gleba",
+              "range": "poziom gruntu",
+              "text": "Ściółka rozkłada się w tygodniach, a nie latach — wysoka temperatura i wilgotność napędzają **błyskawiczną mineralizację**. Uwolnione składniki natychmiast przechwytują płytkie korzenie wsparte mikoryzą, więc gleba laterytowa pozostaje uboga.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Formacje roślinne — warunki, przystosowania i gleby strefowe",
+          "caption": "Kolumna „czynnik ograniczający” to najkrótsza droga do poprawnego uzasadnienia w zadaniu otwartym.",
+          "headers": [
+            "Formacja",
+            "Opad roczny",
+            "Czynnik ograniczający",
+            "Kluczowe przystosowanie",
+            "Gleba strefowa"
+          ],
+          "rows": [
+            [
+              "Wilgotny las równikowy",
+              "ponad 2000 mm",
+              "brak wyraźnego — decyduje konkurencja o światło",
+              "wielopiętrowość, korzenie szkarpowe, okapniki na liściach",
+              "gleby laterytowe"
+            ],
+            [
+              "Las monsunowy",
+              "1000–2000 mm",
+              "sezonowa susza",
+              "zrzucanie liści w porze suchej",
+              "czerwonoziemy, gleby laterytowe"
+            ],
+            [
+              "Sawanna",
+              "500–1500 mm",
+              "długość pory suchej",
+              "trawy z pąkami przy ziemi, drzewa magazynujące wodę, odporność na pożary",
+              "czerwonoziemy, gleby czerwonobrunatne"
+            ],
+            [
+              "Pustynia zwrotnikowa",
+              "poniżej 250 mm",
+              "woda",
+              "sukulencja, liście zredukowane do cierni, efemerofity",
+              "gleby pustynne (szaroziemy)"
+            ],
+            [
+              "Zarośla twardolistne",
+              "400–900 mm, głównie zimą",
+              "susza letnia",
+              "liście twarde i skórzaste, woskowa kutykula, olejki eteryczne",
+              "gleby cynamonowe, terra rossa"
+            ],
+            [
+              "Step",
+              "250–500 mm",
+              "niedobór wody latem",
+              "darniowy system korzeniowy, większość biomasy pod ziemią",
+              "czarnoziemy, gleby kasztanowe"
+            ],
+            [
+              "Las liściasty i mieszany",
+              "500–1000 mm",
+              "mróz i długość zimy",
+              "zrzucanie liści na zimę, spoczynek zimowy",
+              "gleby brunatne i płowe"
+            ],
+            [
+              "Tajga",
+              "300–600 mm",
+              "krótki okres wegetacyjny",
+              "igły, zimozieloność, stożkowa korona zsuwająca śnieg",
+              "gleby bielicowe"
+            ],
+            [
+              "Tundra",
+              "150–350 mm",
+              "temperatura i wieczna zmarzlina",
+              "niski, płożący pokrój, formy poduchowate, krótki cykl życiowy",
+              "gleby tundrowe (glejowe)"
+            ]
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj formację po klimatogramie",
+          "station": "Kano (Nigeria, ok. 12°N)",
+          "caption": "Zanim odsłonisz odpowiedź: policz miesiące suche, oceń amplitudę roczną temperatury i porównaj je z szerokością geograficzną.",
+          "temps": [
+            21,
+            24,
+            28,
+            31,
+            30,
+            27,
+            26,
+            25,
+            26,
+            27,
+            24,
+            21
+          ],
+          "precip": [
+            0,
+            0,
+            2,
+            10,
+            66,
+            116,
+            208,
+            310,
+            138,
+            14,
+            0,
+            0
+          ],
+          "answer": {
+            "climate": "Klimat podrównikowy suchy (sawannowy) — formacja: sawanna sucha",
+            "reasoning": "Temperatura przez cały rok wysoka (21–31°C), amplituda roczna ok. 10°C — to strefa międzyzwrotnikowa. Roczna suma opadów ok. 860 mm wystarczyłaby bujnej roślinności, ale skupiona jest w maju–wrześniu, a przez 5–6 miesięcy opad jest bliski zeru. Taka **długa pora sucha wyklucza zwarty las**, a jednocześnie jest za krótka na pustynię — powstaje sawanna, czyli morze traw z pojedynczymi drzewami. Maksimum opadu w sierpniu odpowiada najdalszemu na północ przesunięciu strefy zbieżności międzyzwrotnikowej (ITCZ)."
+          }
+        },
+        {
+          "type": "compare",
+          "title": "Sawanna a step — dwie formacje trawiaste, dwa różne mechanizmy",
+          "leftLabel": "Sawanna",
+          "rightLabel": "Step",
+          "rows": [
+            {
+              "aspect": "Strefa klimatyczna",
+              "left": "podrównikowa, między zwrotnikami",
+              "right": "umiarkowana ciepła, kontynentalna"
+            },
+            {
+              "aspect": "Przyczyna braku lasu",
+              "left": "długa **pora sucha** przy wysokiej temperaturze",
+              "right": "**mała roczna suma opadów** i silne parowanie latem"
+            },
+            {
+              "aspect": "Temperatura",
+              "left": "wysoka cały rok, amplituda ok. 5–12°C",
+              "right": "gorące lato i mroźna zima, amplituda 25–40°C"
+            },
+            {
+              "aspect": "Drzewa",
+              "left": "obecne — pojedynczo lub kępami (akacje, baobaby)",
+              "right": "praktycznie nieobecne, tylko w dolinach rzek"
+            },
+            {
+              "aspect": "Przerwy w wegetacji",
+              "left": "jedna — pora sucha",
+              "right": "dwie — mroźna zima i susza w pełni lata"
+            },
+            {
+              "aspect": "Gleby",
+              "left": "czerwonoziemy i gleby czerwonobrunatne, mało próchnicy",
+              "right": "**czarnoziemy** i gleby kasztanowe, bardzo dużo próchnicy"
+            },
+            {
+              "aspect": "Rola pożarów",
+              "left": "kluczowa — regularne pożary utrzymują przewagę traw nad drzewami",
+              "right": "istotna, lecz wtórna wobec niedoboru wody"
+            },
+            {
+              "aspect": "Odpowiedniki regionalne",
+              "left": "llanos i campos w Ameryce Południowej, sawanny Australii",
+              "right": "preria, pampa, puszta"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pułapki, na których najłatwiej stracić punkt. **(1) Sawanna ≠ step** — obie są trawiaste, ale sawanna leży w strefie gorącej i ogranicza ją długość pory suchej, a step w umiarkowanej, gdzie ogranicza go niska suma opadów i mróz. **(2) Las monsunowy zrzuca liście w porze SUCHEJ, nie na zimę** — broni się przed suszą, a nie przed mrozem. **(3) Makia ≠ garig** — makia to zwarte, wyższe (2–4 m) zarośla twardolistne, garig to niska, luźna formacja krzewinek na glebach zdegradowanych, zwykle wtórna po wypasie i pożarach. **(4) Dno wilgotnego lasu równikowego jest ubogie w rośliny zielne**, bo dociera tam poniżej 2% światła — nieprzebyty gąszcz rośnie tylko w lukach, nad rzekami i przy drogach."
+        },
+        {
+          "type": "matching",
+          "title": "Przystosowanie a formacja roślinna",
+          "instruction": "Dopasuj przystosowanie do formacji, w której jest ono kluczem do przetrwania. Zastanów się najpierw, PRZED CZYM chroni dana cecha.",
+          "pairs": [
+            {
+              "left": "Korzenie szkarpowe (przyporowe) podpierające pień",
+              "right": "Wilgotny las równikowy — płytka gleba i bardzo wysokie drzewa"
+            },
+            {
+              "left": "Liście twarde, skórzaste, pokryte woskiem i olejkami eterycznymi",
+              "right": "Zarośla twardolistne — susza przypadająca na porę letnią"
+            },
+            {
+              "left": "Łodyga magazynująca wodę, liście zredukowane do cierni",
+              "right": "Pustynia zwrotnikowa — skrajny i stały niedobór wody"
+            },
+            {
+              "left": "Płożący, poduchowaty pokrój i płytki system korzeniowy",
+              "right": "Tundra — silny wiatr i wieczna zmarzlina"
+            },
+            {
+              "left": "Igły oraz stożkowa korona zsuwająca śnieg",
+              "right": "Tajga — mróz, okiść śnieżna i krótki okres wegetacyjny"
+            },
+            {
+              "left": "Pąki odnawiające tuż przy ziemi i gruba darń",
+              "right": "Step — susza, pożary i wypas roślinożerców"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na stacji położonej na 34°S, przy zachodnim wybrzeżu kontynentu, zanotowano: roczny opad 520 mm, z czego 78% przypada na czerwiec–sierpień, w styczniu opad wynosi 4 mm, a średnia temperatura najchłodniejszego miesiąca to 11°C. Jaka formacja roślinna występuje tam naturalnie i dlaczego?",
+          "options": [
+            "Step, ponieważ suma opadów poniżej 600 mm uniemożliwia rozwój lasu",
+            "Twardolistne zarośla typu makia, ponieważ opad przypada na chłodną porę roku, a lato jest suche — rośliny muszą ograniczać transpirację skórzastymi liśćmi",
+            "Las liściasty zrzucający liście na zimę, ponieważ najchłodniejszy miesiąc ma zaledwie 11°C",
+            "Sawanna, ponieważ opad jest wyraźnie sezonowy i skupiony w jednej porze roku"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kluczem jest **kiedy pada**, a nie tylko ile. Szerokość 34°S, zachodnie wybrzeże i maksimum opadu w czerwcu–sierpniu — czyli na półkuli południowej **zimą** — przy suchym styczniu (lecie) to podręcznikowy klimat śródziemnomorski. Roślina musi przetrwać suszę wtedy, gdy jest najgoręcej i najwięcej światła, stąd twardolistne, drobne liście z woskową kutykulą ograniczające transpirację. Odpowiedź A jest błędna, bo step wymaga wnętrza kontynentu i maksimum opadu latem; C — bo przy 11°C w najchłodniejszym miesiącu mrozu praktycznie nie ma, więc zrzucanie liści na zimę nie miałoby sensu; D — bo sawanna leży w strefie gorącej, a jej opad przypada na porę ciepłą."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego wilgotny las równikowy — formacja o największej produkcji biomasy na Ziemi — rośnie na jednych z najuboższych gleb świata?",
+          "options": [
+            "Ponieważ opady są tak obfite, że rośliny nie zdążają pobierać składników pokarmowych",
+            "Ponieważ skały macierzyste strefy równikowej są wyjątkowo ubogie w minerały",
+            "Ponieważ wysoka temperatura i wilgotność powodują błyskawiczny rozkład ściółki, a uwolnione składniki są natychmiast pobierane przez płytkie korzenie lub wymywane w głąb — obieg materii zamyka się w biomasie, nie w glebie",
+            "Ponieważ gęsty okap nie przepuszcza światła do gleby, więc nie tworzy się w niej próchnica"
+          ],
+          "correctIndex": 2,
+          "explanation": "To pytanie o **mechanizm obiegu materii**. W klimacie równikowym mineralizacja ściółki trwa tygodnie, a nie lata, więc próchnica nie zdąży się nagromadzić. Uwolnione jony w ciągu dni przechwytuje gęsta, płytka sieć korzeni wspieranych mikoryzą albo **wymywają je** ogromne opady (silne przemywanie i laterytyzacja). Zapas składników tkwi więc w żywej biomasie, a nie w glebie — dlatego po wycięciu i wypaleniu lasu plony utrzymują się zaledwie 2–3 lata. Odpowiedź B jest fałszywa (skały bywają zasobne, ale ulegają skrajnemu zwietrzeniu), a D myli przyczynę: próchnicy brakuje przez tempo rozkładu, a nie przez brak światła."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie: formacja – czynnik ograniczający jej rozwój – gleba strefowa jest w całości poprawne?",
+          "options": [
+            "Tajga – krótki okres wegetacyjny i mróz – gleby bielicowe",
+            "Step – długa pora sucha w strefie gorącej – czerwonoziemy",
+            "Tundra – niedobór opadów – czarnoziemy",
+            "Las monsunowy – mroźna zima – gleby brunatne"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tylko odpowiedź A jest spójna we wszystkich trzech elementach: w tajdze czynnikiem ograniczającym jest **temperatura** (2–4 miesiące wegetacji), a kwaśna ściółka igliwia przy przewadze opadu nad parowaniem napędza **bielicowanie**. B miesza step z sawanną — step leży w strefie umiarkowanej i wykształca czarnoziemy. C przypisuje tundrze niedobór opadów zamiast temperatury i wiecznej zmarzliny, a czarnoziemy powstają w stepie, nie w tundrze. D wskazuje w lesie monsunowym mróz, podczas gdy ogranicza go sezonowa **susza**, a gleby to czerwonoziemy i laterytowe."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Uniwersalny schemat odpowiedzi w zadaniach o formacjach: **klimat → czynnik ograniczający → przystosowanie → skutek dla gleby i gospodarki**. Gdy w poleceniu pada „wyjaśnij” lub „uzasadnij”, musisz podać co najmniej dwa ogniwa tego łańcucha — samo nazwanie formacji nie daje punktu. Przy klimatogramie zacznij od trzech odczytów: **amplituda roczna** (mała → strefa gorąca, duża → wnętrze kontynentu strefy umiarkowanej), **liczba miesięcy suchych** oraz **pora roku z maksimum opadu** (lato → monsun albo step, zima → klimat śródziemnomorski). I pamiętaj o półkuli południowej — tam czerwiec–sierpień to zima."
+        }
+      ]
+    },
+    {
+      "slug": "pietrowosc-przystosowania-i-ochrona-przyrody",
+      "title": "Piętrowość w górach, przystosowania organizmów i ochrona bioróżnorodności",
+      "summary": "Dlaczego roślinność układa się w piętra, jak organizmy radzą sobie z suszą, zasoleniem i mrozem oraz czym są endemity, bioróżnorodność i formy ochrony przyrody.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wejście na Kilimandżaro trwa około tygodnia, a przechodzi się w tym czasie przez sawannę, wilgotny las górski, wrzosowiska, półpustynię i wieczny śnieg — czyli w pionie odtwarza się drogę, którą w poziomie trzeba by pokonać od równika po Arktykę na dystansie kilku tysięcy kilometrów. To nie jest efektowna metafora, lecz **ta sama przyczyna działająca w dwóch skalach**: spadek temperatury. W tej lekcji zobaczysz, jak z jednego prostego mechanizmu — pionowego gradientu termicznego — wynika cała piętrowość roślinna, a potem przyjrzysz się temu, jak organizmy przystosowują się do warunków skrajnych i dlaczego ochrona przyrody bywa czynnym działaniem, a nie tylko powstrzymaniem się od ingerencji."
+        },
+        {
+          "type": "definition",
+          "term": "Piętrowość roślinna (strefowość pionowa)",
+          "text": "**Piętrowość roślinna** to układ pasów roślinności zmieniających się wraz z wysokością nad poziomem morza, wywołany przede wszystkim **spadkiem temperatury i skróceniem okresu wegetacyjnego**, a dodatkowo zmianą sumy opadów, siły wiatru, grubości i czasu zalegania pokrywy śnieżnej oraz miąższości gleby. Piętra są odpowiednikami stref roślinnych, ale **nie ich kopią**: powstają na innych glebach, przy innej długości dnia i innym rytmie rocznym, dlatego w piętrze alpejskim rosną murawy wysokogórskie, a nie tundra w sensie ścisłym.",
+          "note": "Liczba pięter zależy od dwóch rzeczy: wysokości gór oraz szerokości geograficznej. Im bliżej równika i im wyższe góry, tym pięter więcej."
+        },
+        {
+          "type": "formula",
+          "title": "Pionowy gradient temperatury — narzędzie do obliczeń maturalnych",
+          "expression": "t_h = t_0 - 0{,}6 \\cdot \\dfrac{h - h_0}{100}",
+          "variables": [
+            {
+              "symbol": "t_h",
+              "meaning": "temperatura na wysokości docelowej (°C)"
+            },
+            {
+              "symbol": "t_0",
+              "meaning": "temperatura zmierzona na stacji odniesienia (°C)"
+            },
+            {
+              "symbol": "h",
+              "meaning": "wysokość docelowa (m n.p.m.)"
+            },
+            {
+              "symbol": "h_0",
+              "meaning": "wysokość stacji odniesienia (m n.p.m.)"
+            },
+            {
+              "symbol": "0,6",
+              "meaning": "średni pionowy gradient temperatury w troposferze — spadek o 0,6°C na każde 100 m wzniesienia"
+            }
+          ],
+          "caption": "Z tego wzoru wyprowadza się położenie granicy lasu (średnia najcieplejszego miesiąca ok. 10°C) i granicy wiecznego śniegu (bilans: przybytek śniegu równy jego ubytkowi w ciągu roku)."
+        },
+        {
+          "type": "layers",
+          "title": "Piętra roślinne w Tatrach",
+          "caption": "Układ od podnóża ku szczytom (pierwszy element na dole). Zwróć uwagę, jak wraz z wysokością spada nie tylko temperatura, ale i wysokość samych roślin.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Pogórze",
+              "range": "do ok. 700 m n.p.m.",
+              "text": "Piętro najsilniej przekształcone przez człowieka: pola, łąki, zabudowa, a z lasów naturalnych — grądy i fragmenty lasów liściastych. Okres wegetacyjny trwa ponad 200 dni.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel dolny",
+              "range": "ok. 700–1250 m n.p.m.",
+              "text": "Lasy mieszane i liściaste: **buczyna karpacka** z bukiem, jodłą i świerkiem. Gleby brunatne górskie, opad rośnie z wysokością, więc drzewostan jest tu najbujniejszy w całych Tatrach.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Regiel górny",
+              "range": "ok. 1250–1550 m n.p.m.",
+              "text": "Zwarty **bór świerkowy** — buk i jodła nie znoszą już tak krótkiego okresu wegetacyjnego i długo zalegającego śniegu. Gleby bielicowe, drzewa coraz niższe i rzadsze ku górze.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro kosodrzewiny (subalpejskie)",
+              "range": "ok. 1550–1800 m n.p.m.",
+              "text": "Powyżej **górnej granicy lasu**: zwarte zarośla kosodrzewiny o płożących pniach, które zimą przygniata i chroni śnieg, a latem nie łamie wiatr. To piętro pokazuje, że granicę lasu wyznacza nie brak roślin, lecz brak warunków dla **wysokich pni**.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Piętro hal (alpejskie)",
+              "range": "ok. 1800–2200 m n.p.m.",
+              "text": "Murawy wysokogórskie: niskie trawy, turzyce i byliny o dużych, intensywnie zabarwionych kwiatach. Rośliny są karłowate i często poduchowate — to obrona przed wiatrem i wykorzystanie cieplejszej warstwy powietrza tuż nad gruntem.",
+              "tone": "ice"
+            },
+            {
+              "name": "Piętro turni (subniwalne)",
+              "range": "powyżej ok. 2200 m n.p.m.",
+              "text": "Skały, gołoborza i szczeliny; gleba prawie nie występuje. Życie ograniczają **porosty, mchy i pojedyncze rośliny szczelinowe** (np. skalnice), które korzystają z ciepła nagrzanej skały i śniegu jako osłony przed mrozem.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Ta sama zasada, różne wysokości — piętrowość a szerokość geograficzna",
+          "caption": "Im dalej od równika, tym niżej przebiegają te same granice, bo już u podnóża jest chłodniej. Wartości przybliżone.",
+          "headers": [
+            "Góry",
+            "Szerokość geograficzna",
+            "Górna granica lasu",
+            "Granica wiecznego śniegu",
+            "Liczba pięter"
+          ],
+          "rows": [
+            [
+              "Kilimandżaro (Afryka)",
+              "ok. 3°S",
+              "ok. 3000 m n.p.m.",
+              "ok. 5000 m n.p.m.",
+              "5–6 — pełny zestaw od sawanny po lodowce"
+            ],
+            [
+              "Andy Ekwadoru",
+              "ok. 0°",
+              "ok. 3500–3900 m n.p.m.",
+              "ok. 4800–5000 m n.p.m.",
+              "5–6 — od lasu równikowego po piętro niwalne"
+            ],
+            [
+              "Himalaje (stoki południowe)",
+              "ok. 28°N",
+              "ok. 3800–4000 m n.p.m.",
+              "ok. 4500–5500 m n.p.m.",
+              "5–6, silnie zróżnicowane ekspozycją"
+            ],
+            [
+              "Alpy",
+              "ok. 46°N",
+              "ok. 1800–2200 m n.p.m.",
+              "ok. 2800–3200 m n.p.m.",
+              "4–5"
+            ],
+            [
+              "Tatry",
+              "ok. 49°N",
+              "ok. 1550 m n.p.m.",
+              "brak — leży powyżej szczytów",
+              "5 (bez piętra wiecznego śniegu)"
+            ],
+            [
+              "Góry Skandynawskie (Laponia)",
+              "ok. 68°N",
+              "ok. 500–700 m n.p.m.",
+              "ok. 1000–1300 m n.p.m.",
+              "2–3 — piętra dolne w ogóle nie występują"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Pięć rzeczy, które w zadaniach o piętrowości najczęściej idą źle. **(1) Piętro ≠ strefa** — piętro alpejskie tylko przypomina tundrę; ma inną długość dnia, inne gleby i inne gatunki. **(2) Granicy lasu nie wyznacza brak roślin**, tylko brak warunków dla drzew o wysokim pniu — powyżej niej rosną zwarte zarośla kosodrzewiny. **(3) Ekspozycja przesuwa granice**: na półkuli północnej stoki południowe (dowietrzne dla słońca) są cieplejsze, więc piętra sięgają tam wyżej niż na stokach północnych. **(4) Opad nie spada z wysokością liniowo** — rośnie do wysokości strefy maksymalnych opadów, a dopiero powyżej maleje. **(5) Uwaga na inwersję temperatury w kotlinach**: zimą w dolinie bywa chłodniej niż na stoku, dlatego rośliny ciepłolubne rosną czasem wyżej niż niżej."
+        },
+        {
+          "type": "ordering",
+          "title": "Ułóż piętra Kilimandżaro od podnóża ku szczytowi",
+          "instruction": "Przeciągnij nazwy pięter tak, by powstał układ od najniżej po najwyżej położone. Kieruj się temperaturą i dostępnością wody.",
+          "items": [
+            "Sawanna i uprawy u podnóża (do ok. 1000 m n.p.m.)",
+            "Wilgotny las górski z bujnym runem (ok. 1800–3000 m n.p.m.)",
+            "Piętro wrzosowisk i zarośli z olbrzymimi starcami (ok. 3000–4000 m n.p.m.)",
+            "Półpustynia wysokogórska o skrajnych dobowych wahaniach temperatury (ok. 4000–5000 m n.p.m.)",
+            "Piętro niwalne — skały, śnieg i resztki lodowców (powyżej ok. 5000 m n.p.m.)"
+          ],
+          "explanation": "Kilimandżaro leży niemal na równiku, więc u podnóża jest gorąco i sucho, a na szczycie panuje wieczny mróz — ta sama góra mieści warunki od strefy międzyzwrotnikowej po okołobiegunową. Największa wilgotność, a więc i najbujniejszy las, przypada na wysokość 1800–3000 m, gdzie wznoszące się powietrze osiąga poziom kondensacji. Powyżej powietrze jest już wysuszone i rzadkie, dlatego zamiast lasu pojawiają się wrzosowiska, a potem półpustynia wysokogórska."
+        },
+        {
+          "type": "classification",
+          "title": "Przystosowania organizmów do warunków skrajnych",
+          "caption": "Zawsze pytaj: JAKI czynnik jest tu ograniczający — i dopiero potem szukaj przystosowania, które ten czynnik neutralizuje.",
+          "groups": [
+            {
+              "name": "Kserofity — rośliny sucholubne",
+              "description": "Ograniczają straty wody albo ją magazynują. **Sukulenty** gromadzą wodę w mięsistych łodygach lub liściach i otwierają aparaty szparkowe nocą; **sklerofity** mają twarde, drobne, woskowane liście; **efemerofity** omijają problem, przechodząc cały cykl życiowy w kilka tygodni po deszczu.",
+              "examples": [
+                "kaktusy i wilczomlecze (sukulencja)",
+                "oliwka i dąb korkowy (sklerofity)",
+                "welwiczja dziwna na pustyni Namib",
+                "liście zredukowane do cierni"
+              ]
+            },
+            {
+              "name": "Higrofity i hydrofity — rośliny siedlisk mokrych",
+              "description": "Problemem nie jest brak wody, lecz **brak tlenu w podtopionym podłożu**. Rozwiązaniem jest aerenchyma — tkanka powietrzna przewodząca tlen do korzeni — oraz korzenie oddechowe wystające ponad wodę i pływające liście o szparkach na górnej stronie.",
+              "examples": [
+                "pneumatofory namorzynów",
+                "grzybienie i grążele",
+                "pałka wodna i trzcina",
+                "torfowce zatrzymujące wielokrotność swojej masy wody"
+              ]
+            },
+            {
+              "name": "Halofity — rośliny słonolubne",
+              "description": "Rosną na solniskach, wybrzeżach i glebach zasolonych wtórnie. Muszą pobierać wodę z roztworu o wysokim stężeniu soli, więc utrzymują **jeszcze wyższe ciśnienie osmotyczne** w swoich komórkach, a nadmiar soli usuwają gruczołami solnymi lub odrzucają wraz ze starymi liśćmi.",
+              "examples": [
+                "soliród zielny",
+                "mangrowce",
+                "aster solny",
+                "sukulencja liści jako rozcieńczanie soli"
+              ]
+            },
+            {
+              "name": "Rośliny wysokogórskie i tundrowe",
+              "description": "Walczą z mrozem, wiatrem, silnym promieniowaniem UV i krótkim latem. Stąd **karłowatość i formy poduchowate** (własny, cieplejszy mikroklimat), gęste owłosienie liści, barwniki chroniące przed UV, wieloletniość oraz błyskawiczne kwitnienie tuż po stopieniu śniegu.",
+              "examples": [
+                "szarotka alpejska",
+                "wierzba zielna — najmniejsze drzewo świata",
+                "poduchy lepnicy bezłodygowej",
+                "kosodrzewina o płożących pniach"
+              ]
+            },
+            {
+              "name": "Zwierzęta strefy zimnej",
+              "description": "Zmniejszają straty ciepła: reguła **Bergmanna** (osobniki tego samego rodzaju są większe w zimniejszym klimacie — mniejszy stosunek powierzchni do objętości) i reguła **Allena** (krótsze uszy, ogony i kończyny). Do tego gruba warstwa tłuszczu i podszerstka, hibernacja albo sezonowe migracje.",
+              "examples": [
+                "niedźwiedź polarny a niedźwiedź malajski",
+                "lis polarny a fenek",
+                "hibernacja świstaka",
+                "migracje karibu i ptaków"
+              ]
+            },
+            {
+              "name": "Zwierzęta strefy suchej i gorącej",
+              "description": "Oszczędzają wodę i unikają upału: aktywność nocna, ukrywanie się w norach w ciągu dnia, **estywacja** (sen letni), zagęszczony mocz i sucha wydalina azotowa, a czasem pozyskiwanie wody wyłącznie z pokarmu i z utleniania tłuszczu.",
+              "examples": [
+                "fenek i skoczek pustynny",
+                "estywacja płazów i ryb dwudysznych",
+                "wielbłąd magazynujący tłuszcz w garbie",
+                "chrząszcze Namib zbierające wodę z mgły"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Bioróżnorodność (różnorodność biologiczna)",
+          "text": "**Bioróżnorodność** to zróżnicowanie życia na trzech poziomach: **genetycznym** (zmienność w obrębie gatunku), **gatunkowym** (liczba i proporcje gatunków) oraz **ekosystemowym** (rozmaitość siedlisk i biocenoz). Rośnie w kierunku równika i maleje ku biegunom oraz wraz z wysokością, bo im więcej energii, wody i im stabilniejsze warunki w skali geologicznej, tym więcej **nisz ekologicznych** do zajęcia. Największą różnorodność mają wilgotne lasy równikowe i rafy koralowe, najmniejszą — pustynie lodowe i gorące.",
+          "note": "**Endemit** to gatunek występujący naturalnie tylko na jednym, ograniczonym obszarze (np. lemury na Madagaskarze, warzucha tatrzańska w Tatrach). **Relikt** to gatunek — pozostałość po dawnej epoce o innym klimacie (np. brzoza karłowata na polskich torfowiskach, pamiątka po epoce lodowej). Endemit mówi o miejscu, relikt o czasie — pojęcia te bywają mylone, a gatunek może być jednocześnie jednym i drugim."
+        },
+        {
+          "type": "case-study",
+          "title": "Madagaskar — wyspa, na której izolacja stworzyła i zagroziła",
+          "region": "Madagaskar, Ocean Indyjski",
+          "text": "Madagaskar oddzielił się od pozostałych lądów kilkadziesiąt milionów lat temu i od tego czasu jego flora oraz fauna ewoluowały niemal w całkowitej izolacji. Skutek: **zdecydowana większość rodzimych gatunków to endemity** — wszystkie lemury, większość kameleonów świata, baobaby (6 z 8 gatunków rodzaju), rodzina drzew wilczomleczowatych o pokroju kaktusów. Wyspa jest przy tym duża i rozciągnięta południkowo, więc mieści wilgotne lasy na wschodzie, suchy busz na południu i płaskowyże w środku, co dodatkowo pomnożyło liczbę nisz. Ta sama izolacja, która wytworzyła bogactwo, czyni je jednak skrajnie **wrażliwym**: gatunek o zasięgu ograniczonym do jednej wyspy nie ma dokąd się wycofać. Wypalanie lasów pod uprawy i pastwiska (metoda tavy) zniszczyło znaczną część pierwotnej pokrywy leśnej, a wraz z nią siedliska, których nie da się odtworzyć — wymarcie na Madagaskarze oznacza wymarcie globalne.",
+          "takeaway": "Izolacja geograficzna to fabryka endemitów, ale endemizm i mały zasięg to jednocześnie największy czynnik ryzyka wyginięcia — dlatego wyspy i góry są zawsze priorytetem ochrony przyrody."
+        },
+        {
+          "type": "classification",
+          "title": "Formy ochrony przyrody w Polsce",
+          "caption": "Zapamiętaj podział wg kryterium: co chronimy — obszar, pojedynczy obiekt czy gatunek.",
+          "groups": [
+            {
+              "name": "Ochrona obszarowa wielkoprzestrzenna",
+              "description": "Obejmuje rozległe tereny o różnym rygorze. **Park narodowy** (23 w Polsce, razem ok. 1% powierzchni kraju) ma najwyższy status i własną administrację; **park krajobrazowy** chroni walory przyrodnicze i krajobrazowe, ale dopuszcza gospodarowanie; **obszar chronionego krajobrazu** to najsłabszy rygor, pełni głównie funkcję korytarza ekologicznego i otuliny.",
+              "examples": [
+                "Białowieski PN",
+                "Biebrzański PN — największy w Polsce",
+                "Park Krajobrazowy Puszczy Knyszyńskiej",
+                "obszary chronionego krajobrazu jako korytarze ekologiczne"
+              ]
+            },
+            {
+              "name": "Rezerwaty i małe formy obszarowe",
+              "description": "**Rezerwat przyrody** chroni zwykle niewielki fragment o wybitnych walorach — może być leśny, torfowiskowy, florystyczny, faunistyczny czy geologiczny. Do tej grupy należą także użytki ekologiczne, stanowiska dokumentacyjne oraz zespoły przyrodniczo-krajobrazowe.",
+              "examples": [
+                "rezerwat Wąwóz Homole",
+                "użytki ekologiczne — oczka wodne, śródpolne bagienka",
+                "stanowiska dokumentacyjne — odsłonięcia geologiczne"
+              ]
+            },
+            {
+              "name": "Ochrona obiektowa",
+              "description": "**Pomnik przyrody** to pojedynczy twór przyrody żywej lub nieożywionej o szczególnej wartości: sędziwe drzewo, aleja, głaz narzutowy, źródło, jaskinia, wodospad, skałka. W Polsce jest ich kilkadziesiąt tysięcy — to najliczniejsza forma ochrony.",
+              "examples": [
+                "Dąb Bartek",
+                "głazy narzutowe",
+                "aleje przydrożne",
+                "jaskinie i wywierzyska"
+              ]
+            },
+            {
+              "name": "Ochrona gatunkowa",
+              "description": "Dotyczy nie terenu, lecz **gatunku w całym kraju**. Ochrona **ścisła** zakazuje wszelkich czynności wobec osobników (zabijania, zbioru, niszczenia siedlisk), **częściowa** dopuszcza pozyskiwanie na określonych zasadach. Obejmuje rośliny, zwierzęta i grzyby.",
+              "examples": [
+                "wilk i ryś — ochrona ścisła",
+                "bocian biały",
+                "sasanka i mikołajek nadmorski",
+                "porosty jako gatunki wskaźnikowe"
+              ]
+            },
+            {
+              "name": "Sieć Natura 2000",
+              "description": "Europejska sieć obszarów wyznaczana według wspólnych, unijnych kryteriów: **obszary specjalnej ochrony ptaków (OSO)** i **specjalne obszary ochrony siedlisk (SOO)**. Obejmuje ok. 20% powierzchni Polski i może pokrywać się z innymi formami — nie zabrania gospodarowania, lecz zakazuje działań pogarszających stan chronionych siedlisk i gatunków.",
+              "examples": [
+                "Puszcza Kampinoska jako OSO i SOO",
+                "Dolina Biebrzy",
+                "Ostoja Słowińska",
+                "ocena oddziaływania inwestycji na obszar Natura 2000"
+              ]
+            },
+            {
+              "name": "Sposób ochrony: bierna czy czynna",
+              "description": "To kryterium przecina wszystkie formy. **Ochrona bierna (zachowawcza)** polega na powstrzymaniu się od ingerencji i pozwoleniu przyrodzie na naturalne procesy — sprawdza się w ekosystemach pierwotnych. **Ochrona czynna** wymaga stałych zabiegów, bo chronione siedlisko powstało lub trwa dzięki człowiekowi: bez koszenia łąka zarasta krzewami i ginie razem ze swoimi gatunkami.",
+              "examples": [
+                "ochrona bierna w rezerwacie ścisłym Puszczy Białowieskiej",
+                "koszenie i wypas łąk oraz muraw kserotermicznych",
+                "wykaszanie trzciny na torfowiskach",
+                "budowa przejść dla zwierząt i przepławek dla ryb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na stacji położonej na wysokości 400 m n.p.m. średnia temperatura najcieplejszego miesiąca wynosi 17,2°C. Przyjmując pionowy gradient temperatury 0,6°C/100 m oraz założenie, że klimatyczna górna granica lasu przebiega tam, gdzie średnia temperatura najcieplejszego miesiąca wynosi 10°C, na jakiej wysokości znajdzie się ta granica?",
+          "options": [
+            "ok. 1200 m n.p.m.",
+            "ok. 1600 m n.p.m.",
+            "ok. 2000 m n.p.m.",
+            "ok. 2400 m n.p.m."
+          ],
+          "correctIndex": 1,
+          "explanation": "Różnica temperatur wynosi 17,2°C − 10°C = 7,2°C. Skoro na każde 100 m przypada spadek o 0,6°C, to potrzebne wzniesienie to (7,2 ÷ 0,6) × 100 m = 1200 m. Granica lasu leży więc 1200 m powyżej stacji: 400 m + 1200 m = **1600 m n.p.m.** Typowy błąd to zatrzymanie się na wyniku 1200 m, czyli podanie samej **różnicy wysokości** zamiast wysokości bezwzględnej — na maturze zawsze sprawdź, czy pytanie dotyczy „o ile\", czy „na jakiej wysokości\"."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego na Kilimandżaro (ok. 3°S) górna granica lasu przebiega na wysokości ok. 3000 m n.p.m., a w Tatrach (ok. 49°N) już na ok. 1550 m n.p.m.?",
+          "options": [
+            "Ponieważ w Tatrach spadek temperatury z wysokością jest szybszy niż w strefie międzyzwrotnikowej",
+            "Ponieważ w Tatrach opady są zbyt małe, by las mógł rosnąć powyżej 1550 m n.p.m.",
+            "Ponieważ na Kilimandżaro temperatura u podnóża jest znacznie wyższa, więc próg termiczny lasu zostaje osiągnięty dopiero na dużo większej wysokości",
+            "Ponieważ Kilimandżaro jest wulkanem, a ciepło z jego wnętrza ogrzewa stoki i podnosi granicę lasu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Gradient pionowy jest w obu miejscach zbliżony (ok. 0,6°C/100 m), więc różnicy nie tłumaczy tempo spadku temperatury, lecz **punkt startowy**. U podnóża Kilimandżaro panuje klimat gorący i dopiero po pokonaniu około trzech kilometrów w pionie temperatura spada do progu, przy którym drzewa przestają rosnąć. W Tatrach jest znacznie chłodniej już na poziomie doliny, więc ten sam próg zostaje osiągnięty prawie dwukrotnie niżej. To ta sama zasada, która sprawia, że w Laponii granica lasu schodzi do 500–700 m n.p.m. Odpowiedź B jest błędna, bo w Tatrach opady rosną z wysokością i nie są czynnikiem ograniczającym, a D myli się co do skali: strumień ciepła wulkanicznego nie wpływa na klimat stoków."
+        },
+        {
+          "type": "quiz",
+          "question": "W rezerwacie utworzonym dla ochrony murawy kserotermicznej z licznymi storczykami zaprzestano wypasu owiec i koszenia, uznając, że najlepszą ochroną jest brak ingerencji. Po kilkunastu latach murawa zarosła tarniną i głogiem, a liczba gatunków chronionych spadła. Co było błędem?",
+          "options": [
+            "Zastosowano ochronę bierną tam, gdzie siedlisko jest półnaturalne i wymaga ochrony czynnej, czyli powtarzalnych zabiegów odtwarzających dawne użytkowanie",
+            "Rezerwat był zbyt mały, by utrzymać populacje storczyków",
+            "Storczyki są gatunkami reliktowymi i wymierają niezależnie od sposobu ochrony",
+            "Zabrakło ochrony gatunkowej ścisłej dla storczyków występujących na tym terenie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Murawy kserotermiczne, łąki i wrzosowiska to siedliska **półnaturalne**: powstały i utrzymały się dzięki wielowiekowemu wypasowi oraz koszeniu, które usuwały nalot drzew i krzewów. Zaprzestanie tych zabiegów uruchamia naturalną **sukcesję wtórną** — murawa przechodzi w zarośla, a światłolubne storczyki przegrywają konkurencję o światło. Prawidłowa jest tu ochrona **czynna**: koszenie z usuwaniem biomasy, wypas ekstensywny, usuwanie nalotu. Ochrona bierna ma sens w ekosystemach zbliżonych do pierwotnych, np. w rezerwacie ścisłym starego lasu. Odpowiedzi B, C i D nie tłumaczą kluczowego faktu z opisu — zarastania terenu krzewami, które nastąpiło dokładnie po zaprzestaniu użytkowania."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Trzy nawyki, które opłacają się w tym dziale. **(1) Każde zadanie obliczeniowe z gór** rozwiązuj w dwóch krokach: najpierw różnica temperatur, potem zamiana jej na metry przez podzielenie przez 0,6 i pomnożenie przez 100 — i dopiero na końcu zdecyduj, czy dodać wysokość stacji. **(2) Przy pytaniu „dlaczego w tych górach piętra sięgają wyżej\"** odpowiadaj przez szerokość geograficzną, ekspozycję stoku i kontynentalizm, a nie przez samą wysokość gór. **(3) W zadaniach o ochronie przyrody** zawsze najpierw ustal, czy siedlisko jest naturalne, czy półnaturalne — od tego zależy, czy uzasadnioną odpowiedzią jest ochrona bierna, czy czynna. To rozróżnienie jest jednym z najczęściej punktowanych elementów odpowiedzi w arkuszach CKE."
+        }
+      ]
+    }
+  ]
+}

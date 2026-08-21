@@ -217,6 +217,30 @@ export async function submitOpenSelfAssessment(
   return { ok: true, data: inserted as GeoExerciseAttempt };
 }
 
+/**
+ * Marks a theory lesson as read. Deliberately does NOT touch
+ * geo_topic_progress: mastery there means "solves exercises correctly" (see
+ * lib/geografia/progress.ts), and letting self-declared reading inflate it
+ * would make the estimated score meaningless. Reading still counts as
+ * activity for the streak/calendar, same as any other learning action.
+ */
+export async function markLessonComplete(lessonId: string): Promise<ActionResult<void>> {
+  const profile = await requireProfile();
+  const supabase = await createClient();
+
+  const { error } = await supabase
+    .from("geo_lesson_progress")
+    .upsert({ user_id: profile.id, lesson_id: lessonId }, { onConflict: "user_id,lesson_id" });
+  if (error) {
+    console.error("[geografia] lesson progress upsert failed:", error);
+    return actionFailure("Nie udało się zapisać postępu.");
+  }
+
+  await supabase.rpc("record_activity", { p_type: ACTIVITY_TYPES.GEOGRAFIA });
+  revalidatePath("/geografia/tematy");
+  return { ok: true, data: undefined };
+}
+
 export async function toggleFavorite(exerciseId: string): Promise<ActionResult<{ favorited: boolean }>> {
   const profile = await requireProfile();
   const supabase = await createClient();

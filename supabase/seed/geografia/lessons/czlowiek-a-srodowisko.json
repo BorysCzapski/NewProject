@@ -1,0 +1,2635 @@
+{
+  "topicSlug": "czlowiek-a-srodowisko",
+  "lessons": [
+    {
+      "slug": "antropopresja-i-degradacja",
+      "title": "Antropopresja, degradacja i dewastacja środowiska",
+      "summary": "Czym jest antropopresja, jak narastała w czasie i czym różni się degradacja środowiska od jego dewastacji.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Ten dział spina cały kurs geografii: patrzysz jednocześnie na środowisko przyrodnicze i na gospodarkę, a potem pytasz — **kto na danym rozwiązaniu zyskuje, a kto traci**. Maturalne zadania mają tu prawie zawsze tę samą budowę: podana jest inwestycja albo sposób gospodarowania (zapora, odkrywka, droga, ośrodek narciarski, farma wiatrowa), a Ty masz wskazać jej **skutki przyrodnicze, społeczne i gospodarcze** oraz **strony konfliktu interesów**. Zaczynamy więc od trzech pojęć, których nie wolno mylić: **antropopresja**, **degradacja** i **dewastacja**."
+        },
+        {
+          "type": "definition",
+          "term": "Antropopresja",
+          "text": "**Antropopresja** to ogół oddziaływań człowieka na środowisko przyrodnicze — zarówno **zamierzonych** (osuszanie bagien, budowa zapory, orka, zalesianie), jak i **ubocznych** (emisja spalin, hałas, zawleczenie gatunków obcych, świecenie miast nocą). Jej miarą jest **stopień przekształcenia poszczególnych komponentów środowiska**, a nie sama liczba mieszkańców: obszar słabo zaludniony, ale intensywnie eksploatowany (odkrywka, pole naftowe w tundrze) bywa przekształcony silniej niż gęsto zaludniona wieś.",
+          "note": "Antropopresja nie jest synonimem niszczenia. Ekstensywnie użytkowane łąki kośne, murawy kserotermiczne czy śródpolne zadrzewienia to krajobrazy **półnaturalne** — powstały dzięki człowiekowi, po zaprzestaniu użytkowania zanikają, a bywają bogatsze gatunkowo niż siedliska, które zastąpiły."
+        },
+        {
+          "type": "timeline",
+          "title": "Jak narastała antropopresja",
+          "caption": "Kliknij etap, aby zobaczyć, co zmieniło się w relacji człowiek – środowisko.",
+          "events": [
+            {
+              "period": "ok. 10 tys. lat temu",
+              "label": "Rewolucja neolityczna",
+              "text": "Przejście od zbieractwa i łowiectwa do **uprawy roli i hodowli**. Pierwsze trwałe wylesienia (karczowanie i wypalanie), pierwsze **udomowienia** gatunków, początek celowego przekształcania szaty roślinnej. Presja jest jeszcze **punktowa i odwracalna** — porzucone pole zarasta lasem."
+            },
+            {
+              "period": "III tys. p.n.e. – V w. n.e.",
+              "label": "Cywilizacje antyczne",
+              "text": "Wylesienie znacznej części basenu Morza Śródziemnego (drewno na floty, statki, opał, wypas kóz) i związana z nim **erozja gleb** na stokach. W Mezopotamii nawadnianie bez odwadniania doprowadziło do **wtórnego zasolenia gleb** i spadku plonów — to pierwszy udokumentowany przykład degradacji środowiska niszczącej podstawy gospodarki."
+            },
+            {
+              "period": "XI–XIV w.",
+              "label": "Wielkie karczunki średniowieczne",
+              "text": "W Europie Środkowej lesistość spada z ponad 60% do kilkudziesięciu procent. Powstaje **krajobraz rolniczy** z siecią wsi i pól — dominujący typ krajobrazu kulturowego Niżu Polskiego do dziś."
+            },
+            {
+              "period": "1750–1900",
+              "label": "Rewolucja przemysłowa",
+              "text": "Węgiel kamienny, maszyna parowa, hutnictwo i koleje. Po raz pierwszy pojawia się presja o zasięgu **regionalnym**: smog w miastach przemysłowych, rzeki zamienione w odbiorniki ścieków, hałdy i zapadliska w zagłębiach górniczych."
+            },
+            {
+              "period": "od ok. 1950 r.",
+              "label": "Wielkie przyspieszenie",
+              "text": "Równoczesny, gwałtowny wzrost liczby ludności, zużycia energii, nawozów sztucznych, wody i tworzyw sztucznych. Presja staje się **globalna**: zmiana składu atmosfery, dziura ozonowa, zakwaszenie oceanów, mikroplastik w osadach na całej Ziemi."
+            },
+            {
+              "period": "propozycja: od poł. XX w.",
+              "label": "Antropocen",
+              "text": "Koncepcja **nowej epoki geologicznej**, w której człowiek jest głównym czynnikiem zmian na powierzchni Ziemi (spopularyzował ją Paul Crutzen w 2000 r.). Jej zapisem w osadach mają być m.in. **radionuklidy z prób jądrowych**, popioły lotne, beton i tworzywa sztuczne. Formalnie antropocen nie został dotąd zatwierdzony jako jednostka podziału czasu geologicznego."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Przejawy antropopresji według komponentów środowiska",
+          "caption": "Ten podział jest najwygodniejszym szkieletem odpowiedzi na maturze — przechodzisz po kolei przez komponenty i dla każdego podajesz konkretny skutek.",
+          "groups": [
+            {
+              "name": "Atmosfera",
+              "description": "Zmiana składu powietrza i bilansu cieplnego, zarówno lokalnie, jak i globalnie.",
+              "examples": [
+                "emisja gazów cieplarnianych i pyłów (PM10, PM2,5)",
+                "smog londyński i fotochemiczny",
+                "kwaśne opady po emisji SO2 i tlenków azotu",
+                "miejska wyspa ciepła",
+                "zanieczyszczenie świetlne i hałas"
+              ]
+            },
+            {
+              "name": "Hydrosfera",
+              "description": "Zmiana ilości, jakości i rytmu wód powierzchniowych oraz podziemnych.",
+              "examples": [
+                "regulacja i kanalizowanie rzek",
+                "eutrofizacja jezior i mórz (spływ azotu i fosforu)",
+                "leje depresyjne wokół kopalń i wielkich ujęć wody",
+                "zasolenie wód rzecznych przez wody kopalniane",
+                "zanikanie mokradeł po melioracjach odwadniających"
+              ]
+            },
+            {
+              "name": "Litosfera i rzeźba",
+              "description": "Człowiek jako czynnik rzeźbotwórczy — usuwa i usypuje masy skalne szybciej niż wiele procesów naturalnych.",
+              "examples": [
+                "wyrobiska odkrywkowe i kamieniołomy",
+                "hałdy i zwałowiska (formy antropogeniczne)",
+                "osiadanie i zapadliska nad wyrobiskami podziemnymi",
+                "wstrząsy indukowane działalnością górniczą",
+                "nasypy, wykopy i tunele komunikacyjne"
+              ]
+            },
+            {
+              "name": "Pedosfera (gleby)",
+              "description": "Ubytek, przekształcenie chemiczne i fizyczne pokrywy glebowej — zasobu odnawialnego tylko w skali setek lat.",
+              "examples": [
+                "erozja wodna i wietrzna gleb ornych",
+                "zakwaszenie i skażenie metalami ciężkimi",
+                "wtórne zasolenie gleb nawadnianych",
+                "zagęszczenie gleby przez ciężkie maszyny",
+                "uszczelnienie (zasklepienie) gleby pod zabudową i asfaltem"
+              ]
+            },
+            {
+              "name": "Biosfera",
+              "description": "Zmiana składu gatunkowego, struktury i ciągłości ekosystemów.",
+              "examples": [
+                "wylesianie i fragmentacja siedlisk",
+                "wymieranie i zagrożenie gatunków",
+                "introdukcja gatunków obcych i inwazyjnych",
+                "przełowienie mórz",
+                "monokultury leśne i rolne o ubogiej różnorodności"
+              ]
+            },
+            {
+              "name": "Krajobraz i dziedzictwo",
+              "description": "Zmiana fizjonomii przestrzeni oraz jej wartości kulturowych i wizualnych.",
+              "examples": [
+                "chaotyczna zabudowa i reklamy wielkoformatowe",
+                "dominanty krajobrazowe (maszty, turbiny, kominy)",
+                "zatopienie zabytków przez zbiorniki zaporowe",
+                "zanik tradycyjnego krajobrazu rolniczego"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala oddziaływania człowieka",
+          "items": [
+            {
+              "value": "ok. 8",
+              "unit": "mld",
+              "label": "Ludność świata (2023)",
+              "note": "w 1950 r. było jej ok. 2,5 mld"
+            },
+            {
+              "value": "ok. 50",
+              "unit": "%",
+              "label": "Udział powierzchni lądów wolnych od lodu użytkowanych rolniczo",
+              "note": "grunty orne i pastwiska łącznie"
+            },
+            {
+              "value": "ok. 31",
+              "unit": "%",
+              "label": "Udział lasów w powierzchni lądów",
+              "note": "przed rozwojem rolnictwa było to znacznie więcej"
+            },
+            {
+              "value": "ok. 70",
+              "unit": "%",
+              "label": "Udział rolnictwa w światowym poborze wody słodkiej"
+            },
+            {
+              "value": "ok. 96",
+              "unit": "%",
+              "label": "Udział ludzi i zwierząt hodowlanych w masie wszystkich ssaków lądowych",
+              "note": "na dzikie ssaki przypada zaledwie kilka procent"
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Antropopresja w strefach krajobrazowych",
+          "caption": "Siła presji i odporność środowiska rozkładają się inaczej — kliknij strefę.",
+          "zones": [
+            {
+              "name": "Strefa polarna i subpolarna",
+              "latitude": "90–66°",
+              "tone": "ice",
+              "text": "Zaludnienie znikome, ale **odporność środowiska najmniejsza na Ziemi**: krótki okres wegetacyjny, wieloletnia zmarzlina i wolne tempo rozkładu sprawiają, że ślad po gąsienicach pojazdu w tundrze bywa widoczny przez dziesiątki lat. Główna presja: **wydobycie ropy i gazu**, transport morski, zanieczyszczenia przynoszone z niższych szerokości."
+            },
+            {
+              "name": "Strefa umiarkowana chłodna (tajga)",
+              "latitude": "66–55°",
+              "tone": "vegetation",
+              "text": "Presja związana z **gospodarką leśną** (zręby zupełne), górnictwem i energetyką wodną. Regeneracja lasu trwa dziesiątki lat, gleby bielicowe są mało żyzne i podatne na zakwaszenie."
+            },
+            {
+              "name": "Strefa umiarkowana ciepła",
+              "latitude": "55–40°",
+              "tone": "earth",
+              "text": "**Najsilniej i najdłużej przekształcona strefa świata** — tu skupia się rolnictwo intensywne, przemysł i największe aglomeracje Europy, Azji Wschodniej i Ameryki Północnej. Krajobraz naturalny (las liściasty i mieszany) zachował się na niewielkich powierzchniach."
+            },
+            {
+              "name": "Strefa podzwrotnikowa i zwrotnikowa sucha",
+              "latitude": "40–20°",
+              "tone": "heat",
+              "text": "Środowisko na granicy równowagi wodnej: **nadmierny wypas, wyrąb na opał i nawadnianie bez odwadniania** prowadzą do **pustynnienia** i wtórnego zasolenia. Skutki są tu wyjątkowo trudno odwracalne, bo brakuje wody do regeneracji roślinności."
+            },
+            {
+              "name": "Strefa podrównikowa i równikowa",
+              "latitude": "20–0°",
+              "tone": "vegetation",
+              "text": "Najszybciej narastająca presja współczesnego świata: **wylesianie** pod plantacje i pastwiska, rozwój infrastruktury, górnictwo. Gleby ferralitowe są ubogie, a zapas składników odżywczych tkwi w biomasie — po wycięciu lasu żyzność spada w ciągu kilku lat."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Odporność i pojemność środowiska",
+          "text": "**Odporność środowiska** to zdolność ekosystemu do zachowania równowagi mimo działania czynnika zakłócającego oraz do powrotu do stanu wyjściowego po jego ustąpieniu. **Pojemność (chłonność) środowiska** to największa presja — liczba użytkowników, ilość ścieków, natężenie ruchu — jaką dany obszar może przyjąć **bez trwałej utraty równowagi**. Te dwa pojęcia tłumaczą, dlaczego identyczna inwestycja jest neutralna w jednym miejscu, a katastrofalna w innym.",
+          "note": "Najniższą odpornością cechują się ekosystemy o krótkim okresie wegetacyjnym lub deficycie wody: tundra, wysokogórskie murawy, pustynie i półpustynie, a także rafy koralowe i torfowiska. Najwyższą — ekosystemy o szybkim obiegu materii i dużej zdolności regeneracji, np. łąki i lasy strefy umiarkowanej na żyznych glebach."
+        },
+        {
+          "type": "process",
+          "title": "Model DPSIR — od przyczyny do reakcji",
+          "caption": "Schemat stosowany w raportach o stanie środowiska; świetnie porządkuje odpowiedź na pytanie o przyczyny i skutki.",
+          "steps": [
+            {
+              "title": "D — siły sprawcze (Driving forces)",
+              "text": "Głębokie przyczyny tkwiące w gospodarce i społeczeństwie: **wzrost liczby ludności, konsumpcji, popytu na energię i żywność**, model transportu, moda na dany typ wypoczynku. Same w sobie nie niszczą środowiska — dopiero uruchamiają presję."
+            },
+            {
+              "title": "P — presja (Pressure)",
+              "text": "Konkretne oddziaływania: **emisja zanieczyszczeń, pobór wody, zajęcie terenu, wydobycie surowca, zrzut ścieków**. To ten człon opisujesz, gdy polecenie brzmi: podaj przejawy antropopresji."
+            },
+            {
+              "title": "S — stan środowiska (State)",
+              "text": "Mierzalne cechy środowiska po zadziałaniu presji: **stężenie pyłów, klasa czystości wody, poziom wód gruntowych, powierzchnia lasu, liczebność gatunku**."
+            },
+            {
+              "title": "I — skutki (Impact)",
+              "text": "Konsekwencje zmiany stanu dla przyrody, ludzi i gospodarki: **choroby układu oddechowego, spadek plonów, utrata dochodów z rybołówstwa, wymieranie gatunku, koszty leczenia i odbudowy**."
+            },
+            {
+              "title": "R — reakcja (Response)",
+              "text": "Odpowiedź społeczeństwa i władz: **normy emisji, opłaty i podatki środowiskowe, formy ochrony przyrody, oczyszczalnie, rekultywacja, umowy międzynarodowe, edukacja ekologiczna**. Reakcja może działać na każdy wcześniejszy człon — najskuteczniej wtedy, gdy sięga sił sprawczych."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Degradacja a dewastacja środowiska",
+          "leftLabel": "Degradacja",
+          "rightLabel": "Dewastacja",
+          "rows": [
+            {
+              "aspect": "Głębokość zmian",
+              "left": "Pogorszenie stanu i **częściowa** utrata wartości użytkowych oraz przyrodniczych",
+              "right": "**Całkowite zniszczenie** — teren traci wartość użytkową i zdolność do samoregeneracji"
+            },
+            {
+              "aspect": "Odwracalność",
+              "left": "Odwracalna, choć zwykle kosztowna; ekosystem częściowo się regeneruje po ustaniu presji",
+              "right": "Praktycznie nieodwracalna bez kosztownej ingerencji technicznej; powrót do stanu sprzed zmiany bywa niemożliwy"
+            },
+            {
+              "aspect": "Grunty w statystyce (GUS)",
+              "left": "**Grunty zdegradowane** — takie, których wartość użytkowa zmalała",
+              "right": "**Grunty zdewastowane** — takie, które całkowicie utraciły wartość użytkową"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "zakwaszona gleba rolna, wyeutrofizowane jezioro, przerzedzony las przy hucie, zabrudzony hałasem i pyłem teren przy drodze",
+              "right": "wyrobisko po odkrywce siarki bez gleby i roślinności, hałda odpadów poflotacyjnych, teren po katastrofie chemicznej, dno wyschniętego Jeziora Aralskiego"
+            },
+            {
+              "aspect": "Sposób naprawy",
+              "left": "Ograniczenie presji, wapnowanie, zalesianie, oczyszczanie — środowisko dochodzi do siebie samo, jeśli mu się nie przeszkadza",
+              "right": "Konieczna **rekultywacja**: uformowanie rzeźby, neutralizacja podłoża, nawiezienie warstwy glebotwórczej, dopiero potem roślinność"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Jezioro Aralskie — podręcznikowy przykład dewastacji",
+          "region": "Azja Środkowa (Kazachstan, Uzbekistan)",
+          "text": "Do lat 60. XX w. Jezioro Aralskie było **czwartym co do powierzchni jeziorem świata** (ok. 68 tys. km²). Radziecki program rozwoju upraw **bawełny i ryżu** oparto na nawadnianiu wodami zasilających je rzek — **Amu-darii i Syr-darii**. Kanały (m.in. Kanał Karakumski) o nieuszczelnionym dnie traciły ogromną część wody na przesiąkanie i parowanie, a dopływ do jeziora praktycznie ustał. Powierzchnia zbiornika skurczyła się o ponad 90%, jezioro rozpadło się na części, **zasolenie wzrosło kilkakrotnie** i wybiło rodzimą faunę ryb. Skutki społeczno-gospodarcze: upadek rybołówstwa i portów (Mujnak, Aralsk oddalone dziś dziesiątki kilometrów od wody), bezrobocie i emigracja, **burze pyłowo-solne** roznoszące sól oraz pozostałości pestycydów z odsłoniętego dna, wzrost zachorowań układu oddechowego. Zmieniły się nawet warunki lokalne: bez łagodzącego wpływu wielkiej masy wody **wzrosła amplituda temperatury**, a okres wegetacyjny się skrócił. Częściowy sukces przyniosła zapora Kokaral (2005), dzięki której odbudowano **Mały Aral** na północy i przywrócono tam rybołówstwo.",
+          "takeaway": "Aral pokazuje trzy rzeczy naraz: presja może być **pośrednia** (nikt nie osuszał jeziora — pobierano wodę z rzek), skutki są **kaskadowe** (woda → sól → zdrowie → gospodarka → migracje), a granica między degradacją a dewastacją zostaje przekroczona wtedy, gdy środowisko traci zdolność powrotu o własnych siłach."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa najczęstsze błędy z tej lekcji. Po pierwsze: **antropopresja to nie to samo co zanieczyszczenie** — zalesienie nieużytku, budowa stawów rybnych czy koszenie łąki też są antropopresją, tylko o innym znaku. Po drugie: **degradacja to nie to samo co dewastacja**. Jeśli w zadaniu pada słowo „całkowicie utracił wartość użytkową” albo „konieczna jest rekultywacja”, chodzi o dewastację; jeśli „pogorszyły się warunki”, „zmalały plony” — o degradację."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Połącz termin z jego znaczeniem — to zestaw pojęć, które CKE lubi sprawdzać na wejściu do tego działu.",
+          "pairs": [
+            {
+              "left": "Antropopresja",
+              "right": "ogół oddziaływań człowieka na środowisko przyrodnicze, zamierzonych i ubocznych"
+            },
+            {
+              "left": "Degradacja środowiska",
+              "right": "pogorszenie stanu środowiska i częściowa utrata jego wartości użytkowych"
+            },
+            {
+              "left": "Dewastacja środowiska",
+              "right": "całkowite zniszczenie terenu i utrata jego wartości użytkowych"
+            },
+            {
+              "left": "Pojemność środowiska",
+              "right": "największa presja, jaką obszar przyjmie bez trwałej utraty równowagi"
+            },
+            {
+              "left": "Sozologia",
+              "right": "nauka o przyczynach i skutkach przekształceń środowiska oraz sposobach jego ochrony"
+            },
+            {
+              "left": "Antropocen",
+              "right": "proponowana epoka geologiczna, w której człowiek jest głównym czynnikiem zmian na Ziemi"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Które z opisanych zjawisk jest przykładem dewastacji, a nie degradacji środowiska?",
+          "options": [
+            "Zakwaszenie gleb ornych wskutek stosowania nawozów azotowych",
+            "Wzrost stężenia pyłu zawieszonego w mieście w sezonie grzewczym",
+            "Wyrobisko po odkrywkowej eksploatacji siarki, pozbawione pokrywy glebowej i roślinności",
+            "Przerzedzenie drzewostanu w lesie sąsiadującym z drogą krajową"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dewastacja oznacza **całkowitą utratę wartości użytkowych** i brak zdolności do samoregeneracji — nagie wyrobisko bez gleby wymaga pełnej **rekultywacji** (uformowania rzeźby, neutralizacji podłoża, nawiezienia warstwy glebotwórczej). Pozostałe przykłady to pogorszenie stanu środowiska, czyli degradacja: po ograniczeniu presji te układy częściowo się odbudują."
+        },
+        {
+          "type": "quiz",
+          "question": "Który obszar cechuje się najmniejszą odpornością na antropopresję?",
+          "options": [
+            "Las liściasty na glebie brunatnej w strefie umiarkowanej",
+            "Tundra na wieloletniej zmarzlinie",
+            "Łąka w dolinie rzecznej na madach",
+            "Pole uprawne na czarnoziemie"
+          ],
+          "correctIndex": 1,
+          "explanation": "O odporności decyduje **tempo regeneracji**. W tundrze okres wegetacyjny trwa kilka–kilkanaście tygodni, rozkład materii organicznej jest bardzo wolny, a naruszenie izolującej warstwy roślinnej powoduje **odmarzanie zmarzliny** i termokras. Ślady po pojazdach utrzymują się tam dziesiątki lat. Ekosystemy strefy umiarkowanej na żyznych glebach odbudowują się nieporównanie szybciej."
+        },
+        {
+          "type": "quiz",
+          "question": "W modelu DPSIR wprowadzenie opłat za emisję CO2 oraz utworzenie parku narodowego to przykłady członu:",
+          "options": [
+            "siły sprawcze (D)",
+            "presja (P)",
+            "stan środowiska (S)",
+            "reakcja (R)"
+          ],
+          "correctIndex": 3,
+          "explanation": "**Reakcja (R)** to odpowiedź społeczeństwa i władz na rozpoznane skutki: przepisy, opłaty, formy ochrony przyrody, inwestycje ochronne, edukacja. Siłą sprawczą byłby np. rosnący popyt na energię, presją — sama emisja CO2, a stanem — stężenie CO2 w atmosferze."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W poleceniach typu „podaj po dwa skutki przyrodnicze i społeczne” **nie mieszaj kategorii** — to najczęstsza przyczyna utraty punktów w tym dziale. **Skutek przyrodniczy** dotyczy komponentów środowiska (wód, gleb, rzeźby, roślinności, zwierząt), **społeczny** — ludzi (przesiedlenia, zdrowie, dostęp do wody, konflikty, utrata dziedzictwa), **gospodarczy** — produkcji, kosztów, miejsc pracy. Poprawny skutek zapisany w niewłaściwej kategorii nie dostaje punktu."
+        }
+      ]
+    },
+    {
+      "slug": "zapory-i-wielkie-zbiorniki",
+      "title": "Zapory i wielkie zbiorniki – konflikt o wodę",
+      "summary": "Po co buduje się wielkie zapory, jaki łańcuch skutków uruchamiają w dolinie rzeki i dlaczego Asuan oraz Zapora Trzech Przełomów są klasycznymi przykładami konfliktu interesów.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wielka zapora to najbardziej jaskrawy przykład **konfliktu interesów w gospodarowaniu przestrzenią**: jedna inwestycja daje prąd, chroni przed powodzią i pozwala nawadniać pola, a jednocześnie zatapia doliny, przerywa ciągłość rzeki i zmienia środowisko setki kilometrów w dół — aż po deltę i morze. W tej lekcji nauczysz się rozpisywać ten bilans **mechanizmami**, a nie hasłami: dlaczego akurat delta się cofa, dlaczego gleby nawadniane się zasalają i dlaczego zbiornik w klimacie suchym może zwiększyć straty wody."
+        },
+        {
+          "type": "definition",
+          "term": "Zbiornik zaporowy i retencja",
+          "text": "**Zbiornik zaporowy (retencyjny)** to sztuczne jezioro powstałe przez przegrodzenie doliny rzecznej zaporą. **Retencja** to czasowe zatrzymanie wody w zlewni. Zbiornik pozwala **wyrównać przepływ rzeki**: gromadzi wodę w okresie wezbrania i oddaje ją w czasie niżówki, dzięki czemu z rzeki o dużej **nieregularności przepływu** robi się rzeka użyteczna gospodarczo przez cały rok.",
+          "note": "Retencja nie musi być sztuczna. **Retencja naturalna** — mokradła, torfowiska, lasy, meandrujące koryta z terenami zalewowymi — zatrzymuje wodę taniej i bez skutków ubocznych zapory. Dlatego we współczesnej gospodarce wodnej mówi się o **małej retencji** i renaturyzacji rzek jako uzupełnieniu (lub alternatywie) wielkich zbiorników."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje wielkich zbiorników zaporowych",
+          "caption": "Zbiorniki są zwykle wielozadaniowe, a poszczególne funkcje bywają ze sobą sprzeczne — to źródło konfliktu wpisane w samą konstrukcję.",
+          "groups": [
+            {
+              "name": "Energetyczna",
+              "description": "Spiętrzona woda napędza turbiny hydroelektrowni. Wymaga utrzymywania **wysokiego poziomu** wody w zbiorniku.",
+              "examples": [
+                "Itaipú na Paranie",
+                "Zapora Trzech Przełomów na Jangcy",
+                "kaskada Dunajca w Polsce"
+              ]
+            },
+            {
+              "name": "Przeciwpowodziowa",
+              "description": "Zbiornik przejmuje falę wezbraniową i obniża jej kulminację poniżej. Wymaga utrzymywania **rezerwy powodziowej**, czyli poziomu niskiego — odwrotnie niż funkcja energetyczna.",
+              "examples": [
+                "zbiornik Racibórz Dolny na Odrze",
+                "Jezioro Nasera na Nilu",
+                "Sanxia dla miast doliny Jangcy"
+              ]
+            },
+            {
+              "name": "Nawodnieniowa i zaopatrzeniowa",
+              "description": "Woda ze zbiornika zasila kanały nawadniające i wodociągi. Kluczowa w strefach suchych, gdzie decyduje o liczbie zbiorów w roku.",
+              "examples": [
+                "Jezioro Nasera i pola Doliny Nilu",
+                "Jezioro Mead na Kolorado",
+                "zbiornik Sulejowski dla Łodzi"
+              ]
+            },
+            {
+              "name": "Żeglugowa",
+              "description": "Spiętrzenie zwiększa głębokość tranzytową i skraca odcinki nieżeglowne; śluzy pozwalają pokonać różnicę poziomów.",
+              "examples": [
+                "Jangcy — statki morskie docierają do Chongqingu",
+                "kaskada Renu i Dunaju",
+                "Kanał Panamski z jeziorem Gatún"
+              ]
+            },
+            {
+              "name": "Rekreacyjna i gospodarcza uzupełniająca",
+              "description": "Turystyka, sporty wodne, rybactwo, chłodzenie elektrowni, alimentacja rzeki w czasie suszy.",
+              "examples": [
+                "Jezioro Solińskie w Bieszczadach",
+                "Zalew Zegrzyński pod Warszawą"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Moc zainstalowana wybranych elektrowni wodnych",
+          "caption": "Dla porównania: największa polska elektrownia szczytowo-pompowa Żarnowiec ma ok. 0,7 GW, a elektrownia wodna Włocławek ok. 0,16 GW.",
+          "unit": "GW",
+          "labels": [
+            "Trzy Przełomy (Chiny)",
+            "Baihetan (Chiny)",
+            "Itaipú (Brazylia/Paragwaj)",
+            "Xiluodu (Chiny)",
+            "Belo Monte (Brazylia)",
+            "Guri (Wenezuela)",
+            "Asuan (Egipt)"
+          ],
+          "series": [
+            {
+              "name": "Moc zainstalowana",
+              "values": [
+                22.5,
+                16,
+                14,
+                13.9,
+                11.2,
+                10.2,
+                2.1
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Łańcuch skutków przyrodniczych wielkiej zapory",
+          "caption": "Kliknij kolejne ogniwa — na maturze punktowany jest właśnie ten ciąg przyczynowo-skutkowy.",
+          "steps": [
+            {
+              "title": "1. Przerwanie ciągłości rzeki",
+              "text": "Zapora staje się **barierą dla ryb wędrownych** (łosoś, jesiotr, węgorz) i dla organizmów dennych. Populacje odcięte od tarlisk w górnym biegu zanikają. Częściowym rozwiązaniem są **przepławki**, ale ich skuteczność przy zaporach kilkudziesięciometrowych jest niewielka."
+            },
+            {
+              "title": "2. Zatrzymanie rumowiska w zbiorniku",
+              "text": "W spiętrzonej wodzie prędkość przepływu spada, więc rzeka **traci zdolność transportu materiału** i osadza go na dnie zbiornika. Zbiornik stopniowo się **zamula** i traci pojemność użytkową — to główna przyczyna ograniczonej żywotności wielkich zapór."
+            },
+            {
+              "title": "3. Erozja poniżej zapory",
+              "text": "Poniżej zapory płynie woda pozbawiona materiału, tzw. **woda głodna**. Aby odzyskać zdolność transportową, zabiera materiał z dna i brzegów — nasila się **erozja denna i boczna**, koryto się pogłębia, a **zwierciadło wód gruntowych w dolinie opada** (przesuszenie łęgów i studni)."
+            },
+            {
+              "title": "4. Ubytek namułów na polach i w delcie",
+              "text": "Do niżej położonych pól nie docierają już **żyzne namuły** — rolnicy muszą kupować nawozy sztuczne. Do delty dociera mniej materiału niż zabiera fala morska, więc **brzeg delty ulega abrazji i cofa się**, a w głąb lądu wnika słona woda morska (zasolenie gleb i wód gruntowych)."
+            },
+            {
+              "title": "5. Zmiana reżimu i jakości wody",
+              "text": "Reżim rzeki z naturalnego (np. z wezbraniem letnim) zmienia się w **sterowany** — o wyrównanych przepływach. Woda spuszczana z głębi zbiornika jest zimniejsza i uboższa w tlen, a w samym zbiorniku, przy dopływie biogenów, rozwija się **eutrofizacja** i zakwity sinic."
+            },
+            {
+              "title": "6. Skutki dla wód gruntowych wokół zbiornika",
+              "text": "Wokół zbiornika **podnosi się zwierciadło wód gruntowych** — okoliczne grunty ulegają zabagnieniu, a w klimacie suchym intensywne parowanie wody podsiąkającej powoduje **wtórne zasolenie gleb**. Podmokłe brzegi bywają też ogniskiem chorób (malaria, schistosomatoza)."
+            },
+            {
+              "title": "7. Zmiany geologiczne i lokalny klimat",
+              "text": "Ciężar wody i wahania poziomu destabilizują zbocza — pojawiają się **osuwiska**, a przy dużych zbiornikach notuje się **sejsmiczność indukowaną**. Wielka powierzchnia parowania łagodzi lokalnie amplitudę temperatury i zwiększa wilgotność powietrza w najbliższym otoczeniu."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Wielka Tama Asuańska i Jezioro Nasera",
+          "region": "Egipt, dolina Nilu",
+          "text": "Ukończona w **1970 r.** tama przegrodziła Nil w południowym Egipcie, tworząc **Jezioro Nasera** o długości ok. 500 km, sięgające na terytorium Sudanu. Korzyści były ogromne i natychmiastowe: **koniec corocznych wylewów** i katastrofalnych susz, nawadnianie pozwalające zbierać **2–3 plony rocznie**, elektryfikacja kraju (elektrownia o mocy ok. 2,1 GW), rozwój żeglugi i rybactwa jeziornego. Koszty ujawniały się latami. Zatrzymanie **żyznych namułów** w zbiorniku zmusiło rolników do przejścia na nawozy sztuczne i pozbawiło surowca cegielnie. **Delta Nilu przestała być zasilana materiałem** i zaczęła się cofać, a w głąb lądu wnika słona woda morska. Nawadnianie bez sprawnego odwadniania wywołało **wtórne zasolenie i zabagnienie** gleb. W stojącej wodzie kanałów rozmnożyły się ślimaki — żywiciele pośredni pasożytów wywołujących **schistosomatozę (bilharcjozę)**. Ustanie dostawy biogenów do Morza Śródziemnego zbiegło się z **załamaniem połowów sardynek** u wybrzeży Egiptu. Wysiedlono ok. **100 tys. Nubijczyków**, a zespół świątyń w **Abu Simbel** trzeba było rozebrać i przenieść wyżej. Z powierzchni jeziora, w klimacie skrajnie suchym i gorącym, **paruje rocznie kilkanaście km³ wody** — to strata porównywalna z zużyciem dużego kraju.",
+          "takeaway": "Asuan to modelowy układ: **korzyści są skoncentrowane, szybkie i policzalne**, a koszty **rozproszone, opóźnione i przyrodnicze**. Dlatego ocena wielkiej zapory zawsze zależy od tego, kogo pytamy i w jakim horyzoncie czasowym."
+        },
+        {
+          "type": "climate-chart",
+          "title": "Dlaczego z Jeziora Nasera ubywa tyle wody?",
+          "station": "Asuan (Egipt)",
+          "caption": "Średnie miesięczne wartości temperatury i opadu. Odczytaj amplitudę roczną i sumę opadów, zanim odsłonisz odpowiedź.",
+          "temps": [
+            16,
+            18,
+            22,
+            27,
+            31,
+            33,
+            33,
+            33,
+            31,
+            28,
+            22,
+            17
+          ],
+          "precip": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "answer": {
+            "climate": "Klimat zwrotnikowy suchy (pustynny) — strefa zwrotnikowa",
+            "reasoning": "Opady praktycznie nie występują w żadnym miesiącu (suma roczna bliska 0 mm), średnie temperatury nie spadają poniżej 15°C, a amplituda roczna wynosi ok. 17°C — to klimat kontynentalny strefy zwrotnikowej, kształtowany przez wyż zwrotnikowy i osiadanie powietrza. Przy takim parowaniu potencjalnym, wielokrotnie przewyższającym opad, każdy zbiornik o dużej powierzchni traci ogromne ilości wody — i właśnie dlatego zbiornik retencyjny w strefie suchej wcale nie musi zwiększać zasobów wody dostępnych w zlewni."
+          }
+        },
+        {
+          "type": "case-study",
+          "title": "Zapora Trzech Przełomów (Sanxia) na Jangcy",
+          "region": "Chiny, środkowy bieg Jangcy",
+          "text": "Uruchamiana etapami w latach 2003–2012 zapora ma **największą moc zainstalowaną na świecie — ok. 22,5 GW**. Zbiornik ciągnie się na ok. 600 km w górę rzeki, aż po aglomerację Chongqingu. Cele inwestycji: **ochrona przeciwpowodziowa** gęsto zaludnionej doliny środkowej i dolnej Jangcy (powodzie z 1931 i 1998 r. pochłonęły ogromną liczbę ofiar), produkcja energii bez spalania węgla oraz **poprawa warunków żeglugi** — dzięki śluzom w głąb Chin docierają duże statki. Koszty społeczne były bezprecedensowe: **przesiedlono ok. 1,3 mln osób**, zalano kilkanaście miast, setki wsi i tysiące stanowisk archeologicznych, a przesiedleńcy trafili często na gorsze, stromsze grunty. Skutki przyrodnicze: zatrzymanie rumowiska i **erozja koryta oraz brzegów poniżej zapory**, przyspieszone niszczenie brzegów delty, **osuwiska** na podmytych zboczach zbiornika, pogorszenie jakości wody w zatokach dopływów, degradacja siedlisk rzadkich gatunków — **jesiotra chińskiego** oraz **delfina baiji**, uznanego w 2006 r. za wymarłego funkcjonalnie (zapora była jednym z czynników obok żeglugi, rybołówstwa i zanieczyszczeń).",
+          "takeaway": "Sanxia pokazuje skalę konfliktu, gdy inwestycja realizuje **cele ogólnokrajowe** (bezpieczeństwo powodziowe, energia, transport) kosztem **konkretnej społeczności lokalnej** i ekosystemu rzeki. Im większy zbiornik, tym bardziej korzyści i koszty rozjeżdżają się przestrzennie."
+        },
+        {
+          "type": "compare",
+          "title": "Asuan a Zapora Trzech Przełomów",
+          "leftLabel": "Wielka Tama Asuańska",
+          "rightLabel": "Zapora Trzech Przełomów",
+          "rows": [
+            {
+              "aspect": "Rzeka i państwo",
+              "left": "Nil, Egipt (zbiornik sięga Sudanu)",
+              "right": "Jangcy, Chiny"
+            },
+            {
+              "aspect": "Ukończenie",
+              "left": "1970 r.",
+              "right": "2003–2012 (etapami)"
+            },
+            {
+              "aspect": "Główny cel",
+              "left": "**Nawodnienia i kontrola wylewów** — wyżywienie szybko rosnącej ludności doliny Nilu",
+              "right": "**Ochrona przeciwpowodziowa i energetyka** — ok. 22,5 GW mocy, największa elektrownia świata"
+            },
+            {
+              "aspect": "Skala przesiedleń",
+              "left": "ok. 100 tys. Nubijczyków",
+              "right": "ok. 1,3 mln mieszkańców doliny"
+            },
+            {
+              "aspect": "Kluczowy skutek przyrodniczy",
+              "left": "Brak namułów, **cofanie się delty Nilu**, zasolenie gleb, ogromne parowanie w klimacie pustynnym",
+              "right": "Zamulanie zbiornika, erozja koryta poniżej, **osuwiska** na brzegach, utrata siedlisk gatunków endemicznych"
+            },
+            {
+              "aspect": "Wymiar międzynarodowy",
+              "left": "Konflikt o podział wód Nilu między Egipt, Sudan i państwa górnego biegu",
+              "right": "Sprawa wewnętrzna Chin — rzeka w całości w granicach jednego państwa"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Bilans wielkiej zapory — jak rozpisać odpowiedź",
+          "caption": "Ten schemat działa dla dowolnej zapory podanej w zadaniu, także nieznanej.",
+          "headers": [
+            "Wymiar",
+            "Korzyści",
+            "Koszty i zagrożenia"
+          ],
+          "rows": [
+            [
+              "Gospodarczy",
+              "tania energia bez emisji CO2 przy pracy, nawodnienia i wzrost plonów, żegluga, turystyka, rybactwo jeziorne",
+              "ogromny koszt budowy, utrata gruntów rolnych pod zbiornikiem, zamulanie skracające żywotność, wydatki na nawozy zastępujące namuły"
+            ],
+            [
+              "Społeczny",
+              "ochrona przed powodzią i suszą, dostęp do wody pitnej i elektryczności, nowe miejsca pracy",
+              "przesiedlenia i utrata dziedzictwa kulturowego, choroby przenoszone przez wodę, konflikty o wodę między regionami i państwami"
+            ],
+            [
+              "Przyrodniczy",
+              "wyrównanie przepływu w okresie niżówki, nowe siedliska wodne i ptasie na zbiorniku",
+              "przerwanie ciągłości rzeki, zatrzymanie rumowiska, erozja poniżej i abrazja delty, eutrofizacja, zatopienie dolin"
+            ],
+            [
+              "Ryzyko techniczne",
+              "sterowanie falą powodziową, rezerwa wody na lata suche",
+              "katastrofa budowlana o skutkach masowych, osuwiska i sejsmiczność indukowana, awaria przy braku konserwacji"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Wielkie zapory i spory o wodę",
+          "caption": "Kliknij znacznik, aby poznać istotę konfliktu w danym miejscu.",
+          "center": [
+            20,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 23.97,
+              "lng": 32.88,
+              "label": "Wielka Tama Asuańska (Nil, Egipt)",
+              "text": "Kontrola wylewów i nawadnianie kosztem namułów, delty i zdrowia mieszkańców. Nil płynie przez wiele państw, więc podział jego wód pozostaje kwestią polityczną."
+            },
+            {
+              "lat": 11.21,
+              "lng": 35.09,
+              "label": "Tama Wielkiego Odrodzenia (Nil Błękitny, Etiopia)",
+              "text": "Budowana od 2011 r. Etiopia widzi w niej szansę na elektryfikację kraju, Egipt i Sudan obawiają się zmniejszenia przepływu Nilu w okresie napełniania zbiornika. Klasyczny **konflikt o wodę transgraniczną**."
+            },
+            {
+              "lat": 30.82,
+              "lng": 111,
+              "label": "Zapora Trzech Przełomów (Jangcy, Chiny)",
+              "text": "Największa elektrownia wodna świata (ok. 22,5 GW), ochrona przeciwpowodziowa doliny Jangcy — i przesiedlenie ok. 1,3 mln osób."
+            },
+            {
+              "lat": -25.41,
+              "lng": -54.59,
+              "label": "Itaipú (Parana, Brazylia/Paragwaj)",
+              "text": "Elektrownia wspólna dwóch państw, ok. 14 GW. Zbiornik zatopił wodospady Guaíra (Sete Quedas), a podział zysków z energii przez lata był tematem sporu paragwajsko-brazylijskiego."
+            },
+            {
+              "lat": 36.02,
+              "lng": -114.74,
+              "label": "Zapora Hoovera (Kolorado, USA)",
+              "text": "Jezioro Mead zasila w wodę i prąd południowy zachód USA. Wskutek poboru wody i suszy **Kolorado w większości lat nie dopływa do Zatoki Kalifornijskiej** — jego delta uległa przesuszeniu."
+            },
+            {
+              "lat": -16.52,
+              "lng": 28.76,
+              "label": "Zapora Kariba (Zambezi, Zambia/Zimbabwe)",
+              "text": "Zbiornik z lat 50. XX w. wymusił przesiedlenie kilkudziesięciu tysięcy ludzi z plemienia Tonga; zwierzęta ratowano z zalewanych wzgórz w słynnej Operacji Noe."
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj łańcuch skutków budowy zapory",
+          "instruction": "Ustaw ogniwa tak, jak następują po sobie w rzece niosącej dużo rumowiska.",
+          "items": [
+            "Zapora spiętrza wodę, prędkość przepływu w zbiorniku maleje",
+            "Rzeka traci zdolność transportową i osadza rumowisko na dnie zbiornika",
+            "Poniżej zapory płynie woda uboga w materiał, tzw. woda głodna",
+            "Nasila się erozja denna i boczna koryta poniżej zapory",
+            "Do delty dociera mniej materiału, niż zabiera go fala morska",
+            "Brzeg delty cofa się, a słona woda morska wnika w głąb lądu"
+          ],
+          "explanation": "Zapamiętaj kierunek zależności: **spiętrzenie → spadek prędkości → sedymentacja w zbiorniku → woda głodna → erozja poniżej → deficyt materiału w delcie → abrazja i zasolenie**. Ten sam schemat zastosujesz do dowolnej zapory w zadaniu."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki. **Po pierwsze** — zbiornik retencyjny nie „produkuje” wody: w klimacie suchym parowanie z jego powierzchni bywa większe niż zysk z retencji, więc **zasoby wodne zlewni mogą zmaleć**. **Po drugie** — zapora nie eliminuje powodzi, tylko **obniża kulminację fali**; przy ekstremalnym wezbraniu albo pełnym zbiorniku ochrona zawodzi, a fałszywe poczucie bezpieczeństwa sprzyja zabudowie terenów zalewowych. **Po trzecie** — energia z hydroelektrowni jest bezemisyjna w czasie pracy, ale rozkład zatopionej biomasy w zbiornikach strefy międzyzwrotnikowej powoduje **emisję metanu**, więc określenie „całkowicie neutralna klimatycznie” jest nieścisłe."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego po wybudowaniu wysokiej zapory brzegi delty rzeki zaczynają się cofać?",
+          "options": [
+            "Ponieważ rzeka poniżej zapory niesie więcej wody i szybciej rozmywa deltę",
+            "Ponieważ zbiornik zatrzymuje rumowisko, więc do delty dociera mniej materiału, niż zabiera go morze",
+            "Ponieważ spiętrzenie wody podnosi poziom morza w strefie ujścia",
+            "Ponieważ woda w delcie silniej paruje po zmianie reżimu rzeki"
+          ],
+          "correctIndex": 1,
+          "explanation": "Delta istnieje dzięki **równowadze między dostawą materiału przez rzekę a jego zabieraniem przez fale i prądy morskie**. Zapora przechwytuje rumowisko w zbiorniku, dostawa maleje, więc przewagę zyskuje **abrazja** — brzeg delty się cofa, a w powstałe obniżenia wnika słona woda morska."
+        },
+        {
+          "type": "quiz",
+          "question": "Które ze skutków budowy Wielkiej Tamy Asuańskiej jest skutkiem SPOŁECZNYM?",
+          "options": [
+            "Zatrzymywanie namułów w Jeziorze Nasera",
+            "Wzrost zasolenia gleb nawadnianych w dolinie Nilu",
+            "Przesiedlenie ok. 100 tys. Nubijczyków i konieczność przeniesienia świątyń w Abu Simbel",
+            "Spadek połowów sardynek u wybrzeży Egiptu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Skutek społeczny dotyczy **ludzi i ich dziedzictwa**: przesiedlenia, utrata miejsc zamieszkania, ratowanie zabytków. Zatrzymanie namułów i zasolenie gleb to skutki przyrodnicze, a spadek połowów — przyrodniczy w mechanizmie i gospodarczy w konsekwencji (utrata dochodów rybaków)."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaż sprzeczność funkcji wpisaną w konstrukcję wielozadaniowego zbiornika zaporowego.",
+          "options": [
+            "Funkcja energetyczna wymaga wysokiego poziomu wody, a przeciwpowodziowa — rezerwy, czyli poziomu niskiego",
+            "Funkcja żeglugowa wyklucza budowę śluz",
+            "Funkcja rekreacyjna wymaga wód o dużej zawartości biogenów",
+            "Funkcja nawodnieniowa wymaga stałego opróżniania zbiornika zimą"
+          ],
+          "correctIndex": 0,
+          "explanation": "To klasyczny **konflikt interesów wewnątrz jednej inwestycji**: energetyk chce utrzymywać maksymalne piętrzenie (większy spad, więcej energii), a służby przeciwpowodziowe — pustą rezerwę na przyjęcie fali. Decyzja o poziomie wody przed sezonem wezbraniowym jest w praktyce decyzją polityczną i gospodarczą, nie tylko techniczną."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Skutki zapory zapisuj **czasownikami w łańcuchu**, nie hasłami: „zapora zatrzymuje rumowisko → poniżej płynie woda uboga w materiał → nasila się erozja denna”. CKE punktuje **mechanizm**; samo „erozja delty” albo „zmiana środowiska” najczęściej nie wystarcza. Jeśli w poleceniu pada „uzasadnij” lub „wyjaśnij”, w odpowiedzi musi pojawić się **związek przyczynowo-skutkowy**, a nie wyliczenie."
+        }
+      ]
+    },
+    {
+      "slug": "gornictwo-odkrywkowe-i-rekultywacja",
+      "title": "Eksploatacja odkrywkowa, degradacja terenu i rekultywacja",
+      "summary": "Jak kopalnia odkrywkowa przekształca rzeźbę i stosunki wodne, na czym polega lej depresyjny oraz jak przywraca się wartość terenom poprzemysłowym.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Górnictwo jest formą antropopresji, która **przekształca wszystkie komponenty środowiska naraz**: usuwa rzeźbę i glebę, zmienia obieg wód podziemnych, wpływa na powietrze i roślinność, a przy okazji buduje nowe formy terenu — hałdy i zwałowiska. Konflikt interesów jest tu wyjątkowo ostry, bo złoże **nie da się przenieść**: albo eksploatujemy je w tym miejscu, albo rezygnujemy z surowca. W drugiej części lekcji zobaczysz, co można z takim terenem zrobić później — i dlaczego **rekultywacja** to nie to samo co **rewitalizacja**."
+        },
+        {
+          "type": "compare",
+          "title": "Górnictwo odkrywkowe a podziemne — skutki dla środowiska",
+          "leftLabel": "Odkrywkowe",
+          "rightLabel": "Podziemne",
+          "rows": [
+            {
+              "aspect": "Zajęcie powierzchni",
+              "left": "Ogromne — wyrobisko plus **zwałowiska nadkładu**; teren zostaje całkowicie zdjęty wraz z glebą i roślinnością",
+              "right": "Niewielkie na powierzchni (szyby, zakład przeróbczy, **hałdy skały płonnej**)"
+            },
+            {
+              "aspect": "Zmiana rzeźby",
+              "left": "Rzeźba tworzona od nowa: głębokie wyrobisko i sztuczne wzniesienia z nadkładu",
+              "right": "**Osiadanie terenu, zapadliska i niecki**, wtórne podtopienia w miejscach obniżeń"
+            },
+            {
+              "aspect": "Wody podziemne",
+              "left": "Odwodnienie złoża wytwarza rozległy **lej depresyjny**",
+              "right": "Lej depresyjny mniejszy, ale występuje **zasolenie wód powierzchniowych** przez zrzut słonych wód kopalnianych"
+            },
+            {
+              "aspect": "Powietrze i hałas",
+              "left": "Silne **zapylenie** i hałas maszyn urabiających oraz transportu",
+              "right": "Zapylenie mniejsze; charakterystyczne są **wstrząsy indukowane** odczuwalne na powierzchni"
+            },
+            {
+              "aspect": "Bezpieczeństwo i koszt",
+              "left": "Bezpieczniejsze i tańsze; opłacalne przy złożach płytkich",
+              "right": "Droższe i groźniejsze dla górników; konieczne przy złożach głębokich"
+            },
+            {
+              "aspect": "Możliwość naprawy",
+              "left": "Rekultywacja możliwa i obowiązkowa, ale kosztowna i wieloletnia",
+              "right": "Skutki (osiadanie, zasolenie) ujawniają się także **po zamknięciu kopalni** i wymagają stałego pompowania wód"
+            }
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Przekrój przez odkrywkę węgla brunatnego",
+          "caption": "Kliknij warstwę — zobacz, co dzieje się z nią podczas eksploatacji. Proporcje jak w kopalni Bełchatów.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Gleba i warstwa próchnicza",
+              "range": "0–0,5 m",
+              "tone": "vegetation",
+              "text": "Zdejmowana **selektywnie** i składowana osobno — to najcenniejszy materiał do późniejszej rekultywacji. Jeśli zmiesza się ją z jałowym nadkładem, odtworzenie żyzności potrwa dziesiątki lat."
+            },
+            {
+              "name": "Nadkład (piaski, gliny, iły)",
+              "range": "kilkadziesiąt–ok. 180 m",
+              "tone": "earth",
+              "text": "Masy skalne zalegające nad złożem, urabiane koparkami wielonaczyniowymi i przenoszone taśmociągami na **zwałowisko zewnętrzne** (nowe wzniesienie w krajobrazie), a po pogłębieniu wyrobiska — na **zwałowisko wewnętrzne** w wyeksploatowanej części odkrywki."
+            },
+            {
+              "name": "Poziomy wodonośne",
+              "range": "w obrębie nadkładu",
+              "tone": "water",
+              "text": "Aby móc kopać na sucho, wodę trzeba **wypompować** studniami odwadniającymi. Skutkiem jest **lej depresyjny** — obniżenie zwierciadła wód podziemnych sięgające nawet kilkuset km² wokół kopalni."
+            },
+            {
+              "name": "Pokład węgla brunatnego",
+              "range": "kilkanaście–kilkadziesiąt m miąższości",
+              "tone": "rock",
+              "text": "Właściwe złoże. Węgiel brunatny ma niską wartość opałową i dużą wilgotność, więc **nie opłaca się go transportować daleko** — elektrownia stoi tuż przy odkrywce (zasada: kopalnia + elektrownia jako jeden kompleks paliwowo-energetyczny)."
+            },
+            {
+              "name": "Spąg i warstwy podścielające",
+              "range": "poniżej złoża",
+              "tone": "rock",
+              "text": "Dno wyrobiska. Po zakończeniu eksploatacji to tu, po ustaniu pompowania, **zbiera się woda** — dlatego najczęstszym kierunkiem rekultywacji głębokich odkrywek jest kierunek wodny."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje lej depresyjny i co za sobą pociąga",
+          "caption": "Najczęściej wymagany na maturze mechanizm w temacie górnictwa.",
+          "steps": [
+            {
+              "title": "1. Odwadnianie złoża",
+              "text": "Aby prowadzić eksploatację, kopalnia **pompuje wodę** ze studni odwadniających, obniżając zwierciadło wód podziemnych poniżej spągu wyrobiska."
+            },
+            {
+              "title": "2. Powstanie leja depresyjnego",
+              "text": "Wokół kopalni tworzy się **stożkowate obniżenie zwierciadła wód podziemnych** — najgłębsze przy wyrobisku, wypłycające się ku obrzeżom. Jego zasięg zależy od przepuszczalności skał i może sięgać kilkunastu–kilkudziesięciu kilometrów."
+            },
+            {
+              "title": "3. Zanik wody w studniach i ciekach",
+              "text": "Studnie gospodarskie i ujęcia wysychają, **źródła zanikają**, a mniejsze rzeki i strumienie tracą zasilanie podziemne — niektóre przestają płynąć w okresach bezopadowych."
+            },
+            {
+              "title": "4. Przesuszenie siedlisk i gleb",
+              "text": "Opadanie zwierciadła odcina od wody korzenie drzew i roślinność bagienną: **zanikają mokradła, torfowiska i łąki wilgotne**, murszeją gleby organiczne, spadają plony na gruntach dotąd podsiąkanych."
+            },
+            {
+              "title": "5. Osiadanie i zmiany chemizmu",
+              "text": "Odwodnienie i utlenianie osadów powoduje **osiadanie powierzchni** oraz uwalnianie związków siarki i żelaza; wody odprowadzane z kopalni bywają zakwaszone lub zasolone i zmieniają jakość wód odbiornika."
+            },
+            {
+              "title": "6. Powolna odbudowa po zamknięciu kopalni",
+              "text": "Po ustaniu pompowania lej się **wypełnia, ale bardzo wolno** — dziesiątki lat. W tym czasie wyrobisko zamienia się w zbiornik wodny, a poziom wód wokół stopniowo wraca ku dawnemu, choć rzadko do stanu pierwotnego."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Kompleks Bełchatów w liczbach",
+          "items": [
+            {
+              "value": "ok. 300",
+              "unit": "m",
+              "label": "Głębokość wyrobiska",
+              "note": "jedno z najgłębszych wyrobisk odkrywkowych w Europie"
+            },
+            {
+              "value": "386",
+              "unit": "m n.p.m.",
+              "label": "Wysokość Góry Kamieńsk",
+              "note": "sztuczne wzniesienie usypane z nadkładu — najwyższy punkt regionu"
+            },
+            {
+              "value": "ok. 5",
+              "unit": "GW",
+              "label": "Moc Elektrowni Bełchatów",
+              "note": "największa elektrownia opalana węglem brunatnym w Europie"
+            },
+            {
+              "value": "kilkaset",
+              "unit": "km²",
+              "label": "Zasięg leja depresyjnego wokół odkrywek",
+              "note": "obniżenie zwierciadła wód podziemnych zmienia stosunki wodne całego regionu"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Bełchatów — kopalnia, która zbudowała nowy krajobraz",
+          "region": "Polska, Nizina Południowowielkopolska (woj. łódzkie)",
+          "text": "Odkrywki **Bełchatów i Szczerców** eksploatują węgiel brunatny zalegający w rowie tektonicznym. Aby dotrzeć do pokładu, usunięto miliardy metrów sześciennych **nadkładu** — z części usypano **Górę Kamieńsk**, wzniesienie wyższe od otoczenia o ok. 190 m. Zmieniono bieg **Widawki** i jej dopływów, a rozległy **lej depresyjny** obniżył poziom wód podziemnych na obszarze kilkuset km², co odbiło się na studniach, mokradłach i lasach. Kompleks jest jednocześnie filarem gospodarki regionu: elektrownia o mocy ok. 5 GW dostarczała przez lata istotną część energii elektrycznej w Polsce, a kopalnia i elektrownia dają tysiące miejsc pracy — stąd napięcie między celami klimatycznymi i przyrodniczymi a **bezpieczeństwem energetycznym i rynkiem pracy**. Rekultywacja idzie dwoma torami: Góra Kamieńsk została zalesiona i zagospodarowana **rekreacyjnie** (stok narciarski, trasy rowerowe) oraz **energetycznie** (farma wiatrowa), a docelowo w wyrobiskach mają powstać **zbiorniki wodne**, których napełnianie potrwa dziesięciolecia.",
+          "takeaway": "Bełchatów pokazuje, że górnictwo odkrywkowe tworzy **nową rzeźbę i nowe stosunki wodne**, a jego skutki (lej depresyjny, zbiorniki końcowe) rozciągają się na dziesiątki lat po zakończeniu wydobycia. Konflikt interesów nie znika wraz z zamknięciem kopalni — przekształca się w problem zatrudnienia i przyszłości regionu."
+        },
+        {
+          "type": "case-study",
+          "title": "Turów — kiedy skutki przekraczają granicę państwa",
+          "region": "Polska (Bogatynia), pogranicze z Czechami i Niemcami",
+          "text": "Kopalnia węgla brunatnego **Turów** leży w Worku Turoszowskim, kilka kilometrów od granic czeskiej i niemieckiej. Odwadnianie odkrywki wytworzyło lej depresyjny sięgający **poza terytorium Polski**: strona czeska wskazywała na obniżenie poziomu wód podziemnych w rejonie Frýdlantu i zagrożenie zaopatrzenia w wodę kilkudziesięciu tysięcy mieszkańców, strona niemiecka — na osiadanie terenu w okolicach Zittau. W 2021 r. Czechy skierowały skargę do **Trybunału Sprawiedliwości Unii Europejskiej**, który nakazał tymczasowe wstrzymanie wydobycia, a wobec kontynuowania prac nałożył na Polskę okresową karę pieniężną. Spór zakończyła **umowa międzyrządowa z 2022 r.**: Polska zobowiązała się m.in. do wypłaty rekompensaty (45 mln euro), budowy **podziemnego ekranu przeciwfiltracyjnego** ograniczającego odpływ wód po stronie czeskiej, wału ziemnego przeciw hałasowi i pyłom oraz wspólnego monitoringu wód i powietrza; Czechy wycofały skargę.",
+          "takeaway": "Skutki antropopresji **nie zatrzymują się na granicy państwa** — wody podziemne, pyły i hałas są transgraniczne. To argument za istnieniem prawa międzynarodowego i unijnego w ochronie środowiska: konflikt lokalny stał się sprawą sądową na poziomie całej Unii."
+        },
+        {
+          "type": "definition",
+          "term": "Rekultywacja",
+          "text": "**Rekultywacja** to nadanie lub przywrócenie gruntom zdegradowanym albo zdewastowanym **wartości użytkowych lub przyrodniczych** przez odpowiednie ukształtowanie rzeźby terenu, poprawę właściwości fizycznych i chemicznych podłoża, uregulowanie stosunków wodnych, odtworzenie gleb, umocnienie skarp oraz odbudowę lub budowę dróg i zieleni. W Polsce obowiązek rekultywacji spoczywa na **sprawcy degradacji** (zasada „zanieczyszczający płaci”), a jej kierunek ustala decyzja administracyjna.",
+          "note": "Rekultywacja **nie przywraca stanu sprzed eksploatacji** — tworzy nowy, sprawnie funkcjonujący ekosystem lub użytek. Wyrobisko po odkrywce nie stanie się z powrotem takim samym lasem; może za to stać się jeziorem, borem sosnowym albo terenem rekreacyjnym."
+        },
+        {
+          "type": "classification",
+          "title": "Kierunki rekultywacji",
+          "caption": "O wyborze kierunku decydują: głębokość wyrobiska względem zwierciadła wód, jakość podłoża, potrzeby gminy i koszty.",
+          "groups": [
+            {
+              "name": "Leśny",
+              "description": "Najczęstszy i najtańszy — gatunki pionierskie (sosna, brzoza, olsza, robinia) tolerują ubogie, kwaśne podłoże i same je użyźniają.",
+              "examples": [
+                "zalesione zwałowiska Zagłębia Bełchatowskiego",
+                "hałdy pogórnicze na Górnym Śląsku",
+                "zwałowiska po kopalniach siarki"
+              ]
+            },
+            {
+              "name": "Rolny",
+              "description": "Wymaga najlepszego podłoża i pełnej warstwy glebotwórczej, dlatego jest kosztowny; stosowany tam, gdzie zdjęto żyzne gleby, które można ponownie rozścielić.",
+              "examples": [
+                "grunty orne na zwałowiskach wewnętrznych",
+                "łąki i pastwiska na terenach po eksploatacji kruszyw"
+              ]
+            },
+            {
+              "name": "Wodny",
+              "description": "Naturalny wybór dla wyrobisk sięgających poniżej zwierciadła wód podziemnych — po ustaniu pompowania samo się wypełnia.",
+              "examples": [
+                "Jezioro Machowskie po odkrywce siarki koło Tarnobrzega",
+                "zbiorniki pożwirowe w dolinach rzek",
+                "docelowe zbiorniki w wyrobiskach bełchatowskich"
+              ]
+            },
+            {
+              "name": "Rekreacyjny (sportowo-rekreacyjny)",
+              "description": "Zagospodarowanie form antropogenicznych na potrzeby wypoczynku; często łączony z kierunkiem leśnym lub wodnym.",
+              "examples": [
+                "stok narciarski i trasy rowerowe na Górze Kamieńsk",
+                "ośrodki żeglarskie nad zbiornikami poeksploatacyjnymi",
+                "parki na dawnych hałdach"
+              ]
+            },
+            {
+              "name": "Przyrodniczy i specjalny",
+              "description": "Pozostawienie terenu spontanicznej sukcesji albo przeznaczenie na cele wymagające szczególnych warunków (składowiska, tereny badawcze).",
+              "examples": [
+                "siedliska rzadkich ptaków na zalanych zapadliskach",
+                "murawy na wapiennych hałdach",
+                "rekultywacja i zamknięcie składowiska odpadów"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj etapy rekultywacji terenu pogórniczego",
+          "instruction": "Ustaw działania w kolejności, w jakiej muszą po sobie następować.",
+          "items": [
+            "Etap przygotowawczy: inwentaryzacja terenu, badania podłoża, projekt i decyzja o kierunku rekultywacji",
+            "Etap techniczny: ukształtowanie rzeźby, wyprofilowanie i umocnienie skarp, uregulowanie stosunków wodnych",
+            "Neutralizacja podłoża (odkwaszanie, izolacja odpadów) i rozścielenie warstwy glebotwórczej",
+            "Etap biologiczny: nawożenie, wysiew roślin pionierskich i motylkowych, nasadzenia docelowe",
+            "Zagospodarowanie docelowe i przekazanie terenu użytkownikowi wraz z monitoringiem"
+          ],
+          "explanation": "Zapamiętaj trójpodział: **przygotowawczy → techniczny → biologiczny**, a po nim zagospodarowanie. Kolejności nie da się odwrócić — roślinność nie utrzyma się na niewyprofilowanej, kwaśnej skarpie bez warstwy glebotwórczej i uregulowanego odpływu wody."
+        },
+        {
+          "type": "compare",
+          "title": "Rekultywacja a rewitalizacja",
+          "leftLabel": "Rekultywacja",
+          "rightLabel": "Rewitalizacja",
+          "rows": [
+            {
+              "aspect": "Przedmiot działania",
+              "left": "**Grunt i środowisko przyrodnicze** — rzeźba, podłoże, woda, roślinność",
+              "right": "**Obszar wraz z jego mieszkańcami** — tkanka miejska, budynki, gospodarka, wspólnota lokalna"
+            },
+            {
+              "aspect": "Cel",
+              "left": "Przywrócenie wartości użytkowych lub przyrodniczych terenu zdegradowanego",
+              "right": "Wyprowadzenie obszaru **ze stanu kryzysowego** w sferze społecznej, gospodarczej, przestrzennej i środowiskowej"
+            },
+            {
+              "aspect": "Typowe miejsce",
+              "left": "Wyrobisko, zwałowisko, hałda, składowisko, teren po awarii",
+              "right": "Dzielnica poprzemysłowa lub zdegradowana, dawne fabryki, kolonie robotnicze, śródmieścia"
+            },
+            {
+              "aspect": "Kto prowadzi",
+              "left": "Przedsiębiorca (sprawca degradacji) pod nadzorem administracji",
+              "right": "**Gmina** wraz z mieszkańcami, przedsiębiorcami i organizacjami — na podstawie programu rewitalizacji"
+            },
+            {
+              "aspect": "Miara sukcesu",
+              "left": "Stabilna rzeźba, sprawne stosunki wodne, trwała pokrywa roślinna, bezpieczne podłoże",
+              "right": "Powrót mieszkańców i inwestorów, nowe funkcje, spadek bezrobocia i przestępczości, poprawa jakości życia"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Zagłębie Ruhry — od kopalń do parku kultury przemysłowej",
+          "region": "Niemcy, Nadrenia Północna-Westfalia",
+          "text": "Zagłębie Ruhry przez półtora wieku było **największym okręgiem przemysłowym Europy** opartym na węglu kamiennym i hutnictwie. Wygaszanie kopalń i hut od lat 60. XX w. zostawiło region z bezrobociem, zdegradowanymi terenami, hałdami, zapadliskami i rzeką **Emscher** zamienioną w otwarty kanał ściekowy. Odpowiedzią była wieloletnia **rewitalizacja**, a nie tylko rekultywacja gruntów: program IBA Emscher Park (1989–1999) zamienił obiekty przemysłowe w przestrzenie kultury, nauki i rekreacji. Kopalnia i koksownia **Zollverein** w Essen — arcydzieło architektury przemysłowej — trafiła na **listę światowego dziedzictwa UNESCO** i mieści dziś muzeum oraz centrum designu; teren dawnej huty w Duisburgu stał się **Landschaftspark Duisburg-Nord**, gdzie w zbiorniku gazu nurkuje się, a na murach wspina; zbiornik w Oberhausen zamieniono w salę wystawienniczą. Równolegle prowadzono **renaturyzację Emscher**: budowę systemu kanalizacji i przywracanie rzece naturalnego charakteru. Region przestawił się na usługi, logistykę, szkolnictwo wyższe i technologie.",
+          "takeaway": "Tereny poprzemysłowe (**brownfields**) mogą być atutem, a nie tylko obciążeniem: mają uzbrojenie, komunikację i tożsamość, których brakuje terenom niezabudowanym (**greenfields**). Zagospodarowanie brownfieldów chroni jednocześnie grunty rolne i przyrodnicze na obrzeżach miast przed zabudową."
+        },
+        {
+          "type": "table",
+          "title": "Polskie przykłady rekultywacji i rewitalizacji",
+          "caption": "Warto znać po jednym przykładzie z każdego kierunku — konkret jest w tym dziale punktowany.",
+          "headers": [
+            "Obiekt",
+            "Co było wcześniej",
+            "Co jest dziś"
+          ],
+          "rows": [
+            [
+              "Góra Kamieńsk (woj. łódzkie)",
+              "zwałowisko zewnętrzne nadkładu z odkrywki Bełchatów",
+              "zalesione wzniesienie, stok narciarski i trasy rowerowe, farma wiatrowa — kierunek leśny, rekreacyjny i energetyczny"
+            ],
+            [
+              "Jezioro Machowskie (Tarnobrzeg)",
+              "wyrobisko po odkrywkowej eksploatacji siarki",
+              "zbiornik wodny o powierzchni ok. 500 ha z plażą i przystanią — kierunek wodny i rekreacyjny"
+            ],
+            [
+              "Kopalnia Guido (Zabrze)",
+              "czynna kopalnia węgla kamiennego",
+              "podziemna trasa turystyczna i scena kulturalna na poziomach 170 i 320 m"
+            ],
+            [
+              "Stara Kopalnia (Wałbrzych)",
+              "kopalnia Julia, zamknięta w latach 90. XX w.",
+              "Centrum Nauki i Sztuki — muzeum, pracownie ceramiki, przestrzenie wystawiennicze"
+            ],
+            [
+              "Manufaktura (Łódź)",
+              "zespół fabryczny Izraela Poznańskiego",
+              "centrum handlowo-kulturalne z muzeum i teatrem w zabytkowych halach"
+            ],
+            [
+              "Nowa Huta i tereny pohutnicze",
+              "kombinat metalurgiczny i jego otoczenie",
+              "częściowe przekształcenie w tereny usługowe i zielone, ograniczenie emisji, zachowany układ urbanistyczny jako dziedzictwo"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Nie zamieniaj tych pojęć. **Rekultywacja** dotyczy **gruntu** (rzeźba, podłoże, woda, roślinność) i kończy się, gdy teren jest stabilny i użyteczny. **Rewitalizacja** dotyczy **obszaru z ludźmi** i ma wymiar społeczno-gospodarczy — bez powrotu mieszkańców i funkcji nie jest udana. Drugi częsty błąd: pisanie, że rekultywacja „przywraca stan pierwotny”. Przywraca **wartości użytkowe lub przyrodnicze**, ale krajobraz pozostaje antropogeniczny — hałda i zbiornik poeksploatacyjny nie znikną."
+        },
+        {
+          "type": "quiz",
+          "question": "Skutkiem odwadniania odkrywki węgla brunatnego jest lej depresyjny. Które zjawisko jest jego bezpośrednią konsekwencją?",
+          "options": [
+            "Wzrost zasolenia wód rzecznych w dolinie",
+            "Zanikanie źródeł i mokradeł oraz wysychanie studni w promieniu kilkunastu kilometrów",
+            "Zwiększenie sumy rocznej opadów w regionie",
+            "Podniesienie się zwierciadła wód podziemnych na obrzeżach kopalni"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lej depresyjny to **obniżenie zwierciadła wód podziemnych** wokół kopalni. Ponieważ źródła, mokradła i płytkie studnie zasilane są właśnie z tego poziomu, jako pierwsze przestają funkcjonować. Zasolenie wód powierzchniowych jest typowe dla **kopalń podziemnych** węgla kamiennego, które zrzucają słone wody dołowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Wyrobisko końcowe kopalni odkrywkowej sięga kilkadziesiąt metrów poniżej zwierciadła wód podziemnych. Który kierunek rekultywacji będzie najbardziej racjonalny?",
+          "options": [
+            "Rolny — rozścielenie gleby i uprawa zbóż na dnie wyrobiska",
+            "Wodny — dopuszczenie do wypełnienia wyrobiska wodą i zagospodarowanie zbiornika",
+            "Specjalny — przeznaczenie dna na składowisko odpadów niebezpiecznych",
+            "Leśny — nasadzenie sosny bezpośrednio na dnie wyrobiska"
+          ],
+          "correctIndex": 1,
+          "explanation": "Po zakończeniu pompowania woda podziemna sama wypełni obniżenie — utrzymywanie go w stanie suchym wymagałoby **wiecznego odwadniania**, co jest ekonomicznie absurdalne. Dlatego głębokie wyrobiska rekultywuje się w **kierunku wodnym**, często łącząc go z rekreacyjnym."
+        },
+        {
+          "type": "quiz",
+          "question": "Które działanie jest przykładem rewitalizacji, a nie rekultywacji?",
+          "options": [
+            "Wyprofilowanie i zalesienie zwałowiska nadkładu",
+            "Zamiana zamkniętej kopalni w muzeum i centrum kultury wraz z programem wsparcia mieszkańców dzielnicy",
+            "Odkwaszenie podłoża hałdy i wysiew roślin motylkowych",
+            "Napełnienie wodą wyrobiska po eksploatacji żwiru"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rewitalizacja obejmuje **sferę społeczną i gospodarczą**: nowe funkcje, miejsca pracy, powrót mieszkańców i inwestorów. Pozostałe odpowiedzi to typowe zabiegi **rekultywacyjne**, dotyczące wyłącznie gruntu i jego właściwości."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o górnictwie pilnuj **rozróżnienia odkrywka – kopalnia podziemna**, bo klucz odpowiedzi jest tu bezlitosny: lej depresyjny, zwałowiska i całkowite zajęcie powierzchni to odkrywka; osiadanie terenu, zapadliska, wstrząsy i zasolenie wód to eksploatacja podziemna. Gdy polecenie brzmi „zaproponuj kierunek rekultywacji i uzasadnij”, odpowiedź musi zawierać **warunek lokalny** (głębokość wyrobiska względem wód, jakość podłoża, sąsiedztwo miasta), a nie samą nazwę kierunku."
+        }
+      ]
+    },
+    {
+      "slug": "wylesianie-rolnictwo-i-energetyka",
+      "title": "Konflikt o ziemię: wylesianie, rolnictwo i energetyka",
+      "summary": "Dlaczego lasy strefy międzyzwrotnikowej ustępują polom i plantacjom, jak wylesienie zmienia obieg wody i gleby oraz na czym polegają konflikty wokół biopaliw i farm wiatrowych.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Powierzchnia lądów jest stała, a chętnych do jej wykorzystania przybywa: **żywność, drewno, pasza, surowce energetyczne i przyroda** konkurują o ten sam hektar. Ta lekcja pokazuje trzy odsłony tego samego konfliktu — wylesianie na potrzeby rolnictwa, spór „żywność czy paliwo” oraz opór wobec farm wiatrowych. Wspólny mianownik jest zawsze ten sam: **zysk jest lokalny i natychmiastowy, a koszt środowiskowy rozłożony w czasie i przestrzeni**."
+        },
+        {
+          "type": "definition",
+          "term": "Wylesianie (deforestacja)",
+          "text": "**Wylesianie** to trwała zamiana terenu leśnego na inne użytkowanie — pola, plantacje, pastwiska, kopalnie, zabudowę. Mierzy się je zmianą **lesistości**, czyli udziału powierzchni lasów w powierzchni obszaru. Największe współczesne wylesianie zachodzi w **strefie międzyzwrotnikowej** (Amazonia, dorzecze Konga, Azja Południowo-Wschodnia), podczas gdy w Europie i Ameryce Północnej powierzchnia lasów od dziesięcioleci nieznacznie rośnie.",
+          "note": "Nie myl wylesiania z **degradacją lasu**. Degradacja to przerzedzenie i zubożenie drzewostanu (wybiórczy wyrąb cennych gatunków, pożary, wypas w lesie) bez zmiany przeznaczenia gruntu — las nadal jest lasem, tylko gorszym. W statystykach FAO odnotowuje się je oddzielnie, a degradacja bywa znacznie rozleglejsza niż samo wylesianie."
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny wylesiania w strefie międzyzwrotnikowej",
+          "caption": "Uporządkuj je według tego, kto z wylesienia korzysta — to prosta droga do wskazania stron konfliktu.",
+          "groups": [
+            {
+              "name": "Rolnictwo wielkoobszarowe",
+              "description": "Plantacje towarowe na eksport, zakładane na wykarczowanych powierzchniach; dziś **główna bezpośrednia przyczyna** ubytku lasów równikowych.",
+              "examples": [
+                "soja w Brazylii",
+                "palma olejowa na Borneo i Sumatrze",
+                "trzcina cukrowa i kakao",
+                "kauczukowiec w Azji Południowo-Wschodniej"
+              ]
+            },
+            {
+              "name": "Hodowla bydła",
+              "description": "Ekstensywne pastwiska zajmują największą część wylesionych obszarów Amazonii; wypas bywa też sposobem na potwierdzenie prawa do zajętej ziemi.",
+              "examples": [
+                "rancza wołowe w stanach Pará i Mato Grosso",
+                "wypas na obrzeżach łuku wylesiania"
+              ]
+            },
+            {
+              "name": "Pozyskanie drewna",
+              "description": "Wyrąb gatunków cennych (mahoń, teak) zwykle nie usuwa całego lasu, ale **otwiera go drogami**, po których wchodzą osadnicy i rolnicy.",
+              "examples": [
+                "selektywny wyrąb w Kongo",
+                "nielegalne pozyskanie drewna tropikalnego"
+              ]
+            },
+            {
+              "name": "Infrastruktura i górnictwo",
+              "description": "Drogi, zapory i kopalnie zajmują niewielką powierzchnię, ale **uruchamiają lawinę** dalszych wylesień wzdłuż nowych szlaków.",
+              "examples": [
+                "Transamazônica (BR-230) i BR-163",
+                "kopalnia rud żelaza Carajás",
+                "nielegalne wydobycie złota na ziemiach ludu Yanomami"
+              ]
+            },
+            {
+              "name": "Rolnictwo żarowe i pozyskanie opału",
+              "description": "Gospodarka **żarowo-odłogowa** ludności miejscowej oraz zbiór drewna na opał; problem pojawia się, gdy przy wzroście liczby ludności skraca się okres odłogowania i las nie zdąża się odbudować.",
+              "examples": [
+                "gospodarka żarowa w dorzeczu Konga",
+                "wypał węgla drzewnego wokół miast Afryki"
+              ]
+            },
+            {
+              "name": "Pożary",
+              "description": "Ogień używany do karczunku wymyka się spod kontroli, zwłaszcza w latach El Niño; na **osuszonych torfowiskach** pali się także podłoże.",
+              "examples": [
+                "pożary torfowisk Indonezji i transgraniczny smog",
+                "pożary na skraju Amazonii w porze suchej"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Amazonia i łuk wylesiania",
+          "region": "Ameryka Południowa, dorzecze Amazonki (głównie Brazylia)",
+          "text": "Wylesianie Amazonii koncentruje się na jej południowym i wschodnim skraju — pas ten nazywa się **łukiem wylesiania**. Mechanizm jest powtarzalny: najpierw powstaje **droga** (Transamazônica, BR-163), wzdłuż niej wchodzą firmy drzewne, potem osadnicy wypalają resztę drzewostanu i zakładają **pastwiska**, a na najlepszych, wyrównanych gruntach pojawiają się **plantacje soi** produkującej paszę na eksport. Skutki przyrodnicze wykraczają daleko poza sam las: znika **bioróżnorodność** ekosystemu o największej liczbie gatunków na Ziemi, do atmosfery trafia węgiel zmagazynowany w biomasie, a przerwana zostaje pętla obiegu wody. Amazonia **sama produkuje znaczną część swoich opadów** — para wodna z ewapotranspiracji jest przenoszona nad kontynentem w postaci tzw. latających rzek i zasila deszcze także w południowej Brazylii i w Argentynie. Wylesienie osłabia ten transport i zwiększa ryzyko przekroczenia **punktu krytycznego (tipping point)**, po którym część puszczy przekształciłaby się trwale w formację sawannową. Wymiar społeczny to konflikt z **ludami rdzennymi**, których terytoria są zajmowane przez hodowców i nielegalnych poszukiwaczy złota.",
+          "takeaway": "Amazonia to podręcznikowy przykład, że **wylesianie ma skutki w skali kontynentalnej i globalnej** (klimat, obieg wody, bilans węgla), a korzyści są prywatne i lokalne — to właśnie asymetria, która czyni z niego trwały konflikt interesów."
+        },
+        {
+          "type": "climate-chart",
+          "title": "Klimat wnętrza Amazonii — dlaczego las tu rośnie i dlaczego trudno go odtworzyć",
+          "station": "Manaus (Brazylia)",
+          "caption": "Odczytaj amplitudę roczną temperatury oraz sumę i rozkład opadów, a potem sprawdź odpowiedź.",
+          "temps": [
+            26.6,
+            26.4,
+            26.5,
+            26.7,
+            26.8,
+            26.9,
+            27.1,
+            27.9,
+            28.2,
+            28.1,
+            27.6,
+            27
+          ],
+          "precip": [
+            260,
+            288,
+            314,
+            300,
+            256,
+            114,
+            88,
+            58,
+            83,
+            126,
+            183,
+            217
+          ],
+          "answer": {
+            "climate": "Klimat równikowy wilgotny — strefa równikowa",
+            "reasoning": "Średnie miesięczne temperatury utrzymują się w wąskim przedziale ok. 26–28°C, więc **amplituda roczna wynosi niecałe 2°C** — cecha diagnostyczna strefy równikowej. Suma opadów przekracza 2200 mm, opady występują przez cały rok, choć z wyraźnym okresem mniej wilgotnym w miesiącach VI–IX. Tak duże opady i wysokie temperatury oznaczają intensywne wietrzenie chemiczne i wymywanie — powstają ubogie **gleby ferralitowe**, w których zapas składników pokarmowych tkwi nie w glebie, lecz w **biomasie lasu**. Dlatego po wycięciu i wypaleniu drzewostanu żyzność utrzymuje się tylko przez 2–3 lata."
+          }
+        },
+        {
+          "type": "process",
+          "title": "Co dzieje się po wycięciu lasu równikowego",
+          "caption": "Ten łańcuch tłumaczy jednocześnie ubóstwo gleb, dalsze wylesianie i zmianę klimatu lokalnego.",
+          "steps": [
+            {
+              "title": "1. Wypalenie i krótkotrwały wzrost żyzności",
+              "text": "Popiół dostarcza glebie **składników mineralnych** — pierwsze zbiory bywają dobre. To ten efekt napędza gospodarkę żarową i zachęca kolejnych osadników."
+            },
+            {
+              "title": "2. Wymycie składników pokarmowych",
+              "text": "Bez okrywy koron woda opadowa uderza wprost w glebę i przesiąka. Ulewne deszcze **wymywają** składniki poza zasięg korzeni, a intensywne wietrzenie chemiczne pozostawia w profilu głównie tlenki żelaza i glinu — gleba twardnieje i czerwienieje (laterytyzacja)."
+            },
+            {
+              "title": "3. Erozja i spadek plonów",
+              "text": "Rośnie **spływ powierzchniowy**, gleba jest zmywana ze stoków, a jej miąższość maleje. Po 2–3 latach plony spadają na tyle, że pole przestaje się opłacać."
+            },
+            {
+              "title": "4. Porzucenie pola i wycięcie kolejnego fragmentu lasu",
+              "text": "Rolnik przenosi się dalej — i cykl się powtarza. To dlatego wylesianie **rozprzestrzenia się pasowo**, a nie punktowo."
+            },
+            {
+              "title": "5. Osłabienie ewapotranspiracji",
+              "text": "Las oddaje do atmosfery ogromne ilości pary wodnej. Jego brak oznacza **mniejszą wilgotność powietrza i mniejsze opady konwekcyjne**, wydłużenie pory suchej oraz wzrost temperatury przy powierzchni."
+            },
+            {
+              "title": "6. Skutki globalne",
+              "text": "Spalona i rozłożona biomasa uwalnia **CO2**, ubywa pochłaniacza węgla, a razem z siedliskiem znikają gatunki — wiele z nich zanim zostaną opisane."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Palma olejowa na Borneo i Sumatrze",
+          "region": "Indonezja i Malezja",
+          "text": "Olej palmowy jest najtańszym i najwydajniejszym olejem roślinnym świata — z hektara uzyskuje się go kilkakrotnie więcej niż z rzepaku czy soi — a Indonezja i Malezja odpowiadają za zdecydowaną większość światowej produkcji. Rozwój plantacji odbywa się kosztem **lasów równikowych i torfowisk**. Aby założyć plantację na torfowisku, trzeba je **osuszyć rowami**, co uruchamia rozkład torfu, jego osiadanie i **wielkoskalową emisję CO2**, a w porze suchej sprawia, że podłoże **pali się miesiącami** — pożary z 1997 i 2015 r. spowiły dymem (haze) Singapur i Malezję, zamykając szkoły i lotniska. Ubywa też siedlisk gatunków zagrożonych: **orangutana borneańskiego i sumatrzańskiego**, nosacza, tygrysa sumatrzańskiego. Po drugiej stronie konfliktu stoją miliony drobnych plantatorów i pracowników, dla których uprawa palmy jest podstawą utrzymania, oraz rządy widzące w niej źródło dewiz. Odpowiedzią mają być systemy **certyfikacji zrównoważonej produkcji (RSPO)**, zakaz zakładania plantacji na terenach świeżo wylesionych oraz unijne przepisy ograniczające wprowadzanie na rynek towarów pochodzących z wylesiania.",
+          "takeaway": "Bojkot samego surowca bywa pozorny: zastąpienie oleju palmowego mniej wydajnym olejem oznaczałoby zajęcie **większej powierzchni** pod uprawę. Sensowniejsze jest oddzielenie produkcji od wylesiania — certyfikacja, kontrola pochodzenia i ochrona torfowisk."
+        },
+        {
+          "type": "compare",
+          "title": "Rolnictwo żarowe a wylesianie przemysłowe",
+          "leftLabel": "Tradycyjne rolnictwo żarowe",
+          "rightLabel": "Wylesianie na potrzeby plantacji i pastwisk",
+          "rows": [
+            {
+              "aspect": "Skala jednorazowa",
+              "left": "Poletka od kilku do kilkunastu arów, rozproszone",
+              "right": "Setki i tysiące hektarów w jednym kompleksie"
+            },
+            {
+              "aspect": "Rytm użytkowania",
+              "left": "Uprawa 2–3 lata, potem **wieloletni odłóg** pozwalający lasowi się odbudować",
+              "right": "Użytkowanie trwałe — las nie wraca"
+            },
+            {
+              "aspect": "Przeznaczenie produkcji",
+              "left": "Samozaopatrzenie rodziny i lokalnego rynku",
+              "right": "**Eksport** (pasza, olej, wołowina, biopaliwa)"
+            },
+            {
+              "aspect": "Odwracalność",
+              "left": "Przy małej gęstości zaludnienia system jest w przybliżeniu zrównoważony",
+              "right": "Nieodwracalne w skali pokoleń; siedliska nie odtwarzają się samoistnie"
+            },
+            {
+              "aspect": "Kiedy staje się problemem",
+              "left": "Gdy wzrost liczby ludności **skraca okres odłogowania** i las nie zdąża się regenerować",
+              "right": "Zawsze, gdy zajmuje lasy pierwotne albo torfowiska"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj region do dominującej przyczyny ubytku lasów",
+          "instruction": "Każdy region ma inny główny motor wylesiania — to częsty motyw zadań z mapą.",
+          "pairs": [
+            {
+              "left": "Amazonia (Brazylia)",
+              "right": "pastwiska dla bydła i wielkoobszarowe uprawy soi"
+            },
+            {
+              "left": "Borneo i Sumatra",
+              "right": "plantacje palmy olejowej na osuszanych torfowiskach"
+            },
+            {
+              "left": "Dorzecze Konga",
+              "right": "gospodarka żarowo-odłogowa i pozyskanie drewna na opał"
+            },
+            {
+              "left": "Ameryka Środkowa",
+              "right": "hodowla bydła na eksport wołowiny oraz plantacje bananów i kawy"
+            },
+            {
+              "left": "Syberia i Kanada",
+              "right": "przemysłowe zręby zupełne w lasach borealnych oraz rozległe pożary"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Konflikt żywność – paliwo (food vs fuel)",
+          "text": "**Biopaliwa pierwszej generacji** wytwarza się z roślin jadalnych: etanol z kukurydzy i trzciny cukrowej, biodiesel z rzepaku, soi i oleju palmowego. Ich produkcja zajmuje **grunty rolne**, które mogłyby dostarczać żywności, a wzrost popytu na surowiec podnosi ceny płodów rolnych i zwiększa presję na wylesianie pod nowe uprawy. To klasyczny konflikt interesów między **bezpieczeństwem żywnościowym**, **polityką klimatyczną** i **ochroną lasów**.",
+          "note": "Rozwiązaniem mają być **biopaliwa drugiej generacji** — z odpadów drzewnych, słomy, roślin energetycznych uprawianych na gruntach marginalnych — oraz limity udziału paliw z upraw spożywczych w miksie transportowym, wprowadzone m.in. w Unii Europejskiej."
+        },
+        {
+          "type": "table",
+          "title": "Farma wiatrowa — argumenty stron konfliktu",
+          "caption": "Zadania o energetyce odnawialnej prawie zawsze proszą o argumenty za i przeciw. Warto mieć je uporządkowane.",
+          "headers": [
+            "Aspekt",
+            "Argument zwolenników",
+            "Argument przeciwników"
+          ],
+          "rows": [
+            [
+              "Klimat i powietrze",
+              "energia bez emisji CO2, pyłów i związków siarki w czasie pracy; ograniczenie importu paliw",
+              "emisje powstają na etapie produkcji i transportu turbin; potrzebne źródła rezerwowe na okresy bezwietrzne"
+            ],
+            [
+              "Krajobraz",
+              "turbiny można lokować na gruntach rolnych, które nadal są uprawiane",
+              "wysokie **dominanty krajobrazowe** widoczne z wielu kilometrów, zwłaszcza w krajobrazie otwartym i w otoczeniu obszarów chronionych"
+            ],
+            [
+              "Ptaki i nietoperze",
+              "przy właściwej lokalizacji śmiertelność jest niska; szkody można ograniczać wyłączaniem turbin i oznakowaniem łopat",
+              "kolizje **dużych ptaków szponiastych** (bielik, orlik) na trasach przelotu; nietoperze giną także wskutek **barotraumy** w strefie niskiego ciśnienia za łopatą"
+            ],
+            [
+              "Hałas i komfort",
+              "nowoczesne turbiny są cichsze, a minimalne odległości od zabudowy określa prawo",
+              "**hałas** i pulsujące **migotanie cienia** przy niskim położeniu Słońca; obawy o spadek wartości nieruchomości"
+            ],
+            [
+              "Gospodarka lokalna",
+              "podatki i opłaty dzierżawne zasilające budżet gminy oraz dochody rolników",
+              "korzyści trafiają do właścicieli gruntów i gminy, a uciążliwość dotyka wszystkich sąsiadów — stąd postawy typu **NIMBY**"
+            ],
+            [
+              "Lokalizacja morska",
+              "silniejszy i stabilniejszy wiatr, brak konfliktu z zabudową, większe turbiny",
+              "wysoki koszt, oddziaływanie na dno morskie, ptaki morskie i trasy migracji, konflikt z rybołówstwem i żeglugą"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Energetyka wiatrowa w Polsce a zasada 10H",
+          "region": "Polska — ląd i polska strefa Bałtyku",
+          "text": "Rozwój lądowych farm wiatrowych w Polsce zahamowała ustawa z **2016 r.**, która wprowadziła **zasadę 10H**: elektrownię wiatrową można było lokować w odległości nie mniejszej niż dziesięciokrotność jej całkowitej wysokości od zabudowy mieszkaniowej i od form ochrony przyrody. Dla typowej turbiny oznaczało to bufor rzędu 1,5–2 km i praktycznie wykluczało nowe inwestycje w gęsto zaludnionym kraju. Nowelizacja z **2023 r.** złagodziła regułę, ustalając minimalną odległość od zabudowy na **700 m** i przenosząc rozstrzygnięcie na poziom **miejscowego planu zagospodarowania przestrzennego** z obowiązkowymi konsultacjami społecznymi. Równolegle rozwijane są **morskie farmy wiatrowe** na Bałtyku, gdzie wiatr jest silniejszy i stabilniejszy, a konflikt z zabudową nie występuje — pojawia się za to konflikt z rybołówstwem, żeglugą i ochroną ptaków morskich.",
+          "takeaway": "Ten przykład dobrze pokazuje, jak **prawo przestrzenne rozstrzyga konflikt interesów**: przesunięcie jednego parametru (odległości) decyduje o tym, czy w skali kraju powstaną nowe źródła energii, czy zwycięży ochrona komfortu i krajobrazu mieszkańców."
+        },
+        {
+          "type": "definition",
+          "term": "NIMBY",
+          "text": "**NIMBY** (ang. *not in my backyard* — „byle nie na moim podwórku”) to postawa polegająca na akceptacji danej inwestycji jako potrzebnej **w skali ogólnej**, przy jednoczesnym sprzeciwie wobec jej lokalizacji **w swoim sąsiedztwie**. Występuje wokół farm wiatrowych, spalarni odpadów, składowisk, dróg szybkiego ruchu, masztów i zakładów przemysłowych.",
+          "note": "Mechanizm jest zawsze ten sam: **korzyści są rozproszone** (tańsza energia, mniej odpadów, krótszy dojazd dla tysięcy ludzi), a **uciążliwości skoncentrowane** na kilkuset mieszkańcach. Dlatego skuteczne rozwiązania polegają na rekompensowaniu kosztów lokalnej społeczności (udziały w inwestycji, niższe rachunki, inwestycje gminne) i na wczesnych, rzetelnych konsultacjach."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na dwa uproszczenia. **Pierwsze**: „farmy wiatrowe wybijają ptaki” — skala kolizji zależy przede wszystkim od **lokalizacji** (trasy przelotów, doliny rzeczne, wybrzeża, sąsiedztwo obszarów Natura 2000), a nie od samego istnienia turbin; w odpowiedzi maturalnej pisz o **niewłaściwej lokalizacji** i sposobach jej ograniczania. **Drugie**: „za wylesianie odpowiada rolnictwo żarowe” — tradycyjna gospodarka żarowo-odłogowa przy niskiej gęstości zaludnienia bywa zrównoważona; dziś dominującą przyczyną ubytku lasów równikowych są **wielkoobszarowe plantacje i pastwiska produkujące na eksport**."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego gleby po wykarczowaniu i wypaleniu lasu równikowego tracą żyzność już po 2–3 latach?",
+          "options": [
+            "Ponieważ wypalanie niszczy całą materię organiczną i uniemożliwia jej odtworzenie",
+            "Ponieważ zapas składników pokarmowych tkwi w biomasie lasu, a obfite opady szybko wymywają je z gleby pozbawionej okrywy",
+            "Ponieważ gleby te są bardzo płytkie i zalegają bezpośrednio na litej skale",
+            "Ponieważ wysokie temperatury powodują trwałe zamarzanie składników w profilu glebowym"
+          ],
+          "correctIndex": 1,
+          "explanation": "Gleby **ferralitowe** strefy równikowej są zaawansowanie zwietrzałe i ubogie; obieg materii zamyka się niemal w całości w **biomasie**, a nie w glebie. Popiół z wypalenia daje jednorazowy zastrzyk składników, które przy opadach ponad 2000 mm rocznie zostają szybko **wymyte** poza zasięg korzeni. Stąd konieczność karczowania kolejnych fragmentów lasu."
+        },
+        {
+          "type": "quiz",
+          "question": "Który zestaw najlepiej opisuje mechanizm rozprzestrzeniania się wylesiania w Amazonii?",
+          "options": [
+            "Pożary naturalne → sukcesja wtórna → uprawy",
+            "Budowa drogi → wyrąb selektywny → wypalanie i pastwiska → plantacje soi",
+            "Plantacje soi → budowa zapory → osadnictwo miejskie",
+            "Wypas kóz → pustynnienie → opuszczenie terenu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kolejność jest kluczowa: **droga otwiera dostęp**, firmy drzewne wybierają najcenniejsze gatunki, osadnicy wypalają resztę i zakładają pastwiska, a na wyrównanym terenie pojawiają się wielkoobszarowe uprawy. Dlatego mówi się, że każda nowa droga w puszczy jest zapowiedzią wylesienia pasa po obu jej stronach."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega konflikt „żywność – paliwo” związany z biopaliwami pierwszej generacji?",
+          "options": [
+            "Biopaliwa wymagają wody pitnej, której brakuje w miastach",
+            "Rośliny energetyczne zajmują grunty rolne i podnoszą ceny żywności, zwiększając presję na wylesianie",
+            "Biopaliwa są droższe od benzyny, więc rolnicy rezygnują z hodowli",
+            "Produkcja biopaliw wymaga importu nawozów z krajów rozwijających się"
+          ],
+          "correctIndex": 1,
+          "explanation": "Etanol z kukurydzy i trzciny czy biodiesel z rzepaku, soi i oleju palmowego powstają z roślin **jadalnych**, uprawianych na gruntach rolnych. Wzrost popytu na surowiec energetyczny konkuruje z produkcją żywności, podnosi jej ceny i pcha nowe uprawy na tereny leśne. Stąd nacisk na **biopaliwa drugiej generacji** wytwarzane z odpadów i biomasy niejadalnej."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy polecenie brzmi „przedstaw argumenty stron konfliktu”, **wypisz strony po imieniu** (rolnik, koncern spożywczy, ludność rdzenna, mieszkańcy gminy, samorząd, organizacja ekologiczna, państwo) i przypisz każdej **jeden konkretny interes**. Odpowiedź w stylu „jedni chcą chronić przyrodę, a drudzy zarabiać” jest zbyt ogólna, by dostać punkt. Przy energetyce odnawialnej zawsze dodaj wymiar **przestrzenny** — konflikt dotyczy nie tego, *czy* budować, lecz *gdzie*."
+        }
+      ]
+    },
+    {
+      "slug": "urbanizacja-drogi-i-turystyka",
+      "title": "Miasto, droga i turysta – presja na tereny rolne i przyrodnicze",
+      "summary": "Jak rozlewanie się miast pochłania grunty rolne, dlaczego drogi dzielą populacje zwierząt i kiedy turystyka niszczy to, po co przyjeżdżają turyści.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Trzy formy presji z tej lekcji łączy jedno: **zajmują przestrzeń**, a nie surowiec. Miasto rozlewa się na pola, droga przecina korytarz migracji, a turysta wydeptuje szlak w miejscu, którego walorem jest właśnie to, że jest dzikie. Wszystkie trzy są przy tym **potrzebne** — nikt nie proponuje likwidacji dróg ani zakazu podróżowania. Konflikt dotyczy więc nie istnienia, lecz **skali, lokalizacji i sposobu** korzystania z przestrzeni."
+        },
+        {
+          "type": "definition",
+          "term": "Rozlewanie się miast (urban sprawl)",
+          "text": "**Urban sprawl** to niekontrolowane rozprzestrzenianie się zabudowy na obrzeżach miasta — rozproszonej, o niskiej intensywności, pozbawionej pełnego wyposażenia w usługi i uzależnionej od samochodu. Powstaje, gdy tania ziemia rolna na peryferiach spotyka się z **brakiem miejscowych planów zagospodarowania przestrzennego**, a decyzje o zabudowie zapadają działka po działce.",
+          "note": "Nie myl **suburbanizacji** — czyli przemieszczania się ludności i funkcji ze środka miasta na jego obrzeża, będącej fazą rozwoju każdej aglomeracji — z **rozlewaniem się miasta**, czyli patologiczną, chaotyczną i rozproszoną formą tego procesu. Suburbanizacja może przebiegać w sposób planowy i zwarty, np. wzdłuż linii kolejowych."
+        },
+        {
+          "type": "process",
+          "title": "Od pola do osiedla — mechanizm utraty terenów otwartych",
+          "caption": "Kliknij kolejne ogniwa: to gotowy schemat odpowiedzi na pytanie o skutki żywiołowej urbanizacji.",
+          "steps": [
+            {
+              "title": "1. Presja na tanią ziemię",
+              "text": "Ceny gruntu rosną w centrum, a na obrzeżach ziemia rolna jest tania. Wystarczy **odrolnienie** i pojedyncza decyzja administracyjna, by pole stało się działką budowlaną."
+            },
+            {
+              "title": "2. Zabudowa rozproszona",
+              "text": "Bez planu miejscowego zabudowa powstaje wyspowo, wzdłuż dróg, bez ciągłości. Rośnie **długość sieci** wodociągowej, kanalizacyjnej i drogowej przypadająca na jednego mieszkańca — koszty ponosi gmina."
+            },
+            {
+              "title": "3. Uszczelnienie (zasklepienie) gleby",
+              "text": "Dachy, asfalt i kostka odcinają glebę od wody i powietrza. Gleba przestaje pełnić funkcje retencyjne, filtracyjne i produkcyjne — jest to **utrata praktycznie nieodwracalna** w skali ludzkiego życia."
+            },
+            {
+              "title": "4. Zmiana obiegu wody",
+              "text": "Woda opadowa nie wsiąka, lecz **spływa powierzchniowo**, i to szybko. Rosną kulminacje odpływu i ryzyko **podtopień miejskich** po nawalnym deszczu, a jednocześnie maleje zasilanie wód podziemnych — dwa przeciwstawne problemy naraz."
+            },
+            {
+              "title": "5. Fragmentacja terenów otwartych",
+              "text": "Zabudowa przecina **korytarze ekologiczne** i kliny napowietrzające miasta. Zwierzęta tracą możliwość przemieszczania, a miasto — dopływ chłodnego powietrza."
+            },
+            {
+              "title": "6. Wzrost emisji i wyspy ciepła",
+              "text": "Rozproszone osiedla wymuszają dojazdy samochodem (rośnie emisja i hałas), a powierzchnie betonowe i asfaltowe silnie nagrzewają się w dzień i wolno oddają ciepło nocą, wzmacniając **miejską wyspę ciepła**."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Miasto a środowisko — rzędy wielkości",
+          "items": [
+            {
+              "value": "ok. 57",
+              "unit": "%",
+              "label": "Udział ludności miejskiej na świecie (2023)",
+              "note": "w 1950 r. ok. 30%; prognozy mówią o ok. 2/3 w połowie XXI w."
+            },
+            {
+              "value": "2–5",
+              "unit": "°C",
+              "label": "Typowa różnica temperatury między centrum miasta a otoczeniem",
+              "note": "w bezwietrzne noce w wielkich miastach różnica bywa wyraźnie większa"
+            },
+            {
+              "value": "I–III",
+              "unit": "klasa",
+              "label": "Klasy bonitacyjne gruntów rolnych objęte w Polsce szczególną ochroną przed wyłączeniem z produkcji"
+            },
+            {
+              "value": "ok. 100",
+              "unit": "lat",
+              "label": "Czas potrzebny do wytworzenia 1 cm poziomu próchnicznego gleby",
+              "note": "dlatego uszczelnienie gleby traktuje się jako stratę nieodwracalną"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Miasto rozproszone a miasto zwarte",
+          "leftLabel": "Miasto rozproszone (sprawl)",
+          "rightLabel": "Miasto zwarte (compact city)",
+          "rows": [
+            {
+              "aspect": "Zajęcie terenów otwartych",
+              "left": "Duże — zabudowa pochłania grunty rolne i przyrodnicze wokół miasta",
+              "right": "Ograniczone — rozwój **do wewnątrz**, na terenach poprzemysłowych i lukach zabudowy"
+            },
+            {
+              "aspect": "Transport",
+              "left": "Dominacja samochodu, długie dojazdy, kongestia i emisje",
+              "right": "Opłacalny transport zbiorowy, ruch pieszy i rowerowy na krótkich dystansach"
+            },
+            {
+              "aspect": "Koszty infrastruktury",
+              "left": "Wysokie na mieszkańca — długie sieci i drogi obsługujące nieliczne domy",
+              "right": "Niższe — istniejąca sieć obsługuje więcej osób"
+            },
+            {
+              "aspect": "Woda i zieleń",
+              "left": "Rozległe uszczelnienie, zanik retencji, przecięte korytarze i kliny napowietrzające",
+              "right": "Zwarta zabudowa i zachowany **system przyrodniczy miasta**: parki, kliny, zieleń błękitno-zielona"
+            },
+            {
+              "aspect": "Ryzyko",
+              "left": "Wyludnianie centrum, gettoizacja obrzeży, uzależnienie od samochodu",
+              "right": "Przegęszczenie i wzrost cen mieszkań, jeśli zabraknie polityki mieszkaniowej i terenów zielonych"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Chiny — miasta kontra grunty orne",
+          "region": "Chiny",
+          "text": "Chiny mają ok. 1/5 ludności świata i tylko kilka procent światowych gruntów ornych, a najżyźniejsze i najlepiej nawodnione ziemie leżą dokładnie tam, gdzie najszybciej rosną miasta: na **nizinach wschodnich i w deltach** Jangcy oraz Rzeki Perłowej. Gwałtowna industrializacja i urbanizacja od lat 80. XX w. pochłaniały grunty rolne w tempie zagrażającym **bezpieczeństwu żywnościowemu** państwa. Odpowiedzią stała się polityka **czerwonej linii**: ustalono nieprzekraczalne minimum powierzchni gruntów ornych w skali kraju (ok. 120 mln ha) oraz zasadę **kompensacji** — gmina, która przeznacza pole pod zabudowę, musi zapewnić w zamian grunt rolny o porównywalnej jakości gdzie indziej. W praktyce prowadzi to do kolejnych napięć: grunty zastępcze bywają gorsze, położone dalej i wymagają nawadniania, a presja inwestycyjna popycha władze lokalne do obchodzenia limitów.",
+          "takeaway": "Konflikt „miasto kontra pole” rozstrzyga się przez **prawo i planowanie przestrzenne**, a nie przez dobrą wolę inwestorów. To argument, dlaczego w Polsce grunty klas I–III podlegają szczególnej ochronie przed wyłączeniem z produkcji rolnej."
+        },
+        {
+          "type": "definition",
+          "term": "Efekt bariery i korytarze ekologiczne",
+          "text": "**Korytarz ekologiczny** to pas terenu (dolina rzeczna, ciąg lasów, zadrzewienia śródpolne) umożliwiający zwierzętom i roślinom przemieszczanie się między obszarami cennymi przyrodniczo. **Efekt bariery** powstaje, gdy droga, linia kolejowa, ogrodzenie lub zwarta zabudowa przecinają taki korytarz: populacja zostaje podzielona na mniejsze, izolowane części, w których dochodzi do **chowu wsobnego**, spadku różnorodności genetycznej i większego ryzyka wymarcia lokalnego.",
+          "note": "Droga oddziałuje w czterech trybach jednocześnie: **bariera** (podział populacji), **śmiertelność** (kolizje z pojazdami, groźne zwłaszcza dla płazów i dużych ssaków), **efekt krawędzi i hałas** (zwierzęta unikają pasa kilkuset metrów wokół jezdni) oraz **dostępność** (nowa droga otwiera obszar dla zabudowy i wyrębu). Dlatego sam wiadukt dla zwierząt nie usuwa całego problemu."
+        },
+        {
+          "type": "case-study",
+          "title": "Dolina Rospudy i Via Baltica",
+          "region": "Polska, Podlasie (okolice Augustowa)",
+          "text": "W latach 2006–2009 najgłośniejszym polskim sporem o środowisko była trasa obwodnicy Augustowa w ciągu drogi **Via Baltica**. Wybrany wariant miał przeciąć **dolinę Rospudy** — jedno z ostatnich w Europie Środkowej nieprzekształconych **torfowisk przejściowych i niskich**, z unikatowymi zbiorowiskami roślinnymi i stanowiskami rzadkich storczyków, objęte siecią **Natura 2000**. Argumenty stron były mocne po obu stronach: mieszkańcy Augustowa od lat cierpieli z powodu ruchu tranzytowego, w tym samochodów ciężarowych, przez środek miasta; przyrodnicy i organizacje ekologiczne wskazywali, że estakada nad torfowiskiem trwale zaburzy **stosunki wodne** siedliska, którego nie da się odtworzyć. Spór objął blokady, protesty, opinie naukowców i **skargę Komisji Europejskiej do Trybunału Sprawiedliwości UE** wraz z nakazem wstrzymania prac. Ostatecznie w 2009 r. wybrano **wariant omijający dolinę** (przez Raczki), a obwodnicę zbudowano poza obszarem chronionym.",
+          "takeaway": "Kluczowa lekcja proceduralna: o losie inwestycji przesądziła **ocena oddziaływania na środowisko (OOŚ)** i przepisy o obszarach Natura 2000, zgodnie z którymi przedsięwzięcie znacząco szkodzące przedmiotowi ochrony można zrealizować tylko wtedy, gdy **nie ma wariantu alternatywnego**, przemawia za nim nadrzędny interes publiczny i wykonana zostanie **kompensacja przyrodnicza**. Tu wariant alternatywny istniał — i to zdecydowało."
+        },
+        {
+          "type": "classification",
+          "title": "Jak ograniczać wpływ dróg na przyrodę",
+          "caption": "Kolejność ma znaczenie: najpierw unikaj, potem minimalizuj, a dopiero na końcu kompensuj.",
+          "groups": [
+            {
+              "name": "Unikanie (najskuteczniejsze)",
+              "description": "Poprowadzenie trasy **poza obszarem cennym** na etapie planowania — najtańszy i najpewniejszy sposób ograniczenia szkód.",
+              "examples": [
+                "wariant Via Baltica omijający dolinę Rospudy",
+                "wyprowadzenie tranzytu poza park narodowy",
+                "przebieg wzdłuż istniejących korytarzy transportowych"
+              ]
+            },
+            {
+              "name": "Przejścia dla zwierząt",
+              "description": "Odtworzenie ciągłości korytarza w miejscu przecięcia go przez drogę; kluczowe są **szerokość, lokalizacja i naprowadzenie zwierząt**.",
+              "examples": [
+                "przejścia górne, tzw. zielone mosty, dla dużych ssaków",
+                "przejścia dolne i estakady nad dolinami",
+                "przepusty dla płazów i małych ssaków"
+              ]
+            },
+            {
+              "name": "Ograniczanie śmiertelności",
+              "description": "Rozwiązania techniczne zmniejszające liczbę kolizji.",
+              "examples": [
+                "ogrodzenia naprowadzające do przejść",
+                "płotki dla płazów w okresie migracji",
+                "ograniczenia prędkości i oznakowanie odcinków migracyjnych"
+              ]
+            },
+            {
+              "name": "Ograniczanie hałasu i zanieczyszczeń",
+              "description": "Zmniejszenie strefy oddziaływania drogi na siedliska sąsiadujące.",
+              "examples": [
+                "ekrany akustyczne i wały ziemne",
+                "zbiorniki podczyszczające wody z jezdni",
+                "pasy zieleni izolacyjnej"
+              ]
+            },
+            {
+              "name": "Kompensacja przyrodnicza",
+              "description": "Działanie **ostateczne** — odtworzenie lub utworzenie siedliska zastępczego, gdy szkody nie da się uniknąć. Nigdy nie jest równoważne z ochroną siedliska pierwotnego.",
+              "examples": [
+                "odtworzenie mokradła w innym miejscu",
+                "wykupienie i ochrona równoważnego obszaru",
+                "zabiegi ochrony czynnej dla gatunku, którego siedlisko zajęto"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Turystyka masowa i overtourism",
+          "text": "**Turystyka masowa** to zorganizowany, wielkoskalowy ruch turystyczny skoncentrowany w czasie (sezon) i przestrzeni (kilka najsłynniejszych miejsc). O **overtourismie** mówimy wtedy, gdy natężenie ruchu przekracza **pojemność turystyczną** obszaru — pogarsza się stan środowiska, spada jakość życia mieszkańców i satysfakcja samych turystów.",
+          "note": "Zapamiętaj trzy pojęcia: **chłonność turystyczna** — ile osób obszar wytrzyma bez trwałych zmian w środowisku przyrodniczym; **pojemność turystyczna** — ile osób obsłuży istniejąca infrastruktura (noclegi, parkingi, ścieżki, oczyszczalnia); **przepustowość szlaku** — ile osób może nim przejść w jednostce czasu. Zadania maturalne często proszą o wskazanie, który z tych limitów został przekroczony."
+        },
+        {
+          "type": "table",
+          "title": "Skutki turystyki masowej",
+          "caption": "Zauważ, że turystyka bywa też narzędziem ochrony — dochody z biletów finansują park narodowy, a wartość krajobrazu staje się argumentem gospodarczym.",
+          "headers": [
+            "Sfera",
+            "Skutki negatywne",
+            "Skutki pozytywne i łagodzące"
+          ],
+          "rows": [
+            [
+              "Przyroda",
+              "wydeptywanie i erozja szlaków, płoszenie zwierząt, zaśmiecenie, uszkadzanie raf przez kotwice i nurków, przyzwyczajanie zwierząt do ludzkiego pokarmu",
+              "dochody z opłat finansują ochronę i remonty szlaków, monitoring przyrodniczy, reintrodukcje gatunków"
+            ],
+            [
+              "Woda i odpady",
+              "sezonowe przeciążenie ujęć wody i oczyszczalni, baseny i pola golfowe w strefach suchych, ścieki odprowadzane do morza",
+              "inwestycje w kanalizację i oczyszczalnie opłacalne dzięki ruchowi turystycznemu"
+            ],
+            [
+              "Krajobraz i zabudowa",
+              "chaotyczna zabudowa apartamentowa, wyciągi i parkingi w miejscach cennych widokowo, betonowanie wybrzeży",
+              "ochrona krajobrazu jako zasobu ekonomicznego, przepisy o ładzie przestrzennym w rejonach turystycznych"
+            ],
+            [
+              "Społeczność lokalna",
+              "wzrost cen mieszkań i najmu, wypieranie mieszkańców z centrów (Wenecja, Barcelona), zanik tradycyjnych usług, tłok i hałas",
+              "miejsca pracy, podtrzymanie rzemiosła i kultury ludowej, powstrzymanie wyludniania obszarów górskich"
+            ],
+            [
+              "Gospodarka",
+              "sezonowość zatrudnienia, uzależnienie regionu od jednej branży, wyciek dochodów do zagranicznych operatorów",
+              "dywersyfikacja dochodów wsi (agroturystyka), wpływy podatkowe gmin, rozwój infrastruktury"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Tatry — kilka milionów turystów na 0,07% powierzchni Polski",
+          "region": "Polska, Tatrzański Park Narodowy",
+          "text": "Tatrzański Park Narodowy odwiedza rocznie **kilka milionów osób**, a ruch koncentruje się na kilku szlakach i w kilku dolinach — przede wszystkim na trasie do **Morskiego Oka**, na Kasprowym Wierchu i na Giewoncie. Skutki przyrodnicze to przede wszystkim **erozja szlaków** (wydeptana ścieżka przechwytuje spływ wody i zamienia się w rynnę erozyjną, poszerzaną przez turystów omijających błoto), niszczenie muraw wysokogórskich i kosodrzewiny, zaśmiecenie oraz **płoszenie zwierząt** — kozicy, świstaka i niedźwiedzia, który przyzwyczajony do odpadków traci naturalną ostrożność. Dochodzi presja infrastrukturalna: kolej linowa, wyciągi, parkingi i zabudowa u wylotu dolin. Narzędzia ochronne stosowane w TPN to **wyznaczone szlaki i zakaz schodzenia z nich**, okresowe zamykanie tras (np. ze względu na lęgi lub bezpieczeństwo), **limity przepustowości kolei linowej**, opłaty za wstęp zasilające budżet parku, techniczna zabudowa szlaków (schody, kładki, umocnienia) oraz odsuwanie parkingów od granic parku i dowóz transportem zbiorowym.",
+          "takeaway": "W obszarach chronionych o dużej presji zwykle nie da się „ograniczyć liczby turystów w ogóle” — skuteczniejsze jest **kanalizowanie ruchu** (wyznaczone szlaki i punkty widokowe), **rozłożenie go w czasie** (poza szczytem sezonu) oraz przeniesienie części presji na infrastrukturę położoną poza obszarem chronionym."
+        },
+        {
+          "type": "map-explore",
+          "title": "Miejsca pod presją turystyki i infrastruktury",
+          "caption": "Kliknij znacznik, aby poznać istotę konfliktu — te przykłady wystarczą na maturze do zilustrowania każdego typu presji.",
+          "center": [
+            30,
+            30
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 45.44,
+              "lng": 12.33,
+              "label": "Wenecja (Włochy)",
+              "text": "Symbol **overtourismu**: turyści wielokrotnie liczniejsi od mieszkańców historycznego centrum, wypieranie stałych lokatorów przez najem krótkoterminowy, fale od statków niszczące fundamenty. Odpowiedź: ograniczenia dla wielkich wycieczkowców i opłata wstępu dla odwiedzających jednodniowych, wprowadzona w 2024 r."
+            },
+            {
+              "lat": 49.2,
+              "lng": 20.07,
+              "label": "Morskie Oko, Tatry (Polska)",
+              "text": "Najbardziej obciążony szlak w polskich górach. Erozja nawierzchni, tłok, presja na kozicę i niedźwiedzia; ochrona przez zabudowę techniczną szlaku, opłaty i ograniczenia ruchu pojazdów."
+            },
+            {
+              "lat": -13.16,
+              "lng": -72.55,
+              "label": "Machu Picchu (Peru)",
+              "text": "Stanowisko wpisane na listę UNESCO chronione **dziennymi limitami wejść**, wyznaczonymi trasami zwiedzania i godzinami wstępu — przykład zarządzania przepustowością zamiast zakazu."
+            },
+            {
+              "lat": -18.29,
+              "lng": 147.7,
+              "label": "Wielka Rafa Koralowa (Australia)",
+              "text": "Główne zagrożenie to **bielenie koralowców** przy wzroście temperatury wody; turystyka dokłada uszkodzenia mechaniczne (kotwice, nurkowie) i zanieczyszczenia, ale zarazem finansuje ochronę i tworzy silne lobby na rzecz rafy."
+            },
+            {
+              "lat": 27.99,
+              "lng": 86.93,
+              "label": "Mount Everest (Nepal/Chiny)",
+              "text": "Komercjalizacja wypraw wysokogórskich: tłok w strefie śmierci, tony pozostawionego sprzętu i odpadów, presja na społeczności Szerpów. Odpowiedź: kaucje śmieciowe, obowiązek zniesienia odpadów, limity zezwoleń."
+            },
+            {
+              "lat": 53.87,
+              "lng": 22.95,
+              "label": "Dolina Rospudy (Polska)",
+              "text": "Spór o przebieg Via Baltica przez torfowisko w obszarze Natura 2000; rozstrzygnięty na rzecz **wariantu alternatywnego** omijającego dolinę."
+            },
+            {
+              "lat": 54.34,
+              "lng": 19.35,
+              "label": "Przekop Mierzei Wiślanej (Polska)",
+              "text": "Kanał żeglugowy oddany do użytku w 2022 r. Argument geopolityczny i gospodarczy (bezpośrednie połączenie Elbląga z Bałtykiem) kontra ingerencja w obszar Natura 2000 i zmiana warunków w Zalewie Wiślanym — przykład konfliktu, w którym uznano nadrzędny interes publiczny i wykonano kompensację przyrodniczą."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy skróty myślowe. **Pierwszy**: „turystyka niszczy przyrodę” — niszczy ją **turystyka przekraczająca chłonność obszaru i źle zarządzana**; dochody z turystyki bywają głównym powodem, dla którego obszar w ogóle jest chroniony. **Drugi**: mylenie **chłonności** (limit przyrodniczy) z **pojemnością** (limit infrastruktury) — to dwie różne wielkości i zadania potrafią o to zapytać wprost. **Trzeci**: kompensacja przyrodnicza to **ostateczność**, a nie „przepustka” do inwestowania w obszarze chronionym; hierarchia zawsze brzmi: unikaj → minimalizuj → kompensuj."
+        },
+        {
+          "type": "quiz",
+          "question": "Uszczelnienie (zasklepienie) gleby na osiedlach powstających na dawnych polach powoduje przede wszystkim:",
+          "options": [
+            "wzrost wsiąkania wody i podniesienie poziomu wód gruntowych",
+            "wzrost spływu powierzchniowego, szybsze wezbrania i mniejsze zasilanie wód podziemnych",
+            "zwiększenie retencji gleby i ograniczenie podtopień",
+            "spadek temperatury powietrza w centrum osiedla"
+          ],
+          "correctIndex": 1,
+          "explanation": "Powierzchnie nieprzepuszczalne odcinają glebę od infiltracji: woda opadowa **spływa szybko** kanalizacją deszczową lub po powierzchni, co podnosi kulminacje odpływu i sprzyja **podtopieniom miejskim**, a jednocześnie ogranicza zasilanie wód podziemnych. Dodatkowo betonowe i asfaltowe nawierzchnie nagrzewają się, wzmacniając **wyspę ciepła**."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego w sporze o przebieg Via Baltica ostatecznie zrezygnowano z wariantu przez dolinę Rospudy?",
+          "options": [
+            "Ponieważ wariant ten był droższy od pozostałych",
+            "Ponieważ dla obszaru Natura 2000 istniał wariant alternatywny, a inwestycja znacząco zagrażała przedmiotowi ochrony",
+            "Ponieważ mieszkańcy Augustowa nie chcieli obwodnicy",
+            "Ponieważ w dolinie odkryto złoża surowców mineralnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Przepisy dotyczące sieci **Natura 2000** dopuszczają realizację szkodliwego przedsięwzięcia tylko przy spełnieniu trzech warunków łącznie: **braku wariantu alternatywnego**, nadrzędnego interesu publicznego i wykonania **kompensacji przyrodniczej**. W tym przypadku wariant alternatywny (przez Raczki) istniał, więc pierwszy warunek nie był spełniony."
+        },
+        {
+          "type": "quiz",
+          "question": "Które działanie najskuteczniej ogranicza erozję szlaków w parku narodowym o bardzo dużym ruchu turystycznym?",
+          "options": [
+            "Całkowite zamknięcie parku dla odwiedzających w sezonie letnim",
+            "Kanalizowanie ruchu na wyznaczonych, technicznie zabezpieczonych szlakach i rozłożenie go w czasie",
+            "Zwiększenie liczby parkingów bezpośrednio przy wejściach na szlaki",
+            "Rezygnacja z opłat za wstęp do parku"
+          ],
+          "correctIndex": 1,
+          "explanation": "W praktyce ochrona polega na **sterowaniu ruchem**, a nie na jego likwidacji: wyznaczone i umocnione szlaki (schody, kładki, nawierzchnie) skupiają presję na wąskim pasie, a promocja terminów poza szczytem sezonu rozkłada ją w czasie. Nowe parkingi przy wejściach dodatkowo **zwiększyłyby** natężenie ruchu, a rezygnacja z opłat pozbawiłaby park środków na remonty szlaków."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o inwestycji na obszarze chronionym trzymaj się schematu, którym posługuje się prawo: **czy istnieje wariant alternatywny → czy przemawia za nią nadrzędny interes publiczny → jaka kompensacja przyrodnicza**. Jeśli polecenie brzmi „zaproponuj rozwiązanie ograniczające konflikt”, podaj **konkretny środek techniczny lub organizacyjny** (zielony most, przepust dla płazów, limit wejść, przeniesienie parkingu, transport zbiorowy), a nie ogólnik typu „należy chronić przyrodę”."
+        }
+      ]
+    },
+    {
+      "slug": "zrownowazony-rozwoj-i-goz",
+      "title": "Zrównoważony rozwój, odpady i gospodarka o obiegu zamkniętym",
+      "summary": "Definicja i filary zrównoważonego rozwoju, Cele Zrównoważonego Rozwoju oraz przejście od gospodarki liniowej do obiegu zamkniętego, recyklingu i racjonalnej gospodarki odpadami.",
+      "readingMinutes": 16,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Poprzednie lekcje pokazywały konflikty. Teraz czas na **ramę, w której próbuje się je rozstrzygać**. Zrównoważony rozwój nie jest hasłem o „byciu eko” — to konkretna zasada godzenia trzech porządków: gospodarczego, społecznego i środowiskowego, zapisana w polskiej Konstytucji i w dokumentach ONZ. Jej najbardziej wymierną realizacją jest **gospodarka o obiegu zamkniętym**, która atakuje problem u źródła: zmienia sposób, w jaki materia przepływa przez gospodarkę."
+        },
+        {
+          "type": "definition",
+          "term": "Zrównoważony rozwój",
+          "text": "**Zrównoważony rozwój** to rozwój, który **zaspokaja potrzeby obecnego pokolenia, nie ograniczając możliwości zaspokojenia potrzeb przez pokolenia przyszłe**. Definicja pochodzi z raportu Światowej Komisji ds. Środowiska i Rozwoju **„Nasza wspólna przyszłość”** (tzw. raport Brundtland) z **1987 r.** Kluczowe jest w niej pojęcie **sprawiedliwości międzypokoleniowej**: zasoby są wspólne w czasie, a nie tylko w przestrzeni.",
+          "note": "W Polsce zasada ta ma **rangę konstytucyjną** — art. 5 Konstytucji RP zobowiązuje Rzeczpospolitą do zapewnienia ochrony środowiska, kierując się zasadą zrównoważonego rozwoju. Jej definicję prawną zawiera także ustawa Prawo ochrony środowiska."
+        },
+        {
+          "type": "classification",
+          "title": "Filary (ładu) zrównoważonego rozwoju",
+          "caption": "Rozwój jest zrównoważony tylko wtedy, gdy wszystkie filary rosną jednocześnie — poprawa w jednym kosztem drugiego to rozwój niezrównoważony.",
+          "groups": [
+            {
+              "name": "Ład środowiskowy (ekologiczny)",
+              "description": "Korzystanie z zasobów **w tempie nieprzekraczającym ich odnawiania** oraz emitowanie zanieczyszczeń w ilości, którą środowisko jest w stanie zneutralizować.",
+              "examples": [
+                "połowy nieprzekraczające przyrostu populacji ryb",
+                "pobór wody mniejszy niż zasilanie warstwy wodonośnej",
+                "ochrona bioróżnorodności i gleb"
+              ]
+            },
+            {
+              "name": "Ład gospodarczy (ekonomiczny)",
+              "description": "Trwały wzrost oparty na **efektywności zasobowej i energetycznej**, a nie na rosnącym zużyciu surowców; internalizacja kosztów środowiskowych.",
+              "examples": [
+                "zasada zanieczyszczający płaci",
+                "opłaty za emisję CO2",
+                "gospodarka o obiegu zamkniętym",
+                "efektywność energetyczna budynków"
+              ]
+            },
+            {
+              "name": "Ład społeczny",
+              "description": "Sprawiedliwy dostęp do zasobów, usług i bezpiecznego środowiska — **wewnątrz pokolenia i między pokoleniami**.",
+              "examples": [
+                "dostęp do wody pitnej i kanalizacji",
+                "sprawiedliwa transformacja regionów górniczych",
+                "edukacja i ochrona zdrowia",
+                "prawa ludności rdzennej"
+              ]
+            },
+            {
+              "name": "Ład instytucjonalno-polityczny",
+              "description": "Sprawne państwo, prawo i partycypacja — bez nich pozostałe filary pozostają deklaracją.",
+              "examples": [
+                "planowanie przestrzenne i oceny oddziaływania na środowisko",
+                "dostęp obywateli do informacji o środowisku",
+                "konsultacje społeczne inwestycji",
+                "umowy międzynarodowe"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Kamienie milowe idei zrównoważonego rozwoju",
+          "caption": "Daty i nazwy dokumentów bywają punktowane wprost — warto znać pięć najważniejszych.",
+          "events": [
+            {
+              "period": "1972",
+              "label": "Konferencja ONZ w Sztokholmie",
+              "text": "Pierwsza światowa konferencja poświęcona środowisku człowieka. Powołano **UNEP** — Program Środowiskowy ONZ. W tym samym roku Klub Rzymski ogłosił raport **„Granice wzrostu”**, wskazujący na fizyczne ograniczenia wzrostu opartego na wyczerpywalnych zasobach."
+            },
+            {
+              "period": "1987",
+              "label": "Raport Brundtland",
+              "text": "Raport **„Nasza wspólna przyszłość”** wprowadził do obiegu definicję **zrównoważonego rozwoju**, łączącą po raz pierwszy cele środowiskowe z rozwojowymi i społecznymi."
+            },
+            {
+              "period": "1992",
+              "label": "Szczyt Ziemi w Rio de Janeiro",
+              "text": "Przyjęto **Agendę 21** (program działań na XXI wiek, realizowany także lokalnie jako Lokalne Agendy 21), **Konwencję o różnorodności biologicznej** oraz **Ramową konwencję ONZ w sprawie zmian klimatu (UNFCCC)** — fundament późniejszych negocjacji klimatycznych."
+            },
+            {
+              "period": "2002 i 2012",
+              "label": "Johannesburg i Rio+20",
+              "text": "Szczyt w Johannesburgu podsumował dekadę po Rio i wzmocnił wymiar społeczny (woda, sanitacja, ubóstwo). Konferencja **Rio+20** zapoczątkowała prace nad zestawem uniwersalnych celów rozwojowych."
+            },
+            {
+              "period": "2015",
+              "label": "Agenda 2030 i Porozumienie paryskie",
+              "text": "ONZ przyjęła **Agendę 2030** z **17 Celami Zrównoważonego Rozwoju (SDGs)** obowiązującymi wszystkie państwa — także rozwinięte. W tym samym roku podpisano **Porozumienie paryskie**, zobowiązujące do utrzymania wzrostu średniej temperatury globalnej wyraźnie poniżej 2°C i dążenia do 1,5°C."
+            },
+            {
+              "period": "od 2019",
+              "label": "Europejski Zielony Ład",
+              "text": "Strategia UE zakładająca osiągnięcie **neutralności klimatycznej do 2050 r.**, a wraz z nią pakiet regulacji obejmujący m.in. redukcję emisji, gospodarkę o obiegu zamkniętym, ograniczanie odpadów i odbudowę przyrody."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Wybrane Cele Zrównoważonego Rozwoju (SDGs) z Agendy 2030",
+          "caption": "Celów jest 17. Do matury wystarczy znać zasadę (uniwersalność, rok 2030, ONZ) i kilka celów o wyraźnym wymiarze środowiskowym.",
+          "headers": [
+            "Nr celu",
+            "Nazwa",
+            "Przykładowe działania"
+          ],
+          "rows": [
+            [
+              "6",
+              "Czysta woda i warunki sanitarne",
+              "dostęp do wody pitnej i kanalizacji, oczyszczanie ścieków, ograniczenie strat wody w sieci"
+            ],
+            [
+              "7",
+              "Czysta i dostępna energia",
+              "rozwój OZE, poprawa efektywności energetycznej, likwidacja ubóstwa energetycznego"
+            ],
+            [
+              "11",
+              "Zrównoważone miasta i społeczności",
+              "transport zbiorowy, tereny zielone, poprawa jakości powietrza, planowanie przestrzenne"
+            ],
+            [
+              "12",
+              "Odpowiedzialna konsumpcja i produkcja",
+              "ograniczanie marnowania żywności, ekoprojektowanie, recykling, prawo do naprawy"
+            ],
+            [
+              "13",
+              "Działania w dziedzinie klimatu",
+              "redukcja emisji gazów cieplarnianych, adaptacja miast i rolnictwa do zmian klimatu"
+            ],
+            [
+              "14",
+              "Życie pod wodą",
+              "ograniczenie zanieczyszczeń i przełowienia, morskie obszary chronione, walka z plastikiem w morzach"
+            ],
+            [
+              "15",
+              "Życie na lądzie",
+              "powstrzymanie wylesiania i pustynnienia, ochrona bioróżnorodności, odbudowa ekosystemów"
+            ]
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Gospodarka liniowa a gospodarka o obiegu zamkniętym",
+          "leftLabel": "Gospodarka liniowa",
+          "rightLabel": "Gospodarka o obiegu zamkniętym (GOZ)",
+          "rows": [
+            {
+              "aspect": "Schemat przepływu materii",
+              "left": "**Weź – wytwórz – zużyj – wyrzuć**: materia przepływa przez gospodarkę jeden raz",
+              "right": "**Zamknięta pętla**: produkt po użyciu wraca do obiegu jako surowiec lub jest naprawiany i używany ponownie"
+            },
+            {
+              "aspect": "Odpad",
+              "left": "Nieunikniony koniec cyklu życia produktu, problem do składowania",
+              "right": "**Surowiec** dla kolejnego procesu — odpad traktowany jako błąd projektowy"
+            },
+            {
+              "aspect": "Projektowanie produktu",
+              "left": "Nastawione na niski koszt wytworzenia; typowa jest krótka żywotność i utrudniona naprawa",
+              "right": "**Ekoprojektowanie**: trwałość, naprawialność, wymienne części, materiały łatwe do rozdzielenia i recyklingu"
+            },
+            {
+              "aspect": "Model biznesowy",
+              "left": "Sprzedaż jak największej liczby sztuk",
+              "right": "Sprzedaż **usługi zamiast produktu** (najem, leasing, współdzielenie), serwis, regeneracja i odsprzedaż"
+            },
+            {
+              "aspect": "Skutki środowiskowe",
+              "left": "Rosnące wydobycie surowców, emisje i góra odpadów",
+              "right": "Mniejsze zapotrzebowanie na surowce pierwotne i energię, mniej odpadów i emisji"
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Pętla gospodarki o obiegu zamkniętym",
+          "caption": "Kliknij etap. Im węższa pętla (naprawa, ponowne użycie), tym mniej energii i materiałów traci gospodarka.",
+          "stages": [
+            {
+              "name": "Ekoprojektowanie",
+              "text": "Produkt projektuje się tak, by był **trwały, naprawialny i rozbieralny**, a użyte materiały dały się później rozdzielić. Na tym etapie zapada ok. 80% decyzji o przyszłym wpływie wyrobu na środowisko."
+            },
+            {
+              "name": "Produkcja z surowców wtórnych",
+              "text": "Wytwarzanie z **materiałów z odzysku** oraz w sposób oszczędzający energię i wodę; odpady jednego zakładu bywają surowcem dla drugiego (**symbioza przemysłowa**)."
+            },
+            {
+              "name": "Dystrybucja i konsumpcja",
+              "text": "Ograniczanie opakowań i transportu, wybór produktów trwałych, **współdzielenie** rzadko używanych rzeczy zamiast kupowania ich na własność."
+            },
+            {
+              "name": "Użytkowanie, naprawa, ponowne użycie",
+              "text": "Najcenniejsza część pętli: **przedłużanie życia produktu** przez serwis, dostępność części zamiennych, regenerację i drugi obieg (sklepy z rzeczami używanymi)."
+            },
+            {
+              "name": "Selektywna zbiórka i sortowanie",
+              "text": "Bez czystych, rozdzielonych strumieni odpadów recykling jest niemożliwy albo nieopłacalny. **Segregacja u źródła** decyduje o jakości surowca wtórnego."
+            },
+            {
+              "name": "Recykling i odzysk",
+              "text": "Przetworzenie materiałów w **surowce wtórne** i skierowanie ich z powrotem do produkcji; to, czego nie da się przetworzyć materiałowo, może posłużyć do odzysku energii — dopiero na końcu zostaje składowanie."
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Hierarchia sposobów postępowania z odpadami",
+          "instruction": "Ustaw sposoby od najbardziej do najmniej pożądanego — dokładnie tak, jak nakazuje prawo unijne i polska ustawa o odpadach.",
+          "items": [
+            "Zapobieganie powstawaniu odpadów",
+            "Przygotowanie do ponownego użycia",
+            "Recykling",
+            "Inne procesy odzysku, w tym odzysk energii (spalanie z produkcją ciepła i prądu)",
+            "Unieszkodliwianie, przede wszystkim składowanie"
+          ],
+          "explanation": "Zapamiętaj kolejność jako regułę **5 kroków**: nie wytworzyć → użyć ponownie → przetworzyć materiałowo → odzyskać energię → składować. Najczęstszy błąd to uznanie **recyklingu za rozwiązanie najlepsze** — jest dopiero trzeci, bo wymaga zebrania, transportu i przetworzenia odpadu, czyli energii i kosztów, których nie ponosimy, gdy odpad w ogóle nie powstanie."
+        },
+        {
+          "type": "classification",
+          "title": "Rodzaje odpadów i sposoby ich zagospodarowania",
+          "caption": "Podział ma znaczenie praktyczne: każdy strumień wymaga innego systemu zbiórki i innej technologii.",
+          "groups": [
+            {
+              "name": "Komunalne",
+              "description": "Powstające w gospodarstwach domowych i obiektach użyteczności publicznej; w Polsce objęte gminnym systemem odbioru i **selektywnej zbiórki**.",
+              "examples": [
+                "odpady kuchenne i zielone",
+                "papier, szkło, tworzywa, metale",
+                "odpady wielkogabarytowe"
+              ]
+            },
+            {
+              "name": "Przemysłowe",
+              "description": "Powstające w procesach produkcyjnych; masowo **wielokrotnie liczniejsze** od komunalnych, ale bardziej jednorodne, więc łatwiejsze do zagospodarowania.",
+              "examples": [
+                "odpady wydobywcze i skała płonna",
+                "popioły i żużle z energetyki",
+                "gips z instalacji odsiarczania spalin",
+                "odpady poflotacyjne"
+              ]
+            },
+            {
+              "name": "Niebezpieczne",
+              "description": "Toksyczne, żrące, zakaźne, łatwopalne lub ekotoksyczne — wymagają **oddzielnej zbiórki i unieszkodliwiania** w wyspecjalizowanych instalacjach.",
+              "examples": [
+                "baterie i akumulatory",
+                "przeterminowane leki",
+                "azbest",
+                "odpady medyczne",
+                "chemikalia i oleje przepracowane"
+              ]
+            },
+            {
+              "name": "Zużyty sprzęt elektryczny i elektroniczny (ZSEE)",
+              "description": "Zawiera zarazem substancje niebezpieczne i **cenne metale** — recykling elektroniki bywa nazywany „górnictwem miejskim”.",
+              "examples": [
+                "telefony i komputery",
+                "sprzęt AGD",
+                "świetlówki i źródła światła"
+              ]
+            },
+            {
+              "name": "Budowlane i rozbiórkowe",
+              "description": "Największy masowo strumień odpadów w UE, ale o **wysokim potencjale odzysku** jako kruszywo wtórne.",
+              "examples": [
+                "gruz betonowy i ceglany",
+                "materiały izolacyjne",
+                "drewno budowlane"
+              ]
+            },
+            {
+              "name": "Biodegradowalne",
+              "description": "Ulegają rozkładowi; składowane bez dostępu tlenu wytwarzają **metan** i odcieki, dlatego kieruje się je do kompostowni i biogazowni.",
+              "examples": [
+                "odpady kuchenne",
+                "trawa i liście",
+                "osady ściekowe"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Jednolity System Segregacji Odpadów w Polsce",
+          "caption": "Obowiązuje w całym kraju od 2017 r., dzięki czemu zasady są takie same niezależnie od gminy.",
+          "headers": [
+            "Pojemnik",
+            "Co wrzucamy",
+            "Czego nie wrzucamy"
+          ],
+          "rows": [
+            [
+              "Niebieski — papier",
+              "gazety, zeszyty, kartony, torby papierowe",
+              "papier zatłuszczony i powlekany, kartony po mleku i sokach, pieluchy, tapety"
+            ],
+            [
+              "Zielony — szkło",
+              "butelki i słoiki szklane bez zakrętek",
+              "szkło okienne i zbrojone, lustra, ceramika, żarówki, szkło żaroodporne"
+            ],
+            [
+              "Żółty — metale i tworzywa sztuczne",
+              "butelki PET, opakowania z tworzyw, puszki, kartony po napojach, folie",
+              "opakowania po olejach silnikowych i chemikaliach, zużyty sprzęt elektroniczny, baterie"
+            ],
+            [
+              "Brązowy — bio",
+              "resztki żywności, obierki, trawa, liście",
+              "kości i mięso (w części gmin), popiół, ziemia, odchody zwierząt"
+            ],
+            [
+              "Czarny/szary — zmieszane (resztkowe)",
+              "to, czego nie da się przypisać do pozostałych frakcji",
+              "odpady niebezpieczne, gruz, leki, elektroodpady — te oddajemy do PSZOK"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Poziom recyklingu",
+          "expression": "P_r = \\frac{m_r}{m_w} \\cdot 100\\%",
+          "variables": [
+            {
+              "symbol": "P_r",
+              "meaning": "poziom (stopa) recyklingu w procentach"
+            },
+            {
+              "symbol": "m_r",
+              "meaning": "masa odpadów faktycznie poddanych recyklingowi"
+            },
+            {
+              "symbol": "m_w",
+              "meaning": "masa odpadów wytworzonych (zebranych) w tym samym okresie"
+            }
+          ],
+          "caption": "Uwaga na interpretację: wysoki poziom **zbiórki selektywnej** nie oznacza jeszcze wysokiego poziomu recyklingu — część zebranego strumienia odpada na sortowaniu z powodu zanieczyszczenia. Dlatego jakość segregacji w domu przekłada się wprost na wynik tego wskaźnika."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Odpady i recykling — rzędy wielkości",
+          "items": [
+            {
+              "value": "ok. 95",
+              "unit": "%",
+              "label": "Oszczędność energii przy produkcji aluminium z puszek zamiast z boksytu",
+              "note": "dlatego zbiórka aluminium opłaca się nawet bez dopłat"
+            },
+            {
+              "value": "60",
+              "unit": "%",
+              "label": "Unijny cel poziomu recyklingu odpadów komunalnych na 2030 r.",
+              "note": "55% na 2025 r. i 65% na 2035 r."
+            },
+            {
+              "value": "ok. 27",
+              "unit": "%",
+              "label": "Poziom recyklingu odpadów komunalnych w Polsce (2022)",
+              "note": "średnia UE w tym samym roku to ok. 48%"
+            },
+            {
+              "value": "bez limitu",
+              "label": "Liczba cykli recyklingu szkła",
+              "note": "papier wytrzymuje ok. 5–7 cykli, bo włókna celulozowe się skracają"
+            },
+            {
+              "value": "ok. 1/3",
+              "label": "Udział żywności marnowanej w skali świata",
+              "note": "marnowana żywność to także zmarnowana woda, energia i grunt użyty do jej wyprodukowania"
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kalundborg — pierwsza symbioza przemysłowa",
+          "region": "Dania, Zelandia",
+          "text": "W duńskim Kalundborgu od lat 70. XX w. rozwija się układ nazwany **symbiozą przemysłową**: sąsiadujące zakłady wymieniają się **odpadami, produktami ubocznymi, wodą i energią**, traktując je jako surowce. Elektrownia przekazuje **parę technologiczną** rafinerii i zakładom farmaceutycznym oraz **ciepło** do miejskiej sieci ciepłowniczej; **gips** powstający przy odsiarczaniu spalin trafia do fabryki płyt gipsowo-kartonowych, zastępując gips wydobywany w kopalni; popioły wykorzystuje przemysł cementowy; nadmiar drożdży i osadów z produkcji biotechnologicznej wraca na pola jako nawóz; ta sama woda krąży w układzie wielokrotnie. Żaden z tych przepływów nie powstał z nakazu — każdy okazał się **tańszy niż zakup surowca i utylizacja odpadu**, a warunkiem była bliska lokalizacja zakładów i zaufanie między nimi.",
+          "takeaway": "Kalundborg jest dowodem, że zasada GOZ **działa ekonomicznie**, a nie tylko ideowo: odpad przestaje być kosztem, gdy w pobliżu istnieje ktoś, dla kogo jest surowcem. Stąd rola planowania przestrzennego — sąsiedztwo zakładów bywa warunkiem zamknięcia obiegu."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pojęcia, które maturzyści mylą najczęściej. **Recykling to nie to samo co odzysk** — odzysk jest pojęciem szerszym i obejmuje także spalanie z produkcją energii, które recyklingiem nie jest. **Recykling nie stoi na szczycie hierarchii** — wyprzedzają go zapobieganie i ponowne użycie. I wreszcie **greenwashing**: deklaracje typu „opakowanie przyjazne środowisku” bez podania, jaki udział materiału pochodzi z odzysku i czy nadaje się do recyklingu, są zabiegiem marketingowym, a nie działaniem na rzecz środowiska."
+        },
+        {
+          "type": "quiz",
+          "question": "Zgodnie z hierarchią postępowania z odpadami najbardziej pożądanym działaniem jest:",
+          "options": [
+            "recykling zużytych opakowań",
+            "zapobieganie powstawaniu odpadów",
+            "spalanie odpadów z odzyskiem energii",
+            "składowanie odpadów na uszczelnionym składowisku"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hierarchia brzmi: **zapobieganie → przygotowanie do ponownego użycia → recykling → inny odzysk (w tym energii) → unieszkodliwianie (składowanie)**. Odpad, który nie powstał, nie wymaga zbiórki, transportu ani przetworzenia — dlatego zapobieganie jest bezkonkurencyjne pod względem zużycia energii i surowców."
+        },
+        {
+          "type": "quiz",
+          "question": "Gmina zebrała 40 000 t odpadów komunalnych, z czego recyklingowi poddano 12 000 t. Jaki był poziom recyklingu?",
+          "options": [
+            "12%",
+            "24%",
+            "30%",
+            "48%"
+          ],
+          "correctIndex": 2,
+          "explanation": "Stosujemy wzór $P_r=\\frac{m_r}{m_w}\\cdot 100\\%$, czyli $\\frac{12\\,000}{40\\,000}\\cdot100\\% = 30\\%$. Zwróć uwagę, że wynik dotyczy odpadów **faktycznie przetworzonych**, a nie tylko zebranych selektywnie — część strumienia zwykle odpada na etapie sortowania."
+        },
+        {
+          "type": "quiz",
+          "question": "Które rozwiązanie jest przykładem gospodarki o obiegu zamkniętym, a nie samego recyklingu?",
+          "options": [
+            "Przetworzenie butelek PET na włókna do produkcji odzieży",
+            "Wynajem narzędzi zamiast ich kupowania oraz projektowanie sprzętu tak, by dało się wymienić baterię i części",
+            "Segregowanie szkła do zielonego pojemnika",
+            "Spalanie odpadów resztkowych w spalarni z odzyskiem ciepła"
+          ],
+          "correctIndex": 1,
+          "explanation": "Recykling to **jeden z elementów** GOZ, dotyczący końca cyklu życia produktu. Istotą gospodarki o obiegu zamkniętym jest **zmiana modelu**: ekoprojektowanie, naprawialność, sprzedaż usługi zamiast produktu i przedłużanie życia rzeczy. Spalanie z odzyskiem energii to odzysk, czyli krok niżej w hierarchii."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Definicję zrównoważonego rozwoju zapisuj **całą**: „zaspokojenie potrzeb obecnego pokolenia **bez ograniczania możliwości** zaspokojenia potrzeb przez pokolenia przyszłe”. Sam „rozwój w zgodzie z przyrodą” zwykle nie wystarcza na punkt. Gdy zadanie prosi o **ocenę działania pod kątem zrównoważonego rozwoju**, odnieś się kolejno do **trzech filarów** — środowiskowego, gospodarczego i społecznego — bo klucz odpowiedzi zwykle wymaga argumentów z więcej niż jednego z nich."
+        }
+      ]
+    },
+    {
+      "slug": "ochrona-przyrody-i-wspolpraca-miedzynarodowa",
+      "title": "Ochrona przyrody, ślad ekologiczny i współpraca międzynarodowa",
+      "summary": "Formy ochrony przyrody w Polsce i na świecie, sieć Natura 2000 i rezerwaty biosfery, spór o zasoby Arktyki oraz mierzenie presji człowieka śladem ekologicznym i węglowym.",
+      "readingMinutes": 17,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Skoro konfliktów interesów nie da się usunąć, trzeba je **uregulować**. Służą temu dwa narzędzia: **formy ochrony przyrody**, które wyznaczają, gdzie i na jakich zasadach wolno gospodarować, oraz **umowy międzynarodowe**, bez których nie da się chronić niczego, co przekracza granice — powietrza, wód, gatunków wędrownych i klimatu. Na koniec poznasz dwa wskaźniki, którymi mierzy się indywidualną i zbiorową presję na środowisko: **ślad ekologiczny** i **ślad węglowy**."
+        },
+        {
+          "type": "classification",
+          "title": "Formy ochrony przyrody w Polsce",
+          "caption": "Ustawa o ochronie przyrody wymienia dziesięć form ochrony przyrody: dziewięć obszarowych i obiektowych oraz ochronę gatunkową. Warto znać je uporządkowane według skali.",
+          "groups": [
+            {
+              "name": "Wielkopowierzchniowe",
+              "description": "Obejmują rozległe obszary o zróżnicowanym reżimie: od najsurowszego w parku narodowym po zalecenia w obszarze chronionego krajobrazu.",
+              "examples": [
+                "park narodowy (23 w Polsce)",
+                "park krajobrazowy",
+                "obszar chronionego krajobrazu"
+              ]
+            },
+            {
+              "name": "Małopowierzchniowe",
+              "description": "Chronią pojedyncze, dobrze zachowane ekosystemy, siedliska lub obiekty geologiczne.",
+              "examples": [
+                "rezerwat przyrody",
+                "użytek ekologiczny",
+                "zespół przyrodniczo-krajobrazowy",
+                "stanowisko dokumentacyjne"
+              ]
+            },
+            {
+              "name": "Obiektowe",
+              "description": "Chronią pojedyncze twory przyrody żywej i nieożywionej o szczególnej wartości.",
+              "examples": [
+                "pomnik przyrody: sędziwe drzewo, głaz narzutowy, wodospad, jaskinia, aleja"
+              ]
+            },
+            {
+              "name": "Gatunkowe",
+              "description": "Ochrona **ścisła lub częściowa** konkretnych gatunków wraz z zakazami (zabijania, zrywania, niszczenia siedlisk) — niezależnie od tego, gdzie gatunek występuje.",
+              "examples": [
+                "ochrona gatunkowa roślin",
+                "ochrona gatunkowa zwierząt",
+                "ochrona gatunkowa grzybów",
+                "strefy ochronne wokół gniazd bielika i orlika"
+              ]
+            },
+            {
+              "name": "Europejska sieć obszarowa",
+              "description": "Wprowadzona wraz z wejściem Polski do Unii Europejskiej; nakłada się na pozostałe formy, tworząc spójny system w skali kontynentu.",
+              "examples": [
+                "obszary Natura 2000: OSO (ptasie) i SOO (siedliskowe)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Ochrona przyrody w Polsce w liczbach",
+          "items": [
+            {
+              "value": "23",
+              "label": "Parki narodowe",
+              "note": "ostatni utworzony — PN Ujście Warty (2001)"
+            },
+            {
+              "value": "ok. 1",
+              "unit": "%",
+              "label": "Udział parków narodowych w powierzchni kraju",
+              "note": "największy: Biebrzański (ok. 592 km²), najmniejszy: Ojcowski (ok. 21,5 km²)"
+            },
+            {
+              "value": "ok. 1500",
+              "label": "Rezerwaty przyrody",
+              "note": "łącznie zajmują niecały 1% powierzchni Polski"
+            },
+            {
+              "value": "ok. 125",
+              "label": "Parki krajobrazowe",
+              "note": "zajmują ok. 8% powierzchni kraju"
+            },
+            {
+              "value": "ok. 32",
+              "unit": "%",
+              "label": "Udział obszarów prawnie chronionych w powierzchni Polski",
+              "note": "najwięcej wnoszą obszary chronionego krajobrazu"
+            },
+            {
+              "value": "ok. 20",
+              "unit": "%",
+              "label": "Udział obszarów Natura 2000 w powierzchni Polski",
+              "note": "obszary te nakładają się na pozostałe formy ochrony"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Park narodowy, park krajobrazowy i rezerwat — trzy różne reżimy",
+          "caption": "To zestawienie rozstrzyga większość zadań, w których trzeba wybrać właściwą formę ochrony dla opisanego obszaru.",
+          "headers": [
+            "Cecha",
+            "Park narodowy",
+            "Park krajobrazowy",
+            "Rezerwat przyrody"
+          ],
+          "rows": [
+            [
+              "Przedmiot ochrony",
+              "całość przyrody i walorów krajobrazowych obszaru o szczególnej wartości",
+              "wartości przyrodnicze, historyczne i **krajobrazowe** obszaru",
+              "dobrze zachowane ekosystemy, siedliska lub twory przyrody nieożywionej"
+            ],
+            [
+              "Powierzchnia",
+              "nie mniejsza niż 1000 ha",
+              "zwykle kilka–kilkadziesiąt tysięcy ha",
+              "od ułamka hektara do kilku tysięcy ha"
+            ],
+            [
+              "Gospodarowanie",
+              "wyłączone lub silnie ograniczone; obowiązuje plan ochrony",
+              "**dozwolone** — mieszkańcy gospodarują, obowiązują jedynie zakazy szczególne",
+              "wyłączone lub ograniczone stosownie do celu ochrony"
+            ],
+            [
+              "Kto tworzy",
+              "Rada Ministrów (rozporządzenie)",
+              "sejmik województwa",
+              "regionalny dyrektor ochrony środowiska"
+            ],
+            [
+              "Udostępnianie",
+              "tylko po wyznaczonych szlakach i trasach, zwykle za opłatą",
+              "swobodne, z zachowaniem zakazów",
+              "z reguły zamknięty lub udostępniony wyłącznie ścieżką dydaktyczną"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze pomyłki w tym temacie. **Park krajobrazowy to nie mniejszy park narodowy** — w parku krajobrazowym ludzie normalnie mieszkają i gospodarują, chroniony jest przede wszystkim krajobraz. **Ochrona ścisła ≠ park narodowy**: w parkach narodowych występują trzy rodzaje ochrony — **ścisła** (całkowite zaniechanie ingerencji), **czynna** (zabiegi podtrzymujące siedlisko, np. koszenie łąk, wypas owiec w Pieninach, usuwanie gatunków obcych) i **krajobrazowa**. I najważniejsze: **Natura 2000 nie zakazuje działalności gospodarczej** — zakazuje działań znacząco negatywnie oddziałujących na przedmiot ochrony i wymaga oceny oddziaływania dla planowanych przedsięwzięć."
+        },
+        {
+          "type": "timeline",
+          "title": "Od Yellowstone do sieci Natura 2000",
+          "caption": "Ewolucja podejścia: od ochrony pojedynczych perełek krajobrazu do spójnej sieci siedlisk w skali kontynentu.",
+          "events": [
+            {
+              "period": "1872",
+              "label": "Yellowstone — pierwszy park narodowy świata",
+              "text": "Kongres USA wyłączył obszar gejzerów i kanionów spod osadnictwa i eksploatacji, tworząc **pierwszy park narodowy na świecie**. Wzorzec amerykański — ochrona spektakularnego krajobrazu udostępnionego zwiedzającym — rozprzestrzenił się na cały świat."
+            },
+            {
+              "period": "1909",
+              "label": "Pierwsze parki narodowe w Europie",
+              "text": "Szwecja utworzyła pierwsze europejskie parki narodowe (m.in. Abisko i Sarek), przenosząc ideę na grunt kontynentu o krajobrazie od dawna przekształconym przez człowieka."
+            },
+            {
+              "period": "1932",
+              "label": "Pierwsze polskie parki narodowe",
+              "text": "Powstały jednostki ochronne w **Białowieży** i w **Pieninach**. Park pieniński wraz z odpowiednikiem po stronie czechosłowackiej utworzył **pierwszy na świecie park transgraniczny** — pionierski model współpracy dwóch państw nad wspólnym obiektem przyrodniczym."
+            },
+            {
+              "period": "1948",
+              "label": "Powstanie IUCN",
+              "text": "Międzynarodowa Unia Ochrony Przyrody wprowadziła wspólny język ochrony: **kategorie obszarów chronionych (I–VI)** oraz **Czerwoną księgę gatunków zagrożonych**, dzięki której można porównywać stan przyrody między państwami."
+            },
+            {
+              "period": "1971",
+              "label": "Program MAB i konwencja ramsarska",
+              "text": "UNESCO uruchomiło program **Człowiek i Biosfera (MAB)** wraz z siecią **rezerwatów biosfery**, a w Ramsarze podpisano konwencję o ochronie **obszarów wodno-błotnych** — pierwszą umowę chroniącą konkretny typ ekosystemu w skali globalnej."
+            },
+            {
+              "period": "1979 i 1992",
+              "label": "Dyrektywa ptasia i siedliskowa",
+              "text": "Dwie dyrektywy Wspólnot Europejskich stały się podstawą prawną sieci **Natura 2000**: pierwsza chroni ptaki i ich ostoje, druga — siedliska przyrodnicze oraz pozostałe gatunki roślin i zwierząt."
+            },
+            {
+              "period": "2004",
+              "label": "Natura 2000 w Polsce",
+              "text": "Wraz z wejściem do Unii Europejskiej Polska wyznaczyła pierwsze obszary sieci. Dziś obejmują one ok. 20% powierzchni kraju i to one najczęściej stają się **stroną w sporach o inwestycje**."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Sieć Natura 2000",
+          "text": "**Natura 2000** to spójna europejska sieć obszarów chronionych, której celem jest zachowanie **siedlisk przyrodniczych oraz gatunków ważnych dla całej Unii Europejskiej**. Tworzą ją dwa rodzaje obszarów: **OSO — obszary specjalnej ochrony ptaków** (na podstawie dyrektywy ptasiej) i **SOO — specjalne obszary ochrony siedlisk** (na podstawie dyrektywy siedliskowej). Obszary te mogą na siebie zachodzić i nakładać się na krajowe formy ochrony.",
+          "note": "Logika Natury 2000 różni się od logiki parku narodowego. Chroni się tu **konkretny przedmiot ochrony** (dane siedlisko lub gatunek), a nie cały obszar przed człowiekiem — często to właśnie **tradycyjne użytkowanie** (wypas, koszenie) utrzymuje siedlisko przy życiu. Inwestycja mogąca znacząco negatywnie oddziaływać na przedmiot ochrony jest dopuszczalna tylko wtedy, gdy łącznie: nie ma **wariantu alternatywnego**, przemawia za nią **nadrzędny interes publiczny** i zostanie wykonana **kompensacja przyrodnicza**."
+        },
+        {
+          "type": "concentric",
+          "title": "Rezerwat biosfery UNESCO — trzy strefy",
+          "caption": "Kliknij strefę od zewnątrz do środka. Model MAB godzi ochronę z gospodarką, zamiast je rozdzielać.",
+          "shells": [
+            {
+              "name": "Strefa przejściowa (tranzytowa)",
+              "range": "zewnętrzna",
+              "tone": "earth",
+              "text": "Obszar **normalnego gospodarowania**: rolnictwo, leśnictwo, osadnictwo, turystyka. Promuje się tu praktyki zrównoważone i produkty regionalne — strefa ma pokazywać, że ochrona przyrody i utrzymanie mieszkańców nie muszą się wykluczać."
+            },
+            {
+              "name": "Strefa buforowa",
+              "range": "środkowa",
+              "tone": "vegetation",
+              "text": "Otacza jądro i **osłania je przed presją z zewnątrz**. Dopuszczalne są tu działania niekolidujące z ochroną: badania naukowe, edukacja, turystyka przyrodnicza, ekstensywne użytkowanie, zabiegi ochrony czynnej."
+            },
+            {
+              "name": "Strefa rdzenna (centralna)",
+              "range": "wewnętrzna",
+              "tone": "ice",
+              "text": "Najcenniejsze przyrodniczo jądro objęte **ścisłą ochroną prawną** — najczęściej pokrywa się z parkiem narodowym lub rezerwatem ścisłym. Dopuszczalne są tylko monitoring i badania naukowe nieingerujące w ekosystem."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Obszary chronione świata i strefy polarne",
+          "caption": "Kliknij znacznik — każdy ilustruje inny model ochrony albo inny typ konfliktu o przestrzeń.",
+          "center": [
+            30,
+            10
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 44.6,
+              "lng": -110.5,
+              "label": "Yellowstone (USA)",
+              "text": "**Pierwszy park narodowy świata (1872)** — model ochrony spektakularnego krajobrazu udostępnionego turystom, do dziś kopiowany na całym świecie."
+            },
+            {
+              "lat": -0.75,
+              "lng": -90.5,
+              "label": "Galapagos (Ekwador)",
+              "text": "Park narodowy i rezerwat morski chroniący **endemity** wysp oceanicznych. Główne zagrożenia: gatunki obce zawleczone przez człowieka i presja turystyczna — stąd limity odwiedzin i obowiązkowi przewodnicy."
+            },
+            {
+              "lat": -2.33,
+              "lng": 34.83,
+              "label": "Serengeti (Tanzania)",
+              "text": "Ochrona **wielkiej migracji** kopytnych — przykład obszaru, którego wartość zależy od zachowania ciągłości korytarza migracyjnego; każda droga czy grodzenie przecinające trasę jest zagrożeniem dla całego ekosystemu."
+            },
+            {
+              "lat": 52.72,
+              "lng": 23.85,
+              "label": "Puszcza Białowieska (Polska/Białoruś)",
+              "text": "Najlepiej zachowany fragment **lasu naturalnego niżu europejskiego**: park narodowy, obszary Natura 2000, rezerwat biosfery i obiekt światowego dziedzictwa UNESCO. Stały spór dotyczy zakresu gospodarki leśnej poza parkiem."
+            },
+            {
+              "lat": 53.55,
+              "lng": 22.6,
+              "label": "Biebrzański Park Narodowy (Polska)",
+              "text": "**Największy park narodowy w Polsce** (ok. 592 km²), chroniący rozległe torfowiska i bagienne doliny — kluczowa ostoja ptaków wodno-błotnych, objęta konwencją ramsarską. Wymaga **ochrony czynnej**: koszenia i wypasu, bo bez nich łąki zarastają."
+            },
+            {
+              "lat": 78.22,
+              "lng": 15.65,
+              "label": "Spitsbergen (Norwegia)",
+              "text": "Archipelag objęty **traktatem spitsbergeńskim z 1920 r.**: zwierzchnictwo Norwegii przy równym prawie sygnatariuszy (w tym Polski) do działalności gospodarczej i badawczej. Działa tu Polska Stacja Polarna Hornsund."
+            },
+            {
+              "lat": 70.25,
+              "lng": -148.52,
+              "label": "Prudhoe Bay (Alaska, USA)",
+              "text": "Największe pole naftowe Ameryki Północnej na wybrzeżu Morza Beauforta — wraz z rurociągiem transalaskańskim symbol **konfliktu między wydobyciem a ochroną tundry** i szlakami migracji karibu."
+            },
+            {
+              "lat": 71.26,
+              "lng": 72.06,
+              "label": "Sabetta, Półwysep Jamalski (Rosja)",
+              "text": "Port i terminal skroplonego gazu za kołem podbiegunowym. Infrastruktura posadowiona na **wieloletniej zmarzlinie**, której topnienie zagraża stabilności konstrukcji — to samo zjawisko stało za katastrofalnym wyciekiem paliwa w Norylsku w 2020 r."
+            },
+            {
+              "lat": -62.16,
+              "lng": -58.47,
+              "label": "Wyspa Króla Jerzego, Antarktyda",
+              "text": "Rejon Polskiej Stacji Antarktycznej im. H. Arctowskiego. Cały kontynent obejmuje **Układ antarktyczny (1959)** i **Protokół madrycki (1991)** zakazujący działalności górniczej — najdalej idący reżim ochronny na Ziemi."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Wydobycie surowców w Arktyce",
+          "region": "Arktyka — Alaska, północna Kanada, Grenlandia, Syberia, szelf Oceanu Arktycznego",
+          "text": "Według szacunków Służby Geologicznej USA z 2008 r. w Arktyce może znajdować się ok. **13% nieodkrytych zasobów ropy naftowej i ok. 30% gazu ziemnego** świata, w większości na **szelfie kontynentalnym**. Ocieplenie klimatu i cofanie się lodu morskiego czynią te zasoby dostępniejszymi, a jednocześnie otwierają szlaki żeglugowe — **Północną Drogę Morską** wzdłuż Syberii i **Przejście Północno-Zachodnie** — skracające trasę Europa–Azja o tysiące kilometrów. Stąd rywalizacja o granice szelfu: państwa arktyczne dokumentują, że podwodne grzbiety (m.in. **Grzbiet Łomonosowa**) są przedłużeniem ich lądu, co dawałoby im wyłączne prawa do dna. Argumenty przeciwników wydobycia są mocne: ekosystem arktyczny jest **skrajnie mało odporny** i regeneruje się dziesiątki lat, **wyciek ropy pod lodem jest praktycznie niemożliwy do usunięcia**, brakuje infrastruktury ratowniczej na tysiącach kilometrów wybrzeża, a topnienie **wieloletniej zmarzliny** destabilizuje rurociągi, drogi i zbiorniki. Do tego dochodzi kwestia praw **ludności rdzennej** — Inuitów, Saamów, Nieńców, Czukczów — dla których tundra i morze są podstawą utrzymania i tożsamości. Forum uzgodnień stanowi **Rada Arktyczna** (od 1996 r.), zrzeszająca osiem państw arktycznych oraz organizacje ludów rdzennych jako stałych uczestników.",
+          "takeaway": "Arktyka to konflikt, w którym **zmiana klimatu jest jednocześnie przyczyną i skutkiem**: ocieplenie otwiera dostęp do paliw kopalnych, których spalanie ocieplenie pogłębia. Zwróć uwagę na kontrast z Antarktyką — tam **Protokół madrycki z 1991 r.** zakazał działalności górniczej, bo kontynent nie należy do nikogo i nie ma stałej ludności."
+        },
+        {
+          "type": "compare",
+          "title": "Arktyka a Antarktyka — dwa modele zarządzania obszarem polarnym",
+          "leftLabel": "Arktyka",
+          "rightLabel": "Antarktyka",
+          "rows": [
+            {
+              "aspect": "Charakter obszaru",
+              "left": "**Ocean otoczony lądami** pięciu państw nadbrzeżnych (Rosja, Kanada, USA, Dania/Grenlandia, Norwegia); lód morski nad głębią oceaniczną",
+              "right": "**Kontynent otoczony oceanem**, pokryty lądolodem o miąższości kilku kilometrów"
+            },
+            {
+              "aspect": "Status prawny",
+              "left": "Terytoria i wyłączne strefy ekonomiczne państw arktycznych; spory o zasięg szelfu rozstrzygane na gruncie prawa morza",
+              "right": "**Układ antarktyczny (1959)** zamraża roszczenia terytorialne; obszar przeznaczony wyłącznie na cele **pokojowe i naukowe**"
+            },
+            {
+              "aspect": "Wydobycie surowców",
+              "left": "Dozwolone w granicach jurysdykcji państw; realizowane m.in. na Alasce, Jamale i szelfie",
+              "right": "**Zakazane** przez Protokół madrycki (1991); przegląd zakazu możliwy nie wcześniej niż po 50 latach od wejścia w życie"
+            },
+            {
+              "aspect": "Ludność",
+              "left": "Zamieszkana od tysiącleci przez **ludy rdzenne** oraz przez ludność napływową w miastach i ośrodkach przemysłowych",
+              "right": "**Brak stałej ludności** — wyłącznie personel stacji badawczych, w tym polskiej Stacji im. H. Arctowskiego"
+            },
+            {
+              "aspect": "Główne zagrożenia",
+              "left": "Wydobycie i transport paliw, zanieczyszczenia napływowe, topnienie zmarzliny i lodu morskiego, presja żeglugowa",
+              "right": "Ocieplenie i cofanie się lodu szelfowego, przełowienie kryla, presja turystyki wycieczkowej, gatunki obce zawlekane przez ludzi"
+            },
+            {
+              "aspect": "Forum współpracy",
+              "left": "**Rada Arktyczna** (1996) — osiem państw i organizacje ludów rdzennych",
+              "right": "System Układu Antarktycznego wraz z **CCAMLR** — konwencją o ochronie żywych zasobów morskich Antarktyki"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj porozumienie międzynarodowe do przedmiotu ochrony",
+          "instruction": "Znajomość kilku konwencji z datami to najprostsze punkty w zadaniach o współpracy międzynarodowej.",
+          "pairs": [
+            {
+              "left": "Konwencja ramsarska (1971)",
+              "right": "obszary wodno-błotne, zwłaszcza jako siedliska ptaków"
+            },
+            {
+              "left": "Konwencja waszyngtońska CITES (1973)",
+              "right": "międzynarodowy handel zagrożonymi gatunkami i wyrobami z nich"
+            },
+            {
+              "left": "Protokół montrealski (1987)",
+              "right": "wycofanie substancji zubożających warstwę ozonową"
+            },
+            {
+              "left": "Konwencja bazylejska (1989)",
+              "right": "transgraniczne przemieszczanie odpadów niebezpiecznych"
+            },
+            {
+              "left": "Konwencja helsińska (HELCOM)",
+              "right": "ochrona środowiska Morza Bałtyckiego"
+            },
+            {
+              "left": "Porozumienie paryskie (2015)",
+              "right": "utrzymanie wzrostu średniej temperatury globalnej wyraźnie poniżej 2°C"
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Ślad ekologiczny a ślad węglowy",
+          "leftLabel": "Ślad ekologiczny",
+          "rightLabel": "Ślad węglowy",
+          "rows": [
+            {
+              "aspect": "Co mierzy",
+              "left": "**Powierzchnię biologicznie produktywną** potrzebną do wytworzenia konsumowanych dóbr i pochłonięcia wytworzonych odpadów",
+              "right": "**Ilość gazów cieplarnianych** wyemitowanych bezpośrednio i pośrednio w związku z działalnością człowieka, produktem lub usługą"
+            },
+            {
+              "aspect": "Jednostka",
+              "left": "globalny hektar na osobę (gha/os.)",
+              "right": "tona ekwiwalentu dwutlenku węgla (t CO2e)"
+            },
+            {
+              "aspect": "Zakres",
+              "left": "Szeroki: grunty orne, pastwiska, lasy, łowiska, tereny zabudowane oraz powierzchnia potrzebna do pochłonięcia CO2",
+              "right": "Wąski, ale precyzyjny — wyłącznie emisje gazów cieplarnianych"
+            },
+            {
+              "aspect": "Punkt odniesienia",
+              "left": "**Biozdolność** (biocapacity), czyli powierzchnia produktywna dostępna na Ziemi — ok. 1,6 gha na mieszkańca",
+              "right": "Budżet emisyjny zgodny z celem klimatycznym oraz krajowe i unijne zobowiązania redukcyjne"
+            },
+            {
+              "aspect": "Do czego służy",
+              "left": "Pokazuje, ile **Ziem** potrzebowalibyśmy, gdyby wszyscy żyli jak mieszkańcy danego kraju; wyznacza **Dzień Długu Ekologicznego**",
+              "right": "Pozwala porównać emisyjność produktów, firm i państw oraz rozliczać cele redukcyjne"
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Ślad ekologiczny na mieszkańca w wybranych krajach",
+          "caption": "Wartości szacunkowe (Global Footprint Network, ok. 2022 r.), w globalnych hektarach na osobę. Ostatni słupek to biozdolność Ziemi przypadająca na mieszkańca — wszystko powyżej niego oznacza życie na kredyt.",
+          "unit": "gha/os.",
+          "labels": [
+            "USA",
+            "Niemcy",
+            "Polska",
+            "Chiny",
+            "Brazylia",
+            "Indie",
+            "Świat (średnia)",
+            "Biozdolność Ziemi"
+          ],
+          "series": [
+            {
+              "name": "Ślad ekologiczny",
+              "values": [
+                8,
+                4.7,
+                4.6,
+                3.8,
+                2.8,
+                1.2,
+                2.6,
+                1.6
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Świadomość ekologiczna",
+          "text": "**Świadomość ekologiczna** to zespół wiedzy o środowisku, przekonań i wartości, które przekładają się na **postawy i codzienne zachowania** wobec przyrody. Obejmuje trzy poziomy: rozumienie zależności przyrodniczych (wiedza), przypisywanie środowisku wartości (postawa) i realne działanie — segregację odpadów, wybór transportu, oszczędzanie wody i energii, świadomą konsumpcję, udział w konsultacjach społecznych.",
+          "note": "Charakterystyczna jest **luka między deklaracjami a zachowaniami**: w badaniach niemal wszyscy deklarują troskę o środowisko, ale znacznie mniej osób zmienia z tego powodu nawyki. Dlatego skuteczna polityka środowiskowa łączy edukację z rozwiązaniami **ułatwiającymi właściwy wybór** — dostępnym transportem zbiorowym, systemem kaucyjnym, wygodną siecią punktów zbiórki."
+        },
+        {
+          "type": "quiz",
+          "question": "Na obszarze Natura 2000 planowana jest inwestycja mogąca znacząco negatywnie oddziaływać na przedmiot ochrony. Kiedy można ją zrealizować?",
+          "options": [
+            "Zawsze, o ile inwestor wypłaci gminie rekompensatę finansową",
+            "Nigdy — Natura 2000 wyklucza wszelkie inwestycje",
+            "Gdy łącznie: brak jest wariantu alternatywnego, przemawia za nią nadrzędny interes publiczny i wykonana zostanie kompensacja przyrodnicza",
+            "Gdy zgodę wyrazi wojewódzki konserwator zabytków"
+          ],
+          "correctIndex": 2,
+          "explanation": "To trzy warunki, które muszą być spełnione **jednocześnie**. Dlatego w sporze o dolinę Rospudy przesądziło istnienie wariantu alternatywnego, a przy przekopie Mierzei Wiślanej powołano się na nadrzędny interes publiczny i wykonano kompensację. Sama rekompensata finansowa dla gminy nie ma tu żadnego znaczenia prawnego."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o Antarktyce jest prawdziwe?",
+          "options": [
+            "Wydobycie surowców mineralnych jest tam dozwolone w strefach ekonomicznych państw roszczeniowych",
+            "Protokół madrycki z 1991 r. zakazał działalności związanej z zasobami mineralnymi, a Układ antarktyczny przeznaczył kontynent na cele pokojowe i naukowe",
+            "Antarktyda jest zamieszkana przez ludy rdzenne, których prawa chroni Rada Arktyczna",
+            "Obszarem zarządza wyłącznie Norwegia na mocy traktatu z 1920 r."
+          ],
+          "correctIndex": 1,
+          "explanation": "**Układ antarktyczny (1959)** zamroził roszczenia terytorialne i przeznaczył kontynent na cele pokojowe oraz badawcze, a **Protokół madrycki (1991)** zakazał działalności górniczej. Antarktyda **nie ma stałej ludności**, a Rada Arktyczna i traktat spitsbergeński dotyczą przeciwległego bieguna — to typowa pułapka w zadaniach porównawczych."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Do zadań o ochronie przyrody przygotuj **trzy konkrety**: nazwę formy ochrony wraz z organem, który ją ustanawia, jeden przykład polski i jedną umowę międzynarodową z datą. Przy śladzie ekologicznym pilnuj jednostek — **gha/os.** to ślad ekologiczny, **t CO2e** to ślad węglowy; zamiana ich miejscami to typowy błąd kosztujący punkt. A gdy polecenie brzmi „oceń, czy działanie sprzyja zrównoważonemu rozwojowi”, zawsze wskaż, **komu i w jakiej skali czasowej** przynosi ono korzyść — to sedno całego działu XIII."
+        }
+      ]
+    }
+  ]
+}

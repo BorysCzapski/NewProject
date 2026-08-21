@@ -1,0 +1,1784 @@
+{
+  "topicSlug": "podzial-polityczny-i-rozwoj-spoleczno-gospodarczy",
+  "lessons": [
+    {
+      "slug": "panstwo-terytorium-i-granice",
+      "title": "Państwo, terytorium i granice. Terytoria zależne i państwa nieuznawane",
+      "summary": "Co musi mieć obszar, żeby być państwem, jak daleko w morze i w powietrze sięga terytorium, czym różnią się granice naturalne od geometrycznych i dlaczego mapa polityczna ma obszary o niejasnym statusie.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa polityczna świata wygląda na prosty zbiór kolorowych plam rozdzielonych liniami, ale prawie każda z tych linii jest zapisem konkretnego konfliktu, traktatu albo decyzji urzędnika kolonialnego z linijką w ręku. Na świecie funkcjonuje **193 państwa członkowskie ONZ** (2024), a obok nich kilkadziesiąt obszarów, które państwami w pełnym sensie nie są: **terytoria zależne**, **państwa o ograniczonym uznaniu** i obszary sporne. Ta lekcja pokazuje, co decyduje o tym, że dany obszar jest państwem, jak daleko sięga jego terytorium (także w morze i w górę) oraz według jakich kryteriów klasyfikujemy granice. To fundament całego działu — bez zrozumienia pojęcia suwerenności nie da się wytłumaczyć ani dekolonizacji, ani integracji europejskiej."
+        },
+        {
+          "type": "definition",
+          "term": "Państwo",
+          "text": "Suwerenna organizacja polityczna, którą tworzą trzy elementy konstytutywne: **terytorium** o wytyczonych granicach, **ludność** stale je zamieszkująca oraz **władza suwerenna** (rząd) sprawująca zwierzchnictwo nad tym terytorium i tą ludnością. Brak choćby jednego elementu oznacza, że mamy do czynienia z czymś innym niż państwem.",
+          "note": "Konwencja z Montevideo (1933) dodaje czwarte kryterium: **zdolność do utrzymywania stosunków z innymi państwami**. To ono w praktyce decyduje o losie tworów takich jak Somaliland — mają terytorium, ludność i rząd, ale świat nie chce z nimi rozmawiać jak z państwem."
+        },
+        {
+          "type": "definition",
+          "term": "Suwerenność",
+          "text": "Niezależność władzy państwowej. Ma dwa wymiary: **suwerenność wewnętrzna** to wyłączne prawo do stanowienia i egzekwowania prawa na własnym terytorium, a **suwerenność zewnętrzna** to niezależność od innych państw w polityce zagranicznej. Państwo nie traci suwerenności, gdy dobrowolnie przekazuje część kompetencji organizacji międzynarodowej (np. Polska Unii Europejskiej), bo zachowuje prawo wycofania się z takiej umowy."
+        },
+        {
+          "type": "layers",
+          "title": "Pionowy zasięg terytorium państwa",
+          "caption": "Terytorium to nie tylko powierzchnia — to bryła sięgająca od wnętrza Ziemi po granicę przestrzeni kosmicznej.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Przestrzeń kosmiczna",
+              "range": "powyżej ok. 100 km",
+              "text": "Obszar **poza** terytorium państwa. Umowną granicą jest **linia Kármána** (ok. 100 km n.p.m.). Zgodnie z traktatem o przestrzeni kosmicznej (1967) przestrzeń kosmiczna i ciała niebieskie **nie podlegają zawłaszczeniu** przez żadne państwo — dlatego satelita może swobodnie przelatywać nad cudzym krajem, a samolot już nie.",
+              "tone": "neutral"
+            },
+            {
+              "name": "Przestrzeń powietrzna",
+              "range": "0–ok. 100 km n.p.m.",
+              "text": "Słup powietrza nad obszarem lądowym i morzem terytorialnym, objęty **pełną suwerennością**. Dlatego wlot obcego samolotu wymaga zgody, a naruszenie przestrzeni powietrznej jest traktowane jako incydent międzynarodowy.",
+              "tone": "sky"
+            },
+            {
+              "name": "Obszar lądowy i wody",
+              "range": "powierzchnia",
+              "text": "Ląd, wody śródlądowe (rzeki, jeziora), **wody wewnętrzne** oraz **morze terytorialne** do 12 mil morskich. To rdzeń terytorium — tu władza państwa jest najpełniejsza.",
+              "tone": "earth"
+            },
+            {
+              "name": "Wnętrze Ziemi",
+              "range": "pod powierzchnią",
+              "text": "Bryła skalna pod obszarem lądowym, teoretycznie zwężająca się ku środkowi Ziemi. Stąd wyłączne prawo państwa do **zasobów mineralnych** pod jego terytorium — i stąd znaczenie granic dla podziału złóż ropy czy gazu.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Strefy morskie według konwencji UNCLOS (1982)",
+          "caption": "Odległości liczy się od linii podstawowej, czyli zwykle od linii najniższego stanu wody. 1 mila morska (Mm) = 1852 m.",
+          "headers": ["Strefa", "Zasięg od linii podstawowej", "Uprawnienia państwa nadbrzeżnego"],
+          "rows": [
+            ["Wody wewnętrzne", "po wewnętrznej stronie linii podstawowej (zatoki, porty, ujścia)", "pełna suwerenność, bez prawa obcego przepływu"],
+            ["Morze terytorialne", "do 12 Mm (ok. 22 km)", "pełna suwerenność, ale obce statki mają prawo **nieszkodliwego przepływu**"],
+            ["Strefa przyległa", "do 24 Mm", "kontrola celna, skarbowa, imigracyjna i sanitarna — nie jest to już terytorium państwa"],
+            ["Wyłączna strefa ekonomiczna (WSE)", "do 200 Mm (ok. 370 km)", "wyłączne prawo do **eksploatacji zasobów** (ryby, ropa, energia wiatru), ale swoboda żeglugi i przelotu dla innych"],
+            ["Szelf kontynentalny", "do 200 Mm, przy naturalnym przedłużeniu lądu do 350 Mm", "wyłączne prawo do zasobów dna i podłoża"],
+            ["Morze otwarte (pełne)", "poza WSE", "obszar wspólny — żadne państwo nie może go zawłaszczyć"]
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Typy granic politycznych",
+          "caption": "Kryterium podstawowe to sposób wytyczenia: czy granica wykorzystuje element środowiska, czy jest linią narysowaną na mapie.",
+          "groups": [
+            {
+              "name": "Granice naturalne (przyrodnicze)",
+              "description": "Biegną wzdłuż wyraźnych elementów środowiska: rzek, grzbietów górskich, jezior, wybrzeży. Są czytelne w terenie i historycznie łatwe do obrony, ale bywają problematyczne — rzeka zmienia koryto, a dolina rzeczna zwykle **łączy** ludzi mieszkających po obu stronach, zamiast ich dzielić.",
+              "examples": ["Odra i Nysa Łużycka (Polska–Niemcy)", "Pireneje (Francja–Hiszpania)", "Andy (Chile–Argentyna)", "Rio Grande (USA–Meksyk)"]
+            },
+            {
+              "name": "Granice sztuczne — geometryczne",
+              "description": "Odcinki linii prostych łączące wyznaczone punkty, poprowadzone bez związku z rzeźbą terenu i strukturą etniczną. Typowe dla obszarów słabo zaludnionych i dla dawnych kolonii, gdzie granice dzielono przy stole negocjacyjnym w Europie.",
+              "examples": ["granica Libii z Egiptem na Saharze", "wschodnia granica Namibii (pas Caprivi)", "granice stanów USA na Środkowym Zachodzie"]
+            },
+            {
+              "name": "Granice sztuczne — astronomiczne",
+              "description": "Szczególny przypadek granic geometrycznych: biegną dokładnie wzdłuż **równoleżnika** lub **południka**. Na mapie wyglądają jak idealnie proste linie równoległe do siatki kartograficznej.",
+              "examples": ["49°N (USA–Kanada)", "141°W (Alaska–Kanada)", "22°N (Egipt–Sudan)", "38. równoleżnik jako dawna linia podziału Korei"]
+            },
+            {
+              "name": "Granice etnograficzne i historyczne",
+              "description": "Wytyczone tak, by pokrywały się z zasięgiem grup etnicznych, językowych lub religijnych, albo utrwalone przez wieki sąsiedztwa. Najbardziej trwałe społecznie, bo nie rozdzielają wspólnot — ale ich wytyczenie jest trudne tam, gdzie ludność jest wymieszana.",
+              "examples": ["granica Belgii z Holandią", "granica słowacko-węgierska po korektach", "granice na Bałkanach po 1918 r."]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Nie mieszaj poziomów podziału. **Sztuczna** to kategoria nadrzędna (granica wytyczona przez człowieka bez oparcia o środowisko), a **geometryczna** i **astronomiczna** to jej podtypy. Druga częsta pomyłka: „naturalna” nie znaczy „sprawiedliwa” ani „trwała” — granice naturalne w Afryce po dekolonizacji utrzymano właśnie dlatego, że były czytelne, a nie dlatego, że dobrze dzieliły ludy."
+        },
+        {
+          "type": "compare",
+          "title": "Terytorium zależne a państwo o ograniczonym uznaniu",
+          "leftLabel": "Terytorium zależne",
+          "rightLabel": "Państwo nieuznawane",
+          "rows": [
+            {
+              "aspect": "Suwerenność",
+              "left": "Brak — zwierzchnictwo sprawuje inne państwo (metropolia)",
+              "right": "Deklarowana i faktycznie sprawowana przez własne władze"
+            },
+            {
+              "aspect": "Kto prowadzi politykę zagraniczną",
+              "left": "Metropolia (np. Dania, Francja, Wielka Brytania, USA)",
+              "right": "Własny rząd, ale niemal nikt nie chce z nim rozmawiać oficjalnie"
+            },
+            {
+              "aspect": "Uznanie międzynarodowe",
+              "left": "Status uznany i niekwestionowany — nikt nie twierdzi, że to państwo",
+              "right": "Częściowe lub żadne; państwo macierzyste uznaje obszar za swój"
+            },
+            {
+              "aspect": "Stosunek ludności",
+              "left": "Często dobrowolny — referenda zwykle potwierdzają chęć pozostania (korzyści gospodarcze, obronność)",
+              "right": "Zwykle efekt secesji, wojny domowej lub konfliktu etnicznego"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Grenlandia, Wyspy Owcze, Polinezja Francuska, Nowa Kaledonia, Gibraltar, Bermudy, Portoryko",
+              "right": "Kosowo, Tajwan, Somaliland, Naddniestrze, Abchazja, Osetia Południowa, Cypr Północny, Sahara Zachodnia"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Obszary o spornym lub nietypowym statusie politycznym",
+          "caption": "Kliknij znaczniki — każdy z tych obszarów łamie prosty podział „państwo albo nie państwo”.",
+          "center": [25, 25],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 42.66,
+              "lng": 21.17,
+              "label": "Kosowo (Prisztina)",
+              "text": "Ogłosiło niepodległość w **2008 r.** Uznane przez większość państw Zachodu, ale nie przez Serbię, Rosję i Chiny — dlatego weto w Radzie Bezpieczeństwa blokuje mu członkostwo w ONZ."
+            },
+            {
+              "lat": 25.03,
+              "lng": 121.57,
+              "label": "Tajwan (Tajpej)",
+              "text": "Republika Chińska: własny rząd, waluta, armia i jedna z najnowocześniejszych gospodarek świata, ale utrzymuje stosunki dyplomatyczne z garstką państw. **Zasada jednych Chin** wymusza wybór: albo Pekin, albo Tajpej."
+            },
+            {
+              "lat": 9.56,
+              "lng": 44.07,
+              "label": "Somaliland (Hargejsa)",
+              "text": "Oderwał się od Somalii w 1991 r. i od tego czasu działa stabilniej niż państwo macierzyste — ma własne wybory i walutę. Mimo to **nie uznaje go żadne państwo ONZ**, bo Unia Afrykańska broni zasady nienaruszalności granic pokolonialnych."
+            },
+            {
+              "lat": 35.19,
+              "lng": 33.38,
+              "label": "Cypr Północny",
+              "text": "Powstał po tureckiej interwencji w 1974 r. Uznawany **wyłącznie przez Turcję**. Wyspa pozostaje podzielona linią demarkacyjną ONZ, choć cały Cypr formalnie należy do UE."
+            },
+            {
+              "lat": 27.15,
+              "lng": -13.2,
+              "label": "Sahara Zachodnia (Al-Ujun)",
+              "text": "Ostatnie w Afryce terytorium na liście ONZ obszarów niesamodzielnych. Kontrolowana głównie przez Maroko, a jej niepodległość ogłasza rząd na uchodźstwie (SADR). Klasyczny przykład **niedokończonej dekolonizacji**."
+            },
+            {
+              "lat": 64.18,
+              "lng": -51.72,
+              "label": "Grenlandia (Nuuk)",
+              "text": "Terytorium zależne o szerokiej autonomii w składzie Królestwa Danii. Ma własny parlament, ale obronność i politykę zagraniczną prowadzi Kopenhaga. W 1985 r. **wystąpiła z ówczesnych Wspólnot Europejskich**, choć Dania w nich została."
+            },
+            {
+              "lat": 18.47,
+              "lng": -66.11,
+              "label": "Portoryko (San Juan)",
+              "text": "Terytorium nieinkorporowane USA. Mieszkańcy mają obywatelstwo amerykańskie, ale nie głosują w wyborach prezydenckich, gdy mieszkają na wyspie. Pokazuje, że zależność bywa **wyborem ludności**, nie tylko przymusem."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kosowo — dlaczego uznanie jest polityką, a nie geografią",
+          "region": "Półwysep Bałkański",
+          "text": "Kosowo ogłosiło niepodległość **17 lutego 2008 r.**, po dziewięciu latach administracji ONZ. Spełnia wszystkie kryteria z Montevideo: ma wytyczone terytorium, stałą ludność (w większości albańską), sprawny rząd i zdolność do zawierania umów. Mimo to nie jest członkiem ONZ, bo przyjęcie nowego państwa wymaga rekomendacji **Rady Bezpieczeństwa**, a stały członek — Rosja — zgłasza weto, popierając stanowisko Serbii. Sytuację komplikuje fakt, że pięć państw Unii Europejskiej (m.in. Hiszpania i Cypr) także nie uznaje Kosowa, obawiając się precedensu dla własnych ruchów separatystycznych.",
+          "takeaway": "O tym, czy obszar jest państwem, nie decyduje mapa ani spełnienie definicji, lecz **decyzje polityczne innych państw**. Uznanie międzynarodowe to akt woli, a nie stwierdzenie faktu."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które trzeba znać na pamięć",
+          "items": [
+            { "value": "193", "label": "państwa członkowskie ONZ", "note": "stan na 2024 r.; ostatnie przyjęto Sudan Południowy w 2011 r." },
+            { "value": "2", "label": "państwa-obserwatorzy przy ONZ", "note": "Watykan (Stolica Apostolska) i Palestyna" },
+            { "value": "12", "unit": "Mm", "label": "szerokość morza terytorialnego" },
+            { "value": "200", "unit": "Mm", "label": "zasięg wyłącznej strefy ekonomicznej" },
+            { "value": "1852", "unit": "m", "label": "długość jednej mili morskiej", "note": "to długość łuku 1' południka" }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj odcinek granicy do jego typu",
+          "instruction": "Przy granicach astronomicznych zwróć uwagę, czy linia biegnie wzdłuż równoleżnika, czy południka.",
+          "pairs": [
+            { "left": "Odra i Nysa Łużycka (Polska–Niemcy)", "right": "granica naturalna rzeczna" },
+            { "left": "Pireneje (Francja–Hiszpania)", "right": "granica naturalna górska" },
+            { "left": "49°N (USA–Kanada)", "right": "granica astronomiczna równoleżnikowa" },
+            { "left": "141°W (Alaska–Kanada)", "right": "granica astronomiczna południkowa" },
+            { "left": "Granica Libii z Egiptem na Saharze", "right": "granica geometryczna" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na jakim obszarze państwo nadbrzeżne ma pełną suwerenność, ograniczoną jedynie prawem nieszkodliwego przepływu obcych statków?",
+          "options": [
+            "Na wyłącznej strefie ekonomicznej",
+            "Na morzu terytorialnym",
+            "W strefie przyległej",
+            "Na szelfie kontynentalnym poza 200 Mm"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Morze terytorialne** (do 12 Mm) jest częścią terytorium państwa, dlatego obowiązuje tam jego prawo — jedynym ograniczeniem jest prawo nieszkodliwego przepływu. W **WSE** i na szelfie państwo ma tylko prawa gospodarcze do zasobów, a w **strefie przyległej** jedynie uprawnienia kontrolne (celne, sanitarne, imigracyjne)."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie przyporządkowuje obszar do jego statusu politycznego?",
+          "options": [
+            "Grenlandia – państwo o ograniczonym uznaniu; Somaliland – terytorium zależne",
+            "Gibraltar – terytorium zależne; Kosowo – państwo o ograniczonym uznaniu",
+            "Tajwan – terytorium zależne Chin; Nowa Kaledonia – państwo nieuznawane",
+            "Portoryko – państwo nieuznawane; Cypr Północny – terytorium zależne Grecji"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Gibraltar** to brytyjskie terytorium zamorskie — nie rości sobie prawa do suwerenności, a jego politykę zagraniczną prowadzi Londyn. **Kosowo** przeciwnie: sprawuje własną władzę i deklaruje niepodległość, lecz brakuje mu powszechnego uznania. Grenlandia i Nowa Kaledonia to terytoria zależne (Danii i Francji), Somaliland i Cypr Północny — twory nieuznawane, a Portoryko to terytorium USA."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach maturalnych o granicach polecenie brzmi zwykle „podaj typ granicy i uzasadnij”. Uzasadnienie musi wskazywać **kryterium wytyczenia**, a nie skutek: „granica astronomiczna, ponieważ biegnie wzdłuż równoleżnika 49°N”, a nie „bo jest prosta”. Przy pytaniach o państwa nieuznawane pisz o **braku powszechnego uznania międzynarodowego** i o **wecie w Radzie Bezpieczeństwa ONZ** — to sformułowania, których oczekuje klucz."
+        }
+      ]
+    },
+    {
+      "slug": "ustroje-panstw-i-zmiany-na-mapie-politycznej",
+      "title": "Ustrój polityczny i terytorialny państw. Zmiany na mapie politycznej świata",
+      "summary": "Monarchia czy republika, państwo unitarne czy federacja — oraz trzy procesy, które w XX wieku przebudowały mapę świata: dekolonizacja, rozpad ZSRR i rozpad Jugosławii.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Dwa niezależne pytania opisują ustrój każdego państwa. Pierwsze dotyczy **głowy państwa**: czy urząd jest dziedziczny (monarchia), czy pochodzi z wyboru na kadencję (republika). Drugie dotyczy **wewnętrznej budowy terytorialnej**: czy władza jest skupiona w stolicy (państwo unitarne), czy podzielona między centrum a części składowe (federacja). Te pytania krzyżują się ze sobą — Wielka Brytania jest monarchią unitarną, Belgia monarchią federalną, Polska republiką unitarną, a Niemcy republiką federalną. Druga część lekcji pokazuje, skąd wzięła się dzisiejsza liczba państw: w 1945 r. ONZ zakładało **51 państw**, dziś należą do niej **193**. Ten przyrost to niemal w całości efekt dekolonizacji i rozpadu państw wielonarodowych."
+        },
+        {
+          "type": "compare",
+          "title": "Monarchia a republika",
+          "leftLabel": "Monarchia",
+          "rightLabel": "Republika",
+          "rows": [
+            {
+              "aspect": "Sposób objęcia urzędu głowy państwa",
+              "left": "Dziedziczenie (rzadziej elekcja w gronie rodów panujących)",
+              "right": "Wybory — powszechne lub przez parlament"
+            },
+            {
+              "aspect": "Czas sprawowania urzędu",
+              "left": "Dożywotnio, do abdykacji",
+              "right": "Kadencja o określonej długości, zwykle 4–7 lat"
+            },
+            {
+              "aspect": "Odpowiedzialność polityczna",
+              "left": "Monarcha nie odpowiada przed wyborcami; w wersji parlamentarnej odpowiada za niego rząd",
+              "right": "Prezydent odpowiada przed wyborcami i może nie zostać wybrany ponownie"
+            },
+            {
+              "aspect": "Funkcja ustrojowa dziś",
+              "left": "Najczęściej reprezentacyjna i symboliczna — spoiwo tożsamości narodowej",
+              "right": "Od czysto reprezentacyjnej (Niemcy, Włochy) po realnie rządzącą (USA, Francja)"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Wielka Brytania, Hiszpania, Szwecja, Japonia, Maroko, Arabia Saudyjska",
+              "right": "Polska, Francja, Niemcy, USA, Brazylia, Indie, Chiny"
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Odmiany monarchii",
+          "caption": "Kryterium: jak duży jest realny zakres władzy monarchy.",
+          "groups": [
+            {
+              "name": "Monarchia absolutna",
+              "description": "Monarcha skupia władzę ustawodawczą, wykonawczą i sądowniczą; nie ma konstytucji ograniczającej jego uprawnienia albo konstytucja jest mu podporządkowana. Współcześnie występuje głównie w państwach naftowych Zatoki Perskiej, gdzie **renta surowcowa** pozwala finansować państwo bez podatków od obywateli, a więc i bez ich udziału we władzy.",
+              "examples": ["Arabia Saudyjska", "Oman", "Katar", "Brunei", "Eswatini"]
+            },
+            {
+              "name": "Monarchia konstytucyjna (parlamentarna)",
+              "description": "Władzę monarchy ogranicza konstytucja, a realnie rządzi rząd odpowiedzialny przed parlamentem. Monarcha „panuje, ale nie rządzi”: podpisuje ustawy, mianuje premiera i reprezentuje państwo. W kilku państwach (Maroko, Jordania) monarcha zachowuje jednak realną władzę mimo istnienia konstytucji.",
+              "examples": ["Wielka Brytania", "Hiszpania", "Szwecja", "Niderlandy", "Japonia", "Tajlandia"]
+            },
+            {
+              "name": "Monarchia elekcyjna",
+              "description": "Monarcha jest wybierany, choć zwykle w bardzo wąskim gronie. Najciekawszy przypadek to **Malezja**, gdzie władcy dziewięciu stanów wybierają spośród siebie króla na pięcioletnią kadencję — ustrój łączy więc cechy monarchii, elekcji i federacji.",
+              "examples": ["Malezja", "Watykan", "Zjednoczone Emiraty Arabskie", "Kambodża"]
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Państwo unitarne a federacja",
+          "leftLabel": "Państwo unitarne",
+          "rightLabel": "Federacja (państwo związkowe)",
+          "rows": [
+            {
+              "aspect": "Źródło władzy jednostek podziału",
+              "left": "Kompetencje **nadane** przez władzę centralną i przez nią odwoływalne",
+              "right": "Kompetencje **własne**, zagwarantowane w konstytucji federalnej"
+            },
+            {
+              "aspect": "System prawny",
+              "left": "Jeden system prawa na całym terytorium",
+              "right": "Prawo federalne plus odrębne prawo części składowych (np. różne kodeksy karne stanów USA)"
+            },
+            {
+              "aspect": "Parlament",
+              "left": "Zwykle jednoizbowy lub izba wyższa bez reprezentacji terytorialnej",
+              "right": "Dwuizbowy: izba wyższa reprezentuje **części składowe** (Senat USA, Bundesrat, Rada Federacji)"
+            },
+            {
+              "aspect": "Kiedy się sprawdza",
+              "left": "Państwa jednorodne etnicznie i niezbyt rozległe",
+              "right": "Państwa wielkie obszarowo lub zróżnicowane etnicznie i językowo — federalizm łagodzi napięcia"
+            },
+            {
+              "aspect": "Przykłady",
+              "left": "Polska, Francja, Japonia, Chiny, Ukraina, Wielka Brytania",
+              "right": "USA, Niemcy, Rosja, Brazylia, Indie, Kanada, Australia, Szwajcaria, Belgia"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Największe federacje świata i ich części składowe",
+          "caption": "Nazwa jednostek jest w zadaniach maturalnych częstym „hakiem” rozpoznawczym.",
+          "headers": ["Państwo", "Nazwa części składowych", "Liczba", "Uwaga"],
+          "rows": [
+            ["USA", "stany", "50 (+ Dystrykt Kolumbii)", "każdy stan ma własną konstytucję i po 2 senatorów"],
+            ["Niemcy", "kraje związkowe (landy)", "16", "reprezentowane w Bundesracie"],
+            ["Rosja", "podmioty federacji (republiki, kraje, obwody)", "ponad 80", "silna centralizacja mimo formy federalnej"],
+            ["Indie", "stany i terytoria związkowe", "28 stanów", "granice stanów wytyczono w dużej mierze według **kryterium językowego**"],
+            ["Brazylia", "stany", "26 (+ Dystrykt Federalny)", "stolica Brasília leży w odrębnym dystrykcie"],
+            ["Szwajcaria", "kantony", "26", "oficjalna nazwa Konfederacja Szwajcarska, ale ustrój jest federalny"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki. Po pierwsze: **federacja to nie konfederacja** — konfederacja jest związkiem państw zachowujących suwerenność i prawo wystąpienia, federacja jest jednym państwem. Szwajcaria nosi historyczną nazwę konfederacji, ale od 1848 r. jest federacją. Po drugie: **monarchia nie znaczy niedemokratyczna** — Szwecja czy Japonia są demokracjami, a wiele republik nie. Po trzecie: **autonomia to nie federalizm** — Wielka Brytania czy Hiszpania nadają regionom szerokie uprawnienia (dewolucja, wspólnoty autonomiczne), ale formalnie pozostają państwami unitarnymi, bo centrum może te uprawnienia odebrać."
+        },
+        {
+          "type": "process",
+          "title": "Mechanizm dekolonizacji i jej skutki",
+          "caption": "Dlaczego imperia rozpadły się właśnie po 1945 roku i dlaczego niepodległość nie oznaczała automatycznie rozwoju.",
+          "steps": [
+            {
+              "title": "Osłabienie metropolii po II wojnie światowej",
+              "text": "Wielka Brytania i Francja wyszły z wojny zrujnowane gospodarczo i militarnie. Utrzymywanie kosztownej administracji i garnizonów w koloniach przestało się opłacać, a nowe mocarstwa — **USA i ZSRR** — z własnych powodów popierały likwidację imperiów kolonialnych."
+            },
+            {
+              "title": "Wzrost ruchów narodowowyzwoleńczych",
+              "text": "Kolonialne elity wykształcone w Europie przejęły europejski język praw narodu do samostanowienia i obróciły go przeciw metropoliom. Udział żołnierzy z kolonii w obu wojnach światowych wzmocnił argument: skoro walczyli o wolność Europy, dlaczego mają jej nie mieć u siebie?"
+            },
+            {
+              "title": "Presja instytucjonalna ONZ",
+              "text": "**Rezolucja 1514 Zgromadzenia Ogólnego ONZ z 1960 r.** (Deklaracja o przyznaniu niepodległości krajom i narodom kolonialnym) uznała kolonializm za sprzeczny z Kartą NZ. Utrzymywanie kolonii stało się kosztowne wizerunkowo."
+            },
+            {
+              "title": "Uzyskanie niepodległości w granicach kolonialnych",
+              "text": "Nowe państwa przyjęły zasadę **uti possidetis** — nienaruszalności granic odziedziczonych po administracji kolonialnej. Bano się, że rewizja jednej granicy uruchomi lawinę roszczeń. Skutek: granice geometryczne przecinające obszary plemienne zostały utrwalone."
+            },
+            {
+              "title": "Skutki: słabe państwa i uzależnienie gospodarcze",
+              "text": "Odziedziczono gospodarki **monokulturowe** (jeden surowiec lub jedna uprawa na eksport), infrastrukturę prowadzącą od kopalni do portu zamiast łączyć regiony, oraz granice generujące konflikty etniczne. Zależność gospodarcza od dawnych metropolii utrzymała się mimo formalnej niepodległości — nazywa się to **neokolonializmem**."
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Kluczowe zmiany na mapie politycznej po 1945 roku",
+          "caption": "Trzy fale: dekolonizacja, rozpad bloku wschodniego, secesje XXI wieku.",
+          "events": [
+            {
+              "period": "1947",
+              "label": "Niepodległość Indii i Pakistanu",
+              "text": "Rozpad Indii Brytyjskich według **kryterium religijnego** wywołał jedną z największych migracji w dziejach (kilkanaście milionów ludzi) i trwający do dziś spór o Kaszmir."
+            },
+            {
+              "period": "1960",
+              "label": "Rok Afryki",
+              "text": "W jednym roku niepodległość uzyskało **17 państw afrykańskich**, w większości dawnych kolonii francuskich. Symboliczny szczyt dekolonizacji, wsparty rezolucją 1514 ONZ."
+            },
+            {
+              "period": "1990",
+              "label": "Zjednoczenie Niemiec",
+              "text": "NRD przystąpiła do RFN 3 października 1990 r. Rzadki przypadek zmiany zmniejszającej liczbę państw. W tym samym roku niepodległość uzyskała Namibia — ostatnia duża kolonia w Afryce."
+            },
+            {
+              "period": "1991",
+              "label": "Rozpad ZSRR",
+              "text": "Z jednego państwa powstało **15 republik**: trzy bałtyckie (Litwa, Łotwa, Estonia), Rosja, Ukraina, Białoruś, Mołdawia, trzy kaukaskie (Gruzja, Armenia, Azerbejdżan) i pięć środkowoazjatyckich (Kazachstan, Uzbekistan, Turkmenistan, Kirgistan, Tadżykistan). Granice republik związkowych stały się granicami państw."
+            },
+            {
+              "period": "1991–2008",
+              "label": "Rozpad Jugosławii",
+              "text": "Z sześciu republik SFRJ powstały Słowenia, Chorwacja, Macedonia Północna, Bośnia i Hercegowina, Serbia i Czarnogóra (rozdzielone w 2006 r.), a w 2008 r. niepodległość ogłosiło Kosowo. W odróżnieniu od ZSRR proces miał **krwawy przebieg**."
+            },
+            {
+              "period": "1993",
+              "label": "Podział Czechosłowacji",
+              "text": "1 stycznia 1993 r. powstały Czechy i Słowacja. Nazywany **aksamitnym rozwodem**, bo przeprowadzono go bez przemocy, na mocy porozumienia elit politycznych."
+            },
+            {
+              "period": "2011",
+              "label": "Powstanie Sudanu Południowego",
+              "text": "Po referendum niepodległościowym 9 lipca 2011 r. powstało najmłodsze państwo członkowskie ONZ. Przyczyną secesji był podział religijno-kulturowy (muzułmańska Północ – chrześcijańsko-animistyczne Południe) oraz spór o **złoża ropy naftowej**."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Jugosławia — dlaczego rozpad był krwawy, a Czechosłowacji nie",
+          "region": "Bałkany i Europa Środkowa",
+          "text": "Socjalistyczna Federacyjna Republika Jugosławii składała się z **sześciu republik** i była wewnętrznie zróżnicowana pod trzema względami naraz: etnicznym (Serbowie, Chorwaci, Bośniacy, Słoweńcy, Macedończycy, Albańczycy), religijnym (prawosławie, katolicyzm, islam) oraz gospodarczym (PKB per capita Słowenii wielokrotnie przewyższał wskaźniki Kosowa i Macedonii). Kluczowa różnica wobec Czechosłowacji polegała na tym, że **granice republik nie pokrywały się z granicami etnicznymi** — poza granicami swoich republik zostawały liczne mniejszości, zwłaszcza serbska w Chorwacji i Bośni. Każda secesja tworzyła więc natychmiast nową mniejszość, co uruchomiło wojny w Chorwacji (1991–1995) i w Bośni (1992–1995) oraz czystki etniczne. W Czechosłowacji granica czesko-słowacka pokrywała się z podziałem etnicznym niemal idealnie, więc podział dało się przeprowadzić przy stole.",
+          "takeaway": "O pokojowym lub konfliktowym przebiegu rozpadu państwa decyduje przede wszystkim **stopień zgodności granic administracyjnych z rozmieszczeniem grup etnicznych**, a nie sam fakt zróżnicowania narodowościowego."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby porządkujące zmiany na mapie",
+          "items": [
+            { "value": "51", "label": "państwa założycielskie ONZ (1945)" },
+            { "value": "193", "label": "państwa członkowskie ONZ (2024)", "note": "przyrost to głównie efekt dekolonizacji i rozpadu państw federacyjnych" },
+            { "value": "17", "label": "państwa afrykańskie niepodległe w 1960 r.", "note": "Rok Afryki" },
+            { "value": "15", "label": "państw powstałych z ZSRR w 1991 r." },
+            { "value": "6", "label": "republik tworzących Jugosławię", "note": "z ich terytorium powstało 7 obszarów uznających się za państwa, wliczając Kosowo" }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj wydarzenia chronologicznie",
+          "instruction": "Od najstarszego do najmłodszego. Zwróć uwagę, że zjednoczenie Niemiec poprzedziło rozpad ZSRR.",
+          "items": [
+            "Niepodległość Indii i Pakistanu",
+            "Rok Afryki — niepodległość 17 państw",
+            "Zjednoczenie Niemiec",
+            "Rozpad ZSRR na 15 państw",
+            "Podział Czechosłowacji na Czechy i Słowację",
+            "Niepodległość Czarnogóry po referendum",
+            "Powstanie Sudanu Południowego"
+          ],
+          "explanation": "Kolejność: 1947 → 1960 → 1990 → 1991 → 1993 → 2006 → 2011. Warto zapamiętać, że zjednoczenie Niemiec (3 października 1990 r.) nastąpiło **przed** formalnym rozwiązaniem ZSRR (grudzień 1991 r.), choć oba wydarzenia należą do tej samej fali przemian."
+        },
+        {
+          "type": "quiz",
+          "question": "Które państwo jest jednocześnie monarchią i federacją?",
+          "options": ["Japonia", "Malezja", "Brazylia", "Francja"],
+          "correctIndex": 1,
+          "explanation": "**Malezja** to federacja 13 stanów, a głową państwa jest król wybierany na pięcioletnią kadencję spośród władców dziewięciu stanów — łączy więc monarchię z ustrojem federalnym (podobnie Belgia i ZEA). Japonia jest monarchią, ale **unitarną**; Brazylia federacją, ale **republiką**; Francja jest republiką unitarną."
+        },
+        {
+          "type": "quiz",
+          "question": "Wskaż poprawne wyjaśnienie różnicy w przebiegu rozpadu Czechosłowacji i Jugosławii.",
+          "options": [
+            "Czechosłowacja była federacją, a Jugosławia państwem unitarnym, więc secesja wymagała tam wojny",
+            "W Jugosławii granice republik nie pokrywały się z granicami etnicznymi, więc każda secesja tworzyła nowe mniejszości narodowe",
+            "Jugosławia rozpadła się na skutek interwencji ZSRR, a Czechosłowacja na mocy decyzji ONZ",
+            "Czechosłowacja rozpadła się wcześniej, gdy napięcia etniczne w Europie były jeszcze słabe"
+          ],
+          "correctIndex": 1,
+          "explanation": "Obie były federacjami, a rozpad obu przeprowadziły własne elity, nie mocarstwa. Decydująca była **geografia ludności**: w Jugosławii duże skupiska Serbów mieszkały w Chorwacji i Bośni, więc uznanie granic republik za granice państw zostawiało je po „obcej” stronie. W Czechosłowacji granica czesko-słowacka odpowiadała podziałowi etnicznemu, więc nie było o co walczyć."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Maturalne polecenie „określ ustrój państwa X” wymaga **dwóch informacji naraz**: formy rządów (monarchia/republika) i struktury terytorialnej (unitarne/federacja) — odpowiedź „republika” bywa uznawana za niepełną. W zadaniach o zmianach na mapie politycznej opisuj **przyczyny**, a nie tylko daty: dla dekolonizacji osłabienie metropolii i presję ONZ, dla ZSRR kryzys gospodarczy i odrodzenie narodowe republik, dla Jugosławii niezgodność granic z rozmieszczeniem narodów."
+        }
+      ]
+    },
+    {
+      "slug": "organizacje-miedzynarodowe-i-integracja",
+      "title": "Organizacje międzynarodowe i ugrupowania integracyjne",
+      "summary": "ONZ, NATO i regionalne bloki gospodarcze — a przede wszystkim drabina integracji: od strefy wolnego handlu przez unię celną i wspólny rynek po strefę euro.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Państwa są suwerenne, ale prawie żadne nie działa dziś w pojedynkę. Zawierają umowy, które znoszą cła, otwierają granice, gwarantują wspólną obronę albo pozwalają sterować ceną surowca. Kluczem do zrozumienia tego działu jest odróżnienie **współpracy** od **integracji**: w organizacji takiej jak ONZ czy NATO państwa uzgadniają wspólne działania, ale każde zachowuje pełnię decyzji; w ugrupowaniu integracyjnym takim jak Unia Europejska przekazują część kompetencji **instytucjom ponadnarodowym**, których decyzje obowiązują je bezpośrednio. Ta różnica pozwala uporządkować wszystkie skróty, które trzeba znać na maturze."
+        },
+        {
+          "type": "classification",
+          "title": "Typy organizacji i ugrupowań międzynarodowych",
+          "caption": "Kryterium: cel i zasięg działania.",
+          "groups": [
+            {
+              "name": "Organizacje uniwersalne (powszechne)",
+              "description": "Otwarte dla wszystkich państw świata, o bardzo szerokim zakresie zadań — od bezpieczeństwa po zdrowie i oświatę. Ich siła to legitymacja, ich słabość to konieczność uzgodnień między mocarstwami o sprzecznych interesach.",
+              "examples": ["ONZ", "WHO", "UNESCO", "FAO", "Bank Światowy", "MFW", "WTO"]
+            },
+            {
+              "name": "Organizacje polityczno-wojskowe",
+              "description": "Sojusze obronne, w których napaść na jednego członka traktuje się jako napaść na wszystkich. Ich istotą jest **odstraszanie**: przeciwnik ma z góry wiedzieć, że wojna z jednym państwem oznacza wojnę z całym blokiem.",
+              "examples": ["NATO", "Unia Afrykańska (misje pokojowe)", "OBWE"]
+            },
+            {
+              "name": "Ugrupowania integracyjne (gospodarcze)",
+              "description": "Znoszą bariery w przepływie towarów, a w wersjach zaawansowanych także usług, kapitału i ludzi. Różnią się **głębokością** integracji — od zwykłej strefy wolnego handlu po unię walutową.",
+              "examples": ["Unia Europejska", "USMCA", "ASEAN", "Mercosur"]
+            },
+            {
+              "name": "Ugrupowania surowcowe (kartele)",
+              "description": "Zrzeszają producentów jednego surowca i koordynują wielkość wydobycia, by wpływać na jego cenę światową. Działają tylko wtedy, gdy kontrolują dużą część podaży i gdy członkowie przestrzegają limitów.",
+              "examples": ["OPEC", "OPEC+", "dawne porozumienia kawowe i kauczukowe"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Główne organy ONZ",
+          "caption": "ONZ powstała w 1945 r., siedziba główna mieści się w Nowym Jorku.",
+          "headers": ["Organ", "Skład", "Kompetencje"],
+          "rows": [
+            ["Zgromadzenie Ogólne", "wszystkie państwa członkowskie, każde ma 1 głos", "debata, uchwalanie rezolucji (niewiążących), budżet, przyjmowanie nowych członków"],
+            ["Rada Bezpieczeństwa", "5 członków stałych (USA, Rosja, Chiny, Wielka Brytania, Francja) + 10 niestałych na 2 lata", "utrzymanie pokoju; jej rezolucje są **wiążące**, ale każdy stały członek ma **prawo weta**"],
+            ["Sekretariat z Sekretarzem Generalnym", "administracja ONZ", "bieżąca działalność, mediacje, wykonywanie decyzji organów"],
+            ["Międzynarodowy Trybunał Sprawiedliwości", "15 sędziów, siedziba w Hadze", "rozstrzyganie sporów **między państwami**, jeśli zgodzą się na jego jurysdykcję"],
+            ["Rada Gospodarcza i Społeczna (ECOSOC)", "54 państwa", "koordynacja agend wyspecjalizowanych: WHO, UNESCO, FAO, UNICEF"]
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Drabina integracji gospodarczej",
+          "caption": "Każdy wyższy stopień zawiera w sobie wszystkie niższe. Kliknij kolejne szczeble od dołu.",
+          "orientation": "bottom-up",
+          "layers": [
+            {
+              "name": "Strefa wolnego handlu",
+              "range": "stopień 1",
+              "text": "Zniesienie ceł **w handlu między członkami**, ale każde państwo utrzymuje własne stawki celne wobec reszty świata. Dlatego konieczne są kontrole pochodzenia towaru — inaczej import wchodziłby przez kraj o najniższych cłach. Przykład: **USMCA** (od 2020 r. w miejsce NAFTA).",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Unia celna",
+              "range": "stopień 2",
+              "text": "Do wolnego handlu wewnątrz dochodzi **wspólna taryfa celna** wobec państw trzecich. Znikają kontrole pochodzenia, a blok zaczyna negocjować umowy handlowe jako całość. Przykłady: **Mercosur**, unia celna UE z Turcją.",
+              "tone": "earth"
+            },
+            {
+              "name": "Wspólny rynek",
+              "range": "stopień 3",
+              "text": "Swobodny przepływ nie tylko towarów, ale też **usług, kapitału i osób** — cztery swobody jednolitego rynku UE. Wymaga ujednolicenia norm technicznych i wzajemnego uznawania kwalifikacji, bo inaczej różne przepisy krajowe działają jak ukryte cła.",
+              "tone": "water"
+            },
+            {
+              "name": "Unia gospodarcza i walutowa",
+              "range": "stopień 4",
+              "text": "Wspólna waluta i **wspólna polityka pieniężna** (w strefie euro prowadzi ją Europejski Bank Centralny). Znikają ryzyko kursowe i koszty wymiany, ale państwo traci możliwość osłabienia własnej waluty w kryzysie — musi dostosowywać się przez ceny i płace.",
+              "tone": "sky"
+            },
+            {
+              "name": "Unia polityczna",
+              "range": "stopień 5",
+              "text": "Wspólna polityka zagraniczna, obronna i wspólne obywatelstwo — stopień, którego UE nie osiągnęła w pełni. To najtrudniejszy krok, bo dotyka rdzenia suwerenności.",
+              "tone": "rock"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Etapy integracji europejskiej",
+          "caption": "Od wspólnego rynku węgla i stali do wystąpienia pierwszego państwa.",
+          "events": [
+            {
+              "period": "1951",
+              "label": "EWWiS — traktat paryski",
+              "text": "Sześć państw (Francja, RFN, Włochy, Belgia, Holandia, Luksemburg) oddaje pod wspólny zarząd wydobycie węgla i produkcję stali — surowce wojny. Cel był **polityczny**: uczynić kolejną wojnę francusko-niemiecką technicznie niemożliwą."
+            },
+            {
+              "period": "1957",
+              "label": "Traktaty rzymskie — EWG i Euratom",
+              "text": "Powstaje Europejska Wspólnota Gospodarcza, która rozszerza integrację z dwóch surowców na całą gospodarkę: unia celna i zalążek wspólnego rynku."
+            },
+            {
+              "period": "1985/1995",
+              "label": "Układ z Schengen",
+              "text": "Podpisany w 1985 r., w życie wszedł w 1995 r. Znosi kontrole osób na granicach wewnętrznych i przenosi je na **granicę zewnętrzną** obszaru, wraz z wspólnym systemem wizowym."
+            },
+            {
+              "period": "1993",
+              "label": "Traktat z Maastricht — powstaje Unia Europejska",
+              "text": "Wspólnoty przekształcają się w **Unię Europejską**, rusza jednolity rynek z czterema swobodami, wprowadza się obywatelstwo UE i wyznacza kryteria konwergencji dla przyszłej waluty."
+            },
+            {
+              "period": "1999/2002",
+              "label": "Wprowadzenie euro",
+              "text": "Od 1999 r. euro funkcjonuje w rozliczeniach bezgotówkowych, od 2002 r. wchodzą banknoty i monety. Politykę pieniężną przejmuje **Europejski Bank Centralny** we Frankfurcie."
+            },
+            {
+              "period": "2004",
+              "label": "Największe rozszerzenie",
+              "text": "1 maja 2004 r. do UE wstępuje **10 państw**, w tym Polska. Rozszerzenie objęło głównie kraje postsocjalistyczne, przesuwając granicę zewnętrzną Unii na wschód."
+            },
+            {
+              "period": "2020",
+              "label": "Brexit",
+              "text": "31 stycznia 2020 r. Wielka Brytania jako pierwsze państwo opuszcza UE. Liczba członków spada z 28 do **27** i po raz pierwszy okazuje się, że integracja jest odwracalna."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: mylenie **Unii Europejskiej**, **strefy Schengen** i **strefy euro** — to trzy różne zbiory. Irlandia należy do UE, ale nie do Schengen. Norwegia, Islandia, Szwajcaria i Liechtenstein należą do Schengen, choć są **poza UE**. Polska i Szwecja są w UE i w Schengen, ale płacą własną walutą. Zapamiętaj to jako trzy nakładające się okręgi, a nie jedno koło."
+        },
+        {
+          "type": "table",
+          "title": "Ugrupowania integracyjne i organizacje — ściąga",
+          "caption": "Skrót, charakter i to, co odróżnia dane ugrupowanie od pozostałych.",
+          "headers": ["Skrót", "Nazwa i zasięg", "Charakter", "Cecha rozpoznawcza"],
+          "rows": [
+            ["UE", "Unia Europejska — 27 państw (po brexicie)", "unia gospodarcza i walutowa z elementami politycznej", "instytucje **ponadnarodowe**: Komisja, Parlament, Trybunał Sprawiedliwości"],
+            ["NATO", "Sojusz Północnoatlantycki — 32 państwa (2024)", "sojusz polityczno-wojskowy", "**artykuł 5**: napaść na jednego jest napaścią na wszystkich; siedziba w Brukseli"],
+            ["USMCA", "USA, Meksyk, Kanada (od 2020 w miejsce NAFTA)", "strefa wolnego handlu", "brak wspólnej taryfy celnej i swobody przepływu osób"],
+            ["ASEAN", "Stowarzyszenie Narodów Azji Południowo-Wschodniej — 10 państw (2024)", "strefa wolnego handlu, integracja pogłębiana", "zasada nieingerencji w sprawy wewnętrzne członków"],
+            ["Mercosur", "Wspólny Rynek Południa — Argentyna, Brazylia, Paragwaj, Urugwaj", "unia celna", "Wenezuela zawieszona; blok zdominowany przez Brazylię"],
+            ["OPEC", "Organizacja Krajów Eksportujących Ropę Naftową — ok. 12 państw (2024)", "kartel surowcowy", "ustala **limity wydobycia**; siedziba w Wiedniu"],
+            ["UA", "Unia Afrykańska — 55 członków", "organizacja polityczno-gospodarcza kontynentu", "broni **nienaruszalności granic pokolonialnych**; siedziba w Addis Abebie"]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie mieszczą się siedziby najważniejszych organizacji",
+          "caption": "Lokalizacja siedziby bywa punktowana w zadaniach — kliknij znaczniki.",
+          "center": [25, 10],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 40.75,
+              "lng": -73.97,
+              "label": "Nowy Jork — ONZ",
+              "text": "Siedziba główna Organizacji Narodów Zjednoczonych: obraduje tu **Zgromadzenie Ogólne** i **Rada Bezpieczeństwa**."
+            },
+            {
+              "lat": 52.09,
+              "lng": 4.3,
+              "label": "Haga — MTS i MTK",
+              "text": "Międzynarodowy Trybunał Sprawiedliwości (organ ONZ, spory **między państwami**) oraz odrębny od ONZ Międzynarodowy Trybunał Karny, sądzący **osoby**."
+            },
+            {
+              "lat": 50.85,
+              "lng": 4.35,
+              "label": "Bruksela — UE i NATO",
+              "text": "Komisja Europejska i Rada UE oraz kwatera główna NATO. Parlament Europejski obraduje w Strasburgu, a Europejski Bank Centralny działa we Frankfurcie."
+            },
+            {
+              "lat": 48.21,
+              "lng": 16.37,
+              "label": "Wiedeń — OPEC",
+              "text": "Sekretariat OPEC od 1965 r. Organizację powołano w 1960 r. w **Bagdadzie**, ale siedzibę przeniesiono do neutralnej Austrii."
+            },
+            {
+              "lat": -6.21,
+              "lng": 106.85,
+              "label": "Dżakarta — ASEAN",
+              "text": "Sekretariat Stowarzyszenia Narodów Azji Południowo-Wschodniej, powstałego w 1967 r. w Bangkoku."
+            },
+            {
+              "lat": -34.9,
+              "lng": -56.16,
+              "label": "Montevideo — Mercosur",
+              "text": "Siedziba Wspólnego Rynku Południa, utworzonego w 1991 r. traktatem z Asunción."
+            },
+            {
+              "lat": 9.03,
+              "lng": 38.74,
+              "label": "Addis Abeba — Unia Afrykańska",
+              "text": "Powstała w 2002 r. w miejsce Organizacji Jedności Afrykańskiej. Prowadzi misje pokojowe i buduje kontynentalną strefę wolnego handlu **AfCFTA**."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "OPEC — jak kartel steruje ceną ropy i dlaczego traci kontrolę",
+          "region": "Bliski Wschód, Afryka Północna, Ameryka Południowa",
+          "text": "OPEC powstała w 1960 r., by producenci ropy odzyskali wpływ na cenę surowca ustalaną wcześniej przez zachodnie koncerny. Mechanizm jest prosty: państwa członkowskie przyznają sobie **kwoty wydobywcze**, a ograniczenie podaży przy mało elastycznym popycie na paliwa windzuje cenę. Największą siłę kartel pokazał w **1973 r.**, gdy arabscy producenci nałożyli embargo na dostawy dla państw popierających Izrael — cena ropy wzrosła kilkakrotnie, wywołując światowy kryzys naftowy i przyspieszając poszukiwanie źródeł alternatywnych. Dziś kontrola jest słabsza z trzech powodów: rośnie wydobycie **poza kartelem** (USA dzięki ropie łupkowej, Rosja, Norwegia, Brazylia), członkowie łamią własne limity, a wysoka cena sama uruchamia inwestycje konkurencji. Dlatego od 2016 r. OPEC koordynuje wydobycie z Rosją i innymi producentami w formule **OPEC+**.",
+          "takeaway": "Kartel działa tylko wtedy, gdy kontroluje dużą część **światowej podaży** i gdy członkowie przestrzegają limitów. Wysoka cena uruchamia mechanizm samoograniczający: opłacalne stają się złoża trudno dostępne poza kartelem."
+        },
+        {
+          "type": "compare",
+          "title": "Dwa modele integracji: UE a USMCA",
+          "leftLabel": "Unia Europejska",
+          "rightLabel": "USMCA",
+          "rows": [
+            {
+              "aspect": "Stopień integracji",
+              "left": "Unia gospodarcza i walutowa z elementami unii politycznej",
+              "right": "Strefa wolnego handlu — najniższy szczebel drabiny"
+            },
+            {
+              "aspect": "Cła wobec państw trzecich",
+              "left": "Wspólna taryfa celna, jedna polityka handlowa",
+              "right": "Każde państwo ustala własne cła i zawiera własne umowy"
+            },
+            {
+              "aspect": "Przepływ osób",
+              "left": "Swoboda osiedlania się i pracy, w Schengen bez kontroli granicznych",
+              "right": "Brak swobody osiedlania się; granica USA–Meksyk pozostaje ściśle kontrolowana"
+            },
+            {
+              "aspect": "Instytucje",
+              "left": "Ponadnarodowe — prawo UE ma pierwszeństwo przed krajowym",
+              "right": "Międzyrządowe — brak organu stanowiącego prawo obowiązujące obywateli"
+            },
+            {
+              "aspect": "Waluta",
+              "left": "Euro w 20 państwach (2023 r.), wspólna polityka pieniężna EBC",
+              "right": "Trzy odrębne waluty i trzy niezależne banki centralne"
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby członków — stan do zapamiętania",
+          "items": [
+            { "value": "193", "label": "państwa członkowskie ONZ (2024)" },
+            { "value": "5", "label": "stałych członków Rady Bezpieczeństwa", "note": "USA, Rosja, Chiny, Wielka Brytania, Francja — każdy z prawem weta" },
+            { "value": "27", "label": "państw Unii Europejskiej", "note": "po wystąpieniu Wielkiej Brytanii w 2020 r." },
+            { "value": "20", "label": "państw strefy euro (2023)", "note": "ostatnia dołączyła Chorwacja" },
+            { "value": "32", "label": "państwa NATO (2024)", "note": "po przystąpieniu Finlandii i Szwecji" },
+            { "value": "55", "label": "członków Unii Afrykańskiej" }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj ugrupowanie do jego charakteru",
+          "instruction": "Zwróć uwagę na różnicę między strefą wolnego handlu a unią celną.",
+          "pairs": [
+            { "left": "OPEC", "right": "kartel państw eksportujących ropę naftową" },
+            { "left": "NATO", "right": "sojusz polityczno-wojskowy oparty na artykule 5" },
+            { "left": "USMCA", "right": "strefa wolnego handlu w Ameryce Północnej" },
+            { "left": "Mercosur", "right": "unia celna państw Ameryki Południowej" },
+            { "left": "Unia Europejska", "right": "unia gospodarcza i walutowa z instytucjami ponadnarodowymi" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Czym różni się unia celna od strefy wolnego handlu?",
+          "options": [
+            "W unii celnej zniesiono cła między członkami, a w strefie wolnego handlu tylko je obniżono",
+            "Unia celna dodaje wspólną taryfę celną wobec państw trzecich, której w strefie wolnego handlu nie ma",
+            "W unii celnej obowiązuje swobodny przepływ osób, a w strefie wolnego handlu tylko towarów",
+            "Unia celna wymaga wspólnej waluty, a strefa wolnego handlu nie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Oba stopnie znoszą cła wewnętrzne. Różnica dotyczy **zewnętrza bloku**: unia celna ustala jedną taryfę wobec reszty świata, dzięki czemu znikają kontrole pochodzenia towaru. Swoboda przepływu osób pojawia się dopiero na poziomie **wspólnego rynku**, a wspólna waluta na poziomie **unii walutowej**."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zdanie o relacji UE, strefy Schengen i strefy euro jest prawdziwe?",
+          "options": [
+            "Każde państwo strefy Schengen należy do Unii Europejskiej",
+            "Każde państwo Unii Europejskiej płaci euro",
+            "Norwegia i Szwajcaria należą do strefy Schengen, choć nie są członkami Unii Europejskiej",
+            "Strefa euro obejmuje wszystkie państwa strefy Schengen"
+          ],
+          "correctIndex": 2,
+          "explanation": "**Norwegia, Islandia, Szwajcaria i Liechtenstein** uczestniczą w Schengen, pozostając poza UE — obala to zdania pierwsze i czwarte. Zdanie drugie jest fałszywe, bo Polska, Szwecja, Czechy czy Węgry należą do UE i mają własne waluty. Te trzy zbiory tylko częściowo się pokrywają."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego wpływ OPEC na światową cenę ropy naftowej jest dziś słabszy niż w latach 70. XX w.?",
+          "options": [
+            "Bo popyt na ropę naftową na świecie systematycznie maleje od lat 70.",
+            "Bo rośnie wydobycie poza kartelem, m.in. amerykańskiej ropy łupkowej, a członkowie łamią własne limity",
+            "Bo OPEC utracił wszystkie złoża na Bliskim Wschodzie",
+            "Bo cenę ropy ustala obecnie Rada Bezpieczeństwa ONZ"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kartel wpływa na cenę tylko przez kontrolę **podaży**. Gdy duża część wydobycia pochodzi spoza porozumienia (USA, Rosja, Norwegia, Brazylia), ograniczenie produkcji przez OPEC zostaje po prostu zastąpione dostawami konkurencji. Dodatkowo wysoka cena czyni opłacalnymi złoża trudno dostępne — kartel sam wzmacnia swoich rywali. Dlatego powstała szersza formuła **OPEC+**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o integracji CKE często podaje opis ugrupowania i każe je rozpoznać — kluczem jest zwrot wskazujący **szczebel drabiny**: „wspólna taryfa celna” to unia celna, „swobodny przepływ osób i kapitału” to wspólny rynek, „wspólna polityka pieniężna” to unia walutowa. Przy pytaniach o skutki członkostwa Polski w UE pisz konkretnie: fundusze strukturalne i spójności, dostęp do jednolitego rynku, swoboda podejmowania pracy oraz odpływ wykwalifikowanych pracowników (**drenaż mózgów**) jako skutek negatywny."
+        }
+      ]
+    },
+    {
+      "slug": "mierniki-ekonomiczne-pkb-pnb-i-struktura-zatrudnienia",
+      "title": "Ekonomiczne mierniki rozwoju: PKB, PNB, parytet siły nabywczej i struktura zatrudnienia",
+      "summary": "Jak mierzy się wielkość gospodarki, czym PKB różni się od PNB, po co przelicza się dochód według parytetu siły nabywczej i dlaczego udział trzech sektorów w zatrudnieniu zdradza poziom rozwoju kraju.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Zdanie \"Chiny są bogatsze od Szwajcarii\" jest jednocześnie prawdziwe i fałszywe — wszystko zależy od tego, którym miernikiem się posłużymy. Gospodarka Chin jest kilkanaście razy większa od szwajcarskiej, ale ta przypadająca na jednego mieszkańca jest kilkakrotnie mniejsza. Dlatego na maturze nigdy nie wystarczy powiedzieć \"PKB\": trzeba wiedzieć, czy chodzi o **wielkość całej gospodarki**, czy o **dochód na mieszkańca**, czy liczymy **na terytorium** czy **dla obywateli** i czy przeliczamy po kursie walutowym, czy według **parytetu siły nabywczej**. Ta lekcja porządkuje mierniki ekonomiczne; mierniki społeczne (HDI, wskaźnik Giniego) to temat kolejnej."
+        },
+        {
+          "type": "definition",
+          "term": "Produkt krajowy brutto (PKB)",
+          "text": "Łączna wartość rynkowa wszystkich **dóbr i usług finalnych** wytworzonych na **terytorium** danego państwa w ciągu roku, niezależnie od tego, kto jest właścicielem czynników produkcji. Kluczowe słowo to *finalnych*: liczy się wartość produktu gotowego, żeby nie policzyć dwa razy tej samej stali — raz w hucie, raz w samochodzie. Formalnie sumuje się **wartość dodaną** wytworzoną na każdym etapie produkcji.",
+          "note": "Kryterium PKB jest **geograficzne** — liczy się miejsce wytworzenia, a nie narodowość właściciela fabryki."
+        },
+        {
+          "type": "definition",
+          "term": "Produkt narodowy brutto (PNB), dziś częściej: dochód narodowy brutto (DNB)",
+          "text": "Łączna wartość dóbr i usług wytworzonych przez **podmioty krajowe** (obywateli i firmy danego państwa) w ciągu roku, niezależnie od tego, gdzie na świecie zostały wytworzone. Otrzymujemy go, dodając do PKB dochody uzyskane przez podmioty krajowe za granicą i odejmując dochody uzyskane w kraju przez podmioty zagraniczne — czyli uwzględniając **saldo dochodów z zagranicy**.",
+          "note": "Kryterium PNB jest **własnościowe** — liczy się to, do kogo dochód ostatecznie trafia."
+        },
+        {
+          "type": "compare",
+          "title": "PKB a PNB (DNB) — dwa różne pytania o tę samą gospodarkę",
+          "leftLabel": "PKB — produkt krajowy brutto",
+          "rightLabel": "PNB / DNB — produkt (dochód) narodowy brutto",
+          "rows": [
+            {
+              "aspect": "Odpowiada na pytanie",
+              "left": "Ile wytworzono **na terytorium** kraju?",
+              "right": "Ile zarobili **obywatele i firmy** danego kraju, gdziekolwiek pracowali?"
+            },
+            {
+              "aspect": "Zysk niemieckiej fabryki działającej w Polsce",
+              "left": "Wlicza się do PKB Polski — powstał w Polsce",
+              "right": "Wlicza się do PNB Niemiec — należy do niemieckiego właściciela"
+            },
+            {
+              "aspect": "Wynagrodzenie Polaka pracującego w Niemczech",
+              "left": "Wlicza się do PKB Niemiec",
+              "right": "Wlicza się do PNB Polski"
+            },
+            {
+              "aspect": "Kiedy jest wyższy",
+              "left": "Gdy w kraju działa dużo kapitału zagranicznego transferującego zyski za granicę — **Polska**, **Czechy**, **Węgry**, skrajnie **Irlandia**",
+              "right": "Gdy wielu obywateli pracuje za granicą i przesyła pieniądze do kraju (**transfery emigrantów**) — **Filipiny**, **Nepal**, **Tadżykistan**, kraje Ameryki Środkowej"
+            },
+            {
+              "aspect": "Do czego lepiej służy",
+              "left": "Ocena **aktywności gospodarczej** prowadzonej na obszarze kraju",
+              "right": "Ocena **zamożności mieszkańców** i realnych dochodów społeczeństwa"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Dochód na mieszkańca",
+          "expression": "\\text{PKB per capita} = \\frac{\\text{PKB}}{L}",
+          "variables": [
+            {
+              "symbol": "PKB",
+              "meaning": "produkt krajowy brutto kraju w danym roku (w USD lub w walucie krajowej)"
+            },
+            {
+              "symbol": "L",
+              "meaning": "liczba ludności kraju w tym samym roku"
+            }
+          ],
+          "caption": "Ten sam zabieg stosuje się do PNB. Dopiero przeliczenie **na mieszkańca** pozwala porównywać kraje o różnej wielkości: Indie mają PKB kilkakrotnie większe od Szwajcarii, ale PKB per capita kilkadziesiąt razy niższe."
+        },
+        {
+          "type": "definition",
+          "term": "Parytet siły nabywczej (PPP, ang. purchasing power parity)",
+          "text": "Sposób przeliczania dochodu, który uwzględnia **różnice poziomu cen** między krajami. Zamiast dzielić PKB przez bieżący kurs walutowy, przelicza się go tak, by za daną kwotę można było kupić w każdym kraju taki sam koszyk dóbr i usług; wynik podaje się w **dolarach międzynarodowych**. Ponieważ w krajach uboższych usługi, żywność i mieszkania są tańsze niż w USA, ich PKB per capita według PPP jest **wyższy** niż nominalny; w krajach o wysokim poziomie cen (Szwajcaria, Norwegia, Dania) — **niższy**.",
+          "note": "Kurs walutowy kształtują głównie towary będące przedmiotem handlu międzynarodowego, a fryzjera, czynszu czy przejazdu autobusem nie da się wyeksportować — stąd rozjazd między wartością nominalną a PPP."
+        },
+        {
+          "type": "table",
+          "title": "PKB na mieszkańca: nominalnie i według parytetu siły nabywczej",
+          "caption": "Dane orientacyjne za 2023 r. (Bank Światowy), zaokrąglone. Wartości nominalne przeliczono po kursie walutowym, wartości PPP podano w dolarach międzynarodowych.",
+          "headers": [
+            "Kraj",
+            "PKB per capita nominalnie (USD)",
+            "PKB per capita wg PPP (USD międz.)",
+            "Wniosek"
+          ],
+          "rows": [
+            [
+              "Szwajcaria",
+              "ok. 100 000",
+              "ok. 84 000",
+              "PPP niższe — bardzo wysoki poziom cen krajowych"
+            ],
+            [
+              "Stany Zjednoczone",
+              "ok. 82 000",
+              "ok. 82 000",
+              "Kraj odniesienia — obie wartości praktycznie równe"
+            ],
+            [
+              "Niemcy",
+              "ok. 53 000",
+              "ok. 66 000",
+              "PPP wyższe — ceny niższe niż w USA"
+            ],
+            [
+              "Polska",
+              "ok. 22 000",
+              "ok. 45 000",
+              "PPP ponad dwukrotnie wyższe — dystans do Zachodu mniejszy, niż sugeruje kurs walutowy"
+            ],
+            [
+              "Indie",
+              "ok. 2 500",
+              "ok. 9 000",
+              "PPP ok. 3,5 razy wyższe — bardzo niski poziom cen"
+            ],
+            [
+              "Etiopia",
+              "ok. 1 300",
+              "ok. 3 500",
+              "PPP prawie 3 razy wyższe, ale kraj i tak pozostaje wśród najuboższych"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pomyłki, które kosztują punkty najczęściej. **(1)** PKB (wielkość gospodarki) to nie to samo co PKB per capita (zamożność statystycznego mieszkańca) — Indie mają ogromne PKB i niskie PKB per capita, Luksemburg odwrotnie. **(2)** Wzrost PKB (o ile procent urosła gospodarka) to nie to samo co poziom PKB — kraj o najszybszym wzroście może wciąż być bardzo ubogi. **(3)** PKB i PNB nie są synonimami: jeśli w zadaniu pojawia się kapitał zagraniczny albo emigracja zarobkowa, prawie na pewno chodzi o różnicę między nimi."
+        },
+        {
+          "type": "classification",
+          "title": "Sektory gospodarki — podstawa analizy struktury zatrudnienia",
+          "caption": "Na maturze najczęściej stosuje się podział trójsektorowy; sektor IV wydziela się z usług.",
+          "groups": [
+            {
+              "name": "Sektor I — pierwotny",
+              "description": "Pozyskiwanie surowców i wytwarzanie żywności bezpośrednio ze środowiska. Wysoki udział w zatrudnieniu (powyżej ok. 40%) świadczy o **niskim poziomie rozwoju**: przy niskiej wydajności pracy trzeba zatrudnić bardzo wielu ludzi, by wyżywić społeczeństwo.",
+              "examples": [
+                "rolnictwo",
+                "leśnictwo",
+                "rybactwo",
+                "górnictwo (w części klasyfikacji)"
+              ]
+            },
+            {
+              "name": "Sektor II — wtórny",
+              "description": "Przetwarzanie surowców w wyroby gotowe. Jego udział rośnie w fazie **industrializacji**, a w krajach najwyżej rozwiniętych spada wskutek automatyzacji i przenoszenia produkcji do państw o tańszej sile roboczej (**dezindustrializacja**).",
+              "examples": [
+                "przemysł przetwórczy",
+                "budownictwo",
+                "energetyka"
+              ]
+            },
+            {
+              "name": "Sektor III — usługi",
+              "description": "Zaspokajanie potrzeb bez wytwarzania dóbr materialnych. Dominuje w krajach wysoko rozwiniętych (65–80% zatrudnionych), bo rosnące dochody kierują popyt ku usługom, a rolnictwo i przemysł potrzebują coraz mniej rąk do pracy.",
+              "examples": [
+                "handel",
+                "transport",
+                "turystyka",
+                "edukacja",
+                "ochrona zdrowia",
+                "administracja"
+              ]
+            },
+            {
+              "name": "Sektor IV — usługi wyspecjalizowane",
+              "description": "Wydzielona z usług część oparta na wiedzy i informacji. To ona decyduje dziś o **przewadze konkurencyjnej** gospodarek: kraj, który jedynie montuje cudze wynalazki, zatrzymuje niewielką część wartości dodanej.",
+              "examples": [
+                "badania naukowe (B+R)",
+                "informatyka",
+                "finanse i ubezpieczenia",
+                "doradztwo",
+                "szkolnictwo wyższe"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Model trzech sektorów (Clarka–Fishera): jak zmienia się struktura zatrudnienia w miarę rozwoju",
+          "caption": "Każdy kraj przechodzi przez kolejne fazy — dlatego ze struktury zatrudnienia można odczytać poziom rozwoju gospodarczego.",
+          "steps": [
+            {
+              "title": "Faza przedindustrialna — dominacja sektora I",
+              "text": "Rolnictwo jest **ekstensywne** i mało wydajne, więc zatrudnia 60–80% pracujących, a i tak ledwie zaspokaja potrzeby żywnościowe. Przemysł i usługi są szczątkowe, bo brakuje nadwyżki żywności i kapitału, które pozwoliłyby zwolnić ludzi z pracy na roli. Dziś tak wygląda gospodarka m.in. **Burundi**, **Nigru** i **Etiopii**."
+            },
+            {
+              "title": "Mechanizm przejścia — wzrost wydajności w rolnictwie",
+              "text": "Mechanizacja, nawozy i wydajniejsze odmiany sprawiają, że ta sama produkcja wymaga coraz mniej rąk. Powstaje **nadwyżka siły roboczej**, która odpływa ze wsi do miast — to jest właśnie mechanizm napędzający urbanizację i uprzemysłowienie. Bez rewolucji agrarnej nie ma industrializacji."
+            },
+            {
+              "title": "Faza industrialna — maksimum sektora II",
+              "text": "Fabryki wchłaniają ludzi zwolnionych z rolnictwa. Udział sektora II w zatrudnieniu osiąga szczyt (ok. 30–45%), szybko rośnie PKB per capita i przyspiesza urbanizacja. Współcześnie tę fazę przechodzą m.in. **Wietnam**, **Bangladesz** i **Indonezja**."
+            },
+            {
+              "title": "Faza postindustrialna — dominacja sektorów III i IV",
+              "text": "Automatyzacja i przenoszenie produkcji za granicę zmniejszają zatrudnienie w przemyśle, choć jego **produkcja** nadal rośnie — spada liczba pracowników, nie wielkość wytwarzania. Zamożniejsze społeczeństwo zgłasza popyt na usługi: zdrowie, edukację, turystykę, finanse. Usługi przekraczają 70% zatrudnionych, jak w **Niemczech**, **Francji** czy **USA**."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura zatrudnienia według sektorów w wybranych krajach",
+          "caption": "Szacunki Międzynarodowej Organizacji Pracy (ILO), ok. 2022 r., udziały zaokrąglone do pełnych procent. Kraje uszeregowano od najniższego do najwyższego poziomu rozwoju — widać systematyczne przesuwanie się zatrudnienia z sektora I do III.",
+          "labels": [
+            "Etiopia",
+            "Indie",
+            "Polska",
+            "Niemcy",
+            "USA"
+          ],
+          "unit": "%",
+          "series": [
+            {
+              "name": "Sektor I (rolnictwo)",
+              "values": [
+                63,
+                44,
+                8,
+                1,
+                2
+              ]
+            },
+            {
+              "name": "Sektor II (przemysł)",
+              "values": [
+                10,
+                25,
+                32,
+                27,
+                19
+              ]
+            },
+            {
+              "name": "Sektor III (usługi)",
+              "values": [
+                27,
+                31,
+                60,
+                72,
+                79
+              ]
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do jego znaczenia",
+          "instruction": "Połącz każdy miernik lub sektor z właściwym opisem.",
+          "pairs": [
+            {
+              "left": "PKB",
+              "right": "Wartość dóbr i usług finalnych wytworzonych na terytorium kraju"
+            },
+            {
+              "left": "PNB (DNB)",
+              "right": "Dochód wypracowany przez podmioty krajowe, także poza granicami państwa"
+            },
+            {
+              "left": "PPP",
+              "right": "Przeliczenie dochodu uwzględniające różnice poziomu cen między krajami"
+            },
+            {
+              "left": "Sektor I",
+              "right": "Rolnictwo, leśnictwo i rybactwo"
+            },
+            {
+              "left": "Sektor IV",
+              "right": "Badania naukowe, informatyka i finanse — usługi oparte na wiedzy"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W Polsce PKB jest od lat wyraźnie wyższy niż PNB (DNB). Co jest główną przyczyną tej różnicy?",
+          "options": [
+            "Polacy pracujący za granicą przesyłają do kraju duże kwoty pieniędzy",
+            "Przedsiębiorstwa z kapitałem zagranicznym wytwarzają w Polsce dochód, który następnie transferują do central za granicą",
+            "Polska notuje ujemne saldo w handlu zagranicznym",
+            "Znaczna część gospodarki Polski funkcjonuje w szarej strefie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Zyski zagranicznych firm powstają **na terytorium Polski**, więc wchodzą do polskiego PKB, ale należą do właścicieli zagranicznych, więc do polskiego PNB już nie. Pierwsza odpowiedź opisuje mechanizm działający **odwrotnie** — transfery emigrantów podnoszą PNB ponad PKB (tak jest na Filipinach). Saldo handlu zagranicznego i szara strefa nie decydują o relacji PKB–PNB."
+        },
+        {
+          "type": "quiz",
+          "question": "PKB per capita Indii liczony według parytetu siły nabywczej jest ok. 3,5 raza wyższy od nominalnego. Dlaczego?",
+          "options": [
+            "Ponieważ Indie mają bardzo dużą liczbę ludności, co zawyża przelicznik PPP",
+            "Ponieważ rupia indyjska jest walutą silniejszą od dolara amerykańskiego",
+            "Ponieważ poziom cen dóbr i usług nietransferowalnych (usług, żywności, mieszkań) jest w Indiach znacznie niższy niż w USA, więc za tę samą kwotę można kupić więcej",
+            "Ponieważ przy przeliczaniu na PPP dolicza się dochody Hindusów pracujących za granicą"
+          ],
+          "correctIndex": 2,
+          "explanation": "PPP koryguje wyłącznie **różnicę poziomu cen**. Kurs walutowy kształtują głównie towary będące przedmiotem wymiany międzynarodowej, a usługi i czynsze — najtańsze w krajach o niskich płacach — do niego nie wchodzą. Liczba ludności jest już uwzględniona w dzieleniu \"per capita\", a doliczanie dochodów z zagranicy prowadzi od PKB do PNB, a nie do PPP."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Na maturze te mierniki pojawiają się w trzech typach zadań. **Obliczeniowe**: podane PKB i liczba ludności — dziel i pilnuj jednostek oraz rzędów wielkości (mld USD ÷ mln osób = tys. USD na osobę). **Interpretacyjne**: wykres trójkątny lub słupkowy struktury zatrudnienia — z wysokiego udziału sektora I wnioskuj o niskim poziomie rozwoju, z dominacji sektora III o gospodarce postindustrialnej. **Wyjaśniające**: uzasadnij, dlaczego PKB per capita według PPP lepiej oddaje poziom życia niż wartość nominalna — w odpowiedzi musi paść argument o **różnicach poziomu cen**, a nie ogólnik \"bo jest dokładniejszy\"."
+        }
+      ]
+    },
+    {
+      "slug": "hdi-wskaznik-giniego-i-spoleczne-mierniki-rozwoju",
+      "title": "Społeczne mierniki rozwoju: HDI, wskaźnik Giniego i wskaźniki uzupełniające",
+      "summary": "Dlaczego sam dochód nie wystarcza do oceny rozwoju, z czego zbudowany jest wskaźnik rozwoju społecznego HDI, jak wskaźnik Giniego i krzywa Lorenza opisują nierówności dochodowe oraz co mierzą IHDI, GII i MPI.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Gwinea Równikowa ma dzięki ropie naftowej jedno z najwyższych w Afryce PKB per capita, a mimo to przeciętny mieszkaniec żyje tam krócej niż 62 lata i często nie kończy szkoły podstawowej. To najkrótszy dowód na to, że **dochód i rozwój to nie jest to samo**: pieniądze mogą trafiać do wąskiej grupy albo za granicę, zamiast zamieniać się w dłuższe życie i lepszą edukację. Dlatego ONZ zbudowała mierniki, które pytają nie \"ile kraj wytwarza\", lecz **\"jak długo, jak zdrowo i jak świadomie żyją jego mieszkańcy\"** — oraz jak równo dzielą się owocami wzrostu."
+        },
+        {
+          "type": "definition",
+          "term": "Wskaźnik rozwoju społecznego (HDI, ang. Human Development Index)",
+          "text": "Syntetyczny miernik publikowany od 1990 r. przez **UNDP** (Program Narodów Zjednoczonych ds. Rozwoju) w corocznym *Raporcie o rozwoju społecznym*. Przyjmuje wartości od **0 do 1** (im bliżej 1, tym wyżej rozwinięty kraj) i łączy trzy wymiary rozwoju: **zdrowie (długie życie)**, **wiedzę** i **godziwy poziom życia**. Jego siła polega na tym, że dochód traktuje jedynie jako **środek** do rozwoju człowieka, a nie jako jego cel.",
+          "note": "HDI jest liczbą niemianowaną z przedziału 0–1 — nie podaje się go w procentach ani w dolarach."
+        },
+        {
+          "type": "layers",
+          "title": "Trzy wymiary HDI i mierzące je zmienne",
+          "caption": "Każdy wymiar ma tę samą wagę — dlatego kraj bogaty, ale z krótkim trwaniem życia i słabą edukacją, nie osiągnie wysokiego HDI.",
+          "orientation": "top-down",
+          "layers": [
+            {
+              "name": "Zdrowie — długie i zdrowe życie",
+              "range": "oczekiwana długość życia w chwili urodzenia (lata)",
+              "text": "Jedna zmienna, która streszcza jakość wyżywienia, dostęp do wody pitnej, opiekę medyczną i bezpieczeństwo. Rośnie najszybciej tam, gdzie spada **umieralność niemowląt** — dlatego postęp w tym wymiarze jest tani i szybki nawet w krajach ubogich (szczepienia, kanalizacja, sole nawadniające).",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Wiedza — dostęp do edukacji",
+              "range": "średnia liczba lat nauki dorosłych + oczekiwana liczba lat nauki dzieci",
+              "text": "Dwie zmienne uśrednia się do jednego indeksu. Pierwsza opisuje **stan obecny** (ile lat nauki ma za sobą przeciętny dorosły), druga — **kierunek zmiany** (ile lat nauki czeka dziecko rozpoczynające edukację). Rozjazd między nimi zdradza kraj, który dopiero niedawno rozbudował system szkolny.",
+              "tone": "sky"
+            },
+            {
+              "name": "Dochód — godziwy poziom życia",
+              "range": "DNB (PNB) na mieszkańca według PPP",
+              "text": "Do obliczeń bierze się **logarytm** dochodu, a nie samą kwotę. To celowe: dodatkowe 1000 dolarów zmienia życie mieszkańca Czadu ogromnie, a mieszkańca Norwegii prawie wcale (**malejąca użyteczność krańcowa dochodu**). Dzięki logarytmowi bardzo bogate kraje nie odrywają się od reszty skali.",
+              "tone": "earth"
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Indeks cząstkowy — jak sprowadza się lata i dolary do skali 0–1",
+          "expression": "I = \\frac{x - x_{min}}{x_{max} - x_{min}}",
+          "variables": [
+            {
+              "symbol": "x",
+              "meaning": "rzeczywista wartość zmiennej w danym kraju (np. oczekiwana długość życia)"
+            },
+            {
+              "symbol": "x_{min}",
+              "meaning": "przyjęte przez UNDP minimum skali (dla długości życia — 20 lat)"
+            },
+            {
+              "symbol": "x_{max}",
+              "meaning": "przyjęte maksimum skali (dla długości życia — 85 lat)"
+            }
+          ],
+          "caption": "Normalizacja pozwala dodać do siebie wielkości mierzone w zupełnie różnych jednostkach — latach, latach nauki i dolarach. Przykład: przy oczekiwanej długości życia 78 lat indeks zdrowia wynosi $\\frac{78-20}{85-20} \\approx 0{,}89$."
+        },
+        {
+          "type": "formula",
+          "title": "Złożenie trzech wymiarów w jeden wskaźnik",
+          "expression": "\\text{HDI} = \\sqrt[3]{I_{zdrowia} \\cdot I_{edukacji} \\cdot I_{dochodu}}",
+          "variables": [
+            {
+              "symbol": "I_{zdrowia}",
+              "meaning": "indeks oczekiwanej długości życia"
+            },
+            {
+              "symbol": "I_{edukacji}",
+              "meaning": "indeks edukacji (średnia dwóch zmiennych oświatowych)"
+            },
+            {
+              "symbol": "I_{dochodu}",
+              "meaning": "indeks dochodu, liczony z logarytmu DNB per capita wg PPP"
+            }
+          ],
+          "caption": "Od 2010 r. UNDP stosuje **średnią geometryczną**, a nie arytmetyczną. Powód jest merytoryczny: przy średniej geometrycznej słaby wynik w jednym wymiarze **nie da się w pełni zrekompensować** świetnym wynikiem w innym — kraj bogaty, ale z fatalną edukacją, wyraźnie traci na wskaźniku. Gdy którykolwiek indeks cząstkowy dąży do zera, całe HDI też dąży do zera."
+        },
+        {
+          "type": "table",
+          "title": "Klasy krajów według HDI",
+          "caption": "Progi stosowane przez UNDP; wartości przykładowe za 2022 r. (Raport o rozwoju społecznym 2023/2024).",
+          "headers": [
+            "Klasa",
+            "Zakres HDI",
+            "Przykłady",
+            "Typowa charakterystyka"
+          ],
+          "rows": [
+            [
+              "Bardzo wysoki",
+              "0,800 i więcej",
+              "Szwajcaria 0,967; Norwegia 0,966; Polska 0,881",
+              "Długość życia powyżej 78 lat, powszechne wykształcenie średnie, dominacja usług"
+            ],
+            [
+              "Wysoki",
+              "0,700–0,799",
+              "Chiny 0,788; Brazylia 0,760",
+              "Kraje szybko doganiające, silny przemysł, rosnące miasta, duże kontrasty wewnętrzne"
+            ],
+            [
+              "Średni",
+              "0,550–0,699",
+              "Indie 0,644; Bangladesz 0,670; Kenia 0,601",
+              "Wciąż wysoki udział rolnictwa, edukacja powszechna, ale krótka; duże zróżnicowanie regionalne"
+            ],
+            [
+              "Niski",
+              "poniżej 0,550",
+              "Niger 0,394; Czad 0,394; Somalia 0,380",
+              "Głównie Afryka Subsaharyjska, wysoka umieralność, konflikty, zwykle także status LDC"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "**HDI to średnia — i to jest jego największa słabość.** Kraj może mieć przyzwoite HDI, a jednocześnie ogromne różnice między regionami, płciami czy grupami etnicznymi; średnia je zamazuje. Dlatego UNDP liczy dodatkowo **IHDI** (HDI skorygowany o nierówności): im większe rozwarstwienie, tym mocniej IHDI spada poniżej HDI — w Norwegii różnica to kilka procent, w wielu krajach Afryki i Ameryki Łacińskiej ponad 20%. Pamiętaj też, że HDI **nie uwzględnia** stanu środowiska, bezpieczeństwa ani swobód politycznych, więc nie jest miarą \"szczęścia\" ani jakości rządzenia."
+        },
+        {
+          "type": "definition",
+          "term": "Współczynnik (wskaźnik) Giniego",
+          "text": "Miara **nierówności rozkładu dochodów** w społeczeństwie, przyjmująca wartości od **0** (idealna równość — każdy zarabia tyle samo) do **1**, czyli 100% (skrajna nierówność — cały dochód trafia do jednej osoby). Oblicza się go z **krzywej Lorenza** jako stosunek pola między przekątną idealnej równości a krzywą do całego pola pod przekątną. Uwaga: wskaźnik mówi wyłącznie o **podziale** dochodu, a nie o jego wysokości — kraj ubogi i kraj zamożny mogą mieć identyczny współczynnik Giniego.",
+          "note": "Podawany bywa zarówno w skali 0–1 (np. 0,29), jak i 0–100 (np. 29) — sens jest ten sam."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Krzywa Lorenza — jak odczytać nierówność z wykresu",
+          "caption": "Oś pozioma: skumulowany odsetek ludności uszeregowanej od najuboższych. Oś pionowa: skumulowany odsetek dochodu. Im bardziej krzywa rzeczywista odchyla się od przekątnej, tym większa nierówność — pole między liniami, odniesione do pola pod przekątną, daje właśnie współczynnik Giniego. Dane przykładowe.",
+          "labels": [
+            "0%",
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "90%",
+            "100%"
+          ],
+          "unit": "% dochodu",
+          "series": [
+            {
+              "name": "Idealna równość",
+              "values": [
+                0,
+                10,
+                20,
+                30,
+                40,
+                50,
+                60,
+                70,
+                80,
+                90,
+                100
+              ]
+            },
+            {
+              "name": "Rozkład rzeczywisty",
+              "values": [
+                0,
+                2,
+                5,
+                9,
+                14,
+                20,
+                28,
+                38,
+                51,
+                68,
+                100
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Współczynnik Giniego w wybranych krajach (skala 0–100)",
+          "caption": "Dane orientacyjne Banku Światowego z lat ok. 2018–2021. Najniższe wartości notują kraje Europy Środkowej i Skandynawii z rozbudowaną redystrybucją podatkową, najwyższe — kraje o dziedzictwie skrajnie nierównego dostępu do ziemi i wykształcenia.",
+          "labels": [
+            "Słowacja",
+            "Czechy",
+            "Polska",
+            "Niemcy",
+            "USA",
+            "Brazylia",
+            "RPA"
+          ],
+          "unit": "pkt",
+          "series": [
+            {
+              "name": "Współczynnik Giniego",
+              "values": [
+                24,
+                26,
+                29,
+                32,
+                41,
+                52,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Wskaźniki uzupełniające — kiedy HDI to za mało",
+          "caption": "Wszystkie publikuje UNDP; każdy odpowiada na inne pytanie o rozwój.",
+          "groups": [
+            {
+              "name": "IHDI — HDI skorygowany o nierówności",
+              "description": "Obniża wartość HDI proporcjonalnie do skali nierówności w każdym z trzech wymiarów. **Różnica HDI − IHDI** to gotowa miara \"straty rozwojowej\" spowodowanej rozwarstwieniem społecznym.",
+              "examples": [
+                "duża strata: Brazylia, RPA, Indie",
+                "mała strata: Norwegia, Czechy, Słowenia"
+              ]
+            },
+            {
+              "name": "GII — wskaźnik nierówności płci",
+              "description": "Łączy umieralność okołoporodową, odsetek nastoletnich matek, udział kobiet w parlamencie, wykształcenie średnie kobiet i ich aktywność zawodową. Tu **im niższa wartość, tym lepiej** — odwrotnie niż w HDI.",
+              "examples": [
+                "najniższy: Dania, Norwegia, Szwajcaria",
+                "najwyższy: Jemen, Nigeria, Czad"
+              ]
+            },
+            {
+              "name": "MPI — wielowymiarowy wskaźnik ubóstwa",
+              "description": "Zamiast pytać o dochód, sprawdza faktyczne **deprywacje** gospodarstwa domowego: brak dostępu do wody, elektryczności, kanalizacji, paliwa do gotowania, lat nauki dzieci, niedożywienie. Pokazuje ubóstwo, którego próg dochodowy nie wychwytuje.",
+              "examples": [
+                "Afryka Subsaharyjska",
+                "Azja Południowa"
+              ]
+            },
+            {
+              "name": "Ubóstwo skrajne (próg Banku Światowego)",
+              "description": "Odsetek ludności żyjącej poniżej ustalonej kwoty dziennie liczonej według PPP (od 2022 r. próg to 2,15 USD dziennie). Prosty, porównywalny miernik, który pozwala śledzić globalny postęp — w skali świata odsetek ten spadł z ok. 38% w 1990 r. do niecałych 10% obecnie.",
+              "examples": [
+                "największy spadek: Chiny, Wietnam",
+                "koncentracja obecnie: Afryka Subsaharyjska"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uszereguj kraje od najwyższego do najniższego HDI",
+          "instruction": "Ustaw państwa w kolejności malejącej wartości wskaźnika rozwoju społecznego (dane za 2022 r.).",
+          "items": [
+            "Norwegia (0,966)",
+            "Polska (0,881)",
+            "Chiny (0,788)",
+            "Indie (0,644)",
+            "Niger (0,394)"
+          ],
+          "explanation": "Kolejność odpowiada klasom HDI: dwa pierwsze kraje należą do grupy o bardzo wysokim rozwoju, Chiny do wysokiego, Indie do średniego, a Niger — z najniższą na świecie średnią liczbą lat nauki i jednym z najniższych dochodów na mieszkańca — do niskiego."
+        },
+        {
+          "type": "quiz",
+          "question": "Kraj A i kraj B mają niemal identyczne PKB per capita według PPP, ale HDI kraju A wynosi 0,88, a kraju B — 0,62. Co najlepiej wyjaśnia tę różnicę?",
+          "options": [
+            "Kraj A ma znacznie mniejszą liczbę ludności niż kraj B",
+            "W kraju A dochód jest w większym stopniu przeznaczany na ochronę zdrowia i edukację, dzięki czemu jego mieszkańcy żyją dłużej i dłużej się uczą",
+            "Kraj A ma wyższy współczynnik Giniego niż kraj B",
+            "Kraj B eksportuje więcej surowców mineralnych niż kraj A"
+          ],
+          "correctIndex": 1,
+          "explanation": "Skoro wymiar dochodowy obu krajów jest taki sam, cała różnica musi pochodzić z pozostałych dwóch wymiarów: **zdrowia** i **edukacji**. To typowa sytuacja państw naftowych — wysoki dochód nie przekłada się na rozwój człowieka, jeśli nie zostanie zainwestowany w szpitale i szkoły. Liczba ludności jest już uwzględniona w przeliczeniu per capita, a wysoki Gini obniżałby raczej IHDI niż samo HDI."
+        },
+        {
+          "type": "quiz",
+          "question": "W kraju X współczynnik Giniego wynosi 0,25, a w kraju Y — 0,60. Które stwierdzenie jest poprawne?",
+          "options": [
+            "Kraj X jest zamożniejszy od kraju Y",
+            "W kraju Y dochody są rozdzielone bardziej równomiernie niż w kraju X",
+            "W kraju Y rozwarstwienie dochodowe jest większe niż w kraju X, ale z samego wskaźnika nie wynika, który kraj jest zamożniejszy",
+            "W kraju X 25% ludności żyje poniżej granicy ubóstwa"
+          ],
+          "correctIndex": 2,
+          "explanation": "Wyższa wartość współczynnika Giniego oznacza **większą nierówność**, a nie większą równość — stąd błąd odpowiedzi drugiej. Wskaźnik opisuje wyłącznie **sposób podziału** dochodu i milczy o jego poziomie, więc ubogi kraj o egalitarnym podziale może mieć niższy Gini niż kraj zamożny. Odsetek osób ubogich to zupełnie inny miernik."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Najczęstsze polecenia CKE z tego zakresu. **\"Wymień składowe HDI\"** — trzy wymiary z ich zmiennymi: oczekiwana długość życia, lata nauki (średnia i oczekiwana) oraz DNB per capita wg PPP; sama nazwa wymiaru bez zmiennej często nie wystarcza na pełny punkt. **\"Wyjaśnij, dlaczego kraj o wysokim PKB per capita może mieć niskie HDI\"** — wskaż konkretny mechanizm: dochód z eksportu surowców trafia do wąskiej elity lub za granicę i nie jest inwestowany w zdrowie i edukację. **Zadania z krzywą Lorenza** — im dalej krzywa od przekątnej, tym wyższy Gini. I zapamiętaj kierunki skal: HDI **im wyżej, tym lepiej**, Gini i GII **im niżej, tym lepiej**."
+        }
+      ]
+    },
+    {
+      "slug": "podzial-swiata-wedlug-poziomu-rozwoju-i-jego-przyczyny",
+      "title": "Podział świata według poziomu rozwoju. Północ–Południe, G7, BRICS i przyczyny zróżnicowania",
+      "summary": "Kraje wysoko rozwinięte, rozwijające się i najsłabiej rozwinięte (LDC), umowna linia Brandta, grupy G7 i BRICS oraz mechanizmy — przyrodnicze, historyczne, polityczne i gospodarcze — które utrwalają przepaść rozwojową.",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mierniki z poprzednich lekcji dają liczby; teraz trzeba je ułożyć w **mapę świata**. Okazuje się, że kraje nie rozkładają się równomiernie na skali rozwoju — tworzą wyraźne skupienia, oddzielone luką, którą od lat 80. nazywa się podziałem **Północ–Południe**. Najważniejsze pytanie brzmi jednak nie \"kto jest gdzie\", lecz **dlaczego** dystans utrzymuje się od pokoleń, mimo że niektóre kraje — jak Korea Południowa czy Chiny — potrafiły go w kilkadziesiąt lat pokonać. Odpowiedź nigdy nie jest jednoczynnikowa: składają się na nią uwarunkowania przyrodnicze, dziedzictwo kolonialne, jakość instytucji i miejsce kraju w międzynarodowym podziale pracy."
+        },
+        {
+          "type": "classification",
+          "title": "Typy państw według poziomu rozwoju społeczno-gospodarczego",
+          "caption": "Podział umowny — nie ma jednej urzędowej klasyfikacji; ONZ, Bank Światowy i MFW stosują nieco inne kryteria.",
+          "groups": [
+            {
+              "name": "Kraje wysoko rozwinięte",
+              "description": "Wysokie PKB per capita, HDI powyżej 0,800, dominacja usług i sektora IV, ujemny lub bliski zeru przyrost naturalny, wysoki poziom urbanizacji, przewaga eksportu **wyrobów przetworzonych i technologii**. To one wyznaczają światowe standardy technologiczne i kontrolują największe korporacje transnarodowe.",
+              "examples": [
+                "USA",
+                "Kanada",
+                "Japonia",
+                "Niemcy",
+                "Francja",
+                "Australia",
+                "Korea Południowa"
+              ]
+            },
+            {
+              "name": "Kraje nowo uprzemysłowione (NIC) i wschodzące gospodarki",
+              "description": "Państwa, które w ciągu kilku dekad przeszły od gospodarki rolniczej do **masowego eksportu wyrobów przemysłowych**, wykorzystując tanią, ale wykształconą siłę roboczą i napływ kapitału zagranicznego. Szybki wzrost PKB idzie tu w parze z dużymi kontrastami wewnętrznymi między metropoliami a wsią.",
+              "examples": [
+                "Chiny",
+                "Indie",
+                "Brazylia",
+                "Meksyk",
+                "Malezja",
+                "Tajlandia",
+                "Wietnam",
+                "Turcja"
+              ]
+            },
+            {
+              "name": "Kraje rozwijające się",
+              "description": "Grupa najliczniejsza i skrajnie **niejednorodna**: mieści się w niej zarówno naftowy Katar, jak i rolnicza Kenia. Cechy typowe to duży udział sektora I w zatrudnieniu, wysoki przyrost naturalny, uzależnienie eksportu od kilku surowców i niedobór kapitału krajowego.",
+              "examples": [
+                "Kenia",
+                "Egipt",
+                "Boliwia",
+                "Filipiny",
+                "Nigeria",
+                "Katar (odrębny przypadek — wysoki dochód, niska dywersyfikacja)"
+              ]
+            },
+            {
+              "name": "Kraje najsłabiej rozwinięte (LDC)",
+              "description": "Wyodrębniona przez ONZ grupa państw o najniższym dochodzie, najsłabszym kapitale ludzkim i największej podatności na wstrząsy. Objęte są preferencjami handlowymi i pomocą rozwojową. Ok. 3/4 z nich leży w **Afryce Subsaharyjskiej**.",
+              "examples": [
+                "Niger",
+                "Czad",
+                "Mali",
+                "Etiopia",
+                "Somalia",
+                "Afganistan",
+                "Haiti",
+                "Jemen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Kraje najsłabiej rozwinięte (LDC, ang. least developed countries)",
+          "text": "Kategoria ustanowiona przez ONZ w 1971 r., obejmująca obecnie ok. 45 państw (2024 r.). O zaliczeniu decydują **trzy kryteria** rozpatrywane łącznie: **niski dochód narodowy na mieszkańca**, **słaby kapitał ludzki** (wskaźnik obejmujący stan wyżywienia, umieralność, poziom edukacji) oraz **wysoka podatność ekonomiczno-środowiskowa** — czyli zależność od kilku towarów eksportowych i narażenie na klęski żywiołowe. Kraj może z tej listy **wyjść**: udało się to m.in. Botswanie, Malediwom, Samoa, Vanuatu i Bhutanowi.",
+          "note": "LDC to **podzbiór** krajów rozwijających się, a nie ich synonim — do rozwijających się zalicza się także Chiny czy Brazylię."
+        },
+        {
+          "type": "definition",
+          "term": "Podział Północ–Południe (linia Brandta)",
+          "text": "Umowny podział świata na zamożną **Północ** i uboższe **Południe**, spopularyzowany raportem Komisji Willy'ego Brandta z 1980 r. Granica biegnie mniej więcej wzdłuż **30° szerokości geograficznej północnej**, ale ma charakter **gospodarczy, a nie geograficzny**: opływa Meksyk od północy, a na Pacyfiku schodzi na południe, żeby objąć Północą **Australię i Nową Zelandię**. Podział pokazuje kluczową dysproporcję: kraje Północy skupiają ok. 1/5 ludności świata, a wytwarzają ok. 4/5 światowego PKB.",
+          "note": "Podział jest coraz mniej precyzyjny — awans Chin, Korei Południowej czy państw Zatoki Perskiej rozmył prostą linię, dlatego dziś częściej mówi się o *kontinuum* poziomów rozwoju."
+        },
+        {
+          "type": "compare",
+          "title": "Bogata Północ a uboższe Południe — kontrasty strukturalne",
+          "leftLabel": "Północ (kraje wysoko rozwinięte)",
+          "rightLabel": "Południe (kraje rozwijające się)",
+          "rows": [
+            {
+              "aspect": "Ludność a wytwarzany produkt",
+              "left": "Ok. 1/5 ludności świata, ok. 4/5 światowego PKB",
+              "right": "Ok. 4/5 ludności świata, ok. 1/5 światowego PKB"
+            },
+            {
+              "aspect": "Struktura eksportu",
+              "left": "Wyroby przetworzone, technologie, usługi finansowe i licencje — o **wysokiej wartości dodanej**",
+              "right": "Surowce mineralne i płody rolne — o niskiej i **niestabilnej cenowo** wartości"
+            },
+            {
+              "aspect": "Struktura zatrudnienia",
+              "left": "Dominacja sektorów III i IV (70–80% pracujących w usługach)",
+              "right": "Wysoki udział sektora I — w krajach LDC nawet 60–70% pracujących"
+            },
+            {
+              "aspect": "Procesy demograficzne",
+              "left": "Niski przyrost naturalny, starzenie się społeczeństw, imigracja",
+              "right": "Wysoki przyrost naturalny, społeczeństwa młode, emigracja zarobkowa"
+            },
+            {
+              "aspect": "Kapitał i technologia",
+              "left": "Nadwyżka kapitału, siedziby korporacji transnarodowych, wysokie nakłady na B+R",
+              "right": "Niedobór kapitału krajowego, zadłużenie zagraniczne, technologie importowane"
+            },
+            {
+              "aspect": "Rola w podziale pracy",
+              "left": "Projektowanie, marka, sprzedaż — najbardziej dochodowe ogniwa łańcucha wartości",
+              "right": "Wydobycie i montaż — ogniwa o najniższej marży (**pułapka średniego dochodu**)"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "G7 i BRICS — dwa bieguny gospodarczej mapy świata",
+          "caption": "Ani G7, ani BRICS nie są ugrupowaniami integracyjnymi: nie znoszą ceł ani nie tworzą wspólnego rynku. To fora współpracy i uzgadniania stanowisk.",
+          "headers": [
+            "Cecha",
+            "G7",
+            "BRICS"
+          ],
+          "rows": [
+            [
+              "Skład podstawowy",
+              "USA, Japonia, Niemcy, Wielka Brytania, Francja, Włochy, Kanada (w obradach uczestniczy też UE)",
+              "Brazylia, Rosja, Indie, Chiny, RPA; od 2024 r. m.in. Egipt, Etiopia, Iran i Zjednoczone Emiraty Arabskie"
+            ],
+            [
+              "Charakter grupy",
+              "Nieformalne forum najwyżej rozwiniętych demokracji Zachodu i Japonii",
+              "Nieformalne ugrupowanie największych gospodarek wschodzących z trzech kontynentów"
+            ],
+            [
+              "Podstawa pozycji",
+              "Wysokie PKB per capita, kapitał, technologie, waluty rezerwowe",
+              "Wielka liczba ludności, zasoby surowcowe, szybkie tempo wzrostu PKB, rosnący rynek zbytu"
+            ],
+            [
+              "Cel działania",
+              "Uzgadnianie polityki gospodarczej, klimatycznej i bezpieczeństwa; sankcje i pomoc rozwojowa",
+              "Zwiększenie wpływu krajów Południa w gospodarce światowej, wspólny Nowy Bank Rozwoju, rozliczenia poza dolarem"
+            ],
+            [
+              "Powiązana, szersza grupa",
+              "G20 — forum łączące oba bieguny, odpowiadające za ok. 4/5 światowego PKB",
+              "G20 (wszystkie państwa BRICS pierwotnej piątki są jego członkami)"
+            ]
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Kto gdzie leży: G7, BRICS i wybrane kraje LDC",
+          "caption": "Zwróć uwagę na rozmieszczenie — G7 skupia się w strefie umiarkowanej półkuli północnej, kraje LDC koncentrują się w strefie międzyzwrotnikowej, a BRICS rozciąga się przez wszystkie zamieszkane kontynenty.",
+          "center": [
+            15,
+            25
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 38.9,
+              "lng": -77.04,
+              "label": "Waszyngton, USA (G7)",
+              "text": "Największa gospodarka świata i główny ośrodek sektora IV — technologie, finanse, badania."
+            },
+            {
+              "lat": 35.68,
+              "lng": 139.69,
+              "label": "Tokio, Japonia (G7)",
+              "text": "Kraj niemal pozbawiony surowców, który zbudował pozycję na imporcie surowców i eksporcie wyrobów wysoko przetworzonych."
+            },
+            {
+              "lat": 52.52,
+              "lng": 13.4,
+              "label": "Berlin, Niemcy (G7)",
+              "text": "Największa gospodarka Unii Europejskiej, eksporter maszyn i pojazdów."
+            },
+            {
+              "lat": 39.9,
+              "lng": 116.4,
+              "label": "Pekin, Chiny (BRICS)",
+              "text": "Kraj, który w cztery dekady przeszedł od gospodarki rolniczej do roli \"fabryki świata\", a dziś inwestuje w technologie własne."
+            },
+            {
+              "lat": 28.61,
+              "lng": 77.21,
+              "label": "Nowe Delhi, Indie (BRICS)",
+              "text": "Najludniejsze państwo świata, potęga usług informatycznych, ale wciąż ok. 44% pracujących w rolnictwie."
+            },
+            {
+              "lat": -15.79,
+              "lng": -47.88,
+              "label": "Brasília, Brazylia (BRICS)",
+              "text": "Potęga rolnicza i surowcowa Ameryki Południowej, z jednym z najwyższych na świecie współczynników Giniego."
+            },
+            {
+              "lat": -25.75,
+              "lng": 28.19,
+              "label": "Pretoria, RPA (BRICS)",
+              "text": "Najbardziej uprzemysłowiona gospodarka Afryki, obciążona dziedzictwem apartheidu i skrajnymi nierównościami."
+            },
+            {
+              "lat": 13.51,
+              "lng": 2.11,
+              "label": "Niamey, Niger (LDC)",
+              "text": "Kraj śródlądowy w strefie Sahelu — jedno z najniższych HDI na świecie, bardzo wysoki przyrost naturalny, postępujące pustynnienie."
+            },
+            {
+              "lat": 9.03,
+              "lng": 38.74,
+              "label": "Addis Abeba, Etiopia (LDC)",
+              "text": "Szybko rosnąca gospodarka, ale wciąż ponad 60% pracujących w rolnictwie i brak dostępu do morza po odłączeniu Erytrei."
+            },
+            {
+              "lat": 23.81,
+              "lng": 90.41,
+              "label": "Dhaka, Bangladesz (LDC)",
+              "text": "Przykład awansu: eksport odzieży wyciągnął kraj z najgłębszego ubóstwa, a Bangladesz przygotowuje się do wyjścia z listy LDC."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny zróżnicowania poziomu rozwoju",
+          "caption": "Na maturze prawie zawsze trzeba wskazać czynniki z **różnych grup** — odpowiedź oparta wyłącznie na klimacie albo wyłącznie na kolonializmie rzadko dostaje komplet punktów.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Klimat strefy międzyzwrotnikowej sprzyja chorobom (malaria, śpiączka) i ogranicza wydajność rolnictwa na wyługowanych glebach ferralitowych. **Brak dostępu do morza** (Czad, Mali, Niger, Nepal) podnosi koszty transportu i uzależnia handel od sąsiadów. Susze, powodzie i cyklony niszczą dorobek kilku lat w kilka dni.",
+              "examples": [
+                "Sahel — pustynnienie",
+                "kraje śródlądowe Afryki",
+                "Bangladesz — powodzie"
+              ]
+            },
+            {
+              "name": "Historyczne",
+              "description": "Kolonizatorzy budowali gospodarkę **monokulturową**, nastawioną na wywóz jednego surowca, oraz linie kolejowe prowadzące od kopalni do portu, a nie łączące kraj. Nie tworzyli przemysłu przetwórczego ani elit administracyjnych. **Sztuczne granice** rozdzieliły ludy i wtłoczyły w jedno państwo wspólnoty wrogie sobie, co owocuje konfliktami do dziś.",
+              "examples": [
+                "gospodarka plantacyjna",
+                "granice geometryczne w Afryce",
+                "handel niewolnikami"
+              ]
+            },
+            {
+              "name": "Polityczne i instytucjonalne",
+              "description": "Bez stabilnego państwa, sprawnego sądownictwa i ochrony własności **nikt nie inwestuje** — ani kapitał zagraniczny, ani miejscowi przedsiębiorcy. Wojny domowe i korupcja pochłaniają środki, które mogłyby sfinansować szkoły. Paradoksem jest **klątwa surowcowa**: bogactwo złóż bywa źródłem konfliktów i korupcji zamiast rozwoju.",
+              "examples": [
+                "Demokratyczna Republika Konga",
+                "Somalia",
+                "Wenezuela"
+              ]
+            },
+            {
+              "name": "Gospodarcze",
+              "description": "Eksport surowców przy imporcie wyrobów przetworzonych oznacza **pogarszające się warunki wymiany** (terms of trade): ceny surowców są niestabilne i rosną wolniej niż ceny maszyn. Do tego dochodzi zadłużenie zagraniczne, którego obsługa pochłania budżet, oraz brak kapitału na inwestycje.",
+              "examples": [
+                "zależność od jednego surowca",
+                "spirala zadłużenia",
+                "bariery celne rynków Północy"
+              ]
+            },
+            {
+              "name": "Społeczne i demograficzne",
+              "description": "Wysoki przyrost naturalny sprawia, że wzrost PKB **rozkłada się na coraz większą liczbę osób** i PKB per capita stoi w miejscu. Niski poziom edukacji, zwłaszcza kobiet, utrwala wysoką dzietność i niską wydajność pracy. **Drenaż mózgów** zabiera najlepiej wykształconych — właśnie tych, którzy byli najdroższą inwestycją kraju.",
+              "examples": [
+                "analfabetyzm",
+                "wczesne małżeństwa",
+                "emigracja lekarzy i inżynierów"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Błędne koło ubóstwa — dlaczego bieda sama się utrwala",
+          "caption": "Mechanizm samowzmacniający się: każdy element wynika z poprzedniego i zarazem go podtrzymuje. Przerwać go może dopiero impuls z zewnątrz — inwestycja, pomoc rozwojowa albo reforma instytucji.",
+          "stages": [
+            {
+              "name": "Niskie dochody",
+              "text": "Dochód gospodarstw domowych i wpływy podatkowe państwa ledwie pokrywają bieżące potrzeby — przede wszystkim żywność."
+            },
+            {
+              "name": "Znikome oszczędności",
+              "text": "Skoro cały dochód idzie na konsumpcję, w kraju nie powstaje pula kapitału, z której można by finansować inwestycje."
+            },
+            {
+              "name": "Niskie inwestycje",
+              "text": "Brakuje pieniędzy na maszyny, nawozy, drogi, elektryczność, szkoły i szpitale. Kapitał zagraniczny omija kraj, bo ryzyko jest wysokie, a rynek mały."
+            },
+            {
+              "name": "Niska wydajność pracy",
+              "text": "Praca opiera się na sile mięśni i przestarzałych narzędziach; słabo wykształcony pracownik nie obsłuży nowoczesnej technologii, nawet gdyby ją dostał."
+            },
+            {
+              "name": "Niska produkcja i wartość dodana",
+              "text": "Kraj wytwarza mało i wyłącznie rzeczy proste — surowce, płody rolne — więc zarabia niewiele na jednostce eksportu. I koło zamyka się na powrót niskim dochodem."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Korea Południowa: z poziomu najuboższych krajów Afryki do światowej czołówki technologicznej",
+          "region": "Azja Wschodnia",
+          "text": "Na początku lat 60. XX w. Korea Południowa miała PKB na mieszkańca porównywalne z Ghaną czy Sudanem, była zniszczona wojną, przeludniona i praktycznie pozbawiona surowców mineralnych. W ciągu jednego pokolenia stała się jedną z najbardziej zaawansowanych technologicznie gospodarek świata (HDI 0,929 w 2022 r.). Zadziałało kilka mechanizmów naraz: **reforma rolna** rozdrobniła wielką własność i uwolniła siłę roboczą, państwo skierowało ogromne środki na **powszechną edukację** — najpierw podstawową, potem techniczną i wyższą — a politykę gospodarczą oparto na **industrializacji nastawionej na eksport**: najpierw tekstylia, potem stal i statki, wreszcie elektronika i motoryzacja. Konsekwentnie wspinano się po **łańcuchu wartości**: od montażu cudzych projektów do własnych patentów i marek, finansowanych z jednych z najwyższych na świecie nakładów na badania i rozwój.",
+          "takeaway": "Poziom rozwoju **nie jest zdeterminowany** zasobami przyrodniczymi ani przeszłością kolonialną — o awansie decydują inwestycje w kapitał ludzki, sprawne instytucje i konsekwentne przechodzenie do produkcji o wyższej wartości dodanej."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery uproszczenia, które psują odpowiedzi. **(1)** \"Kraje rozwijające się\" to nie grupa jednorodna — mieszczą się w niej Katar i Czad, więc unikaj zdań typu \"w krajach rozwijających się panuje głód\". **(2)** LDC to **podgrupa** krajów rozwijających się, nie ich synonim. **(3)** Określenie **\"Trzeci Świat\"** pochodzi z okresu zimnej wojny (kraje spoza bloku zachodniego i wschodniego) i dziś jest uznawane za przestarzałe — na maturze pisz \"kraje słabo rozwinięte\" lub \"Południe\". **(4)** G7 i BRICS **nie są ugrupowaniami integracyjnymi** — nie mają wspólnej taryfy celnej ani swobody przepływu osób; mylenie ich z UE czy USMCA to typowy błąd."
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj nazwę do opisu",
+          "instruction": "Połącz każde pojęcie z odpowiadającą mu charakterystyką.",
+          "pairs": [
+            {
+              "left": "G7",
+              "right": "Forum siedmiu najwyżej rozwiniętych gospodarek Zachodu i Japonii"
+            },
+            {
+              "left": "BRICS",
+              "right": "Nieformalne ugrupowanie największych gospodarek wschodzących z trzech kontynentów"
+            },
+            {
+              "left": "LDC",
+              "right": "Kategoria ONZ obejmująca kraje najsłabiej rozwinięte, objęte preferencjami handlowymi"
+            },
+            {
+              "left": "Linia Brandta",
+              "right": "Umowna granica dzieląca świat na zamożną Północ i uboższe Południe"
+            },
+            {
+              "left": "Kraje NIC",
+              "right": "Państwa, które w kilka dekad przeszły od rolnictwa do eksportu wyrobów przemysłowych"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego kraje, których eksport opiera się niemal wyłącznie na nieprzetworzonych surowcach, tak trudno nadrabiają dystans do państw wysoko rozwiniętych?",
+          "options": [
+            "Ponieważ surowce mineralne nie są przedmiotem handlu międzynarodowego",
+            "Ponieważ ceny surowców silnie się wahają i rosną wolniej niż ceny wyrobów przetworzonych, więc za tę samą ilość eksportu można kupić coraz mniej importowanych maszyn",
+            "Ponieważ Światowa Organizacja Handlu zakazuje krajom rozwijającym się eksportu surowców",
+            "Ponieważ wydobycie surowców wymaga zatrudnienia większości mieszkańców kraju"
+          ],
+          "correctIndex": 1,
+          "explanation": "To mechanizm **pogarszających się warunków wymiany (terms of trade)**. Surowiec ma niską wartość dodaną, a jego cena zależy od koniunktury i pogody; wyrób przetworzony zawiera pracę, technologię i markę, więc drożeje szybciej i stabilniej. Efektem jest strukturalna nierównowaga w handlu, którą przerywa dopiero rozwój własnego przetwórstwa — tak jak zrobiła to Korea Południowa."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie dotyczące podziału Północ–Południe jest prawdziwe?",
+          "options": [
+            "Granica podziału przebiega dokładnie wzdłuż równika",
+            "Australię i Nową Zelandię zalicza się do Północy mimo położenia na półkuli południowej, ponieważ podział ma charakter gospodarczy, a nie geograficzny",
+            "Wszystkie kraje Południa mają HDI poniżej 0,550",
+            "Podział wprowadziła ONZ w 2000 r. wraz z ogłoszeniem Milenijnych Celów Rozwoju"
+          ],
+          "correctIndex": 1,
+          "explanation": "Linia Brandta biegnie w przybliżeniu wzdłuż 30°N, ale celowo odchyla się tak, by objąć Północą Australię i Nową Zelandię — kryterium jest **poziom rozwoju**, nie szerokość geograficzna. Kraje Południa mają bardzo różne HDI (od 0,38 w Somalii po ponad 0,80 w państwach Zatoki Perskiej), a sam podział spopularyzował raport Komisji Brandta z 1980 r."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania z tego zakresu są zwykle **wyjaśniające**, a nie odtwórcze. Gdy polecenie brzmi \"podaj dwie przyczyny niskiego poziomu rozwoju kraju X\", sięgnij po czynniki z **dwóch różnych grup** (np. przyrodniczy: położenie śródlądowe podnoszące koszty transportu, oraz polityczny: konflikt zbrojny zniechęcający inwestorów) i zawsze dopisz **skutek** — sama nazwa czynnika to za mało. Przy zadaniach z mapą lub tabelą HDI uzasadniaj wnioski danymi ze źródła, a nie wiedzą ogólną. I miej gotowy **kontrprzykład awansu** (Korea Południowa, Chiny, Bangladesz) — przydaje się w poleceniach typu \"oceń, czy zróżnicowanie rozwoju jest trwałe\"."
+        }
+      ]
+    }
+  ]
+}
