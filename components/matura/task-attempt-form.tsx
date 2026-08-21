@@ -20,7 +20,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { YoutubePlayer } from "@/components/listening/youtube-player";
-import { AccentBar } from "@/components/matura/accent-bar";
+import { AccentBar } from "@/components/ui/accent-bar";
 import { cn } from "@/lib/utils";
 import { submitTaskAttempt } from "@/lib/matura/actions";
 import type { MaturaLanguage, MaturaTask, MaturaTaskItemResult } from "@/lib/types/database";

@@ -804,7 +804,7 @@ export interface TextbookGrammarExercise {
 // ============================================================================
 // Matura — CKE foreign-language matura exam prep (poziom podstawowy /
 // rozszerzony), for English and Spanish. Mirrors supabase/migrations/
-// 0013_matura.sql + 0016_matura_language.sql. Sibling to Matma (lib/matma/*),
+// 0013_matura.sql + 0020_matura_language.sql. Sibling to Matma (lib/matma/*),
 // same shape: shared content (sections/lessons/task bank) + per-user attempts,
 // mastery-per-section, mock exams, study plan.
 // ============================================================================
@@ -813,7 +813,7 @@ export type MaturaLevel = "podstawowa" | "rozszerzona";
 
 /** Languages the matura module actually has content for. Deliberately NOT
  * TargetLanguage from lib/languages.ts — that one includes 'ru', for which
- * there is no matura content and none planned. See 0016_matura_language.sql. */
+ * there is no matura content and none planned. See 0020_matura_language.sql. */
 export type MaturaLanguage = "en" | "es";
 export type MaturaTaskSource = "topic" | "past_exam" | "curated" | "ai_generated";
 export type MaturaMockExamStatus = "in_progress" | "completed" | "abandoned";
@@ -840,16 +840,85 @@ export interface MaturaSection {
   updated_at: string;
 }
 
+/** How a theory lesson is filed within its exam part — drives grouping on the
+ * section page. "strategia" is technique rather than language knowledge (how
+ * to skim a text, what to listen for on the second play). */
+export type MaturaLessonKind = "gramatyka" | "slownictwo" | "strategia";
+
 export interface MaturaLesson {
   id: string;
   section_id: string;
+  /** Unique within a section — the lesson's own URL segment. */
+  slug: string;
   title: string;
+  /** One-line description for the lesson index, so listing lessons never has
+   * to parse `content`. */
+  summary: string;
+  kind: MaturaLessonKind;
+  estimated_minutes: number;
   // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
   // to avoid a client-type <-> db-type import cycle; cast at the call site
   // (same pattern as MathLesson.content / TextbookGrammarTopic.blocks).
   content: unknown[];
   order_index: number;
   created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaLessonProgress {
+  id: string;
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Matura — vocabulary bank (0021_matura_theory.sql)
+// ----------------------------------------------------------------------------
+
+/** One of the podstawa programowa's thematic blocks, per language. */
+export interface MaturaVocabTopic {
+  id: string;
+  language: MaturaLanguage;
+  slug: string;
+  /** Polish name of the block ("Podróżowanie i turystyka"). */
+  title: string;
+  /** The same block named in the target language. */
+  title_target: string;
+  description: string;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaVocabEntry {
+  id: string;
+  topic_id: string;
+  /** The level from which this entry is expected — a rozszerzona student is
+   * responsible for podstawowa entries too. See lib/matura/vocab.ts. */
+  level: MaturaLevel;
+  term: string;
+  part_of_speech: string;
+  translation_pl: string;
+  example: string;
+  example_pl: string;
+  /** Collocations, register, false friends, irregular forms. */
+  note: string;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturaVocabProgress {
+  id: string;
+  user_id: string;
+  entry_id: string;
+  /** Leitner box 0-5; the interval per box lives in lib/matura/vocab-review.ts. */
+  box: number;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  next_review_at: string | null;
   updated_at: string;
 }
 
@@ -1065,51 +1134,6 @@ export interface MaturaWritingSubmission {
   max_points: number;
   ai_feedback: MaturaWritingAiFeedback;
   created_at: string;
-}
-
-// ----------------------------------------------------------------------------
-// Gramatyka i słownictwo (0015_matura_theory.sql) — the actual THEORY behind
-// the practice-only sections above. Grammar exercises/progress reuse the
-// existing GrammarExercise type (structurally identical columns) so
-// components/grammar/grammar-exercise-stepper.tsx works unchanged via its
-// onAttempt/onComplete override props — see that file's header comment.
-// ----------------------------------------------------------------------------
-
-export interface MaturaGrammarTopic {
-  id: string;
-  level: MaturaLevel;
-  slug: string;
-  title: string;
-  // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
-  // to avoid a client-type <-> db-type import cycle, same pattern as
-  // MaturaLesson.content elsewhere in this file; cast at the call site.
-  blocks: unknown[];
-  order_index: number;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface MaturaVocabularyWord {
-  id: string;
-  level: MaturaLevel;
-  /** CKE "krąg tematyczny" (thematic circle), e.g. "Podróżowanie i turystyka". */
-  category: string;
-  word_en: string;
-  translation_pl: string;
-  example_sentence: string | null;
-  order_index: number;
-  created_at: string;
-}
-
-export interface MaturaVocabularyProgress {
-  id: string;
-  user_id: string;
-  word_id: string;
-  correct_count: number;
-  incorrect_count: number;
-  status: MasteryStatus;
-  last_reviewed_at: string | null;
-  updated_at: string;
 }
 
 export interface BottleCounter {
@@ -1414,6 +1438,31 @@ export interface PrayerSettings {
   include_intentions_in_calendar: boolean;
   large_text: boolean;
   updated_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Modlitwa — cache pełnych tekstów Liturgii Godzin z brewiarz.pl.
+// Mirrors supabase/migrations/0019_modlitwa_brewiarz.sql. Tabele globalne:
+// SELECT dla zalogowanych, zapis wyłącznie przez service-role.
+// ----------------------------------------------------------------------------
+export interface BreviaryHourRow {
+  hour_date: string;
+  hour_id: string;
+  variant: string;
+  title: string | null;
+  subtitle: string | null;
+  /** BreviarySection[] — patrz lib/modlitwa/breviary-source.ts. */
+  sections: unknown;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface BreviaryDayRow {
+  day_date: string;
+  /** BreviaryVariant[] */
+  variants: unknown;
+  source_url: string;
+  fetched_at: string;
 }
 
 // ---------------------------------------------------------------------------

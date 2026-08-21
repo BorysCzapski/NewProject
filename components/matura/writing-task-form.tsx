@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 import { submitWritingTask } from "@/lib/matura/writing-actions";
 import { MATURA_WRITING_WORD_RANGE } from "@/lib/matura/constants";
 import { langInfo } from "@/lib/languages";
-import { AccentBar } from "@/components/matura/accent-bar";
+import { AccentBar } from "@/components/ui/accent-bar";
 import type { MaturaLanguage, MaturaLevel, MaturaWritingSubmission, MaturaWritingTask } from "@/lib/types/database";
 
 function countWords(text: string): number {
