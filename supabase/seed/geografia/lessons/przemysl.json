@@ -1553,6 +1553,316 @@
      "text": "Gdy polecenie brzmi „oceń zasadność budowy elektrowni X w regionie Y”, buduj odpowiedź trzytorowo: **warunek przyrodniczy** (wiatr, spad, usłonecznienie, stopień geotermiczny), **warunek techniczno-ekonomiczny** (sieć przesyłowa, odbiorca, dostępność terenu, koszt) i **skutek uboczny** (krajobraz, hałas, zatopienie doliny, konflikt z rolnictwem lub rybołówstwem). Argumenty za i przeciw wyprowadzaj z tych samych warunków — np. „nadmorskie położenie zapewnia silny i wyrównany wiatr, **ale zarazem** oznacza konflikt z rybołówstwem i szlakami migracji ptaków”. Takie zestawienie jest w kluczu punktowane jako pełna ocena."
     }
    ]
+  },
+  {
+   "slug": "galezie-przemyslu-przetworczego-i-srodowisko",
+   "title": "Gałęzie przemysłu przetwórczego i wpływ przemysłu na środowisko",
+   "summary": "Jak działa huta i dlaczego stal wytapia się dziś w portach, a aluminium pod norweskimi elektrowniami wodnymi; czym różnią się logiki lokalizacyjne chemii, przemysłu elektromaszynowego, spożywczego i włókienniczego oraz jak każda z tych gałęzi odciska się na poszczególnych komponentach środowiska.",
+   "readingMinutes": 14,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "„Przemysł przetwórczy” to nie jedna branża, lecz kilkanaście bardzo różnych światów. Huta przerabia miliony ton rudy i potrzebuje portu; farbiarnia potrzebuje taniej siły roboczej; wytwórnia leków — uniwersytetu. Ta lekcja porządkuje **gałęzie przetwórstwa** według tego, co dla każdej z nich jest naprawdę decydujące: jaki wsad wchodzi do zakładu, ile masy w procesie ubywa lub przybywa, ile potrzeba energii i jakich ludzi. Na końcu spojrzymy na rachunek, którego długo nie prowadzono — **koszty środowiskowe**: co dokładnie i którym komponentem środowiska płaci się za tonę stali, cukru czy tkaniny."
+    },
+    {
+     "type": "definition",
+     "term": "Hutnictwo (metalurgia)",
+     "text": "Dział przemysłu ciężkiego zajmujący się **otrzymywaniem metali z rud** oraz ich wstępną obróbką (odlewaniem, walcowaniem). Dzieli się na **hutnictwo żelaza i stali** (metalurgia żelaza, tzw. metalurgia czarna) oraz **hutnictwo metali nieżelaznych** (metalurgia kolorowa) — miedzi, aluminium, cynku, ołowiu, cyny, niklu. Hutnictwo jest klasycznym przemysłem **materiałochłonnym i energochłonnym**, a przy tym typowym przykładem produkcji, w której masa wsadu jest wielokrotnie większa od masy wyrobu.",
+     "note": "Hutnictwo dostarcza wsadu niemal całemu przemysłowi elektromaszynowemu i budownictwu — dlatego jego rozmieszczenie od XIX w. wyznaczało szkielet uprzemysłowienia całych krajów."
+    },
+    {
+     "type": "process",
+     "title": "Od rudy do blachy — pełny cykl hutniczy",
+     "caption": "Huta zintegrowana (o pełnym cyklu) prowadzi wszystkie te etapy na jednym terenie, bo półprodukty opłaca się przekazywać dalej w stanie gorącym — przerwanie ciągu oznaczałoby ponowne ich nagrzewanie.",
+     "steps": [
+      {
+       "title": "1. Przygotowanie wsadu — spiekalnia i koksownia",
+       "text": "Rudę o niskiej zawartości żelaza najpierw **wzbogaca się** i **spieka w aglomerat** albo formuje w peletki, bo drobny pył zapchałby wielki piec. Równolegle węgiel koksujący poddaje się **koksowaniu** (suchej destylacji bez dostępu powietrza) — powstaje **koks**, a jako produkty uboczne gaz koksowniczy i smoła, które zasilają przemysł chemiczny. To najbardziej uciążliwy dla środowiska etap całej huty."
+      },
+      {
+       "title": "2. Wielki piec — redukcja tlenków żelaza",
+       "text": "Do pieca ładuje się warstwami aglomerat, koks i **topnik** (wapień). Koks pełni tu **trzy funkcje naraz**: jest paliwem, jest źródłem tlenku węgla(II), który **redukuje** tlenki żelaza ($Fe_2O_3 + 3CO \\rightarrow 2Fe + 3CO_2$), i jest rusztowaniem utrzymującym przewiewność wsadu. Topnik wiąże skałę płonną w **żużel**, który jako lżejszy zbiera się nad ciekłym metalem. Produktem jest **surówka** — żelazo z domieszką ok. 4% węgla, krucha i nieprzydatna do obróbki plastycznej."
+      },
+      {
+       "title": "3. Stalownia — świeżenie surówki",
+       "text": "W **konwertorze tlenowym** przez ciekłą surówkę przedmuchuje się czysty tlen, który wypala nadmiar węgla i domieszek (siarki, fosforu, krzemu). Reakcja jest silnie egzotermiczna, więc do wsadu dodaje się **złom** jako chłodziwo. Wynik: **stal** — stop o zawartości węgla poniżej 2%, kowalny i spawalny. Alternatywna droga to **piec łukowy (elektryczny)**, który topi wyłącznie złom prądem elektrycznym."
+      },
+      {
+       "title": "4. Odlewanie ciągłe i walcownia",
+       "text": "Ciekłą stal odlewa się w sposób ciągły w kęsy, slaby i wlewki, a następnie **walcuje** na gorąco i na zimno, otrzymując blachy, pręty, szyny, rury i kształtowniki. Dopiero te wyroby trafiają do przemysłu elektromaszynowego, budownictwa i stoczni."
+      },
+      {
+       "title": "5. Dwa modele huty — zintegrowana i złomowa",
+       "text": "**Huta zintegrowana** (koksownia + spiekalnia + wielki piec + stalownia + walcownia) jest ogromna, kapitałochłonna i przywiązana do dostaw rudy i koksu. **Huta złomowa (mini-mill)** z piecem łukowym jest mała, elastyczna i lokalizuje się przy **rynku złomu i taniej energii elektrycznej** — czyli w krajach wysoko rozwiniętych, gdzie złomu jest dużo. To dlatego kraje o dojrzałej gospodarce coraz większą część stali wytwarzają z recyklingu, a nie z rudy."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Hutnictwo żelaza a hutnictwo metali nieżelaznych",
+     "leftLabel": "Hutnictwo żelaza i stali",
+     "rightLabel": "Hutnictwo metali nieżelaznych",
+     "rows": [
+      {
+       "aspect": "Bogactwo rudy",
+       "left": "Rudy stosunkowo bogate — wsad zawiera zwykle **kilkadziesiąt procent żelaza**, więc opłaca się przewozić go przez oceany.",
+       "right": "Rudy skrajnie ubogie — złoża porfirowe miedzi bywają poniżej **1% Cu**. Przewożenie takiej skały nie ma sensu."
+      },
+      {
+       "aspect": "Skutek dla lokalizacji",
+       "left": "**Orientacja przymorska**: ruda z Brazylii i Australii oraz węgiel koksujący docierają masowcami, więc huty stoją w portach (Taranto, Dunkierka, IJmuiden, Fukuyama).",
+       "right": "**Orientacja surowcowa**: zakład wzbogacania (flotacja) i huta powstają tuż przy kopalni, bo transportowałoby się głównie skałę płonną."
+      },
+      {
+       "aspect": "Rola energii",
+       "left": "Energia z koksu wchodzi do procesu razem z reduktorem — decyduje dostęp do węgla koksującego, nie do prądu.",
+       "right": "Przy aluminium i cynku kluczowa jest **energia elektryczna** do elektrolizy — stąd **orientacja energetyczna**."
+      },
+      {
+       "aspect": "Główne ośrodki",
+       "left": "Chiny (największy producent stali na świecie), Indie, Japonia, USA, Rosja; w Polsce Dąbrowa Górnicza i Kraków.",
+       "right": "Miedź — Chile (Chuquicamata, Escondida), Peru, pas miedziowy Zambii i DR Konga, Polska (LGOM: Głogów, Legnica); aluminium — Chiny, Rosja, Kanada, Zatoka Perska, Norwegia, Islandia."
+      },
+      {
+       "aspect": "Produkty uboczne",
+       "left": "Żużel wielkopiecowy (cement, podbudowa dróg), gaz wielkopiecowy, gaz koksowniczy i smoła.",
+       "right": "Przy prażeniu rud siarczkowych (cynk, ołów, miedź) powstaje $SO_2$, z którego produkuje się **kwas siarkowy** — huta staje się dostawcą przemysłu chemicznego."
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pary pojęć mylone na maturze. (1) **Surówka to nie stal** — surówka wychodzi z wielkiego pieca i ma ok. 4% węgla, stal powstaje dopiero po **świeżeniu** i ma go poniżej 2%. (2) Ciąg **boksyt → tlenek glinu → aluminium** ma dwa różne miejsca: tlenek glinu wytwarza się przy złożu w tropikach (bo z ok. 4 t boksytu zostają ok. 2 t tlenku — masy ubywa), a **elektrolizę** prowadzi się tam, gdzie prąd jest tani. (3) **Wzbogacanie rudy** (mechaniczne oddzielenie skały płonnej, np. flotacja) to nie to samo co **wytop** — pierwsze zmniejsza masę do przewiezienia, drugie wydobywa metal chemicznie."
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Ile energii kosztuje tona metalu",
+     "caption": "Wartości orientacyjne — na maturze liczy się rząd wielkości i proporcja, nie dokładna liczba. Wniosek: recykling metali jest formą oszczędzania energii, a nie tylko surowca.",
+     "labels": [
+      "Stal z rudy (wielki piec + konwertor)",
+      "Stal ze złomu (piec łukowy)",
+      "Aluminium pierwotne (elektroliza)",
+      "Aluminium z recyklingu"
+     ],
+     "series": [
+      {
+       "name": "Zużycie energii",
+       "values": [
+        5,
+        1.5,
+        15,
+        0.8
+       ]
+      }
+     ],
+     "unit": "MWh/t"
+    },
+    {
+     "type": "classification",
+     "title": "Przemysł chemiczny — trzy piętra o trzech logikach lokalizacji",
+     "caption": "Im dalej w dół tabeli, tym mniejsza masa produkcji i tym wyższa wartość jednostkowa wyrobu — i tym bardziej surowiec przestaje decydować o lokalizacji.",
+     "groups": [
+      {
+       "name": "Chemia nieorganiczna wielkotonażowa (ciężka)",
+       "description": "Produkcja masowa o małej wartości jednostkowej: kwas siarkowy, amoniak i nawozy azotowe, nawozy fosforowe, soda, chlor. Decyduje **dostęp do surowca mineralnego i do taniej energii** — amoniak wytwarza się z gazu ziemnego, więc lokalizuje się go przy gazociągu lub złożu gazu. Transport gotowego wyrobu jest kosztowny w stosunku do jego ceny, więc zakład ciągnie także ku rynkowi rolniczemu.",
+       "examples": [
+        "Puławy i Włocławek (nawozy azotowe)",
+        "Police (nawozy fosforowe, import fosforytów przez port)",
+        "Zatoka Perska i Trynidad (amoniak przy tanim gazie)",
+        "Inowrocław i Janikowo (soda przy złożach soli)"
+       ]
+      },
+      {
+       "name": "Petrochemia i wielka synteza organiczna",
+       "description": "Przerób ropy naftowej i gazu na etylen, propylen i dalej na **tworzywa sztuczne, włókna syntetyczne, kauczuk syntetyczny**. Lokalizacja przy **węzłach transportu surowca** — portach naftowych i rurociągach — oraz przy dużych ilościach wody technologicznej. Zakłady tworzą sprzężone kompleksy: produkt uboczny jednej instalacji jest wsadem następnej, więc opłaca się je stawiać obok siebie.",
+       "examples": [
+        "Rotterdam i Antwerpia",
+        "Houston i wybrzeże Zatoki Meksykańskiej",
+        "Ludwigshafen nad Renem",
+        "Płock i Gdańsk"
+       ]
+      },
+      {
+       "name": "Chemia lekka (przetwórcza) i farmaceutyczna",
+       "description": "Leki, kosmetyki, farby, detergenty, odczynniki. Masa surowca jest znikoma wobec wartości wyrobu, więc czynnik surowcowy praktycznie znika. Decydują **wykwalifikowana kadra, zaplecze badawcze (B+R) i bliskość rynku zbytu** — to gałąź zaliczana już do przemysłu wysokiej techniki, o wysokiej naukochłonności.",
+       "examples": [
+        "Bazylea (Szwajcaria)",
+        "New Jersey i Boston (USA)",
+        "Hyderabad (Indie)",
+        "okolice dużych ośrodków akademickich"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Płock — rafineria bez ani jednego szybu naftowego",
+     "region": "Nizina Mazowiecka, Polska",
+     "text": "Największy polski kompleks rafineryjno-petrochemiczny stoi w regionie, pod którym nie ma ropy naftowej. Decyzję z przełomu lat 50. i 60. XX w. przesądził zestaw zupełnie innych warunków: przez okolicę poprowadzono **rurociąg naftowy „Przyjaźń”** dostarczający ropę ze wschodu, obok płynie **Wisła** — źródło ogromnych ilości wody technologicznej i odbiornik ścieków, teren jest płaski i tani, a położenie **centralne względem głównych rynków zbytu** (Warszawa, Łódź, Śląsk) skraca drogę gotowych paliw do odbiorcy. Zaplecze siły roboczej dało rolnicze, przeludnione wówczas Mazowsze. Po 1990 r. do tego samego układu dołączył **rurociąg produktowy** i port w Gdańsku, dzięki czemu zakład przestał zależeć od jednego kierunku dostaw.",
+     "takeaway": "W przetwórstwie surowców mineralnych o lokalizacji decyduje **dostęp do surowca dowożonego**, a nie sąsiedztwo złoża. Dlatego rafinerie i petrochemia świata skupiają się w portach i na węzłach rurociągów — w Rotterdamie, Singapurze czy Houston — a nie na polach naftowych Bliskiego Wschodu czy Syberii."
+    },
+    {
+     "type": "table",
+     "title": "Trzy gałęzie, trzy różne logiki",
+     "caption": "Ta sama zasada w trzech odsłonach: lokalizację dyktuje to, co w danym procesie jest najdroższe do przewiezienia albo najtrudniejsze do zastąpienia.",
+     "headers": [
+      "Cecha",
+      "Przemysł spożywczy",
+      "Przemysł włókienniczy i odzieżowy",
+      "Przemysł elektromaszynowy"
+     ],
+     "rows": [
+      [
+       "Wsad",
+       "Płody rolne, mleko, ryby, żywiec — surowce **nietrwałe i tracące masę** w przerobie",
+       "Włókna naturalne (bawełna, wełna, len) i chemiczne — lekkie, trwałe, łatwe w transporcie",
+       "Wyroby hutnictwa, tworzywa, podzespoły elektroniczne — półprodukty od setek kooperantów"
+      ],
+      [
+       "Dominujący czynnik lokalizacji",
+       "**Surowcowy** w przetwórstwie wstępnym (cukrownie, mleczarnie, przetwórnie ryb), **rynkowy** w przetwórstwie finalnym (piekarnie, browary, wytwórnie wód)",
+       "**Koszt pracy** — gałąź od dziesięcioleci wędruje tam, gdzie płace są najniższe; w odzieży dodatkowo bliskość rynków mody",
+       "**Wykwalifikowana kadra, kooperacja z poddostawcami i zaplecze B+R**; w montażu — koszt pracy"
+      ],
+      [
+       "Dlaczego tak",
+       "Z ok. 7 t buraków powstaje ok. 1 t cukru, a mleko psuje się w kilka dni — przewożenie surowca daleko byłoby stratą masy i jakości",
+       "Udział robocizny w koszcie uszycia koszuli jest wysoki, a sama technologia prosta i łatwa do przeniesienia",
+       "Wartość wyrobu jest wysoka, więc transport tanieje względem ceny; liczy się natomiast dostęp do wiedzy i sieci poddostawców"
+      ],
+      [
+       "Mobilność międzynarodowa",
+       "Mała — zakłady wstępnego przerobu są przywiązane do zaplecza rolniczego",
+       "Bardzo duża — pierwsza gałąź przenoszona za granicę: Europa → Azja Wschodnia → Bangladesz, Wietnam, Etiopia",
+       "Rozdzielona: **montaż** przenosi się do krajów tańszych, **projektowanie i B+R** zostaje w krajach wysoko rozwiniętych"
+      ],
+      [
+       "Przykłady koncentracji",
+       "Cukrownie Kujaw i Wielkopolski, przetwórnie ryb w Peru i Chile, mleczarstwo Podlasia",
+       "Bangladesz i Wietnam (odzież), Turcja, dawna Łódź jako polski ośrodek bawełniany",
+       "Wolfsburg i Detroit (motoryzacja), Shenzhen (elektronika), Tuluza i Seattle (lotnictwo)"
+      ]
+     ]
+    },
+    {
+     "type": "classification",
+     "title": "Wpływ przemysłu na środowisko — według komponentów",
+     "caption": "Na maturze nie punktuje się zdania „przemysł zanieczyszcza środowisko”. Punktuje się wskazanie **konkretnego zanieczyszczenia**, **komponentu**, na który działa, i **mechanizmu** — dokładnie tak, jak w poniższych grupach.",
+     "groups": [
+      {
+       "name": "Atmosfera",
+       "description": "**Emisja punktowa** z wysokich kominów: dwutlenek siarki, tlenki azotu, pyły z metalami ciężkimi, dwutlenek węgla. $SO_2$ i $NO_x$ reagują z wilgocią, dając **kwaśne deszcze**, które przez cyrkulację atmosferyczną spadają setki kilometrów dalej — to zanieczyszczenie **transgraniczne**. Wysoki komin nie usuwa problemu, tylko przenosi go na sąsiadów.",
+       "examples": [
+        "Czarny Trójkąt (pogranicze Polski, Czech i Niemiec) — zamieranie borów świerkowych w latach 80. XX w.",
+        "smog przemysłowy (londyński) przy inwersji temperatury",
+        "zakwaszenie jezior Skandynawii przez emisje z Europy Zachodniej"
+       ]
+      },
+      {
+       "name": "Hydrosfera",
+       "description": "Zrzuty ścieków przemysłowych (metale ciężkie, barwniki, związki organiczne), **zanieczyszczenie termiczne** wodami chłodniczymi elektrowni — cieplejsza woda zawiera mniej rozpuszczonego tlenu, co dusi organizmy wodne i sprzyja eutrofizacji — oraz **zasolenie rzek** słonymi wodami wypompowywanymi z kopalń. Odwadnianie kopalń odkrywkowych tworzy **leje depresyjne** obniżające poziom wód gruntowych na dziesiątki kilometrów.",
+       "examples": [
+        "zasolenie Wisły i Odry wodami kopalnianymi GOP-u",
+        "lej depresyjny wokół odkrywki Bełchatowa",
+        "ścieki farbiarni w dorzeczach Azji Południowej"
+       ]
+      },
+      {
+       "name": "Litosfera i gleby",
+       "description": "**Hałdy** skały płonnej i żużla, wyrobiska, **osiadanie terenu i szkody górnicze** nad wyeksploatowanymi wyrobiskami, a wokół hut — trwałe **skażenie gleb metalami ciężkimi** (ołowiem, kadmem, cynkiem, miedzią). Metale ciężkie nie ulegają rozkładowi: raz wprowadzone do gleby zostają w niej na dziesięciolecia i wchodzą do łańcucha pokarmowego, dlatego wokół hut wyłącza się grunty z produkcji żywności.",
+       "examples": [
+        "hałdy i zapadliska Górnośląskiego Okręgu Przemysłowego",
+        "skażenie gleb cynkiem i ołowiem w rejonie Olkusza i Bukowna",
+        "strefa ochronna wokół huty miedzi w Głogowie"
+       ]
+      },
+      {
+       "name": "Krajobraz, przestrzeń i bezpieczeństwo",
+       "description": "Degradacja krajobrazu, hałas i wibracje, wyłączanie dużych powierzchni z użytkowania rolniczego i rekreacyjnego, a po zamknięciu zakładów — **tereny poprzemysłowe** wymagające kosztownej rekultywacji. Osobną kategorią jest ryzyko **poważnych awarii przemysłowych**, w których jednorazowe uwolnienie substancji powoduje skutki nieporównywalne z emisją rutynową.",
+       "examples": [
+        "Seveso we Włoszech (1976) — uwolnienie dioksyn",
+        "Bhopal w Indiach (1984) — wyciek izocyjanianu metylu",
+        "Zagłębie Ruhry — przebudowa terenów pokopalnianych na parki i muzea"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Nie mieszaj trzech rzeczy. (1) **Emisja punktowa** (przemysłowa) pochodzi z wysokich kominów i rozprasza się na dużą odległość; **niska emisja** to źródła do ok. 40 m — domowe piece i transport — i to ona najbardziej truje powietrze w samym mieście. Zakład przemysłowy nie jest sprawcą niskiej emisji. (2) **Smog przemysłowy (londyński)** to zimowa mgła z $SO_2$ i pyłów przy inwersji; **smog fotochemiczny (typu Los Angeles)** powstaje latem ze spalin pod działaniem promieniowania słonecznego. (3) **Zanieczyszczenie termiczne** dotyczy wód chłodniczych i tlenu w rzece — nie jest tym samym co **efekt cieplarniany**."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj zakład do jego charakterystycznego oddziaływania",
+     "instruction": "Każdy zakład ma „własny” typ zanieczyszczenia, wynikający wprost z technologii, którą stosuje.",
+     "pairs": [
+      {
+       "left": "Huta cynku i ołowiu",
+       "right": "Trwałe skażenie gleb kadmem i ołowiem w promieniu kilku kilometrów"
+      },
+      {
+       "left": "Elektrownia cieplna nad rzeką",
+       "right": "Podniesienie temperatury wody i spadek zawartości rozpuszczonego tlenu"
+      },
+      {
+       "left": "Farbiarnia zakładu włókienniczego",
+       "right": "Barwne ścieki obciążone chemikaliami i metalami ciężkimi"
+      },
+      {
+       "left": "Cukrownia",
+       "right": "Sezonowe ścieki o bardzo wysokim ładunku substancji organicznych"
+      },
+      {
+       "left": "Kopalnia węgla kamiennego",
+       "right": "Hałdy skały płonnej, osiadanie terenu i zasolenie rzeki"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego w Europie Zachodniej i w Japonii wielkie huty żelaza przeniosły się z zagłębi węglowych nad wybrzeże?",
+     "options": [
+      "Bo ruda i węgiel koksujący są dziś w większości importowane drogą morską, a jednocześnie spadło zużycie koksu na tonę surówki — decydujący stał się dostęp do portu",
+      "Bo woda morska zastąpiła wapień w roli topnika w wielkim piecu",
+      "Bo nad wybrzeżem obowiązują łagodniejsze normy emisji zanieczyszczeń",
+      "Bo wielkie piece muszą być chłodzone wodą o dużym zasoleniu"
+     ],
+     "correctIndex": 0,
+     "explanation": "To podręcznikowy przykład **zmienności czynników lokalizacji**. W XIX w. na tonę surówki zużywano kilka ton koksu, więc huta musiała stać na węglu — przewożenie takiej masy paliwa było najdroższą pozycją. Postęp techniczny (wzbogacona ruda, wdmuchiwanie pyłu węglowego, odzysk gazów) zredukował zużycie koksu wielokrotnie, a rewolucja w transporcie morskim uczyniła dowóz rudy z Brazylii i Australii tańszym niż z krajowych, wyczerpanych złóż. Punkt równowagi kosztów przesunął się do portu — stąd **orientacja przymorska** hut w Taranto, Dunkierce, IJmuiden czy Fukuyamie."
+    },
+    {
+     "type": "quiz",
+     "question": "Boksyt wydobywa się głównie w Gwinei, Australii i Brazylii, tlenek glinu wytwarza się zwykle w pobliżu tych kopalń, a największe huty aluminium działają m.in. w Norwegii, na Islandii i w kanadyjskim Quebecu. Co najlepiej wyjaśnia ten podział?",
+     "options": [
+      "Dwa etapy mają dwa różne czynniki wiodące: przy złożu opłaca się usunąć masę (z ok. 4 t boksytu zostają ok. 2 t tlenku glinu), a energochłonną elektrolizę prowadzi się tam, gdzie prąd jest najtańszy",
+      "Tlenek glinu ulega rozkładowi w transporcie morskim, więc trzeba go przerabiać na miejscu wydobycia",
+      "Kraje tropikalne nie dysponują pracownikami zdolnymi obsłużyć hutę aluminium",
+      "Umowy międzynarodowe zabraniają wytopu aluminium w krajach rozwijających się"
+     ],
+     "correctIndex": 0,
+     "explanation": "Rozdzielenie etapów wynika z **dwóch różnych rachunków kosztów**. Rafinacja boksytu na tlenek glinu zmniejsza masę o mniej więcej połowę, więc przeprowadzenie jej przed transportem oszczędza fracht — działa tu klasyczna **orientacja surowcowa**. Sama elektroliza pochłania rzędu kilkunastu MWh na tonę metalu, czyli energia stanowi ogromną część kosztu wytworzenia — działa **orientacja energetyczna**, a przyciągają ją kraje z tanią hydroenergią (Norwegia, Quebec), geotermią (Islandia) lub tanim gazem (Zatoka Perska). Aluminium bywa więc nazywane „skondensowaną energią elektryczną”."
+    },
+    {
+     "type": "quiz",
+     "question": "Które stwierdzenie poprawnie odróżnia emisję punktową (przemysłową) od niskiej emisji?",
+     "options": [
+      "Emisja punktowa pochodzi z wysokich kominów zakładów i rozprasza się na dużym obszarze, także poza granicami państwa; niska emisja pochodzi ze źródeł do ok. 40 m — domowych pieców i transportu — i najsilniej zanieczyszcza powietrze w bezpośrednim otoczeniu",
+      "Niska emisja to emisja o małym natężeniu, a punktowa o dużym — wysokość źródła nie ma znaczenia",
+      "Emisja punktowa dotyczy wyłącznie dwutlenku węgla, a niska emisja wyłącznie pyłów zawieszonych",
+      "Emisja punktowa występuje tylko zimą, a niska emisja tylko latem"
+     ],
+     "correctIndex": 0,
+     "explanation": "Kryterium podziału jest **wysokość źródła**, a nie wielkość ładunku zanieczyszczeń. Wysoki komin wprowadza spaliny w warstwę, w której wiatr rozprasza je na dziesiątki i setki kilometrów — dlatego przemysł odpowiada za zanieczyszczenia **transgraniczne** i kwaśne deszcze, a stężenia tuż przy zakładzie bywają niższe niż kilka kilometrów dalej. Zanieczyszczenia z niskich źródeł, zwłaszcza podczas **inwersji temperatury**, nie mają dokąd uciec i gromadzą się nad osiedlem — dlatego zimowy smog w polskich miastach obciąża głównie ogrzewanie indywidualne i transport, a nie kominy fabryk."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W zadaniach o lokalizację zakładu przetwórczego stosuj stały schemat: **jaki wsad wchodzi → czy w procesie masy ubywa, czy przybywa → który czynnik przez to dominuje → czynnik uzupełniający (energia, woda, transport, kadra, rynek)**. Ubytek masy (ruda, buraki, drewno) ciągnie zakład do surowca; przyrost masy lub nietrwałość wyrobu (piwo, pieczywo, meble) ciągnie go do rynku; wysoka energochłonność (aluminium, karbid) — do taniej energii; wysoka naukochłonność (farmacja, elektronika) — do ośrodka akademickiego. W zadaniach o środowisko nigdy nie pisz „zakład zanieczyszcza środowisko”: wskaż **substancję** ($SO_2$, metale ciężkie, ścieki organiczne), **komponent** (powietrze, wody powierzchniowe, gleby, rzeźba) i **mechanizm skutku** (zakwaszenie, ubytek tlenu, wejście do łańcucha pokarmowego). Dopiero taka odpowiedź dostaje pełną punktację."
+    }
+   ]
   }
  ]
 }

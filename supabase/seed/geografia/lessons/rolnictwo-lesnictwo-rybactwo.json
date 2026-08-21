@@ -1185,6 +1185,269 @@
           "text": "Co powtórzyć przed egzaminem: (1) potrafisz **obliczyć lesistość** z danych w tabeli i porównać ją z powierzchnią lasów — pilnuj jednostek (1 km² = 100 ha); (2) umiesz podać po dwie funkcje **produkcyjne, ekologiczne i społeczne** lasu i przypisać je do konkretnej sytuacji z mapy (las wodochronny nad zbiornikiem, pas wiatrochronny na Wielkich Równinach); (3) przy zadaniu „wyjaśnij przyczyny wylesiania na obszarze X” zawsze podawaj **mechanizm ekonomiczny**, a nie samo zjawisko — soja i bydło w Amazonii, palma oleista na Borneo, drewno opałowe w Sahelu; (4) znasz skutki wylesiania w trzech skalach: **lokalnej** (erozja, wezbrania), **regionalnej** (spadek opadów, pustynnienie) i **globalnej** (emisja $CO_2$, utrata bioróżnorodności)."
         }
       ]
+    },
+    {
+      "slug": "rybactwo-lowiska-przelowienie-akwakultura",
+      "title": "Rybactwo — łowiska świata, przełowienie i akwakultura",
+      "summary": "Dlaczego ryby gromadzą się akurat tam, gdzie się gromadzą: mechanizm powstawania łowisk (szelf, upwelling, spotkanie prądów), mapa najbogatszych obszarów połowowych, anatomia przełowienia na przykładzie dorsza nowofundlandzkiego oraz akwakultura jako najszybciej rosnący dział produkcji żywności.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Ocean zajmuje ok. **71% powierzchni Ziemi**, ale nie jest jednorodną spiżarnią: ponad **90% morskich połowów** pochodzi z wąskiego pasa wód szelfowych i ze stref wynoszenia wód głębinowych, czyli z kilku procent powierzchni oceanu. Reszta to w dużej mierze **pustynie oceaniczne** — wody ciepłe, przejrzyste i niemal pozbawione życia. Kluczem do zrozumienia geografii rybactwa jest więc jedno pytanie: **co dostarcza biogeny do oświetlonej warstwy wody?** Tam, gdzie odpowiedź jest twierdząca, powstaje **łowisko**; tam, gdzie nie — ocean pozostaje pusty. W tej lekcji prześledzimy ten mechanizm, zobaczymy, gdzie działa najsilniej, a potem zajmiemy się dwoma zjawiskami, które przesądzają o przyszłości branży: **przełowieniem** dzikich stad i eksplozją **akwakultury**."
+        },
+        {
+          "type": "definition",
+          "term": "Rybactwo, rybołówstwo, akwakultura",
+          "text": "**Rybactwo** to pojęcie najszersze — całość działalności człowieka polegającej na pozyskiwaniu organizmów wodnych. Dzieli się na dwa działy: **rybołówstwo** (połów organizmów **dziko żyjących**, morskie i śródlądowe) oraz **akwakulturę** (kontrolowany **chów i hodowla** ryb, skorupiaków, mięczaków i wodorostów; jej morską odmianę nazywa się **marikulturą**).",
+          "note": "Na maturze pojawia się polecenie typu „wyjaśnij, dlaczego produkcja rybactwa rośnie, choć wielkość połowów się nie zwiększa”. Odpowiedź tkwi w tej definicji: rośnie drugi człon — akwakultura, a nie rybołówstwo."
+        },
+        {
+          "type": "process",
+          "title": "Od światła do ławicy — jak powstaje łowisko",
+          "caption": "Każdy typ łowiska to inny sposób wykonania kroku 3. Jeśli krok 3 nie zachodzi, ocean pozostaje pustynią mimo obfitości światła.",
+          "steps": [
+            {
+              "title": "1. Strefa fotyczna — warunek świetlny",
+              "text": "Fotosynteza jest możliwa tylko w górnej warstwie wody, do której dociera światło (**strefa fotyczna**, orientacyjnie 0–100 m, przy czym realna produkcja skupia się w kilkudziesięciu górnych metrach). Głębiej **produkcja pierwotna nie zachodzi w ogóle** — cała piramida troficzna oceanu opiera się na cienkim naskórku przy powierzchni."
+            },
+            {
+              "title": "2. Wąskie gardło — biogeny",
+              "text": "Fitoplankton potrzebuje **azotanów, fosforanów i krzemionki**. Obumarłe organizmy i odchody opadają w głąb (tzw. **pompa biologiczna**), więc biogeny nieustannie **uciekają** ze strefy fotycznej w ciemne wody głębinowe. Bez mechanizmu, który je zwróci, warstwa oświetlona ubożeje — i mimo pełnego słońca powstaje **pustynia oceaniczna** (Morze Sargassowe, wnętrza wirów zwrotnikowych)."
+            },
+            {
+              "title": "3. Winda dla biogenów",
+              "text": "To krok decydujący. Biogeny wracają ku powierzchni, gdy działa: **upwelling** (wynoszenie wód głębinowych), **zimowe mieszanie konwekcyjne**, **turbulencja na styku prądów** albo gdy dostarcza je z lądu **rzeka**. W strefie międzyzwrotnikowej otwartego oceanu przeszkadza w tym trwała **termoklina** — warstwa skokowego spadku temperatury, która blokuje pionowe mieszanie."
+            },
+            {
+              "title": "4. Zakwit fitoplanktonu",
+              "text": "Światło plus biogeny dają gwałtowny wzrost **produkcji pierwotnej**. Woda mętnieje i zielenieje — dlatego strefy upwellingu widać na zdjęciach satelitarnych jako pasy wysokiego stężenia chlorofilu ciągnące się wzdłuż wybrzeży."
+            },
+            {
+              "title": "5. Zooplankton i ryby planktonożerne",
+              "text": "Za fitoplanktonem idzie **zooplankton** (widłonogi, kryl), a za nim ławice **ryb planktonożernych**: sardeli, sardynek, śledzi, szprotów. To one dają największe tonażowo połowy świata — bo stoją nisko w łańcuchu pokarmowym, a więc są liczne."
+            },
+            {
+              "title": "6. Drapieżniki i opłacalne łowisko",
+              "text": "Na ławice polują **dorsze, tuńczyki, makrele**, ssaki morskie i ptaki. Powstaje trwała, przestrzennie skoncentrowana **kumulacja biomasy** — dopiero ona czyni połów opłacalnym, bo kuter musi znajdować ryby w przewidywalnym miejscu, a nie szukać ich po całym oceanie."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Warunki sprzyjające powstawaniu łowisk",
+          "caption": "Najbogatsze łowiska świata powstają tam, gdzie nakłada się kilka z tych mechanizmów naraz.",
+          "groups": [
+            {
+              "name": "Płytki szelf kontynentalny",
+              "description": "Głębokość do ok. 200 m sprawia, że falowanie i prądy przydenne mieszają wodę **do samego dna**, więc biogeny nie mają dokąd uciec. Dodatkowo szelf dostaje materię zmytą z lądu, a jego dno stanowi dogodne **tarliska** i żerowiska. Płytko jest też taniej łowić.",
+              "examples": ["Morze Północne z Ławicą Dogger", "Wielka Ława Nowofundlandzka", "Morze Żółte i Wschodniochińskie", "Szelf Morza Beringa"]
+            },
+            {
+              "name": "Upwelling przy zachodnich wybrzeżach kontynentów",
+              "description": "Stały **pasat** wieje wzdłuż wybrzeża, a **siła Coriolisa** odchyla powierzchniowy transport wody w stronę otwartego oceanu (transport Ekmana). Powstałą lukę wypełnia zimna woda wynoszona z głębokości ok. 50–300 m, **wyjątkowo bogata w biogeny**. Stąd zimne prądy: Peruwiański, Benguelski, Kanaryjski, Kalifornijski.",
+              "examples": ["Łowisko peruwiańskie (Prąd Peruwiański)", "Łowisko benguelskie u wybrzeży Namibii", "Łowisko kalifornijskie", "Łowisko kanaryjskie (Maroko, Mauretania)"]
+            },
+            {
+              "name": "Spotkanie prądu ciepłego i zimnego",
+              "description": "Na styku mas wodnych o różnej temperaturze i gęstości powstają **silne turbulencje i zawirowania**, które wynoszą biogeny ku powierzchni. Gwałtowna zmiana temperatury działa też jak **bariera** — ryby gromadzą się przy niej, zamiast się rozpraszać.",
+              "examples": ["Nowa Fundlandia — Golfsztrom i Prąd Labradorski", "Wybrzeża Hokkaido — Kuro Siwo i Oja Siwo", "Okolice Falklandów — Prąd Brazylijski i Falklandzki"]
+            },
+            {
+              "name": "Ujścia rzek i strefy estuariowe",
+              "description": "Rzeka wnosi do morza **azot, fosfor i zawiesinę** zmytą z lądu — czyli gotowy nawóz dla fitoplanktonu. Wody słonawe estuariów pełnią zaś rolę **żłobków dla narybku**, bo są płytkie, ciepłe i trudno dostępne dla wielu drapieżników morskich.",
+              "examples": ["Ujście La Platy", "Zatoka Bengalska u ujścia Gangesu i Brahmaputry", "Delta Mekongu i jezioro Tonle Sap"]
+            },
+            {
+              "name": "Zimowe mieszanie konwekcyjne w strefie umiarkowanej i subpolarnej",
+              "description": "Zimą ochłodzona powierzchnia wody staje się gęstsza i **opada**, a w jej miejsce podnosi się woda z głębi razem z biogenami. Wiosną, gdy przybywa światła, zgromadzony zapas biogenów wywołuje gwałtowny **wiosenny zakwit planktonu** — dlatego łowiska strefy umiarkowanej są wydajne, ale wyraźnie **sezonowe**.",
+              "examples": ["Morze Norweskie i Morze Barentsa", "Północny Atlantyk wiosną", "Morze Ochockie"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Najważniejsze łowiska świata — i jedna pustynia oceaniczna dla kontrastu",
+          "caption": "Zwróć uwagę na regułę: łowiska leżą przy wybrzeżach (szelf) albo tam, gdzie prądy wynoszą i mieszają wodę. Środek oceanu jest pusty.",
+          "center": [20, -20],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -12.0,
+              "lng": -78.5,
+              "label": "Łowisko peruwiańskie",
+              "text": "Najwydajniejszy pojedynczy obszar połowowy świata, oparty na **upwellingu** wywołanym pasatem i zimnym **Prądzie Peruwiańskim (Humboldta)**. Dominuje **sardela peruwiańska (anchoveta)** — gatunek o największych połowach na świecie, przetwarzany głównie na **mączkę i olej rybny**, a więc na paszę, nie na bezpośrednią konsumpcję."
+            },
+            {
+              "lat": -23.0,
+              "lng": 13.0,
+              "label": "Łowisko benguelskie (Namibia, RPA)",
+              "text": "Ten sam mechanizm co u wybrzeży Peru, tylko po drugiej stronie Atlantyku: **Prąd Benguelski** i upwelling dają obfitość sardynek, sardeli i morszczuka. Na lądzie tuż obok rozciąga się pustynia **Namib** — ta sama zimna woda, która karmi łowisko, odbiera wybrzeżu opady."
+            },
+            {
+              "lat": 36.5,
+              "lng": -123.0,
+              "label": "Łowisko kalifornijskie",
+              "text": "Upwelling związany z **Prądem Kalifornijskim**, najsilniejszy wiosną i latem, gdy wiatr wieje wzdłuż wybrzeża z północy. Sardynki, sardele, morszczuk i kraby; obok — półpustynne wybrzeże Kalifornii i słynne mgły adwekcyjne San Francisco."
+            },
+            {
+              "lat": 41.5,
+              "lng": 144.0,
+              "label": "Łowisko japońskie (Pacyfik Północno-Zachodni)",
+              "text": "Region o **największych połowach na świecie**. Powstał na **spotkaniu ciepłego Kuro Siwo z zimnym Oja Siwo** nad szelfem Japonii i Kuryli. Łowią tu Japonia, Chiny, Rosja i obie Koree — sajrę, makrele, mintaja, kalmary i tuńczyki."
+            },
+            {
+              "lat": 46.0,
+              "lng": -50.0,
+              "label": "Wielka Ława Nowofundlandzka",
+              "text": "Rozległy, płytki **szelf** w miejscu, gdzie ciepły **Golfsztrom** spotyka zimny **Prąd Labradorski** — stąd również sławne mgły tego rejonu. Przez ponad cztery stulecia jedno z najbogatszych łowisk dorsza świata; **od 1992 r. objęte moratorium** po załamaniu się stada."
+            },
+            {
+              "lat": 54.8,
+              "lng": 2.5,
+              "label": "Morze Północne (Ławica Dogger)",
+              "text": "Klasyczne łowisko szelfowe: **morze epikontynentalne** o głębokości rzędu kilkudziesięciu metrów, mieszane przez sztormy i pływy, zasilane przez rzeki Europy Zachodniej. Śledź, makrela, dorsz, płastugi. Dziś zarządzane kwotami połowowymi i rywalizujące o przestrzeń z morskimi farmami wiatrowymi."
+            },
+            {
+              "lat": 30.0,
+              "lng": -60.0,
+              "label": "Morze Sargassowe — kontrprzykład",
+              "text": "Wnętrze północnoatlantyckiego wiru zwrotnikowego: woda ciepła, przejrzysta i **trwale uwarstwiona**. Termoklina blokuje dopływ biogenów z głębi, a prądy zamiast mieszać — krążą wokół. Efekt: mimo obfitości światła jest to **pustynia oceaniczna** o znikomej produkcji pierwotnej i bez znaczenia dla rybołówstwa."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Sardela peruwiańska i El Niño — łowisko włączane i wyłączane przez atmosferę",
+          "region": "Wybrzeże Peru i północnego Chile",
+          "text": "W latach normalnych **pasat południowo-wschodni** wieje wzdłuż wybrzeża Peru; transport Ekmana odsuwa wodę powierzchniową w stronę oceanu, a jej miejsce zajmuje zimna woda wynoszona z głębokości kilkudziesięciu metrów. Powstaje jedno z najwydajniejszych łowisk planety. Podczas zjawiska **El Niño** pasaty słabną lub odwracają kierunek, ciepła woda z zachodniego Pacyfiku napływa nad wybrzeże Ameryki Południowej, a **termoklina się obniża**. Upwelling formalnie nadal działa — ale wynosi teraz wodę ciepłą i **ubogą w biogeny**. Produkcja pierwotna się załamuje, ławice sardeli rozpraszają się lub schodzą głębiej, a połowy spadają dramatycznie. Tak stało się w latach 1972–1973: połowy sardeli runęły z ok. 13 mln t (1970 r.) do ok. 2 mln t. Bezpośrednim wyzwalaczem było El Niño, ale stado było już wcześniej **przełowione**, więc nie miało rezerwy, by przetrwać naturalny wstrząs.",
+          "takeaway": "El Niño pokazuje, że łowisko nie jest zasobem „leżącym” w danym miejscu, lecz **efektem działającego mechanizmu**: gdy ustaje dopływ biogenów do strefy fotycznej, ryby znikają w ciągu jednego sezonu. Zdrowe stado znosi taki wstrząs znacznie lepiej niż przełowione — presja połowowa i zmienność klimatu **wzmacniają się nawzajem**."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pomyłki, które kosztują punkty. **(1) Upwelling to nie to samo co spotkanie prądów**: upwelling jest ruchem **pionowym**, wywołanym wiatrem i siłą Coriolisa u zachodnich wybrzeży kontynentów; spotkanie prądów to **pozioma konwergencja** dwóch mas wodnych i turbulencja na ich styku. **(2) Nie pisz, że „zimna woda sprzyja rybom”** — przyczyną obfitości nie jest niska temperatura, lecz **biogeny** przyniesione z głębi; niska temperatura jest tylko sygnałem, że woda przyszła z dołu. **(3) Rybactwo ≠ rybołówstwo** — rybactwo obejmuje także akwakulturę. **(4) Przełowienie ≠ wyginięcie gatunku**: przełowione stado może liczyć jeszcze miliony osobników, ale jest zbyt małe, by opłacało się je łowić i by szybko się odbudowało."
+        },
+        {
+          "type": "definition",
+          "term": "Przełowienie (nadmierna eksploatacja stada)",
+          "text": "Sytuacja, w której **wielkość połowów przekracza zdolność stada do odtworzenia się** — z populacji ubywa więcej ryb, niż przybywa dzięki rozrodowi i wzrostowi, więc biomasa stada tarłowego maleje z roku na rok. Granicę bezpiecznej eksploatacji wyznacza **maksymalny podtrzymywalny połów (MSY)** — największy roczny odłów, który nie zmniejsza stada. Najlepszym wskaźnikiem ostrzegawczym jest **połów na jednostkę nakładu**, $CPUE = \\frac{C}{f}$: jeśli przy tym samym tonażu połowu ($C$) rośnie nakład ($f$ — czas połowu, liczba kutrów, długość sieci), stado już się kurczy.",
+          "note": "Objawy przełowienia poza spadkiem CPUE: malejąca **średnia długość i wiek** łowionych ryb (jako pierwsze znikają osobniki najstarsze i najpłodniejsze) oraz przechodzenie flot na gatunki **niższych poziomów troficznych**, zwane „łowieniem w dół łańcucha pokarmowego”. Według FAO ok. **35% morskich stad ryb** było w 2019 r. eksploatowanych na poziomie niezrównoważonym."
+        },
+        {
+          "type": "case-study",
+          "title": "Kolaps dorsza nowofundlandzkiego — podręcznikowy przykład przełowienia",
+          "region": "Wielka Ława Nowofundlandzka, Kanada",
+          "text": "Dorsza z Wielkiej Ławy łowiono od XVI w. i przez stulecia uchodził on za zasób niewyczerpalny — połowy prowadzono z żaglowców, sezonowo, na haczyki. Po II wojnie światowej na łowisko weszły **trawlery-przetwórnie**: statki zdolne łowić przez całą dobę i w każdą pogodę, wyposażone w sonar do lokalizacji ławic i zamrażalnię na pokładzie. Połowy dorsza wystrzeliły, osiągając szczyt ok. **810 tys. t w 1968 r.**, po czym zaczęły spadać. W 1977 r. Kanada wprowadziła 200-milową **wyłączną strefę ekonomiczną**, wypierając floty zagraniczne — ale jednocześnie rozbudowała własną flotę i utrzymała wysokie kwoty, opierając je na zbyt optymistycznych ocenach stanu stada. W **1992 r.** rząd Kanady ogłosił **moratorium** na połowy dorsza: biomasa stada tarłowego spadła do kilku procent stanu wyjściowego. Pracę straciło ok. **30–40 tys. osób**. Mimo ponad trzydziestu lat ochrony stado do dziś nie wróciło do dawnej liczebności.",
+          "takeaway": "Przełowienie rzadko wynika ze złej woli — wynika z **postępu technicznego wyprzedzającego wiedzę o zasobie** i z presji społecznej na utrzymanie miejsc pracy. Wniosek geograficzny: zasób odnawialny przestaje być odnawialny po przekroczeniu progu regeneracji, a odbudowa ekosystemu trwa **dziesiątki lat** albo nie następuje wcale, bo zwolnioną niszę zajmują inne gatunki."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Światowa produkcja rybactwa: połowy a akwakultura",
+          "caption": "Dane FAO, produkcja zwierząt wodnych (bez wodorostów). Połowy obejmują rybołówstwo morskie i śródlądowe. Zwróć uwagę na kształt obu linii: jedna jest płaska od trzydziestu lat, druga rośnie niemal liniowo.",
+          "unit": "mln t",
+          "labels": ["1990", "2000", "2010", "2020"],
+          "series": [
+            { "name": "Połowy (rybołówstwo)", "values": [85, 95, 88, 90] },
+            { "name": "Akwakultura", "values": [13, 32, 59, 88] }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Rybołówstwo a akwakultura",
+          "leftLabel": "Rybołówstwo (połów dzikich ryb)",
+          "rightLabel": "Akwakultura (chów i hodowla)",
+          "rows": [
+            {
+              "aspect": "Charakter działalności",
+              "left": "**Zbieractwo i łowiectwo w skali przemysłowej** — człowiek pobiera to, co wyprodukowała przyroda, i nie kontroluje ani rozrodu, ani wzrostu ryb.",
+              "right": "**Produkcja typu rolniczego** w środowisku wodnym — kontrolowany rozród, żywienie, obsada i termin odłowu; odpowiednik chowu zwierząt na lądzie."
+            },
+            {
+              "aspect": "Co ogranicza wielkość produkcji",
+              "left": "**Zdolność odtwórcza stada (MSY)** — bariera przyrodnicza. Po jej przekroczeniu połowy spadają mimo rosnących nakładów.",
+              "right": "**Kapitał, pasza, dostęp do wody i przestrzeni** — bariera ekonomiczna, którą można przesuwać inwestycjami."
+            },
+            {
+              "aspect": "Trend produkcji od 1990 r.",
+              "left": "Ustabilizowana na poziomie ok. **90 mln t** rocznie — mimo lepszych statków, sonarów i sieci wzrost się zatrzymał, bo zabrakło ryb.",
+              "right": "Wzrost z ok. **13 do ok. 88 mln t** (1990–2020) — najszybciej rosnący dział produkcji żywności na świecie."
+            },
+            {
+              "aspect": "Rozmieszczenie",
+              "left": "Szelfy i strefy upwellingu: Pacyfik Północno-Zachodni, wybrzeża Peru i Chile, Atlantyk Północno-Wschodni.",
+              "right": "Silna dominacja **Azji** — same Chiny dostarczają ponad połowę światowej produkcji; w Europie liczą się Norwegia (łosoś) i kraje z chowem stawowym, w tym Polska (karp, pstrąg)."
+            },
+            {
+              "aspect": "Główne zagrożenia dla środowiska",
+              "left": "**Przełowienie**, **przyłów** (bycatch — delfiny, żółwie, ptaki), niszczenie dna **włokami dennymi**, połowy nielegalne i nieraportowane (**IUU**).",
+              "right": "Wycinanie **lasów namorzynowych** pod stawy krewetkowe, **eutrofizacja** wód, choroby i antybiotyki, zużycie **mączki rybnej** z dzikich połowów jako paszy."
+            },
+            {
+              "aspect": "Znaczenie dla wyżywienia",
+              "left": "Znaczna część połowu (zwłaszcza sardela) trafia nie na talerz, lecz na **paszę** dla zwierząt gospodarskich i ryb hodowlanych.",
+              "right": "Od ok. 2014 r. dostarcza **większość ryb spożywanych bezpośrednio przez ludzi**; kluczowe źródło białka zwierzęcego w Azji Południowo-Wschodniej."
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Łowisko a mechanizm, któremu zawdzięcza swoje bogactwo",
+          "instruction": "Dopasuj obszar do procesu, który dostarcza biogeny do strefy fotycznej — lub, w jednym przypadku, ich dopływ blokuje.",
+          "pairs": [
+            {
+              "left": "Łowisko peruwiańskie",
+              "right": "Upwelling wywołany pasatem wiejącym wzdłuż wybrzeża i zimny Prąd Peruwiański"
+            },
+            {
+              "left": "Wielka Ława Nowofundlandzka",
+              "right": "Rozległy szelf w miejscu spotkania ciepłego Golfsztromu z zimnym Prądem Labradorskim"
+            },
+            {
+              "left": "Łowisko u wybrzeży Hokkaido",
+              "right": "Turbulencja na styku ciepłego Kuro Siwo i zimnego Oja Siwo"
+            },
+            {
+              "left": "Morze Północne z Ławicą Dogger",
+              "right": "Płytkie morze epikontynentalne mieszane sztormami i pływami oraz zasilane przez rzeki"
+            },
+            {
+              "left": "Morze Sargassowe",
+              "right": "Trwała termoklina we wnętrzu wiru zwrotnikowego odcinająca dopływ biogenów z głębi"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Jedne z najbogatszych łowisk świata leżą u zachodnich wybrzeży Ameryki Południowej i Afryki — czyli tam, gdzie na lądzie rozciągają się pustynie Atakama i Namib. Jak wyjaśnić to zestawienie?",
+          "options": [
+            "Zimna woda rozpuszcza więcej tlenu, a to wystarcza, by rozwinął się bujny fitoplankton",
+            "Stały pasat i siła Coriolisa odsuwają wodę powierzchniową od brzegu, a jej miejsce zajmuje wynoszona z głębin woda bogata w biogeny; ta sama zimna woda ochładza powietrze przy wybrzeżu i blokuje opady na lądzie",
+            "Rzeki spływające z Andów i z Wyżyny Południowoafrykańskiej dostarczają do oceanu ogromne ilości materii organicznej",
+            "Ciepłe prądy morskie podnoszą temperaturę wody przybrzeżnej, przyspieszając rozmnażanie ryb, a jednocześnie osuszają wybrzeże"
+          ],
+          "correctIndex": 1,
+          "explanation": "Za oba zjawiska odpowiada **ten sam mechanizm**. Pasat wieje wzdłuż wybrzeża, transport Ekmana odchyla wodę powierzchniową w stronę otwartego oceanu, a lukę wypełnia zimna woda z głębokości kilkudziesięciu–kilkuset metrów, **naładowana azotanami i fosforanami** — stąd zakwit planktonu i łowisko. Ta sama zimna woda **ochładza dolną warstwę powietrza** i tworzy inwersję termiczną: powietrze nie unosi się, nie powstają chmury konwekcyjne, nie ma opadu — rozwija się **pustynia adwekcyjna**. Odpowiedź A myli objaw z przyczyną (czynnikiem ograniczającym w oceanie są biogeny, nie tlen), C jest fałszywa faktograficznie (to obszary skrajnie suche, bez stałych rzek uchodzących do oceanu), a D odwraca kierunek — prądy są tam **zimne**."
+        },
+        {
+          "type": "quiz",
+          "question": "Flota pewnego kraju łowi rocznie mniej więcej tyle samo ton ryb co dekadę temu, ale kutry spędzają na morzu dwa razy więcej czasu, zapuszczają się dalej od portów, a łowione ryby są przeciętnie mniejsze i młodsze. Co z tego wynika?",
+          "options": [
+            "Stado jest przełowione: spadł połów na jednostkę nakładu (CPUE), a z populacji zniknęły osobniki najstarsze i najpłodniejsze — stały tonaż jest maskowany rosnącym nakładem",
+            "Stado jest w dobrym stanie, skoro roczny tonaż połowu utrzymuje się na niezmienionym poziomie",
+            "To dowód, że kwoty połowowe ustalono zbyt nisko i należy je podnieść, by wykorzystać potencjał łowiska",
+            "Zmiana wynika wyłącznie ze wzrostu cen paliwa, który zmusza kutry do dłuższych rejsów"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sam tonaż połowu jest **wskaźnikiem mylącym**, bo można go utrzymać, dokładając statków, czasu i sprzętu. Dlatego stan stada ocenia się przez $CPUE = \\frac{C}{f}$: tutaj $C$ jest stałe, a $f$ wzrosło dwukrotnie, więc **CPUE spadł o połowę** — ryb w wodzie jest znacznie mniej. Potwierdzają to dwa dodatkowe objawy: wydłużanie tras (wyczerpanie łowisk położonych bliżej) oraz **spadek średniej długości i wieku** ryb, typowy dla stada, z którego presja połowowa usunęła najstarsze osobniki — a to właśnie one składają najwięcej ikry, więc zdolność odtwórcza stada dodatkowo maleje. Podniesienie kwot (odpowiedź C) przyspieszyłoby kolaps — dokładnie tak, jak stało się z dorszem nowofundlandzkim."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Co powtórzyć przed egzaminem: (1) potrafisz **wyjaśnić mechanizm upwellingu** w trzech krokach — wiatr wzdłuż wybrzeża → transport Ekmana odsuwający wodę od brzegu → wynoszenie wody bogatej w biogeny — i powiązać go z **pustyniami adwekcyjnymi** na sąsiednim lądzie; (2) umiesz przypisać do każdego z głównych łowisk świata **właściwy czynnik** (szelf, upwelling, spotkanie prądów, ujście rzeki) i podać prąd morski z nazwy; (3) przy pytaniu o stan zasobów odwołujesz się do **CPUE, MSY i struktury wiekowej połowu**, a nie do samego tonażu; (4) znasz przykład kolapsu łowiska (**dorsz nowofundlandzki, 1992 r.**) oraz przykład wpływu zmienności klimatu na połowy (**El Niño a sardela peruwiańska**); (5) potrafisz omówić **akwakulturę** dwustronnie — jako odpowiedź na barierę przyrodniczą rybołówstwa i jednocześnie źródło nowych problemów: wycinania namorzynów, eutrofizacji wód i popytu na mączkę rybną."
+        }
+      ]
     }
   ]
 }
