@@ -11,13 +11,13 @@
 
 delete from matura_tasks
 where source = 'curated'
-  and section_id in (select id from matura_sections where slug = 'srodki-jezykowe');
+  and section_id in (select id from matura_sections where language = 'en' and slug = 'srodki-jezykowe');
 
 -- ----------------------------------------------------------------------------
 -- Poziom podstawowy — zadanie 1: słowotwórstwo
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Uzupełnij zdania, przekształcając podane w nawiasach wyrazy tak, aby powstały poprawne pod względem gramatycznym i logicznym zdania. Wpisz tylko brakujący wyraz.",
@@ -36,7 +36,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom podstawowy — zadanie 2: wybór wielokrotny
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Wybierz odpowiedź (A, B, C lub D), która najlepiej pasuje do luki w zdaniu.",
@@ -55,7 +55,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom podstawowy — zadanie 3: parafraza jednowyrazowa
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Uzupełnij drugie zdanie jednym wyrazem tak, aby zachować znaczenie zdania pierwszego.",
@@ -73,7 +73,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 1: parafraza ze słowem kluczowym
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Uzupełnij drugie zdanie, używając od dwóch do pięciu wyrazów, tak aby zachować znaczenie zdania pierwszego. Wykorzystaj podane słowo kluczowe w niezmienionej formie.",
@@ -92,7 +92,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 2: słowotwórstwo (zaawansowane)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Uzupełnij zdania, przekształcając podane w nawiasach wyrazy tak, aby powstały poprawne pod względem gramatycznym i logicznym zdania. Wpisz tylko brakujący wyraz.",
@@ -111,7 +111,7 @@ insert into matura_tasks (section_id, content, points_max, source, source_metada
 -- Poziom rozszerzony — zadanie 3: tekst z lukami (spójniki, inwersje)
 -- ----------------------------------------------------------------------------
 insert into matura_tasks (section_id, content, points_max, source, source_metadata) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'srodki-jezykowe'),
   $c$
   {
     "instructions": "Uzupełnij zdania, wpisując w każdą lukę jeden brakujący wyraz.",

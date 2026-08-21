@@ -25,9 +25,11 @@ import "server-only";
 // debug code that runs at import time).
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
 import { askAIForJSON } from "@/lib/ai";
+import { langGenitive, langInfo } from "@/lib/languages";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type {
   MaturaCuratedMetadata,
+  MaturaLanguage,
   MaturaLevel,
   MaturaSection,
   MaturaTaskItem,
@@ -36,6 +38,7 @@ import type {
 
 export interface MaturaPdfImportSummary {
   filename: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   srodkiJezykoweFound: number;
   srodkiJezykoweInserted: number;
@@ -101,10 +104,11 @@ const EXACT_MATCH_TASK_SCHEMA = {
   required: ["instructions", "items"],
 };
 
-function buildSystemPrompt(level: MaturaLevel, hasAnswerKey: boolean): string {
+function buildSystemPrompt(language: MaturaLanguage, level: MaturaLevel, hasAnswerKey: boolean): string {
+  const langLocative = langInfo(language).plLocative;
   return (
     "Jesteś redaktorem treści porządkującym tekst wyodrębniony z PDF-a arkusza maturalnego z języka " +
-    `angielskiego (poziom ${level}) w ustrukturyzowane dane do bazy zadań. Tekst pochodzi z automatycznej ` +
+    `${langGenitive(language)} (poziom ${level}) w ustrukturyzowane dane do bazy zadań. Tekst pochodzi z automatycznej ` +
     "ekstrakcji z PDF-a i może być zniekształcony: złamane linie, brakujące znaki, wymieszana kolejność. " +
     "Rozpoznaj i wyodrębnij TRZY typy zadań, każde do osobnej listy:\n" +
     "1) srodkiJezykowe — zadania „Znajomość środków językowych”: słowotwórstwo, parafrazy zdań, wybór " +
@@ -115,8 +119,8 @@ function buildSystemPrompt(level: MaturaLevel, hasAnswerKey: boolean): string {
     "3) pisanie — zadanie „Wypowiedź pisemna”: instructions (treść polecenia), contentPoints (lista " +
     "wymaganych podpunktów po polsku), minWords/maxWords (jeśli PDF nie podaje wprost, użyj 100-150 dla " +
     "podstawowej albo 200-250 dla rozszerzonej), formType (email/blog_post/forum_post dla podstawowej, " +
-    "rozprawka_za_i_przeciw dla rozszerzonej). KRYTYCZNE: modelAnswer MUSISZ napisać sam/a od zera, PO " +
-    "ANGIELSKU — NIGDY nie kopiuj żadnego przykładowego/wzorcowego tekstu, który mógłby się znajdować w " +
+    "rozprawka_za_i_przeciw dla rozszerzonej). KRYTYCZNE: modelAnswer MUSISZ napisać sam/a od zera, " +
+    `W JĘZYKU ${langLocative.toUpperCase()} — NIGDY nie kopiuj żadnego przykładowego/wzorcowego tekstu, który mógłby się znajdować w ` +
     "źródłowym PDF-ie (prawa autorskie) — napisz WŁASNY, oryginalny tekst spełniający polecenie na pełną " +
     "liczbę punktów, w wymaganym zakresie słów. modelAnswerNotes: krótkie uzasadnienie po polsku, dlaczego " +
     "ten tekst zasługuje na pełną punktację.\n\n" +
@@ -128,7 +132,7 @@ function buildSystemPrompt(level: MaturaLevel, hasAnswerKey: boolean): string {
       ? "Dołączono również tekst z KLUCZA ODPOWIEDZI (osobny plik) — ZAWSZE preferuj poprawne odpowiedzi " +
         "z klucza nad własnym oszacowaniem, jeśli klucz jednoznacznie wskazuje odpowiedź do danego zadania.\n\n"
       : "Nie dołączono klucza odpowiedzi — dla zadań zamkniętych (środki językowe, czytanie) musisz " +
-        "samodzielnie wywnioskować poprawną odpowiedź na podstawie własnej znajomości języka angielskiego " +
+        `samodzielnie wywnioskować poprawną odpowiedź na podstawie własnej znajomości języka ${langGenitive(language)} ` +
         "i kontekstu zadania. Rób to najlepiej jak potrafisz — administrator zweryfikuje wynik ręcznie.\n\n") +
     "Jeśli fragment jest zbyt zniekształcony by wiernie go odtworzyć, i tak zwróć najlepszą możliwą próbę " +
     "— administrator przejrzy i poprawi wynik ręcznie, nie musisz być idealny. Jeśli któryś z trzech typów " +
@@ -150,7 +154,12 @@ const IMPORT_SCHEMA = {
         contentPoints: { type: "array", items: { type: "string" } },
         minWords: { type: "number" },
         maxWords: { type: "number" },
-        modelAnswer: { type: "string", description: "ORYGINALNY tekst napisany od zera przez Ciebie, po angielsku." },
+        modelAnswer: {
+          type: "string",
+          // Which language, exactly, is pinned by buildSystemPrompt — this
+          // schema object is shared across languages, so it must not name one.
+          description: "ORYGINALNY tekst napisany od zera przez Ciebie, w języku obcym tego arkusza.",
+        },
         modelAnswerNotes: { type: "string" },
       },
       required: ["formType", "instructions", "contentPoints", "minWords", "maxWords", "modelAnswer", "modelAnswerNotes"],
@@ -174,6 +183,7 @@ async function extractPdfText(buffer: Buffer): Promise<string> {
 async function structureArkusz(
   arkuszText: string,
   answerKeyText: string | null,
+  language: MaturaLanguage,
   level: MaturaLevel
 ): Promise<StructuredExtraction> {
   const prompt =
@@ -182,7 +192,7 @@ async function structureArkusz(
 
   try {
     return await askAIForJSON<StructuredExtraction>({
-      system: buildSystemPrompt(level, !!answerKeyText),
+      system: buildSystemPrompt(language, level, !!answerKeyText),
       prompt,
       schema: IMPORT_SCHEMA,
       maxTokens: DEFAULT_MAX_COMPLETION_TOKENS,
@@ -190,7 +200,7 @@ async function structureArkusz(
   } catch (err) {
     console.error("[matura] structureArkusz failed, retrying smaller:", err);
     return await askAIForJSON<StructuredExtraction>({
-      system: buildSystemPrompt(level, !!answerKeyText),
+      system: buildSystemPrompt(language, level, !!answerKeyText),
       prompt: `--- TEKST ARKUSZA ---\n${truncate(arkuszText, Math.floor(MAX_PROMPT_CHARS / 2))}`,
       schema: IMPORT_SCHEMA,
       maxTokens: RETRY_MAX_COMPLETION_TOKENS,
@@ -206,10 +216,16 @@ function normalizeItems(items: MaturaTaskItem[]): MaturaTaskItem[] {
   }));
 }
 
-async function getSectionId(supabase: SupabaseClient, level: MaturaLevel, slug: string): Promise<string | null> {
+async function getSectionId(
+  supabase: SupabaseClient,
+  language: MaturaLanguage,
+  level: MaturaLevel,
+  slug: string
+): Promise<string | null> {
   const { data } = await supabase
     .from("matura_sections")
     .select("id")
+    .eq("language", language)
     .eq("level", level)
     .eq("slug", slug)
     .maybeSingle();
@@ -222,6 +238,7 @@ async function getSectionId(supabase: SupabaseClient, level: MaturaLevel, slug: 
  * summary.errors, same resilience rule as lib/matma/import-pdf.ts. */
 export async function importMaturaArkuszPdf(
   supabase: SupabaseClient,
+  language: MaturaLanguage,
   level: MaturaLevel,
   arkuszBuffer: Buffer,
   arkuszFilename: string,
@@ -231,6 +248,7 @@ export async function importMaturaArkuszPdf(
 ): Promise<MaturaPdfImportSummary> {
   const summary: MaturaPdfImportSummary = {
     filename: arkuszFilename,
+    language,
     level,
     srodkiJezykoweFound: 0,
     srodkiJezykoweInserted: 0,
@@ -264,7 +282,7 @@ export async function importMaturaArkuszPdf(
 
   let structured: StructuredExtraction;
   try {
-    structured = await structureArkusz(arkuszText, answerKeyText, level);
+    structured = await structureArkusz(arkuszText, answerKeyText, language, level);
   } catch (err) {
     summary.errors.push(`AI nie ustrukturyzowało treści PDF-a: ${errMessage(err)}`);
     return summary;
@@ -277,9 +295,9 @@ export async function importMaturaArkuszPdf(
   summary.czytanieFound = structured.czytanie?.length ?? 0;
   summary.pisanieFound = structured.pisanie?.length ?? 0;
 
-  const srodkiSectionId = await getSectionId(supabase, level, "srodki-jezykowe");
-  const czytanieSectionId = await getSectionId(supabase, level, "czytanie");
-  const pisanieSectionId = await getSectionId(supabase, level, "pisanie");
+  const srodkiSectionId = await getSectionId(supabase, language, level, "srodki-jezykowe");
+  const czytanieSectionId = await getSectionId(supabase, language, level, "czytanie");
+  const pisanieSectionId = await getSectionId(supabase, language, level, "pisanie");
 
   // --- środki językowe ---
   if (srodkiSectionId) {

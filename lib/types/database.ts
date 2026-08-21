@@ -802,13 +802,19 @@ export interface TextbookGrammarExercise {
 }
 
 // ============================================================================
-// Matura Angielski — CKE English matura exam prep (poziom podstawowy /
-// rozszerzony). Mirrors supabase/migrations/0013_matura.sql. Sibling to
-// Matma (lib/matma/*), same shape: shared content (sections/lessons/task
-// bank) + per-user attempts, mastery-per-section, mock exams, study plan.
+// Matura — CKE foreign-language matura exam prep (poziom podstawowy /
+// rozszerzony), for English and Spanish. Mirrors supabase/migrations/
+// 0013_matura.sql + 0016_matura_language.sql. Sibling to Matma (lib/matma/*),
+// same shape: shared content (sections/lessons/task bank) + per-user attempts,
+// mastery-per-section, mock exams, study plan.
 // ============================================================================
 
 export type MaturaLevel = "podstawowa" | "rozszerzona";
+
+/** Languages the matura module actually has content for. Deliberately NOT
+ * TargetLanguage from lib/languages.ts — that one includes 'ru', for which
+ * there is no matura content and none planned. See 0016_matura_language.sql. */
+export type MaturaLanguage = "en" | "es";
 export type MaturaTaskSource = "topic" | "past_exam" | "curated" | "ai_generated";
 export type MaturaMockExamStatus = "in_progress" | "completed" | "abandoned";
 export type MaturaStudyPlanWeekStatus =
@@ -823,6 +829,7 @@ export type MaturaSectionSlug = "sluchanie" | "czytanie" | "srodki-jezykowe" | "
 
 export interface MaturaSection {
   id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   slug: MaturaSectionSlug;
   title: string;
@@ -929,6 +936,7 @@ export interface MaturaMockExamBreakdownEntry {
 export interface MaturaMockExam {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   task_ids: string[];
   time_limit_seconds: number;
@@ -955,6 +963,7 @@ export interface MaturaSectionProgress {
 export interface MaturaProgressSnapshot {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   snapshot_at: string;
   estimated_score: number;
@@ -965,6 +974,7 @@ export interface MaturaProgressSnapshot {
 export interface MaturaStudyPlan {
   id: string;
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   exam_date: string | null;
   weekly_hours_target: number | null;
@@ -995,6 +1005,7 @@ export interface MaturaAssignedPractice {
 
 export interface MaturaSettings {
   user_id: string;
+  language: MaturaLanguage;
   level: MaturaLevel;
   created_at: string;
   updated_at: string;
@@ -1054,6 +1065,51 @@ export interface MaturaWritingSubmission {
   max_points: number;
   ai_feedback: MaturaWritingAiFeedback;
   created_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Gramatyka i słownictwo (0015_matura_theory.sql) — the actual THEORY behind
+// the practice-only sections above. Grammar exercises/progress reuse the
+// existing GrammarExercise type (structurally identical columns) so
+// components/grammar/grammar-exercise-stepper.tsx works unchanged via its
+// onAttempt/onComplete override props — see that file's header comment.
+// ----------------------------------------------------------------------------
+
+export interface MaturaGrammarTopic {
+  id: string;
+  level: MaturaLevel;
+  slug: string;
+  title: string;
+  // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
+  // to avoid a client-type <-> db-type import cycle, same pattern as
+  // MaturaLesson.content elsewhere in this file; cast at the call site.
+  blocks: unknown[];
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaVocabularyWord {
+  id: string;
+  level: MaturaLevel;
+  /** CKE "krąg tematyczny" (thematic circle), e.g. "Podróżowanie i turystyka". */
+  category: string;
+  word_en: string;
+  translation_pl: string;
+  example_sentence: string | null;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturaVocabularyProgress {
+  id: string;
+  user_id: string;
+  word_id: string;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  updated_at: string;
 }
 
 export interface BottleCounter {

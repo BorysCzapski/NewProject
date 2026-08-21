@@ -13,7 +13,7 @@
 -- ============================================================================
 
 delete from matura_writing_tasks
-where section_id in (select id from matura_sections where level = 'rozszerzona' and slug = 'pisanie');
+where section_id in (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'pisanie');
 
 -- ----------------------------------------------------------------------------
 -- Zadanie 1 (REAL, matura maj 2025): nauka wyłącznie zdalna na uczelniach
@@ -21,7 +21,7 @@ where section_id in (select id from matura_sections where level = 'rozszerzona' 
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'pisanie'),
   'rozprawka_za_i_przeciw',
   'W dobie nowoczesnych technologii pojawił się pomysł, aby zajęcia na uczelniach odbywały się wyłącznie w trybie online. Napisz rozprawkę, w której przedstawisz dobre i złe strony tego rozwiązania.',
   '["we wstępie sformułuj tezę, która wprost zapowiada, że przedstawisz zalety i wady", "przedstaw i rozwiń co najmniej dwa argumenty za rozwiązaniem", "przedstaw i rozwiń co najmniej dwa argumenty przeciw rozwiązaniu", "w zakończeniu podsumuj i parafrazuj tezę"]'::jsonb,
@@ -43,7 +43,7 @@ Taking everything into consideration, I would argue that a hybrid model, combini
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'pisanie'),
   'rozprawka_za_i_przeciw',
   'Coraz więcej młodych ludzi decyduje się na pracę w charakterze wolontariusza podczas wakacji. Napisz rozprawkę, w której przedstawisz zalety i wady takiej decyzji.',
   '["we wstępie sformułuj tezę, która wprost zapowiada, że przedstawisz zalety i wady", "przedstaw i rozwiń co najmniej dwa argumenty za", "przedstaw i rozwiń co najmniej dwa argumenty przeciw", "w zakończeniu podsumuj i parafrazuj tezę"]'::jsonb,
@@ -65,7 +65,7 @@ All things considered, I believe that volunteering can be an extremely rewarding
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'pisanie'),
   'rozprawka_za_i_przeciw',
   'Coraz więcej znanych osób, np. sportowców lub aktorów, decyduje się na udział w różnego rodzaju reklamach. Napisz rozprawkę, w której przedstawisz dobre i złe strony tego zjawiska.',
   '["we wstępie sformułuj tezę, która wprost zapowiada, że przedstawisz zalety i wady", "przedstaw i rozwiń co najmniej dwa argumenty za", "przedstaw i rozwiń co najmniej dwa argumenty przeciw", "w zakończeniu podsumuj i parafrazuj tezę"]'::jsonb,
@@ -87,7 +87,7 @@ Having weighed both sides of the argument, I would argue that celebrity endorsem
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'pisanie'),
   'rozprawka_za_i_przeciw',
   'Niektóre firmy wprowadzają czterodniowy tydzień pracy. Napisz rozprawkę, w której rozważysz zalety i wady takiego rozwiązania.',
   '["we wstępie sformułuj tezę, która wprost zapowiada, że przedstawisz zalety i wady", "przedstaw i rozwiń co najmniej dwa argumenty za", "przedstaw i rozwiń co najmniej dwa argumenty przeciw", "w zakończeniu podsumuj i parafrazuj tezę"]'::jsonb,

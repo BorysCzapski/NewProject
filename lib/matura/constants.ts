@@ -1,13 +1,32 @@
 // ============================================================================
 // lib/matura/constants.ts
-// Structural facts about the CKE English exam format (max points per level)
-// plus display labels. Total points ARE fixed by CKE's exam format, unlike
-// per-section exam_weight (an editable admin approximation, see
+// Structural facts about the CKE foreign-language exam format (max points per
+// level) plus display labels. Total points ARE fixed by CKE's exam format,
+// unlike per-section exam_weight (an editable admin approximation, see
 // 0013_matura.sql matura_sections comment).
+//
+// NOTE: every number in this file is LANGUAGE-INDEPENDENT. CKE sets one
+// format for all języki obce nowożytne — English and Spanish maturzyści sit
+// the same structure, the same duration and the same point totals, and are
+// marked against the same rubric. That is precisely why the module carries a
+// `language` column instead of being forked per language
+// (see 0016_matura_language.sql).
 // ============================================================================
-import type { MaturaLevel, MaturaWritingFormType } from "@/lib/types/database";
+import type { MaturaLanguage, MaturaLevel, MaturaWritingFormType } from "@/lib/types/database";
 
 export const MATURA_LEVELS: MaturaLevel[] = ["podstawowa", "rozszerzona"];
+
+export const MATURA_LANGUAGES: MaturaLanguage[] = ["en", "es"];
+
+export const MATURA_LANGUAGE_LABELS: Record<MaturaLanguage, string> = {
+  en: "Angielski",
+  es: "Hiszpański",
+};
+
+export const MATURA_LANGUAGE_DESCRIPTIONS: Record<MaturaLanguage, string> = {
+  en: "Matura z języka angielskiego — format CKE.",
+  es: "Matura z języka hiszpańskiego — ten sam format CKE, treść po hiszpańsku.",
+};
 
 export const MATURA_MAX_POINTS: Record<MaturaLevel, number> = {
   podstawowa: 60,
@@ -26,8 +45,9 @@ export const MATURA_LEVEL_DESCRIPTIONS: Record<MaturaLevel, string> = {
 };
 
 /** Total points for "Wypowiedź pisemna" specifically — a structural fact of
- * the current CKE format (Informator o egzaminie maturalnym z języka
- * angielskiego, od 2024/2025), not an admin approximation like exam_weight.
+ * the current CKE format (Informator o egzaminie maturalnym z języka obcego
+ * nowożytnego, od 2024/2025; identical for angielski and hiszpański), not an
+ * admin approximation like exam_weight.
  * Podstawowa: treść 5 + spójność/logika 2 + zakres 3 + poprawność 2 = 12.
  * Rozszerzona: zgodność z poleceniem 5 + spójność/logika 2 + zakres 3 +
  * poprawność 3 = 13. See lib/matura/writing-grading.ts for the full rubric. */
@@ -49,3 +69,12 @@ export const MATURA_WRITING_FORM_LABELS: Record<MaturaWritingFormType, string> =
   forum_post: "Wpis na forum",
   rozprawka_za_i_przeciw: "Rozprawka za i przeciw",
 };
+
+/** Gramatyka/słownictwo cascade: rozszerzona builds ON TOP of podstawowa
+ * (foundation + advanced additions, same relationship CKE's own grammar
+ * scope has), so a rozszerzona student sees both; podstawowa sees only its
+ * own. Used to query matura_grammar_topics/matura_vocabulary_words with
+ * `.in("level", visibleMaturaLevels(settings.level))` instead of `.eq`. */
+export function visibleMaturaLevels(level: MaturaLevel): MaturaLevel[] {
+  return level === "rozszerzona" ? ["podstawowa", "rozszerzona"] : ["podstawowa"];
+}

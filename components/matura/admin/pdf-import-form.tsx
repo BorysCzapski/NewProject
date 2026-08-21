@@ -15,12 +15,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { runMaturaPdfImport } from "@/lib/matura/import-actions";
-import type { MaturaLevel } from "@/lib/types/database";
+import { MATURA_LANGUAGES, MATURA_LANGUAGE_LABELS } from "@/lib/matura/constants";
+import type { MaturaLanguage, MaturaLevel } from "@/lib/types/database";
 import type { MaturaPdfImportSummary } from "@/lib/matura/import-pdf";
 
 export function MaturaPdfImportForm() {
   const arkuszInputRef = useRef<HTMLInputElement>(null);
   const kluczInputRef = useRef<HTMLInputElement>(null);
+  const [language, setLanguage] = useState<MaturaLanguage>("en");
   const [level, setLevel] = useState<MaturaLevel>("podstawowa");
   const [arkuszName, setArkuszName] = useState<string | null>(null);
   const [kluczName, setKluczName] = useState<string | null>(null);
@@ -39,6 +41,7 @@ export function MaturaPdfImportForm() {
     setIsSubmitting(true);
     try {
       const formData = new FormData();
+      formData.set("language", language);
       formData.set("level", level);
       formData.set("arkusz", arkusz);
       const klucz = kluczInputRef.current?.files?.[0];
@@ -72,6 +75,27 @@ export function MaturaPdfImportForm() {
             językowych”, „Rozumienie tekstów pisanych” i „Wypowiedź pisemna” (dział „kuratorowane”, zawsze wymaga
             przeglądu). „Rozumienie ze słuchu” NIE jest obsługiwane — arkusz nie zawiera nagrania ani transkrypcji.
           </CardDescription>
+        </div>
+
+        <div>
+          <Label>Język arkusza</Label>
+          <div className="flex gap-2">
+            {MATURA_LANGUAGES.map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setLanguage(l)}
+                className={cn(
+                  "flex-1 rounded-(--radius-control) border px-3 py-2 text-sm font-medium",
+                  language === l
+                    ? "border-primary bg-primary-soft text-primary"
+                    : "border-border bg-surface text-foreground-muted"
+                )}
+              >
+                {MATURA_LANGUAGE_LABELS[l]}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div>

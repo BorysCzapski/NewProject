@@ -38,9 +38,13 @@ posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla G
 zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
 z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
 
-Piąta mini-aplikacja to **Matura Angielski** (`/matura`) — przygotowanie do matury z języka
-angielskiego (CKE), poziom podstawowy lub rozszerzony (wybór na starcie, zmienialny w każdej
-chwili). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
+Piąta mini-aplikacja to **Matura z języka** (`/matura`) — przygotowanie do matury z języka
+obcego (CKE): **angielskiego albo hiszpańskiego**, poziom podstawowy lub rozszerzony (język
+i poziom wybierasz na starcie, oba zmienialne w każdej chwili; przełączenie języka niczego nie
+kasuje — postęp każdego języka czeka tam, gdzie go zostawiłeś). Jeden moduł obsługuje oba
+języki, bo CKE ustala **ten sam format egzaminu dla wszystkich języków obcych nowożytnych** —
+te same cztery części, te same 60/50 punktów, te same kryteria wypowiedzi pisemnej; różni się
+wyłącznie treść (patrz `0016_matura_language.sql`). Struktura odzwierciedla realny egzamin: cztery części — rozumienie ze słuchu, rozumienie
 tekstów pisanych, znajomość środków językowych, wypowiedź pisemna — każda z osobną wagą punktową
 (edytowalne przybliżenie, nie oficjalny rozkład CKE) i szacowanym wynikiem na dashboardzie.
 Wszystkie cztery działy działają już dziś, każdy z lekcją (kryteria CKE, typy zadań, strategie,
@@ -68,8 +72,17 @@ zadaniach zamkniętych) — AI wyodrębnia z niego zadania środków językowych
 pipeline Matmy, bo nie da się algorytmicznie zweryfikować, że wgrany PDF to naprawdę niezmieniony
 arkusz CKE — patrz `lib/matura/import-pdf.ts`). „Rozumienie ze słuchu" jest z tego importu świadomie
 wykluczone: arkusz to sam tekst, bez nagrania, a CKE nawet nie drukuje transkrypcji zadań na
-słuchanie. Schemat bazy (`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`) jest już
-przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
+słuchanie. Poza czterema częściami egzaminu, „Nauka" ma też dział **Teoria**: **Gramatyka**
+(`/matura/nauka/gramatyka`) — 13 tematów (8 na podstawie + 5 dodatkowych na rozszerzeniu, np. strona
+bierna w pełnym zakresie, tryb warunkowy III/mieszany, inwersja) z interaktywną lekcją i ćwiczeniami,
+reużywające bez zmian komponenty `GrammarLesson`/`GrammarExerciseStepper` z Linguo (tylko podpięte
+pod inne akcje przez ich propsy `onAttempt`/`onComplete`) — oraz **Słownictwo**
+(`/matura/nauka/slownictwo`) — 210 słówek w 14 oficjalnych kręgach tematycznych CKE (140 na
+podstawie + 70 dodatkowych na rozszerzeniu), ćwiczone fiszkami reużywającymi `FlashcardTrainer` tym
+samym sposobem co funkcja Podręcznika. Poziom rozszerzony widzi ZAWSZE treści obu poziomów naraz
+(fundament + dodatki) — patrz `visibleMaturaLevels()` w `lib/matura/constants.ts`. Schemat bazy
+(`supabase/migrations/0013_matura.sql`, `0014_matura_writing.sql`, `0016_matura_theory.sql`) jest
+już przygotowany na resztę docelowego zakresu: symulacje egzaminu, plan nauki do dnia matury,
 przydzielanie ćwiczeń uczniom — czekają na UI w kolejnych sesjach.
 
 Mini-aplikacja **Modlitwa** (`/modlitwa`, sekcja Wiara) — codzienna praktyka modlitewna po
@@ -237,6 +250,13 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       `matura_writing_submissions` (oceniane analitycznie przez AI wg 4 kryteriów CKE,
       patrz opis aplikacji wyżej) — osobne tabele od `matura_tasks`/`matura_task_attempts`
       z 0013, bo ocena jest holistyczna, nie dopasowaniem pojedynczych odpowiedzi.
+   12. `supabase/migrations/0016_matura_theory.sql` — schemat teorii Matury Angielski:
+      `matura_grammar_topics`/`matura_grammar_exercises`/`matura_grammar_progress`
+      (te same kolumny co `grammar_topics`/`grammar_exercises`/`grammar_progress` z 0001,
+      więc komponenty Linguo działają bez zmian) oraz `matura_vocabulary_words`/
+      `matura_vocabulary_progress` (jak `vocabulary_words`/`vocabulary_progress`).
+      Numer `0015` jest zajęty przez niepowiązaną migrację („geografia") z innej,
+      równoległej sesji na tej samej bazie deweloperskiej — stąd skok do `0016`.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -263,7 +283,7 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       importuje je administrator jednorazowym skryptem z panelu `/matma/admin/import`
       (patrz `lib/matma/import-past-exams.ts`), nie jest to część standardowego seedowania.
 
-   **Seed — Matura Angielski:**
+   **Seed — Matura (angielski):**
    17. `supabase/seed/matura/01_sections.sql` — 4 części egzaminu × 2 poziomy
       (`matura_sections`), z wagami punktowymi (przybliżenie, patrz opis aplikacji wyżej).
    18. `supabase/seed/matura/02_lessons_srodki_jezykowe.sql` — po jednej lekcji na poziom
@@ -290,6 +310,39 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       osadzające prawdziwe nagranie BBC Learning English („6 Minute English",
       `content.youtubeVideoId`) — pytania zweryfikowane względem faktycznie pobranej
       transkrypcji nagrania, nie zgadywane. Uruchom `01_sections.sql` wcześniej.
+   24. `supabase/seed/matura/11_grammar_podstawowa.sql` i `12_grammar_rozszerzona.sql` —
+      13 tematów gramatycznych (`matura_grammar_topics` + `matura_grammar_exercises`):
+      8 na podstawie (czasy, tryby warunkowe 0/I/II, strona bierna podstawowa, mowa
+      zależna, modalne, wish) + 5 dodatkowych na rozszerzeniu (strona bierna pełna +
+      przyczynowa, tryb III/mieszany, inwersja i zdania rozszczepione, zaawansowane
+      życzenia). Nie wymagają `01_sections.sql` — to osobny obszar „Teoria", nie część
+      egzaminu.
+   25. `supabase/seed/matura/13_vocabulary_podstawowa.sql` i
+      `14_vocabulary_rozszerzona.sql` — 210 słówek (`matura_vocabulary_words`) w 14
+      oficjalnych kręgach tematycznych CKE: 140 na podstawie (po 10/krąg) + 70 dodatkowych
+      na rozszerzeniu (po 5/krąg, te same nazwy kręgów co w podstawie).
+
+   **Seed — Matura (hiszpański):** komplet niezależny od angielskiego, w katalogu
+   `supabase/seed/matura-es/`. Wymaga wcześniej migracji `0016_matura_language.sql`.
+   24. `matura-es/01_sections.sql` — te same 4 części × 2 poziomy, tym razem z
+      `language = 'es'`. **Uruchom przed pozostałymi plikami z tego katalogu.**
+   25. `matura-es/02_lessons_srodki_jezykowe.sql` i `03_tasks_srodki_jezykowe.sql` — lekcja
+      + bank zadań dla „Znajomości środków językowych" (3 zadania na podstawie, 4 na
+      rozszerzeniu): słowotwórstwo, ser/estar, por/para, subjuntivo vs indicativo,
+      indefinido vs imperfecto, parafrazy i tłumaczenie fragmentów.
+   26. `matura-es/04_lessons_pisanie.sql`, `05_writing_tasks_podstawowa.sql`,
+      `06_writing_tasks_rozszerzona.sql` — lekcja + po 3 zadania na poziom, każde z własną
+      oryginalną wzorcową odpowiedzią. Wszystkie oznaczone `source: 'curated'` (nie
+      `past_exam`) — są pisane w formacie CKE, ale nie są przepisanymi arkuszami, więc
+      etykieta „prawdziwe zadanie CKE" byłaby nieuczciwa.
+   27. `matura-es/07_lessons_czytanie.sql` i `08_tasks_czytanie.sql` — lekcja + po 2 zadania
+      na poziom, oryginalne teksty w formatach CKE (wybór wielokrotny, dobieranie nagłówków,
+      intencja autora, uzupełnianie luk zdaniami).
+   28. `matura-es/09_lessons_sluchanie.sql` — **tylko lekcja, bez zadań.** Zadanie ze słuchu
+      wymaga `content.youtubeVideoId` wskazującego na realne, wciąż dostępne nagranie;
+      wymyślony identyfikator dałby uczniowi martwy odtwarzacz, co jest gorsze niż uczciwy
+      stan „brak zadań". Zadania hiszpańskie dodaj tak samo jak angielskie: wybierz
+      nagranie, zweryfikuj identyfikator, dopiero potem napisz pytania.
 
    Każdy plik seeda usuwa najpierw swoje dane (`delete ... where language = ... and level = ...`),
    więc można je bezpiecznie uruchomić ponownie — pliki jednego języka **nie ruszają** danych
@@ -409,7 +462,10 @@ app/
       admin/             # panel nauczyciela + import zadań maturalnych CKE
     matura/            # MATURA ANGIELSKI — matura z języka angielskiego (CKE)
       page.tsx          # dashboard: wybór poziomu (pierwsza wizyta) / szacowany wynik
-      nauka/             # hub 4 części egzaminu — wszystkie zbudowane
+      nauka/             # hub: teoria (gramatyka/słownictwo) + 4 części egzaminu
+        gramatyka/         # 13 tematów gramatycznych — reużywa GrammarLesson +
+                          # GrammarExerciseStepper z Linguo bez zmian (inne akcje w propsach)
+        slownictwo/        # 14 kręgów tematycznych CKE — reużywa FlashcardTrainer z Linguo
         [sectionSlug]/     # generyczna trasa dla 3 działów ocenianych dokładnym
                           # dopasowaniem: środki-jezykowe, czytanie, słuchanie (osadza
                           # prawdziwe nagranie YouTube gdy content.youtubeVideoId jest ustawiony)
@@ -441,8 +497,9 @@ lib/
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
-                     # 0013 = Matura Angielski)
-  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/)
+                     # 0013 = Matura, 0016 = wymiar języka w Maturze)
+  seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
+                     # matura-es/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")

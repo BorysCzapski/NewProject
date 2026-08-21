@@ -12,13 +12,13 @@
 -- ============================================================================
 
 delete from matura_lessons
-where section_id in (select id from matura_sections where slug = 'czytanie');
+where section_id in (select id from matura_sections where language = 'en' and slug = 'czytanie');
 
 -- ----------------------------------------------------------------------------
 -- Poziom podstawowy
 -- ----------------------------------------------------------------------------
 insert into matura_lessons (section_id, title, content, order_index) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'czytanie'),
   'Rozumienie tekstów pisanych — jak zdobyć maksimum punktów',
   $content$[
   {
@@ -54,7 +54,7 @@ insert into matura_lessons (section_id, title, content, order_index) values (
 -- Poziom rozszerzony
 -- ----------------------------------------------------------------------------
 insert into matura_lessons (section_id, title, content, order_index) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'czytanie'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'czytanie'),
   'Rozumienie tekstów pisanych — jak zdobyć maksimum punktów',
   $content$[
   {

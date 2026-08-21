@@ -11,13 +11,13 @@
 -- ============================================================================
 
 delete from matura_lessons
-where section_id in (select id from matura_sections where slug = 'srodki-jezykowe');
+where section_id in (select id from matura_sections where language = 'en' and slug = 'srodki-jezykowe');
 
 -- ----------------------------------------------------------------------------
 -- Poziom podstawowy
 -- ----------------------------------------------------------------------------
 insert into matura_lessons (section_id, title, content, order_index) values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'srodki-jezykowe'),
   'Znajomość środków językowych — jak to działa',
   $content$[
   {
@@ -52,7 +52,7 @@ insert into matura_lessons (section_id, title, content, order_index) values (
 -- Poziom rozszerzony
 -- ----------------------------------------------------------------------------
 insert into matura_lessons (section_id, title, content, order_index) values (
-  (select id from matura_sections where level = 'rozszerzona' and slug = 'srodki-jezykowe'),
+  (select id from matura_sections where language = 'en' and level = 'rozszerzona' and slug = 'srodki-jezykowe'),
   'Znajomość środków językowych — jak to działa',
   $content$[
   {

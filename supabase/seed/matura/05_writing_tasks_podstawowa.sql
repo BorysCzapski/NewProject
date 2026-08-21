@@ -14,7 +14,7 @@
 -- ============================================================================
 
 delete from matura_writing_tasks
-where section_id in (select id from matura_sections where level = 'podstawowa' and slug = 'pisanie');
+where section_id in (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'pisanie');
 
 -- ----------------------------------------------------------------------------
 -- Zadanie 1 (REAL, CKE Informator — Zadanie 16): wpis na blogu, zwycięstwo w biegu
@@ -22,7 +22,7 @@ where section_id in (select id from matura_sections where level = 'podstawowa' a
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'pisanie'),
   'blog_post',
   'Zwyciężyłeś/Zwyciężyłaś w biegu ulicami miasta. Napisz wpis na blogu, w którym:',
   '["napiszesz, skąd dowiedziałeś/aś się o imprezie i jakie były warunki udziału", "poinformujesz, jak przygotowywałeś/aś się do biegu", "wyjaśnisz, dlaczego zależało Ci na zwycięstwie", "opiszesz, jak zareagowała publiczność"]'::jsonb,
@@ -46,7 +46,7 @@ The moment I crossed the finish line, the crowd went absolutely wild, and total 
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'pisanie'),
   'email',
   'Wybierałeś/Wybierałaś się na wakacje do kolegi do Londynu, ale dwa dni temu zgubiłeś/zgubiłaś dowód osobisty. Napisz e-mail do tego kolegi, w którym:',
   '["przedstawisz okoliczności zgubienia dowodu", "poinformujesz, że musisz odłożyć wyjazd, i wyrazisz niezadowolenie", "wyjaśnisz, co zrobiłeś/aś, aby odzyskać dowód", "zaproponujesz inny termin wizyty i wyrazisz nadzieję, że pasuje"]'::jsonb,
@@ -73,7 +73,7 @@ Kasia$m$,
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'pisanie'),
   'email',
   'Twoja szkoła bierze udział w międzynarodowej wymianie z Anglią. Napisz e-mail do kolegi/koleżanki z Anglii, który/która niedługo Cię odwiedzi, w którym:',
   '["poinformujesz o terminie jego/jej przyjazdu do Polski i zaproponujesz miejsce spotkania", "opiszesz, jak wygląda typowy dzień w Twojej szkole", "zaproponujesz atrakcję, którą chcielibyście wspólnie zwiedzić", "zapytasz o jego/jej oczekiwania wobec pobytu"]'::jsonb,
@@ -100,7 +100,7 @@ Ola$m$,
 insert into matura_writing_tasks
   (section_id, form_type, instructions, content_points, min_words, max_words, points_max, source, source_metadata, model_answer, model_answer_notes)
 values (
-  (select id from matura_sections where level = 'podstawowa' and slug = 'pisanie'),
+  (select id from matura_sections where language = 'en' and level = 'podstawowa' and slug = 'pisanie'),
   'blog_post',
   'Niedawno zacząłeś/zaczęłaś uczęszczać na nowe zajęcia pozalekcyjne. Napisz wpis na blogu, w którym:',
   '["napiszesz, dlaczego wybrałeś/aś akurat te zajęcia", "opiszesz, jak wyglądają typowe zajęcia", "wyjaśnisz, jakie umiejętności dzięki nim zdobywasz", "zachęcisz czytelników do spróbowania podobnych zajęć"]'::jsonb,

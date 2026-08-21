@@ -26,13 +26,13 @@ export default async function PisanieTaskPage({
 
   const { data: task } = await supabase
     .from("matura_writing_tasks")
-    .select("*, matura_sections!inner(level)")
+    .select("*, matura_sections!inner(level, language)")
     .eq("id", taskId)
     .maybeSingle();
   if (!task) notFound();
 
   const { matura_sections, ...taskRow } = task as MaturaWritingTask & {
-    matura_sections: Pick<MaturaSection, "level">;
+    matura_sections: Pick<MaturaSection, "level" | "language">;
   };
 
   const { data: submission } = await supabase
@@ -58,6 +58,7 @@ export default async function PisanieTaskPage({
 
         <WritingTaskForm
           task={taskRow}
+          language={matura_sections.language}
           level={matura_sections.level}
           initialSubmission={submission as MaturaWritingSubmission | null}
         />
