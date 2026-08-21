@@ -1,0 +1,1453 @@
+{
+  "topicSlug": "rolnictwo-lesnictwo-rybactwo",
+  "lessons": [
+    {
+      "slug": "funkcje-i-uwarunkowania-rolnictwa",
+      "title": "Funkcje rolnictwa i warunki jego rozwoju",
+      "summary": "Po co światu rolnictwo, jak klimat, gleby, rzeźba i woda wyznaczają granice upraw oraz dlaczego w krajach wysoko rozwiniętych o plonach decyduje dziś kapitał, a nie przyroda.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo zajmuje ok. **38% powierzchni lądów** i zużywa ok. **70% pobieranej przez człowieka wody słodkiej** — żaden inny dział gospodarki nie przekształca powierzchni Ziemi na taką skalę. Jednocześnie jest to dział **najsilniej uzależniony od środowiska przyrodniczego**: fabrykę można postawić na pustyni, pola pszenicy — nie. Na maturze rozszerzonej najczęściej nie pyta się „jakie warunki ma dany kraj”, lecz **dlaczego akurat te warunki decydują o tym, co i jak się tam uprawia**. W tej lekcji rozdzielamy dwie grupy czynników — **przyrodnicze** (których rolnik nie wybiera) i **pozaprzyrodnicze** (będące wynikiem decyzji ludzi) — i pokazujemy, że wraz z rozwojem gospodarczym ciężar przesuwa się z pierwszej grupy na drugą."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje rolnictwa",
+          "caption": "Rolnictwo to nie tylko produkcja żywności — w zadaniach maturalnych funkcje pozażywnościowe pojawiają się równie często.",
+          "groups": [
+            {
+              "name": "Funkcja żywieniowa (aprowizacyjna)",
+              "description": "Podstawowa: dostarczenie żywności w odpowiedniej ilości i o odpowiedniej wartości odżywczej. Jej niewypełnienie oznacza **niedożywienie** i konieczność importu żywności, co uzależnia kraj od cen światowych.",
+              "examples": ["zboża chlebowe", "warzywa i owoce", "mleko, mięso, jaja"]
+            },
+            {
+              "name": "Funkcja surowcowa",
+              "description": "Dostarczanie surowców dla **przemysłu spożywczego, włókienniczego, chemicznego i farmaceutycznego** oraz — coraz częściej — energetyki (biopaliwa). To ta funkcja łączy rolnictwo z przemysłem przetwórczym.",
+              "examples": ["burak cukrowy dla cukrowni", "bawełna dla przędzalni", "rzepak i trzcina cukrowa na biopaliwa"]
+            },
+            {
+              "name": "Funkcja gospodarcza (dochodowa i eksportowa)",
+              "description": "Tworzenie PKB, miejsc pracy i wpływów z eksportu. W krajach **monokultury rolniczej** jeden produkt potrafi dawać większość wpływów dewizowych, co czyni gospodarkę wrażliwą na wahania cen światowych.",
+              "examples": ["kakao w Wybrzeżu Kości Słoniowej", "kawa w Etiopii", "soja w Brazylii"]
+            },
+            {
+              "name": "Funkcja społeczna",
+              "description": "Zatrudnienie i utrzymanie ludności wiejskiej, a przez to **hamowanie migracji do miast**. W krajach o niskim PKB rolnictwo bywa jedynym sektorem zdolnym wchłonąć nadwyżkę siły roboczej.",
+              "examples": ["ponad 60% zatrudnionych w rolnictwie w części państw Afryki Subsaharyjskiej"]
+            },
+            {
+              "name": "Funkcja środowiskowa i krajobrazowa",
+              "description": "Utrzymanie **mozaiki krajobrazu rolniczego**, ochrona bioróżnorodności obszarów półnaturalnych (łąki, miedze), a także funkcje pozaprodukcyjne wsi: turystyka, agroturystyka, dziedzictwo kulturowe.",
+              "examples": ["łąki kośne w Karpatach", "winnice tarasowe", "programy rolno-środowiskowe UE"]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Użytki rolne a grunty orne",
+          "text": "**Użytki rolne** to cała powierzchnia wykorzystywana rolniczo: **grunty orne** (regularnie orane i obsiewane), **sady i uprawy trwałe**, **łąki** (koszone) oraz **pastwiska** (spasane). **Grunty orne są więc tylko jedną — choć najcenniejszą — częścią użytków rolnych.**",
+          "note": "Miarą jakości środowiska rolniczego jest nie sama powierzchnia użytków, lecz **udział gruntów ornych w użytkach rolnych** — im wyższy, tym korzystniejsze warunki (w górach i strefie suchej przeważają pastwiska)."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Struktura użytkowania ziemi na świecie",
+          "caption": "Udział w powierzchni lądów bez Antarktydy, dane szacunkowe FAO (ok. 2020). Zwróć uwagę: pod uprawę polową nadaje się zaledwie ok. 1/9 lądów — reszta to bariery klimatyczne, glebowe i rzeźby terenu.",
+          "labels": ["Grunty orne", "Uprawy trwałe (sady, plantacje)", "Łąki i pastwiska", "Lasy", "Pozostałe (pustynie, lodowce, zabudowa)"],
+          "series": [{ "name": "Udział w powierzchni lądów", "values": [11, 1, 26, 31, 31] }],
+          "unit": "%"
+        },
+        {
+          "type": "zones",
+          "title": "Bariery rozwoju rolnictwa według szerokości geograficznej",
+          "caption": "Kliknij strefę. Zauważ, że barierą jest zawsze czynnik **najbardziej ograniczający** — tam, gdzie ciepła jest pod dostatkiem, brakuje wody albo składników pokarmowych w glebie.",
+          "zones": [
+            {
+              "name": "Strefa równikowa wilgotna",
+              "latitude": "0–10° N/S",
+              "text": "Wegetacja trwa **cały rok** (temperatura stale powyżej 20 °C, opady ponad 2000 mm). Barierą nie jest klimat, lecz **gleba**: intensywne wietrzenie i **wymywanie (ługowanie)** dają ubogie, kwaśne **gleby ferralitowe**, a próchnica rozkłada się szybciej, niż powstaje. Po wycięciu lasu żyzność spada w 2–3 lata.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa zwrotnikowa sucha",
+              "latitude": "20–30° N/S",
+              "text": "**Bariera wodna**: wyże zwrotnikowe i osiadające powietrze dają opady poniżej 250 mm rocznie. Uprawa możliwa wyłącznie przy **nawadnianiu** — w dolinach rzek allochtonicznych (Nil, Indus) lub z wód kopalnych. Skutkiem ubocznym bywa **zasolenie gleb** wskutek silnego parowania.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa podzwrotnikowa (śródziemnomorska)",
+              "latitude": "30–40° N/S",
+              "text": "Zimy łagodne i wilgotne, **lata gorące i suche** — barierą jest **letni deficyt wody** w szczycie wegetacji. Stąd przewaga roślin o głębokim systemie korzeniowym i twardych, ograniczających transpirację liściach: **oliwka, winorośl, cytrusy, figowiec**.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa umiarkowana ciepła",
+              "latitude": "40–50° N/S",
+              "text": "Najkorzystniejsze warunki na Ziemi: okres wegetacyjny **220–300 dni**, opady 500–800 mm rozłożone w miarę równomiernie, a w części stepowej **czarnoziemy** o miąższym poziomie próchnicznym. Tu leżą główne spichlerze świata.",
+              "tone": "earth"
+            },
+            {
+              "name": "Strefa umiarkowana chłodna",
+              "latitude": "50–60° N",
+              "text": "Okres wegetacyjny skraca się do **150–210 dni**, co eliminuje rośliny ciepłolubne (kukurydza na ziarno, winorośl). Dominują **żyto, owies, ziemniaki, len** oraz — wobec przewagi łąk — chów bydła.",
+              "tone": "water"
+            },
+            {
+              "name": "Strefa subpolarna i piętra wysokogórskie",
+              "latitude": "powyżej 60° N oraz wysokie góry",
+              "text": "**Bariera termiczna**: okres wegetacyjny poniżej 100 dni, a **wieloletnia zmarzlina** uniemożliwia głęboką orkę i odprowadzanie wody. Rolnictwo ogranicza się do pasterstwa (renifery, jaki) i upraw pod osłonami.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Okres wegetacyjny",
+          "text": "Część roku, w której warunki termiczne pozwalają roślinom na wzrost — umownie **liczba dni ze średnią dobową temperaturą powietrza równą lub wyższą niż 5 °C**. Wyznacza on **liczbę i rodzaj możliwych upraw**: każda roślina ma określone **wymagania termiczne**, np. kukurydza na ziarno potrzebuje ok. 180 dni, a jęczmień jary — ok. 90.",
+          "note": "Okres wegetacyjny skraca się wraz ze **wzrostem szerokości geograficznej** i **wysokości n.p.m.** (średnio o ok. 5–6 dni na każde 100 m wzniesienia)."
+        },
+        {
+          "type": "table",
+          "title": "Przyrodnicze czynniki rozwoju rolnictwa",
+          "caption": "W zadaniu typu „wyjaśnij, dlaczego…” zawsze wskazuj **mechanizm**, a nie sam czynnik: nie „bo jest sucho”, lecz „bo niedobór wody w fazie kłoszenia obniża plon ziarna”.",
+          "headers": ["Czynnik", "Mechanizm wpływu na produkcję", "Przykład bariery"],
+          "rows": [
+            ["Temperatura i okres wegetacyjny", "Decyduje o tempie fotosyntezy i o tym, czy roślina zdąży dojrzeć przed przymrozkami; wyznacza **północną i wysokościową granicę upraw**.", "Kanada, Rosja — północna granica uprawy pszenicy"],
+            ["Opady i stosunki wodne", "Woda jest nośnikiem składników pokarmowych; kluczowy jest **rozkład opadów w czasie**, a nie tylko ich suma roczna.", "Sahel — susze i nieregularność monsunu"],
+            ["Gleby", "Decydują o zasobności w składniki, pojemności wodnej i odczynie. **Żyzność** to naturalne właściwości gleby, **urodzajność** — jej rzeczywista zdolność do dawania plonów po zabiegach człowieka.", "Gleby bielicowe i ferralitowe — kwaśne i wyjałowione"],
+            ["Rzeźba terenu", "Nachylenie powyżej ok. 10° uniemożliwia **mechanizację** i sprzyja **erozji wodnej**; wysokość n.p.m. tworzy **piętra upraw**.", "Himalaje, Andy — konieczność terasowania stoków"],
+            ["Nasłonecznienie i wiatr", "Ilość energii dla fotosyntezy oraz zawartość cukru w owocach; silne wiatry powodują **wyleganie zbóż** i **erozję eoliczną** gleb.", "Wielkie Równiny — burze pyłowe (Dust Bowl)"]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto pamiętać",
+          "items": [
+            { "value": "5", "unit": "°C", "label": "próg średniej dobowej temperatury wyznaczający okres wegetacyjny" },
+            { "value": "190–230", "unit": "dni", "label": "okres wegetacyjny w Polsce", "note": "najdłuższy na Nizinie Śląskiej (ok. 225 dni), najkrótszy na Pojezierzu Suwalskim i w górach" },
+            { "value": "ok. 11", "unit": "%", "label": "udział gruntów ornych w powierzchni lądów", "note": "użytki rolne łącznie z pastwiskami — ok. 38%" },
+            { "value": "ok. 70", "unit": "%", "label": "udział rolnictwa w globalnym poborze wody słodkiej", "note": "głównie nawodnienia w strefie suchej i monsunowej" },
+            { "value": "ok. 1000", "unit": "mm", "label": "minimalna roczna suma opadów przy uprawie ryżu bez sztucznego nawadniania" }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Pozaprzyrodnicze czynniki rozwoju rolnictwa",
+          "caption": "To one tłumaczą, dlaczego dwa kraje o podobnym klimacie mogą mieć plony różniące się kilkakrotnie.",
+          "groups": [
+            {
+              "name": "Struktura agrarna",
+              "description": "Wielkość, liczba i rozmieszczenie gospodarstw oraz struktura własności. **Rozdrobnienie** (małe, rozproszone działki) utrudnia mechanizację i obniża towarowość; **latyfundia** bywają z kolei uprawiane ekstensywnie mimo dużego areału.",
+              "examples": ["rozdrobnienie w Polsce południowo-wschodniej", "latyfundia w Ameryce Łacińskiej", "komasacja gruntów"]
+            },
+            {
+              "name": "Poziom agrotechniki",
+              "description": "**Mechanizacja** (podnosi wydajność pracy), **chemizacja** (nawozy i środki ochrony roślin — podnoszą plony z hektara), **melioracje** i **nawodnienia**, jakość materiału siewnego i odmiany hodowlane.",
+              "examples": ["liczba ciągników na 100 ha", "zużycie NPK w kg/ha", "nawadnianie kroplowe"]
+            },
+            {
+              "name": "Polityka rolna państwa",
+              "description": "Dopłaty bezpośrednie, limity produkcji, cła, skup interwencyjny i regulacje środowiskowe. **Wspólna Polityka Rolna UE** stabilizuje dochody rolników, ale bywa krytykowana za sprzyjanie nadprodukcji i utrudnianie eksportu krajom rozwijającym się.",
+              "examples": ["WPR i dopłaty obszarowe", "reforma rolna", "kolektywizacja i jej skutki"]
+            },
+            {
+              "name": "Rynek zbytu i otoczenie gospodarcze",
+              "description": "Popyt, ceny skupu, bliskość dużych miast i zakładów przetwórczych, **infrastruktura transportowa i chłodnicza**. Bez zbytu nadwyżka produkcji nie zamienia się w dochód — to jedna z głównych przyczyn utrzymywania się rolnictwa samozaopatrzeniowego.",
+              "examples": ["podmiejskie strefy warzywnicze", "straty pozbiorcze z braku chłodni w Afryce"]
+            },
+            {
+              "name": "Czynniki społeczno-kulturowe",
+              "description": "Wykształcenie i wiek rolników, tradycja, **uwarunkowania religijne** wpływające na strukturę chowu i spożycia, a także dostęp do kredytu i prawo własności ziemi.",
+              "examples": ["święte krowy w hinduizmie", "zakaz spożycia wieprzowiny w islamie i judaizmie", "doradztwo rolnicze"]
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Holandia — jak pokonać barierę przyrodniczą kapitałem",
+          "region": "Europa Zachodnia, Holandia",
+          "text": "Holandia ma powierzchnię mniejszą niż dwa duże polskie województwa, znaczną część terytorium poniżej poziomu morza, ubogie **gleby piaszczyste i poldery** wymagające stałego odwadniania oraz niewiele słońca. Mimo to od lat jest **drugim po USA eksporterem produktów rolno-spożywczych na świecie pod względem wartości**. Sposób: rezygnacja z konkurowania powierzchnią i przeniesienie produkcji do **szklarni z doświetlaniem, uprawą hydroponiczną i sterowanym stężeniem CO₂**, ścisłe powiązanie z ośrodkiem badawczym w Wageningen, specjalizacja w produktach o wysokiej wartości jednostkowej (kwiaty cięte, nasiona, pomidory, papryka) oraz gęsta sieć portów i chłodni pozwalająca dostarczyć towar w ciągu godzin.",
+          "takeaway": "Im wyższy poziom rozwoju gospodarczego, tym **mniejsza rola czynników przyrodniczych, a większa pozaprzyrodniczych** — bariery środowiskowe da się obejść kapitałem i technologią, ale kosztem ogromnego zużycia energii."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć mylone na maturze: (1) **użytki rolne** ≠ **grunty orne** — grunty orne są ich częścią; (2) **żyzność** (naturalna zasobność gleby) ≠ **urodzajność** (rzeczywista zdolność plonowania, zależna od zabiegów człowieka — gleba żyzna, ale zaniedbana, może być nieurodzajna); (3) **plon** (z jednostki powierzchni, np. dt/ha — miara intensywności) ≠ **zbiór** (produkcja całkowita, np. mln ton — zależy także od areału)."
+        },
+        {
+          "type": "matching",
+          "title": "Zabieg a jego skutek",
+          "instruction": "Połącz zabieg stosowany w rolnictwie z efektem, który ma wywołać.",
+          "pairs": [
+            { "left": "Wapnowanie", "right": "Zmniejszenie kwasowości gleby i poprawa przyswajalności składników" },
+            { "left": "Melioracja odwadniająca", "right": "Obniżenie poziomu wód gruntowych na terenach podmokłych" },
+            { "left": "Komasacja gruntów", "right": "Scalenie rozproszonych działek jednego gospodarstwa" },
+            { "left": "Terasowanie stoków", "right": "Ograniczenie erozji wodnej na terenach o dużym nachyleniu" },
+            { "left": "Płodozmian", "right": "Zaplanowana zmiana gatunków roślin na tym samym polu w kolejnych latach" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "W Polsce najdłuższy okres wegetacyjny występuje:",
+          "options": [
+            "na Nizinie Śląskiej i w Kotlinie Sandomierskiej",
+            "na Pojezierzu Suwalskim",
+            "w Kotlinie Kłodzkiej",
+            "na Wybrzeżu Słowińskim"
+          ],
+          "correctIndex": 0,
+          "explanation": "Okres wegetacyjny wydłuża się w Polsce z północnego wschodu na południowy zachód, zgodnie z **przejściowością klimatu** — im dalej na zachód, tym silniejszy wpływ mas oceanicznych i tym wcześniejsze wiosenne przekroczenie progu 5 °C. Najdłuższy (ok. 220–230 dni) jest na **Nizinie Śląskiej i w Kotlinie Sandomierskiej**, najkrótszy na **Pojezierzu Suwalskim** (ok. 190 dni) i w górach, gdzie skraca go wysokość n.p.m."
+        },
+        {
+          "type": "quiz",
+          "question": "W strefie równikowej wegetacja trwa cały rok, a mimo to plony w rolnictwie żarowo-odłogowym są niskie. Główną przyczyną jest:",
+          "options": [
+            "zbyt krótki okres wegetacyjny wynikający z długiej pory suchej",
+            "silne wymywanie składników pokarmowych i szybki rozkład próchnicy w glebach ferralitowych",
+            "zbyt niskie średnie temperatury powietrza w ciągu roku",
+            "brak dostępu do wód powierzchniowych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Wysoka temperatura i obfite opady przyspieszają jednocześnie **mineralizację próchnicy** i **ługowanie** — składniki pokarmowe są wypłukiwane w głąb profilu, zanim rośliny zdążą je pobrać. W lesie równikowym obieg materii zachodzi niemal w całości w biomasie, a nie w glebie; po wypaleniu lasu żyzność (dzięki popiołowi) utrzymuje się tylko 2–3 lata, po czym pole trzeba porzucić."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Klasyczne polecenie CKE brzmi: „Wykaż, że w kraju X o wielkości plonów decydują czynniki pozaprzyrodnicze”. Schemat odpowiedzi: (1) wskaż, że **warunki przyrodnicze są przeciętne lub niekorzystne** (podaj konkret: gleby, opady, okres wegetacyjny), (2) wskaż **konkretny czynnik pozaprzyrodniczy** (np. zużycie nawozów na hektar, udział gruntów nawadnianych, dopłaty), (3) **połącz je zdaniem przyczynowo-skutkowym** z wielkością plonu. Sama lista czynników bez związku przyczynowego nie otrzyma punktu."
+        }
+      ]
+    },
+    {
+      "slug": "typy-i-systemy-rolnictwa",
+      "title": "Typy i systemy rolnictwa świata",
+      "summary": "Samozaopatrzeniowe czy towarowe, ekstensywne czy intensywne — dwa niezależne kryteria, które porządkują wszystkie systemy rolnicze świata: od żarowo-odłogowego po precyzyjne.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo świata jest ogromnie zróżnicowane, ale da się je uporządkować **dwoma niezależnymi kryteriami**. Pierwsze — **na co idzie produkcja** — dzieli rolnictwo na samozaopatrzeniowe i towarowe. Drugie — **ile nakładów przypada na 1 ha** — dzieli je na ekstensywne i intensywne. Te dwa kryteria **krzyżują się**, dlatego istnieje rolnictwo towarowe, a zarazem ekstensywne (ranczerstwo), i samozaopatrzeniowe, a zarazem intensywne (rolnictwo monsunowe drobnych gospodarstw). Zrozumienie tego skrzyżowania to najczęstsza różnica między odpowiedzią za 2 punkty a odpowiedzią za 0."
+        },
+        {
+          "type": "definition",
+          "term": "Towarowość i intensywność",
+          "text": "**Towarowość** to udział produkcji przeznaczonej na sprzedaż w produkcji całkowitej — mówi, **dokąd trafia plon**. **Intensywność** to wielkość nakładów (pracy, kapitału, środków produkcji) przypadająca na **jednostkę powierzchni** — mówi, **ile w ziemię włożono**. Miarą efektu intensywności jest **plon z hektara**, a miarą efektu mechanizacji — **wydajność pracy** (produkcja na jednego zatrudnionego).",
+          "note": "Wysokie plony z hektara nie oznaczają wysokiej wydajności pracy: w Chinach plony ryżu są bardzo wysokie, ale osiągane pracą milionów rąk, więc produkcja na jednego rolnika pozostaje niska."
+        },
+        {
+          "type": "compare",
+          "title": "Rolnictwo samozaopatrzeniowe a towarowe",
+          "leftLabel": "Samozaopatrzeniowe (naturalne)",
+          "rightLabel": "Towarowe",
+          "rows": [
+            { "aspect": "Przeznaczenie produkcji", "left": "Zaspokojenie potrzeb rodziny rolnika; na rynek trafiają jedynie przypadkowe nadwyżki", "right": "Sprzedaż na rynek — produkcja planowana pod popyt i cenę" },
+            { "aspect": "Struktura upraw", "left": "Wielokierunkowa — „po trochu wszystkiego”, aby zabezpieczyć całą dietę", "right": "**Specjalizacja**, często jedna–dwie gałęzie o najwyższej opłacalności" },
+            { "aspect": "Powiązanie z gospodarką", "left": "Słabe; rolnik kupuje i sprzedaje niewiele, obieg pieniądza minimalny", "right": "Silne — rolnictwo jest ogniwem **agrobiznesu**: nasiona i nawozy z zewnątrz, plon do przetwórstwa" },
+            { "aspect": "Reakcja na nieurodzaj", "left": "Bezpośrednie zagrożenie **głodem** rodziny", "right": "Spadek dochodu, amortyzowany ubezpieczeniem, kredytem lub dopłatą" },
+            { "aspect": "Typowe regiony", "left": "Afryka Subsaharyjska, wnętrze Azji Południowo-Wschodniej, Andy", "right": "Ameryka Północna, Europa Zachodnia, Australia, Argentyna" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Rolnictwo ekstensywne a intensywne",
+          "caption": "Uwaga na rozróżnienie dwóch dróg intensyfikacji: **pracą** (Azja Południowo-Wschodnia) i **kapitałem** (Europa Zachodnia). Efekt — wysoki plon z hektara — jest podobny, ale koszty społeczne zupełnie różne.",
+          "headers": ["Cecha", "Ekstensywne", "Intensywne pracą", "Intensywne kapitałem"],
+          "rows": [
+            ["Nakłady na 1 ha", "bardzo niskie", "bardzo wysokie nakłady **pracy ludzkiej**", "bardzo wysokie nakłady **kapitału** (maszyny, nawozy, nawodnienia)"],
+            ["Plon z 1 ha", "niski", "wysoki", "bardzo wysoki"],
+            ["Wydajność pracy", "zróżnicowana — wysoka przy mechanizacji, niska przy pasterstwie", "**niska** — plon dzieli się na wielu pracujących", "**bardzo wysoka**"],
+            ["Powierzchnia gospodarstwa", "duża lub bardzo duża", "bardzo mała (często poniżej 1 ha)", "średnia, ale silnie skapitalizowana"],
+            ["Przykład", "ranczerstwo w Australii, uprawa pszenicy na Wielkich Równinach", "uprawa ryżu w delcie Mekongu", "ogrodnictwo szklarniowe w Holandii, chów trzody w Danii"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstszy błąd w tym dziale: utożsamianie **intensywne = nowoczesne = towarowe**. To nieprawda. Uprawa ryżu w Bangladeszu jest **skrajnie intensywna** (kilka zbiorów rocznie, ręczne sadzenie), a jednocześnie w dużej mierze **samozaopatrzeniowa** i technicznie prymitywna. Odwrotnie — farma zbożowa w Kanadzie jest **ekstensywna** (niskie nakłady na hektar, plony poniżej europejskich), a przy tym **wysokotowarowa i w pełni zmechanizowana**. Intensywność mierzy się **na hektar**, a nie na pracownika."
+        },
+        {
+          "type": "classification",
+          "title": "Systemy rolnicze świata",
+          "caption": "Każdy system to trwałe połączenie warunków przyrodniczych, struktury agrarnej i sposobu zbytu. Ucz się ich razem z regionem występowania.",
+          "groups": [
+            {
+              "name": "Żarowo-odłogowe (wypaleniskowe)",
+              "description": "Najbardziej **ekstensywny** system uprawy. Las wycina się i wypala, popiół użyźnia glebę na 2–3 sezony, po czym pole porzuca się na kilkanaście lat **odłogu** dla regeneracji. Działa tylko przy **niskiej gęstości zaludnienia** — skrócenie odłogu prowadzi do trwałej degradacji.",
+              "examples": ["Amazonia (roça)", "dorzecze Konga (chitemene)", "Indonezja (ladang)", "Meksyk (milpa)"]
+            },
+            {
+              "name": "Plantacyjne",
+              "description": "Wielkoobszarowa **monokultura** roślin strefy międzyzwrotnikowej, prowadzona na eksport, z reguły z udziałem **kapitału zagranicznego** i taniej siły najemnej. Wysokotowarowe, ale uzależniające kraj od jednego produktu i cen na giełdach.",
+              "examples": ["kakao", "kawa", "herbata", "banany", "trzcina cukrowa", "kauczuk", "olej palmowy"]
+            },
+            {
+              "name": "Ranczerskie (ekstensywny chów)",
+              "description": "Chów bydła lub owiec na wielkich, ogrodzonych pastwiskach stref suchych i półsuchych. **Towarowe, lecz ekstensywne** — mała obsada zwierząt na hektar, minimalne nakłady, produkcja mięsa i wełny na eksport.",
+              "examples": ["Wielkie Równiny w USA", "Pampa argentyńska", "Outback australijski", "Wielkie Karru w RPA"]
+            },
+            {
+              "name": "Śródziemnomorskie",
+              "description": "Drobne gospodarstwa z przewagą **upraw trwałych** odpornych na letnią suszę, uzupełniane nawadnianiem i wczesnymi warzywami pod osłonami. Wysoka wartość produkcji z hektara, dogodne położenie względem rynków Europy Zachodniej.",
+              "examples": ["oliwka", "winorośl", "cytrusy", "warzywa spod folii w Almerii"]
+            },
+            {
+              "name": "Monsunowe (ryżowe)",
+              "description": "Skrajnie **intensywne pracą** rolnictwo drobnych gospodarstw w regionach o letnich opadach monsunowych. Pola zalewane, często **tarasowane**, dwa–trzy zbiory ryżu rocznie. Ogromne plony z hektara przy znikomej wydajności pracy.",
+              "examples": ["delta Gangesu", "delta Mekongu", "Jawa", "Nizina Chińska"]
+            },
+            {
+              "name": "Farmerskie (towarowe wysokotowarowe)",
+              "description": "Rodzinne, ale w pełni rynkowe gospodarstwa o wysokiej mechanizacji i specjalizacji, wspierane doradztwem, kredytem i polityką rolną. Podstawa produkcji żywności w krajach wysoko rozwiniętych.",
+              "examples": ["Kukurydziany Pas USA", "Niż Środkowoeuropejski", "Kanada", "Nowa Zelandia"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie występują poszczególne systemy rolnicze",
+          "caption": "Kliknij znacznik. Sprawdź, jak system rolniczy odpowiada strefie klimatycznej i poziomowi rozwoju gospodarczego regionu.",
+          "center": [15, 10],
+          "zoom": 2,
+          "markers": [
+            { "lat": -3.5, "lng": -62.0, "label": "Amazonia — żarowo-odłogowe", "text": "Wilgotny las równikowy, gleby ferralitowe. Uprawa manioku i kukurydzy przez 2–3 lata po wypaleniu, potem porzucenie pola. Skracanie odłogu wskutek wzrostu zaludnienia prowadzi do trwałego wylesienia." },
+            { "lat": 6.8, "lng": -5.3, "label": "Wybrzeże Kości Słoniowej — plantacje kakao", "text": "Największy producent ziarna kakaowego na świecie. Klimat równikowy wilgotny, produkcja niemal w całości na eksport, przetwórstwo poza krajem — klasyczny przykład uzależnienia od monokultury." },
+            { "lat": -35.0, "lng": -60.0, "label": "Pampa — ranczerstwo i uprawa soi", "text": "Trawiaste równiny o żyznych glebach i klimacie umiarkowanym ciepłym. Historycznie ekstensywny chów bydła na wołowinę, dziś coraz częściej wypierany przez towarową uprawę soi na eksport." },
+            { "lat": 37.4, "lng": -4.8, "label": "Andaluzja — rolnictwo śródziemnomorskie", "text": "Gorące, suche lato i łagodna wilgotna zima. Gaje oliwne i winnice na terenach nienawadnianych, a w Almerii tysiące hektarów szklarni i tuneli foliowych z wczesnymi warzywami na rynek północnoeuropejski." },
+            { "lat": 10.0, "lng": 105.8, "label": "Delta Mekongu — rolnictwo monsunowe", "text": "Zalewane pola ryżowe na żyznych madach delty, letni monsun daje ponad 1500 mm opadów. Dwa–trzy zbiory rocznie przy gospodarstwach rzędu 0,5–2 ha — intensywność osiągana pracą, nie kapitałem." },
+            { "lat": 38.5, "lng": -98.0, "label": "Kansas — ekstensywne rolnictwo zbożowe", "text": "Step preriowy, opady 500–700 mm, wielkie łanowe pola pszenicy. Nakłady na hektar niskie, plony niższe niż w Europie Zachodniej, ale wydajność pracy jedna z najwyższych na świecie." },
+            { "lat": 52.0, "lng": 4.3, "label": "Westland — ogrodnictwo szklarniowe", "text": "Rolnictwo intensywne kapitałowo: szklarnie z doświetlaniem i hydroponiką, produkcja pomidorów, papryki i kwiatów ciętych niemal niezależna od pogody, w całości na eksport." }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Cykl rolnictwa żarowo-odłogowego",
+          "caption": "Zwróć uwagę, że system jest **zrównoważony tylko wtedy**, gdy faza odłogu jest wielokrotnie dłuższa od fazy uprawy.",
+          "stages": [
+            { "name": "Karczowanie", "text": "Wycięcie i podsuszenie roślinności na niewielkiej działce w porze suchej. Największe drzewa często pozostawia się jako źródło nasion." },
+            { "name": "Wypalanie", "text": "Spalenie biomasy uwalnia zmagazynowane w niej składniki pokarmowe. **Popiół** dostarcza potasu, wapnia i fosforu oraz podnosi odczyn kwaśnej gleby ferralitowej." },
+            { "name": "Uprawa", "text": "Sadzenie motyką bez orki — maniok, jams, kukurydza, ryż górski. Plony w pierwszym roku są wysokie, bo rośliny korzystają z zapasu z popiołu." },
+            { "name": "Spadek żyzności", "text": "Ulewne opady **wymywają** składniki, próchnica szybko się mineralizuje, pojawiają się chwasty i szkodniki. Po 2–3 latach plony spadają poniżej opłacalności." },
+            { "name": "Porzucenie pola", "text": "Rolnik przenosi się na nową działkę. Stare pole zostaje **odłogiem**, na którym rozwija się roślinność wtórna." },
+            { "name": "Regeneracja", "text": "Przez 10–20 lat las wtórny odbudowuje zapas biomasy i próchnicy, po czym cykl może się powtórzyć. **Skrócenie odłogu poniżej ok. 10 lat przerywa regenerację** i prowadzi do wyjałowienia oraz erozji." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kakao w Wybrzeżu Kości Słoniowej — cena monokultury plantacyjnej",
+          "region": "Afryka Zachodnia, Wybrzeże Kości Słoniowej",
+          "text": "Wybrzeże Kości Słoniowej dostarcza ok. **40% światowej produkcji ziarna kakaowego** i wraz z Ghaną odpowiada za ponad połowę globalnej podaży. Uprawa daje utrzymanie setkom tysięcy drobnych gospodarstw, ale kraj eksportuje głównie **surowiec nieprzetworzony** — wartość dodana z przerobu na masę kakaową, czekoladę i wyroby powstaje w Europie i Ameryce Północnej. Skutki: dochody rolników zależą od notowań giełdowych, na które kraj nie ma wpływu; presja na powiększanie plantacji napędza **wylesianie** (Wybrzeże Kości Słoniowej straciło większość pierwotnych lasów wilgotnych); a rozszerzanie monokultury zwiększa wrażliwość na choroby i szkodniki.",
+          "takeaway": "Rolnictwo plantacyjne jest wysokotowarowe, ale **nie równa się rozwojowi**: bez przetwórstwa na miejscu kraj zostaje w roli dostawcy surowca, w najsłabiej opłacanym ogniwie łańcucha wartości."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie drogi „rolnictwa przyszłości”",
+          "leftLabel": "Rolnictwo ekologiczne",
+          "rightLabel": "Rolnictwo precyzyjne",
+          "rows": [
+            { "aspect": "Podstawowa idea", "left": "Rezygnacja z **syntetycznych nawozów, pestycydów i GMO**; żyzność odbudowywana płodozmianem, obornikiem i roślinami motylkowymi", "right": "Zachowanie chemii, ale **dawkowanie jej dokładnie tam i tyle, ile potrzeba**, dzięki danym o zmienności pola" },
+            { "aspect": "Narzędzia", "left": "Certyfikacja i kontrola, kompostowanie, biologiczna ochrona roślin, międzyplony", "right": "**GPS/GNSS**, mapy zasobności gleby, czujniki, drony i zdjęcia satelitarne, siewniki i opryskiwacze o zmiennej dawce" },
+            { "aspect": "Plon z hektara", "left": "Zwykle **o kilkanaście–kilkadziesiąt procent niższy** niż w rolnictwie konwencjonalnym", "right": "Zbliżony lub wyższy niż konwencjonalny przy mniejszym zużyciu środków" },
+            { "aspect": "Bariera wdrożenia", "left": "Wyższa cena produktu i ryzyko strat — opłacalne tylko przy popycie na żywność certyfikowaną", "right": "Wysoki **koszt technologii** i wymóg dużej powierzchni oraz kompetencji cyfrowych" },
+            { "aspect": "Główna korzyść środowiskowa", "left": "Brak pozostałości pestycydów, wyższa bioróżnorodność i zawartość próchnicy", "right": "Ograniczenie **eutrofizacji** i emisji dzięki mniejszym dawkom nawozów i paliwa" }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj według rosnących nakładów na 1 ha",
+          "instruction": "Ustaw systemy rolnicze od najbardziej ekstensywnego do najbardziej intensywnego.",
+          "items": [
+            "Pasterstwo koczownicze w Sahelu",
+            "Ranczerstwo na Pampie",
+            "Ekstensywna uprawa pszenicy na Wielkich Równinach",
+            "Rolnictwo śródziemnomorskie w Andaluzji",
+            "Uprawa ryżu w delcie Mekongu",
+            "Ogrodnictwo szklarniowe w Holandii"
+          ],
+          "explanation": "Kryterium to **nakłady na jednostkę powierzchni**, a nie nowoczesność ani towarowość. Pasterstwo koczownicze praktycznie nie wymaga nakładów, ranczerstwo dodaje ogrodzenia i ujęcia wody, uprawa pszenicy na Wielkich Równinach — maszyny i nawozy, ale rozłożone na ogromny areał. Rolnictwo śródziemnomorskie wymaga nawadniania i pracy przy uprawach trwałych, ryżowe — ogromnych nakładów pracy przy każdym hektarze, a szklarnie — najwyższych na świecie nakładów kapitału i energii."
+        },
+        {
+          "type": "quiz",
+          "question": "Farma pszenicy w Saskatchewan (Kanada) ma 800 ha, plon ok. 30 dt/ha i całą produkcję sprzedaje na eksport. To rolnictwo:",
+          "options": [
+            "intensywne i samozaopatrzeniowe",
+            "ekstensywne i wysokotowarowe",
+            "intensywne i wysokotowarowe",
+            "ekstensywne i samozaopatrzeniowe"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Ekstensywne**, bo nakłady przypadające na 1 ha są niskie, a plon (ok. 30 dt/ha) wyraźnie niższy niż w intensywnym rolnictwie Europy Zachodniej (60–90 dt/ha). Zarazem **wysokotowarowe**, bo praktycznie cała produkcja trafia na rynek. Wysoki dochód gospodarstwa bierze się z **areału i wydajności pracy**, a nie z plonu z hektara — to dowód, że oba kryteria są od siebie niezależne."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego rolnictwo żarowo-odłogowe przestaje być zrównoważone przy wzroście gęstości zaludnienia?",
+          "options": [
+            "Bo rośnie zapotrzebowanie na maszyny rolnicze, których brakuje",
+            "Bo skraca się faza odłogu i las wtórny nie zdąży odbudować zapasu składników pokarmowych",
+            "Bo wypalanie staje się zakazane przez prawo międzynarodowe",
+            "Bo gleby ferralitowe ulegają zasoleniu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cały system opiera się na **przeniesieniu składników pokarmowych z biomasy do gleby** (popiół) i na długiej regeneracji. Więcej ludzi na tym samym obszarze oznacza więcej pól jednocześnie w uprawie, więc czas odłogu skraca się z 15–20 lat do kilku. Las wtórny nie zdąży odbudować biomasy, kolejne wypalenie daje mniej popiołu, plony spadają, a odsłonięta gleba ulega **erozji i wyjałowieniu** — z systemu cyklicznego robi się trwałe wylesienie."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy zadanie podaje dane liczbowe o gospodarstwie (powierzchnia, plon, udział sprzedaży, liczba zatrudnionych), CKE prawie zawsze chce **klasyfikacji według dwóch kryteriów naraz**. Wykonaj dwa niezależne kroki: (1) plon z hektara i nakłady → ekstensywne czy intensywne; (2) udział produkcji sprzedanej → samozaopatrzeniowe czy towarowe. Dopiero potem nazwij system (np. „towarowe ekstensywne rolnictwo zbożowe typu farmerskiego”). Uzasadnienie **musi powoływać się na liczbę z materiału źródłowego**."
+        }
+      ]
+    },
+    {
+      "slug": "glowne-uprawy-i-chow-zwierzat",
+      "title": "Główne uprawy świata i chów zwierząt",
+      "summary": "Wymagania i rejony uprawy zbóż, roślin oleistych, bulwiastych, włóknistych i używek oraz geografia chowu bydła, trzody i owiec — z naciskiem na to, dlaczego dana roślina rośnie akurat tam.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Każda roślina uprawna ma **wymagania termiczne, wodne i glebowe**, które razem wyznaczają obszar jej opłacalnej uprawy — tzw. **optimum uprawy**. Dlatego mapa upraw świata nie jest przypadkowa: pas pszenicy biegnie przez strefę umiarkowaną, ryż koncentruje się w monsunowej Azji, a kakao w wąskim pasie wokół równika. W tej lekcji dla każdej ważnej grupy roślin łączymy **wymaganie → rejon → przeznaczenie**, a następnie robimy to samo dla chowu zwierząt, gdzie do czynników przyrodniczych dochodzą **uwarunkowania religijne i rynkowe**."
+        },
+        {
+          "type": "classification",
+          "title": "Podział roślin uprawnych według przeznaczenia",
+          "caption": "Ta sama roślina może należeć do kilku grup — kukurydza jest jednocześnie zbożem konsumpcyjnym, rośliną pastewną i surowcem do produkcji etanolu.",
+          "groups": [
+            {
+              "name": "Rośliny alimentacyjne (żywieniowe)",
+              "description": "Dostarczają bezpośrednio pokarmu. Należą tu **zboża** (podstawa wyżywienia ludzkości — ok. połowy spożywanych kalorii) oraz **rośliny bulwiaste i korzeniowe**, ważne zwłaszcza tam, gdzie zboża plonują słabo.",
+              "examples": ["pszenica", "ryż", "kukurydza", "ziemniak", "maniok", "jams"]
+            },
+            {
+              "name": "Rośliny przemysłowe",
+              "description": "Uprawiane na surowiec dla przemysłu, nie do bezpośredniego spożycia: **oleiste** (tłuszcze i biopaliwa), **włókniste** (tkaniny, liny), **cukrodajne** (cukier i etanol), **kauczukodajne**.",
+              "examples": ["soja", "rzepak", "palma oleista", "bawełna", "juta", "trzcina cukrowa", "burak cukrowy"]
+            },
+            {
+              "name": "Używki",
+              "description": "Rośliny dostarczające substancji pobudzających lub aromatycznych, o **niewielkiej wartości odżywczej, lecz wysokiej wartości rynkowej**. To klasyczne uprawy plantacyjne strefy międzyzwrotnikowej, silnie uzależnione od cen giełdowych.",
+              "examples": ["kawa", "herbata", "kakao", "tytoń", "mate"]
+            },
+            {
+              "name": "Rośliny pastewne",
+              "description": "Uprawiane na paszę dla zwierząt — decydują o możliwości rozwinięcia intensywnego chowu. Ich udział w strukturze zasiewów rośnie wraz z zamożnością społeczeństwa i spożyciem mięsa.",
+              "examples": ["kukurydza na kiszonkę", "lucerna", "koniczyna", "buraki pastewne"]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Wielka trójka zbóż",
+          "caption": "Te trzy gatunki dają ok. **90% światowych zbiorów zbóż**. Ucz się ich zawsze w układzie: wymaganie → rejon → przeznaczenie.",
+          "headers": ["Zboże", "Wymagania termiczne i wodne", "Gleby i rzeźba", "Główne rejony uprawy", "Przeznaczenie"],
+          "rows": [
+            ["**Pszenica**", "Umiarkowane: okres wegetacyjny od ok. 100 dni (odmiany jare), opady 300–700 mm; źle znosi nadmiar wilgoci w czasie żniw", "Żyzne i zasobne w wapń — **czarnoziemy**, gleby brunatne, mady; teren równinny sprzyjający mechanizacji", "Pas od Wielkich Równin przez Europę i stepy Ukrainy i Rosji po Nizinę Chińską; Indie, Australia, Argentyna", "Głównie **konsumpcja bezpośrednia** (mąka, pieczywo, makarony); najważniejsze zboże w handlu światowym"],
+            ["**Ryż**", "Wysokie: średnia temperatura powyżej 20 °C w okresie wegetacji, ponad 1000 mm opadów lub **stałe nawadnianie**", "Gleby aluwialne (**mady**) o dużej pojemności wodnej; teren płaski lub **tarasowany**, pola zalewane wodą", "Monsunowa i równikowa Azja: Chiny, Indie, Bangladesz, Indonezja, Wietnam, Tajlandia — ok. 90% produkcji świata", "Niemal w całości **konsumpcja bezpośrednia**; podstawa wyżywienia ponad połowy ludzkości, mały udział w eksporcie"],
+            ["**Kukurydza**", "Ciepłolubna: okres wegetacyjny ok. 150–180 dni dla uprawy na ziarno, opady 500–800 mm w okresie wzrostu, dużo słońca", "Gleby żyzne, przewiewne, dobrze nagrzewające się; wrażliwa na przymrozki i zastoiska mrozowe", "**Kukurydziany Pas USA**, Brazylia, Argentyna, Chiny, a na paszę i kiszonkę także cała Europa Środkowa", "W krajach rozwiniętych głównie **pasza i etanol**; w Ameryce Łacińskiej i Afryce także podstawowy pokarm człowieka"]
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Rozpoznaj klimat i dopasuj uprawę",
+          "station": "Kolkata (Indie, 22°N)",
+          "caption": "Zanim spojrzysz na odpowiedź: policz roczną amplitudę temperatury i sprawdź, w których miesiącach mieści się większość opadów.",
+          "temps": [20, 23, 28, 30, 30, 30, 29, 29, 29, 28, 24, 20],
+          "precip": [12, 25, 35, 60, 140, 290, 400, 350, 290, 160, 25, 7],
+          "answer": {
+            "climate": "Klimat zwrotnikowy monsunowy",
+            "reasoning": "Temperatura przez cały rok powyżej 20 °C, a roczna amplituda wynosi ok. 10 °C — to strefa zwrotnikowa. Rozkład opadów jest skrajnie nierównomierny: ok. 75% sumy rocznej (blisko 1800 mm) przypada na miesiące VI–IX, czyli okres **monsunu letniego**, gdy wilgotne powietrze znad Oceanu Indyjskiego napływa nad silnie nagrzany ląd. Zimą kierunek napływu powietrza się odwraca i nastaje pora sucha. Taki układ jest idealny dla **ryżu** uprawianego w porze deszczowej; w porze suchej to samo pole obsiewa się pszenicą lub roślinami strączkowymi przy wykorzystaniu nawadniania."
+          }
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Światowe zbiory wybranych roślin uprawnych",
+          "caption": "Wartości przybliżone dla roku 2022 wg FAO. Uwaga: pierwsze miejsce kukurydzy **nie oznacza**, że najwięcej jej zjadamy — większość trafia na paszę i do produkcji etanolu.",
+          "labels": ["Kukurydza", "Pszenica", "Ryż niełuskany", "Soja", "Jęczmień"],
+          "series": [{ "name": "Zbiory", "values": [1160, 810, 780, 350, 155] }],
+          "unit": "mln t"
+        },
+        {
+          "type": "layers",
+          "title": "Piętra upraw w Andach",
+          "caption": "Przykład z Peru i Boliwii. Kliknij piętro. Mechanizm jest ten sam co przy strefowości szerokościowej — o granicach decyduje **spadek temperatury z wysokością** (ok. 0,6 °C na 100 m).",
+          "orientation": "bottom-up",
+          "layers": [
+            { "name": "Tierra caliente (ziemia gorąca)", "range": "0–1000 m n.p.m.", "text": "Średnia temperatura powyżej 24 °C. Uprawy typowo międzyzwrotnikowe: **trzcina cukrowa, banany, kakao, ryż, maniok**.", "tone": "heat" },
+            { "name": "Tierra templada (ziemia umiarkowana)", "range": "1000–2000 m n.p.m.", "text": "Temperatura 17–24 °C, brak przymrozków, wysoka wilgotność — **optimum dla kawy arabiki**, a także kukurydzy i cytrusów.", "tone": "vegetation" },
+            { "name": "Tierra fría (ziemia zimna)", "range": "2000–3500 m n.p.m.", "text": "Temperatura 12–17 °C, okresowe przymrozki. Uprawia się rośliny strefy umiarkowanej: **pszenicę, jęczmień, ziemniaki**, oraz komosę ryżową (quinoa).", "tone": "earth" },
+            { "name": "Tierra helada / puna", "range": "3500–4500 m n.p.m.", "text": "Zbyt chłodno na uprawę polową — dominuje **pasterstwo lam i alpak** na wysokogórskich pastwiskach oraz mrozoodporne odmiany ziemniaka.", "tone": "rock" },
+            { "name": "Piętro wieczystego śniegu", "range": "powyżej ok. 4800 m n.p.m.", "text": "Temperatura stale poniżej 0 °C — **granica rolnictwa**; brak roślinności użytkowej.", "tone": "ice" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Używki",
+          "text": "Rośliny (i produkty z nich) o **znikomej wartości odżywczej, ale zawierające substancje pobudzające lub aromatyczne** — kofeinę, teinę, teobrominę, nikotynę. Uprawiane niemal wyłącznie w strefie międzyzwrotnikowej, przeważnie w systemie **plantacyjnym na eksport** do krajów wysoko rozwiniętych.",
+          "note": "Kawa **arabika** wymaga chłodniejszych, wilgotnych stoków na wysokości 600–2000 m n.p.m., a **robusta** rośnie na nizinach i jest odporniejsza na choroby — stąd arabika dominuje w górzystej Kolumbii i Etiopii, a robusta w nizinnym Wietnamie."
+        },
+        {
+          "type": "table",
+          "title": "Pozostałe grupy roślin uprawnych",
+          "caption": "Zwróć uwagę, że w każdym wierszu rejon uprawy wynika **wprost z wymagania** wpisanego w kolumnie obok.",
+          "headers": ["Grupa", "Przykłady", "Kluczowe wymagania", "Główne rejony uprawy"],
+          "rows": [
+            ["**Oleiste**", "soja, rzepak, palma oleista, słonecznik, oliwka", "Bardzo zróżnicowane: palma oleista wymaga klimatu równikowego, rzepak — chłodniejszej i wilgotnej części strefy umiarkowanej, słonecznik — dużo słońca i odporność na suszę", "Soja: USA, Brazylia, Argentyna; palma oleista: Indonezja, Malezja; rzepak: Kanada, Chiny, Indie, Europa; słonecznik: Ukraina, Rosja"],
+            ["**Bulwiaste i korzeniowe**", "ziemniak, maniok, bataty, jams, taro", "Ziemniak — gleby lekkie i przewiewne, chłodniejszy klimat umiarkowany; maniok — odporny na suszę i **ubogie gleby strefy międzyzwrotnikowej**", "Ziemniak: Chiny, Indie, Rosja, Ukraina, Polska; maniok: Nigeria, DR Konga, Tajlandia, Brazylia"],
+            ["**Włókniste**", "bawełna, juta, len, sizal, konopie", "Bawełna — dużo ciepła i słońca podczas dojrzewania oraz woda w fazie wzrostu, stąd częste **nawadnianie**; juta — gorące i bardzo wilgotne delty; len — chłodny i wilgotny klimat umiarkowany", "Bawełna: Indie, Chiny, USA, Brazylia, Pakistan, Uzbekistan; juta: Bangladesz i Indie (delta Gangesu); len: Rosja, Białoruś, Francja"],
+            ["**Używki**", "kawa, herbata, kakao, tytoń", "Kakao — stale wilgotno i ciepło w pasie do 20° od równika, uprawa w półcieniu; herbata — ponad 1500 mm opadów, kwaśne gleby stoków, zbiór ręczny", "Kawa: Brazylia, Wietnam, Kolumbia, Etiopia; herbata: Chiny, Indie, Kenia, Sri Lanka; kakao: Wybrzeże Kości Słoniowej, Ghana, Indonezja, Ekwador"],
+            ["**Cukrodajne**", "trzcina cukrowa, burak cukrowy", "Trzcina — strefa międzyzwrotnikowa, dużo ciepła i wody, daje ok. 4/5 światowego cukru; burak — strefa umiarkowana, gleby żyzne i próchniczne", "Trzcina: Brazylia, Indie, Chiny, Tajlandia; burak: Rosja, Francja, Niemcy, USA, Polska"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwie pułapki terminologiczne: (1) **chów** to utrzymywanie i żywienie zwierząt w celu uzyskania produktów, a **hodowla** to celowe doskonalenie cech dziedzicznych przez dobór i selekcję — na maturze najczęściej opisujesz **chów**, nie hodowlę; (2) **pszenica ozima** siana jest jesienią i wymaga łagodnej zimy oraz pokrywy śnieżnej chroniącej przed wymarzaniem, a **jara** — siana wiosną, ma niższy plon, lecz umożliwia uprawę tam, gdzie zimy są zbyt surowe (Kanada, Syberia). To dlatego udział pszenicy jarej rośnie ku północy."
+        },
+        {
+          "type": "compare",
+          "title": "Chów ekstensywny a intensywny",
+          "leftLabel": "Ekstensywny (pastwiskowy, koczowniczy)",
+          "rightLabel": "Intensywny (alkierzowy, przemysłowy)",
+          "rows": [
+            { "aspect": "Obsada zwierząt", "left": "Bardzo mała liczba sztuk na 1 ha — pastwisko musi się samo odnawiać", "right": "Bardzo duża, często bez dostępu do pastwiska (**fermy przemysłowe**)" },
+            { "aspect": "Żywienie", "left": "Naturalna roślinność pastwisk, sezonowe wędrówki za paszą", "right": "**Pasze treściwe** kupowane z zewnątrz (soja, kukurydza), bilansowane pod przyrost lub mleczność" },
+            { "aspect": "Lokalizacja", "left": "Obszary suche, górskie i o niskiej jakości gleb — nienadające się pod uprawę polową", "right": "Blisko **rynków zbytu**, zakładów przetwórczych i zaplecza paszowego" },
+            { "aspect": "Wydajność jednostkowa", "left": "Niska mleczność i powolne przyrosty masy", "right": "Bardzo wysoka — możliwa dzięki genetyce, paszom i kontroli warunków" },
+            { "aspect": "Skutki środowiskowe", "left": "Przy nadmiernym wypasie: **degradacja pastwisk i pustynnienie** (Sahel)", "right": "Koncentracja odchodów → **eutrofizacja** wód, emisja metanu i amoniaku, ryzyko epidemii" }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Indie — największe pogłowie bydła, a znikoma produkcja wołowiny",
+          "region": "Azja Południowa, Indie",
+          "text": "Indie mają **największe na świecie pogłowie bydła** (łącznie z bawołami) i są **największym producentem mleka**, którego produkcja wzrosła kilkakrotnie po programie spółdzielczości mleczarskiej znanym jako „biała rewolucja” (Operation Flood, od 1970 r.). Jednocześnie spożycie i produkcja wołowiny są bardzo niskie: w **hinduizmie krowa jest zwierzęciem świętym**, a ubój bydła w wielu stanach jest prawnie zakazany. Efektem jest struktura chowu nieporównywalna z żadnym krajem zachodnim — ogromne pogłowie o **niskiej wydajności jednostkowej**, utrzymywane głównie dla mleka oraz jako siła pociągowa i źródło obornika, żywione w dużej mierze resztkami pożniwnymi.",
+          "takeaway": "O geografii chowu zwierząt decydują nie tylko pastwiska i klimat, lecz także **czynniki kulturowo-religijne** — obok zakazu uboju bydła w hinduizmie klasycznym przykładem jest brak chowu trzody chlewnej w krajach islamu i judaizmu."
+        },
+        {
+          "type": "matching",
+          "title": "Roślina a jej wymagania",
+          "instruction": "Dopasuj roślinę uprawną do warunków, które decydują o jej rozmieszczeniu.",
+          "pairs": [
+            { "left": "Ryż", "right": "Zalewane pola na terenie płaskim, ponad 1000 mm opadów i temperatura powyżej 20 °C" },
+            { "left": "Bawełna", "right": "Dużo słońca i ciepła w okresie dojrzewania, zwykle konieczne nawadnianie" },
+            { "left": "Maniok", "right": "Ubogie gleby strefy międzyzwrotnikowej i odporność na okresową suszę" },
+            { "left": "Rzepak", "right": "Chłodniejsza, wilgotna część strefy umiarkowanej i gleby zasobne w wapń" },
+            { "left": "Kawa arabika", "right": "Stoki w strefie międzyzwrotnikowej na wysokości 600–2000 m n.p.m." }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Kukurydza ma najwyższe światowe zbiory spośród zbóż, a mimo to ryż i pszenica mają większe znaczenie w bezpośrednim wyżywieniu ludności. Wynika to głównie z tego, że:",
+          "options": [
+            "kukurydza ma znacznie niższą wartość energetyczną niż pszenica i ryż",
+            "większość zbiorów kukurydzy przeznacza się na paszę dla zwierząt i produkcję etanolu",
+            "kukurydza jest uprawiana wyłącznie w krajach o bardzo małej liczbie ludności",
+            "kukurydza nie nadaje się do długiego przechowywania"
+          ],
+          "correctIndex": 1,
+          "explanation": "W USA, Brazylii czy Chinach kukurydza to przede wszystkim **surowiec paszowy i energetyczny** — trafia do tuczu bydła i trzody oraz do gorzelni produkujących bioetanol. Do człowieka dociera więc **pośrednio**, w postaci mięsa i mleka, a przy tej konwersji traci się większość energii. Bezpośrednim pokarmem kukurydza pozostaje głównie w Ameryce Środkowej, części Ameryki Południowej i Afryce."
+        },
+        {
+          "type": "quiz",
+          "question": "Chów owiec dominuje na obszarach takich jak Wyżyna Tybetańska, Outback australijski czy Wyżyna Anatolijska, ponieważ:",
+          "options": [
+            "owce wymagają bardzo żyznych gleb i wysokich opadów",
+            "owce dobrze znoszą suche i chłodne warunki oraz wykorzystują ubogie pastwiska nienadające się pod uprawę polową",
+            "obszary te leżą blisko największych rynków zbytu na wełnę",
+            "owce nie mogą być chowane na terenach nizinnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "Owca jest zwierzęciem o **najmniejszych wymaganiach paszowych** spośród hodowanych zwierząt gospodarskich: zjada niską, twardą roślinność stepów, półpustyń i hal górskich, znosi duże amplitudy temperatury i niedobór wody. Dlatego zajmuje obszary, na których **uprawa polowa i chów bydła są niemożliwe** — to klasyczny przykład dostosowania kierunku produkcji do bariery przyrodniczej, a nie do bliskości rynku."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Zadania o uprawach niemal zawsze mają formę „wyjaśnij, dlaczego roślina X jest uprawiana w regionie Y” albo „wskaż region na mapie”. Odpowiedź buduj z **trzech elementów**: (1) konkretne wymaganie rośliny (temperatura, suma i rozkład opadów, typ gleby, rzeźba), (2) cecha środowiska regionu, która to wymaganie spełnia, (3) spójnik przyczynowy między nimi. Nie pisz „bo tam jest ciepło” — napisz „bo średnia temperatura powyżej 20 °C przez cały okres wegetacji umożliwia dwa zbiory ryżu w roku”."
+        }
+      ]
+    },
+    {
+      "slug": "zielona-rewolucja-gmo-i-problem-glodu",
+      "title": "Zielona rewolucja, GMO i problem wyżywienia świata",
+      "summary": "Jak w pół wieku podwojono plony zbóż, czym naprawdę jest GMO, dlaczego mimo nadprodukcji setki milionów ludzi głodują, ile żywności marnujemy i jak rolnictwo niszczy własną podstawę — glebę.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "W latach 60. XX w. demografowie ostrzegali, że wzrost liczby ludności Azji przegoni możliwości produkcji żywności i skończy się klęskami głodu na niespotykaną skalę. Prognoza się nie sprawdziła — nie dlatego, że ludzi przybyło mniej, lecz dlatego, że **plony zbóż rosły szybciej niż liczba ludności**. Stało za tym wielkie przedsięwzięcie hodowlano-technologiczne zwane **zieloną rewolucją**, a później inżynieria genetyczna. Ta lekcja pokazuje, jak działał ten mechanizm, jaką cenę środowiskową i społeczną za niego zapłacono i dlaczego świat, który produkuje żywności z nadmiarem, wciąż nie potrafi wszystkich nakarmić. Kluczowa myśl matury rozszerzonej: **głód nie jest dziś problemem wielkości produkcji, lecz dostępu, dochodu i strat**."
+        },
+        {
+          "type": "timeline",
+          "title": "Zielona rewolucja — przebieg",
+          "caption": "Zwróć uwagę, że rewolucja zaczęła się od pszenicy w Meksyku, a nie od ryżu w Azji — Azja przejęła gotową metodę.",
+          "events": [
+            {
+              "period": "lata 40.–50. XX w.",
+              "label": "Meksyk — program hodowlany Normana Borlauga",
+              "text": "Zespół Borlauga krzyżuje pszenicę, wybierając odmiany **karłowe** (o krótkim, sztywnym źdźble) i **odporne na rdzę**. Meksyk, dotąd importer pszenicy, w ciągu kilkunastu lat staje się jej eksporterem. Powstaje wzorzec: nowa odmiana plus pakiet agrotechniczny."
+            },
+            {
+              "period": "1966 r.",
+              "label": "Filipiny — „cudowny ryż” IR8",
+              "text": "Międzynarodowy Instytut Badań nad Ryżem (IRRI) wprowadza wysokoplenną odmianę **IR8**: krótka słoma, krótszy okres dojrzewania (możliwe dwa zbiory rocznie), silna reakcja na nawożenie azotowe. Stąd metoda rozchodzi się po monsunowej Azji."
+            },
+            {
+              "period": "przełom lat 60. i 70.",
+              "label": "Indie — od klęski głodu do samowystarczalności zbożowej",
+              "text": "Po dotkliwych suszach połowy lat 60. Indie wdrażają zieloną rewolucję przede wszystkim w **Pendżabie i Hariana**, gdzie istniała już sieć kanałów nawadniających. W ciągu dekady kraj przestaje być zależny od zagranicznej pomocy żywnościowej w zbożach."
+            },
+            {
+              "period": "1970 r.",
+              "label": "Pokojowa Nagroda Nobla dla Borlauga",
+              "text": "Nagrodę przyznano za wkład w pokój przez zwiększenie produkcji żywności — było to uznanie, że wyżywienie stanowi warunek stabilności politycznej państw."
+            },
+            {
+              "period": "od lat 90. XX w.",
+              "label": "Druga fala: inżynieria genetyczna",
+              "text": "Klasyczna hodowla krzyżówkowa wyczerpuje łatwe rezerwy plonu. Pojawiają się **rośliny transgeniczne** (soja odporna na herbicyd, kukurydza i bawełna z genem Bt), a tempo wzrostu plonów wyraźnie zwalnia."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego zielona rewolucja podniosła plony — mechanizm krok po kroku",
+          "caption": "Żaden element nie działa sam. To pakiet: nowa odmiana bez nawodnienia i nawozu daje plon niewiele lepszy od starej.",
+          "steps": [
+            {
+              "title": "Skrócenie źdźbła (odmiany karłowe)",
+              "text": "Stara pszenica przy silnym nawożeniu rosła w słomę i **wylegała** (kładła się przed żniwami), tracąc plon. Odmiana karłowa kieruje wytworzone asymilaty do **ziarna zamiast do słomy** — rośnie udział ziarna w masie rośliny."
+            },
+            {
+              "title": "Nawożenie mineralne",
+              "text": "Dopiero krótkie, sztywne źdźbło pozwala bezpiecznie podać duże dawki **azotu**. Nowe odmiany są „żarłoczne”: bez nawozu plonują słabo, z nawozem — rekordowo. Stąd nierozerwalny związek zielonej rewolucji z przemysłem chemicznym."
+            },
+            {
+              "title": "Nawadnianie",
+              "text": "Wysoki plon wymaga stabilnej wody w fazach krytycznych rozwoju. Dlatego rewolucja objęła obszary z kanałami i studniami głębinowymi (Pendżab, delty rzek Azji), a **ominęła rolnictwo zależne wyłącznie od deszczu**."
+            },
+            {
+              "title": "Ochrona chemiczna",
+              "text": "Gęsty łan jednej odmiany to dogodne warunki dla chorób i szkodników — konieczne stały się **pestycydy**. Jednolitość genetyczna zwiększa ryzyko: jedna nowa rasa patogenu zagraża od razu ogromnym areałom."
+            },
+            {
+              "title": "Mechanizacja i kapitał",
+              "text": "Dwa zbiory w roku wymagają szybkiego sprzętu i siewu, czyli maszyn, a cały pakiet — **kredytu**. Dlatego korzystali na nim przede wszystkim rolnicy zamożniejsi, co pogłębiło rozwarstwienie majątkowe wsi."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Nie myl pojęć: **zielona rewolucja** to intensyfikacja oparta na nawozach, pestycydach i nawadnianiu — jest przeciwieństwem **rolnictwa ekologicznego**, mimo mylącego przymiotnika „zielona”. Nie myl jej też z **rewolucją agrarną** (przemiany własnościowe i uwłaszczenie chłopów) ani z **rewolucją biotechnologiczną** (GMO), która jest jej późniejszą kontynuacją."
+        },
+        {
+          "type": "case-study",
+          "title": "Dlaczego zielona rewolucja ominęła Afrykę Subsaharyjską",
+          "region": "Afryka Subsaharyjska",
+          "text": "Sukces w Azji opierał się na trzech warunkach, których w Afryce zabrakło. Po pierwsze **woda**: przeważa tam rolnictwo zależne od opadów, a udział gruntów nawadnianych jest bardzo niski — pakiet „odmiana + azot” bez wody nie działa. Po drugie **rodzaj upraw**: podstawą wyżywienia są sorgo, proso, maniok, jams i bataty, a międzynarodowe prace hodowlane skupiały się na pszenicy, ryżu i kukurydzy. Po trzecie **otoczenie gospodarcze**: brak dróg i magazynów, słaby dostęp do kredytu i nawozów, niepewność praw do ziemi oraz konflikty zbrojne sprawiają, że nawet dostępna technologia nie trafia na pole. Efekt: w tym regionie wzrost produkcji żywności następował głównie przez **powiększanie areału** (a więc wylesianie i skracanie odłogów), a nie przez wzrost plonów z hektara.",
+          "takeaway": "Technologia rolnicza jest bezużyteczna bez wody, infrastruktury, kapitału i pokoju — dlatego mapa głodu pokrywa się z mapą państw niestabilnych, a nie z mapą najgorszych gleb."
+        },
+        {
+          "type": "definition",
+          "term": "GMO (organizm zmodyfikowany genetycznie)",
+          "text": "Organizm, którego materiał genetyczny zmieniono metodami **inżynierii genetycznej** — najczęściej przez wprowadzenie pojedynczego genu o znanej funkcji, także pochodzącego z innego gatunku (**transgeniczność**). To odróżnia GMO od klasycznej hodowli, w której nowe cechy uzyskuje się przez krzyżowanie i selekcję, mieszając tysiące genów naraz.",
+          "note": "Najczęstsze modyfikacje: odporność na **herbicyd** (soja, rzepak — ułatwia odchwaszczanie), odporność na szkodniki dzięki genowi bakterii Bacillus thuringiensis (**kukurydza i bawełna Bt**) oraz cechy jakościowe, jak „złoty ryż” z prowitaminą A. Największe areały upraw GMO mają USA, Brazylia, Argentyna, Indie i Kanada; w Unii Europejskiej uprawa jest silnie ograniczona, choć import pasz sojowych powszechny."
+        },
+        {
+          "type": "compare",
+          "title": "Spór o GMO — argumenty stron",
+          "leftLabel": "Zwolennicy",
+          "rightLabel": "Krytycy",
+          "rows": [
+            {
+              "aspect": "Plon i areał",
+              "left": "Wyższe plony i mniejsze straty od szkodników pozwalają wyżywić więcej ludzi **bez zajmowania nowych gruntów**, czyli bez wylesiania",
+              "right": "Wzrost plonów nie usuwa głodu, bo jego przyczyną jest **brak dochodu i dostępu**, a nie brak ziarna w skali świata"
+            },
+            {
+              "aspect": "Chemizacja",
+              "left": "Odmiany Bt zmniejszają zużycie insektycydów — wyraźnie w uprawie bawełny w Indiach",
+              "right": "Odmiany odporne na herbicyd zachęcają do **częstszych oprysków** i sprzyjają powstawaniu odpornych chwastów"
+            },
+            {
+              "aspect": "Środowisko",
+              "left": "Gen wprowadzany jest celowo i precyzyjnie, a odmiany przechodzą wieloletnie badania przed dopuszczeniem do obrotu",
+              "right": "Ryzyko **przepływu genów** do odmian tradycyjnych i dzikich krewnych oraz dalszego zubożenia różnorodności odmian uprawnych"
+            },
+            {
+              "aspect": "Zdrowie",
+              "left": "Dotychczasowe badania nie wykazały szkodliwości dopuszczonych odmian dla konsumentów",
+              "right": "Zasada przezorności: skutki długookresowe trudno przewidzieć, stąd postulat obowiązkowego **znakowania żywności**"
+            },
+            {
+              "aspect": "Ekonomia i społeczeństwo",
+              "left": "Rolnik kupuje nasiona, bo mu się to opłaca — decyduje rachunek ekonomiczny gospodarstwa",
+              "right": "**Patenty na nasiona** uzależniają rolników od kilku koncernów i utrudniają wysiew własnego materiału siewnego"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Głód, niedożywienie i głód ukryty",
+          "text": "**Niedożywienie (głód jawny)** to trwałe spożycie energii poniżej zapotrzebowania organizmu. **Głód ukryty (utajony)** to niedobór **mikroskładników**: żelaza, jodu, cynku czy witaminy A — dieta dostarcza wtedy dość kalorii, ale jest jednostajna (oparta na jednym zbożu lub bulwach), więc organizm choruje mimo pełnego żołądka. Odrębnym zjawiskiem jest **klęska głodu** — nagły, lokalny kryzys wywołany zwykle wojną lub suszą.",
+          "note": "Skala (2022, FAO): chronicznie niedożywionych jest ok. **735 mln ludzi**, a głód ukryty dotyczy **ponad 2 mld**. Jednocześnie liczba osób z nadwagą i otyłością przewyższa liczbę głodujących — to paradoks współczesnego wyżywienia."
+        },
+        {
+          "type": "classification",
+          "title": "Przyczyny głodu — cztery grupy",
+          "caption": "Na maturze rzadko wystarczy jedna przyczyna: typowe polecenie brzmi „podaj po jednej przyczynie przyrodniczej i pozaprzyrodniczej”.",
+          "groups": [
+            {
+              "name": "Przyrodnicze",
+              "description": "Ograniczają produkcję lokalnie i najczęściej **wyzwalają** kryzys, ale rzadko go same podtrzymują: susze, powodzie, cyklony, gradacje szkodników, ubogie gleby, krótki okres wegetacyjny.",
+              "examples": [
+                "susze w Sahelu",
+                "plagi szarańczy w Rogu Afryki",
+                "powodzie monsunowe w Bangladeszu"
+              ]
+            },
+            {
+              "name": "Polityczne",
+              "description": "Najgroźniejsze współcześnie — konflikty niszczą zbiory, blokują dostawy pomocy i wypędzają rolników z pól; głód bywa też świadomie używany jako **narzędzie walki**.",
+              "examples": [
+                "wojny domowe w Sudanie i Jemenie",
+                "blokady transportów humanitarnych",
+                "wysiedlenia ludności rolniczej"
+              ]
+            },
+            {
+              "name": "Ekonomiczne i społeczne",
+              "description": "Człowiek głoduje, bo **nie stać go na żywność**, która fizycznie jest dostępna: niskie dochody, wzrost cen zbóż, zadłużenie, bezrolność, niski status kobiet ograniczający dostęp do kredytu i edukacji.",
+              "examples": [
+                "skoki cen żywności na giełdach",
+                "bezrolność w Azji Południowej",
+                "brak dostępu do rynków zbytu"
+              ]
+            },
+            {
+              "name": "Techniczno-organizacyjne",
+              "description": "Żywność powstaje, ale **nie dociera do stołu**: brak magazynów i chłodni, złe drogi, straty w transporcie, słaba administracja i korupcja przy rozdziale pomocy.",
+              "examples": [
+                "wysokie straty pożniwne w Afryce",
+                "brak łańcucha chłodniczego",
+                "zerwane łańcuchy dostaw"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Straty i marnotrawstwo żywności",
+          "items": [
+            {
+              "value": "ok. 1/3",
+              "label": "wyprodukowanej żywności na świecie zostaje utracona lub zmarnowana",
+              "note": "szacunek FAO — od pola aż po talerz konsumenta"
+            },
+            {
+              "value": "ok. 17",
+              "unit": "%",
+              "label": "żywności dostępnej dla konsumentów trafia do odpadów",
+              "note": "raport UNEP Food Waste Index (2021); większość powstaje w gospodarstwach domowych"
+            },
+            {
+              "value": "ok. 60",
+              "unit": "%",
+              "label": "polskiego marnotrawstwa żywności powstaje w domach",
+              "note": "reszta w handlu, gastronomii i przetwórstwie"
+            },
+            {
+              "value": "ok. 8–10",
+              "unit": "%",
+              "label": "światowych emisji gazów cieplarnianych wiąże się z żywnością, która nigdy nie została zjedzona",
+              "note": "produkcja, transport i rozkład odpadów na składowiskach"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Degradacja gleb — rolnictwo niszczące własną podstawę",
+          "caption": "Gleba odnawia się w tempie milimetrów na stulecie, więc w skali ludzkiego życia jest zasobem **nieodnawialnym**.",
+          "headers": [
+            "Forma degradacji",
+            "Mechanizm",
+            "Gdzie szczególnie groźna"
+          ],
+          "rows": [
+            [
+              "Erozja wodna",
+              "Spływ po zaoranych stokach pozbawionych okrywy roślinnej zmywa poziom próchniczny; sprzyja jej orka wzdłuż stoku i usuwanie miedz",
+              "Wyżyna Lessowa w Chinach, Wyżyna Abisyńska, polskie obszary lessowe (Wyżyna Lubelska)"
+            ],
+            [
+              "Erozja wietrzna (eoliczna)",
+              "Wywiewanie suchej, pylastej gleby z wielkich pól pozbawionych zadrzewień śródpolnych",
+              "Wielkie Równiny w USA, stepy Kazachstanu, Sahel"
+            ],
+            [
+              "Zasolenie wtórne",
+              "Nawadnianie w klimacie suchym: woda paruje, a rozpuszczone w niej sole zostają i gromadzą się w warstwie ornej",
+              "Kotlina Aralska, dolina Indusu, doliny Eufratu i Tygrysu"
+            ],
+            [
+              "Wyjałowienie (utrata próchnicy)",
+              "Ciągła uprawa bez nawozów organicznych i płodozmianu wyczerpuje składniki i próchnicę, a monokultura obniża aktywność biologiczną gleby",
+              "Afryka Subsaharyjska, obszary intensywnej monokultury zbożowej"
+            ],
+            [
+              "Zakwaszenie i zanieczyszczenie",
+              "Nadmiar nawozów azotowych obniża pH; ścieki, osady i pyły wnoszą metale ciężkie",
+              "okolice okręgów przemysłowych, m.in. Górny Śląsk"
+            ],
+            [
+              "Zasklepienie gleb",
+              "Trwałe zabudowanie i uszczelnienie powierzchni — całkowita utrata funkcji produkcyjnej",
+              "strefy podmiejskie wielkich miast, korytarze transportowe"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj pojęcie do opisu",
+          "instruction": "Połącz termin z mechanizmem, którego dotyczy.",
+          "pairs": [
+            {
+              "left": "Odmiany karłowe",
+              "right": "Krótkie źdźbło nie wylega przy dużych dawkach azotu i kieruje asymilaty do ziarna"
+            },
+            {
+              "left": "IR8",
+              "right": "Wysokoplenna odmiana ryżu z lat 60., która umożliwiła dwa zbiory rocznie"
+            },
+            {
+              "left": "Kukurydza Bt",
+              "right": "Roślina transgeniczna z genem bakterii, wytwarzająca własne białko owadobójcze"
+            },
+            {
+              "left": "Głód ukryty",
+              "right": "Niedobór żelaza, jodu czy witaminy A przy wystarczającej liczbie kalorii"
+            },
+            {
+              "left": "Zasolenie wtórne",
+              "right": "Nagromadzenie soli w warstwie ornej po wieloletnim nawadnianiu w klimacie suchym"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego wprowadzenie karłowych odmian pszenicy było warunkiem wykorzystania wysokich dawek nawozów azotowych?",
+          "options": [
+            "Ponieważ krótkie odmiany pobierają z gleby mniej azotu, więc nawóz się nie marnuje",
+            "Ponieważ krótkie i sztywne źdźbło nie wylega, a rośliny przeznaczają więcej asymilatów na ziarno niż na słomę",
+            "Ponieważ odmiany karłowe mają głębszy system korzeniowy i nie wymagają nawadniania",
+            "Ponieważ niskie łany są mniej narażone na choroby grzybowe i nie trzeba stosować pestycydów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Silne nawożenie azotem starych, wysokich odmian powodowało bujny wzrost słomy i **wyleganie** łanu przed żniwami — plon spadał zamiast rosnąć. Karłowatość rozwiązała problem mechanicznie (sztywne źdźbło) i fizjologicznie (większy udział ziarna w masie rośliny). Gęsty łan jednej odmiany był natomiast **bardziej**, a nie mniej podatny na choroby, dlatego pakiet zielonej rewolucji zawierał również pestycydy."
+        },
+        {
+          "type": "quiz",
+          "question": "Świat produkuje dziś więcej kalorii, niż wynosi zapotrzebowanie jego mieszkańców, a mimo to setki milionów ludzi są niedożywione. Które wyjaśnienie jest zgodne ze współczesną wiedzą?",
+          "options": [
+            "Gleby świata są już tak wyjałowione, że produkcja globalna nie pokrywa potrzeb",
+            "Głód wynika przede wszystkim z braku dostępu ekonomicznego i fizycznego do żywności: niskich dochodów, wojen, złej infrastruktury i strat w łańcuchu dostaw",
+            "Przyczyną jest wyłącznie zbyt szybki przyrost naturalny w krajach rozwijających się",
+            "Żywność jest w skali globalnej rozdzielana równo, ale mieszkańcy krajów ubogich mają wyższe zapotrzebowanie energetyczne"
+          ],
+          "correctIndex": 1,
+          "explanation": "To kluczowa teza egzaminacyjna: **głód jest dziś problemem dystrybucji i ubóstwa, a nie globalnej wielkości produkcji**. Ta sama planeta, na której ok. 735 mln ludzi było niedożywionych (2022), marnuje około jednej trzeciej wytworzonej żywności. Przyrost naturalny zwiększa presję, lecz sam nie tłumaczy, dlaczego głodują konkretne regiony — pokrywają się one z obszarami konfliktów i skrajnego ubóstwa."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Częste polecenia CKE z tego zakresu: (1) „Wyjaśnij, dlaczego zielona rewolucja przyniosła większe efekty w Azji Południowej niż w Afryce Subsaharyjskiej” — odpowiadaj przez **nawadnianie, rodzaj upraw objętych pracami hodowlanymi i dostęp do kapitału**, nie ogólnikami o zacofaniu. (2) „Podaj skutki pozytywne i negatywne zielonej rewolucji” — po dwa z każdej strony, a negatywne rozbij na **środowiskowe** (zasolenie, obniżenie zwierciadła wód podziemnych, eutrofizacja, spadek różnorodności odmian) i **społeczne** (rozwarstwienie wsi, zadłużenie drobnych rolników). (3) W zadaniach o głodzie zawsze rozdziel **przyczyny przyrodnicze od pozaprzyrodniczych** i pamiętaj, że te drugie są dziś ważniejsze."
+        }
+      ]
+    },
+    {
+      "slug": "lesnictwo-funkcje-lasow-i-wylesianie",
+      "title": "Leśnictwo — funkcje lasów, lesistość i wylesianie",
+      "summary": "Dlaczego las jest jednocześnie surowcem i urządzeniem ochronnym środowiska, jak liczyć i porównywać lesistość, na czym polega trwale zrównoważona gospodarka leśna oraz gdzie i z jakich powodów lasy dziś znikają.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Lasy zajmują ok. **31% powierzchni lądów** (ok. 4,06 mld ha, FAO 2020), ale ich znaczenie daleko wykracza poza dostarczanie drewna. Ten sam hektar lasu równocześnie produkuje surowiec, hamuje erozję, zatrzymuje wodę, pochłania dwutlenek węgla, daje schronienie gatunkom i miejsce wypoczynku ludziom — i właśnie dlatego decyzje o jego wycięciu są tak sporne. **Leśnictwo** to dział gospodarki zajmujący się hodowlą, ochroną i użytkowaniem lasu; jego podstawową zasadą jest **trwałość lasu**: nie wolno pozyskać więcej drewna, niż przyrasta. W skali świata zasada ta bywa łamana — tam, gdzie las nie jest wart tyle, co ziemia pod nim, znika bezpowrotnie."
+        },
+        {
+          "type": "classification",
+          "title": "Funkcje lasu — trzy grupy",
+          "caption": "Na maturze bardzo częste polecenie: „podaj po dwie funkcje pozaprodukcyjne”. Rozdzielaj wtedy funkcje ekologiczne od społecznych.",
+          "groups": [
+            {
+              "name": "Produkcyjne (gospodarcze)",
+              "description": "Dostarczanie surowców i dochodu: **drewno** dla budownictwa, przemysłu meblarskiego, celulozowo-papierniczego i energetyki, a także żywica, runo leśne, zwierzyna łowna i miejsca pracy na obszarach wiejskich.",
+              "examples": [
+                "drewno tartaczne i papierówka",
+                "grzyby i owoce leśne",
+                "gospodarka łowiecka",
+                "żywica i kora"
+              ]
+            },
+            {
+              "name": "Ekologiczne (ochronne)",
+              "description": "Las stabilizuje warunki środowiska: funkcja **glebochronna** (korzenie wiążą glebę na stokach i wydmach), **wodochronna** (ściółka zwiększa wsiąkanie i retencję, spłaszczając fale wezbraniowe), **klimatyczna** (pochłanianie $CO_2$, obniżanie amplitud temperatury, wzrost wilgotności powietrza) oraz ochrona **różnorodności biologicznej**.",
+              "examples": [
+                "lasy wodochronne wokół zbiorników",
+                "pasy wiatrochronne na stepach",
+                "lasy górskie chroniące przed lawinami",
+                "zwiększanie retencji w zlewni"
+              ]
+            },
+            {
+              "name": "Społeczne (socjalne)",
+              "description": "Funkcje związane bezpośrednio z człowiekiem: **rekreacja i turystyka**, edukacja przyrodnicza, walory zdrowotne i krajobrazowe, a w wielu krajach rozwijających się także **drewno opałowe** jako podstawowe źródło energii gospodarstw domowych.",
+              "examples": [
+                "lasy miejskie i podmiejskie",
+                "ścieżki dydaktyczne",
+                "uzdrowiska i lecznictwo klimatyczne",
+                "opał i węgiel drzewny w Afryce"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Lesistość",
+          "text": "**Lesistość** to udział powierzchni lasów w powierzchni ogólnej danego obszaru, wyrażony w procentach. Jest wskaźnikiem **względnym**, więc kraj o ogromnej powierzchni lasów może mieć niską lesistość i odwrotnie.",
+          "note": "Największą powierzchnię lasów mają Rosja, Brazylia, Kanada, USA i Chiny — łącznie ponad połowę lasów świata. Najwyższą lesistością odznaczają się natomiast małe kraje strefy równikowej (Surinam, Gujana, Gabon) oraz Finlandia i Szwecja."
+        },
+        {
+          "type": "formula",
+          "title": "Wskaźnik lesistości",
+          "expression": "L = \\frac{P_l}{P} \\cdot 100\\%",
+          "variables": [
+            {
+              "symbol": "L",
+              "meaning": "lesistość [%]"
+            },
+            {
+              "symbol": "P_l",
+              "meaning": "powierzchnia lasów [km² lub ha]"
+            },
+            {
+              "symbol": "P",
+              "meaning": "powierzchnia ogólna obszaru [km² lub ha]"
+            }
+          ],
+          "caption": "Pilnuj jednakowych jednostek w liczniku i mianowniku — najczęstszy błąd rachunkowy w zadaniach to mieszanie ha z km² (1 km² = 100 ha)."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Lesistość wybranych krajów",
+          "caption": "Dane FAO (ok. 2020), wartości zaokrąglone. Zestaw pokazuje, że lesistość zależy przede wszystkim od **strefy klimatycznej** oraz od historii wylesiania: Wielka Brytania wykarczowała swoje lasy stulecia temu, a Chiny odbudowują je dopiero od kilku dekad.",
+          "unit": "%",
+          "labels": [
+            "Surinam",
+            "Finlandia",
+            "Szwecja",
+            "Brazylia",
+            "Rosja",
+            "Kanada",
+            "Polska",
+            "Chiny",
+            "Wielka Brytania"
+          ],
+          "series": [
+            {
+              "name": "Lesistość",
+              "values": [
+                97,
+                74,
+                69,
+                59,
+                50,
+                39,
+                31,
+                23,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Wielkie strefy leśne świata i ich rola gospodarcza",
+          "caption": "Kliknij kolejne strefy: zwróć uwagę, że najintensywniej użytkowane gospodarczo są lasy borealne i umiarkowane, a najsilniej wylesiane — równikowe.",
+          "zones": [
+            {
+              "name": "Wilgotne lasy równikowe",
+              "latitude": "ok. 10°N – 10°S",
+              "text": "Największa różnorodność biologiczna i ogromny zapas węgla, ale gleby pod nimi (ferralitowe) są **ubogie** — składniki krążą w biomasie, nie w glebie. Drewno gatunków liściastych twardych (mahoń, teak) jest cenne, lecz drzewa rosną w rozproszeniu, co utrudnia pozyskanie. Tu koncentruje się dziś wylesianie.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Lasy monsunowe i suche lasy zwrotnikowe",
+              "latitude": "ok. 10° – 25°",
+              "text": "Zrzucają liście w porze suchej. Silnie przekształcone przez wypas i rolnictwo żarowe, w Afryce dodatkowo przez pozyskanie **drewna opałowego i węgla drzewnego** — ich ubytek prowadzi wprost do pustynnienia Sahelu.",
+              "tone": "heat"
+            },
+            {
+              "name": "Lasy i zarośla twardolistne",
+              "latitude": "ok. 30° – 40°",
+              "text": "Strefa śródziemnomorska: wiecznie zielone dęby korkowe i ostrolistne, często zdegradowane do zarośli typu makia. Głównym zagrożeniem są **pożary** i zabudowa turystyczna wybrzeży, a nie pozyskanie drewna.",
+              "tone": "earth"
+            },
+            {
+              "name": "Lasy strefy umiarkowanej (liściaste i mieszane)",
+              "latitude": "ok. 40° – 55°",
+              "text": "Niemal w całości **wtórne** — pierwotne lasy Europy i wschodu USA wycięto pod uprawy setki lat temu. Dziś ich powierzchnia jest stabilna lub rośnie, bo grunty marginalne są zalesiane. To strefa najstarszej, uregulowanej gospodarki leśnej — należy do niej Polska.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Tajga (borealne lasy iglaste)",
+              "latitude": "ok. 50° – 70°N",
+              "text": "Największy zwarty kompleks leśny świata (Rosja, Kanada, Skandynawia). Drewno iglaste, jednorodne i łatwe w pozyskaniu, zasila przemysł tartaczny i celulozowo-papierniczy. Wolny wzrost w chłodnym klimacie oznacza jednak **bardzo długi okres odnowienia** i dużą wrażliwość na pożary.",
+              "tone": "ice"
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Cykl hodowlany w gospodarce leśnej",
+          "caption": "Cykl zamyka się dopiero po kilkudziesięciu, a w tajdze nawet po ponad stu latach — dlatego leśnictwo planuje się w dziesięcioleciach, a nie w sezonach jak rolnictwo.",
+          "stages": [
+            {
+              "name": "Odnowienie",
+              "text": "Powstaje nowe pokolenie drzew — **naturalnie** (z nasion drzew macierzystych) lub sztucznie, przez sadzenie z hodowanego materiału. Odnowienie naturalne daje drzewostan lepiej dostosowany do siedliska."
+            },
+            {
+              "name": "Pielęgnacja upraw i młodników",
+              "text": "Czyszczenia usuwają egzemplarze chore, wadliwe i nadmiernie zagęszczone, dzięki czemu pozostałe drzewa mają dość światła i wody."
+            },
+            {
+              "name": "Trzebież",
+              "text": "Systematyczne przerzedzanie starszego drzewostanu. Daje **drewno użytkowe już w trakcie wzrostu lasu** i jednocześnie przyspiesza przyrost drzew pozostawionych."
+            },
+            {
+              "name": "Wiek rębności",
+              "text": "Drzewostan osiąga dojrzałość (dla sosny w Polsce zwykle ok. 100 lat, dla dębu znacznie więcej). Przyrost roczny zaczyna maleć, a funkcje ochronne i przyrodnicze są największe."
+            },
+            {
+              "name": "Rębnia i pozyskanie",
+              "text": "Wycinka: **zupełna** (cała powierzchnia naraz — tania, ale odsłania glebę) lub **złożona** (stopniowa, pod osłoną starego drzewostanu — droższa, lecz chroni glebę i sprzyja odnowieniu naturalnemu). Powierzchnia musi zostać odnowiona, więc cykl zaczyna się od nowa."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Gdzie las znika, a gdzie przybywa",
+          "caption": "Sprawdź, czy potrafisz przypisać każdemu obszarowi jego główną przyczynę zmian — to typowe zadanie z mapą.",
+          "center": [
+            8,
+            20
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -10.5,
+              "lng": -63,
+              "label": "Amazonia (Rondônia, Brazylia)",
+              "text": "Klasyczny „łuk wylesiania”. Kolejność: droga — wyrąb cennych drzew — wypalanie — pastwiska dla bydła — uprawa soi. Wylesianie napędza tu **eksportowy agrobiznes**, nie potrzeby miejscowej ludności."
+            },
+            {
+              "lat": 0.5,
+              "lng": 22,
+              "label": "Kotlina Konga",
+              "text": "Drugi co do wielkości kompleks lasów równikowych. Ubytek wolniejszy niż w Amazonii, wywołany głównie **rolnictwem żarowo-odłogowym** i pozyskaniem drewna opałowego przy szybkim wzroście liczby ludności."
+            },
+            {
+              "lat": 0,
+              "lng": 114,
+              "label": "Borneo i Sumatra (Indonezja, Malezja)",
+              "text": "Wylesianie pod **plantacje palmy oleistej**. Szczególnie dotkliwe na podłożu torfowym: osuszenie i wypalanie torfu uwalnia ogromne ilości $CO_2$ i wywołuje transgraniczne zadymienie."
+            },
+            {
+              "lat": -22,
+              "lng": -61.5,
+              "label": "Gran Chaco (Argentyna, Paragwaj)",
+              "text": "Suchy las zwrotnikowy karczowany maszynowo pod **soję i pastwiska** — jedno z najszybciej wylesianych miejsc świata poza strefą równikową."
+            },
+            {
+              "lat": -19,
+              "lng": 47,
+              "label": "Madagaskar",
+              "text": "Wylesianie z ubóstwa: rolnictwo żarowe (tavy) i węgiel drzewny. Skutkiem jest katastrofalna **erozja gleb** — rzeki wynoszą do oceanu czerwoną zwietrzelinę, dobrze widoczną na zdjęciach satelitarnych."
+            },
+            {
+              "lat": 40,
+              "lng": 110,
+              "label": "Północne Chiny — pas ochronny",
+              "text": "Przykład odwrotny: od 1978 r. trwa zakrojony na dekady program zalesiania („Trzy Północne Pasy Ochronne”), mający hamować **erozję wietrzną i postęp pustyni**. Lesistość Chin wyraźnie wzrosła, choć monokultury sadzone w klimacie suchym są krytykowane za zużycie wody."
+            },
+            {
+              "lat": 14,
+              "lng": 5,
+              "label": "Sahel — Wielki Zielony Mur",
+              "text": "Międzynarodowy projekt pasa zieleni na południowym skraju Sahary, łączący sadzenie drzew z odbudową pastwisk i małą retencją. Cel: powstrzymanie **pustynnienia** i poprawa bezpieczeństwa żywnościowego."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Przyczyny wylesiania — inne w każdym regionie",
+          "caption": "Reguła: w krajach o wysokich dochodach lasu ubywa rzadko, bo grunty rolne są porzucane; w krajach ubogich las ustępuje polu, pastwisku lub paleniskom.",
+          "headers": [
+            "Grupa przyczyn",
+            "Mechanizm",
+            "Przykładowe regiony"
+          ],
+          "rows": [
+            [
+              "Ekspansja rolnictwa towarowego",
+              "Las ustępuje, gdy hektar pastwiska lub plantacji daje wyższy dochód niż hektar lasu; decyduje popyt **rynków zagranicznych**",
+              "Amazonia (bydło, soja), Gran Chaco, Borneo (palma oleista)"
+            ],
+            [
+              "Rolnictwo żarowo-odłogowe",
+              "Przy rosnącej liczbie ludności skraca się odłóg i las nie zdąża się odtworzyć — system z odnawialnego staje się rabunkowy",
+              "Kotlina Konga, Madagaskar, wnętrze Azji Południowo-Wschodniej"
+            ],
+            [
+              "Pozyskanie drewna opałowego i węgla drzewnego",
+              "Podstawowe źródło energii gospodarstw domowych w krajach ubogich; wycinka koncentruje się wokół miast i dróg",
+              "Sahel, Afryka Wschodnia, Haiti"
+            ],
+            [
+              "Wyrąb rabunkowy (w tym nielegalny)",
+              "Selektywne wycinanie najcenniejszych gatunków plus drogi zrywkowe otwierające las dla osadników — częściej **degradacja** niż całkowite wylesienie",
+              "Azja Południowo-Wschodnia, dorzecze Amazonki, Syberia"
+            ],
+            [
+              "Górnictwo, energetyka i urbanizacja",
+              "Kopalnie odkrywkowe, zbiorniki zaporowe, drogi i rozlewanie się miast trwale zmieniają użytkowanie terenu",
+              "Amazonia (złoto), Indie, Afryka Zachodnia"
+            ],
+            [
+              "Pożary",
+              "Naturalny czynnik w tajdze i strefie śródziemnomorskiej, ale nasilany przez ocieplenie, susze i wypalanie — pożar sam w sobie nie musi oznaczać wylesienia, o ile las się odnowi",
+              "Syberia, Kanada, basen Morza Śródziemnego, Australia"
+            ]
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Amazonia — dlaczego las przegrywa z pastwiskiem",
+          "region": "Brazylia, dorzecze Amazonki",
+          "text": "Wylesianie w Amazonii ma powtarzalny scenariusz. Najpierw powstaje **droga** — bez niej las jest nieopłacalny do zagospodarowania. Wzdłuż niej wchodzą ekipy wycinające najcenniejsze drzewa, a resztę drzewostanu wypala się w porze suchej. Popiół użyźnia glebę na kilka lat, więc powstaje **pastwisko dla bydła** — najtańszy sposób „zajęcia” ziemi i potwierdzenia prawa do niej. Po wyjałowieniu gleby teren bywa sprzedawany pod mechaniczną uprawę **soi**, a hodowca przesuwa się głębiej w las. Kluczowy jest jednak mechanizm gospodarczy: dochód z hektara pastwiska lub pola jest natychmiastowy i trafia do właściciela, natomiast korzyści z zachowania lasu (retencja wody, pochłanianie $CO_2$, bioróżnorodność) są **rozproszone w skali świata i nikt za nie właścicielowi nie płaci**. Dochodzi do tego sprzężenie zwrotne: Amazonia sama wytwarza znaczną część własnych opadów przez ewapotranspirację, więc zmniejszanie powierzchni lasu **osusza** obszary jeszcze zalesione, ułatwiając kolejne pożary.",
+          "takeaway": "Wylesianie tropikalne jest problemem ekonomicznym: dopóki las żywy jest dla właściciela mniej wart niż las wycięty, chronią go tylko przepisy, kontrola i płatności za usługi ekosystemowe."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. (1) **Wylesianie to trwała zmiana sposobu użytkowania ziemi** (las → pole, pastwisko, kopalnia), a nie każda wycinka: zrąb w gospodarce leśnej, który zostaje odnowiony, wylesianiem nie jest. (2) **Degradacja lasu** (przerzedzenie, wybranie najcenniejszych drzew, pożar) obniża jakość lasu, choć powierzchnia leśna formalnie pozostaje — dlatego statystyki FAO bywają mylące. (3) **Lesistość** to udział procentowy, a **powierzchnia lasów** to wartość bezwzględna: Kanada ma wielokrotnie więcej lasu niż Finlandia, ale znacznie niższą lesistość."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj etapy przejścia leśnego",
+          "instruction": "„Przejście leśne” to typowy przebieg zmian lesistości kraju wraz z rozwojem gospodarczym. Ustaw etapy od najwcześniejszego do najpóźniejszego.",
+          "items": [
+            "Rozległe lasy pierwotne przy niskiej gęstości zaludnienia i rolnictwie na własne potrzeby",
+            "Karczowanie lasów pod uprawy i osadnictwo w miarę szybkiego wzrostu liczby ludności",
+            "Minimum lesistości: deficyt drewna, nasilona erozja gleb i powodzie",
+            "Odpływ ludności ze wsi do miast, porzucanie gruntów marginalnych i pierwsze zalesienia",
+            "Wzrost lesistości oraz przewaga funkcji ochronnych i społecznych lasu nad produkcyjnymi"
+          ],
+          "explanation": "Tę ścieżkę przeszły m.in. Europa Zachodnia, Polska i Korea Południowa: minimum lesistości Polski przypadło na okres po II wojnie światowej (ok. 21%), po czym zalesienia gruntów najsłabszych podniosły ją do ok. 30%. Kraje Afryki Subsaharyjskiej znajdują się dziś w fazie drugiej — dlatego globalne wylesianie i globalne zalesianie zachodzą jednocześnie, w różnych częściach świata."
+        },
+        {
+          "type": "quiz",
+          "question": "Rosja ma największą na świecie powierzchnię lasów, a jednak jej lesistość jest niższa niż Finlandii. Jak to wyjaśnić?",
+          "options": [
+            "Lasy Rosji są młodsze, więc statystyki ich nie uwzględniają",
+            "Lesistość jest wskaźnikiem względnym — liczy udział lasów w powierzchni kraju, a znaczną część Rosji zajmują tundra, stepy i góry, na których las nie rośnie",
+            "Fińskie lasy są gęstsze, więc dają wyższy wskaźnik lesistości",
+            "Rosja zalicza tajgę do gruntów nieleśnych ze względu na jej gospodarcze wykorzystanie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lesistość to iloraz: $L = \\frac{P_l}{P} \\cdot 100\\%$. Rosja ma ogromny licznik, ale jeszcze większy mianownik — poza strefą tajgi leżą rozległe obszary tundry, stepów, pustyń i wysokich gór, gdzie las nie występuje z przyczyn klimatycznych. Finlandia niemal w całości mieści się w strefie borealnej, więc niemal cała jej powierzchnia nadaje się dla lasu. Gęstość drzewostanu nie wchodzi do tego wskaźnika w ogóle."
+        },
+        {
+          "type": "quiz",
+          "question": "Jak wylesienie górnej części zlewni wpłynie na reżim rzeki i stan gleb?",
+          "options": [
+            "Wezbrania staną się wyższe i gwałtowniejsze, przepływy niżówkowe niższe, a erozja gleb i zamulanie zbiorników — silniejsze",
+            "Rzeka wyrówna przepływ, bo woda nie będzie już pobierana przez drzewa",
+            "Wezbrania się zmniejszą, ponieważ zniknie ściółka zatrzymująca wodę na stokach",
+            "Reżim rzeki się nie zmieni, bo o przepływie decydują wyłącznie opady"
+          ],
+          "correctIndex": 0,
+          "explanation": "Las działa jak **gąbka i hamulec**: korony przechwytują część opadu, a porowata ściółka zwiększa wsiąkanie, dzięki czemu woda spływa powoli, w dużej mierze podziemnie. Po wylesieniu rośnie udział szybkiego **spływu powierzchniowego** — fala wezbraniowa jest wyższa i przychodzi wcześniej, a ponieważ zasilanie podziemne słabnie, w okresach bezopadowych przepływy są niższe (amplituda stanów wody rośnie). Odsłonięta gleba na stoku jest jednocześnie zmywana, więc rzeka niesie więcej materiału, który zamula koryta i zbiorniki zaporowe."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Co powtórzyć przed egzaminem: (1) potrafisz **obliczyć lesistość** z danych w tabeli i porównać ją z powierzchnią lasów — pilnuj jednostek (1 km² = 100 ha); (2) umiesz podać po dwie funkcje **produkcyjne, ekologiczne i społeczne** lasu i przypisać je do konkretnej sytuacji z mapy (las wodochronny nad zbiornikiem, pas wiatrochronny na Wielkich Równinach); (3) przy zadaniu „wyjaśnij przyczyny wylesiania na obszarze X” zawsze podawaj **mechanizm ekonomiczny**, a nie samo zjawisko — soja i bydło w Amazonii, palma oleista na Borneo, drewno opałowe w Sahelu; (4) znasz skutki wylesiania w trzech skalach: **lokalnej** (erozja, wezbrania), **regionalnej** (spadek opadów, pustynnienie) i **globalnej** (emisja $CO_2$, utrata bioróżnorodności)."
+        }
+      ]
+    },
+    {
+      "slug": "rybactwo-lowiska-przelowienie-akwakultura",
+      "title": "Rybactwo — łowiska świata, przełowienie i akwakultura",
+      "summary": "Dlaczego ryby gromadzą się akurat tam, gdzie się gromadzą: mechanizm powstawania łowisk (szelf, upwelling, spotkanie prądów), mapa najbogatszych obszarów połowowych, anatomia przełowienia na przykładzie dorsza nowofundlandzkiego oraz akwakultura jako najszybciej rosnący dział produkcji żywności.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Ocean zajmuje ok. **71% powierzchni Ziemi**, ale nie jest jednorodną spiżarnią: ponad **90% morskich połowów** pochodzi z wąskiego pasa wód szelfowych i ze stref wynoszenia wód głębinowych, czyli z kilku procent powierzchni oceanu. Reszta to w dużej mierze **pustynie oceaniczne** — wody ciepłe, przejrzyste i niemal pozbawione życia. Kluczem do zrozumienia geografii rybactwa jest więc jedno pytanie: **co dostarcza biogeny do oświetlonej warstwy wody?** Tam, gdzie odpowiedź jest twierdząca, powstaje **łowisko**; tam, gdzie nie — ocean pozostaje pusty. W tej lekcji prześledzimy ten mechanizm, zobaczymy, gdzie działa najsilniej, a potem zajmiemy się dwoma zjawiskami, które przesądzają o przyszłości branży: **przełowieniem** dzikich stad i eksplozją **akwakultury**."
+        },
+        {
+          "type": "definition",
+          "term": "Rybactwo, rybołówstwo, akwakultura",
+          "text": "**Rybactwo** to pojęcie najszersze — całość działalności człowieka polegającej na pozyskiwaniu organizmów wodnych. Dzieli się na dwa działy: **rybołówstwo** (połów organizmów **dziko żyjących**, morskie i śródlądowe) oraz **akwakulturę** (kontrolowany **chów i hodowla** ryb, skorupiaków, mięczaków i wodorostów; jej morską odmianę nazywa się **marikulturą**).",
+          "note": "Na maturze pojawia się polecenie typu „wyjaśnij, dlaczego produkcja rybactwa rośnie, choć wielkość połowów się nie zwiększa”. Odpowiedź tkwi w tej definicji: rośnie drugi człon — akwakultura, a nie rybołówstwo."
+        },
+        {
+          "type": "process",
+          "title": "Od światła do ławicy — jak powstaje łowisko",
+          "caption": "Każdy typ łowiska to inny sposób wykonania kroku 3. Jeśli krok 3 nie zachodzi, ocean pozostaje pustynią mimo obfitości światła.",
+          "steps": [
+            {
+              "title": "1. Strefa fotyczna — warunek świetlny",
+              "text": "Fotosynteza jest możliwa tylko w górnej warstwie wody, do której dociera światło (**strefa fotyczna**, orientacyjnie 0–100 m, przy czym realna produkcja skupia się w kilkudziesięciu górnych metrach). Głębiej **produkcja pierwotna nie zachodzi w ogóle** — cała piramida troficzna oceanu opiera się na cienkim naskórku przy powierzchni."
+            },
+            {
+              "title": "2. Wąskie gardło — biogeny",
+              "text": "Fitoplankton potrzebuje **azotanów, fosforanów i krzemionki**. Obumarłe organizmy i odchody opadają w głąb (tzw. **pompa biologiczna**), więc biogeny nieustannie **uciekają** ze strefy fotycznej w ciemne wody głębinowe. Bez mechanizmu, który je zwróci, warstwa oświetlona ubożeje — i mimo pełnego słońca powstaje **pustynia oceaniczna** (Morze Sargassowe, wnętrza wirów zwrotnikowych)."
+            },
+            {
+              "title": "3. Winda dla biogenów",
+              "text": "To krok decydujący. Biogeny wracają ku powierzchni, gdy działa: **upwelling** (wynoszenie wód głębinowych), **zimowe mieszanie konwekcyjne**, **turbulencja na styku prądów** albo gdy dostarcza je z lądu **rzeka**. W strefie międzyzwrotnikowej otwartego oceanu przeszkadza w tym trwała **termoklina** — warstwa skokowego spadku temperatury, która blokuje pionowe mieszanie."
+            },
+            {
+              "title": "4. Zakwit fitoplanktonu",
+              "text": "Światło plus biogeny dają gwałtowny wzrost **produkcji pierwotnej**. Woda mętnieje i zielenieje — dlatego strefy upwellingu widać na zdjęciach satelitarnych jako pasy wysokiego stężenia chlorofilu ciągnące się wzdłuż wybrzeży."
+            },
+            {
+              "title": "5. Zooplankton i ryby planktonożerne",
+              "text": "Za fitoplanktonem idzie **zooplankton** (widłonogi, kryl), a za nim ławice **ryb planktonożernych**: sardeli, sardynek, śledzi, szprotów. To one dają największe tonażowo połowy świata — bo stoją nisko w łańcuchu pokarmowym, a więc są liczne."
+            },
+            {
+              "title": "6. Drapieżniki i opłacalne łowisko",
+              "text": "Na ławice polują **dorsze, tuńczyki, makrele**, ssaki morskie i ptaki. Powstaje trwała, przestrzennie skoncentrowana **kumulacja biomasy** — dopiero ona czyni połów opłacalnym, bo kuter musi znajdować ryby w przewidywalnym miejscu, a nie szukać ich po całym oceanie."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Warunki sprzyjające powstawaniu łowisk",
+          "caption": "Najbogatsze łowiska świata powstają tam, gdzie nakłada się kilka z tych mechanizmów naraz.",
+          "groups": [
+            {
+              "name": "Płytki szelf kontynentalny",
+              "description": "Głębokość do ok. 200 m sprawia, że falowanie i prądy przydenne mieszają wodę **do samego dna**, więc biogeny nie mają dokąd uciec. Dodatkowo szelf dostaje materię zmytą z lądu, a jego dno stanowi dogodne **tarliska** i żerowiska. Płytko jest też taniej łowić.",
+              "examples": ["Morze Północne z Ławicą Dogger", "Wielka Ława Nowofundlandzka", "Morze Żółte i Wschodniochińskie", "Szelf Morza Beringa"]
+            },
+            {
+              "name": "Upwelling przy zachodnich wybrzeżach kontynentów",
+              "description": "Stały **pasat** wieje wzdłuż wybrzeża, a **siła Coriolisa** odchyla powierzchniowy transport wody w stronę otwartego oceanu (transport Ekmana). Powstałą lukę wypełnia zimna woda wynoszona z głębokości ok. 50–300 m, **wyjątkowo bogata w biogeny**. Stąd zimne prądy: Peruwiański, Benguelski, Kanaryjski, Kalifornijski.",
+              "examples": ["Łowisko peruwiańskie (Prąd Peruwiański)", "Łowisko benguelskie u wybrzeży Namibii", "Łowisko kalifornijskie", "Łowisko kanaryjskie (Maroko, Mauretania)"]
+            },
+            {
+              "name": "Spotkanie prądu ciepłego i zimnego",
+              "description": "Na styku mas wodnych o różnej temperaturze i gęstości powstają **silne turbulencje i zawirowania**, które wynoszą biogeny ku powierzchni. Gwałtowna zmiana temperatury działa też jak **bariera** — ryby gromadzą się przy niej, zamiast się rozpraszać.",
+              "examples": ["Nowa Fundlandia — Golfsztrom i Prąd Labradorski", "Wybrzeża Hokkaido — Kuro Siwo i Oja Siwo", "Okolice Falklandów — Prąd Brazylijski i Falklandzki"]
+            },
+            {
+              "name": "Ujścia rzek i strefy estuariowe",
+              "description": "Rzeka wnosi do morza **azot, fosfor i zawiesinę** zmytą z lądu — czyli gotowy nawóz dla fitoplanktonu. Wody słonawe estuariów pełnią zaś rolę **żłobków dla narybku**, bo są płytkie, ciepłe i trudno dostępne dla wielu drapieżników morskich.",
+              "examples": ["Ujście La Platy", "Zatoka Bengalska u ujścia Gangesu i Brahmaputry", "Delta Mekongu i jezioro Tonle Sap"]
+            },
+            {
+              "name": "Zimowe mieszanie konwekcyjne w strefie umiarkowanej i subpolarnej",
+              "description": "Zimą ochłodzona powierzchnia wody staje się gęstsza i **opada**, a w jej miejsce podnosi się woda z głębi razem z biogenami. Wiosną, gdy przybywa światła, zgromadzony zapas biogenów wywołuje gwałtowny **wiosenny zakwit planktonu** — dlatego łowiska strefy umiarkowanej są wydajne, ale wyraźnie **sezonowe**.",
+              "examples": ["Morze Norweskie i Morze Barentsa", "Północny Atlantyk wiosną", "Morze Ochockie"]
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Najważniejsze łowiska świata — i jedna pustynia oceaniczna dla kontrastu",
+          "caption": "Zwróć uwagę na regułę: łowiska leżą przy wybrzeżach (szelf) albo tam, gdzie prądy wynoszą i mieszają wodę. Środek oceanu jest pusty.",
+          "center": [20, -20],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": -12.0,
+              "lng": -78.5,
+              "label": "Łowisko peruwiańskie",
+              "text": "Najwydajniejszy pojedynczy obszar połowowy świata, oparty na **upwellingu** wywołanym pasatem i zimnym **Prądzie Peruwiańskim (Humboldta)**. Dominuje **sardela peruwiańska (anchoveta)** — gatunek o największych połowach na świecie, przetwarzany głównie na **mączkę i olej rybny**, a więc na paszę, nie na bezpośrednią konsumpcję."
+            },
+            {
+              "lat": -23.0,
+              "lng": 13.0,
+              "label": "Łowisko benguelskie (Namibia, RPA)",
+              "text": "Ten sam mechanizm co u wybrzeży Peru, tylko po drugiej stronie Atlantyku: **Prąd Benguelski** i upwelling dają obfitość sardynek, sardeli i morszczuka. Na lądzie tuż obok rozciąga się pustynia **Namib** — ta sama zimna woda, która karmi łowisko, odbiera wybrzeżu opady."
+            },
+            {
+              "lat": 36.5,
+              "lng": -123.0,
+              "label": "Łowisko kalifornijskie",
+              "text": "Upwelling związany z **Prądem Kalifornijskim**, najsilniejszy wiosną i latem, gdy wiatr wieje wzdłuż wybrzeża z północy. Sardynki, sardele, morszczuk i kraby; obok — półpustynne wybrzeże Kalifornii i słynne mgły adwekcyjne San Francisco."
+            },
+            {
+              "lat": 41.5,
+              "lng": 144.0,
+              "label": "Łowisko japońskie (Pacyfik Północno-Zachodni)",
+              "text": "Region o **największych połowach na świecie**. Powstał na **spotkaniu ciepłego Kuro Siwo z zimnym Oja Siwo** nad szelfem Japonii i Kuryli. Łowią tu Japonia, Chiny, Rosja i obie Koree — sajrę, makrele, mintaja, kalmary i tuńczyki."
+            },
+            {
+              "lat": 46.0,
+              "lng": -50.0,
+              "label": "Wielka Ława Nowofundlandzka",
+              "text": "Rozległy, płytki **szelf** w miejscu, gdzie ciepły **Golfsztrom** spotyka zimny **Prąd Labradorski** — stąd również sławne mgły tego rejonu. Przez ponad cztery stulecia jedno z najbogatszych łowisk dorsza świata; **od 1992 r. objęte moratorium** po załamaniu się stada."
+            },
+            {
+              "lat": 54.8,
+              "lng": 2.5,
+              "label": "Morze Północne (Ławica Dogger)",
+              "text": "Klasyczne łowisko szelfowe: **morze epikontynentalne** o głębokości rzędu kilkudziesięciu metrów, mieszane przez sztormy i pływy, zasilane przez rzeki Europy Zachodniej. Śledź, makrela, dorsz, płastugi. Dziś zarządzane kwotami połowowymi i rywalizujące o przestrzeń z morskimi farmami wiatrowymi."
+            },
+            {
+              "lat": 30.0,
+              "lng": -60.0,
+              "label": "Morze Sargassowe — kontrprzykład",
+              "text": "Wnętrze północnoatlantyckiego wiru zwrotnikowego: woda ciepła, przejrzysta i **trwale uwarstwiona**. Termoklina blokuje dopływ biogenów z głębi, a prądy zamiast mieszać — krążą wokół. Efekt: mimo obfitości światła jest to **pustynia oceaniczna** o znikomej produkcji pierwotnej i bez znaczenia dla rybołówstwa."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Sardela peruwiańska i El Niño — łowisko włączane i wyłączane przez atmosferę",
+          "region": "Wybrzeże Peru i północnego Chile",
+          "text": "W latach normalnych **pasat południowo-wschodni** wieje wzdłuż wybrzeża Peru; transport Ekmana odsuwa wodę powierzchniową w stronę oceanu, a jej miejsce zajmuje zimna woda wynoszona z głębokości kilkudziesięciu metrów. Powstaje jedno z najwydajniejszych łowisk planety. Podczas zjawiska **El Niño** pasaty słabną lub odwracają kierunek, ciepła woda z zachodniego Pacyfiku napływa nad wybrzeże Ameryki Południowej, a **termoklina się obniża**. Upwelling formalnie nadal działa — ale wynosi teraz wodę ciepłą i **ubogą w biogeny**. Produkcja pierwotna się załamuje, ławice sardeli rozpraszają się lub schodzą głębiej, a połowy spadają dramatycznie. Tak stało się w latach 1972–1973: połowy sardeli runęły z ok. 13 mln t (1970 r.) do ok. 2 mln t. Bezpośrednim wyzwalaczem było El Niño, ale stado było już wcześniej **przełowione**, więc nie miało rezerwy, by przetrwać naturalny wstrząs.",
+          "takeaway": "El Niño pokazuje, że łowisko nie jest zasobem „leżącym” w danym miejscu, lecz **efektem działającego mechanizmu**: gdy ustaje dopływ biogenów do strefy fotycznej, ryby znikają w ciągu jednego sezonu. Zdrowe stado znosi taki wstrząs znacznie lepiej niż przełowione — presja połowowa i zmienność klimatu **wzmacniają się nawzajem**."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pomyłki, które kosztują punkty. **(1) Upwelling to nie to samo co spotkanie prądów**: upwelling jest ruchem **pionowym**, wywołanym wiatrem i siłą Coriolisa u zachodnich wybrzeży kontynentów; spotkanie prądów to **pozioma konwergencja** dwóch mas wodnych i turbulencja na ich styku. **(2) Nie pisz, że „zimna woda sprzyja rybom”** — przyczyną obfitości nie jest niska temperatura, lecz **biogeny** przyniesione z głębi; niska temperatura jest tylko sygnałem, że woda przyszła z dołu. **(3) Rybactwo ≠ rybołówstwo** — rybactwo obejmuje także akwakulturę. **(4) Przełowienie ≠ wyginięcie gatunku**: przełowione stado może liczyć jeszcze miliony osobników, ale jest zbyt małe, by opłacało się je łowić i by szybko się odbudowało."
+        },
+        {
+          "type": "definition",
+          "term": "Przełowienie (nadmierna eksploatacja stada)",
+          "text": "Sytuacja, w której **wielkość połowów przekracza zdolność stada do odtworzenia się** — z populacji ubywa więcej ryb, niż przybywa dzięki rozrodowi i wzrostowi, więc biomasa stada tarłowego maleje z roku na rok. Granicę bezpiecznej eksploatacji wyznacza **maksymalny podtrzymywalny połów (MSY)** — największy roczny odłów, który nie zmniejsza stada. Najlepszym wskaźnikiem ostrzegawczym jest **połów na jednostkę nakładu**, $CPUE = \\frac{C}{f}$: jeśli przy tym samym tonażu połowu ($C$) rośnie nakład ($f$ — czas połowu, liczba kutrów, długość sieci), stado już się kurczy.",
+          "note": "Objawy przełowienia poza spadkiem CPUE: malejąca **średnia długość i wiek** łowionych ryb (jako pierwsze znikają osobniki najstarsze i najpłodniejsze) oraz przechodzenie flot na gatunki **niższych poziomów troficznych**, zwane „łowieniem w dół łańcucha pokarmowego”. Według FAO ok. **35% morskich stad ryb** było w 2019 r. eksploatowanych na poziomie niezrównoważonym."
+        },
+        {
+          "type": "case-study",
+          "title": "Kolaps dorsza nowofundlandzkiego — podręcznikowy przykład przełowienia",
+          "region": "Wielka Ława Nowofundlandzka, Kanada",
+          "text": "Dorsza z Wielkiej Ławy łowiono od XVI w. i przez stulecia uchodził on za zasób niewyczerpalny — połowy prowadzono z żaglowców, sezonowo, na haczyki. Po II wojnie światowej na łowisko weszły **trawlery-przetwórnie**: statki zdolne łowić przez całą dobę i w każdą pogodę, wyposażone w sonar do lokalizacji ławic i zamrażalnię na pokładzie. Połowy dorsza wystrzeliły, osiągając szczyt ok. **810 tys. t w 1968 r.**, po czym zaczęły spadać. W 1977 r. Kanada wprowadziła 200-milową **wyłączną strefę ekonomiczną**, wypierając floty zagraniczne — ale jednocześnie rozbudowała własną flotę i utrzymała wysokie kwoty, opierając je na zbyt optymistycznych ocenach stanu stada. W **1992 r.** rząd Kanady ogłosił **moratorium** na połowy dorsza: biomasa stada tarłowego spadła do kilku procent stanu wyjściowego. Pracę straciło ok. **30–40 tys. osób**. Mimo ponad trzydziestu lat ochrony stado do dziś nie wróciło do dawnej liczebności.",
+          "takeaway": "Przełowienie rzadko wynika ze złej woli — wynika z **postępu technicznego wyprzedzającego wiedzę o zasobie** i z presji społecznej na utrzymanie miejsc pracy. Wniosek geograficzny: zasób odnawialny przestaje być odnawialny po przekroczeniu progu regeneracji, a odbudowa ekosystemu trwa **dziesiątki lat** albo nie następuje wcale, bo zwolnioną niszę zajmują inne gatunki."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Światowa produkcja rybactwa: połowy a akwakultura",
+          "caption": "Dane FAO, produkcja zwierząt wodnych (bez wodorostów). Połowy obejmują rybołówstwo morskie i śródlądowe. Zwróć uwagę na kształt obu linii: jedna jest płaska od trzydziestu lat, druga rośnie niemal liniowo.",
+          "unit": "mln t",
+          "labels": ["1990", "2000", "2010", "2020"],
+          "series": [
+            { "name": "Połowy (rybołówstwo)", "values": [85, 95, 88, 90] },
+            { "name": "Akwakultura", "values": [13, 32, 59, 88] }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Rybołówstwo a akwakultura",
+          "leftLabel": "Rybołówstwo (połów dzikich ryb)",
+          "rightLabel": "Akwakultura (chów i hodowla)",
+          "rows": [
+            {
+              "aspect": "Charakter działalności",
+              "left": "**Zbieractwo i łowiectwo w skali przemysłowej** — człowiek pobiera to, co wyprodukowała przyroda, i nie kontroluje ani rozrodu, ani wzrostu ryb.",
+              "right": "**Produkcja typu rolniczego** w środowisku wodnym — kontrolowany rozród, żywienie, obsada i termin odłowu; odpowiednik chowu zwierząt na lądzie."
+            },
+            {
+              "aspect": "Co ogranicza wielkość produkcji",
+              "left": "**Zdolność odtwórcza stada (MSY)** — bariera przyrodnicza. Po jej przekroczeniu połowy spadają mimo rosnących nakładów.",
+              "right": "**Kapitał, pasza, dostęp do wody i przestrzeni** — bariera ekonomiczna, którą można przesuwać inwestycjami."
+            },
+            {
+              "aspect": "Trend produkcji od 1990 r.",
+              "left": "Ustabilizowana na poziomie ok. **90 mln t** rocznie — mimo lepszych statków, sonarów i sieci wzrost się zatrzymał, bo zabrakło ryb.",
+              "right": "Wzrost z ok. **13 do ok. 88 mln t** (1990–2020) — najszybciej rosnący dział produkcji żywności na świecie."
+            },
+            {
+              "aspect": "Rozmieszczenie",
+              "left": "Szelfy i strefy upwellingu: Pacyfik Północno-Zachodni, wybrzeża Peru i Chile, Atlantyk Północno-Wschodni.",
+              "right": "Silna dominacja **Azji** — same Chiny dostarczają ponad połowę światowej produkcji; w Europie liczą się Norwegia (łosoś) i kraje z chowem stawowym, w tym Polska (karp, pstrąg)."
+            },
+            {
+              "aspect": "Główne zagrożenia dla środowiska",
+              "left": "**Przełowienie**, **przyłów** (bycatch — delfiny, żółwie, ptaki), niszczenie dna **włokami dennymi**, połowy nielegalne i nieraportowane (**IUU**).",
+              "right": "Wycinanie **lasów namorzynowych** pod stawy krewetkowe, **eutrofizacja** wód, choroby i antybiotyki, zużycie **mączki rybnej** z dzikich połowów jako paszy."
+            },
+            {
+              "aspect": "Znaczenie dla wyżywienia",
+              "left": "Znaczna część połowu (zwłaszcza sardela) trafia nie na talerz, lecz na **paszę** dla zwierząt gospodarskich i ryb hodowlanych.",
+              "right": "Od ok. 2014 r. dostarcza **większość ryb spożywanych bezpośrednio przez ludzi**; kluczowe źródło białka zwierzęcego w Azji Południowo-Wschodniej."
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Łowisko a mechanizm, któremu zawdzięcza swoje bogactwo",
+          "instruction": "Dopasuj obszar do procesu, który dostarcza biogeny do strefy fotycznej — lub, w jednym przypadku, ich dopływ blokuje.",
+          "pairs": [
+            {
+              "left": "Łowisko peruwiańskie",
+              "right": "Upwelling wywołany pasatem wiejącym wzdłuż wybrzeża i zimny Prąd Peruwiański"
+            },
+            {
+              "left": "Wielka Ława Nowofundlandzka",
+              "right": "Rozległy szelf w miejscu spotkania ciepłego Golfsztromu z zimnym Prądem Labradorskim"
+            },
+            {
+              "left": "Łowisko u wybrzeży Hokkaido",
+              "right": "Turbulencja na styku ciepłego Kuro Siwo i zimnego Oja Siwo"
+            },
+            {
+              "left": "Morze Północne z Ławicą Dogger",
+              "right": "Płytkie morze epikontynentalne mieszane sztormami i pływami oraz zasilane przez rzeki"
+            },
+            {
+              "left": "Morze Sargassowe",
+              "right": "Trwała termoklina we wnętrzu wiru zwrotnikowego odcinająca dopływ biogenów z głębi"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Jedne z najbogatszych łowisk świata leżą u zachodnich wybrzeży Ameryki Południowej i Afryki — czyli tam, gdzie na lądzie rozciągają się pustynie Atakama i Namib. Jak wyjaśnić to zestawienie?",
+          "options": [
+            "Zimna woda rozpuszcza więcej tlenu, a to wystarcza, by rozwinął się bujny fitoplankton",
+            "Stały pasat i siła Coriolisa odsuwają wodę powierzchniową od brzegu, a jej miejsce zajmuje wynoszona z głębin woda bogata w biogeny; ta sama zimna woda ochładza powietrze przy wybrzeżu i blokuje opady na lądzie",
+            "Rzeki spływające z Andów i z Wyżyny Południowoafrykańskiej dostarczają do oceanu ogromne ilości materii organicznej",
+            "Ciepłe prądy morskie podnoszą temperaturę wody przybrzeżnej, przyspieszając rozmnażanie ryb, a jednocześnie osuszają wybrzeże"
+          ],
+          "correctIndex": 1,
+          "explanation": "Za oba zjawiska odpowiada **ten sam mechanizm**. Pasat wieje wzdłuż wybrzeża, transport Ekmana odchyla wodę powierzchniową w stronę otwartego oceanu, a lukę wypełnia zimna woda z głębokości kilkudziesięciu–kilkuset metrów, **naładowana azotanami i fosforanami** — stąd zakwit planktonu i łowisko. Ta sama zimna woda **ochładza dolną warstwę powietrza** i tworzy inwersję termiczną: powietrze nie unosi się, nie powstają chmury konwekcyjne, nie ma opadu — rozwija się **pustynia adwekcyjna**. Odpowiedź A myli objaw z przyczyną (czynnikiem ograniczającym w oceanie są biogeny, nie tlen), C jest fałszywa faktograficznie (to obszary skrajnie suche, bez stałych rzek uchodzących do oceanu), a D odwraca kierunek — prądy są tam **zimne**."
+        },
+        {
+          "type": "quiz",
+          "question": "Flota pewnego kraju łowi rocznie mniej więcej tyle samo ton ryb co dekadę temu, ale kutry spędzają na morzu dwa razy więcej czasu, zapuszczają się dalej od portów, a łowione ryby są przeciętnie mniejsze i młodsze. Co z tego wynika?",
+          "options": [
+            "Stado jest przełowione: spadł połów na jednostkę nakładu (CPUE), a z populacji zniknęły osobniki najstarsze i najpłodniejsze — stały tonaż jest maskowany rosnącym nakładem",
+            "Stado jest w dobrym stanie, skoro roczny tonaż połowu utrzymuje się na niezmienionym poziomie",
+            "To dowód, że kwoty połowowe ustalono zbyt nisko i należy je podnieść, by wykorzystać potencjał łowiska",
+            "Zmiana wynika wyłącznie ze wzrostu cen paliwa, który zmusza kutry do dłuższych rejsów"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sam tonaż połowu jest **wskaźnikiem mylącym**, bo można go utrzymać, dokładając statków, czasu i sprzętu. Dlatego stan stada ocenia się przez $CPUE = \\frac{C}{f}$: tutaj $C$ jest stałe, a $f$ wzrosło dwukrotnie, więc **CPUE spadł o połowę** — ryb w wodzie jest znacznie mniej. Potwierdzają to dwa dodatkowe objawy: wydłużanie tras (wyczerpanie łowisk położonych bliżej) oraz **spadek średniej długości i wieku** ryb, typowy dla stada, z którego presja połowowa usunęła najstarsze osobniki — a to właśnie one składają najwięcej ikry, więc zdolność odtwórcza stada dodatkowo maleje. Podniesienie kwot (odpowiedź C) przyspieszyłoby kolaps — dokładnie tak, jak stało się z dorszem nowofundlandzkim."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Co powtórzyć przed egzaminem: (1) potrafisz **wyjaśnić mechanizm upwellingu** w trzech krokach — wiatr wzdłuż wybrzeża → transport Ekmana odsuwający wodę od brzegu → wynoszenie wody bogatej w biogeny — i powiązać go z **pustyniami adwekcyjnymi** na sąsiednim lądzie; (2) umiesz przypisać do każdego z głównych łowisk świata **właściwy czynnik** (szelf, upwelling, spotkanie prądów, ujście rzeki) i podać prąd morski z nazwy; (3) przy pytaniu o stan zasobów odwołujesz się do **CPUE, MSY i struktury wiekowej połowu**, a nie do samego tonażu; (4) znasz przykład kolapsu łowiska (**dorsz nowofundlandzki, 1992 r.**) oraz przykład wpływu zmienności klimatu na połowy (**El Niño a sardela peruwiańska**); (5) potrafisz omówić **akwakulturę** dwustronnie — jako odpowiedź na barierę przyrodniczą rybołówstwa i jednocześnie źródło nowych problemów: wycinania namorzynów, eutrofizacji wód i popytu na mączkę rybną."
+        }
+      ]
+    }
+  ]
+}

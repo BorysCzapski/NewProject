@@ -1,0 +1,2034 @@
+{
+  "topicSlug": "problemy-polityczne-swiata",
+  "lessons": [
+    {
+      "slug": "zrodla-i-rodzaje-konfliktow",
+      "title": "Źródła i rodzaje konfliktów zbrojnych",
+      "summary": "Dlaczego wybuchają wojny: podłoże etniczne, religijne, terytorialne, surowcowe i postkolonialne. Podział na konflikty międzypaństwowe, wewnętrzne i separatyzmy oraz mechanizm klątwy surowcowej.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Mapa polityczna świata wygląda na stabilną tylko z daleka. W rzeczywistości w każdej chwili toczy się kilkadziesiąt **konfliktów zbrojnych**, a zdecydowana ich większość to konflikty **wewnętrzne** — wojny domowe, powstania i ruchy separatystyczne — a nie klasyczne wojny między państwami. Na maturze rozszerzonej rzadko pyta się o daty bitew. Pyta się o **podłoże geograficzne**: dlaczego akurat tu, dlaczego akurat teraz i który czynnik — etniczny, religijny, surowcowy czy graniczny — jest przyczyną, a który tylko paliwem podtrzymującym walki. Ta lekcja porządkuje źródła i rodzaje konfliktów; kolejne pokazują konkretne regiony."
+        },
+        {
+          "type": "definition",
+          "term": "Konflikt zbrojny",
+          "text": "Sprzeczność interesów co najmniej dwóch stron (państw, grup etnicznych, organizacji zbrojnych) rozwiązywana z użyciem **przemocy zbrojnej**. W statystykach międzynarodowych za konflikt zbrojny uznaje się starcie, w którym w ciągu roku ginie co najmniej **25 osób** w walkach, a mianem **wojny** określa się konflikt o co najmniej **1000 ofiar** rocznie.",
+          "note": "Próg liczbowy jest umowny, ale pozwala porównywać konflikty między sobą i śledzić ich nasilenie w czasie."
+        },
+        {
+          "type": "classification",
+          "title": "Źródła konfliktów — sześć głównych grup",
+          "caption": "W praktyce przyczyny nakładają się na siebie: konflikt „etniczny” niemal zawsze ma też wymiar ekonomiczny lub surowcowy.",
+          "groups": [
+            {
+              "name": "Etniczne i narodowościowe",
+              "description": "Wynikają z niezgodności **granic politycznych z granicami etnicznymi**: jeden naród żyje w kilku państwach albo w jednym państwie zamknięto kilkadziesiąt zwaśnionych grup. Zapalne są zwłaszcza obszary, gdzie mniejszość jest liczna i skupiona terytorialnie.",
+              "examples": [
+                "Kurdowie podzieleni między 4 państwa",
+                "Tutsi i Hutu w regionie Wielkich Jezior",
+                "rozpad Jugosławii"
+              ]
+            },
+            {
+              "name": "Religijne",
+              "description": "Spór o **dominację jednej religii lub odłamu** w państwie, o kontrolę nad miejscami świętymi albo o prawo religijne jako prawo państwowe. Często pokrywa się z podziałem etnicznym i wzmacnia go.",
+              "examples": [
+                "sunnici a szyici w Iraku i Syrii",
+                "Jerozolima jako miasto trzech religii",
+                "północna i południowa Nigeria"
+              ]
+            },
+            {
+              "name": "Terytorialne",
+              "description": "Spór o **przynależność obszaru** — lądowego lub morskiego. Rośnie znaczenie sporów o akweny, bo wraz z szelfem przejmuje się złoża, łowiska i szlaki żeglugowe.",
+              "examples": [
+                "Kaszmir",
+                "Wyspy Kurylskie",
+                "Morze Południowochińskie"
+              ]
+            },
+            {
+              "name": "Surowcowe",
+              "description": "Walka o kontrolę nad złożami **ropy naftowej, gazu, minerałów** (diamenty, koltan, złoto) lub o **wodę**. Surowiec bywa przyczyną wojny, ale znacznie częściej jest jej **finansowaniem** — sprzedaż złóż opłaca broń.",
+              "examples": [
+                "diamenty w Sierra Leone",
+                "koltan we wschodnim Kongu",
+                "wody Nilu"
+              ]
+            },
+            {
+              "name": "Ekonomiczne i społeczne",
+              "description": "Głębokie **nierówności dochodów**, ubóstwo, bezrobocie młodych i wykluczenie całych regionów. Kraj biedny, o gospodarce opartej na jednym surowcu i słabym państwie ma wielokrotnie wyższe ryzyko wojny domowej niż kraj zamożny.",
+              "examples": [
+                "Arabska Wiosna 2011",
+                "rebelie w Sahelu",
+                "konflikt w Jemenie"
+              ]
+            },
+            {
+              "name": "Postkolonialne",
+              "description": "Skutek **sztucznego wytyczenia granic** przez mocarstwa kolonialne bez uwzględnienia podziałów plemiennych i religijnych, a także spuścizna gospodarki nastawionej na eksport surowców do metropolii.",
+              "examples": [
+                "granice geometryczne w Afryce",
+                "Sudan i Sudan Południowy",
+                "Zachodnia Sahara"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dwa częste błędy. Po pierwsze — **konflikt etniczny to nie to samo co religijny**: w byłej Jugosławii Serbowie, Chorwaci i Boszniacy mówią praktycznie tym samym językiem, a dzieli ich religia i pamięć historyczna; z kolei Kurdowie i Turcy to w większości sunnici, a spór między nimi jest czysto etniczny. Po drugie — obecność surowca **nie dowodzi**, że to on wywołał wojnę. Poprawna odpowiedź maturalna brzmi zwykle: surowiec *podtrzymuje* konflikt, bo daje stronom pieniądze na broń."
+        },
+        {
+          "type": "case-study",
+          "title": "Granice wykreślone linijką",
+          "region": "Afryka Subsaharyjska",
+          "text": "Na **konferencji berlińskiej (1884–1885)** mocarstwa europejskie podzieliły Afrykę, nie mając map etnicznych ani wiedzy o wnętrzu kontynentu. Granice poprowadzono wzdłuż południków i równoleżników — dziś ok. **44% granic w Afryce** to linie geometryczne. Skutek jest podwójny: jedne narody **rozdzielono** między kilka państw (Somalijczycy żyją w Somalii, Etiopii, Kenii i Dżibuti), a inne, wzajemnie wrogie, **zamknięto w jednym organizmie państwowym**. Nigeria liczy ponad **250 grup etnicznych**, z muzułmańską północą (Hausa i Fulanie) i chrześcijańskim południem (Jorubowie, Igbo); próba oderwania się Igbo doprowadziła do wojny o **Biafrę (1967–1970)** i śmierci ponad miliona ludzi, głównie z głodu. Po dekolonizacji Organizacja Jedności Afrykańskiej przyjęła zasadę **nienaruszalności granic kolonialnych** — uznano, że ich rewizja wywołałaby wojnę wszystkich ze wszystkimi.",
+          "takeaway": "Sztuczna granica sama nie strzela, ale tworzy państwo bez wspólnej tożsamości — a takie państwo łatwo pęka wzdłuż linii plemiennych, gdy słabnie władza centralna lub pojawia się nagroda w postaci złóż."
+        },
+        {
+          "type": "map-explore",
+          "title": "Granice postkolonialne i ruchy separatystyczne",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że separatyzmy występują zarówno w krajach biednych, jak i w bogatej Europie — różni je jednak forma: zbrojna albo polityczna.",
+          "center": [
+            20,
+            10
+          ],
+          "zoom": 3,
+          "markers": [
+            {
+              "lat": 27.15,
+              "lng": -13.2,
+              "label": "Zachodnia Sahara",
+              "text": "Dawna kolonia hiszpańska, od 1975 r. w większości kontrolowana przez **Maroko**, a niepodległości domaga się **Front Polisario**. Klasyczny spór **postkolonialny i terytorialny**: w grę wchodzą złoża fosforytów i bogate łowiska Prądu Kanaryjskiego. Referendum ONZ wielokrotnie odkładano z powodu sporu, kto ma prawo głosować."
+            },
+            {
+              "lat": 6.44,
+              "lng": 7.5,
+              "label": "Biafra (Nigeria)",
+              "text": "Wschodnia Nigeria zamieszkana przez chrześcijańskich **Igbo**, z bogatymi polami naftowymi delty Nigru. Secesja z 1967 r. została stłumiona blokadą i głodem. Ropa sprawiła, że rząd centralny nie mógł pozwolić na odejście regionu — to podręcznikowy przykład **surowcowego podłoża separatyzmu**."
+            },
+            {
+              "lat": 4.85,
+              "lng": 31.58,
+              "label": "Sudan Południowy",
+              "text": "Jedyny przypadek uznanej secesji w Afryce po dekolonizacji (**2011**, po referendum). Podział przebiegł wzdłuż granicy religijno-etnicznej: muzułmańska, arabska północ i chrześcijańsko-animistyczne, czarnoafrykańskie południe. Napięcia trwały dalej, bo **złoża ropy leżą na południu, a rurociągi i port — na północy**."
+            },
+            {
+              "lat": 9.56,
+              "lng": 44.07,
+              "label": "Somaliland",
+              "text": "Północna część Somalii ogłosiła niepodległość w 1991 r. Ma własny rząd, walutę i względny spokój, ale **nie jest uznawana** przez społeczność międzynarodową. Pokazuje różnicę między **państwem faktycznym (de facto)** a **uznanym międzynarodowo (de iure)**."
+            },
+            {
+              "lat": 41.39,
+              "lng": 2.17,
+              "label": "Katalonia",
+              "text": "Separatyzm w bogatym regionie Hiszpanii, o podłożu **etniczno-językowym i ekonomicznym**: Katalonia wpłaca do budżetu państwa więcej, niż z niego otrzymuje. Konflikt toczy się środkami **politycznymi i prawnymi**, nie zbrojnymi — to typ separatyzmu charakterystyczny dla państw demokratycznych i zamożnych."
+            },
+            {
+              "lat": 43.26,
+              "lng": -2.93,
+              "label": "Kraj Basków",
+              "text": "Baskowie posługują się językiem niespokrewnionym z żadnym europejskim. Organizacja **ETA** prowadziła walkę zbrojną, ale w 2011 r. ogłosiła jej zaprzestanie, a w 2018 r. — samorozwiązanie. Przykład **wygaszenia** separatyzmu przez szeroką autonomię."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Wojna międzypaństwowa a konflikt wewnętrzny",
+          "leftLabel": "Konflikt międzypaństwowy",
+          "rightLabel": "Konflikt wewnętrzny (domowy)",
+          "rows": [
+            {
+              "aspect": "Strony",
+              "left": "Dwa lub więcej **suwerennych państw** i ich regularne armie",
+              "right": "Rząd kontra **ugrupowania zbrojne** własnych obywateli albo grupy zbrojne między sobą"
+            },
+            {
+              "aspect": "Częstość dziś",
+              "left": "Rzadkie — stanowią niewielką część współczesnych konfliktów",
+              "right": "Dominujące — przytłaczająca większość toczących się wojen"
+            },
+            {
+              "aspect": "Linia frontu",
+              "left": "Wyraźna, przesuwa się wzdłuż granicy",
+              "right": "Rozmyta, walki toczą się **wśród ludności cywilnej**, często o miasta"
+            },
+            {
+              "aspect": "Ofiary",
+              "left": "Przeważają żołnierze, choć rosną straty cywilne",
+              "right": "Zdecydowanie przeważają **cywile**; typowe są masowe ucieczki i głód"
+            },
+            {
+              "aspect": "Czas trwania",
+              "left": "Zwykle krótszy, kończy się traktatem pokojowym",
+              "right": "Długotrwały i **nawracający** — po rozejmie walki często wybuchają ponownie"
+            },
+            {
+              "aspect": "Przykład",
+              "left": "Wojna iracko-irańska (1980–1988)",
+              "right": "Wojna domowa w Syrii (od 2011 r.)"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Separatyzm",
+          "text": "Dążenie grupy zamieszkującej część terytorium państwa do **oderwania się i utworzenia własnego państwa** lub do przyłączenia do innego. Odróżnij od **autonomizmu** (żądanie samorządu w granicach państwa, bez secesji) i od **irredentyzmu** — dążenia państwa do **przyłączenia obszarów zamieszkanych przez rodaków**, leżących po drugiej stronie granicy.",
+          "note": "Separatyzm patrzy „od środka na zewnątrz” (region chce wyjść), irredentyzm „od zewnątrz do środka” (państwo chce zabrać sąsiadowi region zamieszkany przez własną mniejszość)."
+        },
+        {
+          "type": "process",
+          "title": "Klątwa surowcowa — jak bogactwo złóż napędza wojnę",
+          "caption": "Mechanizm tłumaczy paradoks: kraje o największych zasobach mineralnych bywają najbiedniejsze i najbardziej niestabilne.",
+          "steps": [
+            {
+              "title": "1. Renta surowcowa zamiast podatków",
+              "text": "Państwo utrzymuje się z **eksportu jednego surowca**, a nie z podatków od obywateli. Władza przestaje być zależna od społeczeństwa, więc nie musi budować sprawnej administracji ani liczyć się z wyborcami."
+            },
+            {
+              "title": "2. Zaniedbanie reszty gospodarki",
+              "text": "Napływ walut z eksportu podnosi kurs waluty krajowej i **osłabia konkurencyjność rolnictwa oraz przemysłu** (tzw. choroba holenderska). Zanikają miejsca pracy poza sektorem wydobywczym."
+            },
+            {
+              "title": "3. Nagroda warta wojny",
+              "text": "Kto przejmie kopalnię lub pole naftowe, przejmuje **główne źródło dochodu państwa**. Kontrola nad złożem staje się celem samym w sobie — dla rządu, rebeliantów i sąsiadów."
+            },
+            {
+              "title": "4. Surowce konfliktowe finansują walki",
+              "text": "Rebelianci sprzedają **diamenty, koltan czy złoto** na czarnym rynku i za uzyskane środki kupują broń oraz najemników. Konflikt zaczyna się sam finansować i przestaje potrzebować pierwotnej przyczyny politycznej."
+            },
+            {
+              "title": "5. Utrwalenie konfliktu",
+              "text": "Powstaje **gospodarka wojenna**: dla dowódców pokój oznacza utratę dochodów, więc walki trwają mimo kolejnych porozumień. Państwo słabnie i osuwa się w stronę **państwa upadłego**."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Surowce jako paliwo konfliktów",
+          "caption": "Zwróć uwagę na kolumnę „rola surowca” — na maturze to ona odróżnia odpowiedź poprawną od powierzchownej.",
+          "headers": [
+            "Region",
+            "Surowiec",
+            "Rola surowca w konflikcie"
+          ],
+          "rows": [
+            [
+              "Sierra Leone, Liberia, Angola",
+              "diamenty",
+              "„Diamenty krwi” — łatwe do przemytu, finansowały zakup broni przez rebeliantów; stąd **Proces Kimberley** (2003) certyfikujący legalne kamienie"
+            ],
+            [
+              "Wschodnie Kongo (DRK)",
+              "koltan, cyna, złoto, kobalt",
+              "Kopalnie kontrolowane przez bojówki opłacają walki; surowce trafiają do elektroniki użytkowej przez nieprzejrzyste łańcuchy dostaw"
+            ],
+            [
+              "Zatoka Perska",
+              "ropa naftowa i gaz ziemny",
+              "Region skupia blisko połowę udokumentowanych zasobów ropy świata — stąd **zaangażowanie mocarstw** i strategiczne znaczenie cieśniny Ormuz"
+            ],
+            [
+              "Delta Nigru (Nigeria)",
+              "ropa naftowa",
+              "Zyski trafiają do rządu i koncernów, a lokalna ludność ponosi koszty skażeń — źródło rebelii i kradzieży ropy z rurociągów"
+            ],
+            [
+              "Dorzecza Nilu, Tygrysu i Eufratu",
+              "woda",
+              "Surowiec **niezastępowalny**: budowa zapory w górnym biegu zmniejsza przepływ w dolnym i grozi konfliktem międzypaństwowym"
+            ]
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Liczby, które warto zapamiętać",
+          "items": [
+            {
+              "value": "1884–1885",
+              "label": "konferencja berlińska",
+              "note": "podział Afryki bez map etnicznych"
+            },
+            {
+              "value": "44",
+              "unit": "%",
+              "label": "granic Afryki to linie geometryczne",
+              "note": "południki, równoleżniki i proste odcinki"
+            },
+            {
+              "value": "250",
+              "unit": "+",
+              "label": "grup etnicznych w Nigerii",
+              "note": "najludniejsze państwo Afryki"
+            },
+            {
+              "value": "2011",
+              "label": "powstanie Sudanu Południowego",
+              "note": "jedyna uznana secesja w Afryce po dekolonizacji"
+            },
+            {
+              "value": "25",
+              "label": "ofiar rocznie — próg konfliktu zbrojnego",
+              "note": "1000 ofiar to już wojna"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj konflikt do jego głównego podłoża",
+          "instruction": "Wskaż czynnik, który najlepiej tłumaczy genezę danego sporu.",
+          "pairs": [
+            {
+              "left": "Wojna o Biafrę (1967–1970)",
+              "right": "separatyzm etniczny wzmocniony obecnością ropy"
+            },
+            {
+              "left": "Zachodnia Sahara",
+              "right": "spór postkolonialny o terytorium dawnej kolonii"
+            },
+            {
+              "left": "Konflikt w Sierra Leone (lata 90. XX w.)",
+              "right": "złoża diamentów finansujące rebelię"
+            },
+            {
+              "left": "Rozpad Jugosławii",
+              "right": "podziały religijne i historyczne przy wspólnym języku"
+            },
+            {
+              "left": "Napięcia wokół Wielkiej Tamy Etiopskiej",
+              "right": "spór o podział wód rzeki transgranicznej"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie najlepiej opisuje strukturę współczesnych konfliktów zbrojnych?",
+          "options": [
+            "Dominują klasyczne wojny między regularnymi armiami suwerennych państw",
+            "Przeważają konflikty wewnętrzne, w których większość ofiar stanowi ludność cywilna",
+            "Konflikty zbrojne występują niemal wyłącznie w państwach wysoko rozwiniętych",
+            "Wszystkie współczesne konflikty mają podłoże wyłącznie religijne"
+          ],
+          "correctIndex": 1,
+          "explanation": "Po zimnej wojnie zdecydowanie przeważają **konflikty wewnętrzne** — wojny domowe, rebelie i separatyzmy. Front jest rozmyty, walki toczą się wśród ludności, więc **cywile stanowią większość ofiar**, a do strat bezpośrednich dochodzą zgony z głodu i chorób. Wojny międzypaństwowe są dziś rzadkie, a konflikty koncentrują się w krajach o niskim poziomie rozwoju i słabych instytucjach."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego geografowie mówią, że bogate złoża surowców mineralnych bywają dla kraju rozwijającego się „przekleństwem”?",
+          "options": [
+            "Ponieważ wydobycie surowców zawsze wyczerpuje się w ciągu kilku lat",
+            "Ponieważ surowce mineralne występują wyłącznie na obszarach pustynnych",
+            "Ponieważ dochód z jednego surowca uniezależnia władzę od podatników, osłabia pozostałe działy gospodarki i daje stronom konfliktu środki na broń",
+            "Ponieważ eksport surowców jest zakazany przez prawo międzynarodowe"
+          ],
+          "correctIndex": 2,
+          "explanation": "**Klątwa surowcowa** to splot trzech mechanizmów: renta z eksportu zastępuje podatki, więc władza nie musi być rozliczana przez obywateli; napływ walut osłabia rolnictwo i przemysł (choroba holenderska); a łatwy do przemytu surowiec pozwala rebeliantom finansować walki. Powstaje **gospodarka wojenna**, w której pokój jest dla dowódców nieopłacalny."
+        },
+        {
+          "type": "quiz",
+          "question": "Który opis dotyczy irredentyzmu, a nie separatyzmu?",
+          "options": [
+            "Region domaga się oderwania od państwa i utworzenia własnego, niepodległego organizmu",
+            "Państwo dąży do przyłączenia sąsiedniego obszaru zamieszkanego przez ludność mówiącą jego językiem",
+            "Mniejszość narodowa żąda szerszej autonomii i własnego parlamentu regionalnego",
+            "Grupa etniczna domaga się nauczania w języku ojczystym w szkołach publicznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "**Irredentyzm** to dążenie państwa do **włączenia** terytoriów zamieszkanych przez rodaków, leżących poza jego granicami. Odpowiedź 1. opisuje **separatyzm** (region chce wyjść), odpowiedź 3. — **autonomizm** (samorząd bez secesji), a odpowiedź 4. dotyczy praw kulturowych mniejszości, a nie zmiany granic."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu „podaj **dwie przyczyny** konfliktu w podanym regionie” nie wystarczy napisać „przyczyny etniczne”. Punktuje odpowiedź wiążąca czynnik z **konkretną geografią**: „granica państwowa dzieli obszar zamieszkany przez Kurdów między cztery państwa” albo „złoża ropy leżą na terytorium mniejszości, a dochody trafiają do rządu centralnego”. Zapamiętaj schemat odpowiedzi: **przyczyna strukturalna** (granica, złoże, podział etniczny) + **czynnik zapalny** (upadek władzy, susza, interwencja z zewnątrz)."
+        }
+      ]
+    },
+    {
+      "slug": "bliski-wschod-i-spory-o-wode",
+      "title": "Bliski Wschód: konflikty i walka o wodę",
+      "summary": "Konflikt izraelsko-palestyński, wojna w Syrii i sprawa kurdyjska w ujęciu geograficznym. Spory o wody rzek transgranicznych: Nilu, Tygrysu, Eufratu i Jordanu oraz mechanizm konfliktu góra–dół rzeki.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Bliski Wschód to region, w którym nakładają się na siebie **wszystkie źródła konfliktów** z poprzedniej lekcji: styk trzech religii monoteistycznych, granice wykreślone po I wojnie światowej przez Francję i Wielką Brytanię, blisko połowa udokumentowanych zasobów ropy naftowej świata i jednocześnie **dotkliwy deficyt wody**. Do tego dochodzi położenie na styku trzech kontynentów, przez które biegną kluczowe szlaki żeglugowe. Ta lekcja pokazuje, jak te warunki przekładają się na konkretne konflikty — izraelsko-palestyński, syryjski i kurdyjski — oraz jak z rywalizacji o wodę rzek transgranicznych rodzą się napięcia międzypaństwowe."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Bliski Wschód w liczbach",
+          "items": [
+            {
+              "value": "≈ 48",
+              "unit": "%",
+              "label": "udokumentowanych zasobów ropy naftowej świata",
+              "note": "stąd trwałe zainteresowanie mocarstw regionem"
+            },
+            {
+              "value": "1/5",
+              "label": "światowej ropy przepływa cieśniną Ormuz",
+              "note": "najwęższe miejsce ma ok. 40 km — łatwo je zablokować"
+            },
+            {
+              "value": "6650",
+              "unit": "km",
+              "label": "długość Nilu",
+              "note": "najdłuższa rzeka Afryki, dorzecze w 11 państwach"
+            },
+            {
+              "value": "> 90",
+              "unit": "%",
+              "label": "wody słodkiej Egiptu pochodzi z Nilu",
+              "note": "kraj niemal bez opadów, całkowicie zależny od rzeki tranzytowej"
+            },
+            {
+              "value": "25–35",
+              "unit": "mln",
+              "label": "szacowana liczba Kurdów",
+              "note": "największy naród świata bez własnego państwa"
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Punkty zapalne Bliskiego Wschodu i doliny Nilu",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, jak często w opisie pojawia się woda albo ropa — to nie przypadek, lecz cecha geograficzna regionu.",
+          "center": [
+            28,
+            38
+          ],
+          "zoom": 4,
+          "markers": [
+            {
+              "lat": 31.78,
+              "lng": 35.22,
+              "label": "Jerozolima",
+              "text": "Miasto święte dla **judaizmu, chrześcijaństwa i islamu**, skupione wokół Wzgórza Świątynnego. Izrael uznaje je za swoją stolicę, Palestyńczycy — Jerozolimę Wschodnią za stolicę przyszłego państwa. Spór o miasto jest najtrudniejszym punktem każdych negocjacji, bo dotyczy **symboli religijnych**, których nie da się podzielić „po połowie”."
+            },
+            {
+              "lat": 31.42,
+              "lng": 34.38,
+              "label": "Strefa Gazy",
+              "text": "Wąski pas nadmorski o powierzchni ok. 365 km², jeden z **najgęściej zaludnionych obszarów świata**. Izrael wycofał stamtąd wojsko i osadników w 2005 r., a od 2007 r. terytorium kontroluje **Hamas**; obowiązuje blokada lądowa i morska. Nadmierna eksploatacja przybrzeżnej warstwy wodonośnej doprowadziła do jej **zasolenia**."
+            },
+            {
+              "lat": 33,
+              "lng": 35.75,
+              "label": "Wzgórza Golan",
+              "text": "Wyżynny płaskowyż zajęty przez Izrael w 1967 r. Syrii. O jego znaczeniu decyduje **geografia**: górują nad doliną Jordanu (przewaga militarna) i leżą w zlewni zasilającej **Jezioro Tyberiadzkie** — główny zbiornik słodkiej wody Izraela."
+            },
+            {
+              "lat": 36.19,
+              "lng": 44.01,
+              "label": "Irbil — Kurdystan iracki",
+              "text": "Stolica **Regionu Kurdystanu**, jedynego obszaru z realną autonomią kurdyjską. Region ma własny rząd i siły zbrojne (peszmergowie), a spór z Bagdadem dotyczy głównie **podziału dochodów z ropy** i przynależności okręgu naftowego Kirkuku. Referendum niepodległościowe z 2017 r. nie zostało uznane przez żadne państwo."
+            },
+            {
+              "lat": 26.57,
+              "lng": 56.25,
+              "label": "Cieśnina Ormuz",
+              "text": "Jedyne wyjście z **Zatoki Perskiej** na ocean. Przepływa nią około jedna piąta ropy zużywanej na świecie. Groźba zamknięcia cieśniny jest narzędziem nacisku politycznego — to podręcznikowy przykład **wąskiego gardła (choke point)** w geografii transportu."
+            },
+            {
+              "lat": 37.49,
+              "lng": 38.32,
+              "label": "Zapora Atatürka (Eufrat)",
+              "text": "Element tureckiego programu **GAP** (Południowo-Wschodnia Anatolia): kilkadziesiąt zapór na Eufracie i Tygrysie. Turcja, leżąc w **górnym biegu**, może regulować przepływ do Syrii i Iraku — a wraz z nim ilość wody do nawadniania i produkcji energii u sąsiadów."
+            },
+            {
+              "lat": 11.21,
+              "lng": 35.09,
+              "label": "Wielka Tama Etiopskiego Odrodzenia (GERD)",
+              "text": "Zapora na **Nilu Błękitnym**, największa elektrownia wodna Afryki. Etiopia widzi w niej szansę na elektryfikację kraju, Egipt i Sudan — zagrożenie dla przepływu w dolnym biegu, zwłaszcza w okresie napełniania zbiornika."
+            },
+            {
+              "lat": 23.97,
+              "lng": 32.88,
+              "label": "Wysoka Tama Asuańska",
+              "text": "Ukończona w 1970 r., utworzyła **Jezioro Nasera**. Uniezależniła Egipt od kaprysów wezbrań Nilu, ale zatrzymała **żyzne muły**, przez co delta cofa się pod naporem morza, a rolnicy muszą stosować nawozy sztuczne. Egipt broni swojego „prawa historycznego” do wody Nilu właśnie dlatego, że nie ma żadnej alternatywy."
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Konflikt izraelsko-palestyński — kalendarium",
+          "caption": "Zauważ, że każdy etap zmienia mapę: to konflikt przede wszystkim o **terytorium i jego granice**.",
+          "events": [
+            {
+              "period": "1947",
+              "label": "Plan podziału ONZ",
+              "text": "Zgromadzenie Ogólne ONZ uchwala podział brytyjskiego mandatu Palestyny na **państwo żydowskie i arabskie**, z Jerozolimą pod zarządem międzynarodowym. Strona arabska planu nie przyjmuje."
+            },
+            {
+              "period": "1948–1949",
+              "label": "Powstanie Izraela i pierwsza wojna",
+              "text": "Proklamacja **Państwa Izrael** i wojna z państwami arabskimi. Izrael zajmuje obszar większy niż przewidywał plan ONZ; ok. **700 tys. Palestyńczyków** opuszcza domy (nakba), tworząc trwały problem uchodźczy."
+            },
+            {
+              "period": "1967",
+              "label": "Wojna sześciodniowa",
+              "text": "Izrael zajmuje **Zachodni Brzeg** i Jerozolimę Wschodnią (od Jordanii), **Strefę Gazy** i Półwysep Synaj (od Egiptu) oraz **Wzgórza Golan** (od Syrii). Powstaje dzisiejsza geografia sporu — łącznie z kontrolą nad zasobami wodnymi."
+            },
+            {
+              "period": "1979",
+              "label": "Pokój egipsko-izraelski",
+              "text": "Po wojnie Jom Kipur (1973) Egipt jako pierwsze państwo arabskie zawiera pokój z Izraelem i odzyskuje **Synaj**. Dowód, że spór terytorialny między państwami da się rozwiązać — inaczej niż konflikt o to samo terytorium między dwiema wspólnotami."
+            },
+            {
+              "period": "1993–1994",
+              "label": "Porozumienia z Oslo",
+              "text": "Powstaje **Autonomia Palestyńska** ze stopniowanym zakresem władzy (strefy A, B i C). Kluczowe kwestie — Jerozolima, osiedla, uchodźcy i **woda** — odłożono na później i nigdy nie rozstrzygnięto."
+            },
+            {
+              "period": "2002–2007",
+              "label": "Bariera, wycofanie z Gazy i podział władzy",
+              "text": "Izrael buduje **barierę oddzielającą** wzdłuż i wewnątrz Zachodniego Brzegu, w 2005 r. wycofuje się z Gazy, a od 2007 r. terytoriami palestyńskimi rządzą **dwa ośrodki**: Fatah na Zachodnim Brzegu i Hamas w Gazie."
+            },
+            {
+              "period": "2012",
+              "label": "Palestyna w ONZ",
+              "text": "Zgromadzenie Ogólne przyznaje Palestynie status **nieczłonkowskiego państwa obserwatora**. Symboliczne uznanie państwowości nie zmienia jednak faktycznej kontroli nad terytorium."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Zachodni Brzeg a Strefa Gazy",
+          "leftLabel": "Zachodni Brzeg",
+          "rightLabel": "Strefa Gazy",
+          "rows": [
+            {
+              "aspect": "Położenie i powierzchnia",
+              "left": "Wyżynny obszar na zachód od **Jordanu**, ok. 5,6 tys. km²",
+              "right": "Wąski pas nad **Morzem Śródziemnym**, ok. 365 km²"
+            },
+            {
+              "aspect": "Władza",
+              "left": "**Autonomia Palestyńska** (Fatah), obok izraelskiej kontroli wojskowej w strefie C",
+              "right": "**Hamas** od 2007 r., przy blokadzie zewnętrznej"
+            },
+            {
+              "aspect": "Osadnictwo izraelskie",
+              "left": "Rozbudowane osiedla, rozdrabniające terytorium palestyńskie",
+              "right": "Zlikwidowane w 2005 r. wraz z wycofaniem wojsk"
+            },
+            {
+              "aspect": "Zasoby wody",
+              "left": "**Górska warstwa wodonośna** — najcenniejsze źródło wody w regionie, spór o dostęp",
+              "right": "Przybrzeżna warstwa wodonośna, **przeeksploatowana i zasolona** wskutek intruzji wód morskich"
+            },
+            {
+              "aspect": "Gęstość zaludnienia",
+              "left": "Umiarkowana, osadnictwo rozproszone w dolinach i na grzbietach",
+              "right": "Skrajnie wysoka — jeden z najgęściej zaludnionych obszarów świata"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy mylone pary. **Palestyna (państwo uznawane przez większość członków ONZ)** to nie to samo co **Autonomia Palestyńska** (władze administrujące częścią terytoriów). **Sunnici i szyici** to odłamy islamu, a nie odrębne religie — a jednak podział ten wyznacza linie sojuszy (Arabia Saudyjska–Iran). I wreszcie: **Kurdowie nie są Arabami** — to odrębny naród irański językowo, choć w większości sunnicki, tak jak Turcy czy Arabowie wokół nich."
+        },
+        {
+          "type": "case-study",
+          "title": "Syria: od suszy do wojny zastępczej",
+          "region": "Syria i Lewant",
+          "text": "Wojna domowa w Syrii jest pokazowym przykładem konfliktu, w którym **czynnik środowiskowy uruchomił łańcuch społeczny**. W latach 2006–2010 północno-wschodnią Syrię dotknęła najdotkliwsza od dziesięcioleci **susza**; upadek rolnictwa — dodatkowo osłabionego nadmiernym poborem wód podziemnych do nawadniania — wypchnął setki tysięcy ludzi ze wsi do przeludnionych przedmieść miast. Gdy w 2011 r. fala **Arabskiej Wiosny** dotarła do Syrii, protesty spotkały się z brutalną odpowiedzią władz i przerodziły w wojnę domową. Konflikt szybko stał się **wojną zastępczą (proxy war)**: rząd wspierały Rosja i Iran, opozycję — państwa Zatoki i Turcja, Kurdowie z północy uzyskali wsparcie USA w walce z **Państwem Islamskim**, które między 2014 a 2017 r. kontrolowało znaczne obszary Syrii i Iraku. Skutkiem był największy kryzys uchodźczy XXI wieku: **ponad 5 mln uchodźców** za granicą (głównie w Turcji, Libanie i Jordanii) i miliony przesiedlonych wewnątrz kraju. W grudniu 2024 r. rządzący od dekad reżim upadł, ale kraj pozostał podzielony na strefy wpływów.",
+          "takeaway": "Susza nie „wywołała” wojny — wywołał ją splot ustroju politycznego, nierówności i represji. Środowisko zadziałało jako **czynnik zapalny**, który przyspieszył migrację ze wsi do miast i zwiększył napięcie społeczne."
+        },
+        {
+          "type": "definition",
+          "term": "Naród bez państwa",
+          "text": "Wspólnota o wyraźnej odrębności etnicznej, językowej i kulturowej, która **nie ma własnego państwa**, bo jej obszar osadniczy został podzielony granicami innych państw. Kurdowie zamieszkują zwarty obszar górski na styku **Turcji, Iranu, Iraku i Syrii** — granice narzucono tam po rozpadzie Imperium Osmańskiego, a obiecane w traktacie z Sèvres (1920) państwo kurdyjskie nigdy nie powstało.",
+          "note": "Właśnie dlatego żadne z czterech państw nie chce niepodległego Kurdystanu: jego powstanie oznaczałoby oderwanie części terytorium każdego z nich — a w przypadku Iraku również okręgu naftowego Kirkuku."
+        },
+        {
+          "type": "process",
+          "title": "Jak powstaje spór o rzekę transgraniczną",
+          "caption": "Ten sam schemat opisuje Nil, Eufrat, Indus i Mekong — warto go opanować jako gotowy model odpowiedzi.",
+          "steps": [
+            {
+              "title": "1. Asymetria położenia",
+              "text": "Państwo **górnego biegu** kontroluje źródła i przepływ; państwo **dolnego biegu** jest odbiorcą tego, co dopłynie. Przewaga jest z natury nierówna i nie zależy od wielkości armii."
+            },
+            {
+              "title": "2. Wzrost zapotrzebowania",
+              "text": "Przyrost ludności, rozwój nawadniania i potrzeba energii sprawiają, że **zapotrzebowanie rośnie po obu stronach** granicy szybciej niż zasoby, które są stałe lub malejące wskutek zmian klimatu."
+            },
+            {
+              "title": "3. Inwestycja w górnym biegu",
+              "text": "Powstaje **zapora lub system nawadniający**. Napełnianie zbiornika czasowo zmniejsza odpływ, a stałe pobory na nawadnianie ograniczają go trwale — i pogarszają jakość wody (zasolenie po spływie z pól)."
+            },
+            {
+              "title": "4. Zderzenie zasad prawnych",
+              "text": "Dolny bieg powołuje się na **prawa historyczne** („zawsze korzystaliśmy z tej wody”), górny — na **suwerenność** nad zasobami na własnym terytorium. Prawo międzynarodowe zaleca „sprawiedliwe i racjonalne korzystanie”, ale nie ma skutecznego egzekutora."
+            },
+            {
+              "title": "5. Eskalacja albo umowa",
+              "text": "Bez porozumienia spór przenosi się na poziom polityczny i wojskowy (groźby, presja dyplomatyczna). Rozwiązaniem bywa **umowa o podziale wód** wraz z wymianą korzyści — np. tania energia z zapory w zamian za gwarancje przepływu."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Trzy najważniejsze spory o wodę w regionie",
+          "headers": [
+            "Rzeka / dorzecze",
+            "Górny bieg (przewaga)",
+            "Dolny bieg (zależność)",
+            "Istota sporu"
+          ],
+          "rows": [
+            [
+              "Nil",
+              "**Etiopia** (Wyżyna Abisyńska dostarcza ok. 85% wód Nilu przez Nil Błękitny, Atbarę i Sobat)",
+              "**Sudan i Egipt**",
+              "Budowa i napełnianie **GERD** wobec umów z 1929 i 1959 r., które dzieliły wodę wyłącznie między Egipt i Sudan, pomijając Etiopię"
+            ],
+            [
+              "Tygrys i Eufrat",
+              "**Turcja** (źródła w górach Wyżyny Armeńskiej, program zapór GAP)",
+              "**Syria i Irak**",
+              "Zmniejszony przepływ i **zasolenie** gleb w Mezopotamii, wysychanie bagien w dolnym biegu, spadek produkcji rolnej Iraku"
+            ],
+            [
+              "Jordan",
+              "**Izrael, Syria, Liban** (zlewnia Jeziora Tyberiadzkiego)",
+              "**Jordania i Autonomia Palestyńska**",
+              "Pobór wody na nawadnianie i zaopatrzenie miast; skutek uboczny — **kurczenie się Morza Martwego** o około metr rocznie"
+            ]
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Odnawialne zasoby wodne na 1 mieszkańca (wartości przybliżone)",
+          "caption": "Progi Falkenmarka: poniżej 1700 m³/osobę/rok mówimy o **stresie wodnym**, poniżej 1000 m³ — o **niedoborze wody**, poniżej 500 m³ — o niedoborze skrajnym.",
+          "labels": [
+            "Turcja",
+            "Irak",
+            "Polska",
+            "Egipt",
+            "Izrael"
+          ],
+          "series": [
+            {
+              "name": "m³ na osobę rocznie",
+              "values": [
+                2900,
+                2100,
+                1600,
+                550,
+                220
+              ]
+            }
+          ],
+          "unit": "m³"
+        },
+        {
+          "type": "ordering",
+          "title": "Ułóż obiekty zgodnie z biegiem Nilu — od źródeł do ujścia",
+          "instruction": "Przeciągnij elementy tak, aby odtworzyć kolejność wzdłuż rzeki (z uwzględnieniem Nilu Błękitnego).",
+          "items": [
+            "Jezioro Tana na Wyżynie Abisyńskiej — źródło Nilu Błękitnego",
+            "Wielka Tama Etiopskiego Odrodzenia (GERD)",
+            "Chartum — połączenie Nilu Białego i Nilu Błękitnego",
+            "Wysoka Tama Asuańska i Jezioro Nasera",
+            "Kair i delta Nilu",
+            "Morze Śródziemne"
+          ],
+          "explanation": "Nil Błękitny wypływa z **Jeziora Tana** i już w Etiopii przecina go zapora **GERD** — to właśnie dlatego Egipt tak ostro reaguje na inwestycję. W **Chartumie** łączy się z Nilem Białym, płynącym z rejonu Jeziora Wiktorii. Dalej rzeka wkracza w pustynię, zostaje spiętrzona w **Asuanie**, a na końcu rozdziela się w **deltę** i uchodzi do Morza Śródziemnego."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego Wzgórza Golan mają dla Izraela znaczenie wykraczające poza kwestię prestiżu terytorialnego?",
+          "options": [
+            "Znajdują się tam największe złoża ropy naftowej Bliskiego Wschodu",
+            "Górują nad doliną Jordanu i leżą w zlewni zasilającej Jezioro Tyberiadzkie, główny zbiornik wody słodkiej",
+            "Przebiega przez nie jedyna droga łącząca Izrael z Morzem Czerwonym",
+            "Jest to obszar święty dla trzech religii monoteistycznych"
+          ],
+          "correctIndex": 1,
+          "explanation": "O znaczeniu Golanu decyduje **rzeźba i hydrologia**: wyżynny płaskowyż daje przewagę wojskową nad niżej położoną doliną Jordanu, a jego zlewnia zasila **Jezioro Tyberiadzkie**. W regionie o deficycie wody kontrola nad obszarem zasilania jest równie ważna jak kontrola nad samym zbiornikiem. Miejscem świętym dla trzech religii jest Jerozolima, a nie Golan."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega istota sporu Egiptu i Etiopii o Wielką Tamę Etiopskiego Odrodzenia?",
+          "options": [
+            "Etiopia leży w dolnym biegu Nilu i chce ograniczyć pobór wody przez Egipt",
+            "Zapora ma zatrzymywać zanieczyszczenia płynące z Egiptu w górę rzeki",
+            "Etiopia jako państwo górnego biegu może regulować odpływ, a Egipt, zależny od Nilu w ponad 90%, powołuje się na prawa historyczne wynikające z dawnych umów",
+            "Obydwa państwa spierają się o granicę przebiegającą wzdłuż koryta Nilu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczowa jest **asymetria położenia**: Etiopia leży w **górnym biegu** Nilu Błękitnego, z którego pochodzi większość wód rzeki, więc kontroluje odpływ. Egipt, praktycznie pozbawiony opadów i zależny od Nilu w ponad 90%, odwołuje się do umów z 1929 i 1959 r., zawartych bez udziału Etiopii. Woda nie płynie „w górę”, więc odpowiedzi 1. i 2. są geograficznie niemożliwe."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zestawienie poprawnie opisuje sytuację Kurdów?",
+          "options": [
+            "Naród arabski zamieszkujący Półwysep Arabski, dążący do utworzenia federacji z Irakiem",
+            "Naród podzielony granicami Turcji, Iranu, Iraku i Syrii, mający autonomię jedynie w północnym Iraku",
+            "Grupa religijna wyznająca chrześcijaństwo, skupiona w Libanie i Syrii",
+            "Ludność koczownicza Sahelu, przemieszczająca się między Mali a Nigrem"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kurdowie to odrębny naród (językowo irański, w większości sunnicki), zamieszkujący **zwarty obszar górski** rozdzielony granicami czterech państw wytyczonymi po rozpadzie Imperium Osmańskiego. Realną autonomię — z własnym rządem i siłami zbrojnymi — mają wyłącznie w **północnym Iraku (Region Kurdystanu ze stolicą w Irbilu)**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o Bliskim Wschodzie egzaminator nagradza **argument geograficzny**, nie relację historyczną. Trenuj trzy schematy: (1) **położenie tranzytowe** — cieśnina Ormuz, Kanał Sueski, ropociągi; (2) **asymetria góra–dół rzeki** — kto trzyma źródła, ten trzyma sąsiada za gardło; (3) **zgodność mapy etniczno-religijnej z mapą polityczną** — im większa rozbieżność, tym większe ryzyko separatyzmu. Jeśli w poleceniu jest mapa, zawsze wskaż konkretny obiekt (rzekę, zaporę, cieśninę, wyżynę), a nie samą nazwę państwa."
+        }
+      ]
+    },
+    {
+      "slug": "konflikty-w-afryce-sahel-rog-wielkie-jeziora",
+      "title": "Konflikty w Afryce: Sahel, Róg Afryki i Wielkie Jeziora",
+      "summary": "Trzy najbardziej zapalne regiony Afryki i ich podłoże geograficzne: pustynnienie i rebelie w Sahelu, państwo upadłe w Somalii oraz wojny o surowce w regionie Wielkich Jezior.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Afryka skupia dziś najwięcej długotrwałych konfliktów zbrojnych na świecie, ale ich rozmieszczenie nie jest przypadkowe. Trzy zapalne regiony — **Sahel**, **Róg Afryki** i **region Wielkich Jezior** — łączy to samo: słabe państwo, granice odziedziczone po kolonializmie i **presja środowiskowa lub surowcowa**. Różni je natomiast mechanizm: w Sahelu wojnę napędza pustynnienie i konkurencja o pastwiska, w Rogu Afryki — rozpad struktur państwowych i położenie przy jednym z najważniejszych szlaków morskich świata, a nad Wielkimi Jeziorami — pamięć ludobójstwa i najbogatsze na kontynencie złoża metali."
+        },
+        {
+          "type": "zones",
+          "title": "Dlaczego Sahel leży akurat tam, gdzie leży",
+          "caption": "Pasy roślinne Afryki Zachodniej układają się **równoleżnikowo**, bo o wszystkim decyduje suma opadów malejąca ku północy — to bezpośredni skutek wędrówki strefy zbieżności międzyzwrotnikowej.",
+          "zones": [
+            {
+              "name": "Sahara",
+              "latitude": "ok. 18°–30°N",
+              "text": "Pustynia zwrotnikowa pod wpływem **wyżu zwrotnikowego** i osiadających mas powietrza. Opady poniżej 100 mm rocznie, rolnictwo możliwe tylko w oazach i dolinach rzek.",
+              "tone": "heat"
+            },
+            {
+              "name": "Sahel",
+              "latitude": "ok. 12°–18°N",
+              "text": "Pas przejściowy o szerokości kilkuset kilometrów i długości ok. **5000 km** — od Atlantyku po Morze Czerwone. Opady **200–600 mm**, skupione w jednej krótkiej porze deszczowej (lipiec–wrzesień) i skrajnie zmienne z roku na rok. Roślinność: sucha sawanna i step, podstawą gospodarki jest **koczownicza hodowla** i uprawa prosa.",
+              "tone": "earth"
+            },
+            {
+              "name": "Sawanny wilgotne (Sudan)",
+              "latitude": "ok. 8°–12°N",
+              "text": "Opady **600–1000 mm** i dłuższa pora deszczowa pozwalają na **rolnictwo osiadłe** (sorgo, orzeszki ziemne, bawełna). To tutaj, na pola rolników, schodzą w porze suchej stada pasterzy z północy.",
+              "tone": "vegetation"
+            },
+            {
+              "name": "Strefa lasów i wybrzeża Zatoki Gwinejskiej",
+              "latitude": "0°–8°N",
+              "text": "Klimat równikowy wilgotny, opady powyżej 1500 mm, wilgotne lasy i uprawy plantacyjne (kakao, olejowiec). Region najgęściej zaludniony i najbogatszy — **kontrast z ubogą północą** jest w wielu państwach Sahelu źródłem napięć politycznych.",
+              "tone": "water"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Sahel",
+          "text": "Strefa przejściowa między Saharą a sawannami wilgotnymi; nazwa pochodzi od arabskiego słowa oznaczającego **brzeg** — brzeg pustyni. Obejmuje m.in. Mauretanię, Senegal, Mali, Burkina Faso, Niger, Czad i Sudan. Cechą kluczową jest **skrajna zmienność opadów**: różnica między rokiem wilgotnym a suchym sięga kilkuset procent, więc gospodarka balansuje na granicy przetrwania.",
+          "note": "Nie myl Sahelu z Saharą. Sahel **nie jest pustynią** — jest obszarem, który pod wpływem susz i presji człowieka **staje się pustynią** (pustynnienie)."
+        },
+        {
+          "type": "process",
+          "title": "Od suszy do rebelii — łańcuch przyczynowy w Sahelu",
+          "caption": "Ten ciąg zdarzeń to najczęściej punktowany model odpowiedzi w zadaniach o Sahelu.",
+          "steps": [
+            {
+              "title": "1. Susza i pustynnienie",
+              "text": "Ciąg lat suchych (wielkie susze lat 70. i 80. XX w.) w połączeniu z **nadmiernym wypasem, wyrębem drzew na opał i uprawą gleb marginalnych** prowadzi do degradacji pokrywy roślinnej i utraty gruntów użytkowych."
+            },
+            {
+              "title": "2. Presja demograficzna",
+              "text": "Państwa Sahelu mają jedne z **najwyższych na świecie przyrostów naturalnych**. Ziemi i wody ubywa, a ludzi przybywa — zapotrzebowanie rośnie dokładnie wtedy, gdy zasoby maleją."
+            },
+            {
+              "title": "3. Konflikt rolnicy–pasterze",
+              "text": "Pasterze (m.in. Fulanie) przesuwają stada **na południe**, na pola rolników. Zniszczone uprawy, zajęte wodopoje i szlaki przepędu wywołują lokalne starcia, które szybko nabierają charakteru **etnicznego i religijnego**."
+            },
+            {
+              "title": "4. Próżnia władzy",
+              "text": "Rządy słabo kontrolują rozległe, słabo zaludnione tereny północne. W tej próżni osadzają się **grupy dżihadystyczne i przemytnicze** (broń, narkotyki, migranci), oferując ochronę i zarobek tam, gdzie państwa nie ma."
+            },
+            {
+              "title": "5. Destabilizacja państwa",
+              "text": "Armia, obwiniana o porażki, sięga po władzę: w latach 2020–2023 przez Mali, Burkina Faso, Niger, Gwineę i Czad przetoczyła się seria **zamachów stanu**, a siły zachodnie i misje pokojowe wycofano. Konflikt rozlewa się na sąsiednie państwa Zatoki Gwinejskiej."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Mali, Azawad i Boko Haram",
+          "region": "Sahel Zachodni i basen Jeziora Czad",
+          "text": "W 2012 r. koczowniczy **Tuaregowie** — lud saharyjski rozdzielony granicami Mali, Nigru, Algierii i Libii — wykorzystali napływ broni po upadku reżimu w Libii i ogłosili niepodległość **Azawadu** w północnym Mali. Ruch świecki został jednak szybko wyparty przez **ugrupowania dżihadystyczne**, które zajęły m.in. Timbuktu. Interwencja francuska (2013) i misja ONZ powstrzymały marsz na stolicę, ale nie usunęły przyczyn; po zamachach stanu z lat 2020–2021 wojska francuskie i misję ONZ wycofano. Równolegle w basenie **Jeziora Czad**, na styku Nigerii, Nigru, Czadu i Kamerunu, działa **Boko Haram** — organizacja terrorystyczna, która od 2009 r. prowadzi walkę zbrojną w najbiedniejszej, muzułmańskiej północy Nigerii. Region ten dotknęło jednocześnie **kurczenie się Jeziora Czad**: utrata rybołówstwa i pastwisk pozbawiła pracy setki tysięcy ludzi, ułatwiając werbunek.",
+          "takeaway": "W Sahelu granice państwowe przecinają obszary koczownicze w poprzek szlaków wędrówek. Państwo jest tam obecne w stolicy, a nieobecne na peryferiach — i to właśnie peryferie stają się bazą rebelii."
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Kurczenie się Jeziora Czad",
+          "caption": "Powierzchnia otwartego lustra wody, wartości przybliżone i silnie zmienne sezonowo. Jezioro jest **bezodpływowe i bardzo płytkie**, więc nawet niewielki spadek zasilania i pobór wody na nawadnianie dają ogromną zmianę powierzchni.",
+          "labels": [
+            "1963",
+            "1973",
+            "1987",
+            "2000",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "powierzchnia",
+              "values": [
+                25000,
+                15000,
+                3900,
+                1350,
+                1500
+              ]
+            }
+          ],
+          "unit": "km²"
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pułapki pojęciowe. **Pustynnienie** to proces degradacji obszarów suchych, a nie „przesuwanie się piasków Sahary” — powstaje głównie na miejscu, wskutek utraty roślinności. **Sahel to nie Sahara**, lecz strefa przejściowa. I najważniejsze: susza sama nie wywołuje wojny — działa **przez gospodarkę i migracje wewnętrzne**, uderzając w kraje, które i tak mają słabe państwo oraz wysoki przyrost naturalny."
+        },
+        {
+          "type": "definition",
+          "term": "Państwo upadłe (failed state)",
+          "text": "Państwo, którego władze **utraciły kontrolę nad znaczną częścią terytorium** i przestały pełnić podstawowe funkcje: zapewniać bezpieczeństwo, ściągać podatki, świadczyć usługi publiczne i strzec granic. Faktyczną władzę przejmują klany, bojówki lub organizacje zbrojne, a gospodarka przenosi się do szarej strefy.",
+          "note": "Skutki wykraczają poza granice: z państwa upadłego promieniują **piractwo, przemyt, terroryzm i fale uchodźstwa**, dlatego jego rozpad staje się problemem całego regionu."
+        },
+        {
+          "type": "case-study",
+          "title": "Róg Afryki: Somalia, Erytrea i Tigraj",
+          "region": "Róg Afryki",
+          "text": "**Somalia** jest podręcznikowym państwem upadłym: po obaleniu dyktatury w 1991 r. kraj rozpadł się na obszary kontrolowane przez klany, na północy powstał nieuznawany **Somaliland**, a na południu przez lata operowała islamistyczna organizacja **asz-Szabab**; stabilizację wspiera misja **Unii Afrykańskiej**. Brak państwa uruchomił mechanizm o zasięgu globalnym: u wybrzeży rozwinęło się **piractwo morskie**, bo Somalia leży przy **Zatoce Adeńskiej**, na szlaku Kanał Sueski–Morze Czerwone–cieśnina Bab al-Mandab–Ocean Indyjski, którym płynie ropa i kontenery między Azją a Europą. Głębiej w lądzie napięcia mają podłoże terytorialne i etniczne: **Erytrea** uzyskała niepodległość w 1993 r., odcinając Etiopię od morza i czyniąc z niej najludniejsze państwo śródlądowe świata; spór graniczny doprowadził do wojny w latach 1998–2000, zakończonej dopiero porozumieniem z 2018 r. Dwa lata później Etiopia pogrążyła się w wojnie domowej w prowincji **Tigraj** (2020–2022), a całość dopełniają powracające susze wywołujące klęski głodu.",
+          "takeaway": "W Rogu Afryki kluczem jest **dostęp do morza**: to on tłumaczy zarówno determinację Etiopii w sporze z Erytreą, jak i skalę reakcji świata na somalijskie piractwo."
+        },
+        {
+          "type": "timeline",
+          "title": "Region Wielkich Jezior — od ludobójstwa do wojny o surowce",
+          "caption": "Zwróć uwagę, jak konflikt **przekracza granice**: skutki wydarzeń w Rwandzie przeniosły się do Konga i uruchomiły wojnę o zasięgu kontynentalnym.",
+          "events": [
+            {
+              "period": "okres kolonialny",
+              "label": "Utrwalenie podziału Hutu–Tutsi",
+              "text": "Administracja kolonialna usztywniła płynny wcześniej podział społeczny, wpisując przynależność do grupy w **dokumenty tożsamości** i faworyzując mniejszość Tutsi. Powstała trwała linia podziału politycznego."
+            },
+            {
+              "period": "1994",
+              "label": "Ludobójstwo w Rwandzie",
+              "text": "W ciągu ok. **100 dni** zamordowano około **800 tys. osób**, głównie Tutsi i umiarkowanych Hutu. Świat nie zareagował skutecznie — to wydarzenie do dziś jest głównym argumentem w dyskusji o **odpowiedzialności ONZ za ochronę ludności**."
+            },
+            {
+              "period": "1996–1997",
+              "label": "Pierwsza wojna kongijska",
+              "text": "Do wschodniego Zairu uciekają setki tysięcy Hutu wraz ze sprawcami ludobójstwa. Rwanda i Uganda wspierają rebelię, która obala wieloletni reżim w Kinszasie; państwo przyjmuje nazwę **Demokratyczna Republika Konga**."
+            },
+            {
+              "period": "1998–2003",
+              "label": "Druga wojna kongijska",
+              "text": "Nazywana **wielką wojną afrykańską** — zaangażowało się w nią kilka państw regionu, a liczbę ofiar (głównie wskutek głodu i chorób, nie walk) szacuje się w milionach. Motywem stała się kontrola nad **złożami wschodniego Konga**."
+            },
+            {
+              "period": "od 2004",
+              "label": "Konflikt w Kiwu",
+              "text": "Walki bojówek o kopalnie **koltanu, cyny, złota i kobaltu** trwają mimo obecności jednej z największych misji pokojowych ONZ. Surowce sprzedawane na czarnym rynku finansują kolejne fazy walk — to klasyczna **gospodarka wojenna**."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Mapa konfliktów afrykańskich",
+          "caption": "Kliknij znaczniki i sprawdź, czy potrafisz przypisać każdemu z nich mechanizm: pustynnienie, upadek państwa czy walkę o surowce.",
+          "center": [
+            8,
+            25
+          ],
+          "zoom": 3,
+          "markers": [
+            {
+              "lat": 18.44,
+              "lng": 1.41,
+              "label": "Azawad (północne Mali)",
+              "text": "Rozległy, słabo zaludniony obszar saharyjsko-sahelski zamieszkany m.in. przez **Tuaregów**. Powstanie z 2012 r. zostało przejęte przez ugrupowania dżihadystyczne. Przykład **peryferii poza kontrolą państwa**."
+            },
+            {
+              "lat": 13,
+              "lng": 14.2,
+              "label": "Basen Jeziora Czad",
+              "text": "Styk czterech państw i obszar działania **Boko Haram**. Kurczenie się jeziora zniszczyło rybołówstwo i pastwiska, pozbawiając pracy setki tysięcy ludzi — bieda ułatwia werbunek do organizacji zbrojnych."
+            },
+            {
+              "lat": 2.04,
+              "lng": 45.34,
+              "label": "Mogadiszu (Somalia)",
+              "text": "Stolica **państwa upadłego**: od 1991 r. brak trwałej władzy centralnej, faktyczna kontrola należy do klanów i bojówek, a stabilizację wspiera misja Unii Afrykańskiej."
+            },
+            {
+              "lat": 12.5,
+              "lng": 48,
+              "label": "Zatoka Adeńska",
+              "text": "Odcinek szlaku **Kanał Sueski–Morze Czerwone–Ocean Indyjski**. Rozkwit piractwa u wybrzeży Somalii pokazał, jak upadek jednego państwa może zagrozić **handlowi światowemu** i wymusić międzynarodowe operacje morskie."
+            },
+            {
+              "lat": 13.49,
+              "lng": 39.47,
+              "label": "Tigraj (Etiopia)",
+              "text": "Północna prowincja Etiopii, w której w latach 2020–2022 toczyła się wyniszczająca wojna domowa. Nakładający się kryzys żywnościowy pogłębiły **susze** typowe dla Rogu Afryki."
+            },
+            {
+              "lat": -1.94,
+              "lng": 30.06,
+              "label": "Kigali (Rwanda)",
+              "text": "Kraj o **najwyższej gęstości zaludnienia w Afryce kontynentalnej**, co przy rolniczym charakterze gospodarki oznacza ogromną presję na ziemię. To tło ludobójstwa z 1994 r., którego skutki przeniosły się do sąsiedniego Konga."
+            },
+            {
+              "lat": -1.68,
+              "lng": 29.22,
+              "label": "Kiwu Północne (DRK)",
+              "text": "Wschodnie Kongo — region **koltanu, cyny, złota i kobaltu**. Bojówki kontrolują kopalnie i sprzedają urobek poza oficjalnym obiegiem, dzięki czemu konflikt sam się finansuje mimo obecności sił pokojowych."
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Afryka konfliktów w liczbach",
+          "items": [
+            {
+              "value": "5000",
+              "unit": "km",
+              "label": "długość pasa Sahelu",
+              "note": "od Oceanu Atlantyckiego po Morze Czerwone"
+            },
+            {
+              "value": "200–600",
+              "unit": "mm",
+              "label": "roczna suma opadów w Sahelu",
+              "note": "skupiona w jednej krótkiej porze deszczowej"
+            },
+            {
+              "value": "> 90",
+              "unit": "%",
+              "label": "spadek powierzchni Jeziora Czad od lat 60. XX w.",
+              "note": "susze i pobór wody na nawadnianie"
+            },
+            {
+              "value": "≈ 800",
+              "unit": "tys.",
+              "label": "ofiar ludobójstwa w Rwandzie (1994)",
+              "note": "w ciągu około 100 dni"
+            },
+            {
+              "value": "1991",
+              "label": "rozpad państwa somalijskiego",
+              "note": "modelowy przykład państwa upadłego"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj region do mechanizmu konfliktu",
+          "instruction": "Każdemu obszarowi przypisz czynnik, który najlepiej tłumaczy trwałość konfliktu.",
+          "pairs": [
+            {
+              "left": "Sahel (Mali, Niger, Burkina Faso)",
+              "right": "pustynnienie i konkurencja pasterzy z rolnikami o ziemię"
+            },
+            {
+              "left": "Somalia i Zatoka Adeńska",
+              "right": "upadek państwa przy strategicznym szlaku morskim"
+            },
+            {
+              "left": "Kiwu we wschodniej DRK",
+              "right": "kontrola bojówek nad kopalniami metali rzadkich"
+            },
+            {
+              "left": "Etiopia i Erytrea",
+              "right": "spór graniczny państwa pozbawionego dostępu do morza"
+            },
+            {
+              "left": "Rwanda",
+              "right": "utrwalony w okresie kolonialnym podział etniczny przy ogromnej gęstości zaludnienia"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Który ciąg przyczynowo-skutkowy najlepiej opisuje mechanizm konfliktów w Sahelu?",
+          "options": [
+            "Wzrost opadów → nadmiar plonów → walka o rynki zbytu → wojna handlowa",
+            "Susza i pustynnienie → utrata pastwisk → wędrówka pasterzy na południe → starcia z rolnikami → wypełnienie próżni władzy przez grupy zbrojne",
+            "Odkrycie ropy naftowej → napływ inwestycji → wzrost zamożności → protesty przeciw imigrantom",
+            "Topnienie lodowców → podniesienie poziomu morza → zalanie wybrzeży → migracje do wnętrza kontynentu"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sahel to strefa **skrajnie zmiennych opadów**. Ciąg suchych lat wraz z nadmiernym wypasem i wysokim przyrostem naturalnym niszczy pastwiska, co spycha pasterzy na południe, na pola rolników. Lokalne starcia o wodopoje i ziemię nabierają charakteru etnicznego, a słabo kontrolowane peryferie stają się bazą **grup zbrojnych i przemytniczych**."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego upadek państwa w Somalii wywołał skutki odczuwalne dla gospodarki światowej?",
+          "options": [
+            "Somalia była największym producentem ropy naftowej w Afryce",
+            "Somalia kontrolowała źródła Nilu Błękitnego",
+            "Somalia leży przy Zatoce Adeńskiej, na szlaku łączącym Kanał Sueski z Oceanem Indyjskim, gdzie rozwinęło się piractwo morskie",
+            "Somalia dostarczała większość światowego wydobycia koltanu"
+          ],
+          "correctIndex": 2,
+          "explanation": "Decyduje **położenie tranzytowe**. Wybrzeże Somalii ciągnie się wzdłuż Zatoki Adeńskiej i Oceanu Indyjskiego, przy szlaku Azja–Kanał Sueski–Europa. Gdy zniknęła władza zdolna kontrolować wybrzeże, rozwinęło się **piractwo**, podnosząc koszty ubezpieczeń i wymuszając międzynarodowe operacje morskie. Koltan pochodzi ze wschodniego Konga, a źródła Nilu Błękitnego leżą w Etiopii."
+        },
+        {
+          "type": "quiz",
+          "question": "Które zjawisko najlepiej tłumaczy, dlaczego konflikt we wschodniej Demokratycznej Republice Konga trwa mimo wielokrotnych porozumień pokojowych?",
+          "options": [
+            "Region jest bezludny, więc nie ma z kim zawierać porozumień",
+            "Bojówki czerpią dochody z kontrolowanych kopalń, więc pokój oznaczałby dla nich utratę źródła utrzymania",
+            "Konflikt dotyczy wyłącznie sporu o przebieg granicy z Ugandą",
+            "Państwa sąsiednie zakazały wywozu surowców z regionu, co uniemożliwia negocjacje"
+          ],
+          "correctIndex": 1,
+          "explanation": "We wschodnim Kongu wykształciła się **gospodarka wojenna**: kontrola nad kopalniami koltanu, cyny, złota i kobaltu daje bojówkom stały dochód ze sprzedaży poza oficjalnym obiegiem. Skoro walka jest opłacalna, a pokój oznacza utratę kopalni, kolejne porozumienia okazują się nietrwałe — konflikt **sam się finansuje**, niezależnie od pierwotnych przyczyn etnicznych."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o Afryce często pojawia się mapa z zasięgiem stref roślinnych albo z izohietami. Wykorzystaj to: pokaż, że konflikty sahelskie leżą w **pasie 200–600 mm opadów**, czyli tam, gdzie rolnictwo i hodowla są najbardziej wrażliwe na suszę. Buduj odpowiedź trójdzielnie: **warunek środowiskowy** (opady, kurczące się jezioro, złoża) → **skutek gospodarczy i społeczny** (utrata pastwisk, bezrobocie, migracja) → **skutek polityczny** (rebelia, terroryzm, zamach stanu). Zapamiętaj też trzy słowa klucze przypisane do regionów: Sahel — **pustynnienie**, Róg Afryki — **państwo upadłe**, Wielkie Jeziora — **surowce konfliktowe**."
+        }
+      ]
+    },
+    {
+      "slug": "azjatyckie-punkty-zapalne-i-bron-jadrowa",
+      "title": "Azjatyckie punkty zapalne i broń jądrowa",
+      "summary": "Kaszmir, Półwysep Koreański i Morze Południowochińskie — trzy spory, w których o przebiegu konfliktu decyduje geografia: góry, sztuczna linia demarkacyjna, szelf i szlaki morskie. Proliferacja broni jądrowej i układ NPT.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Azja skupia najwięcej **konfliktów międzypaństwowych o wysokiej stawce**: to tutaj graniczą ze sobą państwa dysponujące bronią jądrową, tędy przebiegają najruchliwsze szlaki morskie świata i tutaj przetrwały granice, których żadna ze stron nigdy nie uznała za ostateczne. W tej lekcji przyjrzysz się trzem punktom zapalnym — **Kaszmirowi**, **Półwyspowi Koreańskiemu** i **Morzu Południowochińskiemu** — a potem zobaczysz, co je łączy: wszystkie trzy wiążą się dziś z problemem **proliferacji broni jądrowej**. Kluczowe pytanie maturalne brzmi zawsze tak samo: *jaka cecha środowiska lub położenia sprawia, że akurat ten skrawek Ziemi jest tak cenny?*"
+        },
+        {
+          "type": "map-explore",
+          "title": "Punkty zapalne Azji",
+          "caption": "Kliknij znaczniki. Zwróć uwagę, że wszystkie trzy regiony to obszary pograniczne — wysokogórskie, półwyspowe albo morskie.",
+          "center": [
+            22,
+            105
+          ],
+          "zoom": 3,
+          "markers": [
+            {
+              "lat": 34.08,
+              "lng": 74.8,
+              "label": "Śrinagar (Dolina Kaszmiru)",
+              "text": "Główne miasto indyjskiego Dżammu i Kaszmiru, w kotlinie na wysokości ok. 1600 m n.p.m., otoczonej Himalajami i pasmem Pir Pandżal. Ludność w większości **muzułmańska** — to jądro sporu z Pakistanem."
+            },
+            {
+              "lat": 35.42,
+              "lng": 77.1,
+              "label": "Lodowiec Siaczen",
+              "text": "Rejon walk indyjsko-pakistańskich powyżej 5000 m n.p.m. — **najwyżej położone pole bitwy świata**. Więcej żołnierzy ginie tu z powodu warunków (mróz, lawiny, choroba wysokościowa) niż od ognia przeciwnika."
+            },
+            {
+              "lat": 35.1,
+              "lng": 79.1,
+              "label": "Aksai Czin",
+              "text": "Wysokie pustynne płaskowyże (ok. 5000 m n.p.m.) kontrolowane przez **Chiny**, a przez Indie uznawane za część Ladakhu. Chiny poprowadziły tędy drogę łączącą Tybet z Sinciangiem — stąd ich determinacja."
+            },
+            {
+              "lat": 37.96,
+              "lng": 126.68,
+              "label": "Panmundżom i strefa zdemilitaryzowana",
+              "text": "Wieś, w której w 1953 r. podpisano **rozejm** kończący walki w Korei. Wzdłuż linii demarkacyjnej ciągnie się pas o szerokości ok. 4 km — **strefa zdemilitaryzowana (DMZ)**, jedna z najsilniej ufortyfikowanych granic świata."
+            },
+            {
+              "lat": 39.02,
+              "lng": 125.75,
+              "label": "Pjongjang",
+              "text": "Stolica Korei Północnej (KRLD) — państwa, które w 2003 r. wystąpiło z układu NPT, a od 2006 r. przeprowadza **próby jądrowe**."
+            },
+            {
+              "lat": 16.5,
+              "lng": 112,
+              "label": "Wyspy Paracelskie",
+              "text": "Archipelag zajęty przez Chiny, do którego roszczenia zgłasza także **Wietnam**. Same wysepki są maleńkie — chodzi o **szelf** wokół nich."
+            },
+            {
+              "lat": 9.7,
+              "lng": 114,
+              "label": "Wyspy Spratly",
+              "text": "Kilkadziesiąt raf i wysepek, do których roszczenia zgłasza sześć stron: Chiny, Wietnam, Filipiny, Malezja, Brunei i Tajwan. Chiny **usypały tu sztuczne wyspy** z lotniskami."
+            },
+            {
+              "lat": 15.15,
+              "lng": 117.76,
+              "label": "Ławica Scarborough",
+              "text": "Rafa położona w wyłącznej strefie ekonomicznej Filipin, faktycznie kontrolowana przez Chiny od 2012 r. Jeden z przedmiotów wyroku trybunału arbitrażowego w Hadze z 2016 r."
+            },
+            {
+              "lat": 3,
+              "lng": 100.5,
+              "label": "Cieśnina Malakka",
+              "text": "Najwęższe gardło szlaku z Zatoki Perskiej do Azji Wschodniej. Przez nią i Morze Południowochińskie płynie większość ropy importowanej przez Chiny, Japonię i Koreę Południową."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Kaszmir — spór odziedziczony po podziale imperium",
+          "region": "Azja Południowa: Himalaje i Karakorum",
+          "text": "W 1947 r. Brytyjczycy podzielili Indie Brytyjskie według **kryterium religijnego**: obszary z przewagą hinduistów utworzyły Indie, z przewagą muzułmanów — Pakistan. Księstwo Dżammu i Kaszmiru było wyjątkiem: **władca był hinduistą, a większość mieszkańców muzułmanami**. Jego decyzja o przyłączeniu do Indii wywołała pierwszą wojnę indyjsko-pakistańską (1947–1948) i podział regionu, który trwa do dziś. Do sporu doszły dwa dodatkowe wymiary. Pierwszy — **wodny**: w Kaszmirze płyną górne biegi rzek dorzecza **Indusu**, od których zależy nawadniane rolnictwo Pakistanu; podział wód reguluje **Traktat o wodach Indusu** z 1960 r., zawarty przy mediacji Banku Światowego. Drugi — **strategiczny**: przez Aksai Czin przebiega chińska droga łącząca Tybet z Sinciangiem, dlatego trzecią stroną sporu są **Chiny**.",
+          "takeaway": "Kaszmir to podręcznikowy przykład konfliktu, w którym nakładają się trzy podłoża naraz: **religijno-etniczne** (dziedzictwo podziału z 1947 r.), **hydrologiczne** (górne biegi dopływów Indusu) i **strategiczne** (przejścia górskie łączące Chiny z Azją Południową)."
+        },
+        {
+          "type": "table",
+          "title": "Kto co kontroluje w Kaszmirze",
+          "caption": "Żadna ze stron nie uznaje podziału za granicę państwową — stąd w nazwach słowo „linia”, a nie „granica”.",
+          "headers": [
+            "Obszar",
+            "Kontrolowany przez",
+            "Charakter terenu",
+            "Znaczenie"
+          ],
+          "rows": [
+            [
+              "Dolina Kaszmiru i Dżammu",
+              "Indie",
+              "Kotlina śródgórska ok. 1600 m n.p.m. i przedgórze",
+              "Najgęściej zaludniona część regionu, główny teren wystąpień separatystycznych"
+            ],
+            [
+              "Ladakh",
+              "Indie",
+              "Wysokie płaskowyże, klimat pustynny wysokogórski",
+              "Buddyjska większość, granica z Chinami w rejonie jeziora Pangong"
+            ],
+            [
+              "Azad Dżammu i Kaszmir",
+              "Pakistan",
+              "Pasmo Pir Pandżal i doliny rzeczne",
+              "Zaplecze zapór i elektrowni wodnych na Dżhelamie"
+            ],
+            [
+              "Gilgit-Baltistan",
+              "Pakistan",
+              "Karakorum, lodowce, Autostrada Karakorumska",
+              "Jedyne lądowe połączenie drogowe Pakistanu z Chinami"
+            ],
+            [
+              "Aksai Czin",
+              "Chiny",
+              "Bezludne wysokie pustynie ok. 5000 m n.p.m.",
+              "Droga Tybet–Sinciang, obszar praktycznie niezamieszkany"
+            ]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pojęcia mylone na maturze. **Linia kontroli (LoC)** to linia zawieszenia broni potwierdzona w 1972 r., a nie granica państwowa uznana przez obie strony — dlatego na mapach politycznych rysuje się ją linią przerywaną. **Kaszmir** to nazwa regionu geograficznego, a **Dżammu i Kaszmir** to nazwa jednostki administracyjnej Indii obejmującej także obszary o innym składzie religijnym. I najważniejsze: konflikt kaszmirski **nie jest sporem o surowce mineralne** — chodzi o ludność, wodę i przejścia górskie."
+        },
+        {
+          "type": "timeline",
+          "title": "Półwysep Koreański — jak powstała najbardziej zmilitaryzowana granica świata",
+          "caption": "Zwróć uwagę, że linia podziału z 1945 r. i dzisiejsza linia demarkacyjna to nie to samo.",
+          "events": [
+            {
+              "period": "1945",
+              "label": "Podział wzdłuż 38. równoleżnika",
+              "text": "Po kapitulacji Japonii mocarstwa dzielą półwysep na strefy okupacyjne: na północ od **38. równoleżnika** wkracza ZSRR, na południe — USA. Linię poprowadzono po **równoleżniku**, a nie wzdłuż bariery przyrodniczej czy granicy etnicznej — to klasyczna **granica sztuczna (geometryczna)**."
+            },
+            {
+              "period": "1948",
+              "label": "Dwa państwa",
+              "text": "Powstają Republika Korei (Południowa) i Koreańska Republika Ludowo-Demokratyczna (Północna). Każda uznaje się za jedynego prawowitego reprezentanta całego narodu."
+            },
+            {
+              "period": "1950–1953",
+              "label": "Wojna koreańska",
+              "text": "Atak Korei Północnej, interwencja sił ONZ pod dowództwem USA, następnie wejście „ochotników” chińskich. Front przesuwał się przez cały półwysep, aż ustabilizował się mniej więcej w punkcie wyjścia."
+            },
+            {
+              "period": "1953",
+              "label": "Rozejm w Panmundżomie",
+              "text": "Podpisano **rozejm, a nie traktat pokojowy** — formalnie wojna nigdy się nie zakończyła. Wzdłuż zastygłego frontu wytyczono **strefę zdemilitaryzowaną (DMZ)** o szerokości ok. 4 km i długości ok. 250 km, biegnącą ukośnie względem 38. równoleżnika."
+            },
+            {
+              "period": "2003–2006",
+              "label": "Droga do broni jądrowej",
+              "text": "KRLD wypowiada układ NPT (2003), a w 2006 r. przeprowadza pierwszą **próbę jądrową**. Konflikt lokalny staje się problemem bezpieczeństwa globalnego."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwie Koree — ten sam naród, dwa światy",
+          "leftLabel": "Korea Południowa (Republika Korei)",
+          "rightLabel": "Korea Północna (KRLD)",
+          "rows": [
+            {
+              "aspect": "Ustrój i gospodarka",
+              "left": "Demokracja, gospodarka rynkowa otwarta na świat",
+              "right": "Dyktatura, gospodarka **centralnie sterowana**, dążenie do samowystarczalności (doktryna „dżucze”)"
+            },
+            {
+              "aspect": "Poziom rozwoju",
+              "left": "Państwo wysoko rozwinięte, członek OECD, bardzo wysoki wskaźnik HDI",
+              "right": "Kraj słabo rozwinięty, z powtarzającymi się **kryzysami żywnościowymi**"
+            },
+            {
+              "aspect": "Struktura eksportu",
+              "left": "Elektronika, samochody, statki — przemysł zaawansowanych technologii",
+              "right": "Surowce mineralne (węgiel, rudy), handel niewielki i objęty **sankcjami**"
+            },
+            {
+              "aspect": "Warunki przyrodnicze rolnictwa",
+              "left": "Niziny nadmorskie zachodu, dłuższy okres wegetacyjny",
+              "right": "Przewaga terenów górzystych i chłodniejszy klimat — mniejszy udział gruntów ornych"
+            },
+            {
+              "aspect": "Obraz satelitarny nocą",
+              "left": "Rozległa, jasna sieć oświetlonych miast",
+              "right": "Niemal całkowita ciemność poza Pjongjangiem — obrazowy wskaźnik **zużycia energii na mieszkańca**"
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Proliferacja broni jądrowej",
+          "text": "**Proliferacja** to rozprzestrzenianie się broni jądrowej — wzrost liczby państw (lub podmiotów niepaństwowych) nią dysponujących. Przeciwdziałać temu ma **Układ o nierozprzestrzenianiu broni jądrowej (NPT)** z 1968 r., oparty na wymianie zobowiązań: państwa bez broni jądrowej zobowiązują się jej nie budować i dopuszczają kontrolę **MAEA**, a w zamian zachowują prawo do pokojowego wykorzystania energii jądrowej; mocarstwa jądrowe zobowiązują się do rozbrojenia.",
+          "note": "Uwaga na kierunek pojęć: **proliferacja pozioma** to pojawienie się broni w nowym państwie, a **proliferacja pionowa** to rozbudowa arsenału przez państwo, które już go posiada."
+        },
+        {
+          "type": "classification",
+          "title": "Państwa a broń jądrowa",
+          "caption": "Ważniejszy od listy nazw jest sam podział — pokazuje, dlaczego układ NPT tak trudno wyegzekwować.",
+          "groups": [
+            {
+              "name": "Mocarstwa jądrowe uznane przez NPT",
+              "description": "Państwa, które przeprowadziły próby przed 1967 r. To jednocześnie **stali członkowie Rady Bezpieczeństwa ONZ z prawem weta** — zbieżność nieprzypadkowa i wdzięczna jako temat zadania.",
+              "examples": [
+                "Stany Zjednoczone",
+                "Rosja (dawniej ZSRR)",
+                "Wielka Brytania",
+                "Francja",
+                "Chiny"
+              ]
+            },
+            {
+              "name": "Państwa jądrowe poza układem NPT",
+              "description": "Nigdy do NPT nie przystąpiły, więc formalnie go nie łamią — i to jest największa luka systemu.",
+              "examples": [
+                "Indie (próby 1974 i 1998)",
+                "Pakistan (próby 1998)",
+                "Izrael (ani nie potwierdza, ani nie zaprzecza)"
+              ]
+            },
+            {
+              "name": "Państwo, które wystąpiło z NPT",
+              "description": "Jedyny taki przypadek: wypowiedzenie układu i przeprowadzenie prób mimo sankcji.",
+              "examples": [
+                "Korea Północna (wystąpienie 2003, pierwsza próba 2006)"
+              ]
+            },
+            {
+              "name": "Państwa, które zrezygnowały z broni jądrowej",
+              "description": "Dowód, że rozbrojenie jest możliwe: RPA zlikwidowała własny arsenał, a trzy republiki poradzieckie przekazały odziedziczoną po ZSRR broń Rosji.",
+              "examples": [
+                "Republika Południowej Afryki",
+                "Ukraina",
+                "Białoruś",
+                "Kazachstan"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala zjawiska",
+          "items": [
+            {
+              "value": "ok. 12 tys.",
+              "label": "głowic jądrowych na świecie (2023)",
+              "note": "Około 90% należy do USA i Rosji — dziedzictwo zimnowojennego wyścigu zbrojeń."
+            },
+            {
+              "value": "9",
+              "label": "państw dysponujących bronią jądrową",
+              "note": "Pięć uznanych przez NPT oraz Indie, Pakistan, Izrael i Korea Północna."
+            },
+            {
+              "value": "1968",
+              "label": "rok podpisania układu NPT",
+              "note": "W życie wszedł w 1970 r.; należy do niego ponad 190 państw."
+            },
+            {
+              "value": "200",
+              "unit": "mil morskich",
+              "label": "zasięg wyłącznej strefy ekonomicznej wg konwencji UNCLOS",
+              "note": "Ok. 370 km — dlatego pojedyncza rafa może „przynieść” państwu setki tysięcy km² morza."
+            },
+            {
+              "value": "ok. 1/3",
+              "label": "światowego handlu morskiego przechodzi przez Morze Południowochińskie",
+              "note": "Stąd zainteresowanie sporem także tych państw, które nie zgłaszają tam żadnych roszczeń."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Wyłączna strefa ekonomiczna (WSE)",
+          "text": "Pas wód sięgający do **200 mil morskich** od linii podstawowej wybrzeża, w którym państwo nadbrzeżne ma wyłączne prawo do korzystania z zasobów: **ryb, ropy naftowej i gazu ziemnego szelfu**, energii wiatru i fal. Nie jest to terytorium państwa — obce statki zachowują tam prawo swobodnej żeglugi. Zasady określa **konwencja o prawie morza (UNCLOS)** z 1982 r.",
+          "note": "Zasada kluczowa dla sporów morskich: WSE przysługuje **wyspie** zdolnej do zamieszkania i własnego życia gospodarczego, ale **skała ani rafa zalewana przez przypływ WSE nie tworzy**. Dlatego strony tak zaciekle spierają się o to, czy dany obiekt jest „wyspą”, czy „skałą”."
+        },
+        {
+          "type": "process",
+          "title": "Morze Południowochińskie — anatomia sporu morskiego",
+          "caption": "Ten sam schemat rozumowania zastosujesz później do Arktyki.",
+          "steps": [
+            {
+              "title": "1. Stawka: co leży pod wodą i na wodzie",
+              "text": "Płytki **szelf kontynentalny** ze złożami **ropy naftowej i gazu ziemnego**, jedne z najbogatszych **łowisk** świata oraz szlak żeglugowy łączący Ocean Indyjski z portami Azji Wschodniej przez cieśninę **Malakka**."
+            },
+            {
+              "title": "2. Mechanizm prawny: wyspa jako klucz do morza",
+              "text": "Kto wykaże suwerenność nad wysepką, ten może żądać wokół niej **morza terytorialnego (12 mil morskich)**, a przy korzystnej interpretacji także **WSE (200 mil morskich)**. Kilkanaście hektarów lądu daje więc kontrolę nad setkami tysięcy km² morza wraz z dnem."
+            },
+            {
+              "title": "3. Konkurencyjne roszczenia",
+              "text": "Chiny powołują się na historyczną **„linię dziewięciu kresek”** obejmującą niemal całe morze, a Wietnam, Filipiny, Malezja i Brunei — na wynikającą z UNCLOS zasadę odległości od własnych wybrzeży. Roszczenia nachodzą na siebie."
+            },
+            {
+              "title": "4. Fakty dokonane",
+              "text": "Od 2013 r. Chiny **pogłębiarkami usypują sztuczne wyspy** na rafach Spratly, budując na nich pasy startowe, porty i instalacje radarowe. Sztuczna wyspa nie tworzy WSE w świetle prawa, ale tworzy **stałą obecność wojskową**."
+            },
+            {
+              "title": "5. Rozstrzygnięcie bez egzekucji",
+              "text": "W 2016 r. trybunał arbitrażowy w Hadze orzekł na korzyść Filipin, uznając „linię dziewięciu kresek” za pozbawioną podstaw prawnych. Chiny wyroku nie uznały — i w tym tkwi istota problemu: prawu międzynarodowemu **brakuje mechanizmu przymusu wobec mocarstwa**."
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj punkt zapalny do głównej stawki sporu",
+          "instruction": "Każdemu obiektowi przyporządkuj to, o co toczy się gra w pierwszej kolejności.",
+          "pairs": [
+            {
+              "left": "Lodowiec Siaczen",
+              "right": "Kontrola grzbietów i przełęczy górskich na styku trzech państw"
+            },
+            {
+              "left": "Wyspy Spratly",
+              "right": "Złoża szelfu i wyłączna strefa ekonomiczna wokół drobnych raf"
+            },
+            {
+              "left": "Strefa zdemilitaryzowana w Korei",
+              "right": "Zamrożona linia frontu utrzymywana rozejmem bez traktatu pokojowego"
+            },
+            {
+              "left": "Aksai Czin",
+              "right": "Droga łącząca Tybet z Sinciangiem przez bezludny płaskowyż"
+            },
+            {
+              "left": "Cieśnina Malakka",
+              "right": "Wąskie gardło morskiego transportu ropy do Azji Wschodniej"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego państwa spierające się o Morze Południowochińskie przywiązują tak dużą wagę do maleńkich, w większości niezamieszkanych raf i wysepek?",
+          "options": [
+            "Ponieważ same wysepki kryją duże zasoby surowców mineralnych możliwych do wydobycia odkrywkowego",
+            "Ponieważ zgodnie z prawem morza posiadanie lądu pozwala rościć sobie prawo do otaczających go wód terytorialnych i wyłącznej strefy ekonomicznej z zasobami szelfu",
+            "Ponieważ wysepki leżą na granicy płyt litosfery i mają znaczenie dla prognozowania trzęsień ziemi",
+            "Ponieważ zamieszkuje je liczna ludność, której przynależność państwowa jest sporna"
+          ],
+          "correctIndex": 1,
+          "explanation": "Stawką nie jest ląd, lecz **morze wokół niego**. Konwencja UNCLOS wiąże uprawnienia do wód i dna z posiadaniem lądu, więc kilkanaście hektarów rafy może „przynieść” setki tysięcy km² wyłącznej strefy ekonomicznej ze złożami ropy i gazu oraz łowiskami. Dlatego trybunał w 2016 r. rozstrzygał przede wszystkim to, czy sporne obiekty są wyspami, czy jedynie skałami."
+        },
+        {
+          "type": "quiz",
+          "question": "Które sformułowanie poprawnie opisuje status Półwyspu Koreańskiego?",
+          "options": [
+            "Wojna koreańska zakończyła się traktatem pokojowym, a granicę wyznaczono dokładnie wzdłuż 38. równoleżnika",
+            "Wojna koreańska zakończyła się rozejmem, a strefa zdemilitaryzowana biegnie wzdłuż linii frontu z 1953 r., przecinając 38. równoleżnik ukośnie",
+            "Podział półwyspu wynika z granicy etnicznej między dwoma odrębnymi narodami",
+            "Strefa zdemilitaryzowana pokrywa się z naturalną granicą wyznaczoną przez główny grzbiet górski półwyspu"
+          ],
+          "correctIndex": 1,
+          "explanation": "W 1953 r. podpisano wyłącznie **rozejm** — formalnie stan wojny nie został zakończony. Linia z 1945 r. pokrywała się z **38. równoleżnikiem**, ale dzisiejsza linia demarkacyjna to zastygły front z 1953 r., biegnący ukośnie: na zachodzie nieco poniżej, a na wschodzie wyraźnie powyżej 38°N. Obie Koree zamieszkuje ten sam naród — to podział **ideologiczny**, a nie etniczny."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega główna słabość układu NPT jako narzędzia powstrzymywania proliferacji?",
+          "options": [
+            "Zakazuje pokojowego wykorzystania energii jądrowej, więc państwa rozwijające się nie chcą go podpisywać",
+            "Obowiązuje wyłącznie państwa europejskie, a pozostałe kontynenty są poza jego zasięgiem",
+            "Wiąże tylko te państwa, które do niego przystąpiły — Indie, Pakistan i Izrael nigdy tego nie zrobiły, a KRLD go wypowiedziała, więc formalnie żadne z nich układu nie łamie",
+            "Nie przewiduje żadnych mechanizmów kontroli instalacji jądrowych"
+          ],
+          "correctIndex": 2,
+          "explanation": "NPT jest **umową dobrowolną**: nie zobowiązuje tego, kto do niej nie przystąpił. Indie, Pakistan i Izrael pozostały poza układem i zbudowały broń, nie łamiąc żadnego podpisanego przez siebie zobowiązania, a Korea Północna skorzystała z przewidzianej w traktacie możliwości jego wypowiedzenia (2003). Kontrolę instalacji prowadzi MAEA, a prawo do pokojowego wykorzystania energii jądrowej NPT wprost gwarantuje — pozostałe odpowiedzi są więc fałszywe."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o azjatyckich punktach zapalnych punktowany jest **argument z położenia**, a nie opowieść historyczna. Buduj odpowiedź według schematu: *cecha położenia lub środowiska → korzyść dla strony konfliktu*. Wzorcowe sformułowania: „Aksai Czin zapewnia Chinom lądowe połączenie Tybetu z Sinciangiem przez teren o niewielkich deniwelacjach”, „kontrola górnych biegów dopływów Indusu daje Indiom przewagę nad zależnym od nawodnień rolnictwem Pakistanu”, „rafy Spratly pozwalają rościć prawo do wyłącznej strefy ekonomicznej ze złożami szelfu”. Jeśli w poleceniu pada zwrot **„uwarunkowania geograficzne”**, odpowiedź bez odwołania do środowiska lub położenia nie dostanie punktu."
+        }
+      ]
+    },
+    {
+      "slug": "balkany-ukraina-i-rywalizacja-o-arktyke",
+      "title": "Konflikty w Europie i rywalizacja o Arktykę",
+      "summary": "Rozpad Jugosławii i mechanizm bałkanizacji, geograficzne tło wojny w Ukrainie (Krym, Donbas, czarnoziemy i porty czarnomorskie) oraz nowy spór terytorialny, który otwiera topniejący lód — o szelf i szlaki żeglugowe Arktyki.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Przez pół wieku Europa uchodziła za kontynent, na którym wojny należą do przeszłości. Ostatnie trzydzieści lat pokazało, że to złudzenie: najpierw **rozpad Jugosławii** przywrócił do słownika słowo *czystki etniczne*, a potem wojna w **Ukrainie** stała się największym konfliktem zbrojnym w Europie od 1945 r. Na północy rysuje się natomiast spór zupełnie nowego typu — o **Arktykę**, gdzie stawką nie jest ludność ani historia, lecz dostęp do dna morskiego i szlaków, które odsłania topniejący lód. Wszystkie trzy przypadki łączy pytanie, które musisz umieć postawić na maturze: *która cecha środowiska lub położenia sprawia, że akurat ten obszar stał się przedmiotem sporu?*"
+        },
+        {
+          "type": "definition",
+          "term": "Bałkanizacja",
+          "text": "**Bałkanizacja** to rozpad państwa wielonarodowego na wiele mniejszych, wzajemnie skłóconych organizmów, zwykle o granicach nieodpowiadających rozmieszczeniu grup etnicznych. Termin pochodzi od Półwyspu Bałkańskiego, gdzie **przemieszanie ludności** (języków, religii i tradycji państwowych) jest większe niż w jakiejkolwiek innej części Europy. Sprzyjało temu położenie: półwysep był przez stulecia **strefą styku** trzech kręgów kulturowych — łacińskiego, prawosławnego i osmańsko-muzułmańskiego — a górzysta rzeźba (Góry Dynarskie, Rodopy, Pindos) utrudniała wymieszanie i ujednolicenie ludności.",
+          "note": "Zapamiętaj mechanizm: im bardziej **mozaikowe** rozmieszczenie grup etnicznych, tym trudniej wytyczyć granicę, która nie zostawi po obu stronach licznych mniejszości — i tym większe ryzyko, że rozpad państwa przyniesie wojnę, a nie pokojowy rozwód."
+        },
+        {
+          "type": "timeline",
+          "title": "Rozpad Jugosławii — od jednego państwa do siedmiu",
+          "caption": "Socjalistyczna Federacyjna Republika Jugosławii składała się z sześciu republik i dwóch okręgów autonomicznych.",
+          "events": [
+            {
+              "period": "1991",
+              "label": "Słowenia i Chorwacja",
+              "text": "Ogłoszenie niepodległości. W **jednorodnej etnicznie Słowenii** walki trwały dziesięć dni; w **Chorwacji**, gdzie zwarcie mieszkała mniejszość serbska, wojna ciągnęła się cztery lata. To najlepszy w Europie dowód, że o gwałtowności rozpadu decyduje **struktura etniczna**, a nie sam fakt secesji."
+            },
+            {
+              "period": "1992–1995",
+              "label": "Wojna w Bośni i Hercegowinie",
+              "text": "Republika o **trzech dużych społecznościach** — Boszniaków (muzułmanów), Serbów i Chorwatów — nie dała się podzielić wzdłuż żadnej linii. Wojnie towarzyszyły **czystki etniczne**, oblężenie Sarajewa i masakra w Srebrenicy (1995), uznana przez trybunał międzynarodowy za **ludobójstwo**."
+            },
+            {
+              "period": "1995",
+              "label": "Porozumienie z Dayton",
+              "text": "Kończy wojnę, zachowując jedno państwo złożone z dwóch części składowych. To przykład **rozwiązania terytorialnego konfliktu etnicznego**: granice wewnętrzne dopasowano do stanu posiadania stron w chwili zawieszenia broni."
+            },
+            {
+              "period": "1998–1999",
+              "label": "Kosowo i interwencja NATO",
+              "text": "Konflikt między władzami Serbii a albańską większością Kosowa. **NATO** przeprowadziło naloty **bez zgody Rady Bezpieczeństwa ONZ**, zablokowanej wetem — precedens, do którego wraca każda dyskusja o skuteczności ONZ."
+            },
+            {
+              "period": "2006–2008",
+              "label": "Czarnogóra i Kosowo",
+              "text": "Czarnogóra opuszcza unię z Serbią po referendum (2006), a Kosowo ogłasza niepodległość (2008). Kosowa nie uznają m.in. Serbia, Rosja i Chiny — dlatego na mapach politycznych bywa oznaczane jako **terytorium sporne**."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Bośnia i Hercegowina — państwo zszyte z konfliktu",
+          "region": "Półwysep Bałkański",
+          "text": "Po 1995 r. Bośnia i Hercegowina istnieje jako jedno państwo, ale składa się z dwóch części składowych: **Federacji Bośni i Hercegowiny** (zamieszkanej głównie przez Boszniaków i Chorwatów) oraz **Republiki Serbskiej**, a między nimi leży niewielki, wspólnie zarządzany **Dystrykt Brczko** — położony w wąskim korytarzu posawskim, który łączy zachodnią i wschodnią część Republiki Serbskiej. Władza centralna jest słaba, a najwyższe urzędy dzieli się według klucza narodowościowego. Efekt jest dwuznaczny: **wojna się skończyła, ale podziały zostały utrwalone w geografii politycznej** — granice wewnętrzne pokrywają się dziś w dużej mierze z liniami frontu i skutkami wysiedleń z lat 1992–1995.",
+          "takeaway": "Bośnia to modelowy przykład **konfliktu zamrożonego przez rozwiązanie terytorialne**: pokój kupiono za cenę uznania efektów czystek etnicznych, co daje stabilność, ale nie usuwa źródła sporu."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery pary pojęć mylonych przy Bałkanach. **Półwysep Bałkański** to region fizycznogeograficzny, a **Bałkany Zachodnie** — używane w polityce określenie państw powstałych po Jugosławii plus Albania. **Serbia** to państwo, a **Republika Serbska** — część składowa Bośni i Hercegowiny; to dwa różne byty. **Jugosławia** przestała istnieć — nie używaj tej nazwy do opisu dzisiejszej mapy. I wreszcie: **Macedonia Północna** to obecna oficjalna nazwa państwa (zmieniona w 2019 r. w wyniku porozumienia z Grecją), natomiast **Macedonia** to szersza kraina geograficzna, leżąca także w Grecji i Bułgarii."
+        },
+        {
+          "type": "map-explore",
+          "title": "Punkty zapalne Europy Południowo-Wschodniej i Wschodniej",
+          "caption": "Porównaj położenie znaczników z przebiegiem granic państwowych na mapie politycznej Europy.",
+          "center": [
+            46,
+            26
+          ],
+          "zoom": 4,
+          "markers": [
+            {
+              "lat": 43.86,
+              "lng": 18.41,
+              "label": "Sarajewo",
+              "text": "Stolica Bośni i Hercegowiny, oblegana w latach 1992–1996. Leży w **kotlinie otoczonej wzgórzami** — rzeźba terenu zdecydowała o przebiegu oblężenia, bo pozycje artyleryjskie na okolicznych grzbietach kontrolowały całe miasto."
+            },
+            {
+              "lat": 44.1,
+              "lng": 19.3,
+              "label": "Srebrenica",
+              "text": "Miejsce masakry z 1995 r., uznanej przez trybunał międzynarodowy za **ludobójstwo**, popełnionej mimo formalnego statusu „strefy bezpieczeństwa ONZ” — symboliczna porażka misji pokojowej pozbawionej odpowiedniego mandatu i sił."
+            },
+            {
+              "lat": 42.66,
+              "lng": 21.17,
+              "label": "Prisztina",
+              "text": "Stolica **Kosowa** — terytorium o albańskiej większości, którego niepodległości (2008) nie uznaje m.in. Serbia. Przykład sporu o **prawo do samostanowienia kontra integralność terytorialna**."
+            },
+            {
+              "lat": 46.84,
+              "lng": 29.64,
+              "label": "Tyraspol (Naddniestrze)",
+              "text": "Ośrodek nieuznawanego **quasi-państwa** na wschód od Dniestru, w granicach Mołdawii. Klasyczny **konflikt zamrożony**: brak walk, brak rozwiązania, brak uznania."
+            },
+            {
+              "lat": 44.62,
+              "lng": 33.53,
+              "label": "Sewastopol",
+              "text": "Port na Krymie i historyczna baza Floty Czarnomorskiej. Głęboka, osłonięta zatoka i **niezamarzające wody** czynią go najcenniejszym punktem północnego wybrzeża Morza Czarnego."
+            },
+            {
+              "lat": 48.02,
+              "lng": 37.8,
+              "label": "Donieck",
+              "text": "Centrum **Zagłębia Donieckiego** — okręgu wydobycia węgla kamiennego i hutnictwa, silnie zurbanizowanego i uprzemysłowionego już od XIX w."
+            },
+            {
+              "lat": 46.48,
+              "lng": 30.73,
+              "label": "Odessa",
+              "text": "Największy port Ukrainy. Tędy wypływa większość eksportowanego zboża — dlatego zablokowanie żeglugi na Morzu Czarnym odbija się na cenach żywności w Afryce Północnej i na Bliskim Wschodzie."
+            },
+            {
+              "lat": 47.51,
+              "lng": 34.59,
+              "label": "Zaporoska Elektrownia Jądrowa",
+              "text": "Największa elektrownia jądrowa w Europie, położona w strefie działań zbrojnych — przykład **infrastruktury krytycznej jako czynnika ryzyka środowiskowego** w czasie wojny."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Ukraina — dlaczego akurat tam",
+          "region": "Europa Wschodnia, Nizina Wschodnioeuropejska",
+          "text": "Ukraina leży na **Nizinie Wschodnioeuropejskiej**, na obszarze pozbawionym naturalnych barier: nie ma tu ani pasma górskiego, ani rozległej pustyni, które utrudniałyby ruch wojsk — jedyną wyraźną osią jest **Dniepr**. To położenie tranzytowe zawsze czyniło ten obszar strefą styku wpływów. Do tego dochodzą trzy zasoby o znaczeniu globalnym: żyzne **czarnoziemy** stepowej i leśno-stepowej części kraju, dzięki którym Ukraina należy do czołowych eksporterów **pszenicy, kukurydzy i oleju słonecznikowego**; **Zagłębie Donieckie** z węglem kamiennym i przemysłem ciężkim; oraz **wybrzeże Morza Czarnego** z portami i szelfem. Wojna zaczęła się w 2014 r. od **aneksji Krymu** przez Rosję — nieuznanej przez Zgromadzenie Ogólne ONZ — i walk w Donbasie, a w 2022 r. przekształciła się w **pełnoskalową inwazję**.",
+          "takeaway": "Skutki tego konfliktu są **globalne, a nie regionalne**: wzrost cen żywności w krajach uzależnionych od importu zboża znad Morza Czarnego, przebudowa europejskiego rynku gazu oraz największa od dziesięcioleci fala uchodźstwa w Europie."
+        },
+        {
+          "type": "compare",
+          "title": "Krym a Donbas — dwa różne mechanizmy jednego konfliktu",
+          "leftLabel": "Krym",
+          "rightLabel": "Donbas",
+          "rows": [
+            {
+              "aspect": "Charakter obszaru",
+              "left": "**Półwysep** połączony z lądem wąskim Przesmykiem Perekopskim, oddzielony od Rosji Cieśniną Kerczeńską",
+              "right": "**Okręg przemysłowy** w głębi lądu, bez granicy naturalnej — otwarty step"
+            },
+            {
+              "aspect": "Główna wartość",
+              "left": "Baza morska w Sewastopolu, kontrola nad wyłączną strefą ekonomiczną i szelfem Morza Czarnego",
+              "right": "Węgiel kamienny, hutnictwo, gęsta sieć kolejowa i duże miasta przemysłowe"
+            },
+            {
+              "aspect": "Słabość geograficzna",
+              "left": "Deficyt wody — półwysep zaopatrywał **Kanał Północnokrymski** czerpiący z Dniepru",
+              "right": "Skażenie i osiadanie terenu po dziesięcioleciach głębinowej eksploatacji węgla"
+            },
+            {
+              "aspect": "Przebieg wydarzeń w 2014 r.",
+              "left": "Zajęcie i **aneksja** ogłoszona po referendum nieuznanym przez społeczność międzynarodową",
+              "right": "Walki zbrojne i powstanie **samozwańczych republik** kontrolowanych przez siły prorosyjskie"
+            },
+            {
+              "aspect": "Typ konfliktu",
+              "left": "Zmiana granic państwowych siłą — naruszenie **integralności terytorialnej**",
+              "right": "Początkowo konflikt wewnętrzny wsparty z zewnątrz — **wojna zastępcza (proxy)**"
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Arktyka — jak ocieplenie klimatu tworzy nowy spór terytorialny",
+          "caption": "Prześledź łańcuch: zmiana środowiska → dostępność → interes gospodarczy → roszczenie polityczne.",
+          "steps": [
+            {
+              "title": "1. Zanik lodu morskiego",
+              "text": "Ocieplenie w Arktyce postępuje **szybciej niż średnio na Ziemi** (dodatnie sprzężenie zwrotne: mniej lodu → niższe albedo → więcej pochłoniętej energii → jeszcze mniej lodu). Letni zasięg lodu morskiego kurczy się od dziesięcioleci."
+            },
+            {
+              "title": "2. Otwarcie szlaków żeglugowych",
+              "text": "Coraz dłuższy sezon nawigacyjny na **Przejściu Północno-Wschodnim** (wzdłuż wybrzeży Syberii) i **Przejściu Północno-Zachodnim** (przez kanadyjski Archipelag Arktyczny). Trasa z Europy do Azji Wschodniej skraca się o kilka tysięcy kilometrów w porównaniu z drogą przez Kanał Sueski."
+            },
+            {
+              "title": "3. Dostęp do złóż szelfu",
+              "text": "Ocean Arktyczny ma **rozległy szelf kontynentalny**, zwłaszcza od strony Syberii. Według szacunków amerykańskiej służby geologicznej (USGS, 2008) może się tam znajdować kilkanaście procent nieodkrytych zasobów ropy naftowej i ok. jedna trzecia nieodkrytych zasobów gazu ziemnego świata."
+            },
+            {
+              "title": "4. Roszczenia prawne",
+              "text": "Konwencja UNCLOS pozwala państwu nadbrzeżnemu rozszerzyć prawa do dna poza 200 mil morskich, jeśli udowodni, że dany obszar jest **przedłużeniem jego szelfu kontynentalnego**. Dlatego Rosja, Dania (Grenlandia) i Kanada spierają się o to, do czyjego szelfu należy podmorski **Grzbiet Łomonosowa** — spór o geologię jest tu sporem o terytorium."
+            },
+            {
+              "title": "5. Rywalizacja bez wojny",
+              "text": "Arktyka to jak dotąd **spór dyplomatyczny i prawny**, a nie zbrojny: działa **Rada Arktyczna** (osiem państw arktycznych), a wnioski o szelf rozpatruje komisja ONZ. Rośnie jednak obecność wojskowa, a status Przejścia Północno-Zachodniego (wody wewnętrzne Kanady czy cieśnina międzynarodowa?) pozostaje nierozstrzygnięty."
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "line",
+          "title": "Wrześniowy (minimalny) zasięg lodu morskiego w Arktyce",
+          "caption": "Wartości przybliżone, uśrednione dla września danego roku. Wrzesień to miesiąc minimum — dlatego właśnie ten miesiąc pokazuje się na wykresach.",
+          "labels": [
+            "1980",
+            "1990",
+            "2000",
+            "2010",
+            "2020"
+          ],
+          "series": [
+            {
+              "name": "Zasięg lodu morskiego",
+              "values": [
+                7.7,
+                6.2,
+                6.3,
+                4.9,
+                3.9
+              ]
+            }
+          ],
+          "unit": "mln km²"
+        },
+        {
+          "type": "table",
+          "title": "Strony sporu o Arktykę",
+          "caption": "Uwaga: żadne z tych roszczeń nie dotyczy samego bieguna jako lądu — chodzi o dno morskie i prawo do żeglugi.",
+          "headers": [
+            "Państwo",
+            "Podstawa roszczeń",
+            "Główny interes"
+          ],
+          "rows": [
+            [
+              "Rosja",
+              "Wniosek o uznanie Grzbietu Łomonosowa za przedłużenie szelfu syberyjskiego",
+              "Północna Droga Morska, złoża gazu Półwyspu Jamał, porty Murmańsk i Sabetta"
+            ],
+            [
+              "Kanada",
+              "Roszczenia do szelfu; uznaje Przejście Północno-Zachodnie za swoje wody wewnętrzne",
+              "Kontrola żeglugi między wyspami Archipelagu Arktycznego"
+            ],
+            [
+              "Dania (Grenlandia)",
+              "Wniosek o szelf na północ od Grenlandii, obejmujący Grzbiet Łomonosowa",
+              "Złoża szelfu, pozycja Grenlandii w Królestwie Danii"
+            ],
+            [
+              "Norwegia",
+              "Szelf Morza Barentsa; granicę morską z Rosją ustalono umową z 2010 r.",
+              "Wydobycie ropy i gazu, rybołówstwo, Svalbard"
+            ],
+            [
+              "Stany Zjednoczone",
+              "Szelf Morza Czukockiego i Beauforta; USA **nie ratyfikowały UNCLOS**",
+              "Złoża rejonu Prudhoe Bay, swoboda żeglugi na arktycznych szlakach"
+            ]
+          ]
+        },
+        {
+          "type": "matching",
+          "title": "Dopasuj obszar do mechanizmu konfliktu",
+          "instruction": "Wskaż mechanizm, który w danym przypadku jest najważniejszy.",
+          "pairs": [
+            {
+              "left": "Bośnia i Hercegowina",
+              "right": "Mozaikowe rozmieszczenie grup etnicznych uniemożliwiające podział terytorialny"
+            },
+            {
+              "left": "Naddniestrze",
+              "right": "Konflikt zamrożony wokół nieuznawanego quasi-państwa"
+            },
+            {
+              "left": "Krym",
+              "right": "Kontrola nad portem wojennym i szelfem morza półzamkniętego"
+            },
+            {
+              "left": "Grzbiet Łomonosowa",
+              "right": "Spór o zasięg szelfu kontynentalnego rozstrzygany na gruncie geologii"
+            },
+            {
+              "left": "Przejście Północno-Zachodnie",
+              "right": "Spór o status prawny drogi morskiej udostępnionej przez ocieplenie klimatu"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego secesja Słowenii w 1991 r. kosztowała kilkanaście ofiar, a niepodległość Bośni i Hercegowiny — wojnę trwającą ponad trzy lata?",
+          "options": [
+            "Ponieważ Słowenia była znacznie większa i lepiej uzbrojona od Bośni i Hercegowiny",
+            "Ponieważ Słowenia jest jednorodna etnicznie i nie miała spornej ludności, a w Bośni żyły wymieszane trzy duże społeczności, których nie dało się rozdzielić granicą",
+            "Ponieważ Słowenia leży nad Morzem Adriatyckim, co ułatwiło interwencję ONZ",
+            "Ponieważ Bośnia i Hercegowina nie ogłosiła niepodległości, lecz została podzielona decyzją mocarstw"
+          ],
+          "correctIndex": 1,
+          "explanation": "Decydująca była **struktura etniczna**, a nie wielkość czy uzbrojenie. W jednorodnej Słowenii oderwanie się od federacji nie zostawiało po żadnej stronie dużej spornej mniejszości. W Bośni Boszniacy, Serbowie i Chorwaci mieszkali **w przemieszaniu**, więc każda propozycja granicy zostawiała po drugiej stronie liczną grupę — to jest istota mechanizmu bałkanizacji."
+        },
+        {
+          "type": "quiz",
+          "question": "Które uzasadnienie najlepiej tłumaczy, dlaczego wojna w Ukrainie wpłynęła na bezpieczeństwo żywnościowe krajów Afryki Północnej i Bliskiego Wschodu?",
+          "options": [
+            "Ukraina jest głównym światowym producentem ryżu, którego brak odczuły kraje strefy suchej",
+            "Ukraina uprawia na czarnoziemach zboża eksportowane głównie drogą morską przez porty czarnomorskie, a zakłócenie tej żeglugi ograniczyło podaż i podniosło ceny na rynku światowym",
+            "Kraje te importowały z Ukrainy przede wszystkim ropę naftową, wykorzystywaną do produkcji nawozów",
+            "Ukraińscy uchodźcy przenieśli się do Afryki Północnej, zwiększając tam zapotrzebowanie na żywność"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ukraina należy do czołowych eksporterów **pszenicy, kukurydzy i oleju słonecznikowego**, uprawianych na **czarnoziemach**, a jej eksport idzie przede wszystkim przez porty **Morza Czarnego** (m.in. Odessę). Kraje Afryki Północnej i Bliskiego Wschodu — o klimacie suchym i wysokim przyroście naturalnym — są w dużym stopniu zależne od importu zboża, więc ograniczenie podaży i wzrost cen uderzyły w nie najmocniej."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega istota sporu o Grzbiet Łomonosowa w Arktyce?",
+          "options": [
+            "Na tym, czy wyspy na grzbiecie zamieszkuje ludność rdzenna uprawniona do samostanowienia",
+            "Na tym, że biegun północny leży na lądzie należącym do jednego z państw arktycznych",
+            "Na tym, czy podmorski grzbiet stanowi geologiczne przedłużenie szelfu kontynentalnego Rosji, Danii czy Kanady, co przesądza o prawie do zasobów dna poza 200 milami morskimi",
+            "Na wyznaczeniu przebiegu Przejścia Północno-Zachodniego przez kanadyjski Archipelag Arktyczny"
+          ],
+          "correctIndex": 2,
+          "explanation": "Grzbiet Łomonosowa to **podmorskie wzniesienie dna**, a nie ląd — nie ma tam ani wysp, ani ludności, a biegun północny leży na **pływającym lodzie**, nie na lądzie. Konwencja UNCLOS pozwala rozciągnąć prawa do dna poza 200 mil morskich, jeśli państwo udowodni, że obszar ten jest **przedłużeniem jego szelfu kontynentalnego** — dlatego spór polityczny rozstrzyga się tu przy pomocy badań geologicznych i batymetrycznych."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Do tych trzech regionów przypisz sobie po jednym słowie kluczu: Bałkany — **mozaika etniczna**, Ukraina — **położenie tranzytowe i zasoby (czarnoziemy, węgiel, porty)**, Arktyka — **szelf i szlaki odsłonięte przez ocieplenie**. W zadaniach o Arktyce nie pisz o „walce o biegun”: poprawna odpowiedź mówi o **prawie do zasobów dna morskiego** i o **żegludze**, a jako przyczynę wskazuje **zmniejszanie się zasięgu lodu morskiego**. Gdy polecenie brzmi „wyjaśnij, dlaczego dany obszar jest przedmiotem sporu”, zawsze zaczynaj od cechy środowiska lub położenia, a dopiero potem podaj interes strony konfliktu."
+        }
+      ]
+    },
+    {
+      "slug": "terroryzm-uchodzstwo-i-rola-organizacji-miedzynarodowych",
+      "title": "Terroryzm, uchodźstwo i rola organizacji międzynarodowych",
+      "summary": "Terroryzm międzynarodowy i warunki geograficzne, które mu sprzyjają. Uchodźstwo, kryzysy humanitarne i polityka migracyjna. Narzędzia ONZ, NATO i Unii Afrykańskiej wobec konfliktów oraz mechanizm pułapki konfliktu.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Konflikt zbrojny nie kończy się na linii frontu. Jego skutki rozchodzą się dalej: w postaci **zamachów terrorystycznych** w miastach odległych o tysiące kilometrów, **fal uchodźczych**, które zmieniają strukturę ludności całych regionów, i **kryzysów humanitarnych**, na które odpowiadać musi społeczność międzynarodowa. Ta lekcja pokazuje trzy rzeczy naraz: co sprzyja terroryzmowi w wymiarze geograficznym, jak przebiega droga od wybuchu walk do obozu dla uchodźców i jakimi narzędziami — od mediacji po **misje pokojowe** — dysponują **ONZ, NATO i Unia Afrykańska**. Na końcu zobaczysz, dlaczego kraj raz dotknięty wojną tak często wpada w nią ponownie."
+        },
+        {
+          "type": "definition",
+          "term": "Terroryzm międzynarodowy",
+          "text": "**Terroryzm** to stosowanie przemocy — najczęściej wobec **ludności cywilnej** — w celu wywołania powszechnego strachu i wymuszenia w ten sposób ustępstw politycznych. Terroryzm **międzynarodowy** to taki, w którym sprawcy, ofiary i miejsce zamachu należą do różnych państw, a organizacja działa w skali ponadpaństwowej. Charakterystyczne są cztery cechy: przemoc, **cel polityczny**, przypadkowość ofiar oraz nastawienie na **rozgłos medialny** — zamach ma być komunikatem, a nie zwycięstwem militarnym.",
+          "note": "Zapamiętaj różnicę stawki: partyzantka dąży do **pokonania sił zbrojnych przeciwnika**, a terroryzm — do **złamania woli społeczeństwa**. Dlatego celem zamachów są dworce, metro, hotele i miejsca zgromadzeń, a nie obiekty wojskowe."
+        },
+        {
+          "type": "classification",
+          "title": "Odmiany terroryzmu i sprzyjające im warunki geograficzne",
+          "caption": "Na maturze rzadko pyta się o nazwy organizacji — częściej o to, dlaczego pewne obszary sprzyjają ich powstawaniu.",
+          "groups": [
+            {
+              "name": "Terroryzm o podłożu religijnym (fundamentalistyczny)",
+              "description": "Organizacje odwołujące się do radykalnej interpretacji religii, działające ponad granicami państw. Rozwijają się głównie tam, gdzie **państwo utraciło kontrolę nad terytorium**.",
+              "examples": [
+                "Al-Kaida",
+                "tzw. Państwo Islamskie",
+                "Boko Haram w rejonie Jeziora Czad",
+                "Asz-Szabab w Somalii"
+              ]
+            },
+            {
+              "name": "Terroryzm separatystyczny (etniczny)",
+              "description": "Przemoc w służbie dążeń niepodległościowych lub autonomicznych określonej grupy etnicznej zamieszkującej zwarte terytorium.",
+              "examples": [
+                "IRA w Irlandii Północnej",
+                "ETA w Kraju Basków (rozwiązana w 2018 r.)",
+                "Tygrysy Wyzwolenia Tamilskiego Ilamu na Sri Lance",
+                "PKK w Turcji"
+              ]
+            },
+            {
+              "name": "Terroryzm ideologiczny",
+              "description": "Motywowany skrajną ideologią lewicową lub prawicową, typowy dla państw wysoko rozwiniętych, gdzie sprawcami bywają obywatele danego kraju.",
+              "examples": [
+                "Czerwone Brygady we Włoszech",
+                "Frakcja Czerwonej Armii w RFN",
+                "współczesne ugrupowania skrajnie prawicowe"
+              ]
+            },
+            {
+              "name": "Nowe formy",
+              "description": "Ataki niewymagające fizycznej obecności sprawcy — a więc niezależne od odległości, co całkowicie zmienia geografię zagrożenia.",
+              "examples": [
+                "cyberterroryzm (ataki na infrastrukturę krytyczną)",
+                "bioterroryzm",
+                "zamachy pojedynczych sprawców zradykalizowanych w sieci"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy błędy, które kosztują punkty. Po pierwsze — **terroryzm to metoda działania, a nie religia ani narodowość**; przypisywanie go wyznawcom jednej religii jest merytorycznie fałszywe, bo najwięcej ofiar zamachów ponoszą muzułmanie w państwach muzułmańskich. Po drugie — **nie myl terroryzmu z partyzantką ani z powstaniem**: różni je wybór celu (cywile kontra siły zbrojne). Po trzecie — pisząc o warunkach sprzyjających terroryzmowi, podawaj czynniki **geograficzne i społeczno-gospodarcze** (obszary poza kontrolą państwa, teren trudno dostępny, przepuszczalne granice, bezrobocie młodych, dostępność broni), a nie ogólniki typu „bieda rodzi terroryzm” — najbogatsze i najbiedniejsze kraje świata bywają od zamachów wolne."
+        },
+        {
+          "type": "process",
+          "title": "Od wybuchu walk do obozu dla uchodźców",
+          "caption": "Ten łańcuch tłumaczy, dlaczego większość uciekających przed wojną nigdy nie dociera do krajów wysoko rozwiniętych.",
+          "steps": [
+            {
+              "title": "1. Ucieczka w granicach własnego kraju",
+              "text": "Pierwsza reakcja to przemieszczenie się w bezpieczniejszy region — do większego miasta lub w głąb kraju. Takie osoby to **uchodźcy wewnętrzni (IDP)**; jest ich na świecie więcej niż uchodźców w rozumieniu prawa międzynarodowego."
+            },
+            {
+              "title": "2. Przekroczenie granicy państwa",
+              "text": "Dopiero po jej przekroczeniu można się ubiegać o **status uchodźcy**. Kierunek ucieczki wyznacza przede wszystkim **odległość i dostępność terenu** — ludzie idą pieszo, więc uciekają do państwa sąsiedniego, a nie do najbogatszego."
+            },
+            {
+              "title": "3. Obóz lub miasto w kraju sąsiednim",
+              "text": "Powstają wielkie obozy (Dadaab, Kakuma, Zaatari, Kutupalong), często na obszarach **suchych i słabo zaludnionych** — tanich i odległych od centrów, ale też ubogich w wodę. To rodzi wtórne problemy: przeciążenie ujęć wody, wylesienie okolic obozu, konflikty z ludnością miejscową."
+            },
+            {
+              "title": "4. Przedłużanie się sytuacji",
+              "text": "Statystycznie pobyt w obozie liczy się w latach, a nie miesiącach — wielu mieszkańców rodzi się już na miejscu. Kryzys **z ostrego staje się przewlekły**, a finansowanie pomocy maleje wraz ze spadkiem zainteresowania mediów."
+            },
+            {
+              "title": "5. Migracja wtórna",
+              "text": "Część uchodźców rusza dalej, ku państwom wysoko rozwiniętym, korzystając z **szlaków migracyjnych** kontrolowanych przez przemytników ludzi. To najbardziej widoczny medialnie, ale liczbowo **najmniejszy** etap całego procesu."
+            }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Uchodźca, uchodźca wewnętrzny i migrant ekonomiczny",
+          "text": "**Uchodźca** — zgodnie z konwencją genewską z 1951 r. — to osoba przebywająca **poza krajem pochodzenia** z powodu uzasadnionej obawy przed prześladowaniem ze względu na rasę, religię, narodowość, poglądy polityczne lub przynależność do określonej grupy społecznej. **Uchodźca wewnętrzny (IDP)** uciekł przed tym samym zagrożeniem, ale **nie przekroczył granicy państwa**, więc nie obejmuje go ochrona międzynarodowa. **Migrant ekonomiczny** przemieszcza się **dobrowolnie**, w poszukiwaniu pracy i wyższego poziomu życia — nie przysługuje mu status uchodźcy.",
+          "note": "Z prawa uchodźczego wynika zasada **non-refoulement**: zakaz odesłania człowieka do kraju, w którym groziłoby mu prześladowanie. To ona sprawia, że wniosek o ochronę trzeba rozpatrzyć indywidualnie, a nie odsyłać ludzi zbiorczo od granicy."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Skala przymusowych przesiedleń",
+          "items": [
+            {
+              "value": "ok. 110 mln",
+              "label": "osób przymusowo przesiedlonych na świecie (2023)",
+              "note": "Liczba ta rosła nieprzerwanie przez ponad dekadę — to suma uchodźców, uchodźców wewnętrznych i osób ubiegających się o ochronę."
+            },
+            {
+              "value": "ponad 60 mln",
+              "label": "uchodźców wewnętrznych (IDP)",
+              "note": "Jest ich znacznie więcej niż uchodźców zagranicznych — dlatego samo liczenie osób, które dotarły do Europy, całkowicie zniekształca obraz zjawiska."
+            },
+            {
+              "value": "ok. 3/4",
+              "label": "uchodźców przebywa w krajach o niskim i średnim dochodzie",
+              "note": "Największe ciężary ponoszą państwa sąsiadujące z obszarem konfliktu — m.in. Turcja, Iran, Pakistan, Uganda, Kolumbia — a nie kraje najbogatsze."
+            },
+            {
+              "value": "1951",
+              "label": "rok podpisania konwencji genewskiej o statusie uchodźców",
+              "note": "Pierwotnie dotyczyła Europy po II wojnie światowej; jej zasięg rozszerzył protokół nowojorski z 1967 r."
+            }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Największe skupiska uchodźców i główne szlaki migracyjne",
+          "caption": "Zwróć uwagę na regułę sąsiedztwa: wielkie obozy leżą tuż przy granicach obszarów objętych konfliktem.",
+          "center": [
+            18,
+            25
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 0.05,
+              "lng": 40.31,
+              "label": "Dadaab (Kenia)",
+              "text": "Zespół obozów przy granicy z Somalią, założony w 1991 r., zamieszkany przez kilkaset tysięcy osób. Leży w **strefie półsuchej** — woda jest tu zasobem deficytowym, a jej pobór dla obozu obniża poziom wód gruntowych w okolicy."
+            },
+            {
+              "lat": 3.72,
+              "lng": 34.86,
+              "label": "Kakuma (Kenia)",
+              "text": "Obóz w suchej północno-zachodniej Kenii, przyjmujący uchodźców z Sudanu Południowego i Rogu Afryki. Powstało przy nim stałe osiedle — przykład **przekształcania się obozu w miasto**."
+            },
+            {
+              "lat": 3.44,
+              "lng": 31.35,
+              "label": "Bidibidi (Uganda)",
+              "text": "Jedno z największych osiedli uchodźczych świata, zamieszkane głównie przez uciekinierów z Sudanu Południowego. Uganda prowadzi politykę przydzielania uchodźcom **działek pod uprawę**, zamiast zamykania ich w obozach."
+            },
+            {
+              "lat": 32.29,
+              "lng": 36.32,
+              "label": "Zaatari (Jordania)",
+              "text": "Obóz dla uchodźców z Syrii na pustynnym płaskowyżu, jedno z największych „miast” Jordanii. Pokazuje obciążenie, jakie kryzys syryjski nałożył na **państwo o skrajnie ubogich zasobach wodnych**."
+            },
+            {
+              "lat": 21.2,
+              "lng": 92.16,
+              "label": "Kutupalong / Koks Badźar (Bangladesz)",
+              "text": "Największe skupisko uchodźców na świecie — **Rohingjów** wypędzonych z Mjanmy. Obóz leży na wzgórzach narażonych na **osuwiska i cyklony**, co czyni go modelowym przykładem nałożenia się kryzysu humanitarnego i zagrożenia naturalnego."
+            },
+            {
+              "lat": 35.5,
+              "lng": 12.6,
+              "label": "Lampedusa (Włochy)",
+              "text": "Wyspa na **szlaku środkowośródziemnomorskim** — najkrótszej i zarazem najniebezpieczniejszej drodze morskiej z Afryki Północnej do Europy."
+            },
+            {
+              "lat": 39.2,
+              "lng": 26.3,
+              "label": "Lesbos (Grecja)",
+              "text": "Wyspa na **szlaku wschodniośródziemnomorskim**, oddzielona od wybrzeży Turcji cieśniną o szerokości kilkunastu kilometrów — bliskość lądu decyduje o jej roli w migracjach."
+            },
+            {
+              "lat": 8.4,
+              "lng": -77.4,
+              "label": "Przesmyk Darién (Panama/Kolumbia)",
+              "text": "Jedyna przerwa w drodze lądowej z Ameryki Południowej do Północnej: bagnisty **las równikowy bez dróg**, przez który wędrują migranci zmierzający do USA. Środowisko przyrodnicze jest tu głównym czynnikiem śmiertelności szlaku."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Kto i czym reaguje na konflikt",
+          "caption": "Kolumna „ograniczenia” jest najważniejsza — to na nią najczęściej pyta polecenie „oceń skuteczność”.",
+          "headers": [
+            "Podmiot",
+            "Czym jest",
+            "Narzędzia wobec konfliktów",
+            "Ograniczenia"
+          ],
+          "rows": [
+            [
+              "Rada Bezpieczeństwa ONZ",
+              "Organ ONZ odpowiedzialny za pokój; 15 członków, w tym 5 stałych",
+              "Wiążące rezolucje, sankcje, embargo na broń, upoważnienie do użycia siły, powoływanie misji pokojowych",
+              "**Prawo weta** pięciu stałych członków blokuje działanie, gdy stroną sporu jest mocarstwo lub jego sojusznik"
+            ],
+            [
+              "Misje pokojowe ONZ („błękitne hełmy”)",
+              "Kontyngenty użyczane ONZ przez państwa członkowskie",
+              "Rozdzielanie stron, nadzór nad zawieszeniem broni, ochrona konwojów pomocy, wsparcie wyborów",
+              "Wkraczają zwykle **za zgodą stron**, mają ograniczony mandat i prawo użycia broni głównie w obronie własnej"
+            ],
+            [
+              "Zgromadzenie Ogólne ONZ",
+              "Forum wszystkich państw członkowskich, jedno państwo — jeden głos",
+              "Rezolucje wyrażające stanowisko społeczności międzynarodowej, presja polityczna",
+              "Jego uchwały **nie są prawnie wiążące**"
+            ],
+            [
+              "NATO",
+              "Sojusz polityczno-wojskowy państw Ameryki Północnej i Europy",
+              "Obrona kolektywna (art. 5), operacje wojskowe i stabilizacyjne",
+              "Działa w interesie swoich członków, a nie całej społeczności międzynarodowej; interwencja bez mandatu ONZ budzi spory prawne"
+            ],
+            [
+              "Unia Afrykańska",
+              "Organizacja regionalna zrzeszająca państwa Afryki (od 2002 r., wcześniej OJA)",
+              "Własne misje pokojowe (m.in. w Somalii), mediacje, zawieszanie w prawach państw po zamachu stanu",
+              "Ograniczone środki finansowe i sprzętowe — misje zależą od wsparcia z zewnątrz"
+            ],
+            [
+              "UNHCR i agendy humanitarne",
+              "Wyspecjalizowane organy ONZ (UNHCR, WFP, UNICEF) oraz organizacje pozarządowe",
+              "Obozy, pomoc żywnościowa, opieka medyczna, ochrona prawna uchodźców",
+              "Nie usuwają przyczyn konfliktu; działają z **dobrowolnych składek**, które maleją, gdy kryzys przestaje być medialny"
+            ]
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Pułapka konfliktu — dlaczego wojna wraca",
+          "caption": "Zamknięty łańcuch skutków tłumaczy, dlaczego kraj, który raz przeżył wojnę domową, jest szczególnie zagrożony jej nawrotem.",
+          "stages": [
+            {
+              "name": "Zniszczenie infrastruktury",
+              "text": "Walki niszczą drogi, mosty, ujęcia wody, szpitale i szkoły. Odbudowa jest kosztowna, a inwestorzy uciekają — **kapitał wychodzi z kraju**."
+            },
+            {
+              "name": "Załamanie produkcji żywności",
+              "text": "Pola zostają porzucone lub zaminowane, przerywane są dostawy nawozów i paliwa. Rośnie **niedożywienie**, a kraj uzależnia się od pomocy żywnościowej."
+            },
+            {
+              "name": "Masowa ucieczka ludności",
+              "text": "Wyjeżdżają nie tylko najsłabsi, ale i najlepiej wykształceni — następuje **drenaż mózgów**. Ubywa lekarzy, nauczycieli i inżynierów potrzebnych do odbudowy."
+            },
+            {
+              "name": "Rozpad instytucji państwa",
+              "text": "Spadają wpływy podatkowe, administracja traci kontrolę nad częścią terytorium. Powstają **obszary bezpaństwowe**, w których rządzą grupy zbrojne i przemytnicy."
+            },
+            {
+              "name": "Pokolenie bez perspektyw",
+              "text": "Przerwana edukacja i bezrobocie młodych przy powszechnej dostępności broni sprawiają, że **udział w grupie zbrojnej staje się formą zarobku** — rekrutacja jest łatwa i tania."
+            },
+            {
+              "name": "Nawrót walk",
+              "text": "Nierozwiązane spory i uzbrojona, zubożała młodzież prowadzą do kolejnej rundy przemocy — koło się zamyka, a konflikt staje się **przewlekły**."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Najczęstsze nieporozumienia dotyczące ONZ. **ONZ nie ma własnej armii** — „błękitne hełmy” to żołnierze użyczeni przez państwa członkowskie, dlatego siła misji zależy od tego, czy ktoś zechce ich wysłać. **Rada Bezpieczeństwa to nie Zgromadzenie Ogólne**: tylko uchwały Rady są wiążące, ale to właśnie w niej działa **weto**. I ostatnie: **interwencja zbrojna NATO nie jest misją pokojową ONZ** — to dwa różne narzędzia, o różnej podstawie prawnej; naloty w Kosowie w 1999 r. odbyły się bez upoważnienia Rady Bezpieczeństwa."
+        },
+        {
+          "type": "ordering",
+          "title": "Uporządkuj narzędzia społeczności międzynarodowej",
+          "instruction": "Ułóż działania od najmniej do najbardziej ingerujących w suwerenność państwa objętego konfliktem.",
+          "items": [
+            "Mediacja i negocjacje dyplomatyczne prowadzone przez wysłannika ONZ",
+            "Sankcje gospodarcze i embargo na dostawy broni",
+            "Misja obserwacyjna nadzorująca przestrzeganie zawieszenia broni",
+            "Misja pokojowa rozdzielająca strony, rozmieszczona za ich zgodą",
+            "Interwencja zbrojna prowadzona na podstawie upoważnienia Rady Bezpieczeństwa"
+          ],
+          "explanation": "Kolejność odpowiada rosnącemu stopniowi przymusu. Najpierw sięga się po środki dyplomatyczne, potem gospodarcze, następnie po obecność wojskową o charakterze biernym (obserwacja), dalej po rozdzielenie stron **za ich zgodą**, a dopiero na końcu po użycie siły. Prawo międzynarodowe traktuje interwencję zbrojną jako ostateczność właśnie dlatego, że narusza zasadę nienaruszalności suwerenności państwa."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego liczba uchodźców przyjmowanych przez kraje wysoko rozwinięte jest wielokrotnie mniejsza niż liczba osób uciekających przed konfliktami?",
+          "options": [
+            "Ponieważ większość uciekających przed wojną przemieszcza się w granicach własnego kraju lub do państw sąsiednich, do których można dotrzeć drogą lądową",
+            "Ponieważ konwencja genewska zabrania uchodźcom opuszczania własnego kontynentu",
+            "Ponieważ kraje rozwinięte przyjmują wyłącznie migrantów ekonomicznych, a nie uchodźców",
+            "Ponieważ w krajach objętych konfliktem nie ma zjawiska przymusowych przesiedleń wewnętrznych"
+          ],
+          "correctIndex": 0,
+          "explanation": "Decyduje **odległość i dostępność**: ucieczka odbywa się najczęściej pieszo lub przypadkowym transportem, więc kończy się w najbliższym bezpiecznym miejscu. Dlatego **uchodźców wewnętrznych (IDP)** jest na świecie więcej niż uchodźców zagranicznych, a ok. trzy czwarte tych ostatnich przebywa w krajach o niskim i średnim dochodzie, zwykle sąsiadujących z obszarem konfliktu."
+        },
+        {
+          "type": "quiz",
+          "question": "Które wyjaśnienie najlepiej opisuje główną słabość Rady Bezpieczeństwa ONZ jako narzędzia zapobiegania wojnom?",
+          "options": [
+            "Rada nie może nakładać sankcji gospodarczych, a jedynie wydawać niewiążące zalecenia",
+            "Rada liczy zbyt wielu członków, by szybko podejmować decyzje",
+            "Każdy z pięciu stałych członków może zawetować rezolucję, więc Rada jest bezsilna właśnie wtedy, gdy stroną konfliktu jest mocarstwo lub jego sojusznik",
+            "Rada dysponuje własną stałą armią, ale nie ma prawa jej użyć bez zgody państwa, którego konflikt dotyczy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Uchwały Rady Bezpieczeństwa są **wiążące** i mogą obejmować sankcje, a nawet upoważnienie do użycia siły — problemem nie jest zakres uprawnień, lecz sposób ich uruchamiania. **Prawo weta** pięciu stałych członków oznacza, że system działa dobrze w sporach peryferyjnych, a zawodzi tam, gdzie stawka jest największa. ONZ nie ma też własnej stałej armii — kontyngenty użyczają państwa członkowskie."
+        },
+        {
+          "type": "quiz",
+          "question": "Na czym polega mechanizm tzw. pułapki konfliktu?",
+          "options": [
+            "Na tym, że państwa bogate w surowce mineralne nie przystępują do organizacji międzynarodowych",
+            "Na tym, że skutki wojny — zniszczona infrastruktura, drenaż mózgów, rozpad instytucji i bezrobocie młodych — same tworzą warunki sprzyjające wybuchowi kolejnego konfliktu",
+            "Na tym, że misje pokojowe ONZ zawsze wkraczają zbyt późno, by zapobiec walkom",
+            "Na tym, że uchodźcy po powrocie do kraju przenoszą konflikt na obszary sąsiednie"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pułapka konfliktu to **sprzężenie zwrotne dodatnie**: wojna niszczy gospodarkę i instytucje, ucieczka wykształconych mieszkańców utrudnia odbudowę, a pokolenie pozbawione edukacji i pracy, mające łatwy dostęp do broni, stanowi gotowe zaplecze rekrutacyjne dla grup zbrojnych. Dlatego kraj, który przeżył wojnę domową, należy do najbardziej zagrożonych jej nawrotem — i dlatego sama pomoc humanitarna, nieusuwająca przyczyn, konfliktu nie kończy."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o skutkach konfliktów porządkuj odpowiedź według **czterech grup skutków**: demograficznych (ofiary, deformacja piramidy wieku wskutek nadumieralności mężczyzn, uchodźstwo), gospodarczych (zniszczenie infrastruktury, spadek PKB, ucieczka kapitału i drenaż mózgów), społecznych (przerwana edukacja, trauma, wzrost analfabetyzmu) i środowiskowych (miny, skażenia, wylesienie wokół obozów, zniszczone ujęcia wody). Przy pytaniach o rolę organizacji międzynarodowych nie poprzestawaj na wyliczeniu nazw — dopisz **narzędzie i jego ograniczenie**, np. „ONZ może wysłać misję pokojową, ale jej rozmieszczenie wymaga zgody stron, a rezolucję może zablokować weto stałego członka Rady Bezpieczeństwa”. To właśnie za takie sformułowania przyznaje się pełną punktację."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1868 @@
+{
+ "topicSlug": "przemysl",
+ "lessons": [
+  {
+   "slug": "podzial-przemyslu-i-czynniki-lokalizacji",
+   "title": "Podział przemysłu i czynniki lokalizacji",
+   "summary": "Czym jest przemysł, jak dzieli się go według fazy produkcji i stopnia zaawansowania techniki oraz dlaczego zakład powstaje akurat tam, gdzie powstaje — czynniki lokalizacji, orientacje lokalizacyjne i ich zmienność od XIX w. do dziś.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Fabryka nie stoi tam, gdzie stoi, przez przypadek. Za każdą lokalizacją kryje się **rachunek kosztów**: gdzie taniej dowieźć surowiec, gdzie tańsza jest energia, gdzie znajdą się ludzie umiejący obsłużyć maszyny, gdzie jest komu sprzedać wyrób. W tej lekcji najpierw uporządkujesz **podział przemysłu** — bez niego nie da się precyzyjnie mówić o niczym dalej — a potem poznasz **czynniki lokalizacji** i ich najważniejszą cechę: to, że **zmieniają się w czasie**. Zakład zbudowany sto lat temu przy kopalni dziś stanąłby zupełnie gdzie indziej, bo to, co kiedyś przesądzało (węgiel), bywa dziś nieistotne wobec tego, co przesądza teraz (kadry i wiedza)."
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł",
+     "text": "Dział **sektora II (wtórnego)** gospodarki polegający na **masowym wytwarzaniu dóbr materialnych za pomocą maszyn**, w oparciu o podział pracy i zorganizowaną, powtarzalną produkcję. Od rzemiosła odróżnia go nie rodzaj wyrobu, lecz **skala, mechanizacja i standaryzacja** — szewc i fabryka obuwia robią to samo, ale zupełnie inaczej.",
+     "note": "W polskiej statystyce (PKD) „przemysł” obejmuje trzy sekcje: **górnictwo i wydobywanie**, **przetwórstwo przemysłowe** oraz **wytwarzanie i zaopatrywanie w energię elektryczną, gaz i wodę**. Budownictwo liczone jest osobno, choć także należy do sektora II — dlatego dane o „produkcji przemysłowej” zwykle budownictwa nie obejmują."
+    },
+    {
+     "type": "classification",
+     "title": "Podział przemysłu według fazy produkcji",
+     "caption": "To podział stosowany w statystyce (PKD, NACE) — opierają się na nim niemal wszystkie dane liczbowe pojawiające się w zadaniach maturalnych.",
+     "groups": [
+      {
+       "name": "Przemysł wydobywczy (górnictwo)",
+       "description": "**Pozyskuje surowce mineralne wprost ze skorupy ziemskiej.** Jego cechą szczególną jest całkowite **przywiązanie do złoża** — kopalni nie da się przenieść, a jej żywotność kończy się wraz z wyczerpaniem zasobów. Stąd bierze się problem **miast jednofunkcyjnych**, które po zamknięciu kopalni tracą rację bytu.",
+       "examples": [
+        "górnictwo węgla kamiennego i brunatnego",
+        "wydobycie ropy naftowej i gazu ziemnego",
+        "górnictwo rud metali",
+        "eksploatacja surowców skalnych i soli"
+       ]
+      },
+      {
+       "name": "Przemysł przetwórczy",
+       "description": "**Przetwarza surowce i półprodukty w wyroby gotowe.** Zdecydowanie największy dział — odpowiada za większość wartości produkcji i zatrudnienia w przemyśle. To tutaj powstaje najwięcej **wartości dodanej**, bo im dalej od surowca, tym większy udział pracy i wiedzy w cenie wyrobu.",
+       "examples": [
+        "hutnictwo żelaza i metali nieżelaznych",
+        "przemysł chemiczny",
+        "przemysł elektromaszynowy",
+        "przemysł spożywczy",
+        "przemysł włókienniczy i odzieżowy",
+        "przemysł drzewno-papierniczy"
+       ]
+      },
+      {
+       "name": "Wytwarzanie i zaopatrywanie w energię",
+       "description": "**Przetwarza nośniki energii w energię elektryczną i cieplną** oraz dostarcza ją odbiorcom. Dział specyficzny, bo jego „wyrób” jest **niemagazynowalny w dużej skali** — energię elektryczną trzeba wytwarzać dokładnie wtedy, gdy jest zużywana, co narzuca całą logikę pracy systemu elektroenergetycznego.",
+       "examples": [
+        "elektrownie cieplne i elektrociepłownie",
+        "elektrownie jądrowe",
+        "elektrownie wodne, wiatrowe i słoneczne",
+        "gazownictwo i ciepłownictwo sieciowe"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Przemysł lekki a przemysł ciężki",
+     "leftLabel": "Przemysł lekki",
+     "rightLabel": "Przemysł ciężki",
+     "rows": [
+      {
+       "aspect": "Co wytwarza",
+       "left": "Wyroby **konsumpcyjne**, trafiające wprost do odbiorcy indywidualnego: tkaniny, odzież, obuwie, żywność, meble, papier, kosmetyki.",
+       "right": "Wyroby **zaopatrzeniowe** dla innych działów gospodarki: stal, metale, nawozy, cement, maszyny, tabor, statki."
+      },
+      {
+       "aspect": "Materiało- i energochłonność",
+       "left": "Niska — na tonę wyrobu przypada niewiele surowca i energii.",
+       "right": "Bardzo wysoka — na 1 t stali potrzeba kilku ton wsadu (ruda, koks, topniki) i dużych ilości energii."
+      },
+      {
+       "aspect": "Wielkość zakładu i nakłady",
+       "left": "Zakłady mniejsze i tańsze w budowie, stosunkowo łatwe do uruchomienia lub przeniesienia.",
+       "right": "Wielkie kombinaty, ogromny kapitał początkowy i długi okres zwrotu — stąd silna **inercja lokalizacyjna**: zakład trwa w miejscu, którego dziś by nie wybrano."
+      },
+      {
+       "aspect": "Decydujący czynnik lokalizacji",
+       "left": "**Siła robocza** (liczna, tania, często kobieca) oraz **rynek zbytu**.",
+       "right": "**Baza surowcowa i energetyczna** oraz dostęp do **transportu masowego** (kolej, port, droga wodna)."
+      },
+      {
+       "aspect": "Wpływ na środowisko",
+       "left": "Umiarkowany — głównie ścieki (barwniki, garbniki, detergenty) i odpady stałe.",
+       "right": "Bardzo duży — emisje pyłów, SO₂, NOₓ i CO₂, żużle i hałdy, ogromny pobór wody do chłodzenia."
+      },
+      {
+       "aspect": "Podatność na delokalizację",
+       "left": "Wysoka — to pierwszy dział, który przenosi się do krajów o niskich płacach.",
+       "right": "Niska — przeniesienie kombinatu jest praktycznie niewykonalne, zamiast tego buduje się nowy."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł zaawansowanych technologii (high-tech)",
+     "text": "Część przemysłu przetwórczego o **najwyższej naukochłonności** — wydatki na badania i rozwój (**B+R**) stanowią w niej od kilku do kilkunastu procent wartości produkcji, a znaczący odsetek zatrudnionych to inżynierowie i naukowcy. O wartości wyrobu decyduje nie surowiec, lecz **wiedza**: w cenie procesora koszt materiału to ułamek procenta.",
+     "note": "Zalicza się tu m.in. przemysł elektroniczny i komputerowy, farmaceutyczny, lotniczy i kosmiczny, precyzyjny, aparatury medycznej oraz biotechnologię. Bywa nazywany **przemysłem naukochłonnym**."
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pułapki pojęciowe, na których najłatwiej stracić punkt. **(1) Przemysł ciężki ≠ przemysł wydobywczy** — hutnictwo, cementownie czy produkcja maszyn ciężkich to *przetwórstwo*, a nie górnictwo. **(2) „Lekki” nie znaczy „mało ważny”** — kryterium jest masa i materiałochłonność wyrobu, a nie jego znaczenie gospodarcze. **(3) High-tech nie jest osobną sekcją statystyczną** — to wyodrębniona ze względu na naukochłonność część przetwórstwa, więc produkcja komputerów należy *jednocześnie* do przemysłu przetwórczego i do high-tech."
+    },
+    {
+     "type": "definition",
+     "term": "Czynnik lokalizacji",
+     "text": "Warunek, dzięki któremu **koszt wytworzenia i zbytu wyrobu jest w danym miejscu niższy** (albo osiągalny zysk wyższy) niż gdzie indziej — i który z tego powodu przyciąga tam zakład. **Lokalizacja optymalna** to nie miejsce „najbogatsze przyrodniczo”, lecz takie, w którym **suma kosztów: dowozu surowca + produkcji + dostarczenia wyrobu na rynek jest najmniejsza**.",
+     "note": "Rozróżniaj **lokalizację ogólną** (wybór regionu lub miasta) i **lokalizację szczegółową** (wybór konkretnej działki — z uwzględnieniem nośności gruntu, dostępu do bocznicy kolejowej czy położenia osiedli względem kierunku wiatrów)."
+    },
+    {
+     "type": "classification",
+     "title": "Cztery grupy czynników lokalizacji",
+     "caption": "Na maturze bardzo często pojawia się polecenie typu „podaj po dwa czynniki przyrodnicze i pozaprzyrodnicze” — trzeba więc umieć czynnik nie tylko wymienić, ale i poprawnie zaklasyfikować.",
+     "groups": [
+      {
+       "name": "Przyrodnicze",
+       "description": "Warunki dane przez środowisko, **nieprzenośne**. Ich znaczenie maleje wraz z tanieniem transportu, ale dla zakładów silnie materiało-, wodo- i energochłonnych pozostaje decydujące.",
+       "examples": [
+        "baza surowcowa (złoża)",
+        "zasoby wody do chłodzenia i procesów technologicznych",
+        "ukształtowanie i nośność terenu",
+        "warunki klimatyczne, np. zdolność do rozpraszania zanieczyszczeń"
+       ]
+      },
+      {
+       "name": "Techniczno-ekonomiczne",
+       "description": "To, co człowiek w danym miejscu już zbudował. Nowy zakład chętnie **dołącza do gotowej infrastruktury**, bo nie musi płacić za nią od zera — działa tu efekt **korzyści aglomeracji**.",
+       "examples": [
+        "dostęp do energii i sieci przesyłowych",
+        "węzły transportowe: kolej, autostrada, port, rurociąg",
+        "zaplecze kooperacyjne — poddostawcy, usługi remontowe",
+        "uzbrojenie terenu i istniejące hale"
+       ]
+      },
+      {
+       "name": "Społeczno-ekonomiczne",
+       "description": "Ludzie i pieniądze. W krajach wysoko rozwiniętych to **ta grupa decyduje dziś najczęściej**, bo koszty pracy i dostęp do kwalifikacji różnicują rentowność silniej niż koszty surowca.",
+       "examples": [
+        "zasoby i kwalifikacje siły roboczej",
+        "koszt pracy",
+        "rynek zbytu i siła nabywcza ludności",
+        "kapitał oraz zaplecze naukowo-badawcze — uczelnie, instytuty"
+       ]
+      },
+      {
+       "name": "Polityczne i prawne",
+       "description": "Wynikają z **decyzji władz**, a nie z rachunku rynkowego. Potrafią całkowicie odwrócić wynik kalkulacji ekonomicznej — i tak właśnie działały w gospodarce centralnie planowanej.",
+       "examples": [
+        "specjalne strefy ekonomiczne i ulgi podatkowe",
+        "dotacje oraz zamówienia publiczne",
+        "normy ochrony środowiska i plany zagospodarowania przestrzennego",
+        "cła, sankcje, względy obronne"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Orientacje lokalizacyjne — który czynnik przeważa",
+     "caption": "Reguła praktyczna: jeśli w procesie produkcyjnym **ubywa masy**, zakład idzie do surowca; jeśli masy **przybywa** albo wyrób jest nietrwały i kruchy — idzie do rynku zbytu.",
+     "headers": [
+      "Orientacja",
+      "Kiedy dominuje",
+      "Mechanizm (dlaczego)",
+      "Przykłady branż"
+     ],
+     "rows": [
+      [
+       "Surowcowa (materiałowa)",
+       "Surowiec jest ciężki i **traci masę** w procesie produkcji",
+       "Taniej przewieźć lekki wyrób niż tony wsadu, z którego większość stanie się odpadem — zakład przesuwa się **do złoża**",
+       "cementownie, cukrownie, zakłady wzbogacania rud, koksownie"
+      ],
+      [
+       "Energetyczna",
+       "Proces jest skrajnie **energochłonny**",
+       "Koszt energii przewyższa koszt transportu surowca, więc opłaca się wozić surowiec **do taniego prądu**",
+       "huty aluminium, elektrolityczna produkcja metali, produkcja karbidu"
+      ],
+      [
+       "Transportowa (portowa)",
+       "Surowiec pochodzi z importu drogą morską",
+       "Najdroższy jest przeładunek, więc surowiec przerabia się **tam, gdzie schodzi ze statku**",
+       "rafinerie i huty nadmorskie, przemysł stoczniowy, tłuszczowy"
+      ],
+      [
+       "Rynkowa (konsumpcyjna)",
+       "Wyrób jest **nietrwały, kruchy lub obszerny**",
+       "Transport gotowego wyrobu jest droższy i ryzykowniejszy niż surowca — zakład idzie **do odbiorcy**",
+       "piekarnie, browary, rozlewnie napojów, poligrafia, produkcja mebli"
+      ],
+      [
+       "Na siłę roboczą",
+       "Płace stanowią wysoki udział w koszcie, a praca jest prosta",
+       "Zakład szuka **licznej i taniej siły roboczej**, nawet z dala od surowca i rynku",
+       "przemysł odzieżowy i obuwniczy, montaż elektroniki użytkowej"
+      ],
+      [
+       "Naukowa (na zaplecze B+R)",
+       "O wartości wyrobu decyduje **wiedza**, nie materiał",
+       "Firma musi mieć pod ręką uczelnie, laboratoria i wysoko wykwalifikowane kadry",
+       "farmacja, elektronika, lotnictwo, biotechnologia"
+      ]
+     ]
+    },
+    {
+     "type": "timeline",
+     "title": "Zmienność czynników lokalizacji",
+     "caption": "Czynniki nie „znikają” — tracą względną wagę, bo zmienia się to, co w produkcji jest najdroższe. Prześledź, jak przesuwał się ciężar decyzji.",
+     "events": [
+      {
+       "period": "XIX w.",
+       "label": "Dyktat węgla i rudy",
+       "text": "Transport lądowy był drogi, a maszyna parowa zużywała ogromne ilości węgla, którego nie opłacało się wozić. Przemysł musiał powstawać **na złożu** — tak narodziły się wielkie okręgi na zagłębiach węglowych: Ruhra, Górny Śląsk, Appalachy, Donbas."
+      },
+      {
+       "period": "1. połowa XX w.",
+       "label": "Elektryfikacja i kolej",
+       "text": "Przesył energii elektrycznej **oderwał fabrykę od kopalni**: prąd można doprowadzić linią wysokiego napięcia na setki kilometrów, a gęsta sieć kolejowa potaniła transport masowy. Rośnie waga czynnika transportowego i rynku zbytu."
+      },
+      {
+       "period": "2. połowa XX w.",
+       "label": "Rewolucja transportowa i zwrot ku portom",
+       "text": "Masowce, supertankowce, rurociągi i konteneryzacja obniżyły koszt przewozu surowców tak bardzo, że opłacało się budować huty i rafinerie **przy porcie**, tysiące kilometrów od kopalni — jak w Japonii, we Włoszech czy w Holandii."
+      },
+      {
+       "period": "Od lat 70.–80. XX w.",
+       "label": "Kadry, wiedza i środowisko",
+       "text": "W krajach wysoko rozwiniętych decydują **wykwalifikowane kadry, zaplecze naukowe, jakość środowiska i restrykcyjne przepisy ekologiczne**. Produkcja pracochłonna i uciążliwa przenosi się do krajów o taniej sile roboczej — to **delokalizacja**."
+      },
+      {
+       "period": "XXI w.",
+       "label": "Automatyzacja i skracanie łańcuchów dostaw",
+       "text": "Robotyzacja zmniejsza znaczenie taniej pracy (robot kosztuje podobnie w każdym kraju), a doświadczenie zerwanych łańcuchów dostaw skłania firmy do **reshoringu** — przenoszenia produkcji z powrotem bliżej rynku zbytu."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Nowa Huta — lokalizacja wbrew rachunkowi ekonomicznemu",
+     "region": "Kraków, Polska",
+     "text": "Budowę kombinatu metalurgicznego pod Krakowem rozpoczęto w 1949 r., a pierwszy wielki piec uruchomiono w 1954 r. Z punktu widzenia klasycznych czynników lokalizacji wybór był zły: zakład stanął na **żyznych glebach lessowych**, w kotlinie o słabym przewietrzaniu, z dala od złóż rudy (sprowadzanej koleją z ZSRR) i w oddaleniu od górnośląskiego węgla koksującego. Zanieczyszczenia gromadziły się nad miastem, przyspieszając niszczenie zabytków Krakowa. Zadecydowały **czynniki polityczne** — plan szybkiego uprzemysłowienia kraju oraz chęć zbudowania wielkiego ośrodka klasy robotniczej w konserwatywnym, uniwersyteckim mieście. Po 1989 r. huta przeszła głęboką **restrukturyzację**: wygaszono część surowcową, produkcję ograniczono do przetwórstwa, a zatrudnienie spadło z kilkudziesięciu tysięcy osób do kilku tysięcy.",
+     "takeaway": "Decyzja polityczna potrafi utrwalić zakład na dekady w miejscu, którego rachunek ekonomiczny nigdy by nie wybrał — a koszty tej decyzji ponoszą środowisko, mieszkańcy i budżet, gdy po latach trzeba przeprowadzić restrukturyzację."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj zakład do czynnika, który przesądził o jego lokalizacji",
+     "instruction": "Za każdym razem zadaj sobie jedno pytanie: co w tej produkcji jest najdroższe lub najtrudniejsze do przewiezienia?",
+     "pairs": [
+      {
+       "left": "Cementownia",
+       "right": "bliskość złoża wapieni — surowiec traci masę w procesie wypalania"
+      },
+      {
+       "left": "Huta aluminium",
+       "right": "dostęp do bardzo taniej energii elektrycznej dla elektrolizy"
+      },
+      {
+       "left": "Rafineria w Rotterdamie",
+       "right": "port zdolny przyjąć tankowce z importowaną ropą"
+      },
+      {
+       "left": "Piekarnia przemysłowa",
+       "right": "bliskość dużego rynku zbytu — wyrób błyskawicznie traci świeżość"
+      },
+      {
+       "left": "Szwalnia w Bangladeszu",
+       "right": "tania i liczna siła robocza przy prostych czynnościach"
+      },
+      {
+       "left": "Zakład biotechnologiczny",
+       "right": "sąsiedztwo uniwersytetu, laboratoriów i wysoko wykwalifikowanych kadr"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Zakład przerabia 3 t rudy na 1 t koncentratu. Gdzie najkorzystniej go zlokalizować i dlaczego?",
+     "options": [
+      "Przy złożu rudy, bo w procesie ubywa masy — taniej przewieźć lżejszy koncentrat niż cały wsad",
+      "Przy rynku zbytu, bo koncentrat ma wyższą cenę jednostkową niż ruda",
+      "W dowolnym miejscu, bo koszt transportu nie zależy od masy przewożonego ładunku",
+      "Zawsze przy porcie morskim, bo ruda w całości pochodzi z importu"
+     ],
+     "correctIndex": 0,
+     "explanation": "Decyduje **relacja mas**, a nie wartości. Skoro z 3 t wsadu powstaje 1 t wyrobu, przewiezienie surowca kosztuje trzykrotnie więcej niż przewiezienie gotowego koncentratu — zakład opłaca się więc postawić **przy złożu**. To klasyczna **orientacja surowcowa**, ta sama, która trzyma cementownie przy wapieniach, a cukrownie w rejonie uprawy buraka. Wysoka cena wyrobu niczego tu nie zmienia, bo przewoźnik rozlicza się od tony, a nie od złotówki."
+    },
+    {
+     "type": "quiz",
+     "question": "Które zestawienie poprawnie przypisuje czynniki lokalizacji do grup?",
+     "options": [
+      "Zasoby wody — czynnik przyrodniczy; ulgi w specjalnej strefie ekonomicznej — czynnik polityczny",
+      "Zasoby wody — czynnik ekonomiczny; kwalifikacje kadr — czynnik przyrodniczy",
+      "Rynek zbytu — czynnik przyrodniczy; złoża surowców — czynnik polityczny",
+      "Korzyści aglomeracji — czynnik przyrodniczy; warunki klimatyczne — czynnik społeczny"
+     ],
+     "correctIndex": 0,
+     "explanation": "Do czynników **przyrodniczych** należy to, co daje środowisko i czego nie da się przenieść: złoża, woda, ukształtowanie terenu, klimat. Czynniki **polityczne** wynikają z decyzji władz — specjalne strefy ekonomiczne, ulgi podatkowe, dotacje, normy emisyjne. Kwalifikacje kadr, rynek zbytu i korzyści aglomeracji to czynniki **społeczno-ekonomiczne** (dwa ostatnie bywają zaliczane do techniczno-ekonomicznych), ale w żadnym ujęciu nie są przyrodnicze."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W poleceniach typu „wyjaśnij, dlaczego zakład X zlokalizowano w miejscu Y” **samo wymienienie czynnika nie wystarcza** — trzeba pokazać mechanizm. Buduj odpowiedź według schematu: *czynnik → co dzięki niemu tanieje albo staje się możliwe → skutek dla zakładu*. Porównaj: „bo tania energia” (odpowiedź niepełna) oraz „hutę aluminium zlokalizowano w Norwegii, **ponieważ** energia z elektrowni wodnych jest tam tania, a elektroliza tlenku glinu pochłania około jednej trzeciej kosztów produkcji — obniża to koszt jednostkowy wyrobu”. Druga wersja zawiera czynnik, mechanizm i skutek, czyli wszystko, czego szuka klucz odpowiedzi."
+    }
+   ]
+  },
+  {
+   "slug": "rewolucje-przemyslowe-i-deindustrializacja",
+   "title": "Rewolucje przemysłowe I–IV i deindustrializacja",
+   "summary": "Cztery przewroty techniczne, które stworzyły dzisiejszy przemysł — od maszyny parowej po Przemysł 4.0 — oraz mechanizm deindustrializacji: dlaczego w krajach wysoko rozwiniętych fabryki produkują coraz więcej, a pracuje w nich coraz mniej ludzi.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Historia przemysłu nie jest ciągiem drobnych ulepszeń — to cztery gwałtowne przełomy, po każdym z których **gospodarka wyglądała inaczej niż przed nim**. Za każdym razem zmieniał się nośnik energii, technologia i wiodąca gałąź, a razem z nimi przesuwały się okręgi przemysłowe i przebudowywało się całe społeczeństwo. W tej lekcji prześledzisz cztery rewolucje przemysłowe i zobaczysz ich najważniejszy współczesny skutek: **deindustrializację**. To pojęcie brzmi jak diagnoza upadku, a bardzo często oznacza dokładnie odwrotność — przemysł, który produkuje rekordowo dużo, potrzebując rekordowo mało rąk."
+    },
+    {
+     "type": "definition",
+     "term": "Rewolucja przemysłowa",
+     "text": "**Gwałtowna, trwała zmiana sposobu wytwarzania**, wywołana upowszechnieniem nowego nośnika energii i nowej technologii, która skokowo podnosi **wydajność pracy** i pociąga za sobą przebudowę gospodarki, przestrzeni i struktury społecznej. O rewolucji mówimy dopiero wtedy, gdy wynalazek przestaje być ciekawostką, a **staje się podstawą masowej produkcji**.",
+     "note": "Sam wynalazek nie tworzy rewolucji. Maszyny parowe konstruowano już przed Wattem, ale dopiero gdy stały się tanie, niezawodne i powszechne, zmieniły gospodarkę. Podobnie sztuczna inteligencja: istniała dekady przed tym, nim zaczęto mówić o IV rewolucji."
+    },
+    {
+     "type": "timeline",
+     "title": "Cztery rewolucje przemysłowe",
+     "caption": "Przy każdej zwróć uwagę na trzy rzeczy: skąd bierze się energia, jaka technologia jest kluczowa i która gałąź prowadzi. To właśnie ta triada jest najczęściej punktowana na maturze.",
+     "events": [
+      {
+       "period": "ok. 1760–1840",
+       "label": "I rewolucja — para, węgiel i bawełna",
+       "text": "Rozpoczęła się w **Wielkiej Brytanii**. Przełomem było udoskonalenie **maszyny parowej przez Jamesa Watta** (1769): po raz pierwszy energia nie pochodziła z mięśni, wiatru ani koła wodnego, więc fabryka mogła stanąć **z dala od rzeki, za to blisko węgla**. Wiodące gałęzie: **włókiennictwo bawełniane**, hutnictwo żelaza, górnictwo węgla. Powstaje system fabryczny, kolej parowa (1825) i pierwsze wielkie okręgi przemysłowe — a wraz z nimi gwałtowna **urbanizacja**."
+      },
+      {
+       "period": "ok. 1870–1914",
+       "label": "II rewolucja — elektryczność, stal i chemia",
+       "text": "Nowe nośniki energii: **energia elektryczna i ropa naftowa**. Nowe technologie: **masowa produkcja stali** (konwertor, piec martenowski), silnik spalinowy, chemia syntetyczna — nawozy, barwniki, tworzywa. Henry Ford uruchamia **ruchomą taśmę produkcyjną** (1913), czyli produkcję masową i standaryzowaną. Centrum przemysłu przesuwa się do **Niemiec i USA**, a przesył prądu zaczyna odrywać fabrykę od kopalni."
+      },
+      {
+       "period": "od lat 70. XX w.",
+       "label": "III rewolucja — elektronika i automatyzacja",
+       "text": "W polskich podręcznikach nazywana też **rewolucją naukowo-techniczną**. Podstawą są **układy scalone, komputer i sterowniki programowalne**, dzięki którym można **zautomatyzować maszynę i całą linię produkcyjną**. Rozwijają się przemysł high-tech, energetyka jądrowa i telekomunikacja. W krajach rozwiniętych zatrudnienie w przemyśle zaczyna spadać — rusza **deindustrializacja**, a produkcja pracochłonna wędruje do Azji."
+      },
+      {
+       "period": "od ok. 2011",
+       "label": "IV rewolucja — Przemysł 4.0",
+       "text": "Termin **Industrie 4.0** ogłoszono na targach w Hanowerze w 2011 r. Nowością nie jest sama automatyzacja, lecz **połączenie maszyn, wyrobów i systemów w jedną sieć**: urządzenia wymieniają dane w czasie rzeczywistym, a decyzje zapadają na podstawie analizy wielkich zbiorów danych i algorytmów uczenia maszynowego. Efekt gospodarczy: produkcja **elastyczna i personalizowana** przy kosztach zbliżonych do masowej."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Dlaczego I rewolucja zaczęła się właśnie w Anglii",
+     "region": "Wielka Brytania, XVIII w.",
+     "text": "Anglia nie miała jednej przewagi, lecz **komplet ogniw naraz**. Po pierwsze — zasoby: bogate i płytkie złoża **węgla kamiennego leżące blisko rud żelaza**, często niedaleko wybrzeża. Po drugie — transport: wyspiarskie położenie, żeglowne rzeki i gęsta sieć kanałów sprawiały, że przewóz towarów masowych był tani, a żaden punkt kraju nie leżał daleko od portu. Po trzecie — kapitał: zyski z handlu zamorskiego i kolonii dały pieniądze na budowę maszyn. Po czwarte — ludzie: **grodzenia (enclosures)** i przewrót agrarny pozbawiły ziemi drobnych rolników, którzy ruszyli do miast, tworząc **tanią, liczną siłę roboczą**. Po piąte — rynek: kolonie dostarczały bawełny i jednocześnie **kupowały gotowe tkaniny**. Do tego doszedł stabilny system prawny z ochroną patentową, opłacający się wynalazcom.",
+     "takeaway": "Rewolucja przemysłowa nie wybuchła tam, gdzie był jeden korzystny czynnik, lecz tam, gdzie **surowiec, kapitał, siła robocza, transport i rynek zbytu spotkały się jednocześnie w jednym miejscu**. To ten sam mechanizm, który później zdecyduje o narodzinach każdego okręgu przemysłowego."
+    },
+    {
+     "type": "definition",
+     "term": "Przemysł 4.0",
+     "text": "Model produkcji oparty na **systemach cyberfizycznych** — maszynach wyposażonych w czujniki i połączonych siecią, które **wymieniają dane i podejmują decyzje bez bieżącego udziału człowieka**. Fabryka przestaje być zbiorem osobnych maszyn i staje się jednym systemem informacyjnym, w którym sam wyrób „niesie” dane o tym, jak ma zostać wykonany.",
+     "note": "Najważniejszy skutek gospodarczy to **masowa personalizacja**: możliwość wytwarzania krótkich, indywidualnie dopasowanych serii po koszcie zbliżonym do produkcji masowej. Osłabia to klasyczną **korzyść skali**, która od czasów Forda była głównym argumentem za wielkimi zakładami."
+    },
+    {
+     "type": "classification",
+     "title": "Filary technologiczne Przemysłu 4.0",
+     "caption": "Żadna z tych technologii sama nie tworzy Przemysłu 4.0 — rewolucyjne jest dopiero ich **połączenie w jeden obieg danych**: czujnik mierzy, chmura analizuje, algorytm decyduje, maszyna wykonuje.",
+     "groups": [
+      {
+       "name": "Internet rzeczy (IoT) i systemy cyberfizyczne",
+       "description": "Czujniki wbudowane w maszyny i wyroby **generują strumień danych** o temperaturze, drganiach, zużyciu narzędzi. Dzięki temu awarię można przewidzieć, zanim nastąpi (**utrzymanie predykcyjne**).",
+       "examples": [
+        "czujniki drgań w łożyskach obrabiarek",
+        "znaczniki RFID na częściach",
+        "inteligentne liczniki energii"
+       ]
+      },
+      {
+       "name": "Big data, chmura i cyfrowy bliźniak",
+       "description": "Dane z tysięcy czujników przetwarza się w chmurze, a proces produkcyjny odwzorowuje w **cyfrowym bliźniaku** — wirtualnej kopii zakładu, na której można przetestować zmianę, nie zatrzymując produkcji.",
+       "examples": [
+        "symulacja linii montażowej przed przezbrojeniem",
+        "optymalizacja zużycia energii w czasie rzeczywistym"
+       ]
+      },
+      {
+       "name": "Sztuczna inteligencja i uczenie maszynowe",
+       "description": "Algorytmy **wykrywają w danych zależności niedostrzegalne dla człowieka** — same dobierają parametry procesu, rozpoznają wady wyrobu na obrazie z kamery, prognozują popyt.",
+       "examples": [
+        "automatyczna kontrola jakości",
+        "planowanie produkcji i zapasów"
+       ]
+      },
+      {
+       "name": "Robotyka współpracująca i automatyzacja",
+       "description": "**Koboty** pracują obok ludzi bez klatek ochronnych, a pojazdy autonomiczne (AGV) same rozwożą materiał po hali. Praca fizyczna przechodzi na maszyny, człowiekowi zostaje nadzór i programowanie.",
+       "examples": [
+        "roboty montażowe współpracujące z operatorem",
+        "autonomiczne wózki magazynowe"
+       ]
+      },
+      {
+       "name": "Wytwarzanie przyrostowe (druk 3D)",
+       "description": "Wyrób powstaje przez **dodawanie materiału warstwa po warstwie**, a nie przez skrawanie. Koszt nie rośnie wraz ze skomplikowaniem kształtu, a produkcja jednej sztuki przestaje być nieopłacalna — to argument za **skracaniem łańcuchów dostaw**.",
+       "examples": [
+        "części zamienne drukowane na miejscu",
+        "implanty i protezy dopasowane do pacjenta",
+        "prototypy w lotnictwie"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Najczęstsza pomyłka: **III i IV rewolucja**. Komputery, roboty i automatyzacja to **III rewolucja** — maszyna wykonuje zaprogramowany przez człowieka ciąg czynności, ale nic nie „wie” o reszcie fabryki. **IV rewolucja** zaczyna się dopiero tam, gdzie maszyny **komunikują się ze sobą i z wyrobem**, a system sam koryguje proces na podstawie danych. Nie myl też **rewolucji przemysłowej** z **przewrotem agrarnym** (zmiana w rolnictwie, która ją poprzedziła i uwolniła ręce do pracy w fabrykach); z kolei **rewolucja naukowo-techniczna** to w polskiej terminologii szkolnej po prostu inna nazwa III rewolucji przemysłowej."
+    },
+    {
+     "type": "definition",
+     "term": "Deindustrializacja",
+     "text": "**Trwały spadek udziału przemysłu w zatrudnieniu i w wartości PKB** kraju lub regionu. Występuje w dwóch odmianach: **pozornej**, gdy produkcja przemysłowa nadal rośnie, a zatrudnienie spada dzięki automatyzacji (Niemcy, Japonia), oraz **rzeczywistej (regresywnej)**, gdy zakłady upadają lub przenoszą się za granicę i nic nie powstaje w ich miejsce (Appalachy, część Górnego Śląska po 1989 r.).",
+     "note": "Spadek udziału przemysłu sam w sobie nie jest kryzysem — w gospodarce rozwiniętej to **naturalny etap** opisany modelem Clarka-Fishera. Niepokojące jest dopiero połączenie go z **bezrobociem strukturalnym, odpływem ludności i degradacją terenów poprzemysłowych**."
+    },
+    {
+     "type": "process",
+     "title": "Mechanizm deindustrializacji — krok po kroku",
+     "caption": "Prześledź łańcuch przyczynowo-skutkowy. Zwróć uwagę, że pierwsze dwa kroki to sukces gospodarczy, a dopiero od trzeciego zaczyna się problem społeczny.",
+     "steps": [
+      {
+       "title": "Skokowy wzrost wydajności pracy",
+       "text": "Automatyzacja, robotyzacja i nowe technologie sprawiają, że **ta sama produkcja wymaga coraz mniej rąk**. Jeden pracownik obsługuje dziś linię, przy której kiedyś stało kilkudziesięciu ludzi. Sam w sobie to nie kryzys, lecz postęp techniczny."
+      },
+      {
+       "title": "Rozejście się produkcji i zatrudnienia",
+       "text": "Wartość produkcji przemysłowej rośnie, a liczba pracujących w przemyśle **spada**. Udział sektora II w zatrudnieniu maleje, mimo że fabryki wytwarzają więcej niż kiedykolwiek — to właśnie **deindustrializacja pozorna**."
+      },
+      {
+       "title": "Delokalizacja działów pracochłonnych",
+       "text": "Gałęzie, w których płace stanowią dużą część kosztu (odzież, obuwie, montaż elektroniki), **przenoszą się do krajów o niskich kosztach pracy**. W kraju macierzystym znikają nie pojedyncze zakłady, lecz całe branże."
+      },
+      {
+       "title": "Bezrobocie strukturalne",
+       "text": "Zwolniony górnik czy hutnik ma kwalifikacje, na które **nie ma już popytu**. Nie brakuje miejsc pracy w ogóle — brakuje takich, które pasują do jego umiejętności. Bez **przekwalifikowania** bezrobocie utrwala się na lata."
+      },
+      {
+       "title": "Zapaść przestrzenna i społeczna",
+       "text": "Powstają rozległe **tereny poprzemysłowe (brownfields)**, spada wartość nieruchomości, młodzi i wykształceni emigrują, a budżety miast tracą wpływy podatkowe — co uniemożliwia inwestycje mogące przyciągnąć nowe firmy. Bez **restrukturyzacji** region wpada w samonapędzającą się spiralę zapaści, jak amerykański **Pas Rdzy**."
+      }
+     ]
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Udział pracujących w sektorze II (przemysł i budownictwo)",
+     "caption": "Dane szacunkowe, ok. 2021 r. (Bank Światowy). Zwróć uwagę na paradoks: kraje o **najdłuższej** historii przemysłowej mają dziś **najniższy** udział zatrudnienia w przemyśle. Deindustrializacja jest etapem rozwoju, a nie porażką.",
+     "labels": [
+      "Wielka Brytania",
+      "Francja",
+      "USA",
+      "Japonia",
+      "Niemcy",
+      "Chiny",
+      "Polska"
+     ],
+     "series": [
+      {
+       "name": "udział pracujących",
+       "values": [
+        18,
+        20,
+        20,
+        24,
+        27,
+        29,
+        32
+       ]
+      }
+     ],
+     "unit": "%"
+    },
+    {
+     "type": "compare",
+     "title": "Dwa oblicza tej samej zmiany",
+     "leftLabel": "Kraje wysoko rozwinięte — deindustrializacja",
+     "rightLabel": "Kraje rozwijające się — industrializacja",
+     "rows": [
+      {
+       "aspect": "Kierunek zmian strukturalnych",
+       "left": "Udział przemysłu w zatrudnieniu spada, rośnie udział usług i sektora IV (informacja, B+R).",
+       "right": "Udział przemysłu rośnie kosztem rolnictwa — kraj wchodzi w fazę industrializacji opisaną modelem Clarka-Fishera."
+      },
+      {
+       "aspect": "Co decyduje o przepływie kapitału",
+       "left": "Wysokie płace, kosztowne normy środowiskowe i podatki **wypychają** produkcję pracochłonną.",
+       "right": "Niskie koszty pracy, ulgi w specjalnych strefach ekonomicznych i łagodniejsze normy **przyciągają** kapitał zagraniczny."
+      },
+      {
+       "aspect": "Jaka produkcja zostaje lub przybywa",
+       "left": "Zostaje to, co naukochłonne i zautomatyzowane: high-tech, farmacja, przemysł precyzyjny, centra B+R.",
+       "right": "Przybywa to, co pracochłonne i technologicznie proste: montaż, odzież, obuwie, przetwórstwo surowców."
+      },
+      {
+       "aspect": "Skutki społeczne",
+       "left": "Bezrobocie strukturalne w starych okręgach, ale też czystsze środowisko i wyższe dochody w usługach.",
+       "right": "Nowe miejsca pracy i wzrost dochodów, lecz także niskie płace, wypadki przy pracy i gwałtownie rosnące zanieczyszczenie."
+      },
+      {
+       "aspect": "Typowe przykłady",
+       "left": "Zagłębie Ruhry, Appalachy, północna Anglia, Górny Śląsk po 1989 r.",
+       "right": "Chiny, Wietnam, Bangladesz, Meksyk, Etiopia"
+      }
+     ]
+    },
+    {
+     "type": "ordering",
+     "title": "Uporządkuj wydarzenia chronologicznie",
+     "instruction": "Przeciągnij tak, by powstał ciąg od najstarszego do najmłodszego. Podpowiedź: każde dwa kolejne elementy należą do tej samej rewolucji.",
+     "items": [
+      "udoskonalenie maszyny parowej przez Jamesa Watta",
+      "uruchomienie pierwszej publicznej linii kolejowej z trakcją parową",
+      "upowszechnienie masowej produkcji stali i silnika elektrycznego",
+      "uruchomienie ruchomej taśmy produkcyjnej w fabryce Forda",
+      "wprowadzenie obrabiarek sterowanych komputerowo i robotów przemysłowych",
+      "ogłoszenie koncepcji Przemysłu 4.0 na targach w Hanowerze"
+     ],
+     "explanation": "Kolejność odpowiada czterem rewolucjom: maszyna parowa (1769) i kolej (1825) to **I rewolucja**; stal, silnik elektryczny i taśma Forda (1913) — **II**; obrabiarki sterowane komputerowo i roboty — **III** (od lat 70. XX w.); koncepcja Przemysłu 4.0 (2011) — **IV**."
+    },
+    {
+     "type": "quiz",
+     "question": "W pewnym kraju wartość produkcji przemysłowej wzrosła w ciągu 20 lat o 40%, a liczba pracujących w przemyśle spadła o jedną czwartą. Jak najtrafniej opisać to zjawisko?",
+     "options": [
+      "Deindustrializacja pozorna — spadek zatrudnienia wynika ze wzrostu wydajności pracy, a nie z upadku przemysłu",
+      "Deindustrializacja rzeczywista — przemysł tego kraju wyraźnie się załamał",
+      "Reindustrializacja — skoro produkcja rośnie, przemysł jest właśnie odbudowywany",
+      "Delokalizacja — cały przemysł przeniósł się do krajów o tańszej sile roboczej"
+     ],
+     "correctIndex": 0,
+     "explanation": "Jeżeli **produkcja rośnie, a zatrudnienie maleje**, jedynym możliwym wyjaśnieniem jest **wzrost wydajności pracy** — czyli automatyzacja i robotyzacja. Udział przemysłu w zatrudnieniu spada, więc formalnie jest to deindustrializacja, ale **pozorna**: przemysł ma się dobrze, po prostu potrzebuje mniej ludzi. Przy deindustrializacji rzeczywistej spadłyby *obie* wielkości — i zatrudnienie, i produkcja."
+    },
+    {
+     "type": "quiz",
+     "question": "Na czym polega zasadnicza różnica między III a IV rewolucją przemysłową?",
+     "options": [
+      "W III zautomatyzowano pojedyncze maszyny, a w IV maszyny i wyroby wymieniają dane i na bieżąco korygują proces produkcji",
+      "III opierała się na energii elektrycznej, a IV na energii pary wodnej",
+      "III dotyczyła wyłącznie rolnictwa, a IV — przemysłu przetwórczego",
+      "W III po raz pierwszy zastosowano taśmę produkcyjną, a w IV — silnik spalinowy"
+     ],
+     "correctIndex": 0,
+     "explanation": "III rewolucja przyniosła **automatyzację**: maszyna sterowana komputerem wykonuje zaprogramowany ciąg czynności, ale działa w izolacji. IV rewolucja dokłada **łączność i dane** — systemy cyberfizyczne komunikują się między sobą, a analiza danych pozwala zmieniać parametry procesu w czasie rzeczywistym; stąd możliwość **masowej personalizacji**. Para to I rewolucja, elektryczność, silnik spalinowy i taśma Forda — II."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Przy pytaniach o rewolucje przemysłowe klucz odpowiedzi zwykle premiuje **triadę: nośnik energii — kluczowa technologia — wiodąca gałąź**. Zapamiętaj ją jako cztery pary: **I** — węgiel i maszyna parowa (włókiennictwo, hutnictwo); **II** — elektryczność i ropa, stal i chemia (motoryzacja); **III** — energetyka jądrowa i elektronika (informatyka, high-tech); **IV** — dane i sieć (produkcja spersonalizowana). A gdy w poleceniu pada słowo „skutki”, obok gospodarczych podaj koniecznie **społeczne** (urbanizacja, migracje ze wsi do miast, powstanie nowych grup społecznych) i **środowiskowe** — za samą gospodarkę rzadko przyznaje się komplet punktów."
+    }
+   ]
+  },
+  {
+   "slug": "okregi-przemyslowe-swiata-i-restrukturyzacja",
+   "title": "Okręgi przemysłowe świata i ich przekształcenia",
+   "summary": "Jak powstawały wielkie okręgi przemysłowe — od węglowej Ruhry i Appalachów po Dolinę Krzemową i Bangalore — dlaczego jedne z nich udało się przebudować, a inne zapadły się razem z kopalniami, oraz czym różnią się technopolia, park technologiczny i klaster.",
+   "readingMinutes": 14,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Przemysł nigdy nie rozkłada się równomiernie — **skupia się**, bo zakład woli stanąć tam, gdzie już są drogi, poddostawcy, wykwalifikowani ludzie i odbiorcy. Tak rodzą się **okręgi przemysłowe**: obszary, w których przemysł decyduje o wszystkim — o zabudowie, o rynku pracy, o powietrzu, którym oddycha się rano. W tej lekcji zobaczysz, jak okręgi powstawały i co się z nimi dzieje, gdy ich pierwotna podstawa — złoże, port albo zamówienie wojskowe — przestaje mieć znaczenie. Zestawimy dwa okręgi węglowe o tej samej diagnozie i przeciwnym finale, a potem przyjrzymy się okręgom nowego typu, w których o lokalizacji nie decyduje już ani surowiec, ani port, lecz **uniwersytet**."
+    },
+    {
+     "type": "definition",
+     "term": "Okręg przemysłowy",
+     "text": "Obszar o **dużej koncentracji zakładów przemysłowych powiązanych kooperacją**, obejmujący zwykle kilka sąsiadujących ze sobą ośrodków, w którym przemysł jest **funkcją dominującą** i decyduje o sposobie zagospodarowania przestrzeni oraz o strukturze zatrudnienia.",
+     "note": "Zapamiętaj hierarchię według rosnącej skali: **zakład przemysłowy → ośrodek przemysłowy** (jedno miasto z zakładami) **→ okręg przemysłowy** (zespół sąsiadujących ośrodków) **→ region przemysłowy** (kilka okręgów w obrębie większego obszaru). Terminem **węzeł przemysłowy** określa się duży ośrodek o szczególnie rozwiniętej kooperacji między zakładami."
+    },
+    {
+     "type": "classification",
+     "title": "Typy okręgów według genezy",
+     "caption": "Każdy typ powstał w innej epoce i pod dyktando innego czynnika lokalizacji — dlatego kolejność grup odpowiada w przybliżeniu kolejności historycznej.",
+     "groups": [
+      {
+       "name": "Okręgi surowcowe (na zagłębiach)",
+       "description": "Najstarsze, z okresu I i II rewolucji przemysłowej. Powstały **bezpośrednio na złożach** węgla lub rud, bo transport surowca był wtedy zbyt drogi. Dominuje w nich przemysł ciężki, a dziś niemal wszystkie wymagają restrukturyzacji, bo ich podstawa się wyczerpała lub przestała być opłacalna.",
+       "examples": [
+        "Zagłębie Ruhry",
+        "Górnośląski Okręg Przemysłowy",
+        "Appalachy",
+        "Zagłębie Donieckie",
+        "Zagłębie Kuźnieckie"
+       ]
+      },
+      {
+       "name": "Okręgi portowe (nadmorskie)",
+       "description": "Wyrosły w XX w. wraz z **rewolucją transportu morskiego**. Przerabiają surowce sprowadzane z całego świata tam, gdzie schodzą ze statku, co pozwala uniknąć najdroższego elementu — przeładunku i dowozu w głąb lądu.",
+       "examples": [
+        "Rotterdam–Europoort",
+        "okręg Keihin (Tokio–Jokohama)",
+        "Marsylia–Fos",
+        "Taranto",
+        "okręg gdański i szczeciński"
+       ]
+      },
+      {
+       "name": "Okręgi wielkomiejskie (rynkowe)",
+       "description": "Rozwinęły się wokół wielkich miast, gdzie o lokalizacji zdecydowały **rynek zbytu, wykwalifikowane kadry i zaplecze usługowe**. Przeważa przemysł lekki, precyzyjny, poligraficzny, spożywczy i elektromaszynowy — czyli branże mało materiałochłonne.",
+       "examples": [
+        "Okręg Warszawski",
+        "Okręg Paryski",
+        "Okręg Londyński",
+        "Okręg Moskiewski",
+        "Okręg Mediolański"
+       ]
+      },
+      {
+       "name": "Okręgi zaawansowanych technologii",
+       "description": "Najmłodsze, powstałe od 2. połowy XX w. Lokują się **przy uczelniach i instytutach badawczych**, z dala od surowców, najczęściej w miejscach o wysokiej jakości środowiska, które przyciąga wysoko wykwalifikowaną kadrę.",
+       "examples": [
+        "Dolina Krzemowa",
+        "Bangalore",
+        "Sophia Antipolis",
+        "Tsukuba",
+        "okręg Cambridge"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "map-explore",
+     "title": "Wielkie okręgi przemysłowe świata",
+     "caption": "Kliknij znaczniki i porównaj genezę. Zwróć uwagę na prawidłowość: okręgi surowcowe leżą w głębi lądu, portowe — na wybrzeżu, a high-tech tam, gdzie są uczelnie i przyjemny klimat.",
+     "center": [
+      30,
+      10
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 51.5,
+       "lng": 7.1,
+       "label": "Zagłębie Ruhry (Niemcy)",
+       "text": "Największy okręg przemysłowy Europy, zbudowany na **złożach węgla kamiennego** i na transporcie po Renie. Po zamknięciu ostatniej kopalni w 2018 r. funkcjonuje dzięki wieloletniej restrukturyzacji — uczelniom, logistyce i usługom."
+      },
+      {
+       "lat": 50.27,
+       "lng": 19.02,
+       "label": "Górnośląski Okręg Przemysłowy (Polska)",
+       "text": "Największy okręg Polski, powstały na węglu kamiennym; opierał się na triadzie kopalnia–koksownia–huta. Od 1989 r. w trakcie głębokiej **restrukturyzacji** — z rozwojem motoryzacji, logistyki i usług dla biznesu."
+      },
+      {
+       "lat": 37.8,
+       "lng": -81.6,
+       "label": "Appalachy (USA)",
+       "text": "Największy amerykański okręg wydobycia **węgla kamiennego**, dziś w regresie: przegrał z tanim węglem z odkrywek Wyoming i z gazem łupkowym. Przykład restrukturyzacji, która się nie powiodła."
+      },
+      {
+       "lat": 51.92,
+       "lng": 4.48,
+       "label": "Rotterdam–Europoort (Holandia)",
+       "text": "Wzorcowy **okręg portowy**: rafinerie i przemysł chemiczny przerabiają ropę prosto z tankowców, a największy port Europy zapewnia zbyt na całe zaplecze kontynentu."
+      },
+      {
+       "lat": 35.55,
+       "lng": 139.72,
+       "label": "Okręg Keihin (Japonia)",
+       "text": "Pas przemysłowy Tokio–Jokohama, oparty niemal wyłącznie na **surowcach importowanych**. Huty i rafinerie stoją na terenach osuszonych i nasypowych tuż przy nabrzeżach."
+      },
+      {
+       "lat": 37.39,
+       "lng": -122.08,
+       "label": "Dolina Krzemowa (USA)",
+       "text": "**Klaster** elektroniczno-informatyczny, który wyrósł wokół Uniwersytetu Stanforda i kapitału wysokiego ryzyka. Brak jakichkolwiek złóż surowców nie miał znaczenia — o wartości wyrobu decyduje wiedza."
+      },
+      {
+       "lat": 12.97,
+       "lng": 77.59,
+       "label": "Bangalore / Bengaluru (Indie)",
+       "text": "Największe indyjskie centrum **usług informatycznych i outsourcingu**, położone na wyżynie Dekan (ok. 900 m n.p.m.). Kluczowe czynniki: tania, anglojęzyczna kadra inżynierska i dogodna różnica czasu wobec USA."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Zagłębie Ruhry — od węgla do nauki i kultury",
+     "region": "Nadrenia Północna-Westfalia, Niemcy",
+     "text": "Okręg powstał w XIX w. na **najbogatszych w Europie złożach węgla kamiennego**, w tym koksującego, przy Renie zapewniającym tani transport wodny i wodę technologiczną. Przez sto lat opierał się na triadzie **kopalnia — koksownia — huta**, a Essen, Dortmund, Duisburg i Bochum zrosły się w jedną z największych aglomeracji Europy. Kryzys nadszedł w latach 60. i 70. XX w.: tańszy węgiel importowany, przechodzenie energetyki na ropę i gaz oraz światowa nadprodukcja stali sprawiły, że wydobycie stało się trwale nierentowne — **ostatnią kopalnię węgla kamiennego zamknięto w 2018 r.** Restrukturyzację rozłożono jednak na dziesięciolecia i prowadzono równolegle na kilku frontach: **przekwalifikowywano górników**, zakładano uniwersytety (Bochum, Dortmund, Duisburg-Essen) i parki technologiczne, rekultywowano hałdy i zwałowiska, a obiekty pokopalniane adaptowano na cele kultury — **kopalnia Zollverein w Essen trafiła na Listę światowego dziedzictwa UNESCO**.",
+     "takeaway": "Restrukturyzacja udaje się wtedy, gdy jest **rozłożona na dziesięciolecia i prowadzona jednocześnie na czterech frontach**: gospodarczym, edukacyjnym, środowiskowym i wizerunkowym. Samo zamknięcie kopalń zostawia po sobie wyłącznie bezrobocie."
+    },
+    {
+     "type": "definition",
+     "term": "Restrukturyzacja",
+     "text": "**Głęboka, świadomie sterowana przebudowa struktury gospodarczej** okręgu lub przedsiębiorstwa: wygaszanie gałęzi nierentownych i przestarzałych oraz wprowadzanie w ich miejsce nowych — mniej materiałochłonnych, bardziej naukochłonnych, a także usług. Celem nie jest zamknięcie starych zakładów, lecz **zastąpienie utraconych miejsc pracy nowymi**.",
+     "note": "Odróżniaj **restrukturyzację** od **deindustrializacji**: deindustrializacja to *proces* spadku znaczenia przemysłu, który zachodzi także wtedy, gdy nikt nic nie robi; restrukturyzacja to *odpowiedź* na niego — kosztowna, wieloletnia i wymagająca pieniędzy publicznych."
+    },
+    {
+     "type": "process",
+     "title": "Etapy restrukturyzacji okręgu przemysłowego",
+     "caption": "Kolejność ma znaczenie, ale etapy 2–5 muszą biec **równolegle** z pierwszym. Wykonanie samego kroku pierwszego to nie restrukturyzacja, tylko likwidacja.",
+     "steps": [
+      {
+       "title": "Diagnoza i wygaszanie nierentownej produkcji",
+       "text": "Zamyka się kopalnie i wydziały, których koszt wydobycia lub wytworzenia jest trwale wyższy od ceny rynkowej. Krok konieczny, ale **sam w sobie generujący bezrobocie** — dlatego nigdy nie może pozostać jedynym."
+      },
+      {
+       "title": "Osłona socjalna i przekwalifikowanie",
+       "text": "Odprawy, świadczenia przedemerytalne i przede wszystkim **kursy zawodowe** mają zamienić bezrobocie strukturalne w przepływ pracowników do nowych branż. Bez tego kwalifikacje całego pokolenia stają się bezużyteczne, a bezrobocie dziedziczy się w rodzinach."
+      },
+      {
+       "title": "Rekultywacja i uzbrojenie terenów poprzemysłowych",
+       "text": "Hałdy, zwałowiska i skażone grunty trzeba oczyścić, ustabilizować i przygotować pod nowe funkcje. Zagospodarowany **brownfield** jest atutem inwestycyjnym — zaniedbany odstrasza inwestora skuteczniej niż wysokie podatki."
+      },
+      {
+       "title": "Przyciąganie nowych, zróżnicowanych branż",
+       "text": "**Specjalne strefy ekonomiczne**, ulgi podatkowe, parki technologiczne i inwestycje w uczelnie mają sprowadzić przemysł lżejszy, logistykę i usługi. Kluczowa jest **dywersyfikacja**: region nie może ponownie oprzeć się na jednej gałęzi, bo powtórzy ten sam błąd."
+      },
+      {
+       "title": "Zmiana funkcji i wizerunku regionu",
+       "text": "Obiekty poprzemysłowe adaptuje się na muzea, sale koncertowe i centra nauki, rozwijając **turystykę poprzemysłową** — jak Szlak Zabytków Techniki na Górnym Śląsku czy Zollverein w Essen. Region przestaje być kojarzony z brudem i schyłkiem, dzięki czemu łatwiej zatrzymać młodych mieszkańców i przyciągnąć specjalistów."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Appalachy — okręg, który nie zdążył się przebudować",
+     "region": "Wschodnie USA: Wirginia Zachodnia, Kentucky, Pensylwania",
+     "text": "Appalaskie zagłębie węglowe było **największym obszarem wydobycia węgla kamiennego w USA**, a jego rozkwit przypadł na przełom XIX i XX w., gdy węgiel zasilał huty Pittsburgha i całą amerykańską kolej. Załamanie przyszło z kilku stron naraz: **konkurencja taniego węgla z odkrywek w Wyoming**, przejście energetyki na **tani gaz ziemny z łupków**, zaostrzenie norm emisji oraz mechanizacja wydobycia, która radykalnie zmniejszyła zapotrzebowanie na górników. Region jest przy tym górzysty i słabo dostępny komunikacyjnie, o niskim przeciętnym poziomie wykształcenia i słabym zapleczu akademickim — brakowało więc dokładnie tego, na czym można byłoby oprzeć nową gospodarkę. Skutki utrzymują się do dziś: wysokie bezrobocie, odpływ ludności, jedne z najniższych dochodów w USA i środowisko zdegradowane przez odkrywkowe zdejmowanie wierzchołków gór (**mountaintop removal**).",
+     "takeaway": "Porównaj z Ruhrą: **ta sama diagnoza, przeciwny finał**. O powodzeniu restrukturyzacji decyduje nie sam upadek starej gałęzi, lecz to, czy region dysponuje kadrami, dostępnością transportową, kapitałem i konsekwentną polityką publiczną, na których da się zbudować nową funkcję."
+    },
+    {
+     "type": "classification",
+     "title": "Formy przestrzenne przemysłu zaawansowanych technologii",
+     "caption": "Uporządkowane od największej do najmniejszej skali — z wyjątkiem klastra, który nie ma z góry określonych granic, bo nikt go nie projektuje.",
+     "groups": [
+      {
+       "name": "Technopolia",
+       "description": "**Planowo zbudowane miasto lub dzielnica nauki**, w której skupiono uczelnie, instytuty badawcze i zakłady high-tech. Powstaje zwykle z inicjatywy państwa, w miejscu atrakcyjnym środowiskowo i z dala od starych okręgów. Celem jest **maksymalne skrócenie drogi od laboratorium do wdrożenia**.",
+       "examples": [
+        "Tsukuba (Japonia)",
+        "Sophia Antipolis (Francja)",
+        "Daedeok (Korea Południowa)",
+        "Akademgorodok (Rosja)"
+       ]
+      },
+      {
+       "name": "Park technologiczny (naukowo-technologiczny)",
+       "description": "Wydzielony i uzbrojony teren z gotowymi halami oraz laboratoriami, powiązany z uczelnią, gdzie firmy technologiczne **wynajmują powierzchnię i korzystają ze wspólnego zaplecza** — aparatury, doradztwa, obsługi patentowej. To obiekt, a nie miasto: skala znacznie mniejsza niż technopolii.",
+       "examples": [
+        "Cambridge Science Park",
+        "Krakowski Park Technologiczny",
+        "Poznański Park Naukowo-Technologiczny"
+       ]
+      },
+      {
+       "name": "Inkubator przedsiębiorczości",
+       "description": "Instytucja wspierająca **najmłodsze firmy (start-upy)** przez pierwsze, najbardziej ryzykowne lata: tanie biuro, obsługa księgowa i prawna, mentoring, kontakt z inwestorami. Ma obniżyć próg wejścia i zmniejszyć „śmiertelność” nowych przedsiębiorstw.",
+       "examples": [
+        "akademickie inkubatory przedsiębiorczości przy uczelniach",
+        "inkubatory przy parkach technologicznych"
+       ]
+      },
+      {
+       "name": "Klaster (grono) przemysłowy",
+       "description": "**Geograficzne skupienie firm z jednej lub pokrewnych branż wraz z dostawcami, uczelniami i instytucjami otoczenia biznesu**, które jednocześnie ze sobą konkurują i współpracują. Cechą kluczową jest to, że klaster **najczęściej nie jest zaplanowany** — powstaje samorzutnie, a jego siłą jest swobodny przepływ wiedzy, wykwalifikowanych pracowników i wyspecjalizowanych poddostawców, czyli **korzyści aglomeracji**.",
+       "examples": [
+        "Dolina Krzemowa (elektronika, IT)",
+        "Hollywood (film)",
+        "Dolina Lotnicza w rejonie Rzeszowa",
+        "klaster meblarski w Wielkopolsce"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Dwa okręgi high-tech: Dolina Krzemowa a Bangalore",
+     "caption": "Oba żyją z informatyki, ale zajmują **różne miejsca w łańcuchu wartości**: jeden tworzy technologie, drugi świadczy usługi na zlecenie. Stąd zupełnie inne czynniki lokalizacji.",
+     "headers": [
+      "Cecha",
+      "Dolina Krzemowa (USA)",
+      "Bangalore (Indie)"
+     ],
+     "rows": [
+      [
+       "Geneza",
+       "Zaczęła się od **Uniwersytetu Stanforda**, który w 1951 r. udostępnił swoje grunty firmom technologicznym; wcześniej ważne były wojskowe zamówienia na elektronikę",
+       "Rozwój od lat 80. i 90. XX w. na bazie **państwowych instytutów** (lotnictwo, elektronika, program kosmiczny) oraz liberalizacji gospodarki Indii po 1991 r."
+      ],
+      [
+       "Kluczowy czynnik lokalizacji",
+       "Zaplecze naukowe i **kapitał wysokiego ryzyka (venture capital)** finansujący ryzykowne przedsięwzięcia",
+       "**Tania, liczna i anglojęzyczna kadra inżynierska** oraz różnica czasu wobec USA, pozwalająca pracować „na drugą zmianę”"
+      ],
+      [
+       "Specjalizacja",
+       "**Tworzenie** nowych technologii: półprzewodniki, oprogramowanie, internet, sztuczna inteligencja",
+       "**Świadczenie usług** dla klientów zagranicznych: offshoring i outsourcing programowania, obsługa systemów, centra usług wspólnych"
+      ],
+      [
+       "Rola warunków środowiskowych",
+       "Łagodny klimat śródziemnomorski i wysoka jakość życia przyciągające wysoko wykwalifikowaną kadrę",
+       "Położenie na wyżynie Dekan (ok. 900 m n.p.m.) łagodzi upały typowe dla nizinnych Indii — stąd dawne miano „miasta-ogrodu”"
+      ],
+      [
+       "Główny problem",
+       "Skrajnie wysokie koszty mieszkań i życia, wypychające pracowników poza region",
+       "Przeciążona infrastruktura miejska, deficyt wody i energii elektrycznej, rosnące koszty pracy"
+      ]
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pary pojęć, które trzeba rozdzielić. **(1) Ośrodek — okręg — region**: ośrodek to jedno miasto, okręg to zespół sąsiadujących ośrodków, region to zespół okręgów; przy zadaniu z mapą to rozróżnienie decyduje o punkcie. **(2) Technopolia a park technologiczny**: technopolia to całe, planowo zbudowane miasto nauki (zwykle dzieło państwa), park to wydzielony teren z halami i laboratoriami — różni je skala i inicjator. **(3) Klaster a park technologiczny**: klaster **powstaje samorzutnie**, nie ma granic ani zarządcy, park jest **zaplanowany, ogrodzony i administrowany**. Dolina Krzemowa jest więc klastrem, a **nie** parkiem technologicznym ani technopolią."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj okręg do cechy, która go definiuje",
+     "instruction": "Skup się na tym, co przesądziło o jego powstaniu, a nie na tym, co się w nim produkuje dzisiaj.",
+     "pairs": [
+      {
+       "left": "Zagłębie Ruhry",
+       "right": "okręg węglowy, w którym wieloletnia restrukturyzacja się powiodła"
+      },
+      {
+       "left": "Appalachy",
+       "right": "okręg węglowy, w którym restrukturyzacja się nie powiodła"
+      },
+      {
+       "left": "Okręg Keihin",
+       "right": "przerób surowców importowanych drogą morską, na terenach nadmorskich"
+      },
+      {
+       "left": "Dolina Krzemowa",
+       "right": "samorzutny klaster wyrosły wokół uniwersytetu i kapitału wysokiego ryzyka"
+      },
+      {
+       "left": "Bangalore",
+       "right": "outsourcing usług informatycznych oparty na taniej kadrze anglojęzycznej"
+      },
+      {
+       "left": "Tsukuba",
+       "right": "technopolia zbudowana planowo z inicjatywy państwa"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Który zestaw czynników najlepiej wyjaśnia powstanie Doliny Krzemowej z dala od jakichkolwiek złóż surowców?",
+     "options": [
+      "Bliskość uniwersytetu, dostęp do kapitału wysokiego ryzyka i wykwalifikowane kadry — w high-tech o wartości wyrobu decyduje wiedza, a nie surowiec",
+      "Bliskość bogatych złóż krzemionki, z której wytwarza się półprzewodniki",
+      "Tania siła robocza i wyjątkowo niskie koszty życia w Kalifornii",
+      "Bliskość portu morskiego, umożliwiająca import ciężkich surowców hutniczych"
+     ],
+     "correctIndex": 0,
+     "explanation": "Przemysł high-tech ma **orientację naukową**: udział materiału w koszcie wyrobu jest znikomy, więc położenie złóż nie ma tu żadnego znaczenia. Decydują uczelnia (Stanford), kadra i **kapitał wysokiego ryzyka**, bez którego nie da się finansować przedsięwzięć o dużym prawdopodobieństwie porażki. Nazwa „krzemowa” pochodzi od krzemu jako materiału półprzewodników, a **nie od miejscowych złóż** — to klasyczna pułapka. Koszty życia w Dolinie Krzemowej należą zaś do najwyższych w USA."
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego restrukturyzacja Zagłębia Ruhry powiodła się lepiej niż przebudowa gospodarki Appalachów?",
+     "options": [
+      "W Ruhrze zamykaniu kopalń towarzyszyły przez dekady inwestycje w uczelnie, przekwalifikowanie górników i rekultywacja terenów, czego w Appalachach zabrakło",
+      "W Ruhrze nie zamknięto żadnej kopalni, więc nie pojawiło się bezrobocie",
+      "Appalachy nigdy nie miały przemysłu wydobywczego, więc nie było czego restrukturyzować",
+      "W Ruhrze odkryto nowe, bogatsze złoża węgla, które zastąpiły złoża wyczerpane"
+     ],
+     "correctIndex": 0,
+     "explanation": "Przyczyny kryzysu były w obu okręgach niemal identyczne — nierentowne wydobycie, konkurencja tańszych nośników energii, mechanizacja. Różniła się **odpowiedź**. W Ruhrze restrukturyzację prowadzono przez kilkadziesiąt lat równolegle na wielu frontach: nowe uniwersytety i parki technologiczne, osłony socjalne i kursy zawodowe, rekultywacja hałd, turystyka poprzemysłowa. Appalachom zabrakło kadr, dostępności transportowej i konsekwentnej polityki publicznej, więc po upadku górnictwa nie powstała żadna nowa funkcja. Kopalnie w Ruhrze zamykano jak najbardziej — ostatnią w 2018 r. — tylko nie zostawiono regionu samemu sobie."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W zadaniach o okręgach przemysłowych klucz oczekuje odróżnienia **czynników genezy** (dlaczego okręg powstał *wtedy*) od **czynników współczesnych** (dlaczego trwa albo upada *dziś*) — to zwykle dwa różne zestawy. Dla Ruhry: geneza = węgiel kamienny i transport po Renie, współcześnie = kadry, uczelnie, położenie w centrum Europy i węzeł logistyczny. Przy porównaniach dwóch okręgów pisz **równolegle** („w okręgu A…, natomiast w okręgu B…”), bo za wypisanie cech tylko jednego z nich zwykle nie ma punktu. I nie zamieniaj pojęć: **technopolia ≠ park technologiczny ≠ klaster** — to jeden z częstszych błędów w arkuszach."
+    }
+   ]
+  },
+  {
+   "slug": "energetyka-swiata-zrodla-konwencjonalne",
+   "title": "Energetyka świata i źródła konwencjonalne",
+   "summary": "Z czego świat naprawdę czerpie energię, jak w elektrowni cieplnej węgiel zamienia się w prąd, dlaczego węgiel brunatny nigdy nie odjeżdża daleko od kopalni oraz na czym polega bezpieczeństwo energetyczne państwa.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Każda gałąź przemysłu potrzebuje jednego wspólnego wsadu — **energii**. Dlatego energetyka jest gałęzią szczególną: jej wyrób nie da się magazynować w prosty sposób ani odłożyć na później, a bez niej nie ruszy żadna huta, walcownia ani serwerownia. W tej lekcji patrzymy na **strukturę światowej produkcji energii**, na cztery **źródła konwencjonalne** (węgiel, ropa naftowa, gaz ziemny, paliwo jądrowe) oraz na to, jak z nich powstaje prąd. Zwróć uwagę na myśl przewodnią: o miejscu elektrowni prawie zawsze decyduje **relacja kosztu transportu nośnika do kosztu przesyłu energii** — jeśli taniej przewieźć paliwo, elektrownia stoi przy odbiorcy; jeśli taniej przesłać prąd, elektrownia stoi przy złożu."
+    },
+    {
+     "type": "definition",
+     "term": "Nośnik energii pierwotnej",
+     "text": "Substancja lub zjawisko występujące w przyrodzie w stanie nieprzetworzonym, z którego można uzyskać energię: **węgiel, ropa naftowa, gaz ziemny, ruda uranu, energia wody, wiatru, Słońca, wnętrza Ziemi, biomasa**. Po przetworzeniu — spaleniu, rozszczepieniu, przepuszczeniu przez turbinę — otrzymujemy **nośniki energii wtórnej**: energię elektryczną, ciepło sieciowe, benzynę, koks, wodór.",
+     "note": "Nośniki konwencjonalne dzielimy na **nieodnawialne paliwa kopalne** (węgiel, ropa, gaz) oraz **paliwo jądrowe** (uran). Paliwo jądrowe także jest nieodnawialne, ale — w odróżnieniu od kopalnych — jego wykorzystanie **nie powoduje emisji dwutlenku węgla**, dlatego w zestawieniach klimatycznych bywa liczone razem ze źródłami bezemisyjnymi."
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Struktura światowej produkcji energii elektrycznej według źródeł (ok. 2023)",
+     "caption": "Wartości przybliżone, zaokrąglone do pełnych procent. Zapamiętaj przede wszystkim kolejność i rzędy wielkości, a nie dokładne liczby — na maturze zwykle wystarczy stwierdzić, że **węgiel wciąż jest źródłem nr 1 w elektroenergetyce świata**, choć jego udział systematycznie maleje.",
+     "labels": [
+      "Węgiel",
+      "Gaz ziemny",
+      "Wodna",
+      "Jądrowa",
+      "Wiatrowa",
+      "Słoneczna",
+      "Pozostałe"
+     ],
+     "series": [
+      {
+       "name": "Udział w produkcji energii elektrycznej",
+       "values": [
+        36,
+        23,
+        14,
+        9,
+        8,
+        5,
+        5
+       ]
+      }
+     ],
+     "unit": "%"
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Nie myl **struktury zużycia energii pierwotnej** ze **strukturą produkcji energii elektrycznej** — to dwa różne wykresy i jedna z częstszych pułapek w zadaniach. W energii pierwotnej (całe paliwo zużywane również w transporcie, ogrzewaniu i przemyśle) pierwsze miejsce na świecie zajmuje **ropa naftowa** — około jednej trzeciej — bo napędza samochody, statki i samoloty. W samej elektroenergetyce ropa jest niemal nieobecna, a prym wiedzie **węgiel**. Zanim odpowiesz, sprawdź w poleceniu, czy chodzi o „energię pierwotną”, czy o „energię elektryczną”."
+    },
+    {
+     "type": "classification",
+     "title": "Cztery konwencjonalne źródła energii",
+     "caption": "Dla każdego zapamiętaj triadę: **gdzie występuje — jak trafia do elektrowni — co ogranicza jego użycie**. Z tych trzech elementów da się zbudować odpowiedź na większość poleceń typu „wyjaśnij, dlaczego w kraju X dominuje źródło Y”.",
+     "groups": [
+      {
+       "name": "Węgiel kamienny i brunatny",
+       "description": "Najbardziej rozpowszechnione paliwo elektroenergetyki. Jego przewagą jest **duża dostępność zasobów i niska cena jednostki energii**, wadą — najwyższa spośród paliw **emisja $CO_2$ na jednostkę wytworzonej energii** oraz emisja tlenków siarki, tlenków azotu i pyłów. Wydobycie skupia się w kilku państwach, a same Chiny odpowiadają za około połowę światowego wydobycia.",
+       "examples": [
+        "Chiny (Shanxi, Mongolia Wewnętrzna)",
+        "Indie",
+        "Indonezja",
+        "USA (Wyoming — Powder River Basin)",
+        "Australia",
+        "Polska (Górnośląskie Zagłębie Węglowe)"
+       ]
+      },
+      {
+       "name": "Ropa naftowa",
+       "description": "Paliwo o **bardzo wysokiej wartości energetycznej w jednostce objętości** i łatwe do transportu (tankowce, rurociągi), dlatego zdominowało transport. W elektroenergetyce jest zbyt drogie i używa się go głównie tam, gdzie jest tanie na miejscu albo gdzie brak alternatyw — w krajach Zatoki Perskiej, na wyspach, w agregatach awaryjnych. Rynek ropy jest **silnie upolityczniony**: część produkcji koordynuje kartel **OPEC**.",
+       "examples": [
+        "USA (Basen Permski — ropa łupkowa)",
+        "Arabia Saudyjska (złoże Ghawar)",
+        "Rosja (Syberia Zachodnia)",
+        "Kanada (piaski roponośne Alberty)",
+        "Irak i Iran",
+        "szelf Zatoki Meksykańskiej"
+       ]
+      },
+      {
+       "name": "Gaz ziemny",
+       "description": "**Najczystsze z paliw kopalnych** — przy spalaniu emituje mniej więcej o połowę mniej $CO_2$ niż węgiel na jednostkę energii i praktycznie nie emituje siarki ani pyłów. Bloki gazowo-parowe mają **najwyższą sprawność** spośród elektrowni cieplnych i **bardzo szybko zmieniają moc**, dlatego dobrze uzupełniają niestabilne źródła odnawialne. Wada: transport wymaga **gazociągu albo skroplenia do postaci LNG** i terminala, co wiąże odbiorcę z dostawcą.",
+       "examples": [
+        "USA (gaz łupkowy)",
+        "Rosja (Jamał, Urengoj)",
+        "Katar (Pole Północne, eksport LNG)",
+        "Iran",
+        "Norwegia (szelf Morza Północnego)"
+       ]
+      },
+      {
+       "name": "Paliwo jądrowe (uran)",
+       "description": "Energia pochodzi z **rozszczepienia jąder uranu-235**, a nie ze spalania — stąd **brak emisji $CO_2$ i zanieczyszczeń powietrza** oraz znikome zapotrzebowanie na masę paliwa: kilogram uranu zastępuje setki ton węgla, więc **transport paliwa nie ma tu znaczenia lokalizacyjnego**. Elektrownia jądrowa pracuje stabilnie przez cały rok, ale wymaga **ogromnego kapitału początkowego, długiej budowy, dużych ilości wody do chłodzenia** i rozwiązania problemu **odpadów promieniotwórczych**.",
+       "examples": [
+        "USA (największa produkcja)",
+        "Francja (największy udział w miksie)",
+        "Chiny (najwięcej reaktorów w budowie)",
+        "Rosja",
+        "Korea Południowa",
+        "Kazachstan, Kanada, Australia — wydobycie uranu"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "process",
+     "title": "Jak w elektrowni cieplnej węgiel zamienia się w prąd",
+     "caption": "Cały ten łańcuch to w istocie jedna zasada: **energia chemiczna → cieplna → mechaniczna → elektryczna**. Elektrownia jądrowa różni się wyłącznie pierwszym etapem — zamiast kotła jest reaktor, reszta drogi jest identyczna.",
+     "steps": [
+      {
+       "title": "Przygotowanie paliwa",
+       "text": "Węgiel jest kruszony i mielony na **pył węglowy**. Rozdrobnienie zwiększa powierzchnię kontaktu z tlenem, dzięki czemu paliwo spala się szybciej i pełniej — rośnie sprawność, maleje ilość niedopału."
+      },
+      {
+       "title": "Spalanie w kotle",
+       "text": "W komorze paleniskowej pył spala się w temperaturze rzędu 1400–1600°C. **Energia chemiczna paliwa zamienia się w cieplną**, która przez ściany rur kotła ogrzewa wodę."
+      },
+      {
+       "title": "Wytworzenie pary o wysokich parametrach",
+       "text": "Woda zamienia się w **parę przegrzaną** o bardzo wysokim ciśnieniu i temperaturze. Im wyższe te parametry, tym większa sprawność obiegu — dlatego nowoczesne bloki nadkrytyczne osiągają ok. 45%, a stare, wysłużone jednostki ledwie ok. 30%."
+      },
+      {
+       "title": "Praca turbiny",
+       "text": "Para rozpręża się na łopatkach **turbiny parowej** i wprawia jej wał w ruch obrotowy — energia cieplna staje się **mechaniczną**."
+      },
+      {
+       "title": "Wytworzenie prądu",
+       "text": "Wał turbiny napędza **generator (prądnicę)**: wirujące pole magnetyczne wzbudza w uzwojeniach prąd. Transformator podnosi napięcie do setek kilowoltów, bo **przesył pod wysokim napięciem oznacza mniejsze straty**."
+      },
+      {
+       "title": "Skraplanie i chłodzenie",
+       "text": "Zużyta para musi zostać **skroplona w skraplaczu**, żeby obieg mógł się zamknąć. Ciepło odbiera od niej woda z rzeki, jeziora lub morza albo **chłodnia kominowa** — i to jest właśnie powód, dla którego elektrownia cieplna zawsze stoi nad dużym zbiornikiem wody."
+      },
+      {
+       "title": "Oczyszczanie spalin",
+       "text": "Zanim spaliny opuszczą komin, przechodzą przez **elektrofiltry** (pyły), **instalację odsiarczania** (tlenki siarki) i **instalację odazotowania** (tlenki azotu). Urządzenia te nie usuwają jednak dwutlenku węgla — stąd nierozwiązany problem klimatyczny energetyki węglowej."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Węgiel kamienny a węgiel brunatny — dwa różne modele lokalizacji",
+     "leftLabel": "Węgiel kamienny",
+     "rightLabel": "Węgiel brunatny",
+     "rows": [
+      {
+       "aspect": "Wartość opałowa",
+       "left": "Wysoka, rzędu **25–30 MJ/kg** — dużo energii w jednej tonie.",
+       "right": "Niska, rzędu **7–11 MJ/kg**; aby uzyskać tę samą energię, trzeba spalić kilka razy więcej surowca."
+      },
+      {
+       "aspect": "Zawartość wody",
+       "left": "Wilgotność kilkuprocentowa; węgiel jest zwięzły i dobrze znosi transport.",
+       "right": "Wilgotność sięga **40–60%** — wożąc go, transportuje się głównie wodę, co czyni przewóz ekonomicznie bezsensownym."
+      },
+      {
+       "aspect": "Sposób wydobycia",
+       "left": "Przeważnie **głębinowy** (szyby, chodniki) — kosztowny i niebezpieczny, ale mniej ingerujący w powierzchnię.",
+       "right": "Przeważnie **odkrywkowy** — tańszy i wydajniejszy, ale niszczy rzeźbę, gleby i stosunki wodne na wielkim obszarze."
+      },
+      {
+       "aspect": "Lokalizacja elektrowni",
+       "left": "**Swobodna** — węgiel opłaca się wozić koleją i drogą morską, więc elektrownia może stanąć przy odbiorcy albo w porcie.",
+       "right": "**Sztywno przy odkrywce** — kopalnia i elektrownia tworzą jeden kompleks paliwowo-energetyczny połączony taśmociągiem."
+      },
+      {
+       "aspect": "Przykłady w Polsce",
+       "left": "Elektrownie Kozienice, Połaniec, Opole — zaopatrywane koleją z Górnego Śląska.",
+       "right": "Zespoły Bełchatów, Turów oraz Pątnów–Adamów–Konin, każdy przy własnej odkrywce."
+      },
+      {
+       "aspect": "Skutki środowiskowe wydobycia",
+       "left": "Osiadanie terenu i szkody górnicze, zasolone wody kopalniane, hałdy skały płonnej.",
+       "right": "**Lej depresyjny** sięgający kilkunastu kilometrów, trwałe obniżenie zwierciadła wód gruntowych, konieczność rekultywacji wyrobiska."
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Zalety i wady źródeł konwencjonalnych",
+     "caption": "W zadaniach typu „podaj dwie zalety i dwie wady” najwyżej punktowane są argumenty **konkretne i mierzalne** (emisja, sprawność, koszt, dyspozycyjność), a nie ogólniki w rodzaju „szkodzi środowisku”.",
+     "headers": [
+      "Źródło",
+      "Zalety",
+      "Wady"
+     ],
+     "rows": [
+      [
+       "Węgiel",
+       "Duże i dobrze rozpoznane zasoby; niska cena paliwa; niezależność od importu w krajach z własnymi złożami; praca niezależna od pogody i pory dnia",
+       "Najwyższa emisja $CO_2$ na jednostkę energii; emisja $SO_2$, $NO_x$ i pyłów; niska sprawność starych bloków; degradacja terenu przez wydobycie; duże zużycie wody"
+      ],
+      [
+       "Ropa naftowa",
+       "Bardzo wysoka wartość energetyczna; łatwy transport i magazynowanie; niezastąpiona w transporcie i jako surowiec petrochemiczny",
+       "Wysoka cena; koncentracja zasobów w regionach niestabilnych politycznie; emisja $CO_2$; ryzyko katastrof ekologicznych przy wydobyciu i przewozie morskim"
+      ],
+      [
+       "Gaz ziemny",
+       "Najniższa emisja $CO_2$ i zanieczyszczeń wśród paliw kopalnych; najwyższa sprawność elektrowni cieplnych; błyskawiczna regulacja mocy wspierająca OZE; mała powierzchnia zajmowana przez elektrownię",
+       "Zależność od gazociągu lub terminala LNG; bardzo zmienna cena; podatność na wykorzystanie jako narzędzie nacisku politycznego; ulatniający się metan jest silnym gazem cieplarnianym"
+      ],
+      [
+       "Paliwo jądrowe",
+       "Brak emisji $CO_2$ i zanieczyszczeń powietrza; ogromna gęstość energii w paliwie; najwyższa dyspozycyjność (praca ok. 90% czasu w roku); niewielkie zużycie surowca i zajętej powierzchni",
+       "Bardzo wysoki koszt i długi czas budowy; odpady promieniotwórcze wymagające składowania przez tysiące lat; ryzyko awarii (Czarnobyl 1986, Fukushima 2011); duże zapotrzebowanie na wodę chłodzącą; opór społeczny"
+      ]
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Francja — państwo zbudowane na atomie",
+     "region": "Francja, Europa Zachodnia",
+     "text": "Francja nie ma znaczących złóż węgla, ropy ani gazu. Gdy kryzys naftowy 1973 r. gwałtownie podniósł ceny ropy, rząd uznał **uzależnienie od importu paliw za zagrożenie dla suwerenności** i uruchomił program budowy elektrowni jądrowych (tzw. plan Messmera). W ciągu dwóch dekad powstało kilkadziesiąt reaktorów, dzięki czemu dziś **około dwóch trzecich francuskiej energii elektrycznej pochodzi z atomu** — to najwyższy taki udział na świecie. Skutki są wielorakie: Francja ma jedną z **najniższych w Europie emisji $CO_2$ przypadających na jednostkę wytworzonej energii elektrycznej** i bywa jej stałym eksporterem do sąsiadów. Ujawniły się jednak i słabości modelu. Reaktory budowane w tym samym czasie **starzeją się jednocześnie**, przez co remonty kumulują się w jednym okresie, a w suche, upalne lata rzeki — Rodan czy Garonna — bywają zbyt ciepłe i zbyt płytkie, by odbierać ciepło ze skraplaczy, co zmusza do ograniczania mocy właśnie wtedy, gdy zapotrzebowanie rośnie.",
+     "takeaway": "Struktura miksu energetycznego państwa jest w dużej mierze **decyzją polityczną podjętą pod presją konkretnej sytuacji surowcowej** — a raz podjęta wiąże kraj na pół wieku, bo elektrownia to inwestycja na 40–60 lat."
+    },
+    {
+     "type": "map-explore",
+     "title": "Geografia energetyki konwencjonalnej",
+     "caption": "Kliknij znaczniki. Zwróć uwagę, jak silnie **skoncentrowana** jest produkcja paliw — i jak niewiele punktów na mapie wystarczy, by zachwiać dostawami dla całego świata.",
+     "center": [
+      30,
+      45
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 37.87,
+       "lng": 112.55,
+       "label": "Shanxi (Chiny)",
+       "text": "Serce największego zagłębia węglowego świata. Chiny wydobywają około **połowy światowego węgla** i zużywają go niemal w całości u siebie — to główny powód, dla którego węgiel wciąż jest źródłem nr 1 w elektroenergetyce świata."
+      },
+      {
+       "lat": 31.85,
+       "lng": -102.37,
+       "label": "Basen Permski (USA, Teksas)",
+       "text": "Dzięki **szczelinowaniu hydraulicznemu** złóż łupkowych USA stały się po 2010 r. największym producentem ropy i gazu na świecie, przechodząc z pozycji importera do eksportera — podręcznikowy przykład tego, jak technologia przebudowuje geografię polityczną."
+      },
+      {
+       "lat": 25.43,
+       "lng": 49.62,
+       "label": "Ghawar (Arabia Saudyjska)",
+       "text": "Największe konwencjonalne złoże ropy naftowej świata, eksploatowane od lat 50. XX w. Bardzo niskie koszty wydobycia sprawiają, że Arabia Saudyjska pełni rolę **producenta regulującego** — może zwiększać lub ograniczać podaż, wpływając na światowe ceny."
+      },
+      {
+       "lat": 26.57,
+       "lng": 56.25,
+       "label": "Cieśnina Ormuz",
+       "text": "Wąskie gardło o szerokości niespełna 40 km, przez które przepływa około **jednej piątej ropy będącej przedmiotem światowego handlu**. Jej zablokowanie natychmiast podniosłoby ceny na wszystkich kontynentach — modelowy przykład zagrożenia bezpieczeństwa energetycznego."
+      },
+      {
+       "lat": 70.4,
+       "lng": 68.3,
+       "label": "Półwysep Jamał (Rosja)",
+       "text": "Jedno z największych zagłębi gazowych świata, położone za kołem podbiegunowym. Gaz płynie stąd tysiące kilometrów gazociągami, a **gazociąg wiąże dostawcę z odbiorcą na dziesięciolecia** — dlatego gaz jest paliwem najbardziej podatnym na wykorzystanie politycznie."
+      },
+      {
+       "lat": 50.99,
+       "lng": 2.14,
+       "label": "Elektrownia jądrowa Gravelines (Francja)",
+       "text": "Sześć reaktorów o łącznej mocy ponad 5 GW, chłodzonych wodą morską — typowa dla Francji lokalizacja **nad wodą i blisko uprzemysłowionego odbiorcy**. Nadmorskie położenie uniezależnia elektrownię od letnich niżówek na rzekach."
+      },
+      {
+       "lat": 51.27,
+       "lng": 19.33,
+       "label": "Elektrownia Bełchatów (Polska)",
+       "text": "Największa elektrownia na węgiel brunatny w Europie, zasilana taśmociągami wprost z sąsiedniej odkrywki, a zarazem **największe pojedyncze źródło emisji $CO_2$ w Unii Europejskiej**. Wzorcowy kompleks paliwowo-energetyczny: kopalnia i elektrownia jako jeden organizm."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Bezpieczeństwo energetyczne",
+     "text": "Zdolność państwa do **pokrycia bieżącego i przewidywanego zapotrzebowania odbiorców na energię** w sposób technicznie i ekonomicznie uzasadniony, przy zachowaniu wymagań ochrony środowiska. W praktyce opiera się na czterech filarach: **dostępności** surowca, **niezawodności** dostaw, **akceptowalnej cenie** oraz **dywersyfikacji** źródeł i kierunków importu.",
+     "note": "Stąd bierze się sens takich inwestycji jak terminal LNG w Świnoujściu czy gazociąg Baltic Pipe: nie powiększają one krajowych zasobów, lecz **mnożą kierunki, z których gaz może przyjść** — a im więcej niezależnych kierunków, tym mniejsza siła przetargowa pojedynczego dostawcy."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj państwo do cechy jego energetyki",
+     "instruction": "Za każdym razem pytaj: jakie surowce ten kraj ma na miejscu, a czego musi szukać za granicą? To pytanie prawie zawsze wystarcza, by odtworzyć strukturę miksu.",
+     "pairs": [
+      {
+       "left": "Francja",
+       "right": "około dwie trzecie energii elektrycznej z elektrowni jądrowych — odpowiedź na brak własnych paliw kopalnych"
+      },
+      {
+       "left": "Polska",
+       "right": "miks wciąż zdominowany przez węgiel kamienny i brunatny, oparty na własnych złożach"
+      },
+      {
+       "left": "Katar",
+       "right": "gospodarka oparta na eksporcie skroplonego gazu ziemnego z jednego olbrzymiego złoża"
+      },
+      {
+       "left": "Norwegia",
+       "right": "prąd niemal wyłącznie z elektrowni wodnych, a ropa i gaz z szelfu idą na eksport"
+      },
+      {
+       "left": "Chiny",
+       "right": "największy na świecie producent i konsument węgla, a zarazem lider mocy wiatrowych i słonecznych"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego elektrownie opalane węglem brunatnym lokalizuje się bezpośrednio przy odkrywce, a elektrownie na węgiel kamienny — niekoniecznie?",
+     "options": [
+      "Ponieważ węgiel brunatny zapala się samoczynnie i nie wolno go przewozić koleją",
+      "Ponieważ węgiel brunatny ma niską wartość opałową i bardzo wysoką wilgotność, więc jego transport na większe odległości jest nieopłacalny",
+      "Ponieważ złoża węgla brunatnego leżą zawsze nad dużymi rzekami, a kamiennego — z dala od nich",
+      "Ponieważ elektrownie na węgiel brunatny nie potrzebują wody chłodzącej"
+     ],
+     "correctIndex": 1,
+     "explanation": "Węgiel brunatny ma wartość opałową rzędu 7–11 MJ/kg i wilgotność sięgającą 40–60%, więc przewożąc go, transportuje się w dużej mierze **wodę i balast mineralny**. Koszt przewozu szybko przewyższa wartość zawartej w nim energii, dlatego opłaca się **spalić go na miejscu i przesłać gotową energię elektryczną linią wysokiego napięcia**. Węgiel kamienny (25–30 MJ/kg, niska wilgotność) znosi transport bez problemu, więc elektrownia może stanąć tam, gdzie jest odbiorca albo woda chłodząca."
+    },
+    {
+     "type": "quiz",
+     "question": "Które zestawienie poprawnie opisuje elektrownię jądrową na tle konwencjonalnej elektrowni cieplnej?",
+     "options": [
+      "Nie emituje $CO_2$, ma bardzo wysoką dyspozycyjność, ale wymaga ogromnych nakładów początkowych i wody do chłodzenia",
+      "Nie emituje $CO_2$ i nie wymaga wody chłodzącej, dzięki czemu można ją postawić na pustyni bez dodatkowych warunków",
+      "Emituje mniej $CO_2$ niż elektrownia węglowa, ale za to znacznie więcej tlenków siarki",
+      "Jest tania w budowie, lecz jej moc trzeba stale dostosowywać do warunków pogodowych"
+     ],
+     "correctIndex": 0,
+     "explanation": "Energia powstaje z **rozszczepienia jąder uranu**, a nie ze spalania, więc nie ma emisji $CO_2$, $SO_2$ ani pyłów. Reaktor pracuje przy stałym obciążeniu przez większość roku (dyspozycyjność ok. 90%), co czyni go typowym źródłem **podstawy obciążenia** systemu. Dalsza część układu jest jednak identyczna jak w elektrowni węglowej — para, turbina, skraplacz — więc **woda do chłodzenia jest niezbędna**, a koszt i czas budowy należą do najwyższych w całej energetyce."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Zadania o energetyce niemal zawsze każą **powiązać strukturę miksu z warunkami danego kraju**. Trzymaj się schematu: *jakie surowce są na miejscu → co trzeba importować → jaka jest polityka i historia (kryzysy, awarie, zobowiązania klimatyczne) → jakie z tego wynikają mocne i słabe strony*. Odpowiedź „bo tak jest taniej” nie wystarczy — punktowany jest **konkretny mechanizm**, np. „w Norwegii dominują elektrownie wodne, **ponieważ** wysokie opady i znaczne różnice wysokości w górach zapewniają duże i stałe przepływy, co pozwala uzyskać tanią energię bez importu paliwa”."
+    }
+   ]
+  },
+  {
+   "slug": "odnawialne-zrodla-energii-i-transformacja-energetyczna",
+   "title": "Odnawialne źródła energii i transformacja energetyczna",
+   "summary": "Pięć rodzajów OZE i warunki, jakich każdy z nich wymaga, dlaczego megawat megawatowi nierówny, po co elektrowniom szczytowo-pompowym nocna dziura w zapotrzebowaniu oraz na czym polega transformacja energetyczna i jakie stawia przed geografią wyzwania.",
+   "readingMinutes": 13,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "Źródła konwencjonalne mają jedną wspólną cechę: **człowiek decyduje, kiedy je uruchomić**. Odnawialne źródła energii odwracają tę zależność — to przyroda decyduje, kiedy wieje, kiedy świeci i ile wody niesie rzeka, a system elektroenergetyczny musi się do tego dostosować. Dlatego geografia OZE to nie tylko pytanie „gdzie są dobre warunki”, ale też „co zrobić, gdy warunków akurat nie ma”. W tej lekcji poznasz **pięć głównych rodzajów OZE** wraz z warunkami, jakich wymagają, nauczysz się liczyć, ile energii naprawdę daje zainstalowany megawat, i zrozumiesz, dlaczego **transformacja energetyczna** jest procesem nie tylko technicznym, lecz także społecznym i przestrzennym."
+    },
+    {
+     "type": "definition",
+     "term": "Odnawialne źródła energii (OZE)",
+     "text": "Źródła, których zasób **odtwarza się w krótkim czasie w procesach naturalnych** — szybciej, niż jest zużywany. Zdecydowana większość z nich to w istocie **przetworzona energia słoneczna**: nierównomierne nagrzewanie powierzchni Ziemi napędza wiatr, wiatr wzbudza falowanie, parowanie i opady zasilają rzeki, a fotosynteza gromadzi energię w biomasie. Poza tym schematem stoją tylko **energia geotermalna** (ciepło wnętrza Ziemi, głównie z rozpadu pierwiastków promieniotwórczych) i **energia pływów** (grawitacja Księżyca i Słońca).",
+     "note": "Odnawialny **nie znaczy automatycznie bezemisyjny ani nieszkodliwy**: spalanie biomasy emituje $CO_2$ i pyły, a zbiornik zaporowy zatapia dolinę i zatrzymuje rumowisko. Odwrotnie — energia jądrowa jest bezemisyjna, ale **nieodnawialna**. Te dwie osie podziału są niezależne i mylenie ich jest częstym błędem."
+    },
+    {
+     "type": "classification",
+     "title": "Pięć głównych rodzajów OZE i ich warunki",
+     "caption": "Przy każdym źródle zapamiętaj przede wszystkim **warunek przyrodniczy**, który przesądza o lokalizacji — właśnie o niego pyta większość poleceń typu „wyjaśnij, dlaczego akurat tam”.",
+     "groups": [
+      {
+       "name": "Energia wodna",
+       "description": "Wykorzystuje **energię potencjalną wody spiętrzonej zaporą**. Warunki: duże i wyrównane przepływy oraz znaczny **spad**, czyli różnica poziomów — stąd przewaga obszarów górskich i wyżynnych o wysokich opadach. Największa zaleta to **pełna sterowalność**: turbinę wodną uruchamia się w kilkadziesiąt sekund, dlatego elektrownie wodne stabilizują cały system. Wada: zatopienie doliny, przerwanie ciągłości rzeki dla ryb i zatrzymanie rumowiska powyżej zapory.",
+       "examples": [
+        "Norwegia — prąd niemal wyłącznie z wody",
+        "Brazylia i Paragwaj — Itaipú na Paranie",
+        "Chiny — Zapora Trzech Przełomów",
+        "Polska — Włocławek, Solina, Żarnowiec (szczytowo-pompowa)"
+       ]
+      },
+      {
+       "name": "Energia wiatru",
+       "description": "Moc turbiny rośnie **z trzecią potęgą prędkości wiatru**, dlatego niewielki wzrost prędkości daje ogromny przyrost energii — i dlatego liczy się nie tyle „czy wieje”, ile **jak mocno i jak regularnie**. Najlepsze warunki mają wybrzeża, przełęcze, otwarte równiny i przede wszystkim obszary morskie, gdzie brak przeszkód terenowych daje wiatr silniejszy i mniej porywisty. Wady: zmienność produkcji, hałas i infradźwięki, zagrożenie dla ptaków i nietoperzy, ingerencja w krajobraz.",
+       "examples": [
+        "Dania — pionier energetyki wiatrowej",
+        "Niemcy, Wielka Brytania — farmy na Morzu Północnym",
+        "Chiny i USA — największe moce zainstalowane",
+        "Polska — Pomorze, Kujawy, Suwalszczyzna oraz farmy planowane na Bałtyku"
+       ]
+      },
+      {
+       "name": "Energia słoneczna",
+       "description": "Wykorzystywana **fotowoltaicznie** (bezpośrednia zamiana światła na prąd w ogniwie) lub **termicznie** (kolektory i elektrownie słoneczne skupiające promienie na zbiorniku z czynnikiem roboczym). Warunek podstawowy to **duże usłonecznienie i wysoka roczna suma promieniowania** — najkorzystniejsze są strefy zwrotnikowe z klimatem suchym: mało chmur i mała wilgotność. Zaleta: instalacja skalowalna od dachu domu po park o mocy gigawata. Wada: **zero produkcji nocą** i wyraźny spadek zimą w umiarkowanych szerokościach.",
+       "examples": [
+        "Chiny — największa moc zainstalowana na świecie",
+        "Indie — park słoneczny Bhadla na pustyni Thar",
+        "USA — Kalifornia, pustynia Mojave",
+        "Hiszpania, Maroko (Ouarzazate)"
+       ]
+      },
+      {
+       "name": "Energia geotermalna",
+       "description": "Ciepło wnętrza Ziemi, dostępne opłacalnie tam, gdzie **stopień geotermiczny jest niski**, czyli temperatura rośnie z głębokością wyjątkowo szybko — na granicach płyt litosfery, w strefach wulkanicznych i ryftowych. Jest to źródło **stałe i całkowicie niezależne od pogody i pory roku**. Ograniczenie ma charakter czysto geologiczny: tam, gdzie nie ma anomalii cieplnej, opłaca się co najwyżej ciepłownictwo i balneologia, a nie produkcja prądu.",
+       "examples": [
+        "Islandia — grzbiet śródatlantycki",
+        "Włochy — Larderello, pierwsza taka elektrownia świata",
+        "Nowa Zelandia, Filipiny, Kenia (Ryft Wschodnioafrykański)",
+        "Polska — Podhale, Uniejów: ciepłownictwo, nie elektroenergetyka"
+       ]
+      },
+      {
+       "name": "Biomasa i biogaz",
+       "description": "Materia pochodzenia roślinnego i zwierzęcego: drewno i odpady drzewne, słoma, rośliny energetyczne (wierzba, miskant), a także **biogaz** z fermentacji odpadów w oczyszczalniach, na składowiskach i w gospodarstwach. Jedyne OZE, które jest **magazynowalne i sterowalne jak paliwo kopalne** — można je spalić dokładnie wtedy, gdy potrzeba. Wady: niska gęstość energii wymusza transport dużych objętości, spalanie emituje pyły, a uprawy energetyczne konkurują o ziemię z produkcją żywności.",
+       "examples": [
+        "Szwecja i Finlandia — biomasa drzewna w ciepłownictwie",
+        "Brazylia — bioetanol z trzciny cukrowej",
+        "Niemcy — sieć biogazowni rolniczych",
+        "Polska — współspalanie biomasy i biogazownie przy oczyszczalniach"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "title": "OZE — warunki, zalety, wady",
+     "caption": "Kolumna „warunek rozstrzygający” to zwykle klucz do zadania z mapą: jeśli w treści pojawia się region górski o dużych opadach, obszar wulkaniczny albo wybrzeże, źródło odpowiada się niemal samo.",
+     "headers": [
+      "Źródło",
+      "Warunek rozstrzygający",
+      "Główne zalety",
+      "Główne wady"
+     ],
+     "rows": [
+      [
+       "Wodna",
+       "Duży spad i wyrównany, obfity przepływ",
+       "Pełna sterowalność, długa żywotność, funkcja przeciwpowodziowa i retencyjna",
+       "Zatopienie doliny i przesiedlenia, bariera dla ryb, zatrzymanie rumowiska i erozja poniżej zapory"
+      ],
+      [
+       "Wiatrowa",
+       "Wysoka średnia prędkość wiatru i brak przeszkód terenowych",
+       "Brak emisji i zużycia wody, niski koszt energii, teren pod turbinami nadal rolniczy",
+       "Zmienność produkcji, hałas, kolizje ptaków i nietoperzy, konflikt krajobrazowy"
+      ],
+      [
+       "Słoneczna",
+       "Duże usłonecznienie i wysoka roczna suma promieniowania",
+       "Skalowalność od dachu po wielki park, produkcja w szczycie letniego zapotrzebowania, brak części ruchomych",
+       "Brak produkcji nocą, silna sezonowość w klimacie umiarkowanym, duża zajętość terenu"
+      ],
+      [
+       "Geotermalna",
+       "Niski stopień geotermiczny — strefy wulkaniczne i ryftowe",
+       "Praca ciągła niezależnie od pogody, bardzo mała zajętość terenu, wykorzystanie także w ciepłownictwie",
+       "Ścisłe ograniczenie geologiczne, wysoki koszt odwiertów, wody mineralizowane i korozyjne, uwalnianie $H_2S$"
+      ],
+      [
+       "Biomasa i biogaz",
+       "Dostępność taniego surowca w promieniu opłacalnego dowozu",
+       "Magazynowalna i sterowalna, zagospodarowuje odpady, wspiera lokalną gospodarkę",
+       "Emisja pyłów i $CO_2$ przy spalaniu, konkurencja o grunty rolne, kosztowny transport dużych objętości"
+      ]
+     ]
+    },
+    {
+     "type": "formula",
+     "title": "Współczynnik wykorzystania mocy",
+     "expression": "CF = \\frac{E}{P \\cdot t} \\cdot 100\\%",
+     "variables": [
+      {
+       "symbol": "CF",
+       "meaning": "współczynnik wykorzystania mocy (ang. capacity factor), w procentach"
+      },
+      {
+       "symbol": "E",
+       "meaning": "energia faktycznie wyprodukowana w danym okresie, np. w MWh"
+      },
+      {
+       "symbol": "P",
+       "meaning": "moc zainstalowana elektrowni, np. w MW"
+      },
+      {
+       "symbol": "t",
+       "meaning": "liczba godzin w okresie — dla roku 8760 h"
+      }
+     ],
+     "caption": "To najważniejszy wzór całej lekcji, bo tłumaczy, dlaczego **1 MW w fotowoltaice i 1 MW w elektrowni jądrowej to nie to samo**. Orientacyjne wartości roczne: elektrownia jądrowa ok. 80–90%, elektrownia węglowa ok. 50–60%, morska farma wiatrowa ok. 40–50%, lądowa farma wiatrowa ok. 25–35%, fotowoltaika w Polsce ok. 10–12%. Dlatego zestawienia mocy zainstalowanej i zestawienia produkcji energii dają zupełnie różne obrazy tego samego systemu."
+    },
+    {
+     "type": "cycle",
+     "title": "Doba pracy elektrowni szczytowo-pompowej",
+     "caption": "Elektrownia szczytowo-pompowa **niczego nie produkuje w bilansie** — zwraca mniej energii, niż pobiera (sprawność ok. 70–80%). Jest **magazynem**, a nie źródłem, i to właśnie czyni ją tak cenną w systemie z dużym udziałem niesterowalnych OZE.",
+     "stages": [
+      {
+       "name": "Nocna nadwyżka",
+       "text": "W nocy zapotrzebowanie spada, ale elektrownie jądrowe i węglowe nie mogą łatwo zmniejszyć mocy, a farmy wiatrowe pracują dalej. W systemie pojawia się **tania nadwyżka energii**."
+      },
+      {
+       "name": "Pompowanie",
+       "text": "Nadwyżka napędza pompy, które tłoczą wodę ze zbiornika dolnego do górnego. Energia elektryczna zamienia się w **energię potencjalną wody** — system właśnie się „naładował”."
+      },
+      {
+       "name": "Postój i gotowość",
+       "text": "Woda czeka w zbiorniku górnym. Elektrownia jest w **stanie gotowości**: od decyzji do pełnej mocy potrzebuje zwykle mniej niż dwie minuty, znacznie mniej niż jakikolwiek blok cieplny."
+      },
+      {
+       "name": "Szczyt zapotrzebowania",
+       "text": "W godzinach porannego i wieczornego szczytu — albo gdy nagle ustanie wiatr — brakuje mocy, a ceny energii są najwyższe. To moment na rozładowanie magazynu."
+      },
+      {
+       "name": "Generowanie",
+       "text": "Woda spływa rurociągiem do zbiornika dolnego, napędzając turbiny. Energia potencjalna wraca do sieci jako **energia elektryczna sprzedawana po najwyższej cenie** — na tej różnicy cen opiera się cała opłacalność inwestycji."
+      },
+      {
+       "name": "Powrót do stanu wyjściowego",
+       "text": "Zbiornik górny jest pusty, dolny pełny — układ czeka na kolejną nadwyżkę. Cykl powtarza się codziennie, a przy dużym udziale fotowoltaiki coraz częściej **w środku dnia**, gdy to słońce, a nie noc, daje nadwyżkę."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Farmy wiatrowe na lądzie a na morzu",
+     "leftLabel": "Lądowe (on-shore)",
+     "rightLabel": "Morskie (off-shore)",
+     "rows": [
+      {
+       "aspect": "Warunki wiatrowe",
+       "left": "Wiatr osłabiany i zaburzany przez rzeźbę, lasy i zabudowę — bardziej porywisty, produkcja mniej wyrównana.",
+       "right": "Nad gładką powierzchnią morza wiatr jest **silniejszy i bardziej wyrównany**, więc turbina pracuje dłużej i stabilniej."
+      },
+      {
+       "aspect": "Współczynnik wykorzystania mocy",
+       "left": "Zwykle ok. 25–35%.",
+       "right": "Zwykle ok. 40–50% — z tej samej mocy zainstalowanej powstaje wyraźnie więcej energii."
+      },
+      {
+       "aspect": "Koszt budowy",
+       "left": "Niższy: droga dojazdowa, fundament, przyłącze do istniejącej sieci.",
+       "right": "Znacznie wyższy: fundamenty w dnie morskim, statki instalacyjne, kable podmorskie, kosztowna eksploatacja."
+      },
+      {
+       "aspect": "Konflikty społeczne i przestrzenne",
+       "left": "Duże — hałas, migotanie cienia, protesty mieszkańców, w Polsce dodatkowo ograniczenia odległościowe od zabudowy.",
+       "right": "Mniejsze wobec mieszkańców, ale pojawiają się konflikty z **rybołówstwem, żeglugą i ochroną przyrody morskiej**."
+      },
+      {
+       "aspect": "Wielkość turbin",
+       "left": "Ograniczona możliwościami transportu drogowego elementów.",
+       "right": "Elementy dowozi się statkami, więc turbiny są **znacznie większe**, a większa średnica wirnika to więcej energii z jednego fundamentu."
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Islandia — energetyka napisana przez tektonikę",
+     "region": "Islandia, północny Atlantyk",
+     "text": "Islandia leży na **grzbiecie śródatlantyckim**, w strefie rozchodzenia się płyt litosfery, gdzie gorąca magma podchodzi niemal pod powierzchnię. Stopień geotermiczny jest tu wyjątkowo niski, więc wodę o temperaturze przekraczającej 200°C wydobywa się z niewielkich głębokości. Do tego dochodzi drugi dar środowiska: obfite opady znad Atlantyku i lodowce zasilają rwące rzeki spływające z wyżynnego wnętrza wyspy, co daje **duży spad i stały przepływ**. W rezultacie **praktycznie cała islandzka energia elektryczna pochodzi z OZE** — w większości z elektrowni wodnych, w pozostałej części z geotermalnych — a ciepło geotermalne ogrzewa niemal wszystkie budynki w kraju, wraz z chodnikami odśnieżanymi zimą i basenami czynnymi cały rok. Tania i bezemisyjna energia przyciągnęła na wyspę przemysł skrajnie energochłonny: **huty aluminium**, do których tlenek glinu dowozi się statkami z drugiego końca świata, bo koszt energii przewyższa koszt transportu surowca.",
+     "takeaway": "Warunki przyrodnicze mogą przesądzić nie tylko o miksie energetycznym, ale i o **strukturze całego przemysłu kraju** — tania energia sama przyciąga zakłady energochłonne, nawet jeśli surowiec trzeba przywieźć z innego kontynentu."
+    },
+    {
+     "type": "map-explore",
+     "title": "Gdzie OZE mają najlepsze warunki",
+     "caption": "Kliknij znaczniki i za każdym razem nazwij **warunek przyrodniczy**, który zdecydował o wyborze miejsca. To dokładnie ta operacja myślowa, której wymagają zadania z mapą.",
+     "center": [
+      25,
+      10
+     ],
+     "zoom": 2,
+     "markers": [
+      {
+       "lat": 64.04,
+       "lng": -21.4,
+       "label": "Hellisheiði (Islandia)",
+       "text": "Elektrownia geotermalna na aktywnym wulkanicznie polu w strefie ryftowej. Warunek rozstrzygający: **niezwykle niski stopień geotermiczny** na granicy rozchodzących się płyt — para o wysokiej temperaturze jest osiągalna płytkim odwiertem."
+      },
+      {
+       "lat": 30.82,
+       "lng": 111,
+       "label": "Zapora Trzech Przełomów (Chiny)",
+       "text": "Największa elektrownia świata pod względem mocy zainstalowanej, na Jangcy. Warunki: **ogromny przepływ rzeki i przełomowy odcinek doliny**, który pozwolił zbudować wysoką zaporę. Kosztem były przesiedlenia ponad miliona osób i zatrzymanie rumowiska niesionego do delty."
+      },
+      {
+       "lat": -25.41,
+       "lng": -54.59,
+       "label": "Itaipú (Brazylia i Paragwaj)",
+       "text": "Elektrownia na Paranie, wspólna inwestycja dwóch państw. Pokrywa większość zapotrzebowania Paragwaju — modelowy przykład tego, jak **jedna inwestycja hydroenergetyczna może zdefiniować bilans energetyczny całego kraju**."
+      },
+      {
+       "lat": 27.54,
+       "lng": 71.91,
+       "label": "Park słoneczny Bhadla (Indie)",
+       "text": "Jeden z największych parków fotowoltaicznych świata na pustyni Thar. Warunki idealne: **bardzo wysokie usłonecznienie, znikome zachmurzenie i tanie, nieprzydatne rolniczo grunty**. Problemem jest zapylenie — panele trzeba regularnie czyścić."
+      },
+      {
+       "lat": 54.75,
+       "lng": 2,
+       "label": "Dogger Bank i Morze Północne",
+       "text": "Płytka ławica na Morzu Północnym: **silny, wyrównany wiatr i niewielka głębokość** pozwalająca posadowić fundamenty w dnie. Stąd największe skupienie morskich farm wiatrowych na świecie."
+      },
+      {
+       "lat": 43.4,
+       "lng": 10.87,
+       "label": "Larderello (Włochy)",
+       "text": "Miejsce, gdzie w 1904 r. po raz pierwszy wytworzono prąd z pary geotermalnej. Warunek ten sam co na Islandii — **anomalia cieplna w obszarze aktywnym tektonicznie**, tu związana z młodym wulkanizmem Toskanii."
+      },
+      {
+       "lat": 54.78,
+       "lng": 18.09,
+       "label": "Elektrownia szczytowo-pompowa Żarnowiec (Polska)",
+       "text": "Największa polska elektrownia szczytowo-pompowa, wykorzystująca różnicę poziomów między wysoczyzną a Jeziorem Żarnowieckim. Nie produkuje energii netto — **magazynuje ją**, przenosząc z nocnej doliny do porannego i wieczornego szczytu."
+      }
+     ]
+    },
+    {
+     "type": "definition",
+     "term": "Transformacja energetyczna",
+     "text": "Długotrwały proces **zmiany struktury miksu energetycznego** — odchodzenia od paliw kopalnych na rzecz źródeł niskoemisyjnych — połączony ze wzrostem efektywności energetycznej, rozwojem magazynów i sieci oraz z **rozproszeniem produkcji**: zamiast kilkudziesięciu wielkich elektrowni pojawiają się setki tysięcy małych źródeł, w tym prosumenckich instalacji na dachach.",
+     "note": "Transformacja ma wyraźny wymiar **przestrzenny i społeczny**. Energetyka konwencjonalna była skupiona w kilku okręgach i dawała tam dziesiątki tysięcy miejsc pracy; energetyka odnawialna jest rozproszona i mniej pracochłonna w eksploatacji. Dlatego regionom górniczym towarzyszy program **sprawiedliwej transformacji** — wsparcia dla obszarów, które tracą swoją gospodarczą podstawę."
+    },
+    {
+     "type": "timeline",
+     "title": "Kamienie milowe polityki klimatyczno-energetycznej",
+     "caption": "Daty warto znać, bo zadania często proszą o **wskazanie przyczyny zmiany widocznej na wykresie** — a wykresy udziału OZE łamią się dokładnie w tych momentach.",
+     "events": [
+      {
+       "period": "1973",
+       "label": "Pierwszy kryzys naftowy",
+       "text": "Skokowy wzrost cen ropy uświadomił państwom importującym skalę uzależnienia od jednego surowca. To wtedy ruszają pierwsze programy oszczędzania energii, francuski program jądrowy i duńskie badania nad energetyką wiatrową."
+      },
+      {
+       "period": "1997",
+       "label": "Protokół z Kioto",
+       "text": "Pierwsze porozumienie międzynarodowe nakładające na kraje rozwinięte **wiążące limity emisji gazów cieplarnianych**. Krajów rozwijających się nie objęto zobowiązaniami, co stało się jego główną słabością."
+      },
+      {
+       "period": "2015",
+       "label": "Porozumienie paryskie",
+       "text": "Niemal wszystkie państwa świata zgadzają się dążyć do zatrzymania wzrostu średniej temperatury **wyraźnie poniżej 2°C, a w miarę możliwości na poziomie 1,5°C** względem epoki przedprzemysłowej. Każdy kraj deklaruje własny wkład — stąd polityki niskoemisyjne trafiają do prawa krajowego."
+      },
+      {
+       "period": "2019",
+       "label": "Europejski Zielony Ład",
+       "text": "Unia Europejska przyjmuje cel **neutralności klimatycznej do 2050 r.** i podporządkowuje mu politykę przemysłową, transportową i rolną. Powstaje Fundusz Sprawiedliwej Transformacji dla regionów górniczych."
+      },
+      {
+       "period": "2021",
+       "label": "Pakiet „Gotowi na 55”",
+       "text": "Zestaw przepisów mających obniżyć emisje UE o **co najmniej 55% do 2030 r.** względem 1990 r.: zaostrzenie systemu handlu uprawnieniami do emisji, wyższe cele dla OZE i efektywności energetycznej."
+      },
+      {
+       "period": "2022",
+       "label": "Kryzys energetyczny w Europie",
+       "text": "Gwałtowne ograniczenie dostaw gazu z Rosji podnosi ceny energii i przesuwa akcent debaty z klimatu na **bezpieczeństwo dostaw** — okazuje się, że oba cele prowadzą do tego samego wniosku: mniej importowanych paliw kopalnych, więcej źródeł własnych."
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Uważaj na trzy klasyczne pomyłki. Po pierwsze, **moc zainstalowana (MW) to nie produkcja (MWh)** — 1 MW fotowoltaiki daje w Polsce w ciągu roku około trzy razy mniej energii niż 1 MW farmy wiatrowej i około ośmiokrotnie mniej niż 1 MW w elektrowni jądrowej. Po drugie, **elektrownia szczytowo-pompowa nie jest źródłem energii, lecz jej magazynem** — oddaje mniej, niż pobrała. Po trzecie, **„odnawialne” nie znaczy „bezemisyjne”**: biomasa przy spalaniu emituje $CO_2$ i pyły, a energia jądrowa jest bezemisyjna, choć nieodnawialna."
+    },
+    {
+     "type": "quiz",
+     "question": "Farma wiatrowa o mocy zainstalowanej 50 MW wyprodukowała w ciągu roku 131 400 MWh energii. Ile wynosi jej współczynnik wykorzystania mocy?",
+     "options": [
+      "Około 15%",
+      "Około 30%",
+      "Około 45%",
+      "Około 60%"
+     ],
+     "correctIndex": 1,
+     "explanation": "Energia możliwa do uzyskania przy pracy z mocą maksymalną przez cały rok to $50\\ \\text{MW} \\cdot 8760\\ \\text{h} = 438\\ 000$ MWh. Zatem $CF = \\frac{131\\,400}{438\\,000} \\cdot 100\\% = 30\\%$. Taki wynik jest typowy dla **lądowej farmy wiatrowej** — morska osiągnęłaby ok. 40–50%, a fotowoltaika w Polsce zaledwie ok. 10–12%. Właśnie dlatego z zestawienia mocy zainstalowanej nie wolno wprost wnioskować o udziale danego źródła w produkcji energii."
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego elektrownie geotermalne wytwarzające energię elektryczną budowane są na Islandii, we Włoszech czy na Filipinach, a w Polsce energię geotermalną wykorzystuje się niemal wyłącznie do ogrzewania?",
+     "options": [
+      "Ponieważ w Polsce obowiązuje zakaz wykonywania głębokich odwiertów",
+      "Ponieważ w Polsce nie ma wód podziemnych na dużych głębokościach",
+      "Ponieważ tamte obszary leżą w strefach aktywnych tektonicznie, gdzie stopień geotermiczny jest niski i płytko występuje woda o wysokiej temperaturze, a w Polsce temperatura rośnie z głębokością znacznie wolniej",
+      "Ponieważ polskie wody geotermalne są zbyt mało zmineralizowane, by napędzać turbinę"
+     ],
+     "correctIndex": 2,
+     "explanation": "O opłacalności geotermii decyduje **stopień geotermiczny** — liczba metrów, o którą trzeba zejść, by temperatura wzrosła o 1°C. Na granicach płyt litosfery i w obszarach wulkanicznych magma podchodzi blisko powierzchni, więc płytkim odwiertem sięga się wody i pary o temperaturze grubo ponad 150°C, wystarczającej do napędzenia turbiny. Polska leży wewnątrz płyty, na starych, spokojnych strukturach — temperatura rośnie tu wolno, a wody z Podhala czy Uniejowa mają kilkadziesiąt stopni, co wystarcza do **ciepłownictwa, balneologii i rekreacji, ale nie do produkcji prądu**."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "Gdy polecenie brzmi „oceń zasadność budowy elektrowni X w regionie Y”, buduj odpowiedź trzytorowo: **warunek przyrodniczy** (wiatr, spad, usłonecznienie, stopień geotermiczny), **warunek techniczno-ekonomiczny** (sieć przesyłowa, odbiorca, dostępność terenu, koszt) i **skutek uboczny** (krajobraz, hałas, zatopienie doliny, konflikt z rolnictwem lub rybołówstwem). Argumenty za i przeciw wyprowadzaj z tych samych warunków — np. „nadmorskie położenie zapewnia silny i wyrównany wiatr, **ale zarazem** oznacza konflikt z rybołówstwem i szlakami migracji ptaków”. Takie zestawienie jest w kluczu punktowane jako pełna ocena."
+    }
+   ]
+  },
+  {
+   "slug": "galezie-przemyslu-przetworczego-i-srodowisko",
+   "title": "Gałęzie przemysłu przetwórczego i wpływ przemysłu na środowisko",
+   "summary": "Jak działa huta i dlaczego stal wytapia się dziś w portach, a aluminium pod norweskimi elektrowniami wodnymi; czym różnią się logiki lokalizacyjne chemii, przemysłu elektromaszynowego, spożywczego i włókienniczego oraz jak każda z tych gałęzi odciska się na poszczególnych komponentach środowiska.",
+   "readingMinutes": 14,
+   "blocks": [
+    {
+     "type": "intro",
+     "text": "„Przemysł przetwórczy” to nie jedna branża, lecz kilkanaście bardzo różnych światów. Huta przerabia miliony ton rudy i potrzebuje portu; farbiarnia potrzebuje taniej siły roboczej; wytwórnia leków — uniwersytetu. Ta lekcja porządkuje **gałęzie przetwórstwa** według tego, co dla każdej z nich jest naprawdę decydujące: jaki wsad wchodzi do zakładu, ile masy w procesie ubywa lub przybywa, ile potrzeba energii i jakich ludzi. Na końcu spojrzymy na rachunek, którego długo nie prowadzono — **koszty środowiskowe**: co dokładnie i którym komponentem środowiska płaci się za tonę stali, cukru czy tkaniny."
+    },
+    {
+     "type": "definition",
+     "term": "Hutnictwo (metalurgia)",
+     "text": "Dział przemysłu ciężkiego zajmujący się **otrzymywaniem metali z rud** oraz ich wstępną obróbką (odlewaniem, walcowaniem). Dzieli się na **hutnictwo żelaza i stali** (metalurgia żelaza, tzw. metalurgia czarna) oraz **hutnictwo metali nieżelaznych** (metalurgia kolorowa) — miedzi, aluminium, cynku, ołowiu, cyny, niklu. Hutnictwo jest klasycznym przemysłem **materiałochłonnym i energochłonnym**, a przy tym typowym przykładem produkcji, w której masa wsadu jest wielokrotnie większa od masy wyrobu.",
+     "note": "Hutnictwo dostarcza wsadu niemal całemu przemysłowi elektromaszynowemu i budownictwu — dlatego jego rozmieszczenie od XIX w. wyznaczało szkielet uprzemysłowienia całych krajów."
+    },
+    {
+     "type": "process",
+     "title": "Od rudy do blachy — pełny cykl hutniczy",
+     "caption": "Huta zintegrowana (o pełnym cyklu) prowadzi wszystkie te etapy na jednym terenie, bo półprodukty opłaca się przekazywać dalej w stanie gorącym — przerwanie ciągu oznaczałoby ponowne ich nagrzewanie.",
+     "steps": [
+      {
+       "title": "1. Przygotowanie wsadu — spiekalnia i koksownia",
+       "text": "Rudę o niskiej zawartości żelaza najpierw **wzbogaca się** i **spieka w aglomerat** albo formuje w peletki, bo drobny pył zapchałby wielki piec. Równolegle węgiel koksujący poddaje się **koksowaniu** (suchej destylacji bez dostępu powietrza) — powstaje **koks**, a jako produkty uboczne gaz koksowniczy i smoła, które zasilają przemysł chemiczny. To najbardziej uciążliwy dla środowiska etap całej huty."
+      },
+      {
+       "title": "2. Wielki piec — redukcja tlenków żelaza",
+       "text": "Do pieca ładuje się warstwami aglomerat, koks i **topnik** (wapień). Koks pełni tu **trzy funkcje naraz**: jest paliwem, jest źródłem tlenku węgla(II), który **redukuje** tlenki żelaza ($Fe_2O_3 + 3CO \\rightarrow 2Fe + 3CO_2$), i jest rusztowaniem utrzymującym przewiewność wsadu. Topnik wiąże skałę płonną w **żużel**, który jako lżejszy zbiera się nad ciekłym metalem. Produktem jest **surówka** — żelazo z domieszką ok. 4% węgla, krucha i nieprzydatna do obróbki plastycznej."
+      },
+      {
+       "title": "3. Stalownia — świeżenie surówki",
+       "text": "W **konwertorze tlenowym** przez ciekłą surówkę przedmuchuje się czysty tlen, który wypala nadmiar węgla i domieszek (siarki, fosforu, krzemu). Reakcja jest silnie egzotermiczna, więc do wsadu dodaje się **złom** jako chłodziwo. Wynik: **stal** — stop o zawartości węgla poniżej 2%, kowalny i spawalny. Alternatywna droga to **piec łukowy (elektryczny)**, który topi wyłącznie złom prądem elektrycznym."
+      },
+      {
+       "title": "4. Odlewanie ciągłe i walcownia",
+       "text": "Ciekłą stal odlewa się w sposób ciągły w kęsy, slaby i wlewki, a następnie **walcuje** na gorąco i na zimno, otrzymując blachy, pręty, szyny, rury i kształtowniki. Dopiero te wyroby trafiają do przemysłu elektromaszynowego, budownictwa i stoczni."
+      },
+      {
+       "title": "5. Dwa modele huty — zintegrowana i złomowa",
+       "text": "**Huta zintegrowana** (koksownia + spiekalnia + wielki piec + stalownia + walcownia) jest ogromna, kapitałochłonna i przywiązana do dostaw rudy i koksu. **Huta złomowa (mini-mill)** z piecem łukowym jest mała, elastyczna i lokalizuje się przy **rynku złomu i taniej energii elektrycznej** — czyli w krajach wysoko rozwiniętych, gdzie złomu jest dużo. To dlatego kraje o dojrzałej gospodarce coraz większą część stali wytwarzają z recyklingu, a nie z rudy."
+      }
+     ]
+    },
+    {
+     "type": "compare",
+     "title": "Hutnictwo żelaza a hutnictwo metali nieżelaznych",
+     "leftLabel": "Hutnictwo żelaza i stali",
+     "rightLabel": "Hutnictwo metali nieżelaznych",
+     "rows": [
+      {
+       "aspect": "Bogactwo rudy",
+       "left": "Rudy stosunkowo bogate — wsad zawiera zwykle **kilkadziesiąt procent żelaza**, więc opłaca się przewozić go przez oceany.",
+       "right": "Rudy skrajnie ubogie — złoża porfirowe miedzi bywają poniżej **1% Cu**. Przewożenie takiej skały nie ma sensu."
+      },
+      {
+       "aspect": "Skutek dla lokalizacji",
+       "left": "**Orientacja przymorska**: ruda z Brazylii i Australii oraz węgiel koksujący docierają masowcami, więc huty stoją w portach (Taranto, Dunkierka, IJmuiden, Fukuyama).",
+       "right": "**Orientacja surowcowa**: zakład wzbogacania (flotacja) i huta powstają tuż przy kopalni, bo transportowałoby się głównie skałę płonną."
+      },
+      {
+       "aspect": "Rola energii",
+       "left": "Energia z koksu wchodzi do procesu razem z reduktorem — decyduje dostęp do węgla koksującego, nie do prądu.",
+       "right": "Przy aluminium i cynku kluczowa jest **energia elektryczna** do elektrolizy — stąd **orientacja energetyczna**."
+      },
+      {
+       "aspect": "Główne ośrodki",
+       "left": "Chiny (największy producent stali na świecie), Indie, Japonia, USA, Rosja; w Polsce Dąbrowa Górnicza i Kraków.",
+       "right": "Miedź — Chile (Chuquicamata, Escondida), Peru, pas miedziowy Zambii i DR Konga, Polska (LGOM: Głogów, Legnica); aluminium — Chiny, Rosja, Kanada, Zatoka Perska, Norwegia, Islandia."
+      },
+      {
+       "aspect": "Produkty uboczne",
+       "left": "Żużel wielkopiecowy (cement, podbudowa dróg), gaz wielkopiecowy, gaz koksowniczy i smoła.",
+       "right": "Przy prażeniu rud siarczkowych (cynk, ołów, miedź) powstaje $SO_2$, z którego produkuje się **kwas siarkowy** — huta staje się dostawcą przemysłu chemicznego."
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Trzy pary pojęć mylone na maturze. (1) **Surówka to nie stal** — surówka wychodzi z wielkiego pieca i ma ok. 4% węgla, stal powstaje dopiero po **świeżeniu** i ma go poniżej 2%. (2) Ciąg **boksyt → tlenek glinu → aluminium** ma dwa różne miejsca: tlenek glinu wytwarza się przy złożu w tropikach (bo z ok. 4 t boksytu zostają ok. 2 t tlenku — masy ubywa), a **elektrolizę** prowadzi się tam, gdzie prąd jest tani. (3) **Wzbogacanie rudy** (mechaniczne oddzielenie skały płonnej, np. flotacja) to nie to samo co **wytop** — pierwsze zmniejsza masę do przewiezienia, drugie wydobywa metal chemicznie."
+    },
+    {
+     "type": "chart",
+     "variant": "bar",
+     "title": "Ile energii kosztuje tona metalu",
+     "caption": "Wartości orientacyjne — na maturze liczy się rząd wielkości i proporcja, nie dokładna liczba. Wniosek: recykling metali jest formą oszczędzania energii, a nie tylko surowca.",
+     "labels": [
+      "Stal z rudy (wielki piec + konwertor)",
+      "Stal ze złomu (piec łukowy)",
+      "Aluminium pierwotne (elektroliza)",
+      "Aluminium z recyklingu"
+     ],
+     "series": [
+      {
+       "name": "Zużycie energii",
+       "values": [
+        5,
+        1.5,
+        15,
+        0.8
+       ]
+      }
+     ],
+     "unit": "MWh/t"
+    },
+    {
+     "type": "classification",
+     "title": "Przemysł chemiczny — trzy piętra o trzech logikach lokalizacji",
+     "caption": "Im dalej w dół tabeli, tym mniejsza masa produkcji i tym wyższa wartość jednostkowa wyrobu — i tym bardziej surowiec przestaje decydować o lokalizacji.",
+     "groups": [
+      {
+       "name": "Chemia nieorganiczna wielkotonażowa (ciężka)",
+       "description": "Produkcja masowa o małej wartości jednostkowej: kwas siarkowy, amoniak i nawozy azotowe, nawozy fosforowe, soda, chlor. Decyduje **dostęp do surowca mineralnego i do taniej energii** — amoniak wytwarza się z gazu ziemnego, więc lokalizuje się go przy gazociągu lub złożu gazu. Transport gotowego wyrobu jest kosztowny w stosunku do jego ceny, więc zakład ciągnie także ku rynkowi rolniczemu.",
+       "examples": [
+        "Puławy i Włocławek (nawozy azotowe)",
+        "Police (nawozy fosforowe, import fosforytów przez port)",
+        "Zatoka Perska i Trynidad (amoniak przy tanim gazie)",
+        "Inowrocław i Janikowo (soda przy złożach soli)"
+       ]
+      },
+      {
+       "name": "Petrochemia i wielka synteza organiczna",
+       "description": "Przerób ropy naftowej i gazu na etylen, propylen i dalej na **tworzywa sztuczne, włókna syntetyczne, kauczuk syntetyczny**. Lokalizacja przy **węzłach transportu surowca** — portach naftowych i rurociągach — oraz przy dużych ilościach wody technologicznej. Zakłady tworzą sprzężone kompleksy: produkt uboczny jednej instalacji jest wsadem następnej, więc opłaca się je stawiać obok siebie.",
+       "examples": [
+        "Rotterdam i Antwerpia",
+        "Houston i wybrzeże Zatoki Meksykańskiej",
+        "Ludwigshafen nad Renem",
+        "Płock i Gdańsk"
+       ]
+      },
+      {
+       "name": "Chemia lekka (przetwórcza) i farmaceutyczna",
+       "description": "Leki, kosmetyki, farby, detergenty, odczynniki. Masa surowca jest znikoma wobec wartości wyrobu, więc czynnik surowcowy praktycznie znika. Decydują **wykwalifikowana kadra, zaplecze badawcze (B+R) i bliskość rynku zbytu** — to gałąź zaliczana już do przemysłu wysokiej techniki, o wysokiej naukochłonności.",
+       "examples": [
+        "Bazylea (Szwajcaria)",
+        "New Jersey i Boston (USA)",
+        "Hyderabad (Indie)",
+        "okolice dużych ośrodków akademickich"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "case-study",
+     "title": "Płock — rafineria bez ani jednego szybu naftowego",
+     "region": "Nizina Mazowiecka, Polska",
+     "text": "Największy polski kompleks rafineryjno-petrochemiczny stoi w regionie, pod którym nie ma ropy naftowej. Decyzję z przełomu lat 50. i 60. XX w. przesądził zestaw zupełnie innych warunków: przez okolicę poprowadzono **rurociąg naftowy „Przyjaźń”** dostarczający ropę ze wschodu, obok płynie **Wisła** — źródło ogromnych ilości wody technologicznej i odbiornik ścieków, teren jest płaski i tani, a położenie **centralne względem głównych rynków zbytu** (Warszawa, Łódź, Śląsk) skraca drogę gotowych paliw do odbiorcy. Zaplecze siły roboczej dało rolnicze, przeludnione wówczas Mazowsze. Po 1990 r. do tego samego układu dołączył **rurociąg produktowy** i port w Gdańsku, dzięki czemu zakład przestał zależeć od jednego kierunku dostaw.",
+     "takeaway": "W przetwórstwie surowców mineralnych o lokalizacji decyduje **dostęp do surowca dowożonego**, a nie sąsiedztwo złoża. Dlatego rafinerie i petrochemia świata skupiają się w portach i na węzłach rurociągów — w Rotterdamie, Singapurze czy Houston — a nie na polach naftowych Bliskiego Wschodu czy Syberii."
+    },
+    {
+     "type": "table",
+     "title": "Trzy gałęzie, trzy różne logiki",
+     "caption": "Ta sama zasada w trzech odsłonach: lokalizację dyktuje to, co w danym procesie jest najdroższe do przewiezienia albo najtrudniejsze do zastąpienia.",
+     "headers": [
+      "Cecha",
+      "Przemysł spożywczy",
+      "Przemysł włókienniczy i odzieżowy",
+      "Przemysł elektromaszynowy"
+     ],
+     "rows": [
+      [
+       "Wsad",
+       "Płody rolne, mleko, ryby, żywiec — surowce **nietrwałe i tracące masę** w przerobie",
+       "Włókna naturalne (bawełna, wełna, len) i chemiczne — lekkie, trwałe, łatwe w transporcie",
+       "Wyroby hutnictwa, tworzywa, podzespoły elektroniczne — półprodukty od setek kooperantów"
+      ],
+      [
+       "Dominujący czynnik lokalizacji",
+       "**Surowcowy** w przetwórstwie wstępnym (cukrownie, mleczarnie, przetwórnie ryb), **rynkowy** w przetwórstwie finalnym (piekarnie, browary, wytwórnie wód)",
+       "**Koszt pracy** — gałąź od dziesięcioleci wędruje tam, gdzie płace są najniższe; w odzieży dodatkowo bliskość rynków mody",
+       "**Wykwalifikowana kadra, kooperacja z poddostawcami i zaplecze B+R**; w montażu — koszt pracy"
+      ],
+      [
+       "Dlaczego tak",
+       "Z ok. 7 t buraków powstaje ok. 1 t cukru, a mleko psuje się w kilka dni — przewożenie surowca daleko byłoby stratą masy i jakości",
+       "Udział robocizny w koszcie uszycia koszuli jest wysoki, a sama technologia prosta i łatwa do przeniesienia",
+       "Wartość wyrobu jest wysoka, więc transport tanieje względem ceny; liczy się natomiast dostęp do wiedzy i sieci poddostawców"
+      ],
+      [
+       "Mobilność międzynarodowa",
+       "Mała — zakłady wstępnego przerobu są przywiązane do zaplecza rolniczego",
+       "Bardzo duża — pierwsza gałąź przenoszona za granicę: Europa → Azja Wschodnia → Bangladesz, Wietnam, Etiopia",
+       "Rozdzielona: **montaż** przenosi się do krajów tańszych, **projektowanie i B+R** zostaje w krajach wysoko rozwiniętych"
+      ],
+      [
+       "Przykłady koncentracji",
+       "Cukrownie Kujaw i Wielkopolski, przetwórnie ryb w Peru i Chile, mleczarstwo Podlasia",
+       "Bangladesz i Wietnam (odzież), Turcja, dawna Łódź jako polski ośrodek bawełniany",
+       "Wolfsburg i Detroit (motoryzacja), Shenzhen (elektronika), Tuluza i Seattle (lotnictwo)"
+      ]
+     ]
+    },
+    {
+     "type": "classification",
+     "title": "Wpływ przemysłu na środowisko — według komponentów",
+     "caption": "Na maturze nie punktuje się zdania „przemysł zanieczyszcza środowisko”. Punktuje się wskazanie **konkretnego zanieczyszczenia**, **komponentu**, na który działa, i **mechanizmu** — dokładnie tak, jak w poniższych grupach.",
+     "groups": [
+      {
+       "name": "Atmosfera",
+       "description": "**Emisja punktowa** z wysokich kominów: dwutlenek siarki, tlenki azotu, pyły z metalami ciężkimi, dwutlenek węgla. $SO_2$ i $NO_x$ reagują z wilgocią, dając **kwaśne deszcze**, które przez cyrkulację atmosferyczną spadają setki kilometrów dalej — to zanieczyszczenie **transgraniczne**. Wysoki komin nie usuwa problemu, tylko przenosi go na sąsiadów.",
+       "examples": [
+        "Czarny Trójkąt (pogranicze Polski, Czech i Niemiec) — zamieranie borów świerkowych w latach 80. XX w.",
+        "smog przemysłowy (londyński) przy inwersji temperatury",
+        "zakwaszenie jezior Skandynawii przez emisje z Europy Zachodniej"
+       ]
+      },
+      {
+       "name": "Hydrosfera",
+       "description": "Zrzuty ścieków przemysłowych (metale ciężkie, barwniki, związki organiczne), **zanieczyszczenie termiczne** wodami chłodniczymi elektrowni — cieplejsza woda zawiera mniej rozpuszczonego tlenu, co dusi organizmy wodne i sprzyja eutrofizacji — oraz **zasolenie rzek** słonymi wodami wypompowywanymi z kopalń. Odwadnianie kopalń odkrywkowych tworzy **leje depresyjne** obniżające poziom wód gruntowych na dziesiątki kilometrów.",
+       "examples": [
+        "zasolenie Wisły i Odry wodami kopalnianymi GOP-u",
+        "lej depresyjny wokół odkrywki Bełchatowa",
+        "ścieki farbiarni w dorzeczach Azji Południowej"
+       ]
+      },
+      {
+       "name": "Litosfera i gleby",
+       "description": "**Hałdy** skały płonnej i żużla, wyrobiska, **osiadanie terenu i szkody górnicze** nad wyeksploatowanymi wyrobiskami, a wokół hut — trwałe **skażenie gleb metalami ciężkimi** (ołowiem, kadmem, cynkiem, miedzią). Metale ciężkie nie ulegają rozkładowi: raz wprowadzone do gleby zostają w niej na dziesięciolecia i wchodzą do łańcucha pokarmowego, dlatego wokół hut wyłącza się grunty z produkcji żywności.",
+       "examples": [
+        "hałdy i zapadliska Górnośląskiego Okręgu Przemysłowego",
+        "skażenie gleb cynkiem i ołowiem w rejonie Olkusza i Bukowna",
+        "strefa ochronna wokół huty miedzi w Głogowie"
+       ]
+      },
+      {
+       "name": "Krajobraz, przestrzeń i bezpieczeństwo",
+       "description": "Degradacja krajobrazu, hałas i wibracje, wyłączanie dużych powierzchni z użytkowania rolniczego i rekreacyjnego, a po zamknięciu zakładów — **tereny poprzemysłowe** wymagające kosztownej rekultywacji. Osobną kategorią jest ryzyko **poważnych awarii przemysłowych**, w których jednorazowe uwolnienie substancji powoduje skutki nieporównywalne z emisją rutynową.",
+       "examples": [
+        "Seveso we Włoszech (1976) — uwolnienie dioksyn",
+        "Bhopal w Indiach (1984) — wyciek izocyjanianu metylu",
+        "Zagłębie Ruhry — przebudowa terenów pokopalnianych na parki i muzea"
+       ]
+      }
+     ]
+    },
+    {
+     "type": "tip",
+     "variant": "warning",
+     "text": "Nie mieszaj trzech rzeczy. (1) **Emisja punktowa** (przemysłowa) pochodzi z wysokich kominów i rozprasza się na dużą odległość; **niska emisja** to źródła do ok. 40 m — domowe piece i transport — i to ona najbardziej truje powietrze w samym mieście. Zakład przemysłowy nie jest sprawcą niskiej emisji. (2) **Smog przemysłowy (londyński)** to zimowa mgła z $SO_2$ i pyłów przy inwersji; **smog fotochemiczny (typu Los Angeles)** powstaje latem ze spalin pod działaniem promieniowania słonecznego. (3) **Zanieczyszczenie termiczne** dotyczy wód chłodniczych i tlenu w rzece — nie jest tym samym co **efekt cieplarniany**."
+    },
+    {
+     "type": "matching",
+     "title": "Dopasuj zakład do jego charakterystycznego oddziaływania",
+     "instruction": "Każdy zakład ma „własny” typ zanieczyszczenia, wynikający wprost z technologii, którą stosuje.",
+     "pairs": [
+      {
+       "left": "Huta cynku i ołowiu",
+       "right": "Trwałe skażenie gleb kadmem i ołowiem w promieniu kilku kilometrów"
+      },
+      {
+       "left": "Elektrownia cieplna nad rzeką",
+       "right": "Podniesienie temperatury wody i spadek zawartości rozpuszczonego tlenu"
+      },
+      {
+       "left": "Farbiarnia zakładu włókienniczego",
+       "right": "Barwne ścieki obciążone chemikaliami i metalami ciężkimi"
+      },
+      {
+       "left": "Cukrownia",
+       "right": "Sezonowe ścieki o bardzo wysokim ładunku substancji organicznych"
+      },
+      {
+       "left": "Kopalnia węgla kamiennego",
+       "right": "Hałdy skały płonnej, osiadanie terenu i zasolenie rzeki"
+      }
+     ]
+    },
+    {
+     "type": "quiz",
+     "question": "Dlaczego w Europie Zachodniej i w Japonii wielkie huty żelaza przeniosły się z zagłębi węglowych nad wybrzeże?",
+     "options": [
+      "Bo ruda i węgiel koksujący są dziś w większości importowane drogą morską, a jednocześnie spadło zużycie koksu na tonę surówki — decydujący stał się dostęp do portu",
+      "Bo woda morska zastąpiła wapień w roli topnika w wielkim piecu",
+      "Bo nad wybrzeżem obowiązują łagodniejsze normy emisji zanieczyszczeń",
+      "Bo wielkie piece muszą być chłodzone wodą o dużym zasoleniu"
+     ],
+     "correctIndex": 0,
+     "explanation": "To podręcznikowy przykład **zmienności czynników lokalizacji**. W XIX w. na tonę surówki zużywano kilka ton koksu, więc huta musiała stać na węglu — przewożenie takiej masy paliwa było najdroższą pozycją. Postęp techniczny (wzbogacona ruda, wdmuchiwanie pyłu węglowego, odzysk gazów) zredukował zużycie koksu wielokrotnie, a rewolucja w transporcie morskim uczyniła dowóz rudy z Brazylii i Australii tańszym niż z krajowych, wyczerpanych złóż. Punkt równowagi kosztów przesunął się do portu — stąd **orientacja przymorska** hut w Taranto, Dunkierce, IJmuiden czy Fukuyamie."
+    },
+    {
+     "type": "quiz",
+     "question": "Boksyt wydobywa się głównie w Gwinei, Australii i Brazylii, tlenek glinu wytwarza się zwykle w pobliżu tych kopalń, a największe huty aluminium działają m.in. w Norwegii, na Islandii i w kanadyjskim Quebecu. Co najlepiej wyjaśnia ten podział?",
+     "options": [
+      "Dwa etapy mają dwa różne czynniki wiodące: przy złożu opłaca się usunąć masę (z ok. 4 t boksytu zostają ok. 2 t tlenku glinu), a energochłonną elektrolizę prowadzi się tam, gdzie prąd jest najtańszy",
+      "Tlenek glinu ulega rozkładowi w transporcie morskim, więc trzeba go przerabiać na miejscu wydobycia",
+      "Kraje tropikalne nie dysponują pracownikami zdolnymi obsłużyć hutę aluminium",
+      "Umowy międzynarodowe zabraniają wytopu aluminium w krajach rozwijających się"
+     ],
+     "correctIndex": 0,
+     "explanation": "Rozdzielenie etapów wynika z **dwóch różnych rachunków kosztów**. Rafinacja boksytu na tlenek glinu zmniejsza masę o mniej więcej połowę, więc przeprowadzenie jej przed transportem oszczędza fracht — działa tu klasyczna **orientacja surowcowa**. Sama elektroliza pochłania rzędu kilkunastu MWh na tonę metalu, czyli energia stanowi ogromną część kosztu wytworzenia — działa **orientacja energetyczna**, a przyciągają ją kraje z tanią hydroenergią (Norwegia, Quebec), geotermią (Islandia) lub tanim gazem (Zatoka Perska). Aluminium bywa więc nazywane „skondensowaną energią elektryczną”."
+    },
+    {
+     "type": "quiz",
+     "question": "Które stwierdzenie poprawnie odróżnia emisję punktową (przemysłową) od niskiej emisji?",
+     "options": [
+      "Emisja punktowa pochodzi z wysokich kominów zakładów i rozprasza się na dużym obszarze, także poza granicami państwa; niska emisja pochodzi ze źródeł do ok. 40 m — domowych pieców i transportu — i najsilniej zanieczyszcza powietrze w bezpośrednim otoczeniu",
+      "Niska emisja to emisja o małym natężeniu, a punktowa o dużym — wysokość źródła nie ma znaczenia",
+      "Emisja punktowa dotyczy wyłącznie dwutlenku węgla, a niska emisja wyłącznie pyłów zawieszonych",
+      "Emisja punktowa występuje tylko zimą, a niska emisja tylko latem"
+     ],
+     "correctIndex": 0,
+     "explanation": "Kryterium podziału jest **wysokość źródła**, a nie wielkość ładunku zanieczyszczeń. Wysoki komin wprowadza spaliny w warstwę, w której wiatr rozprasza je na dziesiątki i setki kilometrów — dlatego przemysł odpowiada za zanieczyszczenia **transgraniczne** i kwaśne deszcze, a stężenia tuż przy zakładzie bywają niższe niż kilka kilometrów dalej. Zanieczyszczenia z niskich źródeł, zwłaszcza podczas **inwersji temperatury**, nie mają dokąd uciec i gromadzą się nad osiedlem — dlatego zimowy smog w polskich miastach obciąża głównie ogrzewanie indywidualne i transport, a nie kominy fabryk."
+    },
+    {
+     "type": "tip",
+     "variant": "exam",
+     "text": "W zadaniach o lokalizację zakładu przetwórczego stosuj stały schemat: **jaki wsad wchodzi → czy w procesie masy ubywa, czy przybywa → który czynnik przez to dominuje → czynnik uzupełniający (energia, woda, transport, kadra, rynek)**. Ubytek masy (ruda, buraki, drewno) ciągnie zakład do surowca; przyrost masy lub nietrwałość wyrobu (piwo, pieczywo, meble) ciągnie go do rynku; wysoka energochłonność (aluminium, karbid) — do taniej energii; wysoka naukochłonność (farmacja, elektronika) — do ośrodka akademickiego. W zadaniach o środowisko nigdy nie pisz „zakład zanieczyszcza środowisko”: wskaż **substancję** ($SO_2$, metale ciężkie, ścieki organiczne), **komponent** (powietrze, wody powierzchniowe, gleby, rzeźba) i **mechanizm skutku** (zakwaszenie, ubytek tlenu, wejście do łańcucha pokarmowego). Dopiero taka odpowiedź dostaje pełną punktację."
+    }
+   ]
+  }
+ ]
+}

@@ -1301,6 +1301,29 @@ export interface GeoExerciseAttempt {
   attempted_at: string;
 }
 
+export interface GeoLesson {
+  id: string;
+  topic_id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  // GeoBlock[] from lib/geografia/lesson-blocks.ts — kept as unknown[] here to
+  // avoid a client-type <-> db-type import cycle; cast at the call site (same
+  // pattern as MathLesson.content above).
+  content: unknown[];
+  reading_minutes: number;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GeoLessonProgress {
+  id: string;
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
 export interface GeoTopicProgress {
   id: string;
   user_id: string;

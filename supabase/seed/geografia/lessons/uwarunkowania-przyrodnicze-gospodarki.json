@@ -1,0 +1,1470 @@
+{
+  "topicSlug": "uwarunkowania-przyrodnicze-gospodarki",
+  "lessons": [
+    {
+      "slug": "rzezba-terenu-a-gospodarka",
+      "title": "Rzeźba terenu a rolnictwo, transport i osadnictwo",
+      "summary": "Jak nachylenie stoków, deniwelacje i wysokość nad poziomem morza decydują o tym, gdzie opłaca się orać, budować drogi i zakładać miasta — od Niziny Padańskiej po tarasy Banaue.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Środowisko przyrodnicze niczego człowiekowi nie **nakazuje**, ale bardzo wyraźnie **wycenia** jego decyzje. Hektar pszenicy na płaskiej nizinie i hektar pszenicy na stoku o nachyleniu 15° to ta sama roślina i ten sam klimat, ale zupełnie inny koszt paliwa, inne ryzyko utraty gleby i inna wydajność pracy. Spośród wszystkich elementów środowiska to właśnie **rzeźba terenu** przekłada się na pieniądze najbardziej bezpośrednio: przez nachylenie, przez **deniwelację** i przez wysokość nad poziomem morza. W tej lekcji prześledzimy trzy dziedziny, w których ten rachunek widać najlepiej: **rolnictwo**, **transport** i **osadnictwo**."
+        },
+        {
+          "type": "definition",
+          "term": "Nachylenie (spadek) stoku",
+          "text": "Kąt między powierzchnią stoku a płaszczyzną poziomą, podawany w stopniach lub w procentach. To **najważniejszy parametr rzeźby z punktu widzenia gospodarki**: wraz z nim rośnie koszt uprawy i budowy drogi, spada wydajność maszyn, a przede wszystkim gwałtownie rośnie **zagrożenie erozją wodną gleb**.",
+          "note": "Spadek 100% to nachylenie 45°, a nie kąt prosty — procent wyraża stosunek przewyższenia do odległości poziomej, a nie część kąta pełnego."
+        },
+        {
+          "type": "formula",
+          "title": "Spadek terenu",
+          "expression": "i = \\frac{\\Delta h}{l} \\cdot 100\\%",
+          "variables": [
+            { "symbol": "i", "meaning": "spadek (nachylenie) w procentach" },
+            { "symbol": "\\Delta h", "meaning": "deniwelacja, czyli różnica wysokości między dwoma punktami (m)" },
+            { "symbol": "l", "meaning": "odległość między punktami mierzona w poziomie, czyli odczytana z mapy (m)" }
+          ],
+          "caption": "Wzór, którym na maturze liczy się spadek odcinka drogi lub rzeki z mapy topograficznej. Uwaga: $l$ to odległość w poziomie, a nie długość stoku."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Rzeźba w liczbach, które warto pamiętać",
+          "items": [
+            { "value": "3", "unit": "°", "label": "Nachylenie, powyżej którego na gruncie ornym zaczyna się odczuwalne spłukiwanie gleby", "note": "Poniżej tej wartości erozja wodna praktycznie nie zagraża uprawom polowym" },
+            { "value": "12", "unit": "°", "label": "Praktyczna granica opłacalnej mechanizacji upraw polowych", "note": "Powyżej zaleca się trwałe użytki zielone, sady, tarasy lub zalesienie" },
+            { "value": "91", "unit": "%", "label": "Udział terenów poniżej 300 m n.p.m. (nizin) w powierzchni Polski" },
+            { "value": "173", "unit": "m n.p.m.", "label": "Średnia wysokość Polski — jednego z najniżej położonych krajów Europy Środkowej" },
+            { "value": "57", "unit": "km", "label": "Długość tunelu bazowego św. Gotarda (otwarty w 2016 r.), najdłuższego tunelu kolejowego świata" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Nachylenie stoku a sposób użytkowania ziemi",
+          "caption": "Progi orientacyjne — w praktyce przesuwa je rodzaj gleby, suma opadów i cena ziemi.",
+          "headers": ["Nachylenie", "Zagrożenie erozją", "Racjonalne użytkowanie", "Przykład regionu"],
+          "rows": [
+            ["do 3°", "znikome", "dowolne uprawy polowe, pełna mechanizacja", "Nizina Wielkopolska, Nizina Padańska"],
+            ["3–6°", "słabe", "uprawy polowe, ale orka w poprzek stoku", "Wyżyna Lubelska"],
+            ["6–12°", "umiarkowane", "uprawy z pasami ochronnymi, sady, płodozmian przeciwerozyjny", "Pogórze Karpackie"],
+            ["12–20°", "silne", "trwałe użytki zielone, sady tarasowe, winnice", "stoki doliny Mozeli, Roztocze"],
+            ["powyżej 20°", "bardzo silne", "las ochronny lub tarasy budowane ręcznie", "Kordyliera Środkowa na Luzonie, Wyżyna Lessowa"]
+          ]
+        },
+        {
+          "type": "layers",
+          "title": "Piętrowość gospodarowania w Alpach",
+          "caption": "Ta sama dolina, pięć różnych gospodarek — o tym, co się opłaca, decyduje wysokość. Kliknij w piętro, aby zobaczyć szczegóły.",
+          "orientation": "bottom-up",
+          "layers": [
+            { "name": "Dno doliny", "range": "do ok. 800 m n.p.m.", "text": "Uprawy polowe i sady, największe miasta (Innsbruck, Bolzano), autostrady i linie kolejowe. Płasko, ciepło i dostępnie — ale zimą **inwersja temperatury** zatrzymuje chłodne powietrze i zanieczyszczenia przy dnie.", "tone": "earth" },
+            { "name": "Stoki dolin i regiel dolny", "range": "800–1400 m n.p.m.", "text": "Wsie o układzie łańcuchowym, sady i winnice zakładane głównie na stokach o **ekspozycji południowej**, które otrzymują więcej promieniowania. Powyżej pól — lasy liściaste i mieszane.", "tone": "vegetation" },
+            { "name": "Regiel górny", "range": "1400–1900 m n.p.m.", "text": "Bory świerkowe i gospodarka leśna, dolne stacje kolei linowych, schroniska. Stałe osadnictwo już praktycznie zanika — zima trwa tu ponad pół roku.", "tone": "vegetation" },
+            { "name": "Piętro hal alpejskich", "range": "1900–2500 m n.p.m.", "text": "Powyżej **górnej granicy lasu**. Murawy wykorzystywane do letniego wypasu (**transhumancja** — sezonowe wyprowadzanie stad w góry), zimą trasy narciarskie. Gospodarka wyłącznie sezonowa.", "tone": "rock" },
+            { "name": "Piętro turni i lodowców", "range": "powyżej 2500 m n.p.m.", "text": "Brak osadnictwa i rolnictwa. Wartość gospodarcza to turystyka wysokogórska oraz woda: lodowce i śnieg zasilają zbiorniki **elektrowni wodnych**, które dają Austrii i Szwajcarii większość produkcji energii elektrycznej.", "tone": "ice" }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego stok wypycha rolnictwo — łańcuch przyczynowy",
+          "caption": "Bariera rzeźby nie działa jednym skokiem, tylko przez ciąg następstw. Na maturze punktuje się właśnie ten ciąg.",
+          "steps": [
+            { "title": "Nachylenie zwiększa energię spływu", "text": "Woda opadowa, która nie zdążyła wsiąknąć, spływa po powierzchni tym szybciej, im większe nachylenie. **Siła erozyjna strugi rośnie szybciej niż jej prędkość** — dwukrotnie szybszy spływ przenosi wielokrotnie więcej materiału." },
+            { "title": "Spłukiwanie zdziera poziom próchniczny", "text": "Najpierw znika najdrobniejsza i najbardziej wartościowa frakcja — cząstki ilaste i **próchnica**. Powstają żłobiny i wąwozy, a na wypukłościach stoku odsłania się jaśniejsza skała macierzysta." },
+            { "title": "Gleba płytsza — plony niższe", "text": "Cieńszy poziom próchniczny gorzej magazynuje wodę i składniki pokarmowe, więc plony spadają i stają się bardziej wrażliwe na suszę. Rolnik musi nadrabiać nawozami, co podnosi koszt produkcji." },
+            { "title": "Maszyny pracują wolniej i niebezpiecznie", "text": "Na stromym stoku ciągnik zużywa więcej paliwa, traci przyczepność, a przy nachyleniu powyżej ok. 12° rośnie ryzyko wywrotki. **Wydajność pracy spada, a koszt jednostkowy rośnie** — nawet gdy plon jeszcze jest przyzwoity." },
+            { "title": "Rolnik wycofuje grunt orny", "text": "Pole zamienia się w łąkę, pastwisko lub las — albo, jeśli ziemi jest za mało, w **tarasy**. To ostatni etap: bariera nie znika, tylko zostaje wykupiona ogromnym nakładem pracy." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Tarasy ryżowe Banaue — stok zamieniony w schody",
+          "region": "Kordyliera Środkowa, wyspa Luzon, Filipiny",
+          "text": "Lud Ifugao od stuleci (wg tradycji ok. 2000 lat) przekształca strome stoki na wysokości 700–1500 m n.p.m. w system poziomych tarasów podpartych murkami z kamienia i ubitej ziemi. Mechanizm jest prosty i genialny: **taras redukuje nachylenie pola do zera**, więc spływ powierzchniowy zamienia się w kontrolowane przelewanie wody z tarasu na taras, a gleba nie jest zdzierana, tylko zatrzymywana. Woda pochodzi z lasu na grzbietach, który działa jak gąbka — dlatego wylesienie szczytów natychmiast rozregulowuje cały system. Cena tego rozwiązania jest jednak wysoka: pola są za wąskie dla jakiejkolwiek maszyny, cała praca wykonywana jest ręcznie, a utrzymanie murków pochłania więcej roboczogodzin niż sam zbiór. Tarasy wpisano na listę światowego dziedzictwa UNESCO w 1995 r., a głównym zagrożeniem jest dziś **porzucanie ich przez młodych migrujących do miast**.",
+          "takeaway": "Tarasowanie to podręcznikowy przykład **posybilizmu**: ograniczenie rzeźby nie zostaje zniesione, lecz przesunięte — kosztem gigantycznego nakładu pracy, który opłaca się tylko przy dużej gęstości zaludnienia i braku alternatywnej ziemi."
+        },
+        {
+          "type": "compare",
+          "title": "Nizina Padańska i Alpy Centralne — ten sam kraj, inny rachunek",
+          "leftLabel": "Nizina Padańska (dolina Padu)",
+          "rightLabel": "Alpy Centralne",
+          "rows": [
+            { "aspect": "Rolnictwo", "left": "Intensywna produkcja polowa: ryż, kukurydza, rośliny pastewne, hodowla mleczna. Pełna mechanizacja, duże pola, nawadnianie wodą z Alp.", "right": "Gospodarka pastwiskowo-hodowlana. Grunty orne tylko na dnach dolin, produkcja roślinna praktycznie zanika powyżej regla dolnego." },
+            { "aspect": "Transport", "left": "Gęsta sieć autostrad i kolei, trasy prowadzone niemal prostoliniowo, koszt budowy kilometra najniższy we Włoszech.", "right": "Trasy wymuszone przez doliny i przełęcze, konieczne tunele, wiadukty i galerie przeciwlawinowe — kilometr drogi kosztuje wielokrotnie więcej." },
+            { "aspect": "Osadnictwo", "left": "Najgęściej zaludniony region Włoch, zwarte miasta i ciągła zabudowa wzdłuż osi Turyn–Mediolan–Wenecja.", "right": "Osadnictwo **liniowe** — wsie ciągną się wzdłuż potoków i dróg w dnie doliny; grzbiety i strome stoki pozostają puste." },
+            { "aspect": "Energetyka", "left": "Elektrownie cieplne i gazowe blisko odbiorców przemysłowych; brak własnych spadków wody.", "right": "Duże **elektrownie wodne i szczytowo-pompowe** — wysokie deniwelacje i obfite opady dają darmową energię potencjalną wody." },
+            { "aspect": "Główne ograniczenie", "left": "Zimowe **inwersje temperatury** w kotlinie zamkniętej Alpami i Apeninami: smog i wysokie stężenia pyłów.", "right": "Krótki okres wegetacyjny, lawiny, spływy błotne, wysoki koszt każdej inwestycji liniowej." }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Rzeźba, która kosztuje — sześć miejsc na mapie",
+          "caption": "Kliknij znacznik, aby zobaczyć, jak konkretna forma rzeźby przełożyła się na decyzję gospodarczą.",
+          "center": [30, 55],
+          "zoom": 2,
+          "markers": [
+            { "lat": 46.62, "lng": 8.59, "label": "Tunel bazowy św. Gotarda (Szwajcaria)", "text": "57 km tunelu poprowadzonego na wysokości ok. 550 m n.p.m., czyli **na poziomie dna doliny**. Pociąg nie musi już pokonywać podjazdu na przełęcz — może być dłuższy, cięższy i szybszy, a trasa nie jest zamykana przez zimę." },
+            { "lat": 47.0, "lng": 11.51, "label": "Przełęcz Brenner (Austria–Włochy)", "text": "Najniższa (ok. 1370 m n.p.m.) i dlatego najstarsza droga tranzytowa przez Alpy Wschodnie. **Przełęcz to obniżenie w grzbiecie** — naturalny korytarz, który od czasów rzymskich skupia cały ruch transalpejski." },
+            { "lat": 16.91, "lng": 121.06, "label": "Tarasy ryżowe Banaue (Filipiny)", "text": "Stok o nachyleniu ponad 20° przekształcony w tysiące poziomych półek. Rzeźba została pokonana, ale kosztem wykluczenia jakiejkolwiek mechanizacji." },
+            { "lat": 36.0, "lng": 109.5, "label": "Wyżyna Lessowa (Chiny)", "text": "Miąższe pokrywy lessu — bardzo żyzne, ale skrajnie podatne na rozmywanie. Wylesienie i orka doprowadziły do powstania gęstej sieci wąwozów; to stąd **Huang He (Rzeka Żółta) bierze swój ładunek zawiesiny** i swoją nazwę." },
+            { "lat": -16.5, "lng": -68.15, "label": "La Paz i El Alto (Boliwia)", "text": "Aglomeracja rozciągnięta między 3200 a 4100 m n.p.m. Rozrzedzone powietrze zmniejsza siłę nośną skrzydeł, dlatego lotnisko w El Alto potrzebuje wyjątkowo długiego pasa startowego, a samoloty startują z ograniczonym ładunkiem." },
+            { "lat": 45.46, "lng": 9.19, "label": "Mediolan i Nizina Padańska (Włochy)", "text": "Płaskie, dobrze nawodnione dno kotliny — najgęściej zaludniony i najbogatszy region Włoch. Ta sama zamknięta rzeźba, która ułatwia transport, zatrzymuje zimą zanieczyszczenia powietrza." }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pomyłki, które kosztują punkty. **Wysokość bezwzględna** to wysokość nad poziomem morza, a **deniwelacja (wysokość względna)** to różnica wysokości między dwoma punktami — teren na wysokości 4500 m n.p.m. może być płaski (Wyżyna Tybetańska), a teren na wysokości 300 m n.p.m. bardzo stromy (odcinki przełomowe dolin). Po drugie: **nie mieszaj stopni z procentami** — nachylenie 100% to 45°. Po trzecie: zdanie „góry są barierą transportową” nie znaczy „przez góry się nie jeździ” — jeździ się, tylko **drożej i wolniej**, a ruch koncentruje się w wąskich korytarzach dolin i przełęczy."
+        },
+        {
+          "type": "matching",
+          "title": "Forma rzeźby a jej gospodarcza konsekwencja",
+          "instruction": "Połącz element rzeźby z następstwem, które wywołuje w gospodarce.",
+          "pairs": [
+            { "left": "Kotlina śródgórska zimą", "right": "Inwersja temperatury, przymrozki i kumulacja zanieczyszczeń powietrza" },
+            { "left": "Stok o ekspozycji południowej w dolinie Mozeli", "right": "Wyższa suma promieniowania — opłacalna uprawa winorośli" },
+            { "left": "Przełęcz w grzbiecie górskim", "right": "Naturalny korytarz transportowy skupiający ruch tranzytowy" },
+            { "left": "Terasa zalewowa w dolinie dużej rzeki", "right": "Bardzo żyzne mady, ale stałe ryzyko zalania zabudowy" },
+            { "left": "Stok o nachyleniu powyżej 12°", "right": "Praktyczne wykluczenie mechanizacji upraw polowych" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Rolnik na Wyżynie Lubelskiej gospodaruje na polu o nachyleniu ok. 15°, na glebie wytworzonej z lessu. Które rozwiązanie najskuteczniej ograniczy degradację gleby, nie eliminując całkowicie produkcji?",
+          "options": [
+            "Orka wzdłuż linii największego spadku, aby ułatwić szybki odpływ wody z pola",
+            "Zwiększenie dawek nawozów mineralnych, które odbudują utracony poziom próchniczny",
+            "Zamiana pola na trwałe użytki zielone lub założenie uprawy tarasowej z orką w poprzek stoku",
+            "Pogłębienie orki jesiennej, aby woda wsiąkała w rozluźnioną warstwę"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczem jest **skrócenie i spowolnienie spływu powierzchniowego**. Trwała darń chroni glebę przez cały rok, a tarasy i orka w poprzek stoku zamieniają ciągły spadek na serię przeszkód, więc woda nie rozpędza się. Orka wzdłuż spadku (opcje 1 i 4) tworzy gotowe bruzdy odprowadzające wodę i **przyspiesza** erozję, a nawozy (opcja 2) nie odtwarzają zdartego poziomu próchnicznego — uzupełniają tylko składniki pokarmowe."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego kraje alpejskie budują kosztowne **tunele bazowe** (Gotard, Brenner) zamiast rozbudowywać drogi biegnące przez przełęcze?",
+          "options": [
+            "Tunel bazowy prowadzi trasę na poziomie dna doliny, więc likwiduje strome podjazdy, pozwala prowadzić dłuższe i cięższe składy i działa niezależnie od zimy",
+            "Budowa tunelu jest tańsza niż budowa drogi o tej samej długości",
+            "Przełęcze alpejskie leżą powyżej granicy wiecznego śniegu i są nieprzekraczalne",
+            "Tunele nie wymagają bieżącego utrzymania, w przeciwieństwie do dróg górskich"
+          ],
+          "correctIndex": 0,
+          "explanation": "Barierą nie jest sama obecność gór, lecz **deniwelacja i nachylenie trasy**. Pociąg pokonuje pochylenia rzędu kilkunastu promili, więc podjazd na przełęcz wymusza krótkie składy, dodatkowe lokomotywy i pętle rozwinięć. Tunel bazowy przebija masyw u jego podstawy i zamienia trasę górską w praktycznie płaską, a przy okazji uniezależnia ją od lawin i zamieci. Jest przy tym bardzo drogi (opcja 2 jest fałszywa), a przełęcze takie jak Brenner (1370 m n.p.m.) leżą znacznie poniżej granicy wiecznego śniegu."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach typu „wyjaśnij wpływ rzeźby terenu na…” CKE oczekuje **łańcucha przyczynowo-skutkowego z nazwanym mechanizmem**, a nie samego stwierdzenia „bo są góry”. Buduj odpowiedź w schemacie: *cecha rzeźby (duże nachylenie / znaczne deniwelacje / brak przełęczy) → mechanizm fizyczny lub ekonomiczny (szybszy spływ i erozja / większy koszt budowy i eksploatacji / krótszy okres wegetacyjny) → skutek gospodarczy (mniejsze plony, rzadsza sieć drogowa, osadnictwo liniowe w dolinach)*. Pamiętaj też o argumentach „na plus”: rzeźba górska daje **energię wodną**, **surowce odsłonięte przez erozję** i **rentę turystyczną** — pytanie o wpływ rzeźby prawie nigdy nie oznacza wyliczania samych utrudnień."
+        }
+      ]
+    },
+    {
+      "slug": "klimat-a-dzialalnosc-gospodarcza",
+      "title": "Klimat jako czynnik gospodarczy: okres wegetacyjny, opady i ekstrema",
+      "summary": "Dlaczego ta sama roślina rodzi w Wielkopolsce, a nie na Suwalszczyźnie, dlaczego Norylsk buduje się na palach, a Grecja żyje z bezdeszczowego lata — klimat jako rachunek kosztów w rolnictwie, turystyce, energetyce i budownictwie.",
+      "readingMinutes": 13,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rzeźba terenu jest widoczna gołym okiem, klimat trzeba przeliczyć — i właśnie dlatego jego wpływ na gospodarkę bywa niedoceniany. Tymczasem to klimat decyduje, **ile dni w roku roślina w ogóle rośnie**, czy pole trzeba nawadniać, czy fundament trzeba wbić w wieczną zmarzlinę i czy stok narciarski utrzyma śnieg bez armatek. W tej lekcji rozbierzemy klimat na trzy „śrubki”, o które CKE pyta najczęściej: **warunki termiczne** (okres wegetacyjny), **warunki opadowe** (bilans wodny) oraz **zjawiska ekstremalne** — a każdą z nich przełożymy na konkretny sektor gospodarki."
+        },
+        {
+          "type": "definition",
+          "term": "Okres wegetacyjny",
+          "text": "Liczba dni w roku, w których średnia dobowa temperatura powietrza jest równa lub wyższa niż **5°C** — czyli tyle dni, ile rośliny strefy umiarkowanej faktycznie mogą przyrastać. To **podstawowy termiczny wskaźnik przydatności rolniczej klimatu**: im dłuższy okres wegetacyjny, tym więcej gatunków wchodzi w grę, tym pewniejsze dojrzewanie odmian późnych i tym realniejszy drugi plon w sezonie.",
+          "note": "Nie myl go z **okresem bezprzymrozkowym** (liczbą dni bez spadków poniżej 0°C) — ten drugi decyduje o ryzyku dla sadów i warzyw, a bywa krótszy nawet o kilka tygodni."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Klimatyczne progi, które rządzą gospodarką",
+          "items": [
+            { "value": "5", "unit": "°C", "label": "Próg średniej dobowej temperatury, od którego liczy się okres wegetacyjny" },
+            { "value": "ok. 200", "unit": "dni", "label": "Przeciętna długość okresu wegetacyjnego w Polsce", "note": "Od ok. 225 dni na Nizinie Śląskiej po niespełna 150 dni w wyższych partiach gór" },
+            { "value": "ok. 600", "unit": "mm", "label": "Przeciętny roczny opad w Polsce — jeden z najniższych w Europie", "note": "W Tatrach ponad 1700 mm, a na Kujawach miejscami poniżej 500 mm" },
+            { "value": "250", "unit": "mm/rok", "label": "Umowna granica opadowa obszarów pustynnych", "note": "Poniżej niej rolnictwo bez nawadniania jest niemożliwe" }
+          ]
+        },
+        {
+          "type": "climate-chart",
+          "title": "Klimatogram, który tłumaczy grecką gospodarkę",
+          "station": "Ateny (Grecja), ok. 100 m n.p.m.",
+          "caption": "Przeanalizuj rozkład temperatur i opadów, zanim odsłonisz odpowiedź. Zwróć uwagę na to, w którym miesiącu wypada minimum opadowe.",
+          "temps": [10.2, 10.6, 12.7, 16.3, 21.4, 26.1, 28.8, 28.6, 24.7, 19.7, 15.4, 11.8],
+          "precip": [56, 47, 41, 30, 23, 11, 6, 7, 14, 53, 68, 71],
+          "answer": {
+            "climate": "Klimat podzwrotnikowy śródziemnomorski (Csa)",
+            "reasoning": "Maksimum opadów przypada na chłodną porę roku, a lato jest niemal bezdeszczowe (poniżej 15 mm w lipcu i sierpniu) — to skutek letniego przesunięcia **wyżu zwrotnikowego** nad basen Morza Śródziemnego. Gospodarczo daje to dwa przeciwstawne skutki: **rolnictwo musi być nawadniane latem** (stąd oliwka i winorośl — gatunki o głębokich korzeniach i twardych liściach), ale **turystyka zyskuje gwarancję bezdeszczowego sezonu** od czerwca do września, co pozwala budować cały model gospodarczy na wypoczynku nadmorskim."
+          }
+        },
+        {
+          "type": "table",
+          "title": "Jeden element klimatu — cztery różne sektory gospodarki",
+          "caption": "Tabela do nauki „w poprzek”: dla każdego elementu klimatu warto umieć podać skutek w więcej niż jednej gałęzi.",
+          "headers": ["Element klimatu", "Rolnictwo", "Energetyka i budownictwo", "Turystyka"],
+          "rows": [
+            ["Długość okresu wegetacyjnego", "decyduje o doborze gatunków i liczbie zbiorów w roku", "krótszy sezon budowlany, wyższe koszty ogrzewania", "krótszy sezon letni w wyższych szerokościach"],
+            ["Roczna suma i rozkład opadów", "przesądza o konieczności nawadniania lub melioracji odwadniającej", "warunkuje opłacalność **hydroenergetyki**", "opady letnie obniżają atrakcyjność wypoczynku plażowego"],
+            ["Usłonecznienie", "wpływa na zawartość cukru w owocach i na dojrzewanie zbóż", "decyduje o wydajności **fotowoltaiki i elektrowni CSP**", "podstawa produktu turystycznego „3S”"],
+            ["Prędkość i stałość wiatru", "wiatry suche nasilają **erozję wietrzną** gleb", "warunek opłacalności **farm wiatrowych**, zwłaszcza morskich", "sporty wodne, ale też ryzyko zamknięcia plaż"],
+            ["Zjawiska ekstremalne", "susze, przymrozki i grad niszczą plony w skali roku", "konieczne droższe konstrukcje odporne na cyklony, śnieg, zmarzlinę", "przerwy sezonu, wyższe składki ubezpieczeniowe"]
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Klimat morski a kontynentalny — dwie strategie rolne",
+          "leftLabel": "Irlandia (klimat umiarkowany ciepły morski)",
+          "rightLabel": "Północny Kazachstan (klimat umiarkowany chłodny kontynentalny)",
+          "rows": [
+            { "aspect": "Amplituda roczna temperatury", "left": "Bardzo mała — łagodne zimy bez trwałej pokrywy śnieżnej.", "right": "Bardzo duża — mroźne zimy i gorące lata, wysokie ryzyko przymrozków wiosennych." },
+            { "aspect": "Opady", "left": "Wysokie i rozłożone równomiernie przez cały rok, częste dni z opadem.", "right": "Niskie (ok. 300 mm), z maksimum letnim, ale przy dużym parowaniu — częste **susze glebowe**." },
+            { "aspect": "Dominujący kierunek produkcji", "left": "Trwałe użytki zielone i **hodowla bydła** — trawa rośnie niemal cały rok.", "right": "Ekstensywna uprawa **pszenicy jarej** na czarnoziemach i kasztanoziemach." },
+            { "aspect": "Ograniczenie", "left": "Mało dni słonecznych i chłodne lato — zboża trudno dojrzewają, brakuje ciepła.", "right": "Brakuje wody, a nie ciepła; plony wahają się z roku na rok o kilkadziesiąt procent." },
+            { "aspect": "Sposób radzenia sobie", "left": "Melioracje **odwadniające**, wypas przez większość roku, tanie utrzymanie stad.", "right": "Ugorowanie, zatrzymywanie śniegu na polach, pasy wiatrochronne przeciw erozji wietrznej." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Jak susza atmosferyczna zamienia się w stratę gospodarczą",
+          "caption": "Ścieżka od anomalii pogodowej do rachunku ekonomicznego — dokładnie ta, o którą pyta zadanie „wyjaśnij skutki suszy”.",
+          "steps": [
+            { "title": "Susza atmosferyczna", "text": "Przez kilka tygodni brakuje opadów, a nad obszarem utrzymuje się **układ wyżowy** z bezchmurnym niebem. Silne usłonecznienie podnosi temperaturę i zwiększa parowanie." },
+            { "title": "Susza glebowa", "text": "Zapas wody dostępnej dla roślin w warstwie korzeniowej wyczerpuje się. Rośliny zamykają aparaty szparkowe, aby ograniczyć transpirację — i tym samym **przerywają fotosyntezę**, więc przestają przyrastać." },
+            { "title": "Susza hydrologiczna", "text": "Spada poziom wód gruntowych i przepływy w rzekach. Nawadnianie staje się niemożliwe lub zostaje administracyjnie ograniczone, a elektrownie tracą wodę chłodzącą." },
+            { "title": "Straty w plonach", "text": "Największe wtedy, gdy niedobór wody trafi w **fazę krytyczną** rośliny (u zbóż — strzelanie w źdźbło i kłoszenie). Ta sama susza w innym miesiącu może być niemal nieszkodliwa." },
+            { "title": "Reakcja gospodarki", "text": "Rosną ceny płodów rolnych i pasz, spada pogłowie zwierząt, państwo uruchamia dopłaty klęskowe, a rolnicy przesuwają się w stronę odmian odpornych na suszę i nawodnień — co podnosi trwały koszt produkcji." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Budować na zmarzlinie — Norylsk i Jakuck",
+          "region": "Syberia Środkowa i Wschodnia (Rosja)",
+          "text": "W strefie **wieloletniej zmarzliny** grunt jest zamarznięty na dziesiątki, a lokalnie setki metrów w głąb; latem odmarza jedynie cienka **warstwa czynna**. Ciepło budynku postawionego bezpośrednio na takim podłożu przenika w dół, roztapia lód zawarty w gruncie i zamienia go w błotnistą maź — konstrukcja osiada nierównomiernie i pęka. Dlatego bloki, rurociągi i drogi buduje się tu **na palach wbitych poniżej warstwy czynnej**, z przewietrzaną pustką pod podłogą, która nie pozwala ciepłu dotrzeć do zmarzliny. Do tego dochodzą: krótki, kilkumiesięczny sezon budowlany, konieczność prowadzenia instalacji wodociągowych nad ziemią w ocieplanych kanałach oraz zaopatrzenie możliwe głównie w czasie krótkiej nawigacji rzecznej lub zimowymi drogami lodowymi. Efekt: koszt tej samej inwestycji jest tu wielokrotnie wyższy niż w strefie umiarkowanej, a **jedynym uzasadnieniem takiej lokalizacji są bogate złoża** (w Norylsku — niklu, miedzi i metali z grupy platynowców).",
+          "takeaway": "W warunkach ekstremalnych klimat nie zamyka drogi rozwojowi, ale **radykalnie podnosi próg opłacalności**: gospodarka pojawia się tam tylko wtedy, gdy renta z surowca przewyższa narzut kosztów przyrodniczych."
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Orientacyjna długość okresu wegetacyjnego w Polsce",
+          "caption": "Wartości przeciętne z wielolecia. Widać dwa nakładające się gradienty: z południowego zachodu ku północnemu wschodowi (rosnący kontynentalizm) oraz malejący wraz z wysokością.",
+          "labels": ["Wrocław", "Poznań", "Warszawa", "Białystok", "Zakopane"],
+          "series": [{ "name": "Dni ze średnią dobową temperaturą ≥ 5°C", "values": [225, 220, 210, 195, 160] }],
+          "unit": "dni"
+        },
+        {
+          "type": "classification",
+          "title": "Bariery przyrodnicze osadnictwa (bariery ekumeny)",
+          "caption": "Cztery klasyczne bariery, które CKE każe rozpoznawać na mapie świata. Trzy z nich mają podłoże klimatyczne, czwarta — wysokościowe.",
+          "groups": [
+            { "name": "Bariera termiczna (zimna)", "description": "Zbyt niska temperatura: krótki lub żaden okres wegetacyjny, wieloletnia zmarzlina, ogromne koszty ogrzewania i budownictwa. Rolnictwo praktycznie niemożliwe, gospodarka opiera się na surowcach i usługach specjalnych.", "examples": ["Arktyka kanadyjska", "Grenlandia", "Syberia Wschodnia", "Antarktyda"] },
+            { "name": "Bariera wodna (sucha)", "description": "Opady poniżej ok. 250 mm rocznie przy bardzo wysokim parowaniu. Osadnictwo skupia się wyłącznie w oazach i dolinach **rzek tranzytowych**, poza nimi możliwe jest tylko koczownicze pasterstwo.", "examples": ["Sahara", "Rub al-Chali", "Atakama", "pustynie Australii Zachodniej"] },
+            { "name": "Bariera świetlna", "description": "Noc polarna i długi okres bardzo małego usłonecznienia w wysokich szerokościach. Ogranicza fotosyntezę, obniża wydajność pracy i pogarsza samopoczucie mieszkańców; wymusza całoroczne oświetlenie sztuczne.", "examples": ["Svalbard", "północna Grenlandia", "północne wybrzeża Syberii"] },
+            { "name": "Bariera grawitacyjna (wysokościowa)", "description": "Powyżej ok. 5000 m n.p.m. rozrzedzone powietrze i niskie ciśnienie parcjalne tlenu uniemożliwiają stały pobyt bez aklimatyzacji. Spada wydajność silników i ludzi, rośnie koszt każdej operacji.", "examples": ["Wyżyna Tybetańska", "Himalaje", "najwyższe partie Andów"] }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na trzy klasyczne pułapki. Po pierwsze: **pogoda to nie klimat** — jedno suche lato nie zmienia typu klimatu i nie jest argumentem w zadaniu o warunkach gospodarowania; klimat to stan przeciętny z wielolecia. Po drugie: **okres wegetacyjny ≠ okres bezprzymrozkowy** — Wielkopolska ma długi okres wegetacyjny, ale wiosenne przymrozki wciąż zagrażają sadom. Po trzecie: sama **roczna suma opadów niczego nie przesądza** — 600 mm rozłożone równomiernie w Irlandii daje bujne łąki, a 600 mm spadłe w trzy miesiące pory deszczowej oznacza pół roku suszy; zawsze analizuj **rozkład opadów w roku i ich stosunek do parowania**."
+        },
+        {
+          "type": "matching",
+          "title": "Cecha klimatu a decyzja gospodarcza",
+          "instruction": "Połącz warunek klimatyczny z inwestycją lub rozwiązaniem, które w danym miejscu staje się opłacalne albo konieczne.",
+          "pairs": [
+            { "left": "Roczna suma opadów poniżej 250 mm", "right": "Rolnictwo możliwe wyłącznie z nawadnianiem — w oazach i dolinach rzek" },
+            { "left": "Ponad 300 dni słonecznych w roku i niska wilgotność", "right": "Wysoka opłacalność elektrowni fotowoltaicznych i słonecznych elektrowni termicznych" },
+            { "left": "Wieloletnia zmarzlina w podłożu", "right": "Budynki i rurociągi stawiane na palach, z przewietrzaną pustką pod podłogą" },
+            { "left": "Stały, silny wiatr zachodni nad płytkim szelfem", "right": "Morskie farmy wiatrowe o wysokim współczynniku wykorzystania mocy" },
+            { "left": "Pokrywa śnieżna utrzymująca się ponad 100 dni", "right": "Sezon narciarski rentowny bez kosztownego naśnieżania" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na Nizinie Śląskiej okres wegetacyjny trwa ok. 225 dni, a na Suwalszczyźnie ok. 190. Które wyjaśnienie tej różnicy jest poprawne i najpełniejsze?",
+          "options": [
+            "Na Suwalszczyźnie jest znacznie wyżej nad poziomem morza, więc temperatura spada zgodnie z gradientem pionowym",
+            "Rosnący ku północnemu wschodowi kontynentalizm i szerokość geograficzna dają chłodniejsze, dłuższe zimy, a lokalnie wzmacnia to wyższe położenie pojezierzy",
+            "Na Suwalszczyźnie roczna suma opadów jest wyższa, a opady bezpośrednio skracają okres wegetacyjny",
+            "Nizina Śląska leży w cieniu opadowym Sudetów, co podnosi jej średnią roczną temperaturę"
+          ],
+          "correctIndex": 1,
+          "explanation": "Okres wegetacyjny to wskaźnik **termiczny**, więc tłumaczą go czynniki wpływające na temperaturę. W Polsce działają jednocześnie: **wzrost kontynentalizmu ku wschodowi** (chłodniejsze, dłuższe zimy z dala od Atlantyku), **szerokość geograficzna** oraz **wysokość** — Suwalszczyzna leży kilkadziesiąt do ponad stu metrów wyżej niż Nizina Śląska, ale to czynnik dodatkowy, a nie główny (dlatego opcja 1 jest niepełna). Opady nie skracają okresu wegetacyjnego (opcja 3), a cień opadowy Sudetów zmniejsza opady, a nie podnosi temperatury w sposób decydujący (opcja 4)."
+        },
+        {
+          "type": "quiz",
+          "question": "Inwestor rozważa budowę ośrodka narciarskiego. Który zestaw warunków klimatycznych jest dla tej inwestycji najkorzystniejszy?",
+          "options": [
+            "Duża roczna suma opadów przy średniej temperaturze zimy powyżej 0°C i częstych odwilżach",
+            "Bardzo mroźna, ale sucha zima w klimacie kontynentalnym, z pokrywą śnieżną poniżej 10 cm",
+            "Obfite opady zimowe przy temperaturach utrzymujących się poniżej 0°C oraz stoki o ekspozycji północnej",
+            "Częste zimowe inwersje temperatury w kotlinie, dające ciepłe powietrze na stokach"
+          ],
+          "correctIndex": 2,
+          "explanation": "Potrzebne są **dwa warunki naraz**: dużo opadu zimą (żeby śnieg w ogóle spadł) i temperatura trwale poniżej 0°C (żeby pokrywa się utrzymała). Sama wysoka suma opadów przy odwilżach (opcja 1) daje deszcz i zanik pokrywy, a sam mróz bez opadu (opcja 2) — goły stok. **Ekspozycja północna** na półkuli północnej dodatkowo pomaga: stok otrzymuje mniej promieniowania, więc śnieg topnieje wolniej i sezon trwa dłużej. Inwersja (opcja 4) działa odwrotnie — zatrzymuje mróz w dnie doliny, a ociepla wyższe partie stoku."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Gdy zadanie brzmi „przedstaw wpływ warunków klimatycznych na rozwój (rolnictwa / turystyki / energetyki) w regionie X”, nie wystarczy opisać klimat — trzeba **wskazać konkretny element klimatu i przypisać mu konkretny skutek**. Sprawdzona lista kontrolna: (1) warunki termiczne — okres wegetacyjny, przymrozki, sumy temperatur; (2) warunki opadowe — suma, **rozkład w roku**, stosunek do parowania; (3) usłonecznienie i wiatr — jako **zasób energetyczny**, nie tylko jako pogoda; (4) zjawiska ekstremalne — susze, cyklony, gradobicia, zmarzlina. Odpowiedź na pełne punkty niemal zawsze zawiera przynajmniej jeden **argument za** i jeden **przeciw**, bo CKE ocenia umiejętność ważenia czynników, a nie wyliczankę."
+        }
+      ]
+    },
+    {
+      "slug": "woda-i-gleby-a-produkcja-rolna",
+      "title": "Zasoby wodne i gleby a produkcja rolna",
+      "summary": "Rolnictwo nawadniane Egiptu i Azji Południowej, strefy deficytu wody i cena, jaką się za nawodnienia płaci — oraz trzy najżyźniejsze regiony świata: czarnoziemy Ukrainy, Wielkie Równiny i wulkaniczne gleby Jawy.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rolnictwo to w gruncie rzeczy przemysł przetwarzający **wodę, światło i składniki pokarmowe** w biomasę. Klimat dostarcza dwóch pierwszych składników, gleba trzeciego — i to na styku tych dwóch zasobów rozstrzyga się, gdzie na świecie produkuje się żywność taniej niż gdzie indziej. W tej lekcji zobaczysz obie strony medalu: **jak brak wody da się obejść** (Egipt, Pendżab, Wielkie Równiny) i **ile to kosztuje** (zasolenie, zanik Jeziora Aralskiego, drenaż warstw wodonośnych), a także **dlaczego niektóre gleby są tak żyzne**, że wokół nich narastają jedne z najgęściej zaludnionych regionów Ziemi."
+        },
+        {
+          "type": "definition",
+          "term": "Stres wodny i niedobór wody (skala Falkenmarka)",
+          "text": "Miara zasobów wody słodkiej przypadających na jednego mieszkańca w ciągu roku. Poniżej **1700 m³/os./rok** mówimy o **stresie wodnym** — pojawiają się okresowe konflikty między rolnictwem, przemysłem i komunalnym poborem wody. Poniżej **1000 m³/os./rok** występuje **chroniczny niedobór wody**, który staje się realnym hamulcem rozwoju gospodarczego.",
+          "note": "Polska ma ok. 1600 m³/os./rok, a w latach suchych spada poniżej 1000 — mimo klimatu umiarkowanego należy do krajów najuboższych w wodę w Europie."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Woda i gleba w liczbach",
+          "items": [
+            { "value": "ok. 70", "unit": "%", "label": "Udział rolnictwa w globalnym poborze wody słodkiej", "note": "To dlatego każdy kryzys wodny jest przede wszystkim kryzysem rolnym" },
+            { "value": "ok. 20", "unit": "%", "label": "Udział gruntów nawadnianych w powierzchni gruntów ornych świata", "note": "Dają jednak ok. 40% światowej produkcji żywności — nawadnianie zwielokrotnia plon z hektara" },
+            { "value": "ok. 4", "unit": "%", "label": "Część powierzchni Egiptu, na której mieszka ponad 95% jego ludności — dolina i delta Nilu" },
+            { "value": "1700", "unit": "m³/os./rok", "label": "Próg stresu wodnego wg skali Falkenmarka" }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Strefy deficytu wody na świecie",
+          "caption": "Suchość nie rozkłada się przypadkowo — układa się w pasy wyznaczone przez cyrkulację atmosfery i odległość od oceanu. Kliknij strefę, aby zobaczyć jej mechanizm.",
+          "zones": [
+            { "name": "Pas suchy zwrotnikowy półkuli północnej", "latitude": "15–35°N", "text": "Sahara, Półwysep Arabski, pustynie Iranu i Thar. Panuje tu **wyż zwrotnikowy** — osiadające, osuszające się adiabatycznie powietrze zstępującej gałęzi komórki Hadleya. Rolnictwo wyłącznie nawadniane; gospodarka opiera się na wodach rzek tranzytowych i wodach kopalnych.", "tone": "heat" },
+            { "name": "Sahel — strefa przejściowa", "latitude": "10–20°N", "text": "Opady 200–600 mm, ale skrajnie **zmienne z roku na rok**, bo zależą od zasięgu letniej wędrówki międzyzwrotnikowej strefy zbieżności. Kilka suchych lat z rzędu oznacza klęskę głodu — to najbardziej wrażliwa gospodarczo strefa świata.", "tone": "earth" },
+            { "name": "Wnętrza kontynentów strefy umiarkowanej", "latitude": "35–50°N", "text": "Azja Środkowa, południowa Syberia, zachodnie Wielkie Równiny. Suchość wynika tu z **oddalenia od oceanów** oraz z **cienia opadowego** wysokich gór. Rolnictwo jest możliwe, ale ekstensywne i uzależnione od nawodnień lub od zapasu wilgoci w glebie.", "tone": "earth" },
+            { "name": "Pas suchy zwrotnikowy półkuli południowej", "latitude": "15–35°S", "text": "Kalahari, Atakama, Wielka Pustynia Wiktorii. Ten sam mechanizm wyżowy co na półkuli północnej, lokalnie wzmocniony przez **zimne prądy morskie** (Peruwiański, Benguelski), które wychładzają dolne warstwy powietrza i blokują konwekcję.", "tone": "heat" }
+          ]
+        },
+        {
+          "type": "map-explore",
+          "title": "Sześć regionów, w których o rolnictwie decyduje woda albo gleba",
+          "caption": "Kliknij znacznik i zwróć uwagę, czy dany region żyje z **zasobu wodnego**, czy z **zasobu glebowego** — a także jaką cenę za to płaci.",
+          "center": [25, 30],
+          "zoom": 2,
+          "markers": [
+            { "lat": 24.09, "lng": 32.9, "label": "Tama Asuańska i dolina Nilu (Egipt)", "text": "Nil to **rzeka tranzytowa (allochtoniczna)** — powstaje w strefie deszczowej Etiopii i Afryki Równikowej, a przez Egipt jedynie przepływa. Bez niego kraj byłby pustynią; z nim możliwe są trzy zbiory rocznie na wąskim pasie mad." },
+            { "lat": 30.2, "lng": 71.47, "label": "Pendżab i dolina Indusu (Pakistan)", "text": "Największy spójny system kanałów nawadniających świata, zasilany wodą z topnienia śniegu i lodowców Himalajów oraz Karakorum. To zaplecze **zielonej rewolucji**, ale też obszar postępującego **zasolenia wtórnego** gleb." },
+            { "lat": 48.5, "lng": 32.3, "label": "Czarnoziemy stepów Ukrainy", "text": "Gleby wykształcone na **lessach** pod roślinnością stepową, z poziomem próchnicznym sięgającym metra i zawartością próchnicy rzędu 3–6%. Ograniczeniem nie jest tu żyzność, lecz **woda** — susze i sucha wiosna." },
+            { "lat": 37.97, "lng": -100.87, "label": "Wielkie Równiny i warstwa Ogallala (USA)", "text": "Rolnictwo oparte na **wodzie kopalnej** z rozległej warstwy wodonośnej, wypompowywanej przez deszczownie obrotowe (stąd charakterystyczne zielone koła na zdjęciach satelitarnych). Pobór przewyższa zasilanie — to zasób w praktyce nieodnawialny." },
+            { "lat": -7.8, "lng": 110.36, "label": "Jawa i wulkan Merapi (Indonezja)", "text": "Popioły wulkaniczne wietrzeją w **andosole** — gleby bardzo zasobne w fosfor, potas i wapń, w dodatku odnawiane przez kolejne erupcje. Przy klimacie równikowym daje to 2–3 zbiory ryżu rocznie i jedną z najwyższych gęstości zaludnienia na świecie." },
+            { "lat": 45.0, "lng": 59.5, "label": "Jezioro Aralskie (Kazachstan–Uzbekistan)", "text": "Rozbudowa nawodnień w dorzeczach **Amu-darii i Syr-darii** pod uprawę bawełny odcięła dopływ wody do bezodpływowego jeziora. Zbiornik skurczył się o większość powierzchni, a odsłonięte dno stało się źródłem słonych burz pyłowych." }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Nawadnianie i jego ukryta cena — mechanizm zasolenia wtórnego",
+          "caption": "Ten łańcuch tłumaczy, dlaczego wiele obszarów nawadnianych po kilkudziesięciu latach wypada z produkcji. To jeden z ulubionych mechanizmów CKE.",
+          "steps": [
+            { "title": "Pobór wody i wzrost plonów", "text": "Kanały doprowadzają wodę na pola, które wcześniej były zbyt suche. Plony rosną skokowo, pojawia się możliwość dwóch lub trzech zbiorów w roku — nawodnienie wygląda na czysty zysk." },
+            { "title": "Nadmiar wody podnosi zwierciadło wód gruntowych", "text": "Nawadnianie **grawitacyjne (zalewowe)** dostarcza znacznie więcej wody, niż rośliny pobierają. Nadwyżka przesiąka w głąb i stopniowo podnosi poziom wód gruntowych — czasem o kilka metrów w ciągu dekady." },
+            { "title": "Podsiąkanie kapilarne", "text": "Gdy zwierciadło zbliży się do powierzchni, woda zaczyna wznosić się **kapilarnie** ku górze, niosąc rozpuszczone sole zawarte w glebie i w samej wodzie nawadniającej." },
+            { "title": "Parowanie zostawia sole na powierzchni", "text": "W klimacie suchym parowanie jest bardzo intensywne: woda odparowuje, a **sole zostają**. Na powierzchni pojawia się biały nalot, a stężenie soli w warstwie korzeniowej rośnie z roku na rok." },
+            { "title": "Zasolenie wtórne i wyłączenie gruntu", "text": "Wysokie stężenie soli obniża potencjał osmotyczny roztworu glebowego — rośliny **nie mogą pobrać wody, mimo że gleba jest wilgotna** (susza fizjologiczna). Plony spadają, a w skrajnych przypadkach pole trzeba porzucić. Ratunkiem jest kosztowny drenaż i przepłukiwanie gleby albo przejście na nawadnianie kropelkowe." }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Tama Asuańska — bilans, który trzeba umieć podać z obu stron",
+          "region": "Asuan, Górny Egipt",
+          "text": "Wysoka Tama w Asuanie (ukończona w 1970 r.) spiętrzyła Nil w **Jezioro Nasera** — jeden z największych zbiorników zaporowych świata. Korzyści były ogromne: koniec niszczycielskich wylewów i katastrofalnych susz, możliwość nawadniania przez cały rok (a więc dwa–trzy zbiory rocznie zamiast jednego), powiększenie areału upraw oraz duża elektrownia wodna. Ale ten sam mur, który zatrzymał wodę, zatrzymał też **muł (żyzne namuły)**, który przez tysiące lat co roku użyźniał pola i zasilał deltę. Skutki: rolnicy musieli przejść na **nawozy sztuczne**, delta Nilu przestała być zasilana materiałem i jest **niszczona przez abrazję** oraz zasalana wodą morską, w Jeziorze Nasera ubywa pojemności wskutek zamulania, a duże parowanie z jego powierzchni pochłania część zgromadzonych zasobów. Rozwój stałych nawodnień sprzyjał też szerzeniu się chorób przenoszonych przez wodę, m.in. **schistosomatozy**.",
+          "takeaway": "Wielka inwestycja hydrotechniczna nie „znosi” uwarunkowań przyrodniczych — ona **zamienia jeden zestaw ograniczeń na inny**. Odpowiedź maturalna o Asuanie bez wymienienia skutków negatywnych zwykle nie dostaje kompletu punktów."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie drogi do wysokiej żyzności: czarnoziemy Ukrainy i andosole Jawy",
+          "leftLabel": "Czarnoziemy stepowej Ukrainy",
+          "rightLabel": "Gleby wulkaniczne (andosole) Jawy",
+          "rows": [
+            { "aspect": "Skała macierzysta i geneza", "left": "**Less** — pylasta skała naniesiona przez wiatr w plejstocenie; gleba powstała pod roślinnością **stepową**, której korzenie rok po roku dostarczały masy organicznej.", "right": "**Popioły i tufy wulkaniczne** świeżo dostarczane przez erupcje; szybkie wietrzenie chemiczne w gorącym i wilgotnym klimacie uwalnia składniki pokarmowe." },
+            { "aspect": "Źródło żyzności", "left": "Bardzo miąższy (do ok. 1 m) poziom próchniczny o zawartości próchnicy rzędu 3–6% i doskonałej strukturze gruzełkowatej.", "right": "Duża zasobność w **fosfor, potas, wapń i magnez** oraz świetna zdolność zatrzymywania wody; poziom próchniczny cieńszy, ale stale odnawiany." },
+            { "aspect": "Klimat i ograniczenie", "left": "Umiarkowany kontynentalny, opady ok. 400–500 mm — **wodą, nie glebą, ograniczone są plony**; typowe są susze i sucha wiosna.", "right": "Równikowy wilgotny i monsunowy — wody pod dostatkiem; ograniczeniem jest **ryzyko erupcji** i wymywanie składników z gleb położonych dalej od wulkanów." },
+            { "aspect": "Typ rolnictwa", "left": "Wielkoobszarowe, silnie zmechanizowane: pszenica, kukurydza, słonecznik, burak cukrowy. Region eksportowy — „spichlerz Europy”.", "right": "Drobnotowarowe i pracochłonne: **ryż mokry na tarasowanych polach**, 2–3 zbiory rocznie, w dużej części na własne potrzeby." },
+            { "aspect": "Główne zagrożenie", "left": "Erozja wietrzna i wodna po zaoraniu stepu, przesuszenie, utrata próchnicy przy monokulturach.", "right": "Erupcje i **lahary** niszczące pola i wsie — a mimo to gęstość zaludnienia wokół wulkanów należy do najwyższych na świecie." }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Cztery typy gleb wysokoprodukcyjnych i ich rolnicze konsekwencje",
+          "caption": "Do każdego typu warto umieć podać region i uprawę — CKE bardzo często łączy glebę z konkretnym obszarem na mapie.",
+          "headers": ["Typ gleby", "Skała macierzysta / geneza", "Region", "Charakterystyczna produkcja"],
+          "rows": [
+            ["Czarnoziemy", "less pod roślinnością stepową", "stepy Ukrainy, Wyżyna Lubelska, prerie środkowe USA", "pszenica, kukurydza, burak cukrowy"],
+            ["Mady (gleby aluwialne)", "namuły rzeczne osadzane podczas wylewów", "delta i dolina Nilu, Nizina Gangesu, Żuławy Wiślane", "ryż, bawełna, warzywa, pszenica"],
+            ["Andosole (gleby wulkaniczne)", "wietrzejące popioły i tufy wulkaniczne", "Jawa, Wyżyna Meksykańska, wyżyny Ameryki Środkowej", "ryż, kawa, trzcina cukrowa"],
+            ["Kasztanoziemy", "less i utwory pylaste pod stepem suchym", "północny Kazachstan, zachodnie Wielkie Równiny", "pszenica jara, ekstensywna hodowla"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Rozróżniaj pojęcia, na których najłatwiej stracić punkt. **Żyzność** to naturalna zasobność gleby w składniki pokarmowe, wodę i powietrze — cecha samej gleby. **Urodzajność** to zdolność do dawania plonu z uwzględnieniem **działalności człowieka** (nawożenia, melioracji, uprawy), więc gleba mało żyzna może być urodzajna, a bardzo żyzna — zaniedbana i mało urodzajna. Nie myl też **zasolenia pierwotnego** (naturalnego, np. na dnach słonych jezior i w sołonczakach) z **zasoleniem wtórnym**, wywołanym przez nadmierne i źle odwadniane nawadnianie. I wreszcie: **rzeka tranzytowa (allochtoniczna)** to taka, która przepływa przez obszar suchy, a swoje zasilanie czerpie spoza niego (Nil, Niger w środkowym biegu, Indus) — to nie to samo co rzeka okresowa."
+        },
+        {
+          "type": "matching",
+          "title": "Region a jego kluczowy zasób wodny lub glebowy",
+          "instruction": "Połącz region z czynnikiem przyrodniczym, który przesądza o jego rolnictwie.",
+          "pairs": [
+            { "left": "Wielkie Równiny w Kansas", "right": "Wody kopalne z warstwy Ogallala i deszczownie obrotowe" },
+            { "left": "Dolina i delta Nilu", "right": "Rolnictwo w całości oparte na rzece tranzytowej i jej madach" },
+            { "left": "Stepy Ukrainy", "right": "Czarnoziemy wykształcone na lessach pod roślinnością stepową" },
+            { "left": "Jawa", "right": "Andosole odnawiane przez popioły z czynnych wulkanów" },
+            { "left": "Dorzecza Amu-darii i Syr-darii", "right": "Nadmierny pobór na nawodnienia i zanik jeziora bezodpływowego" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Na nawadnianych polach bawełny w Azji Środkowej po kilkudziesięciu latach użytkowania pojawił się biały nalot na powierzchni gleby, a plony wyraźnie spadły. Który ciąg przyczynowy poprawnie wyjaśnia to zjawisko?",
+          "options": [
+            "Nadmierne nawożenie mineralne zakwasiło glebę, przez co wapń wytrącił się na powierzchni",
+            "Nadmiar wody z nawodnień podniósł zwierciadło wód gruntowych, sole wzniosły się kapilarnie, a intensywne parowanie pozostawiło je w warstwie korzeniowej",
+            "Erozja wietrzna nawiała na pola pył z odsłoniętego dna Jeziora Aralskiego, który przykrył glebę warstwą piasku",
+            "Zbyt głęboka orka odsłoniła jasną skałę macierzystą, co obniżyło zawartość próchnicy"
+          ],
+          "correctIndex": 1,
+          "explanation": "To klasyczne **zasolenie wtórne**. Kluczowe są trzy ogniwa, które muszą pojawić się w odpowiedzi: (1) nadmiar wody z nawadniania grawitacyjnego podnosi **zwierciadło wód gruntowych**, (2) woda **podsiąka kapilarnie** ku powierzchni, niosąc rozpuszczone sole, (3) w suchym klimacie woda **paruje, a sole zostają**. Skutkiem jest susza fizjologiczna — roślina nie pobiera wody mimo wilgotnej gleby. Słone burze pyłowe znad dna Aralu (opcja 3) rzeczywiście występują, ale są **skutkiem** tego samego nadmiernego poboru, a nie przyczyną nalotu na polach."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego gęstość zaludnienia na Jawie należy do najwyższych na świecie, mimo że wyspa leży w strefie bardzo aktywnego wulkanizmu?",
+          "options": [
+            "Erupcje są tam na tyle rzadkie, że praktycznie nie stanowią zagrożenia dla ludności",
+            "Wulkany osłaniają wyspę przed cyklonami, co pozwala na całoroczną uprawę roślin",
+            "Popioły wulkaniczne wietrzeją w gleby bardzo zasobne w składniki pokarmowe i stale je odnawiają, co przy klimacie równikowym daje 2–3 zbiory ryżu w roku",
+            "Podłoże wulkaniczne jest tak twarde, że pozwala na tanią budowę wielopiętrowych miast"
+          ],
+          "correctIndex": 2,
+          "explanation": "To sztandarowy przykład **kalkulacji ryzyka wpisanej w gospodarkę**: ludzie osiedlają się w miejscu niebezpiecznym, bo bieżąca korzyść przewyższa rozłożone w czasie ryzyko. Popioły wulkaniczne, wietrzejąc, uwalniają fosfor, potas, wapń i magnez, a kolejne erupcje **odnawiają** ten zasób, którego w wilgotnym klimacie równikowym normalnie szybko by ubywało wskutek wymywania. W połączeniu z całorocznym ciepłem i wodą daje to kilka zbiorów ryżu rocznie, czyli wyżywienie bardzo dużej liczby osób z hektara. Erupcje wcale nie są rzadkie (Merapi należy do najaktywniejszych wulkanów świata), więc opcja 1 jest fałszywa."
+        },
+        {
+          "type": "quiz",
+          "question": "Które stwierdzenie o rolnictwie nawadnianym jest **prawdziwe**?",
+          "options": [
+            "Grunty nawadniane zajmują ok. 20% gruntów ornych świata, ale dostarczają ok. 40% produkcji żywności",
+            "Nawadnianie kropelkowe zużywa więcej wody niż zalewowe, ale daje wyższe plony",
+            "Rolnictwo odpowiada za mniej niż jedną czwartą globalnego poboru wody słodkiej",
+            "Nawadnianie jest stosowane wyłącznie w strefie klimatów suchych, poza nią nie ma uzasadnienia ekonomicznego"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nawadnianie **zwielokrotnia plon z hektara**, dlatego stosunkowo niewielki areał daje nieproporcjonalnie dużą część produkcji — to podstawowy argument w zadaniach o bezpieczeństwie żywnościowym. Nawadnianie **kropelkowe** podaje wodę bezpośrednio pod korzenie i **zużywa jej znacznie mniej** niż zalewowe (opcja 2 jest odwrócona). Rolnictwo pochłania ok. 70% globalnego poboru wody słodkiej, a nie jedną czwartą (opcja 3). Nawadnianie stosuje się także w strefie umiarkowanej — w Polsce m.in. w sadach, na plantacjach warzyw i na glebach lekkich w latach suchych (opcja 4)."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o wodzie i glebach opłaca się myśleć **bilansem, a nie listą zalet**. Trzy schematy, które zwracają punkty najczęściej: (1) *rzeka tranzytowa → woda w strefie suchej → nawadnianie → wysokie plony na małym areale → koncentracja ludności* (Nil, Indus, Niger w środkowym biegu); (2) *inwestycja hydrotechniczna → korzyść (kontrola wylewów, energia, kilka zbiorów) + koszt środowiskowy (zatrzymanie mułu, zasolenie, abrazja delty, zamulanie zbiornika)*; (3) *cecha gleby → mechanizm (miąższy poziom próchniczny / zasobność w składniki / zdolność retencyjna) → typ produkcji i gęstość zaludnienia*. Pilnuj też słownictwa: **żyzność ≠ urodzajność**, **zasolenie wtórne ≠ pierwotne**, **wody kopalne ≠ wody odnawialne**."
+        }
+      ]
+    },
+    {
+      "slug": "zasoby-mineralne-a-rozwoj-panstw",
+      "title": "Zasoby mineralne i energetyczne a rozwój i bogactwo państw",
+      "summary": "Dlaczego ta sama ropa uczyniła Norwegię jednym z najbogatszych krajów świata, a Nigerii nie wyciągnęła z biedy — renta surowcowa, choroba holenderska i klątwa surowcowa na przykładach Zatoki Perskiej, Australii i Górnego Śląska.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Złoże samo w sobie nie jest bogactwem — jest **szansą**. Ta sama warstwa piaskowca nasyconego ropą pod Morzem Północnym i pod Deltą Nigru dała dwa zupełnie różne efekty: Norwegia należy dziś do najzamożniejszych państw świata, a Nigeria pozostaje krajem o niskim PKB na mieszkańca i ogromnych nierównościach. Różnicy nie tłumaczy geologia, tylko to, **kto przejmuje rentę surowcową i co z nią robi**. W tej lekcji rozbierzemy ten mechanizm na części: skąd bierze się nadzwyczajny dochód z surowca, dlaczego tak często niszczy on resztę gospodarki (**choroba holenderska**), kiedy zamienia się w trwały rozwój, a kiedy w **klątwę surowcową** — i co dzieje się z regionem, gdy surowiec się kończy, jak na Górnym Śląsku."
+        },
+        {
+          "type": "definition",
+          "term": "Renta surowcowa",
+          "text": "**Renta surowcowa** to nadwyżka przychodu ze sprzedaży surowca ponad pełny koszt jego wydobycia i normalny zysk przedsiębiorstwa. Bierze się stąd, że cena światowa surowca jest wyznaczana przez **najdroższe złoża potrzebne do zaspokojenia popytu**, a kraj dysponujący złożem tanim w eksploatacji sprzedaje po tej samej cenie. Wydobycie baryłki ropy w Arabii Saudyjskiej kosztuje kilka–kilkanaście dolarów, a sprzedaje się ją po cenie ustalanej na rynku światowym — cała różnica to właśnie renta.",
+          "note": "Renta surowcowa nie jest efektem pracy ani innowacji, tylko **posiadania złoża**. Dlatego walka o to, kto ją przechwyci — państwo, koncern czy lokalne elity — decyduje o losach kraju surowcowego."
+        },
+        {
+          "type": "classification",
+          "title": "Grupy surowców mineralnych i ich rola gospodarcza",
+          "caption": "Im wyższa wartość surowca w przeliczeniu na tonę, tym dalej opłaca się go transportować — dlatego złoto wozi się przez pół świata, a piasek i żwir wydobywa kilkanaście kilometrów od budowy.",
+          "groups": [
+            {
+              "name": "Surowce energetyczne (paliwa kopalne)",
+              "description": "Dają największą rentę i największą zmienność dochodów, bo ich ceny na giełdach światowych wahają się bardzo silnie. Decydują o bilansie handlowym całych państw i bywają narzędziem **polityki surowcowej** — embarg, kartelu OPEC, szantażu energetycznego.",
+              "examples": [
+                "ropa naftowa",
+                "gaz ziemny",
+                "węgiel kamienny i brunatny",
+                "rudy uranu"
+              ]
+            },
+            {
+              "name": "Rudy metali",
+              "description": "Podstawa przemysłu ciężkiego i elektronicznego. Wydobycie wymaga ogromnych inwestycji i zwykle tworzy **enklawy gospodarcze** — nowoczesne kopalnie odkrywkowe w słabo zaludnionych regionach, słabo powiązane z resztą kraju.",
+              "examples": [
+                "ruda żelaza (Pilbara)",
+                "rudy miedzi (Chile, LGOM)",
+                "boksyty (Gwinea, Australia)",
+                "kobalt i lit — metale transformacji energetycznej"
+              ]
+            },
+            {
+              "name": "Surowce chemiczne",
+              "description": "Sole, siarka i fosforyty zasilają przemysł nawozowy i chemiczny. Mają znaczenie **strategiczne dla bezpieczeństwa żywnościowego** — bez fosforu i potasu nie ma nowoczesnego rolnictwa, a ich złoża są bardzo nierównomiernie rozmieszczone.",
+              "examples": [
+                "sole potasowe",
+                "fosforyty (Maroko i Sahara Zachodnia)",
+                "siarka rodzima",
+                "sól kamienna"
+              ]
+            },
+            {
+              "name": "Surowce skalne i budowlane",
+              "description": "Niska wartość jednostkowa, więc eksploatacja opłaca się tylko przy **krótkim transporcie** do odbiorcy. Nie generują renty w skali międzynarodowej, ale decydują o lokalizacji cementowni, kopalń kruszywa i zakładów prefabrykacji.",
+              "examples": [
+                "wapienie i margle",
+                "kruszywa naturalne",
+                "gliny ceramiczne",
+                "granity i piaskowce"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "chart",
+          "variant": "bar",
+          "title": "Udokumentowane zasoby ropy naftowej według regionów (2020)",
+          "caption": "Uwaga na pułapkę: to zasoby, a nie wydobycie. Ameryka Południowa i Środkowa ma drugi wynik na świecie prawie wyłącznie dzięki wenezuelskim ropom ciężkim z pasa Orinoko, których eksploatacja jest droga i technicznie trudna — dlatego udział Wenezueli w światowym wydobyciu jest wielokrotnie mniejszy niż w zasobach.",
+          "labels": [
+            "Bliski Wschód",
+            "Ameryka Płd. i Środk.",
+            "Ameryka Płn.",
+            "WNP",
+            "Afryka",
+            "Azja i Pacyfik",
+            "Europa"
+          ],
+          "series": [
+            {
+              "name": "udział w zasobach świata",
+              "values": [
+                48.3,
+                18.7,
+                14,
+                8.4,
+                7.2,
+                2.6,
+                0.8
+              ]
+            }
+          ],
+          "unit": "%"
+        },
+        {
+          "type": "key-numbers",
+          "title": "Surowce w liczbach, które warto znać na maturze",
+          "items": [
+            {
+              "value": "48",
+              "unit": "%",
+              "label": "udział Bliskiego Wschodu w udokumentowanych zasobach ropy naftowej świata (2020)",
+              "note": "Stąd geopolityczna waga cieśniny Ormuz, przez którą przechodzi znaczna część światowego eksportu ropy."
+            },
+            {
+              "value": "ok. 1/4",
+              "label": "udział Chile w światowym wydobyciu miedzi",
+              "note": "Złoża porfirowe pustyni Atakama — m.in. Chuquicamata i Escondida."
+            },
+            {
+              "value": "ok. 70",
+              "unit": "%",
+              "label": "udział Demokratycznej Republiki Konga w światowym wydobyciu kobaltu (2022)",
+              "note": "Skrajny przykład koncentracji surowca krytycznego w jednym, niestabilnym politycznie państwie."
+            },
+            {
+              "value": "1990",
+              "label": "rok utworzenia norweskiego państwowego funduszu majątkowego",
+              "note": "Zasilany dochodami z ropy i gazu, inwestujący wyłącznie poza Norwegią."
+            },
+            {
+              "value": "ok. 3",
+              "unit": "%",
+              "label": "norweska reguła budżetowa — ile z funduszu może rocznie trafić do budżetu",
+              "note": "Wydaje się jedynie szacowany realny zysk, więc kapitał nie topnieje. To instytucjonalne antidotum na klątwę surowcową."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Choroba holenderska — jak boom surowcowy niszczy resztę gospodarki",
+          "caption": "Nazwa pochodzi od Holandii, która po odkryciu wielkiego złoża gazu w Groningen (1959) zobaczyła nieoczekiwany spadek konkurencyjności własnego przemysłu przetwórczego.",
+          "steps": [
+            {
+              "title": "Odkrycie złoża i eksplozja eksportu",
+              "text": "Kraj zaczyna sprzedawać za granicę surowiec obciążony ogromną rentą. Wpływy z eksportu rosną skokowo, a bilans handlowy staje się mocno dodatni."
+            },
+            {
+              "title": "Napływ dewiz podnosi kurs waluty krajowej",
+              "text": "Zagraniczni odbiorcy muszą kupić walutę eksportera, żeby zapłacić za surowiec. Popyt na tę walutę rośnie, więc następuje **aprecjacja** — waluta krajowa staje się droga."
+            },
+            {
+              "title": "Eksport przemysłowy i rolny traci konkurencyjność",
+              "text": "Po aprecjacji ten sam wyrób przemysłowy kosztuje zagranicznego klienta więcej niż wcześniej, a import tanieje. Krajowe fabryki i gospodarstwa przegrywają cenowo **na obu frontach naraz** — na rynkach zagranicznych i na własnym."
+            },
+            {
+              "title": "Kapitał i pracownicy przenoszą się do sektora surowcowego",
+              "text": "W kopalniach i na platformach płace są wyższe, więc przyciągają najlepszych inżynierów i kapitał. Przemysł przetwórczy kurczy się — to **deindustrializacja**. Kłopot w tym, że sektor surowcowy zatrudnia niewielu i działa jak **enklawa**, słabo powiązana z resztą gospodarki."
+            },
+            {
+              "title": "Gospodarka uzależnia się od jednej ceny światowej",
+              "text": "Budżet państwa opiera się na wpływach z jednego surowca. Gdy jego cena spada — a ceny surowców są wyjątkowo zmienne — dochody budżetu załamują się, a **przemysłu, który mógłby je zastąpić, już nie ma**. Zaczyna się kryzys walutowy i zadłużeniowy."
+            },
+            {
+              "title": "Renta psuje instytucje (klątwa surowcowa)",
+              "text": "Skoro budżet żyje z renty, a nie z podatków płaconych przez obywateli, władza jest mniej od nich zależna. Rośnie **korupcja**, słabnie kontrola społeczna, maleją bodźce do inwestowania w edukację i innowacje. Bogactwo złoża zamienia się w barierę rozwoju."
+            }
+          ]
+        },
+        {
+          "type": "compare",
+          "title": "Dwie drogi petropaństwa: Norwegia i Nigeria",
+          "leftLabel": "Norwegia",
+          "rightLabel": "Nigeria",
+          "rows": [
+            {
+              "aspect": "Moment odkrycia złóż",
+              "left": "Ropa na szelfie Morza Północnego od końca lat 60. XX w. — w kraju już zamożnym, z rozwiniętym przemysłem i stabilną demokracją.",
+              "right": "Ropa w Delcie Nigru od końca lat 50. XX w. — w kraju biednym, świeżo po dekolonizacji, targanym konfliktami etnicznymi i wojną domową."
+            },
+            {
+              "aspect": "Kto przejmuje rentę",
+              "left": "Państwo — przez wysokie podatki od wydobycia i udziały spółki narodowej; renta trafia do funduszu majątkowego należącego do ogółu obywateli.",
+              "right": "Znaczna część renty rozpływa się między koncerny, elity polityczne i nielegalny handel ropą; kontrola publiczna jest słaba."
+            },
+            {
+              "aspect": "Co się dzieje z pieniędzmi",
+              "left": "Są inwestowane **poza krajem**, w akcje i obligacje. To celowo blokuje napływ dewiz na rynek krajowy i chroni koronę przed aprecjacją.",
+              "right": "Są wydawane na bieżącą konsumpcję i import; brak trwałego funduszu stabilizacyjnego o porównywalnej skali."
+            },
+            {
+              "aspect": "Reakcja na spadek cen ropy",
+              "left": "Budżet amortyzuje wstrząs środkami z funduszu, a gospodarka pozostaje zdywersyfikowana (rybołówstwo, żegluga, hydroenergetyka, usługi).",
+              "right": "Załamanie wpływów budżetowych, deficyt, presja na walutę i cięcia w usługach publicznych."
+            },
+            {
+              "aspect": "Skutek środowiskowy i społeczny",
+              "left": "Ostre normy dla wydobycia na morzu, wysoka jakość życia, jeden z najwyższych wskaźników HDI na świecie.",
+              "right": "Skażenie Delty Nigru ropą i spalanie gazu towarzyszącego, konflikty zbrojne o podział renty, niski poziom życia mimo ogromnych wpływów."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Górny Śląsk — region zbudowany na węglu i to, co dzieje się potem",
+          "region": "Górnośląskie Zagłębie Węglowe, Polska",
+          "text": "Górnośląskie Zagłębie Węglowe to podręcznikowy przykład tego, jak **złoże organizuje całą przestrzeń**. Płytko zalegający węgiel kamienny przyciągnął od XIX w. hutnictwo, koksownictwo, energetykę i przemysł maszynowy, a wraz z nimi setki tysięcy pracowników. Powstała **konurbacja** — zespół kilkunastu miast o zbliżonej wielkości, bez jednego wyraźnego centrum, uformowanych wokół kopalń, a nie wokół rynku czy portu. Gospodarka regionu stała się **monofunkcyjna**: praca, mieszkanie, dom kultury i klub sportowy należały do tej samej kopalni. Po 1989 r. otwarcie na konkurencję i wyczerpywanie się najłatwiej dostępnych pokładów uruchomiły **restrukturyzację** — zatrudnienie w górnictwie węgla kamiennego spadło z ponad 400 tys. osób pod koniec lat 80. do kilkudziesięciu tysięcy dzisiaj. Region zapłacił za to bezrobociem strukturalnym, odpływem młodych i dziedzictwem szkód górniczych, hałd oraz terenów poprzemysłowych. Odpowiedzią stała się zmiana funkcji: Katowicka Specjalna Strefa Ekonomiczna przyciągnęła przemysł motoryzacyjny, dawne kopalnie i huty zamieniono w obiekty kultury i biura, a Katowice rozbudowały funkcje usługowe, kongresowe i akademickie.",
+          "takeaway": "Surowiec daje regionowi rozkwit, ale też **uzależnienie od jednej branży**. Rachunek za wyjście z monokultury surowcowej — bezrobocie strukturalne, rekultywacja terenów, przekwalifikowanie ludzi — przychodzi dekadę po tym, jak prosperity się skończyła."
+        },
+        {
+          "type": "map-explore",
+          "title": "Siedem regionów, w których surowiec zdecydował o losach gospodarki",
+          "caption": "Kliknij znacznik. Przy każdym pytaj o to samo: jaki surowiec, kto przejmuje rentę i czy region ma plan na czas, gdy złoże się wyczerpie.",
+          "center": [
+            15,
+            30
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 25.4,
+              "lng": 49.6,
+              "label": "Ghawar, Arabia Saudyjska",
+              "text": "Największe konwencjonalne złoże ropy naftowej świata. Bardzo niski koszt wydobycia oznacza **rentę surowcową ekstremalnej wielkości**, która pozwoliła państwu pustynnemu zbudować od zera infrastrukturę, odsalarnie i wielkie miasta — ale też uzależniła budżet od jednej ceny."
+            },
+            {
+              "lat": 56.5,
+              "lng": 3.2,
+              "label": "Ekofisk, szelf Morza Północnego",
+              "text": "Norweskie złoża naftowo-gazowe eksploatowane w trudnych warunkach morskich. Wysoki koszt wydobycia wymusił rozwój **zaawansowanych technologii offshore**, które Norwegia sprzedaje dziś jako usługę — to część renty zamieniona w trwałe kompetencje."
+            },
+            {
+              "lat": -23.4,
+              "lng": 119.7,
+              "label": "Pilbara, Australia Zachodnia",
+              "text": "Największy na świecie region eksportu **rudy żelaza**, wydobywanej odkrywkowo na pustyni i wywożonej koleją do portów Pacyfiku, głównie do Chin. Klasyczna **enklawa**: ogromna wartość eksportu przy niewielkim zatrudnieniu i pracy w systemie rotacyjnym (fly-in fly-out)."
+            },
+            {
+              "lat": 50.26,
+              "lng": 19.02,
+              "label": "Górnośląskie Zagłębie Węglowe, Polska",
+              "text": "Węgiel kamienny, który ukształtował **konurbację** kilkunastu miast, a po 1989 r. wymusił kosztowną restrukturyzację. Przykład regionu w fazie **schyłku surowcowego**, szukającego nowych funkcji gospodarczych."
+            },
+            {
+              "lat": -22.3,
+              "lng": -68.9,
+              "label": "Chuquicamata, Chile",
+              "text": "Jedna z największych kopalni odkrywkowych miedzi na świecie, na pustyni Atakama. Miedź jest filarem chilijskiego eksportu — dlatego Chile utworzyło **fundusz stabilizacyjny**, który gromadzi nadwyżki przy wysokich cenach metalu i zasila budżet, gdy ceny spadają."
+            },
+            {
+              "lat": -10.7,
+              "lng": 25.5,
+              "label": "Kolwezi, Demokratyczna Republika Konga",
+              "text": "Pas miedziowo-kobaltowy Katangi. Kobalt jest surowcem **krytycznym dla produkcji baterii**, ale znaczna część wydobycia odbywa się w kopalniach nieformalnych, w fatalnych warunkach. Renta niemal nie przekłada się na poziom życia mieszkańców — modelowa klątwa surowcowa."
+            },
+            {
+              "lat": 26.5,
+              "lng": 51.9,
+              "label": "North Field / Ras Laffan, Katar",
+              "text": "Największe złoże gazu ziemnego świata (przedłużone po stronie irańskiej jako South Pars). Katar postawił na **skraplanie gazu (LNG)** i własną flotę gazowców, czyli na przetworzenie surowca zanim opuści kraj — to sposób na zatrzymanie w kraju większej części łańcucha wartości."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Trzy pary pojęć, na których najłatwiej stracić punkty. **Zasoby geologiczne** to cała rozpoznana ilość kopaliny w złożu, a **zasoby przemysłowe (rezerwy)** — tylko ta część, którą opłaca się wydobyć przy dzisiejszej cenie i technice; wzrost ceny ropy powiększa rezerwy, choć nie odkryto ani jednego nowego złoża. **Choroba holenderska** to sam mechanizm walutowy (aprecjacja → deindustrializacja), a **klątwa surowcowa** to szerszy syndrom, obejmujący też korupcję, słabe instytucje i konflikty zbrojne. Wreszcie **zasoby ≠ wydobycie**: Wenezuela ma największe udokumentowane rezerwy ropy na świecie, a wydobywa jej ułamek tego, co Arabia Saudyjska."
+        },
+        {
+          "type": "matching",
+          "title": "Region a jego surowiec i konsekwencja gospodarcza",
+          "instruction": "Dopasuj region do zdania, które najlepiej opisuje jego sytuację surowcową.",
+          "pairs": [
+            {
+              "left": "Pilbara (Australia Zachodnia)",
+              "right": "ruda żelaza wywożona koleją do portów i eksportowana głównie do Chin"
+            },
+            {
+              "left": "Górnośląskie Zagłębie Węglowe",
+              "right": "węgiel kamienny i kosztowna restrukturyzacja regionu monofunkcyjnego"
+            },
+            {
+              "left": "Szelf Morza Północnego (Norwegia)",
+              "right": "renta z ropy i gazu przekształcona w państwowy fundusz majątkowy"
+            },
+            {
+              "left": "North Field (Katar)",
+              "right": "gaz ziemny skraplany na miejscu i eksportowany jako LNG"
+            },
+            {
+              "left": "Pas miedziowo-kobaltowy Katangi",
+              "right": "surowiec krytyczny dla baterii przy skrajnie niskim poziomie życia mieszkańców"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Kraj o dotąd zrównoważonej gospodarce odkrywa wielkie złoże gazu i zaczyna go masowo eksportować. Który ciąg przyczynowo-skutkowy najlepiej opisuje chorobę holenderską?",
+          "options": [
+            "Wzrost eksportu gazu → napływ dewiz → aprecjacja waluty krajowej → spadek konkurencyjności eksportu przemysłowego → deindustrializacja",
+            "Wzrost eksportu gazu → deprecjacja waluty krajowej → tańszy eksport przemysłowy → gwałtowna industrializacja kraju",
+            "Wzrost eksportu gazu → spadek światowych cen gazu → zamknięcie kopalń → recesja w całej gospodarce",
+            "Wzrost eksportu gazu → wzrost zatrudnienia w wydobyciu o miliony osób → niedobór rąk do pracy w rolnictwie → konieczność importu żywności"
+          ],
+          "correctIndex": 0,
+          "explanation": "Istotą choroby holenderskiej jest **kanał kursowy**. Zagraniczni odbiorcy kupują walutę eksportera, żeby zapłacić za surowiec, więc waluta się umacnia (aprecjacja). Po aprecjacji krajowe wyroby przemysłowe drożeją dla klienta zagranicznego, a import tanieje — przemysł przetwórczy przegrywa cenowo i kurczy się. Odpowiedź 2 odwraca kierunek zmiany kursu, odpowiedź 3 opisuje zwykły szok cenowy, a odpowiedź 4 jest niezgodna z faktami: wydobycie surowców to sektor **kapitałochłonny**, zatrudniający stosunkowo niewielu ludzi."
+        },
+        {
+          "type": "quiz",
+          "question": "Norweski fundusz majątkowy inwestuje zgromadzone środki wyłącznie w aktywa zagraniczne. Jaki jest główny gospodarczy sens tej zasady?",
+          "options": [
+            "Zagraniczne akcje są zawsze bardziej dochodowe niż norweskie, więc fundusz szybciej rośnie",
+            "Utrzymuje dewizy poza rynkiem krajowym, dzięki czemu korona nie umacnia się nadmiernie i norweski przemysł zachowuje konkurencyjność",
+            "Norweskie prawo zakazuje państwu posiadania jakichkolwiek udziałów w spółkach krajowych",
+            "Inwestycje zagraniczne są zwolnione z podatku, więc państwo unika obciążeń fiskalnych"
+          ],
+          "correctIndex": 1,
+          "explanation": "To **świadome antidotum na chorobę holenderską**. Gdyby wpływy z ropy wymieniano na korony i wydawano w kraju, popyt na koronę podbiłby jej kurs i uderzył w norweski eksport przemysłowy — dokładnie według mechanizmu opisanego wcześniej. Inwestowanie za granicą zatrzymuje dewizy poza rynkiem krajowym, a przy okazji **oddziela dochody budżetu od bieżącej ceny ropy** i przenosi część renty na przyszłe pokolenia. Pozostałe odpowiedzi są nieprawdziwe."
+        },
+        {
+          "type": "quiz",
+          "question": "Który argument najlepiej uzasadnia tezę, że samo posiadanie bogatych złóż nie przesądza o poziomie rozwoju gospodarczego państwa?",
+          "options": [
+            "Wszystkie państwa surowcowe mają zbliżony poziom PKB na mieszkańca",
+            "Surowce mineralne są dziś w praktyce niewyczerpalne",
+            "Norwegia i Nigeria dysponują ropą naftową, ale wskutek różnej jakości instytucji i różnego sposobu zagospodarowania renty osiągnęły skrajnie odmienny poziom życia",
+            "Kraje pozbawione surowców mineralnych zawsze rozwijają się szybciej niż kraje surowcowe"
+          ],
+          "correctIndex": 2,
+          "explanation": "Poprawne uzasadnienie działa przez **porównanie przypadków o podobnym zasobie i różnym wyniku**: skoro oba państwa mają ropę, a rezultaty są skrajnie odmienne, o różnicy decyduje coś innego niż geologia — jakość instytucji, przejrzystość podziału renty i polityka gospodarcza. Odpowiedzi 1 i 4 to fałszywe uogólnienia (Japonia i Szwajcaria są ubogie w surowce i bogate, ale Australia i Kanada są bogate w surowce i również zamożne), a odpowiedź 2 jest po prostu nieprawdziwa — surowce mineralne są **nieodnawialne**."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "W zadaniach o gospodarce surowcowej CKE prawie zawsze pyta o **mechanizm, a nie o listę krajów**. Trzymaj się schematu: *cecha złoża (wielkość, głębokość, koszt wydobycia, odległość od portu) → wielkość renty → kto ją przejmuje → w co jest inwestowana → skutek dla gospodarki i poziomu życia*. Gdy polecenie brzmi „wyjaśnij, dlaczego mimo bogactwa surowcowego kraj X pozostaje słabo rozwinięty”, wymień **dwa różne ogniwa naraz**: kanał gospodarczy (aprecjacja waluty i deindustrializacja, uzależnienie budżetu od zmiennej ceny, enklawowy charakter wydobycia) oraz kanał instytucjonalny (korupcja, konflikty o podział renty, brak inwestycji w edukację). Do argumentów o przeciwnym kierunku miej gotową parę **Norwegia i Botswana** — państwa, które rentę zamieniły w rozwój dzięki funduszom i stabilnym instytucjom."
+        }
+      ]
+    },
+    {
+      "slug": "polozenie-nadmorskie-porty-i-turystyka",
+      "title": "Położenie nadmorskie, linia brzegowa i warunki rozwoju turystyki",
+      "summary": "Dlaczego jedne wybrzeża rodzą wielkie porty, a inne pozostają puste, jak Rotterdam i Singapur zamieniły geografię w pieniądze i od czego naprawdę zależy, czy region stanie się celem turystycznym — aż po cykl życia kurortu.",
+      "readingMinutes": 14,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Ponad cztery piąte masy towarów w handlu światowym przemieszcza się **drogą morską**, bo statek jest najtańszym środkiem transportu na duże odległości. To sprawia, że dostęp do morza jest jednym z najsilniejszych atutów gospodarczych, jakie może mieć państwo — i że kraje śródlądowe płacą za jego brak trwałą karą w kosztach eksportu. Ale samo morze nie wystarczy: liczy się **jaka jest linia brzegowa**, czy ma głębokie i osłonięte zatoki, czy nie zamarza, czy da się z niej wjechać w głąb kontynentu. Ta sama geografia brzegu decyduje o czymś jeszcze — o **turystyce**, dla wielu regionów jedynej realnej alternatywie dla rolnictwa. W tej lekcji zobaczysz, jak z cech wybrzeża wyprowadzić lokalizację portu i kurortu, oraz dlaczego oba te sukcesy mają swoje granice."
+        },
+        {
+          "type": "definition",
+          "term": "Zaplecze i przedpole portu",
+          "text": "**Zaplecze portu (hinterland)** to obszar lądowy, z którego port zbiera towary do wywozu i do którego dostarcza import — czyli jego rynek obsługiwany przez koleje, drogi, rurociągi i żeglugę śródlądową. **Przedpole portu (foreland)** to zbiór portów i krajów zamorskich, z którymi port utrzymuje regularne połączenia. O sile portu decyduje **iloczyn obu**: wielki port musi mieć jednocześnie zamożne, uprzemysłowione zaplecze i szerokie przedpole.",
+          "note": "Dlatego port bez sprawnej sieci lądowej dławi się nawet przy świetnych warunkach naturalnych, a port o doskonałych połączeniach lądowych, lecz płytkim podejściu, nie przyjmie największych statków — obie bariery odcinają go od ruchu tak samo skutecznie."
+        },
+        {
+          "type": "classification",
+          "title": "Typy wybrzeży i ich przydatność dla gospodarki morskiej",
+          "caption": "Reguła jest prosta: portom sprzyja wybrzeże **rozczłonkowane i głębokie**, turystyce plażowej — **wyrównane i piaszczyste**. Rzadko oba naraz, dlatego wybrzeża często się specjalizują.",
+          "groups": [
+            {
+              "name": "Wybrzeże fiordowe",
+              "description": "Zatopione doliny polodowcowe: bardzo głębokie, wąskie i osłonięte od falowania. Dają **naturalne porty głębokowodne** niemal bez inwestycji, ale zaplecze lądowe jest górzyste i słabo zaludnione, więc pełnią funkcje wyspecjalizowane.",
+              "examples": [
+                "Bergen i Narwik (Norwegia)",
+                "wybrzeża Chile na południe od Puerto Montt",
+                "Ziemia Ognista"
+              ]
+            },
+            {
+              "name": "Wybrzeże estuariowe",
+              "description": "Lejkowate ujście rzeki, w którym pływy morskie utrzymują głębokość toru wodnego. Pozwala wprowadzić statki **dziesiątki kilometrów w głąb lądu**, prosto do zaplecza przemysłowego — stąd największe porty Europy Zachodniej.",
+              "examples": [
+                "Rotterdam (Ren i Moza)",
+                "Hamburg (Łaba)",
+                "Londyn (Tamiza)",
+                "Buenos Aires (La Plata)"
+              ]
+            },
+            {
+              "name": "Wybrzeże riasowe",
+              "description": "Zatopione ujścia dolin rzecznych w rzeźbie górskiej, o kształcie rozgałęzionym. Głębokie i osłonięte jak fiordy, ale w klimacie umiarkowanym ciepłym — łączą funkcję portową z rybacką i turystyczną.",
+              "examples": [
+                "Galicja w północno-zachodniej Hiszpanii (Vigo)",
+                "wybrzeże Bretanii",
+                "południowo-zachodnia Irlandia"
+              ]
+            },
+            {
+              "name": "Wybrzeże mierzejowo-zalewowe i wyrównane",
+              "description": "Płytkie, piaszczyste, ubogie w naturalne osłony — port trzeba tu **zbudować od podstaw**: usypać falochrony i stale pogłębiać tor podejściowy. Za to daje długie plaże, czyli podstawowy walor turystyki wypoczynkowej.",
+              "examples": [
+                "polskie wybrzeże Bałtyku (Gdynia zbudowana od zera w latach 20. XX w.)",
+                "wybrzeże Zatoki Meksykańskiej",
+                "Wybrzeże Kości Słoniowej"
+              ]
+            },
+            {
+              "name": "Wybrzeże koralowe i deltowe",
+              "description": "Dwie różne przeszkody o podobnym skutku: **rafa** grozi rozbiciem kadłuba i wymusza wąskie przejścia, a **delta** stale zamula tor wodny. Oba typy utrudniają żeglugę, ale rafa jest zarazem pierwszorzędnym walorem turystycznym.",
+              "examples": [
+                "Wielka Rafa Koralowa",
+                "Malediwy",
+                "delta Nilu",
+                "delta Gangesu i Brahmaputry"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "key-numbers",
+          "title": "Morze i porty w liczbach",
+          "items": [
+            {
+              "value": "ok. 80",
+              "unit": "%",
+              "label": "udział transportu morskiego w masie towarów światowego handlu",
+              "note": "W wartości udział jest niższy, bo drogą lotniczą leci to, co lekkie i drogie — elektronika, leki, kwiaty cięte."
+            },
+            {
+              "value": "1869",
+              "label": "otwarcie Kanału Sueskiego",
+              "note": "Skrócił drogę z Europy do Azji o wiele tysięcy kilometrów, bo wyeliminował opłynięcie Afryki wokół Przylądka Dobrej Nadziei."
+            },
+            {
+              "value": "1914",
+              "label": "otwarcie Kanału Panamskiego",
+              "note": "Rozbudowany w 2016 r. o nowe, większe śluzy — to one wyznaczają dziś klasę statków „neopanamax”."
+            },
+            {
+              "value": "ok. 44",
+              "label": "liczba państw świata pozbawionych dostępu do morza (śródlądowych)",
+              "note": "Ich koszty transportu w handlu zagranicznym są istotnie wyższe, bo każdy ładunek wymaga dodatkowego przeładunku i tranzytu przez terytorium sąsiada."
+            },
+            {
+              "value": "2013",
+              "label": "otwarcie terminalu Maasvlakte 2 w Rotterdamie",
+              "note": "Zbudowany na terenie **odzyskanym od morza** — brak miejsca na lądzie okazał się barierą łatwiejszą do pokonania niż zbyt płytkie podejście."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Dlaczego przeładunki koncentrują się w kilku portach świata",
+          "caption": "Ten łańcuch tłumaczy, czemu w epoce kontenera liczba portów obsługujących największe statki maleje, choć wolumen handlu rośnie.",
+          "steps": [
+            {
+              "title": "Armatorzy budują coraz większe statki",
+              "text": "Koszt przewozu jednego kontenera spada wraz z wielkością statku — to **efekt skali**. Największe kontenerowce przewożą ponad dwadzieścia tysięcy kontenerów (TEU), więc cena za sztukę jest nieporównanie niższa niż na małej jednostce."
+            },
+            {
+              "title": "Wielki statek stawia twarde warunki portowi",
+              "text": "Potrzebuje toru podejściowego o głębokości kilkunastu metrów, długiego nabrzeża i suwnic o odpowiednim wysięgu. **Tylko nieliczne porty są w stanie to zapewnić** — reszta fizycznie nie może takiego statku przyjąć."
+            },
+            {
+              "title": "Powstaje układ hub and spoke",
+              "text": "Armator obsługuje kilka **portów węzłowych (hubów)** na trasie oceanicznej, a stamtąd mniejsze statki **feederowe** rozwożą kontenery do portów regionalnych. Port, który nie zostanie hubem, spada o poziom niżej w hierarchii."
+            },
+            {
+              "title": "Hub przyciąga usługi i przemysł",
+              "text": "Wokół węzła osiadają spedytorzy, ubezpieczyciele, stocznie remontowe, centra logistyczne i przemysł przetwórczy korzystający z taniego importu surowca. To **efekt aglomeracji** — koszty spadają dlatego, że wszyscy są obok siebie."
+            },
+            {
+              "title": "Sprzężenie zwrotne dodatnie",
+              "text": "Większe wpływy pozwalają pogłębiać tor i budować kolejne terminale, co przyciąga jeszcze większe statki. **Przewaga portu sama się wzmacnia**, a różnica między hubem a portem regionalnym rośnie z dekady na dekadę."
+            },
+            {
+              "title": "Bariery: ląd i przestrzeń",
+              "text": "Ograniczeniem przestaje być morze, a staje się **dostępność lądowa** — zatłoczone autostrady i za mała przepustowość kolei — oraz brak miejsca na nowe terminale. Odpowiedzią bywa przesunięcie portu na tereny odzyskane od morza lub przerzucenie ładunku na żeglugę śródlądową."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Rotterdam — port, który żyje z cudzego zaplecza",
+          "region": "Ujście Renu i Mozy, Holandia",
+          "text": "Rotterdam leży w **estuarium Renu i Mozy**, gdzie głębokie podejście od Morza Północnego spotyka się z największą arterią żeglugi śródlądowej Europy. To połączenie jest kluczem: statek oceaniczny wyładowuje towar przy nabrzeżu, a **barka rzeczna zawozi go w głąb kontynentu** — do Zagłębia Ruhry, Nadrenii, Szwajcarii — bez ani jednego kilometra ciężarówką. Zaplecze Rotterdamu w większości leży więc **poza Holandią**, co jest ewenementem w skali świata i pokazuje, że hinterland nie zna granic państwowych, jeśli istnieje tania droga transportowa. Wokół portu wyrosła ogromna dzielnica przemysłowa: rafinerie, przemysł petrochemiczny i chemiczny, terminale masowe — czyli zakłady **przyciągane przez surowiec przywożony morzem**, klasyczny przykład lokalizacji przemysłu na wybrzeżu. Gdy zabrakło miejsca, Holendrzy zrobili to, co robią od stuleci: usypali nowy ląd. Kompleks Europoort, a potem Maasvlakte 2 oddany w 2013 r., stoi na terenie **odzyskanym od morza** i od razu ma głębokość pozwalającą przyjmować największe kontenerowce świata.",
+          "takeaway": "Wielkość portu to nie tylko cecha brzegu, ale iloczyn trzech rzeczy: **głębokości podejścia, jakości zaplecza i taniej drogi w głąb lądu**. Rotterdam ma komplet, a brakującą przestrzeń po prostu wyprodukował."
+        },
+        {
+          "type": "case-study",
+          "title": "Singapur — państwo bez surowców, które sprzedaje własne położenie",
+          "region": "Cieśnina Malakka, Azja Południowo-Wschodnia",
+          "text": "Singapur nie ma praktycznie żadnych zasobów naturalnych — importuje surowce, żywność, a nawet wodę i piasek. Ma za to jedno: **położenie u wylotu Cieśniny Malakka**, najkrótszej drogi morskiej między Oceanem Indyjskim a Pacyfikiem, którą przechodzi ogromna część handlu Azji z Europą i Bliskim Wschodem. Państwo zamieniło to położenie w gospodarkę: zbudowało port o głębokim podejściu, wprowadziło status **portu wolnocłowego**, sprawną administrację celną i przewidywalne prawo, a następnie dołożyło do tego rafinerie, bunkrowanie paliwa dla statków, ubezpieczenia morskie i usługi finansowe. Większość kontenerów przechodzących przez Singapur nigdy nie trafia na rynek singapurski — są tylko **przeładowywane (transshipment)** ze statku oceanicznego na feederowy. Kraj zarabia więc nie na własnym zapleczu, którego prawie nie ma, lecz na **byciu węzłem cudzych tras**, i dlatego musi nieustannie inwestować, by konkurenci nie przejęli ruchu.",
+          "takeaway": "Położenie **tranzytowe** przy szlaku o dużym natężeniu może zastąpić brak surowców i brak zaplecza — pod warunkiem że państwo dołoży do niego infrastrukturę i instytucje. Sama geografia daje szansę, nie wynik."
+        },
+        {
+          "type": "map-explore",
+          "title": "Węzły morskie świata — porty, kanały i cieśniny",
+          "caption": "Zwróć uwagę, jak wiele z tych punktów to **wąskie gardła**: miejsca, w których cały ruch musi się przecisnąć przez kilkukilometrową szczelinę. To tam geografia zamienia się w politykę.",
+          "center": [
+            25,
+            40
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 51.95,
+              "lng": 4.05,
+              "label": "Rotterdam / Maasvlakte, Holandia",
+              "text": "Największy port Europy w **estuarium Renu i Mozy**. Głębokie podejście od morza plus żegluga śródlądowa w głąb kontynentu; nowe terminale zbudowano na lądzie odzyskanym od morza."
+            },
+            {
+              "lat": 1.26,
+              "lng": 103.82,
+              "label": "Singapur",
+              "text": "Węzeł przeładunkowy u wylotu **Cieśniny Malakka** i największy port bunkrowania paliwa na świecie. Gospodarka oparta na położeniu tranzytowym, nie na zapleczu."
+            },
+            {
+              "lat": 30.62,
+              "lng": 122.07,
+              "label": "Yangshan, Szanghaj, Chiny",
+              "text": "Terminal głębokowodny wyniesiony na wyspy i połączony z lądem wielokilometrowym mostem — powstał dlatego, że **ujście Jangcy jest zbyt płytkie i zamulane** dla największych kontenerowców. Obsługuje eksport najludniejszego zaplecza przemysłowego świata."
+            },
+            {
+              "lat": 30.58,
+              "lng": 32.27,
+              "label": "Kanał Sueski, Egipt",
+              "text": "Sztuczna droga wodna z 1869 r. łącząca Morze Śródziemne z Morzem Czerwonym. Skraca rejs z Azji do Europy o tysiące kilometrów, a Egiptowi daje stały dochód z opłat tranzytowych — przykład **renty położenia**."
+            },
+            {
+              "lat": 9.27,
+              "lng": -79.92,
+              "label": "Kanał Panamski, Panama",
+              "text": "Otwarty w 1914 r., śluzowy — statki pokonują wzniesienie przez sztuczne jezioro Gatún. Rozbudowa z 2016 r. dopuściła większe jednostki, ale przepustowość ogranicza dziś także **dostępność wody słodkiej** potrzebnej do śluzowania."
+            },
+            {
+              "lat": 68.44,
+              "lng": 17.43,
+              "label": "Narwik, Norwegia",
+              "text": "Port położony za kołem podbiegunowym, a mimo to **niezamarzający** dzięki ciepłemu Prądowi Norweskiemu. Powstał, by wywozić rudę żelaza ze szwedzkiej Kiruny — wybrzeże fiordowe dało głębokie i osłonięte nabrzeże."
+            },
+            {
+              "lat": 54.4,
+              "lng": 18.72,
+              "label": "Gdańsk, Polska",
+              "text": "Terminal głębokowodny na wybrzeżu, które z natury jest płytkie i wyrównane — dostęp trzeba było **wypracować inwestycją**, nie odziedziczyć. Dzięki temu Bałtyk zyskał punkt przyjmujący największe kontenerowce bezpośrednio z Azji."
+            }
+          ]
+        },
+        {
+          "type": "zones",
+          "title": "Główne strefy turystyczne świata i to, co je napędza",
+          "caption": "Turystyka rodzi się tam, gdzie spotykają się trzy warunki: **walory** (przyrodnicze lub kulturowe), **zagospodarowanie** (hotele, wyciągi, wodociągi) oraz **dostępność komunikacyjna**. Brak choćby jednego z nich zatrzymuje rozwój.",
+          "zones": [
+            {
+              "name": "Strefa śródziemnomorska",
+              "latitude": "ok. 30–45°N",
+              "text": "Klimat z **gorącym i bezdeszczowym latem** daje niemal gwarantowaną pogodę w szczycie sezonu, a ciepłe morze i bogate dziedzictwo antyczne dokładają walory kulturowe. Cena tego modelu to skrajna **sezonowość**: przeciążenie infrastruktury i niedobory wody latem, martwe kurorty zimą.",
+              "tone": "heat"
+            },
+            {
+              "name": "Strefa tropikalna wyspiarska",
+              "latitude": "ok. 25°N–25°S",
+              "text": "Ciepłe morze przez cały rok, rafy koralowe i plaże. Sezon układa się według **pory suchej i rytmu cyklonów tropikalnych**, a nie według temperatury. Barierą jest odległość — ruch pojawia się dopiero po zbudowaniu portu lotniczego zdolnego przyjąć samoloty dalekiego zasięgu.",
+              "tone": "water"
+            },
+            {
+              "name": "Strefa górska",
+              "latitude": "Alpy, Karpaty, Góry Skaliste — powyżej ok. 1200 m n.p.m.",
+              "text": "Podstawowym zasobem jest **pokrywa śnieżna o odpowiedniej trwałości** oraz deniwelacje pozwalające wytyczyć trasy. Rosnąca temperatura podnosi granicę pewnego śniegu, więc niżej położone ośrodki muszą naśnieżać albo przechodzić na sezon letni.",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa okołobiegunowa",
+              "latitude": "powyżej 66°34′ szerokości geograficznej",
+              "text": "Turystyka **kwalifikowana i ekstremalna**: zorza polarna, lodowce, dzika przyroda, dzień polarny. Ruch jest mały, ale wydatek na jednego turystę bardzo wysoki. Środowisko jest tu wyjątkowo wrażliwe, więc obowiązują limity odwiedzin.",
+              "tone": "ice"
+            },
+            {
+              "name": "Strefa pustynna i sztucznych kurortów",
+              "latitude": "ok. 20–30°N, m.in. Zatoka Perska",
+              "text": "Miejsce, gdzie warunki naturalne są **z gruntu niekorzystne**, a mimo to powstaje ruch turystyczny — dzięki klimatyzacji, odsalaniu wody i inwestycjom w atrakcje. Sezon jest tu odwrócony: szczyt przypada na chłodniejsze półrocze zimowe.",
+              "tone": "earth"
+            }
+          ]
+        },
+        {
+          "type": "cycle",
+          "title": "Cykl życia obszaru turystycznego (model Butlera)",
+          "caption": "Model tłumaczy, dlaczego sukces turystyczny bywa samobójczy: ruch niszczy walor, który go wywołał. Ostatni etap jest rozwidleniem, nie wyrokiem.",
+          "stages": [
+            {
+              "name": "Eksploracja",
+              "text": "Przyjeżdżają nieliczni podróżnicy przyciągnięci **nietkniętym środowiskiem**. Nie ma infrastruktury turystycznej, kontakt z mieszkańcami jest bezpośredni, wpływ na środowisko znikomy."
+            },
+            {
+              "name": "Inicjacja",
+              "text": "Mieszkańcy zaczynają świadczyć proste usługi — kwatery, wyżywienie, przewodnictwo. Dochód zostaje w rękach lokalnych, ale pojawia się pierwsza **reklama miejsca**."
+            },
+            {
+              "name": "Rozwój",
+              "text": "Wkracza kapitał zewnętrzny: hotele sieciowe, biura podróży, lotnisko. Ruch rośnie gwałtownie, krajobraz zmienia się nieodwracalnie, a kontrola nad rozwojem przechodzi **poza społeczność lokalną**."
+            },
+            {
+              "name": "Konsolidacja",
+              "text": "Tempo wzrostu słabnie, choć liczba turystów wciąż rośnie. Gospodarka regionu jest już **zdominowana przez turystykę** — inne działalności zanikły, co czyni region zależnym od jednego rynku."
+            },
+            {
+              "name": "Stagnacja",
+              "text": "Zostaje przekroczona **pojemność turystyczna**: brakuje wody, oczyszczalni i miejsc na plaży, walory są zniszczone lub przesłonięte zabudową. Miejsce traci prestiż, przyciąga tańszego klienta, ceny spadają."
+            },
+            {
+              "name": "Schyłek albo odmłodzenie",
+              "text": "Bez interwencji następuje **schyłek** — hotele zamieniają się w mieszkania lub pustoszeją. **Odmłodzenie** wymaga nowego zasobu: kongresów, sportu, kasyn, uzdrowiska, rewitalizacji zabytków — albo przywrócenia utraconych walorów środowiska."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Uważaj na cztery mylone pojęcia. **Linia brzegowa dobrze rozwinięta** to brzeg silnie rozczłonkowany (półwyspy, zatoki, wyspy) — sprzyja portom, a nie plażom; brzeg wyrównany jest odwrotnie. **Walory turystyczne** to zasoby, które przyciągają (klimat, rzeźba, zabytki), a **zagospodarowanie turystyczne** to infrastruktura, która pozwala je wykorzystać — sam walor bez bazy nie tworzy ruchu. **Port morski** leży nad morzem, **port morsko-rzeczny** dziesiątki kilometrów w górę rzeki, w estuarium (Hamburg, Szczecin). I najczęstszy błąd: **kraj śródlądowy** to państwo bez dostępu do morza, a nie państwo bez rzek — dodatkowe koszty bierze stąd, że każdy ładunek eksportowy musi przekroczyć granicę i zostać przeładowany."
+        },
+        {
+          "type": "matching",
+          "title": "Typ wybrzeża a jego gospodarcza konsekwencja",
+          "instruction": "Dopasuj typ wybrzeża do najlepiej pasującej konsekwencji dla gospodarki.",
+          "pairs": [
+            {
+              "left": "Wybrzeże fiordowe",
+              "right": "głębokie i osłonięte zatoki polodowcowe — naturalny port bez kosztownych robót czerpalnych"
+            },
+            {
+              "left": "Wybrzeże estuariowe",
+              "right": "statki wpływają dziesiątki kilometrów w głąb lądu, prosto do zaplecza przemysłowego"
+            },
+            {
+              "left": "Wybrzeże mierzejowo-zalewowe",
+              "right": "płytko i bez osłony — port wymaga falochronów i stałego pogłębiania toru"
+            },
+            {
+              "left": "Wybrzeże koralowe",
+              "right": "rafa utrudnia dojście statków, ale sama jest pierwszorzędnym walorem turystycznym"
+            },
+            {
+              "left": "Wybrzeże deltowe",
+              "right": "rzeka nieustannie zamula tor wodny, więc port walczy z odkładaniem materiału"
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Singapur nie ma surowców mineralnych ani rozległego zaplecza lądowego, a mimo to należy do największych portów świata. Które wyjaśnienie jest najtrafniejsze?",
+          "options": [
+            "Leży w strefie klimatu równikowego, co pozwala na żeglugę przez cały rok, niemożliwą w innych portach",
+            "Ma najgłębsze naturalne podejście na świecie, więc jako jedyny może przyjąć największe kontenerowce",
+            "Leży u wylotu Cieśniny Malakka, na trasie tranzytowej między Oceanem Indyjskim a Pacyfikiem, i pełni funkcję portu przeładunkowego dla ruchu, który tylko przez niego przechodzi",
+            "Wydobywa ropę naftową na własnym szelfie, dzięki czemu obsługuje głównie eksport paliw"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kluczem jest **położenie tranzytowe** i funkcja **transshipment**: większość kontenerów jest w Singapurze wyłącznie przeładowywana ze statków oceanicznych na feederowe i nigdy nie trafia na rynek singapurski. Odpowiedź 1 jest błędna, bo całoroczna żegluga to cecha wszystkich portów strefy międzyzwrotnikowej i wielu portów strefy umiarkowanej. Odpowiedź 2 przypisuje Singapurowi wyłączność, której nie ma. Odpowiedź 4 jest po prostu nieprawdziwa — Singapur ropę **przerabia i bunkruje**, ale jej nie wydobywa."
+        },
+        {
+          "type": "quiz",
+          "question": "Popularny kurort śródziemnomorski notuje od kilku lat spadek liczby turystów i obniżenie standardu gości, mimo że infrastruktura hotelowa jest największa w historii miejscowości. Który etap modelu Butlera to opisuje i dlaczego?",
+          "options": [
+            "Etap rozwoju — bo trwa intensywna rozbudowa bazy noclegowej",
+            "Etap stagnacji — przekroczono pojemność turystyczną, walory zostały zniszczone lub przesłonięte zabudową, więc miejsce traci prestiż mimo rozbudowanej bazy",
+            "Etap eksploracji — bo przyjeżdża coraz mniej osób, jak na początku rozwoju miejscowości",
+            "Etap inicjacji — bo mieszkańcy zaczynają samodzielnie świadczyć usługi turystyczne"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sygnałem rozpoznawczym **stagnacji** jest właśnie rozejście się dwóch wielkości: baza noclegowa jest największa w historii, a ruch i prestiż spadają. Mechanizm jest samoniszczący — masowa zabudowa i przeciążenie infrastruktury niszczą ten walor środowiska, który pierwotnie przyciągał gości. Odpowiedź 1 pomija spadek ruchu, a odpowiedzi 3 i 4 mylą **niską liczbę turystów na początku cyklu** (przy braku bazy) ze spadkiem po szczycie (przy bazie przerośniętej). Wyjściem ze stagnacji jest **odmłodzenie**: nowa funkcja lub odbudowa walorów."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "Przy zadaniach o portach i turystyce buduj odpowiedź z **cech mierzalnych, nie z ogólników**. Dla portu wymień: głębokość podejścia, osłonę przed falowaniem, brak zamarzania, zakres pływów, jakość zaplecza i istnienie taniej drogi w głąb lądu (rzeka, kolej, autostrada) oraz położenie względem szlaku tranzytowego. Dla turystyki użyj klasycznej triady CKE: **walory → zagospodarowanie → dostępność komunikacyjna**, i pamiętaj, że walory dzielą się na **przyrodnicze** (klimat, rzeźba, wody, przyroda ożywiona) i **antropogeniczne** (zabytki, kultura, wydarzenia). Gdy polecenie brzmi „oceń warunki”, zawsze podaj **argument i kontrargument** — na przykład: ciepłe, suche lato sprzyja wypoczynkowi, ale wywołuje deficyt wody i skrajną sezonowość zatrudnienia."
+        }
+      ]
+    },
+    {
+      "slug": "bariery-przyrodnicze-adaptacja-i-posybilizm",
+      "title": "Bariery i zagrożenia przyrodnicze, adaptacja i spór o determinizm geograficzny",
+      "summary": "Trzęsienia ziemi, wulkany, powodzie i cyklony jako bariery rozwoju — i cztery kraje, które nauczyły się je obchodzić: Holandia z polderami, Japonia z izolatorami sejsmicznymi, Izrael z odsalaniem i Dubaj z klimatyzacją. Podsumowanie działu w postaci sporu: determinizm czy posybilizm?",
+      "readingMinutes": 15,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Cały ten dział dotyczył jednego pytania: **jak mocno środowisko trzyma człowieka za rękę**. Widziałeś już, że stok podnosi koszt orki, że okres wegetacyjny wyznacza dobór roślin, że gleba i woda decydują o plonach, a złoże i linia brzegowa o zamożności regionu. Teraz przyjrzymy się stronie najbardziej dramatycznej — **zagrożeniom przyrodniczym**, które potrafią w kilka minut zniszczyć dorobek pokoleń — a potem odwrócimy perspektywę i zapytamy o granice tej zależności. Bo istnieją kraje, które zamieszkały tam, gdzie z pozoru mieszkać nie sposób: na dnie dawnej zatoki morskiej, na styku czterech płyt litosfery, na pustyni bez rzeki. To one dostarczają argumentów w najstarszym sporze geografii: **determinizm czy posybilizm**."
+        },
+        {
+          "type": "compare",
+          "title": "Determinizm a posybilizm geograficzny — dwa spojrzenia na tę samą zależność",
+          "leftLabel": "Determinizm geograficzny",
+          "rightLabel": "Posybilizm geograficzny",
+          "rows": [
+            {
+              "aspect": "Teza główna",
+              "left": "Warunki przyrodnicze **przesądzają** o poziomie rozwoju, kulturze i ustroju społeczeństwa. Środowisko jest przyczyną, człowiek skutkiem.",
+              "right": "Środowisko **stwarza możliwości i ograniczenia**, ale o tym, które z nich zostaną wykorzystane, decyduje człowiek — jego technika, kapitał i organizacja społeczna."
+            },
+            {
+              "aspect": "Rola człowieka",
+              "left": "Bierna: dostosowuje się do tego, co zastał. Zmiana warunków jest poza jego zasięgiem.",
+              "right": "Czynna: **wybiera spośród możliwości**, a granicę wyboru przesuwa wraz z rozwojem techniki. To, co dla jednego pokolenia było barierą, dla następnego bywa kosztem."
+            },
+            {
+              "aspect": "Przywoływane argumenty",
+              "left": "Cywilizacje rzeczne powstały nad wielkimi rzekami; pustynie i strefa okołobiegunowa pozostają niemal bezludne; kraje śródlądowe rozwijają się wolniej od nadmorskich.",
+              "right": "Holandia gospodaruje poniżej poziomu morza, Japonia buduje wieżowce na obszarze sejsmicznym, Izrael eksportuje żywność z półpustyni, Islandia grzeje domy ciepłem wnętrza Ziemi."
+            },
+            {
+              "aspect": "Słaby punkt",
+              "left": "Nie tłumaczy, dlaczego w **identycznych warunkach** przyrodniczych sąsiednie kraje osiągają skrajnie różny poziom rozwoju. Prowadzi też do nieuprawnionych wniosków o „lepszych” i „gorszych” klimatach dla cywilizacji.",
+              "right": "Bywa nadużywany do twierdzenia, że pieniądze i technika pokonają wszystko. Tymczasem koszt pokonania bariery bywa **niewspółmierny do korzyści**, a niektóre granice — jak wyczerpanie wód kopalnych — są nieprzekraczalne."
+            },
+            {
+              "aspect": "Ujęcie dzisiejsze",
+              "left": "Odrzucone jako wyjaśnienie całościowe; zachowuje wartość jako opis warunków **początkowych**, od których zaczynał każdy region.",
+              "right": "Dominujące, w wersji ostrożnej zwanej **probabilizmem**: pewne sposoby gospodarowania są w danym środowisku po prostu **bardziej prawdopodobne** niż inne, bo tańsze — ale żaden nie jest przesądzony."
+            }
+          ]
+        },
+        {
+          "type": "classification",
+          "title": "Zagrożenia przyrodnicze według źródła energii",
+          "caption": "Podział ma sens praktyczny: zagrożenia **endogeniczne** są nagłe i niemal niemożliwe do przewidzenia co do terminu, ale świetnie zlokalizowane w przestrzeni; **hydrometeorologiczne** są przewidywalne na godziny lub dni, lecz obejmują ogromne obszary.",
+          "groups": [
+            {
+              "name": "Zagrożenia endogeniczne (wnętrza Ziemi)",
+              "description": "Uwalniają energię nagromadzoną w skorupie ziemskiej. Występują w **przewidywalnych miejscach** — wzdłuż granic płyt litosfery — ale w nieprzewidywalnym momencie, dlatego jedyną skuteczną obroną jest budownictwo odporne i planowanie przestrzenne.",
+              "examples": [
+                "trzęsienia ziemi",
+                "tsunami",
+                "erupcje wulkaniczne",
+                "lahary i chmury piroklastyczne"
+              ]
+            },
+            {
+              "name": "Zagrożenia hydrometeorologiczne",
+              "description": "Napędzane energią słoneczną zgromadzoną w atmosferze i oceanie. Są **prognozowalne z wyprzedzeniem**, więc ostrzeganie i ewakuacja realnie ratują życie, choć nie chronią majątku.",
+              "examples": [
+                "cyklony tropikalne",
+                "powodzie opadowe i roztopowe",
+                "powodzie sztormowe",
+                "trąby powietrzne",
+                "gradobicia"
+              ]
+            },
+            {
+              "name": "Zagrożenia klimatyczne o powolnym przebiegu",
+              "description": "Nie mają jednego momentu uderzenia — narastają latami, przez co bywają lekceważone, a straty gospodarcze sumują się do ogromnych kwot. Najtrudniejsze do sfinansowania z ubezpieczeń.",
+              "examples": [
+                "susze i pustynnienie",
+                "podnoszenie się poziomu morza",
+                "wieloletnie fale upałów",
+                "topnienie wieloletniej zmarzliny pod budynkami"
+              ]
+            },
+            {
+              "name": "Zagrożenia grawitacyjne i biologiczne",
+              "description": "Uruchamiane przez zagrożenie pierwotne (opad, wstrząs) albo przez organizmy żywe. Często są **skutkiem wtórnym**, dlatego pojawiają się już po tym, jak główne uderzenie minęło.",
+              "examples": [
+                "osuwiska i lawiny",
+                "spływy błotne",
+                "plagi szarańczy",
+                "gradacje szkodników lasu"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "formula",
+          "title": "Ryzyko klęski żywiołowej",
+          "expression": "R = H \\cdot E \\cdot V",
+          "variables": [
+            {
+              "symbol": "R",
+              "meaning": "ryzyko — oczekiwana wielkość strat (ofiary, majątek)"
+            },
+            {
+              "symbol": "H",
+              "meaning": "zagrożenie (hazard) — siła i częstość zjawiska naturalnego"
+            },
+            {
+              "symbol": "E",
+              "meaning": "ekspozycja — ile osób i majątku znajduje się w zasięgu zjawiska"
+            },
+            {
+              "symbol": "V",
+              "meaning": "podatność — jak łatwo to, co eksponowane, ulega zniszczeniu"
+            }
+          ],
+          "caption": "Ten zapis tłumaczy całą politykę adaptacji. Człowiek prawie nigdy nie zmienia **H** — nie powstrzyma ruchu płyt ani cyklonu. Może natomiast obniżać **E** (planowanie przestrzenne, zakaz zabudowy w terenie zalewowym, ewakuacja) i **V** (normy budowlane, wały, systemy ostrzegania, ubezpieczenia). Skoro to iloczyn, wyzerowanie choćby jednego czynnika znosi ryzyko — a to dlatego silne trzęsienie ziemi na bezludziu nie jest klęską."
+        },
+        {
+          "type": "key-numbers",
+          "title": "Bariery i adaptacja w liczbach",
+          "items": [
+            {
+              "value": "ok. 26",
+              "unit": "%",
+              "label": "udział powierzchni Holandii położonej poniżej poziomu morza",
+              "note": "Wraz z terenami zagrożonymi powodzią rzeczną obszar wymagający ochrony obejmuje mniej więcej połowę kraju."
+            },
+            {
+              "value": "1953",
+              "label": "powódź sztormowa na Morzu Północnym — ponad 1800 ofiar w Holandii",
+              "note": "Bezpośrednia przyczyna uruchomienia Planu Delta, największego programu przeciwpowodziowego w Europie."
+            },
+            {
+              "value": "9,0",
+              "unit": "M",
+              "label": "magnituda trzęsienia ziemi Tōhoku u wybrzeży Japonii (2011)",
+              "note": "Tsunami przekroczyło wysokość wałów w wielu miejscach — dowód, że adaptacja przesuwa granicę bezpieczeństwa, ale jej nie likwiduje."
+            },
+            {
+              "value": "ok. 90",
+              "unit": "%",
+              "label": "udział budynków w Islandii ogrzewanych ciepłem geotermalnym",
+              "note": "Położenie na granicy rozbieżnej płyt, samo w sobie groźne, dało jednocześnie tanie i czyste źródło energii."
+            },
+            {
+              "value": "ok. 85",
+              "unit": "%",
+              "label": "udział oczyszczonych ścieków ponownie wykorzystanych w rolnictwie Izraela",
+              "note": "Najwyższy wskaźnik na świecie — woda przechodzi przez gospodarkę dwa razy, zanim zostanie utracona przez parowanie."
+            }
+          ]
+        },
+        {
+          "type": "process",
+          "title": "Od wstrząsu do klęski — dlaczego liczy się podatność, a nie sama magnituda",
+          "caption": "Prześledź, w którym ogniwie łańcucha decyduje przyroda, a w którym człowiek. Ogniw „ludzkich” jest więcej — i to one odpowiadają za większość różnicy w liczbie ofiar.",
+          "steps": [
+            {
+              "title": "Uwolnienie energii w ognisku",
+              "text": "Nagromadzone naprężenia w skorupie ziemskiej zostają rozładowane. **To jedyne ogniwo w całości przyrodnicze** — jego siłę opisuje magnituda i nikt na nią nie wpływa."
+            },
+            {
+              "title": "Wzmocnienie drgań przez podłoże",
+              "text": "Fale sejsmiczne inaczej biegną w litej skale, a inaczej w luźnych osadach doliny rzecznej, gdzie ich amplituda **rośnie wielokrotnie**. Grunty nasycone wodą mogą ulec **upłynnieniu** i budynek osiada, choć sam pozostaje cały. Wybór miejsca pod zabudowę jest już decyzją człowieka."
+            },
+            {
+              "title": "Reakcja konstrukcji",
+              "text": "Budynek z niezbrojonego muru lub cegły suszonej rozpada się przy drganiach, które konstrukcji szkieletowej z **izolatorami sejsmicznymi** i tłumikami nie robią większej krzywdy. Tu powstaje główna różnica w liczbie ofiar między krajami."
+            },
+            {
+              "title": "Zagrożenia wtórne",
+              "text": "Po wstrząsie przychodzi to, co często zabija więcej: **pożary** z rozerwanych gazociągów, **tsunami** przy epicentrum podmorskim, osuwiska, zerwane tamy. Odporność sieci gazowej i energetycznej okazuje się równie ważna jak odporność domów."
+            },
+            {
+              "title": "Załamanie infrastruktury i akcji ratunkowej",
+              "text": "Zniszczone drogi, mosty, szpitale i sieć wodociągowa opóźniają pomoc. Większość uratowanych spod gruzu wydobywa się w **pierwszych godzinach**, więc opóźnienie przekłada się wprost na liczbę ofiar."
+            },
+            {
+              "title": "Skutki długookresowe",
+              "text": "Utrata majątku, przerwanie produkcji i migracja z regionu. W kraju biednym odbudowa pochłania znaczną część rocznego dochodu i **cofa rozwój o lata**; w kraju bogatym jest wchłonięta przez ubezpieczenia i budżet."
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Katastrofy, które zmieniły sposób gospodarowania",
+          "caption": "Regułą jest niestety to, że wielkie zabezpieczenia powstają **po** klęsce, a nie przed nią — bo dopiero wtedy społeczeństwo zgadza się ponieść koszt.",
+          "events": [
+            {
+              "period": "1932",
+              "label": "Afsluitdijk odcina Zuiderzee",
+              "text": "Trzydziestokilometrowa grobla zamienia morską zatokę w słodkowodne jezioro IJsselmeer. Otwiera to drogę do osuszenia **polderów Flevoland** — nowej prowincji utworzonej na dnie dawnej zatoki."
+            },
+            {
+              "period": "1953",
+              "label": "Powódź sztormowa w Holandii",
+              "text": "Sztorm z wysokim przypływem przerywa wały: ponad 1800 ofiar. Kraj przyjmuje zasadę, że poziom zabezpieczeń ma odpowiadać zdarzeniu o skrajnie rzadkim prawdopodobieństwie, i rozpoczyna **Plan Delta**."
+            },
+            {
+              "period": "1958–1997",
+              "label": "Budowa Deltaworks",
+              "text": "Zapory, śluzy i ruchome wrota skracają linię brzegową narażoną na sztorm. Zwieńczeniem jest **Maeslantkering** — ruchoma zapora zamykająca drogę wodną do Rotterdamu tylko wtedy, gdy nadchodzi sztorm, by nie blokować żeglugi."
+            },
+            {
+              "period": "1995",
+              "label": "Trzęsienie ziemi w Kobe",
+              "text": "Wstrząs w uprzemysłowionym mieście obnaża słabość starszych budynków i wiaduktów. Japonia zaostrza normy, rozwija **wzmacnianie istniejących konstrukcji** i przebudowuje system zarządzania kryzysowego."
+            },
+            {
+              "period": "2004",
+              "label": "Tsunami na Oceanie Indyjskim",
+              "text": "Fala zabija ponad dwieście tysięcy osób w krajach, w których **nie istniał system ostrzegania** — mimo że od wstrząsu do uderzenia fali w odległe wybrzeża upłynęły godziny. Efektem jest budowa sieci ostrzegawczej dla całego oceanu."
+            },
+            {
+              "period": "2007–2015",
+              "label": "Program „Przestrzeń dla rzeki”",
+              "text": "Holandia zmienia filozofię: zamiast wyłącznie podnosić wały, **oddaje rzece tereny zalewowe**, obniża międzywala i przesuwa obwałowania. Uznano, że nieskończone podnoszenie wałów tylko zwiększa skalę katastrofy, gdy w końcu ustąpią."
+            },
+            {
+              "period": "2011",
+              "label": "Trzęsienie ziemi i tsunami Tōhoku",
+              "text": "Wstrząs o magnitudzie 9,0 wywołuje falę, która w wielu miejscach przelewa się przez wały zaprojektowane na słabsze zdarzenie, a jej skutkiem jest awaria elektrowni w Fukushimie. Lekcja brzmi: **zabezpieczenie projektuje się na jakiś scenariusz, a przyroda go czasem przekracza**."
+            }
+          ]
+        },
+        {
+          "type": "case-study",
+          "title": "Holandia — kraj, który zbudował sobie ziemię",
+          "region": "Niziny nadmorskie, Holandia",
+          "text": "Około jedna czwarta powierzchni Holandii leży **poniżej poziomu morza**, a najniższe punkty sięgają kilku metrów poniżej. Mieszka tam i pracuje ok. jedna piąta ludności kraju, a poniżej poziomu morza leży również lotnisko Schiphol. Ten stan nie jest dziełem natury, lecz **osiemsetletniej pracy**: budowano groble, odcinano od morza płytkie zatoki, a wodę z osuszanych obszarów wypompowywano — najpierw wiatrakami, później maszynami parowymi i elektrycznymi. Tak powstał **polder**: teren depresyjny, otoczony wałem, z którego wodę trzeba wypompowywać bez przerwy, bo inaczej wróci. Kulminacją jest Flevoland — cała prowincja leżąca na dnie dawnej zatoki, z zaplanowanymi od zera miastami, polami i drogami. Trzeba jednak zobaczyć drugą stronę bilansu. Po pierwsze, ochrona wymaga **stałych, ogromnych nakładów**: pompy muszą pracować zawsze, wały muszą być podnoszone wraz z podnoszeniem się poziomu morza. Po drugie, osuszony torf **ulega murszeniu i osiada**, więc teren z każdą dekadą obniża się jeszcze bardziej — bariera sama się pogłębia. Po trzecie, powódź z 1953 r. pokazała, że jedno przerwanie wału niweczy dorobek stuleci. Dlatego po 2007 r. Holendrzy zaczęli świadomie **oddawać rzekom część zdobytej przestrzeni**.",
+          "takeaway": "Holandia jest koronnym dowodem posybilizmu — bariera przyrodnicza została pokonana. Ale jest też dowodem jego granic: zwycięstwo trzeba **opłacać co roku**, a im dalej się je posunie, tym większa katastrofa czeka w razie awarii."
+        },
+        {
+          "type": "case-study",
+          "title": "Japonia — życie na styku czterech płyt litosfery",
+          "region": "Wyspy Japońskie, zachodni skraj Pacyfiku",
+          "text": "Japonia leży w miejscu, gdzie stykają się cztery płyty litosfery, a płyta pacyficzna podsuwa się pod kontynentalną. Skutkiem są tysiące wstrząsów rocznie, kilkadziesiąt czynnych wulkanów, tsunami i cyklony tropikalne (tajfuny). Do tego kraj jest **górzysty w około trzech czwartych powierzchni** i ubogi w surowce, więc ludność stłoczyła się na wąskich nizinach nadmorskich — dokładnie tam, gdzie zagrożenie jest największe. Odpowiedzią stała się adaptacja doprowadzona do perfekcji: rygorystyczne **normy sejsmiczne**, wieżowce posadowione na **izolatorach** i wyposażone w tłumiki drgań, wały przeciwtsunamiowe, sieć czujników wykrywających szybszą **falę P** i wysyłających ostrzeżenie na kilkanaście sekund przed nadejściem niszczącej fali S — dość, by zatrzymać pociągi i zamknąć zawory gazu. Do tego dochodzi coś, czego nie kupi się za pieniądze: powszechne **ćwiczenia ewakuacyjne** i kultura gotowości. Efekt widać w liczbach ofiar: wstrząsy, które w kraju o słabym budownictwie zabijają dziesiątki tysięcy ludzi, w Japonii kończą się nierzadko pojedynczymi ofiarami. Granicę tego systemu wyznaczył jednak rok 2011, gdy fala tsunami przekroczyła projektowaną wysokość wałów.",
+          "takeaway": "Adaptacja działa na czynnik **podatności (V)**, nie na zagrożenie (H). Potrafi obniżyć ryzyko o rzędy wielkości, ale zawsze jest zaprojektowana na konkretny scenariusz — a zdarzenie rzadsze i silniejsze pozostaje możliwe."
+        },
+        {
+          "type": "map-explore",
+          "title": "Siedem miejsc, w których człowiek przesunął granicę możliwego",
+          "caption": "Przy każdym znaczniku zadaj trzy pytania: jaka bariera, jaka technika ją obeszła i **jaki jest tego stały koszt** — energetyczny, finansowy albo środowiskowy.",
+          "center": [
+            30,
+            30
+          ],
+          "zoom": 2,
+          "markers": [
+            {
+              "lat": 52.52,
+              "lng": 5.6,
+              "label": "Flevoland, Holandia",
+              "text": "Prowincja utworzona na dnie dawnej zatoki morskiej. **Polder** działa tylko dzięki nieustannemu pompowaniu wody; osuszony torf osiada, więc depresja z każdą dekadą się pogłębia. Bariera pokonana — ale opłacana bez końca."
+            },
+            {
+              "lat": 35.68,
+              "lng": 139.69,
+              "label": "Tokio, Japonia",
+              "text": "Największy obszar metropolitalny świata na terenie **silnie sejsmicznym**. Izolatory sejsmiczne, tłumiki drgań, system wczesnego ostrzegania i ćwiczenia ewakuacyjne obniżają podatność do poziomu nieosiągalnego w krajach ubogich."
+            },
+            {
+              "lat": 31.94,
+              "lng": 34.7,
+              "label": "Odsalarnia Sorek, Izrael",
+              "text": "Kraj o klimacie półpustynnym i pustynnym zbudował gospodarkę wodną na trzech filarach: **odsalanie wody morskiej** metodą odwróconej osmozy, **nawadnianie kropelkowe** ograniczające straty na parowanie i **powtórne użycie oczyszczonych ścieków** w rolnictwie. Cena to duże zużycie energii i solanka odprowadzana do morza."
+            },
+            {
+              "lat": 25.2,
+              "lng": 55.27,
+              "label": "Dubaj, Zjednoczone Emiraty Arabskie",
+              "text": "Miasto na pustyni, gdzie latem temperatura przekracza 45 °C. Funkcjonuje dzięki **odsalaniu i klimatyzacji zasilanym tanią energią**, a gospodarkę oparto na porcie przeładunkowym, lotniczym hubie i turystyce — na **położeniu**, nie na miejscowych zasobach. Ślad wodny i energetyczny mieszkańca należy do najwyższych na świecie."
+            },
+            {
+              "lat": 22.82,
+              "lng": 89.56,
+              "label": "Wybrzeże Zatoki Bengalskiej, Bangladesz",
+              "text": "Nisko położona delta regularnie atakowana przez **cyklony tropikalne** i powodzie sztormowe. Bez kosztownych zapór, za to dzięki sieci **schronów cyklonowych**, ostrzeganiu i wolontariuszom ewakuującym wsie, liczba ofiar spadła o rzędy wielkości w porównaniu z katastrofami sprzed pół wieku. Dowód, że podatność da się obniżyć także tanio."
+            },
+            {
+              "lat": 64.03,
+              "lng": -21.4,
+              "label": "Hellisheiði, Islandia",
+              "text": "Wyspa na **grzbiecie śródoceanicznym**: wulkanizm i trzęsienia ziemi to zagrożenie, ale to samo położenie daje ciepło geotermalne ogrzewające niemal wszystkie budynki i tanią energię elektryczną, którą wykorzystują huty aluminium. **Ta sama cecha środowiska bywa jednocześnie barierą i zasobem**."
+            },
+            {
+              "lat": 18.54,
+              "lng": -72.34,
+              "label": "Port-au-Prince, Haiti",
+              "text": "Punkt odniesienia dla całej lekcji. Trzęsienie ziemi o umiarkowanej magnitudzie spowodowało tu katastrofę o ogromnej liczbie ofiar, podczas gdy znacznie silniejsze wstrząsy w krajach o wysokich normach budowlanych kończyły się stratami nieporównanie mniejszymi. Decydowała **podatność**, nie siła zjawiska."
+            }
+          ]
+        },
+        {
+          "type": "ordering",
+          "title": "Cykl zarządzania ryzykiem klęski żywiołowej",
+          "instruction": "Ułóż działania w kolejności, w jakiej występują w cyklu zarządzania ryzykiem — od pracy wykonywanej na długo przed zdarzeniem aż po wnioski wyciągane po nim.",
+          "items": [
+            "Rozpoznanie zagrożenia — sporządzenie map zagrożenia i ryzyka dla obszaru",
+            "Zapobieganie — planowanie przestrzenne, normy budowlane, wały i zbiorniki retencyjne",
+            "Przygotowanie — systemy ostrzegania, plany ewakuacji, ćwiczenia i zapasy",
+            "Reagowanie — ostrzeżenie ludności, ewakuacja i akcja ratunkowa",
+            "Odbudowa — przywrócenie funkcjonowania i korekta norm na podstawie wniosków"
+          ],
+          "explanation": "To **cykl**, a nie prosta lista: wnioski z odbudowy wracają do etapu rozpoznania i zapobiegania, bo każda klęska ujawnia słabości, których nie przewidziano. Zwróć uwagę, że aż trzy pierwsze etapy dzieją się **zanim** cokolwiek się wydarzy — i to one decydują o skali strat. Reagowanie ratuje życie, ale majątku uratować już nie może."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Cztery rozróżnienia, które CKE lubi sprawdzać. **Zagrożenie (hazard)** to samo zjawisko naturalne, **ryzyko** to oczekiwana wielkość strat, a **klęska żywiołowa** to zdarzenie, które już nastąpiło i przerosło możliwości lokalnej pomocy — trzęsienie ziemi na bezludziu jest zagrożeniem, ale nie klęską. **Adaptacja** to przystosowanie się do skutków (wały, izolatory, odmiany odporne na suszę), a **mitygacja** to ograniczanie samej przyczyny, na przykład redukcja emisji gazów cieplarnianych. **Determinizm** twierdzi, że środowisko przesądza, **posybilizm** — że tylko stwarza możliwości; nie myl posybilizmu z twierdzeniem, że środowisko nie ma znaczenia. I wreszcie: **magnituda** opisuje energię wstrząsu w ognisku i jest jedna dla całego zdarzenia, a **intensywność** opisuje odczuwalne skutki w konkretnym miejscu i maleje wraz z odległością od epicentrum."
+        },
+        {
+          "type": "quiz",
+          "question": "Trzęsienie ziemi o magnitudzie 8,8 w kraju A powoduje kilkaset ofiar, a wstrząs o magnitudzie 7,0 w kraju B — kilkaset tysięcy. Który zestaw czynników najlepiej wyjaśnia tę różnicę?",
+          "options": [
+            "Wstrząs w kraju B miał płytsze ognisko, więc jego magnituda została zaniżona przez sejsmografy",
+            "Kraj B ma gęstsze zaludnienie, a to jedyny czynnik decydujący o liczbie ofiar trzęsień ziemi",
+            "W kraju B budownictwo nie spełnia norm sejsmicznych, brakuje planów ewakuacji i sprawnych służb ratowniczych, a zabudowa stoi na podatnym podłożu — czyli wysoka jest podatność, nie siła zjawiska",
+            "Kraj A leży dalej od granicy płyt litosfery, więc fale sejsmiczne dotarły tam osłabione"
+          ],
+          "correctIndex": 2,
+          "explanation": "W zależności $R = H \\cdot E \\cdot V$ różnica leży w **podatności (V)**, a częściowo w ekspozycji (E) — nie w zagrożeniu (H), które w kraju A było przecież znacznie większe. O liczbie ofiar decydują normy budowlane, jakość konstrukcji, przygotowanie służb i to, czy zabudowano luźne osady wzmacniające drgania. Odpowiedź 1 jest błędna, bo magnituda mierzy energię w ognisku niezależnie od głębokości. Odpowiedź 2 wskazuje czynnik realny, ale nazywa go **jedynym**, co jest nieprawdą. Odpowiedź 4 przeczy założeniu — silniejszy wstrząs w kraju A też nastąpił w strefie sejsmicznej."
+        },
+        {
+          "type": "quiz",
+          "question": "Który przykład najmocniej podważa determinizm geograficzny jako całościowe wyjaśnienie rozwoju gospodarczego?",
+          "options": [
+            "Cywilizacje starożytne rozwijały się w dolinach wielkich rzek — Nilu, Eufratu, Indusu i Huang He",
+            "Strefa okołobiegunowa i wielkie pustynie należą do najsłabiej zaludnionych obszarów świata",
+            "Holandia gospodaruje na terenach poniżej poziomu morza, a Izrael eksportuje płody rolne z obszaru półpustynnego — mimo skrajnie niekorzystnych warunków wyjściowych",
+            "Kraje śródlądowe ponoszą wyższe koszty transportu w handlu zagranicznym niż kraje nadmorskie"
+          ],
+          "correctIndex": 2,
+          "explanation": "Determinizm podważa się **kontrprzykładem**: państwem, które osiągnęło wysoki poziom rozwoju wbrew warunkom uznawanym za wykluczające. Holandia i Izrael pokazują, że bariera przyrodnicza zamienia się w **koszt do poniesienia**, a nie w wyrok — pod warunkiem dostępu do techniki, kapitału i sprawnych instytucji. Odpowiedzi 1, 2 i 4 opisują fakty prawdziwe, ale są to argumenty **na rzecz** wpływu środowiska, a nie przeciwko niemu — pokazują jednak co najwyżej, że pewne rozwiązania są bardziej prawdopodobne (probabilizm), a nie przesądzone."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "To lekcja domykająca dział, więc zapamiętaj z niej **schemat odpowiedzi uniwersalnej**. Gdy polecenie brzmi „oceń wpływ warunków przyrodniczych na gospodarkę regionu X”, prowadź myśl tak: *konkretna cecha środowiska → mechanizm, przez który działa na koszt lub plon → skutek gospodarczy → sposób, w jaki człowiek tę barierę obchodzi → koszt tego obejścia*. Ostatnie ogniwo jest tym, które najczęściej odróżnia odpowiedź na komplet punktów od przeciętnej — egzaminator chce zobaczyć, że wiesz, iż **pokonanie bariery zawsze coś kosztuje**: energię na odsalanie, ciągłe pompowanie polderów, droższe konstrukcje sejsmiczne, nawozy na wyjałowionym stoku. Miej też przygotowaną gotową czwórkę przykładów posybilizmu — **Holandia (poldery), Japonia (budownictwo sejsmiczne), Izrael (woda), Dubaj (klimatyzacja i położenie tranzytowe)** — oraz jedno zdanie o ich wspólnej granicy: żadne z tych rozwiązań nie usuwa zagrożenia, wszystkie jedynie obniżają podatność, i to za stałą opłatą."
+        }
+      ]
+    }
+  ]
+}
