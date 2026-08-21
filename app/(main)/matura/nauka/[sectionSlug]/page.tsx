@@ -2,7 +2,7 @@
 // app/(main)/matura/nauka/[sectionSlug]/page.tsx
 // Hub for any exact-match-graded section (środki językowe, czytanie, słuchanie
 // — see MATURA_EXACT_MATCH_SECTION_SLUGS): the section's THEORY LIBRARY,
-// grouped by kind, followed by its task bank with the student's last score.
+// grouped by kind, followed by the CKE TASK TYPES it is practised through.
 // "pisanie" has its own dedicated route (different tables, AI-graded
 // holistically) and is NOT served here.
 //
@@ -10,6 +10,14 @@
 // lesson in the section onto one screen, which was tolerable at one lesson per
 // section and unusable at a dozen — each lesson now has its own page under
 // teoria/, and this page only reads their titles and summaries.
+//
+// Tasks used to be listed the same way: "Zadanie 1..N" straight out of the
+// bank, each showing the student's last score. That made every task a one-shot
+// item — once answered it was done, and a section was "finished" after four
+// attempts. Since 0023 the bank is tagged with CKE TASK TYPES and this page
+// lists those instead: each type is a counter of how many times the student has
+// done it, and starting one hands out a task they have not seen (generating a
+// new one when the queue runs dry — lib/matura/task-stock.ts).
 // ============================================================================
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
@@ -19,17 +27,29 @@ import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
 import { MATURA_EXACT_MATCH_SECTION_SLUGS } from "@/lib/matura/sections";
 import { getSectionLessons, groupLessonsByKind } from "@/lib/matura/theory";
+import { getTypeStats } from "@/lib/matura/task-stock";
+import { startTaskType } from "@/lib/matura/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import type { MaturaSection, MaturaSectionSlug, MaturaTask, MaturaTaskAttempt } from "@/lib/types/database";
+import { TaskTypeCard } from "@/components/practice/type-card";
+import type { MaturaSection, MaturaSectionSlug } from "@/lib/types/database";
+
+// Handing out a task can generate one inline, and the after() top-up runs on
+// this segment's budget too — both are AI calls. The platform default (10s on
+// Vercel) would cut them off; 60 is what every other AI path in this repo uses
+// (see app/api/geografia/import-exercises/route.ts).
+export const maxDuration = 60;
 
 export default async function MaturaSectionPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ sectionSlug: string }>;
+  searchParams: Promise<{ pusto?: string }>;
 }) {
   const { sectionSlug } = await params;
   if (!MATURA_EXACT_MATCH_SECTION_SLUGS.includes(sectionSlug as MaturaSectionSlug)) notFound();
+  const { pusto } = await searchParams;
 
   const profile = await requireProfile();
   const supabase = await createClient();
@@ -46,24 +66,14 @@ export default async function MaturaSectionPage({
   if (!sectionRow) notFound();
   const section = sectionRow as MaturaSection;
 
-  const [lessons, { data: taskRows }, { data: attemptRows }] = await Promise.all([
+  const [lessons, typeStats] = await Promise.all([
     getSectionLessons(supabase, profile.id, section.id),
-    supabase.from("matura_tasks").select("*").eq("section_id", section.id).order("created_at"),
-    supabase
-      .from("matura_task_attempts")
-      .select("*")
-      .eq("user_id", profile.id)
-      .order("attempted_at", { ascending: false }),
+    getTypeStats(supabase, profile.id, { id: section.id, slug: section.slug }, settings.level),
   ]);
 
   const groups = groupLessonsByKind(lessons);
   const doneCount = lessons.filter((item) => item.completed).length;
-  const tasks = (taskRows ?? []) as MaturaTask[];
-  const attempts = (attemptRows ?? []) as MaturaTaskAttempt[];
-  const latestAttemptByTask = new Map<string, MaturaTaskAttempt>();
-  for (const attempt of attempts) {
-    if (!latestAttemptByTask.has(attempt.task_id)) latestAttemptByTask.set(attempt.task_id, attempt);
-  }
+  const totalCompleted = typeStats.reduce((sum, stat) => sum + stat.completedCount, 0);
 
   return (
     <div>
@@ -110,32 +120,50 @@ export default async function MaturaSectionPage({
           </section>
         ))}
 
-        <h2 className="mt-2 text-sm font-semibold text-foreground-muted">Zadania</h2>
+        <div className="mt-2 flex items-baseline justify-between gap-2">
+          <h2 className="text-sm font-semibold text-foreground-muted">Typy zadań</h2>
+          {totalCompleted > 0 && (
+            <span className="text-xs tabular-nums text-foreground-muted">
+              {totalCompleted} wykonanych łącznie
+            </span>
+          )}
+        </div>
 
-        {tasks.length === 0 && (
-          <Card className="text-center text-sm text-foreground-muted">Brak dostępnych zadań — wróć tu wkrótce.</Card>
+        <p className="-mt-2 text-xs text-foreground-muted">
+          Każdy typ możesz rozwiązywać bez końca — za każdym razem dostajesz inne zadanie.
+        </p>
+
+        {pusto && (
+          <Card className="border-danger/40 text-sm text-foreground-muted">
+            Do tego typu nie ma jeszcze żadnego zadania. Nagrania do rozumienia ze słuchu dodaje
+            administrator — wróć tu wkrótce.
+          </Card>
         )}
 
-        {tasks.map((task, i) => {
-          const attempt = latestAttemptByTask.get(task.id);
-          return (
-            <Link key={task.id} href={`/matura/nauka/${sectionSlug}/zadanie/${task.id}`}>
-              <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">
-                <div className="min-w-0 flex-1">
-                  <CardTitle>Zadanie {i + 1}</CardTitle>
-                  <CardDescription className="mt-0.5 line-clamp-1">{task.content.instructions}</CardDescription>
-                </div>
-                {attempt ? (
-                  <span className="shrink-0 text-sm font-semibold tabular-nums text-primary">
-                    {attempt.points_awarded}/{attempt.max_points}
-                  </span>
-                ) : (
-                  <ChevronRight className="h-4 w-4 shrink-0 text-foreground-muted" />
-                )}
-              </Card>
-            </Link>
-          );
-        })}
+        {typeStats.length === 0 && (
+          <Card className="text-center text-sm text-foreground-muted">
+            Zadania do tej części pojawią się wkrótce.
+          </Card>
+        )}
+
+        {typeStats.map((stat) => (
+          <TaskTypeCard
+            key={stat.typeDef.slug}
+            action={startTaskType}
+            fields={{ sectionSlug, typeSlug: stat.typeDef.slug }}
+            label={stat.typeDef.label}
+            description={stat.typeDef.description}
+            completedCount={stat.completedCount}
+            lastPoints={stat.lastPoints}
+            lastMaxPoints={stat.lastMaxPoints}
+            averagePercent={stat.averagePercent}
+            unavailableNote={
+              !stat.typeDef.aiGeneratable && stat.freshAvailable === 0 && stat.completedCount > 0
+                ? "Wszystkie nagrania z tej puli masz już za sobą — kolejne podejście powtórzy najstarsze."
+                : undefined
+            }
+          />
+        ))}
       </div>
     </div>
   );

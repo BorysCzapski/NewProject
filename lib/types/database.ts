@@ -965,9 +965,29 @@ export interface MaturaGeneratedMetadata {
   needsReview?: boolean;
 }
 
+/** CKE task types practised inside an exam part — see lib/matura/task-types.ts
+ * for the catalog and why the student practises along this axis rather than a
+ * numbered task list. */
+export type MaturaTaskTypeSlug =
+  | "slowotworstwo"
+  | "luki-otwarte"
+  | "formy-czasownika"
+  | "luki-wybor"
+  | "parafraza"
+  | "tlumaczenie"
+  | "czytanie-wybor"
+  | "czytanie-dobieranie"
+  | "czytanie-prawda-falsz"
+  | "sluchanie-wybor"
+  | "sluchanie-dobieranie";
+
 export interface MaturaTask {
   id: string;
   section_id: string;
+  /** Which CKE task type this is an instance of. Null only for rows seeded
+   * before 0023_matura_task_types.sql that the backfill could not classify —
+   * those are hidden from the type hubs but still openable by direct link. */
+  task_type: MaturaTaskTypeSlug | null;
   content: MaturaTaskContent;
   points_max: number;
   source: MaturaTaskSource;
@@ -1086,7 +1106,17 @@ export interface MaturaSettings {
 // graded holistically against a 4-part CKE rubric, not per-item exact match.
 // ----------------------------------------------------------------------------
 
-export type MaturaWritingFormType = "email" | "blog_post" | "forum_post" | "rozprawka_za_i_przeciw";
+/** Forms the writing prompt can take. Podstawowa: email/blog_post/forum_post.
+ * Rozszerzona: the tekst argumentacyjny forms — rozprawka, artykuł
+ * publicystyczny, list formalny. All are graded against one form-independent
+ * CKE rubric (lib/matura/writing-grading.ts). */
+export type MaturaWritingFormType =
+  | "email"
+  | "blog_post"
+  | "forum_post"
+  | "rozprawka_za_i_przeciw"
+  | "artykul"
+  | "list_formalny";
 
 export interface MaturaWritingTask {
   id: string;

@@ -2,11 +2,18 @@
 // app/(main)/matura/nauka/pisanie/page.tsx
 // "Wypowiedź pisemna" hub: the section's theory library (CKE rubric, forms,
 // connectors — see supabase/seed/matura*/04_lessons_pisanie.sql) followed by
-// its writing task bank, each task tagged with the student's last AI-graded
-// score if any.
+// the FORMS the student practises — e-mail, wpis na blogu, rozprawka…
 //
 // Lessons are listed rather than inlined, matching [sectionSlug]/page.tsx —
 // see the note there for why.
+//
+// Like the exact-match sections, this page used to list the writing bank as
+// "Zadanie 1..N": four prompts at poziom podstawowy, each done once, and then
+// the section had nothing left to offer. It now lists FORMS with a counter of
+// how many wypowiedzi the student has written in each, and starting one hands
+// out a prompt they have not answered — generating a new one when the queue
+// runs dry (lib/matura/writing-stock.ts). matura_writing_tasks.form_type was
+// already the right axis; it just was not the one the UI was built on.
 // ============================================================================
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
@@ -15,17 +22,29 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
 import { getSectionLessons, groupLessonsByKind } from "@/lib/matura/theory";
-import { MATURA_WRITING_FORM_LABELS } from "@/lib/matura/constants";
+import { getWritingTypeStats } from "@/lib/matura/writing-stock";
+import { startWritingType } from "@/lib/matura/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import type { MaturaSection, MaturaWritingSubmission, MaturaWritingTask } from "@/lib/types/database";
+import { TaskTypeCard } from "@/components/practice/type-card";
+import type { MaturaSection } from "@/lib/types/database";
 
-export default async function PisaniePage() {
+// Handing out a task can generate one inline, and the after() top-up runs on
+// this segment's budget too — both are AI calls. The platform default (10s on
+// Vercel) would cut them off; 60 is what every other AI path in this repo uses
+// (see app/api/geografia/import-exercises/route.ts).
+export const maxDuration = 60;
+
+export default async function PisaniePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ pusto?: string }>;
+}) {
   const profile = await requireProfile();
   const supabase = await createClient();
   const settings = await getMaturaSettings(supabase, profile.id);
   if (!settings) redirect("/matura");
+  const { pusto } = await searchParams;
 
   const { data: sectionRow } = await supabase
     .from("matura_sections")
@@ -37,24 +56,14 @@ export default async function PisaniePage() {
   if (!sectionRow) notFound();
   const section = sectionRow as MaturaSection;
 
-  const [lessons, { data: taskRows }, { data: submissionRows }] = await Promise.all([
+  const [lessons, typeStats] = await Promise.all([
     getSectionLessons(supabase, profile.id, section.id),
-    supabase.from("matura_writing_tasks").select("*").eq("section_id", section.id).order("created_at"),
-    supabase
-      .from("matura_writing_submissions")
-      .select("*")
-      .eq("user_id", profile.id)
-      .order("created_at", { ascending: false }),
+    getWritingTypeStats(supabase, profile.id, section.id, settings.level),
   ]);
 
   const groups = groupLessonsByKind(lessons);
   const doneCount = lessons.filter((item) => item.completed).length;
-  const tasks = (taskRows ?? []) as MaturaWritingTask[];
-  const submissions = (submissionRows ?? []) as MaturaWritingSubmission[];
-  const latestSubmissionByTask = new Map<string, MaturaWritingSubmission>();
-  for (const submission of submissions) {
-    if (!latestSubmissionByTask.has(submission.task_id)) latestSubmissionByTask.set(submission.task_id, submission);
-  }
+  const totalCompleted = typeStats.reduce((sum, stat) => sum + stat.completedCount, 0);
 
   return (
     <div>
@@ -101,35 +110,44 @@ export default async function PisaniePage() {
           </section>
         ))}
 
-        <h2 className="mt-2 text-sm font-semibold text-foreground-muted">Zadania</h2>
+        <div className="mt-2 flex items-baseline justify-between gap-2">
+          <h2 className="text-sm font-semibold text-foreground-muted">Formy wypowiedzi</h2>
+          {totalCompleted > 0 && (
+            <span className="text-xs tabular-nums text-foreground-muted">
+              {totalCompleted} napisanych łącznie
+            </span>
+          )}
+        </div>
 
-        {tasks.length === 0 && (
-          <Card className="text-center text-sm text-foreground-muted">Brak dostępnych zadań — wróć tu wkrótce.</Card>
+        <p className="-mt-2 text-xs text-foreground-muted">
+          Każdą formę możesz ćwiczyć bez końca — za każdym razem dostajesz inne polecenie.
+        </p>
+
+        {pusto && (
+          <Card className="border-danger/40 text-sm text-foreground-muted">
+            Nie udało się przygotować nowego polecenia. Spróbuj ponownie za chwilę.
+          </Card>
         )}
 
-        {tasks.map((task, i) => {
-          const submission = latestSubmissionByTask.get(task.id);
-          return (
-            <Link key={task.id} href={`/matura/nauka/pisanie/zadanie/${task.id}`}>
-              <Card className="transition-transform active:scale-[0.99]">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <Badge className="mb-1.5">{MATURA_WRITING_FORM_LABELS[task.form_type]}</Badge>
-                    <CardTitle>Zadanie {i + 1}</CardTitle>
-                    <CardDescription className="mt-0.5 line-clamp-2">{task.instructions}</CardDescription>
-                  </div>
-                  {submission ? (
-                    <span className="shrink-0 text-sm font-semibold tabular-nums text-primary">
-                      {submission.points_awarded}/{submission.max_points}
-                    </span>
-                  ) : (
-                    <ChevronRight className="h-4 w-4 shrink-0 text-foreground-muted" />
-                  )}
-                </div>
-              </Card>
-            </Link>
-          );
-        })}
+        {typeStats.length === 0 && (
+          <Card className="text-center text-sm text-foreground-muted">
+            Zadania do tej części pojawią się wkrótce.
+          </Card>
+        )}
+
+        {typeStats.map((stat) => (
+          <TaskTypeCard
+            key={stat.typeDef.formType}
+            action={startWritingType}
+            fields={{ formType: stat.typeDef.formType }}
+            label={stat.typeDef.label}
+            description={stat.typeDef.description}
+            completedCount={stat.completedCount}
+            lastPoints={stat.lastPoints}
+            lastMaxPoints={stat.lastMaxPoints}
+            averagePercent={stat.averagePercent}
+          />
+        ))}
       </div>
     </div>
   );
