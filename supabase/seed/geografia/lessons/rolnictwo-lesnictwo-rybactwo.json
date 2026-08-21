@@ -125,7 +125,7 @@
           "title": "Liczby, które warto pamiętać",
           "items": [
             { "value": "5", "unit": "°C", "label": "próg średniej dobowej temperatury wyznaczający okres wegetacyjny" },
-            { "value": "200–220", "unit": "dni", "label": "okres wegetacyjny w Polsce", "note": "najdłuższy na Nizinie Śląskiej (ok. 225 dni), najkrótszy na Pojezierzu Suwalskim i w górach" },
+            { "value": "190–230", "unit": "dni", "label": "okres wegetacyjny w Polsce", "note": "najdłuższy na Nizinie Śląskiej (ok. 225 dni), najkrótszy na Pojezierzu Suwalskim i w górach" },
             { "value": "ok. 11", "unit": "%", "label": "udział gruntów ornych w powierzchni lądów", "note": "użytki rolne łącznie z pastwiskami — ok. 38%" },
             { "value": "ok. 70", "unit": "%", "label": "udział rolnictwa w globalnym poborze wody słodkiej", "note": "głównie nawodnienia w strefie suchej i monsunowej" },
             { "value": "ok. 1000", "unit": "mm", "label": "minimalna roczna suma opadów przy uprawie ryżu bez sztucznego nawadniania" }
@@ -453,7 +453,7 @@
           "precip": [12, 25, 35, 60, 140, 290, 400, 350, 290, 160, 25, 7],
           "answer": {
             "climate": "Klimat zwrotnikowy monsunowy",
-            "reasoning": "Temperatura przez cały rok powyżej 20 °C, a roczna amplituda wynosi ok. 10 °C — to strefa zwrotnikowa. Rozkład opadów jest skrajnie nierównomierny: ok. 80% sumy rocznej (blisko 1800 mm) przypada na miesiące VI–IX, czyli okres **monsunu letniego**, gdy wilgotne powietrze znad Oceanu Indyjskiego napływa nad silnie nagrzany ląd. Zimą kierunek napływu powietrza się odwraca i nastaje pora sucha. Taki układ jest idealny dla **ryżu** uprawianego w porze deszczowej; w porze suchej to samo pole obsiewa się pszenicą lub roślinami strączkowymi przy wykorzystaniu nawadniania."
+            "reasoning": "Temperatura przez cały rok powyżej 20 °C, a roczna amplituda wynosi ok. 10 °C — to strefa zwrotnikowa. Rozkład opadów jest skrajnie nierównomierny: ok. 75% sumy rocznej (blisko 1800 mm) przypada na miesiące VI–IX, czyli okres **monsunu letniego**, gdy wilgotne powietrze znad Oceanu Indyjskiego napływa nad silnie nagrzany ląd. Zimą kierunek napływu powietrza się odwraca i nastaje pora sucha. Taki układ jest idealny dla **ryżu** uprawianego w porze deszczowej; w porze suchej to samo pole obsiewa się pszenicą lub roślinami strączkowymi przy wykorzystaniu nawadniania."
           }
         },
         {

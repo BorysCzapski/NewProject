@@ -563,7 +563,7 @@
       "blocks": [
         {
           "type": "intro",
-          "text": "Między zwrotnikami mieści się najgorętsza część Ziemi — i jednocześnie najbardziej kontrastowa pod względem opadów. Na przestrzeni zaledwie 2500 km, od Kisangani nad Kongo do Tamanrasset na Saharze, roczna suma opadów spada z ponad 1700 mm do kilku milimetrów. Temperatura zmienia się przy tym niewiele. To dowód, że w pasie międzyzwrotnikowym **o krajobrazie decydują opady, a nie temperatura** — i że rytm opadów wyznacza wędrówka jednego układu barycznego: strefy zbieżności pasatów."
+          "text": "Między zwrotnikami mieści się najgorętsza część Ziemi — i jednocześnie najbardziej kontrastowa pod względem opadów. Na przestrzeni nieco ponad 3000 km, od Kisangani nad Kongo do Tamanrasset na Saharze, roczna suma opadów spada z ponad 1700 mm do kilkudziesięciu milimetrów. Temperatura zmienia się przy tym niewiele. To dowód, że w pasie międzyzwrotnikowym **o krajobrazie decydują opady, a nie temperatura** — i że rytm opadów wyznacza wędrówka jednego układu barycznego: strefy zbieżności pasatów."
         },
         {
           "type": "climate-chart",
@@ -574,7 +574,7 @@
           "precip": [260, 288, 314, 300, 256, 114, 88, 58, 83, 126, 183, 217],
           "answer": {
             "climate": "Klimat równikowy wilgotny (strefa równikowa)",
-            "reasoning": "Temperatura powyżej 26 °C przez cały rok, amplituda roczna zaledwie ok. 1,9 °C — to możliwe tylko w pobliżu równika, gdzie kąt padania promieni słonecznych zmienia się w ciągu roku minimalnie. Roczna suma opadów przekracza 2200 mm i opady występują w każdym miesiącu (minimum ok. 58 mm), z dwoma maksimami związanymi z dwukrotnym przejściem strefy zbieżności pasatów nad równikiem."
+            "reasoning": "Temperatura powyżej 26 °C przez cały rok, amplituda roczna zaledwie ok. 1,9 °C — to możliwe tylko w pobliżu równika, gdzie kąt padania promieni słonecznych zmienia się w ciągu roku minimalnie. Roczna suma opadów przekracza 2200 mm i opady występują w każdym miesiącu (minimum ok. 58 mm w sierpniu), z maksimum w marcu (314 mm) — wtedy strefa zbieżności pasatów jest przesunięta na półkulę południową, nad Amazonię."
           }
         },
         {
@@ -624,7 +624,7 @@
           "precip": [0, 0, 2, 10, 65, 110, 205, 300, 130, 15, 0, 0],
           "answer": {
             "climate": "Klimat podrównikowy suchy (sawannowy)",
-            "reasoning": "Temperatury wysokie przez cały rok (amplituda ok. 9,5 °C — większa niż na równiku, bo szerokość geograficzna jest wyższa), z maksimum w kwietniu, czyli tuż przed porą deszczową, gdy zachmurzenie jest jeszcze małe. Roczna suma opadów ok. 840 mm skupiona w jednej porze deszczowej (V–IX) z maksimum w sierpniu, gdy strefa zbieżności pasatów jest najdalej wysunięta na północ. Przez pięć miesięcy opady są zerowe — to klasyczny rytm sawanny suchej."
+            "reasoning": "Temperatury wysokie przez cały rok (amplituda ok. 9,5 °C — większa niż na równiku, bo szerokość geograficzna jest wyższa), z maksimum w kwietniu, czyli tuż przed porą deszczową, gdy zachmurzenie jest jeszcze małe. Roczna suma opadów ok. 840 mm skupiona w jednej porze deszczowej (V–IX) z maksimum w sierpniu, gdy strefa zbieżności pasatów jest najdalej wysunięta na północ. Przez cztery miesiące (XI–II) opady w ogóle nie występują — to klasyczny rytm sawanny suchej."
           }
         },
         {
@@ -638,7 +638,7 @@
             },
             {
               "name": "Marzec–maj",
-              "text": "Zenitalne górowanie Słońca przesuwa się ku równikowi i dalej na północ, a wraz z nim ITCZ. **Nad równikiem następuje pierwsze z dwóch rocznych maksimów opadów** (zobacz marzec–kwiecień na wykresie z Manaus). W sawannach półkuli północnej zaczyna padać."
+              "text": "Zenitalne górowanie Słońca przesuwa się ku równikowi i dalej na północ, a wraz z nim ITCZ. **Nad samym równikiem następuje pierwsze z dwóch rocznych maksimów opadów** (w Kisangani przypada ono na kwiecień–maj). W sawannach półkuli północnej zaczyna padać."
             },
             {
               "name": "Czerwiec–sierpień",
@@ -646,7 +646,7 @@
             },
             {
               "name": "Wrzesień–listopad",
-              "text": "ITCZ wraca na południe, po drodze **drugi raz w roku przechodząc nad równikiem** — stąd drugie maksimum opadów w strefie równikowej (październik–listopad w Manaus). W sawannie północnej pora deszczowa gwałtownie się kończy."
+              "text": "ITCZ wraca na południe, po drodze **drugi raz w roku przechodząc nad równikiem** — stąd drugie maksimum opadów w strefie równikowej (październik–listopad w Kisangani). W sawannie północnej pora deszczowa gwałtownie się kończy."
             }
           ]
         },
@@ -896,7 +896,7 @@
           "precip": [30, 28, 33, 39, 57, 70, 78, 65, 50, 41, 40, 35],
           "answer": {
             "climate": "Klimat umiarkowany ciepły przejściowy (morsko-kontynentalny)",
-            "reasoning": "Cztery wyraźne pory roku: najcieplejszy lipiec (19,6 °C), najzimniejszy styczeń (−1,8 °C), amplituda roczna ok. 21,4 °C — pośrednia między morską (poniżej 15 °C) a kontynentalną (powyżej 30 °C), stąd określenie „przejściowy”. Trzy miesiące ze średnią poniżej 0 °C oznaczają zimę z pokrywą śnieżną. Opady umiarkowane (ok. 570 mm) i występujące przez cały rok, ale z wyraźnym maksimum letnim (lipiec 78 mm) — typowym dla opadów konwekcyjnych nad ogrzanym lądem. Okres wegetacyjny (średnia dobowa powyżej 5 °C) trwa ok. 210 dni."
+            "reasoning": "Cztery wyraźne pory roku: najcieplejszy lipiec (19,6 °C), najzimniejszy styczeń (−1,8 °C), amplituda roczna ok. 21,4 °C — pośrednia między morską (poniżej 15 °C) a kontynentalną (powyżej 30 °C), stąd określenie „przejściowy”. Dwa miesiące ze średnią poniżej 0 °C oznaczają zimę z pokrywą śnieżną. Opady umiarkowane (ok. 570 mm) i występujące przez cały rok, ale z wyraźnym maksimum letnim (lipiec 78 mm) — typowym dla opadów konwekcyjnych nad ogrzanym lądem. Okres wegetacyjny (średnia dobowa powyżej 5 °C) trwa ok. 210 dni."
           }
         },
         {
@@ -1128,7 +1128,7 @@
           "precip": [8, 6, 7, 12, 25, 38, 40, 39, 30, 24, 15, 11],
           "answer": {
             "climate": "Klimat umiarkowany chłodny skrajnie kontynentalny (syberyjski) — strefa tajgi",
-            "reasoning": "Amplituda roczna wynosi ok. 58 °C (od −38,6 °C w styczniu do 19,5 °C w lipcu) — to najwyższa wartość na Ziemi, skutek położenia w głębi Azji i zalegania zimą potężnego **Wyżu Azjatyckiego (syberyjskiego)**, w którym powietrze osiada i wypromieniowuje ciepło przy bezchmurnym niebie. Roczna suma opadów zaledwie ok. 255 mm — tyle, co na półpustyni — z maksimum letnim. Mimo tak małych opadów rośnie tu las, ponieważ parowanie przy niskich temperaturach jest znikome, a wieloletnia zmarzlina zatrzymuje wodę roztopową tuż pod powierzchnią."
+            "reasoning": "Amplituda roczna wynosi ok. 58 °C (od −38,6 °C w styczniu do 19,5 °C w lipcu) — to jedna z najwyższych wartości na Ziemi, skutek położenia w głębi Azji i zalegania zimą potężnego **Wyżu Azjatyckiego (syberyjskiego)**, w którym powietrze osiada i wypromieniowuje ciepło przy bezchmurnym niebie. Roczna suma opadów zaledwie ok. 255 mm — tyle, co na półpustyni — z maksimum letnim. Mimo tak małych opadów rośnie tu las, ponieważ parowanie przy niskich temperaturach jest znikome, a wieloletnia zmarzlina zatrzymuje wodę roztopową tuż pod powierzchnią."
           }
         },
         {
@@ -1204,7 +1204,7 @@
           "precip": [5, 4, 4, 5, 6, 9, 25, 30, 22, 15, 8, 6],
           "answer": {
             "climate": "Klimat subpolarny (okołobiegunowy) — strefa tundry",
-            "reasoning": "Temperatura najcieplejszego miesiąca (lipiec 5 °C) mieści się między 0 a 10 °C — to definicyjny warunek klimatu tundry. Tylko cztery miesiące mają średnią powyżej 0 °C, więc okres wegetacyjny trwa ok. 2–3 miesiące. Roczna suma opadów ok. 139 mm — mniej niż na wielu pustyniach — z maksimum późnoletnim, gdy morze jest wolne od lodu i dostarcza wilgoci. Mimo to teren jest podmokły, bo parowanie jest znikome, a nieprzepuszczalna zmarzlina zatrzymuje wodę tuż pod powierzchnią."
+            "reasoning": "Temperatura najcieplejszego miesiąca (lipiec 5 °C) mieści się między 0 a 10 °C — to definicyjny warunek klimatu tundry. Tylko trzy miesiące mają średnią powyżej 0 °C, więc okres wegetacyjny trwa ok. 2–3 miesiące. Roczna suma opadów ok. 139 mm — mniej niż na wielu pustyniach — z maksimum późnoletnim, gdy morze jest wolne od lodu i dostarcza wilgoci. Mimo to teren jest podmokły, bo parowanie jest znikome, a nieprzepuszczalna zmarzlina zatrzymuje wodę tuż pod powierzchnią."
           }
         },
         {
@@ -1342,7 +1342,7 @@
               "lat": 62.03,
               "lng": 129.73,
               "label": "Jakuck, Rosja",
-              "text": "Największe miasto świata zbudowane na ciągłej zmarzlinie. Amplituda roczna ok. 58 °C — rekord Ziemi. Wokół modrzewiowa tajga."
+              "text": "Największe miasto świata zbudowane na ciągłej zmarzlinie. Amplituda roczna ok. 58 °C — jedna z najwyższych na Ziemi. Wokół modrzewiowa tajga."
             },
             {
               "lat": 63.46,

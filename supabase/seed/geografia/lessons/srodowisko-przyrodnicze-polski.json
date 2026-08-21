@@ -1385,7 +1385,7 @@
               "lat": 49.5733,
               "lng": 19.5292,
               "label": "Babia Góra — 1725 m n.p.m.",
-              "text": "Najwyższy szczyt polskich **Beskidów**, zbudowany z odpornych piaskowców magurskich. Drugi co do wysokości szczyt Polski poza Tatrami."
+              "text": "Najwyższy szczyt polskich **Beskidów**, zbudowany z odpornych piaskowców magurskich. To zarazem najwyższy szczyt Polski poza Tatrami — o 122 m wyższy od sudeckiej Śnieżki."
             },
             {
               "lat": 49.075,
@@ -2117,7 +2117,7 @@
               "lat": 54.35,
               "lng": 18.95,
               "label": "Świbno — ujście Wisły",
-              "text": "**Przekop Wisły** — sztuczne ujście wykonane w 1895 r., które skróciło drogę wód do morza i ograniczyło zagrożenie powodziowe Żuław. Rzeka usypuje tu deltę wsteczną."
+              "text": "**Przekop Wisły** — sztuczne ujście wykonane w 1895 r., które skróciło drogę wód do morza i ograniczyło zagrożenie powodziowe Żuław. Rzeka usypuje tu nowy stożek ujściowy, wysuwający się w głąb Zatoki Gdańskiej."
             },
             {
               "lat": 53.75,
@@ -2242,8 +2242,7 @@
               "examples": [
                 "Śniardwy (113,8 km²)",
                 "Mamry",
-                "Niegocin",
-                "Drawsko"
+                "Niegocin"
               ]
             },
             {

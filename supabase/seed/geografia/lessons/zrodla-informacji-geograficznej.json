@@ -408,7 +408,7 @@
             },
             {
               "aspect": "Przykład",
-              "left": "Rysy mają **2501 m n.p.m.**",
+              "left": "Rysy mają **2499 m n.p.m.**",
               "right": "Rysy wznoszą się ok. **1100 m** ponad taflę Morskiego Oka (1395 m n.p.m.)."
             },
             {
@@ -492,7 +492,7 @@
           "type": "chart",
           "variant": "line",
           "title": "Przykładowy profil hipsometryczny wzdłuż linii A–B",
-          "caption": "Odczytaj z profilu: wysokość maksymalna ok. 340 m n.p.m. (na 2,0 km), minimalna 180 m n.p.m. w punkcie A, więc **deniwelacja** wzdłuż profilu wynosi ok. 160 m. Najbardziej stromy jest odcinek 2,5–3,5 km, gdzie na 1 km przypada 90 m różnicy wysokości.",
+          "caption": "Odczytaj z profilu: wysokość maksymalna ok. 340 m n.p.m. (na 2,0 km), minimalna 180 m n.p.m. w punkcie A, więc **deniwelacja** wzdłuż profilu wynosi ok. 160 m. Najbardziej stromy jest odcinek 1,0–1,5 km, gdzie na 0,5 km przypada 50 m różnicy wysokości, czyli spadek 10%.",
           "labels": ["0,0", "0,5", "1,0", "1,5", "2,0", "2,5", "3,0", "3,5", "4,0"],
           "series": [{ "name": "Wysokość n.p.m.", "values": [180, 215, 260, 310, 340, 325, 280, 235, 200] }],
           "unit": "m n.p.m."
@@ -518,9 +518,9 @@
           "type": "key-numbers",
           "title": "Wysokości w Polsce — liczby warte zapamiętania",
           "items": [
-            { "value": "2501", "unit": "m n.p.m.", "label": "Rysy — najwyższy punkt Polski", "note": "Tatry Wysokie, granica ze Słowacją." },
-            { "value": "-1,8", "unit": "m p.p.m.", "label": "okolice Raczek Elbląskich — najniższy punkt Polski", "note": "Depresja na Żuławach Wiślanych." },
-            { "value": "2503", "unit": "m", "label": "deniwelacja Polski", "note": "Różnica między punktem najwyższym a najniższym: 2501 − (−1,8) ≈ 2503 m." },
+            { "value": "2499", "unit": "m n.p.m.", "label": "Rysy — najwyższy punkt Polski", "note": "Tatry Wysokie, granica ze Słowacją; wyższy, środkowy wierzchołek Rysów (2503 m) leży już po stronie słowackiej." },
+            { "value": "-1,8", "unit": "m n.p.m.", "label": "okolice Raczek Elbląskich — najniższy punkt Polski", "note": "Depresja na Żuławach Wiślanych." },
+            { "value": "2501", "unit": "m", "label": "deniwelacja Polski", "note": "Różnica między punktem najwyższym a najniższym: 2499 − (−1,8) ≈ 2501 m." },
             { "value": "173", "unit": "m n.p.m.", "label": "średnia wysokość Polski", "note": "Średnia dla całego świata to ok. 875 m — Polska jest krajem wyraźnie nizinnym." },
             { "value": "91,3", "unit": "%", "label": "udział powierzchni Polski poniżej 300 m n.p.m." }
           ]
@@ -1161,7 +1161,7 @@
           "type": "chart",
           "variant": "line",
           "title": "Liczba ludności świata w latach 1950–2020",
-          "caption": "Ten sam wykres odpowiada na dwa różne pytania: o wzrost bezwzględny (o ile mld przybyło) i o tempo wzrostu (o ile procent w stosunku do stanu wyjściowego). Nachylenie linii jest największe w latach 60. i 70. XX w. — to okres eksplozji demograficznej.",
+          "caption": "Ten sam wykres odpowiada na dwa różne pytania: o wzrost bezwzględny (o ile mld przybyło) i o tempo wzrostu (o ile procent w stosunku do stanu wyjściowego). Największe **tempo** wzrostu (przyrost względny) przypada na lata 60. XX w. — to szczyt eksplozji demograficznej; przyrost bezwzględny, czyli nachylenie linii, pozostaje duży także później (po 0,9 mld w latach 80. i w dekadzie 2010–2020).",
           "labels": [
             "1950",
             "1960",
@@ -1335,7 +1335,7 @@
           ],
           "answer": {
             "shape": "piramida regresywna (zwężona u podstawy)",
-            "reasoning": "Podstawa jest **wyraźnie węższa** niż część środkowa — rodzi się mniej dzieci, niż wynosi liczebność roczników rodziców, więc **dzietność jest poniżej poziomu zastępowalności pokoleń**. Wybrzuszenie w grupach 35–49 lat to **echo wyżu demograficznego lat 80. XX w.**, a drugie zgrubienie w grupach 60–69 lat odpowiada **wyżowi powojennemu**. Wcięcie w grupach 20–29 lat to niż demograficzny lat 90., gdy transformacja gospodarcza zbiegła się z odkładaniem decyzji o dziecku. U szczytu piramidy słupki kobiet są znacznie dłuższe od męskich — to skutek **nadumieralności mężczyzn** i wyższej oczekiwanej długości życia kobiet. Całość oznacza **starzenie się społeczeństwa**: rosnący udział grupy poprodukcyjnej przy kurczącej się grupie przedprodukcyjnej."
+            "reasoning": "Podstawa jest **wyraźnie węższa** niż część środkowa — rodzi się mniej dzieci, niż wynosi liczebność roczników rodziców, więc **dzietność jest poniżej poziomu zastępowalności pokoleń**. Wybrzuszenie w grupach 35–49 lat to **wyż demograficzny lat 80. XX w.** (sam będący echem wyżu powojennego), a drugie zgrubienie w grupach 60–69 lat odpowiada **wyżowi powojennemu**. Wcięcie w grupach 20–29 lat to niż demograficzny lat 90., gdy transformacja gospodarcza zbiegła się z odkładaniem decyzji o dziecku. U szczytu piramidy słupki kobiet są znacznie dłuższe od męskich — to skutek **nadumieralności mężczyzn** i wyższej oczekiwanej długości życia kobiet. Całość oznacza **starzenie się społeczeństwa**: rosnący udział grupy poprodukcyjnej przy kurczącej się grupie przedprodukcyjnej."
           }
         },
         {

@@ -339,7 +339,7 @@
       "blocks": [
         {
           "type": "intro",
-          "text": "Żadna gospodarka nie działa w próżni — każdy wyrób zaczyna się od **zasobu pobranego ze środowiska**. Ale zasoby są rozmieszczone na Ziemi skrajnie nierównomiernie: ponad połowa udokumentowanych zasobów ropy naftowej leży wokół jednego akwenu, a ponad dwie trzecie światowego wydobycia kobaltu pochodzi z jednego państwa. Ta nierównomierność jest **przyczyną handlu międzynarodowego, ale też konfliktów i zależności politycznych**. W tej lekcji nauczysz się odróżniać zasoby od rezerw, liczyć wystarczalność złóż i wyjaśniać, dlaczego surowce leżą tam, gdzie leżą."
+          "text": "Żadna gospodarka nie działa w próżni — każdy wyrób zaczyna się od **zasobu pobranego ze środowiska**. Ale zasoby są rozmieszczone na Ziemi skrajnie nierównomiernie: blisko połowa udokumentowanych zasobów ropy naftowej leży wokół jednego akwenu, a ponad dwie trzecie światowego wydobycia kobaltu pochodzi z jednego państwa. Ta nierównomierność jest **przyczyną handlu międzynarodowego, ale też konfliktów i zależności politycznych**. W tej lekcji nauczysz się odróżniać zasoby od rezerw, liczyć wystarczalność złóż i wyjaśniać, dlaczego surowce leżą tam, gdzie leżą."
         },
         {
           "type": "definition",
@@ -545,7 +545,7 @@
               "lat": 25.5,
               "lng": 49.5,
               "label": "Zatoka Perska (Ghawar, Arabia Saudyjska)",
-              "text": "Największa koncentracja **ropy naftowej** na świecie. Powód geologiczny: rozległy, płytki basen sedymentacyjny na przedpolu orogenezy alpejskiej, z idealnym układem skały macierzystej, zbiornikowej i **nieprzepuszczalnego nadkładu solnego**. Region skupia ponad połowę udokumentowanych zasobów ropy."
+              "text": "Największa koncentracja **ropy naftowej** na świecie. Powód geologiczny: rozległy, płytki basen sedymentacyjny na przedpolu orogenezy alpejskiej, z idealnym układem skały macierzystej, zbiornikowej i **nieprzepuszczalnego nadkładu solnego**. Region skupia blisko połowę udokumentowanych zasobów ropy."
             },
             {
               "lat": -22.5,
@@ -1038,7 +1038,7 @@
             {
               "period": "lata 60.-80. XX w.",
               "label": "Kontenery i mikroelektronika",
-              "text": "**Kontenaryzacja** ujednolica ładunek i pozwala przeładować statek w godziny zamiast tygodni, a wielkie kontenerowce i masowce obniżają koszt jednostkowy przewozu do ułamka dawnego poziomu. Równolegle tanieje łączność. To wtedy zaczyna się masowe przenoszenie produkcji do Azji Wschodniej — najpierw do Japonii, potem do **azjatyckich tygrysów**."
+              "text": "**Konteneryzacja** ujednolica ładunek i pozwala przeładować statek w godziny zamiast tygodni, a wielkie kontenerowce i masowce obniżają koszt jednostkowy przewozu do ułamka dawnego poziomu. Równolegle tanieje łączność. To wtedy zaczyna się masowe przenoszenie produkcji do Azji Wschodniej — najpierw do Japonii, potem do **azjatyckich tygrysów**."
             },
             {
               "period": "1989-1991",
@@ -1127,7 +1127,7 @@
           "rows": [
             [
               "Techniczne",
-              "Kontenaryzacja, wielkie kontenerowce i masowce",
+              "Konteneryzacja, wielkie kontenerowce i masowce",
               "Koszt przewozu jednostki ładunku spadł tak bardzo, że **przestał być barierą lokalizacyjną** — opłaca się produkować 10 tys. km od odbiorcy, jeśli produkcja jest tam tańsza"
             ],
             [
@@ -1317,7 +1317,7 @@
           "question": "Który czynnik najlepiej wyjaśnia, dlaczego globalizacja przyspieszyła dopiero w drugiej połowie XX w., choć powiązania międzykontynentalne istniały od wieków?",
           "options": [
             "Dopiero wtedy odkryto nowe surowce mineralne, które trzeba było przewozić między kontynentami",
-            "Radykalny spadek kosztu transportu (kontenaryzacja, wielkie statki) i łączności sprawił, że odległość przestała być barierą ekonomiczną",
+            "Radykalny spadek kosztu transportu (konteneryzacja, wielkie statki) i łączności sprawił, że odległość przestała być barierą ekonomiczną",
             "Dopiero wtedy liczba ludności świata przekroczyła poziom pozwalający na handel międzynarodowy",
             "Dopiero wtedy powstały pierwsze przedsiębiorstwa produkujące na eksport"
           ],
@@ -1712,7 +1712,7 @@
           "rows": [
             [
               "Monokultura surowcowa",
-              "Jeden surowiec mineralny lub jedno płodozmienne dobro rolne",
+              "Jeden surowiec mineralny lub jeden płód rolny",
               "**Skrajnie niestabilne** — ceny surowców wahają się gwałtownie, a w długim okresie rosną wolniej niż ceny wyrobów przemysłowych",
               "Zambia (miedź), Nigeria (ropa), Wybrzeże Kości Słoniowej (kakao)"
             ],

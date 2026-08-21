@@ -115,7 +115,7 @@
         {
           "type": "tip",
           "variant": "warning",
-          "text": "Trzy pomyłki, które kosztują punkty. **Wysokość bezwzględna** to wysokość nad poziomem morza, a **deniwelacja (wysokość względna)** to różnica wysokości między dwoma punktami — teren na wysokości 2000 m n.p.m. może być płaski (Wyżyna Tybetańska), a teren na wysokości 300 m n.p.m. bardzo stromy (odcinki przełomowe dolin). Po drugie: **nie mieszaj stopni z procentami** — nachylenie 100% to 45°. Po trzecie: zdanie „góry są barierą transportową” nie znaczy „przez góry się nie jeździ” — jeździ się, tylko **drożej i wolniej**, a ruch koncentruje się w wąskich korytarzach dolin i przełęczy."
+          "text": "Trzy pomyłki, które kosztują punkty. **Wysokość bezwzględna** to wysokość nad poziomem morza, a **deniwelacja (wysokość względna)** to różnica wysokości między dwoma punktami — teren na wysokości 4500 m n.p.m. może być płaski (Wyżyna Tybetańska), a teren na wysokości 300 m n.p.m. bardzo stromy (odcinki przełomowe dolin). Po drugie: **nie mieszaj stopni z procentami** — nachylenie 100% to 45°. Po trzecie: zdanie „góry są barierą transportową” nie znaczy „przez góry się nie jeździ” — jeździ się, tylko **drożej i wolniej**, a ruch koncentruje się w wąskich korytarzach dolin i przełęczy."
         },
         {
           "type": "matching",
@@ -903,7 +903,7 @@
           "steps": [
             {
               "title": "Armatorzy budują coraz większe statki",
-              "text": "Koszt przewozu jednego kontenera spada wraz z wielkością statku — to **efekt skali**. Największe kontenerowce przewożą po kilkanaście tysięcy jednostek, więc cena za sztukę jest nieporównanie niższa niż na małej jednostce."
+              "text": "Koszt przewozu jednego kontenera spada wraz z wielkością statku — to **efekt skali**. Największe kontenerowce przewożą ponad dwadzieścia tysięcy kontenerów (TEU), więc cena za sztukę jest nieporównanie niższa niż na małej jednostce."
             },
             {
               "title": "Wielki statek stawia twarde warunki portowi",
@@ -1353,7 +1353,7 @@
           "type": "case-study",
           "title": "Holandia — kraj, który zbudował sobie ziemię",
           "region": "Niziny nadmorskie, Holandia",
-          "text": "Około jedna czwarta powierzchni Holandii leży **poniżej poziomu morza**, a najniższe punkty sięgają kilku metrów poniżej. Mieszka tam i pracuje większość ludności kraju, łącznie z lotniskiem Schiphol. Ten stan nie jest dziełem natury, lecz **osiemsetletniej pracy**: budowano groble, odcinano od morza płytkie zatoki, a wodę z osuszanych obszarów wypompowywano — najpierw wiatrakami, później maszynami parowymi i elektrycznymi. Tak powstał **polder**: teren depresyjny, otoczony wałem, z którego wodę trzeba wypompowywać bez przerwy, bo inaczej wróci. Kulminacją jest Flevoland — cała prowincja leżąca na dnie dawnej zatoki, z zaplanowanymi od zera miastami, polami i drogami. Trzeba jednak zobaczyć drugą stronę bilansu. Po pierwsze, ochrona wymaga **stałych, ogromnych nakładów**: pompy muszą pracować zawsze, wały muszą być podnoszone wraz z podnoszeniem się poziomu morza. Po drugie, osuszony torf **ulega murszeniu i osiada**, więc teren z każdą dekadą obniża się jeszcze bardziej — bariera sama się pogłębia. Po trzecie, powódź z 1953 r. pokazała, że jedno przerwanie wału niweczy dorobek stuleci. Dlatego po 2007 r. Holendrzy zaczęli świadomie **oddawać rzekom część zdobytej przestrzeni**.",
+          "text": "Około jedna czwarta powierzchni Holandii leży **poniżej poziomu morza**, a najniższe punkty sięgają kilku metrów poniżej. Mieszka tam i pracuje ok. jedna piąta ludności kraju, a poniżej poziomu morza leży również lotnisko Schiphol. Ten stan nie jest dziełem natury, lecz **osiemsetletniej pracy**: budowano groble, odcinano od morza płytkie zatoki, a wodę z osuszanych obszarów wypompowywano — najpierw wiatrakami, później maszynami parowymi i elektrycznymi. Tak powstał **polder**: teren depresyjny, otoczony wałem, z którego wodę trzeba wypompowywać bez przerwy, bo inaczej wróci. Kulminacją jest Flevoland — cała prowincja leżąca na dnie dawnej zatoki, z zaplanowanymi od zera miastami, polami i drogami. Trzeba jednak zobaczyć drugą stronę bilansu. Po pierwsze, ochrona wymaga **stałych, ogromnych nakładów**: pompy muszą pracować zawsze, wały muszą być podnoszone wraz z podnoszeniem się poziomu morza. Po drugie, osuszony torf **ulega murszeniu i osiada**, więc teren z każdą dekadą obniża się jeszcze bardziej — bariera sama się pogłębia. Po trzecie, powódź z 1953 r. pokazała, że jedno przerwanie wału niweczy dorobek stuleci. Dlatego po 2007 r. Holendrzy zaczęli świadomie **oddawać rzekom część zdobytej przestrzeni**.",
           "takeaway": "Holandia jest koronnym dowodem posybilizmu — bariera przyrodnicza została pokonana. Ale jest też dowodem jego granic: zwycięstwo trzeba **opłacać co roku**, a im dalej się je posunie, tym większa katastrofa czeka w razie awarii."
         },
         {

@@ -71,7 +71,7 @@
               "values": [
                 68.7,
                 30.1,
-                0.35,
+                0.86,
                 0.29,
                 0.05,
                 0.04,
@@ -636,7 +636,7 @@
       "blocks": [
         {
           "type": "intro",
-          "text": "Woda w oceanie nigdy nie stoi w miejscu, ale porusza się na trzy zupełnie różne sposoby, napędzane przez trzy różne siły. **Falowanie** to ruch drgający wywołany tarciem wiatru o powierzchnię wody. **Pływy** to okresowe wahania poziomu wody wywołane grawitacją Księżyca i Słońca. **Prądy morskie** to ruch postępowy — rzeczywisty transport ogromnych mas wody, napędzany przez wiatry stałe i przez różnice gęstości. Ostatni z tych ruchów jest dla geografii najważniejszy: prądy morskie przenoszą ok. **jedną czwartą całego ciepła** wędrującego z równika ku biegunom, przez co decydują o tym, że Norwegia jest zielona, a chilijskie wybrzeże na tej samej szerokości geograficznej — pustynne."
+          "text": "Woda w oceanie nigdy nie stoi w miejscu, ale porusza się na trzy zupełnie różne sposoby, napędzane przez trzy różne siły. **Falowanie** to ruch drgający wywołany tarciem wiatru o powierzchnię wody. **Pływy** to okresowe wahania poziomu wody wywołane grawitacją Księżyca i Słońca. **Prądy morskie** to ruch postępowy — rzeczywisty transport ogromnych mas wody, napędzany przez wiatry stałe i przez różnice gęstości. Ostatni z tych ruchów jest dla geografii najważniejszy: prądy morskie przenoszą ok. **jedną czwartą całego ciepła** wędrującego z równika ku biegunom, przez co decydują o tym, że norweskie porty za kołem podbiegunowym nie zamarzają, a wybrzeże Chile w strefie zwrotnikowej jest pustynne."
         },
         {
           "type": "process",

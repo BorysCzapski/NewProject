@@ -217,7 +217,7 @@
       "blocks": [
         {
           "type": "intro",
-          "text": "Bergen w Norwegii i Jakuck w Rosji leżą prawie na tej samej szerokości geograficznej — około 61–62°N. W styczniu w Bergen jest średnio **+1,5 °C**, a w Jakucku **−38 °C**. Czterdzieści stopni różnicy przy identycznym kącie padania promieni słonecznych. To najlepszy dowód, że sama szerokość geograficzna nie wystarcza do wyjaśnienia rozkładu temperatury: pracuje na nią jeszcze wysokość nad poziomem morza, odległość od oceanu, prądy morskie, rzeźba terenu i to, co rośnie albo stoi na powierzchni. W tej lekcji nauczysz się liczyć temperaturę w pionie, rozpoznawać **inwersję** i jej skutki, czytać **izotermy** oraz uzasadniać wielkość **amplitudy** — czyli robić dokładnie to, czego wymaga polecenie „wyjaśnij, dlaczego w miejscowości A jest cieplej niż w B”."
+          "text": "Bergen w Norwegii i Jakuck w Rosji leżą prawie na tej samej szerokości geograficznej — około 60–62°N. W styczniu w Bergen jest średnio **+1,5 °C**, a w Jakucku **−38 °C**. Czterdzieści stopni różnicy przy identycznym kącie padania promieni słonecznych. To najlepszy dowód, że sama szerokość geograficzna nie wystarcza do wyjaśnienia rozkładu temperatury: pracuje na nią jeszcze wysokość nad poziomem morza, odległość od oceanu, prądy morskie, rzeźba terenu i to, co rośnie albo stoi na powierzchni. W tej lekcji nauczysz się liczyć temperaturę w pionie, rozpoznawać **inwersję** i jej skutki, czytać **izotermy** oraz uzasadniać wielkość **amplitudy** — czyli robić dokładnie to, czego wymaga polecenie „wyjaśnij, dlaczego w miejscowości A jest cieplej niż w B”."
         },
         {
           "type": "definition",
@@ -356,9 +356,9 @@
           "markers": [
             { "lat": 60.39, "lng": 5.32, "label": "Bergen (Norwegia) — styczeń ok. +1,5 °C", "text": "Wybrzeże omywane ciepłym **Prądem Norweskim** (przedłużenie Golfsztromu). Napływające znad Atlantyku powietrze polarne morskie jest ogrzewane i nasycane wilgocią, więc zima jest łagodna, a opady bardzo wysokie. Amplituda roczna zaledwie ok. 14 °C." },
             { "lat": 64.13, "lng": -21.9, "label": "Reykjavík (Islandia) — styczeń ok. −0,5 °C", "text": "Mimo położenia tuż przy kole podbiegunowym średnia stycznia jest bliska zeru, bo wyspę opływa ciepły Prąd Północnoatlantycki, a klimat jest skrajnie oceaniczny. Lipiec ma zaledwie ok. 11 °C — lato jest równie „nijakie” jak zima." },
-            { "lat": 64.18, "lng": -51.72, "label": "Nuuk (Grenlandia) — styczeń ok. −8 °C", "text": "Ta sama szerokość co Reykjavík, ale wybrzeże chłodzone przez **Prąd Wschodniogrenlandzki** i sąsiedztwo lądolodu. Efekt: zima o 7–8 °C chłodniejsza niż na Islandii i znacznie krótszy sezon wegetacyjny." },
+            { "lat": 64.18, "lng": -51.72, "label": "Nuuk (Grenlandia) — styczeń ok. −8 °C", "text": "Ta sama szerokość co Reykjavík, ale wybrzeże chłodzone przez zimny **Prąd Zachodniogrenlandzki** i sąsiedztwo lądolodu. Efekt: zima o 7–8 °C chłodniejsza niż na Islandii i znacznie krótszy sezon wegetacyjny." },
             { "lat": 59.94, "lng": 30.31, "label": "Sankt Petersburg (Rosja) — styczeń ok. −6 °C", "text": "Ląd oddalony od otwartego oceanu, a Bałtyk w tej części zamarza. Wpływ oceanu wyraźnie osłabiony, klimat przejściowy z przewagą cech kontynentalnych; amplituda roczna ok. 25 °C." },
-            { "lat": 62.03, "lng": 129.73, "label": "Jakuck (Rosja) — styczeń ok. −38 °C", "text": "Wnętrze Syberii, ponad 4000 km od oceanu, zimą pod panowaniem **Wyżu Azjatyckiego (syberyjskiego)** z silną inwersją osiadania. Klimat skrajnie kontynentalny: lipiec ok. +19,5 °C, amplituda roczna ok. 58 °C — jedna z największych na Ziemi." }
+            { "lat": 62.03, "lng": 129.73, "label": "Jakuck (Rosja) — styczeń ok. −38 °C", "text": "Wnętrze Syberii, ponad 5000 km od Atlantyku, zimą pod panowaniem **Wyżu Azjatyckiego (syberyjskiego)** z silną inwersją osiadania. Klimat skrajnie kontynentalny: lipiec ok. +19,5 °C, amplituda roczna ok. 58 °C — jedna z największych na Ziemi." }
           ]
         },
         {
@@ -457,7 +457,7 @@
               "text": "Nad obszarem silniej ogrzanym powietrze rozszerza się i unosi — przy powierzchni powstaje **niż termiczny**. Nad obszarem chłodniejszym powietrze osiada i tworzy **wyż termiczny**. Pojawia się poziomy gradient baryczny."
             },
             {
-              "title": "2. Siła gradientu baryczności wprawia powietrze w ruch",
+              "title": "2. Siła gradientu barycznego wprawia powietrze w ruch",
               "text": "Powietrze przemieszcza się **zawsze od wyższego ciśnienia do niższego**, prostopadle do izobar. Im większa różnica ciśnienia na tym samym dystansie, tym większe przyspieszenie — i tym silniejszy wiatr."
             },
             {

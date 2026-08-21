@@ -379,7 +379,7 @@
           "question": "W gminie liczącej 10 000 mieszkańców jest 6000 osób w wieku produkcyjnym, 1800 w przedprodukcyjnym i 2200 w poprodukcyjnym. Ile wynosi współczynnik obciążenia demograficznego?",
           "options": ["36,7", "66,7", "40,0", "150,0"],
           "correctIndex": 1,
-          "explanation": "$\\frac{1800 + 2200}{6000} \\cdot 100 = \\frac{4000}{6000} \\cdot 100 \\approx 66,7$. Na 100 osób w wieku produkcyjnym przypada niecałe 67 osób w wieku nieprodukcyjnym. Odpowiedź A powstaje z podzielenia przez liczbę ludności ogółem, a D z odwrócenia ułamka — obie to typowe błędy rachunkowe."
+          "explanation": "$\\frac{1800 + 2200}{6000} \\cdot 100 = \\frac{4000}{6000} \\cdot 100 \\approx 66,7$. Na 100 osób w wieku produkcyjnym przypada niecałe 67 osób w wieku nieprodukcyjnym. Odpowiedź C powstaje z podzielenia przez liczbę ludności ogółem, odpowiedź A — z uwzględnienia w liczniku samej ludności poprodukcyjnej, a D z odwrócenia ułamka. To trzy typowe błędy rachunkowe."
         },
         {
           "type": "quiz",
@@ -466,7 +466,7 @@
             {
               "name": "Miasta małe i średnie",
               "description": "Kręgosłup polskiej sieci osadniczej — pełnią funkcje **usługowe i administracyjne** dla otaczających je obszarów wiejskich. Wiele z nich traci te funkcje po utracie statusu siedziby województwa (reforma 1999 r.) lub upadku lokalnego zakładu pracy.",
-              "examples": ["dawne miasta wojewódzkie: Radom, Częstochowa, Kielce, Elbląg, Włocławek", "ośrodki jednozakładowe: Bełchatów, Police, Puławy", "miasteczka rolnicze i turystyczne ściany wschodniej"]
+              "examples": ["dawne miasta wojewódzkie: Radom, Częstochowa, Legnica, Elbląg, Włocławek", "ośrodki jednozakładowe: Bełchatów, Police, Puławy", "miasteczka rolnicze i turystyczne ściany wschodniej"]
             }
           ]
         },
@@ -827,7 +827,7 @@
             {
               "name": "Rzeźba terenu — atut",
               "description": "Ponad 90% powierzchni Polski leży poniżej 300 m n.p.m., a nizinność sprzyja **mechanizacji** i scalaniu pól. Bariery pojawiają się dopiero w Karpatach i Sudetach, gdzie strome stoki wymuszają gospodarkę łąkowo-pastwiskową i sprzyjają erozji gleb.",
-              "examples": ["niziny środkowopolskie — łatwa uprawa mechaniczna", "pojezierza — pola porozdzielane jeziorami i wzgórzami morenowymi", "Karpaty i Sudety — hodowla owiec i bydła zamiast upraw"]
+              "examples": ["niziny środkowopolskie — łatwa uprawa mechaniczna", "pojezierza — pola porozdzielane jeziorami i wzgórzami morenowymi", "Karpaty i Sudety — chów owiec i bydła zamiast upraw"]
             },
             {
               "name": "Klimat — czynnik ograniczający",
@@ -849,7 +849,7 @@
         {
           "type": "definition",
           "term": "Wskaźnik waloryzacji rolniczej przestrzeni produkcyjnej (WRPP)",
-          "text": "Syntetyczna ocena warunków przyrodniczych dla rolnictwa, opracowana przez IUNG w Puławach. Sumuje w punktach cztery elementy: **jakość gleb, agroklimat, rzeźbę terenu i warunki wodne**. Skala sięga ok. 100 punktów, a średnia dla Polski to ok. **66 punktów**. Najwyższe wartości osiągają województwa opolskie (ok. 81), lubelskie i dolnośląskie; najniższe — podlaskie i warmińsko-mazurskie (ok. 55).",
+          "text": "Syntetyczna ocena warunków przyrodniczych dla rolnictwa, opracowana przez IUNG w Puławach. Sumuje w punktach cztery elementy: **jakość gleb, agroklimat, rzeźbę terenu i warunki wodne**. Skala sięga ok. 100 punktów, a średnia dla Polski to ok. **66 punktów**. Najwyższe wartości osiągają województwa opolskie (ok. 81), lubelskie i dolnośląskie; najniższe — podlaskie (ok. 55) i mazowieckie (ok. 60).",
           "note": "WRPP tłumaczy, dlaczego kierunki produkcji rolnej są w Polsce tak wyraźnie rozdzielone przestrzennie: tam, gdzie wskaźnik jest wysoki, opłaca się uprawa wymagających roślin (pszenica, buraki cukrowe, rzepak), a gdzie niski — dominuje żyto, ziemniaki, łąki i chów bydła."
         },
         {
@@ -1290,7 +1290,7 @@
             { "lat": 53.91, "lng": 14.25, "label": "Świnoujście i Szczecin", "text": "Zespół portowy obsługujący zaplecze zachodniej Polski i Niemiec. W Świnoujściu działa **terminal LNG (gazoport)** oraz terminal promowy do Skandynawii — to element polityki dywersyfikacji dostaw surowców energetycznych." },
             { "lat": 52.17, "lng": 20.97, "label": "Lotnisko Chopina w Warszawie", "text": "Największy port lotniczy w Polsce i główny **hub przesiadkowy** dla ruchu w Europie Środkowo-Wschodniej. Jego przepustowość jest głównym argumentem za budową Centralnego Portu Komunikacyjnego pod Baranowem." },
             { "lat": 50.08, "lng": 19.79, "label": "Kraków-Balice", "text": "Drugi port lotniczy Polski pod względem liczby pasażerów. Rozwinął się dzięki turystyce przyjazdowej i tanim liniom lotniczym — dowód na to, jak silnie lotnictwo pasażerskie zależy od funkcji turystycznej miasta." },
-            { "lat": 50.47, "lng": 19.08, "label": "Katowice-Pyrzowice", "text": "Największy port **cargo** poza Warszawą i baza tanich linii. Atutem jest położenie w centrum konurbacji, przy skrzyżowaniu autostrad A1 i A4 — czyli w miejscu o najlepszej dostępności drogowej w kraju." },
+            { "lat": 50.47, "lng": 19.08, "label": "Katowice-Pyrzowice", "text": "Największy port **cargo** poza Warszawą i baza tanich linii. Atutem jest położenie w regionie konurbacji katowickiej, bezpośrednio przy autostradzie A1 i niedaleko jej skrzyżowania z A4 — czyli w obszarze o najlepszej dostępności drogowej w kraju." },
             { "lat": 51.9, "lng": 19.4, "label": "Skrzyżowanie A1 i A2 — węzeł łódzki", "text": "Przecięcie głównego korytarza północ-południe (A1: Gdańsk-Katowice) z korytarzem wschód-zachód (A2: Berlin-Warszawa). Dzięki temu region łódzki stał się **centrum logistycznym Polski**, co częściowo zrekompensowało upadek przemysłu włókienniczego." },
             { "lat": 52.09, "lng": 20.62, "label": "Baranów — Centralny Port Komunikacyjny", "text": "Planowany port lotniczy z węzłem kolejowym, mający połączyć ruch lotniczy z siecią szybkich kolei. Projekt ma przebudować układ transportowy kraju z promienistego (wszystko przez Warszawę) na bardziej równomierny." }
           ]
@@ -1333,7 +1333,7 @@
             {
               "name": "Region pojezierny",
               "description": "Jeziora polodowcowe, lasy i rzeki — baza turystyki wodnej i wypoczynkowej. Coraz większe znaczenie ma turystyka weekendowa mieszkańców Warszawy i Trójmiasta.",
-              "examples": ["Wielkie Jeziora Mazurskie (Mikołajki, Giżycko, Węgorzewo)", "Suwalszczyzna i Wigierski PN", "Pojezierze Drawskie i Bory Tucholskie", "Kraina Wielkich Dolin — spływy kajakowe Krutynią i Czarną Hańczą"]
+              "examples": ["Wielkie Jeziora Mazurskie (Mikołajki, Giżycko, Węgorzewo)", "Suwalszczyzna i Wigierski PN", "Pojezierze Drawskie i Bory Tucholskie", "szlaki kajakowe — spływy Krutynią i Czarną Hańczą"]
             },
             {
               "name": "Region górski",
@@ -1375,7 +1375,7 @@
             { "aspect": "Struktura zatrudnienia", "left": "wysoki udział usług, w tym metropolitalnych; rozwinięty przemysł przetwórczy", "right": "wysoki udział rolnictwa (miejscami powyżej 20% pracujących), słabo rozwinięty sektor IV" },
             { "aspect": "Inwestycje zagraniczne", "left": "silna koncentracja — bliskość granicy zachodniej, autostrady, duże rynki pracy", "right": "napływ znacznie mniejszy; bariery: dostępność transportowa i mniejszy rynek pracy" },
             { "aspect": "Procesy demograficzne", "left": "napływ migracyjny do metropolii i stref podmiejskich, wolniejsze starzenie się", "right": "depopulacja, odpływ młodych (zwłaszcza kobiet), zaawansowane starzenie się" },
-            { "aspect": "Korzenie historyczne", "left": "dawne zabory pruski i częściowo austriacki (Śląsk), wcześniejsza industrializacja, gęstsza sieć kolejowa", "right": "dawny **zabór rosyjski i Galicja** — zapóźnienie industrializacji, rzadsza sieć kolei, przeludnienie agrarne" },
+            { "aspect": "Korzenie historyczne", "left": "dawny **zabór pruski** oraz Górny Śląsk (przed 1918 r. w państwie pruskim) — wcześniejsza industrializacja, gęstsza sieć kolejowa", "right": "dawny **zabór rosyjski i Galicja** — zapóźnienie industrializacji, rzadsza sieć kolei, przeludnienie agrarne" },
             { "aspect": "Jak to widać na mapie", "left": "granica biegnie mniej więcej wzdłuż Wisły — najlepiej widoczna w gęstości linii kolejowych i rozmieszczeniu dużych miast", "right": "brak dużych miast na wschód od Wisły poza Białymstokiem, Lublinem i Rzeszowem" }
           ]
         },

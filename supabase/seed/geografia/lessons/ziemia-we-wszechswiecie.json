@@ -582,7 +582,7 @@
             ["Kair", "31°E", "UTC+2", "Zgodność z południkiem środkowym strefy (30°E)"],
             ["Nowe Delhi", "77°E", "UTC+5:30", "Cały kraj w jednej strefie o przesunięciu pół godziny"],
             ["Katmandu", "85°E", "UTC+5:45", "Jedyne w świecie przesunięcie o 45 minut"],
-            ["Urumczi (Chiny zach.)", "88°E", "UTC+8", "Chiny mają jedną strefę dla całego kraju — Słońce góruje tu ok. 14:40"],
+            ["Urumczi (Chiny zach.)", "88°E", "UTC+8", "Chiny mają jedną strefę dla całego kraju — Słońce góruje tu ok. 14:10"],
             ["Tokio", "140°E", "UTC+9", "Zgodność z południkiem 135°E"],
             ["Nowy Jork", "74°W", "UTC−5", "Czas wschodni USA"],
             ["Kiritimati (Kiribati)", "157°W", "UTC+14", "Najbardziej wysunięta w przyszłość strefa świata"]
@@ -623,7 +623,7 @@
             { "lat": 51.48, "lng": -0.0, "label": "Greenwich (0°)", "text": "Południk zerowy i punkt odniesienia dla **UTC**. Wybrany na konferencji w Waszyngtonie w 1884 r., gdy uzgadniano międzynarodowy system stref czasowych." },
             { "lat": 52.23, "lng": 21.01, "label": "Warszawa (21°E)", "text": "Strefa **UTC+1** o południku środkowym 15°E. Czas słoneczny wyprzedza tu urzędowy o **24 minuty** — Słońce zimą góruje ok. 11:36." },
             { "lat": 64.15, "lng": -21.94, "label": "Reykjavík (22°W)", "text": "Islandia leży w pobliżu południka 22°W, co odpowiadałoby strefie UTC−1, ale kraj stosuje **UTC+0** przez cały rok. Słońce góruje tu więc dopiero ok. 13:30." },
-            { "lat": 43.83, "lng": 87.62, "label": "Urumczi (88°E)", "text": "Chiny — mimo rozciągłości ok. 60° długości geograficznej — mają **jedną strefę czasową (UTC+8)** opartą na Pekinie. W zachodnim Sinciangu Słońce góruje ok. 14:40, więc życie zaczyna się tam późno." },
+            { "lat": 43.83, "lng": 87.62, "label": "Urumczi (88°E)", "text": "Chiny — mimo rozciągłości ok. 60° długości geograficznej — mają **jedną strefę czasową (UTC+8)** opartą na Pekinie. W Urumczi Słońce góruje ok. 14:10, a w zachodnim Sinciangu nawet ok. 15:00, więc życie zaczyna się tam późno." },
             { "lat": 27.72, "lng": 85.32, "label": "Katmandu (85°E)", "text": "Nepal stosuje **UTC+5:45** — jedyne na świecie przesunięcie o 45 minut, przyjęte, by czas urzędowy odpowiadał południkowi przechodzącemu przez szczyt Gaurisankar." },
             { "lat": 1.87, "lng": -157.4, "label": "Kiritimati (157°W)", "text": "Wyspa Bożego Narodzenia w Kiribati stosuje **UTC+14** — mimo położenia na półkuli zachodniej. Nowy Rok wita się tu jako w jednym z pierwszych miejsc na świecie." },
             { "lat": 0.19, "lng": -176.48, "label": "Wyspa Baker (176°W)", "text": "Niezamieszkane terytorium USA w strefie **UTC−12** — najpóźniejszej na Ziemi. Różnica czasu między Wyspą Baker a Kiritimati sięga **26 godzin**, choć dzieli je niecałe 20° długości geograficznej." },
@@ -948,7 +948,7 @@
         {
           "type": "tip",
           "variant": "warning",
-          "text": "Trzy pułapki rachunkowe. Po pierwsze: **deklinacja to nie szerokość geograficzna obserwatora** — δ opisuje położenie Słońca, φ położenie człowieka; pomylenie ich daje bezsensowny wynik. Po drugie: **nie wolno opuszczać wartości bezwzględnej** — uproszczony zapis $h = 90^\\circ - \\varphi + \\delta$ działa wyłącznie wtedy, gdy obserwator leży na północ od punktu podsłonecznego, a w zadaniach o półkuli południowej zawodzi. Po trzecie: **roczna różnica wysokości górowania wynosi w każdym miejscu poza strefą podbiegunową dokładnie $46^\\circ52'$** (dwa razy 23°26') — jeśli po obliczeniu maksimum i minimum wychodzi coś innego, gdzieś jest błąd."
+          "text": "Trzy pułapki rachunkowe. Po pierwsze: **deklinacja to nie szerokość geograficzna obserwatora** — δ opisuje położenie Słońca, φ położenie człowieka; pomylenie ich daje bezsensowny wynik. Po drugie: **nie wolno opuszczać wartości bezwzględnej** — uproszczony zapis $h = 90^\\circ - \\varphi + \\delta$ działa wyłącznie wtedy, gdy obserwator leży na północ od punktu podsłonecznego, a w zadaniach o półkuli południowej zawodzi. Po trzecie: **roczna różnica wysokości górowania wynosi w strefie umiarkowanej — czyli poza strefą międzyzwrotnikową i podbiegunową — dokładnie $46^\\circ52'$** (dwa razy 23°26'); między zwrotnikami jest mniejsza, bo maksimum wynosi tam zawsze 90°. Jeśli w strefie umiarkowanej po obliczeniu maksimum i minimum wychodzi coś innego, gdzieś jest błąd."
         },
         {
           "type": "formula",

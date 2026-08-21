@@ -1113,7 +1113,7 @@
       "blocks": [
         {
           "type": "intro",
-          "text": "Gwinea Równikowa ma dzięki ropie naftowej PKB per capita porównywalne z krajami Europy Środkowej, a mimo to przeciętny mieszkaniec żyje tam krócej niż 62 lata i często nie kończy szkoły podstawowej. To najkrótszy dowód na to, że **dochód i rozwój to nie jest to samo**: pieniądze mogą trafiać do wąskiej grupy albo za granicę, zamiast zamieniać się w dłuższe życie i lepszą edukację. Dlatego ONZ zbudowała mierniki, które pytają nie \"ile kraj wytwarza\", lecz **\"jak długo, jak zdrowo i jak świadomie żyją jego mieszkańcy\"** — oraz jak równo dzielą się owocami wzrostu."
+          "text": "Gwinea Równikowa ma dzięki ropie naftowej jedno z najwyższych w Afryce PKB per capita, a mimo to przeciętny mieszkaniec żyje tam krócej niż 62 lata i często nie kończy szkoły podstawowej. To najkrótszy dowód na to, że **dochód i rozwój to nie jest to samo**: pieniądze mogą trafiać do wąskiej grupy albo za granicę, zamiast zamieniać się w dłuższe życie i lepszą edukację. Dlatego ONZ zbudowała mierniki, które pytają nie \"ile kraj wytwarza\", lecz **\"jak długo, jak zdrowo i jak świadomie żyją jego mieszkańcy\"** — oraz jak równo dzielą się owocami wzrostu."
         },
         {
           "type": "definition",
@@ -1369,7 +1369,7 @@
             "Indie (0,644)",
             "Niger (0,394)"
           ],
-          "explanation": "Kolejność odpowiada klasom HDI: dwa pierwsze kraje należą do grupy o bardzo wysokim rozwoju, Chiny do wysokiego, Indie do średniego, a Niger — z najkrótszym trwaniem życia i najniższą liczbą lat nauki na świecie — do niskiego."
+          "explanation": "Kolejność odpowiada klasom HDI: dwa pierwsze kraje należą do grupy o bardzo wysokim rozwoju, Chiny do wysokiego, Indie do średniego, a Niger — z najniższą na świecie średnią liczbą lat nauki i jednym z najniższych dochodów na mieszkańca — do niskiego."
         },
         {
           "type": "quiz",
@@ -1562,7 +1562,7 @@
         {
           "type": "map-explore",
           "title": "Kto gdzie leży: G7, BRICS i wybrane kraje LDC",
-          "caption": "Zwróć uwagę na rozmieszczenie — G7 skupia się na półkuli północnej powyżej 40°N, kraje LDC koncentrują się w strefie międzyzwrotnikowej, a BRICS rozciąga się przez wszystkie zamieszkane kontynenty.",
+          "caption": "Zwróć uwagę na rozmieszczenie — G7 skupia się w strefie umiarkowanej półkuli północnej, kraje LDC koncentrują się w strefie międzyzwrotnikowej, a BRICS rozciąga się przez wszystkie zamieszkane kontynenty.",
           "center": [
             15,
             25
@@ -1712,7 +1712,7 @@
         },
         {
           "type": "case-study",
-          "title": "Korea Południowa: z poziomu najuboższych krajów Afryki do G7 technologii",
+          "title": "Korea Południowa: z poziomu najuboższych krajów Afryki do światowej czołówki technologicznej",
           "region": "Azja Wschodnia",
           "text": "Na początku lat 60. XX w. Korea Południowa miała PKB na mieszkańca porównywalne z Ghaną czy Sudanem, była zniszczona wojną, przeludniona i praktycznie pozbawiona surowców mineralnych. W ciągu jednego pokolenia stała się jedną z najbardziej zaawansowanych technologicznie gospodarek świata (HDI 0,929 w 2022 r.). Zadziałało kilka mechanizmów naraz: **reforma rolna** rozdrobniła wielką własność i uwolniła siłę roboczą, państwo skierowało ogromne środki na **powszechną edukację** — najpierw podstawową, potem techniczną i wyższą — a politykę gospodarczą oparto na **industrializacji nastawionej na eksport**: najpierw tekstylia, potem stal i statki, wreszcie elektronika i motoryzacja. Konsekwentnie wspinano się po **łańcuchu wartości**: od montażu cudzych projektów do własnych patentów i marek, finansowanych z jednych z najwyższych na świecie nakładów na badania i rozwój.",
           "takeaway": "Poziom rozwoju **nie jest zdeterminowany** zasobami przyrodniczymi ani przeszłością kolonialną — o awansie decydują inwestycje w kapitał ludzki, sprawne instytucje i konsekwentne przechodzenie do produkcji o wyższej wartości dodanej."
