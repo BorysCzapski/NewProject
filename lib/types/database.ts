@@ -840,16 +840,85 @@ export interface MaturaSection {
   updated_at: string;
 }
 
+/** How a theory lesson is filed within its exam part — drives grouping on the
+ * section page. "strategia" is technique rather than language knowledge (how
+ * to skim a text, what to listen for on the second play). */
+export type MaturaLessonKind = "gramatyka" | "slownictwo" | "strategia";
+
 export interface MaturaLesson {
   id: string;
   section_id: string;
+  /** Unique within a section — the lesson's own URL segment. */
+  slug: string;
   title: string;
+  /** One-line description for the lesson index, so listing lessons never has
+   * to parse `content`. */
+  summary: string;
+  kind: MaturaLessonKind;
+  estimated_minutes: number;
   // GrammarBlock[] from lib/grammar/lesson-blocks.ts — kept as unknown[] here
   // to avoid a client-type <-> db-type import cycle; cast at the call site
   // (same pattern as MathLesson.content / TextbookGrammarTopic.blocks).
   content: unknown[];
   order_index: number;
   created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaLessonProgress {
+  id: string;
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
+// ----------------------------------------------------------------------------
+// Matura — vocabulary bank (0017_matura_theory.sql)
+// ----------------------------------------------------------------------------
+
+/** One of the podstawa programowa's thematic blocks, per language. */
+export interface MaturaVocabTopic {
+  id: string;
+  language: MaturaLanguage;
+  slug: string;
+  /** Polish name of the block ("Podróżowanie i turystyka"). */
+  title: string;
+  /** The same block named in the target language. */
+  title_target: string;
+  description: string;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MaturaVocabEntry {
+  id: string;
+  topic_id: string;
+  /** The level from which this entry is expected — a rozszerzona student is
+   * responsible for podstawowa entries too. See lib/matura/vocab.ts. */
+  level: MaturaLevel;
+  term: string;
+  part_of_speech: string;
+  translation_pl: string;
+  example: string;
+  example_pl: string;
+  /** Collocations, register, false friends, irregular forms. */
+  note: string;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturaVocabProgress {
+  id: string;
+  user_id: string;
+  entry_id: string;
+  /** Leitner box 0-5; the interval per box lives in lib/matura/vocab-review.ts. */
+  box: number;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  next_review_at: string | null;
   updated_at: string;
 }
 

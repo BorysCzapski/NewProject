@@ -55,6 +55,74 @@ export interface CompareColumn {
   examples: string[];
 }
 
+// ----------------------------------------------------------------------------
+// Drill blocks
+//
+// The blocks above PRESENT grammar; the ones below make the student produce
+// it mid-lesson, which is the difference between reading a rule and knowing
+// it. They stay purely didactic — like `quiz`, nothing here is persisted or
+// graded; the graded work lives in the exercise/task tables.
+//
+// New blocks name their fields `text`/`pl` rather than following the older
+// `en`/`pl` pair used by ExampleItem and FormulaVariant. Those two predate
+// multilingual content and now hold Spanish and Russian in a field called
+// `en`; there is no reason to spread that.
+// ----------------------------------------------------------------------------
+
+export interface FillGapItem {
+  /** Sentence text before the gap. */
+  before: string;
+  /** Sentence text after the gap. */
+  after: string;
+  /**
+   * Every spelling that counts as correct — the first is treated as the
+   * canonical answer and shown when the student gives up. Comparison is
+   * case- and whitespace-insensitive but NOT accent-insensitive: on a Spanish
+   * lesson "esta" must not pass for "está", since a missing tilde is exactly
+   * the error the exam penalises.
+   */
+  accept: string[];
+  /** Optional nudge shown before answering, e.g. the infinitive to conjugate. */
+  hint?: string;
+  /** Polish translation of the completed sentence, shown after answering. */
+  pl?: string;
+}
+
+export interface MatchPair {
+  left: string;
+  right: string;
+}
+
+export interface OrderWordsItem {
+  /**
+   * The chunks in their CORRECT order. The renderer shuffles them for display,
+   * so authored content can never disagree with itself about the answer.
+   */
+  correct: string[];
+  /** Polish translation, shown once solved. */
+  pl?: string;
+  /** Why this order — e.g. "zaimek dopełnienia stoi przed odmienionym czasownikiem". */
+  note?: string;
+}
+
+/** One column of a conjugation/declension paradigm; `forms` lines up with the
+ * block's `persons`, index for index. */
+export interface ConjugationColumn {
+  label: string;
+  forms: string[];
+}
+
+export interface FlashcardItem {
+  front: string;
+  back: string;
+  example?: string;
+}
+
+export interface PhraseGroup {
+  label: string;
+  phrases: { text: string; pl: string }[];
+}
+
 export type GrammarBlock =
   | { type: "intro"; text: string }
   | {
@@ -85,6 +153,45 @@ export type GrammarBlock =
       options: string[];
       correctIndex: number;
       explanation: string;
+    }
+  | {
+      type: "fillGap";
+      title?: string;
+      instruction?: string;
+      items: FillGapItem[];
+    }
+  | {
+      type: "matchPairs";
+      title?: string;
+      instruction?: string;
+      pairs: MatchPair[];
+    }
+  | {
+      type: "orderWords";
+      title?: string;
+      instruction?: string;
+      items: OrderWordsItem[];
+    }
+  | {
+      type: "conjugation";
+      title?: string;
+      caption?: string;
+      /** Row labels — "yo", "tú", … or "I", "you", … */
+      persons: string[];
+      columns: ConjugationColumn[];
+      /** Forms to flag as irregular once revealed (exact string match). */
+      highlight?: string[];
+    }
+  | {
+      type: "flashcards";
+      title?: string;
+      cards: FlashcardItem[];
+    }
+  | {
+      type: "keyPhrases";
+      title?: string;
+      caption?: string;
+      groups: PhraseGroup[];
     };
 
 export type GrammarLesson = GrammarBlock[];

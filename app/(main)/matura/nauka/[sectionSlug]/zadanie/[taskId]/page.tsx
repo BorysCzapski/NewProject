@@ -26,7 +26,7 @@ export default async function MaturaSectionTaskPage({
   const supabase = await createClient();
 
   // The join pulls the section's language: the answer field needs it to decide
-  // whether to offer the Spanish accent bar (see components/matura/accent-bar.tsx).
+  // whether to offer the Spanish accent bar (see components/ui/accent-bar.tsx).
   const { data: task } = await supabase
     .from("matura_tasks")
     .select("*, matura_sections!inner(language)")

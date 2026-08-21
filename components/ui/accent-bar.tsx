@@ -1,7 +1,7 @@
 "use client";
 
 // ============================================================================
-// components/matura/accent-bar.tsx
+// components/ui/accent-bar.tsx
 // A row of Spanish-only characters that a Polish keyboard cannot type
 // directly, inserted at the caret of the field it belongs to.
 //
@@ -15,21 +15,25 @@
 // alphabet.
 // ============================================================================
 import { cn } from "@/lib/utils";
-
-const SPANISH_CHARS = ["á", "é", "í", "ó", "ú", "ü", "ñ", "¿", "¡"];
+import { langInfo } from "@/lib/languages";
 
 export function AccentBar({
   onInsert,
   disabled,
   className,
+  // Defaults to Spanish because that is the only language currently needing
+  // one; pass langInfo(language).specialChars to make it follow the content.
+  chars = langInfo("es").specialChars,
 }: {
   onInsert: (char: string) => void;
   disabled?: boolean;
   className?: string;
+  chars?: string[];
 }) {
+  if (chars.length === 0) return null;
   return (
     <div className={cn("mt-2 flex flex-wrap gap-1.5", className)}>
-      {SPANISH_CHARS.map((char) => (
+      {chars.map((char) => (
         <button
           key={char}
           type="button"
