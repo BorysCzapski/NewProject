@@ -1,0 +1,106 @@
+{
+  "topicSlug": "drzewa-bst",
+  "lessons": [
+    {
+      "slug": "drzewo-binarne-i-bst",
+      "title": "Drzewo binarne i BST",
+      "summary": "Przechodzenie pre/in/post-order, własność BST i to, co się psuje, gdy drzewo się zdegeneruje.",
+      "readingMinutes": 11,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Lista ma jeden następnik. Drzewo binarne ma dwa — i ta jedna zmiana wystarcza, żeby liczba osiągalnych węzłów rosła wykładniczo z głębokością. Drzewo o wysokości 20 mieści milion węzłów, a droga do dowolnego z nich ma 20 kroków. Cały dział sprowadza się do pilnowania, żeby ta wysokość naprawdę pozostała logarytmiczna."
+        },
+        {
+          "type": "definition",
+          "term": "Drzewo poszukiwań binarnych (BST)",
+          "text": "Drzewo binarne, w którym dla KAŻDEGO węzła wszystkie wartości w lewym poddrzewie są od niego mniejsze, a wszystkie w prawym — większe.",
+          "note": "Ta własność musi zachodzić rekurencyjnie w całym poddrzewie, nie tylko dla bezpośrednich dzieci. To najczęstszy błąd przy implementowaniu sprawdzania poprawności BST."
+        },
+        {
+          "type": "traversal",
+          "title": "Przechodzenie drzewa w głąb (DFS)",
+          "algorithm": "dfs",
+          "nodes": [
+            { "id": "n8", "label": "8", "x": 50, "y": 10 },
+            { "id": "n3", "label": "3", "x": 25, "y": 40 },
+            { "id": "n10", "label": "10", "x": 75, "y": 40 },
+            { "id": "n1", "label": "1", "x": 12, "y": 72 },
+            { "id": "n6", "label": "6", "x": 38, "y": 72 },
+            { "id": "n14", "label": "14", "x": 88, "y": 72 }
+          ],
+          "edges": [
+            { "from": "n8", "to": "n3" },
+            { "from": "n8", "to": "n10" },
+            { "from": "n3", "to": "n1" },
+            { "from": "n3", "to": "n6" },
+            { "from": "n10", "to": "n14" }
+          ],
+          "startId": "n8",
+          "caption": "Sprawdź własność BST: wszystko na lewo od 8 jest mniejsze (3, 1, 6), wszystko na prawo większe (10, 14)."
+        },
+        {
+          "type": "table",
+          "title": "Trzy porządki przechodzenia",
+          "caption": "Różnica to WYŁĄCZNIE moment odwiedzenia węzła względem jego poddrzew.",
+          "headers": ["Porządek", "Kolejność", "Wynik dla drzewa powyżej", "Zastosowanie"],
+          "rows": [
+            ["pre-order", "węzeł → lewo → prawo", "8, 3, 1, 6, 10, 14", "kopiowanie drzewa, zapis do pliku"],
+            ["in-order", "lewo → węzeł → prawo", "1, 3, 6, 8, 10, 14", "wypisanie BST po kolei"],
+            ["post-order", "lewo → prawo → węzeł", "1, 6, 3, 14, 10, 8", "zwalnianie pamięci, obliczanie wyrażeń"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "In-order na BST daje wartości POSORTOWANE rosnąco. To najkrótsza definicja tego, czym jest BST: strukturą, która trzyma dane posortowane, ale pozwala je tanio wstawiać."
+        },
+        {
+          "type": "code",
+          "title": "Wyszukiwanie w BST",
+          "language": "python",
+          "code": "def szukaj(wezel, cel):\n    if wezel is None:\n        return None\n    if cel == wezel.wartosc:\n        return wezel\n    if cel < wezel.wartosc:\n        return szukaj(wezel.lewy, cel)    # odrzucamy CAŁE prawe poddrzewo\n    return szukaj(wezel.prawy, cel)       # odrzucamy CAŁE lewe poddrzewo",
+          "caption": "To wyszukiwanie binarne w innym opakowaniu: jedno porównanie odrzuca całe poddrzewo. Koszt równa się wysokości drzewa."
+        },
+        {
+          "type": "intro",
+          "text": "„Koszt równa się wysokości\" jest przyjemny dopiero wtedy, gdy wysokość jest logarytmiczna. A nie zawsze jest. Wstaw do pustego BST kolejno 1, 2, 3, 4, 5 — każdy element trafi na prawo od poprzedniego i powstanie struktura, która jest formalnie drzewem, a w praktyce listą wiązaną o wysokości n. Wyszukiwanie robi się O(n)."
+        },
+        {
+          "type": "complexity",
+          "title": "Zależność od wysokości",
+          "rows": [
+            { "operation": "Wyszukiwanie / wstawianie / usuwanie — drzewo zrównoważone", "worst": "O(log n)" },
+            { "operation": "Wyszukiwanie / wstawianie / usuwanie — drzewo zdegenerowane", "worst": "O(n)", "note": "dane wstawiane po kolei" },
+            { "operation": "Przejście in-order", "worst": "O(n)", "note": "trzeba odwiedzić każdy węzeł" },
+            { "operation": "Znalezienie minimum / maksimum", "worst": "O(h)", "note": "skrajnie w lewo / w prawo" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Dlatego w praktyce używa się drzew SAMOZRÓWNOWAŻĄCYCH — AVL, czerwono-czarnych, B-drzew. Wykonują dodatkową pracę przy wstawianiu (rotacje), żeby zagwarantować wysokość O(log n) niezależnie od kolejności danych. Zwykłe BST jest strukturą do nauki, nie do produkcji."
+        },
+        {
+          "type": "quiz",
+          "question": "Do pustego BST wstawiono kolejno: 1, 2, 3, 4, 5. Jaka jest złożoność wyszukiwania w powstałym drzewie?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "correctIndex": 2,
+          "explanation": "Każda kolejna wartość jest większa od poprzedniej, więc trafia na prawo — powstaje jednogałęziowy „patyk\" o wysokości n. Koszt wyszukiwania równa się wysokości, czyli O(n)."
+        },
+        {
+          "type": "quiz",
+          "question": "Przechodzenie in-order drzewa BST wypisało: 4, 7, 9, 12, 15. Co można stąd wywnioskować?",
+          "options": [
+            "Drzewo jest zrównoważone",
+            "Drzewo spełnia własność BST",
+            "Korzeniem jest 9",
+            "Drzewo ma wysokość 3"
+          ],
+          "correctIndex": 1,
+          "explanation": "In-order na poprawnym BST zawsze daje ciąg rosnący — i to jedyne, co stąd wynika. O kształcie drzewa, jego wysokości ani o tym, który węzeł jest korzeniem, ten wynik nie mówi nic."
+        }
+      ]
+    }
+  ]
+}

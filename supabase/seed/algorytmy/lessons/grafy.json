@@ -1,0 +1,156 @@
+{
+  "topicSlug": "grafy",
+  "lessons": [
+    {
+      "slug": "reprezentacja-i-przeszukiwanie",
+      "title": "Reprezentacja grafu, BFS i DFS",
+      "summary": "Ten sam algorytm z kolejką i ze stosem daje dwa różne przeszukiwania — i tylko jedno z nich znajduje najkrótszą drogę.",
+      "readingMinutes": 11,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Graf to najbardziej pojemna struktura w całym dziale: sieć znajomości, mapa połączeń, zależności między zadaniami, plansza gry. Wszystko, co da się opisać zdaniem „te rzeczy są ze sobą połączone\", jest grafem. Dwie operacje, od których zaczyna się prawie każdy algorytm grafowy, to przeszukiwanie wszerz i w głąb."
+        },
+        {
+          "type": "compare",
+          "title": "Dwie reprezentacje grafu",
+          "leftLabel": "Lista sąsiedztwa",
+          "rightLabel": "Macierz sąsiedztwa",
+          "rows": [
+            { "aspect": "Co przechowuje", "left": "dla każdego wierzchołka listę jego sąsiadów", "right": "tablicę n × n z 0/1 dla każdej pary" },
+            { "aspect": "Pamięć", "left": "O(V + E)", "right": "O(V²) niezależnie od liczby krawędzi" },
+            { "aspect": "Sprawdzenie, czy istnieje krawędź u–v", "left": "O(stopień u)", "right": "O(1)" },
+            { "aspect": "Przejście po sąsiadach u", "left": "O(stopień u)", "right": "O(V) — trzeba obejrzeć cały wiersz" },
+            { "aspect": "Kiedy lepsza", "left": "grafy rzadkie (typowy przypadek)", "right": "grafy gęste, częste pytania o pojedynczą krawędź" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Przeszukiwanie wszerz (BFS)",
+          "text": "Odwiedzaj wierzchołki warstwami: najpierw wszystkich sąsiadów startu, potem sąsiadów sąsiadów. Wierzchołki do odwiedzenia trzymasz w KOLEJCE.",
+          "note": "W grafie nieważonym BFS znajduje najkrótszą ścieżkę — bo dociera do każdego wierzchołka w minimalnej liczbie kroków."
+        },
+        {
+          "type": "traversal",
+          "title": "BFS — warstwa po warstwie",
+          "algorithm": "bfs",
+          "nodes": [
+            { "id": "a", "label": "A", "x": 12, "y": 50 },
+            { "id": "b", "label": "B", "x": 38, "y": 20 },
+            { "id": "c", "label": "C", "x": 38, "y": 80 },
+            { "id": "d", "label": "D", "x": 64, "y": 20 },
+            { "id": "e", "label": "E", "x": 64, "y": 80 },
+            { "id": "f", "label": "F", "x": 88, "y": 50 }
+          ],
+          "edges": [
+            { "from": "a", "to": "b" },
+            { "from": "a", "to": "c" },
+            { "from": "b", "to": "d" },
+            { "from": "c", "to": "e" },
+            { "from": "d", "to": "f" },
+            { "from": "e", "to": "f" }
+          ],
+          "startId": "a",
+          "caption": "Kolejność: A, potem cała warstwa {B, C}, potem {D, E}, na końcu F. BFS nigdy nie schodzi głębiej, dopóki nie skończy bieżącej warstwy."
+        },
+        {
+          "type": "definition",
+          "term": "Przeszukiwanie w głąb (DFS)",
+          "text": "Idź tak daleko, jak się da, jedną ścieżką. Gdy utkniesz, cofnij się do ostatniego rozgałęzienia i spróbuj innej drogi. Wierzchołki do odwiedzenia trzymasz na STOSIE.",
+          "note": "Wersja rekurencyjna nie potrzebuje jawnego stosu — używa stosu wywołań, co jest tym samym."
+        },
+        {
+          "type": "traversal",
+          "title": "DFS — jedną ścieżką w dół",
+          "algorithm": "dfs",
+          "nodes": [
+            { "id": "a", "label": "A", "x": 12, "y": 50 },
+            { "id": "b", "label": "B", "x": 38, "y": 20 },
+            { "id": "c", "label": "C", "x": 38, "y": 80 },
+            { "id": "d", "label": "D", "x": 64, "y": 20 },
+            { "id": "e", "label": "E", "x": 64, "y": 80 },
+            { "id": "f", "label": "F", "x": 88, "y": 50 }
+          ],
+          "edges": [
+            { "from": "a", "to": "b" },
+            { "from": "a", "to": "c" },
+            { "from": "b", "to": "d" },
+            { "from": "c", "to": "e" },
+            { "from": "d", "to": "f" },
+            { "from": "e", "to": "f" }
+          ],
+          "startId": "a",
+          "caption": "Ten sam graf, ten sam start, inna struktura pomocnicza — i zupełnie inna kolejność odwiedzin."
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "BFS i DFS to ten sam kod. Różnica sprowadza się do jednej linijki: czy z pojemnika na wierzchówki-do-odwiedzenia zdejmujesz z początku (kolejka → BFS), czy z końca (stos → DFS). Warto to raz zobaczyć, bo potem nie sposób ich pomylić."
+        },
+        {
+          "type": "code",
+          "title": "BFS z odległościami",
+          "language": "python",
+          "code": "from collections import deque\n\ndef bfs(graf, start):\n    odleglosc = {start: 0}\n    kolejka = deque([start])\n    while kolejka:\n        u = kolejka.popleft()          # deque -> BFS; pop() dałoby DFS\n        for v in graf[u]:\n            if v not in odleglosc:     # oznacz W MOMENCIE dodania do kolejki\n                odleglosc[v] = odleglosc[u] + 1\n                kolejka.append(v)\n    return odleglosc",
+          "caption": "Oznaczenie odwiedzenia przy DODAWANIU, nie przy zdejmowaniu. Inaczej ten sam wierzchołek trafi do kolejki wielokrotnie."
+        },
+        {
+          "type": "steps",
+          "title": "Algorytm Dijkstry — BFS dla grafów ważonych",
+          "steps": [
+            {
+              "title": "Problem",
+              "text": "BFS liczy najkrótszą drogę w liczbie krawędzi. Gdy krawędzie mają różne wagi (kilometry, czas), droga o mniejszej liczbie odcinków bywa dłuższa."
+            },
+            {
+              "title": "Zmiana",
+              "text": "Zamiast kolejki FIFO użyj kolejki priorytetowej i zawsze rozwijaj wierzchołek o NAJMNIEJSZEJ znanej odległości od startu."
+            },
+            {
+              "title": "Relaksacja",
+              "text": "Dla każdego sąsiada v sprawdź, czy droga przez u jest krótsza niż dotychczas znana. Jeśli tak — popraw odległość v."
+            },
+            {
+              "title": "Ograniczenie",
+              "text": "Wagi muszą być nieujemne. Przy ujemnej krawędzi już zamknięty wierzchołek mógłby wymagać poprawki, a Dijkstra do niego nie wróci — wtedy potrzeba Bellmana-Forda."
+            }
+          ]
+        },
+        {
+          "type": "complexity",
+          "title": "Koszty (V — wierzchołki, E — krawędzie)",
+          "rows": [
+            { "operation": "BFS / DFS na liście sąsiedztwa", "worst": "O(V + E)" },
+            { "operation": "BFS / DFS na macierzy sąsiedztwa", "worst": "O(V²)" },
+            { "operation": "Dijkstra z kopcem", "worst": "O((V + E) log V)" },
+            { "operation": "Najkrótsza ścieżka w grafie nieważonym", "worst": "O(V + E)", "note": "zwykły BFS wystarcza" }
+          ]
+        },
+        {
+          "type": "quiz",
+          "question": "Szukasz najmniejszej liczby przesiadek między dwiema stacjami. Wszystkie połączenia traktujesz jednakowo. Czego użyjesz?",
+          "options": [
+            "DFS — szybciej dociera do celu",
+            "BFS — w grafie nieważonym daje najkrótszą ścieżkę",
+            "Dijkstry — to zawsze najlepszy wybór dla ścieżek",
+            "Sortowania topologicznego"
+          ],
+          "correctIndex": 1,
+          "explanation": "Jednakowe połączenia to graf nieważony, a tam BFS z definicji dociera do każdego wierzchołka w minimalnej liczbie krawędzi. DFS może znaleźć drogę okrężną, a Dijkstra to niepotrzebny narzut, gdy wszystkie wagi są równe."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego algorytm Dijkstry nie działa poprawnie przy ujemnych wagach krawędzi?",
+          "options": [
+            "Bo kolejka priorytetowa nie przyjmuje liczb ujemnych",
+            "Bo zamknąwszy wierzchołek uznaje jego odległość za ostateczną, a ujemna krawędź może ją później zmniejszyć",
+            "Bo złożoność rośnie do O(V³)",
+            "Bo ujemne wagi tworzą cykle"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dijkstra opiera się na założeniu, że wydłużając ścieżkę, nigdy jej nie skrócisz. Ujemna krawędź to założenie łamie: wierzchołek zamknięty jako „gotowy\" mógłby zostać osiągnięty taniej okrężną drogą, a algorytm już do niego nie wraca."
+        }
+      ]
+    }
+  ]
+}

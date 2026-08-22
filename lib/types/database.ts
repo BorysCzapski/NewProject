@@ -1544,3 +1544,79 @@ export interface StudySession {
   created_at: string;
   updated_at: string;
 }
+
+// ============================================================================
+// Algorytmy — nauka struktur danych i algorytmów.
+// Mirrors supabase/migrations/0024_algorytmy.sql. Ćwiczenia są wyłącznie
+// jednokrotnego wyboru — uzasadnienie w lib/algorytmy/task-types.ts.
+// ============================================================================
+export type AlgoCategoryRow = "podstawy" | "struktury" | "algorytmy";
+export type AlgoExerciseSource = "curated" | "ai_generated";
+
+export interface AlgoTopic {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  category: AlgoCategoryRow;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AlgoLesson {
+  id: string;
+  topic_id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  /** AlgoBlock[] from lib/algorytmy/lesson-blocks.ts — kept as unknown[] here
+   * to avoid a client-type <-> db-type import cycle; cast at the call site
+   * (same pattern as GeoLesson.content above). */
+  content: unknown[];
+  reading_minutes: number;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AlgoLessonProgress {
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
+export interface AlgoExerciseOption {
+  id: string;
+  text: string;
+}
+
+export interface AlgoExercise {
+  id: string;
+  topic_id: string;
+  /** Slug from lib/algorytmy/task-types.ts. */
+  task_type: string;
+  statement: string;
+  code: string | null;
+  code_language: string | null;
+  options: AlgoExerciseOption[];
+  correct_option_id: string;
+  explanation: string;
+  difficulty: 1 | 2 | 3;
+  points_max: number;
+  source: AlgoExerciseSource;
+  needs_review: boolean;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface AlgoExerciseAttempt {
+  id: string;
+  exercise_id: string;
+  user_id: string;
+  chosen_option_id: string;
+  is_correct: boolean;
+  points_awarded: number;
+  points_max: number;
+  attempted_at: string;
+}

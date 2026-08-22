@@ -1,0 +1,87 @@
+{
+  "topicSlug": "wyszukiwanie",
+  "lessons": [
+    {
+      "slug": "liniowe-i-binarne",
+      "title": "Wyszukiwanie liniowe i binarne",
+      "summary": "Skąd bierze się logarytm, dlaczego binarne wymaga posortowania i kiedy sortowanie się nie opłaca.",
+      "readingMinutes": 9,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Szukanie elementu w zbiorze to najprostsze możliwe zadanie i jednocześnie najlepsza ilustracja tego, ile daje dodatkowa wiedza o danych. Bez żadnych założeń musisz obejrzeć wszystko: O(n). Ale jeśli wiesz, że dane są POSORTOWANE, każde porównanie odrzuca połowę pozostałych kandydatów — i milion elementów przeszukujesz w dwudziestu krokach."
+        },
+        {
+          "type": "code",
+          "title": "Wyszukiwanie liniowe",
+          "language": "python",
+          "code": "def szukaj_liniowo(dane, cel):\n    for i, wartosc in enumerate(dane):\n        if wartosc == cel:\n            return i\n    return -1",
+          "caption": "Działa na dowolnych danych. Pesymistycznie n porównań — element może być ostatni albo nie być go wcale."
+        },
+        {
+          "type": "definition",
+          "term": "Wyszukiwanie binarne",
+          "text": "Porównaj cel ze środkiem posortowanego zakresu. Jeśli cel jest mniejszy, odrzuć całą prawą połowę; jeśli większy — całą lewą. Powtarzaj na tym, co zostało.",
+          "note": "Warunek konieczny: dane MUSZĄ być posortowane. Na nieposortowanych algorytm nie działa wolniej — zwraca zły wynik."
+        },
+        {
+          "type": "binary-search",
+          "title": "Wyszukiwanie binarne krok po kroku",
+          "values": [2, 5, 8, 12, 16, 23, 38, 45, 56, 72, 91],
+          "target": 23,
+          "caption": "11 elementów, 3–4 porównania. Przy każdym kroku zobacz, jak duży fragment tablicy przestaje być brany pod uwagę."
+        },
+        {
+          "type": "intro",
+          "text": "Zauważ, co dokładnie się dzieje: po pierwszym porównaniu zostaje 5 kandydatów, po drugim 2, po trzecim 1. Liczba kroków to tyle, ile razy da się podzielić n przez dwa — czyli log₂n. Dla miliona elementów to 20. Dla miliarda — 30. Logarytm rośnie tak wolno, że w praktyce zachowuje się prawie jak stała."
+        },
+        {
+          "type": "code",
+          "title": "Wyszukiwanie binarne — wersja iteracyjna",
+          "language": "python",
+          "code": "def szukaj_binarnie(dane, cel):\n    lewy, prawy = 0, len(dane) - 1\n    while lewy <= prawy:\n        srodek = (lewy + prawy) // 2\n        if dane[srodek] == cel:\n            return srodek\n        if dane[srodek] < cel:\n            lewy = srodek + 1     # odrzuć lewą połowę razem ze środkiem\n        else:\n            prawy = srodek - 1    # odrzuć prawą połowę razem ze środkiem\n    return -1",
+          "caption": "Dwa klasyczne błędy: `while lewy < prawy` (gubi ostatni element) oraz `lewy = srodek` zamiast `srodek + 1` (pętla nieskończona)."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "`(lewy + prawy) // 2` może się przepełnić w językach ze stałym rozmiarem liczby całkowitej, gdy oba indeksy są bliskie maksimum. Bezpieczna wersja to `lewy + (prawy - lewy) // 2`. Ten błąd siedział w bibliotece standardowej Javy przez dziewięć lat."
+        },
+        {
+          "type": "complexity",
+          "title": "Porównanie",
+          "rows": [
+            { "operation": "Liniowe — element na początku", "best": "O(1)", "worst": "O(n)", "note": "działa na nieposortowanych" },
+            { "operation": "Liniowe — element nieobecny", "worst": "O(n)" },
+            { "operation": "Binarne", "best": "O(1)", "average": "O(log n)", "worst": "O(log n)", "note": "wymaga posortowania" },
+            { "operation": "Posortowanie + jedno wyszukanie binarne", "worst": "O(n log n)", "note": "gorsze niż jedno liniowe!" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Ostatni wiersz to praktyczna reguła: sortowanie po to, żeby wyszukać RAZ, się nie opłaca — O(n log n) jest gorsze niż O(n). Opłaca się dopiero przy wielu wyszukiwaniach: k wyszukiwań to O(n log n + k log n) zamiast O(k · n)."
+        },
+        {
+          "type": "quiz",
+          "question": "Ile porównań w najgorszym razie wykona wyszukiwanie binarne w tablicy 1000 elementów?",
+          "options": ["około 10", "około 100", "około 500", "1000"],
+          "correctIndex": 0,
+          "explanation": "log₂1000 ≈ 10. Każde porównanie połowi zakres: 1000 → 500 → 250 → 125 → 63 → 32 → 16 → 8 → 4 → 2 → 1."
+        },
+        {
+          "type": "quiz",
+          "question": "Wyszukiwanie binarne uruchomiono na NIEposortowanej tablicy. Co się stanie?",
+          "options": [
+            "Zapętli się",
+            "Zwróci wynik w O(log n), ale może być błędny",
+            "Zwróci poprawny wynik, tylko wolniej — w O(n)",
+            "Zgłosi błąd"
+          ],
+          "correctIndex": 1,
+          "explanation": "Algorytm wykona swoje log n kroków i coś zwróci — tylko decyzja „odrzuć tę połowę\" opiera się na założeniu uporządkowania, którego nie ma. Istniejący element bywa więc raportowany jako nieobecny. Cicha niepoprawność jest groźniejsza niż błąd."
+        }
+      ]
+    }
+  ]
+}

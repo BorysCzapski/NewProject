@@ -1,0 +1,100 @@
+{
+  "topicSlug": "rekurencja",
+  "lessons": [
+    {
+      "slug": "warunek-bazowy-i-stos-wywolan",
+      "title": "Warunek bazowy i stos wywołań",
+      "summary": "Co dokładnie dzieje się w pamięci, gdy funkcja wywołuje samą siebie, i dlaczego naiwne Fibonacciego jest wykładnicze.",
+      "readingMinutes": 10,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Rekurencja to rozwiązanie problemu przez sprowadzenie go do MNIEJSZEJ wersji tego samego problemu. Silnia z 5 to 5 razy silnia z 4. Silnia z 4 to 4 razy silnia z 3. I tak w dół, aż do przypadku, którego już nie trzeba sprowadzać — silni z 0, która po prostu wynosi 1. Ten ostatni krok to **warunek bazowy** i bez niego rekurencja nie jest algorytmem, tylko nieskończoną pętlą z gwarantowanym przepełnieniem stosu."
+        },
+        {
+          "type": "definition",
+          "term": "Warunek bazowy",
+          "text": "Przypadek, dla którego funkcja zwraca wynik BEZ wywoływania samej siebie. Każde wywołanie rekurencyjne musi zbliżać argument do warunku bazowego — inaczej rekurencja nigdy się nie zatrzyma.",
+          "note": "Dwa najczęstsze błędy: brak warunku bazowego oraz wywołanie, które nie zmniejsza argumentu (np. f(n) zamiast f(n-1))."
+        },
+        {
+          "type": "code",
+          "title": "Silnia rekurencyjnie",
+          "language": "python",
+          "code": "def silnia(n):\n    if n <= 1:        # warunek bazowy\n        return 1\n    return n * silnia(n - 1)   # krok rekurencyjny, argument maleje",
+          "caption": "Głębokość rekurencji to n, więc czas O(n) — ale też PAMIĘĆ O(n), bo n wywołań czeka jednocześnie na stosie."
+        },
+        {
+          "type": "intro",
+          "text": "To ostatnie zdanie jest sednem. Każde niezakończone wywołanie zajmuje ramkę na **stosie wywołań**: swoje argumenty, zmienne lokalne i adres powrotu. Zanim silnia(5) cokolwiek policzy, na stosie leży pięć ramek. Zobacz to poniżej — najpierw stos rośnie do samego dołu rekurencji, a dopiero potem zwija się, mnożąc wyniki w drodze powrotnej."
+        },
+        {
+          "type": "structure-ops",
+          "title": "Stos wywołań przy silnia(4)",
+          "kind": "stack",
+          "operations": [
+            { "op": "push", "value": "silnia(4)" },
+            { "op": "push", "value": "silnia(3)" },
+            { "op": "push", "value": "silnia(2)" },
+            { "op": "push", "value": "silnia(1) → 1" },
+            { "op": "pop" },
+            { "op": "pop" },
+            { "op": "pop" },
+            { "op": "pop" }
+          ],
+          "caption": "Cztery wejścia w głąb, potem cztery powroty. Maksymalna wysokość stosu to głębokość rekurencji — i to ona wyznacza koszt pamięciowy."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Przepełnienie stosu (stack overflow) to nie awaria komputera, tylko wyczerpanie limitu ramek. Python domyślnie zatrzymuje się przy około 1000 zagnieżdżeń. Rekurencja o głębokości n na danych z miliona elementów wywróci program niezależnie od tego, jak szybko liczy."
+        },
+        {
+          "type": "code",
+          "title": "Fibonacci naiwnie — pułapka",
+          "language": "python",
+          "code": "def fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)",
+          "caption": "Dwa wywołania na poziom, głębokość n → drzewo wywołań ma około 2ⁿ węzłów. fib(50) to biliony wywołań."
+        },
+        {
+          "type": "intro",
+          "text": "Dlaczego to tak drogo kosztuje? Bo `fib(n-2)` liczy się od zera również wewnątrz `fib(n-1)`. Ten sam podproblem rozwiązywany jest wielokrotnie, w kółko. To dokładnie ta obserwacja prowadzi do programowania dynamicznego — ale najpierw trzeba zobaczyć, że problem w ogóle istnieje."
+        },
+        {
+          "type": "complexity",
+          "title": "Koszt typowych schematów rekurencyjnych",
+          "rows": [
+            { "operation": "Jedno wywołanie, argument −1 (silnia)", "worst": "O(n)", "note": "pamięć O(n)" },
+            { "operation": "Jedno wywołanie, argument /2 (wyszukiwanie binarne)", "worst": "O(log n)", "note": "pamięć O(log n)" },
+            { "operation": "Dwa wywołania, argument /2 + scalanie (merge sort)", "worst": "O(n log n)" },
+            { "operation": "Dwa wywołania, argument −1 (naiwny Fibonacci)", "worst": "O(2ⁿ)", "note": "praktycznie nieużywalne" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Każdą rekurencję da się zapisać iteracyjnie — czasem wprost pętlą, czasem z własnym stosem. Odwrotnie też: pętla to rekurencja ogonowa. Wybieraj tę wersję, która jaśniej wyraża problem, i pamiętaj o koszcie pamięciowym stosu."
+        },
+        {
+          "type": "quiz",
+          "question": "Funkcja `def f(n): return f(n - 2)` z warunkiem bazowym `if n == 0: return 0` wywołana dla n = 7 zakończy się:",
+          "options": [
+            "poprawnie, zwracając 0",
+            "przepełnieniem stosu — argument nigdy nie trafi w warunek bazowy",
+            "błędem typu",
+            "natychmiast, bo 7 > 0"
+          ],
+          "correctIndex": 1,
+          "explanation": "Od 7 schodzimy przez 5, 3, 1, −1, −3… i nigdy nie trafiamy dokładnie w 0. Warunek bazowy musi być osiągalny dla KAŻDEGO dopuszczalnego wejścia — tutaj powinien brzmieć `if n <= 0`."
+        },
+        {
+          "type": "quiz",
+          "question": "Jaka jest złożoność PAMIĘCIOWA rekurencyjnego wyszukiwania binarnego?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "correctIndex": 1,
+          "explanation": "Głębokość rekurencji to log n (zakres połowi się co wywołanie), a każde niezakończone wywołanie trzyma ramkę na stosie. Wersja iteracyjna tego samego algorytmu ma pamięć O(1)."
+        }
+      ]
+    }
+  ]
+}

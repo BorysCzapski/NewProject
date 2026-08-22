@@ -6,6 +6,7 @@
 // which server code also imports) onto lucide-react components.
 // ============================================================================
 import {
+  Binary,
   Calculator,
   Church,
   Compass,
@@ -24,6 +25,7 @@ import {
 } from "lucide-react";
 
 const ICONS: Record<string, LucideIcon> = {
+  Binary,
   Calculator,
   Church,
   Compass,

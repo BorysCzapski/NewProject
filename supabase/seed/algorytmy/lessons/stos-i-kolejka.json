@@ -1,0 +1,105 @@
+{
+  "topicSlug": "stos-i-kolejka",
+  "lessons": [
+    {
+      "slug": "lifo-fifo-i-ich-zastosowania",
+      "title": "LIFO, FIFO i po co odbierać sobie dostęp",
+      "summary": "Dwie struktury zdefiniowane przez to, czego NIE pozwalają zrobić — i dlaczego to czyni je użytecznymi.",
+      "readingMinutes": 9,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Stos i kolejka to tablice z odebranymi uprawnieniami. Nie możesz sięgnąć do środka, nie możesz odczytać elementu numer 5 — masz dostęp wyłącznie do jednego końca (stos) albo do dwóch przeciwnych (kolejka). Brzmi jak ograniczenie i jest nim. Ale właśnie dlatego każda dozwolona operacja kosztuje O(1), a kod, który ich używa, sam z siebie dokumentuje kolejność przetwarzania."
+        },
+        {
+          "type": "definition",
+          "term": "Stos (LIFO)",
+          "text": "Last In, First Out. Dokładasz na wierzch (push) i zdejmujesz z wierzchu (pop). Ostatni włożony element wychodzi pierwszy.",
+          "note": "Wzorzec: cofanie zmian, stos wywołań funkcji, sprawdzanie nawiasów, przechodzenie grafu w głąb."
+        },
+        {
+          "type": "structure-ops",
+          "title": "Stos w działaniu",
+          "kind": "stack",
+          "operations": [
+            { "op": "push", "value": "A" },
+            { "op": "push", "value": "B" },
+            { "op": "push", "value": "C" },
+            { "op": "pop" },
+            { "op": "push", "value": "D" },
+            { "op": "pop" },
+            { "op": "pop" }
+          ],
+          "caption": "Wyjmowane po kolei: C, D, B. Zwróć uwagę, że A cały czas leży na dnie — na stosie najstarszy element wychodzi ostatni."
+        },
+        {
+          "type": "definition",
+          "term": "Kolejka (FIFO)",
+          "text": "First In, First Out. Dokładasz na koniec (enqueue) i zdejmujesz z początku (dequeue). Kolejność wyjścia jest taka sama jak kolejność wejścia.",
+          "note": "Wzorzec: bufory, zadania do wykonania, przechodzenie grafu wszerz, obsługa żądań w kolejności zgłoszeń."
+        },
+        {
+          "type": "structure-ops",
+          "title": "Kolejka w działaniu",
+          "kind": "queue",
+          "operations": [
+            { "op": "push", "value": "A" },
+            { "op": "push", "value": "B" },
+            { "op": "push", "value": "C" },
+            { "op": "pop" },
+            { "op": "push", "value": "D" },
+            { "op": "pop" },
+            { "op": "pop" }
+          ],
+          "caption": "Te same operacje co przy stosie, a wychodzą: A, B, C. Cała różnica to koniec, z którego zdejmujesz."
+        },
+        {
+          "type": "code",
+          "title": "Klasyczne zastosowanie stosu: sprawdzanie nawiasów",
+          "language": "python",
+          "code": "def nawiasy_poprawne(tekst):\n    pary = {')': '(', ']': '[', '}': '{'}\n    stos = []\n    for znak in tekst:\n        if znak in '([{':\n            stos.append(znak)\n        elif znak in pary:\n            if not stos or stos.pop() != pary[znak]:\n                return False\n    return not stos     # coś zostało niedomknięte?",
+          "caption": "Stos pasuje idealnie, bo nawias zamykający zawsze odnosi się do OSTATNIEGO niezamkniętego otwierającego. To definicja LIFO."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Kolejkę zaimplementowaną na zwykłej tablice łatwo zepsuć: `tab.pop(0)` przesuwa wszystkie pozostałe elementy, więc dequeue robi się O(n) zamiast O(1). Poprawne implementacje używają dwóch indeksów (bufor cykliczny) albo listy dwukierunkowej — w Pythonie `collections.deque`."
+        },
+        {
+          "type": "complexity",
+          "title": "Koszty operacji",
+          "rows": [
+            { "operation": "Stos — push / pop / peek", "worst": "O(1)" },
+            { "operation": "Kolejka — enqueue / dequeue (poprawna implementacja)", "worst": "O(1)" },
+            { "operation": "Kolejka na tablicy z pop(0)", "worst": "O(n)", "note": "typowy błąd wydajnościowy" },
+            { "operation": "Wyszukanie wartości w stosie/kolejce", "worst": "O(n)", "note": "wymaga opróżnienia — to nie jest ich zastosowanie" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Przechodzenie grafu w głąb (DFS) i wszerz (BFS) to DOKŁADNIE ten sam algorytm — różnią się wyłącznie tym, czy wierzchołki do odwiedzenia trzymasz na stosie, czy w kolejce. To jedna z najładniejszych symetrii w całym dziale."
+        },
+        {
+          "type": "quiz",
+          "question": "Na pusty stos wykonano: push(1), push(2), pop, push(3), push(4), pop, pop. Co zostało na stosie?",
+          "options": ["[1]", "[1, 3]", "[3, 4]", "stos jest pusty"],
+          "correctIndex": 0,
+          "explanation": "Po push(1), push(2) stos to [1,2]. pop zdejmuje 2 → [1]. push(3), push(4) → [1,3,4]. Dwa pop zdejmują 4 i 3 → zostaje [1]."
+        },
+        {
+          "type": "quiz",
+          "question": "Obsługujesz zgłoszenia użytkowników i chcesz je przetwarzać w kolejności nadejścia. Której struktury użyjesz?",
+          "options": [
+            "Stosu — zapewnia stały koszt operacji",
+            "Kolejki — FIFO odpowiada kolejności zgłoszeń",
+            "Tablicy z wyszukiwaniem najstarszego zgłoszenia",
+            "Listy wiązanej sortowanej po czasie"
+          ],
+          "correctIndex": 1,
+          "explanation": "„W kolejności nadejścia\" to dosłownie definicja FIFO. Stos odwróciłby kolejność, a szukanie najstarszego w tablicy kosztowałoby O(n) na zgłoszenie zamiast O(1)."
+        }
+      ]
+    }
+  ]
+}

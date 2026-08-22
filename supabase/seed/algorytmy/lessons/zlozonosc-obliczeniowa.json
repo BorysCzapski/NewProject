@@ -1,0 +1,107 @@
+{
+  "topicSlug": "zlozonosc-obliczeniowa",
+  "lessons": [
+    {
+      "slug": "notacja-o-i-rzedy-wzrostu",
+      "title": "Notacja O i rzędy wzrostu",
+      "summary": "Dlaczego mierzymy algorytmy rzędem wzrostu, a nie sekundami, i jak odczytać złożoność z kodu.",
+      "readingMinutes": 10,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Dwa programy rozwiązują to samo zadanie. Pierwszy na Twoim laptopie działa 2 sekundy, drugi 8. Czy pierwszy jest lepszy? Nie wiadomo — może testowałeś na 100 elementach, a w produkcji będzie ich 100 000. Sekundy zależą od procesora, języka, kompilatora i tego, co akurat robi system. **Rząd wzrostu** nie zależy od żadnej z tych rzeczy: mówi, jak czas rośnie, gdy dane rosną. To pytanie ma sens niezależnie od maszyny — i dlatego to jego zadajemy."
+        },
+        {
+          "type": "definition",
+          "term": "Złożoność czasowa O(f(n))",
+          "text": "Algorytm ma złożoność O(f(n)), jeśli dla dostatecznie dużych n liczba jego operacji jest co najwyżej stałą wielokrotnością f(n). Notacja O opisuje więc GÓRNE ograniczenie tempa wzrostu, a nie dokładną liczbę operacji.",
+          "note": "Stałe i składniki niższego rzędu znikają: 3n² + 500n + 9000 to po prostu O(n²). Dla dużych n to n² decyduje o wszystkim."
+        },
+        {
+          "type": "growth",
+          "title": "Jak szybko rosną typowe klasy złożoności",
+          "functions": ["1", "log n", "n", "n log n", "n^2"],
+          "maxN": 40,
+          "caption": "Przy n = 40 różnica między n log n a n² to już rząd wielkości. Przy n = 100 000 — kilka rzędów."
+        },
+        {
+          "type": "table",
+          "title": "Ile operacji przy różnych n",
+          "caption": "Liczby zaokrąglone. Zwróć uwagę, że O(log n) prawie nie reaguje na wzrost danych.",
+          "headers": ["Klasa", "n = 10", "n = 1 000", "n = 1 000 000"],
+          "rows": [
+            ["O(1)", "1", "1", "1"],
+            ["O(log n)", "3", "10", "20"],
+            ["O(n)", "10", "1 000", "1 000 000"],
+            ["O(n log n)", "33", "10 000", "20 000 000"],
+            ["O(n²)", "100", "1 000 000", "1 000 000 000 000"]
+          ]
+        },
+        {
+          "type": "intro",
+          "text": "Ostatni wiersz tabeli to cała praktyczna różnica między „działa\" a „nie działa\". Algorytm O(n²) przy milionie elementów to bilion operacji — kilkanaście dni liczenia. Ten sam problem w O(n log n) zamyka się w sekundach. Nie chodzi o mikrooptymalizację, tylko o to, czy program w ogóle skończy."
+        },
+        {
+          "type": "code",
+          "title": "Odczytywanie złożoności z pętli",
+          "language": "python",
+          "code": "def ma_duplikat(dane):\n    for i in range(len(dane)):          # n obrotów\n        for j in range(i + 1, len(dane)):  # średnio n/2 obrotów\n            if dane[i] == dane[j]:\n                return True\n    return False",
+          "caption": "Pętla w pętli po tych samych danych: n · n/2 porównań, czyli O(n²). Stała 1/2 znika."
+        },
+        {
+          "type": "steps",
+          "title": "Jak policzyć złożoność w trzech krokach",
+          "steps": [
+            {
+              "title": "1. Znajdź najgłębiej zagnieżdżoną pętlę",
+              "text": "Operacje wykonywane najczęściej decydują o wyniku. Instrukcja poza pętlą to O(1) i nie ma znaczenia."
+            },
+            {
+              "title": "2. Policz, ile razy się wykonuje w zależności od n",
+              "text": "Pętla przechodząca przez wszystkie dane to n. Pętla w pętli to n · n. Pętla, w której zmienna podwaja się co obrót, to log n."
+            },
+            {
+              "title": "3. Odrzuć stałe i składniki niższego rzędu",
+              "text": "O(2n) to O(n). O(n² + n) to O(n²). Zostaw wyłącznie najszybciej rosnący składnik."
+            }
+          ]
+        },
+        {
+          "type": "complexity",
+          "title": "Złożoność typowych konstrukcji",
+          "rows": [
+            { "operation": "Dostęp do elementu tablicy po indeksie", "worst": "O(1)" },
+            { "operation": "Jedna pętla po n elementach", "worst": "O(n)" },
+            { "operation": "Pętla w pętli po n elementach", "worst": "O(n²)" },
+            { "operation": "Połowienie zakresu co obrót", "worst": "O(log n)", "note": "wyszukiwanie binarne" },
+            { "operation": "Podział na pół + praca liniowa na każdym poziomie", "worst": "O(n log n)", "note": "sortowanie przez scalanie" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Złożoność pamięciowa to osobna miara i liczy się ją tak samo. Algorytm może być szybki i pamięciożerny — sortowanie przez scalanie działa w O(n log n) czasu, ale potrzebuje O(n) dodatkowej pamięci, czego sortowanie przez wstawianie nie wymaga."
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Przypadek pesymistyczny (worst case) to gwarancja: „nigdy nie będzie gorzej\". Przypadek średni opisuje typowe dane. Quicksort ma średnio O(n log n), ale pesymistycznie O(n²) — i to właśnie dlatego jego wybór pivota jest tak ważny."
+        },
+        {
+          "type": "quiz",
+          "question": "Jaka jest złożoność czasowa pętli `while n > 1: n = n // 2`?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+          "correctIndex": 1,
+          "explanation": "Każdy obrót zmniejsza n o połowę, więc liczba obrotów to tyle, ile razy da się podzielić n przez 2 — czyli log₂n."
+        },
+        {
+          "type": "quiz",
+          "question": "Algorytm wykonuje 5n² + 1000n + 30000 operacji. Jaka to złożoność?",
+          "options": ["O(30000)", "O(1000n)", "O(n²)", "O(5n² + 1000n)"],
+          "correctIndex": 2,
+          "explanation": "Zostawiamy wyłącznie najszybciej rosnący składnik i odrzucamy stałą: 5n² → O(n²). Dla dużych n reszta jest pomijalna, mimo że stałe wyglądają groźnie."
+        }
+      ]
+    }
+  ]
+}
