@@ -1,0 +1,115 @@
+{
+  "topicSlug": "sortowanie-szybkie",
+  "lessons": [
+    {
+      "slug": "scalanie-i-quicksort",
+      "title": "Przez scalanie i szybkie",
+      "summary": "Dziel i zwyciężaj: skąd bierze się n log n, dlaczego quicksort bywa kwadratowy i gdzie leży granica możliwości.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Sortowania proste wykonują n przebiegów po n elementach. Sortowania szybkie robią coś innego: dzielą problem na pół, rozwiązują obie połowy i składają wynik. Podziałów jest log n, na każdym poziomie pracy jest O(n) — stąd O(n log n). To nie jest drobne usprawnienie: dla miliona elementów różnica między n² a n log n to różnica między dwoma tygodniami a dwiema sekundami."
+        },
+        {
+          "type": "steps",
+          "title": "Sortowanie przez scalanie — schemat",
+          "steps": [
+            {
+              "title": "1. Podziel",
+              "text": "Rozetnij tablicę na pół. Nie patrz na wartości — podział jest zawsze dokładnie w środku, więc drzewo rekursji ma gwarantowaną wysokość log n."
+            },
+            {
+              "title": "2. Posortuj rekurencyjnie obie połowy",
+              "text": "Warunek bazowy: tablica jednoelementowa jest już posortowana."
+            },
+            {
+              "title": "3. Scal",
+              "text": "Mając dwie posortowane połowy, przechodź je równolegle i przepisuj mniejszy z dwóch aktualnych elementów. Jedno przejście, koszt O(n) na poziom."
+            }
+          ]
+        },
+        {
+          "type": "sorting",
+          "title": "Sortowanie przez scalanie",
+          "algorithm": "merge",
+          "values": [8, 3, 5, 1, 9, 2, 7, 4],
+          "caption": "Podświetlone fragmenty to scalane właśnie podtablice. Kolejność scaleń idzie od najmniejszych kawałków w górę."
+        },
+        {
+          "type": "definition",
+          "term": "Sortowanie szybkie (quicksort)",
+          "text": "Wybierz element rozdzielający (pivot). Przestaw tablicę tak, żeby po lewej znalazły się elementy mniejsze od pivota, po prawej większe. Pivot jest wtedy na docelowej pozycji — posortuj rekurencyjnie obie strony.",
+          "note": "W przeciwieństwie do scalania cała praca dzieje się PRZED rekurencją, a składanie wyników jest darmowe."
+        },
+        {
+          "type": "sorting",
+          "title": "Sortowanie szybkie",
+          "algorithm": "quick",
+          "values": [8, 3, 5, 1, 9, 2, 7, 4],
+          "caption": "Po każdym podziale pivot ląduje na swoim ostatecznym miejscu i już się nie rusza."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Quicksort ma pesymistyczne O(n²) i nie jest to sytuacja teoretyczna. Gdy pivotem jest zawsze pierwszy element, a tablica jest już posortowana, każdy podział daje 0 i n−1 elementów — rekursja schodzi n poziomów w dół, wykonując po n operacji. Najlepsze możliwe dane dają najgorsze zachowanie."
+        },
+        {
+          "type": "intro",
+          "text": "Dlatego praktyczne implementacje nigdy nie biorą pivota na sztywno. Standardowe zabezpieczenia to mediana z trzech (pierwszy, środkowy, ostatni), losowy pivot albo introsort — hybryda, która liczy głębokość rekursji i po przekroczeniu 2·log n przełącza się na sortowanie przez kopcowanie o gwarantowanym O(n log n)."
+        },
+        {
+          "type": "compare",
+          "title": "Scalanie kontra quicksort",
+          "leftLabel": "Przez scalanie",
+          "rightLabel": "Szybkie",
+          "rows": [
+            { "aspect": "Pesymistycznie", "left": "O(n log n) — gwarancja", "right": "O(n²) przy złym pivocie" },
+            { "aspect": "Pamięć dodatkowa", "left": "O(n) — bufor na scalanie", "right": "O(log n) — tylko stos rekursji" },
+            { "aspect": "Stabilność", "left": "stabilne", "right": "niestabilne" },
+            { "aspect": "Szybkość w praktyce", "left": "wolniejsze o stałą — kopiuje dane", "right": "zwykle najszybsze — pracuje w miejscu, dobrze korzysta z cache" },
+            { "aspect": "Typowe zastosowanie", "left": "dane zewnętrzne, wymagana stabilność", "right": "domyślne sortowanie tablic w pamięci" }
+          ]
+        },
+        {
+          "type": "complexity",
+          "title": "Zestawienie",
+          "rows": [
+            { "operation": "Przez scalanie", "best": "O(n log n)", "average": "O(n log n)", "worst": "O(n log n)", "note": "pamięć O(n), stabilne" },
+            { "operation": "Szybkie (losowy pivot)", "best": "O(n log n)", "average": "O(n log n)", "worst": "O(n²)", "note": "pamięć O(log n)" },
+            { "operation": "Przez kopcowanie", "best": "O(n log n)", "average": "O(n log n)", "worst": "O(n log n)", "note": "pamięć O(1), niestabilne" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "exam",
+          "text": "O(n log n) to udowodniona GRANICA dla sortowania opartego na porównaniach — żaden taki algorytm nie może być szybszy. Sortowania liniowe (przez zliczanie, pozycyjne) tę granicę omijają, bo nie porównują elementów, tylko korzystają z wiedzy o zakresie wartości."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego sortowanie przez scalanie ma gwarantowane O(n log n), a quicksort nie?",
+          "options": [
+            "Bo scalanie jest stabilne",
+            "Bo scalanie zawsze dzieli dokładnie na pół, niezależnie od danych",
+            "Bo scalanie nie używa rekurencji",
+            "Bo quicksort porównuje więcej par elementów"
+          ],
+          "correctIndex": 1,
+          "explanation": "Podział na pół w scalaniu nie zależy od wartości, więc drzewo rekursji ma zawsze wysokość log n. W quicksorcie o podziale decyduje pivot — nieszczęśliwy wybór daje podziały 0/(n−1) i drzewo wysokości n."
+        },
+        {
+          "type": "quiz",
+          "question": "Sortujesz 10 milionów rekordów, których nie mieści się w pamięci naraz, i potrzebujesz stabilności. Co wybierzesz?",
+          "options": [
+            "Quicksort — jest najszybszy",
+            "Sortowanie przez scalanie — stabilne i naturalnie dzieli dane na porcje",
+            "Sortowanie przez wstawianie — działa w miejscu",
+            "Sortowanie przez kopcowanie — ma stałą pamięć"
+          ],
+          "correctIndex": 1,
+          "explanation": "Oba wymagania wskazują na scalanie: jest stabilne, a jego schemat „posortuj kawałki, potem je scal\" jest wprost tym, czego potrzebuje sortowanie zewnętrzne. Quicksort i kopcowanie są niestabilne, a wstawianie ma O(n²)."
+        }
+      ]
+    }
+  ]
+}

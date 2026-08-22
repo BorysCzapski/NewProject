@@ -12,6 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Home,
+  Binary,
   BookOpen,
   ClipboardList,
   Calendar,
@@ -38,6 +39,7 @@ import { cn } from "@/lib/utils";
 
 const ICONS = {
   Home,
+  Binary,
   BookOpen,
   ClipboardList,
   Calendar,

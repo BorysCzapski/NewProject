@@ -1,0 +1,113 @@
+{
+  "topicSlug": "sortowanie-proste",
+  "lessons": [
+    {
+      "slug": "babelkowe-wstawianie-wybor",
+      "title": "Bąbelkowe, przez wstawianie, przez wybór",
+      "summary": "Trzy algorytmy O(n²), które robią to samo w innej kolejności — i różnią się tym, kiedy warto ich użyć.",
+      "readingMinutes": 11,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wszystkie trzy mają złożoność O(n²) i wszystkie trzy przegrywają z quicksortem na dużych danych. A jednak warto je znać dokładnie, bo dopiero na nich widać, że „ta sama złożoność\" nie znaczy „to samo zachowanie\". Jeden z nich na prawie posortowanych danych jest liniowy, drugi wykonuje najmniej przestawień ze wszystkich, trzeci nie ma żadnej zalety poza prostotą. Puść animacje i patrz na to, co się porównuje."
+        },
+        {
+          "type": "definition",
+          "term": "Sortowanie bąbelkowe",
+          "text": "Przechodź tablicę od lewej, porównując sąsiadów i zamieniając ich, gdy są w złej kolejności. Po każdym przebiegu największy nieposortowany element „wypływa\" na swoje miejsce na końcu.",
+          "note": "Z optymalizacją: jeśli przebieg nie wykonał żadnej zamiany, tablica jest posortowana i można przerwać."
+        },
+        {
+          "type": "sorting",
+          "title": "Sortowanie bąbelkowe",
+          "algorithm": "bubble",
+          "values": [5, 2, 9, 1, 7, 3],
+          "caption": "Zauważ, że po pierwszym przebiegu 9 jest już na końcu i nigdy więcej się nie rusza. Po drugim — 7. Ogon rośnie z każdym przebiegiem."
+        },
+        {
+          "type": "definition",
+          "term": "Sortowanie przez wstawianie",
+          "text": "Utrzymuj posortowany prefiks tablicy. Bierz kolejny element i przesuwaj go w lewo, dopóki napotyka większych sąsiadów — czyli wstaw go w odpowiednie miejsce już uporządkowanej części.",
+          "note": "Tak układa się karty w ręce. Na prawie posortowanych danych każdy element cofa się o kilka pozycji, więc koszt spada do O(n)."
+        },
+        {
+          "type": "sorting",
+          "title": "Sortowanie przez wstawianie",
+          "algorithm": "insertion",
+          "values": [5, 2, 9, 1, 7, 3],
+          "caption": "Lewa część tablicy jest przez cały czas posortowana i rośnie o jeden element na krok."
+        },
+        {
+          "type": "definition",
+          "term": "Sortowanie przez wybór",
+          "text": "Znajdź najmniejszy element w nieposortowanej części i zamień go z pierwszym elementem tej części. Powtórz dla reszty.",
+          "note": "Wykonuje dokładnie n−1 zamian — najmniej ze wszystkich trzech. To ma znaczenie, gdy zapis jest drogi (np. pamięć flash)."
+        },
+        {
+          "type": "sorting",
+          "title": "Sortowanie przez wybór",
+          "algorithm": "selection",
+          "values": [5, 2, 9, 1, 7, 3],
+          "caption": "Porównań jest tyle samo co w bąbelkowym, ale zamiana następuje najwyżej raz na przebieg."
+        },
+        {
+          "type": "compare",
+          "title": "Czym się naprawdę różnią",
+          "leftLabel": "Przez wstawianie",
+          "rightLabel": "Przez wybór",
+          "rows": [
+            { "aspect": "Dane prawie posortowane", "left": "O(n) — praktycznie darmowe", "right": "O(n²) — bez zmian, zawsze szuka minimum" },
+            { "aspect": "Liczba zamian", "left": "do O(n²)", "right": "dokładnie n−1" },
+            { "aspect": "Stabilność", "left": "stabilne", "right": "niestabilne w wersji podstawowej" },
+            { "aspect": "Sortowanie w trakcie napływu danych", "left": "tak — wstawia kolejny element do gotowego prefiksu", "right": "nie — potrzebuje całego zbioru" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Stabilność sortowania",
+          "text": "Sortowanie jest stabilne, jeśli elementy o równych kluczach zachowują swoją pierwotną kolejność względem siebie.",
+          "note": "Ma znaczenie przy sortowaniu wielokryterialnym: posortuj po nazwisku, potem stabilnie po dziale — w każdym dziale nazwiska zostaną uporządkowane."
+        },
+        {
+          "type": "complexity",
+          "title": "Zestawienie",
+          "rows": [
+            { "operation": "Bąbelkowe", "best": "O(n)", "average": "O(n²)", "worst": "O(n²)", "note": "O(n) tylko z optymalizacją przerwania" },
+            { "operation": "Przez wstawianie", "best": "O(n)", "average": "O(n²)", "worst": "O(n²)", "note": "stabilne, w miejscu" },
+            { "operation": "Przez wybór", "best": "O(n²)", "average": "O(n²)", "worst": "O(n²)", "note": "n−1 zamian, w miejscu" }
+          ],
+          "note": "Wszystkie trzy działają w miejscu — pamięć dodatkowa O(1)."
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Sortowanie przez wstawianie nie jest reliktem: biblioteczne implementacje quicksorta i mergesorta przełączają się na nie dla podtablic poniżej kilkunastu elementów, bo na małych danych jego niska stała bije asymptotykę."
+        },
+        {
+          "type": "quiz",
+          "question": "Tablica [1, 2, 3, 5, 4] jest prawie posortowana. Który algorytm poradzi sobie najszybciej?",
+          "options": [
+            "Przez wybór — najmniej zamian",
+            "Przez wstawianie — koszt spada do O(n)",
+            "Wszystkie tak samo, bo mają O(n²)",
+            "Bąbelkowe bez optymalizacji"
+          ],
+          "correctIndex": 1,
+          "explanation": "Przez wstawianie każdy element cofa się o zero lub jedną pozycję, więc łącznie wychodzi O(n). Przez wybór i tak przeszuka całą resztę w poszukiwaniu minimum — O(n²) niezależnie od danych."
+        },
+        {
+          "type": "quiz",
+          "question": "Co to znaczy, że sortowanie działa „w miejscu\" (in-place)?",
+          "options": [
+            "Że nie zmienia kolejności elementów równych",
+            "Że używa O(1) dodatkowej pamięci poza samą tablicą",
+            "Że sortuje w jednym przebiegu",
+            "Że nie kopiuje tablicy przed sortowaniem"
+          ],
+          "correctIndex": 1,
+          "explanation": "In-place dotyczy PAMIĘCI: algorytm przestawia elementy wewnątrz tablicy, potrzebując stałej liczby zmiennych pomocniczych. Zachowanie kolejności elementów równych to osobna własność — stabilność."
+        }
+      ]
+    }
+  ]
+}
