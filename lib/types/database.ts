@@ -1620,3 +1620,72 @@ export interface AlgoExerciseAttempt {
   points_max: number;
   attempted_at: string;
 }
+
+// ============================================================================
+// Siłownia — trening, nawodnienie, odżywianie, suplementy.
+// Mirrors supabase/migrations/0026_silownia.sql.
+// ============================================================================
+
+export type GymGoal = "redukcja" | "masa" | "utrzymanie" | "wytrzymalosc";
+
+export interface GymProfile {
+  user_id: string;
+  weight_kg: number | null;
+  height_cm: number | null;
+  goal: GymGoal | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface WorkoutSet {
+  reps: number;
+  weightKg: number | null;
+}
+
+export interface WorkoutExercise {
+  name: string;
+  sets: WorkoutSet[];
+}
+
+export interface GymWorkout {
+  id: string;
+  user_id: string;
+  workout_date: string;
+  split_label: string;
+  duration_minutes: number | null;
+  exercises: WorkoutExercise[];
+  note: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GymHydrationLog {
+  user_id: string;
+  log_date: string;
+  consumed_ml: number;
+  updated_at: string;
+}
+
+export interface GymMealEntry {
+  id: string;
+  user_id: string;
+  entry_date: string;
+  description: string;
+  calories: number;
+  protein_g: number;
+  carbs_g: number;
+  fat_g: number;
+  ai_note: string | null;
+  created_at: string;
+}
+
+export interface GymSupplementEntry {
+  id: string;
+  user_id: string;
+  entry_date: string;
+  name: string;
+  dose: string | null;
+  time_label: string | null;
+  note: string | null;
+  created_at: string;
+}

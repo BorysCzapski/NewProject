@@ -66,7 +66,11 @@ export interface NavItem {
     | "HeartHandshake"
     | "Timer"
     | "ListChecks"
-    | "Binary";
+    | "Binary"
+    | "Dumbbell"
+    | "Droplet"
+    | "UtensilsCrossed"
+    | "Pill";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -143,6 +147,15 @@ export const GODZINY_NAV: NavItem[] = [
   { href: "/godziny/tematy", label: "Tematy", icon: "ListChecks" },
 ];
 
+export const SILOWNIA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/silownia", label: "Dziś", icon: "Dumbbell", exact: true },
+  { href: "/silownia/treningi", label: "Treningi", icon: "ListChecks" },
+  { href: "/silownia/odzywianie", label: "Odżywianie", icon: "UtensilsCrossed" },
+  { href: "/silownia/suplementy", label: "Suplementy", icon: "Pill" },
+  { href: "/silownia/ustawienia", label: "Ustawienia", icon: "User" },
+];
+
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
@@ -154,6 +167,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/modlitwa", items: MODLITWA_NAV },
   { prefix: "/godziny", items: GODZINY_NAV },
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
+  { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 

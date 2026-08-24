@@ -6,7 +6,7 @@
 // all render from here. Icon names map to lucide-react icons client-side.
 // ============================================================================
 
-export type PhoenixSectionId = "nauka" | "narzedzia" | "wiara";
+export type PhoenixSectionId = "nauka" | "narzedzia" | "wiara" | "zdrowie";
 
 export interface PhoenixSection {
   id: PhoenixSectionId;
@@ -32,6 +32,7 @@ export const PHOENIX_SECTIONS: PhoenixSection[] = [
   { id: "nauka", label: "Nauka", icon: "GraduationCap" },
   { id: "narzedzia", label: "Narzędzia", icon: "Wrench" },
   { id: "wiara", label: "Wiara", icon: "Church" },
+  { id: "zdrowie", label: "Zdrowie", icon: "Dumbbell" },
 ];
 
 export const PHOENIX_APPS: PhoenixApp[] = [
@@ -116,6 +117,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     section: "wiara",
     icon: "Sparkles",
     href: "/modlitwa",
+  },
+  {
+    id: "silownia",
+    name: "Siłownia",
+    description: "Trening, nawodnienie, kalorie (AI) i suplementacja",
+    section: "zdrowie",
+    icon: "Dumbbell",
+    href: "/silownia",
   },
 ];
 
