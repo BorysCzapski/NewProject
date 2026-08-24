@@ -250,10 +250,15 @@ export async function pickTaskForType(params: {
 
   // Nothing unseen left. For a generatable type make one now — this is the
   // only place the student waits on the model, and only because there is
-  // genuinely nothing else to show them.
+  // genuinely nothing else to show them. One retry: a single malformed reply
+  // (Groq invalidates the whole tool call if the model runs out of tokens
+  // mid-JSON — see the comment on maxTokens in generate-tasks.ts) shouldn't
+  // bounce the student to the empty state when trying again usually works.
   if (typeDef.aiGeneratable) {
-    const [generatedId] = await generateInto({ typeDef, sectionId, language, level, count: 1 });
-    if (generatedId) return { taskId: generatedId, isRepeat: false };
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      const [generatedId] = await generateInto({ typeDef, sectionId, language, level, count: 1 });
+      if (generatedId) return { taskId: generatedId, isRepeat: false };
+    }
   }
 
   if (seen.length > 0) return { taskId: seen[0].id, isRepeat: true };

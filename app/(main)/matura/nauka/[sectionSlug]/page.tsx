@@ -29,6 +29,7 @@ import { MATURA_EXACT_MATCH_SECTION_SLUGS } from "@/lib/matura/sections";
 import { getSectionLessons, groupLessonsByKind } from "@/lib/matura/theory";
 import { getTypeStats } from "@/lib/matura/task-stock";
 import { startTaskType } from "@/lib/matura/practice-actions";
+import { getTaskType } from "@/lib/matura/task-types";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { TaskTypeCard } from "@/components/practice/type-card";
@@ -135,8 +136,9 @@ export default async function MaturaSectionPage({
 
         {pusto && (
           <Card className="border-danger/40 text-sm text-foreground-muted">
-            Do tego typu nie ma jeszcze żadnego zadania. Nagrania do rozumienia ze słuchu dodaje
-            administrator — wróć tu wkrótce.
+            {getTaskType(pusto)?.aiGeneratable
+              ? "Nie udało się przygotować nowego zadania tego typu. Spróbuj ponownie za chwilę."
+              : "Do tego typu nie ma jeszcze żadnego zadania. Nagrania do rozumienia ze słuchu dodaje administrator — wróć tu wkrótce."}
           </Card>
         )}
 

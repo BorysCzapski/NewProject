@@ -25,7 +25,7 @@ import {
   getLessonsForTopic,
   getTopicBySlug,
 } from "@/lib/geografia/content";
-import { getGeoTypeStats } from "@/lib/geografia/exercise-stock";
+import { getGeoType, getGeoTypeStats } from "@/lib/geografia/exercise-stock";
 import { startGeoExerciseType } from "@/lib/geografia/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle } from "@/components/ui/card";
@@ -139,8 +139,9 @@ export default async function GeografiaTopicPage({
 
         {pusto && (
           <Card className="text-sm text-foreground-muted">
-            Do tego typu nie ma jeszcze żadnego zadania w tym dziale. Zadania z mapą dodaje
-            administrator — wróć tu wkrótce.
+            {getGeoType(pusto)?.aiGeneratable
+              ? "Nie udało się przygotować nowego zadania tego typu. Spróbuj ponownie za chwilę."
+              : "Do tego typu nie ma jeszcze żadnego zadania w tym dziale. Zadania z mapą dodaje administrator — wróć tu wkrótce."}
           </Card>
         )}
 

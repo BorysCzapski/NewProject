@@ -56,6 +56,17 @@ function stringList(value: unknown): string[] {
   return value.map(text).filter((entry) => entry.length > 0);
 }
 
+/** Collapses whitespace so "A.  Foo" and "A. Foo\n" compare equal. */
+function normalizeOptionText(value: string): string {
+  return value.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+/** Leading "A." / "3)" marker, if any — options are always written with one. */
+function optionMarker(value: string): string | null {
+  const match = value.match(/^([a-z0-9]+)[.)]/i);
+  return match ? match[1].toLowerCase() : null;
+}
+
 /**
  * Turns a raw model reply into task content, dropping only the sub-items that
  * are unusable rather than rejecting the whole task. A generator that insists
@@ -84,11 +95,17 @@ export function normalizeGeneratedTask(
       if (options.length < 2) continue;
       // The grader compares the student's pick to correctAnswers verbatim
       // (lib/matura/grading.ts), so an answer that is not one of the options
-      // makes the item impossible to score — recover it by case-insensitive
-      // match before giving up on it.
-      const matched = options.find(
-        (option) => option.toLowerCase() === correctAnswers[0].toLowerCase()
-      );
+      // makes the item impossible to score. The model is asked to copy an
+      // option's text into correctAnswers verbatim, which for "dobieranie"
+      // types means repeating the same heading across every item — recover
+      // whitespace/punctuation slips by normalized match, then by leading
+      // "A."/"3)" marker (trusting options as the source of truth for what
+      // the student actually sees), before giving up on the item.
+      const normalizedAnswer = normalizeOptionText(correctAnswers[0]);
+      const answerMarker = optionMarker(correctAnswers[0]);
+      const matched =
+        options.find((option) => normalizeOptionText(option) === normalizedAnswer) ??
+        (answerMarker ? options.find((option) => optionMarker(option) === answerMarker) : undefined);
       if (!matched) continue;
       items.push({
         id: String(items.length + 1),
@@ -213,8 +230,12 @@ export async function generateMaturaTask(params: {
   const { typeDef, language, level, variationHint } = params;
   if (!typeDef.aiGeneratable) return null;
 
-  // Passage-bearing types need room for the text on top of the items.
-  const maxTokens = needsPassage(typeDef) ? 3200 : 2000;
+  // Passage-bearing types need room for the text on top of the items — and
+  // "dobieranie" types repeat their whole 5-6-heading options list at every
+  // item, which is the most token-hungry shape this file produces. Too tight
+  // a budget here means the model runs out mid-JSON and Groq invalidates the
+  // entire tool call (see the file header comment), so this errs generous.
+  const maxTokens = needsPassage(typeDef) ? 4096 : 2000;
 
   try {
     const raw = await askAIForJSON<RawTask>({
