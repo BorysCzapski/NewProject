@@ -10,17 +10,33 @@ import { ArrowLeft } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { MATURA_EXACT_MATCH_SECTION_SLUGS } from "@/lib/matura/sections";
+import { getTaskType } from "@/lib/matura/task-types";
+import { startTaskType } from "@/lib/matura/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { TaskAttemptForm } from "@/components/matura/task-attempt-form";
+import { NextOfTypeButton } from "@/components/practice/next-of-type-button";
 import type { MaturaSection, MaturaSectionSlug, MaturaTask } from "@/lib/types/database";
+
+// Handing out a task can generate one inline, and the after() top-up runs on
+// this segment's budget too — both are AI calls. The platform default (10s on
+// Vercel) would cut them off; 60 is what every other AI path in this repo uses
+// (see app/api/geografia/import-exercises/route.ts).
+export const maxDuration = 60;
 
 export default async function MaturaSectionTaskPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ sectionSlug: string; taskId: string }>;
+  searchParams: Promise<{ typ?: string }>;
 }) {
   const { sectionSlug, taskId } = await params;
   if (!MATURA_EXACT_MATCH_SECTION_SLUGS.includes(sectionSlug as MaturaSectionSlug)) notFound();
+  const { typ } = await searchParams;
+  // Only honour a type that really belongs to this section — the marker comes
+  // from the query string, so it is student-editable input.
+  const typeDef = typ ? getTaskType(typ) : undefined;
+  const practisedType = typeDef && typeDef.section === sectionSlug ? typeDef : undefined;
 
   await requireProfile();
   const supabase = await createClient();
@@ -49,10 +65,17 @@ export default async function MaturaSectionTaskPage({
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground-muted"
         >
           <ArrowLeft className="h-4 w-4" />
-          Wszystkie zadania
+          {practisedType ? practisedType.label : "Wszystkie zadania"}
         </Link>
 
         <TaskAttemptForm task={taskRow} backHref={backHref} language={matura_sections.language} />
+
+        {practisedType && (
+          <NextOfTypeButton
+            action={startTaskType}
+            fields={{ sectionSlug, typeSlug: practisedType.slug }}
+          />
+        )}
       </div>
     </div>
   );

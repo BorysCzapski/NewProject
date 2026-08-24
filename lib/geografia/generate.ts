@@ -33,7 +33,12 @@ interface GenerationResult {
   exercises: GeneratedExercise[];
 }
 
-async function generateBatch(topic: GeoTopic, count: number, avoidStatements: string[]): Promise<GeneratedExercise[]> {
+async function generateBatch(
+  topic: GeoTopic,
+  count: number,
+  avoidStatements: string[],
+  onlyType?: "mc" | "open"
+): Promise<GeneratedExercise[]> {
   const result = await askAIForJSON<GenerationResult>({
     system:
       "Jesteś doświadczonym nauczycielem geografii, autorem zadań na maturę rozszerzoną zgodną z polską " +
@@ -49,6 +54,12 @@ async function generateBatch(topic: GeoTopic, count: number, avoidStatements: st
     prompt:
       `Wygeneruj ${count} zadań maturalnych z geografii dla działu CKE "${topic.title}" ` +
       `(${topic.description}).` +
+      // Student-facing top-up asks for one type at a time (the student is
+      // practising "zadania otwarte", not "zadania"), so the batch has to be
+      // steered — the admin flow passes no type and gets the usual mix.
+      (onlyType
+        ? ` WSZYSTKIE zadania w tej partii mają być typu "${onlyType}" — nie generuj żadnego innego typu.`
+        : "") +
       (avoidStatements.length > 0
         ? `\n\nNIE powtarzaj tematycznie tych już istniejących pytań:\n${avoidStatements.map((s) => `- ${s}`).join("\n")}`
         : ""),
@@ -123,7 +134,11 @@ export async function generateExercisesForTopic(
   supabase: SupabaseClient,
   topic: GeoTopic,
   adminId: string,
-  count: number
+  count: number,
+  /** Restrict the batch to one exercise type. Used by the student-facing
+   * top-up in lib/geografia/exercise-stock.ts, which refills one type at a
+   * time; the admin trigger omits it and gets a mix. */
+  onlyType?: "mc" | "open"
 ): Promise<{ inserted: number; skipped: number }> {
   const { data: existingRows } = await supabase
     .from("geo_exercises")
@@ -137,7 +152,7 @@ export async function generateExercisesForTopic(
   let generated: GeneratedExercise[] = [];
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      generated = await generateBatch(topic, count, existingStatements);
+      generated = await generateBatch(topic, count, existingStatements, onlyType);
       break;
     } catch (err) {
       console.error(`[geografia] generation attempt ${attempt + 1} failed:`, err);
@@ -146,7 +161,12 @@ export async function generateExercisesForTopic(
   }
 
   const existingKeys = new Set(existingStatements.map((s) => s.trim().toLowerCase().slice(0, 40)));
-  const fresh = generated.filter((e) => !existingKeys.has(e.statement.trim().toLowerCase().slice(0, 40)));
+  const fresh = generated
+    // The onlyType steer is a prompt instruction, not a schema constraint, so
+    // enforce it here too — a stray 'open' in an 'mc' top-up would land in the
+    // wrong queue and never be handed out.
+    .filter((e) => !onlyType || e.type === onlyType)
+    .filter((e) => !existingKeys.has(e.statement.trim().toLowerCase().slice(0, 40)));
   const skipped = generated.length - fresh.length;
   if (fresh.length === 0) return { inserted: 0, skipped };
 

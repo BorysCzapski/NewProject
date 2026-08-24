@@ -9,18 +9,31 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
+import { getWritingType } from "@/lib/matura/task-types";
+import { startWritingType } from "@/lib/matura/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { WritingTaskForm } from "@/components/matura/writing-task-form";
+import { NextOfTypeButton } from "@/components/practice/next-of-type-button";
 import type { MaturaSection, MaturaWritingSubmission, MaturaWritingTask } from "@/lib/types/database";
 
 const BACK_HREF = "/matura/nauka/pisanie";
 
+// Handing out a task can generate one inline, and the after() top-up runs on
+// this segment's budget too — both are AI calls. The platform default (10s on
+// Vercel) would cut them off; 60 is what every other AI path in this repo uses
+// (see app/api/geografia/import-exercises/route.ts).
+export const maxDuration = 60;
+
 export default async function PisanieTaskPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ taskId: string }>;
+  searchParams: Promise<{ typ?: string }>;
 }) {
   const { taskId } = await params;
+  const { typ } = await searchParams;
+  const practisedType = typ ? getWritingType(typ) : undefined;
   const profile = await requireProfile();
   const supabase = await createClient();
 
@@ -53,7 +66,7 @@ export default async function PisanieTaskPage({
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground-muted"
         >
           <ArrowLeft className="h-4 w-4" />
-          Wszystkie zadania
+          {practisedType ? practisedType.label : "Wszystkie zadania"}
         </Link>
 
         <WritingTaskForm
@@ -62,6 +75,13 @@ export default async function PisanieTaskPage({
           level={matura_sections.level}
           initialSubmission={submission as MaturaWritingSubmission | null}
         />
+
+        {practisedType && (
+          <NextOfTypeButton
+            action={startWritingType}
+            fields={{ formType: practisedType.formType }}
+          />
+        )}
       </div>
     </div>
   );

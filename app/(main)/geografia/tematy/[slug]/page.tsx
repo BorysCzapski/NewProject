@@ -1,10 +1,17 @@
 // ============================================================================
 // app/(main)/geografia/tematy/[slug]/page.tsx
-// One topic: its theory lessons first, then its exercise bank — theory
-// before practice, since a student landing on a brand-new dział has nothing
-// to attempt yet. Also carries the product-spec-required notice when the
-// topic has fewer than 25 exercises (see components/geografia/topic-list-item
-// .tsx header for the spec citation).
+// One topic: its theory lessons first, then practice — theory before practice,
+// since a student landing on a brand-new dział has nothing to attempt yet.
+// Also carries the product-spec-required notice when the topic has fewer than
+// 25 exercises (see components/geografia/topic-list-item.tsx header for the
+// spec citation).
+//
+// Practice is organised by TASK TYPE (zamknięte / otwarte / mapa) rather than
+// as a flat "solve each of these 25 exercises once" list. The flat list is
+// still below — it is how favourites and browsing work — but it is no longer
+// the way you practise: each type is a counter of how many you have done, and
+// starting one hands out an exercise you have not seen, generating more when
+// the queue runs dry (lib/geografia/exercise-stock.ts).
 // ============================================================================
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -18,31 +25,50 @@ import {
   getLessonsForTopic,
   getTopicBySlug,
 } from "@/lib/geografia/content";
+import { getGeoTypeStats } from "@/lib/geografia/exercise-stock";
+import { startGeoExerciseType } from "@/lib/geografia/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExerciseListItem } from "@/components/geografia/exercise/exercise-list-item";
+import { TaskTypeCard } from "@/components/practice/type-card";
 import { cn } from "@/lib/utils";
 
 const TARGET_EXERCISE_COUNT = 25;
 
-export default async function GeografiaTopicPage({ params }: { params: Promise<{ slug: string }> }) {
+// Handing out a task can generate one inline, and the after() top-up runs on
+// this segment's budget too — both are AI calls. The platform default (10s on
+// Vercel) would cut them off; 60 is what every other AI path in this repo uses
+// (see app/api/geografia/import-exercises/route.ts).
+export const maxDuration = 60;
+
+export default async function GeografiaTopicPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ pusto?: string }>;
+}) {
   const { slug } = await params;
+  const { pusto } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
 
   const topic = await getTopicBySlug(supabase, slug);
   if (!topic) notFound();
 
-  const [lessons, completedLessonIds, exercises, favoriteIds, { data: attemptRows }] = await Promise.all([
-    getLessonsForTopic(supabase, topic.id),
-    getCompletedLessonIds(supabase, profile.id),
-    getExercisesForTopic(supabase, topic.id),
-    getFavoriteExerciseIds(supabase, profile.id),
-    supabase.from("geo_exercise_attempts").select("exercise_id").eq("user_id", profile.id),
-  ]);
+  const [lessons, completedLessonIds, exercises, favoriteIds, { data: attemptRows }, typeStats] =
+    await Promise.all([
+      getLessonsForTopic(supabase, topic.id),
+      getCompletedLessonIds(supabase, profile.id),
+      getExercisesForTopic(supabase, topic.id),
+      getFavoriteExerciseIds(supabase, profile.id),
+      supabase.from("geo_exercise_attempts").select("exercise_id").eq("user_id", profile.id),
+      getGeoTypeStats(supabase, profile.id, topic.id),
+    ]);
   const solvedIds = new Set((attemptRows ?? []).map((r) => r.exercise_id as string));
   const doneCount = lessons.filter((l) => completedLessonIds.has(l.id)).length;
+  const totalCompleted = typeStats.reduce((sum, stat) => sum + stat.completedCount, 0);
 
   return (
     <div>
@@ -97,8 +123,50 @@ export default async function GeografiaTopicPage({ params }: { params: Promise<{
           })
         )}
 
-        {/* ——— Ćwiczenia ——— */}
-        <h2 className="mt-3 text-sm font-semibold text-foreground">Ćwiczenia ({exercises.length})</h2>
+        {/* ——— Ćwiczenia: typy zadań ——— */}
+        <div className="mt-3 flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-foreground">Typy zadań</h2>
+          {totalCompleted > 0 && (
+            <span className="text-xs tabular-nums text-foreground-muted">
+              {totalCompleted} wykonanych łącznie
+            </span>
+          )}
+        </div>
+
+        <p className="-mt-1 text-xs text-foreground-muted">
+          Każdy typ możesz rozwiązywać bez końca — za każdym razem dostajesz inne zadanie.
+        </p>
+
+        {pusto && (
+          <Card className="text-sm text-foreground-muted">
+            Do tego typu nie ma jeszcze żadnego zadania w tym dziale. Zadania z mapą dodaje
+            administrator — wróć tu wkrótce.
+          </Card>
+        )}
+
+        {typeStats.map((stat) => (
+          <TaskTypeCard
+            key={stat.typeDef.type}
+            action={startGeoExerciseType}
+            fields={{ topicSlug: topic.slug, type: stat.typeDef.type }}
+            label={stat.typeDef.label}
+            description={stat.typeDef.description}
+            completedCount={stat.completedCount}
+            lastPoints={stat.lastPoints}
+            lastMaxPoints={stat.lastMaxPoints}
+            averagePercent={stat.averagePercent}
+            unavailableNote={
+              !stat.typeDef.aiGeneratable && stat.freshAvailable === 0 && stat.completedCount > 0
+                ? "Wszystkie zadania z mapą z tego działu masz już za sobą — kolejne podejście powtórzy najstarsze."
+                : undefined
+            }
+          />
+        ))}
+
+        {/* ——— Pełna lista: przeglądanie i ulubione ——— */}
+        <h2 className="mt-3 text-sm font-semibold text-foreground">
+          Wszystkie ćwiczenia ({exercises.length})
+        </h2>
 
         {exercises.length < TARGET_EXERCISE_COUNT && (
           <Card className="flex items-start gap-3 bg-warning-soft">
