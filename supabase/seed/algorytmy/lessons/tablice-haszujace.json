@@ -1,0 +1,100 @@
+{
+  "topicSlug": "tablice-haszujace",
+  "lessons": [
+    {
+      "slug": "haszowanie-i-kolizje",
+      "title": "Haszowanie i kolizje",
+      "summary": "Jak słownik znajduje klucz bez przeszukiwania i dlaczego jego O(1) ma gwiazdkę.",
+      "readingMinutes": 10,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Wyszukiwanie binarne potrzebuje log n porównań, bo pyta „czy szukany jest większy?\". Tablica haszująca nie pyta o nic — LICZY, gdzie element powinien leżeć, i idzie tam bezpośrednio. Zamiana porównań na obliczenie adresu to cała idea haszowania i źródło jego stałego kosztu."
+        },
+        {
+          "type": "definition",
+          "term": "Funkcja haszująca",
+          "text": "Funkcja przekształcająca klucz dowolnego typu w liczbę całkowitą z ustalonego zakresu — indeks w tablicy. Ten sam klucz zawsze daje ten sam indeks.",
+          "note": "Dobra funkcja haszująca rozrzuca klucze równomiernie i liczy się szybko. Zła skupia wszystko w kilku kubełkach i zamienia słownik w listę."
+        },
+        {
+          "type": "steps",
+          "title": "Wstawianie pary klucz–wartość",
+          "steps": [
+            { "title": "1. Policz skrót", "text": "h = hash(klucz) — liczba całkowita, zwykle bardzo duża." },
+            { "title": "2. Sprowadź do rozmiaru tablicy", "text": "indeks = h mod m, gdzie m to liczba kubełków." },
+            { "title": "3. Zapisz w kubełku", "text": "Jeśli kubełek jest pusty — po prostu wstaw. Jeśli nie, mamy kolizję i trzeba ją rozwiązać." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Kolizja",
+          "text": "Sytuacja, w której dwa różne klucze trafiają na ten sam indeks. Kolizji nie da się uniknąć: kluczy jest nieskończenie wiele, a kubełków skończenie.",
+          "note": "Paradoks dnia urodzin: przy 23 osobach szansa na wspólną datę urodzin przekracza 50%. Kolizje pojawiają się dużo wcześniej, niż podpowiada intuicja."
+        },
+        {
+          "type": "compare",
+          "title": "Dwa sposoby radzenia sobie z kolizjami",
+          "leftLabel": "Łańcuchowanie",
+          "rightLabel": "Adresowanie otwarte",
+          "rows": [
+            { "aspect": "Gdzie ląduje kolidujący element", "left": "na liście przypiętej do kubełka", "right": "w kolejnym wolnym kubełku tablicy" },
+            { "aspect": "Zachowanie przy dużym zapełnieniu", "left": "łańcuchy się wydłużają, koszt rośnie liniowo", "right": "gwałtowna degradacja — grupowanie zajętych miejsc" },
+            { "aspect": "Pamięć", "left": "narzut na wskaźniki list", "right": "brak narzutu, ale tablica musi być rzadka" },
+            { "aspect": "Usuwanie", "left": "proste — usuń węzeł z listy", "right": "trudne — trzeba znacznika, żeby nie przerwać ciągu poszukiwań" }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Współczynnik zapełnienia",
+          "text": "Stosunek liczby elementów do liczby kubełków (α = n/m). To on decyduje o rzeczywistej wydajności — nie sam rozmiar tablicy.",
+          "note": "Praktyczne implementacje przebudowują tablicę (rehashing) po przekroczeniu progu, zwykle 0,7. Przebudowa to O(n), ale zdarza się rzadko, więc amortyzowany koszt wstawiania zostaje O(1)."
+        },
+        {
+          "type": "complexity",
+          "title": "Koszty operacji",
+          "rows": [
+            { "operation": "Wstawienie / wyszukanie / usunięcie", "average": "O(1)", "worst": "O(n)", "note": "pesymistyczny przypadek: wszystkie klucze w jednym kubełku" },
+            { "operation": "Przebudowa tablicy (rehashing)", "worst": "O(n)", "note": "amortyzowana do O(1) na operację" },
+            { "operation": "Przejrzenie wszystkich elementów", "worst": "O(m + n)", "note": "trzeba obejść też puste kubełki" },
+            { "operation": "Odczyt elementów w kolejności posortowanej", "worst": "O(n log n)", "note": "wymaga posortowania — hasz nie przechowuje porządku" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Tablica haszująca NIE przechowuje porządku kluczy. Jeśli potrzebujesz zapytań zakresowych („wszystkie klucze między A i B\") albo posortowanego przeglądu, potrzebujesz drzewa poszukiwań, nie hasza. To najczęstszy powód, dla którego hasz jest złym wyborem mimo lepszej złożoności."
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Klucz w tablicy haszującej musi być niezmienny. Zmiana obiektu użytego jako klucz zmienia jego skrót, a element zostaje w starym kubełku — od tej chwili jest w słowniku, ale nie da się go znaleźć. Dlatego w Pythonie kluczem może być krotka, ale nie lista."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego złożoność wyszukiwania w tablicy haszującej podaje się jako O(1) średnio, a nie po prostu O(1)?",
+          "options": [
+            "Bo funkcja haszująca bywa wolna",
+            "Bo przy kolizjach trzeba przeszukać kubełek, a pesymistycznie wszystkie klucze mogą trafić do jednego",
+            "Bo tablica musi być posortowana",
+            "Bo operacja modulo ma koszt O(log n)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Stały koszt zakłada równomierne rozrzucenie kluczy. Gdy wszystkie kolidują, kubełek staje się listą o długości n i wyszukiwanie degeneruje się do O(n)."
+        },
+        {
+          "type": "quiz",
+          "question": "Potrzebujesz struktury, która szybko sprawdza obecność klucza ORAZ pozwala wypisać klucze w kolejności rosnącej. Co wybierzesz?",
+          "options": [
+            "Tablicę haszującą — ma najlepszą złożoność wyszukiwania",
+            "Drzewo poszukiwań binarnych — O(log n) wyszukiwania i darmowy porządek",
+            "Tablicę haszującą i sortowanie przy każdym wypisaniu",
+            "Listę wiązaną trzymaną w porządku rosnącym"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hasz nie zna porządku, więc każde wypisanie kosztowałoby O(n log n). Zrównoważone BST daje wyszukiwanie w O(log n) i przechodzenie in-order w O(n) — spełnia oba wymagania naraz."
+        }
+      ]
+    }
+  ]
+}

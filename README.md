@@ -119,6 +119,34 @@ na UI w kolejnych sesjach.
 > hiszpański, i tak dostawał angielską teorię i angielskie słówka. Obecna wersja rozdziela treść
 > językiem od pierwszego dnia.
 
+**Algorytmy** (`/algorytmy`) — interaktywna nauka struktur danych i algorytmów. Dwanaście
+działów ułożonych w **łańcuch zależności**, nie w taksonomię: złożoność jako pierwsza, bo w jej
+języku opisuje się każdy kolejny dział; rekurencja przed drzewami, bo przechodzenie drzewa JEST
+rekurencją; sortowanie przed kopcami, bo kopiec odpowiada na pytanie „skoro sortowanie daje
+n log n, czy da się wyciągnąć minimum taniej?". Uzasadnienie kolejności siedzi
+w `lib/algorytmy/topics.ts`.
+
+Lekcje nie są ścianą tekstu o algorytmach — pokazują je w działaniu. Bloki interaktywne
+(`lib/algorytmy/lesson-blocks.ts`) **uruchamiają prawdziwy algorytm** na zapisanych danych
+i zapisują każdą klatkę: sortowanie bąbelkowe, przez wstawianie, przez wybór, przez scalanie
+i szybkie z podświetlonymi porównaniami i zamianami; BFS i DFS na grafie SVG; wyszukiwanie
+binarne z odrzucanymi połówkami; stos i kolejka odtwarzające tę samą listę operacji obok siebie;
+wykres rzędów wzrostu. To celowe: animacja pisana ręcznie może po cichu rozminąć się
+z algorytmem, który rzekomo pokazuje, a tutaj ciąg klatek JEST śladem wykonania, więc obrazek
+nie może skłamać. Reszta bloków to definicje, tabele złożoności, kod, porównania i quizy
+sprawdzające zrozumienie w trakcie czytania (bez punktów — od oceniania są zadania).
+
+Zadania działają tak samo jak w Maturze i Geografii: dział listuje **typy zadań** (złożoność,
+wynik kodu, krok algorytmu, dobór struktury, pojęcia, analiza błędu) z licznikiem wykonań
+i skutecznością, a wejście w typ wydaje zadanie, którego jeszcze nie rozwiązywałeś —
+`lib/algorytmy/exercise-stock.ts` dogenerowuje kolejne, gdy zapas się kończy. Wszystkie zadania
+są jednokrotnego wyboru, świadomie: odpowiedź otwartą o algorytmie oceniałby model, a jego
+werdyktu nikt nie umie sprawdzić. Teoria pisana jest jako JSON w `supabase/seed/algorytmy/
+lessons/*.json` i walidowana przez `node scripts/algorytmy-build-lessons.mjs`, który odmawia
+wygenerowania SQL-a m.in. dla nieposortowanej tablicy w bloku wyszukiwania binarnego (algorytm
+pokazałby wtedy poprawne kroki prowadzące do złej odpowiedzi) i dla krawędzi wskazującej
+nieistniejący wierzchołek.
+
 **Godziny** (`/godziny`) — dziennik czasu nauki: ile minut i **czego** się dziś uczyłeś.
 Wpis to data + długość sesji + temat z własnej listy (+ opcjonalna notatka), a ekran główny
 odpowiada na jedno pytanie — „ile dziś zrobiłem i co ostatnio robiłem": kafelki dziś/tydzień/
@@ -304,6 +332,13 @@ Aplikacja wystartuje na [http://localhost:3000](http://localhost:3000).
       `form_type`, ta migracja tylko poszerza dopuszczalne wartości o `artykul`
       i `list_formalny`. **Numer `0023` sprawdź przez `npm run db status` przed wgraniem** —
       patrz ostrzeżenie o kolizjach numeracji wyżej.
+   15. `supabase/migrations/0024_algorytmy.sql` — schemat aplikacji Algorytmy: `algo_topics`,
+      `algo_lessons` + `algo_lesson_progress`, `algo_exercises` (bank jednokrotnego wyboru
+      z `task_type` **NOT NULL** od początku — w przeciwieństwie do Matury, gdzie kolumnę
+      trzeba było dołożyć do istniejącego banku) oraz `algo_exercise_attempts`. Polityka
+      `algo_exercises_insert_own` dopuszcza wiersz, którego `created_by` to wołający — dzięki
+      temu kolejka ćwiczeń dogenerowuje zadania **bez klucza service-role**, dokładnie tak jak
+      `geo_exercises`. Ten sam warunek: `npm run db status` przed wgraniem.
 
    **Seed — konto admina:**
    8. `supabase/seed/00_admin.sql` — konto administratora (patrz [niżej](#konto-administratora)).
@@ -560,6 +595,9 @@ components/
   matura/            # komponenty Matury: język i poziom, dashboard, lista części,
                      # próba zadania, trenażer słownictwa, lista haseł, stopka lekcji
                      # (treść lekcji renderuje components/grammar/lesson)
+  algorytmy/         # bloki lekcji Algorytmów: statyczne (kod, tabela złożoności,
+                     # porównanie) plus interaktywne wizualizatory sortowania, BFS/DFS,
+                     # wyszukiwania binarnego, stosu/kolejki i rzędów wzrostu
   practice/          # kafelek typu zadania z licznikiem wykonań i przycisk „kolejne
                      # zadanie tego typu" — wspólne dla Matury i Geografii; formularze,
                      # nie linki, bo wydanie zadania bywa mutacją (generuje nowe)
@@ -585,6 +623,8 @@ lib/
                      # (generate-tasks.ts)
   grammar/           # typy bloków lekcji (lesson-blocks.ts) + deterministyczne
                      # tasowanie ćwiczeń (shuffle.ts — Math.random rozjechałby hydratację)
+  algorytmy/         # Algorytmy: katalog działów i typów zadań, typy bloków lekcji,
+                     # kolejka ćwiczeń per typ (exercise-stock.ts) i generator zadań
   godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
                      # i sumowanie historii, akcje wpisów i tematów
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
@@ -596,6 +636,7 @@ supabase/
                      # matura-es/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
+  algorytmy-build-lessons.mjs # walidacja lekcji Algorytmów (JSON) → 03_lessons.sql
 proxy.ts             # odświeżanie sesji Supabase + ochrona tras (Next.js 16 "proxy")
 ```
 

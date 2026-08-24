@@ -65,7 +65,8 @@ export interface NavItem {
     | "Church"
     | "HeartHandshake"
     | "Timer"
-    | "ListChecks";
+    | "ListChecks"
+    | "Binary";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -128,6 +129,13 @@ export const MODLITWA_NAV: NavItem[] = [
   { href: "/modlitwa/kalendarz", label: "Kalendarz", icon: "Calendar" },
 ];
 
+export const ALGORYTMY_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/algorytmy", label: "Dziś", icon: "Binary", exact: true },
+  { href: "/algorytmy/dzialy", label: "Działy", icon: "BookOpen" },
+  { href: "/algorytmy/postepy", label: "Postępy", icon: "TrendingUp" },
+];
+
 export const GODZINY_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/godziny", label: "Dziś", icon: "Timer", exact: true },
@@ -145,6 +153,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },
   { prefix: "/godziny", items: GODZINY_NAV },
+  { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
 
@@ -182,6 +191,7 @@ export const ACTIVITY_TYPES = {
   MATH: "math",
   MATURA: "matura",
   GEOGRAFIA: "geografia",
+  ALGORYTMY: "algorytmy",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 

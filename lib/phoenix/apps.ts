@@ -68,6 +68,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/geografia",
   },
   {
+    id: "algorytmy",
+    name: "Algorytmy",
+    description: "Struktury danych i algorytmy: teoria, animacje, zadania",
+    section: "nauka",
+    icon: "Binary",
+    href: "/algorytmy",
+  },
+  {
     id: "godziny",
     name: "Godziny",
     description: "Licznik czasu nauki: ile i czego się uczysz",
