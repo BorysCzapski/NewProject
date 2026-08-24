@@ -183,3 +183,38 @@ insert into vocabulary_words (language, level, category, word_en, translation_pl
 ('es', 'B1', 'zwroty codzienne', 'en fin', 'krótko mówiąc', 'En fin, no ha salido como esperábamos.'),
 ('es', 'B1', 'zwroty codzienne', 'por lo visto', 'najwyraźniej', 'Por lo visto, van a subir los precios el mes que viene.'),
 ('es', 'B1', 'zwroty codzienne', 'ni siquiera', 'nawet nie', 'No me llamó; ni siquiera me envió un mensaje.');
+
+-- ============================================================================
+-- Additional words (batch 1, 2026-08-24)
+-- ============================================================================
+insert into vocabulary_words (language, level, category, word_en, translation_pl, example_sentence) values
+-- relacje
+('es', 'B1', 'relacje', 'suegro', 'teść', 'Mi suegro me enseñó a pescar el verano pasado.'),
+('es', 'B1', 'relacje', 'yerno', 'zięć', 'Mis padres adoran a su yerno porque es muy trabajador.'),
+('es', 'B1', 'relacje', 'nuera', 'synowa', 'La nuera ayudó a organizar la fiesta de cumpleaños de su suegra.'),
+('es', 'B1', 'relacje', 'sobrino', 'siostrzeniec / bratanek', 'Mi sobrino cumple diez años la próxima semana.'),
+('es', 'B1', 'relacje', 'desconocido', 'nieznajomy', 'No debes hablar con un desconocido si estás sola por la noche.'),
+('es', 'B1', 'relacje', 'infidelidad', 'niewierność', 'La infidelidad fue la causa principal de su divorcio.'),
+('es', 'B1', 'relacje', 'reconciliación', 'pojednanie', 'Después de la discusión, buscaron la reconciliación durante toda la tarde.'),
+('es', 'B1', 'relacje', 'desconfianza', 'nieufność', 'Su desconfianza hacia los demás le impide hacer nuevos amigos.'),
+('es', 'B1', 'relacje', 'vínculo', 'więź', 'El vínculo entre los dos hermanos se ha fortalecido con los años.'),
+-- kultura
+('es', 'B1', 'kultura', 'actriz', 'aktorka', 'Esa actriz ganó un premio por su papel en la nueva película.'),
+('es', 'B1', 'kultura', 'banda sonora', 'ścieżka dźwiękowa', 'La banda sonora de la película se hizo muy popular.'),
+('es', 'B1', 'kultura', 'subtítulos', 'napisy', 'Vi la serie coreana con subtítulos en español.'),
+('es', 'B1', 'kultura', 'galería', 'galeria (sztuki)', 'Inauguraron una nueva galería de arte contemporáneo en el centro.'),
+('es', 'B1', 'kultura', 'artesanía', 'rzemiosło artystyczne', 'El mercado vende artesanía local hecha a mano.'),
+('es', 'B1', 'kultura', 'folclore', 'folklor', 'El folclore andaluz incluye el flamenco y otras tradiciones.'),
+('es', 'B1', 'kultura', 'compositor', 'kompozytor', 'El compositor escribió la música para varias películas famosas.'),
+('es', 'B1', 'kultura', 'crítica', 'krytyka / recenzja', 'La crítica del nuevo álbum fue muy positiva.'),
+('es', 'B1', 'kultura', 'ritmo', 'rytm', 'Este grupo toca canciones con mucho ritmo y energía.'),
+-- zwroty codzienne
+('es', 'B1', 'zwroty codzienne', 'llevarse bien', 'dobrze się dogadywać (z kimś)', 'Mis hermanos y yo nos llevamos muy bien desde pequeños.'),
+('es', 'B1', 'zwroty codzienne', 'hacer las paces', 'pogodzić się', 'Después de la pelea, decidieron hacer las paces enseguida.'),
+('es', 'B1', 'zwroty codzienne', 'dar la lata', 'naprzykrzać się / marudzić', 'Deja de dar la lata con las mismas preguntas.'),
+('es', 'B1', 'zwroty codzienne', 'caer bien', 'być komuś sympatycznym', 'Ese chico me cae muy bien, es simpático y honesto.'),
+('es', 'B1', 'zwroty codzienne', 'caer mal', 'być komuś antypatycznym', 'Su actitud arrogante hace que le caiga mal a todos.'),
+('es', 'B1', 'zwroty codzienne', 'estar al tanto', 'być na bieżąco', 'Intento estar al tanto de las noticias todos los días.'),
+('es', 'B1', 'zwroty codzienne', 'tener razón', 'mieć rację', 'Tienes razón, deberíamos salir más temprano.'),
+('es', 'B1', 'zwroty codzienne', 'no tener ni idea', 'nie mieć pojęcia', 'No tengo ni idea de dónde he puesto las llaves.'),
+('es', 'B1', 'zwroty codzienne', 'quedar con alguien', 'umówić się z kimś', 'He quedado con unos amigos para cenar esta noche.');

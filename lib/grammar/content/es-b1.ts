@@ -541,4 +541,235 @@ export const ES_B1_LESSONS: Record<string, GrammarLesson> = {
         "Kolejność to OI przed OD, a les przed lo obowiązkowo zmienia się w se: Se lo doy. „Les lo” i „lo les” są niegramatyczne.",
     },
   ],
+
+  "es-perifrasis-verbales": [
+    {
+      type: "intro",
+      text:
+        "Perífrasis verbales to konstrukcje z czasownika posiłkowego (czasem z przyimkiem) i bezokolicznika lub gerundio, które razem znaczą coś innego niż zwykły czas gramatyczny. Cztery są kluczowe na poziomie B1: ir a + infinitivo (bliska przyszłość, zamiar), acabar de + infinitivo (przed chwilą), estar + gerundio (dzieje się właśnie teraz) i volver a + infinitivo (znowu). Dzięki nim mówisz naturalnie o przyszłości, teraźniejszości i powtórzeniach bez sięgania po skomplikowane czasy.",
+    },
+    {
+      type: "table",
+      title: "Cztery kluczowe perífrasis",
+      headers: ["Perífrasis", "Znaczenie", "Przykład"],
+      rows: [
+        ["ir a + infinitivo", "bliska przyszłość / zamiar", "Voy a llamar a mi madre."],
+        ["acabar de + infinitivo", "przed chwilą coś zrobiłem", "Acabo de terminar el informe."],
+        ["estar + gerundio", "dzieje się właśnie teraz", "Estoy estudiando para el examen."],
+        ["volver a + infinitivo", "zrobić coś znowu", "Mi hermano vuelve a suspender el examen."],
+      ],
+    },
+    {
+      type: "formula",
+      title: "Budowa krok po kroku",
+      variants: [
+        {
+          label: "ir a + infinitivo (przyszłość / zamiar)",
+          parts: [
+            { text: "Voy", role: "aux", note: "ir w czasie teraźniejszym" },
+            { text: "a", role: "other", note: "stały łącznik między ir a bezokolicznikiem" },
+            { text: "llamar", role: "verb", note: "bezokolicznik — czasownik główny" },
+            { text: "a mi madre esta tarde", role: "object" },
+          ],
+          example: { en: "Voy a llamar a mi madre esta tarde.", pl: "Zadzwonię do mamy dziś po południu." },
+        },
+        {
+          label: "acabar de + infinitivo (przed chwilą)",
+          parts: [
+            { text: "Acabo", role: "aux", note: "acabar w czasie teraźniejszym" },
+            { text: "de", role: "other", note: "stały łącznik" },
+            { text: "terminar", role: "verb" },
+            { text: "el informe", role: "object" },
+          ],
+          example: { en: "Acabo de terminar el informe.", pl: "Właśnie skończyłem raport." },
+        },
+        {
+          label: "estar + gerundio (właśnie teraz)",
+          parts: [
+            { text: "Estoy", role: "aux" },
+            { text: "estudiando", role: "verb", note: "gerundio: estudiar → estudiando" },
+            { text: "para el examen", role: "object" },
+          ],
+          example: { en: "Estoy estudiando para el examen.", pl: "Właśnie się uczę do egzaminu." },
+        },
+        {
+          label: "volver a + infinitivo (znowu)",
+          parts: [
+            { text: "Mi hermano", role: "subject" },
+            { text: "vuelve", role: "aux", note: "volver w czasie teraźniejszym" },
+            { text: "a", role: "other" },
+            { text: "suspender", role: "verb" },
+            { text: "el examen", role: "object" },
+          ],
+          example: { en: "Mi hermano vuelve a suspender el examen.", pl: "Mój brat znowu oblewa egzamin." },
+        },
+      ],
+    },
+    {
+      type: "compare",
+      title: "ir a + infinitivo czy futuro simple?",
+      columns: [
+        {
+          title: "ir a + infinitivo",
+          formula: "ir (presente) + a + infinitivo",
+          whenToUse:
+            "Mowa potoczna, decyzja już podjęta, bliska przyszłość — domyślny wybór w rozmowie.",
+          examples: ["Voy a llamar a mi madre esta tarde.", "Vamos a cenar fuera hoy."],
+        },
+        {
+          title: "futuro simple",
+          formula: "infinitivo + é / ás / á...",
+          whenToUse:
+            "Przewidywania, obietnice, formalne zapowiedzi oraz domysły o teraźniejszości.",
+          examples: ["Llamaré a mi madre esta tarde.", "Mañana lloverá en el norte."],
+        },
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Ellos van a llegar tarde otra vez.", pl: "Oni znowu się spóźnią.", highlight: "van a" },
+        { en: "Nosotros acabamos de terminar el proyecto.", pl: "Właśnie skończyliśmy projekt.", highlight: "acabamos de" },
+        { en: "Ahora mismo, ella está preparando la cena.", pl: "Właśnie teraz przygotowuje kolację.", highlight: "está preparando" },
+        { en: "Mi hermano vuelve a suspender el examen.", pl: "Mój brat znowu oblewa egzamin.", highlight: "vuelve a" },
+        { en: "Acabo de llegar al aeropuerto.", pl: "Właśnie dotarłem na lotnisko.", highlight: "Acabo de" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        "Po estar zawsze stoi gerundio, nigdy bezokolicznik: „Estoy estudiar” ✗ → „Estoy estudiando” ✓. Acabar de łączymy tylko z czasem teraźniejszym lub imperfecto (acababa de) — nigdy z indefinido: „Acabé de comer” ✗ w tym znaczeniu, poprawnie „Acabo de comer” ✓. I pamiętaj: ir a + infinitivo i futuro simple bywają wymienne, ale ir a brzmi bardziej naturalnie w codziennej rozmowie, bo sugeruje gotową już decyzję.",
+    },
+    {
+      type: "quiz",
+      question: "Elige la forma correcta: Ahora mismo, ella ___ la cena.",
+      options: ["está preparando", "prepara", "preparará"],
+      correctIndex: 0,
+      explanation:
+        "„Ahora mismo” podkreśla, że czynność dzieje się w tej chwili, dlatego potrzebujemy estar + gerundio: está preparando. Prepara (presente) i preparará (futuro) nie oddają tego „w trakcie”.",
+    },
+    {
+      type: "quiz",
+      question: "Elige la perífrasis correcta: Acabamos ___ llegar al aeropuerto.",
+      options: ["de", "a", "por"],
+      correctIndex: 0,
+      explanation:
+        "Acabar de + infinitivo to stały związek oznaczający „przed chwilą coś zrobić”. Acabar a i acabar por nie istnieją w tym znaczeniu — por wprowadza inną perífrasis (acabar por + infinitivo = „skończyć na tym, że...”).",
+    },
+  ],
+
+  "es-indefinido-imperfecto-contraste": [
+    {
+      type: "intro",
+      text:
+        "Indefinido i imperfecto tłumaczymy na polski tym samym czasem przeszłym, dlatego wybór między nimi bywa trudny. Zadaj sobie proste pytanie: czy to zamknięte, punktowe wydarzenie (indefinido), czy tło, trwanie lub powtarzalność (imperfecto)? Najbardziej charakterystyczny wzorzec łączy oba czasy w jednym zdaniu: imperfecto maluje scenę, a indefinido opisuje wydarzenie, które ją przerywa.",
+    },
+    {
+      type: "timeline",
+      title: "Tło (imperfecto) przerwane zdarzeniem (indefinido)",
+      caption:
+        "Imperfecto rozciąga się w czasie jak tło. Indefinido to pojedynczy punkt, który w to tło „uderza”.",
+      markers: [
+        {
+          at: 5,
+          to: 35,
+          label: "Zwyczaj — imperfecto",
+          example: { en: "Antes íbamos al cine todos los sábados.", pl: "Dawniej chodziliśmy do kina w każdą sobotę." },
+        },
+        {
+          at: 15,
+          to: 45,
+          label: "Tło — czynność w trakcie",
+          example: { en: "Dormía...", pl: "Spałem..." },
+        },
+        {
+          at: 40,
+          label: "Indefinido — punktowe zdarzenie",
+          example: { en: "...sonó el teléfono.", pl: "...zadzwonił telefon." },
+        },
+        {
+          at: 75,
+          label: "Zamknięte wydarzenie — indefinido",
+          example: { en: "Ayer fui al cine con mi hermana.", pl: "Wczoraj poszłam do kina z siostrą." },
+        },
+      ],
+    },
+    {
+      type: "table",
+      title: "Sygnały czasowe",
+      headers: ["Indefinido — zamknięte wydarzenie", "Imperfecto — tło, powtarzalność"],
+      rows: [
+        ["ayer", "antes"],
+        ["el año pasado", "siempre"],
+        ["una vez", "todos los días"],
+        ["de repente", "mientras"],
+        ["en 2015", "cuando era niño"],
+      ],
+    },
+    {
+      type: "table",
+      title: "Czasowniki, które zmieniają znaczenie",
+      headers: ["Czasownik", "Imperfecto", "Indefinido"],
+      rows: [
+        ["saber", "sabía — wiedziałem", "supe — dowiedziałem się"],
+        ["poder", "podía — mogłem (miałem możliwość)", "pude — udało mi się"],
+        ["querer", "quería — chciałem", "no quiso — odmówił (nie chciał)"],
+        ["conocer", "conocía — znałem", "conocí — poznałem"],
+      ],
+      caption: "Po polsku te pary tłumaczymy zupełnie różnymi czasownikami — warto wykuć je jako całe zdania.",
+    },
+    {
+      type: "compare",
+      title: "Imperfecto vs indefinido — ostatnie sprawdzenie",
+      columns: [
+        {
+          title: "Imperfecto — tło i powtarzalność",
+          formula: "antes / siempre / todos los días + imperfecto",
+          whenToUse:
+            "Zwyczaje, opisy, czynność w trakcie, tło wydarzenia — bez informacji o zakończeniu.",
+          examples: ["Antes íbamos al cine todos los sábados.", "Dormía cuando sonó el teléfono."],
+        },
+        {
+          title: "Indefinido — zamknięte zdarzenie",
+          formula: "ayer / una vez / de repente + indefinido",
+          whenToUse:
+            "Pojedyncze, zakończone wydarzenie w konkretnym momencie — coś, co przerywa tło.",
+          examples: ["Ayer fui al cine con mi hermana.", "De repente sonó el teléfono."],
+        },
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Ayer fui al cine con mi hermana.", pl: "Wczoraj poszłam do kina z siostrą.", highlight: "fui" },
+        { en: "Antes íbamos al cine todos los sábados.", pl: "Dawniej chodziliśmy do kina w każdą sobotę.", highlight: "íbamos" },
+        { en: "Dormía cuando sonó el teléfono.", pl: "Spałem, kiedy zadzwonił telefon.", highlight: "sonó" },
+        { en: "Supe la verdad ayer.", pl: "Dowiedziałem się prawdy wczoraj.", highlight: "Supe" },
+        { en: "De niña, tenía mucho miedo a la oscuridad.", pl: "Jako dziewczynka bardzo bała się ciemności.", highlight: "tenía" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        "Nie odwracaj ról obu czasów: „Ayer hacía sol y fui a la playa” ✓ (pogoda to tło — imperfecto, wyjście to zamknięte zdarzenie — indefinido), ale „Ayer hizo sol y iba a la playa” ✗ razi ucho native speakera. Uważaj też na czasowniki zmieniające znaczenie: „Sabía la verdad” (wiedziałem) to zupełnie co innego niż „Supe la verdad” (dowiedziałem się). Prosta zasada: indefinido to zdjęcie, imperfecto to film w tle.",
+    },
+    {
+      type: "quiz",
+      question: "Ayer yo ___ al cine con mi hermana.",
+      options: ["fui", "iba", "voy"],
+      correctIndex: 0,
+      explanation:
+        "„Ayer” sygnalizuje pojedyncze, zamknięte wydarzenie, więc potrzebujemy indefinido: fui. Iba (imperfecto) sugerowałoby zwyczaj, a voy to czas teraźniejszy.",
+    },
+    {
+      type: "quiz",
+      question: "Ayer ___ la verdad sobre el accidente.",
+      options: ["supe", "sabía", "sé"],
+      correctIndex: 0,
+      explanation:
+        "Saber w indefinido zmienia znaczenie na „dowiedzieć się”: supe. Sabía (imperfecto) znaczyłoby „wiedziałem” — czyli stan, a nie moment odkrycia, a sé to czas teraźniejszy.",
+    },
+  ],
 };
