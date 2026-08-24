@@ -20,7 +20,7 @@ export default async function MaturaAdminImportPage() {
         subtitle="Zadania z arkuszy maturalnych z poprzednich lat"
         action={
           <Link href="/matura">
-            <Button variant="ghost" size="icon" aria-label="Wróć do Matury Angielski">
+            <Button variant="ghost" size="icon" aria-label="Wróć do Matury">
               <ArrowLeft className="h-5 w-5" />
             </Button>
           </Link>
