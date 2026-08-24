@@ -1,0 +1,112 @@
+{
+  "topicSlug": "kopce",
+  "lessons": [
+    {
+      "slug": "kopiec-binarny-i-kolejka-priorytetowa",
+      "title": "Kopiec binarny i kolejka priorytetowa",
+      "summary": "Drzewo bez wskaźników: jak tablica udaje kopiec, po co przesiewanie i dlaczego budowa kopca jest liniowa.",
+      "readingMinutes": 10,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Sortowanie daje pełny porządek, ale zwykle go nie potrzebujesz. Planista zadań pyta tylko o jedno: co jest teraz najpilniejsze? Pełne sortowanie po każdej zmianie kosztowałoby O(n log n), a przecież zmienił się jeden element. Kopiec odpowiada na to pytanie w O(1), a aktualizuje się w O(log n) — bo utrzymuje porządek CZĘŚCIOWY, dokładnie tyle, ile trzeba."
+        },
+        {
+          "type": "definition",
+          "term": "Własność kopca (min-heap)",
+          "text": "Każdy węzeł jest mniejszy lub równy obu swoim dzieciom. Nie ma żadnego wymagania co do relacji między rodzeństwem ani między poddrzewami.",
+          "note": "Stąd minimum zawsze leży w korzeniu. To znacznie słabszy warunek niż w BST — i właśnie dlatego taniej go utrzymać."
+        },
+        {
+          "type": "intro",
+          "text": "Drugą własnością kopca jest to, że jest drzewem ZUPEŁNYM: wypełnionym poziom po poziomie, od lewej. Dzięki temu nie potrzebuje wskaźników — mieści się w zwykłej tablicy, a pokrewieństwo liczy się arytmetycznie. Węzeł o indeksie i ma dzieci pod 2i+1 i 2i+2, a rodzica pod (i−1)//2."
+        },
+        {
+          "type": "table",
+          "title": "Kopiec [1, 3, 6, 5, 9, 8] jako tablica i jako drzewo",
+          "caption": "Sprawdź własność: 1 ≤ 3 i 1 ≤ 6; 3 ≤ 5 i 3 ≤ 9; 6 ≤ 8. Rodzeństwo (3 i 6) nie musi być w żadnej relacji.",
+          "headers": ["Indeks", "Wartość", "Rodzic (i−1)//2", "Dzieci 2i+1, 2i+2"],
+          "rows": [
+            ["0", "1", "—", "3, 6"],
+            ["1", "3", "1", "5, 9"],
+            ["2", "6", "1", "8, —"],
+            ["3", "5", "3", "—"],
+            ["4", "9", "3", "—"],
+            ["5", "8", "6", "—"]
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Dwie operacje, na których stoi wszystko",
+          "steps": [
+            {
+              "title": "Przesiewanie w górę (po wstawieniu)",
+              "text": "Dopisz element na koniec tablicy — to jedyne miejsce, które zachowuje zupełność drzewa. Potem zamieniaj go z rodzicem, dopóki jest od niego mniejszy. Najwyżej log n zamian."
+            },
+            {
+              "title": "Przesiewanie w dół (po usunięciu minimum)",
+              "text": "Zabierz korzeń, przenieś na jego miejsce ostatni element tablicy i opuszczaj go, zamieniając z MNIEJSZYM z dzieci, dopóki narusza własność kopca. Znowu najwyżej log n zamian."
+            },
+            {
+              "title": "Budowa kopca z gotowej tablicy",
+              "text": "Przesiej w dół każdy węzeł, zaczynając od ostatniego rodzica i idąc w stronę korzenia. Naiwnie wygląda to na O(n log n), ale wychodzi O(n) — bo prawie wszystkie węzły są liśćmi albo leżą tuż nad nimi i mają bardzo krótką drogę w dół."
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "title": "Przesiewanie w dół",
+          "language": "python",
+          "code": "def przesiej_w_dol(kopiec, i, n):\n    while True:\n        najmniejszy = i\n        lewy, prawy = 2 * i + 1, 2 * i + 2\n        if lewy < n and kopiec[lewy] < kopiec[najmniejszy]:\n            najmniejszy = lewy\n        if prawy < n and kopiec[prawy] < kopiec[najmniejszy]:\n            najmniejszy = prawy\n        if najmniejszy == i:\n            return                      # własność kopca przywrócona\n        kopiec[i], kopiec[najmniejszy] = kopiec[najmniejszy], kopiec[i]\n        i = najmniejszy",
+          "caption": "Kluczowe: zamiana z MNIEJSZYM z dwojga dzieci. Zamiana z większym naruszyłaby własność po drugiej stronie."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Kopiec NIE jest posortowany. Tablica [1, 3, 6, 5, 9, 8] spełnia własność kopca, choć 5 stoi przed 9, a 6 przed 8. Odczytanie zawartości kopca po kolei wymaga n-krotnego usunięcia minimum — czyli sortowania przez kopcowanie, O(n log n)."
+        },
+        {
+          "type": "complexity",
+          "title": "Koszty",
+          "rows": [
+            { "operation": "Podejrzenie minimum", "worst": "O(1)", "note": "to zawsze korzeń" },
+            { "operation": "Wstawienie", "worst": "O(log n)", "note": "przesiewanie w górę" },
+            { "operation": "Usunięcie minimum", "worst": "O(log n)", "note": "przesiewanie w dół" },
+            { "operation": "Budowa kopca z n elementów", "worst": "O(n)", "note": "nie O(n log n)" },
+            { "operation": "Sortowanie przez kopcowanie", "worst": "O(n log n)", "note": "pamięć O(1), niestabilne" },
+            { "operation": "Wyszukanie dowolnej wartości", "worst": "O(n)", "note": "kopiec nie służy do wyszukiwania" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Kolejka priorytetowa to interfejs („daj najważniejsze\"), a kopiec to jej najczęstsza implementacja. Algorytm Dijkstry stoi dokładnie na tej strukturze: w każdym kroku pyta o nieodwiedzony wierzchołek o najmniejszej znanej odległości."
+        },
+        {
+          "type": "quiz",
+          "question": "Do min-kopca [2, 4, 7, 9, 5] wstawiono wartość 1. Gdzie ostatecznie wyląduje?",
+          "options": [
+            "Na końcu tablicy — tam trafiają nowe elementy",
+            "W korzeniu — przesieje się w górę aż na sam szczyt",
+            "Na pozycji 1, obok czwórki",
+            "Kopiec odrzuci ją jako mniejszą od minimum"
+          ],
+          "correctIndex": 1,
+          "explanation": "Element dopisuje się na końcu, ale potem przesiewa w górę, dopóki jest mniejszy od rodzica. Jedynka jest mniejsza od wszystkiego, więc dojdzie do korzenia — i stanie się nowym minimum."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego budowa kopca z n elementów kosztuje O(n), a nie O(n log n)?",
+          "options": [
+            "Bo przesiewanie w dół jest stałe",
+            "Bo połowa węzłów to liście, których nie trzeba przesiewać, a im niżej węzeł, tym krótsza jego droga w dół",
+            "Bo tablica jest już częściowo posortowana",
+            "Bo budowa pomija sprawdzanie własności kopca"
+          ],
+          "correctIndex": 1,
+          "explanation": "Górne ograniczenie n log n zakłada, że każdy węzeł spada przez log n poziomów. W rzeczywistości połowa węzłów to liście (0 kroków), ćwierć ma 1 krok, ósma część 2 — suma tego szeregu jest liniowa."
+        }
+      ]
+    }
+  ]
+}

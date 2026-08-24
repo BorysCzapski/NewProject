@@ -1,0 +1,97 @@
+{
+  "topicSlug": "tablice-i-listy",
+  "lessons": [
+    {
+      "slug": "tablica-kontra-lista-wiazana",
+      "title": "Tablica kontra lista wiązana",
+      "summary": "Dlaczego tablica daje dostęp w O(1), lista wstawianie w O(1), i dlaczego żadna nie daje obu naraz.",
+      "readingMinutes": 9,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Obie struktury trzymają ciąg elementów. Różnica jest w JEDNEJ rzeczy: czy elementy leżą w pamięci obok siebie. Tablica leży ciągiem, więc adres i-tego elementu to prosty rachunek: początek + i · rozmiar. Lista wiązana rozrzuca elementy po pamięci i spina je wskaźnikami, więc do i-tego trzeba dojść, przechodząc po kolei przez wszystkie wcześniejsze. Z tej jednej różnicy wynika cała reszta."
+        },
+        {
+          "type": "definition",
+          "term": "Tablica",
+          "text": "Ciągły blok pamięci o znanym rozmiarze elementu. Adres dowolnego elementu wylicza się arytmetycznie, więc dostęp po indeksie kosztuje O(1) niezależnie od długości.",
+          "note": "Ceną jest sztywność: wstawienie w środek wymaga przesunięcia wszystkiego, co dalej."
+        },
+        {
+          "type": "definition",
+          "term": "Lista wiązana",
+          "text": "Ciąg węzłów, z których każdy trzyma wartość i wskaźnik na następny węzeł. Wstawienie i usunięcie to przepięcie dwóch wskaźników — O(1), o ile trzymasz już wskaźnik na właściwe miejsce.",
+          "note": "Ceną jest brak dostępu swobodnego: dojście do i-tego węzła to O(n) kroków."
+        },
+        {
+          "type": "compare",
+          "title": "Kiedy która",
+          "leftLabel": "Tablica",
+          "rightLabel": "Lista wiązana",
+          "rows": [
+            { "aspect": "Dostęp po indeksie", "left": "O(1) — rachunek adresu", "right": "O(n) — trzeba przejść od głowy" },
+            { "aspect": "Wstawienie na początek", "left": "O(n) — przesunięcie wszystkich", "right": "O(1) — nowy węzeł, jedno przepięcie" },
+            { "aspect": "Wstawienie w środek", "left": "O(n)", "right": "O(1) po dotarciu, ale dotarcie to O(n)" },
+            { "aspect": "Wstawienie na koniec", "left": "O(1) amortyzowane", "right": "O(1), jeśli trzymasz wskaźnik na ogon" },
+            { "aspect": "Pamięć na element", "left": "sama wartość", "right": "wartość + wskaźnik (często 8 bajtów więcej)" },
+            { "aspect": "Przechodzenie po kolei", "left": "bardzo szybkie — dane leżą obok siebie w cache", "right": "wolniejsze — każdy skok to inne miejsce w pamięci" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Ostatni wiersz jest w praktyce ważniejszy, niż sugeruje notacja O. Tablica i lista przechodzą n elementów tak samo w O(n), ale tablica robi to często kilka razy szybciej, bo procesor wczytuje pamięć całymi liniami cache. Notacja O celowo tego nie widzi — mierzy liczbę operacji, nie ich koszt."
+        },
+        {
+          "type": "code",
+          "title": "Wstawienie na początek — obie wersje",
+          "language": "python",
+          "code": "# tablica: każdy element przesuwa się o jedno miejsce\ndef wstaw_na_poczatek_tablicy(tab, x):\n    tab.append(None)\n    for i in range(len(tab) - 1, 0, -1):\n        tab[i] = tab[i - 1]      # n przesunięć\n    tab[0] = x\n\n# lista: jeden nowy węzeł i jedno przepięcie\ndef wstaw_na_poczatek_listy(glowa, x):\n    return Wezel(wartosc=x, nastepny=glowa)   # stały koszt",
+          "caption": "Ta sama operacja: O(n) kontra O(1). Wybór struktury JEST wyborem złożoności."
+        },
+        {
+          "type": "complexity",
+          "title": "Podsumowanie kosztów",
+          "rows": [
+            { "operation": "Tablica — odczyt tab[i]", "worst": "O(1)" },
+            { "operation": "Tablica — wstawienie/usunięcie w środku", "worst": "O(n)" },
+            { "operation": "Tablica dynamiczna — dopisanie na koniec", "average": "O(1)", "worst": "O(n)", "note": "amortyzowane O(1): realokacja z podwojeniem" },
+            { "operation": "Lista — wstawienie przy znanym wskaźniku", "worst": "O(1)" },
+            { "operation": "Lista — dostęp do i-tego elementu", "worst": "O(n)" },
+            { "operation": "Obie — wyszukanie wartości bez sortowania", "worst": "O(n)" }
+          ],
+          "note": "Amortyzowane O(1) znaczy: pojedyncze dopisanie bywa kosztowne (realokacja), ale n dopisań łącznie kosztuje O(n), więc średnio wychodzi stała."
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Lista w Pythonie to NIE jest lista wiązana, tylko tablica dynamiczna — `lista[i]` jest tam O(1), a `lista.insert(0, x)` jest O(n). Nazwa myli. Struktura wiązana w bibliotece standardowej to `collections.deque`."
+        },
+        {
+          "type": "quiz",
+          "question": "Potrzebujesz struktury, w której najczęstszą operacją jest odczyt elementu o zadanym numerze. Co wybierzesz?",
+          "options": [
+            "Listę wiązaną — jest elastyczniejsza",
+            "Tablicę — dostęp po indeksie jest O(1)",
+            "Obojętne, obie mają ten sam koszt",
+            "Listę wiązaną, ale dwukierunkową"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dostęp po indeksie to jedyna operacja, w której tablica ma przewagę rzędu wielkości: O(1) wobec O(n). Jeśli to dominująca operacja, wybór jest jednoznaczny."
+        },
+        {
+          "type": "quiz",
+          "question": "Dlaczego dopisywanie na koniec tablicy dynamicznej jest O(1) AMORTYZOWANE, a nie po prostu O(1)?",
+          "options": [
+            "Bo czasem trzeba przydzielić większy blok i przepisać wszystko — ale rzadko",
+            "Bo procesor czasem zwalnia",
+            "Bo tablica dynamiczna wewnętrznie jest listą wiązaną",
+            "Bo dopisanie wymaga posortowania tablicy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Gdy blok się zapełni, tablica alokuje dwa razy większy i przepisuje elementy — to O(n). Ale zdarza się to co drugie, czwarte, ósme dopisanie, więc n dopisań kosztuje łącznie O(n), czyli średnio O(1) na operację."
+        }
+      ]
+    }
+  ]
+}

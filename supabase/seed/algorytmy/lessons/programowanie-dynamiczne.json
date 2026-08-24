@@ -1,0 +1,119 @@
+{
+  "topicSlug": "programowanie-dynamiczne",
+  "lessons": [
+    {
+      "slug": "spamietywanie-i-zachlannosc",
+      "title": "Spamiętywanie, budowa od dołu i zachłanność",
+      "summary": "Kiedy wystarczy zapamiętać wyniki podproblemów, a kiedy prosty wybór „najlepszego teraz\" prowadzi na manowce.",
+      "readingMinutes": 12,
+      "blocks": [
+        {
+          "type": "intro",
+          "text": "Naiwne Fibonacciego liczy fib(30) przez ponad milion wywołań, choć różnych podproblemów jest tylko trzydzieści. Cała reszta to powtórki — te same wartości liczone od zera raz za razem. Programowanie dynamiczne jest odpowiedzią na dokładnie tę sytuację i sprowadza się do jednego zdania: policz każdy podproblem RAZ i zapamiętaj wynik."
+        },
+        {
+          "type": "definition",
+          "term": "Nakładające się podproblemy",
+          "text": "Własność problemu, w którym rekurencyjny rozkład prowadzi wielokrotnie do tych samych mniejszych instancji.",
+          "note": "Bez tej własności spamiętywanie nic nie da — sortowanie przez scalanie też jest rekurencyjne, ale każda podtablica pojawia się dokładnie raz."
+        },
+        {
+          "type": "definition",
+          "term": "Optymalna podstruktura",
+          "text": "Własność problemu, w którym optymalne rozwiązanie całości da się złożyć z optymalnych rozwiązań podproblemów.",
+          "note": "Obie własności naraz są warunkiem stosowalności programowania dynamicznego."
+        },
+        {
+          "type": "code",
+          "title": "Ten sam Fibonacci, trzy podejścia",
+          "language": "python",
+          "code": "# 1. Naiwnie: O(2^n)\ndef fib_naiwnie(n):\n    return n if n < 2 else fib_naiwnie(n - 1) + fib_naiwnie(n - 2)\n\n# 2. Z gory na dol (spamietywanie): O(n) czasu, O(n) pamieci\ndef fib_memo(n, pamiec={}):\n    if n < 2:\n        return n\n    if n not in pamiec:\n        pamiec[n] = fib_memo(n - 1, pamiec) + fib_memo(n - 2, pamiec)\n    return pamiec[n]\n\n# 3. Z dolu do gory: O(n) czasu, O(1) pamieci\ndef fib_iteracyjnie(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a",
+          "caption": "Trzy razy ta sama definicja matematyczna. Różnica: 2ⁿ kontra n operacji, i n kontra 1 komórka pamięci."
+        },
+        {
+          "type": "compare",
+          "title": "Dwa style programowania dynamicznego",
+          "leftLabel": "Z góry na dół (spamiętywanie)",
+          "rightLabel": "Z dołu do góry (tabelaryczne)",
+          "rows": [
+            { "aspect": "Sposób zapisu", "left": "zwykła rekurencja + słownik wyników", "right": "pętla wypełniająca tablicę po kolei" },
+            { "aspect": "Które podproblemy liczy", "left": "tylko te faktycznie potrzebne", "right": "wszystkie w tablicy" },
+            { "aspect": "Ryzyko", "left": "przepełnienie stosu przy dużej głębokości", "right": "trzeba samemu ustalić poprawną kolejność wypełniania" },
+            { "aspect": "Oszczędzanie pamięci", "left": "trudne", "right": "łatwe — często wystarczy pamiętać ostatni wiersz" }
+          ]
+        },
+        {
+          "type": "steps",
+          "title": "Jak zabrać się za zadanie z programowania dynamicznego",
+          "steps": [
+            { "title": "1. Nazwij stan", "text": "Co dokładnie oznacza dp[i]? Jedno precyzyjne zdanie. To najtrudniejszy i najważniejszy krok — reszta z niego wynika." },
+            { "title": "2. Zapisz przejście", "text": "Jak dp[i] wyraża się przez wcześniejsze stany? To rekurencja, tylko zapisana jako wzór." },
+            { "title": "3. Ustal przypadki bazowe", "text": "Od czego zaczyna się tablica i dlaczego te wartości są poprawne." },
+            { "title": "4. Wybierz kolejność wypełniania", "text": "Każdy stan musi być liczony PO tych, od których zależy." }
+          ]
+        },
+        {
+          "type": "definition",
+          "term": "Algorytm zachłanny",
+          "text": "Algorytm, który na każdym kroku wybiera opcję najlepszą lokalnie i nigdy nie cofa decyzji.",
+          "note": "Prostszy i szybszy od programowania dynamicznego — ale poprawny tylko wtedy, gdy da się DOWIEŚĆ, że lokalnie najlepszy wybór prowadzi do globalnego optimum."
+        },
+        {
+          "type": "table",
+          "title": "Wydawanie reszty — kiedy zachłanność zawodzi",
+          "caption": "Zachłannie: bierz największą monetę, która się mieści. Dla nominałów 1, 3, 4 i kwoty 6 daje to gorszy wynik niż optimum.",
+          "headers": ["Nominały", "Kwota", "Wybór zachłanny", "Optimum"],
+          "rows": [
+            ["1, 2, 5", "6", "5 + 1 → 2 monety", "5 + 1 → 2 monety ✓"],
+            ["1, 3, 4", "6", "4 + 1 + 1 → 3 monety", "3 + 3 → 2 monety ✗"]
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "warning",
+          "text": "Drugi wiersz jest istotny: dla polskich i większości europejskich nominałów algorytm zachłanny wydaje resztę optymalnie, więc łatwo uwierzyć, że działa zawsze. Nie działa — to własność konkretnego zestawu monet, nie własność metody. Programowanie dynamiczne daje poprawny wynik dla dowolnych nominałów."
+        },
+        {
+          "type": "complexity",
+          "title": "Koszty typowych zadań",
+          "rows": [
+            { "operation": "Fibonacci naiwnie", "worst": "O(2ⁿ)" },
+            { "operation": "Fibonacci ze spamiętywaniem", "worst": "O(n)", "note": "pamięć O(n), iteracyjnie O(1)" },
+            { "operation": "Wydawanie reszty (DP)", "worst": "O(kwota · liczba nominałów)" },
+            { "operation": "Najdłuższy wspólny podciąg", "worst": "O(n · m)", "note": "pamięć redukowalna do O(min(n, m))" },
+            { "operation": "Wydawanie reszty zachłannie", "worst": "O(liczba nominałów)", "note": "szybkie, ale nie zawsze poprawne" }
+          ]
+        },
+        {
+          "type": "tip",
+          "variant": "tip",
+          "text": "Praktyczna heurystyka: jeśli w zadaniu pada „ile jest sposobów\", „minimalny/maksymalny koszt\" i widzisz, że wybór teraz wpływa na to, co będzie można zrobić później — to prawie na pewno programowanie dynamiczne. Zachłanność wchodzi w grę, gdy decyzje są niezależne albo gdy potrafisz udowodnić, że lokalny wybór nigdy nie szkodzi."
+        },
+        {
+          "type": "quiz",
+          "question": "Które dwie własności musi mieć problem, żeby dało się go rozwiązać programowaniem dynamicznym?",
+          "options": [
+            "Rekurencyjność i posortowane dane",
+            "Nakładające się podproblemy i optymalna podstruktura",
+            "Optymalna podstruktura i liniowa złożoność",
+            "Nakładające się podproblemy i brak cykli"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nakładające się podproblemy sprawiają, że spamiętywanie w ogóle coś daje, a optymalna podstruktura gwarantuje, że złożenie optymalnych podrozwiązań jest optymalne dla całości. Bez pierwszej DP jest bezcelowe, bez drugiej — niepoprawne."
+        },
+        {
+          "type": "quiz",
+          "question": "Rozwiązanie ze spamiętywaniem liczy fib(100) natychmiast, a naiwne nie kończy się w rozsądnym czasie. Dlaczego?",
+          "options": [
+            "Bo spamiętywanie używa iteracji zamiast rekurencji",
+            "Bo różnych podproblemów jest tylko 100, a wersja naiwna liczy każdy z nich wykładniczo wiele razy",
+            "Bo słownik jest szybszy od dodawania",
+            "Bo spamiętywanie pomija połowę wywołań"
+          ],
+          "correctIndex": 1,
+          "explanation": "Liczba RÓŻNYCH podproblemów to n. Wersja naiwna rozwija pełne drzewo wywołań o około 2ⁿ węzłach, licząc te same wartości w kółko; spamiętywanie liczy każdą raz, więc pracy jest dokładnie n."
+        }
+      ]
+    }
+  ]
+}
