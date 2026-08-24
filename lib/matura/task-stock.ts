@@ -20,6 +20,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { generateMaturaTask, MATURA_TOPIC_AREAS } from "@/lib/matura/generate-tasks";
+import { generateMaturaListeningTask } from "@/lib/matura/generate-listening-task";
 import { taskTypesFor, type MaturaTaskTypeDef } from "@/lib/matura/task-types";
 import type {
   MaturaLanguage,
@@ -167,12 +168,18 @@ async function generateInto(params: {
   // background work with no deadline, so serialising costs the student nothing
   // and keeps a burst from tripping the limit for the whole app.
   for (let i = 0; i < count; i += 1) {
-    const content = await generateMaturaTask({
-      typeDef,
-      language,
-      level,
-      variationHint: pickRandom(MATURA_TOPIC_AREAS),
-    });
+    // Rozumienie ze słuchu cannot be invented from scratch — it is generated
+    // GROUNDED in a real, curated recording instead. See the aiGeneratable
+    // comment in lib/matura/task-types.ts and generate-listening-task.ts.
+    const content =
+      typeDef.section === "sluchanie"
+        ? await generateMaturaListeningTask({ typeDef, language, level, supabase: admin, sectionId })
+        : await generateMaturaTask({
+            typeDef,
+            language,
+            level,
+            variationHint: pickRandom(MATURA_TOPIC_AREAS),
+          });
     if (!content) continue;
 
     const { data, error } = await admin

@@ -45,12 +45,16 @@ export interface MaturaTaskTypeDef {
    * matura_tasks comment in 0013_matura.sql). */
   itemCount: number;
   /**
-   * False for types whose authenticity depends on material the model cannot
-   * invent — rozumienie ze słuchu needs a REAL recording (matura_tasks.content
-   * carries a youtubeVideoId), and a made-up transcript the student reads
-   * instead of hears is not a listening task. Those types rotate over the
-   * curated bank instead of being topped up; everything else is generated on
-   * demand. See lib/matura/task-stock.ts.
+   * True for every type — nothing here waits on a human administrator.
+   * Almost every type is generated from scratch (lib/matura/generate-tasks.ts).
+   * Rozumienie ze słuchu is the one exception to "from scratch": a made-up
+   * transcript the student reads instead of hears would not be a listening
+   * task, so those two types are instead generated GROUNDED in a REAL
+   * recording — a curated pool of real YouTube videos
+   * (lib/matura/listening-pool.ts) whose actual captions get fetched and fed
+   * to the model, which then writes original comprehension items against
+   * that real transcript (lib/matura/generate-listening-task.ts). Either way
+   * the queue tops itself up; see lib/matura/task-stock.ts.
    */
   aiGeneratable: boolean;
   /** Type-specific brief appended to the generator's system prompt. */
@@ -199,7 +203,9 @@ export const MATURA_TASK_TYPES: MaturaTaskTypeDef[] = [
   },
 
   // ——— Rozumienie ze słuchu ———
-  // aiGeneratable: false — patrz komentarz przy polu w MaturaTaskTypeDef.
+  // Generated GROUNDED in a real recording — see the aiGeneratable comment
+  // above and lib/matura/generate-listening-task.ts. aiBrief here is read by
+  // that generator, not by lib/matura/generate-tasks.ts.
   {
     slug: "sluchanie-wybor",
     section: "sluchanie",
@@ -208,8 +214,13 @@ export const MATURA_TASK_TYPES: MaturaTaskTypeDef[] = [
     description: "Wysłuchaj nagrania i wybierz właściwą odpowiedź A–D.",
     itemType: "multiple_choice",
     itemCount: 5,
-    aiGeneratable: false,
-    aiBrief: "",
+    aiGeneratable: true,
+    aiBrief:
+      "Każdy item to pytanie o treść nagrania (fakt, opinię mówiącego, przyczynę, cel wypowiedzi albo " +
+      "znaczenie słowa/wyrażenia wyjaśnionego w nagraniu) z DOKŁADNIE czterema opcjami. Dystraktory mają " +
+      "być wiarygodne, ale jednoznacznie odrzucalne na podstawie nagrania — nie mogą dać się wybrać bez " +
+      "wysłuchania. Rozłóż pytania na różne fragmenty nagrania (początek, środek, koniec), nie skupiaj " +
+      "wszystkich na jednym momencie.",
   },
   {
     slug: "sluchanie-dobieranie",
@@ -219,8 +230,14 @@ export const MATURA_TASK_TYPES: MaturaTaskTypeDef[] = [
     description: "Dopasuj zdanie do wypowiedzi właściwej osoby.",
     itemType: "multiple_choice",
     itemCount: 4,
-    aiGeneratable: false,
-    aiBrief: "",
+    aiGeneratable: true,
+    aiBrief:
+      "W nagraniu mówi więcej niż jedna osoba (np. dwoje prowadzących i/lub gość) — użyj ich prawdziwych " +
+      "imion z transkrypcji. Każdy item to jedno zdanie PARAFRAZUJĄCE (własnymi słowami, nie cytatem) coś, " +
+      "co w nagraniu powiedziała JEDNA konkretna osoba, a opcje to imiona wszystkich mówiących w tym " +
+      "nagraniu (2–4 opcje, każda w formacie \"A. Imię\"). correctAnswers to opcja z imieniem osoby, która " +
+      "to powiedziała. Każdy item ma dotyczyć innej osoby lub innego fragmentu, tak żeby nie dało się " +
+      "zgadnąć wzorem.",
   },
 ];
 
