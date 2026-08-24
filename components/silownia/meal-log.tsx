@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { Plus, Trash2 } from "lucide-react";
 import { deleteMeal } from "@/lib/silownia/actions";
 import { formatDayLabel } from "@/lib/silownia/format";
-import type { GymMealEntry } from "@/lib/types/database";
 import { MealForm } from "@/components/silownia/meal-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription } from "@/components/ui/card";
