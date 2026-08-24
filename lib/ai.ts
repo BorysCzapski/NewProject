@@ -12,16 +12,22 @@ import Groq from "groq-sdk";
 import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions";
 import { cleanEnv } from "@/lib/env";
 
-const CONFIGURED_MODEL = cleanEnv(process.env.GROQ_MODEL) || "llama-3.3-70b-versatile";
+const CONFIGURED_MODEL = cleanEnv(process.env.GROQ_MODEL) || "openai/gpt-oss-120b";
 
-// Groq periodically decommissions models. If the configured model stops
-// existing, we fall through this list instead of hard-failing every AI
-// feature in the app. All entries support tool calling (required by
-// askAIForJSON's pinned tool choice).
+// Groq periodically decommissions models — llama-3.3-70b-versatile and
+// llama-3.1-8b-instant, this list's previous entries, both now 404
+// ("does not exist") as of 2026-08-24, confirmed against GET
+// https://api.groq.com/openai/v1/models. That silently broke every AI
+// feature's first call each cold start (two guaranteed-fail attempts before
+// falling through) and would have broken them outright once the one
+// remaining entry was retired too. If the configured model stops existing,
+// we fall through this list instead of hard-failing every AI feature in the
+// app. All entries confirmed live on Groq and support tool calling (required
+// by askAIForJSON's pinned tool choice).
 const FALLBACK_MODELS = [
-  "llama-3.3-70b-versatile",
   "openai/gpt-oss-120b",
-  "llama-3.1-8b-instant",
+  "openai/gpt-oss-20b",
+  "qwen/qwen3.6-27b",
 ];
 
 // Model that most recently succeeded — start with the configured one.

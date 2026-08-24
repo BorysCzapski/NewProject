@@ -314,3 +314,37 @@ insert into vocabulary_words (level, category, word_en, translation_pl, example_
   ('B1', 'kultura', 'carnival', 'karnawał', 'Thousands of people dance in the streets during the carnival.'),
   ('B1', 'kultura', 'architecture', 'architektura', 'The old town is famous for its Gothic architecture.'),
   ('B1', 'kultura', 'applause', 'oklaski', 'The actors received loud applause at the end of the play.');
+
+-- ----------------------------------------------------------------------------
+-- Additional words (batch 3, 2026-08-24)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B1', 'edukacja', 'essay', 'wypracowanie / esej', 'She wrote a five-page essay about climate change for her English class.'),
+  ('B1', 'edukacja', 'faculty', 'wydział (uczelni)', 'My sister works at the Faculty of Medicine as a researcher.'),
+  ('B1', 'edukacja', 'module', 'moduł (przedmiotu)', 'This module covers the basics of statistics.'),
+  ('B1', 'edukacja', 'postgraduate', 'podyplomowy / studia magisterskie i wyższe', 'She is doing a postgraduate degree in psychology.'),
+  ('B1', 'edukacja', 'supervisor', 'promotor / opiekun naukowy', 'My supervisor gave me useful feedback on my thesis draft.'),
+  ('B1', 'edukacja', 'internship', 'staż', 'He did a summer internship at a marketing company.'),
+  ('B1', 'edukacja', 'vocational', 'zawodowy (kształcenie)', 'Vocational training prepares students for a specific trade.'),
+  ('B1', 'edukacja', 'mentor', 'mentor / opiekun', 'A good mentor can guide you through the first years of your career.'),
+  ('B1', 'edukacja', 'peer', 'rówieśnik / kolega z grupy', 'Students often learn a lot from peer feedback.'),
+  ('B1', 'edukacja', 'transcript', 'wykaz ocen (dokument)', 'You need an official transcript to apply for the exchange program.'),
+  ('B1', 'technologia', 'firmware', 'firmware (oprogramowanie sprzętowe)', 'The manufacturer released a firmware update to fix the bug.'),
+  ('B1', 'technologia', 'glitch', 'usterka / chwilowy błąd', 'The app had a strange glitch that made the screen freeze.'),
+  ('B1', 'technologia', 'compatible', 'kompatybilny', 'Make sure the new printer is compatible with your laptop.'),
+  ('B1', 'technologia', 'troubleshoot', 'rozwiązywać problemy (techniczne)', 'Our technician can troubleshoot most connection issues remotely.'),
+  ('B1', 'technologia', 'bandwidth', 'przepustowość łącza', 'Video calls use a lot of bandwidth.'),
+  ('B1', 'technologia', 'interface', 'interfejs', 'The new interface is much easier to navigate than the old one.'),
+  ('B1', 'technologia', 'widget', 'widżet', 'You can add a weather widget to your home screen.'),
+  ('B1', 'technologia', 'outdated', 'przestarzały', 'This software is outdated and no longer receives security updates.'),
+  ('B1', 'technologia', 'subscription', 'subskrypcja (usługi)', 'I cancelled my streaming subscription to save money.'),
+  ('B1', 'technologia', 'sync', 'synchronizować', 'Remember to sync your phone with the cloud every night.'),
+  ('B1', 'kultura', 'choir', 'chór', 'The choir performed beautifully at the Christmas concert.'),
+  ('B1', 'kultura', 'playwright', 'dramaturg', 'Shakespeare is considered the greatest playwright in English literature.'),
+  ('B1', 'kultura', 'myth', 'mit', 'According to Greek myth, Zeus ruled over all the gods.'),
+  ('B1', 'kultura', 'curator', 'kurator (wystawy)', 'The curator selected paintings from three different centuries.'),
+  ('B1', 'kultura', 'artifact', 'artefakt', 'Archaeologists found ancient artifacts buried beneath the temple.'),
+  ('B1', 'kultura', 'folk music', 'muzyka ludowa', 'Folk music is still very popular in rural areas.'),
+  ('B1', 'kultura', 'anecdote', 'anegdota', 'He told a funny anecdote about his childhood in the village.'),
+  ('B1', 'kultura', 'proverb', 'przysłowie', 'This proverb teaches us to be patient in difficult times.'),
+  ('B1', 'kultura', 'immigrant', 'imigrant', 'The city''s culture has been shaped by immigrants from many countries.');

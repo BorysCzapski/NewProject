@@ -246,6 +246,7 @@ w planie implementacji, jeśli szukasz uzasadnienia tej decyzji).
 - [Konfiguracja Supabase](#konfiguracja-supabase)
 - [Zmienne środowiskowe](#zmienne-środowiskowe)
 - [Konto administratora](#konto-administratora)
+- [Testy end-to-end](#testy-end-to-end)
 - [Struktura projektu](#struktura-projektu)
 - [Deploy na Vercel](#deploy-na-vercel)
 
@@ -576,6 +577,19 @@ Logowanie w aplikacji akceptuje login **lub** e-mail — dla konta admina wystar
 > ⚠️ **To hasło jest publiczne (jest w tym repozytorium).** Przed jakimkolwiek wdrożeniem
 > produkcyjnym/publicznym zmień je w **Supabase Dashboard → Authentication → Users → admin →
 > Reset password**, albo usuń to konto i utwórz własne z rolą `admin` w tabeli `profiles`.
+
+## Testy end-to-end
+
+[Playwright](https://playwright.dev) — bez mocka backendu, testy klikają po prawdziwej aplikacji
+gadającej z prawdziwym Supabase (tak jak `npm run dev`), łącznie z prawdziwym ocenianiem AI. Na
+razie pokrywają moduł **Matura z języka**:
+
+```bash
+npm run test:e2e       # wymaga wgranego seeda Matury i .env.local, patrz e2e/README.md
+npm run test:e2e:ui    # tryb interaktywny
+```
+
+Szczegóły (co jest pokryte, jak działają jednorazowe konta testowe) w `e2e/README.md`.
 
 ## Struktura projektu
 

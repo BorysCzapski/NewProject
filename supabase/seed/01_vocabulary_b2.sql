@@ -325,3 +325,35 @@ insert into vocabulary_words (level, category, word_en, translation_pl, example_
   ('B2', 'ekonomia', 'boom', 'boom / gwałtowny rozkwit gospodarczy', 'The construction boom created thousands of new jobs in the city.'),
   ('B2', 'ekonomia', 'taxation', 'opodatkowanie', 'The party promised lower taxation for small businesses.'),
   ('B2', 'ekonomia', 'bankruptcy', 'bankructwo / upadłość', 'The airline filed for bankruptcy after two years of heavy losses.');
+
+-- ----------------------------------------------------------------------------
+-- Additional words (batch 3, 2026-08-24)
+-- ----------------------------------------------------------------------------
+insert into vocabulary_words (level, category, word_en, translation_pl, example_sentence) values
+  ('B2', 'nauka', 'paradigm', 'paradygmat', 'The discovery caused a paradigm shift in how scientists understood the universe.'),
+  ('B2', 'nauka', 'methodology', 'metodologia', 'The study''s methodology was criticized for its small sample size.'),
+  ('B2', 'nauka', 'anomaly', 'anomalia', 'Researchers noticed an anomaly in the data that they could not explain.'),
+  ('B2', 'nauka', 'inference', 'wnioskowanie', 'Scientists draw inferences from limited data, which can sometimes be misleading.'),
+  ('B2', 'nauka', 'replicate', 'powtórzyć (eksperyment)', 'Other laboratories were unable to replicate the original results.'),
+  ('B2', 'nauka', 'skew', 'zniekształcać / przekłamywać (dane)', 'Small sample sizes can skew the results of a study.'),
+  ('B2', 'nauka', 'longitudinal', 'długofalowy (badanie)', 'The longitudinal study followed the same participants for twenty years.'),
+  ('B2', 'nauka', 'sample size', 'wielkość próby (badawczej)', 'A larger sample size makes the results more reliable.'),
+  ('B2', 'nauka', 'theorem', 'twierdzenie (matematyczne)', 'Pythagoras'' theorem is one of the most famous in mathematics.'),
+  ('B2', 'ekonomia', 'monetary policy', 'polityka pieniężna', 'The central bank uses monetary policy to control inflation.'),
+  ('B2', 'ekonomia', 'liquidity', 'płynność (finansowa)', 'The company faced a liquidity crisis and could not pay its suppliers on time.'),
+  ('B2', 'ekonomia', 'diversify', 'dywersyfikować', 'Investors are advised to diversify their portfolio to reduce risk.'),
+  ('B2', 'ekonomia', 'dividend', 'dywidenda', 'Shareholders received a generous dividend this year.'),
+  ('B2', 'ekonomia', 'hedge', 'zabezpieczać się (przed ryzykiem finansowym)', 'Farmers often hedge against price fluctuations by signing contracts in advance.'),
+  ('B2', 'ekonomia', 'volatility', 'zmienność (rynku)', 'The stock market experienced extreme volatility after the announcement.'),
+  ('B2', 'ekonomia', 'oligopoly', 'oligopol', 'A few large companies dominate the market in an oligopoly.'),
+  ('B2', 'ekonomia', 'protectionism', 'protekcjonizm', 'Rising protectionism has slowed down global trade.'),
+  ('B2', 'ekonomia', 'depreciation', 'deprecjacja / amortyzacja', 'Depreciation of equipment is calculated over several years.'),
+  ('B2', 'idiomy', 'to go back to the drawing board', 'zaczynać od nowa (po porażce)', 'The plan failed completely, so we had to go back to the drawing board.'),
+  ('B2', 'idiomy', 'to bark up the wrong tree', 'szukać w złym miejscu / mylić się co do przyczyny', 'If you think I broke the vase, you''re barking up the wrong tree.'),
+  ('B2', 'idiomy', 'to add insult to injury', 'dolewać oliwy do ognia / pogarszać sytuację', 'The team lost the match, and to add insult to injury, their star player got injured.'),
+  ('B2', 'idiomy', 'to be in the same boat', 'być w tej samej sytuacji', 'We''re all in the same boat when it comes to rising prices.'),
+  ('B2', 'idiomy', 'to give someone the benefit of the doubt', 'dawać komuś kredyt zaufania', 'I don''t fully believe him, but I''ll give him the benefit of the doubt this time.'),
+  ('B2', 'idiomy', 'to read between the lines', 'czytać między wierszami', 'You have to read between the lines to understand what she really meant.'),
+  ('B2', 'idiomy', 'to cut to the chase', 'przejść od razu do sedna', 'Let''s cut to the chase: are you accepting the offer or not?'),
+  ('B2', 'idiomy', 'to go cold turkey', 'rzucić coś nagle (nałóg)', 'He decided to go cold turkey and quit smoking overnight.'),
+  ('B2', 'idiomy', 'to be a dime a dozen', 'być pospolitym / nic nadzwyczajnego', 'Cheap plastic toys like this one are a dime a dozen.');

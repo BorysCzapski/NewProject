@@ -820,4 +820,221 @@ export const ES_B2_LESSONS: Record<string, GrammarLesson> = {
         "Kierunek podróży (cel drogi) wyraża para: salgo para Madrid = wyjeżdżam do Madrytu. Salgo por Madrid znaczyłoby raczej „ruszam przez Madryt / po Madrycie”, a en nie łączy się z salir w tym znaczeniu.",
     },
   ],
+
+  "es-oraciones-relativas": [
+    {
+      type: "intro",
+      text:
+        "Oraciones de relativo łączą dwa zdania zaimkiem względnym (que, quien, cuyo...), by dodać informację o rzeczowniku bez jego powtarzania. Na poziomie B2 kluczowe jest jednak co innego niż sam zaimek: czy czasownik w zdaniu podrzędnym stoi w indicativo, czy w subjuntivo? Rozstrzyga to charakter poprzednika (antecedente) — rzeczownika, do którego odnosi się zaimek.",
+    },
+    {
+      type: "table",
+      title: "Zaimki względne",
+      headers: ["Zaimek", "Użycie", "Przykład"],
+      rows: [
+        ["que", "uniwersalny — osoby i rzeczy", "El libro que leí era muy bueno."],
+        ["quien / quienes", "tylko osoby, często po przyimku", "La persona con quien hablé es mi jefa."],
+        ["el que / la que / los que / las que", "osoby i rzeczy, po dłuższych przyimkach", "La empresa para la que trabajo crece rápido."],
+        ["cuyo / cuya / cuyos / cuyas", "przynależność — „czyj”, zgadza się z rzeczownikiem po sobie", "El escritor cuyo libro leí es argentino."],
+      ],
+    },
+    {
+      type: "compare",
+      title: "Indicativo czy subjuntivo?",
+      columns: [
+        {
+          title: "Indicativo — poprzednik istnieje i jest znany",
+          whenToUse:
+            "Mówimy o konkretnej, znanej osobie lub rzeczy, której istnienia jesteśmy pewni.",
+          examples: ["Conozco a un chico que habla cuatro idiomas.", "Tengo un amigo que vive en Madrid."],
+        },
+        {
+          title: "Subjuntivo — poprzednik nieznany, nieistniejący lub hipotetyczny",
+          whenToUse:
+            "Szukamy czegoś nieokreślonego, przeczymy istnieniu czegoś lub pytamy, czy coś w ogóle istnieje.",
+          examples: ["Busco a un chico que hable cuatro idiomas.", "No hay nadie que sepa la respuesta."],
+        },
+      ],
+    },
+    {
+      type: "formula",
+      title: "Trzy wzorce w praktyce",
+      variants: [
+        {
+          label: "Poprzednik znany → indicativo",
+          parts: [
+            { text: "Conozco", role: "verb" },
+            { text: "a un chico", role: "object", note: "poprzednik: konkretna, znana osoba" },
+            { text: "que", role: "other" },
+            { text: "habla", role: "verb", note: "indicativo, bo osoba naprawdę istnieje" },
+            { text: "cuatro idiomas", role: "object" },
+          ],
+          example: { en: "Conozco a un chico que habla cuatro idiomas.", pl: "Znam chłopaka, który mówi w czterech językach." },
+        },
+        {
+          label: "Poprzednik nieznany → subjuntivo",
+          parts: [
+            { text: "Busco", role: "verb" },
+            { text: "a un chico", role: "object", note: "poprzednik: nieokreślony, jeszcze nieznaleziony" },
+            { text: "que", role: "other" },
+            { text: "hable", role: "verb", note: "subjuntivo, bo taka osoba jest tylko wyobrażona" },
+            { text: "cuatro idiomas", role: "object" },
+          ],
+          example: { en: "Busco a un chico que hable cuatro idiomas.", pl: "Szukam chłopaka, który mówiłby w czterech językach." },
+        },
+        {
+          label: "Przeczenie istnienia → zawsze subjuntivo",
+          parts: [
+            { text: "No hay", role: "negation", note: "zaprzeczenie istnienia" },
+            { text: "nadie", role: "subject" },
+            { text: "que", role: "other" },
+            { text: "sepa", role: "verb", note: "saber: sé → sepa" },
+            { text: "la respuesta", role: "object" },
+          ],
+          example: { en: "No hay nadie que sepa la respuesta.", pl: "Nie ma nikogo, kto znałby odpowiedź." },
+        },
+      ],
+      caption:
+        "Ta sama zasada rządzi pytaniami o istnienie: ¿Hay algún restaurante que esté abierto ahora? — nie wiemy, czy taka restauracja istnieje, więc subjuntivo.",
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "El escritor cuyo libro leí es argentino.", pl: "Pisarz, którego książkę przeczytałem, jest Argentyńczykiem.", highlight: "cuyo" },
+        { en: "La persona con quien hablé ayer es mi jefa.", pl: "Osoba, z którą rozmawiałem wczoraj, to moja szefowa.", highlight: "con quien" },
+        { en: "¿Hay algún restaurante que esté abierto ahora?", pl: "Czy jest jakaś restauracja, która jest teraz otwarta?", highlight: "esté" },
+        { en: "Tengo un amigo que vive en Madrid.", pl: "Mam przyjaciela, który mieszka w Madrycie.", highlight: "vive" },
+        { en: "Busco un amigo que viva en Madrid.", pl: "Szukam przyjaciela, który mieszkałby w Madrycie.", highlight: "viva" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        "Polski nie rozróżnia tych sytuacji gramatycznie, dlatego odruchowo stawiasz wszędzie indicativo. Zadaj sobie pytanie: czy ta osoba/rzecz na pewno istnieje i wiem, kto/co to jest? Jeśli nie — subjuntivo. Uważaj też na cuyo: zawsze wprowadza rzeczownik (cuyo libro), nigdy nie stoi samodzielnie jak quien — „el escritor cuyo escribió” ✗ jest niegramatyczne.",
+    },
+    {
+      type: "quiz",
+      question: "Busco a un chico que ___ (hablar) cuatro idiomas.",
+      options: ["hable", "habla", "hablará"],
+      correctIndex: 0,
+      explanation:
+        "Poprzednik „un chico” jest tu nieokreślony — jeszcze go nie znaleźliśmy — więc czasownik przechodzi w subjuntivo: hable. Habla pasowałoby, gdybyśmy mówili o konkretnej, znanej osobie (Conozco a un chico que habla...).",
+    },
+    {
+      type: "quiz",
+      question: "No hay nadie que ___ (saber) la respuesta.",
+      options: ["sepa", "sabe", "sabrá"],
+      correctIndex: 0,
+      explanation:
+        "„Nadie” to poprzednik nieistniejący — przeczenie istnienia zawsze wymaga subjuntivo: sepa. Sabe i sabrá należą do indicativo, niedopuszczalnego po przeczeniu tego typu.",
+    },
+  ],
+
+  "es-conectores-concesivos-causales": [
+    {
+      type: "intro",
+      text:
+        "Konektory przyczynowe (porque, ya que, puesto que) i przyzwalające (aunque, a pesar de que) pozwalają budować bardziej dojrzałe zdania na poziomie B2. Najważniejsza pułapka: aunque jako jedyny z nich zmienia znaczenie w zależności od trybu czasownika — indicativo mówi o fakcie pewnym, subjuntivo o hipotetycznym lub nieistotnym dla decyzji.",
+    },
+    {
+      type: "table",
+      title: "Konektory przyczynowe i przyzwalające",
+      headers: ["Konektor", "Funkcja", "Przykład"],
+      rows: [
+        ["porque", "przyczyna, zawsze indicativo", "No fui porque estaba cansado."],
+        ["ya que", "przyczyna znana/oczywista, często na początku", "Ya que estás aquí, ayúdame."],
+        ["puesto que", "przyczyna formalna, często na początku", "Puesto que no hay preguntas, terminamos."],
+        ["aunque", "przyzwolenie — indicativo LUB subjuntivo", "Aunque llueve / llueva..."],
+        ["a pesar de que", "przyzwolenie, jak aunque — oba tryby", "A pesar de que llovía, salimos."],
+        ["a pesar de", "przyzwolenie + rzeczownik/bezokolicznik (bez que)", "A pesar de la lluvia, salimos."],
+      ],
+    },
+    {
+      type: "compare",
+      title: "aunque + indicativo czy aunque + subjuntivo?",
+      columns: [
+        {
+          title: "aunque + indicativo",
+          whenToUse: "Fakt znany i pewny dla mówiącego — informujemy o czymś, co na pewno się dzieje.",
+          examples: ["Aunque llueve, salgo a correr.", "Aunque es caro, lo voy a comprar."],
+        },
+        {
+          title: "aunque + subjuntivo",
+          whenToUse: "Fakt hipotetyczny, nieznany lub nieistotny dla podjętej decyzji.",
+          examples: ["Aunque llueva mañana, saldré a correr.", "Aunque sea caro, lo compraré."],
+        },
+      ],
+    },
+    {
+      type: "formula",
+      title: "Przyczyna czy przyzwolenie?",
+      variants: [
+        {
+          label: "porque — przyczyna (zawsze indicativo)",
+          parts: [
+            { text: "No fui", role: "verb" },
+            { text: "a la fiesta", role: "object" },
+            { text: "porque", role: "other", note: "porque = wyłącznie przyczyna, nigdy kontrast" },
+            { text: "estaba", role: "verb" },
+            { text: "muy cansado", role: "object" },
+          ],
+          example: { en: "No fui a la fiesta porque estaba muy cansado.", pl: "Nie poszedłem na imprezę, bo byłem bardzo zmęczony." },
+        },
+        {
+          label: "aunque + indicativo — fakt pewny",
+          parts: [
+            { text: "Aunque", role: "other" },
+            { text: "llueve,", role: "verb", note: "indicativo — pada naprawdę, wiem to na pewno" },
+            { text: "salgo", role: "verb" },
+            { text: "a correr", role: "object" },
+          ],
+          example: { en: "Aunque llueve, salgo a correr.", pl: "Chociaż pada, wychodzę biegać." },
+        },
+        {
+          label: "aunque + subjuntivo — fakt hipotetyczny",
+          parts: [
+            { text: "Aunque", role: "other" },
+            { text: "llueva", role: "verb", note: "subjuntivo — nie wiem, czy będzie padać" },
+            { text: "mañana,", role: "object" },
+            { text: "saldré", role: "verb" },
+            { text: "a correr", role: "object" },
+          ],
+          example: { en: "Aunque llueva mañana, saldré a correr.", pl: "Nawet jeśli jutro będzie padać, wyjdę biegać." },
+        },
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Ya que estás aquí, ayúdame con esto.", pl: "Skoro już tu jesteś, pomóż mi z tym.", highlight: "Ya que" },
+        { en: "Puesto que no hay más preguntas, terminamos la reunión.", pl: "Ponieważ nie ma więcej pytań, kończymy spotkanie.", highlight: "Puesto que" },
+        { en: "A pesar de la lluvia, salimos a pasear.", pl: "Mimo deszczu wyszliśmy na spacer.", highlight: "A pesar de" },
+        { en: "A pesar de estudiar mucho, no aprobó el examen.", pl: "Mimo że dużo się uczył, nie zdał egzaminu.", highlight: "A pesar de estudiar" },
+        { en: "Aunque estudio mucho, no apruebo.", pl: "Chociaż dużo się uczę, nie zdaję.", highlight: "Aunque estudio" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        "Porque wprowadza WYŁĄCZNIE przyczynę, nigdy kontrast: „Estudio mucho porque no apruebo” brzmi nielogicznie — poprawnie Estudio mucho, pero no apruebo albo Aunque estudio mucho, no apruebo. Nie stawiaj też subjuntivo po każdym aunque odruchowo — jeśli fakt jest znany i pewny, indicativo jest poprawną i częstszą opcją. I pamiętaj: a pesar de que + odmieniony czasownik, ale a pesar de (bez que) + rzeczownik lub bezokolicznik.",
+    },
+    {
+      type: "quiz",
+      question: "Elige el conector correcto: ___ estás aquí, ayúdame con esto.",
+      options: ["Ya que", "Porque", "Aunque"],
+      correctIndex: 0,
+      explanation:
+        "Ya que otwiera zdanie i wprowadza przyczynę znaną obu rozmówcom — „skoro już...”. Porque nie otwiera zwykle zdania w ten sposób, a aunque wprowadzałoby przyzwolenie, nie przyczynę.",
+    },
+    {
+      type: "quiz",
+      question: "A pesar de ___ mucho, no aprobó el examen.",
+      options: ["estudiar", "estudia", "estudiara"],
+      correctIndex: 0,
+      explanation:
+        "A pesar de bez que łączy się z bezokolicznikiem: a pesar de estudiar. Z odmienionym czasownikiem potrzebowalibyśmy que: a pesar de que estudiaba/estudiara mucho.",
+    },
+  ],
 };

@@ -156,3 +156,60 @@ insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, 
   ('f0000000-0000-4000-8000-0000000000c5', 'gap_fill', 'Wstaw czasownik ехать z przedrostkiem по- w czasie przyszłym: Завтра я ___ в Санкт-Петербург на поезде.', NULL, 'поеду', 3),
   ('f0000000-0000-4000-8000-0000000000c5', 'multiple_choice', 'Wybierz formę dla czynności regularnej (pojazdem): Ты часто ___ на машине?', '["едешь","ездишь","ехал"]'::jsonb, 'ездишь', 4),
   ('f0000000-0000-4000-8000-0000000000c5', 'transformation', 'Przekształć zdanie Я иду в кино. na czas przyszły dokonany z przedrostkiem по-.', NULL, 'Я пойду в кино.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 5: Tryb warunkowy (бы)
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, language, level, slug, title, explanation, order_index) values (
+  'f0000000-0000-4000-8000-0000000000c6',
+  'ru',
+  'B1',
+  'ru-tryb-warunkowy',
+  'Tryb warunkowy (бы)',
+  'Tryb warunkowy tworzy się w rosyjskim bardzo prosto: bierzemy czasownik w czasie przeszłym i dodajemy niezmienną cząstkę бы. W odróżnieniu od polskiego rosyjski nie rozróżnia formalnie zdań realnych i nierealnych ani czasu warunku — jedna forma z бы obsługuje teraźniejszość, przyszłość i przeszłość, a to, o który moment chodzi, wynika z kontekstu.
+Podstawowa formuła: если бы + forma przeszła, ... forma przeszła + бы. Na przykład: Если бы я знал ответ, я сказал бы тебе (Gdybym znał odpowiedź, powiedziałbym ci).
+Cząstka бы zwykle stoi zaraz po czasowniku (сказал бы, пришла бы) albo po spójniku если (если бы), nigdy jednak samodzielnie na początku zdania.
+Zdania odnoszące się do przeszłości wyglądają identycznie jak te dotyczące teraźniejszości: Если бы вчера не было дождя, мы пошли бы гулять (Gdyby wczoraj nie padał deszcz, poszlibyśmy na spacer) — nie ma osobnej formy odpowiadającej polskiemu trybowi zaprzeszłemu.
+Bardzo częsty błąd Polaków to próba odmiany бы przez osoby albo łączenie go z czasem teraźniejszym lub przyszłym — tak się nie da: бы łączy się WYŁĄCZNIE z formą przeszłą czasownika i ma zawsze tę samą, niezmienną postać.
+Druga pułapka to szyk: po polsku mówimy ja bym chciał, z by zaraz po zaimku, a standardowy rosyjski szyk to czasownik + бы, czyli я хотел бы, a nie я бы хотел (ta druga wersja bywa potoczna, ale mniej naturalna).
+Warto odróżnić zdanie z если bez бы, które opisuje warunek realny i spełnialny: Если у меня будет время, я приду (Jeśli będę miał czas, przyjdę) — brak бы, bo warunek dotyczy realnej przyszłości, a nie sytuacji hipotetycznej.
+Tryb warunkowy służy też do grzecznych próśb i życzeń: Я хотел бы кофе, пожалуйста (Chciałbym kawę, poproszę) oraz Хорошо бы отдохнуть! (Dobrze byłoby odpocząć!).',
+  5
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('f0000000-0000-4000-8000-0000000000c6', 'gap_fill', 'Wstaw czasownik знать w formie trybu warunkowego (rodzaj męski): Если бы я ___, я сказал бы тебе.', NULL, 'знал', 0),
+  ('f0000000-0000-4000-8000-0000000000c6', 'multiple_choice', 'Wybierz poprawną kolejność (Gdybym miał czas, przyjechałbym): Если бы у меня было время, я ___.', '["приеду","приехал бы","бы приехал"]'::jsonb, 'приехал бы', 1),
+  ('f0000000-0000-4000-8000-0000000000c6', 'gap_fill', 'Uzupełnij cząstkę trybu warunkowego: Она сделала ___ это с удовольствием.', NULL, 'бы', 2),
+  ('f0000000-0000-4000-8000-0000000000c6', 'multiple_choice', 'Wybierz zdanie z warunkiem REALNYM (bez бы):', '["Если у меня будет время, я приду.","Если бы у меня было время, я пришёл бы.","Я пришёл бы, если было время."]'::jsonb, 'Если у меня будет время, я приду.', 3),
+  ('f0000000-0000-4000-8000-0000000000c6', 'multiple_choice', 'Wybierz grzeczną prośbę z trybem warunkowym: ___ кофе, пожалуйста.', '["Я хочу","Я хотел бы","Я буду хотеть"]'::jsonb, 'Я хотел бы', 4),
+  ('f0000000-0000-4000-8000-0000000000c6', 'transformation', 'Przekształć zdanie realne na nierealne (warunek niespełniony): Если будет дождь, мы останемся дома.', NULL, 'Если бы был дождь, мы остались бы дома.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 6: Stopniowanie przymiotników i przysłówków
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, language, level, slug, title, explanation, order_index) values (
+  'f0000000-0000-4000-8000-0000000000c7',
+  'ru',
+  'B1',
+  'ru-stopniowanie-przymiotnikow',
+  'Stopniowanie przymiotników i przysłówków',
+  'Stopniowanie przymiotników i przysłówków w rosyjskim ma dwie ścieżki: prostą (syntetyczną, jedno słowo) i złożoną (analityczną, dwa słowa) — podobnie jak w polskim mamy ładny → ładniejszy oraz interesujący → bardziej interesujący.
+Stopień wyższy prosty tworzymy najczęściej przyrostkiem -ее: красивый → красивее (ładniejszy), интересный → интереснее (ciekawszy). Ta forma jest nieodmienna i pasuje do każdego rodzaju i liczby.
+Niektóre częste przymiotniki mają nieregularny, krótszy stopień wyższy na -е z wymianą spółgłoski: хороший → лучше (lepszy), плохой → хуже (gorszy), большой → больше (większy), маленький → меньше (mniejszy), молодой → моложе (młodszy), дорогой → дороже (droższy).
+Stopień wyższy złożony tworzymy słowem более (bardziej) lub менее (mniej) + przymiotnik w formie podstawowej, odmienny przez rodzaje: более интересный фильм, более интересная книга. Tej formy używamy zwłaszcza wtedy, gdy przymiotnik stoi PRZED rzeczownikiem.
+Porównanie z drugim elementem wyraża się na dwa sposoby: dopełniaczem bez spójnika (Она старше меня) albo spójnikiem чем + mianownik (Она старше, чем я) — obie wersje znaczą to samo, ale dopełniacz jest krótszy i bardziej naturalny w mowie.
+Stopień najwyższy tworzymy najczęściej słowem самый + przymiotnik w formie podstawowej, odmienny: самый красивый, самая красивая, самое красивое. Możliwa jest też forma z наиболее, bardziej książkowa: наиболее важный вопрос.
+Przysłówki stopniujemy tak samo jak krótki stopień wyższy przymiotnika, ale forma jest zawsze nieodmienna i pełni funkcję przysłówka w zdaniu: быстро → быстрее (szybciej), хорошо → лучше (lepiej): Он бежит быстрее, чем я.
+Typowa pułapka Polaków: mylenie krótkiego stopnia wyższego przymiotnika z przysłówkiem — formy takie jak быстрее czy лучше wyglądają identycznie w obu funkcjach, więc rolę rozstrzyga kontekst (czy opisujemy rzeczownik, czy czynność). Druga pułapka: podwajanie stopnia, np. более лучше — to błąd, bo лучше jest już formą stopnia wyższego i nie łączy się z более.
+Zwróć uwagę, że rosyjskie самый różni się od polskiego najbardziej: łączy się bezpośrednio z przymiotnikiem w formie podstawowej, a nie z jego stopniem wyższym — самый быстрый (najszybszy).',
+  6
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('f0000000-0000-4000-8000-0000000000c7', 'gap_fill', 'Utwórz stopień wyższy przymiotnika красивый: Эта картина ___, чем та.', NULL, 'красивее', 0),
+  ('f0000000-0000-4000-8000-0000000000c7', 'multiple_choice', 'Wybierz poprawny nieregularny stopień wyższy: Этот фильм ___, чем предыдущий.', '["хороший","лучше","более хороший"]'::jsonb, 'лучше', 1),
+  ('f0000000-0000-4000-8000-0000000000c7', 'gap_fill', 'Wstaw słowo tworzące stopień najwyższy (rodzaj żeński): Эверест — ___ высокая гора в мире.', NULL, 'самая', 2),
+  ('f0000000-0000-4000-8000-0000000000c7', 'multiple_choice', 'Wybierz poprawną formę porównania (dopełniacz): Она старше ___.', '["я","меня","мне"]'::jsonb, 'меня', 3),
+  ('f0000000-0000-4000-8000-0000000000c7', 'multiple_choice', 'Wybierz poprawny stopień wyższy przysłówka: Он бежит ___, чем я.', '["быстрый","быстрее","самый быстрый"]'::jsonb, 'быстрее', 4),
+  ('f0000000-0000-4000-8000-0000000000c7', 'transformation', 'Przekształć zdanie, tworząc stopień wyższy złożony (более): Это интересный фильм.', NULL, 'Это более интересный фильм.', 5);

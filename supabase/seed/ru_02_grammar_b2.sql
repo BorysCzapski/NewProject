@@ -161,3 +161,61 @@ insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, 
   ('f0000000-0000-4000-8000-0000000000d5', 'gap_fill', 'Wstaw zaimek pytający (miejsce), który zostaje w mowie zależnej: Она не знала, ___ я живу.', NULL, 'где', 3),
   ('f0000000-0000-4000-8000-0000000000d5', 'multiple_choice', 'Wybierz właściwą formę czasownika (zmiana osoby): «Где ты работаешь?» — Она спросила, где я ___.', '["работаю","работаешь","работать"]'::jsonb, 'работаю', 4),
   ('f0000000-0000-4000-8000-0000000000d5', 'transformation', 'Zamień mowę niezależną na zależną: «Я люблю Москву», — сказал он.', NULL, 'Он сказал, что любит Москву.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 5: Krótkie formy przymiotników
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, language, level, slug, title, explanation, order_index) values (
+  'f0000000-0000-4000-8000-0000000000d6',
+  'ru',
+  'B2',
+  'ru-krotkie-przymiotniki',
+  'Krótkie formy przymiotników',
+  'Rosyjskie przymiotniki jakościowe mają obok pełnej (odmiennej) formy także formę krótką, która nie odmienia się przez przypadki, tylko przez rodzaj i liczbę, i pełni w zdaniu funkcję orzecznika — nigdy nie stoi przed rzeczownikiem. Formę krótką tworzymy, odrywając końcówkę formy pełnej: rodzaj męski dostaje zerową końcówkę, żeński -а, nijaki -о, liczba mnoga -ы/-и: готовый → готов, готова, готово, готовы.
+Niektóre przymiotniki, jak рад (zadowolony, uradowany), używane są niemal wyłącznie w formie krótkiej — pełna forma радый nie istnieje we współczesnym języku: Я рад тебя видеть (Cieszę się, że cię widzę).
+Podobnie działa должен (musieć, powinienem) — to zawsze forma krótka, forma pełna должный jest archaiczna: Я должен идти, Она должна работать, Они должны прийти.
+Przymiotnik свободный ma obie formy, ale ze zmianą znaczenia: forma pełna свободный человек opisuje cechę (człowiek wolny, niezależny), a krótka Я свободен opisuje stan chwilowy (jestem wolny, mam teraz czas) — dokładnie jak polskie wolny człowiek kontra jestem dziś wolny.
+Ogólna zasada: forma pełna opisuje trwałą, obiektywną cechę i może stać przed rzeczownikiem (красивая девушка), a forma krótka opisuje stan chwilowy albo subiektywną ocenę i stoi zawsze po podmiocie, jako orzecznik: девушка красива (jest piękna — w tej chwili, w oczach mówiącego).
+Niektóre przymiotniki krótkie mają rekcję, czyli łączą się z innym słowem w przypadku zależnym: Он готов к экзамену (gotów do egzaminu), Я доволен результатом (zadowolony z wyniku) — w tym znaczeniu predykatywnym forma pełna готовый tak się nie łączy.
+Częsty błąd Polaków: użycie formy pełnej tam, gdzie rosyjski wymaga krótkiej, zwłaszcza z должен i рад — mówią oni готовый zamiast он готов, bo po polsku gotowy działa zarówno orzecznikowo, jak i przydawkowo, a rosyjski to rozróżnia.
+Druga pułapka: forma krótka nigdy się nie odmienia przez przypadki i nie łączy się z przyimkami bezpośrednio — nie istnieje с рад ani к готов, bo krótka forma stoi samodzielnie jako orzecznik, najwyżej z dopełnieniem w odpowiednim przypadku (рад чему, готов к чему).
+Zapamiętaj więc: рад, должен i намерен istnieją właściwie tylko w formie krótkiej, a przymiotniki takie jak свободен, готов, доволен, счастлив zmieniają odcień znaczenia zależnie od wybranej formy.',
+  5
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('f0000000-0000-4000-8000-0000000000d6', 'gap_fill', 'Wstaw krótką formę przymiotnika рад (rodzaj żeński): Она очень ___ этой новости.', NULL, 'рада', 0),
+  ('f0000000-0000-4000-8000-0000000000d6', 'multiple_choice', 'Wybierz poprawną formę: Я ___ идти на работу.', '["должный","должен","должного"]'::jsonb, 'должен', 1),
+  ('f0000000-0000-4000-8000-0000000000d6', 'gap_fill', 'Wstaw krótką formę przymiotnika готовый (liczba mnoga): Мы ___ к экзамену.', NULL, 'готовы', 2),
+  ('f0000000-0000-4000-8000-0000000000d6', 'multiple_choice', 'Wybierz zdanie opisujące stan chwilowy (forma krótka):', '["Он свободный человек.","Сегодня вечером он свободен.","Он свободный сегодня."]'::jsonb, 'Сегодня вечером он свободен.', 3),
+  ('f0000000-0000-4000-8000-0000000000d6', 'multiple_choice', 'Wybierz poprawną formę: Я ___ результатом работы.', '["доволен","довольный","довольного"]'::jsonb, 'доволен', 4),
+  ('f0000000-0000-4000-8000-0000000000d6', 'transformation', 'Przekształć zdanie, zamieniając formę pełną na krótką w funkcji orzecznika: Эта девушка красивая.', NULL, 'Эта девушка красива.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 6: Zdania złożone ze spójnikami podrzędnymi
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, language, level, slug, title, explanation, order_index) values (
+  'f0000000-0000-4000-8000-0000000000d7',
+  'ru',
+  'B2',
+  'ru-zdania-zlozone-spojniki',
+  'Zdania złożone ze spójnikami podrzędnymi',
+  'Zdania złożone podrzędnie łączymy w rosyjskim różnymi spójnikami, z których wiele wygląda znajomo, ale rządzi się swoimi regułami składniowymi, innymi niż w polskim. Najważniejszy spójnik przyczynowy to потому что (ponieważ, bo) — wprowadza przyczynę i stoi zawsze w zdaniu podrzędnym, nigdy na samym początku całej wypowiedzi: Я не пришёл, потому что заболел.
+Bliskoznaczny, ale bardziej książkowy jest spójnik так как (skoro, jako że) — w odróżnieniu od потому что może otwierać całe zdanie złożone, stojąc przed przyczyną: Так как было поздно, мы решили остаться.
+Spójnik хотя (chociaż, mimo że) wprowadza ustępstwo i, tak jak po polsku, nie wymaga żadnych dodatkowych partykuł: Хотя было холодно, мы пошли гулять.
+Spójnik пока ma dwa znaczenia zależne od kontekstu: dopóki / podczas gdy przy czynnościach równoczesnych (Пока ты спал, я приготовила завтрак) oraz, z przeczeniem, пока не w znaczeniu dopóki nie (Подожди, пока я не вернусь).
+Spójnik чтобы wprowadza zdania celu i życzenia, a czasownik po nim stoi ZAWSZE w formie przeszłej, gdy podmioty obu zdań są różne, niezależnie od czasu zdania głównego: Я хочу, чтобы ты помог мне (chcę, żebyś mi pomógł) — forma przeszła помог nie oznacza tu przeszłości, to wymóg gramatyczny po чтобы.
+Konstrukcja если бы + forma przeszła wprowadza zdanie warunkowe nierealne, znane już z osobnego tematu trybu warunkowego: Если бы я знал, я сказал бы.
+Typowa pułapka Polaków: próba postawienia po чтобы bezokolicznika lub czasu teraźniejszego, na wzór polskiego żeby + bezokolicznik (chcę, żeby pomóc) — po rosyjsku to błąd, gdy podmiot zdania podrzędnego różni się od podmiotu zdania głównego: obowiązuje wtedy forma przeszła, nie bezokolicznik.
+Druga pułapka: mylenie потому что z так как na początku zdania — потому что zwykle nie otwiera całej wypowiedzi, a так как owszem, dlatego zdanie zaczynające się od przyczyny lepiej otworzyć spójnikiem так как.
+Warto zapamiętać wyjątek: gdy podmiot zdania głównego i podrzędnego po чтобы jest ten sam, można użyć bezokolicznika zamiast formy przeszłej, tak jak w Я купил цветы, чтобы порадовать маму (ten sam podmiot я) — ale gdy podmioty się różnią, forma przeszła po чтобы jest obowiązkowa.',
+  6
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('f0000000-0000-4000-8000-0000000000d7', 'multiple_choice', 'Wybierz spójnik, który może otwierać całe zdanie złożone (przyczyna na początku): ___ было поздно, мы решили остаться.', '["Потому что","Так как","Хотя"]'::jsonb, 'Так как', 0),
+  ('f0000000-0000-4000-8000-0000000000d7', 'gap_fill', 'Wstaw spójnik wprowadzający ustępstwo: ___ было холодно, мы пошли гулять.', NULL, 'Хотя', 1),
+  ('f0000000-0000-4000-8000-0000000000d7', 'multiple_choice', 'Wybierz poprawną formę czasownika po чтобы (różne podmioty): Я хочу, чтобы ты мне ___.', '["помочь","помогаешь","помог"]'::jsonb, 'помог', 2),
+  ('f0000000-0000-4000-8000-0000000000d7', 'gap_fill', 'Wstaw czasownik w odpowiedniej formie (dopóki nie): Подожди, пока я не ___.', NULL, 'вернусь', 3),
+  ('f0000000-0000-4000-8000-0000000000d7', 'multiple_choice', 'Wybierz poprawne zdanie z чтобы (ten sam podmiot, można użyć bezokolicznika):', '["Я купил цветы, чтобы порадовать маму.","Я купил цветы, чтобы я порадовал маму.","Я купил цветы, чтобы радовать маму вчера."]'::jsonb, 'Я купил цветы, чтобы порадовать маму.', 4),
+  ('f0000000-0000-4000-8000-0000000000d7', 'transformation', 'Połącz zdania spójnikiem потому что: Я не пришёл. Я заболел.', NULL, 'Я не пришёл, потому что заболел.', 5);

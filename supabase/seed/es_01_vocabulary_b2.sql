@@ -183,3 +183,38 @@ insert into vocabulary_words (language, level, category, word_en, translation_pl
 ('es', 'B2', 'zwroty zaawansowane', 'cabe destacar', 'warto podkreślić', 'Cabe destacar el enorme esfuerzo realizado por todo el equipo.'),
 ('es', 'B2', 'zwroty zaawansowane', 'dando por hecho', 'zakładając (że)', 'Actuó dando por hecho que contaba con nuestro apoyo.'),
 ('es', 'B2', 'zwroty zaawansowane', 'a grandes rasgos', 'w ogólnym zarysie', 'A grandes rasgos, el plan consiste en reducir gastos y aumentar ingresos.');
+
+-- ============================================================================
+-- Additional words (batch 1, 2026-08-24)
+-- ============================================================================
+insert into vocabulary_words (language, level, category, word_en, translation_pl, example_sentence) values
+-- idiomy
+('es', 'B2', 'idiomy', 'armarse de valor', 'zebrać się na odwagę', 'Se armó de valor y le confesó lo que sentía.'),
+('es', 'B2', 'idiomy', 'no dar su brazo a torcer', 'nie ustępować / nie dawać za wygraną', 'A pesar de las críticas, no dio su brazo a torcer.'),
+('es', 'B2', 'idiomy', 'echar leña al fuego', 'dolewać oliwy do ognia', 'Sus comentarios solo echaron leña al fuego en la discusión.'),
+('es', 'B2', 'idiomy', 'estar entre la espada y la pared', 'być między młotem a kowadłem', 'Me encuentro entre la espada y la pared: cualquier decisión traerá problemas.'),
+('es', 'B2', 'idiomy', 'no ver tres en un burro', 'nie widzieć na oczy (mieć bardzo słaby wzrok)', 'Sin gafas no veo tres en un burro.'),
+('es', 'B2', 'idiomy', 'ser uña y carne', 'być za pan brat / być nierozłącznymi', 'Esas dos amigas son uña y carne desde la infancia.'),
+('es', 'B2', 'idiomy', 'írsele la mano', 'przesadzić / przedobrzyć', 'Al cocinero se le fue la mano con la sal.'),
+('es', 'B2', 'idiomy', 'no pegar ojo', 'nie zmrużyć oka', 'Anoche no pegué ojo pensando en la entrevista de hoy.'),
+('es', 'B2', 'idiomy', 'estar hasta las narices', 'mieć czegoś powyżej uszu', 'Estoy hasta las narices de tantas reuniones inútiles.'),
+-- zwroty zaawansowane
+('es', 'B2', 'zwroty zaawansowane', 'con vistas a', 'z myślą o / w celu', 'Se reunieron con vistas a mejorar la comunicación interna.'),
+('es', 'B2', 'zwroty zaawansowane', 'en detrimento de', 'ze szkodą dla', 'Aprobaron la ley en detrimento de los pequeños agricultores.'),
+('es', 'B2', 'zwroty zaawansowane', 'so pena de', 'pod groźbą / pod rygorem', 'Debe entregar el informe hoy, so pena de perder el contrato.'),
+('es', 'B2', 'zwroty zaawansowane', 'en función de', 'w zależności od', 'El precio final varía en función de la cantidad solicitada.'),
+('es', 'B2', 'zwroty zaawansowane', 'conforme a', 'zgodnie z', 'Actuaron conforme a lo establecido en el contrato.'),
+('es', 'B2', 'zwroty zaawansowane', 'en pos de', 'w pogoni za / dążąc do', 'Trabajan en pos de un acuerdo que beneficie a ambas partes.'),
+('es', 'B2', 'zwroty zaawansowane', 'máxime cuando', 'zwłaszcza gdy / tym bardziej że', 'Deberíamos revisar el plan, máxime cuando los datos han cambiado tanto.'),
+('es', 'B2', 'zwroty zaawansowane', 'amén de', 'oprócz tego / poza tym', 'El proyecto requiere financiación, amén de un equipo más numeroso.'),
+('es', 'B2', 'zwroty zaawansowane', 'en la medida en que', 'w takim stopniu, w jakim / o ile', 'El proyecto avanzará en la medida en que consigamos financiación.'),
+-- ekonomia
+('es', 'B2', 'ekonomia', 'superávit', 'nadwyżka (budżetowa)', 'El país registró un superávit fiscal por primera vez en una década.'),
+('es', 'B2', 'ekonomia', 'déficit', 'deficyt', 'El déficit público obligó al gobierno a recortar el gasto.'),
+('es', 'B2', 'ekonomia', 'austeridad', 'oszczędności / polityka oszczędnościowa', 'Las medidas de austeridad afectaron duramente a los servicios públicos.'),
+('es', 'B2', 'ekonomia', 'especulación', 'spekulacja', 'La especulación inmobiliaria disparó los precios de la vivienda.'),
+('es', 'B2', 'ekonomia', 'dividendo', 'dywidenda', 'Los accionistas recibieron un dividendo mayor que el año anterior.'),
+('es', 'B2', 'ekonomia', 'liquidez', 'płynność finansowa', 'La empresa tuvo problemas de liquidez tras el impago de varios clientes.'),
+('es', 'B2', 'ekonomia', 'cotización', 'notowanie / kurs (giełdowy)', 'La cotización de las acciones subió tras el anuncio de beneficios.'),
+('es', 'B2', 'ekonomia', 'hipoteca', 'hipoteka / kredyt hipoteczny', 'Pidieron una hipoteca al banco para comprar su primera vivienda.'),
+('es', 'B2', 'ekonomia', 'blanqueo de capitales', 'pranie pieniędzy', 'La policía investiga una red de blanqueo de capitales vinculada a la empresa.');

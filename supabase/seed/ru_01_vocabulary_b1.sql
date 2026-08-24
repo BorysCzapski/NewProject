@@ -185,3 +185,38 @@ insert into vocabulary_words (language, level, category, word_en, translation_pl
 ('ru', 'B1', 'zwroty codzienne', 'ладно', 'dobrze (no dobra)', 'Ладно, я согласен на твоё предложение.'),
 ('ru', 'B1', 'zwroty codzienne', 'похоже', 'wygląda na to (chyba)', 'Похоже, на улице начинается дождь.'),
 ('ru', 'B1', 'zwroty codzienne', 'пожалуй', 'chyba (raczej)', 'Пожалуй, я выпью чашку чая.');
+
+-- ============================================================================
+-- Batch: 2026-08-24 — additional B1 vocabulary
+-- New words in existing categories: edukacja, technologia, środowisko
+-- ============================================================================
+insert into vocabulary_words (language, level, category, word_en, translation_pl, example_sentence) values
+-- ---------- edukacja (dodatkowe) ----------
+('ru', 'B1', 'edukacja', 'аттестат', 'świadectwo (szkolne)', 'После школы он получил аттестат с отличием.'),
+('ru', 'B1', 'edukacja', 'стипендия', 'stypendium', 'Студентка получает стипендию за хорошую учёбу.'),
+('ru', 'B1', 'edukacja', 'семестр', 'semestr', 'Первый семестр закончился в январе.'),
+('ru', 'B1', 'edukacja', 'реферат', 'referat', 'Я написал реферат по истории России.'),
+('ru', 'B1', 'edukacja', 'конспект', 'notatki (z wykładu)', 'Я веду подробный конспект на каждой лекции.'),
+('ru', 'B1', 'edukacja', 'зачёт', 'zaliczenie', 'Завтра у меня зачёт по грамматике.'),
+('ru', 'B1', 'edukacja', 'абитуриент', 'kandydat na studia', 'Каждый абитуриент должен сдать вступительные экзамены.'),
+('ru', 'B1', 'edukacja', 'факультет', 'wydział (uczelni)', 'Она учится на филологическом факультете.'),
+('ru', 'B1', 'edukacja', 'специальность', 'specjalność (kierunek studiów)', 'Он выбрал специальность программиста.'),
+-- ---------- technologia (dodatkowe) ----------
+('ru', 'B1', 'technologia', 'браузер', 'przeglądarka (internetowa)', 'Он открыл нужный сайт в браузере.'),
+('ru', 'B1', 'technologia', 'уведомление', 'powiadomienie', 'На телефоне появилось новое уведомление.'),
+('ru', 'B1', 'technologia', 'вложение', 'załącznik (e-mail)', 'Не забудь открыть вложение в письме.'),
+('ru', 'B1', 'technologia', 'подключение', 'połączenie', 'Проверь подключение к интернету.'),
+('ru', 'B1', 'technologia', 'батарея', 'bateria (urządzenia)', 'Батарея телефона разрядилась за час.'),
+('ru', 'B1', 'technologia', 'папка', 'folder', 'Сохрани документ в новую папку.'),
+('ru', 'B1', 'technologia', 'диск', 'dysk', 'Все фотографии хранятся на внешнем диске.'),
+('ru', 'B1', 'technologia', 'клик', 'kliknięcie', 'Один клик — и страница загрузилась.'),
+('ru', 'B1', 'technologia', 'значок', 'ikonka', 'Нажми на значок приложения на экране.'),
+-- ---------- środowisko (dodatkowe) ----------
+('ru', 'B1', 'środowisko', 'заповедник', 'rezerwat przyrody', 'В этом заповеднике обитают редкие животные.'),
+('ru', 'B1', 'środowisko', 'вымирание', 'wymieranie', 'Учёные предупреждают о вымирании многих видов.'),
+('ru', 'B1', 'środowisko', 'экология', 'ekologia', 'Он изучает экологию в университете.'),
+('ru', 'B1', 'środowisko', 'возобновляемый', 'odnawialny', 'Возобновляемая энергия становится дешевле.'),
+('ru', 'B1', 'środowisko', 'выброс', 'emisja (spalin)', 'Автомобили производят вредные выбросы в атмосферу.'),
+('ru', 'B1', 'środowisko', 'ураган', 'huragan', 'Ураган разрушил несколько домов на побережье.'),
+('ru', 'B1', 'środowisko', 'землетрясение', 'trzęsienie ziemi', 'В этом районе часто случаются землетрясения.'),
+('ru', 'B1', 'środowisko', 'пестицид', 'pestycyd', 'Фермеры используют пестициды для защиты урожая.');

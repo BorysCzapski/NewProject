@@ -133,7 +133,7 @@ function rozszerzonaRubric(language: MaturaLanguage): string {
   return `
 Oceniasz rozprawkę "za i przeciw" (200-250 słów, styl formalny) na maturze z ${langGenitive(language)}, POZIOM ROZSZERZONY, wg oficjalnych kryteriów CKE:
 
-1. ZGODNOŚĆ Z POLECENIEM (0-5 pkt): to połączona ocena treści i formy. Pełne 5 pkt wymaga: (a) wstępu z JASNĄ tezą, która WPROST zapowiada strukturę "za i przeciw" (teza w stylu "${notes.thesisExample}" — sama pytająca teza typu "${notes.weakThesisExample}" BEZ zapowiedzi struktury to błąd obniżający ocenę); (b) argumentów za, każdy rozwinięty (nie samo wymienienie, ale wyjaśniony mechanizm/konsekwencja); (c) argumentów przeciw, tak samo rozwiniętych; (d) zakończenia, które parafrazuje tezę (nie powtarza dosłownie) i podsumowuje bilans; (e) braku dygresji nie na temat; oraz poprawnej formy: teza na początku, widoczna struktura wstęp/rozwinięcie/zakończenie, podział na akapity (jeden akapit = jedna myśl), długość w granicach 180-280 słów (mniej niż 160 słów = tylko to kryterium liczy się normalnie, reszta i tak zostanie wyzerowana przez system).
+1. ZGODNOŚĆ Z POLECENIEM (0-5 pkt): to połączona ocena treści i formy. Pełne 5 pkt wymaga: (a) wstępu z JASNĄ tezą, która WPROST zapowiada strukturę "za i przeciw" (teza w stylu "${notes.thesisExample}" — sama pytająca teza typu "${notes.weakThesisExample}" BEZ zapowiedzi struktury to błąd obniżający ocenę); (b) argumentów za, każdy rozwinięty (nie samo wymienienie, ale wyjaśniony mechanizm/konsekwencja); (c) argumentów przeciw, tak samo rozwiniętych; (d) zakończenia, które parafrazuje tezę (nie powtarza dosłownie) i podsumowuje bilans; (e) braku dygresji nie na temat; oraz poprawnej formy: teza na początku, widoczna struktura wstęp/rozwinięcie/zakończenie, podział na akapity (jeden akapit = jedna myśl), długość w granicach 200-250 słów (mniej niż 160 słów = tylko to kryterium liczy się normalnie, reszta i tak zostanie wyzerowana przez system).
 2. SPÓJNOŚĆ I LOGIKA WYPOWIEDZI (0-2 pkt): licz konkretne zakłócenia spójności/logiki. 0-2 zakłócenia = 2 pkt, 3-5 = 1 pkt, 6+ = 0 pkt.
 3. ZAKRES ŚRODKÓW JĘZYKOWYCH (0-3 pkt): pełne 3 pkt = "szeroki zakres" na poziomie B2+ — liczne, naturalne, precyzyjne i zróżnicowane frazy (nie tylko "${notes.basicConnectors}", ale np. "${notes.advancedConnectors}"), STYL FORMALNY I JEDNOLITY przez cały tekst (bez ${notes.informalForms}). Mieszanie rejestru bez uzasadnienia obniża ocenę nawet przy bogatym słownictwie.
 4. POPRAWNOŚĆ ŚRODKÓW JĘZYKOWYCH (0-3 pkt): oceniana dwuwymiarowo — błędy językowe ORAZ błędy ortograficzne/interpunkcyjne. Pełne 3 pkt wymaga niewielu błędów w OBU wymiarach jednocześnie (mocna gramatyka, ale dużo literówek, nie daje pełnej punktacji). Po stronie językowej zwracaj szczególną uwagę na ${notes.errorFocus}. Po stronie ortograficznej: ${notes.orthographyFocus}. W komentarzu NAZWIJ konkretny błąd i podaj poprawną formę.
@@ -196,7 +196,14 @@ export async function gradeWritingSubmission(
         description: "jedna konkretna, praktyczna wskazówka po polsku, co poprawić najpierw",
       },
     },
-    maxTokens: 1200,
+    // 1200 was too tight: 4 criteria + generalFeedback + improvementTip in
+    // Polish can legitimately run past it on a long, substantive rozszerzona
+    // essay, truncating the JSON tool call mid-string and failing the whole
+    // grading request (reproduced with a real submission — the model's
+    // output cut off mid-word inside "generalFeedback"). 2048 matches
+    // askAIForJSON's own default for every other JSON-shaped call in this
+    // codebase (lib/ai.ts) rather than a new guessed number.
+    maxTokens: 2048,
   });
 
   const byKey = new Map(raw.criteria.map((c) => [c.key, c]));

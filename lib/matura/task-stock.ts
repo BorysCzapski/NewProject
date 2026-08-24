@@ -20,6 +20,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { generateMaturaTask, MATURA_TOPIC_AREAS } from "@/lib/matura/generate-tasks";
+import { generateMaturaListeningTask } from "@/lib/matura/generate-listening-task";
 import { taskTypesFor, type MaturaTaskTypeDef } from "@/lib/matura/task-types";
 import type {
   MaturaLanguage,
@@ -67,7 +68,7 @@ export async function getTypeStats(
   const types = taskTypesFor(section.slug, level);
   if (types.length === 0) return [];
 
-  const [{ data: attemptRows }, { data: taskRows }] = await Promise.all([
+  const [{ data: attemptRows, error: attemptsError }, { data: taskRows, error: tasksError }] = await Promise.all([
     supabase
       .from("matura_task_attempts")
       .select("task_id, points_awarded, max_points, attempted_at, matura_tasks!inner(task_type, section_id)")
@@ -76,6 +77,8 @@ export async function getTypeStats(
       .order("attempted_at", { ascending: false }),
     supabase.from("matura_tasks").select("id, task_type").eq("section_id", section.id),
   ]);
+  if (attemptsError) console.error("[matura] pobranie prób nie powiodło się:", attemptsError);
+  if (tasksError) console.error("[matura] pobranie zadań nie powiodło się:", tasksError);
 
   const attempts = (attemptRows ?? []) as unknown as AttemptRow[];
   const tasks = (taskRows ?? []) as Array<{ id: string; task_type: string | null }>;
@@ -110,21 +113,23 @@ async function splitByFreshness(
   sectionId: string,
   typeSlug: MaturaTaskTypeSlug
 ): Promise<{ fresh: string[]; seen: Array<{ id: string; attemptedAt: string }> }> {
-  const { data: taskRows } = await supabase
+  const { data: taskRows, error: tasksError } = await supabase
     .from("matura_tasks")
     .select("id")
     .eq("section_id", sectionId)
     .eq("task_type", typeSlug);
+  if (tasksError) console.error("[matura] pobranie puli zadań nie powiodło się:", tasksError);
 
   const ids = (taskRows ?? []).map((t) => (t as { id: string }).id);
   if (ids.length === 0) return { fresh: [], seen: [] };
 
-  const { data: attemptRows } = await supabase
+  const { data: attemptRows, error: attemptsError } = await supabase
     .from("matura_task_attempts")
     .select("task_id, attempted_at")
     .eq("user_id", userId)
     .in("task_id", ids)
     .order("attempted_at", { ascending: false });
+  if (attemptsError) console.error("[matura] pobranie prób dla typu nie powiodło się:", attemptsError);
 
   const latestAttempt = new Map<string, string>();
   for (const row of (attemptRows ?? []) as Array<{ task_id: string; attempted_at: string }>) {
@@ -167,12 +172,18 @@ async function generateInto(params: {
   // background work with no deadline, so serialising costs the student nothing
   // and keeps a burst from tripping the limit for the whole app.
   for (let i = 0; i < count; i += 1) {
-    const content = await generateMaturaTask({
-      typeDef,
-      language,
-      level,
-      variationHint: pickRandom(MATURA_TOPIC_AREAS),
-    });
+    // Rozumienie ze słuchu cannot be invented from scratch — it is generated
+    // GROUNDED in a real, curated recording instead. See the aiGeneratable
+    // comment in lib/matura/task-types.ts and generate-listening-task.ts.
+    const content =
+      typeDef.section === "sluchanie"
+        ? await generateMaturaListeningTask({ typeDef, language, level, supabase: admin, sectionId })
+        : await generateMaturaTask({
+            typeDef,
+            language,
+            level,
+            variationHint: pickRandom(MATURA_TOPIC_AREAS),
+          });
     if (!content) continue;
 
     const { data, error } = await admin

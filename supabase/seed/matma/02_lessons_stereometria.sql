@@ -759,112 +759,152 @@ insert into math_lessons (topic_id, title, content, order_index) values (
 );
 
 -- ----------------------------------------------------------------------------
--- Lesson (AI-generated addition, temat-fill 2026-08): Proste w przestrzeni
+-- Lesson (AI-generated addition, temat-fill 2026-08, rewritten 2026-08): Twierdzenie o trzech
+-- prostopadłych i kąt między prostą a płaszczyzną
 -- ----------------------------------------------------------------------------
 insert into math_lessons (topic_id, title, content, order_index) values (
   (select id from math_topics where slug = 'stereometria'),
-  $title5$Proste w przestrzeni$title5$,
+  $title5$Twierdzenie o trzech prostopadłych i kąt między prostą a płaszczyzną$title5$,
   $content5$[
   {
     "type": "intro",
-    "text": "Lekcja teorii na temat prostej w przestrzeni i twierdzeń związanych z nią. Omówimy zagadnienia CKE do matury rozszerzonej."
+    "text": "Na maturze rozszerzonej bardzo często pojawia się polecenie \"oblicz kąt, jaki przekątna bryły tworzy z płaszczyzną podstawy\". W tej lekcji poznasz ogólną definicję kąta między prostą a płaszczyzną oraz nauczysz się go liczyć na przykładzie przekątnej prostopadłościanu — tę samą metodę stosuje się w każdej bryle (graniastosłupie, ostrosłupie), zawsze sprowadzając zadanie do trójkąta prostokątnego."
   },
   {
     "type": "definition",
-    "term": "Prosta",
-    "text": "Prosta w przestrzeni to zbiór punktów spełniających pewne warunki. Jest to pojęcie podstawowe w geometrii przestrzennej."
+    "term": "Rzut prostokątny punktu i prostej na płaszczyznę",
+    "text": "Rzutem prostokątnym punktu $P$ na płaszczyznę $\\pi$ nazywamy punkt $P'$, w którym płaszczyznę $\\pi$ przecina prosta prostopadła do $\\pi$ przechodząca przez $P$. Rzutem prostokątnym prostej $k$ (nieprostopadłej do $\\pi$) na płaszczyznę $\\pi$ jest prosta $k'$ złożona z rzutów wszystkich punktów prostej $k$."
   },
   {
-    "type": "formula",
-    "title": "Równanie prostej w przestrzeni",
-    "expression": "\\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}",
-    "variables": [
-      {
-        "meaning": "współrzędna x punktu należącego do prostej",
-        "symbol": "x_0"
-      },
-      {
-        "meaning": "współrzędna y punktu należącego do prostej",
-        "symbol": "y_0"
-      },
-      {
-        "meaning": "współrzędna z punktu należącego do prostej",
-        "symbol": "z_0"
-      },
-      {
-        "meaning": "współczynnik kierunkowy prostej w kierunku x",
-        "symbol": "a"
-      },
-      {
-        "meaning": "współczynnik kierunkowy prostej w kierunku y",
-        "symbol": "b"
-      },
-      {
-        "meaning": "współczynnik kierunkowy prostej w kierunku z",
-        "symbol": "c"
-      }
-    ]
+    "type": "definition",
+    "term": "Twierdzenie o trzech prostopadłych",
+    "text": "Niech $P'$ będzie rzutem prostokątnym punktu $P$ (spoza płaszczyzny $\\pi$) na płaszczyznę $\\pi$, a $k$ dowolną prostą leżącą w $\\pi$. Wówczas prosta $PA$ (dla punktu $A\\in k$) jest prostopadła do $k$ wtedy i tylko wtedy, gdy jej rzut $P'A$ jest prostopadły do $k$. Twierdzenie to pozwala sprowadzić dowodzenie prostopadłości odcinków w przestrzeni do dowodzenia prostopadłości na płaszczyźnie (w rzucie) — bardzo przydatne w zadaniach dowodowych ze stereometrii.",
+    "formula": "PA \\perp k \\iff P'A \\perp k"
   },
   {
     "type": "examples",
-    "title": "Przykłady prostych w przestrzeni",
+    "title": "Zastosowanie twierdzenia o trzech prostopadłych",
     "items": [
       {
-        "answer": "\\frac{x - 1}{2} = \\frac{y - 2}{3} = \\frac{z - 3}{4}",
-        "problem": "Znajdź równanie prostej przechodzącej przez punkt $(1, 2, 3)$ i mającej wektory kierunkowe $(2, 3, 4)$.",
+        "problem": "\\text{Ostrosłup prawidłowy czworokątny } SABCD \\text{ ma podstawę — kwadrat } ABCD \\text{ — a rzutem wierzchołka } S \\text{ na podstawę jest środek kwadratu } O. \\text{ Wykaż, że } SA \\perp BD.",
         "steps": [
-          {
-            "formula": "",
-            "text": "Podstawiamy dane do równania prostej."
-          }
-        ]
+          {"text": "Rzutem prostokątnym punktu $S$ na płaszczyznę podstawy jest $O$, więc rzutem odcinka $SA$ jest odcinek $OA$ — fragment przekątnej $AC$ kwadratu $ABCD$.", "formula": "\\text{rzut}(SA) = OA \\subset AC"},
+          {"text": "W kwadracie przekątne są prostopadłe, więc $AC \\perp BD$, a tym samym $OA \\perp BD$.", "formula": "AC \\perp BD \\Rightarrow OA \\perp BD"},
+          {"text": "Rzut $OA$ jest prostopadły do $BD$, więc na mocy twierdzenia o trzech prostopadłych sama krawędź $SA$ też jest prostopadła do $BD$.", "formula": "OA \\perp BD \\Rightarrow SA \\perp BD"}
+        ],
+        "answer": "SA \\perp BD, \\text{ co kończy dowód}"
       }
     ]
   },
   {
     "type": "quiz",
-    "question": "Czym charakteryzuje się prosta w przestrzeni?",
+    "question": "Twierdzenie o trzech prostopadłych pozwala wywnioskować, że prosta $PA$ jest prostopadła do prostej $k$ leżącej w płaszczyźnie $\\pi$, jeśli wiadomo, że:",
     "options": [
-      "Przecina się z inną prostą w jednym punkcie.",
-      "Jest to zbiór punktów spełniających pewne warunki.",
-      "Ma stałą długość.",
-      "Jest zawsze równoległa do innej prostej."
+      "rzut prostokątny $P'A$ (gdzie $P'$ to rzut $P$ na $\\pi$) jest prostopadły do $k$",
+      "punkt $P$ leży w płaszczyźnie $\\pi$",
+      "prosta $k$ jest równoległa do $\\pi$",
+      "$|PA| = |P'A|$"
     ],
-    "correctIndex": 1,
-    "explanation": "Prosta w przestrzeni jest zbiorem punktów spełniających pewne warunki."
+    "correctIndex": 0,
+    "explanation": "Twierdzenie o trzech prostopadłych: $PA\\perp k \\iff P'A\\perp k$, gdzie $P'$ jest rzutem prostokątnym $P$ na płaszczyznę zawierającą $k$."
   },
   {
-    "type": "reveal-steps",
-    "title": "Twierdzenie o prostej prostopadłej do płaszczyzny",
-    "problem": "Dowiedz, że prosta przechodząca przez punkt $(1, 2, 3)$ i mająca wektor kierunkowy $(2, 3, 4)$ jest prostopadła do płaszczyzny $2x + 3y + 4z = 12$.",
-    "steps": [
-      {
-        "acceptedAnswers": [
-          "nie"
-        ],
-        "correctIndex": 0,
-        "kind": "input",
-        "options": [],
-        "prompt": "Wektor kierunkowy prostej jest równoległy do płaszczyzny.",
-        "reveal": "Wektor kierunkowy prostej $(2, 3, 4)$ jest równoległy do normalnej płaszczyzny $(2, 3, 4)$, zatem prosta jest prostopadła do płaszczyzny."
-      },
-      {
-        "acceptedAnswers": [],
-        "correctIndex": 1,
-        "kind": "choice",
-        "options": [
-          "tak",
-          "nie"
-        ],
-        "prompt": "Prosta przechodzi przez punkt należący do płaszczyzny.",
-        "reveal": "Prosta nie przechodzi przez punkt należący do płaszczyzny."
-      }
+    "type": "definition",
+    "term": "Kąt między prostą a płaszczyzną",
+    "text": "Kątem między prostą $k$ a płaszczyzną $\\pi$ (nierównoległą do niej) nazywamy kąt ostry $\\alpha$ między prostą $k$ a jej rzutem prostokątnym $k'$ na płaszczyznę $\\pi$. To najmniejszy kąt, jaki prosta $k$ tworzy z dowolną prostą leżącą w płaszczyźnie $\\pi$.",
+    "formula": "\\alpha = \\angle(k, k')"
+  },
+  {
+    "type": "table",
+    "title": "Przypadki szczególne",
+    "headers": ["Sytuacja", "Kąt między prostą a płaszczyzną"],
+    "rows": [
+      ["Prosta leży w płaszczyźnie lub jest do niej równoległa", "$0^\\circ$"],
+      ["Prosta jest prostopadła do płaszczyzny", "$90^\\circ$"],
+      ["W pozostałych przypadkach", "kąt ostry między prostą a jej rzutem prostokątnym $k'$ na płaszczyznę"]
     ]
   },
   {
     "type": "tip",
     "variant": "tip",
-    "text": "Tę lekcję opanowałeś, jeśli potrafisz zdefiniować prostą w przestrzeni oraz zastosować twierdzenie o prostej prostopadłej do płaszczyzny."
+    "text": "Praktyczny przepis: 1) znajdź spodek prostopadłej opuszczonej z jednego końca odcinka na płaszczyznę — to punkt rzutu; 2) połącz go z drugim końcem odcinka (który leży w płaszczyźnie) — powstaje trójkąt prostokątny, w którym odcinek jest przeciwprostokątną, a jego rzut jedną z przyprostokątnych; 3) szukany kąt leży w tym trójkącie naprzeciw wysokości (drugiej przyprostokątnej) — oblicz go za pomocą $\\sin$, $\\cos$ lub $\\tan$."
+  },
+  {
+    "type": "solid3d",
+    "title": "Przekątna prostopadłościanu i jej rzut na podstawę",
+    "caption": "Przekątna $AC_1$ łączy wierzchołek podstawy z przeciwległym wierzchołkiem górnej ściany. Jej rzutem prostokątnym na płaszczyznę podstawy jest przekątna podstawy $AC$.",
+    "solid": {
+      "shape": "cuboid",
+      "dimensions": {"a": 6, "b": 8, "c": 10},
+      "labels": {"a": "krawędź a", "b": "krawędź b", "c": "wysokość c"}
+    }
+  },
+  {
+    "type": "examples",
+    "title": "Kąt między przekątną prostopadłościanu a podstawą — sinus i cosinus",
+    "items": [
+      {
+        "problem": "a=3,\\ b=4,\\ c=12. \\ \\text{Oblicz sinus i cosinus kąta między przekątną prostopadłościanu a płaszczyzną podstawy}",
+        "steps": [
+          {"text": "Rzutem przekątnej bryły $AC_1$ na podstawę jest przekątna podstawy $AC=e$; liczymy ją z twierdzenia Pitagorasa dla prostokąta o bokach $a,b$.", "formula": "e=\\sqrt{a^2+b^2}=\\sqrt{3^2+4^2}=5"},
+          {"text": "Przekątna bryły $d$ (przeciwprostokątna trójkąta o przyprostokątnych $e$ i wysokości $c$) to znana już przekątna prostopadłościanu.", "formula": "d=\\sqrt{e^2+c^2}=\\sqrt{5^2+12^2}=13"},
+          {"text": "Szukany kąt $\\alpha$ leży w trójkącie prostokątnym $ACC_1$ naprzeciw wysokości $c$, między przyprostokątną $e$ a przeciwprostokątną $d$.", "formula": "\\sin\\alpha=\\frac{c}{d}=\\frac{12}{13},\\quad \\cos\\alpha=\\frac{e}{d}=\\frac{5}{13}"}
+        ],
+        "answer": "\\sin\\alpha=\\frac{12}{13},\\ \\cos\\alpha=\\frac{5}{13}"
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Kąt między przekątną prostopadłościanu a podstawą",
+    "problem": "a=6,\\ b=8,\\ c=10. \\ \\text{Oblicz kąt między przekątną prostopadłościanu a płaszczyzną podstawy}",
+    "steps": [
+      {
+        "prompt": "Rzutem prostokątnym przekątnej bryły na podstawę jest przekątna podstawy $e$ (prostokąt o bokach $a=6$, $b=8$). Oblicz $e$.",
+        "kind": "input",
+        "acceptedAnswers": ["10"],
+        "reveal": "Z twierdzenia Pitagorasa: $e=\\sqrt{6^2+8^2}=\\sqrt{100}=10$.",
+        "formula": "e=\\sqrt{6^2+8^2}"
+      },
+      {
+        "prompt": "Szukany kąt $\\alpha$ to kąt między przekątną bryły a jej rzutem $e$, w trójkącie prostokątnym o przyprostokątnych $c=10$ (wysokość) i $e=10$. Oblicz $\\tan\\alpha$.",
+        "kind": "input",
+        "acceptedAnswers": ["1"],
+        "reveal": "$\\tan\\alpha=\\dfrac{c}{e}=\\dfrac{10}{10}=1$.",
+        "formula": "\\tan\\alpha=\\frac{c}{e}"
+      },
+      {
+        "prompt": "Dla jakiego kąta z przedziału $0^\\circ$–$90^\\circ$ tangens wynosi $1$?",
+        "kind": "choice",
+        "options": ["$45^\\circ$", "$30^\\circ$", "$60^\\circ$", "$90^\\circ$"],
+        "correctIndex": 0,
+        "reveal": "$\\tan45^\\circ=1$, więc kąt między przekątną prostopadłościanu a podstawą wynosi $\\alpha=45^\\circ$."
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "question": "Prosta $k$ jest prostopadła do płaszczyzny $\\pi$. Ile wynosi kąt między $k$ a $\\pi$?",
+    "options": ["$0^\\circ$", "$45^\\circ$", "$90^\\circ$", "Nie da się tego ustalić bez dodatkowych danych"],
+    "correctIndex": 2,
+    "explanation": "Gdy prosta jest prostopadła do płaszczyzny, z definicji kąt między nimi wynosi $90^\\circ$ — to szczególny przypadek, w którym rzut prostej na płaszczyznę \"zwija się\" do jednego punktu."
+  },
+  {
+    "type": "quiz",
+    "question": "Aby obliczyć kąt między przekątną graniastosłupa prawidłowego a płaszczyzną podstawy, należy rozpatrzyć trójkąt prostokątny o przyprostokątnych:",
+    "options": [
+      "wysokości bryły oraz przekątnej (lub innego odcinka) podstawy, na której leży rzut przekątnej",
+      "dwóch krawędzi podstawy",
+      "krawędzi bocznej i krawędzi podstawy",
+      "dwóch przekątnych ścian bocznych"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rzutem przekątnej bryły na podstawę jest odpowiedni odcinek leżący w podstawie (np. przekątna podstawy), a wysokość bryły jest drugą przyprostokątną — szukany kąt leży między przekątną bryły (przeciwprostokątną) a jej rzutem."
+  },
+  {
+    "type": "tip",
+    "variant": "tip",
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz zastosować twierdzenie o trzech prostopadłych do dowodzenia prostopadłości w przestrzeni (sprowadzając ją do prostopadłości w rzucie), zdefiniować kąt między prostą a płaszczyzną przez rzut prostokątny, rozpoznać przypadki szczególne ($0^\\circ$ i $90^\\circ$), a przede wszystkim — sprowadzić obliczenie takiego kąta w bryle (np. dla przekątnej prostopadłościanu lub graniastosłupa) do trójkąta prostokątnego i policzyć go za pomocą $\\sin$, $\\cos$ lub $\\tan$."
   }
 ]$content5$::jsonb,
   4

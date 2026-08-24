@@ -717,4 +717,248 @@ export const B2_LESSONS: Record<string, GrammarLesson> = {
         '"Needn\'t have bought" = kupiliśmy, choć nie było to potrzebne — dokładnie ta sytuacja. "Mustn\'t have" nie istnieje w znaczeniu przeszłej dedukcji, a "couldn\'t have bought" znaczyłoby, że zakup był niemożliwy.',
     },
   ],
+
+  "causative-have-get": [
+    {
+      type: "intro",
+      text:
+        "Have/get something done opisuje sytuację, w której KTOŚ INNY wykonuje dla nas czynność — zwykle usługę. Nie mówimy \"I cut my hair\" o wizycie u fryzjera, tylko \"I had my hair cut\" — bo to nie my trzymaliśmy nożyczki.",
+    },
+    {
+      type: "formula",
+      title: "have/get + dopełnienie + Past Participle",
+      variants: [
+        {
+          label: "Bierna wersja (usługa)",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "had", role: "aux", note: "have odmienia się w dowolnym czasie" },
+            { text: "my car", role: "object", note: "dopełnienie — rzecz, której to dotyczy" },
+            { text: "repaired", role: "verb", note: "Past Participle (III forma) — ZAWSZE, niezależnie od czasu have" },
+          ],
+          example: { en: "I had my car repaired.", pl: "Oddałem samochód do naprawy. (zrobił to mechanik)" },
+        },
+        {
+          label: "get — wersja nieformalna",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "need to get", role: "aux", note: "get = to samo co have, bardziej potoczne" },
+            { text: "my hair", role: "object" },
+            { text: "cut", role: "verb" },
+          ],
+          example: { en: "I need to get my hair cut this week.", pl: "Muszę w tym tygodniu obciąć włosy (u fryzjera)." },
+        },
+        {
+          label: "aktywna wersja (kto wykonał)",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "had", role: "aux" },
+            { text: "the mechanic", role: "object", note: "podajemy WYKONAWCĘ" },
+            { text: "check", role: "verb", note: "bezokolicznik bez to — nie Past Participle!" },
+            { text: "my brakes", role: "object" },
+          ],
+          example: { en: "I had the mechanic check my brakes.", pl: "Kazałem mechanikowi sprawdzić hamulce." },
+        },
+      ],
+      caption:
+        "Have/get odmienia się w każdym czasie — reszta konstrukcji (dopełnienie + Past Participle) zawsze zostaje bez zmian.",
+    },
+    {
+      type: "compare",
+      title: "Causative vs zwykła strona bierna",
+      columns: [
+        {
+          title: "have something done",
+          formula: "I had my car repaired.",
+          whenToUse: "Podkreśla, że TY zleciłeś czynność — świadoma decyzja skorzystania z usługi.",
+          examples: ["I had my car repaired. (ja to zleciłem)"],
+        },
+        {
+          title: "zwykła strona bierna",
+          formula: "My car was repaired.",
+          whenToUse: "Stwierdza tylko fakt — nie wiadomo, kto to zrobił ani czy ktoś to zlecił.",
+          examples: ["My car was repaired. (fakt, bez kontekstu zlecenia)"],
+        },
+      ],
+    },
+    {
+      type: "table",
+      title: "Have/get something done w różnych czasach",
+      headers: ["Czas", "Przykład"],
+      rows: [
+        ["Present Simple", "She has her nails done every month."],
+        ["Past Simple", "We had our house painted last spring."],
+        ["Present Perfect", "I have just had my phone screen fixed."],
+        ["Future (will)", "They will have their kitchen renovated next year."],
+      ],
+    },
+    {
+      type: "examples",
+      title: "Causative w codziennym życiu",
+      items: [
+        {
+          en: "She had her wallet stolen on the train.",
+          pl: "Ukradziono jej portfel w pociągu.",
+          highlight: "had her wallet stolen",
+        },
+        {
+          en: "Where did you have your hair cut?",
+          pl: "Gdzie obciąłeś/aś sobie włosy?",
+          highlight: "have your hair cut",
+        },
+        {
+          en: "I haven't had my suit dry-cleaned yet.",
+          pl: "Jeszcze nie oddałem garnituru do pralni chemicznej.",
+          highlight: "haven't had",
+        },
+        {
+          en: "We didn't get our windows cleaned this month.",
+          pl: "Nie umyliśmy okien (nie zleciliśmy tego) w tym miesiącu.",
+          highlight: "didn't get",
+        },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Uwaga na znaczenie: "have something done" nie zawsze oznacza świadome zlecenie — może też opisywać coś nieprzyjemnego, co się przydarzyło: "She had her bag stolen" NIE znaczy, że zleciła kradzież! Kontekst (bag stolen vs hair cut) mówi, czy to usługa, czy nieszczęśliwy wypadek.',
+    },
+    {
+      type: "quiz",
+      question: 'Które zdanie oznacza, że to NIE TY malowałeś płot?',
+      options: [
+        "I painted the fence.",
+        "I had the fence painted.",
+        "I was painting the fence.",
+      ],
+      correctIndex: 1,
+      explanation:
+        '"I had the fence painted" = zleciłem malowanie komuś innemu. Pozostałe dwie opcje opisują czynność wykonaną osobiście przez mówiącego.',
+    },
+  ],
+
+  "participle-clauses": [
+    {
+      type: "intro",
+      text:
+        "Zdania imiesłowowe (participle clauses) skracają pełne zdania podrzędne z who/which/because/while — dzięki temu tekst brzmi bardziej zwięźle i naturalnie. To bardzo typowa cecha formalnego, pisanego angielskiego.",
+    },
+    {
+      type: "compare",
+      title: "Imiesłów czynny (-ing) vs bierny (-ed)",
+      columns: [
+        {
+          title: "-ing (Present Participle)",
+          formula: "podmiot WYKONUJE czynność",
+          whenToUse: "Zastępuje zdanie w stronie czynnej: who is/was + czasownik.",
+          examples: [
+            "The man who is standing by the door → The man standing by the door",
+          ],
+        },
+        {
+          title: "-ed / III forma (Past Participle)",
+          formula: "podmiot DOZNAJE czynności",
+          whenToUse: "Zastępuje zdanie w stronie biernej: which was + Past Participle.",
+          examples: [
+            "The letter which was written in French → The letter written in French",
+          ],
+        },
+      ],
+    },
+    {
+      type: "formula",
+      title: "Skracanie zdań podrzędnych",
+      variants: [
+        {
+          label: "Przyczyna (because)",
+          parts: [
+            { text: "Feeling", role: "verb", note: "zamiast \"Because she felt tired\"" },
+            { text: "tired,", role: "object" },
+            { text: "she", role: "subject" },
+            { text: "decided", role: "verb" },
+            { text: "to go to bed early", role: "object" },
+          ],
+          example: {
+            en: "Feeling tired, she decided to go to bed early.",
+            pl: "Czując się zmęczona, postanowiła iść wcześniej spać.",
+          },
+        },
+        {
+          label: "Jednoczesność (while)",
+          parts: [
+            { text: "Walking", role: "verb", note: "zamiast \"While I was walking home\"" },
+            { text: "home,", role: "object" },
+            { text: "I", role: "subject" },
+            { text: "saw", role: "verb" },
+            { text: "an old friend", role: "object" },
+          ],
+          example: {
+            en: "Walking home, I saw an old friend.",
+            pl: "Idąc do domu, spotkałem starego przyjaciela.",
+          },
+        },
+        {
+          label: "Wcześniejsza czynność (having + III)",
+          parts: [
+            { text: "Having finished", role: "verb", note: "Perfect Participle — ta czynność zaszła PIERWSZA" },
+            { text: "his homework,", role: "object" },
+            { text: "he", role: "subject" },
+            { text: "went out to play", role: "verb" },
+          ],
+          example: {
+            en: "Having finished his homework, he went out to play.",
+            pl: "Skończywszy pracę domową, wyszedł się bawić.",
+          },
+        },
+      ],
+      caption:
+        "Podmiot zdania głównego i imiesłowowego MUSI być ten sam — inaczej powstaje błędny \"dangling participle\".",
+    },
+    {
+      type: "examples",
+      title: "Imiesłowy w praktyce",
+      items: [
+        {
+          en: "Not knowing what to say, he just stayed silent.",
+          pl: "Nie wiedząc, co powiedzieć, po prostu milczał.",
+          highlight: "Not knowing",
+        },
+        {
+          en: "Built in the 19th century, the bridge is now a popular tourist attraction.",
+          pl: "Zbudowany w XIX wieku most jest dziś popularną atrakcją turystyczną.",
+          highlight: "Built in the 19th century",
+        },
+        {
+          en: "The woman standing by the door is my colleague.",
+          pl: "Kobieta stojąca przy drzwiach to moja koleżanka z pracy.",
+          highlight: "standing by the door",
+        },
+        {
+          en: "Having lost his keys, he had to call a locksmith.",
+          pl: "Zgubiwszy klucze, musiał wezwać ślusarza.",
+          highlight: "Having lost",
+        },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Klasyczny błąd — "dangling participle": "Walking down the street, the trees looked beautiful." ✗ (to nie drzewa szły ulicą!). Podmiot zdania głównego musi wykonywać czynność z imiesłowu: "Walking down the street, I thought the trees looked beautiful." ✓',
+    },
+    {
+      type: "quiz",
+      question:
+        'Jak poprawnie skrócić: "The castle, which was built in the 12th century, attracts thousands of visitors."?',
+      options: [
+        "Building in the 12th century, the castle attracts thousands of visitors.",
+        "Built in the 12th century, the castle attracts thousands of visitors.",
+        "Having built in the 12th century, the castle attracts thousands of visitors.",
+      ],
+      correctIndex: 1,
+      explanation:
+        'Zamek DOZNAJE czynności budowania (strona bierna), więc potrzebny jest imiesłów bierny: "Built in the 12th century...". "Building" sugerowałoby, że zamek sam siebie budował.',
+    },
+  ],
 };

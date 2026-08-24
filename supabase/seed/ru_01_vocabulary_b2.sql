@@ -167,3 +167,38 @@ insert into vocabulary_words (language, level, category, word_en, translation_pl
 ('ru', 'B2', 'zwroty zaawansowane', 'на самом деле', 'w rzeczywistości', 'На самом деле всё оказалось гораздо сложнее.'),
 ('ru', 'B2', 'zwroty zaawansowane', 'по крайней мере', 'przynajmniej', 'Приди хотя бы на час, по крайней мере ненадолго.'),
 ('ru', 'B2', 'zwroty zaawansowane', 'ввиду того что', 'z uwagi na to, że', 'Ввиду того что времени мало, начнём прямо сейчас.');
+
+-- ============================================================================
+-- Batch: 2026-08-24 — additional B2 vocabulary
+-- New words in existing categories: idiomy, zwroty zaawansowane, nauka
+-- ============================================================================
+insert into vocabulary_words (language, level, category, word_en, translation_pl, example_sentence) values
+-- ---------- idiomy (dodatkowe) ----------
+('ru', 'B2', 'idiomy', 'вешать лапшу на уши', 'wciskać komuś kit (dosł. wieszać makaron na uszy)', 'Не вешай мне лапшу на уши, я тебе не верю.'),
+('ru', 'B2', 'idiomy', 'попасть впросак', 'wpaść w tarapaty (dać się nabrać)', 'Он попал впросак, не проверив факты перед выступлением.'),
+('ru', 'B2', 'idiomy', 'на седьмом небе', 'w siódmym niebie', 'Она была на седьмом небе от счастья после свадьбы.'),
+('ru', 'B2', 'idiomy', 'душа в душу', 'w idealnej zgodzie', 'Они прожили вместе сорок лет душа в душу.'),
+('ru', 'B2', 'idiomy', 'яблоку негде упасть', 'tłok (nie ma gdzie szpilki wetknąć)', 'В зале было яблоку негде упасть.'),
+('ru', 'B2', 'idiomy', 'за семью печатями', 'okryty głęboką tajemnicą', 'Результаты расследования остаются за семью печатями.'),
+('ru', 'B2', 'idiomy', 'набить руку', 'nabrać wprawy', 'За годы работы он набил руку в этом деле.'),
+('ru', 'B2', 'idiomy', 'семь пятниц на неделе', 'być niestałym w decyzjach', 'У него семь пятниц на неделе, на него нельзя положиться.'),
+('ru', 'B2', 'idiomy', 'прикусить язык', 'ugryźć się w język', 'Она чуть не сказала правду, но вовремя прикусила язык.'),
+-- ---------- zwroty zaawansowane (dodatkowe) ----------
+('ru', 'B2', 'zwroty zaawansowane', 'таким образом', 'w ten sposób (a zatem)', 'Таким образом, мы можем сделать однозначный вывод.'),
+('ru', 'B2', 'zwroty zaawansowane', 'более того', 'co więcej', 'Более того, эта проблема касается всех регионов страны.'),
+('ru', 'B2', 'zwroty zaawansowane', 'иными словами', 'innymi słowy', 'Иными словами, проект оказался убыточным.'),
+('ru', 'B2', 'zwroty zaawansowane', 'не говоря уже о', 'nie mówiąc już o', 'Не говоря уже о расходах, проект требует много времени.'),
+('ru', 'B2', 'zwroty zaawansowane', 'что касается', 'jeśli chodzi o', 'Что касается цены, она осталась прежней.'),
+('ru', 'B2', 'zwroty zaawansowane', 'невзирая на', 'nie zważając na (wbrew)', 'Невзирая на трудности, команда завершила проект вовремя.'),
+('ru', 'B2', 'zwroty zaawansowane', 'в силу того что', 'z uwagi na to, że (skutkiem tego, że)', 'В силу того что спрос упал, компания сократила производство.'),
+('ru', 'B2', 'zwroty zaawansowane', 'с одной стороны', 'z jednej strony', 'С одной стороны, решение выгодно, с другой — рискованно.'),
+('ru', 'B2', 'zwroty zaawansowane', 'так называемый', 'tak zwany', 'Так называемый эффект бабочки объясняет цепные реакции.'),
+-- ---------- nauka (dodatkowe) ----------
+('ru', 'B2', 'nauka', 'молекула', 'molekuła (cząsteczka)', 'Учёные исследовали структуру молекулы воды.'),
+('ru', 'B2', 'nauka', 'фактор', 'czynnik', 'Климат — важный фактор, влияющий на урожай.'),
+('ru', 'B2', 'nauka', 'критерий', 'kryterium', 'Учёные предложили новый критерий оценки.'),
+('ru', 'B2', 'nauka', 'концепция', 'koncepcja', 'Эта концепция изменила подход к изучению вселенной.'),
+('ru', 'B2', 'nauka', 'воспроизводимость', 'powtarzalność (wyników)', 'Воспроизводимость результатов — ключевое условие в науке.'),
+('ru', 'B2', 'nauka', 'корреляция', 'korelacja', 'Учёные нашли корреляцию между стрессом и болезнями сердца.'),
+('ru', 'B2', 'nauka', 'погрешность', 'błąd pomiarowy', 'Погрешность измерения оказалась незначительной.'),
+('ru', 'B2', 'nauka', 'умозаключение', 'wniosek (konkluzja rozumowa)', 'Из этих данных он сделал ошибочное умозаключение.');

@@ -28,6 +28,7 @@ import { getMaturaSettings } from "@/lib/matura/settings";
 import { MATURA_EXACT_MATCH_SECTION_SLUGS } from "@/lib/matura/sections";
 import { getSectionLessons, groupLessonsByKind } from "@/lib/matura/theory";
 import { getTypeStats } from "@/lib/matura/task-stock";
+import { getTaskType } from "@/lib/matura/task-types";
 import { startTaskType } from "@/lib/matura/practice-actions";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
@@ -50,6 +51,7 @@ export default async function MaturaSectionPage({
   const { sectionSlug } = await params;
   if (!MATURA_EXACT_MATCH_SECTION_SLUGS.includes(sectionSlug as MaturaSectionSlug)) notFound();
   const { pusto } = await searchParams;
+  const pustoType = pusto ? getTaskType(pusto) : undefined;
 
   const profile = await requireProfile();
   const supabase = await createClient();
@@ -135,8 +137,9 @@ export default async function MaturaSectionPage({
 
         {pusto && (
           <Card className="border-danger/40 text-sm text-foreground-muted">
-            Do tego typu nie ma jeszcze żadnego zadania. Nagrania do rozumienia ze słuchu dodaje
-            administrator — wróć tu wkrótce.
+            Nie udało się przygotować zadania
+            {pustoType ? ` typu „${pustoType.label}”` : ""} — zadania przygotowuje AI na bieżąco,
+            spróbuj ponownie za chwilę.
           </Card>
         )}
 
@@ -157,11 +160,6 @@ export default async function MaturaSectionPage({
             lastPoints={stat.lastPoints}
             lastMaxPoints={stat.lastMaxPoints}
             averagePercent={stat.averagePercent}
-            unavailableNote={
-              !stat.typeDef.aiGeneratable && stat.freshAvailable === 0 && stat.completedCount > 0
-                ? "Wszystkie nagrania z tej puli masz już za sobą — kolejne podejście powtórzy najstarsze."
-                : undefined
-            }
           />
         ))}
       </div>

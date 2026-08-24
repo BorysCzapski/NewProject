@@ -168,3 +168,64 @@ insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, 
   ('3286c06d-6383-4b9a-b5d0-5162b69c8987', 'multiple_choice', 'Direct: "Where do you live?" Reported: He asked me ___.', '["where do I live","where I lived","where did I live"]'::jsonb, 'where I lived', 3),
   ('3286c06d-6383-4b9a-b5d0-5162b69c8987', 'gap_fill', 'Direct: "I can swim very well." Reported: She said she ___ swim very well.', null, 'could', 4),
   ('3286c06d-6383-4b9a-b5d0-5162b69c8987', 'transformation', 'Rewrite in reported speech: He said, "I am learning English."', null, 'He said (that) he was learning English.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 5: Used to / would - nawyki w przeszłości
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, level, slug, title, explanation, order_index) values (
+  '96e40378-10bb-4bc3-8798-6b11332f8d31',
+  'B1',
+  'used-to-would',
+  'Used to / would - nawyki w przeszłości',
+  '"Used to" oraz "would" używamy, aby mówić o powtarzających się czynnościach lub stanach z przeszłości, które już nie są prawdą - to najprostszy sposób na opisanie dawnych nawyków.
+"Used to" + czasownik w formie podstawowej opisuje zarówno powtarzające się czynności, jak i stałe stany (miejsce zamieszkania, posiadanie czegoś, uczucia), np.: "I used to live in Kraków." oraz "She used to smoke, but she quit five years ago."
+"Would" + czasownik w formie podstawowej też opisuje powtarzające się czynności z przeszłości, ale NIE stosujemy go do stanów - would pasuje tylko do wydarzeń, które można sobie wyobrazić jako powtarzającą się scenę, np.: "Every summer we would visit my grandparents in the countryside."
+Porównaj: "I used to have a dog." (stan - poprawnie tylko z used to) oraz błędne "I would have a dog." (would nie opisuje posiadania ani innych stałych stanów, tylko czynności).
+Przeczenie z "used to" tworzymy za pomocą "didn''t use to" (bez końcówki -d po didn''t), np.: "I didn''t use to like coffee, but now I drink it every morning."
+Pytania z "used to" tworzymy za pomocą "did...use to", np.: "Did you use to play football when you were a child?"
+"Would" rzadko pojawia się w przeczeniach i pytaniach o dawne nawyki - w tej funkcji zwykle sięgamy po "used to" albo zwykły Past Simple.
+Warto odróżnić "used to" (nawyk z przeszłości, którego już nie ma) od "be used to" (być przyzwyczajonym do czegoś) oraz "get used to" (przyzwyczajać się do czegoś) - te dwie ostatnie konstrukcje łączą się z rzeczownikiem lub gerundem, nie z bezokolicznikiem, np.: "I am used to waking up early." (jestem już przyzwyczajony, robię to teraz) w kontraście do "I used to wake up early." (kiedyś tak robiłem, teraz już nie).
+Zdania z "used to" i "would" zawsze podkreślają zmianę - sytuacja z przeszłości już nie obowiązuje, np.: "We used to go to the cinema every Friday, but now we just watch movies at home."
+W jednej opowieści często łączy się obie konstrukcje: "used to" wprowadza temat lub opisuje stan, a "would" opisuje konkretne powtarzające się czynności w tamtym okresie, np.: "I used to spend my summers at my grandparents'' farm. Every morning, we would feed the chickens together."
+Warto ćwiczyć te konstrukcje, opowiadając o własnym dzieciństwie lub dawnych nawykach, zwracając uwagę, czy opisujemy stan (tylko used to) czy powtarzającą się czynność (used to lub would).',
+  5
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'gap_fill', 'When I was a child, I ___ (use to / spend) every summer at my grandparents'' farm.', null, 'used to spend', 0),
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'gap_fill', 'She ___ (not / use to / like) spicy food, but now she loves it.', null, 'did not use to like', 1),
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'multiple_choice', 'Every Sunday, my father ___ take us fishing by the lake.', '["would","used","uses"]'::jsonb, 'would', 2),
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'multiple_choice', 'Which sentence is grammatically correct?', '["I would have a dog when I was young.","I used to have a dog when I was young.","I use to have a dog when I was young."]'::jsonb, 'I used to have a dog when I was young.', 3),
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'transformation', 'Rewrite using "used to": "I lived in Paris in 2010, but I do not live there anymore."', null, 'I used to live in Paris.', 4),
+  ('96e40378-10bb-4bc3-8798-6b11332f8d31', 'transformation', 'Rewrite using "be used to": "She has done so much public speaking that it does not make her nervous anymore."', null, 'She is used to public speaking.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 6: Gerund vs bezokolicznik po czasownikach
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, level, slug, title, explanation, order_index) values (
+  'bb69d0c7-363f-42a0-a0d2-1662977d1b2f',
+  'B1',
+  'gerund-vs-infinitive',
+  'Gerund vs bezokolicznik po czasownikach',
+  'Niektóre angielskie czasowniki łączą się wyłącznie z gerundem (czasownik + -ing), inne wyłącznie z bezokolicznikiem (to + czasownik), a jeszcze inne z obiema formami - czasem bez różnicy w znaczeniu, a czasem ze zmianą sensu całego zdania.
+Czasowniki takie jak "enjoy", "avoid", "finish", "suggest", "mind", "consider", "practise", "give up" łączą się wyłącznie z gerundem, np.: "I enjoy reading before bed." oraz "She avoided answering the question."
+Czasowniki takie jak "want", "decide", "hope", "plan", "promise", "afford", "manage", "refuse", "agree", "offer" łączą się wyłącznie z bezokolicznikiem, np.: "I want to travel more this year." oraz "He decided to change his job."
+Po czasownikach wyrażających uczucia i preferencje, jak "like", "love", "hate", "prefer", "start", "begin", "continue", można użyć zarówno gerundu, jak i bezokolicznika, praktycznie bez różnicy w znaczeniu, np.: "I like swimming." oraz "I like to swim." znaczą niemal to samo.
+Niektóre czasowniki zmieniają znaczenie w zależności od tego, czy stoi po nich gerund czy bezokolicznik - to najtrudniejsza grupa dla uczących się. "Remember doing something" oznacza, że pamiętasz, że coś zrobiłeś w przeszłości ("I remember locking the door." - pamiętam, jak zamykałem drzwi), a "remember to do something" oznacza, że pamiętasz, żeby coś zrobić w przyszłości ("Remember to lock the door before you leave.").
+Podobnie działa "forget": "forget doing something" (zapomnieć, że się coś zrobiło) wobec "forget to do something" (zapomnieć zrobić coś, co było potrzebne), np.: "I''ll never forget seeing the pyramids." oraz "Don''t forget to call your mother."
+"Stop" również zmienia znaczenie: "stop doing something" oznacza przerwanie danej czynności na stałe ("He stopped smoking." - rzucił palenie), a "stop to do something" oznacza przerwanie jednej czynności, aby wykonać inną ("He stopped to smoke." - przerwał to, co robił, żeby zapalić papierosa).
+"Try" ma podobną różnicę: "try doing something" oznacza eksperymentowanie z rozwiązaniem ("Try turning it off and on again."), a "try to do something" oznacza próbę zrobienia czegoś trudnego, niekoniecznie udaną ("I tried to open the jar, but I couldn''t.").
+Po przyimkach (in, on, at, about, for, of, without itd.) zawsze stosujemy gerund, nigdy bezokolicznik, np.: "She is interested in learning Spanish." oraz "Thank you for helping me."
+Czasowniki modalne (can, must, should, will itd.) zawsze łączą się z bezokolicznikiem bez "to" - to osobna kategoria, którą warto odróżnić od zwykłych czasowników opisanych powyżej.
+Ponieważ nie ma jednej reguły obejmującej wszystkie czasowniki, najlepszą strategią jest zapamiętywanie par czasownik + gerund/bezokolicznik w kontekście całych zdań, a nie uczenie się suchych list na pamięć.
+Ta konstrukcja jest bardzo często testowana na egzaminach, ponieważ pokazuje, jak dobrze uczeń zna typowe kolokacje i naturalne połączenia czasowników w języku angielskim.',
+  6
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'gap_fill', 'I really enjoy ___ (read) before I go to sleep.', null, 'reading', 0),
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'gap_fill', 'She decided ___ (change) her career after ten years in banking.', null, 'to change', 1),
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'multiple_choice', 'I remember ___ the door before I left the house - I''m sure I did it.', '["locking","to lock","lock"]'::jsonb, 'locking', 2),
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'multiple_choice', 'She is interested in ___ a new language next year.', '["to learn","learning","learn"]'::jsonb, 'learning', 3),
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'transformation', 'Rewrite using "stop + -ing": "He used to smoke, but he does not do it anymore."', null, 'He stopped smoking.', 4),
+  ('bb69d0c7-363f-42a0-a0d2-1662977d1b2f', 'transformation', 'Rewrite using "remember to": "Please do not forget - you need to send the email today."', null, 'Remember to send the email today.', 5);

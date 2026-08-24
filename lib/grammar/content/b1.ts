@@ -479,4 +479,211 @@ export const B1_LESSONS: Record<string, GrammarLesson> = {
         "Pytanie zależne traci szyk pytający: bez do/did, zwykła kolejność podmiot + czasownik, a czas cofa się o stopień (live → lived): He asked me where I lived.",
     },
   ],
+
+  "used-to-would": [
+    {
+      type: "intro",
+      text:
+        "Used to i would opisują nawyki i stany z przeszłości, których już nie ma. Used to działa z czynnościami I stanami (mieszkanie gdzieś, posiadanie czegoś). Would działa TYLKO z powtarzającymi się czynnościami — nigdy ze stanami.",
+    },
+    {
+      type: "formula",
+      title: "Used to — czynności i stany",
+      variants: [
+        {
+          label: "Twierdzenie",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "used to", role: "aux", note: "zawsze ta sama forma, bez względu na osobę" },
+            { text: "live", role: "verb", note: "bezokolicznik bez to" },
+            { text: "in Kraków", role: "object" },
+          ],
+          example: { en: "I used to live in Kraków.", pl: "Kiedyś mieszkałem w Krakowie." },
+        },
+        {
+          label: "Przeczenie",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "didn't", role: "aux", note: "did przejmuje czas przeszły" },
+            { text: "use to", role: "verb", note: "UWAGA: bez -d, bo did już jest w czasie przeszłym" },
+            { text: "like coffee", role: "object" },
+          ],
+          example: { en: "I didn't use to like coffee.", pl: "Kiedyś nie lubiłem kawy." },
+        },
+        {
+          label: "Pytanie",
+          parts: [
+            { text: "Did", role: "aux" },
+            { text: "you", role: "subject" },
+            { text: "use to", role: "verb", note: "znowu bez -d po did" },
+            { text: "play football?", role: "object" },
+          ],
+          example: { en: "Did you use to play football as a child?", pl: "Czy grałeś kiedyś w piłkę jako dziecko?" },
+        },
+      ],
+      caption:
+        "Used to opisuje zarówno powtarzające się czynności, jak i stałe stany — miejsce zamieszkania, posiadanie czegoś, uczucia.",
+    },
+    {
+      type: "compare",
+      title: "Used to vs would — kto opisuje stany?",
+      columns: [
+        {
+          title: "used to",
+          formula: "used to + czasownik",
+          whenToUse: "Czynności ORAZ stany (mieć, mieszkać, lubić, wyglądać).",
+          examples: [
+            "I used to have a dog. (stan — poprawnie)",
+            "We used to live near the sea. (stan — poprawnie)",
+          ],
+        },
+        {
+          title: "would",
+          formula: "would + czasownik",
+          whenToUse: "TYLKO powtarzające się czynności — nigdy stany.",
+          examples: [
+            "Every summer we would visit my grandparents.",
+            "✗ I would have a dog. (błąd — have to stan)",
+          ],
+        },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "tip",
+      text:
+        'Test: jeśli zdanie da się wyobrazić jako scenę powtarzaną w czasie ("robił to co tydzień") — pasuje would. Jeśli to opis stanu — tylko used to.',
+    },
+    {
+      type: "table",
+      title: "Sąsiedzi used to, którzy znaczą co innego",
+      headers: ["Konstrukcja", "Znaczenie", "Przykład"],
+      rows: [
+        ["used to + verb", "dawny nawyk, już nieaktualny", "I used to wake up early. (kiedyś, już nie)"],
+        ["be used to + -ing/rzeczownik", "być przyzwyczajonym (teraz)", "I am used to waking up early. (przyzwyczajony, robię tak teraz)"],
+        ["get used to + -ing/rzeczownik", "przyzwyczajać się do czegoś", "I'm getting used to the new schedule."],
+      ],
+      caption: "Te trzy konstrukcje wyglądają podobnie, ale mówią o zupełnie różnych rzeczach — used to o przeszłości, be/get used to o teraźniejszości.",
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "We used to go to the cinema every Friday, but now we just watch movies at home.", pl: "Kiedyś chodziliśmy do kina co piątek, a teraz oglądamy filmy w domu.", highlight: "used to go" },
+        { en: "Every morning, we would feed the chickens together.", pl: "Każdego ranka razem karmiliśmy kury.", highlight: "would feed" },
+        { en: "She used to smoke, but she quit five years ago.", pl: "Kiedyś paliła, ale rzuciła pięć lat temu.", highlight: "used to smoke" },
+        { en: "I am used to waking up early now — it doesn't bother me anymore.", pl: "Jestem już przyzwyczajony do wczesnego wstawania — nie przeszkadza mi to.", highlight: "am used to" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Najczęstszy błąd: "I would have a dog when I was young." ✗ — would nie opisuje posiadania (stanu). Poprawnie: "I used to have a dog." ✓. I pamiętaj o pisowni przeczenia: "didn\'t used to" ✗ → "didn\'t use to" ✓ (bez -d, bo did już niesie czas przeszły).',
+    },
+    {
+      type: "quiz",
+      question: "Które zdanie jest poprawne?",
+      options: [
+        "I would have long hair when I was a teenager.",
+        "I used to have long hair when I was a teenager.",
+        "I use to have long hair when I was a teenager.",
+      ],
+      correctIndex: 1,
+      explanation:
+        '"Have long hair" to stan, więc would jest tu błędne. Poprawna forma przeszła to "used to have" (z -d), nie "use to have".',
+    },
+  ],
+
+  "gerund-vs-infinitive": [
+    {
+      type: "intro",
+      text:
+        "Po jednych czasownikach stawiamy gerund (-ing), po innych bezokolicznik (to + verb), a po jeszcze innych oba — czasem ze zmianą znaczenia. Nie ma jednej reguły, więc uczymy się par czasownik + wzorzec w kontekście.",
+    },
+    {
+      type: "table",
+      title: "Trzy grupy czasowników",
+      headers: ["Grupa", "Przykłady czasowników", "Zdanie"],
+      rows: [
+        ["tylko gerund", "enjoy, avoid, finish, suggest, mind, practise, give up", "I enjoy reading before bed."],
+        ["tylko bezokolicznik", "want, decide, hope, plan, promise, afford, manage, refuse", "He decided to change his job."],
+        ["oba, bez różnicy", "like, love, hate, prefer, start, begin, continue", "I like swimming. / I like to swim."],
+      ],
+    },
+    {
+      type: "formula",
+      title: "Czasowniki, które zmieniają znaczenie",
+      variants: [
+        {
+          label: "remember + -ing",
+          parts: [
+            { text: "I", role: "subject" },
+            { text: "remember", role: "verb" },
+            { text: "locking", role: "verb", note: "gerund — pamiętam czynność Z PRZESZŁOŚCI, że ją wykonałem" },
+            { text: "the door", role: "object" },
+          ],
+          example: { en: "I remember locking the door.", pl: "Pamiętam, jak zamykałem drzwi. (i to zrobiłem)" },
+        },
+        {
+          label: "remember + to",
+          parts: [
+            { text: "Remember", role: "verb" },
+            { text: "to lock", role: "verb", note: "bezokolicznik — pamiętaj, żeby zrobić to W PRZYSZŁOŚCI" },
+            { text: "the door", role: "object" },
+            { text: "before you leave", role: "object" },
+          ],
+          example: { en: "Remember to lock the door before you leave.", pl: "Pamiętaj, żeby zamknąć drzwi, zanim wyjdziesz." },
+        },
+      ],
+      caption:
+        "Ten sam wzorzec działa dla forget (forget doing = zapomnieć, że się zrobiło; forget to do = zapomnieć zrobić coś potrzebnego).",
+    },
+    {
+      type: "compare",
+      title: "stop i try — pułapka znaczeniowa",
+      columns: [
+        {
+          title: "stop / try + -ing",
+          formula: "stop doing / try doing",
+          whenToUse: "stop doing = przerwać czynność na stałe; try doing = eksperymentować z rozwiązaniem.",
+          examples: [
+            "He stopped smoking. (rzucił palenie)",
+            "Try turning it off and on again. (spróbuj tego sposobu)",
+          ],
+        },
+        {
+          title: "stop / try + to",
+          formula: "stop to do / try to do",
+          whenToUse: "stop to do = przerwać jedną czynność, by zrobić drugą; try to do = próbować (niekoniecznie z sukcesem).",
+          examples: [
+            "He stopped to smoke. (przerwał to, co robił, żeby zapalić)",
+            "I tried to open the jar, but I couldn't. (próba się nie udała)",
+          ],
+        },
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "She avoided answering the question.", pl: "Unikała odpowiedzi na to pytanie.", highlight: "avoided answering" },
+        { en: "I want to travel more this year.", pl: "Chcę więcej podróżować w tym roku.", highlight: "want to travel" },
+        { en: "She is interested in learning Spanish.", pl: "Interesuje się nauką hiszpańskiego.", highlight: "in learning" },
+        { en: "Thank you for helping me.", pl: "Dziękuję, że mi pomogłeś.", highlight: "for helping" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Po przyimku (in, on, at, about, for, of, without...) ZAWSZE stoi gerund, nigdy bezokolicznik: "interested in learn Spanish" ✗ → "interested in learning Spanish" ✓. To osobna reguła od czasowników modalnych, po których zawsze jest bezokolicznik bez to: "must go", nie "must to go".',
+    },
+    {
+      type: "quiz",
+      question: 'Uzupełnij: "Please remember ___ the door before you leave — it\'s important."',
+      options: ["locking", "to lock", "lock"],
+      correctIndex: 1,
+      explanation:
+        'Chodzi o przyszłą czynność do wykonania (przypomnienie na przód), więc potrzebny jest bezokolicznik: "remember to lock". "Remember locking" opisywałoby wspomnienie z przeszłości.',
+    },
+  ],
 };
