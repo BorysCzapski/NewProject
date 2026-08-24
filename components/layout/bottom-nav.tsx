@@ -33,6 +33,10 @@ import {
   HeartHandshake,
   Timer,
   ListChecks,
+  Dumbbell,
+  Droplet,
+  UtensilsCrossed,
+  Pill,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -60,6 +64,10 @@ const ICONS = {
   HeartHandshake,
   Timer,
   ListChecks,
+  Dumbbell,
+  Droplet,
+  UtensilsCrossed,
+  Pill,
 };
 
 export function BottomNav() {
