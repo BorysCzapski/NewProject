@@ -84,6 +84,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/godziny",
   },
   {
+    id: "gitara",
+    name: "Gitara",
+    description: "Nauka gry na gitarze: akordy, CAGED, rytm, techniki, piosenki",
+    section: "nauka",
+    icon: "Guitar",
+    href: "/gitara",
+  },
+  {
     id: "kuznia",
     name: "Kuźnia",
     description: "Kreator promptów do budowy kolejnych aplikacji",

@@ -192,6 +192,7 @@ export const ACTIVITY_TYPES = {
   MATURA: "matura",
   GEOGRAFIA: "geografia",
   ALGORYTMY: "algorytmy",
+  GITARA: "gitara",
 } as const;
 export type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 
