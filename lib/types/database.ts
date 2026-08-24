@@ -1622,70 +1622,93 @@ export interface AlgoExerciseAttempt {
 }
 
 // ============================================================================
-// Siłownia — trening, nawodnienie, odżywianie, suplementy.
-// Mirrors supabase/migrations/0026_silownia.sql.
+// Gitara — nauka gry na gitarze: akordy, nuty i rytm, CAGED, techniki,
+// biblioteka akordów i piosenek, praktyka (metronom, stroik).
+// Mirrors supabase/migrations/0025_gitara.sql. Nie ma banku ćwiczeń —
+// uzasadnienie w komentarzu na górze tej migracji.
 // ============================================================================
+export type GtrChordCategory = "open" | "power" | "barre" | "rozszerzony";
+export type GtrSongSource = "curated" | "imported";
+export type GtrPracticeKind = "metronom" | "strojenie" | "wolna-gra";
 
-export type GymGoal = "redukcja" | "masa" | "utrzymanie" | "wytrzymalosc";
-
-export interface GymProfile {
-  user_id: string;
-  weight_kg: number | null;
-  height_cm: number | null;
-  goal: GymGoal | null;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface WorkoutSet {
-  reps: number;
-  weightKg: number | null;
-}
-
-export interface WorkoutExercise {
-  name: string;
-  sets: WorkoutSet[];
-}
-
-export interface GymWorkout {
+export interface GtrTopic {
   id: string;
-  user_id: string;
-  workout_date: string;
-  split_label: string;
-  duration_minutes: number | null;
-  exercises: WorkoutExercise[];
-  note: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface GymHydrationLog {
-  user_id: string;
-  log_date: string;
-  consumed_ml: number;
-  updated_at: string;
-}
-
-export interface GymMealEntry {
-  id: string;
-  user_id: string;
-  entry_date: string;
+  slug: string;
+  title: string;
   description: string;
-  calories: number;
-  protein_g: number;
-  carbs_g: number;
-  fat_g: number;
-  ai_note: string | null;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GtrLesson {
+  id: string;
+  topic_id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  /** GtrBlock[] from lib/gitara/lesson-blocks.ts — kept as unknown[] here to
+   * avoid a client-type <-> db-type import cycle; cast at the call site
+   * (same pattern as AlgoLesson.content above). */
+  content: unknown[];
+  reading_minutes: number;
+  order_index: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface GtrLessonProgress {
+  user_id: string;
+  lesson_id: string;
+  completed_at: string;
+}
+
+/** Mirrors FrettedChord from lib/gitara/theory.ts — kept as unknown here for
+ * the same reason GtrLesson.content is: no client-type import in a db-type
+ * file. Cast at the call site. */
+export interface GtrChord {
+  id: string;
+  slug: string;
+  symbol: string;
+  root: string;
+  quality: string;
+  category: GtrChordCategory;
+  positions: unknown;
+  difficulty: 1 | 2 | 3;
+  order_index: number;
+  description: string;
   created_at: string;
 }
 
-export interface GymSupplementEntry {
+export interface GtrSong {
+  id: string;
+  slug: string;
+  title: string;
+  artist: string;
+  difficulty: 1 | 2 | 3;
+  tempo_bpm: number | null;
+  capo: number;
+  content_chordpro: string;
+  tab_text: string;
+  source: GtrSongSource;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface GtrPracticeSession {
   id: string;
   user_id: string;
-  entry_date: string;
-  name: string;
-  dose: string | null;
-  time_label: string | null;
-  note: string | null;
-  created_at: string;
+  kind: GtrPracticeKind;
+  bpm: number | null;
+  duration_seconds: number;
+  practiced_at: string;
+}
+
+export interface GtrDrillAttempt {
+  id: string;
+  user_id: string;
+  /** Slug from lib/gitara/drills.ts. */
+  drill_type: string;
+  is_correct: boolean;
+  attempted_at: string;
 }

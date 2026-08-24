@@ -147,6 +147,45 @@ wygenerowania SQL-a m.in. dla nieposortowanej tablicy w bloku wyszukiwania binar
 pokazałby wtedy poprawne kroki prowadzące do złej odpowiedzi) i dla krawędzi wskazującej
 nieistniejący wierzchołek.
 
+**Gitara** (`/gitara`) — nauka gry na gitarze od zera: akordy, nuty i rytm, system CAGED,
+techniki gry, biblioteka akordów i piosenek, metronom i stroik. Pięć działów w kolejności
+zależności, nie w taksonomię — postawa i strojenie jako pierwszy dział, bo nic innego nie da
+się ćwiczyć na rozstrojonej gitarze; pierwsze akordy przed nutami i rytmem, bo to one
+utrzymują motywację początkującego; CAGED dopiero po obu, bo jest dosłownie tymi samymi
+pięcioma kształtami akordów przesuwanymi po gryfie poznanym w dziale o nutach. Uzasadnienie
+kolejności w `lib/gitara/topics.ts`.
+
+Bloki interaktywne (`lib/gitara/lesson-blocks.ts`) liczą prawdziwą teorię muzyki
+(`lib/gitara/theory.ts`), nie rysują statycznych obrazków: diagram akordu i przebieg
+progresji odtwarzane prawdziwym syntezatorem strun (Karplus-Strong przez Web Audio API, bez
+próbek audio), pięć kształtów CAGED wyprowadzonych transpozycją prawdziwych otwartych
+akordów C-A-G-E-D (z jednym efektem ubocznym wartym uwagi: kształty G i E dla tego samego
+akordu wychodzą na tym samym progu struny basowej, bo dzielą tę samą strunę root — dlatego
+G jest w praktyce rzadziej grywany, co wynika z matematyki transpozycji, nie jest arbitralną
+notatką), klikalny gryf („znajdź wszystkie C") i wartości rytmiczne wystukiwane w
+rzeczywistym tempie. Poprawność muzyczna całej biblioteki (nuty każdego akordu, dźwięk
+każdego pola gryfu, root każdego kształtu CAGED) jest zweryfikowana programowo przy
+tworzeniu danych startowych, nie tylko oceniona „na oko".
+
+Aplikacja świadomie nie ma banku zadań w stylu Algorytmów czy Matury: każde pytanie, jakie
+da się zadać o gryfie czy akordzie („jaka to nuta", „jaki to akord"), da się wygenerować i
+ocenić deterministycznie z `lib/gitara/theory.ts` — nie ma tu żadnej ukrytej odpowiedzi
+wartej chronienia po stronie serwera, więc ćwiczenia (np. blok `fretboard-explorer`)
+generują się i oceniają w przeglądarce, a `gtr_drill_attempts` zapisuje wyłącznie wynik.
+Biblioteka akordów (`/gitara/akordy`) i piosenek (`/gitara/piosenki`) to osobne, przeglądalne
+zasoby poza lekcjami; import śpiewnika z PDF-a (`app/api/gitara/import-songbook/route.ts`)
+działa jak w Scholi — AI dzieli plik na piosenki w formacie ChordPro, człowiek poprawia
+przed zapisem, dopiero wtedy trafiają do bazy. Startowa biblioteka piosenek to wyłącznie
+utwory tradycyjne/ludowe bez ustalonego autorstwa („Wlazł kotek na płotek", „Sto lat",
+„Cicha noc", „Płonie ognisko") — świadomie, bo spec wymaga zgody na rozpowszechnianie
+tabulatur, a tej zgody nie da się zweryfikować automatycznie dla dowolnej współczesnej
+piosenki. `/gitara/cwicz` to metronom (harmonogram z wyprzedzeniem, ta sama technika co w
+prawdziwych aplikacjach audio, żeby tempo nie driftowało pod jitterem JS-owej pętli zdarzeń)
+i stroik chromatyczny z detekcją wysokości dźwięku przez mikrofon (autokorelacja, Web Audio
+API) — z jawną obsługą braku dostępu do mikrofonu, zgodnie ze specem („alternatywna ścieżka
+bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść startowa:
+`supabase/seed/gitara/*.sql`.
+
 **Godziny** (`/godziny`) — dziennik czasu nauki: ile minut i **czego** się dziś uczyłeś.
 Wpis to data + długość sesji + temat z własnej listy (+ opcjonalna notatka), a ekran główny
 odpowiada na jedno pytanie — „ile dziś zrobiłem i co ostatnio robiłem": kafelki dziś/tydzień/
@@ -612,6 +651,10 @@ components/
   algorytmy/         # bloki lekcji Algorytmów: statyczne (kod, tabela złożoności,
                      # porównanie) plus interaktywne wizualizatory sortowania, BFS/DFS,
                      # wyszukiwania binarnego, stosu/kolejki i rzędów wzrostu
+  gitara/            # diagram akordu (SVG, współdzielony przez bibliotekę akordów, bloki
+                     # lekcji i kształty CAGED), narzędzia metronomu/stroika, przepływ
+                     # importu śpiewnika PDF, bloki lekcji (chord-diagram, caged-shapes,
+                     # fretboard-explorer, rhythm-values, progression, tab, ...)
   practice/          # kafelek typu zadania z licznikiem wykonań i przycisk „kolejne
                      # zadanie tego typu" — wspólne dla Matury i Geografii; formularze,
                      # nie linki, bo wydanie zadania bywa mutacją (generuje nowe)
@@ -641,13 +684,18 @@ lib/
                      # kolejka ćwiczeń per typ (exercise-stock.ts) i generator zadań
   godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
                      # i sumowanie historii, akcje wpisów i tematów
+  gitara/            # Gitara: teoria muzyki i kształty akordów (theory.ts, w tym 5
+                     # kształtów CAGED wyprowadzonych transpozycją), Web Audio (syntezator
+                     # strun Karplus-Strong, metronom z harmonogramem z wyprzedzeniem,
+                     # stroik przez autokorelację), typy bloków lekcji, akcje serwerowe —
+                     # bez banku zadań (uzasadnienie w migracji 0025 i lib/gitara/actions.ts)
   types/database.ts  # typy TypeScript odzwierciedlające schemat bazy
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
                      # 0013 = Matura, 0016 = wymiar języka, 0017 = teoria i słownictwo,
-                     # 0020 = Godziny)
+                     # 0020 = Godziny, 0024 = Algorytmy, 0025 = Gitara)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
-                     # matura-es/)
+                     # matura-es/, algorytmy/, gitara/)
 scripts/
   db.mjs             # runner migracji i skryptów SQL (`npm run db`)
   algorytmy-build-lessons.mjs # walidacja lekcji Algorytmów (JSON) → 03_lessons.sql
