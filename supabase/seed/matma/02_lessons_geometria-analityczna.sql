@@ -923,27 +923,43 @@ insert into math_lessons (topic_id, title, content, order_index) values (
   $content5$[
   {
     "type": "intro",
-    "text": "Witaj w lekcji teorii na temat wektorów. Wektory to istotna część matematyki, szczególnie w geometrii płaskiej i przestrzennej. Pozwalają one na opisanie kierunku i wielkości w przestrzeni. W tej lekcji dowiesz się, jak obliczać współrzędne wektora, jego długość, oraz jak dodawać, odejmować i porównywać wektory."
+    "text": "Wektory pozwalają opisywać przesunięcia i kierunki na płaszczyźnie za pomocą pary liczb. W tej lekcji nauczysz się wyznaczać współrzędne i długość wektora, dodawać i odejmować wektory, mnożyć wektor przez liczbę oraz sprawdzać, czy dwa wektory są równe lub równoległe."
   },
   {
     "type": "definition",
     "term": "Wektor",
-    "text": "Wektor to para punktów w przestrzeni, która opisuje kierunek i wielkość od punktu początkowego do punktu końcowego.",
+    "text": "Wektor $\\overrightarrow{AB}$ to uporządkowana para punktów — początek $A$ i koniec $B$ — która opisuje kierunek, zwrot i długość przesunięcia z $A$ do $B$. Dwa wektory są równe, jeśli mają te same współrzędne, niezależnie od tego, gdzie leżą ich punkty początkowe (wektor jest \"swobodny\").",
     "formula": "\\overrightarrow{AB}"
   },
   {
     "type": "formula",
-    "title": "Długość wektora",
-    "expression": "\\sqrt{x^2 + y^2)",
+    "title": "Współrzędne wektora wyznaczonego przez dwa punkty",
+    "expression": "\\overrightarrow{AB} = (x_B - x_A,\\ y_B - y_A)",
     "variables": [
+      { "symbol": "A=(x_A,y_A)", "meaning": "punkt początkowy wektora" },
+      { "symbol": "B=(x_B,y_B)", "meaning": "punkt końcowy wektora" }
+    ]
+  },
+  {
+    "type": "examples",
+    "title": "Obliczanie współrzędnych wektora",
+    "items": [
       {
-        "meaning": "współrzędna x wektora",
-        "symbol": "x"
-      },
-      {
-        "meaning": "współrzędna y wektora",
-        "symbol": "y"
+        "problem": "$A = (1, 2)$, $B = (4, 6)$",
+        "steps": [
+          { "text": "Odejmujemy współrzędne punktu początkowego od współrzędnych punktu końcowego.", "formula": "\\overrightarrow{AB} = (4-1,\\ 6-2)" }
+        ],
+        "answer": "$\\overrightarrow{AB} = (3, 4)$"
       }
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Długość wektora",
+    "expression": "|\\overrightarrow{AB}| = \\sqrt{x^2 + y^2}",
+    "variables": [
+      { "symbol": "x", "meaning": "pierwsza współrzędna wektora" },
+      { "symbol": "y", "meaning": "druga współrzędna wektora" }
     ]
   },
   {
@@ -951,15 +967,23 @@ insert into math_lessons (topic_id, title, content, order_index) values (
     "title": "Obliczanie długości wektora",
     "items": [
       {
-        "answer": "$d = 5$",
         "problem": "$\\overrightarrow{AB} = (3, 4)$",
         "steps": [
-          {
-            "formula": "d = \\sqrt{3^2 + 4^2)",
-            "text": "Użyty wzór: $d = \\sqrt{x^2 + y^2}$"
-          }
-        ]
+          { "text": "Podstawiamy współrzędne wektora do wzoru na długość.", "formula": "d = \\sqrt{3^2 + 4^2} = \\sqrt{25}" }
+        ],
+        "answer": "$d = 5$"
       }
+    ]
+  },
+  {
+    "type": "table",
+    "title": "Działania na wektorach",
+    "caption": "Wektory dodajemy, odejmujemy i mnożymy przez liczbę współrzędna po współrzędnej.",
+    "headers": ["Działanie", "Wzór na współrzędne", "Interpretacja geometryczna"],
+    "rows": [
+      ["$\\overrightarrow{u} + \\overrightarrow{v}$", "$(x_1+x_2,\\ y_1+y_2)$", "Reguła trójkąta: koniec $\\overrightarrow{u}$ staje się początkiem $\\overrightarrow{v}$; sumą jest wektor od początku $\\overrightarrow{u}$ do końca $\\overrightarrow{v}$."],
+      ["$\\overrightarrow{u} - \\overrightarrow{v}$", "$(x_1-x_2,\\ y_1-y_2)$", "Wektor prowadzący od końca $\\overrightarrow{v}$ do końca $\\overrightarrow{u}$, gdy oba mają wspólny początek."],
+      ["$k\\cdot\\overrightarrow{u}$", "$(kx_1,\\ ky_1)$", "Wektor równoległy do $\\overrightarrow{u}$, $|k|$ razy dłuższy; ten sam zwrot dla $k>0$, przeciwny dla $k<0$."]
     ]
   },
   {
@@ -971,10 +995,67 @@ insert into math_lessons (topic_id, title, content, order_index) values (
         "acceptedAnswers": [
           "(6, 4)"
         ],
-        "formula": "(2+4, 3+1)",
+        "formula": "(2+4,\\ 3+1)",
         "kind": "input",
         "prompt": "Oblicz współrzędne wektora $\\overrightarrow{AC}$",
         "reveal": "Użyty wzór: $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$"
+      }
+    ]
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Odejmowanie wektorów",
+    "problem": "$\\overrightarrow{u} = (5, 2)$ i $\\overrightarrow{v} = (1, 4)$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "(4, -2)"
+        ],
+        "formula": "(5-1,\\ 2-4)",
+        "kind": "input",
+        "prompt": "Oblicz współrzędne wektora $\\overrightarrow{u} - \\overrightarrow{v}$",
+        "reveal": "Odejmujemy współrzędne wektora $\\overrightarrow{v}$ od współrzędnych wektora $\\overrightarrow{u}$."
+      }
+    ]
+  },
+  {
+    "type": "definition",
+    "term": "Mnożenie wektora przez liczbę",
+    "text": "Iloczyn wektora $\\overrightarrow{u}=(x,y)$ przez liczbę rzeczywistą $k$ to wektor o współrzędnych $k$ razy większych. Otrzymany wektor jest równoległy do $\\overrightarrow{u}$: ma ten sam zwrot, gdy $k>0$, przeciwny, gdy $k<0$, a dla $k=0$ jest to wektor zerowy.",
+    "formula": "k\\cdot\\overrightarrow{u} = k\\cdot(x,y) = (kx,\\ ky)"
+  },
+  {
+    "type": "examples",
+    "title": "Mnożenie wektora przez liczbę",
+    "items": [
+      {
+        "problem": "$\\overrightarrow{u} = (2, -3)$, $k=-2$",
+        "steps": [
+          { "text": "Mnożymy obie współrzędne wektora przez $k$.", "formula": "k\\cdot\\overrightarrow{u} = (-2\\cdot2,\\ -2\\cdot(-3))" }
+        ],
+        "answer": "$k\\cdot\\overrightarrow{u} = (-4, 6)$"
+      }
+    ]
+  },
+  {
+    "type": "definition",
+    "term": "Wektory równe i równoległe",
+    "text": "Dwa wektory są równe, gdy mają identyczne współrzędne. Dwa niezerowe wektory są równoległe (kolinearne), gdy jeden jest wielokrotnością drugiego — ich współrzędne są proporcjonalne.",
+    "formula": "\\overrightarrow{u} \\parallel \\overrightarrow{v} \\iff \\overrightarrow{u} = k\\cdot\\overrightarrow{v} \\ \\text{dla pewnego}\\ k \\in \\mathbb{R}\\setminus\\{0\\}"
+  },
+  {
+    "type": "reveal-steps",
+    "title": "Sprawdzanie równoległości wektorów",
+    "problem": "$\\overrightarrow{u} = (4, -6)$ i $\\overrightarrow{v} = (-2, 3)$",
+    "steps": [
+      {
+        "acceptedAnswers": [
+          "-2"
+        ],
+        "formula": "\\dfrac{4}{-2} = \\dfrac{-6}{3} = -2",
+        "kind": "input",
+        "prompt": "Podaj liczbę $k$, dla której $\\overrightarrow{u} = k \\cdot \\overrightarrow{v}$ (jeśli wektory są równoległe)",
+        "reveal": "Współrzędne są proporcjonalne: $4 = k\\cdot(-2)$ oraz $-6 = k\\cdot 3$ dają to samo $k=-2$, więc wektory są równoległe."
       }
     ]
   },
@@ -991,9 +1072,21 @@ insert into math_lessons (topic_id, title, content, order_index) values (
     "explanation": "Użyty wzór: $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$"
   },
   {
+    "type": "quiz",
+    "question": "Wektor $\\overrightarrow{u} = (3, -1)$ mnożymy przez $k=3$. Jaki wektor otrzymamy?",
+    "options": [
+      "(9, -3)",
+      "(6, 2)",
+      "(3, -3)",
+      "(1, -1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "$k\\cdot\\overrightarrow{u} = (3\\cdot3,\\ 3\\cdot(-1)) = (9, -3)$."
+  },
+  {
     "type": "tip",
     "variant": "tip",
-    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie obliczać współrzędne wektora, jego długość, oraz dodawać, odejmować i porównywać wektory."
+    "text": "Tę lekcję opanowałeś, jeśli potrafisz samodzielnie wyznaczać współrzędne i długość wektora, dodawać i odejmować wektory, mnożyć wektor przez liczbę oraz sprawdzać, czy dwa wektory są równe lub równoległe."
   }
 ]$content5$::jsonb,
   4
