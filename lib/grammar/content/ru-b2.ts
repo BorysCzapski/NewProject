@@ -877,4 +877,205 @@ export const RU_B2_LESSONS: Record<string, GrammarLesson> = {
         "Zmienia się osoba (ты работаешь → я работаю), ale czas ZOSTAJE teraźniejszy, bo rosyjski nie ma następstwa czasów. Работал sugerowałoby, że już tam nie pracuję, a работаешь nie zgadza się z nowym podmiotem я.",
     },
   ],
+
+  "ru-krotkie-przymiotniki": [
+    {
+      type: "intro",
+      text:
+        "Obok pełnej, odmiennej formy przymiotnika (готовый, красивый, свободный) rosyjski ma też formę krótką (готов, красива, свободен), która nie odmienia się przez przypadki — tylko przez rodzaj i liczbę — i zawsze pełni funkcję orzecznika, nigdy nie stoi przed rzeczownikiem. Kilka bardzo częstych słów, jak рад czy должен, istnieje właściwie WYŁĄCZNIE w formie krótkiej.",
+    },
+    {
+      type: "table",
+      title: "Budowa formy krótkiej: готовый",
+      headers: ["Rodzaj / liczba", "Końcówka", "Forma krótka"],
+      rows: [
+        ["męski", "— (zerowa)", "готов"],
+        ["żeński", "-а", "готова"],
+        ["nijaki", "-о", "готово"],
+        ["liczba mnoga", "-ы / -и", "готовы"],
+      ],
+      caption:
+        "Ten sam wzór działa dla większości przymiotników jakościowych: рад, рада, радо, рады; свободен, свободна, свободно, свободны (uwaga na ruchome е: свободен, ale свободна — bez е).",
+    },
+    {
+      type: "compare",
+      title: "Forma pełna czy krótka?",
+      columns: [
+        {
+          title: "Forma pełna — cecha trwała",
+          formula: "какой? — przed rzeczownikiem",
+          whenToUse:
+            "Obiektywna, trwała właściwość; przymiotnik odmienia się przez przypadki i może stać przed rzeczownikiem.",
+          examples: [
+            "Он свободный человек. (niezależny z natury)",
+            "Красивая девушка вошла в комнату.",
+          ],
+        },
+        {
+          title: "Forma krótka — stan / orzecznik",
+          formula: "каков? — po podmiocie",
+          whenToUse:
+            "Stan chwilowy, subiektywna ocena albo rekcja z innym przypadkiem; stoi zawsze po podmiocie jako orzecznik.",
+          examples: [
+            "Сегодня вечером он свободен. (ma teraz czas)",
+            "Девушка красива. (jest piękna — w oczach mówiącego)",
+          ],
+        },
+      ],
+    },
+    {
+      type: "table",
+      title: "Słowa istniejące (niemal) tylko w formie krótkiej",
+      headers: ["Słowo", "Znaczenie", "Przykład"],
+      rows: [
+        ["рад", "zadowolony, uradowany", "Я рад тебя видеть."],
+        ["должен", "musieć, powinienem", "Я должен идти."],
+        ["намерен", "zamierzać, mieć zamiar", "Она намерена уехать."],
+        ["готов (к чему)", "gotowy (na coś)", "Он готов к экзамену."],
+        ["доволен (чем)", "zadowolony (z czegoś)", "Я доволен результатом."],
+      ],
+      caption:
+        "Formy pełne радый, должный, намеренный są archaiczne albo mają inne, wąskie znaczenie — w mowie codziennej nie używa się ich jako orzecznika.",
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Я рад тебя видеть.", pl: "Cieszę się, że cię widzę.", highlight: "рад" },
+        { en: "Она должна работать сегодня.", pl: "Ona musi dziś pracować.", highlight: "должна" },
+        { en: "Мы готовы к экзамену.", pl: "Jesteśmy gotowi na egzamin.", highlight: "готовы" },
+        { en: "Он готов к экзамену.", pl: "On jest gotów do egzaminu.", highlight: "готов к экзамену" },
+        { en: "Эта девушка красива.", pl: "Ta dziewczyna jest piękna.", highlight: "красива" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Polski nie rozróżnia form, dlatego Polacy często mówią "он готовый" ✗ tam, gdzie potrzeba orzecznika: "он готов" ✓. Zapamiętaj zwłaszcza должен i рад — pełna forma "должный"/"радый" jako orzecznik brzmi archaicznie albo błędnie. I uważaj na formę krótką z przyimkiem: "с рад" ✗, "к готов" ✗ nie istnieją — forma krótka stoi samodzielnie, ewentualnie z dopełnieniem w przypadku zależnym: "готов к экзамену" ✓, "доволен результатом" ✓ (bez przyimka!).',
+    },
+    {
+      type: "quiz",
+      question: "Я ___ идти на работу.",
+      options: ["должный", "должен", "должного"],
+      correctIndex: 1,
+      explanation:
+        "Должен to czasownik modalny istniejący praktycznie tylko w formie krótkiej — должный jako orzecznik jest archaiczny i nienaturalny we współczesnym języku.",
+    },
+    {
+      type: "quiz",
+      question: "Wybierz zdanie opisujące stan chwilowy (forma krótka):",
+      options: [
+        "Он свободный человек.",
+        "Сегодня вечером он свободен.",
+        "Он свободный сегодня.",
+      ],
+      correctIndex: 1,
+      explanation:
+        "Stan chwilowy (ma dziś wolny czas) wymaga formy krótkiej jako orzecznika: он свободен. Свободный человек to trwała cecha, a «он свободный сегодня» miesza formę pełną z użyciem właściwym krótkiej.",
+    },
+  ],
+
+  "ru-zdania-zlozone-spojniki": [
+    {
+      type: "intro",
+      text:
+        "Zdania złożone podrzędnie łączy rosyjski spójnikami, które wyglądają znajomo, ale rządzą się własnymi regułami. Kluczowe rozróżnienia na B2: потому что vs так как (oba znaczą „ponieważ”, ale różnią się pozycją w zdaniu), хотя (ustępstwo), пока / пока не (równoczesność vs granica czasowa) oraz чтобы, po którym czasownik niemal zawsze stoi w formie przeszłej.",
+    },
+    {
+      type: "table",
+      title: "Najważniejsze spójniki podrzędne",
+      headers: ["Spójnik", "Znaczenie", "Uwaga"],
+      rows: [
+        ["потому что", "ponieważ, bo", "tylko w zdaniu podrzędnym, nie otwiera całej wypowiedzi"],
+        ["так как", "skoro, jako że", "może stać na początku całego zdania"],
+        ["хотя", "chociaż, mimo że", "bez dodatkowych partykuł, jak po polsku"],
+        ["пока", "dopóki / podczas gdy", "czynności równoczesne"],
+        ["пока не", "dopóki nie", "granica w czasie, zwykle z czasem przyszłym dokonanym"],
+        ["чтобы", "żeby, aby", "czasownik w formie przeszłej, gdy podmioty są różne"],
+        ["если бы", "gdyby", "warunek nierealny — zob. temat trybu warunkowego"],
+      ],
+    },
+    {
+      type: "compare",
+      title: "потому что czy так как?",
+      columns: [
+        {
+          title: "потому что",
+          formula: "..., потому что + przyczyna",
+          whenToUse:
+            "Zawsze w zdaniu podrzędnym, PO skutku; nie otwiera całej wypowiedzi.",
+          examples: ["Я не пришёл, потому что заболел."],
+        },
+        {
+          title: "так как",
+          formula: "Так как + przyczyna, ... skutek",
+          whenToUse:
+            "Bardziej książkowe; może stać na samym początku zdania złożonego, przed przyczyną.",
+          examples: ["Так как было поздно, мы решили остаться."],
+        },
+      ],
+    },
+    {
+      type: "formula",
+      title: "чтобы: ten sam podmiot czy różne podmioty?",
+      variants: [
+        {
+          label: "Różne podmioty → forma przeszła",
+          parts: [
+            { text: "Я", role: "subject" },
+            { text: "хочу,", role: "verb" },
+            { text: "чтобы", role: "other" },
+            { text: "ты", role: "subject", note: "podmiot zdania podrzędnego inny niż я" },
+            { text: "помог", role: "verb", note: "ZAWSZE czas przeszły po чтобы, gdy podmioty się różnią" },
+            { text: "мне", role: "object" },
+          ],
+          example: { en: "Я хочу, чтобы ты помог мне.", pl: "Chcę, żebyś mi pomógł." },
+        },
+        {
+          label: "Ten sam podmiot → można bezokolicznik",
+          parts: [
+            { text: "Я", role: "subject" },
+            { text: "купил", role: "verb" },
+            { text: "цветы,", role: "object" },
+            { text: "чтобы", role: "other" },
+            { text: "порадовать", role: "verb", note: "bezokolicznik — podmiot obu czynności to я" },
+            { text: "маму", role: "object" },
+          ],
+          example: { en: "Я купил цветы, чтобы порадовать маму.", pl: "Kupiłem kwiaty, żeby ucieszyć mamę." },
+        },
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Так как было поздно, мы решили остаться.", pl: "Skoro było późno, postanowiliśmy zostać.", highlight: "Так как" },
+        { en: "Хотя было холодно, мы пошли гулять.", pl: "Chociaż było zimno, poszliśmy na spacer.", highlight: "Хотя" },
+        { en: "Пока ты спал, я приготовила завтрак.", pl: "Podczas gdy spałeś, przygotowałam śniadanie.", highlight: "Пока" },
+        { en: "Подожди, пока я не вернусь.", pl: "Poczekaj, dopóki nie wrócę.", highlight: "пока не" },
+        { en: "Я не пришёл, потому что заболел.", pl: "Nie przyszedłem, ponieważ zachorowałem.", highlight: "потому что" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Po чтобы, gdy podmiot zdania podrzędnego różni się od głównego, NIE wolno użyć bezokolicznika ani czasu teraźniejszego: "чтобы ты помогать" ✗, "чтобы ты помогаешь" ✗ — poprawnie tylko "чтобы ты помог" ✓, choć znaczenie nie jest wcale przeszłe. Druga pułapka: nie zaczynaj zdania od потому что — to błąd składniowy w rosyjskim (inaczej niż w polskim „Bo...” na początku zdania) — użyj wtedy так как.',
+    },
+    {
+      type: "quiz",
+      question: "Я хочу, чтобы ты мне ___.",
+      options: ["помочь", "помогаешь", "помог"],
+      correctIndex: 2,
+      explanation:
+        "Podmiot zdania podrzędnego (ты) różni się od podmiotu zdania głównego (я), więc po чтобы musi stać czasownik w formie przeszłej: помог. Bezokolicznik pomочь ✗ i czas teraźniejszy помогаешь ✗ tu nie działają.",
+    },
+    {
+      type: "quiz",
+      question: "Wybierz spójnik, który MOŻE otwierać całe zdanie złożone: ___ было поздно, мы решили остаться.",
+      options: ["Потому что", "Так как", "Хотя"],
+      correctIndex: 1,
+      explanation:
+        "Так как może stać na początku zdania, przed przyczyną — dlatego pasuje tu najlepiej. Потому что zwykle nie otwiera całej wypowiedzi, a хотя zmieniłoby sens na ustępstwo (mimo że było późno).",
+    },
+  ],
 };

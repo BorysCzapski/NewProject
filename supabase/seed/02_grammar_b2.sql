@@ -162,3 +162,63 @@ insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, 
   ('c5e6f708-1920-4b34-cd35-5f6071829304', 'multiple_choice', 'You ___ so rude to the waiter - it wasn''t his fault the food was cold.', '["shouldn''t have been","mustn''t have been","couldn''t have been"]'::jsonb, 'shouldn''t have been', 3),
   ('c5e6f708-1920-4b34-cd35-5f6071829304', 'gap_fill', 'We ___ (needn''t / buy) so much food, half of it went to waste.', null, 'needn''t have bought', 4),
   ('c5e6f708-1920-4b34-cd35-5f6071829304', 'transformation', 'Rewrite expressing regret with "should have": "It was a mistake that I did not save my document before the computer crashed."', null, 'I should have saved my document before the computer crashed.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 5: Causative: have / get something done
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, level, slug, title, explanation, order_index) values (
+  '4616d08b-72cb-4047-bb12-b043169c5ff6',
+  'B2',
+  'causative-have-get',
+  'Causative: have / get something done',
+  'Konstrukcji przyczynowej (causative) "have/get something done" używamy, gdy mówimy, że ktoś inny wykonuje dla nas jakąś czynność - zwykle usługę - a nie robimy jej sami.
+Budowa: have/get + dopełnienie (rzecz) + Past Participle (III forma czasownika), np.: "I had my car repaired." - oznacza to, że nie naprawiłem samochodu sam, tylko zleciłem to komuś (mechanikowi).
+Porównaj ze zdaniem bez konstrukcji przyczynowej: "I repaired my car." (zrobiłem to sam) a "I had my car repaired." (ktoś zrobił to za mnie) - ta różnica w znaczeniu jest kluczowa.
+"Get something done" znaczy dokładnie to samo co "have something done", ale jest bardziej nieformalne i częściej pojawia się w mówionym języku angielskim, np.: "I need to get my hair cut this week." zamiast bardziej formalnego "I need to have my hair cut this week."
+Czasownik "have/get" można odmieniać w dowolnym czasie gramatycznym, a reszta konstrukcji (dopełnienie + Past Participle) pozostaje bez zmian, np. Present Simple: "She has her nails done every month.", Past Simple: "We had our house painted last spring.", Present Perfect: "I have just had my phone screen fixed.", Future: "They will have their kitchen renovated next year."
+Konstrukcji przyczynowej używamy też w znaczeniu "coś nieprzyjemnego przydarzyło się komuś" (zwykle poza jego kontrolą), np.: "She had her wallet stolen on the train." - to nie znaczy, że zleciła kradzież, tylko że coś złego jej się przytrafiło.
+Warto odróżnić causative "have something done" od zwykłej strony biernej - strona bierna po prostu opisuje fakt, że coś zostało zrobione, bez podkreślania, że ktoś to zlecił, np.: "My car was repaired." (fakt - naprawiono go, nie wiemy przez kogo ani czy ktoś to zlecił) a "I had my car repaired." (podkreśla, że TY zleciłeś tę czynność).
+Możemy też użyć aktywnej wersji konstrukcji przyczynowej: "have someone do something" (bez Past Participle, z bezokolicznikiem bez "to"), gdy chcemy podać, KTO wykonał czynność, np.: "I had the mechanic check my brakes." - kazałem mechanikowi sprawdzić hamulce.
+Pytania w konstrukcji przyczynowej tworzymy tak samo jak w zwykłych zdaniach z have/get, np.: "Where did you have your hair cut?" oraz "Have you had your car serviced recently?"
+Przeczenia tworzymy identycznie: "I haven''t had my suit dry-cleaned yet." oraz "We didn''t get our windows cleaned this month."
+Konstrukcja "have/get something done" jest bardzo praktyczna w codziennym życiu - opisuje usługi takie jak fryzjer, mechanik, dentysta, malarz czy firma sprzątająca, dlatego warto znać ją na pamięć i ćwiczyć na przykładach z własnych codziennych spraw.',
+  5
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'gap_fill', 'I ___ (have / my hair / cut) every six weeks.', null, 'have my hair cut', 0),
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'gap_fill', 'We ___ (get / our roof / repair) after the storm last month.', null, 'got our roof repaired', 1),
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'multiple_choice', 'Which sentence means that someone else painted the fence, not you?', '["I painted the fence.","I had the fence painted.","I was painting the fence."]'::jsonb, 'I had the fence painted.', 2),
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'multiple_choice', 'She ___ her phone screen fixed yesterday.', '["had","did","made"]'::jsonb, 'had', 3),
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'transformation', 'Rewrite using the causative: "A dentist checked my teeth last week." (Start with "I...")', null, 'I had my teeth checked last week.', 4),
+  ('4616d08b-72cb-4047-bb12-b043169c5ff6', 'transformation', 'Rewrite using the causative: "Someone stole her bag on the bus." (Start with "She...")', null, 'She had her bag stolen on the bus.', 5);
+
+-- ----------------------------------------------------------------------------
+-- Topic 6: Imiesłowowe równoważniki zdań (-ing / -ed)
+-- ----------------------------------------------------------------------------
+insert into grammar_topics (id, level, slug, title, explanation, order_index) values (
+  '05e4ed61-96ea-4aae-a087-54c204e6c0aa',
+  'B2',
+  'participle-clauses',
+  'Imiesłowowe równoważniki zdań (-ing / -ed)',
+  'Zdania imiesłowowe (participle clauses) to skrócone konstrukcje, które zastępują pełne zdania podrzędne z "who", "which", "because", "after", "while" itd. - używamy ich, aby zdania brzmiały bardziej zwięźle i naturalnie, zwłaszcza w piśmie.
+Imiesłów czynny (Present Participle, czasownik + -ing) zastępuje zdanie, w którym podmiot WYKONUJE czynność, np.: "The man who is standing by the door is my uncle." można skrócić do "The man standing by the door is my uncle."
+Imiesłów bierny (Past Participle, zwykle czasownik + -ed lub III forma) zastępuje zdanie, w którym podmiot DOZNAJE czynności (strona bierna), np.: "The letter which was written in French was difficult to translate." można skrócić do "The letter written in French was difficult to translate."
+Konstrukcji -ing używamy też, aby połączyć dwie czynności wykonywane przez tę samą osobę, zwłaszcza gdy jedna wynika z drugiej lub dzieje się jednocześnie, np.: "Feeling tired, she decided to go to bed early." zamiast "Because she felt tired, she decided to go to bed early."
+Konstrukcje z -ing mogą też zastępować "while" lub "as" przy dwóch czynnościach dziejących się jednocześnie, np.: "Walking home, I saw an old friend." zamiast "While I was walking home, I saw an old friend."
+Zdania imiesłowowe z -ing mogą zastępować też zdania przyczynowo-skutkowe z "because"/"since", np.: "Not knowing what to say, he just stayed silent." zamiast "Because he did not know what to say, he just stayed silent."
+Ważna zasada: podmiot zdania głównego i zdania imiesłowowego musi być TEN SAM, inaczej zdanie staje się niejasne lub błędne (tzw. "dangling participle"), np. błędne: "Walking down the street, the trees looked beautiful." (to nie drzewa szły ulicą!) - poprawnie: "Walking down the street, I thought the trees looked beautiful."
+Konstrukcje z -ed (lub inną formą Past Participle) zastępują zdania bierne, np.: "Built in the 19th century, the bridge is now a popular tourist attraction." zamiast "Because it was built in the 19th century, the bridge is now a popular tourist attraction."
+Aby podkreślić, że jedna czynność zakończyła się PRZED drugą, używamy "having" + Past Participle (Perfect Participle), np.: "Having finished his homework, he went out to play." - najpierw skończył pracę domową, a potem wyszedł się bawić.
+Zdania imiesłowowe są bardzo częste w formalnym piśmie - artykułach, esejach, literaturze - ponieważ pozwalają unikać powtarzania podmiotu i zaimków względnych w każdym zdaniu podrzędnym.
+Warto ćwiczyć przekształcanie pełnych zdań podrzędnych na imiesłowowe równoważniki, zwracając szczególną uwagę na to, czy potrzebny jest imiesłów czynny (-ing, podmiot wykonuje czynność) czy bierny (-ed/III forma, podmiot doznaje czynności).',
+  6
+);
+
+insert into grammar_exercises (topic_id, type, prompt, options, correct_answer, order_index) values
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'gap_fill', 'The woman ___ (stand) at the bus stop is my colleague.', null, 'standing', 0),
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'gap_fill', '___ (not / know) what to say, she just smiled awkwardly.', null, 'Not knowing', 1),
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'multiple_choice', 'Which sentence correctly reduces: "The book which was written by a famous author became a bestseller."?', '["The book writing by a famous author became a bestseller.","The book written by a famous author became a bestseller.","The book that written by a famous author became a bestseller."]'::jsonb, 'The book written by a famous author became a bestseller.', 2),
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'multiple_choice', 'Choose the correct perfect participle clause: ___ his homework, he went out to play.', '["Having finished","Having finish","Finished"]'::jsonb, 'Having finished', 3),
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'transformation', 'Rewrite as a participle clause: "Because he felt exhausted, he cancelled the meeting."', null, 'Feeling exhausted, he cancelled the meeting.', 4),
+  ('05e4ed61-96ea-4aae-a087-54c204e6c0aa', 'transformation', 'Rewrite as a participle clause: "The castle, which was built in the 12th century, attracts thousands of visitors."', null, 'Built in the 12th century, the castle attracts thousands of visitors.', 5);

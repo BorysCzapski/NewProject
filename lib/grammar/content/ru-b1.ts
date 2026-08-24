@@ -535,4 +535,223 @@ export const RU_B1_LESSONS: Record<string, GrammarLesson> = {
         "Przedrostek по- tworzy czas przyszły dokonany: поеду (pojadę). Еду to czas teraźniejszy (jadę teraz), a езжу oznacza ruch regularny (jeżdżę).",
     },
   ],
+
+  "ru-tryb-warunkowy": [
+    {
+      type: "intro",
+      text:
+        "Rosyjski tryb warunkowy zaskakuje prostotą: bierzesz czasownik w czasie przeszłym i dodajesz niezmienną cząstkę бы. Jedna forma obsługuje wszystko, co po polsku rozbijamy na „zrobiłbym”, „zrobiłabym”, „zrobilibyśmy” — zmienia się tylko końcówka rodzajowa czasownika, a бы zawsze wygląda tak samo, niezależnie od osoby i liczby.",
+    },
+    {
+      type: "conjugation",
+      title: "бы się nie odmienia — zmienia się tylko czasownik",
+      caption: "Dokładnie jak w zwykłym czasie przeszłym: -Ø / -а / -о / -и, tyle że z doklejonym бы.",
+      persons: ["on (r. męski)", "ona (r. żeński)", "ono (r. nijaki)", "oni/one (l. mnoga)"],
+      columns: [
+        { label: "знать (wiedzieć)", forms: ["знал бы", "знала бы", "знало бы", "знали бы"] },
+        { label: "прийти (przyjść)", forms: ["пришёл бы", "пришла бы", "пришло бы", "пришли бы"] },
+      ],
+    },
+    {
+      type: "formula",
+      title: "Zdanie warunkowe: если бы ... , ... бы",
+      variants: [
+        {
+          label: "Warunek (jeśli)",
+          parts: [
+            { text: "Если", role: "other", note: "если бы = gdyby" },
+            { text: "бы", role: "aux" },
+            { text: "я", role: "subject" },
+            { text: "знал", role: "verb", note: "czas przeszły, tu: rodzaj męski" },
+            { text: "ответ,", role: "object" },
+          ],
+        },
+        {
+          label: "Skutek",
+          parts: [
+            { text: "я", role: "subject" },
+            { text: "сказал", role: "verb", note: "też czas przeszły" },
+            { text: "бы", role: "aux", note: "бы zwykle stoi zaraz po czasowniku" },
+            { text: "тебе", role: "object" },
+          ],
+        },
+      ],
+      caption:
+        "Cała formuła: Если бы я знал ответ, я сказал бы тебе. — Gdybym znał odpowiedź, powiedziałbym ci.",
+    },
+    {
+      type: "compare",
+      title: "если czy если бы?",
+      columns: [
+        {
+          title: "если (bez бы) — warunek realny",
+          formula: "если + czas przyszły",
+          whenToUse:
+            "Warunek, który naprawdę może się spełnić — zwykle dotyczy przyszłości.",
+          examples: [
+            "Если у меня будет время, я приду. (naprawdę mogę mieć czas)",
+          ],
+        },
+        {
+          title: "если бы — warunek nierealny/hipotetyczny",
+          formula: "если бы + czas przeszły, ... + бы",
+          whenToUse:
+            "Warunek zmyślony, mało prawdopodobny albo już niespełniony — bez względu na to, czy mowa o teraźniejszości, przyszłości czy przeszłości.",
+          examples: [
+            "Если бы у меня было время, я пришёл бы. (ale czasu nie mam / nie miałem)",
+          ],
+        },
+      ],
+    },
+    {
+      type: "table",
+      title: "Gdzie stawiać бы",
+      headers: ["Wzorzec", "Przykład"],
+      rows: [
+        ["czasownik + бы", "Я сказал бы тебе."],
+        ["если + бы (razem, na początku zdania podrzędnego)", "Если бы я знал..."],
+        ["хотел бы — grzeczna prośba", "Я хотел бы кофе, пожалуйста."],
+        ["хорошо бы — życzenie", "Хорошо бы отдохнуть!"],
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Если бы я знал ответ, я сказал бы тебе.", pl: "Gdybym znał odpowiedź, powiedziałbym ci.", highlight: "сказал бы" },
+        { en: "Если бы вчера не было дождя, мы пошли бы гулять.", pl: "Gdyby wczoraj nie padał deszcz, poszlibyśmy na spacer.", highlight: "пошли бы" },
+        { en: "Если у меня будет время, я приду.", pl: "Jeśli będę miał czas, przyjdę.", highlight: "будет" },
+        { en: "Я хотел бы кофе, пожалуйста.", pl: "Chciałbym kawę, poproszę.", highlight: "хотел бы" },
+        { en: "Хорошо бы отдохнуть!", pl: "Dobrze byłoby odpocząć!", highlight: "Хорошо бы" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'бы łączy się WYŁĄCZNIE z czasem przeszłym — "я буду бы делать" ✗ i "я делаю бы" ✗ nie istnieją. Standardowy szyk to czasownik + бы: "я хотел бы" ✓, nie "я бы хотел" (ta wersja jest potoczna i mniej naturalna). I pamiętaj: rosyjski nie ma osobnej formy dla warunku w przeszłości — Если бы я знал może znaczyć zarówno "gdybym wiedział (teraz)", jak i "gdybym był wiedział (wtedy)" — rozstrzyga kontekst.',
+    },
+    {
+      type: "quiz",
+      question: "Если бы у меня было время, я ___.",
+      options: ["приеду", "приехал бы", "бы приехал"],
+      correctIndex: 1,
+      explanation:
+        "Skutek warunku nierealnego to czas przeszły + бы, ze standardowym szykiem czasownik + бы: приехал бы. Приеду to zwykły czas przyszły — nie pasuje do если бы.",
+    },
+    {
+      type: "quiz",
+      question: "Wybierz zdanie z warunkiem REALNYM (bez бы):",
+      options: [
+        "Если у меня будет время, я приду.",
+        "Если бы у меня было время, я пришёл бы.",
+        "Я пришёл бы, если было время.",
+      ],
+      correctIndex: 0,
+      explanation:
+        "Warunek realny, dotyczący przyszłości, nie potrzebuje бы: если + czas przyszły. Pozostałe dwa zdania opisują sytuację hipotetyczną lub niespełnioną.",
+    },
+  ],
+
+  "ru-stopniowanie-przymiotnikow": [
+    {
+      type: "intro",
+      text:
+        "Rosyjski stopniuje przymiotniki i przysłówki na dwa sposoby: prosto, jednym słowem z końcówką -ее (красивый → красивее), albo złożenie, słowem более/менее + forma podstawowa. Stopień najwyższy najczęściej tworzy самый + przymiotnik. Kilka bardzo częstych przymiotników ma nieregularny, krótszy stopień wyższy, który trzeba po prostu zapamiętać — tak jak polskie dobry → lepszy.",
+    },
+    {
+      type: "table",
+      title: "Stopień wyższy: regularny i nieregularny",
+      headers: ["Podstawowy", "Stopień wyższy", "Po polsku"],
+      rows: [
+        ["красивый", "красивее", "ładny → ładniejszy"],
+        ["интересный", "интереснее", "ciekawy → ciekawszy"],
+        ["хороший", "лучше", "dobry → lepszy"],
+        ["плохой", "хуже", "zły → gorszy"],
+        ["большой", "больше", "duży → większy"],
+        ["маленький", "меньше", "mały → mniejszy"],
+        ["молодой", "моложе", "młody → młodszy"],
+        ["дорогой", "дороже", "drogi → droższy"],
+      ],
+      caption:
+        "Forma na -ее (i nieregularna na -е) jest nieodmienna — pasuje do każdego rodzaju i liczby: он умнее, она умнее, они умнее.",
+    },
+    {
+      type: "formula",
+      title: "Trzy sposoby porównania",
+      variants: [
+        {
+          label: "Dopełniacz — bez spójnika",
+          parts: [
+            { text: "Она", role: "subject" },
+            { text: "старше", role: "verb" },
+            { text: "меня", role: "object", note: "kого? — dopełniacz zamiast spójnika чем" },
+          ],
+          example: { en: "Она старше меня.", pl: "Ona jest starsza ode mnie." },
+        },
+        {
+          label: "чем + mianownik",
+          parts: [
+            { text: "Она", role: "subject" },
+            { text: "старше,", role: "verb" },
+            { text: "чем", role: "other" },
+            { text: "я", role: "subject" },
+          ],
+          example: { en: "Она старше, чем я.", pl: "Ona jest starsza niż ja." },
+        },
+        {
+          label: "Stopień złożony — более/менее",
+          parts: [
+            { text: "Это", role: "subject" },
+            { text: "более", role: "aux", note: "более/менее + przymiotnik podstawowy, odmienny przez rodzaje" },
+            { text: "интересный", role: "verb" },
+            { text: "фильм", role: "object" },
+          ],
+          example: { en: "Это более интересный фильм.", pl: "To bardziej interesujący film." },
+        },
+      ],
+      caption:
+        "Stopnia złożonego (более + przymiotnik) używamy zwłaszcza wtedy, gdy przymiotnik stoi PRZED rzeczownikiem — forma prosta na -ее tam nie pasuje.",
+    },
+    {
+      type: "table",
+      title: "Stopień najwyższy",
+      headers: ["Wzorzec", "Przykład"],
+      rows: [
+        ["самый + przymiotnik (odmienny)", "самый красивый, самая красивая, самое красивое"],
+        ["наиболее + przymiotnik (bardziej książkowe)", "наиболее важный вопрос"],
+      ],
+    },
+    {
+      type: "examples",
+      items: [
+        { en: "Эта картина красивее, чем та.", pl: "Ten obraz jest ładniejszy niż tamten.", highlight: "красивее" },
+        { en: "Этот фильм лучше, чем предыдущий.", pl: "Ten film jest lepszy niż poprzedni.", highlight: "лучше" },
+        { en: "Эверест — самая высокая гора в мире.", pl: "Everest to najwyższa góra na świecie.", highlight: "самая высокая" },
+        { en: "Он бежит быстрее, чем я.", pl: "On biegnie szybciej niż ja.", highlight: "быстрее" },
+        { en: "Это более интересный вопрос.", pl: "To bardziej interesujące pytanie.", highlight: "более интересный" },
+      ],
+    },
+    {
+      type: "tip",
+      variant: "warning",
+      text:
+        'Nie podwajaj stopnia: "более лучше" ✗ — лучше jest już stopniem wyższym i nigdy nie łączy się z более. Druga pułapka: rosyjskie самый zachowuje się inaczej niż polskie "najbardziej" — łączy się z przymiotnikiem w formie PODSTAWOWEJ, nie ze stopniem wyższym: "самый быстрый" ✓ (najszybszy), nie "самый быстрее" ✗. I pamiętaj: быстрее, лучше w funkcji przysłówka (Он бежит быстрее) wygląda identycznie jak krótki stopień wyższy przymiotnika — rozstrzyga tylko kontekst zdania.',
+    },
+    {
+      type: "quiz",
+      question: "Этот фильм ___, чем предыдущий.",
+      options: ["хороший", "лучше", "более хороший"],
+      correctIndex: 1,
+      explanation:
+        "Хороший ma nieregularny stopień wyższy лучше — to jedyna poprawna forma. Более хороший ✗ nie istnieje, bo лучше już jest gotowym stopniem wyższym.",
+    },
+    {
+      type: "quiz",
+      question: "Эверест — ___ высокая гора в мире.",
+      options: ["самая", "самое", "более"],
+      correctIndex: 0,
+      explanation:
+        "Stopień najwyższy самый zgadza się w rodzaju z rzeczownikiem — гора jest rodzaju żeńskiego, więc самая высокая. Более tworzy tylko stopień WYŻSZY, nie najwyższy.",
+    },
+  ],
 };
