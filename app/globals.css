@@ -1,6 +1,6 @@
 /* ============================================================================
  * globals.css
- * Design tokens for the app: a warm, friendly palette (indigo primary, mint
+ * Design tokens for the app: a muted, earthy palette (sage primary, sand
  * accent) tuned for a mobile-first learning app, plus a manually-toggled
  * dark mode (".dark" class on <html>, see components/theme/theme-provider).
  * ============================================================================ */
@@ -17,13 +17,13 @@
   --foreground-muted: #6b6b7a;
   --border: #e4e4ee;
 
-  --primary: #4f46e5;
+  --primary: #5a7a68;
   --primary-foreground: #ffffff;
-  --primary-soft: #eef0fe;
+  --primary-soft: #eaf0ec;
 
-  --accent: #10b981;
-  --accent-foreground: #ffffff;
-  --accent-soft: #e6f9f1;
+  --accent: #c9a876;
+  --accent-foreground: #3a2a12;
+  --accent-soft: #f3ead9;
 
   --danger: #e11d48;
   --danger-soft: #fde8ed;
@@ -52,12 +52,12 @@
   --radius-card: 1.25rem;
   --radius-control: 0.875rem;
 
-  /* Soft, slightly indigo-tinted elevation instead of flat neutral shadows —
+  /* Soft, slightly sage-tinted elevation instead of flat neutral shadows —
    * keeps cards and raised controls feeling warm rather than heavy/gray. */
-  --shadow-card: 0 1px 2px -1px rgb(79 70 229 / 0.06), 0 4px 16px -4px rgb(79 70 229 / 0.1);
-  --shadow-card-hover: 0 2px 4px -1px rgb(79 70 229 / 0.08), 0 12px 28px -6px rgb(79 70 229 / 0.16);
-  --shadow-control: 0 1px 2px rgb(79 70 229 / 0.06);
-  --shadow-primary: 0 4px 14px -3px rgb(79 70 229 / 0.35);
+  --shadow-card: 0 1px 2px -1px rgb(90 122 104 / 0.06), 0 4px 16px -4px rgb(90 122 104 / 0.1);
+  --shadow-card-hover: 0 2px 4px -1px rgb(90 122 104 / 0.08), 0 12px 28px -6px rgb(90 122 104 / 0.16);
+  --shadow-control: 0 1px 2px rgb(90 122 104 / 0.06);
+  --shadow-primary: 0 4px 14px -3px rgb(90 122 104 / 0.35);
 }
 
 .dark {
@@ -68,13 +68,13 @@
   --foreground-muted: #9a9aab;
   --border: #2a2a38;
 
-  --primary: #818cf8;
-  --primary-foreground: #12121a;
-  --primary-soft: #24243a;
+  --primary: #8fab9d;
+  --primary-foreground: #0f1f18;
+  --primary-soft: #1c2822;
 
-  --accent: #34d399;
-  --accent-foreground: #0b1f16;
-  --accent-soft: #163227;
+  --accent: #d4b88a;
+  --accent-foreground: #2a1d0c;
+  --accent-soft: #2d2a20;
 
   --danger: #fb7185;
   --danger-soft: #3a1620;
@@ -97,7 +97,7 @@
   --shadow-card: 0 1px 2px -1px rgb(0 0 0 / 0.2), 0 4px 16px -4px rgb(0 0 0 / 0.35);
   --shadow-card-hover: 0 2px 4px -1px rgb(0 0 0 / 0.25), 0 12px 28px -6px rgb(0 0 0 / 0.45);
   --shadow-control: 0 1px 2px rgb(0 0 0 / 0.25);
-  --shadow-primary: 0 4px 16px -3px rgb(129 140 248 / 0.4);
+  --shadow-primary: 0 4px 16px -3px rgb(143 171 157 / 0.4);
 }
 
 @theme inline {
@@ -155,8 +155,8 @@ html.dark {
 }
 
 body {
-  /* Flat color felt a bit sterile — two faint, fixed radial tints (indigo
-   * top-left, mint top-right) add depth without competing with content. */
+  /* Flat color felt a bit sterile — two faint, fixed radial tints (sage
+   * top-left, sand top-right) add depth without competing with content. */
   background:
     radial-gradient(ellipse 900px 500px at 15% -10%, var(--primary-soft) 0%, transparent 60%),
     radial-gradient(ellipse 800px 500px at 110% 0%, var(--accent-soft) 0%, transparent 55%),
