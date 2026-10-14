@@ -54,10 +54,7 @@ export interface NavItem {
     | "Sun"
     | "Hammer"
     | "Calculator"
-    | "Wallet"
-    | "PiggyBank"
     | "TrendingUp"
-    | "Target"
     | "GraduationCap"
     | "Compass"
     | "Upload"
@@ -100,14 +97,6 @@ export const MATMA_NAV: NavItem[] = [
   { href: "/matma/nauka", label: "Nauka", icon: "BookOpen" },
   { href: "/matma/egzamin", label: "Egzamin", icon: "ClipboardList" },
   { href: "/matma/plan", label: "Plan", icon: "Calendar" },
-];
-
-export const PARAGONY_NAV: NavItem[] = [
-  { href: "/", label: "Phoenix", icon: "Home", exact: true },
-  { href: "/paragony", label: "Pulpit", icon: "Wallet", exact: true },
-  { href: "/paragony/budzet", label: "Budżet", icon: "PiggyBank" },
-  { href: "/paragony/etf", label: "ETF", icon: "TrendingUp" },
-  { href: "/paragony/cele", label: "Cele", icon: "Target" },
 ];
 
 export const MATURA_NAV: NavItem[] = [
@@ -161,7 +150,6 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
   { prefix: "/kuznia", items: KUZNIA_NAV },
   { prefix: "/matma", items: MATMA_NAV },
-  { prefix: "/paragony", items: PARAGONY_NAV },
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },

@@ -3,9 +3,8 @@
 // ============================================================================
 // components/schola/song-photo-import-flow.tsx
 // Capture -> AI OCR draft -> review (SongForm, pre-filled) -> confirm.
-// Mirrors components/paragony/receipt-scan-flow.tsx's capture/scanning/
-// review state machine, but simpler: nothing is persisted until the review
-// step's SongForm actually saves — no Storage, no intermediate DB row.
+// Nothing is persisted until the review step's SongForm actually saves —
+// no Storage, no intermediate DB row.
 // ============================================================================
 import { useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";

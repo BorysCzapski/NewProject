@@ -5,9 +5,9 @@
 // over the default ~1MB Server Action body limit (no experimental.
 // serverActions.bodySizeLimit override exists in next.config.ts) — so this
 // is the portable fix (works regardless of framework config), and it also
-// speeds up vision AI calls and keeps payloads small. Originally written
-// for components/paragony/receipt-scan-flow.tsx; reused as-is by
-// components/schola/song-photo-import-flow.tsx.
+// speeds up vision AI calls and keeps payloads small. Shared by
+// components/schola/song-photo-import-flow.tsx and
+// components/butelki/coupon-gallery.tsx.
 // ============================================================================
 
 export function resizeImageToDataUrl(file: File, maxDim = 1600, quality = 0.82): Promise<string> {

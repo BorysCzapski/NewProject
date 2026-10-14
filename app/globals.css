@@ -51,6 +51,13 @@
 
   --radius-card: 1.25rem;
   --radius-control: 0.875rem;
+
+  /* Soft, slightly indigo-tinted elevation instead of flat neutral shadows —
+   * keeps cards and raised controls feeling warm rather than heavy/gray. */
+  --shadow-card: 0 1px 2px -1px rgb(79 70 229 / 0.06), 0 4px 16px -4px rgb(79 70 229 / 0.1);
+  --shadow-card-hover: 0 2px 4px -1px rgb(79 70 229 / 0.08), 0 12px 28px -6px rgb(79 70 229 / 0.16);
+  --shadow-control: 0 1px 2px rgb(79 70 229 / 0.06);
+  --shadow-primary: 0 4px 14px -3px rgb(79 70 229 / 0.35);
 }
 
 .dark {
@@ -84,6 +91,13 @@
   --chart-6: #d95926;
   --chart-7: #9085e9;
   --chart-8: #e66767;
+
+  /* Darker surfaces need deeper, less colorful shadows — a tinted shadow
+   * reads as a glow rather than depth once the background is already dark. */
+  --shadow-card: 0 1px 2px -1px rgb(0 0 0 / 0.2), 0 4px 16px -4px rgb(0 0 0 / 0.35);
+  --shadow-card-hover: 0 2px 4px -1px rgb(0 0 0 / 0.25), 0 12px 28px -6px rgb(0 0 0 / 0.45);
+  --shadow-control: 0 1px 2px rgb(0 0 0 / 0.25);
+  --shadow-primary: 0 4px 16px -3px rgb(129 140 248 / 0.4);
 }
 
 @theme inline {
@@ -124,6 +138,11 @@
   --radius-card: var(--radius-card);
   --radius-control: var(--radius-control);
 
+  --shadow-card: var(--shadow-card);
+  --shadow-card-hover: var(--shadow-card-hover);
+  --shadow-control: var(--shadow-control);
+  --shadow-primary: var(--shadow-primary);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -136,7 +155,12 @@ html.dark {
 }
 
 body {
-  background: var(--color-background);
+  /* Flat color felt a bit sterile — two faint, fixed radial tints (indigo
+   * top-left, mint top-right) add depth without competing with content. */
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, var(--primary-soft) 0%, transparent 60%),
+    radial-gradient(ellipse 800px 500px at 110% 0%, var(--accent-soft) 0%, transparent 55%),
+    var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;

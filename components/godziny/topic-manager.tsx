@@ -21,7 +21,7 @@ import {
   updateTopic,
 } from "@/lib/godziny/topic-actions";
 import { formatEntryCount, formatMinutes } from "@/lib/godziny/format";
-import { chartColor, CHART_COLORS } from "@/lib/paragony/chart-colors";
+import { chartColor, CHART_COLORS } from "@/lib/chart-colors";
 import type { StudyTopic } from "@/lib/types/database";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription } from "@/components/ui/card";

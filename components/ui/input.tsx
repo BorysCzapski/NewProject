@@ -13,9 +13,9 @@ export function Input({ className, ...props }: ComponentPropsWithRef<"input">) {
   return (
     <input
       className={cn(
-        "h-12 w-full rounded-(--radius-control) border border-border bg-surface px-4 text-base text-foreground",
+        "h-12 w-full rounded-(--radius-control) border border-border bg-surface px-4 text-base text-foreground shadow-(--shadow-control) transition-shadow",
         "placeholder:text-foreground-muted",
-        "focus:outline-none focus:ring-2 focus:ring-primary",
+        "focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/40",
         className
       )}
       {...props}

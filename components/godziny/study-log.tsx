@@ -18,7 +18,7 @@ import { Pencil, Plus, Trash2 } from "lucide-react";
 import { deleteEntry } from "@/lib/godziny/actions";
 import type { StudyEntry } from "@/lib/godziny/queries";
 import { formatDayLabel, formatEntryCount, formatMinutes } from "@/lib/godziny/format";
-import { chartColor } from "@/lib/paragony/chart-colors";
+import { chartColor } from "@/lib/chart-colors";
 import type { StudyTopic } from "@/lib/types/database";
 import { EntryForm } from "@/components/godziny/entry-form";
 import { Button } from "@/components/ui/button";

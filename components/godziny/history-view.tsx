@@ -40,7 +40,7 @@ import {
   type Grouping,
 } from "@/lib/godziny/format";
 import type { StudyHistory } from "@/lib/godziny/queries";
-import { chartColor } from "@/lib/paragony/chart-colors";
+import { chartColor } from "@/lib/chart-colors";
 import type { StudyTopic } from "@/lib/types/database";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";

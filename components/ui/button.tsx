@@ -18,11 +18,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-primary text-primary-foreground hover:opacity-90 active:opacity-80",
-  secondary: "bg-accent text-accent-foreground hover:opacity-90 active:opacity-80",
-  outline: "border border-border bg-transparent text-foreground hover:bg-surface-muted",
+  primary: "bg-primary text-primary-foreground shadow-(--shadow-primary) hover:brightness-110",
+  secondary: "bg-accent text-accent-foreground shadow-sm hover:brightness-110",
+  outline: "border border-border bg-surface text-foreground hover:bg-surface-muted hover:border-primary/30",
   ghost: "bg-transparent text-foreground hover:bg-surface-muted",
-  danger: "bg-danger text-white hover:opacity-90 active:opacity-80",
+  danger: "bg-danger text-white shadow-sm hover:brightness-110",
 };
 
 const sizeClasses: Record<Size, string> = {
@@ -45,7 +45,7 @@ export function Button({
     <button
       className={cn(
         "inline-flex items-center justify-center rounded-(--radius-control) font-medium",
-        "transition-colors disabled:opacity-50 disabled:pointer-events-none",
+        "transition-[filter,transform,background-color,box-shadow] duration-150 active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none disabled:active:scale-100",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         variantClasses[variant],
         sizeClasses[size],

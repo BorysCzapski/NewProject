@@ -29,16 +29,7 @@ rysik/tablet graficzny (Pointer Events — nacisk, gumka, cofnij/ponów) do zapi
 rozwiązania, pełne symulacje egzaminu (180 minut, 50 punktów), spersonalizowany harmonogram
 nauki do dnia matury, trener dowodów i panel nauczyciela.
 
-Czwarta mini-aplikacja to **Paragony** (`/paragony`) — paragony, budżet domowy i portfel
-ETF: skanowanie paragonu ze zdjęcia (Groq, model wizyjny) z ekranem korekty przed zapisem,
-automatyczna kategoryzacja AI, konta/portfele z saldem per konto, rachunki cykliczne
-(czynsz, subskrypcje), cele oszczędnościowe z szacowaną datą osiągnięcia, budżet miesięczny
-plan vs wykonanie z wykresami i drill-downem do listy transakcji; oraz ręczna ewidencja
-posiadanych ETF-ów z automatycznym pobieraniem i cache'owaniem cen (Stooq dla GPW, FMP dla
-zagranicznych), wykresem wartości portfela w czasie, CAGR/zmiennością/max drawdown liczonymi
-z realnych danych (uwzględniając dywidendy) i symulatorem „co jeśli" bez zapisu do bazy.
-
-Piąta mini-aplikacja to **Matura z języka** (`/matura`) — przygotowanie do matury z języka
+Czwarta mini-aplikacja to **Matura z języka** (`/matura`) — przygotowanie do matury z języka
 obcego (CKE): **angielskiego albo hiszpańskiego**, poziom podstawowy lub rozszerzony (język
 i poziom wybierasz na starcie, oba zmienialne w każdej chwili; przełączenie języka niczego nie
 kasuje — postęp każdego języka czeka tam, gdzie go zostawiłeś). Jeden moduł obsługuje oba
@@ -233,7 +224,7 @@ Funkcje: śpiewnik (tytuł, tekst z akordami w formacie ChordPro, tagi liturgicz
 nagrań/nut), planowanie Mszy (uporządkowana lista pieśni z notatkami typu „2x refren, 1x
 zwrotka"), import całego śpiewnika z PDF-a (AI dzieli plik na pojedyncze pieśni) oraz import
 pojedynczej pieśni ze zdjęcia nut/tekstu z akordami — oba z obowiązkowym ekranem korekty
-przed zapisem, ten sam schemat co w Paragonach. Zob. `supabase/migrations/0009_schola.sql`
+przed zapisem. Zob. `supabase/migrations/0009_schola.sql`
 i `lib/schola/*` po szczegóły; osoba z istniejącym kontem Phoenixa, która chce dołączyć do
 Scholi, loguje się tym samym e-mailem na `/schola/logowanie` (patrz komentarz „Sharp edges”
 w planie implementacji, jeśli szukasz uzasadnienia tej decyzji).
@@ -559,10 +550,7 @@ Patrz `.env.example`. Wymagane:
 | `GROQ_API_KEY` | klucz API Groq — funkcje AI (czytanie, pisanie, piosenki, gramatyka-przekształcenia) nie zadziałają bez niego, darmowy tier na [console.groq.com](https://console.groq.com/keys) |
 | `NEXT_PUBLIC_SITE_URL` | publiczny URL wdrożenia (linki w e-mailach autoryzacyjnych) |
 
-Opcjonalnie: `GROQ_MODEL` (domyślnie `llama-3.3-70b-versatile`), `FMP_API_KEY` — klucz
-Financial Modeling Prep (darmowy tier: 250 zapytań/dzień) używany przez Paragony do cen
-ETF-ów zagranicznych; bez niego działają nadal ETF-y notowane na GPW (Stooq, bez klucza) —
-patrz `lib/paragony/etf-prices.ts`.
+Opcjonalnie: `GROQ_MODEL` (domyślnie `llama-3.3-70b-versatile`).
 
 ## Konto administratora
 

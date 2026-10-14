@@ -100,16 +100,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     icon: "Hammer",
     href: "/kuznia",
   },
-  // ——— planned apps: visible in /aplikacje as "wkrótce", hidden from the
-  // launcher until they get routes and comingSoon is removed ———
-  {
-    id: "paragony",
-    name: "Paragony",
-    description: "Paragony, budżet domowy i portfel ETF",
-    section: "narzedzia",
-    icon: "ReceiptText",
-    href: "/paragony",
-  },
   {
     id: "butelki",
     name: "Kaucje",

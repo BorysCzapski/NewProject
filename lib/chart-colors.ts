@@ -1,11 +1,11 @@
 // ============================================================================
-// lib/paragony/chart-colors.ts
-// Categorical series colors for Recharts (Paragony budget/ETF charts). Backed
-// by the --chart-1..8 CSS custom properties in app/globals.css — a validated
-// CVD-safe 8-hue order (see the dataviz skill's palette.md), already stepped
-// for both the light and dark surface via the existing ".dark" class toggle,
-// so passing these var() strings straight into Recharts fill/stroke props
-// gets automatic theme-awareness for free.
+// lib/chart-colors.ts
+// Categorical series colors for Recharts. Backed by the --chart-1..8 CSS
+// custom properties in app/globals.css — a validated CVD-safe 8-hue order
+// (see the dataviz skill's palette.md), already stepped for both the light
+// and dark surface via the existing ".dark" class toggle, so passing these
+// var() strings straight into Recharts fill/stroke props gets automatic
+// theme-awareness for free. Shared across apps (Godziny topics, ...).
 // ============================================================================
 
 export const CHART_COLORS = [

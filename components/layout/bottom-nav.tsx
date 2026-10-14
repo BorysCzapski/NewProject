@@ -21,10 +21,7 @@ import {
   Sun,
   Hammer,
   Calculator,
-  Wallet,
-  PiggyBank,
   TrendingUp,
-  Target,
   GraduationCap,
   Compass,
   Upload,
@@ -52,10 +49,7 @@ const ICONS = {
   Sun,
   Hammer,
   Calculator,
-  Wallet,
-  PiggyBank,
   TrendingUp,
-  Target,
   GraduationCap,
   Compass,
   Upload,
@@ -79,7 +73,7 @@ export function BottomNav() {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 backdrop-blur"
+      className="fixed inset-x-0 bottom-0 z-40 bg-surface/80 shadow-[0_-1px_0_var(--border),0_-8px_24px_-16px_rgb(0_0_0/0.3)] backdrop-blur-md"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="mx-auto flex max-w-lg items-stretch justify-between px-2">
@@ -93,11 +87,18 @@ export function BottomNav() {
               <Link
                 href={item.href}
                 className={cn(
-                  "flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium transition-colors",
+                  "flex flex-col items-center gap-1 py-2 text-[11px] font-medium transition-colors",
                   isActive ? "text-primary" : "text-foreground-muted"
                 )}
               >
-                <Icon className="h-6 w-6" strokeWidth={isActive ? 2.5 : 2} />
+                <span
+                  className={cn(
+                    "flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-200",
+                    isActive && "bg-primary-soft"
+                  )}
+                >
+                  <Icon className="h-5 w-5" strokeWidth={isActive ? 2.5 : 2} />
+                </span>
                 {item.label}
               </Link>
             </li>

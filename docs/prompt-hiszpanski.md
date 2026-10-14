@@ -267,7 +267,7 @@ Dziś import jest tylko admiński (`lib/matura/import-pdf.ts`). Rozszerzenie:
    **per chunk**, scalanie w kodzie. Nie proś modelu o cały plik naraz.
 3. **Obowiązkowy ekran korekty przed zapisem** — wykryta kategoria (mapowana na
    `MaturaSectionSlug`: `sluchanie` / `czytanie` / `srodki-jezykowe` / `pisanie`), język,
-   poziom i wyekstrahowane zadania, wszystko edytowalne. Tak działają Paragony i Schola.
+   poziom i wyekstrahowane zadania, wszystko edytowalne. Tak działa Schola.
    Podręcznik świadomie tego nie robi, bo ma zbyt zagnieżdżoną strukturę — arkusz jest płaski,
    więc **tutaj ekran korekty ma być**.
 4. Plik do Supabase Storage (bucket `matura-arkusze`), pobierany podpisanym URL-em —

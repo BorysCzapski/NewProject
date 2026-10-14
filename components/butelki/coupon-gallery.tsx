@@ -4,8 +4,7 @@
 // components/butelki/coupon-gallery.tsx
 // Photo strip of deposit-return coupons ("kaucyjne kupony"): capture ->
 // upload -> thumbnail at the bottom. Tapping a thumbnail opens it enlarged
-// in a lightbox with a delete action. Mirrors the capture/resize pattern of
-// components/paragony/receipt-scan-flow.tsx.
+// in a lightbox with a delete action.
 // ============================================================================
 import { useRef, useState, useTransition } from "react";
 import { Camera, Trash2, X } from "lucide-react";

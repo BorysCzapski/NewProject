@@ -43,7 +43,7 @@ export default async function PhoenixHomePage() {
                 <div className="grid grid-cols-2 gap-3">
                   {apps.map((app) => (
                     <Link key={app.id} href={app.href}>
-                      <Card className="flex h-full flex-col gap-2 active:scale-[0.98] transition-transform">
+                      <Card className="flex h-full flex-col gap-2 transition-[transform,box-shadow] duration-200 hover:shadow-(--shadow-card-hover) hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0">
                         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-soft text-primary">
                           <AppIcon name={app.icon} className="h-6 w-6" />
                         </span>
