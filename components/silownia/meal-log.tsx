@@ -14,6 +14,7 @@ import { formatDayLabel } from "@/lib/silownia/format";
 import { MealForm } from "@/components/silownia/meal-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription } from "@/components/ui/card";
+import type { GymMealEntry } from "@/lib/types/database";
 
 export function MealLog({ meals, today }: { meals: GymMealEntry[]; today: string }) {
   const router = useRouter();
