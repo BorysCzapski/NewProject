@@ -45,7 +45,12 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "pg": "^8.23.0",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "sharp@0.35.5": true
   }
 }

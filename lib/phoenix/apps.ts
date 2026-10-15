@@ -77,6 +77,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/algorytmy",
   },
   {
+    id: "maturalnik",
+    name: "Maturalnik",
+    description: "612 zadań maturalnych z matematyki: odhaczaj, rysuj, sprawdzaj rozwiązania",
+    section: "nauka",
+    icon: "NotebookPen",
+    href: "/maturalnik",
+  },
+  {
     id: "godziny",
     name: "Godziny",
     description: "Licznik czasu nauki: ile i czego się uczysz",

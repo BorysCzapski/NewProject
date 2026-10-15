@@ -1601,3 +1601,49 @@ export interface GymSupplementEntry {
   note: string | null;
   created_at: string;
 }
+
+// ============================================================================
+// Maturalnik — zaimportowany bank zadań z notatnika OneNote (17 rozdziałów,
+// ~612 zadań maturalnych z matematyki). Mirrors supabase/migrations/0028_maturalnik.sql.
+// ============================================================================
+export interface MaturalnikChapter {
+  id: string;
+  number: number;
+  slug: string;
+  title: string;
+  order_index: number;
+  created_at: string;
+}
+
+export interface MaturalnikAiSolution {
+  solutionText: string;
+  model: string;
+  generatedAt: string;
+}
+
+export interface MaturalnikProblem {
+  id: string;
+  chapter_id: string;
+  number: number;
+  image_path: string;
+  ai_solution: MaturalnikAiSolution | null;
+  flagged_for_review: boolean;
+  created_at: string;
+}
+
+export interface MaturalnikProgress {
+  id: string;
+  user_id: string;
+  problem_id: string;
+  done: boolean;
+  done_at: string | null;
+  canvas_path: string | null;
+  updated_at: string;
+}
+
+export interface MaturalnikSettings {
+  user_id: string;
+  exam_date: string | null;
+  created_at: string;
+  updated_at: string;
+}
