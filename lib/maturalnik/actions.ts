@@ -10,9 +10,6 @@ import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { actionFailure, type ActionResult } from "@/lib/action-result";
-import { getProblemById } from "@/lib/maturalnik/content";
-import { getOrGenerateSolution } from "@/lib/maturalnik/solutions";
-import type { MaturalnikAiSolution } from "@/lib/types/database";
 
 export async function toggleProblemDone(problemId: string, done: boolean): Promise<ActionResult<void>> {
   const profile = await requireProfile();
@@ -86,23 +83,4 @@ export async function setExamDate(examDate: string | null): Promise<ActionResult
   revalidatePath("/maturalnik");
   revalidatePath("/maturalnik/ustawienia");
   return { ok: true, data: undefined };
-}
-
-/** Generates (once, cached) the AI solution for a problem — see
- * lib/maturalnik/solutions.ts for the caveats around this being AI-generated,
- * never official CKE material. */
-export async function generateSolution(problemId: string): Promise<ActionResult<MaturalnikAiSolution>> {
-  await requireProfile();
-  const supabase = await createClient();
-
-  const problem = await getProblemById(supabase, problemId);
-  if (!problem) return actionFailure("Nie znaleziono zadania.");
-
-  try {
-    const solution = await getOrGenerateSolution(supabase, problem);
-    return { ok: true, data: solution };
-  } catch (err) {
-    console.error("[maturalnik] generateSolution failed:", err);
-    return actionFailure("Nie udało się wygenerować rozwiązania. Spróbuj ponownie za chwilę.");
-  }
 }

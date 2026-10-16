@@ -1,7 +1,9 @@
 // ============================================================================
 // app/(main)/maturalnik/[chapterSlug]/[problemNumber]/page.tsx
-// Single problem: scanned statement image, "zrobione" toggle, a drawing
-// canvas that auto-saves/reloads, and a lazy AI solution reveal.
+// Single problem: scanned statement image, "zrobione" toggle, and a drawing
+// canvas that auto-saves/reloads. No AI-generated solution — the book itself
+// has step-by-step solutions, and Groq's pay-as-you-go vision models made a
+// second, AI-guessed solution pointless (see removed lib/maturalnik/solutions.ts).
 // ============================================================================
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -14,7 +16,6 @@ import { getProblemImageSignedUrl, getCanvasSignedUrl } from "@/lib/maturalnik/s
 import { PageHeader } from "@/components/layout/page-header";
 import { ProblemCheckbox } from "@/components/maturalnik/problem-checkbox";
 import { CanvasPanel } from "@/components/maturalnik/canvas-panel";
-import { SolutionPanel } from "@/components/maturalnik/solution-panel";
 
 export default async function MaturalnikProblemPage({
   params,
@@ -75,8 +76,6 @@ export default async function MaturalnikProblemPage({
         </div>
 
         <CanvasPanel problemId={problem.id} initialImageUrl={canvasUrl} />
-
-        <SolutionPanel problemId={problem.id} initialSolution={problem.ai_solution} />
 
         <div className="flex items-center justify-between gap-3 pt-2">
           {prevProblem ? (

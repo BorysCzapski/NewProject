@@ -1615,18 +1615,11 @@ export interface MaturalnikChapter {
   created_at: string;
 }
 
-export interface MaturalnikAiSolution {
-  solutionText: string;
-  model: string;
-  generatedAt: string;
-}
-
 export interface MaturalnikProblem {
   id: string;
   chapter_id: string;
   number: number;
   image_path: string;
-  ai_solution: MaturalnikAiSolution | null;
   flagged_for_review: boolean;
   created_at: string;
 }
