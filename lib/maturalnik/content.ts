@@ -3,7 +3,7 @@
 // Server-only read helpers over the shared content tables (maturalnik_
 // chapters, maturalnik_problems). No auth checks here — RLS already makes
 // these tables select-true for any authenticated user; auth happens once, in
-// the page via requireProfile(), same pattern as lib/matma/content.ts.
+// the page via requireProfile().
 // ============================================================================
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";

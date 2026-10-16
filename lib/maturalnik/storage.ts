@@ -1,9 +1,9 @@
 // ============================================================================
 // lib/maturalnik/storage.ts
 // Signed-URL helpers for the two private buckets — maturalnik-problems (the
-// book scans) and maturalnik-canvas (per-user drawings). Same pattern as
-// lib/matma/spaced-review.ts's getCanvasSignedUrl: buckets are private, so
-// client-side <img>/canvas loads need a signed URL, never the raw path.
+// book scans) and maturalnik-canvas (per-user drawings). Both buckets are
+// private, so client-side <img>/canvas loads need a signed URL, never the
+// raw path.
 // ============================================================================
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";

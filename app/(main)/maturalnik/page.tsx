@@ -8,8 +8,9 @@ import { ChevronRight, Settings2 } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getChapters } from "@/lib/maturalnik/content";
-import { getProgressByChapter, getProgressSummary, getDailyActivityCounts } from "@/lib/maturalnik/progress";
+import { getProgressByChapter, getProgressSummary, getDailyActivity } from "@/lib/maturalnik/progress";
 import { getMaturalnikSettings } from "@/lib/maturalnik/settings";
+import { todayKey } from "@/lib/maturalnik/dates";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -26,9 +27,7 @@ export default async function MaturalnikPage() {
     getMaturalnikSettings(supabase, profile.id),
   ]);
 
-  const activityCounts = settings?.exam_date
-    ? await getDailyActivityCounts(supabase, profile.id, settings.exam_date)
-    : new Map<string, number>();
+  const activity = settings?.exam_date ? await getDailyActivity(supabase, profile.id, settings.exam_date) : {};
 
   const overallPercent = summary.totalCount > 0 ? Math.round((summary.doneCount / summary.totalCount) * 100) : 0;
 
@@ -47,7 +46,7 @@ export default async function MaturalnikPage() {
       />
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
         {settings?.exam_date ? (
-          <ExamCountdownHeatmap examDate={settings.exam_date} activityCounts={activityCounts} />
+          <ExamCountdownHeatmap examDate={settings.exam_date} today={todayKey()} activity={activity} />
         ) : (
           <Link href="/maturalnik/ustawienia">
             <Card className="flex items-center justify-between gap-3 bg-primary-soft transition-transform active:scale-[0.99]">

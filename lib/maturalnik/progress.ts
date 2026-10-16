@@ -1,12 +1,12 @@
 // ============================================================================
 // lib/maturalnik/progress.ts
 // Per-user progress reads over maturalnik_progress. Writes live in
-// lib/maturalnik/actions.ts (Server Actions), same split as
-// lib/matma/{content,progress}.ts.
+// lib/maturalnik/actions.ts (Server Actions).
 // ============================================================================
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { MaturalnikProgress } from "@/lib/types/database";
+import { addDays, dayKey } from "@/lib/maturalnik/dates";
 
 export interface ProgressSummary {
   doneCount: number;
@@ -84,29 +84,63 @@ export async function getProblemProgress(
 
 const HEATMAP_LOOKBACK_WEEKS = 20;
 
-/** Problems-done-per-day from ~20 weeks before today through `examDate`
- * (inclusive, "YYYY-MM-DD"), for the exam-countdown heatmap. Keyed by date
- * string. The lookback window is computed here (not by the caller) so a
- * Server Component rendering the heatmap never calls Date.now() itself —
- * React's purity lint flags impure calls directly in component bodies. */
-export async function getDailyActivityCounts(
+export interface DailyActivityItem {
+  label: string;
+  href: string;
+}
+
+export interface DailyActivity {
+  count: number;
+  items: DailyActivityItem[];
+}
+
+interface DoneRow {
+  done_at: string;
+  maturalnik_problems: {
+    number: number;
+    maturalnik_chapters: { number: number; slug: string } | { number: number; slug: string }[] | null;
+  } | null;
+}
+
+/** Problems done per calendar day (in APP_TIME_ZONE, see lib/maturalnik/
+ * dates.ts) from ~20 weeks back through `examDate`, each with the list of
+ * problems so the heatmap can show WHAT was done on a clicked day, not just
+ * how many. The lookback window is computed here (not by the caller) so a
+ * Server Component never calls Date.now() itself — React's purity lint
+ * flags impure calls directly in component bodies. Plain object (not Map)
+ * because it's passed on to a Client Component. */
+export async function getDailyActivity(
   supabase: SupabaseClient,
   userId: string,
   examDate: string
-): Promise<Map<string, number>> {
+): Promise<Record<string, DailyActivity>> {
   const fromDate = new Date(Date.now() - HEATMAP_LOOKBACK_WEEKS * 7 * 86_400_000).toISOString().slice(0, 10);
+  // Pad a day on both sides: the stored timestamps are UTC, the buckets are
+  // Warsaw days, so a boundary day's rows can sit just outside a UTC-exact range.
   const { data } = await supabase
     .from("maturalnik_progress")
-    .select("done_at")
+    .select("done_at, maturalnik_problems(number, maturalnik_chapters(number, slug))")
     .eq("user_id", userId)
     .not("done_at", "is", null)
-    .gte("done_at", `${fromDate}T00:00:00`)
-    .lte("done_at", `${examDate}T23:59:59`);
+    .gte("done_at", `${addDays(fromDate, -1)}T00:00:00Z`)
+    .lte("done_at", `${addDays(examDate, 1)}T23:59:59Z`)
+    .order("done_at");
 
-  const counts = new Map<string, number>();
-  for (const row of (data ?? []) as { done_at: string }[]) {
-    const day = row.done_at.slice(0, 10);
-    counts.set(day, (counts.get(day) ?? 0) + 1);
+  const activity: Record<string, DailyActivity> = {};
+  for (const row of (data ?? []) as unknown as DoneRow[]) {
+    const day = dayKey(row.done_at);
+    const bucket = (activity[day] ??= { count: 0, items: [] });
+    bucket.count += 1;
+    const problem = row.maturalnik_problems;
+    const chapter = Array.isArray(problem?.maturalnik_chapters)
+      ? problem?.maturalnik_chapters[0]
+      : problem?.maturalnik_chapters;
+    if (problem && chapter) {
+      bucket.items.push({
+        label: `Zadanie ${chapter.number}.${problem.number}`,
+        href: `/maturalnik/${chapter.slug}/${problem.number}`,
+      });
+    }
   }
-  return counts;
+  return activity;
 }

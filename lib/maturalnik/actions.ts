@@ -34,8 +34,8 @@ export async function toggleProblemDone(problemId: string, done: boolean): Promi
 }
 
 /** Uploads a "data:image/png;base64,..." canvas snapshot to a DETERMINISTIC
- * path (one evolving drawing per user+problem, unlike Matma's one-random-
- * file-per-attempt — see 0028_maturalnik.sql comment on canvas_path) and
+ * path (one evolving drawing per user+problem, not an append-only attempt
+ * log — see 0028_maturalnik.sql comment on canvas_path) and
  * records it on the progress row. Called by the autosave debounce in
  * components/maturalnik/ink-canvas.tsx, so failures are logged, not
  * surfaced loudly — a dropped autosave shouldn't interrupt drawing. */
