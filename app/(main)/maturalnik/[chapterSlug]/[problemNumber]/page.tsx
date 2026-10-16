@@ -52,7 +52,7 @@ export default async function MaturalnikProblemPage({
         subtitle={chapter.title}
         action={<ProblemCheckbox problemId={problem.id} initialDone={progress?.done ?? false} />}
       />
-      <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
+      <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5 lg:max-w-5xl">
         {problem.flagged_for_review && (
           <div className="flex items-start gap-2 rounded-(--radius-control) bg-warning-soft p-2.5 text-xs text-warning">
             <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
