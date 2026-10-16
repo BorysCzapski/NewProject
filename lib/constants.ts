@@ -190,7 +190,6 @@ export const ACTIVITY_TYPES = {
   SONG: "song",
   LISTENING: "listening",
   MATCHING: "matching",
-  MATH: "math",
   MATURA: "matura",
   GEOGRAFIA: "geografia",
   ALGORYTMY: "algorytmy",

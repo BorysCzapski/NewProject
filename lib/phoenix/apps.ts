@@ -45,14 +45,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/jezyki",
   },
   {
-    id: "matma",
-    name: "Matma",
-    description: "Matura rozszerzona z matematyki",
-    section: "nauka",
-    icon: "Calculator",
-    href: "/matma",
-  },
-  {
     id: "matura",
     name: "Matura z języka",
     description: "Przygotowanie do matury z angielskiego i hiszpańskiego (CKE)",
