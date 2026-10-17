@@ -48,19 +48,23 @@ const asDate = (v: unknown) => {
   return Number.isNaN(d.getTime()) ? null : d;
 };
 const num = (v: unknown) => (v === null || v === undefined ? null : Number(v));
+// sql.js hands every JS number back to SQLite as a REAL, and SQLite renders a REAL to text as
+// "2026.0" — so integer-valued results are cleaned up where text is built (CONCAT).
+const int = (n: number | null) => (n === null || !Number.isFinite(n) ? null : Math.trunc(n));
+const plain = (v: unknown) => (typeof v === "string" && /^-?\d+\.0$/.test(v) ? v.slice(0, -2) : v);
 
 function registerShims(db: SqlJsDatabase) {
   const fn = (name: string, f: (...a: never[]) => unknown) => db.create_function(name, f);
-  fn("YEAR", ((v: unknown) => asDate(v)?.getUTCFullYear() ?? null) as never);
-  fn("MONTH", ((v: unknown) => (asDate(v) ? asDate(v)!.getUTCMonth() + 1 : null)) as never);
-  fn("DAY", ((v: unknown) => asDate(v)?.getUTCDate() ?? null) as never);
-  fn("DAYOFMONTH", ((v: unknown) => asDate(v)?.getUTCDate() ?? null) as never);
+  fn("YEAR", ((v: unknown) => int(asDate(v)?.getUTCFullYear() ?? null)) as never);
+  fn("MONTH", ((v: unknown) => int(asDate(v) ? asDate(v)!.getUTCMonth() + 1 : null)) as never);
+  fn("DAY", ((v: unknown) => int(asDate(v)?.getUTCDate() ?? null)) as never);
+  fn("DAYOFMONTH", ((v: unknown) => int(asDate(v)?.getUTCDate() ?? null)) as never);
   fn("DATEDIFF", ((a: unknown, b: unknown) => {
     const x = asDate(a);
     const y = asDate(b);
-    return x && y ? Math.round((x.getTime() - y.getTime()) / 86_400_000) : null;
+    return x && y ? int(Math.round((x.getTime() - y.getTime()) / 86_400_000)) : null;
   }) as never);
-  fn("CONCAT", ((...args: unknown[]) => (args.some((a) => a === null) ? null : args.join(""))) as never);
+  fn("CONCAT", ((...args: unknown[]) => (args.some((a) => a === null) ? null : args.map(plain).join(""))) as never);
   fn("IF", ((c: unknown, a: unknown, b: unknown) => (c ? a : b)) as never);
   fn("IFNULL", ((a: unknown, b: unknown) => (a === null ? b : a)) as never);
   fn("LEFT", ((s: unknown, n: unknown) => (s === null ? null : String(s).slice(0, Number(n)))) as never);
@@ -71,15 +75,15 @@ function registerShims(db: SqlJsDatabase) {
     const start = Number(from) > 0 ? Number(from) - 1 : Math.max(str.length + Number(from), 0);
     return len === undefined ? str.slice(start) : str.slice(start, start + Number(len));
   }) as never);
-  fn("CHAR_LENGTH", ((s: unknown) => (s === null ? null : String(s).length)) as never);
-  fn("LOCATE", ((sub: unknown, s: unknown) => (s === null ? null : String(s).indexOf(String(sub)) + 1)) as never);
-  fn("FLOOR", ((v: unknown) => (num(v) === null ? null : Math.floor(num(v)!))) as never);
-  fn("CEIL", ((v: unknown) => (num(v) === null ? null : Math.ceil(num(v)!))) as never);
-  fn("CEILING", ((v: unknown) => (num(v) === null ? null : Math.ceil(num(v)!))) as never);
+  fn("CHAR_LENGTH", ((s: unknown) => (s === null ? null : int(String(s).length))) as never);
+  fn("LOCATE", ((sub: unknown, s: unknown) => (s === null ? null : int(String(s).indexOf(String(sub)) + 1))) as never);
+  fn("FLOOR", ((v: unknown) => (num(v) === null ? null : int(Math.floor(num(v)!)))) as never);
+  fn("CEIL", ((v: unknown) => (num(v) === null ? null : int(Math.ceil(num(v)!)))) as never);
+  fn("CEILING", ((v: unknown) => (num(v) === null ? null : int(Math.ceil(num(v)!)))) as never);
   fn("SQRT", ((v: unknown) => (num(v) === null ? null : Math.sqrt(num(v)!))) as never);
   fn("POW", ((a: unknown, b: unknown) => Math.pow(Number(a), Number(b))) as never);
   fn("POWER", ((a: unknown, b: unknown) => Math.pow(Number(a), Number(b))) as never);
-  fn("MOD", ((a: unknown, b: unknown) => (Number(b) === 0 ? null : Number(a) % Number(b))) as never);
+  fn("MOD", ((a: unknown, b: unknown) => (Number(b) === 0 ? null : Number.isInteger(Number(a) % Number(b)) ? int(Number(a) % Number(b)) : Number(a) % Number(b))) as never);
   fn("CURDATE", (() => new Date().toISOString().slice(0, 10)) as never);
   fn("NOW", (() => new Date().toISOString().slice(0, 19).replace("T", " ")) as never);
 }

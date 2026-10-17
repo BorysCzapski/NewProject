@@ -8,6 +8,7 @@
 import { useEffect, useRef } from "react";
 import { basicSetup, EditorView } from "codemirror";
 import { keymap } from "@codemirror/view";
+import { Prec } from "@codemirror/state";
 import { indentWithTab } from "@codemirror/commands";
 import { python } from "@codemirror/lang-python";
 import { sql } from "@codemirror/lang-sql";
@@ -48,16 +49,19 @@ export function CodeEditor({
       doc: value,
       extensions: [
         basicSetup,
-        keymap.of([
-          indentWithTab,
-          {
-            key: "Mod-Enter",
-            run: () => {
-              callbacks.current.onRun?.();
-              return true;
+        // above basicSetup's own keymap, where Mod-Enter inserts a blank line
+        Prec.highest(
+          keymap.of([
+            {
+              key: "Mod-Enter",
+              run: () => {
+                callbacks.current.onRun?.();
+                return true;
+              },
             },
-          },
-        ]),
+          ])
+        ),
+        keymap.of([indentWithTab]),
         language === "python" ? python() : sql(),
         theme,
         EditorView.contentAttributes.of({ spellcheck: "false", autocapitalize: "off", autocorrect: "off" }),

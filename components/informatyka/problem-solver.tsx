@@ -6,6 +6,7 @@
 // answer; code / SQL / spreadsheet tabs join as those tools land), and the
 // "check with the key" + self-scoring flow that marks the problem done.
 // ============================================================================
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Check, Eye, RotateCcw } from "lucide-react";
@@ -17,13 +18,17 @@ import { SqlConsole } from "@/components/informatyka/sql-console";
 import { completeProblem, reopenProblem, saveCanvas, saveWork } from "@/lib/informatyka/actions";
 import type { InformatykaKind, InformatykaStatus } from "@/lib/types/database";
 
-type TabId = "canvas" | "answer" | "code" | "sql";
+// Univer is heavy — only fetched for spreadsheet problems.
+const Spreadsheet = dynamic(() => import("@/components/informatyka/spreadsheet"), { ssr: false });
 
-const DEFAULT_TAB: Partial<Record<InformatykaKind, TabId>> = { program: "code", sql: "sql" };
+type TabId = "canvas" | "answer" | "code" | "sql" | "sheet";
+
+const DEFAULT_TAB: Partial<Record<InformatykaKind, TabId>> = { program: "code", sql: "sql", arkusz: "sheet" };
 
 function tabsFor(kind: InformatykaKind): { id: TabId; label: string }[] {
   return [
     ...(kind === "program" || kind === "pisemne" ? [{ id: "code" as const, label: "Kod" }] : []),
+    ...(kind === "arkusz" ? [{ id: "sheet" as const, label: "Arkusz" }] : []),
     ...(kind === "sql" ? [{ id: "sql" as const, label: "SQL" }] : []),
     { id: "canvas", label: "Canvas" },
     { id: "answer", label: "Odpowiedź" },
@@ -86,6 +91,7 @@ export function ProblemSolver({
   dataFiles,
   resultFile,
   sqlExtraSchema,
+  sheetUrl,
   initialCode,
   initialSql,
   pointsMax,
@@ -105,6 +111,7 @@ export function ProblemSolver({
   dataFiles: string[];
   resultFile: string | null;
   sqlExtraSchema: string | null;
+  sheetUrl: string | null;
   initialCode: string;
   initialSql: string;
   pointsMax: number;
@@ -199,6 +206,9 @@ export function ProblemSolver({
                 initialCode={initialCode}
               />
             </div>
+          )}
+          {kind === "arkusz" && tab === "sheet" && (
+            <Spreadsheet problemId={problemId} examId={examId} dataFiles={dataFiles} snapshotUrl={sheetUrl} />
           )}
           {kind === "sql" && (
             <div hidden={tab !== "sql"}>

@@ -111,6 +111,31 @@ export async function saveCanvas(problemId: string, dataUrl: string): Promise<Ac
   return { ok: true, data: undefined };
 }
 
+/** Stores the spreadsheet workbook snapshot (JSON) at a deterministic per-user path. */
+export async function saveSheet(problemId: string, snapshotJson: string): Promise<ActionResult<void>> {
+  if (snapshotJson.length > 12_000_000) return actionFailure("Arkusz jest za duży, by go zapisać.");
+  const profile = await requireProfile();
+  const supabase = await createClient();
+
+  const path = `${profile.id}/${problemId}.json`;
+  const { error: uploadError } = await supabase.storage
+    .from("informatyka-sheets")
+    .upload(path, Buffer.from(snapshotJson, "utf8"), { contentType: "application/json", upsert: true });
+  if (uploadError) {
+    console.error("[informatyka] sheet upload failed:", uploadError);
+    return actionFailure("Nie udało się zapisać arkusza.");
+  }
+
+  const { error } = await supabase
+    .from("informatyka_progress")
+    .upsert({ user_id: profile.id, problem_id: problemId, sheet_path: path }, { onConflict: "user_id,problem_id" });
+  if (error) {
+    console.error("[informatyka] sheet upsert failed:", error);
+    return actionFailure("Nie udało się zapisać arkusza.");
+  }
+  return { ok: true, data: undefined };
+}
+
 export async function setExamDate(examDate: string | null): Promise<ActionResult<void>> {
   const profile = await requireProfile();
   const supabase = await createClient();

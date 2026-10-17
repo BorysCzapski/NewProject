@@ -10,7 +10,7 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getAllProblems, getProblemDetail } from "@/lib/informatyka/content";
 import { getProblemProgress } from "@/lib/informatyka/progress";
-import { getCanvasUrl, getPageUrls } from "@/lib/informatyka/storage";
+import { getCanvasUrl, getPageUrls, getSheetUrl } from "@/lib/informatyka/storage";
 import { KIND_LABEL, examShortLabel, topicLabel } from "@/lib/informatyka/taxonomy";
 import { PageHeader } from "@/components/layout/page-header";
 import { ProblemSolver } from "@/components/informatyka/problem-solver";
@@ -34,7 +34,10 @@ export default async function ZadaniePage({ params }: { params: Promise<{ proble
     getPageUrls(supabase, problem.key_image_paths),
     getAllProblems(supabase),
   ]);
-  const canvasUrl = progress?.canvas_path ? await getCanvasUrl(supabase, progress.canvas_path) : null;
+  const [canvasUrl, sheetUrl] = await Promise.all([
+    progress?.canvas_path ? getCanvasUrl(supabase, progress.canvas_path) : null,
+    progress?.sheet_path ? getSheetUrl(supabase, progress.sheet_path) : null,
+  ]);
 
   const siblings = all.filter((p) => p.exam.id === exam.id);
   const index = siblings.findIndex((p) => p.id === problem.id);
@@ -54,6 +57,7 @@ export default async function ZadaniePage({ params }: { params: Promise<{ proble
           dataFiles={problem.data_files}
           resultFile={problem.result_file}
           sqlExtraSchema={problem.sql_extra_schema}
+          sheetUrl={sheetUrl}
           initialCode={progress?.code ?? ""}
           initialSql={progress?.sql_text ?? ""}
           pointsMax={problem.points_max}

@@ -26,3 +26,12 @@ export async function getCanvasUrl(supabase: SupabaseClient, canvasPath: string)
   }
   return data?.signedUrl ?? null;
 }
+
+export async function getSheetUrl(supabase: SupabaseClient, sheetPath: string): Promise<string | null> {
+  const { data, error } = await supabase.storage.from("informatyka-sheets").createSignedUrl(sheetPath, 3600);
+  if (error) {
+    console.error("[informatyka] sheet createSignedUrl failed:", error);
+    return null;
+  }
+  return data?.signedUrl ?? null;
+}
