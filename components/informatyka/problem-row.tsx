@@ -10,10 +10,13 @@ export function ProblemRow({
   problem,
   progress,
   showExam,
+  hideTaskTitle,
 }: {
   problem: ProblemSummary;
   progress: InformatykaProgress | undefined;
   showExam?: boolean;
+  /** Set where the task title is already shown as a group heading. */
+  hideTaskTitle?: boolean;
 }) {
   const done = progress?.status === "done";
   return (
@@ -32,7 +35,7 @@ export function ProblemRow({
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-foreground">
           {showExam ? `${examShortLabel(problem.exam)} · ` : ""}Zadanie {problem.label}
-          {problem.task_title ? <span className="font-normal text-foreground-muted"> — {problem.task_title}</span> : null}
+          {problem.task_title && !hideTaskTitle ? <span className="font-normal text-foreground-muted"> — {problem.task_title}</span> : null}
         </p>
         <p className="truncate text-xs text-foreground-muted">
           {KIND_LABEL[problem.kind]} · {topicLabel(problem.topic)}

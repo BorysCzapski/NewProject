@@ -47,7 +47,7 @@ export default async function ArkuszPage({ params }: { params: Promise<{ slug: s
               {g.title ? ` — ${g.title}` : ""}
             </h3>
             {g.items.map((p) => (
-              <ProblemRow key={p.id} problem={p} progress={progress.get(p.id)} />
+              <ProblemRow key={p.id} problem={p} progress={progress.get(p.id)} hideTaskTitle />
             ))}
           </section>
         ))}
