@@ -1,6 +1,6 @@
 // ============================================================================
-// lib/maturalnik/dates.ts
-// Calendar-day math for the exam-countdown heatmap, done on "YYYY-MM-DD"
+// lib/exam-dates.ts
+// Calendar-day math (shared by Maturalnik and Informatyka) for the exam-countdown heatmap, done on "YYYY-MM-DD"
 // strings in a fixed app time zone instead of on local Date objects: the
 // server (UTC on Vercel) and the student's browser disagree about what
 // "today" is for a couple of hours every night, and a problem marked done at
@@ -53,4 +53,16 @@ export function formatKeyPl(key: string): string {
     month: "long",
     year: "numeric",
   });
+}
+
+/** One problem done on a given day, linking back to it. */
+export interface DailyActivityItem {
+  label: string;
+  href: string;
+}
+
+/** What the heatmap shows for a clicked day. */
+export interface DailyActivity {
+  count: number;
+  items: DailyActivityItem[];
 }

@@ -1,0 +1,14 @@
+{
+  "_comment": "Which folder of Archive.zip holds the CKE data files of which session. Folder names in the archive are misleading (\"dane maj 23\" is 2025 maj); verified by matching the file names each exam PDF mentions.",
+  "2022-maj": "Dane_2205",
+  "2022-czerwiec": "DANE-2",
+  "2023-maj": "Dane_2305",
+  "2023-czerwiec": "DANE/DANE_M",
+  "2024-maj": "Dane-NF-2405",
+  "2024-czerwiec": "informatyka-2024-czerwiec-matura-rozszerzona-zalaczniki/informatyka-2024-czerwiec-matura-rozszerzona-zalaczniki",
+  "2025-maj": "dane maj 23",
+  "2025-czerwiec": "informatyka-2025-czerwiec-matura-rozszerzona-zalaczniki",
+  "2026-maj": "Dane-NF-2605-2",
+  "2026-czerwiec": "informatyka-2026-czerwiec-matura-rozszerzona-zalaczniki",
+  "2026-czerwiec-stara": "informatyka-2026-czerwiec-matura-stara-rozszerzona-zalaczniki"
+}

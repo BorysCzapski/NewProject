@@ -37,7 +37,7 @@ export async function toggleProblemDone(problemId: string, done: boolean): Promi
  * path (one evolving drawing per user+problem, not an append-only attempt
  * log — see 0028_maturalnik.sql comment on canvas_path) and
  * records it on the progress row. Called by the autosave debounce in
- * components/maturalnik/ink-canvas.tsx, so failures are logged, not
+ * components/ink/ink-canvas.tsx, so failures are logged, not
  * surfaced loudly — a dropped autosave shouldn't interrupt drawing. */
 export async function autosaveCanvas(problemId: string, dataUrl: string): Promise<ActionResult<void>> {
   const profile = await requireProfile();

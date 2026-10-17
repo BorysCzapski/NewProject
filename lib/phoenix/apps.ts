@@ -77,6 +77,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/maturalnik",
   },
   {
+    id: "informatyka",
+    name: "Informatyka",
+    description: "Matura rozszerzona z informatyki 2022–2026: kod, SQL, arkusz i canvas",
+    section: "nauka",
+    icon: "Terminal",
+    href: "/informatyka",
+  },
+  {
     id: "godziny",
     name: "Godziny",
     description: "Licznik czasu nauki: ile i czego się uczysz",

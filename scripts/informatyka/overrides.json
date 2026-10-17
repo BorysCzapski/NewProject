@@ -1,0 +1,90 @@
+{
+  "2026-czerwiec": {
+    "4.1": {
+      "topic": "analiza-danych"
+    },
+    "4.2": {
+      "topic": "analiza-danych"
+    },
+    "4.3": {
+      "topic": "struktury-danych"
+    },
+    "5": {
+      "topic": "systemy-liczbowe"
+    },
+    "6": {
+      "topic": "sieci-i-bezpieczenstwo"
+    },
+    "8.4": {
+      "sql_extra_schema": "CREATE TABLE Kategorie (Id_Kategorii INTEGER PRIMARY KEY, Nazwa_Kategorii TEXT); ALTER TABLE oceny ADD COLUMN Id_Kategorii INTEGER;"
+    },
+    "8.5": {
+      "sql_extra_schema": "CREATE TABLE Kategorie (Id_Kategorii INTEGER PRIMARY KEY, Nazwa_Kategorii TEXT); ALTER TABLE oceny ADD COLUMN Id_Kategorii INTEGER;"
+    }
+  },
+  "2026-czerwiec-stara": {
+    "3.2": {
+      "topic": "bazy-danych"
+    },
+    "3.3": {
+      "topic": "bazy-danych"
+    }
+  },
+  "2024-czerwiec": {
+    "5": {
+      "topic": "sieci-i-bezpieczenstwo"
+    },
+    "6": {
+      "topic": "systemy-liczbowe"
+    },
+    "8.4": {
+      "sql_extra_schema": "ALTER TABLE wizyty ADD COLUMN kod_punktu TEXT; CREATE TABLE PACJENCI (pesel TEXT PRIMARY KEY, \"województwo_pacjenta\" TEXT); CREATE TABLE PUNKT_SZCZEPIEN (kod_punktu TEXT PRIMARY KEY, \"województwo_punktu\" TEXT);"
+    }
+  },
+  "2023-czerwiec": {
+    "5": {
+      "topic": "sieci-i-bezpieczenstwo"
+    },
+    "7.5": {
+      "sql_extra_schema": "CREATE TABLE firmy (id_firmy INTEGER PRIMARY KEY, nazwa TEXT); ALTER TABLE instalacje ADD COLUMN id_firmy INTEGER;"
+    }
+  },
+  "2022-maj": {
+    "3.1": {
+      "topic": "algorytmy-ogolne"
+    },
+    "3.3": {
+      "topic": "bazy-danych"
+    }
+  },
+  "2022-czerwiec": {
+    "3.2": {
+      "topic": "bazy-danych"
+    }
+  },
+  "2026-maj": {
+    "8.5": {
+      "sql_extra_schema": "CREATE TABLE Kategorie (IdKategorii INTEGER PRIMARY KEY, NazwaKategorii TEXT); CREATE TABLE Produkty (IdProduktu INTEGER PRIMARY KEY, IdKategorii INTEGER, Nazwa TEXT, Opis TEXT);"
+    }
+  },
+  "2025-czerwiec": {
+    "7.5": {
+      "sql_extra_schema": "CREATE TABLE salony (id_salonu INTEGER PRIMARY KEY, nazwa_salonu TEXT, miejsce TEXT); ALTER TABLE fryzjerzy ADD COLUMN id_salonu INTEGER;"
+    }
+  },
+  "2025-maj": {
+    "7.5": {
+      "sql_extra_schema": "CREATE TABLE Producent (kod_producenta INTEGER PRIMARY KEY, nazwa TEXT, kraj TEXT); ALTER TABLE laziki ADD COLUMN kod_producenta INTEGER;"
+    }
+  },
+  "2024-maj": {
+    "8.4": {
+      "sql_extra_schema": "CREATE TABLE Fotoradar (IdFotoradaru INTEGER PRIMARY KEY, Miejscowosc TEXT, DozwolonaPredkosc INTEGER); ALTER TABLE rejestr ADD COLUMN IdFotoradaru INTEGER;"
+    }
+  },
+  "2023-maj": {
+    "7.5": {
+      "sql_extra_schema": "CREATE TABLE sklep (id_gry INTEGER, cena REAL, promocja TEXT);"
+    }
+  }
+}

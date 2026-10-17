@@ -10,11 +10,11 @@ import { createClient } from "@/lib/supabase/server";
 import { getChapters } from "@/lib/maturalnik/content";
 import { getProgressByChapter, getProgressSummary, getDailyActivity } from "@/lib/maturalnik/progress";
 import { getMaturalnikSettings } from "@/lib/maturalnik/settings";
-import { todayKey } from "@/lib/maturalnik/dates";
+import { todayKey } from "@/lib/exam-dates";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExamCountdownHeatmap } from "@/components/maturalnik/exam-countdown-heatmap";
+import { ExamCountdownHeatmap } from "@/components/exam/exam-countdown-heatmap";
 
 export default async function MaturalnikPage() {
   const profile = await requireProfile();

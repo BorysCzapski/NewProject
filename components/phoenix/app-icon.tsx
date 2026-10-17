@@ -20,6 +20,7 @@ import {
   Recycle,
   ScrollText,
   Sparkles,
+  Terminal,
   Timer,
   Wrench,
   type LucideIcon,
@@ -39,6 +40,7 @@ const ICONS: Record<string, LucideIcon> = {
   Recycle,
   ScrollText,
   Sparkles,
+  Terminal,
   Timer,
   Wrench,
 };

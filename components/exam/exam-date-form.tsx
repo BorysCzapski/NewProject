@@ -1,17 +1,25 @@
 "use client";
 
 // ============================================================================
-// components/maturalnik/exam-date-form.tsx
-// Sets/changes maturalnik_settings.exam_date — a plain typed Server Action
-// (not FormData-based), called via useTransition, same style as
-// components/textbook/delete-textbook-button.tsx.
+// components/exam/exam-date-form.tsx
+// Sets/changes an exam-countdown date for one of the exam apps (Maturalnik,
+// Informatyka). The app-specific Server Action comes in as `save`.
 // ============================================================================
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { setExamDate } from "@/lib/maturalnik/actions";
 
-export function ExamDateForm({ currentExamDate }: { currentExamDate: string | null }) {
+export function ExamDateForm({
+  currentExamDate,
+  save,
+  backHref,
+  label,
+}: {
+  currentExamDate: string | null;
+  save: (examDate: string | null) => Promise<{ ok: true } | { ok: false; error: string }>;
+  backHref: string;
+  label: string;
+}) {
   const router = useRouter();
   const [value, setValue] = useState(currentExamDate ?? "");
   const [error, setError] = useState<string | null>(null);
@@ -21,12 +29,12 @@ export function ExamDateForm({ currentExamDate }: { currentExamDate: string | nu
     e.preventDefault();
     setError(null);
     startTransition(async () => {
-      const result = await setExamDate(value || null);
+      const result = await save(value || null);
       if (!result.ok) {
         setError(result.error);
         return;
       }
-      router.push("/maturalnik");
+      router.push(backHref);
       router.refresh();
     });
   }
@@ -35,7 +43,7 @@ export function ExamDateForm({ currentExamDate }: { currentExamDate: string | nu
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="flex flex-col gap-1.5">
         <label htmlFor="exam-date" className="text-sm font-semibold text-foreground">
-          Data matury z matematyki
+          {label}
         </label>
         <input
           id="exam-date"

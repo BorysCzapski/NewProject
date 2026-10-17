@@ -1,20 +1,19 @@
 "use client";
 
 // ============================================================================
-// components/maturalnik/exam-countdown-heatmap.tsx
+// components/exam/exam-countdown-heatmap.tsx
 // GitHub-contributions-style grid counting down to the matura exam date:
 // one column per week, 7 rows (Mon-Sun), colored by how many problems the
 // student marked done that day. Every square is a button — tapping it shows
 // that day's count and the list of problems below the grid. Colors are just
 // opacity steps against the theme-aware --primary (app/globals.css), so
 // light/dark come for free. All day math is on "YYYY-MM-DD" strings in the
-// app time zone (lib/maturalnik/dates.ts), never on local Date objects.
+// app time zone (lib/exam-dates.ts), never on local Date objects.
 // ============================================================================
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { addDays, diffDays, formatKeyPl, weekdayMonday0 } from "@/lib/maturalnik/dates";
-import type { DailyActivity } from "@/lib/maturalnik/progress";
+import { addDays, diffDays, formatKeyPl, weekdayMonday0, type DailyActivity } from "@/lib/exam-dates";
 
 const DAY_LABELS = ["Pon", "Wt", "Śr", "Czw", "Pt", "Sob", "Nd"];
 

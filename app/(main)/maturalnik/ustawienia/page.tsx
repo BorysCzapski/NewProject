@@ -7,7 +7,8 @@ import { createClient } from "@/lib/supabase/server";
 import { getMaturalnikSettings } from "@/lib/maturalnik/settings";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { ExamDateForm } from "@/components/maturalnik/exam-date-form";
+import { ExamDateForm } from "@/components/exam/exam-date-form";
+import { setExamDate } from "@/lib/maturalnik/actions";
 
 export default async function MaturalnikUstawieniaPage() {
   const profile = await requireProfile();
@@ -24,7 +25,12 @@ export default async function MaturalnikUstawieniaPage() {
             Na jej podstawie liczymy odliczanie dni i rysujemy siatkę aktywności na stronie głównej.
           </CardDescription>
           <div className="mt-4">
-            <ExamDateForm currentExamDate={settings?.exam_date ?? null} />
+            <ExamDateForm
+              currentExamDate={settings?.exam_date ?? null}
+              save={setExamDate}
+              backHref="/maturalnik"
+              label="Data matury z matematyki"
+            />
           </div>
         </Card>
       </div>

@@ -1426,3 +1426,80 @@ export interface MaturalnikSettings {
   created_at: string;
   updated_at: string;
 }
+
+// ============================================================================
+// Informatyka — arkusze CKE z matury rozszerzonej z informatyki 2022–2026.
+// Mirrors supabase/migrations/0030_informatyka.sql.
+// ============================================================================
+export type InformatykaKind = "pisemne" | "program" | "arkusz" | "sql" | "teoria";
+export type InformatykaStatus = "todo" | "in_progress" | "done";
+
+export interface InformatykaExam {
+  id: string;
+  slug: string;
+  year: number;
+  session: "maj" | "czerwiec";
+  formula: "2015" | "2023";
+  title: string;
+  exam_date: string | null;
+  duration_minutes: number | null;
+  max_points: number;
+  order_index: number;
+}
+
+export interface InformatykaTask {
+  id: string;
+  exam_id: string;
+  number: number;
+  part: 1 | 2 | null;
+  title: string;
+  intro_image_paths: string[];
+}
+
+export interface InformatykaProblem {
+  id: string;
+  task_id: string;
+  label: string;
+  order_index: number;
+  points_max: number;
+  kind: InformatykaKind;
+  topic: string;
+  statement_image_paths: string[];
+  key_image_paths: string[];
+  scoring_text: string;
+  key_text: string;
+  result_file: string | null;
+  data_files: string[];
+  sql_extra_schema: string | null;
+  needs_review: boolean;
+}
+
+export interface InformatykaDataFile {
+  id: string;
+  exam_id: string;
+  name: string;
+  content: string;
+  is_example: boolean;
+}
+
+export interface InformatykaProgress {
+  id: string;
+  user_id: string;
+  problem_id: string;
+  status: InformatykaStatus;
+  score: number | null;
+  done_at: string | null;
+  code: string | null;
+  answer_text: string | null;
+  sql_text: string | null;
+  canvas_path: string | null;
+  sheet_path: string | null;
+  updated_at: string;
+}
+
+export interface InformatykaSettings {
+  user_id: string;
+  exam_date: string | null;
+  created_at: string;
+  updated_at: string;
+}

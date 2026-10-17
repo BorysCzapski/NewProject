@@ -6,7 +6,7 @@
 import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { MaturalnikProgress } from "@/lib/types/database";
-import { addDays, dayKey } from "@/lib/maturalnik/dates";
+import { addDays, dayKey, type DailyActivity } from "@/lib/exam-dates";
 
 export interface ProgressSummary {
   doneCount: number;
@@ -83,16 +83,6 @@ export async function getProblemProgress(
 }
 
 const HEATMAP_LOOKBACK_WEEKS = 20;
-
-export interface DailyActivityItem {
-  label: string;
-  href: string;
-}
-
-export interface DailyActivity {
-  count: number;
-  items: DailyActivityItem[];
-}
 
 interface DoneRow {
   done_at: string;

@@ -1,8 +1,8 @@
 "use client";
 
 // ============================================================================
-// components/maturalnik/ink-canvas.tsx
-// Maturalnik's "rozwiąż na tablecie" scratchpad: a large fixed-size page
+// components/ink/ink-canvas.tsx
+// Shared (Maturalnik, Informatyka) "rozwiąż na tablecie" scratchpad: a large fixed-size page
 // (PAGE_WIDTH × PAGE_HEIGHT) shown through a zoomable, pannable viewport.
 //
 // - Drawing: Pointer Events (mouse / touch / pen), pressure-sensitive for pens.

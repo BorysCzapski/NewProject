@@ -15,7 +15,8 @@ import { getProblemProgress } from "@/lib/maturalnik/progress";
 import { getProblemImageSignedUrl, getCanvasSignedUrl } from "@/lib/maturalnik/storage";
 import { PageHeader } from "@/components/layout/page-header";
 import { ProblemCheckbox } from "@/components/maturalnik/problem-checkbox";
-import { CanvasPanel } from "@/components/maturalnik/canvas-panel";
+import { CanvasPanel } from "@/components/ink/canvas-panel";
+import { autosaveCanvas } from "@/lib/maturalnik/actions";
 
 export default async function MaturalnikProblemPage({
   params,
@@ -75,7 +76,7 @@ export default async function MaturalnikProblemPage({
           )}
         </div>
 
-        <CanvasPanel problemId={problem.id} initialImageUrl={canvasUrl} />
+        <CanvasPanel initialImageUrl={canvasUrl} save={autosaveCanvas.bind(null, problem.id)} />
 
         <div className="flex items-center justify-between gap-3 pt-2">
           {prevProblem ? (

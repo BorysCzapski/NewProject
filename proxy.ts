@@ -135,6 +135,6 @@ export const config = {
      * Run on every path except static assets, image optimization files,
      * and common static file extensions.
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|js|wasm)$).*)",
   ],
 };
