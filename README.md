@@ -19,7 +19,7 @@ na pudełkach Leitnera plus 10 nowych haseł w kolejności listy. Źródła są 
 tłumaczenie, przykład i wskazówkę dopisuje AI (`lib/lexicon/enrich.ts`) przy pierwszym użyciu hasła
 i zapisuje w bazie. Schemat: `0032_lexicon.sql`, `0033_lexicon_definitions.sql`; dane:
 `supabase/seed/lexicon/` (surowe listy `.txt` + `node scripts/build-lexicon-seed.mjs` generuje SQL).
-W Maturze dział „100 najważniejszych słówek" (`supabase/seed/matura/18_vocab_top100.sql`).
+W Maturze dwa działy: „100 najważniejszych słówek" (`supabase/seed/matura/18_vocab_top100.sql`) i „Phrasal verbs" (41 haseł z przykładami, `19_vocab_phrasal_verbs.sql`, generowany z `phrasal-verbs-source.txt` tym samym skryptem).
 
 Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
 aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do

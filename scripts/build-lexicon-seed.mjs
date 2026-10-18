@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Buduje supabase/seed/lexicon/01_daily_words.sql (EF) i 02_phrasal_verbs.sql (UMN) z surowych list
+// Buduje z surowych list: lexicon/01_daily_words.sql (EF), lexicon/02_phrasal_verbs.sql (UMN)
+// i matura/19_vocab_phrasal_verbs.sql (testyourenglish.pl)
 // (supabase/seed/lexicon/ef-top-3000.txt, jedno hasło na linię, kolejność = ranga częstości).
 //
 //   node scripts/build-lexicon-seed.mjs
@@ -105,3 +106,61 @@ on conflict (deck_id, term) do nothing;
 `
 writeFileSync(join(DIR, '02_phrasal_verbs.sql'), phrasalSql)
 console.log(`✓ UMN: ${umn.length} czasowników frazowych`)
+
+// --- Matura: phrasal verbs (testyourenglish.pl) -----------------------------
+// Blok w pliku: "* hasło – tłumaczenie", pusta linia, zdanie EN, zdanie PL.
+// Wpis „turn on / turn off – włączać / wyłączać" rozbijamy na dwa hasła (wpisywanie
+// „turn on / turn off" w trenerze byłoby niewykonalne); przykład z źródła dostaje
+// pierwsze, drugie zostaje bez przykładu — niczego nie dopisujemy od siebie.
+const blocks = readFileSync(join(DIR, '..', 'matura', 'phrasal-verbs-source.txt'), 'utf8')
+  .split(/\n\s*\n(?=\* )/)
+  .map((b) => b.trim())
+  .filter(Boolean)
+
+const pv = []
+for (const block of blocks) {
+  const lines = block.split('\n').map((l) => l.trim()).filter(Boolean)
+  const head = lines[0].match(/^\*\s*(.+?)\s+[–-]\s+(.+)$/)
+  if (!head || lines.length !== 3) throw new Error(`Zły blok phrasal verb:\n${block}`)
+  const [, term, pl] = head
+  const [ex, exPl] = [lines[1], lines[2]]
+  if (term.includes(' / ') && pl.includes(' / ')) {
+    const terms = term.split(' / ')
+    const pls = pl.split(' / ')
+    if (terms.length !== pls.length) throw new Error(`Niezgodne warianty: ${term}`)
+    terms.forEach((t, i) => pv.push({ term: t.trim(), pl: pls[i].trim(), ex: i === 0 ? ex : '', exPl: i === 0 ? exPl : '' }))
+  } else {
+    pv.push({ term, pl, ex, exPl })
+  }
+}
+const pvTerms = new Set()
+for (const r of pv) {
+  if (pvTerms.has(r.term)) throw new Error(`Duplikat phrasal verb: ${r.term}`)
+  pvTerms.add(r.term)
+}
+
+const pvSql = `-- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
+-- ============================================================================
+-- supabase/seed/matura/19_vocab_phrasal_verbs.sql
+-- Blok „Phrasal verbs na maturze" w banku słownictwa angielskiego.
+-- Źródło: testyourenglish.pl, „Phrasal verbs na maturze"
+-- (https://testyourenglish.pl/wiedza/phrasal-verbs-na-maturze/) — hasło,
+-- tłumaczenie i zdanie przykładowe z tłumaczeniem, wszystko ze źródła.
+-- ${pv.length} haseł. Nieniszczący i idempotentny (nie kasuje banku).
+-- ============================================================================
+
+insert into matura_vocab_topics (language, slug, title, title_target, description, order_index) values
+  ('en', 'phrasal-verbs', 'Phrasal verbs', 'Phrasal verbs',
+   'Czasowniki frazowe, które najczęściej pojawiają się na maturze. Źródło: testyourenglish.pl.', 17)
+on conflict do nothing;
+
+insert into matura_vocab_entries (topic_id, level, term, part_of_speech, translation_pl, example, example_pl, note, order_index)
+select t.id, 'podstawowa'::matura_level, v.term, 'czasownik frazowy', v.pl, v.ex, v.ex_pl, '', v.ord
+from (select id from matura_vocab_topics where language = 'en' and slug = 'phrasal-verbs') t,
+(values
+${pv.map((r, i) => `  (${i + 1}, ${q(r.term)}, ${q(r.pl)}, ${q(r.ex)}, ${q(r.exPl)})`).join(',\n')}
+) as v(ord, term, pl, ex, ex_pl)
+on conflict (topic_id, term) do nothing;
+`
+writeFileSync(join(DIR, '..', 'matura', '19_vocab_phrasal_verbs.sql'), pvSql)
+console.log(`✓ Matura phrasal verbs: ${pv.length} haseł`)
