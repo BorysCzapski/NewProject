@@ -6,12 +6,13 @@
 // ============================================================================
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BookA, ChevronRight } from "lucide-react";
+import { BookA, ChevronRight, Star } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
 import { getSectionsWithProgress } from "@/lib/matura/progress";
 import { getVocabTopicsWithProgress } from "@/lib/matura/vocab";
+import { MATURA_FEATURED_VOCAB_SLUGS } from "@/lib/matura/constants";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { SectionList } from "@/components/matura/section-list";
@@ -27,9 +28,18 @@ export default async function MaturaNaukaPage() {
     getVocabTopicsWithProgress(supabase, profile.id, settings.language, settings.level),
   ]);
 
-  const vocabTotal = vocabTopics.reduce((sum, item) => sum + item.totalEntries, 0);
-  const vocabMastered = vocabTopics.reduce((sum, item) => sum + item.masteredEntries, 0);
-  const vocabDue = vocabTopics.reduce((sum, item) => sum + item.dueEntries, 0);
+  const isFeatured = (slug: string) => (MATURA_FEATURED_VOCAB_SLUGS as readonly string[]).includes(slug);
+  const featured = vocabTopics.filter((item) => isFeatured(item.topic.slug));
+  const thematic = vocabTopics.filter((item) => !isFeatured(item.topic.slug));
+
+  const sum = (items: typeof vocabTopics, key: "totalEntries" | "masteredEntries" | "dueEntries") =>
+    items.reduce((total, item) => total + item[key], 0);
+  const vocabTotal = sum(thematic, "totalEntries");
+  const vocabMastered = sum(thematic, "masteredEntries");
+  const vocabDue = sum(thematic, "dueEntries");
+  const featuredTotal = sum(featured, "totalEntries");
+  const featuredMastered = sum(featured, "masteredEntries");
+  const featuredDue = sum(featured, "dueEntries");
 
   return (
     <div>
@@ -43,6 +53,24 @@ export default async function MaturaNaukaPage() {
             The theory itself lives inside each section, not here: it is scoped
             to a part of the exam, and a student revising czytanie should not
             have to hunt for reading strategy in a separate tree. */}
+        {featuredTotal > 0 && (
+          <Link href="/matura/slowka-zwroty">
+            <Card className="flex items-center justify-between gap-3 border-primary/40 bg-primary-soft/40 transition-transform active:scale-[0.99]">
+              <div className="min-w-0 flex-1">
+                <CardTitle className="flex items-center gap-1.5">
+                  <Star className="h-4 w-4 shrink-0 text-primary" />
+                  Słówka i zwroty
+                </CardTitle>
+                <CardDescription className="mt-0.5">
+                  100 najważniejszych słówek i phrasal verbs • {featuredMastered}/{featuredTotal} opanowanych
+                  {featuredDue > 0 && ` • ${featuredDue} do powtórki`}
+                </CardDescription>
+              </div>
+              <ChevronRight className="h-4 w-4 shrink-0 text-foreground-muted" />
+            </Card>
+          </Link>
+        )}
+
         {vocabTotal > 0 && (
           <Link href="/matura/slownictwo">
             <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">

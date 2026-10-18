@@ -4,13 +4,19 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 
 const MODULES = [
+  {
+    href: "/jezyki/nauka/codzienne",
+    label: "Codzienne",
+    description: "3000 najczęstszych angielskich słów, po 10 nowych dziennie",
+    icon: CalendarCheck,
+  },
   {
     href: "/jezyki/nauka/sciezka",
     label: "Ścieżka nauki",

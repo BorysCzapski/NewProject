@@ -16,7 +16,7 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getMaturaSettings } from "@/lib/matura/settings";
 import { getVocabTopicsWithProgress, getDueVocabEntries } from "@/lib/matura/vocab";
-import { MATURA_LANGUAGE_LABELS } from "@/lib/matura/constants";
+import { MATURA_LANGUAGE_LABELS, MATURA_FEATURED_VOCAB_SLUGS } from "@/lib/matura/constants";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,10 +27,16 @@ export default async function MaturaVocabIndexPage() {
   const settings = await getMaturaSettings(supabase, profile.id);
   if (!settings) redirect("/matura");
 
-  const [topics, due] = await Promise.all([
+  const [allTopics, due] = await Promise.all([
     getVocabTopicsWithProgress(supabase, profile.id, settings.language, settings.level),
     getDueVocabEntries(supabase, profile.id, settings.language, settings.level, 20),
   ]);
+
+  // The curated exam lists live at /matura/slowka-zwroty; keeping them out of
+  // the thematic index also keeps this page's progress about the CKE blocks.
+  const topics = allTopics.filter(
+    (item) => !(MATURA_FEATURED_VOCAB_SLUGS as readonly string[]).includes(item.topic.slug)
+  );
 
   const totalEntries = topics.reduce((sum, item) => sum + item.totalEntries, 0);
   const totalMastered = topics.reduce((sum, item) => sum + item.masteredEntries, 0);
