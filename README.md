@@ -13,6 +13,14 @@ lekcjami, czytanie i pisanie oceniane przez AI, tłumaczenie piosenek, słuchani
 (YouTube), gra „łączenie tłumaczeń", prace domowe z panelem admina, kalendarz i streaki,
 a dla rosyjskiego — wprowadzenie do cyrylicy i ekranowa klawiatura.
 
+**Codzienne** (`/jezyki/nauka/codzienne`) to moduł Linguo do codziennej nauki angielskiego z dwóch list
+częstości: 3000 najczęstszych słów (EF) i 146 czasowników frazowych (UMN CCAPS). Sesja to powtórki
+na pudełkach Leitnera plus 10 nowych haseł w kolejności listy. Źródła są samymi hasłami, więc polskie
+tłumaczenie, przykład i wskazówkę dopisuje AI (`lib/lexicon/enrich.ts`) przy pierwszym użyciu hasła
+i zapisuje w bazie. Schemat: `0032_lexicon.sql`, `0033_lexicon_definitions.sql`; dane:
+`supabase/seed/lexicon/` (surowe listy `.txt` + `node scripts/build-lexicon-seed.mjs` generuje SQL).
+W Maturze dział „100 najważniejszych słówek" (`supabase/seed/matura/18_vocab_top100.sql`).
+
 Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
 aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do
 skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne uzupełnienia

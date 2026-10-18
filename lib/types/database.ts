@@ -1530,6 +1530,9 @@ export interface LexiconEntry {
   rank: number;
   term: string;
   part_of_speech: string;
+  /** The source list's English gloss (UMN phrasal verbs: senses separated by
+   * ";"). Empty for bare-headword lists. */
+  definition_en: string;
   /** Empty until the AI fills the card in (see lexicon/enrich.ts). */
   translation_pl: string;
   example: string;

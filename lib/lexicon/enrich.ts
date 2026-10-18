@@ -30,6 +30,7 @@ const SYSTEM = `Jesteś lektorem angielskiego dla polskich uczniów. Dla każdeg
 - example: naturalne, krótkie zdanie po angielsku (maks. 12 słów), poziom A2-B1, użyte w codziennej sytuacji.
 - example_pl: tłumaczenie tego zdania na polski.
 - note: jedna krótka wskazówka po polsku (kolokacja, nieregularna forma, fałszywy przyjaciel, nieoczywiste użycie) albo pusty tekst, gdy nie ma nic wartego uwagi.
+- Gdy przy haśle podano angielską definicję (kilka znaczeń rozdzielonych średnikiem), tłumacz WŁAŚNIE te znaczenia — nie wymyślaj innych — a w translation_pl podaj najwyżej trzy najważniejsze, rozdzielone średnikiem. Przykład ma pokazywać pierwsze znaczenie.
 Zwróć DOKŁADNIE tyle fiszek, ile haseł, i skopiuj pole term bez zmian.`;
 
 const SCHEMA = {
@@ -74,7 +75,9 @@ export async function enrichEntries(deck: LexiconDeck, entries: LexiconEntry[]):
   try {
     const result = await askAIForJSON<{ cards: EnrichedCard[] }>({
       system: SYSTEM,
-      prompt: `${kindHint}\nHasła:\n${pending.map((e) => `- ${e.term}`).join("\n")}`,
+      prompt: `${kindHint}\nHasła:\n${pending
+        .map((e) => (e.definition_en ? `- ${e.term} (definicja: ${e.definition_en})` : `- ${e.term}`))
+        .join("\n")}`,
       schema: SCHEMA,
       maxTokens: 400 + pending.length * 220,
     });
