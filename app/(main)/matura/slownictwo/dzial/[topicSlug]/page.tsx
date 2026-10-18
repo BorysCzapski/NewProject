@@ -18,6 +18,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { VocabEntryList } from "@/components/matura/vocab-entry-list";
+import { MATURA_FEATURED_VOCAB_SLUGS } from "@/lib/matura/constants";
 import type { MasteryStatus } from "@/lib/types/database";
 
 export default async function MaturaVocabTopicPage({
@@ -44,6 +45,7 @@ export default async function MaturaVocabTopicPage({
   const statuses = Object.fromEntries(
     [...progress.entries()].map(([id, row]) => [id, row.status])
   ) as Record<string, MasteryStatus>;
+  const isFeatured = (MATURA_FEATURED_VOCAB_SLUGS as readonly string[]).includes(topic.slug);
   const mastered = entries.filter((entry) => statuses[entry.id] === "mastered").length;
 
   return (
@@ -51,11 +53,11 @@ export default async function MaturaVocabTopicPage({
       <PageHeader title={topic.title} subtitle={topic.title_target} />
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
         <Link
-          href="/matura/slownictwo"
+          href={isFeatured ? "/matura/slowka-zwroty" : "/matura/slownictwo"}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground-muted"
         >
           <ArrowLeft className="h-4 w-4" />
-          Wszystkie działy
+          {isFeatured ? "Słówka i zwroty" : "Wszystkie działy"}
         </Link>
 
         {topic.description && (

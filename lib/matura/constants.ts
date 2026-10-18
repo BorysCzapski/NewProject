@@ -71,3 +71,9 @@ export const MATURA_WRITING_FORM_LABELS: Record<MaturaWritingFormType, string> =
   artykul: "Artykuł publicystyczny",
   list_formalny: "List formalny",
 };
+
+/** Vocabulary blocks that are curated exam checklists rather than thematic
+ * zakres tematyczny blocks (supabase/seed/matura/18_*, 19_*). They get their own
+ * entry point (/matura/slowka-zwroty) and are left out of the thematic index,
+ * where as blocks 16-17 of 17 they would sit unnoticed at the bottom. */
+export const MATURA_FEATURED_VOCAB_SLUGS = ["top-100", "phrasal-verbs"] as const;
