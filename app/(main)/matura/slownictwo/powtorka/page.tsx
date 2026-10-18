@@ -12,6 +12,7 @@ import { getDueVocabEntries, getVocabProgressForEntries } from "@/lib/matura/voc
 import { langInfo } from "@/lib/languages";
 import { PageHeader } from "@/components/layout/page-header";
 import { VocabDrill } from "@/components/matura/vocab-drill";
+import { recordVocabAnswer, finishVocabSession } from "@/lib/matura/vocab-actions";
 
 const BACK_HREF = "/matura/slownictwo";
 
@@ -39,6 +40,8 @@ export default async function MaturaVocabReviewPage() {
           boxes={boxes}
           backHref={BACK_HREF}
           accentChars={langInfo(settings.language).specialChars}
+          recordAnswer={recordVocabAnswer}
+          finishSession={finishVocabSession}
         />
       </div>
     </div>

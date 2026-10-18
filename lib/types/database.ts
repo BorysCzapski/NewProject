@@ -1507,3 +1507,45 @@ export interface InformatykaSettings {
   created_at: string;
   updated_at: string;
 }
+
+// ---------------------------------------------------------------------------
+// Lexicon ("Codzienne"): frequency-list decks of daily words and phrases
+// (supabase/migrations/0032_lexicon.sql)
+// ---------------------------------------------------------------------------
+export interface LexiconDeck {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  kind: "word" | "phrase";
+  source_name: string;
+  source_url: string;
+  order_index: number;
+}
+
+export interface LexiconEntry {
+  id: string;
+  deck_id: string;
+  /** Position in the source list; new entries are taught in this order. */
+  rank: number;
+  term: string;
+  part_of_speech: string;
+  /** Empty until the AI fills the card in (see lexicon/enrich.ts). */
+  translation_pl: string;
+  example: string;
+  example_pl: string;
+  note: string;
+  enriched_at: string | null;
+}
+
+export interface LexiconProgress {
+  id: string;
+  user_id: string;
+  entry_id: string;
+  box: number;
+  correct_count: number;
+  incorrect_count: number;
+  status: MasteryStatus;
+  last_reviewed_at: string | null;
+  next_review_at: string | null;
+}

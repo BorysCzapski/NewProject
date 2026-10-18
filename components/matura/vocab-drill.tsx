@@ -30,15 +30,25 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { AccentBar } from "@/components/ui/accent-bar";
 import { cn } from "@/lib/utils";
-import { recordVocabAnswer, finishVocabSession } from "@/lib/matura/vocab-actions";
-import type { MaturaVocabEntry } from "@/lib/types/database";
+
+/** The fields the drill shows. Both the matura bank and the Linguo lexicon
+ * satisfy this, which is what lets one trainer serve both. */
+export interface DrillEntry {
+  id: string;
+  term: string;
+  part_of_speech: string;
+  translation_pl: string;
+  example: string;
+  example_pl: string;
+  note: string;
+}
 
 /** Boxes below this get recognition questions, at or above get production. */
 const PRODUCTION_FROM_BOX = 2;
 
 interface QueueItem {
   uid: string;
-  entry: MaturaVocabEntry;
+  entry: DrillEntry;
   produce: boolean;
 }
 
@@ -67,12 +77,18 @@ export function VocabDrill({
   boxes,
   backHref,
   accentChars,
+  recordAnswer,
+  finishSession,
 }: {
-  entries: MaturaVocabEntry[];
+  entries: DrillEntry[];
   /** entry id -> current Leitner box; missing means never seen. */
   boxes: Record<string, number>;
   backHref: string;
   accentChars: string[];
+  /** Persists one answer; each bank passes its own server action. */
+  recordAnswer: (entryId: string, wasCorrect: boolean) => Promise<void>;
+  /** Called once when the session ends. */
+  finishSession: () => Promise<void>;
 }) {
   const [queue, setQueue] = useState<QueueItem[]>(() =>
     entries.map((entry, i) => ({
@@ -96,7 +112,7 @@ export function VocabDrill({
 
   function advance(wasCorrect: boolean) {
     if (!current) return;
-    void recordVocabAnswer(current.entry.id, wasCorrect);
+    void recordAnswer(current.entry.id, wasCorrect);
 
     let nextQueue = queue.slice(1);
     if (!wasCorrect) {
@@ -120,7 +136,7 @@ export function VocabDrill({
       setDone(true);
       if (!finishedRef.current) {
         finishedRef.current = true;
-        void finishVocabSession();
+        void finishSession();
       }
     }
     setQueue(nextQueue);

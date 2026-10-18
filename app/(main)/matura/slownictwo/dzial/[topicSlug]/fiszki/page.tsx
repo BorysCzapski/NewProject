@@ -12,6 +12,7 @@ import { getVocabTopic, getTopicDrillBatch, getVocabProgressForEntries } from "@
 import { langInfo } from "@/lib/languages";
 import { PageHeader } from "@/components/layout/page-header";
 import { VocabDrill } from "@/components/matura/vocab-drill";
+import { recordVocabAnswer, finishVocabSession } from "@/lib/matura/vocab-actions";
 
 export default async function MaturaVocabDrillPage({
   params,
@@ -45,6 +46,8 @@ export default async function MaturaVocabDrillPage({
           boxes={boxes}
           backHref={`/matura/slownictwo/dzial/${topic.slug}`}
           accentChars={langInfo(settings.language).specialChars}
+          recordAnswer={recordVocabAnswer}
+          finishSession={finishVocabSession}
         />
       </div>
     </div>
