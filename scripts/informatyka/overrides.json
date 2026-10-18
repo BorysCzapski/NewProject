@@ -38,7 +38,7 @@
       "topic": "systemy-liczbowe"
     },
     "8.4": {
-      "sql_extra_schema": "ALTER TABLE wizyty ADD COLUMN kod_punktu TEXT; CREATE TABLE PACJENCI (pesel TEXT PRIMARY KEY, \"województwo_pacjenta\" TEXT); CREATE TABLE PUNKT_SZCZEPIEN (kod_punktu TEXT PRIMARY KEY, \"województwo_punktu\" TEXT);"
+      "sql_extra_schema": "ALTER TABLE wizyty ADD COLUMN kod_punktu TEXT; CREATE TABLE PACJENCI (pesel TEXT PRIMARY KEY, wojewodztwo_pacjenta TEXT, \"województwo_pacjenta\" TEXT GENERATED ALWAYS AS (wojewodztwo_pacjenta) VIRTUAL); CREATE TABLE PUNKT_SZCZEPIEN (kod_punktu TEXT PRIMARY KEY, wojewodztwo_punktu TEXT, \"województwo_punktu\" TEXT GENERATED ALWAYS AS (wojewodztwo_punktu) VIRTUAL);"
     }
   },
   "2023-czerwiec": {

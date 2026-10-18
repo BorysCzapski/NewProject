@@ -4,6 +4,7 @@
 // systemy liczbowe, …) across all exam sessions, newest first.
 // ============================================================================
 import { notFound } from "next/navigation";
+import { Shuffle } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getAllProblems } from "@/lib/informatyka/content";
@@ -32,6 +33,12 @@ export default async function TypyPage({ params }: { params: Promise<{ key: stri
         subtitle={`${t.earned}/${t.possible} pkt · ${t.done}/${t.total} zadań`}
       />
       <div className="mx-auto flex max-w-lg flex-col gap-2 px-5 py-5">
+        <a
+          href={`/informatyka/losuj?zakres=${key}`}
+          className="mb-1 flex items-center justify-center gap-2 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-sm font-semibold text-foreground shadow-(--shadow-card)"
+        >
+          <Shuffle className="h-4 w-4 text-primary" /> Losuj nierozwiązane zadanie
+        </a>
         {problems.map((p) => (
           <ProblemRow key={p.id} problem={p} progress={progress.get(p.id)} showExam />
         ))}

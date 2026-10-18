@@ -1,0 +1,45 @@
+{
+ "2024-maj": {
+  "4.4": {
+   "alt": [
+    [
+     "1200.704918032787",
+     "61",
+     "1847"
+    ]
+   ],
+   "note": "Średnią można podać w pełnej precyzji lub zaokrągloną do 2 miejsc."
+  }
+ },
+ "2023-czerwiec": {
+  "2.2": {
+   "check": false,
+   "note": "Odpowiedź to TAK/NIE dla każdego z trzech plików — sprawdź z kluczem."
+  }
+ },
+ "2022-maj": {
+  "4.2": {
+   "alt": [
+    [
+     "99792",
+     "10",
+     "62790",
+     "6"
+    ],
+    [
+     "20992",
+     "10",
+     "62790",
+     "6"
+    ],
+    [
+     "56064",
+     "10",
+     "62790",
+     "6"
+    ]
+   ],
+   "note": "Klucz dopuszcza jedną z trzech liczb (99792, 20992, 56064) z 10 czynnikami pierwszymi."
+  }
+ }
+}

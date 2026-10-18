@@ -4,12 +4,13 @@
 // points, and two ways in — by exam session and by task type.
 // ============================================================================
 import Link from "next/link";
-import { ChevronRight, Settings2 } from "lucide-react";
+import { BarChart3, ChevronRight, Repeat, Settings2, Shuffle } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getAllProblems, getExams } from "@/lib/informatyka/content";
 import { getDailyActivity, getProgressMap, percent, tally } from "@/lib/informatyka/progress";
 import { getInformatykaSettings } from "@/lib/informatyka/settings";
+import { computeReview } from "@/lib/informatyka/review";
 import { KINDS, TOPICS } from "@/lib/informatyka/taxonomy";
 import { todayKey } from "@/lib/exam-dates";
 import { PageHeader } from "@/components/layout/page-header";
@@ -33,6 +34,7 @@ export default async function InformatykaPage() {
     : {};
 
   const overall = tally(problems, progress);
+  const dueCount = computeReview(problems, progress).due.length;
   const topicIds = Object.keys(TOPICS).filter((t) => problems.some((p) => p.topic === t));
 
   return (
@@ -62,6 +64,30 @@ export default async function InformatykaPage() {
             </Card>
           </Link>
         )}
+
+        <div className="grid grid-cols-3 gap-2">
+          <a
+            href="/informatyka/losuj"
+            className="flex flex-col items-center gap-1 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-center text-xs font-semibold text-foreground shadow-(--shadow-card) active:scale-[0.98]"
+          >
+            <Shuffle className="h-5 w-5 text-primary" /> Losuj zadanie
+          </a>
+          <Link
+            href="/informatyka/powtorki"
+            className="relative flex flex-col items-center gap-1 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-center text-xs font-semibold text-foreground shadow-(--shadow-card) active:scale-[0.98]"
+          >
+            <Repeat className="h-5 w-5 text-primary" /> Powtórki
+            {dueCount > 0 && (
+              <span className="absolute right-2 top-2 rounded-full bg-primary px-1.5 text-[10px] font-bold text-primary-foreground">{dueCount}</span>
+            )}
+          </Link>
+          <Link
+            href="/informatyka/statystyki"
+            className="flex flex-col items-center gap-1 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-center text-xs font-semibold text-foreground shadow-(--shadow-card) active:scale-[0.98]"
+          >
+            <BarChart3 className="h-5 w-5 text-primary" /> Statystyki
+          </Link>
+        </div>
 
         <div>
           <div className="mb-2 flex items-center justify-between">

@@ -1,0 +1,283 @@
+{
+ "2026-maj": {
+  "8.1": {
+   "sql": "SELECT k.Imie, k.Nazwisko FROM transakcje t JOIN klienci k ON k.IdKlienta = t.IdKlienta GROUP BY k.IdKlienta ORDER BY COUNT(*) DESC LIMIT 1",
+   "check": true
+  },
+  "8.2": {
+   "sql": "SELECT Plec, COUNT(*) AS ile FROM klienci WHERE IdKlienta NOT IN (SELECT IdKlienta FROM transakcje) GROUP BY Plec",
+   "check": true
+  },
+  "8.3": {
+   "sql": "SELECT COUNT(DISTINCT t.IdSklepu) AS sklepy, ROUND(SUM(o.Cena * o.Liczba), 2) AS kwota FROM transakcje t JOIN opis_transakcji o ON o.IdTransakcji = t.IdTransakcji WHERE t.IdSprzedawcy IS NULL",
+   "check": true
+  },
+  "8.4": {
+   "sql": "SELECT IdSprzedawcy, MONTH(DataTransakcji) AS miesiac FROM transakcje WHERE IdSprzedawcy IS NOT NULL GROUP BY IdSprzedawcy, MONTH(DataTransakcji) ORDER BY COUNT(DISTINCT IdSklepu) DESC LIMIT 1",
+   "alt": [
+    [
+     "14",
+     "styczen"
+    ]
+   ],
+   "check": true
+  },
+  "8.5": {
+   "sql": "SELECT DISTINCT p.IdProduktu, p.Nazwa FROM opis_transakcji o JOIN Produkty p ON p.IdProduktu = o.IdProduktu JOIN Kategorie k ON k.IdKategorii = p.IdKategorii WHERE k.NazwaKategorii = 'spozywcze' AND p.Opis LIKE '%do ekspresu kolbowego%'",
+   "note": "Tabele Produkty i Kategorie nie są w plikach CKE — w aplikacji są puste, więc zapytanie sprawdzisz tylko pod kątem składni.",
+   "check": false
+  }
+ },
+ "2026-czerwiec": {
+  "8.1": {
+   "sql": "SELECT u.Plec, ROUND(AVG(o.Ocena), 2) AS srednia FROM oceny o JOIN uczniowie u ON u.Id_Ucznia = o.Id_Ucznia JOIN nauczyciele n ON n.Id_Naucz = o.Id_Naucz WHERE n.Przedmiot = 'matematyka' GROUP BY u.Plec",
+   "check": true
+  },
+  "8.2": {
+   "sql": "SELECT Id_Naucz FROM nauczyciele WHERE Id_Naucz NOT IN (SELECT Id_Naucz FROM oceny WHERE Ocena = 1 AND Data BETWEEN '2023-12-01' AND '2023-12-31')",
+   "check": true
+  },
+  "8.3": {
+   "sql": "SELECT x.m AS miesiac, x.Ocena AS ocena, x.n AS liczba FROM (SELECT MONTH(Data) AS m, Ocena, COUNT(*) AS n FROM oceny GROUP BY MONTH(Data), Ocena) x WHERE x.n = (SELECT MIN(y.n) FROM (SELECT MONTH(Data) AS m, Ocena, COUNT(*) AS n FROM oceny GROUP BY MONTH(Data), Ocena) y WHERE y.m = x.m) ORDER BY x.m",
+   "check": true
+  },
+  "8.4": {
+   "sql": "SELECT Kategorie.Nazwa_Kategorii, COUNT(Oceny.Id_Oceny) FROM Kategorie INNER JOIN Oceny ON Kategorie.Id_Kategorii = Oceny.Id_Kategorii GROUP BY Kategorie.Nazwa_Kategorii",
+   "note": "Tabela Kategorie nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  },
+  "8.5": {
+   "sql": "SELECT Uczniowie.Id_Ucznia FROM Uczniowie JOIN Oceny ON Uczniowie.Id_Ucznia = Oceny.Id_Ucznia JOIN Kategorie ON Kategorie.Id_Kategorii = Oceny.Id_Kategorii WHERE Kategorie.Nazwa_Kategorii = 'sprawdzian' AND Oceny.Ocena = 6 GROUP BY Uczniowie.Id_Ucznia ORDER BY COUNT(Oceny.Id_Oceny) DESC LIMIT 1",
+   "note": "Tabela Kategorie nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2026-czerwiec-stara": {
+  "6.1": {
+   "sql": "SELECT u.Id_Klasy, ROUND(AVG(o.Ocena), 2) AS srednia FROM oceny o JOIN uczniowie u ON u.Id_Ucznia = o.Id_Ucznia GROUP BY u.Id_Klasy ORDER BY AVG(o.Ocena)",
+   "check": true
+  },
+  "6.2": {
+   "sql": "SELECT u.Id_Ucznia, u.Id_Klasy, COUNT(*) AS ile FROM oceny o JOIN uczniowie u ON u.Id_Ucznia = o.Id_Ucznia WHERE o.Ocena = 6 GROUP BY u.Id_Ucznia HAVING COUNT(*) = (SELECT MAX(c) FROM (SELECT COUNT(*) AS c FROM oceny WHERE Ocena = 6 GROUP BY Id_Ucznia))",
+   "check": true
+  },
+  "6.3": {
+   "sql": "SELECT u.Plec, ROUND(AVG(o.Ocena), 2) AS srednia FROM oceny o JOIN uczniowie u ON u.Id_Ucznia = o.Id_Ucznia JOIN nauczyciele n ON n.Id_Naucz = o.Id_Naucz WHERE n.Przedmiot = 'matematyka' GROUP BY u.Plec",
+   "check": true
+  },
+  "6.4": {
+   "sql": "SELECT x.m AS miesiac, x.Ocena AS ocena, x.n AS liczba FROM (SELECT MONTH(Data) AS m, Ocena, COUNT(*) AS n FROM oceny GROUP BY MONTH(Data), Ocena) x WHERE x.n = (SELECT MIN(y.n) FROM (SELECT MONTH(Data) AS m, Ocena, COUNT(*) AS n FROM oceny GROUP BY MONTH(Data), Ocena) y WHERE y.m = x.m) ORDER BY x.m",
+   "check": true
+  },
+  "6.5": {
+   "sql": "SELECT Id_Naucz FROM nauczyciele WHERE Id_Naucz NOT IN (SELECT Id_Naucz FROM oceny WHERE Ocena = 1 AND Data BETWEEN '2023-12-01' AND '2023-12-31')",
+   "check": true
+  }
+ },
+ "2025-czerwiec": {
+  "7.1": {
+   "sql": "SELECT k.imie, k.nazwisko, SUM(u.cena) AS suma FROM wizyty w JOIN klienci k ON k.id_klienta = w.id_klienta JOIN uslugi u ON u.id_uslugi = w.id_uslugi GROUP BY k.id_klienta ORDER BY suma DESC LIMIT 1",
+   "check": true
+  },
+  "7.2": {
+   "sql": "SELECT DISTINCT k.id_klienta, k.imie, k.nazwisko FROM klienci k JOIN wizyty w ON w.id_klienta = k.id_klienta JOIN fryzjerzy f ON f.id_fryzjera = w.id_fryzjera WHERE f.imie = k.imie ORDER BY k.imie",
+   "check": true
+  },
+  "7.3": {
+   "sql": "SELECT ROUND(SUM(u.cena * 0.1), 2) AS rabaty FROM wizyty w JOIN klienci k ON k.id_klienta = w.id_klienta JOIN uslugi u ON u.id_uslugi = w.id_uslugi WHERE k.emeryt = 'TAK' AND SUBSTR(w.termin, 12, 5) BETWEEN '10:00' AND '12:00'",
+   "check": true
+  },
+  "7.4": {
+   "sql": "SELECT f.id_fryzjera, f.imie FROM fryzjerzy f WHERE EXISTS (SELECT 1 FROM wizyty w WHERE w.id_fryzjera = f.id_fryzjera AND MONTH(w.termin) = 4) AND NOT EXISTS (SELECT 1 FROM wizyty w JOIN uslugi u ON u.id_uslugi = w.id_uslugi WHERE w.id_fryzjera = f.id_fryzjera AND MONTH(w.termin) = 4 AND u.nazwa = 'Strzyzenie meskie')",
+   "check": true
+  },
+  "7.5": {
+   "sql": "SELECT DISTINCT wizyty.id_klienta FROM wizyty JOIN fryzjerzy ON fryzjerzy.id_fryzjera = wizyty.id_fryzjera JOIN salony ON salony.id_salonu = fryzjerzy.id_salonu WHERE salony.nazwa_salonu = 'Magnolia'",
+   "note": "Tabela salony nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2025-maj": {
+  "7.1": {
+   "sql": "SELECT o.nazwa_obszaru FROM pomiary p JOIN obszary o ON o.kod_obszaru = p.kod_obszaru WHERE p.glebokosc <= 100 GROUP BY o.kod_obszaru ORDER BY SUM(p.ilosc) DESC LIMIT 1",
+   "check": true
+  },
+  "7.2": {
+   "sql": "SELECT l.nazwa_lazika, strftime('%d.%m.%Y', MIN(p.data_pomiaru)) AS pierwszy, strftime('%d.%m.%Y', MAX(p.data_pomiaru)) AS ostatni FROM pomiary p JOIN laziki l ON l.nr_lazika = p.nr_lazika GROUP BY l.nr_lazika ORDER BY DATEDIFF(MAX(p.data_pomiaru), MIN(p.data_pomiaru)) DESC LIMIT 1",
+   "alt": [
+    [
+     "spirit",
+     "14",
+     "2066-08-29",
+     "2076-07-25"
+    ]
+   ],
+   "check": true
+  },
+  "7.3": {
+   "sql": "SELECT nazwa_obszaru FROM obszary WHERE kod_obszaru NOT IN (SELECT p.kod_obszaru FROM pomiary p JOIN laziki l ON l.nr_lazika = p.nr_lazika WHERE YEAR(p.data_pomiaru) = l.rok_wyslania) ORDER BY nazwa_obszaru",
+   "check": true
+  },
+  "7.4": {
+   "sql": "SELECT l.nazwa_lazika FROM laziki l WHERE SUBSTR(l.wsp_ladowania, 1, INSTR(l.wsp_ladowania, ',') - 1) LIKE '%S' AND EXISTS (SELECT 1 FROM pomiary p WHERE p.nr_lazika = l.nr_lazika AND SUBSTR(p.wspolrzedne, 1, INSTR(p.wspolrzedne, ',') - 1) LIKE '%N') AND EXISTS (SELECT 1 FROM pomiary p WHERE p.nr_lazika = l.nr_lazika AND SUBSTR(p.wspolrzedne, 1, INSTR(p.wspolrzedne, ',') - 1) LIKE '%S') ORDER BY l.nazwa_lazika",
+   "check": true
+  },
+  "7.5": {
+   "sql": "SELECT DISTINCT Producent.nazwa FROM Producent JOIN laziki ON laziki.kod_producenta = Producent.kod_producenta JOIN pomiary ON pomiary.nr_lazika = laziki.nr_lazika JOIN obszary ON obszary.kod_obszaru = pomiary.kod_obszaru WHERE obszary.nazwa_obszaru = 'Arcadia' AND YEAR(pomiary.data_pomiaru) = 2060",
+   "note": "Tabela Producent nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2024-czerwiec": {
+  "8.1": {
+   "sql": "SELECT kod_szczepionki, COUNT(*) AS dawki FROM wizyty GROUP BY kod_szczepionki ORDER BY dawki DESC",
+   "check": true
+  },
+  "8.2": {
+   "sql": "SELECT COUNT(DISTINCT pesel) AS pacjenci, COUNT(DISTINCT CASE WHEN CAST(SUBSTR(pesel, 10, 1) AS INTEGER) % 2 = 0 THEN pesel END) AS kobiety FROM wizyty WHERE kod_szczepionki = 'sz12_3d'",
+   "check": true
+  },
+  "8.3": {
+   "sql": "SELECT YEAR(w.data_szczepienia) AS rok, MONTH(w.data_szczepienia) AS miesiac, COUNT(*) AS osoby FROM wizyty w JOIN szczepionki s ON s.kod_szczepionki = w.kod_szczepionki WHERE w.numer_dawki = s.liczba_dawek GROUP BY rok, miesiac ORDER BY osoby DESC LIMIT 1",
+   "alt": [
+    [
+     "2023",
+     "maj",
+     "48"
+    ]
+   ],
+   "check": true
+  },
+  "8.4": {
+   "sql": "SELECT WIZYTY.pesel FROM PACJENCI JOIN WIZYTY ON PACJENCI.pesel = WIZYTY.pesel JOIN PUNKT_SZCZEPIEN ON WIZYTY.kod_punktu = PUNKT_SZCZEPIEN.kod_punktu WHERE PACJENCI.wojewodztwo_pacjenta != PUNKT_SZCZEPIEN.wojewodztwo_punktu",
+   "note": "Tabele PACJENCI i PUNKT_SZCZEPIEN nie są w plikach CKE — w aplikacji są puste (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2024-maj": {
+  "8.1": {
+   "sql": "SELECT k.Imie, k.Nazwisko, SUM(t.Kwota) AS suma FROM rejestr r JOIN kierowcy k ON k.IdOsoby = r.IdOsoby JOIN taryfikator t ON t.IdWykroczenia = r.IdWykroczenia GROUP BY k.IdOsoby ORDER BY suma DESC LIMIT 1",
+   "check": true
+  },
+  "8.2": {
+   "sql": "SELECT MONTH(r.Data) AS miesiac, SUM(t.Punkty) AS punkty FROM rejestr r JOIN taryfikator t ON t.IdWykroczenia = r.IdWykroczenia WHERE r.IdWykroczenia BETWEEN 3 AND 6 GROUP BY MONTH(r.Data) ORDER BY punkty ASC LIMIT 1",
+   "alt": [
+    [
+     "listopad",
+     "1766"
+    ]
+   ],
+   "check": true
+  },
+  "8.3": {
+   "sql": "SELECT NrRejestracyjny, Imie, Nazwisko FROM kierowcy WHERE IdOsoby NOT IN (SELECT IdOsoby FROM rejestr) ORDER BY NrRejestracyjny",
+   "check": true
+  },
+  "8.4": {
+   "sql": "SELECT Fotoradar.IdFotoradaru FROM Fotoradar LEFT JOIN Rejestr ON Fotoradar.IdFotoradaru = Rejestr.IdFotoradaru WHERE Rejestr.IdFotoradaru IS NULL",
+   "note": "Tabela Fotoradar nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2023-czerwiec": {
+  "7.1": {
+   "sql": "SELECT u.typ_u, COUNT(*) AS instalacje FROM instalacje i JOIN urzadzenia u ON u.kod_u = i.kod_u GROUP BY u.typ_u ORDER BY u.typ_u",
+   "check": true
+  },
+  "7.2": {
+   "sql": "SELECT u.producent_u, COUNT(*) AS c FROM instalacje i JOIN urzadzenia u ON u.kod_u = i.kod_u WHERE YEAR(i.data_i) = 2019 AND MONTH(i.data_i) = 2 GROUP BY u.producent_u ORDER BY c DESC LIMIT 1",
+   "check": true
+  },
+  "7.3": {
+   "sql": "SELECT k.nazwa_k, ROUND(COUNT(*) * 1000000.0 / k.ludnosc_k, 2) AS na_milion FROM instalacje i JOIN kraje k ON k.kod_k = i.kod_k WHERE k.ludnosc_k >= 1000000 GROUP BY k.kod_k ORDER BY COUNT(*) * 1.0 / k.ludnosc_k DESC LIMIT 5",
+   "check": true
+  },
+  "7.4": {
+   "sql": "SELECT u.kod_u, u.nazwa_u, COUNT(DISTINCT i.kod_k) AS kraje FROM instalacje i JOIN urzadzenia u ON u.kod_u = i.kod_u WHERE u.typ_u = 'Tablet' GROUP BY u.kod_u ORDER BY kraje DESC LIMIT 1",
+   "check": true
+  },
+  "7.5": {
+   "sql": "SELECT firmy.nazwa, COUNT(*) AS liczba FROM firmy INNER JOIN instalacje ON firmy.id_firmy = instalacje.id_firmy GROUP BY firmy.id_firmy ORDER BY COUNT(*) DESC",
+   "note": "Tabela firmy nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2023-maj": {
+  "7.1": {
+   "sql": "SELECT g.nazwa FROM oceny o JOIN gry g ON g.id_gry = o.id_gry GROUP BY g.id_gry ORDER BY COUNT(*) DESC LIMIT 1",
+   "check": true
+  },
+  "7.2": {
+   "sql": "SELECT g.nazwa, ROUND(AVG(o.ocena), 2) AS srednia FROM oceny o JOIN gry g ON g.id_gry = o.id_gry WHERE g.kategoria = 'imprezowa' GROUP BY g.id_gry ORDER BY g.nazwa",
+   "check": true
+  },
+  "7.3": {
+   "sql": "SELECT COUNT(DISTINCT id_gracza) AS gracze FROM oceny WHERE id_gracza NOT IN (SELECT id_gracza FROM oceny WHERE stan = 'posiada')",
+   "check": true
+  },
+  "7.4": {
+   "sql": "WITH t AS (SELECT CASE WHEN g.wiek <= 19 THEN 'juniorzy' WHEN g.wiek <= 49 THEN 'seniorzy' ELSE 'weterani' END AS kat, ga.nazwa AS nazwa, COUNT(*) AS n FROM oceny o JOIN gracze g ON g.id_gracza = o.id_gracza JOIN gry ga ON ga.id_gry = o.id_gry GROUP BY kat, ga.id_gry) SELECT kat, nazwa, n FROM t WHERE n = (SELECT MAX(n) FROM t t2 WHERE t2.kat = t.kat) ORDER BY kat",
+   "check": true
+  },
+  "7.5": {
+   "sql": "SELECT SUM(cena) FROM gry INNER JOIN sklep ON gry.id_gry = sklep.id_gry WHERE gry.kategoria = 'logiczna' AND sklep.promocja = 'true'",
+   "note": "Tabela sklep nie jest w plikach CKE — w aplikacji jest pusta (sprawdzasz składnię).",
+   "check": false
+  }
+ },
+ "2022-czerwiec": {
+  "6.1": {
+   "sql": "SELECT COUNT(*) AS tiebreaki FROM mecze WHERE Sety_wygrane + Sety_przegrane = 5",
+   "check": true
+  },
+  "6.2": {
+   "sql": "SELECT k.Miasto, COUNT(*) AS liczba_meczy FROM mecze m JOIN kluby k ON k.Id_klubu = m.Id_klubu GROUP BY k.Miasto ORDER BY liczba_meczy DESC",
+   "check": true
+  },
+  "6.3": {
+   "sql": "SELECT s.Imie, s.Nazwisko, COUNT(*) AS liczba_meczy FROM mecze m JOIN sedziowie s ON s.Id_sedziego = m.Id_sedziego GROUP BY s.Id_sedziego HAVING COUNT(*) > (SELECT AVG(c) FROM (SELECT COUNT(*) AS c FROM mecze GROUP BY Id_sedziego))",
+   "check": true
+  },
+  "6.4": {
+   "sql": "SELECT Imie, Nazwisko FROM sedziowie WHERE Id_sedziego NOT IN (SELECT m.Id_sedziego FROM mecze m JOIN kluby k ON k.Id_klubu = m.Id_klubu WHERE k.Miasto IN ('Licowo', 'Szymbark') AND m.Data BETWEEN '2019-10-15' AND '2019-12-15')",
+   "check": true
+  },
+  "6.5": {
+   "sql": "SELECT k.Nazwa, k.Miasto, SUM(CASE WHEN m.Sety_wygrane > m.Sety_przegrane THEN 1 ELSE 0 END) AS wygrane, SUM(CASE WHEN m.Sety_wygrane < m.Sety_przegrane THEN 1 ELSE 0 END) AS przegrane FROM mecze m JOIN kluby k ON k.Id_klubu = m.Id_klubu GROUP BY k.Id_klubu HAVING wygrane >= przegrane",
+   "check": true
+  }
+ },
+ "2022-maj": {
+  "6.1": {
+   "sql": "SELECT COUNT(*) AS wejscia FROM ewidencja e JOIN uczen u ON u.IdUcznia = e.IdUcznia JOIN klasa k ON k.IdKlasy = u.IdKlasy WHERE k.ProfilKlasy = 'biologiczno-chemiczny' AND u.Imie LIKE '%a'",
+   "check": true
+  },
+  "6.2": {
+   "sql": "SELECT strftime('%d.%m.%Y', dzien) AS dzien, COUNT(*) AS punktualni FROM (SELECT DATE(Wejscie) AS dzien, IdUcznia, MIN(Wejscie) AS pierwsze FROM ewidencja GROUP BY DATE(Wejscie), IdUcznia) WHERE TIME(pierwsze) <= '08:00:00' GROUP BY dzien ORDER BY dzien",
+   "alt": [
+    [
+     "04.04.2022",
+     "233",
+     "05.04.2022",
+     "303",
+     "06.04.2022",
+     "134",
+     "07.04.2022",
+     "280",
+     "08.04.2022",
+     "127"
+    ]
+   ],
+   "note": "Klucz CKE dopuszcza też liczenie samych wejść (134 zamiast 126 dla 6.04).",
+   "check": true
+  },
+  "6.3": {
+   "sql": "SELECT u.IdUcznia, u.Imie, u.Nazwisko FROM ewidencja e JOIN uczen u ON u.IdUcznia = e.IdUcznia GROUP BY u.IdUcznia ORDER BY SUM(julianday(e.Wyjscie) - julianday(e.Wejscie)) DESC LIMIT 3",
+   "check": true
+  },
+  "6.4": {
+   "sql": "SELECT Imie, Nazwisko FROM uczen WHERE IdUcznia NOT IN (SELECT IdUcznia FROM ewidencja WHERE DATE(Wejscie) = '2022-04-06')",
+   "check": true
+  }
+ }
+}

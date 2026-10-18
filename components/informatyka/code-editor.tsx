@@ -5,7 +5,7 @@
 // CodeMirror 6 editor (Python or SQL) styled with the app's theme tokens.
 // Uncontrolled after mount: `value` seeds the document, `onChange` reports edits.
 // ============================================================================
-import { useEffect, useRef } from "react";
+import { useEffect, useImperativeHandle, useRef, type Ref } from "react";
 import { basicSetup, EditorView } from "codemirror";
 import { keymap } from "@codemirror/view";
 import { Prec } from "@codemirror/state";
@@ -22,12 +22,18 @@ const theme = EditorView.theme({
   ".cm-scroller": { overflow: "auto" },
 });
 
+export interface CodeEditorHandle {
+  /** Replaces the whole document (also reports it through onChange). */
+  replace: (text: string) => void;
+}
+
 export function CodeEditor({
   value,
   onChange,
   onRun,
   language,
   minHeight = "14rem",
+  handle,
 }: {
   value: string;
   onChange: (value: string) => void;
@@ -35,8 +41,16 @@ export function CodeEditor({
   onRun?: () => void;
   language: "python" | "sql";
   minHeight?: string;
+  handle?: Ref<CodeEditorHandle>;
 }) {
   const host = useRef<HTMLDivElement>(null);
+  const viewRef = useRef<EditorView | null>(null);
+  useImperativeHandle(handle, () => ({
+    replace(text: string) {
+      const view = viewRef.current;
+      if (view) view.dispatch({ changes: { from: 0, to: view.state.doc.length, insert: text } });
+    },
+  }));
   const callbacks = useRef({ onChange, onRun });
   useEffect(() => {
     callbacks.current = { onChange, onRun };
@@ -70,7 +84,11 @@ export function CodeEditor({
         }),
       ],
     });
-    return () => view.destroy();
+    viewRef.current = view;
+    return () => {
+      viewRef.current = null;
+      view.destroy();
+    };
     // the document is seeded once; later edits flow out through onChange
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);

@@ -16,7 +16,7 @@ interface SqlJsDatabase {
   create_function(name: string, fn: (...args: never[]) => unknown): void;
   close(): void;
 }
-interface SqlJsStatic {
+export interface SqlJsStatic {
   Database: new () => SqlJsDatabase;
 }
 declare global {
@@ -98,13 +98,26 @@ function parseTable(file: LoadedFile) {
   const delimiter = lines[0].includes("\t") ? "\t" : lines[0].includes(";") ? ";" : ",";
   const columns = lines[0].split(delimiter).map((c) => c.trim());
   const rows = lines.slice(1).map((l) => l.split(delimiter));
+  // dd.mm.rrrr columns (the exams ship dates that way) become ISO dates — what a MySQL import would
+  // produce, and what YEAR()/MONTH()/DATEDIFF() and date comparisons expect
+  const isDate = columns.map((_, i) => {
+    const values = rows.map((r) => (r[i] ?? "").trim()).filter((v) => v !== "");
+    return values.length > 0 && values.every((v) => /^\d{2}\.\d{2}\.\d{4}$/.test(v));
+  });
+  for (const row of rows) {
+    isDate.forEach((date, i) => {
+      const v = (row[i] ?? "").trim();
+      if (date && v) row[i] = `${v.slice(6)}-${v.slice(3, 5)}-${v.slice(0, 2)}`;
+    });
+  }
   const types = columns.map((_, i) => {
     const values = rows.map((r) => (r[i] ?? "").trim()).filter((v) => v !== "");
     if (values.length === 0) return "TEXT";
     // "007"-style values (PESEL, codes) keep their leading zeros → text
     if (values.some((v) => /^-?0\d/.test(v))) return "TEXT";
     if (values.every((v) => /^-?\d+$/.test(v))) return "INTEGER";
-    if (values.every((v) => /^-?\d+(\.\d+)?$/.test(v))) return "REAL";
+    // decimal comma ("5,85") is what the exam files use; a MySQL import reads these as numbers
+    if (values.every((v) => /^-?\d+([.,]\d+)?$/.test(v))) return "REAL";
     return "TEXT";
   });
   return { columns, rows, types };
@@ -123,7 +136,11 @@ export interface SqlSession {
 }
 
 export async function openSession(files: LoadedFile[], extraSchema: string | null): Promise<SqlSession> {
-  const SQL = await loadEngine();
+  return createSession(await loadEngine(), files, extraSchema);
+}
+
+/** Engine-agnostic core of openSession — also what scripts/informatyka/verify-sql.mjs runs in Node. */
+export function createSession(SQL: SqlJsStatic, files: LoadedFile[], extraSchema: string | null): SqlSession {
   const db = new SQL.Database();
   registerShims(db);
 
@@ -140,8 +157,9 @@ export async function openSession(files: LoadedFile[], extraSchema: string | nul
         insert,
         parsed.columns.map((_, i) => {
           const raw = (row[i] ?? "").trim();
-          if (parsed.types[i] === "TEXT") return row[i] ?? "";
-          return raw === "" ? null : Number(raw);
+          // MySQL ignores trailing spaces when comparing strings ("Licowo " = "Licowo"); SQLite doesn't — trim on import
+          if (parsed.types[i] === "TEXT") return (row[i] ?? "").replace(/\s+$/, "");
+          return raw === "" ? null : Number(raw.replace(",", "."));
         })
       );
     }

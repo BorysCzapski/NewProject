@@ -54,6 +54,7 @@ export default async function ZadaniePage({ params }: { params: Promise<{ proble
         <ProblemSolver
           problemId={problem.id}
           examId={exam.id}
+          examSlug={exam.slug}
           dataFiles={problem.data_files}
           resultFile={problem.result_file}
           sqlExtraSchema={problem.sql_extra_schema}
@@ -71,6 +72,10 @@ export default async function ZadaniePage({ params }: { params: Promise<{ proble
           initialAnswer={progress?.answer_text ?? ""}
           initialStatus={progress?.status ?? "todo"}
           initialScore={progress?.score ?? null}
+          answerCheck={problem.answer_check}
+          referenceCode={problem.reference_code}
+          referenceSql={problem.reference_sql}
+          referenceNote={problem.reference_note}
         />
 
         <div className="flex items-center justify-between gap-3 pt-2">

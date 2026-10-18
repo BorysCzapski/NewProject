@@ -4,6 +4,8 @@
 // with every sub-problem, status and points.
 // ============================================================================
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Shuffle, Timer } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getAllProblems, getExamBySlug } from "@/lib/informatyka/content";
@@ -35,6 +37,20 @@ export default async function ArkuszPage({ params }: { params: Promise<{ slug: s
     <div>
       <PageHeader title={exam.title} subtitle={`${t.earned}/${t.possible} pkt · ${t.done}/${t.total} zadań`} />
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 py-5">
+        <div className="grid grid-cols-2 gap-2">
+          <Link
+            href={`/informatyka/egzamin/${exam.slug}`}
+            className="flex items-center justify-center gap-2 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-sm font-semibold text-foreground shadow-(--shadow-card)"
+          >
+            <Timer className="h-4 w-4 text-primary" /> Rozwiąż na czas
+          </Link>
+          <a
+            href={`/informatyka/losuj?zakres=${exam.slug}`}
+            className="flex items-center justify-center gap-2 rounded-(--radius-card) border border-border/70 bg-surface p-3 text-sm font-semibold text-foreground shadow-(--shadow-card)"
+          >
+            <Shuffle className="h-4 w-4 text-primary" /> Losowe zadanie
+          </a>
+        </div>
         {groups.map((g, i) => (
           <section key={g.number} className="flex flex-col gap-2">
             {g.part && g.part !== groups[i - 1]?.part ? (

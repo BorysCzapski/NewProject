@@ -6,10 +6,11 @@
 // files, plus empty tables for those the statement only describes) and see the
 // result grid. The SQL autosaves; a result can be copied into the answer.
 // ============================================================================
-import { useEffect, useRef, useState } from "react";
-import { Loader2, Play, RotateCcw } from "lucide-react";
+import { useEffect, useImperativeHandle, useRef, useState, type Ref } from "react";
+import { ClipboardPaste, Loader2, Play, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CodeEditor } from "@/components/informatyka/code-editor";
+import { CodeEditor, type CodeEditorHandle } from "@/components/informatyka/code-editor";
+import type { CodeAreaHandle } from "@/components/informatyka/python-runner";
 import { loadDataFiles } from "@/lib/informatyka/data-files-client";
 import { openSession, type QueryResult, type SqlSession } from "@/lib/informatyka/sql-db";
 import { saveWork } from "@/lib/informatyka/actions";
@@ -22,13 +23,20 @@ export function SqlConsole({
   dataFiles,
   extraSchema,
   initialSql,
+  onUseAsAnswer,
+  handle,
 }: {
   problemId: string;
   examId: string;
   dataFiles: string[];
   extraSchema: string | null;
   initialSql: string;
+  /** "Use as answer": the last result set as plain text (one row per line). */
+  onUseAsAnswer?: (text: string) => void;
+  handle?: Ref<CodeAreaHandle>;
 }) {
+  const editor = useRef<CodeEditorHandle>(null);
+  useImperativeHandle(handle, () => ({ replace: (text: string) => editor.current?.replace(text) }));
   const [sql, setSql] = useState(initialSql || "SELECT * FROM ");
   const [session, setSession] = useState<SqlSession | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -110,7 +118,7 @@ export function SqlConsole({
           </ul>
         </details>
       )}
-      <CodeEditor value={sql} onChange={handleChange} onRun={run} language="sql" minHeight="9rem" />
+      <CodeEditor value={sql} onChange={handleChange} onRun={run} language="sql" minHeight="9rem" handle={editor} />
       <div className="flex items-center gap-3">
         <Button onClick={run} disabled={!session}>
           <Play className="h-4 w-4" /> Wykonaj
@@ -132,10 +140,21 @@ export function SqlConsole({
       {results && results.length === 0 && <p className="text-xs text-foreground-muted">Zapytanie wykonane — brak wyniku do pokazania.</p>}
       {results?.map((r, i) => (
         <div key={i} className="flex flex-col gap-1">
-          <p className="text-xs text-foreground-muted">
-            {r.rows.length} {r.rows.length === 1 ? "wiersz" : "wierszy"}
-            {r.rows.length > MAX_ROWS ? ` (pokazano pierwsze ${MAX_ROWS})` : ""}
-          </p>
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-xs text-foreground-muted">
+              {r.rows.length} {r.rows.length === 1 ? "wiersz" : "wierszy"}
+              {r.rows.length > MAX_ROWS ? ` (pokazano pierwsze ${MAX_ROWS})` : ""}
+            </p>
+            {onUseAsAnswer && i === results.length - 1 && r.rows.length > 0 && (
+              <button
+                type="button"
+                onClick={() => onUseAsAnswer(r.rows.map((row) => row.map((c) => (c === null ? "" : String(c))).join(" ")).join("\n"))}
+                className="flex items-center gap-1.5 text-xs font-medium text-primary"
+              >
+                <ClipboardPaste className="h-3.5 w-3.5" /> Użyj jako odpowiedzi
+              </button>
+            )}
+          </div>
           <div className="max-h-96 overflow-auto rounded-(--radius-control) border border-border">
             <table className="w-full border-collapse text-left font-mono text-xs">
               <thead className="sticky top-0 bg-surface-muted">

@@ -6,10 +6,10 @@
 // Pyodide Web Worker (public/pyodide-worker.js). The code autosaves; files the
 // program writes (wyniki*.txt) are shown so they can be copied into the answer.
 // ============================================================================
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Loader2, Play, Square } from "lucide-react";
+import { useCallback, useEffect, useImperativeHandle, useRef, useState, type Ref } from "react";
+import { ClipboardPaste, Loader2, Play, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CodeEditor } from "@/components/informatyka/code-editor";
+import { CodeEditor, type CodeEditorHandle } from "@/components/informatyka/code-editor";
 import { loadDataFiles } from "@/lib/informatyka/data-files-client";
 import { saveWork } from "@/lib/informatyka/actions";
 
@@ -30,19 +30,30 @@ function starter(files: string[]): string {
     : "# Tu napisz program.\n";
 }
 
+export interface CodeAreaHandle {
+  replace: (text: string) => void;
+}
+
 export function PythonRunner({
   problemId,
   examId,
   dataFiles,
   resultFile,
   initialCode,
+  onUseAsAnswer,
+  handle,
 }: {
   problemId: string;
   examId: string;
   dataFiles: string[];
   resultFile: string | null;
   initialCode: string;
+  /** "Use as answer": the file the program wrote (e.g. wyniki.txt) or, failing that, its output. */
+  onUseAsAnswer?: (text: string) => void;
+  handle?: Ref<CodeAreaHandle>;
 }) {
+  const editor = useRef<CodeEditorHandle>(null);
+  useImperativeHandle(handle, () => ({ replace: (text: string) => editor.current?.replace(text) }));
   const [code, setCode] = useState(initialCode || starter(dataFiles));
   const [result, setResult] = useState<RunResult | null>(null);
   const [running, setRunning] = useState(false);
@@ -131,6 +142,9 @@ export function PythonRunner({
   }
 
   const outputNames = result ? Object.keys(result.outputs) : [];
+  const answerText = result
+    ? (resultFile && result.outputs[resultFile]) || (outputNames.length === 1 ? result.outputs[outputNames[0]] : "") || result.stdout
+    : "";
 
   return (
     <div className="flex flex-col gap-3">
@@ -145,7 +159,7 @@ export function PythonRunner({
           ) : null}
         </p>
       )}
-      <CodeEditor value={code} onChange={handleChange} onRun={run} language="python" />
+      <CodeEditor value={code} onChange={handleChange} onRun={run} language="python" handle={editor} />
       <div className="flex items-center gap-3">
         {running ? (
           <Button onClick={stop} variant="secondary">
@@ -166,6 +180,15 @@ export function PythonRunner({
           {running && "Działa…"}
           {result && !running && `${(result.ms / 1000).toFixed(2)} s`}
         </span>
+        {onUseAsAnswer && result && !running && answerText.trim() && !result.stderr && (
+          <button
+            type="button"
+            onClick={() => onUseAsAnswer(answerText.trim())}
+            className="ml-auto flex items-center gap-1.5 text-xs font-medium text-primary"
+          >
+            <ClipboardPaste className="h-3.5 w-3.5" /> Użyj jako odpowiedzi
+          </button>
+        )}
       </div>
       {loadError && <p className="text-sm text-danger">{loadError}</p>}
       {result && (

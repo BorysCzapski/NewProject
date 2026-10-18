@@ -1472,6 +1472,10 @@ export interface InformatykaProblem {
   data_files: string[];
   sql_extra_schema: string | null;
   needs_review: boolean;
+  reference_sql: string | null;
+  reference_code: string | null;
+  reference_note: string | null;
+  answer_check: { any: string[][] } | null;
 }
 
 export interface InformatykaDataFile {
