@@ -1552,3 +1552,50 @@ export interface LexiconProgress {
   last_reviewed_at: string | null;
   next_review_at: string | null;
 }
+
+// ============================================================================
+// Gitara tabs — whole songs as structured notes (supabase/migrations/0035_gitara_tabs.sql).
+// ============================================================================
+export interface GtrTabNote {
+  /** 1 = thinnest (high e) … 6 = thickest (low E). */
+  s: number;
+  /** Fret relative to the capo; absent for a muted note. */
+  f?: number;
+  /** Artificial harmonic — the fret it sounds at (written fret + 12). */
+  ah?: number;
+  mute?: boolean;
+  /** Held/tied note shown in brackets in the tab — not plucked again. */
+  tie?: boolean;
+}
+
+export interface GtrTabEvent {
+  /** Position inside the bar in beats (0–4), estimated from the layout. */
+  beat: number;
+  notes: GtrTabNote[];
+  /** "H" hammer-on, "P" pull-off, "AH" artificial harmonic label above the staff. */
+  tech?: string;
+  /** Note names are derived, never stored. */
+}
+
+export interface GtrTabBar {
+  n: number;
+  section?: string;
+  events: GtrTabEvent[];
+}
+
+export interface GtrTab {
+  id: string;
+  slug: string;
+  title: string;
+  artist: string;
+  arranger: string | null;
+  capo: number;
+  tempo: number | null;
+  tuning: string;
+  note: string | null;
+  source_file: string | null;
+  bars: GtrTabBar[];
+  bar_count: number;
+  created_by: string | null;
+  created_at: string;
+}

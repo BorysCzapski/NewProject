@@ -11,6 +11,7 @@
 // ============================================================================
 import Link from "next/link";
 import { ArrowRight, BookOpen, Guitar, ListMusic, Music, Timer } from "lucide-react";
+import { Play } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getCompletedLessonIds, getTopics, getTotalPracticeSeconds } from "@/lib/gitara/content";
@@ -121,6 +122,19 @@ export default async function GitaraDashboardPage() {
               <CardDescription className="mt-0.5">
                 {topics.length} działów: od postawy po techniki gry
               </CardDescription>
+            </div>
+            <ArrowRight className="h-4 w-4 shrink-0 text-foreground-muted" />
+          </Card>
+        </Link>
+
+        <Link href="/gitara/tabulatury">
+          <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">
+            <div className="min-w-0 flex-1">
+              <CardTitle className="flex items-center gap-1.5">
+                <Play className="h-4 w-4 text-primary" />
+                Tabulatury do grania
+              </CardTitle>
+              <CardDescription className="mt-0.5">Całe utwory w tabulaturze — z kapodastrem i tempem</CardDescription>
             </div>
             <ArrowRight className="h-4 w-4 shrink-0 text-foreground-muted" />
           </Card>
