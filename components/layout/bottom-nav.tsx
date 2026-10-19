@@ -34,6 +34,8 @@ import {
   Droplet,
   UtensilsCrossed,
   Pill,
+  LineChart,
+  Lightbulb,
 } from "lucide-react";
 import { NAV_BY_PREFIX } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -62,6 +64,8 @@ const ICONS = {
   Droplet,
   UtensilsCrossed,
   Pill,
+  LineChart,
+  Lightbulb,
 };
 
 export function BottomNav() {

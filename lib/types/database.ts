@@ -1131,27 +1131,17 @@ export interface BreviaryDayRow {
 }
 
 // ---------------------------------------------------------------------------
-// Godziny — rejestr czasu nauki (supabase/migrations/0020_godziny.sql)
+// Tracker — jeden wpis na dzień: godziny pracy, zadania, notatka
+// (supabase/migrations/0034_tracker.sql)
 // ---------------------------------------------------------------------------
 
-export interface StudyTopic {
+export interface TrackerDay {
   id: string;
   user_id: string;
-  name: string;
-  category: string | null;
-  /** Slot palety --chart-1..8 (0-7), patrz lib/chart-colors.ts. */
-  color_index: number;
-  is_archived: boolean;
-  created_at: string;
-  updated_at: string;
-}
-
-export interface StudySession {
-  id: string;
-  user_id: string;
-  topic_id: string;
-  study_date: string;
-  duration_minutes: number;
+  /** Dzień kalendarzowy "YYYY-MM-DD" — kolumna `date`, bez strefy. */
+  day: string;
+  hours: number;
+  tasks: number;
   note: string | null;
   created_at: string;
   updated_at: string;

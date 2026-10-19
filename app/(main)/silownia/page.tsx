@@ -3,7 +3,7 @@
 // Ekran główny "Siłowni": nawodnienie dziś, status dzisiejszego treningu (+
 // sugestia co trenować), szybkie liczby (tydzień treningów, kalorie dziś,
 // suplementy dziś) i skróty do pełnych dzienników. Ten sam kształt co
-// app/(main)/godziny/page.tsx: jedno pytanie na ekran — "co się dziś dzieje".
+// app/(main)/tracker/page.tsx: jedno pytanie na ekran — "co się dziś dzieje".
 // ============================================================================
 import Link from "next/link";
 import { ArrowRight, Dumbbell, Flame, Pill } from "lucide-react";

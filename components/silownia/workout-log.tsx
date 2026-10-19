@@ -4,7 +4,7 @@
 // components/silownia/workout-log.tsx
 // Stream treningów: przycisk „Dodaj trening" + lista pogrupowana po dniach,
 // z edycją i kasowaniem w miejscu. Ten sam wzorzec co
-// components/godziny/study-log.tsx — lista nie jest trzymana w stanie
+// dawny dziennik Godzin (usunięty) — lista nie jest trzymana w stanie
 // klienta, router.refresh() po każdej zmianie jest jednym źródłem prawdy.
 // ============================================================================
 import { useState, useTransition } from "react";

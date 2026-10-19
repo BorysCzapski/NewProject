@@ -3,8 +3,8 @@
 // ============================================================================
 // components/silownia/meal-log.tsx
 // Stream posiłków: przycisk „Dodaj posiłek" + lista pogrupowana po dniach z
-// sumą kalorii dnia i kasowaniem w miejscu. Ten sam wzorzec co
-// components/godziny/study-log.tsx.
+// sumą kalorii dnia i kasowaniem w miejscu. Ten sam wzorzec co dawny dziennik
+// Godzin (usunięty).
 // ============================================================================
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
