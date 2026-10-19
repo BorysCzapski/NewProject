@@ -1,6 +1,6 @@
 // ============================================================================
 // lib/gitara/topics.ts
-// The Gitara curriculum: 5 działy, ordered as a real prerequisite chain, not
+// The Gitara curriculum: 6 działy, ordered as a real prerequisite chain, not
 // a taxonomy — this file is the reference supabase/seed/gitara/01_topics.sql
 // is authored from, same relationship as lib/algorytmy/topics.ts to its seed.
 //
@@ -56,6 +56,13 @@ export const GTR_TOPICS: GtrTopicSeed[] = [
     description:
       "Palm muting, legato (hammer-on, pull-off), bend, tapping i sweep picking — jak wydobyć z gitary więcej niż samo brzdąkanie.",
     orderIndex: 5,
+  },
+  {
+    slug: "teoria-muzyki",
+    title: "Teoria muzyki",
+    description:
+      "Zapis nutowy, rytm, gamy, interwały i akordy — teoria, która tłumaczy, dlaczego to, co grasz na gitarze, brzmi tak, a nie inaczej. Adaptacja polska podręcznika Catherine Schmidt-Jones z dopiskami dla gitarzysty.",
+    orderIndex: 6,
   },
 ];
 
