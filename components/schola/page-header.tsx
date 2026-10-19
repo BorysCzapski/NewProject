@@ -7,6 +7,7 @@
 // non-sticky block; the shell bar is the only sticky element in this realm.
 // ============================================================================
 import type { ReactNode } from "react";
+import { BackButton } from "@/components/layout/back-button";
 
 export function ScholaPageHeader({
   title,
@@ -19,9 +20,12 @@ export function ScholaPageHeader({
 }) {
   return (
     <div className="mx-auto flex max-w-lg items-center justify-between gap-3 px-5 pt-5">
-      <div>
-        <h1 className="text-xl font-bold text-foreground">{title}</h1>
-        {subtitle && <p className="text-sm text-foreground-muted">{subtitle}</p>}
+      <div className="flex min-w-0 items-center gap-1">
+        <BackButton />
+        <div className="min-w-0">
+          <h1 className="text-xl font-bold text-foreground">{title}</h1>
+          {subtitle && <p className="text-sm text-foreground-muted">{subtitle}</p>}
+        </div>
       </div>
       {action}
     </div>

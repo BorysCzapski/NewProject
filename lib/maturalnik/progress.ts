@@ -82,7 +82,7 @@ export async function getProblemProgress(
   return (data as MaturalnikProgress) ?? null;
 }
 
-const HEATMAP_LOOKBACK_WEEKS = 20;
+const HEATMAP_LOOKBACK_WEEKS = 52;
 
 interface DoneRow {
   done_at: string;

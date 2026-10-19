@@ -18,6 +18,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { ExamPreferencesForm } from "@/components/matura/exam-preferences-form";
 import { EstimatedScoreCard } from "@/components/matura/estimated-score-card";
 import { SectionList } from "@/components/matura/section-list";
+import { BackButton } from "@/components/layout/back-button";
 
 export default async function MaturaDashboardPage() {
   const profile = await requireProfile();
@@ -30,6 +31,7 @@ export default async function MaturaDashboardPage() {
   if (!settings) {
     return (
       <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 pb-5 pt-[calc(env(safe-area-inset-top)+1.25rem)]">
+        <BackButton className="-mb-2" />
         <div>
           <p className="text-sm text-foreground-muted">{greeting},</p>
           <h1 className="text-2xl font-bold text-foreground">{profile.username}</h1>
@@ -52,6 +54,7 @@ export default async function MaturaDashboardPage() {
 
   return (
     <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 pb-5 pt-[calc(env(safe-area-inset-top)+1.25rem)]">
+      <BackButton className="-mb-2" />
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm text-foreground-muted">{greeting},</p>

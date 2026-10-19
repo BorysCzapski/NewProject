@@ -30,6 +30,7 @@ import { PrayButton } from "@/components/modlitwa/pray-button";
 import { StreakStrip } from "@/components/modlitwa/streak-strip";
 import { LiturgicalDayCard } from "@/components/modlitwa/liturgical-day-card";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { BackButton } from "@/components/layout/back-button";
 
 export default async function ModlitwaPage() {
   const profile = await requireProfile();
@@ -56,6 +57,7 @@ export default async function ModlitwaPage() {
 
   return (
     <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 pb-6 pt-[calc(env(safe-area-inset-top)+1.25rem)]">
+      <BackButton className="-mb-2" />
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-sm text-foreground-muted">Szczęść Boże,</p>

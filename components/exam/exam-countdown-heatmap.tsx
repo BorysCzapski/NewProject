@@ -10,12 +10,15 @@
 // light/dark come for free. All day math is on "YYYY-MM-DD" strings in the
 // app time zone (lib/exam-dates.ts), never on local Date objects.
 // ============================================================================
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { addDays, diffDays, formatKeyPl, weekdayMonday0, type DailyActivity } from "@/lib/exam-dates";
 
 const DAY_LABELS = ["Pon", "Wt", "Śr", "Czw", "Pt", "Sob", "Nd"];
+/** Always show at least this many past weeks, even before any activity. */
+const MIN_PAST_WEEKS = 4;
+const CELL_STRIDE = 18; // 15px cell + 3px gap
 
 function intensityClass(count: number): string {
   if (count <= 0) return "bg-surface-muted";
@@ -44,7 +47,23 @@ export function ExamCountdownHeatmap({
   activity: Record<string, DailyActivity>;
 }) {
   const [selected, setSelected] = useState<string>(today);
+  const scroller = useRef<HTMLDivElement>(null);
   const daysUntilExam = diffDays(today, examDate);
+
+  // The grid reaches back to the first recorded day (at least MIN_PAST_WEEKS), so earlier
+  // progress can be scrolled to; open it scrolled to the current week.
+  const earliestActivity = Object.keys(activity)
+    .filter((k) => (activity[k]?.count ?? 0) > 0)
+    .sort()[0];
+  const pastStart = addDays(today, -7 * MIN_PAST_WEEKS);
+  const firstDay = earliestActivity && earliestActivity < pastStart ? earliestActivity : pastStart;
+  const gridStart = addDays(firstDay, -weekdayMonday0(firstDay));
+  const todayColumn = Math.floor(diffDays(gridStart, today) / 7);
+
+  useEffect(() => {
+    const el = scroller.current;
+    if (el) el.scrollLeft = Math.max(0, todayColumn * CELL_STRIDE - el.clientWidth / 2);
+  }, [todayColumn]);
 
   if (daysUntilExam < 0) {
     return (
@@ -54,7 +73,6 @@ export function ExamCountdownHeatmap({
     );
   }
 
-  const gridStart = addDays(today, -weekdayMonday0(today));
   const gridEnd = addDays(examDate, 6 - weekdayMonday0(examDate));
   const days: string[] = [];
   for (let key = gridStart; key <= gridEnd; key = addDays(key, 1)) days.push(key);
@@ -72,7 +90,7 @@ export function ExamCountdownHeatmap({
         <p className="text-sm text-foreground-muted">do matury ({formatKeyPl(examDate).split(", ")[1]})</p>
       </div>
 
-      <div className="flex gap-2 overflow-x-auto pb-1">
+      <div ref={scroller} className="flex gap-2 overflow-x-auto pb-1">
         <div className="flex shrink-0 flex-col justify-between gap-[3px] py-[1px] text-[10px] text-foreground-muted">
           {DAY_LABELS.map((label) => (
             <span key={label} className="h-[15px] leading-[15px]">
@@ -107,7 +125,9 @@ export function ExamCountdownHeatmap({
         </div>
       </div>
 
-      <div className="mt-3 flex items-center justify-end gap-1 text-[10px] text-foreground-muted">
+      <div className="mt-3 flex items-center justify-between gap-1 text-[10px] text-foreground-muted">
+        {todayColumn > 0 ? <span>← przewiń, żeby zobaczyć wcześniejsze dni</span> : <span />}
+        <span className="flex items-center gap-1">
         <span>mniej</span>
         <span className="h-[11px] w-[11px] rounded-[2px] bg-surface-muted" />
         <span className="h-[11px] w-[11px] rounded-[2px] bg-primary/25" />
@@ -115,6 +135,7 @@ export function ExamCountdownHeatmap({
         <span className="h-[11px] w-[11px] rounded-[2px] bg-primary/75" />
         <span className="h-[11px] w-[11px] rounded-[2px] bg-primary" />
         <span>więcej</span>
+        </span>
       </div>
 
       <div className="mt-3 rounded-(--radius-control) bg-surface-muted p-3">

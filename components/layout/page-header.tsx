@@ -4,6 +4,7 @@
 // shell: a title, optional subtitle, and a slot for right-aligned actions.
 // ============================================================================
 import type { ReactNode } from "react";
+import { BackButton } from "@/components/layout/back-button";
 
 export function PageHeader({
   title,
@@ -20,9 +21,12 @@ export function PageHeader({
       style={{ paddingTop: "calc(env(safe-area-inset-top) + 1rem)" }}
     >
       <div className="mx-auto flex max-w-lg items-center justify-between gap-3">
-        <div>
-          <h1 className="text-xl font-bold tracking-tight text-foreground">{title}</h1>
-          {subtitle && <p className="text-sm text-foreground-muted">{subtitle}</p>}
+        <div className="flex min-w-0 items-center gap-1">
+          <BackButton />
+          <div className="min-w-0">
+            <h1 className="text-xl font-bold tracking-tight text-foreground">{title}</h1>
+            {subtitle && <p className="text-sm text-foreground-muted">{subtitle}</p>}
+          </div>
         </div>
         {action}
       </div>

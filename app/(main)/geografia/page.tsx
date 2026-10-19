@@ -19,6 +19,7 @@ import { SpacedReviewCard } from "@/components/geografia/dashboard/spaced-review
 import { TopicMasteryBars } from "@/components/geografia/dashboard/topic-mastery-bars";
 import { ProgressTrendChart } from "@/components/geografia/dashboard/progress-trend-chart";
 import { WeakestTopicsCard } from "@/components/geografia/dashboard/weakest-topics-card";
+import { BackButton } from "@/components/layout/back-button";
 
 export default async function GeografiaDashboardPage() {
   const profile = await requireProfile();
@@ -39,6 +40,7 @@ export default async function GeografiaDashboardPage() {
 
   return (
     <div className="mx-auto flex max-w-lg flex-col gap-4 px-5 pb-5 pt-[calc(env(safe-area-inset-top)+1.25rem)]">
+      <BackButton className="-mb-2" />
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm text-foreground-muted">{greeting},</p>

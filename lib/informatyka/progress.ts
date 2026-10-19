@@ -63,7 +63,7 @@ export function percent(t: Tally): number {
   return t.possible > 0 ? Math.round((t.earned / t.possible) * 100) : 0;
 }
 
-const HEATMAP_LOOKBACK_WEEKS = 20;
+const HEATMAP_LOOKBACK_WEEKS = 52;
 
 interface DoneRow {
   done_at: string;

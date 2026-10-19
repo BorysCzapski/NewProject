@@ -15,6 +15,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 import { HomeworkProgressBar } from "@/components/homework/homework-progress-bar";
 import { HOMEWORK_TYPE_LABELS } from "@/lib/constants";
+import { BackButton } from "@/components/layout/back-button";
 
 const MODULE_LINKS = [
   { href: "/jezyki/nauka/fiszki", label: "Fiszki", icon: Layers, color: "bg-level-a1/15 text-level-a1" },
@@ -49,6 +50,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="mx-auto max-w-lg px-5 pt-[calc(env(safe-area-inset-top)+1.25rem)]">
+      <BackButton className="-mb-2" />
       <div className="mb-6 flex items-center justify-between">
         <div>
           <p className="text-sm text-foreground-muted">{greeting},</p>
