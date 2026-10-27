@@ -85,12 +85,12 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/informatyka",
   },
   {
-    id: "godziny",
-    name: "Godziny",
-    description: "Licznik czasu nauki: ile i czego się uczysz",
+    id: "tracker",
+    name: "Tracker",
+    description: "Godziny pracy i zadania dzień po dniu, wykres postępu i wskazówki lock in",
     section: "nauka",
-    icon: "Timer",
-    href: "/godziny",
+    icon: "LineChart",
+    href: "/tracker",
   },
   {
     id: "gitara",

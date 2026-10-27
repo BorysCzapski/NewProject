@@ -2,7 +2,7 @@
 // lib/silownia/queries.ts
 // Strona odczytu "Siłowni": profil (waga/wzrost/cel), lista treningów,
 // dzisiejsze nawodnienie, posiłki i suplementy, plus podsumowanie na
-// dashboard. Sumowanie w TypeScripcie, nie w SQL-u — jak w lib/godziny/queries.ts,
+// dashboard. Sumowanie w TypeScripcie, nie w SQL-u — jak w lib/tracker/queries.ts,
 // to dziennik jednej osoby, więc proste zapytanie plus pętla wystarczą.
 // ============================================================================
 import "server-only";

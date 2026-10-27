@@ -4,7 +4,7 @@
 // Server Actions "Siłowni": profil, treningi, nawodnienie, posiłki (AI),
 // suplementy. Walidacja jest dublowana świadomie (formularz blokuje bzdury od
 // razu, Server Action sprawdza wszystko jeszcze raz — publiczny endpoint POST
-// nie może ufać klientowi), ten sam wzorzec co lib/godziny/actions.ts. Żadna
+// nie może ufać klientowi), ten sam wzorzec co lib/tracker/actions.ts. Żadna
 // funkcja nie przyjmuje user_id z zewnątrz; RLS ("*_own") dokłada drugą
 // warstwę.
 // ============================================================================

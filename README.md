@@ -175,34 +175,30 @@ API) — z jawną obsługą braku dostępu do mikrofonu, zgodnie ze specem („a
 bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść startowa:
 `supabase/seed/gitara/*.sql`.
 
-**Godziny** (`/godziny`) — dziennik czasu nauki: ile minut i **czego** się dziś uczyłeś.
-Wpis to data + długość sesji + temat z własnej listy (+ opcjonalna notatka), a ekran główny
-odpowiada na jedno pytanie — „ile dziś zrobiłem i co ostatnio robiłem": kafelki dziś/tydzień/
-miesiąc, seria dni z rzędu i stream ostatnich wpisów pogrupowany po dniach, z edycją i
-kasowaniem w miejscu. `/godziny/historia` daje ten sam materiał w przekroju: przełącznik
-dni/tygodnie/miesiące, filtr po temacie (oba trzymane w URL-u, więc dają się zapisać w
-zakładkach), wykres słupkowy sumy czasu w kolejnych okresach oraz rozbicie „na co poszedł czas".
-Listą tematów zarządza się na `/godziny/tematy` — startowy zestaw (przedmioty szkolne, rozwój
-własny oraz **aplikacje edukacyjne z samego Phoenixa**, czytane z `lib/phoenix/apps.ts`) wchodzi
-na jedno kliknięcie i jest w całości edytowalny.
+**Tracker** (`/tracker`) — dziennik pracy w stylu giełdowego wykresu: jednego dnia wpisujesz
+**ile godzin pracowałeś**, **ile zadań zrobiłeś** i opcjonalną notatkę, a dzień ląduje jako
+punkt na wykresie. Punkt jest zielony (▲), gdy dzień był lepszy od poprzedniego, czerwony (▼),
+gdy gorszy, szary (=), gdy taki sam — kolor zawsze idzie w parze ze strzałką i liczbą, a pod
+wykresem jest tabela. Metryki: godziny, zadania i **tempo** (zadania na godzinę, łapie dni „siedziałem
+długo, zrobiłem mało"); zakresy 7/30/90 dni i całość. Tooltip i nagłówek-ticker porównują dzień z
+poprzednim zapisanym, ze średnią pozostałych dni i z całą historią („lepiej niż 80% dni, miejsce 3
+z 25") — zawsze na całej historii, a nie na widocznym zakresie, więc wynik dnia nie zmienia się
+od przełączenia zakresu. `/tracker/wskazowki` („Lock in") to protokół skupienia (przed / w
+trakcie / po bloku) oraz wskazówki dobrej nauki: aktywne przypominanie, powtórki rozłożone w
+czasie, sen i planowanie. Logika porównań siedzi w czystym `lib/tracker/stats.ts` (bez I/O).
 
-Dwie decyzje, które warto znać przed grzebaniem w tym module. Po pierwsze: **wiele wpisów tego
-samego dnia jest dozwolone**, także dla tego samego tematu — spec zostawiała ten wybór otwarty,
-a nauka realnie rozbija się na sesje (rano 30 min, wieczorem 45 min) i notatka opisuje sesję, nie
-dzień; sumowanie jest sprawą widoku, nie schematu. Po drugie: **temat z zapisanymi godzinami da
-się tylko zarchiwizować, nie skasować** — historia nigdy nie zostaje z dziurą po nazwie. Klucz
-obcy `study_sessions.topic_id` ma mimo to `on delete cascade`, a nie `restrict`, wyłącznie po to,
-żeby kasowanie profilu nie wywracało się na kolejności kaskad; regułę egzekwuje `deleteTopic()`
-w `lib/godziny/topic-actions.ts` (uzasadnienie w komentarzu w `0020_godziny.sql`). Walidacji
-„data nie z przyszłości" nie da się zapisać jako `CHECK` (`current_date` jest STABLE, a Postgres
-wymaga tam funkcji IMMUTABLE), więc pilnuje jej `lib/godziny/actions.ts` — w strefie
-`Europe/Warsaw`, żeby wpis zrobiony o 23:30 nie wyglądał na jutrzejszy. Schemat:
-`supabase/migrations/0020_godziny.sql` — numer `0020`, a nie kolejny wolny w repo, bo wersje
-`0018` i `0019` są już zajęte na bazie deweloperskiej przez migracje wdrożone równolegle z innych
-sesji/worktree (`geografia_lessons`, `modlitwa_brewiarz`), których pliki nie trafiły jeszcze na
-`main`. Runner z `scripts/db.mjs` rozpoznaje migracje po **numerze wersji**, nie po pełnej nazwie
-pliku, więc plik z zajętym numerem nie zgłosiłby konfliktu — zostałby po cichu uznany za „już
-wgrany" i **nigdy by się nie wykonał**. Dlatego przed dodaniem migracji zawsze `npm run db status`.
+Dwie decyzje, które warto znać. Po pierwsze: **jeden dzień = jeden wiersz** (`unique (user_id,
+day)`), zapis na ten sam dzień nadpisuje wpis (upsert) — wybranie daty z istniejącym wpisem
+wczytuje go do edycji. Dni bez wpisu nie są punktami (wykres pokazuje tylko zapisane dni), a
+dzień z samymi zerami jest pełnoprawnym punktem — wykres, który ukrywa słabe dni, kłamie. Po
+drugie: Tracker **zastąpił aplikację Godziny**. Kod i UI Godzin zostały usunięte, a tabele
+`study_topics` / `study_sessions` (`0027_godziny.sql`) zostają w bazie nietknięte — tak samo jak
+`math_*` po usunięciu Matmy. Migracja `0034_tracker.sql` przepisuje przy okazji `"godziny"` na
+`"tracker"` w `profiles.installed_apps`, żeby aplikacja nie znikła z ekranu głównego. Walidacji
+„dzień nie z przyszłości" nie da się zapisać jako `CHECK` (`current_date` jest STABLE), więc
+pilnuje jej `lib/tracker/actions.ts` w strefie `Europe/Warsaw`; zakresy (0–24 h, 0–999 zadań)
+pilnuje baza. Przed dodaniem migracji zawsze `npm run db status` — runner rozpoznaje migracje po
+numerze wersji, więc plik z zajętym numerem zostałby po cichu uznany za „już wgrany".
 
 
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
@@ -586,10 +582,9 @@ app/
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
     kuznia/            # KUŹNIA — kreator promptów
-    godziny/           # GODZINY — licznik czasu nauki
-      page.tsx          # „Dziś": sumy dzień/tydzień/miesiąc + stream wpisów
-      historia/          # historia wg dni/tygodni/miesięcy + filtr po temacie
-      tematy/            # lista tematów (zestaw startowy, archiwum)
+    tracker/           # TRACKER — godziny i zadania dzień po dniu
+      page.tsx          # wykres „jak na giełdzie" + formularz dnia + ostatnie dni
+      wskazowki/         # „Lock in": protokół skupienia i wskazówki nauki
     matura/            # MATURA Z JĘZYKA — angielski albo hiszpański (CKE)
       page.tsx          # dashboard: wybór języka i poziomu / szacowany wynik
       nauka/             # hub 4 części egzaminu — wszystkie zbudowane
@@ -649,8 +644,8 @@ lib/
                      # tasowanie ćwiczeń (shuffle.ts — Math.random rozjechałby hydratację)
   algorytmy/         # Algorytmy: katalog działów i typów zadań, typy bloków lekcji,
                      # kolejka ćwiczeń per typ (exercise-stock.ts) i generator zadań
-  godziny/           # Godziny: format czasu/dat i polska odmiana, zapytania
-                     # i sumowanie historii, akcje wpisów i tematów
+  tracker/           # Tracker: daty i etykiety, czysta logika porównań dni (stats.ts),
+                     # zapytania, akcje zapisu dnia, treść wskazówek
   gitara/            # Gitara: teoria muzyki i kształty akordów (theory.ts, w tym 5
                      # kształtów CAGED wyprowadzonych transpozycją), Web Audio (syntezator
                      # strun Karplus-Strong, metronom z harmonogramem z wyprzedzeniem,
@@ -660,7 +655,7 @@ lib/
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
                      # 0013 = Matura, 0016 = wymiar języka, 0017 = teoria i słownictwo,
-                     # 0020 = Godziny, 0024 = Algorytmy, 0025 = Gitara)
+                     # 0024 = Algorytmy, 0025 = Gitara, 0034 = Tracker)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
                      # matura-es/, algorytmy/, gitara/)
 scripts/

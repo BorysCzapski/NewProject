@@ -67,7 +67,9 @@ export interface NavItem {
     | "Dumbbell"
     | "Droplet"
     | "UtensilsCrossed"
-    | "Pill";
+    | "Pill"
+    | "LineChart"
+    | "Lightbulb";
   /** Highlight only on exact pathname match (for app/platform home tabs). */
   exact?: boolean;
 }
@@ -129,11 +131,10 @@ export const ALGORYTMY_NAV: NavItem[] = [
   { href: "/algorytmy/postepy", label: "Postępy", icon: "TrendingUp" },
 ];
 
-export const GODZINY_NAV: NavItem[] = [
+export const TRACKER_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
-  { href: "/godziny", label: "Dziś", icon: "Timer", exact: true },
-  { href: "/godziny/historia", label: "Historia", icon: "Calendar" },
-  { href: "/godziny/tematy", label: "Tematy", icon: "ListChecks" },
+  { href: "/tracker", label: "Wykres", icon: "LineChart", exact: true },
+  { href: "/tracker/wskazowki", label: "Lock in", icon: "Lightbulb" },
 ];
 
 export const SILOWNIA_NAV: NavItem[] = [
@@ -153,7 +154,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },
-  { prefix: "/godziny", items: GODZINY_NAV },
+  { prefix: "/tracker", items: TRACKER_NAV },
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },

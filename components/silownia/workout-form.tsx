@@ -4,7 +4,7 @@
 // components/silownia/workout-form.tsx
 // Formularz jednej sesji treningowej — data, rodzaj dnia (presety + własny
 // tekst), czas trwania, lista ćwiczeń z seriami (powtórzenia + ciężar), notatka.
-// Ten sam wzorzec co components/godziny/entry-form.tsx: walidacja tu jest po
+// Ten sam wzorzec co components/tracker/day-form.tsx: walidacja tu jest po
 // to, żeby nie płacić rundy do serwera za literówkę — prawdziwą bramką jest
 // lib/silownia/actions.ts.
 // ============================================================================
