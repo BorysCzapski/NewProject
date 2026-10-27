@@ -21,6 +21,21 @@ i zapisuje w bazie. Schemat: `0032_lexicon.sql`, `0033_lexicon_definitions.sql`;
 `supabase/seed/lexicon/` (surowe listy `.txt` + `node scripts/build-lexicon-seed.mjs` generuje SQL).
 W Maturze dwa działy: „100 najważniejszych słówek" (`supabase/seed/matura/18_vocab_top100.sql`) i „Phrasal verbs" (41 haseł z przykładami, `19_vocab_phrasal_verbs.sql`, generowany z `phrasal-verbs-source.txt` tym samym skryptem).
 
+**Pisownia** (`/jezyki/nauka/pisownia`) — tylko dla angielskiego: widzisz polskie znaczenie i słowo z
+**jedną lub dwiema brakującymi literami** (`ma_tress`), wpisujesz brakujące litery. Nowe słowo ma jedną
+lukę, od drugiego pudełka Leitnera — dwie. Błąd wraca za kilka kart, ale z INNYMI zasłoniętymi
+literami, żeby nie zapamiętać maski zamiast pisowni. Maska (`lib/lexicon/spelling.ts`, czysta logika)
+jest deterministyczna — zależy od hasła i ziarna, nie od `Math.random`, więc serwer i przeglądarka
+budują tę samą zagadkę. Nie zasłania pierwszych liter wyrazów, słów funkcyjnych (`the`, `on`, `to`),
+tekstu w nawiasach ani `sth`/`sb`; woli podwójne spółgłoski i skupiska samogłosek, bo na nich Polacy
+się mylą. Postęp pisowni jest w **osobnej** tabeli (`lexicon_spelling_progress`, `0036`) od postępu
+w znaczeniach — znać słowo to nie to samo co umieć je napisać. Ćwiczy tylko słowa, które mają już
+polskie tłumaczenie, i nie woła AI. Talia „Dom i mieszkanie" (139 haseł z zestawu „Pojęcia", ze zrzutów ekranu) ma gotowe tłumaczenia
+(`supabase/seed/lexicon/03_dom_i_mieszkanie.sql`, generowany z `dom-pojecia-source.txt`). Lista jest
+**niepełna**: na zrzutach brakuje fragmentu między `armchair` a `bench` oraz między `boiler room` a
+`bowl` (była tam reklama), a `armchair` i `pot` były ucięte bez tłumaczenia, więc zostały pominięte.
+Seed przenumerowuje `rank` całej talii, więc dopisywanie brakujących haseł jest bezpieczne.
+
 Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
 aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do
 skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne uzupełnienia

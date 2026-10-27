@@ -4,7 +4,7 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -79,6 +79,15 @@ const MODULES = [
   },
 ];
 
+// Spelling drill (fill in missing letters) — English only: it trains English
+// orthography on the English lexicon decks.
+const PISOWNIA_MODULE = {
+  href: "/jezyki/nauka/pisownia",
+  label: "Pisownia",
+  description: "Uzupełnij 1–2 brakujące litery w słowach i zwrotach",
+  icon: SpellCheck,
+};
+
 // Shown only to Russian learners, at the very top — the alphabet comes first.
 const CYRYLICA_MODULE = {
   href: "/jezyki/nauka/cyrylica",
@@ -90,7 +99,11 @@ const CYRYLICA_MODULE = {
 export default async function NaukaPage() {
   const profile = await requireProfile();
   const modules =
-    profile.target_language === "ru" ? [CYRYLICA_MODULE, ...MODULES] : MODULES;
+    profile.target_language === "ru"
+      ? [CYRYLICA_MODULE, ...MODULES]
+      : profile.target_language === "en"
+        ? [MODULES[0], PISOWNIA_MODULE, ...MODULES.slice(1)]
+        : MODULES;
 
   return (
     <div>
