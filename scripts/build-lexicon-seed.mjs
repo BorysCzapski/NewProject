@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Buduje z surowych list: lexicon/01_daily_words.sql (EF), lexicon/02_phrasal_verbs.sql (UMN)
-// i matura/19_vocab_phrasal_verbs.sql (testyourenglish.pl)
+// matura/19_vocab_phrasal_verbs.sql (testyourenglish.pl) i lexicon/03_dom_i_mieszkanie.sql
 // (supabase/seed/lexicon/ef-top-3000.txt, jedno hasło na linię, kolejność = ranga częstości).
 //
 //   node scripts/build-lexicon-seed.mjs
@@ -164,3 +164,69 @@ on conflict (topic_id, term) do nothing;
 `
 writeFileSync(join(DIR, '..', 'matura', '19_vocab_phrasal_verbs.sql'), pvSql)
 console.log(`✓ Matura phrasal verbs: ${pv.length} haseł`)
+
+// --- Dom i mieszkanie (zrzuty ekranu użytkownika, zestaw „Pojęcia") ---------
+// Linia: "hasło — tłumaczenie". Wpisy BEZ tłumaczenia to hasła ucięte na
+// krawędzi zrzutu ekranu — pomijamy je i wypisujemy, zamiast zgadywać.
+// Talia ma gotowe tłumaczenia, więc dostaje enriched_at i nie wymaga AI
+// (patrz lib/lexicon/enrich.ts: needsEnrichment).
+const dom = []
+const domCut = []
+readFileSync(join(DIR, 'dom-pojecia-source.txt'), 'utf8')
+  .split('\n')
+  .map((l) => l.trim())
+  .filter(Boolean)
+  .forEach((line, i) => {
+    const m = line.match(/^(.+?)\s+—\s*(.*)$/)
+    if (!m) throw new Error(`Nie umiem sparsować linii ${i + 1}: ${line}`)
+    const [, term, pl] = m
+    if (!pl.trim()) domCut.push(term.trim())
+    else dom.push({ rank: i + 1, term: term.trim(), pl: pl.trim() })
+  })
+const domTerms = new Set()
+for (const r of dom) {
+  if (domTerms.has(r.term)) throw new Error(`Duplikat hasła: ${r.term}`)
+  domTerms.add(r.term)
+}
+
+const domSql = `-- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
+-- Talia „Dom i mieszkanie": ${dom.length} haseł z zestawu „Pojęcia" (zrzuty ekranu od użytkownika).
+-- Pominięte (ucięte na zrzucie, bez tłumaczenia): ${domCut.join(', ') || 'brak'}.
+-- Lista jest niepełna — zrzuty urywają się na „outdoor heater", a między
+-- „armchair" i „bench" oraz „boiler room" i „bowl" brakuje fragmentów. Reszta
+-- dojdzie osobnym plikiem; rank to pozycja w przepisanej liście.
+insert into lexicon_decks (slug, title, description, kind, source_name, source_url, order_index)
+values (
+  'dom-pojecia',
+  'Dom i mieszkanie',
+  'Słownictwo o domu, wyposażeniu i obowiązkach domowych — słówka i zwroty',
+  'word',
+  'Zestaw „Pojęcia" — dom i mieszkanie',
+  '',
+  3
+)
+on conflict (slug) do nothing;
+
+-- Talia jest niepełna i będzie uzupełniana, a nowe hasła wchodzą MIĘDZY
+-- istniejące i przesuwają rank. unique (deck_id, rank) nie pozwala na zamianę
+-- numerów w jednym zapytaniu, więc najpierw odsuwamy wszystkie rangi poza
+-- zakres, a upsert ustawia je na nowo (term jest kluczem, więc postęp
+-- użytkowników, wskazujący na entry_id, zostaje nietknięty).
+update lexicon_entries
+set rank = rank + 100000
+where deck_id = (select id from lexicon_decks where slug = 'dom-pojecia');
+
+insert into lexicon_entries (deck_id, rank, term, translation_pl, enriched_at)
+select d.id, v.rank, v.term, v.translation_pl, now()
+from lexicon_decks d
+cross join (values
+${dom.map((r) => `  (${r.rank}, ${q(r.term)}, ${q(r.pl)})`).join(',\n')}
+) as v(rank, term, translation_pl)
+where d.slug = 'dom-pojecia'
+on conflict (deck_id, term) do update
+  set rank = excluded.rank,
+      translation_pl = excluded.translation_pl,
+      enriched_at = coalesce(lexicon_entries.enriched_at, excluded.enriched_at);
+`
+writeFileSync(join(DIR, '03_dom_i_mieszkanie.sql'), domSql)
+console.log(`✓ Dom i mieszkanie: ${dom.length} haseł, pominięto ucięte: ${domCut.join(', ') || 'brak'}`)
