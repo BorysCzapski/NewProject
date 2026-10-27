@@ -30,11 +30,11 @@ budują tę samą zagadkę. Nie zasłania pierwszych liter wyrazów, słów funk
 tekstu w nawiasach ani `sth`/`sb`; woli podwójne spółgłoski i skupiska samogłosek, bo na nich Polacy
 się mylą. Postęp pisowni jest w **osobnej** tabeli (`lexicon_spelling_progress`, `0036`) od postępu
 w znaczeniach — znać słowo to nie to samo co umieć je napisać. Ćwiczy tylko słowa, które mają już
-polskie tłumaczenie, i nie woła AI. Talia „Dom i mieszkanie" (94 hasła z zestawu „Pojęcia", z
-zrzutów ekranu) ma gotowe tłumaczenia (`supabase/seed/lexicon/03_dom_i_mieszkanie.sql`, generowany z
-`dom-pojecia-source.txt`); lista jest **niepełna** — zrzuty urywają się na „outdoor heater", a
-`armchair` i `outdoor heater` były ucięte bez tłumaczenia, więc zostały pominięte. Seed przenumerowuje
-`rank` całej talii, więc dopisywanie brakujących haseł jest bezpieczne.
+polskie tłumaczenie, i nie woła AI. Talia „Dom i mieszkanie" (139 haseł z zestawu „Pojęcia", ze zrzutów ekranu) ma gotowe tłumaczenia
+(`supabase/seed/lexicon/03_dom_i_mieszkanie.sql`, generowany z `dom-pojecia-source.txt`). Lista jest
+**niepełna**: na zrzutach brakuje fragmentu między `armchair` a `bench` oraz między `boiler room` a
+`bowl` (była tam reklama), a `armchair` i `pot` były ucięte bez tłumaczenia, więc zostały pominięte.
+Seed przenumerowuje `rank` całej talii, więc dopisywanie brakujących haseł jest bezpieczne.
 
 Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
 aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do

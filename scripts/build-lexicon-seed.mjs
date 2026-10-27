@@ -192,9 +192,10 @@ for (const r of dom) {
 const domSql = `-- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
 -- Talia „Dom i mieszkanie": ${dom.length} haseł z zestawu „Pojęcia" (zrzuty ekranu od użytkownika).
 -- Pominięte (ucięte na zrzucie, bez tłumaczenia): ${domCut.join(', ') || 'brak'}.
--- Lista jest niepełna — zrzuty urywają się na „outdoor heater", a między
--- „armchair" i „bench" oraz „boiler room" i „bowl" brakuje fragmentów. Reszta
--- dojdzie osobnym plikiem; rank to pozycja w przepisanej liście.
+-- Lista jest niepełna: na zrzutach brakuje fragmentu między „armchair" i
+-- „bench" oraz między „boiler room" i „bowl" (tam była reklama). Rank to
+-- pozycja w przepisanej liście; po dopisaniu brakujących haseł seed
+-- przenumerowuje całą talię.
 insert into lexicon_decks (slug, title, description, kind, source_name, source_url, order_index)
 values (
   'dom-pojecia',

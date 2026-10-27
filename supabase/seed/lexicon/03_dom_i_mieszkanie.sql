@@ -1,9 +1,10 @@
 -- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
--- Talia „Dom i mieszkanie": 94 haseł z zestawu „Pojęcia" (zrzuty ekranu od użytkownika).
--- Pominięte (ucięte na zrzucie, bez tłumaczenia): armchair, outdoor heater.
--- Lista jest niepełna — zrzuty urywają się na „outdoor heater", a między
--- „armchair" i „bench" oraz „boiler room" i „bowl" brakuje fragmentów. Reszta
--- dojdzie osobnym plikiem; rank to pozycja w przepisanej liście.
+-- Talia „Dom i mieszkanie": 139 haseł z zestawu „Pojęcia" (zrzuty ekranu od użytkownika).
+-- Pominięte (ucięte na zrzucie, bez tłumaczenia): armchair, pot.
+-- Lista jest niepełna: na zrzutach brakuje fragmentu między „armchair" i
+-- „bench" oraz między „boiler room" i „bowl" (tam była reklama). Rank to
+-- pozycja w przepisanej liście; po dopisaniu brakujących haseł seed
+-- przenumerowuje całą talię.
 insert into lexicon_decks (slug, title, description, kind, source_name, source_url, order_index)
 values (
   'dom-pojecia',
@@ -122,7 +123,52 @@ cross join (values
   (92, 'on the corner', 'na rogu'),
   (93, 'on the top floor', 'na ostatnim piętrze'),
   (94, 'one-bedroom flat', 'mieszkanie z jedną sypialnią'),
-  (95, 'opposite sth', 'naprzeciwko czegoś')
+  (95, 'opposite sth', 'naprzeciwko czegoś'),
+  (96, 'outdoor heater', 'ogrzewacz ogrodowy'),
+  (97, 'oven', 'piekarnik'),
+  (98, 'pavement', 'chodnik'),
+  (99, 'penthouse', 'luksusowy apartament na ostatnim piętrze budynku'),
+  (100, 'porch', 'ganek, weranda'),
+  (102, 'put away the clothes', 'odkładać ubrania (na miejsce)'),
+  (103, 'rear garden', 'ogród z tyłu budynku'),
+  (104, 'recently renovated', 'niedawno odnowiony, po remoncie'),
+  (105, 'resident', 'mieszkaniec, mieszkanka'),
+  (106, 'residential area', 'dzielnica mieszkaniowa'),
+  (107, 'roll down the blinds', 'opuszczać rolety'),
+  (108, 'roof garden', 'ogród na dachu'),
+  (109, 'roomy', 'przestronny'),
+  (110, 'rug', 'dywanik'),
+  (111, 'rural', 'wiejski'),
+  (112, 'sandbox', 'piaskownica'),
+  (113, 'see sb off', 'odprowadzać kogoś'),
+  (114, 'semi-detached house', 'dom bliźniak'),
+  (115, 'share a room', 'dzielić z kimś pokój'),
+  (116, 'sheet', 'prześcieradło'),
+  (117, 'shower cabin', 'kabina prysznicowa'),
+  (118, 'skyscraper', 'drapacz chmur'),
+  (119, 'soap', 'mydło'),
+  (120, 'spacious', 'przestronny'),
+  (121, 'staircase', 'klatka schodowa'),
+  (122, 'stay at home', 'zostawać w domu'),
+  (123, 'stay in', 'zostawać w domu (nie wychodzić)'),
+  (124, 'studio (flat)', 'kawalerka'),
+  (125, 'suburbs', 'przedmieścia'),
+  (126, 'sweep the floor', 'zamiatać podłogę'),
+  (127, 'teapot', 'dzbanek'),
+  (128, 'terraced house', 'dom szeregowy'),
+  (129, 'tidy', 'uporządkowany'),
+  (130, 'tiny', 'malutki'),
+  (131, 'tourist resort', 'kurort'),
+  (132, 'town', 'małe miasto'),
+  (133, 'underground garage', 'garaż podziemny'),
+  (134, 'underground station', 'stacja metra'),
+  (135, 'upstairs', 'na górze'),
+  (136, 'urban', 'miejski'),
+  (137, 'wallpaper', 'tapeta'),
+  (138, 'washbasin', 'umywalka'),
+  (139, 'windowsill', 'parapet'),
+  (140, 'within walking distance of sth', 'w bliskiej odległości od czegoś'),
+  (141, 'worktop', 'blat')
 ) as v(rank, term, translation_pl)
 where d.slug = 'dom-pojecia'
 on conflict (deck_id, term) do update
