@@ -1,0 +1,28 @@
+ogródek	garden
+zlew	kitchen sink
+działka	allotment
+parapet	windowsill
+umywalka	bathroom sink
+roleta	roller blinds
+dom wolnostojący	detached house
+strych	attic
+kawalerka	studio
+sufit	ceiling
+piwnica	cellar
+komin	chimney
+klatka schodowa	staircase/stairwell
+trawnik	lawn
+chodnik	pavement/sidewalk
+tapeta	wallpaper
+luksusowa rezydencja	luxury mansion
+przedmieście	suburbs/outskirts
+mieszkaniec	resident
+wiejski	rural
+schludny	neat
+przestronny	spacious
+kran	tap
+łóżko piętrowe	bunk bed
+kołdra	duvet
+poduszka ozdobna	cushion
+poduszka	pillow
+sztućce	cutlery

@@ -36,6 +36,24 @@ polskie tłumaczenie, i nie woła AI. Talia „Dom i mieszkanie" (139 haseł z z
 `bowl` (była tam reklama), a `armchair` i `pot` były ucięte bez tłumaczenia, więc zostały pominięte.
 Seed przenumerowuje `rank` całej talii, więc dopisywanie brakujących haseł jest bezpieczne.
 
+**Trening fiszek** (`/jezyki/nauka/trening-fiszki`) — tylko dla angielskiego: widzisz **polskie** słowo i
+**wpisujesz angielskie** (aktywne przypominanie, trudniejsze niż odwracanie fiszki). Przyjmuje hasło
+główne i każdy wariant (`staircase` / `stairwell`, `pavement` / `sidewalk`), także oba naraz przez
+ukośnik, bez względu na wielkość liter, dodatkowe spacje i rodzajnik na początku (`the garden`).
+Literówka jest błędem, ale odpowiedź o jedną literę od poprawnej (także zamiana sąsiednich liter,
+`cieling` → `ceiling`) jest nazwana „prawie — literówka"; „Nie wiem" odkrywa odpowiedź i liczy się
+jako błąd. Logika porównania to czysty `lib/lexicon/recall.ts`. Warianty siedzą w
+`lexicon_entries.alternatives` (`text[]`, `0037`); `term` zostaje hasłem głównym, na którym ćwiczy
+Pisownia. Postęp ma własną tabelę (`lexicon_recall_progress`) — rozpoznać słowo, napisać je i
+przypomnieć je sobie z polskiego to trzy osobne umiejętności z osobnym harmonogramem. Zapytania
+Pisowni i Treningu współdzielą `lib/lexicon/skill-queries.ts`. Talia „Trening fiszki 4" (28 haseł,
+`04_trening_fiszki_4.sql`, generowany z `trening-fiszki-4-source.txt`) zawiera warianty; trening
+ćwiczy też każdą inną talię leksykonu, gdy jej słowa mają już tłumaczenie.
+
+Ekran końcowy Pisowni i Treningu liczy „za pierwszym razem" uczciwie: powtórki po błędzie nie
+zwiększają mianownika, a powtórka po błędzie w Pisowni zasłania INNĄ literę niż poprzednio (o ile
+słowo daje wybór) — samo losowe ziarno często wybierało to samo miejsce.
+
 Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
 aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do
 skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne uzupełnienia

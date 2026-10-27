@@ -1519,6 +1519,9 @@ export interface LexiconEntry {
   /** Position in the source list; new entries are taught in this order. */
   rank: number;
   term: string;
+  /** Dopuszczalne warianty odpowiedzi w Treningu fiszek ("stairwell" przy
+   * "staircase"); puste, gdy hasło ma jedną poprawną postać. */
+  alternatives: string[];
   part_of_speech: string;
   /** The source list's English gloss (UMN phrasal verbs: senses separated by
    * ";"). Empty for bare-headword lists. */

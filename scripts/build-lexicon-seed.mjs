@@ -231,3 +231,62 @@ on conflict (deck_id, term) do update
 `
 writeFileSync(join(DIR, '03_dom_i_mieszkanie.sql'), domSql)
 console.log(`✓ Dom i mieszkanie: ${dom.length} haseł, pominięto ucięte: ${domCut.join(', ') || 'brak'}`)
+
+// --- Trening fiszki 4 (polskie słowo -> angielskie) -------------------------
+// Linia: "polskie<TAB>english" albo "polskie<TAB>variant1/variant2". Pierwszy
+// wariant jest hasłem głównym (term), reszta trafia do `alternatives` — trening
+// przyjmuje każdy wariant, a Pisownia ćwiczy tylko hasło główne.
+const tf = readFileSync(join(DIR, 'trening-fiszki-4-source.txt'), 'utf8')
+  .split('\n')
+  .map((l) => l.replace(/\r$/, ''))
+  .filter((l) => l.trim())
+  .map((line, i) => {
+    const parts = line.split('\t')
+    if (parts.length !== 2 || !parts[0].trim() || !parts[1].trim())
+      throw new Error(`Trening fiszki 4, linia ${i + 1}: oczekiwano "polskie<TAB>english": ${line}`)
+    const variants = parts[1].split('/').map((v) => v.trim()).filter(Boolean)
+    return { rank: i + 1, pl: parts[0].trim(), term: variants[0], alternatives: variants.slice(1) }
+  })
+const tfTerms = new Set()
+for (const r of tf) {
+  if (tfTerms.has(r.term)) throw new Error(`Duplikat hasła: ${r.term}`)
+  tfTerms.add(r.term)
+}
+
+const tfSql = `-- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
+-- Talia „Trening fiszki 4": ${tf.length} haseł (polskie słowo -> angielskie), z wariantami
+-- w kolumnie alternatives. Źródło: lexicon/trening-fiszki-4-source.txt.
+-- Wymaga migracji 0037 (kolumna alternatives). Idempotentny.
+insert into lexicon_decks (slug, title, description, kind, source_name, source_url, order_index)
+values (
+  'trening-fiszki-4',
+  'Trening fiszki 4',
+  'Dom i mieszkanie: widzisz polskie słowo, wpisujesz angielskie',
+  'word',
+  'Trening fiszki 4',
+  '',
+  4
+)
+on conflict (slug) do nothing;
+
+-- Jak w 03_dom_i_mieszkanie.sql: odsuwamy rangi, żeby dopisanie haseł w środku
+-- nie zderzyło się z unique (deck_id, rank).
+update lexicon_entries
+set rank = rank + 100000
+where deck_id = (select id from lexicon_decks where slug = 'trening-fiszki-4');
+
+insert into lexicon_entries (deck_id, rank, term, alternatives, translation_pl, enriched_at)
+select d.id, v.rank, v.term, v.alternatives, v.translation_pl, now()
+from lexicon_decks d
+cross join (values
+${tf.map((r) => `  (${r.rank}, ${q(r.term)}, ${r.alternatives.length ? `array[${r.alternatives.map(q).join(', ')}]::text[]` : `array[]::text[]`}, ${q(r.pl)})`).join(',\n')}
+) as v(rank, term, alternatives, translation_pl)
+where d.slug = 'trening-fiszki-4'
+on conflict (deck_id, term) do update
+  set rank = excluded.rank,
+      alternatives = excluded.alternatives,
+      translation_pl = excluded.translation_pl,
+      enriched_at = coalesce(lexicon_entries.enriched_at, excluded.enriched_at);
+`
+writeFileSync(join(DIR, '04_trening_fiszki_4.sql'), tfSql)
+console.log(`✓ Trening fiszki 4: ${tf.length} haseł, z wariantami: ${tf.filter((r) => r.alternatives.length).length}`)

@@ -38,6 +38,8 @@ interface QueueItem {
   entry: SpellingEntry;
   blanks: 1 | 2;
   seed: string;
+  /** Pozycje liter zasłoniętych w poprzedniej, nieudanej próbie tego słowa. */
+  avoid: number[];
 }
 
 function speak(term: string) {
@@ -82,16 +84,20 @@ export function SpellingDrill({
           entry,
           blanks: blanksForBox(boxes[entry.id] ?? 0),
           seed: "0",
+          avoid: [],
         }))
-        .filter((item) => buildPuzzle(item.entry.term, item.blanks, item.seed) !== null),
+        .filter((item) => buildPuzzle(item.entry.term, item.blanks, item.seed, item.avoid) !== null),
     [entries, boxes]
   );
 
   const [queue, setQueue] = useState<QueueItem[]>(initialQueue);
   const [typed, setTyped] = useState<string[]>([]);
   const [results, setResults] = useState<boolean[] | null>(null);
-  const [processed, setProcessed] = useState(0);
-  const [correct, setCorrect] = useState(0);
+  // finished = karty zakończone poprawną odpowiedzią (w dowolnej próbie),
+  // firstTry = z nich te, które poszły dobrze od razu. Powtórki po błędzie nie
+  // zwiększają mianownika: ekran końcowy ma mówić prawdę o "za pierwszym razem".
+  const [finished, setFinished] = useState(0);
+  const [firstTry, setFirstTry] = useState(0);
   const [done, setDone] = useState(false);
   const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
   const actionRef = useRef<HTMLDivElement | null>(null);
@@ -101,7 +107,7 @@ export function SpellingDrill({
   const total = initialQueue.length;
   const current = queue[0];
   const puzzle = useMemo(
-    () => (current ? buildPuzzle(current.entry.term, current.blanks, current.seed) : null),
+    () => (current ? buildPuzzle(current.entry.term, current.blanks, current.seed, current.avoid) : null),
     [current]
   );
 
@@ -163,19 +169,24 @@ export function SpellingDrill({
       const attempt = counter.current++;
       nextQueue = [
         ...nextQueue.slice(0, insertAt),
-        { ...current, uid: `${current.entry.id}-${attempt}`, seed: String(attempt) },
+        {
+          ...current,
+          uid: `${current.entry.id}-${attempt}`,
+          seed: String(attempt),
+          avoid: puzzle ? puzzle.cells.flatMap((cell, index) => (cell.blank !== null ? [index] : [])) : [],
+        },
         ...nextQueue.slice(insertAt),
       ];
     } else {
-      setCorrect((value) => value + 1);
+      setFinished((value) => value + 1);
+      // Ziarno "0" ma tylko pierwsze podejście do słowa; powtórki dostają kolejne.
+      if (current.seed === "0") setFirstTry((value) => value + 1);
     }
 
-    const nextProcessed = processed + 1;
-    setProcessed(nextProcessed);
     setTyped([]);
     setResults(null);
 
-    if (nextProcessed >= total && nextQueue.length === 0) {
+    if (nextQueue.length === 0) {
       setDone(true);
       if (!finishedRef.current) {
         finishedRef.current = true;
@@ -200,12 +211,12 @@ export function SpellingDrill({
   }
 
   if (done || !current || !puzzle) {
-    const percent = Math.round((correct / Math.max(processed, 1)) * 100);
+    const percent = Math.round((firstTry / Math.max(total, 1)) * 100);
     return (
       <Card className="flex flex-col items-center gap-3 text-center">
         <p className="text-3xl font-bold text-primary">{percent}%</p>
         <p className="text-sm text-foreground-muted">
-          {correct} z {processed} słów napisanych dobrze za pierwszym razem. Powtórki zaplanowane.
+          {firstTry} z {total} słów napisanych dobrze za pierwszym razem. Powtórki zaplanowane.
         </p>
         <Link href={backHref} className="w-full">
           <Button className="w-full" size="lg">
@@ -228,12 +239,12 @@ export function SpellingDrill({
           Przerwij
         </Link>
         <span className="text-xs tabular-nums text-foreground-muted">
-          {Math.min(processed + 1, total)}/{total}
+          {Math.min(finished + 1, total)}/{total}
         </span>
       </div>
 
       <div className="h-1.5 overflow-hidden rounded-full bg-surface-muted">
-        <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(processed / total) * 100}%` }} />
+        <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(finished / total) * 100}%` }} />
       </div>
 
       <Card key={current.uid} className="flex flex-col gap-4">

@@ -4,7 +4,7 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck, Keyboard } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -88,6 +88,14 @@ const PISOWNIA_MODULE = {
   icon: SpellCheck,
 };
 
+// Recall drill (Polish word -> type the English) — English only, like Pisownia.
+const TRENING_MODULE = {
+  href: "/jezyki/nauka/trening-fiszki",
+  label: "Trening fiszek",
+  description: "Widzisz polskie słowo, wpisujesz angielskie (też warianty)",
+  icon: Keyboard,
+};
+
 // Shown only to Russian learners, at the very top — the alphabet comes first.
 const CYRYLICA_MODULE = {
   href: "/jezyki/nauka/cyrylica",
@@ -102,7 +110,7 @@ export default async function NaukaPage() {
     profile.target_language === "ru"
       ? [CYRYLICA_MODULE, ...MODULES]
       : profile.target_language === "en"
-        ? [MODULES[0], PISOWNIA_MODULE, ...MODULES.slice(1)]
+        ? [MODULES[0], PISOWNIA_MODULE, TRENING_MODULE, ...MODULES.slice(1)]
         : MODULES;
 
   return (

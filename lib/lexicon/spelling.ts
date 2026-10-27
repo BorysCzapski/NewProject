@@ -109,19 +109,33 @@ function pickWeighted(pool: Candidate[], random: () => number): Candidate {
  * Zagadka dla hasła z `blanks` lukami (1 lub 2). Gdy hasło ma za mało liter do
  * zasłonięcia dwóch, zasłania jedną; gdy nie ma żadnej (np. samo "a"), zwraca
  * null i wołający pomija takie hasło.
+ *
+ * `avoid` to pozycje liter zasłoniętych w poprzedniej, nieudanej próbie.
+ * Ziarno samo zmienia maskę tylko losowo — przy słowie z jednym wyraźnie
+ * "faworyzowanym" miejscem (mattress) wylosowałoby po błędzie to samo — więc
+ * powtórka najpierw omija te pozycje, o ile zostaje z czego wybrać.
  */
-export function buildPuzzle(term: string, blanks: 1 | 2, seed: string): SpellingPuzzle | null {
+export function buildPuzzle(
+  term: string,
+  blanks: 1 | 2,
+  seed: string,
+  avoid: readonly number[] = []
+): SpellingPuzzle | null {
   const { interior, edge } = findCandidates(term);
   // Litery końcowe wyrazów dokładamy dopiero, gdy środek nie wystarcza —
   // brak litery na końcu ("kettl_") rzadko uczy czegoś o pisowni.
   const pool = interior.length >= blanks ? interior : [...interior, ...edge];
   if (pool.length === 0) return null;
 
+  // Liczba luk zależy od CAŁEJ puli, a nie od tego, co zostało po odsianiu
+  // poprzednich — inaczej powtórka zmieniałaby poziom trudności.
   const wanted = blanks === 2 && pool.length >= 4 ? 2 : 1;
+  const fresh = pool.filter((c) => !avoid.includes(c.index));
+  const usable = fresh.length >= wanted ? fresh : pool;
   const random = mulberry32(hashSeed(`${term}|${seed}`));
 
   const chosen: Candidate[] = [];
-  let remaining = [...pool];
+  let remaining = [...usable];
   while (chosen.length < wanted && remaining.length > 0) {
     const pick = pickWeighted(remaining, random);
     chosen.push(pick);
