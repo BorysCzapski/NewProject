@@ -264,6 +264,21 @@ i `lib/schola/*` po szczegóły; osoba z istniejącym kontem Phoenixa, która ch
 Scholi, loguje się tym samym e-mailem na `/schola/logowanie` (patrz komentarz „Sharp edges”
 w planie implementacji, jeśli szukasz uzasadnienia tej decyzji).
 
+**ZUSia** (`/zusia`) to mini-aplikacja do przygotowania do Olimpiady „Warto wiedzieć więcej
+o ubezpieczeniach społecznych" (ZUS). Materiał pochodzi ze zdjęć podręcznika „Lekcje z ZUS 2026/2027"
+(OCR przez macOS Vision), PDF-a „Materiał dodatkowy 2025/26", PDF-a „Składki przedsiębiorców w 2026"
+i testu I etapu z 2017 r. Treść jest statyczna w `lib/zusia/` (bez migracji): `theory.ts` (6 działów:
+lekcje 1–4, materiały dodatkowe, składki 2026), `questions.ts` (zadania jednokrotnego/wielokrotnego
+wyboru, prawda/fałsz i otwarte), `flashcards.ts`, `crosswords.ts` (siatkę układa deterministycznie
+`crossword-layout.ts`), `mindmaps.ts`. Tryby: **Teoria**, **Trening** (natychmiastowa odpowiedź,
+powtórka błędów), **Test – wszystkie zadania** (tryb egzaminu z limitem czasu i wynikiem), **Fiszki**,
+**Krzyżówki**, **Mapy myśli** (z trybem „z pamięci") i **Zadania AI** (`ai-actions.ts`: Groq generuje
+nowe pytania i przypadki wyłącznie z teorii działu oraz ocenia odpowiedzi otwarte; wymaga
+`GROQ_API_KEY`). Postępy (statystyki pytań, poziomy fiszek, krzyżówki, wyniki testów) trzyma
+`localStorage` (`lib/zusia/use-local-state.ts`), więc są per przeglądarka. Podręcznik nie ma klucza
+odpowiedzi – klucze do ćwiczeń z podręcznika (test z lekcji 2, prawda/fałsz z lekcji 3, zadania 1–4)
+wyprowadzono z treści lekcji; pytania z testu 2017 zaktualizowano do przepisów 2026.
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)
