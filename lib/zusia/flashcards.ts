@@ -1,0 +1,138 @@
+// ============================================================================
+// lib/zusia/flashcards.ts
+// Term -> definition flashcards for every lesson (pojęcia do zapamiętania).
+// ============================================================================
+import type { Flashcard, LessonId } from "./types";
+
+type Row = [term: string, definition: string];
+
+const DATA: Record<LessonId, Row[]> = {
+  l1: [
+    ["ZUS", "Zakład Ubezpieczeń Społecznych – państwowa instytucja powołana w 1934 r.; zarządza FUS, prowadzi konta ubezpieczonych i płatników, wypłaca świadczenia."],
+    ["FUS", "Fundusz Ubezpieczeń Społecznych – do niego wpływają składki; z niego finansuje się emerytury, renty i zasiłki. Zarządza nim ZUS."],
+    ["Otto von Bismarck", "Kanclerz II Rzeszy, który pod koniec XIX w. w Niemczech wprowadził obowiązkowe ubezpieczenia społeczne."],
+    ["Ignacy Mościcki", "Prezydent RP, który rozporządzeniem z 24 października 1934 r. powołał ZUS."],
+    ["Ustawa z 13 października 1998 r.", "Ustawa o systemie ubezpieczeń społecznych – podstawa prawna działania ZUS."],
+    ["Ryzyko ubezpieczeniowe", "Przewidywalne zdarzenie (choroba, wypadek, starość, macierzyństwo), którego skutki chroni świadczenie."],
+    ["Płatnik składek", "Pracodawca, zleceniodawca lub osoba prowadząca działalność gospodarczą, która opłaca składki."],
+    ["Ubezpieczony", "Osoba objęta ubezpieczeniem, np. pracownik lub zleceniobiorca (ponad 16 mln osób)."],
+    ["Świadczeniobiorca", "Osoba pobierająca świadczenie: emeryt, rencista, osoba pobierająca zasiłek."],
+    ["Świadczenia długoterminowe", "Emerytury i renty – wypłacane przez dłuższy czas lub do końca życia."],
+    ["Świadczenia krótkoterminowe", "Zasiłki: chorobowy, macierzyński, opiekuńczy."],
+    ["Prewencja rentowa i wypadkowa", "Działania ZUS zapobiegające trwałej utracie zdolności do pracy i wypadkom przy pracy."],
+    ["Pomoc społeczna", "Wsparcie w trudnych sytuacjach życiowych (ubóstwo, bezdomność…) niezależne od składek; ma usamodzielniać."],
+    ["Zaopatrzenie społeczne", "Świadczenia podobne do ubezpieczeniowych, ale bez płacenia składek (np. 800+, emerytury policyjne)."],
+    ["Składka zdrowotna – droga", "ZUS jej nie gromadzi: przekazuje ją od razu do NFZ wraz z informacją, kogo dotyczy."],
+    ["Fundusz Rezerwy Demograficznej", "Fundusz zabezpieczający wypłaty w przyszłości – obok składek i dotacji budżetowych."],
+  ],
+  l2: [
+    ["Ubezpieczenie emerytalne", "Chroni na starość. Składka 19,52% (9,76% pracownik + 9,76% pracodawca)."],
+    ["Ubezpieczenie rentowe", "Chroni przy niezdolności do pracy. Składka 8% (1,5% pracownik + 6,5% pracodawca)."],
+    ["Ubezpieczenie chorobowe", "Chroni w chorobie i macierzyństwie. Składka 2,45% płacona przez pracownika; obowiązkowe tylko przy umowie o pracę."],
+    ["Ubezpieczenie wypadkowe", "Chroni przy wypadku przy pracy i chorobie zawodowej. Składkę płaci w całości pracodawca (stopa zróżnicowana)."],
+    ["Ubezpieczenie zdrowotne", "Składka 9% (4,9% dla przedsiębiorców na podatku liniowym); trafia do NFZ."],
+    ["Zasiłek chorobowy", "Zamiast pensji przy zwolnieniu lekarskim: 80% (100% m.in. przy ciąży, wypadku w drodze do/z pracy). Do 182 dni (270 przy ciąży/gruźlicy)."],
+    ["Okres wyczekiwania", "Wymagany okres ubezpieczenia chorobowego: 30 dni (obowiązkowe) lub 90 dni (dobrowolne)."],
+    ["Podstawa wymiaru zasiłku", "Kwota, od której liczono składki chorobowe/wypadkowe w ciągu 12 kalendarzowych miesięcy przed niezdolnością."],
+    ["Świadczenie rehabilitacyjne", "Po wyczerpaniu zasiłku, gdy jest szansa odzyskania zdolności do pracy; do 12 miesięcy; 90% przez 90 dni, potem 75%."],
+    ["Zasiłek macierzyński", "Po urodzeniu lub przyjęciu dziecka: 100% przez 20 tyg., 70% przez 32 tyg. + 9 tyg. dla drugiego rodzica; łącznie do 61 tyg. (jedno max 52)."],
+    ["Zasiłek opiekuńczy", "80% pensji; do 60 dni w roku (dziecko do 8 lat zdrowe / do 14 chore), 30 dni, 14 dni – inny chory członek rodziny."],
+    ["Urlop ojcowski – zasiłek", "Do 2 tygodni, do ukończenia przez dziecko 12 miesiąca życia, 100% pensji."],
+    ["Uzupełniający urlop macierzyński", "Dla wcześniaków i dzieci długo w szpitalu – do tygodnia urlopu za każdy tydzień pobytu dziecka w szpitalu."],
+    ["Jednorazowe odszkodowanie", "Tylko z ubezpieczenia wypadkowego: 20% przeciętnego wynagrodzenia za każdy procent uszczerbku na zdrowiu."],
+    ["Umowa o dzieło", "Nie podlega ubezpieczeniom społecznym ani zdrowotnemu."],
+    ["Zlecenie ucznia/studenta do 26 lat", "Nie podlega ubezpieczeniom społecznym ani zdrowotnemu."],
+  ],
+  l3: [
+    ["Niezdolność całkowita do pracy", "Utrata zdolności do wykonywania jakiejkolwiek pracy zarobkowej."],
+    ["Niezdolność częściowa do pracy", "Utrata zdolności do pracy zgodnej z kwalifikacjami; można wykonywać inną pracę lub dotychczasową krócej."],
+    ["Niezdolność do samodzielnej egzystencji", "Stała lub długotrwała potrzeba opieki i pomocy innej osoby w czynnościach życia codziennego."],
+    ["Lekarz orzecznik ZUS", "Orzeka o niezdolności do pracy; od orzeczenia sprzeciw w 14 dni (komisja lekarska, od 2027 r. inny lekarz orzecznik)."],
+    ["Celowość przekwalifikowania", "Orzeczenie, że mimo choroby można wykonywać inną pracę (np. górnik z pylicą → sprzedawca)."],
+    ["Renta z tytułu niezdolności do pracy", "Świadczenie za utratę możliwości pracowania – wymaga orzeczenia o niezdolności i okresów składkowych/nieskładkowych."],
+    ["Renta rodzinna", "Dla członków rodziny zmarłego, który miał lub mógł mieć prawo do emerytury/renty."],
+    ["Renta wdowia", "Renta rodzinna połączona z innym świadczeniem: 100% jednego + 15% drugiego (od 2027 r. 25%)."],
+    ["Renta socjalna", "Finansowana przez państwo, nie z ubezpieczenia; dla osób całkowicie niezdolnych do pracy od młodości (przed 18/25 r. życia)."],
+    ["Zasiłek pogrzebowy", "7000 zł (2026); członek rodziny pełna kwota, inna osoba do poniesionych kosztów."],
+    ["Wiek emerytalny w Polsce", "60 lat – kobiety, 65 lat – mężczyźni. Prawo, nie obowiązek."],
+    ["Solidarność międzypokoleniowa", "Składki obecnie pracujących finansują emerytury obecnych emerytów, a własne składki są zapisywane na ich kontach."],
+    ["Okresy składkowe", "Aktywność zawodowa z ubezpieczeniem (praca, zlecenie, działalność, zasiłek macierzyński, służba wojskowa)."],
+    ["Okresy nieskładkowe", "Zaliczane do stażu bez składek: np. studia, zasiłek chorobowy; nie więcej niż 1/3 okresów składkowych."],
+    ["Najniższa emerytura – staż", "Gwarancja: 20 lat (kobiety) / 25 lat (mężczyźni) okresów składkowych i nieskładkowych."],
+    ["Model zdefiniowanej składki", "Emerytura = zwaloryzowane składki + kapitał początkowy + subkonto ÷ średnie dalsze trwanie życia. Od reformy 1999 r."],
+    ["Model zdefiniowanego świadczenia", "Stary system (przed 1999 r., osoby ur. przed 1949 r.): staż i najlepsze zarobki z 10 lub 20 lat."],
+    ["Kapitał początkowy", "Wartość pracy sprzed 1999 r. zapisana na koncie; waloryzowana."],
+    ["Subkonto", "Wydzielona część konta w ZUS; waloryzowane, dziedziczone, dzielone przy rozwodzie."],
+    ["Waloryzacja", "Coroczne zwiększanie wartości składek, kapitału początkowego i subkonta o wskaźnik (inflacja + wzrost wynagrodzeń lub PKB)."],
+    ["Średnie dalsze trwanie życia", "Statystyczna liczba miesięcy życia dla wieku emerytalnego; ogłasza ją prezes GUS."],
+    ["Renta socjalna – dodatek dopełniający", "Dodatek 2704,71 zł (od 1.03.2026) dla całkowicie niezdolnych do pracy i do samodzielnej egzystencji."],
+  ],
+  l4: [
+    ["CEIDG", "Centralna Ewidencja i Informacja o Działalności Gospodarczej – spis przedsiębiorców; wniosek CEIDG-1."],
+    ["CEIDG-1", "Jeden wniosek: zgłasza firmę w gminie, urzędzie skarbowym, GUS i ZUS (jako płatnika składek)."],
+    ["Działalność nieewidencjonowana", "Drobna działalność bez rejestracji (np. blog) – brak ubezpieczeń społecznych i składek, więc brak świadczeń."],
+    ["ZUS ZUA / ZZA", "Zgłoszenie do ubezpieczeń (społecznych i zdrowotnego albo tylko zdrowotnego) siebie i zatrudnionych."],
+    ["ZUS ZCNA", "Zgłoszenie członków rodziny do ubezpieczenia zdrowotnego."],
+    ["Osoba współpracująca", "Małżonek, dzieci, rodzice, macocha/ojczym… we wspólnym gospodarstwie i współpracujący przy działalności."],
+    ["Podstawa wymiaru składek (zasady ogólne)", "Co najmniej 60% prognozowanego przeciętnego wynagrodzenia (2026: 5652 zł)."],
+    ["Ulga na start", "6 miesięcy bez składek społecznych; tylko zdrowotna; brak świadczeń z ubezpieczeń społecznych."],
+    ["Składki preferencyjne", "24 miesiące; podstawa co najmniej 30% minimalnego wynagrodzenia (2026: 1441,80 zł)."],
+    ["Mały ZUS plus", "36 miesięcy w każdym okresie 60 miesięcy; podstawa zależna od dochodu; przychód ≤ 120 tys. zł."],
+    ["Wakacje składkowe", "Zwolnienie ze składek za jeden miesiąc w roku; wniosek RWS miesiąc wcześniej przez eZUS; nie obejmuje zdrowotnej."],
+    ["Pomoc de minimis", "Forma pomocy publicznej – wakacje składkowe są nią objęte (limit 300 tys. euro w 3 latach)."],
+    ["Składka zdrowotna przedsiębiorcy", "Zawsze w pełnej wysokości; 9% (4,9% liniowy); zależy od formy opodatkowania; ulgi jej nie obejmują."],
+    ["ZUS DRA", "Deklaracja rozliczeniowa – wszystkie składki za dany miesiąc."],
+    ["ZUS RCA", "Raport imienny: należne składki i wypłacone świadczenia."],
+    ["ZUS RPA", "Raport imienny: przychody ubezpieczonego / okresy pracy nauczycielskiej."],
+    ["ZUS RSA", "Raport imienny: wypłacone świadczenia i przerwy w opłacaniu składek."],
+    ["Termin 15. / 20.", "Do 15. – osoby prawne (spółki kapitałowe, fundacje, JST…); do 20. – osoby fizyczne, spółki osobowe, zatrudniający."],
+    ["Płatnik / ePłatnik", "Płatnik – program bez limitu osób (podpis kwalifikowany); ePłatnik – aplikacja do 100 osób, konto na eZUS."],
+    ["NRS", "Numer rachunku składkowego – na niego wszystkie składki płacisz jednym przelewem."],
+    ["Dofinansowanie BHP", "Do 80% wartości projektu, min. 15 tys. zł, max 350 tys. zł; coroczny konkurs ZUS."],
+    ["Odroczenie / raty / umorzenie", "Narzędzia ZUS dla płatnika, który nie może bieżąco płacić składek lub ma zaległości."],
+  ],
+  d1: [
+    ["Wniosek EDD-SOC", "Wniosek o dodatek dopełniający do renty socjalnej (z zaświadczeniem OL-9)."],
+    ["Świadczenie uzupełniające", "Dla niezdolnych do samodzielnej egzystencji; wygasa, gdy ZUS ustali dodatek dopełniający."],
+    ["Wniosek RWS", "Wniosek o zwolnienie z opłacania składek za wskazany miesiąc (wakacje składkowe) – wyłącznie przez eZUS."],
+    ["Kody 05 14 / 05 74 / 05 94", "Kody RCA za miesiąc wakacji składkowych: podstawa 60%, preferencyjna 30% minimalnego, mały ZUS plus."],
+    ["Kody 05 90 / 05 92", "Kody tytułu ubezpieczenia przy zgłoszeniu do małego ZUS plus (ZUA/ZZA)."],
+    ["Świadczenie honorowe", "6938,92 zł (od 1.03.2026) dla osób, które skończyły 100 lat; z urzędu lub na wniosek."],
+    ["eZUS", "Nowa odsłona e-urzędu ZUS (dawne PUE); część dla płatników od początku 2026 r."],
+    ["mZUS dla Płatnika", "Aplikacja mobilna: salda, zwolnienia pracowników, wysyłanie dokumentów, zaświadczenia, kontakt z CKK."],
+    ["Zbieg świadczeń z rentą rodzinną", "100% jednego + 15% drugiego świadczenia (od 2027 r. 25%); limit – trzykrotność najniższej emerytury."],
+    ["Formularz Z-12", "Wniosek o zasiłek pogrzebowy (od 1 stycznia 2026 r.)."],
+    ["Zaświadczenie o utracie ciąży", "Wystawia położnik-ginekolog lub położna – podstawa zasiłku macierzyńskiego i pogrzebowego (od 6.08.2025)."],
+    ["Wniosek USP", "Zaświadczenie o okresach doliczanych do stażu pracy (od 1.01.1999); tylko elektronicznie. Sprzed 1999 r. – US-7."],
+    ["Wniosek POG", "Wniosek ogólny – m.in. o postępowanie wyjaśniające po odmowie wydania zaświadczenia."],
+  ],
+  d2: [
+    ["9420 zł", "Prognozowane przeciętne wynagrodzenie w 2026 r."],
+    ["5652 zł", "60% prognozowanego przeciętnego wynagrodzenia – podstawa składek na zasadach ogólnych (2026)."],
+    ["4806 zł", "Minimalne wynagrodzenie za pracę w 2026 r."],
+    ["1441,80 zł", "30% minimalnego wynagrodzenia – podstawa składek preferencyjnych (2026)."],
+    ["1926,76 zł", "Najniższe składki ZUS + FP/FS na zasadach ogólnych w 2026 r. (z chorobową)."],
+    ["1788,29 zł", "Najniższe składki społeczne z chorobową na zasadach ogólnych (bez FP/FS)."],
+    ["1649,82 zł", "Najniższe składki społeczne bez chorobowej na zasadach ogólnych (2026)."],
+    ["456,18 zł", "Najniższe składki preferencyjne z chorobową (2026); bez chorobowej – 420,86 zł."],
+    ["432,54 zł", "Minimalna składka zdrowotna przedsiębiorcy (9% × 4806 zł)."],
+    ["498,35 / 830,58 / 1495,04 zł", "Składka zdrowotna na ryczałcie: do 60 tys. / 60–300 tys. / powyżej 300 tys. zł przychodu."],
+    ["622,93 zł", "Składka zdrowotna za osoby współpracujące (9% × 75% przeciętnego wynagrodzenia)."],
+    ["10 813,50 zł", "Kwartalny limit przychodu działalności nierejestrowej (225% minimalnego)."],
+    ["Ulgowy pas startowy", "Wszystkie ulgi po kolei – nawet ponad 5,5 roku, ograniczenie składek o ponad 70%."],
+  ],
+};
+
+export const FLASHCARDS: Flashcard[] = (Object.keys(DATA) as LessonId[]).flatMap((lesson) =>
+  DATA[lesson].map(([term, definition], i) => ({
+    id: `${lesson}-f${String(i + 1).padStart(2, "0")}`,
+    lesson,
+    term,
+    definition,
+  }))
+);
+
+export function getFlashcardsForLessons(lessons: LessonId[]): Flashcard[] {
+  const set = new Set(lessons);
+  return FLASHCARDS.filter((c) => set.has(c.lesson));
+}

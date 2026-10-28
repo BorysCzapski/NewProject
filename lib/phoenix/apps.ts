@@ -85,6 +85,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/informatyka",
   },
   {
+    id: "zusia",
+    name: "ZUSia",
+    description: "Olimpiada o ubezpieczeniach społecznych: teoria, trening, testy, fiszki, krzyżówki, mapy myśli i zadania AI",
+    section: "nauka",
+    icon: "Landmark",
+    href: "/zusia",
+  },
+  {
     id: "tracker",
     name: "Tracker",
     description: "Godziny pracy i zadania dzień po dniu, wykres postępu i wskazówki lock in",

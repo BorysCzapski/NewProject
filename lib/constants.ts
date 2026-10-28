@@ -131,6 +131,14 @@ export const ALGORYTMY_NAV: NavItem[] = [
   { href: "/algorytmy/postepy", label: "Postępy", icon: "TrendingUp" },
 ];
 
+export const ZUSIA_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/zusia", label: "ZUSia", icon: "GraduationCap", exact: true },
+  { href: "/zusia/teoria", label: "Teoria", icon: "BookOpen" },
+  { href: "/zusia/trening", label: "Trening", icon: "ListChecks" },
+  { href: "/zusia/fiszki", label: "Fiszki", icon: "Sparkles" },
+];
+
 export const TRACKER_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/tracker", label: "Wykres", icon: "LineChart", exact: true },
@@ -154,6 +162,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },
+  { prefix: "/zusia", items: ZUSIA_NAV },
   { prefix: "/tracker", items: TRACKER_NAV },
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
