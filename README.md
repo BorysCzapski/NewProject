@@ -50,6 +50,14 @@ Pisowni i Treningu współdzielą `lib/lexicon/skill-queries.ts`. Talia „Treni
 `04_trening_fiszki_4.sql`, generowany z `trening-fiszki-4-source.txt`) zawiera warianty; trening
 ćwiczy też każdą inną talię leksykonu, gdy jej słowa mają już tłumaczenie.
 
+Gdy talia się wyczerpie (nowych słów brak, a powtórki dopiero za 1–2 dni — po poprawnej odpowiedzi
+termin to 2 dni, nie „jutro"), sesja Pisowni i Treningu nie jest już pustym „wróć jutro", które
+wyglądało na awarię. Pokazuje **prawdziwy termin najbliższej powtórki** (`lib/lexicon/next-due.ts`) i
+przycisk **„Ćwicz dodatkowo"** (`?tryb=dodatkowo`): słowa już ćwiczone, najbliższe terminowi pierwsze,
+bez nowych. Ćwiczenie dodatkowe **nie przesuwa harmonogramu** — poprawna odpowiedź nic nie zmienia
+(inaczej dodatkowa powtórka przyspieszałaby pudełka Leitnera i słowo wróciłoby za późno), a błąd
+liczy się normalnie. Lista talii też mówi „Na dziś gotowe", zanim klikniesz w pustą sesję.
+
 Ekran końcowy Pisowni i Treningu liczy „za pierwszym razem" uczciwie: powtórki po błędzie nie
 zwiększają mianownika, a powtórka po błędzie w Pisowni zasłania INNĄ literę niż poprzednio (o ile
 słowo daje wybór) — samo losowe ziarno często wybierało to samo miejsce.
