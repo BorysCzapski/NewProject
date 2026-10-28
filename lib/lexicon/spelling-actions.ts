@@ -49,3 +49,13 @@ export async function finishSpellingSession(): Promise<void> {
   revalidatePath("/jezyki/nauka/pisownia");
   revalidatePath("/jezyki");
 }
+
+/**
+ * Odpowiedź w ćwiczeniu DODATKOWYM (poza harmonogramem). Poprawna odpowiedź nie
+ * przesuwa terminu — dodatkowa powtórka nie może przyspieszać pudełek Leitnera,
+ * bo słowo wróciłoby za późno. Błąd liczy się normalnie: ujawnia słabe słowo.
+ */
+export async function recordSpellingExtraAnswer(entryId: string, wasCorrect: boolean): Promise<void> {
+  if (wasCorrect) return;
+  await recordSpellingAnswer(entryId, false);
+}

@@ -77,6 +77,12 @@ export interface SkillSession {
   boxes: Record<string, number>;
   reviewCount: number;
   newCount: number;
+  /** Ile słów z tej talii ma już jakikolwiek postęp w tej umiejętności. */
+  startedCount: number;
+  /** Najbliższy zaplanowany termin powtórki (null, gdy nic nie jest zaplanowane). */
+  nextDueAt: string | null;
+  /** Sesja "ćwicz dodatkowo": słowa spoza harmonogramu, bez przesuwania terminów. */
+  extra: boolean;
 }
 
 /** Powtórki, których termin minął (najbardziej zaległe pierwsze), potem kolejne
@@ -85,7 +91,8 @@ export async function buildSkillSession(
   supabase: SupabaseClient,
   userId: string,
   deck: LexiconDeck,
-  table: SkillTable
+  table: SkillTable,
+  options: { extra?: boolean } = {}
 ): Promise<SkillSession> {
   const { data: dueRows } = await supabase
     .from(table)
@@ -103,10 +110,48 @@ export async function buildSkillSession(
 
   const { data: seenRows } = await supabase
     .from(table)
-    .select("entry_id, lexicon_entries!inner(deck_id)")
+    .select("entry_id, next_review_at, lexicon_entries!inner(deck_id)")
     .eq("user_id", userId)
     .eq("lexicon_entries.deck_id", deck.id);
-  const seen = new Set(((seenRows ?? []) as Array<{ entry_id: string }>).map((row) => row.entry_id));
+  const started = (seenRows ?? []) as Array<{ entry_id: string; next_review_at: string | null }>;
+  const seen = new Set(started.map((row) => row.entry_id));
+
+  // Najbliższa powtórka w przyszłości — po to, żeby pusta sesja mogła powiedzieć
+  // PRAWDĘ, kiedy coś wróci, zamiast ogólnego "wróć jutro". Porównujemy jako
+  // czas, nie jako tekst: PostgREST oddaje znaczniki w innym zapisie niż toISOString.
+  const nowMs = Date.now();
+  const upcoming = started
+    .map((row) => (row.next_review_at ? new Date(row.next_review_at).getTime() : NaN))
+    .filter((ms) => Number.isFinite(ms) && ms > nowMs);
+  const nextDueAt = upcoming.length > 0 ? new Date(Math.min(...upcoming)).toISOString() : null;
+
+  if (options.extra) {
+    // Ćwiczenie dodatkowe: słowa już ćwiczone, najbliższe terminowi pierwsze —
+    // te, które i tak zaraz wrócą, najmniej psują harmonogram.
+    const { data: extraRows } = await supabase
+      .from(table)
+      .select("entry_id, box, next_review_at, lexicon_entries!inner(*)")
+      .eq("user_id", userId)
+      .eq("lexicon_entries.deck_id", deck.id)
+      .order("next_review_at")
+      .limit(REVIEWS_PER_SESSION);
+    const extraEntries = (extraRows ?? []) as unknown as Array<{
+      entry_id: string;
+      box: number;
+      lexicon_entries: LexiconEntry;
+    }>;
+    const extraBoxes: Record<string, number> = {};
+    for (const row of extraEntries) extraBoxes[row.entry_id] = row.box;
+    return {
+      entries: extraEntries.map((row) => row.lexicon_entries),
+      boxes: extraBoxes,
+      reviewCount: extraEntries.length,
+      newCount: 0,
+      startedCount: started.length,
+      nextDueAt,
+      extra: true,
+    };
+  }
 
   // Z nadmiarem o liczbę już ćwiczonych, żeby filtr poniżej zawsze znalazł dość.
   const { data: candidateRows } = await supabase
@@ -129,5 +174,8 @@ export async function buildSkillSession(
     boxes,
     reviewCount: reviewEntries.length,
     newCount: fresh.length,
+    startedCount: started.length,
+    nextDueAt,
+    extra: false,
   };
 }

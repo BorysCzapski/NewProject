@@ -34,6 +34,9 @@ export default async function TreningFiszekPage() {
 
         {decks.map(({ deck, available, started, mastered, due }) => {
           const disabled = available === 0;
+          // Wszystko przećwiczone i nic nie czeka: sesja będzie pusta, więc
+          // mówimy to od razu, zamiast kazać klikać, żeby się o tym przekonać.
+          const caughtUp = available > 0 && started >= available && due === 0;
           const body = (
             <Card
               className={`flex items-center justify-between gap-3 transition-transform ${
@@ -59,6 +62,11 @@ export default async function TreningFiszekPage() {
                       {mastered} opanowanych • {started}/{available} ćwiczonych
                       {due > 0 && <span className="ml-1.5 text-primary">• {due} do powtórki</span>}
                     </p>
+                    {caughtUp && (
+                      <p className="mt-1 text-xs text-foreground-muted">
+                        Na dziś gotowe — możesz poćwiczyć dodatkowo.
+                      </p>
+                    )}
                   </>
                 )}
               </div>
