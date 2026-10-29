@@ -7,6 +7,7 @@
 // ============================================================================
 import {
   Binary,
+  Briefcase,
   Church,
   Compass,
   Dumbbell,
@@ -30,6 +31,7 @@ import {
 
 const ICONS: Record<string, LucideIcon> = {
   Binary,
+  Briefcase,
   Church,
   Compass,
   Dumbbell,

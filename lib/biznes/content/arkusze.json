@@ -1,0 +1,2206 @@
+[
+ {
+  "slug": "arkusz-pokazowy",
+  "title": "Arkusz pokazowy CKE",
+  "period": "Kwiecień 2026",
+  "url": "https://maturabiz.pl/arkusze/arkusz-pokazowy",
+  "kind": "cke",
+  "maxPoints": 50,
+  "items": [
+   {
+    "id": "arkusz-pokazowy-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis\nAgnieszka jest aktywną sportsmenką. Zdecydowała się podjąć studia. Mogłaby pozostać blisko domu, trenować w swoim klubie i studiować na lokalnej uczelni, która oferuje przeciętny poziom nauczania. Pozwoliłoby to zaoszczędzić na kosztach życia i być blisko rodziny. Rozwiązaniem alternatywnym jest wyjazd do oddalonego o 200 km miasta, gdzie znajdują się prestiżowa uczelnia i kilka dużych klubów sportowych.\nDaje to większe perspektywy zawodowe i możliwość rozwoju kariery sportowej.\nNiestety, takie rozwiązanie wiąże się z wyższymi wydatkami, skutkuje stresem związanym z wyjazdem, oznacza rozłąkę z rodziną i przekłada się na konieczność podjęcia dorywczej pracy w celu częściowego pokrycia kosztów utrzymania.\nAgnieszka, po namyśle i w wyniku rozmów z bliskimi, zdecydowała się wyjechać i podjąć studia w innym mieście."
+   },
+   {
+    "id": "arkusz-pokazowy-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Na podstawie tekstu wymień cechę charakteryzującą Agnieszkę jako osobę przedsiębiorczą, która to cecha pozwoliła Agnieszce podjąć decyzję o wyjeździe do dużego miasta. Odpowiedź uzasadnij, odnosząc się do przykładu działania Agnieszki.\nCecha:\nPrzykład działania Agnieszki podany w opisie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj kompetencję przedsiębiorczą rozwijaną przez Agnieszkę oraz wyjaśnij, dlaczego ta kompetencja jest istotna we współczesnym świecie.\nKompetencja:\nWyjaśnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "task",
+    "points": 1,
+    "text": "Zespół to dwie lub więcej osób, które współdziałają i oddziałują na siebie w dążeniu do wspólnego celu.\nPraca zespołowa niesie ze sobą dużo korzyści wpływających na efektywność realizacji zadań i projektów. Ważną zaletą pracy zespołowej jest występowanie tzw.\n„efektu synergii”.\nNa podstawie: J. Stoner i in., Kierowanie, Warszawa 2001.\nWyjaśnij, na czym polega występowanie „efektu synergii” w pracy zespołowej."
+   },
+   {
+    "id": "arkusz-pokazowy-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "context",
+    "points": 0,
+    "text": "Tekst 1. O projekcie dla pewnej dzielnicy\nTa dzielnica miasta dopiero niedawno zmieniła się z dzielnicy przemysłowej w miejsce osiedli mieszkaniowych. Jej mieszkańcy to zwykle ludzie młodzi, energiczni, łatwo nawiązujący kontakt z sąsiadami, choć mocno zapracowani. Bardzo brakuje im\n– w pobliżu miejsca zamieszkania – terenów zielonych, na których mogliby się spotykać i uprawiać sport. Oprócz budynków mieszkalnych na ich osiedlu są niezagospodarowane tereny poprzemysłowe, należące do miasta.\nNieco ponad stu mieszkańców przystąpiło do stowarzyszenia Moje Osiedle. Wiążą oni duże nadzieje z miejskim budżetem obywatelskim. Jeśli udałoby się uzyskać kwotę 1 mln złotych na realizację projektu utworzenia parku na miejskich nieużytkach, już niebawem ich problem zostałby rozwiązany. Trzeba tylko nakłonić przynajmniej 5 tysięcy mieszkańców miasta do poparcia tego projektu. O środki z budżetu rywalizuje wiele innych świetnych projektów. Członkowie stowarzyszenia jednak zakładają, że przekonają co drugą osobę, z którą porozmawiają o projekcie.\nObiecują też, że postarają się rozmawiać z przynajmniej czterema nowymi osobami każdego dnia. W dotarciu do mieszkańców miasta może im również pomóc wykorzystanie – prowadzonych przez niektórych członków – popularnych profili w mediach społecznościowych. Muszą działać szybko, bo finał głosowania jest już za 4 tygodnie.\nTekst 2. O zwinnym zarządzaniu projektami\nPodejście zwinne w zarządzaniu projektami charakteryzuje się m.in. cyklem życia projektu składającym się z adaptacyjnych iteracji oraz chęcią do akceptacji zmian.\nKluczową korzyścią ze stosowania metod zwinnych w zarządzaniu pozostaje szybkość i zdolność do adaptacji. Pozwala to budować trwałe przewagi konkurencyjne oraz elastyczność w działaniu.\nNa podstawie: P. Wyrozębski, Zwinność. Od zwinnych zespołów do zwinnego zarządzania,\nWarszawa 2021."
+   },
+   {
+    "id": "arkusz-pokazowy-z3-1",
+    "label": "3.1",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Z wykorzystaniem techniki SMART zdefiniuj cel projektu, który chcą zrealizować członkowie stowarzyszenia Moje Osiedle, aby rozwiązać problem opisany w tekście 1.\nCel projektu:"
+   },
+   {
+    "id": "arkusz-pokazowy-z3-2",
+    "label": "3.2",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Przygotuj analizę SWOT dla przedsięwzięcia planowanego przez stowarzyszenie Moje Osiedle. Wpisz po jednym właściwym elemencie analizy w odpowiednie miejsca tabeli.\nS (mocna strona)\nW (słaba strona)\nO (szansa)\nT (zagrożenie)"
+   },
+   {
+    "id": "arkusz-pokazowy-z3-3",
+    "label": "3.3",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie tekstu 1. oraz tekstu 2. sformułuj argument za stwierdzeniem oraz argument przeciw stwierdzeniu: W zarządzaniu projektem stowarzyszenia Moje Osiedle najlepiej sprawdzi się podejście zwinne.\nArgument za stwierdzeniem:\nArgument przeciw stwierdzeniu:"
+   },
+   {
+    "id": "arkusz-pokazowy-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "context",
+    "points": 0,
+    "text": "Tekst. Opisy wybranych ról odgrywanych w zespole wg R.M. Belbina\nOpis A – Otwarty, entuzjastyczny, komunikatywny. Bada możliwości. Rozwija kontakty.\nOpis B – Pracowity, punktualny, sumienny, zatroskany. Wyszukuje błędy i niedociągnięcia, ukierunkowany. Poprawia i udoskonala.\nOpis C – Pomysłowy, twórczy, myślący niestereotypowo. Tworzy idee i rozwiązuje trudne problemy.\nNa podstawie: R.M. Belbin, Twoja rola w zespole, Gdańsk 2008."
+   },
+   {
+    "id": "arkusz-pokazowy-z4-1",
+    "label": "4.1",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Do każdego z podanych w tekście opisów dopisz odpowiednią nazwę roli odgrywanej w zespole. Wpisz odpowiedzi wybrane spośród podanych poniżej.\nmyślicielkoordynatorposzukiwacz źródełskrupulatny wykonawca\nOpis A –\nOpis B –\nOpis C –"
+   },
+   {
+    "id": "arkusz-pokazowy-z4-2",
+    "label": "4.2",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Sformułuj argument za stwierdzeniem oraz argument przeciw stwierdzeniu:\nKierownikiem projektu powinna być osoba odgrywająca w zespole rolę koordynatora.\nArgument za stwierdzeniem:\nArgument przeciw stwierdzeniu:"
+   },
+   {
+    "id": "arkusz-pokazowy-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "O komunikacji z podwładnymi\nDobrą ogólną zasadą jest chwalenie publiczne, a krytykowanie w cztery oczy. [...] To jest jednak zasada ogólna, a od każdej takiej zasady [...] są wyjątki. [...]\nPoprawki [...] oraz dyskusje różnią się od krytyki. [...] „Na szóstym slajdzie masz literówkę” lub [...] „Nie zgadzam się z tym, co przed chwilą powiedziałeś”. Tego typu drobne poprawki mogą być [...] przekazane podczas publicznego spotkania. [...] „Po tym, jak przygotowałeś kilka ważnych prezentacji, w których aż się roi od błędów [...], zaczynam się zastanawiać, co się z tobą dzieje. Czy mógłbyś mi to wyjaśnić?”. Tego typu uwagi należy przekazywać podczas rozmowy w cztery oczy.\n[...] Chociaż większość ludzi lubi być chwalona publicznie, niektórzy odbierają każdą publiczną wzmiankę na swój temat jako rodzaj kary. Chwaląc kogoś, chcesz, by wiedział, co zrobił dobrze, i chcesz przekazać mu to w taki sposób, by to on czuł się możliwie jak najlepiej. Jeśli naprawdę troszczysz się o swoich pracowników [...], będziesz świadom także ich osobistych preferencji w tym względzie.\nK. Scott, Szef wymagający i wyrozumiały. Jak skutecznie zarządzać, nie tracąc ludzkiego oblicza, Warszawa 2019."
+   },
+   {
+    "id": "arkusz-pokazowy-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, dlaczego zasada „chwalenie publiczne, a krytykowanie w cztery oczy” jest dobrą zasadą w komunikacji z podwładnymi.\nChwalenie publiczne:\nKrytykowanie w cztery oczy:"
+   },
+   {
+    "id": "arkusz-pokazowy-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj dwa opisane w tekście wyjątki od zasady „chwalenie publiczne, a krytykowanie w cztery oczy”.\n1.:\n2.:"
+   },
+   {
+    "id": "arkusz-pokazowy-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis projektu uczniowskiego\nUczniowie liceum postanowili w ramach zajęć z biznesu i zarządzania zrealizować akcję „Zdrowa przerwa w naszej szkole”. Celem projektu była promocja zdrowych nawyków żywieniowych wśród uczniów szkoły. Uczniowie na przerwie rozmawiali o tym, że ich koledzy mają niewielką świadomość zdrowego odżywiania, a w sklepiku szkolnym jest mało zdrowych przekąsek. W celu realizacji akcji stworzyli zespół zadaniowy i podzieli role: lider, specjalista ds. mediów, osoba do kontaktów z dyrektorem szkoły i z radą rodziców, logistyk.\nNastępnie ustalili harmonogram działań i budżet, który – po zaprezentowaniu celów projektu – zobowiązała się pokryć rada rodziców. Projekt trwał sześć tygodni i składał się z kilku działań. Uczniowie przeprowadzili kampanię edukacyjną: rozwieszali plakaty propagujące zdrowe odżywianie na terenie szkoły, prowadzili kampanię w mediach społecznościowych szkoły, zorganizowali cotygodniową akcję „Zdrowa środa” – we środy w sklepiku szkolnym, również po zakończeniu projektu, pojawiały się świeże owoce i kanapki z pełnoziarnistego pieczywa."
+   },
+   {
+    "id": "arkusz-pokazowy-z6-1",
+    "label": "6.1",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj różnicę między projektem a procesem, występującą w zarządzaniu."
+   },
+   {
+    "id": "arkusz-pokazowy-z6-2",
+    "label": "6.2",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie tekstu podaj dwa przykłady działań w ramach akcji „Zdrowa przerwa w naszej szkole” – jednego mającego cechy projektu i jednego mającego cechy procesu.\nDziałanie mające cechy projektu:\nDziałanie mające cechy procesu:"
+   },
+   {
+    "id": "arkusz-pokazowy-z6-3",
+    "label": "6.3",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj nazwy dwóch etapów zarządzania projektem, które zostały zastosowane przez uczniów realizujących akcję „Zdrowa przerwa w naszej szkole”. Wymień przykłady działań, które zostały przez nich podjęte w ramach każdego etapu.\nEtap:\nPrzykład działania:\nEtap:\nPrzykład działania:"
+   },
+   {
+    "id": "arkusz-pokazowy-z6-4",
+    "label": "6.4",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj nazwę tego etapu projektu, którego nie uwzględniono w opisie, oraz podaj przykład działania, które mogłoby zostać podjęte w ramach tego etapu.\nEtap:\nPrzykład działania:"
+   },
+   {
+    "id": "arkusz-pokazowy-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "context",
+    "points": 0,
+    "text": "Tekst 1. O jednej ze struktur rynkowych\nTo struktura rynku, w której funkcjonuje dużo przedsiębiorstw oraz istnieje nieograniczona swoboda wejścia na rynek. Każde z tych przedsiębiorstw wywiera pewien wpływ na cenę. W tym modelu rynku występuje zróżnicowanie produktów.\nNa podstawie: R. Milewski i E. Kwiatkowski (red.), Podstawy ekonomii, Warszawa 2005.\nTekst 2. O rynkach produktów rolnych\nNiektóre produkty rolne (np. kapusta, marchew, ziemniaki) są do siebie bardzo podobne, wręcz jednorodne. Istnieje bardzo dużo gospodarstw rolnych, a swoboda wejścia na ten rynek jest nieograniczona. Producent produktów rolnych może swobodnie wyjść z rynku. Poszczególni producenci rolni nie wywierają wpływu na ceny, np. kapusty, marchwi, czy ziemniaków."
+   },
+   {
+    "id": "arkusz-pokazowy-z7-1",
+    "label": "7.1",
+    "number": 7,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nW tekście 1. przedstawiono założenia struktury rynkowej określanej jako\nA.oligopol.\nB.monopol.\nC.konkurencja doskonała.\nD.konkurencja monopolistyczna."
+   },
+   {
+    "id": "arkusz-pokazowy-z7-2",
+    "label": "7.2",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Przedstaw jedną zaletę struktury rynkowej opisanej w tekście 1. z punktu widzenia konsumentów oraz jedną zaletę tejże struktury z punktu widzenia producentów.\nZaleta z punktu widzenia konsumentów:\nZaleta z punktu widzenia producentów:"
+   },
+   {
+    "id": "arkusz-pokazowy-z7-3",
+    "label": "7.3",
+    "number": 7,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy rynki opisane w tekście 2. są przykładami struktury rynkowej przedstawionej w tekście 1. Odpowiedź uzasadnij.\nRozstrzygnięcie: (TA K / N I E)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "context",
+    "points": 0,
+    "text": "Wykres. Zmiany na rynku usług restauracyjnych w Polsce\nTekst. O konsekwencjach zmian struktury społeczeństwa polskiego\nWzrostowi liczby emerytów towarzyszyć [...] będzie zmniejszająca się relacja przeciętnej emerytury do średniej płacy. Zmniejszenie dochodów u liczebnie dużej grupy konsumentów spowoduje [...] zmiany w strukturze zakupów. Mniejszych wydatków należy się spodziewać m.in. na odzież, na transport [...], na posiłki w restauracjach.\nK. Caban-Piaskowska i A. Miarka, Starzenie się społeczeństwa szansą rozwoju przedsiębiorstw,\n„Handel Wewnętrzny” 6(1), 2018.\nD\nS1S2\nP1\nQ1\nP2\nQ2\n0\nCena, PLN\nLiczba posiłków"
+   },
+   {
+    "id": "arkusz-pokazowy-z8-1",
+    "label": "8.1",
+    "number": 8,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy wykres przedstawia zmiany na rynku usług restauracyjnych, będące konsekwencją wzrostu liczby emerytów, opisanego w tekście.\nOdpowiedź uzasadnij.\nRozstrzygnięcie: (TA K / N I E)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z8-2",
+    "label": "8.2",
+    "number": 8,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nSpadek ceny produktu jest przyczyną wzrostu jego oferowanej ilości.PF\nPrzy cenie P2 i liczbie posiłków Q2 rynek usług restauracyjnych – definiowany przez krzywe S2 oraz D – jest w równowadze.\nPF"
+   },
+   {
+    "id": "arkusz-pokazowy-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "context",
+    "points": 0,
+    "text": "Dobro A i dobro B są to dobra komplementarne, tzn. uzupełniają się w zaspakajaniu danej potrzeby."
+   },
+   {
+    "id": "arkusz-pokazowy-z9-1",
+    "label": "9.1",
+    "number": 9,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, jak wzrost ceny dobra A wpływa na popyt na dobro B."
+   },
+   {
+    "id": "arkusz-pokazowy-z9-2",
+    "label": "9.2",
+    "number": 9,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj przykład pary dóbr komplementarnych.\nDobro A:\nDobro B:"
+   },
+   {
+    "id": "arkusz-pokazowy-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "context",
+    "points": 0,
+    "text": "Lokata „Sprytna” w złotych. Tabela oprocentowania i opłat dla klientów indywidualnych\nOKRES\nLOKATY\nSTOPA\nOPROCENTOWANIA\nSTAŁEGO W SKALI ROKU\nKAPITALIZACJA\nODSETEK\nMINIMALNA\nKWOTA LOKATY\nOPŁAT Y\n6 miesięcy12,00 % kwartalna5 000 zł0 zł12 miesięcy12,75 %\n24 miesiące12,00 %\nLokata „Najlepsza” w złotych. Tabela oprocentowania i opłat dla klientów indywidualnych\nOKRES\nLOKATY\nSTOPA\nOPROCENTOWANIA\nSTAŁEGO W SKALI ROKU\nKAPITALIZACJA\nODSETEK\nMINIMALNA\nKWOTA LOKATY\nOPŁAT Y\n12 miesięcy12,75 % roczna10 000 zł0 zł\n24 miesiące12,50 %\nMateriały informacyjne banków komercyjnych (dane na potrzeby zadania egzaminacyjnego)."
+   },
+   {
+    "id": "arkusz-pokazowy-z10-1",
+    "label": "10.1",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz kwotę odsetek, jakie zostaną wypłacone z 12-miesięcznej lokaty\n„Sprytnej”, założonej na kwotę 10 000 zł. Zapisz obliczenia. W obliczeniach przyjmij, że każdy kwartał ma taką samą liczbę dni oraz pomiń podatek od zysków kapitałowych. Wyniki obliczeń zaokrąglaj do pełnych groszy.\nMiejsce na obliczenia\nZ 12-miesięcznej lokaty „Sprytnej”, założonej na kwotę 10 000 zł, zostaną po roku wypłacone odsetki w wysokości zł."
+   },
+   {
+    "id": "arkusz-pokazowy-z10-2",
+    "label": "10.2",
+    "number": 10,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy odsetki z rocznej lokaty „Najlepszej”, założonej na kwotę 10\n000 zł, byłyby większe niż z rocznej lokaty „Sprytnej”, założonej na tę samą kwotę. Odpowiedź uzasadnij.\nRozstrzygnięcie: (TA K / N I E)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z10-3",
+    "label": "10.3",
+    "number": 10,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nLokata bankowa jest zazwyczaj mniej płynnym instrumentem inwestycyjnym niż dzieła sztuki.\nPF\nŚrodki i należności deponenta do wysokości równowartości w złotych\n100 000 euro zgromadzone w bankach w Polsce są gwarantowane w całości przez Bankowy Fundusz Gwarancyjny.\nPF"
+   },
+   {
+    "id": "arkusz-pokazowy-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment komunikatu prasowego z 4 marca 2026 r.\n[...] podjęła decyzję o obniżeniu stopy referencyjnej NBP o 0,25 punktu procentowego, tj. do poziomu 3,75%. Jednocześnie [...] ustaliła następujący poziom pozostałych stóp procentowych NBP:\nstopa lombardowa 4,25% stopa depozytowa 3,25% stopa redyskontowa weksli 3,80% stopa dyskontowa weksli 3,85%.\nKomunikat prasowy NBP, 16.03.2026, www.nbp.pl"
+   },
+   {
+    "id": "arkusz-pokazowy-z11-1",
+    "label": "11.1",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj pełną nazwę tego organu Narodowego Banku Polskiego, którego decyzję przedstawiono w przytoczonym fragmencie komunikatu prasowego."
+   },
+   {
+    "id": "arkusz-pokazowy-z11-2",
+    "label": "11.2",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj oczekiwany skutek zmiany wielkości stóp procentowych – określonej w komunikacie z 4 marca 2026 r. – dla poziomu inflacji w Polsce."
+   },
+   {
+    "id": "arkusz-pokazowy-z11-3",
+    "label": "11.3",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj przykładowy negatywny skutek decyzji przedstawionej w przytoczonym fragmencie komunikatu dla sytuacji finansowej gospodarstw domowych w\nPolsce."
+   },
+   {
+    "id": "arkusz-pokazowy-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "context",
+    "points": 0,
+    "text": "Wykres. Średni miesięczny kurs euro wobec złotego w 2023 r.\nNa podstawie: Archiwalne kursy walut, 16.03.2026, www.nbp.pl"
+   },
+   {
+    "id": "arkusz-pokazowy-z12-1",
+    "label": "12.1",
+    "number": 12,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nKurs euro wobec złotego w 2023 roku miał dłuższe okresy wzrostowe niż spadkowe.\nPF\nW 2023 roku nastąpiła aprecjacja złotego względem euro.PF\nIIIIIIIVVVIVIIVIIIIXXXIXII\n4.2\n4.35\n4.5\n4.65\n4.8\nKurs (PLN)"
+   },
+   {
+    "id": "arkusz-pokazowy-z12-2",
+    "label": "12.2",
+    "number": 12,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, jak dla polskich turystów mogły się zmienić ceny wycieczek do krajów strefy euro przy założeniu, że trend przedstawiony na wykresie utrzymał się w kolejnych latach, a inne czynniki nie uległy zmianom. Wpisz odpowiedź wybraną spośród podanych w nawiasie. Odpowiedź uzasadnij.\nRozstrzygniecie: (wzrost / spadek)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z12-3",
+    "label": "12.3",
+    "number": 12,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie wykresu uzupełnij zdania. Wpisz właściwe określenia, wybrane spośród podanych w nawiasach.\nZmiany kursu euro wobec złotego w ostatnim kwartale 2023 roku sprawiły, że pod koniec 2023 roku polskie przedsiębiorstwa eksportujące meble do Francji otrzymywały (mniej / więcej) złotych za sprzedane towary. Natomiast dla polskich przedsiębiorstw importujących odzież z Włoch oznaczało to (niższe / wyższe) koszty zakupu. Polskie produkty rolne sprzedawane we Francji stały się (tańsze / droższe)\ndla francuskich klientów."
+   },
+   {
+    "id": "arkusz-pokazowy-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "context",
+    "points": 0,
+    "text": "Przysłowie:\nNie wkładaj wszystkich jajek do jednego koszyka."
+   },
+   {
+    "id": "arkusz-pokazowy-z13-1",
+    "label": "13.1",
+    "number": 13,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj nazwę zasady ograniczania ryzyka inwestycyjnego, do którego odnosi się przytoczone przysłowie."
+   },
+   {
+    "id": "arkusz-pokazowy-z13-2",
+    "label": "13.2",
+    "number": 13,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, w jaki sposób stosowanie zasady, której odpowiada przytoczone przysłowie, przyczynia się do ograniczenia ryzyka inwestycyjnego."
+   },
+   {
+    "id": "arkusz-pokazowy-z14",
+    "label": "14",
+    "number": 14,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment ustawy z 27 sierpnia 2009 r. o finansach publicznych\nArt. 100.\n1.\n[...] jest papierem wartościowym oferowanym do sprzedaży w kraju lub za granicą, oprocentowanym w postaci dyskonta lub odsetek.\n2.\n[...] sprzedawana jest na rynku pierwotnym:\n1) z dyskontem,\n2) według wartości nominalnej,\n3) powyżej wartości nominalnej\n– i wykupywana po upływie okresu, na jaki została wyemitowana.\nDz.U. 2025, poz. 1483 ze zm."
+   },
+   {
+    "id": "arkusz-pokazowy-z14-1",
+    "label": "14.1",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj nazwę papieru wartościowego opisanego w powyższym przepisie prawa."
+   },
+   {
+    "id": "arkusz-pokazowy-z14-2",
+    "label": "14.2",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj zaletę inwestycji w papier wartościowy, którego dotyczy przytoczony fragment ustawy."
+   },
+   {
+    "id": "arkusz-pokazowy-z14-3",
+    "label": "14.3",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Określ jedną różnicę miedzy lokatą bankową a papierem wartościowym, którego dotyczy przytoczony fragment ustawy."
+   },
+   {
+    "id": "arkusz-pokazowy-z15",
+    "label": "15",
+    "number": 15,
+    "kind": "context",
+    "points": 0,
+    "text": "Tabela. Dane statystyczne dotyczące społeczeństwa polskiego w 4. kwartale\n2023 r.\nLiczba ludności37 637 000\nLiczba ludności w wieku 15–89 lat biernej zawodowo12 492 000\nOsoby zatrudnione17 323 000\nOsoby bezrobotne547 000\nNa podstawie: Aktywność ekonomiczna ludności Polski, 16.03.2026 r., www.stat.gov.pl"
+   },
+   {
+    "id": "arkusz-pokazowy-z15-1",
+    "label": "15.1",
+    "number": 15,
+    "kind": "task",
+    "points": 1,
+    "text": "Z wykorzystaniem danych statystycznych podanych w tabeli oblicz stopę bezrobocia w Polsce w 4. kwartale 2023 r.\nMiejsce na obliczenia\nStopa bezrobocia wyniosła"
+   },
+   {
+    "id": "arkusz-pokazowy-z15-2",
+    "label": "15.2",
+    "number": 15,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj dwa działania, jakie może podejmować państwo w celu aktywizacji zasobów pracy.\n1.:\n2.:"
+   },
+   {
+    "id": "arkusz-pokazowy-z16",
+    "label": "16",
+    "number": 16,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment ustawy z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych\nArt. 66. 1. Obowiązkowi ubezpieczenia zdrowotnego podlegają:\n1.\nosoby spełniające warunki do objęcia ubezpieczeniami społecznymi lub ubezpieczeniem społecznym rolników, które są:\na) pracownikami w rozumieniu ustawy o systemie ubezpieczeń społecznych [...].\nDz.U. 2025, poz. 1461 ze zm."
+   },
+   {
+    "id": "arkusz-pokazowy-z16",
+    "label": "16",
+    "number": 16,
+    "kind": "context",
+    "points": 0,
+    "text": "Tekst. O świadczeniu w ramach jednego z rodzajów ubezpieczenia społecznego\n[...] [Z] tytułu niezdolności do pracy przysługuje osobie, którą uznano za całkowicie lub częściowo niezdolną do wykonywania pracy zarobkowej z powodu stanu zdrowia.\nCałkowicie niezdolną do pracy jest osoba, która utraciła zdolność do wykonywania jakiejkolwiek pracy. Za częściowo niezdolną do pracy uznaje się natomiast osobę, która w znacznym stopniu utraciła zdolność do wykonywania pracy zgodnej z posiadanymi przez nią kwalifikacjami.\nUbezpieczenia społeczne, 16.03.2026 r., www.gov.pl"
+   },
+   {
+    "id": "arkusz-pokazowy-z16-1",
+    "label": "16.1",
+    "number": 16,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nPrawo do świadczenia, którego dotyczy definicja przytoczona w powyższym tekście, przysługuje ubezpieczonemu w ramach ubezpieczenia\nA.rentowego.\nB.chorobowego.\nC.emerytalnego.\nD.wypadkowego."
+   },
+   {
+    "id": "arkusz-pokazowy-z16-2",
+    "label": "16.2",
+    "number": 16,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy przytoczony fragment ustawy i tekst dotyczą tego samego rodzaju ubezpieczenia. Odpowiedź uzasadnij.\nRozstrzygnięcie: (TA K / N I E)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-pokazowy-z16-3",
+    "label": "16.3",
+    "number": 16,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nSkładka z tytułu ubezpieczenia wypadkowego jest odprowadzana do\nNarodowego Funduszu Zdrowia.\nPF\nObowiązek odprowadzenia składki na ubezpieczenie emerytalne spoczywa na pracowniku.\nPF"
+   }
+  ]
+ },
+ {
+  "slug": "informator-cke",
+  "title": "Informator CKE",
+  "period": "Maj 2026",
+  "url": "https://maturabiz.pl/arkusze/informator-cke",
+  "kind": "cke",
+  "maxPoints": 68,
+  "items": [
+   {
+    "id": "informator-cke-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji\nPrzeprowadzono kampanię reklamową produktu P – dobra typowego, dla którego ma zastosowanie prawo popytu i podaży. W wyniku tej kampanii doszło do zwiększenia popularności tego produktu na rynku."
+   },
+   {
+    "id": "informator-cke-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Na którym wykresie w schematyczny sposób przedstawiono opisaną sytuację na rynku? Wybierz właściwą odpowiedź spośród podanych.\nUwaga: Rozważamy sytuację standardowego przebiegu krzywej popytu i krzywej podaży, tzn. pomijamy wyjątki od prawa popytu.\n\nA.Wykres A\nB.Wykres B\nC.Wykres C\nD.Wykres D\nA\n0 cena ilość\nB\n0 cena ilość\nC\n0 cena ilość\nD\n0 cena ilość"
+   },
+   {
+    "id": "informator-cke-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Przedsiębiorca będący producentem produktu P, aby zaspokoić rosnący popyt, zwiększył produkcję tego produktu.\nJaki będzie efekt zwiększenia popularności wśród konsumentów oraz zwiększenia produkcji produktu P, przy pozostałych czynnikach niezmienionych, dla ilości produktu P w punkcie równowagi cenowej? Wybierz właściwą odpowiedź spośród podanych.\nW punkcie równowagi cenowej ilość produktu P\nA.będzie większa.\nB.będzie mniejsza.\nC.jest niemożliwa do określenia.\nD.nie zmieni się."
+   },
+   {
+    "id": "informator-cke-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "task",
+    "points": 1,
+    "text": "Rząd postanowił wprowadzić cenę minimalną na produkt R.\nDokończ zdanie. Wybierz właściwą odpowiedź spośród A albo B oraz spośród\n1., 2. albo 3.\nWprowadzenie przez państwo ceny minimalnej produktu R chroni\nAkonsumentów\nBproducentów ale konsekwencją będzie wystąpienie\n1 niedoboru produktu R.\n2 nadwyżki produktu R.\n3 równowagi produktu R."
+   },
+   {
+    "id": "informator-cke-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "context",
+    "points": 0,
+    "text": "Wybrane informacje o wielkim kryzysie w Stanach Zjednoczonych\nW 1929 r. nastąpił krach na giełdzie na Wall Street. Stany Zjednoczone, a za nimi reszta świata, pogrążyły się w kryzysie. Popyt na produkty rolne w miastach spadł, co spowodowało, że dochody farm zmniejszyły się o dwie trzecie. Stałe nadwyżki produkcyjne amerykańskiego rolnictwa zmusiły USA do dumpingu, czyli do zakupu przez rząd nadwyżek i do ich sprzedaży za granicę po cenach niższych od cen krajowych.\nNa podstawie: H. Brogan, Historia Stanów Zjednoczonych Ameryki, Wrocław 2004, s. 586–588."
+   },
+   {
+    "id": "informator-cke-z3-1",
+    "label": "3.1",
+    "number": 3,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nOpisane działania administracji rządowej wynikały z małej podaży na rynku produktów rolnych.\nPF\nDziałania rządu amerykańskiego, o których mowa w tekście, były przejawem interwencjonizmu państwowego.\nPF"
+   },
+   {
+    "id": "informator-cke-z3-2",
+    "label": "3.2",
+    "number": 3,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj przykład narzędzia oddziaływania państwa na współczesną gospodarkę, innego niż skup nadwyżek towarów, które powinno zastosować państwo, aby przeciwdziałać kryzysowi gospodarczemu. Wyjaśnij mechanizm działania tego narzędzia.\nPrzykład narzędzia:\nWyjaśnienie:"
+   },
+   {
+    "id": "informator-cke-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "task",
+    "points": 3,
+    "text": "Jednym z celów ekspansywnej polityki monetarnej Narodowego Banku Polskiego realizowanej na rynku krajowym (wewnętrznym) jest pobudzenie gospodarki poprzez zwiększenie podaży pieniądza w gospodarce.\nDo wskazanego powyżej celu ekspansywnej polityki monetarnej Narodowego\nBanku Polskiego podaj dwa narzędzia tej polityki stosowane przez NBP oraz wyjaśnij mechanizm działania tych narzędzi.\n1. narzędzie polityki monetarnej:\nMechanizm działania tego narzędzia:\n2. narzędzie polityki monetarnej:\nMechanizm działania tego narzędzia:"
+   },
+   {
+    "id": "informator-cke-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "Na jednym z posiedzeń Rada Polityki Pieniężnej podjęła uchwałę o podniesieniu stóp procentowych:\nreferencyjnej lombardowej depozytowej redyskontowej weksli dyskontowej weksli."
+   },
+   {
+    "id": "informator-cke-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Uzupełnij poniższe zdanie tak, aby w poprawny sposób opisywało skutki powyższej decyzji Rady Polityki Pieniężnej. W każdym nawiasie podkreśl właściwe określenie.\nDecyzja Rady Polityki Pieniężnej przyczyniła się do (wzrostu / spadku) zdolności kredytowej ludności, do (wzrostu / spadku) wysokości rat kredytów o zmiennej stopie procentowej oraz do (wzrostu / spadku) oprocentowania lokat w bankach komercyjnych."
+   },
+   {
+    "id": "informator-cke-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Uzupełnij tabelę. Do każdego opisu stopy procentowej NBP przyporządkuj jej nazwę spośród wymienionych we wprowadzeniu do zadania.\nSłuży do ustalenia ceny, po której bank centralny udziela bankom komercyjnym pożyczek pod zastaw papierów wartościowych.\nOkreśla minimalną cenę, po jakiej bank centralny organizuje operacje otwartego rynku na rynku międzybankowym."
+   },
+   {
+    "id": "informator-cke-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Zaznacz odpowiedź A. albo B. oraz odpowiedź 1., 2. albo 3.\nJednym ze sposobów ograniczenia negatywnych skutków recesji jest\nA podwyższanie stóp procentowych banku centralnego\nB zwiększanie zadłużenia zagranicznego w celu sfinansowania publicznych wydatków inwestycyjnych co skutkuje\n1 wzrostem aktywności gospodarczej.\n2 ograniczeniem wzrostu zadłużenia przedsiębiorstw.\n3 obniżeniem popytu na instrumenty finansowe."
+   },
+   {
+    "id": "informator-cke-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Uzupełnij tabelę. Do każdego przykładu dopisz nazwę odpowiadającej mu właściwej struktury rynkowej.\nPrzykładStruktura rynkowa\nBranża restauracyjna w dużym mieście, gdzie istnieje wiele restauracji oferujących usługi podobne, ale nie – identyczne. Każda restauracja ma pewną kontrolę nad swoimi cenami i produktami. Istnieje duża różnorodność i możliwość wyboru dla klientów.\nRynek rolniczy, gdzie istnieje wiele małych gospodarstw rolnych produkujących identyczne produkty rolnicze, takie jak zboża, owoce i warzywa. Żaden z producentów nie ma wystarczającej siły rynkowej, aby wpłynąć na cenę na rynku."
+   },
+   {
+    "id": "informator-cke-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "context",
+    "points": 0,
+    "text": "Tabela. Dane gospodarcze dotyczące pewnego okresu cyklu koniunkturalnego\nWskaźnikRok 1.Rok 2.Rok 3.Rok 4.Rok 5.\nwzrost realnego PKB (r/r)\n+4%+5%+6%+4%+3% stopa bezrobocia7%6%5%4%3% wskaźnik inflacji2%2,5%1,9%1,4%1% sprzedaż detaliczna (r/r)\n+5%+6%+7%+5%+4% główny indeks giełdowy\n1200 pkt1300 pkt1400 pkt1350 pkt1300 pkt"
+   },
+   {
+    "id": "informator-cke-z8-1",
+    "label": "8.1",
+    "number": 8,
+    "kind": "task",
+    "points": 1,
+    "text": "W której fazie klasycznego cyklu koniunkturalnego znajduje się gospodarka opisana powyższymi danymi w roku 2.? Wybierz odpowiedź spośród podanych.\nA.dno\nB.szczyt\nC.kryzys\nD.ożywienie"
+   },
+   {
+    "id": "informator-cke-z8-2",
+    "label": "8.2",
+    "number": 8,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz 5-letni wzrost gospodarczy na podstawie danych przedstawionych w tabeli zamieszczonej we wprowadzeniu do zadania. Zapisz obliczenia. Wynik podaj w procentach.\nMiejsce na obliczenia\nOdpowiedź\nWzrost gospodarczy w podanym okresie wynosi:%."
+   },
+   {
+    "id": "informator-cke-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "task",
+    "points": 1,
+    "text": "Przykład blankietu wekslowego\nNa podstawie: www.remitent.pl\nPodaj dwie cechy weksla świadczące o tym, że jest on wykorzystywany na rynku kapitałowym.\nCecha 1.:\nCecha 2.:"
+   },
+   {
+    "id": "informator-cke-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "Tekst 1. Fragment ustawy\nArt. 8. § 1. Każdy człowiek od chwili urodzenia ma zdolność prawną.\nArt. 11. Pełną zdolność do czynności prawnych nabywa się z chwilą uzyskania pełnoletności.\nArt. 14. § 1. Czynność prawna dokonana przez osobę, która nie ma zdolności do czynności prawnych, jest nieważna.\n§ 2. Jednakże gdy osoba niezdolna do czynności prawnych zawarła umowę należącą do umów powszechnie zawieranych w drobnych bieżących sprawach życia codziennego, umowa taka staje się ważna z chwilą jej wykonania, chyba że pociąga za sobą rażące pokrzywdzenie osoby niezdolnej do czynności prawnych.\nUstawa Kodeks cywilny, Dz.U. z 2024 r. poz. 1061, z późn. zm. (stan prawny na 4 lipca 2025 r.)\n\nTekst 2. Opis sytuacji\n12-letni Szymon bez wiedzy swoich rodziców samodzielnie kupił telefon komórkowy w cenie 3 200 zł oraz czekoladę za 14,70 zł. Kiedy przyniósł do domu zakupione towary i pokazał rodzicom, ci zdecydowali, że należy je zwrócić. Uznali, że dotychczas użytkowany telefon komórkowy jest wystarczający dla ucznia szkoły podstawowej. Szymon jest także uczulony na niektóre słodycze. Udali się wraz z\nSzymonem do sklepów i próbowali zwrócić zakupy, przedstawiając paragony i twierdząc, że sprzedawcy nie mieli prawa sprzedać towaru 12-letniemu chłopcu bez zgody rodziców.\nRozstrzygnij, którego z zakupionych produktów (telefonu czy czekolady)\nwyszczególnionego w tekście 2, zgodnie z przepisami Kodeksu cywilnego, sprzedawca musi przyjąć zwrot. Odpowiedź uzasadnij, odwołując się do przytoczonych przepisów prawnych oraz do opisu sytuacji.\nRozstrzygnięcie:\nUzasadnienie:"
+   },
+   {
+    "id": "informator-cke-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nDo konsumentów zaliczamy także osoby niemające pełnej zdolności do czynności prawnych.\nPF\nW przypadku zakupu towaru przez osobę niemającą zdolności do czynności prawnych reklamację w jej imieniu składa opiekun prawny.\nPF"
+   },
+   {
+    "id": "informator-cke-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "task",
+    "points": 1,
+    "text": "Wybrane elementy składowe budżetu państwa\n1.\npodatek VAT\n2.\ndotacje podmiotowe, przedmiotowe i celowe\n3.\nsubwencja ogólna\n4.\nobsługa długu publicznego\n5.\ndywidendy z tytułu udziałów Skarbu Państwa w spółkach\n6.\nświadczenia na rzecz osób fizycznych\nWypisz numery tych elementów składowych budżetu państwa, które stanowią dochody tego państwa."
+   },
+   {
+    "id": "informator-cke-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nUjemna różnica między dochodami publicznymi a wydatkami publicznymi, ustalona dla okresu rozliczeniowego, stanowi nadwyżkę sektora finansów publicznych.\nPF\nJednostka samorządu terytorialnego może emitować obligacje w celu finansowania planowanego deficytu budżetu tej jednostki.\nPF"
+   },
+   {
+    "id": "informator-cke-z14",
+    "label": "14",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Fragment komunikatu GUS dotyczący dochodów i wydatków sektora instytucji rządowych i samorządowych w latach 2023–2024\nWyszczególnienie\nOgółem (w mln zł)\nDochody w kolejnych latach\n20231 420 468\n20241 559 374\nWydatki w kolejnych latach\n20231 600 546\n20241 799 183 www.stat.gov.pl\nUzupełnij notatkę. Dla każdego roku zaznacz, czy wystąpiła w nim nadwyżka budżetowa, czy wystąpił w nim deficyt budżetowy, oraz podaj wartość tej nadwyżki albo tego deficytu.\nRok 2023 –(nadwyżka / deficyt)w wysokości:mln zł\nRok 2024 –(nadwyżka / deficyt)w wysokości:mln zł"
+   },
+   {
+    "id": "informator-cke-z15",
+    "label": "15",
+    "number": 15,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment ustawy\nPrzepisy dotyczące instytucji 1.:\nArt. 42. 1. Do zadań [...] należy:\n1.\nzapewnienie bezpłatnego poradnictwa konsumenckiego i informacji prawnej w zakresie ochrony interesów konsumentów;\n2.\nskładanie wniosków w sprawie stanowienia i zmiany przepisów prawa miejscowego w zakresie ochrony interesów konsumentów;\n3.\nwystępowanie do przedsiębiorców w sprawach ochrony praw i interesów konsumentów;\n4.\nwspółdziałanie z Prezesem Urzędu, organami Inspekcji Handlowej oraz organizacjami konsumenckimi.\n\nPrzepisy dotyczące instytucji 2.:\nArt. 26.\n1.\nPrezes Urzędu wydaje decyzję o uznaniu praktyki za naruszającą zbiorowe interesy konsumentów i nakazującą zaniechanie jej stosowania, jeżeli stwierdzi naruszenie zakazu określonego w art. 24.\n2.\nW decyzji, o której mowa w ust. 1, Prezes Urzędu może określić środki usunięcia trwających skutków naruszenia zbiorowych interesów konsumentów w celu zapewnienia wykonania nakazu, w szczególności zobowiązać przedsiębiorcę do złożenia jednokrotnego lub wielokrotnego oświadczenia o treści i w formie określonej w decyzji.\nDz.U. z 2024 r. poz. 1616 (stan prawny na 4 lipca 2025 r.)"
+   },
+   {
+    "id": "informator-cke-z15-1",
+    "label": "15.1",
+    "number": 15,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj pełne nazwy instytucji, których wybrane kompetencje podano w przytoczonych przepisach prawnych.\nInstytucja 1.:\nInstytucja 2.:"
+   },
+   {
+    "id": "informator-cke-z15-2",
+    "label": "15.2",
+    "number": 15,
+    "kind": "task",
+    "points": 2,
+    "text": "Oceń, czy dokończenia poniższego zdania są prawdziwe. Zaznacz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.\nPrezes Instytucji 2. wydaje decyzję o uznaniu praktyki za naruszającą zbiorowe interesy konsumentów i nakazującą zaniechanie jej stosowania, jeżeli stwierdzi naruszanie obowiązku udzielania konsumentom rzetelnej, prawdziwej i pełnej informacji.\nPF nieuczciwe praktyki rynkowe lub czyny nieuczciwej konkurencji.PF proponowanie konsumentom nabycia usług finansowych, które nie odpowiadają potrzebom tych konsumentów.\nPF"
+   },
+   {
+    "id": "informator-cke-z16",
+    "label": "16",
+    "number": 16,
+    "kind": "task",
+    "points": 2,
+    "text": "Opis typu inwestora\nTen inwestor preferuje pewność zachowania kapitału. Jest skłonny do inwestowania w stabilne instrumenty finansowe o niskim ryzyku, nawet jeśli oznacza to niższe potencjalne zyski. Preferuje długoterminowe inwestycje.\nKtóre z poniższych form inwestycji finansowych pasują do przedstawionego typu inwestora? Wybierz dwie formy inwestycji spośród podanych.\nA.akcje\nB.kryptowaluty\nC.lokaty bankowe\nD.kontrakty terminowe\nE.obligacje skarbu państwa"
+   },
+   {
+    "id": "informator-cke-z17",
+    "label": "17",
+    "number": 17,
+    "kind": "task",
+    "points": 2,
+    "text": "Opis sytuacji\nMarek przeprowadził kalkulację pracowniczego planu kapitałowego z oficjalnej strony internetowej PPK. Poniżej przedstawiono wynik i dokonane wyliczenia.\n\nNa podstawie: www.mojeppk.pl\nOceń prawdziwość poniższych stwierdzeń dotyczących przedstawionej kalkulacji dla Marka. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nPonad połowę środków zgromadzonych w PPK będą stanowiły wpłaty pracownika.\nPF\nUczestnik PPK będzie musiał zapłacić podatek od zysków kapitałowych, jeżeli po ukończeniu 60. roku życia dokona jednorazowej wypłaty 150 000 zł.\nPF\nPrzedstawiona symulacja wypracowanego zysku uwzględnia również utratę siły nabywczej pieniądza.\nPF"
+   },
+   {
+    "id": "informator-cke-z18",
+    "label": "18",
+    "number": 18,
+    "kind": "context",
+    "points": 0,
+    "text": "Paragon fiskalny\nPRZYJAZNY SKLEP 24 H\nGRUPA PIONKI POLSKA\n00-100 HOTYM, POLESIE 123S, CENTRUM 04 LOK. 1234\nSKLEP NR 1\nASD 00000589\nNIP 0010901185 nr: 444888\nPARAGON FISKALNY\nMLEK. GOUDA SER PL1 SZT x 6,10 = 6,10C\nMLEKO MAZURSKIE 21 LT x 4,80 = 4,80C\nMLECZKO TRUSKAWKO3 SZT x 2,10 = 6,30C\nTORBA PAPIEROWA1 SZT x 1,00 = 1,00A\nCHLEB ZWYKŁY 500 G0,500 SZT x 5,60 = 2,80C\nCHLEB ŻYTNI, / 400 ...1 SZT x 5,80 = 5,80C\nBUŁKA KAJZERKA, / 504 SZT x 0,98 = 3,92C\nBUŁKA MLECZNA Z KAWAŁKAMI CZEKOLADY, 92 SZT x 2,85 = 5,70C\nSPRZEDAŻ OPODATKOWANA A1,00\nSPRZEDAŻ OPODATKOWANA C35,42\nPTU A 23%0,19\nPTU C 5%1,69\nSUMA PTU1,88\nSUMA PLN36,42\nROZLICZENIE PŁATNOŚCI\nKARTA36,42 PLN\n00131 #001 KIEROWNIK2025-02-11 9:45\n67343G3FE9A4808516BC6B28D4BADC02674D44B9\nIP EAD 1801505733\nNumer:10/1/58467"
+   },
+   {
+    "id": "informator-cke-z18-1",
+    "label": "18.1",
+    "number": 18,
+    "kind": "task",
+    "points": 2,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nParagon zawiera informację o kwotach podatku CIT, który ma zapłacić wystawca dokumentu.\nPF\nNa paragonie zostały przedstawione należne kwoty podatku pośredniego, z którego ma się rozliczyć wystawca dokumentu.\nPF\nPrzy pozycji sprzedaży oznaczonej literą A podano kwotę należnego podatku akcyzowego.\nPF"
+   },
+   {
+    "id": "informator-cke-z18-2",
+    "label": "18.2",
+    "number": 18,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie przedstawionego paragonu podaj nazwę produktu objętego podstawową stawką podatku wskazanego na paragonie, należną kwotę tego podatku oraz cenę netto tego produktu.\nNazwa produktu:\nKwota podatku:\nCena netto produktu:"
+   },
+   {
+    "id": "informator-cke-z19",
+    "label": "19",
+    "number": 19,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji\nW 2022 r. Pan Jan postanowił ulokować swoje oszczędności w wysokości 50 000,00 zł w banku. Bank zaproponował mu lokatę na 3 lata oprocentowaną na 5% w skali roku z roczną kapitalizacją odsetek."
+   },
+   {
+    "id": "informator-cke-z19-1",
+    "label": "19.1",
+    "number": 19,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz łączną kwotę odsetek, jakie uzyska pan Jan z tej lokaty po trzech latach oszczędzania. Zapisz obliczenia.\nUwaga: W obliczeniach pomiń podatek od zysków kapitałowych i oszczędności („podatek Belki\").\nMiejsce na obliczenia\nOdpowiedź Łączna kwota odsetek, jakie uzyska pan Jan z lokaty w 2025 r., wynosi zł."
+   },
+   {
+    "id": "informator-cke-z19-2",
+    "label": "19.2",
+    "number": 19,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy korzystniejszy finansowo dla pana Jana byłby wybór lokaty na 3 lata oprocentowanej na 5% w skali roku, ale z półroczną kapitalizacją odsetek. Odpowiedź uzasadnij.\nRozstrzygnięcie:\nUzasadnienie:"
+   },
+   {
+    "id": "informator-cke-z20",
+    "label": "20",
+    "number": 20,
+    "kind": "context",
+    "points": 0,
+    "text": "Tabela. Notowania trzech spółek z wybranej sesji na Giełdzie Papierów\nWartościowych w Warszawie\nSpółkaKurs odniesienia (zł)Kurs zamknięcia (zł)Wolumen obrotu (szt.)\nAlfa2,302,53113 400\nBeta18,0018,9075 050\nGamma22221523 500"
+   },
+   {
+    "id": "informator-cke-z20-1",
+    "label": "20.1",
+    "number": 20,
+    "kind": "task",
+    "points": 2,
+    "text": "Oceń prawdziwość podanych stwierdzeń dotyczących podanej sesji giełdowej. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nSprzedano najwięcej akcji spółki Gamma.PF\nW ujęciu procentowym najbardziej wzrosła cena akcji spółki Alfa.PF\nAkcje spółki Gamma straciły na wartości.PF"
+   },
+   {
+    "id": "informator-cke-z20-2",
+    "label": "20.2",
+    "number": 20,
+    "kind": "task",
+    "points": 3,
+    "text": "Opis sytuacji\nInwestor zakupił 1000 szt. akcji spółki Beta po cenie 18 zł za akcję. Sprzedał je wszystkie po kursie zamknięcia na podanej sesji. Biuro maklerskie pobiera prowizję\n0,5% od wartości zakupu akcji oraz prowizję 0,5% od wartości sprzedaży akcji.\n\nOblicz stopę zwrotu, jaką osiągnął inwestor z tej inwestycji. Zapisz obliczenia.\nUwaga: W obliczeniach pomiń podatek dochodowy oraz przyjmij, że doszło do jednej transakcji kupna oraz do jednej transakcji sprzedaży.\nMiejsce na obliczenia\nOdpowiedź Stopa zwrotu z inwestycji:%."
+   },
+   {
+    "id": "informator-cke-z21",
+    "label": "21",
+    "number": 21,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji\nRodzinę Kowalskich w ostatnim roku dotknęło kilka nieszczęśliwych zdarzeń.\n1.\nPan Kowalski – jako kierujący pojazdem – spowodował stłuczkę, w wyniku której uszkodzone zostały zarówno jego samochód, jak i pojazd innego kierowcy.\n2.\nCórka państwa Kowalskich miała wypadek w drodze do szkoły i wymagała kilkudniowego pobytu w szpitalu.\n3.\nPodczas odczytywania wskazań wodomierza w mieszkaniu państwa Kowalskich pracownik spółdzielni został ugryziony przez ich psa."
+   },
+   {
+    "id": "informator-cke-z21-1",
+    "label": "21.1",
+    "number": 21,
+    "kind": "task",
+    "points": 2,
+    "text": "Uzupełnij tabelę. Do każdego opisanego przypadku przyporządkuj jedno odpowiednie ubezpieczenie, które miałoby zastosowanie w opisanej sytuacji, i pozwoliłoby pokryć finansowe skutki zdarzenia dla państwa Kowalskich.\nWstaw znak X we właściwe miejsca tabeli.\nOC posiadacz y pojazdów mechanic znych\nAC (autocasc o)\nUbezpiec zenie od\nNNW\nOC właściciel a mieszkani a\nUszkodzenie pojazdu pana\nKowalskiego\nWypadek córki w drodze do szkoły\nPogryzienie pracownika spółdzielni"
+   },
+   {
+    "id": "informator-cke-z21-2",
+    "label": "21.2",
+    "number": 21,
+    "kind": "task",
+    "points": 1,
+    "text": "Córka państwa Kowalskich raz w tygodniu kieruje samochodem swojego ojca za jego zgodą i wiedzą, aby dojechać na zajęcia dodatkowe.\nRozstrzygnij, czy córka pana Kowalskiego ma obowiązek zawarcia ubezpieczenia OC posiadaczy pojazdów mechanicznych. Odpowiedź uzasadnij.\nRozstrzygnięcie:\nUzasadnienie:"
+   },
+   {
+    "id": "informator-cke-z22",
+    "label": "22",
+    "number": 22,
+    "kind": "context",
+    "points": 0,
+    "text": "Źródło 1. Fragment poradnika przedsiębiorcy\nPrzedsiębiorca zatrudniający na podstawie umowy zlecenia powinien pamiętać o obowiązku naliczania i odprowadzania składek na ubezpieczenia społeczne do ZUS- u. Przedsiębiorca zwolniony jest z odprowadzania takich składek wtedy, kiedy zleceniobiorca ma inne tytuły do ubezpieczenia, których kwota jest równa lub wyższa niż minimalne wynagrodzenie. W takim przypadku obowiązkowo opłacana będzie jedynie składka zdrowotna.\nNa podstawie: poradnikprzedsiebiorcy.pl\nŹródło 2. Tabela dotycząca minimalnego wynagrodzenia w Polsce\nWynagrodzenie minimalneObowiązuje od\n3 490,00 zł01.01.2023\n3 600,00 zł01.07.2023\nNa podstawie: Dz.U. z 2022 r. poz. 1952.\n(stan prawny na 4 lipca 2025 r.)\n\nŹródło 3. Opis sytuacji\nJan 1 września 2023 r. był zatrudniony w przedsiębiorstwie państwowym w wymiarze\n0,75 etatu (na podstawie umowy o pracę), a jego miesięczne wynagrodzenie brutto wynosiło 2 700 zł (płatne przelewem). 1 września 2023 r. pracodawca zaproponował\nJanowi zwiększenie wymiaru czasu pracy do pełnego etatu oraz 500 zł podwyżki.\nJednak 1 września 2023 r. Jan zawarł umowę z wynagrodzeniem maksymalnie 1 300 zł brutto miesięcznie, do której stosuje się przepisy dotyczące umów zlecenia, z innym przedsiębiorcą."
+   },
+   {
+    "id": "informator-cke-z22-1",
+    "label": "22.1",
+    "number": 22,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, czy w opisanej sytuacji przedsiębiorca zatrudniający Jana na podstawie umowy cywilnoprawnej będzie miał obowiązek odprowadzania za niego składek na ubezpieczenia społeczne. Odpowiedź uzasadnij.\nRozstrzygnięcie:\nUzasadnienie:"
+   },
+   {
+    "id": "informator-cke-z22-2",
+    "label": "22.2",
+    "number": 22,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nPropozycja przedsiębiorcy, u którego Jan jest zatrudniony na podstawie umowy o pracę, była zgodna z prawem.\nPF\nJan otrzymał przelewem na konto 2700 zł jako wynagrodzenie z tytułu umowy o pracę za wrzesień 2023 r.\nPF"
+   },
+   {
+    "id": "informator-cke-z23",
+    "label": "23",
+    "number": 23,
+    "kind": "task",
+    "points": 2,
+    "text": "Fragment ustawy\nArt. 627. Przez umowę o dzieło przyjmujący zamówienie zobowiązuje się do wykonania oznaczonego dzieła, a zamawiający do zapłaty wynagrodzenia.\nArt. 734 § 1. Przez umowę zlecenia przyjmujący zlecenie zobowiązuje się do dokonania określonej czynności prawnej dla dającego zlecenie.\nArt. 750. Do umów o świadczenie usług, które nie są uregulowane innymi przepisami, stosuje się odpowiednio przepisy o zleceniu.\nUstawa Kodeks cywilny, Dz.U. z 2024 r. poz. 1061, z późn. zm.\n(stan prawny na 4 lipca 2025 r.)\nUzupełnij tabelę. Do każdego opisanego przypadku przyporządkuj odpowiedni przepis ustawy, który ma zastosowanie w opisanej sytuacji. Wstaw znak X we właściwe miejsca tabeli.\nArt. 627\nArt. 734 §\n1.\nArt. 750\nDorota zawarła umowę na projekt aranżacji wnętrza recepcji dla firmy „Nemo”.\nDominik ma zawrzeć umowę sprzedaży domu w imieniu\nPiotra."
+   },
+   {
+    "id": "informator-cke-z24",
+    "label": "24",
+    "number": 24,
+    "kind": "task",
+    "points": 1,
+    "text": "W Polsce w 2019 r. w gospodarce narodowej było zatrudnionych 16 120,6 tys. osób.\nJednocześnie w tym czasie liczba zarejestrowanych bezrobotnych wyniosła 866,4 tys. osób.\nNa podstawie: http://www.stat.gov.pl/wskazniki-makroekonomiczne\nNa podstawie powyższych danych oblicz stopę bezrobocia rejestrowanego w\nPolsce w 2019 r. Zapisz obliczenia. Wynik podaj w procentach zaokrąglony do jednego miejsca po przecinku.\nMiejsce na obliczenia\nOdpowiedź\nStopa bezrobocia w Polsce w 2019 r. wynosiła:%."
+   },
+   {
+    "id": "informator-cke-z25",
+    "label": "25",
+    "number": 25,
+    "kind": "task",
+    "points": 1,
+    "text": "Fragment aktu prawnego\nArt. 18.\n§ 1. Postanowienia umów o pracę oraz innych aktów, na których podstawie powstaje stosunek pracy, nie mogą być mniej korzystne dla pracownika niż przepisy prawa pracy. [...]\nArt. 103¹.\n§ 1. Przez podnoszenie kwalifikacji zawodowych rozumie się zdobywanie lub uzupełnianie wiedzy i umiejętności przez pracownika, z inicjatywy pracodawcy albo za jego zgodą.\n§ 2. Pracownikowi podnoszącemu kwalifikacje zawodowe przysługują:\n1.\nurlop szkoleniowy; [...]\nArt. 103².\n§ 1. Urlop szkoleniowy, o którym mowa w art. 103¹ § 2 pkt 1, przysługuje w wymiarze:\n[...]\n2.\n6 dni – dla pracownika przystępującego do egzaminu maturalnego [...].\nArt. 103³.\nPracodawca może przyznać pracownikowi podnoszącemu kwalifikacje zawodowe dodatkowe świadczenia, w szczególności pokryć opłaty za kształcenie, przejazd, podręczniki i zakwaterowanie.\nDz.U. z 2025 r. poz. 277 (stan prawny na 4 lipca 2025 r.)\n\nOpis sytuacji\nOd lutego 2025 r. Maciej jest zatrudniony na pół etatu jako pracownik w letnisku. W maju 2025 r. przystępuje ponownie do egzaminu maturalnego. Powiadomił o tym pracodawcę przy zawieraniu umowy, a ten zaproponował mu łącznie 5 dni urlopu szkoleniowego w związku z egzaminem maturalnym, co zostało zawarte w umowie o pracę. Ponadto Maciej zwrócił się do pracodawcy z wnioskiem o pokrycie kosztów pomocy naukowych potrzebnych, aby dobrze przygotować się do egzaminu.\nPracodawca odmownie rozpatrzył wniosek złożony przez Macieja.\nOceń, czy pracodawca w zaistniałej sytuacji postąpił zgodnie z prawem.\nZaznacz T (tak), jeśli mógł tak postąpić, albo N (nie) – jeśli nie mógł.\nPracodawca miał prawo udzielić Maciejowi urlopu szkoleniowego w wymiarze mniejszym niż 6 dni.\nTN\nPracodawca miał prawo odmówić Maciejowi zapłaty za pomoce naukowe potrzebne do przygotowań do egzaminu maturalnego.\nTN"
+   },
+   {
+    "id": "informator-cke-z26",
+    "label": "26",
+    "number": 26,
+    "kind": "context",
+    "points": 0,
+    "text": "Tabela. Składniki wynagrodzenia pracownika z pominięciem niektórych danych.\nOznaczenia: P – pracownik, Z – zakład pracy.\n\nDane osobowe\nAdam Adamowicz\nPESEL 65012561045 nauczyciel etat: 17,16/18 tyt. ub.: 011000 NFZ: 10R\nSkładniki płacowe wynagrodzenie zasadnicze\n5638\n,97 wysługa lat (20,00%)\n1127,\n79 dodatek motywacyjny\n200,0\n0\nOdliczenia i potrącenia koszty\n250,\n00 ulga\n300,\n00 potrącenia0,00\nSkładki i podatek (procent | podstawa)\npodatek (12,00% | [...])[...]\nZUS EmeP ( 9,76% |\n[...])\n[...]\nPPK PodP ( 0,00% |\n6966,76)\n0,00\nNFZ ( 9,00% | 6011,61)\n541,0\n4\nZUS RenP ( 1,50% | [...])\nPPK DodP ( 0,00% |\n6966,76)\nNFZ odl ( 0,00% | 6011,61)0,00ZUS ChoP ( 2,45% | [...])\nPPK PodZ ( 0,00% |\n6966,76)\nZUS EmeZ ( 9,76% |\n[...])\nPPK DodZ ( 0,00% |\n6966,76)\nZUS RenZ ( 6,50% | [...])\nZUS WypZ ( 0,67% |\n[...])\nFGŚP ( 0,00% |\n6966,76)\n0,00\nFP ( 2,45% | 6966,76)\n170,6\n9\nFEP ( 0,00% | 6966,76)0,00\nPodsumowanie wynagr.\n(12,00% |\n[...])\n6966\n,76\nZUS P[...]PPK P\n0,00 świadcz.\n( 9,00% |\n6011,61)\n0,00ZUS Z\n1179,\n48\nPPK Z potrąc.\n( 0,00% |\n6011,61)\n1887,\n19\nWypłata na konto\n5079\n,57 do kasy0,00sygn.0924/44_ZAS/NAU"
+   },
+   {
+    "id": "informator-cke-z26-1",
+    "label": "26.1",
+    "number": 26,
+    "kind": "task",
+    "points": 3,
+    "text": "Na podstawie powyższych danych oblicz wysokości poszczególnych składek z tytułu obowiązkowych ubezpieczeń społecznych odprowadzonych przez pracodawcę za Adama jako pracownika pomniejszających jego wynagrodzenie brutto. Zapisz obliczenia.\nMiejsce na obliczenia\nOdpowiedzi:\nWysokości poszczególnych składek z tytułu ubezpieczeń społecznych:"
+   },
+   {
+    "id": "informator-cke-z26-2",
+    "label": "26.2",
+    "number": 26,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj kwotę składki, jaka została potrącona z wynagrodzenia Adama z tytułu obowiązkowego ubezpieczenia zdrowotnego."
+   },
+   {
+    "id": "informator-cke-z26-3",
+    "label": "26.3",
+    "number": 26,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość podanych stwierdzeń. Zaznacz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nZ wynagrodzenia Adama zostało potrącone 391,00 zł na poczet podatku dochodowego od osób fizycznych.\nPF\nWynagrodzenie brutto Adama za czerwiec 2025 r. wyniosło 5079,57 zł.PF"
+   },
+   {
+    "id": "informator-cke-z27",
+    "label": "27",
+    "number": 27,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment ustawy\nArt. 94. [...]\n§ 2. [...] oznacza działania lub zachowania dotyczące pracownika lub skierowane przeciwko pracownikowi, polegające na uporczywym i długotrwałym nękaniu lub zastraszaniu pracownika, wywołujące u niego zaniżoną ocenę przydatności zawodowej, powodujące lub mające na celu poniżenie lub ośmieszenie pracownika\n[...]\nDz.U. z 2025 r. poz. 277 (stan prawny na 4 lipca 2025 r.)"
+   },
+   {
+    "id": "informator-cke-z27-1",
+    "label": "27.1",
+    "number": 27,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj nazwę zjawiska opisanego w przywołanym przepisie prawnym.\n3"
+   },
+   {
+    "id": "informator-cke-z27-2",
+    "label": "27.2",
+    "number": 27,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń, czy dokończenia poniższego zdania są prawdziwe. Zaznacz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.\nPrzejawem zjawiska opisanego w materiale źródłowym jest ciągłe izolowanie przez pracodawcę pracownika lub eliminowanie go z zespołu współpracowników.\nPF żądanie przez pracodawcę bycia dostępnym online także po godzinach pracy bez dodatkowego wynagrodzenia przez kolejnych kilkanaście miesięcy.\nPF"
+   },
+   {
+    "id": "informator-cke-z28",
+    "label": "28",
+    "number": 28,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń, czy dokończenia poniższego zdania są prawdziwe. Zaznacz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.\nJednym z obszarów wyszczególnionych w modelu BMC (ang. Business Model\nCanvas) jest obszar relacji z klientami (ang. customer relationships).PF kluczowych partnerów (ang. key partners).PF"
+   },
+   {
+    "id": "informator-cke-z29",
+    "label": "29",
+    "number": 29,
+    "kind": "task",
+    "points": 3,
+    "text": "Dane finansowe przedsiębiorstwa handlowego XYZ sp. z o.o. za rok 2023:\nprzychody: 1 500 000 zł koszty: 1 200 000 zł podatek dochodowy i pozostałe obowiązkowe zmniejszenia zysku: 60 000 zł.\nOblicz wyniki wskaźników finansowych przedsiębiorstwa XYZ sp. z o.o.: zysk brutto, zysk netto oraz wskaźnik rentowności sprzedaży (ROS) netto. Zapisz obliczenia.\nMiejsce na obliczenia\nOdpowiedzi\nZysk brutto:zł.\nZysk netto:zł.\nWskaźnik ROS netto:"
+   },
+   {
+    "id": "informator-cke-z30",
+    "label": "30",
+    "number": 30,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród A albo B oraz spośród\n1., 2. albo 3.\nKażda sp. z o.o. jest spółką\nAosobową,\nBkapitałową, co oznacza, że w polskim porządku prawnym\n1 ma ona osobowość prawną.\n2 kapitał zakładowy spółki nie jest mniejszy niż\n100 000 zł.\n3 wspólnicy tworzą ją w celu wykonywania wolnego zawodu."
+   },
+   {
+    "id": "informator-cke-z31",
+    "label": "31",
+    "number": 31,
+    "kind": "context",
+    "points": 0,
+    "text": "O zakładaniu działalności gospodarczej w Polsce\nNajważniejszy i dla wielu osób najtrudniejszy krok w procesie zakładania jednoosobowej działalności gospodarczej to prawidłowe wypełnienie wniosku na formularzu CEIDG-1. Wypełniony wniosek złożysz zarówno przez internet, jak i w sposób tradycyjny.\nNa podstawie: ksu.parp.gov.pl"
+   },
+   {
+    "id": "informator-cke-z31-1",
+    "label": "31.1",
+    "number": 31,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Zaznacz właściwą odpowiedź spośród podanych.\nTra d y c y j n y s p o sób złożenia wniosku wymieniony w tekście to\nA.złożenie go w sądzie rejonowym.\nB.przesłanie go pocztą do urzędu skarbowego.\nC.złożenie go w urzędzie gminy albo w urzędzie miasta.\nD.zarejestrowanie go w Zakładzie Ubezpieczeń Społecznych."
+   },
+   {
+    "id": "informator-cke-z31-2",
+    "label": "31.2",
+    "number": 31,
+    "kind": "task",
+    "points": 2,
+    "text": "Sformułuj argument oraz kontrargument do tezy: Jednoosobowa działalność gospodarcza to najkorzystniejszy rodzaj działalności gospodarczej dla osoby fizycznej.\nArgument:\nKontrargument:"
+   }
+  ]
+ },
+ {
+  "slug": "arkusz-autorski-1",
+  "title": "Arkusz autorski 1",
+  "period": "Maj 2026",
+  "url": "https://maturabiz.pl/arkusze/arkusz-autorski-1",
+  "kind": "autorski",
+  "maxPoints": 50,
+  "items": [
+   {
+    "id": "arkusz-autorski-1-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis scenariusza\nAnna, z wykształcenia chemiczka, pracowała przez 10 lat w dużej korporacji kosmetycznej. Zauważyła jednak, że na rynku brakuje wysokiej jakości, naturalnych świec sojowych, które podczas palenia mogą ograniczać emisję szkodliwych substancji. Mimo stabilnej sytuacji zawodowej zdecydowała się odejść z pracy i założyć własną manufakturę \"EkoBlask\". Przez pierwsze pół roku sama opracowywała receptury zapachowe i testowała różne rodzaje knotów, nie zniechęcając się początkowymi porażkami. Kiedy jej świece zaczęły zdobywać nagrody na targach rzemiosła, zainwestowała w nowoczesną linię do nalewania wosku, co pozwoliło jej znacząco zwiększyć skalę produkcji i wejść do dużych sieci handlowych."
+   },
+   {
+    "id": "arkusz-autorski-1-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie tekstu wymień cechę charakteryzującą Annę jako osobę przedsiębiorczą, która pozwoliła jej kontynuować prace nad produktem mimo początkowych porażek. Odpowiedź uzasadnij, odnosząc się do tekstu.\nCecha:\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-1-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 3,
+    "text": "Wyjaśnij, w jaki sposób innowacyjność produktu Anny przyczyniła się do zbudowania przewagi konkurencyjnej jej firmy na rynku świec.\nWyjaśnienie:"
+   },
+   {
+    "id": "arkusz-autorski-1-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "context",
+    "points": 0,
+    "text": "Tekst. Praca zespołowa w firmie FinTech\nW firmie \"QuickPay\" powołano zespół do opracowania nowej aplikacji mobilnej. W jego skład weszli:\nJan: jest niezwykle sumienny, pilnuje każdego przecinka w kodzie i denerwuje się, gdy prace nie przebiegają zgodnie z harmonogramem.\nEwa: świetnie czuje się w kontaktach z zewnętrznymi dostawcami usług, potrafi szybko znaleźć potrzebne informacje i nawiązać nowe relacje biznesowe.\nPiotr: jest generatorem pomysłów, często proponuje rozwiązania, na które nikt inny by nie wpadł, choć czasem zapomina o przyziemnych ograniczeniach budżetowych."
+   },
+   {
+    "id": "arkusz-autorski-1-z2-1",
+    "label": "2.1",
+    "number": 2,
+    "kind": "task",
+    "points": 3,
+    "text": "Na podstawie teorii ról zespołowych R.M. Belbina, dopasuj do Jana, Ewy i\nPiotra odpowiednie nazwy ról. Wybierz spośród podanych: poszukiwacz źródeł, skrupulatny wykonawca, myśliciel, koordynator.\nJan to , Ewa to , a Piotr to\n."
+   },
+   {
+    "id": "arkusz-autorski-1-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "task",
+    "points": 3,
+    "text": "Dyrekcja Biblioteki Publicznej w Mieście X zaplanowała projekt \"Nowoczesna\nCzytelnia\". Sformułowano następujący cel: \"Do końca sierpnia 2026 roku planujemy wyposażyć czytelnię w 15 nowoczesnych stanowisk komputerowych z dostępem do baz naukowych oraz przeszkolić 5 pracowników z ich obsługi, nie przekraczając budżetu 120 000 zł pozyskanych z funduszy unijnych\".\nOceń, czy powyższy cel został sformułowany zgodnie z techniką SMART.\nPodaj dwa konkretne dowody z treści celu, które potwierdzają (lub obalają)\nmierzalność (M) oraz określoność w czasie (T) tego zamierzenia.\nOcena (TAK/NIE): (TA K / N I E)\nMierzalność (dowód):\nOkreśloność w czasie (dowód):"
+   },
+   {
+    "id": "arkusz-autorski-1-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "task",
+    "points": 3,
+    "text": "W winnicy \"Słoneczne Wzgórze\" realizowane są różne działania. Działanie A:\nCoroczny zbiór winogron, wyciskanie soku i proces fermentacji powtarzany w każdym cyklu produkcyjnym według ustalonej technologii. Działanie B: Budowa nowej sali degustacyjnej wraz z tarasem widokowym, mająca na celu przyciągnięcie turystów w wyznaczonym terminie i określonym budżecie.\nPrzypisz działania A i B do pojęć \"projekt\" lub \"proces\". Uzasadnij wybór dla działania B, wskazując dwie cechy charakterystyczne dla tej formy zarządzania.\nDziałanie A:\nDziałanie B:\nUzasadnienie (cechy dla działania B):"
+   },
+   {
+    "id": "arkusz-autorski-1-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "Sytuacja na rynku zbóż\nDługotrwała susza w regionach będących głównymi producentami zboża doprowadziła do znacznego obniżenia zbiorów. Jednocześnie ceny na rynkach światowych wzrosły, co skłoniło rolników do oferowania mniejszych ilości ziarna na rynku krajowym przy każdej cenie."
+   },
+   {
+    "id": "arkusz-autorski-1-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Rozstrzygnij, która z krzywych podaży (S1 czy S2) przedstawia sytuację na krajowym rynku zboża po wystąpieniu suszy. Uzasadnij odpowiedź.\nRozstrzygnięcie: (S1 / S2)\nUzasadnienie:\nD\nS1\nS2\nP1\nQ1\nP2\nQ2\n0\nCena (PLN/t)\nIlość zboża (t)"
+   },
+   {
+    "id": "arkusz-autorski-1-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyjaśnij, w jaki sposób spadek podaży zboża wpłynął na zmianę ceny i ilości równowagi na krajowym rynku, odnosząc się do pojęcia niedoboru rynkowego przy dotychczasowej cenie P1."
+   },
+   {
+    "id": "arkusz-autorski-1-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Marek (student poniżej 26 roku życia) pracuje w kawiarni na podstawie umowy zlecenie. Jego wynagrodzenie brutto wynosi 4 500 zł miesięcznie.\nOceń prawdziwość poniższych stwierdzeń dotyczących sytuacji finansowej\nMarka. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nDzięki uldze dla młodych (zerowy PIT dla osób do 26 roku życia), kwota netto Marka będzie wyższa niż w przypadku nieuczącej się osoby powyżej 26 roku życia przy tym samym wynagrodzeniu brutto.\nPF\nMarek jako zleceniobiorca musi obowiązkowo odprowadzać składkę na ubezpieczenie chorobowe, która jest potrącana z jego wynagrodzenia brutto.\nPF\nWynagrodzenie netto Marka z tej umowy będzie równe kwocie brutto (4\n500 zł), ponieważ uczeń lub student do 26 roku życia wykonujący pracę na podstawie umowy zlecenie nie podlega obowiązkowym ubezpieczeniom społecznym ani ubezpieczeniu zdrowotnemu.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-1-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Pani Janina, emerytka, chce zainwestować 20 000 zł oszczędności. Jej głównym celem jest ochrona kapitału przed inflacją przy minimalnym ryzyku straty.\nRozstrzygnij, który z wymienionych instrumentów finansowych w największym stopniu realizuje cel pani Janiny. Odpowiedź uzasadnij.\n1.\nAkcje spółek z sektora wydobywczego.\n2.\nObligacje skarbowe indeksowane inflacją.\nRozstrzygnięcie (wpisz 1 lub 2): (1 / 2)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-1-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "task",
+    "points": 3,
+    "text": "Fragment Kodeksu pracy\nArt. 151.\n§ 1. Praca wykonywana ponad obowiązujące pracownika normy czasu pracy [...] stanowi pracę w godzinach nadliczbowych. Praca ta jest dopuszczalna w razie:\n1) konieczności prowadzenia akcji ratowniczej [...];\n2) szczególnych potrzeb pracodawcy.\nNa podstawie: art. 151 § 1 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (tekst jednolity:\nDz.U. z 2025 r. poz. 277, z późn. zm.), stan prawny na 5 listopada 2026 r.\nPani Maria, pracownik biurowy, została poproszona o pozostanie w pracy przez\n3 dodatkowe godziny w związku z koniecznością przygotowania pilnego raportu dla zarządu (szczególna potrzeba pracodawcy). Wyjaśnij, w jakiej formie pracodawca może zrekompensować pani Marii pracę w godzinach nadliczbowych zgodnie z przepisami prawa pracy."
+   },
+   {
+    "id": "arkusz-autorski-1-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "task",
+    "points": 3,
+    "text": "Urząd Pracy w Mieście Y ogłosił nabór na program \"Pierwszy Staż\", finansowany ze środków Funduszu Pracy.\nPodaj, do którego rodzaju polityki państwa na rynku pracy (aktywnej czy pasywnej) zalicza się organizowanie staży dla osób bezrobotnych. Odpowiedź uzasadnij, wskazując główny cel takiego działania.\nRodzaj polityki: (aktywnej / pasywnej)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-1-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "task",
+    "points": 3,
+    "text": "Dwoje lekarzy weterynarii, Anna i Tomasz, postanowiło wspólnie otworzyć przychodnię \"Zdrowy Pupil\". Zdecydowali się na formę spółki cywilnej, aby uprościć formalności związane z rejestracją i prowadzeniem księgowości.\nPodaj jedną wadę prowadzenia działalności w formie spółki cywilnej w porównaniu do spółki z ograniczoną odpowiedzialnością, odnosząc się do kwestii odpowiedzialności wspólników za zobowiązania spółki.\nWada:"
+   },
+   {
+    "id": "arkusz-autorski-1-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "context",
+    "points": 0,
+    "text": "Wykres. Średni miesięczny kurs dolara amerykańskiego (USD) względem złotego (PLN) w 2024 r.\nŹródło: api.nbp.pl\nFirma \"TechComp\" importuje podzespoły elektroniczne z Tajwanu, rozliczając się w dolarach amerykańskich (USD)."
+   },
+   {
+    "id": "arkusz-autorski-1-z11-1",
+    "label": "11.1",
+    "number": 11,
+    "kind": "task",
+    "points": 3,
+    "text": "Na podstawie wykresu rozstrzygnij, w którym kwartale 2024 roku warunki do importu podzespołów były dla firmy \"TechComp\" najkorzystniejsze (przy założeniu stałej ceny w USD). Odpowiedź uzasadnij, wskazując miesiąc o najkorzystniejszym kursie.\nNajkorzystniejszy kwartał:\nUzasadnienie:\nIIIIIIIVVVIVIIVIIIIXXXIXII\n3.835\n3.9\n3.965\n4.03\n4.095\nKurs (PLN)"
+   },
+   {
+    "id": "arkusz-autorski-1-z11-2",
+    "label": "11.2",
+    "number": 11,
+    "kind": "task",
+    "points": 3,
+    "text": "Wyjaśnij, jak wyraźny wzrost kursu USD/PLN zaobserwowany w listopadzie\n2024 r. mógł wpłynąć na rentowność sprzedaży produktów firmy \"TechComp\" na rynku polskim, jeśli firma nie zmieniła swoich cen detalicznych w PLN."
+   },
+   {
+    "id": "arkusz-autorski-1-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "task",
+    "points": 3,
+    "text": "Startup biotechnologiczny \"BioNova\" opracował innowacyjną metodę utylizacji mikroplastiku. Firma potrzebuje 2 mln zł na budowę prototypu reaktora. Założyciele rozważają pozyskanie funduszy od funduszu Venture Capital (VC).\nWyjaśnij, na czym polega specyfika finansowania typu Venture Capital i dlaczego jest ono często wybierane przez innowacyjne firmy o wysokim stopniu ryzyka, które nie mają dostępu do tradycyjnych kredytów bankowych."
+   },
+   {
+    "id": "arkusz-autorski-1-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "task",
+    "points": 3,
+    "text": "Ogólnopolska sieć supermarketów \"Zielony Rynek\" wprowadziła program \"Zero\nWaste\", w ramach którego produkty z krótką datą ważności są przeceniane o 70% lub przekazywane lokalnym bankom żywności. Dodatkowo firma zrezygnowała z foliowych woreczków na działach warzywnych na rzecz wielorazowych siatek.\nPodaj nazwę koncepcji zarządzania, która zakłada uwzględnianie wpływu przedsiębiorstwa na społeczeństwo i środowisko, a którą realizuje sieć\n\"Zielony Rynek\" poprzez opisane działania. Wyjaśnij, jaką korzyść (poza wizerunkową) może odnieść przedsiębiorstwo stosujące tę koncepcję.\nNazwa koncepcji:\nKorzyść:"
+   },
+   {
+    "id": "arkusz-autorski-1-z14",
+    "label": "14",
+    "number": 14,
+    "kind": "context",
+    "points": 0,
+    "text": "Główny Urząd Statystyczny ogłosił, że średnioroczny wskaźnik cen towarów i usług konsumpcyjnych w Polsce w 2024 roku wzrósł o 3,6%. W tym samym okresie przeciętne miesięczne wynagrodzenie brutto w gospodarce narodowej wzrosło nominalnie o 13,6%.\nŹródło danych: GUS, „Sytuacja społeczno-gospodarcza kraju – Wynagrodzenia i świadczenia społeczne” (2025) oraz komunikat o średniorocznym wskaźniku cen towarów i usług konsumpcyjnych za 2024 r."
+   },
+   {
+    "id": "arkusz-autorski-1-z14-1",
+    "label": "14.1",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, co oznacza pojęcie \"inflacja\" oraz w jaki sposób inflacja wpływa na realną siłę nabywczą gospodarstw domowych.\nWyjaśnienie inflacji i jej wpływu na siłę nabywczą:"
+   },
+   {
+    "id": "arkusz-autorski-1-z14-2",
+    "label": "14.2",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Oblicz procentową zmianę realnych wynagrodzeń w 2024 roku. Zapisz obliczenia.\nMiejsce na obliczenia\nZmiana realnych wynagrodzeń:%"
+   },
+   {
+    "id": "arkusz-autorski-1-z14-3",
+    "label": "14.3",
+    "number": 14,
+    "kind": "task",
+    "points": 1,
+    "text": "Sformułuj wniosek o sytuacji materialnej pracowników w 2024 roku.\nWniosek:"
+   },
+   {
+    "id": "arkusz-autorski-1-z15",
+    "label": "15",
+    "number": 15,
+    "kind": "context",
+    "points": 0,
+    "text": "Założyciele startupu \"EcoDrive\", który produkuje oprogramowanie do optymalizacji tras dla flot pojazdów elektrycznych, przeprowadzili analizę SWOT swojego przedsięwzięcia.\nMocne strony (S)Słabe strony (W)\nInnowacyjny algorytm oparty na sztucznej inteligencji\nZespół doświadczonych programistów\nBrak doświadczenia w sprzedaży B2B\nOgraniczone zasoby finansowe\nSzanse (O)Zagrożenia (T)\nRosnący popyt na rozwiązania proekologiczne w transporcie\nMożliwość pozyskania dofinansowania z funduszy unijnych\nWejście na rynek dużych konkurentów z zagranicy\nNiepewność regulacji prawnych dotyczących pojazdów elektrycznych"
+   },
+   {
+    "id": "arkusz-autorski-1-z15-1",
+    "label": "15.1",
+    "number": 15,
+    "kind": "task",
+    "points": 3,
+    "text": "Na podstawie powyższej analizy SWOT sformułuj jedną konkretną rekomendację strategiczną dla firmy \"EcoDrive\". Rekomendacja powinna łączyć co najmniej dwa elementy z różnych kategorii SWOT (np. wykorzystanie mocnej strony do realizacji szansy). Uzasadnij rekomendację.\nRekomendacja:\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-1-z15-2",
+    "label": "15.2",
+    "number": 15,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie powyższej analizy SWOT sformułuj drugą konkretną rekomendację strategiczną dla firmy \"EcoDrive\". Rekomendacja powinna łączyć co najmniej dwa elementy z różnych kategorii SWOT (np. rozwiązanie słabej strony w celu minimalizacji zagrożenia). Uzasadnij rekomendację.\nRekomendacja:\nUzasadnienie:"
+   }
+  ]
+ },
+ {
+  "slug": "arkusz-autorski-2",
+  "title": "Arkusz autorski 2",
+  "period": "Sierpień 2026",
+  "url": "https://maturabiz.pl/arkusze/arkusz-autorski-2",
+  "kind": "autorski",
+  "maxPoints": 50,
+  "items": [
+   {
+    "id": "arkusz-autorski-2-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji\nPaweł planuje uruchomić punkt naprawy drobnego sprzętu elektronicznego.\nZakładał, że w każdy weekend obsłuży 60 klientów. Przed podpisaniem trzyletniej umowy najmu przeprowadził dwudniowy pilotaż w wynajętym stanowisku. Z usługi skorzystały 34 osoby, a 19 kolejnych zapytało o naprawy, których Paweł nie miał jeszcze w ofercie. Po analizie wyników zrezygnował z długoterminowego najmu, rozszerzył zakres usług i uzgodnił możliwość wynajmowania stanowiska na pojedyncze weekendy."
+   },
+   {
+    "id": "arkusz-autorski-2-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Zaznacz odpowiedź A albo B oraz odpowiedź 1 albo 2.\nDecyzja Pawła o rezygnacji z trzyletniej umowy najmu była decyzją\nAintuicyjną,\nBracjonalną, ponieważ była\n1 oparta na danych uzyskanych podczas pilotażu.\n2 podjęta wyłącznie na podstawie jego przeczucia."
+   },
+   {
+    "id": "arkusz-autorski-2-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj jedno ryzyko przedsięwzięcia, które Paweł ograniczył dzięki przeprowadzeniu pilotażu, oraz jedno ryzyko, które nadal występuje mimo przeprowadzenia pilotażu. Każdą odpowiedź uzasadnij informacją z opisu.\nRyzyko ograniczone:\nRyzyko nadal występujące:"
+   },
+   {
+    "id": "arkusz-autorski-2-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "context",
+    "points": 0,
+    "text": "Zespół projektowy przygotowuje internetową mapę lokalnych przedsiębiorców.\nPodczas pierwszych spotkań członkowie zespołu uprzejmie przyjmowali wszystkie propozycje. Po podziale zadań pojawił się spór o to, czy najpierw rozbudować bazę firm, czy funkcję wyszukiwania. Kierownik uznał, że sam spór świadczy o braku współpracy, i zapowiedział, że od tej pory wszystkie decyzje będzie podejmował sam.\nUrząd miasta udostępnia zespołowi dane i musi zatwierdzić ich publikację. Jest zainteresowany terminowym uruchomieniem mapy i może wstrzymać publikację, jeżeli projekt nie spełni wymagań prawnych."
+   },
+   {
+    "id": "arkusz-autorski-2-z2-1",
+    "label": "2.1",
+    "number": 2,
+    "kind": "task",
+    "points": 2,
+    "text": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nSpór dotyczący priorytetów projektu może wystąpić w fazie ścierania się zespołu według modelu Tuckmana.\nPF\nSamodzielne przejęcie wszystkich decyzji przez kierownika oznacza, że zespół osiągnął fazę normowania, nawet jeśli członkowie nie ustalili wspólnych zasad współpracy.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-2-z2-2",
+    "label": "2.2",
+    "number": 2,
+    "kind": "task",
+    "points": 1,
+    "text": "Określ właściwy sposób zarządzania relacją z urzędem miasta jako interesariuszem projektu. Odpowiedź uzasadnij jego wpływem na projekt i zainteresowaniem projektem."
+   },
+   {
+    "id": "arkusz-autorski-2-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "context",
+    "points": 0,
+    "text": "Firma kurierska codziennie przyjmuje przesyłki, sortuje je według stałej procedury i przekazuje do doręczenia. Jednocześnie firma planuje jednorazowe wdrożenie nowego systemu do wyznaczania tras. Wdrożenie ma potrwać sześć miesięcy i zakończyć się uruchomieniem systemu we wszystkich oddziałach."
+   },
+   {
+    "id": "arkusz-autorski-2-z3-1",
+    "label": "3.1",
+    "number": 3,
+    "kind": "task",
+    "points": 1,
+    "text": "Uzupełnij zdanie wyrazami „proces” i „projekt” w odpowiedniej formie.\nCodzienne sortowanie przesyłek jest , natomiast jednorazowe wdrożenie nowego systemu jest ."
+   },
+   {
+    "id": "arkusz-autorski-2-z3-2",
+    "label": "3.2",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Kierownik sformułował cel wdrożenia następująco: „W najbliższym czasie znacząco poprawimy wyznaczanie tras”. Wskaż dwa kryteria SMART, których nie spełnia ten cel, a następnie zapisz jego poprawioną wersję zawierającą miernik rezultatu i termin.\nNiespełnione kryteria SMART:\nPoprawiony cel:"
+   },
+   {
+    "id": "arkusz-autorski-2-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "context",
+    "points": 0,
+    "text": "Plan projektu wdrożenia systemu\nZadanie może rozpocząć się dopiero po zakończeniu wszystkich zadań wskazanych w kolumnie „Poprzednik”.\nZadanie\nCzas trwania\nPoprzed nik\nKoszt\nA. Analiza wymagań2 dni–1 000 zł\nB. Projekt rozwiązania3 dniA2 500 zł\nC. Uzyskanie zgód4 dniA500 zł\nD. Wdrożenie systemu6 dniB i C8 000 zł\nE. Testy końcowe3 dniD1 500 zł\nF. Szkolenie pracowników2 dniD1 200 zł\nG. Uruchomienie systemu1 dzieńE i F300 zł"
+   },
+   {
+    "id": "arkusz-autorski-2-z4-1",
+    "label": "4.1",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyznacz ścieżkę krytyczną projektu i podaj najkrótszy możliwy czas jego realizacji.\nŚcieżka krytyczna:\nCzas realizacji projektu:dni"
+   },
+   {
+    "id": "arkusz-autorski-2-z4-2",
+    "label": "4.2",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Czas realizacji zadania B wydłużył się o 2 dni. Oblicz nowy czas realizacji całego projektu i wyjaśnij, dlaczego projekt nie wydłuży się o pełne 2 dni.\nMiejsce na obliczenia\nNowy czas realizacji projektu:dni\nWyjaśnienie:"
+   },
+   {
+    "id": "arkusz-autorski-2-z4-3",
+    "label": "4.3",
+    "number": 4,
+    "kind": "task",
+    "points": 1,
+    "text": "Oblicz budżet projektu, jeżeli do sumy kosztów wszystkich zadań należy dodać rezerwę w wysokości 10%. Zapisz obliczenia.\nMiejsce na obliczenia\nBudżet projektu z rezerwą:zł."
+   },
+   {
+    "id": "arkusz-autorski-2-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "Rząd wprowadził podatek kwotowy obciążający sprzedawców produktu X. Popyt na produkt nie zmienił się. Na wykresie przedstawiono krzywą popytu D oraz dwie krzywe podaży S1 i S2. Jedna krzywa podaży opisuje rynek bez podatku, a druga – rynek po jego wprowadzeniu."
+   },
+   {
+    "id": "arkusz-autorski-2-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, która krzywa podaży – S1 czy S2 – opisuje rynek po wprowadzeniu podatku. Uzasadnij odpowiedź wpływem podatku na koszty sprzedawców i wielkość podaży przy danej cenie.\nRozstrzygnięcie: (S1 / S2)\nUzasadnienie:\nD\nS1\nS2\nP1\nQ1\nP2\nQ2\n0\nCena (zł/szt.)\nIlość (tys. szt.)"
+   },
+   {
+    "id": "arkusz-autorski-2-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Odczytaj z wykresu cenę i ilość równowagi rynkowej po wprowadzeniu podatku.\nCena równowagi:zł\nIlość równowagi:tys. szt."
+   },
+   {
+    "id": "arkusz-autorski-2-z5-3",
+    "label": "5.3",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Po wprowadzeniu podatku państwo ustaliło cenę maksymalną na poziomie 120 zł. Na podstawie wykresu określ, czy na rynku powstanie nadwyżka, czy niedobór, oraz oblicz jego wielkość.\nRodzaj nierównowagi: (nadwyżka / niedobór)\nWielkość nierównowagi:tys. szt."
+   },
+   {
+    "id": "arkusz-autorski-2-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "context",
+    "points": 0,
+    "text": "Tabela. Wybrane dane makroekonomiczne\nRok\nZmiana realnego\nPKB r/r\nStopa bezrobocia\nInflacja CPI\n2023–1,8%8,9%3,0%\n2024+0,3%9,1%2,0%\n2025+3,2%7,8%4,5%\n2026+5,1%6,2%7,8%\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-2-z6-1",
+    "label": "6.1",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Uwzględniając zmiany realnego PKB i stopy bezrobocia w latach 2023–2025, wskaż fazę klasycznego cyklu koniunkturalnego, która najlepiej opisuje gospodarkę w 2025 roku.\nA.recesja\nB.ożywienie\nC.szczyt\nD.dno"
+   },
+   {
+    "id": "arkusz-autorski-2-z6-2",
+    "label": "6.2",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Dokończ zdanie. Zaznacz odpowiedź A albo B oraz odpowiedź 1 albo 2.\nW warunkach przedstawionych dla 2026 roku bank centralny, chcąc ograniczyć presję inflacyjną, powinien\nA obniżyć stopy procentowe,\nB podwyższyć stopy procentowe, co zazwyczaj prowadzi do\n1 spadku kosztu kredytu i wzrostu popytu w gospodarce.\n2 wzrostu kosztu kredytu i osłabienia popytu w gospodarce."
+   },
+   {
+    "id": "arkusz-autorski-2-z6-3",
+    "label": "6.3",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Przyjmij, że na początku 2025 roku realny PKB wynosił 250 mld zł. Oblicz jego wartość na koniec 2026 roku oraz łączny procentowy wzrost w latach 2025–\n2026. Nie sumuj rocznych stóp wzrostu. Wyniki zaokrąglij do jednego miejsca po przecinku.\nMiejsce na obliczenia\nRealny PKB na koniec 2026 roku:mld zł.\nŁączny wzrost realnego PKB:%."
+   },
+   {
+    "id": "arkusz-autorski-2-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "context",
+    "points": 0,
+    "text": "W pewnym roku dochody budżetu państwa wyniosły 620 mld zł, a wydatki – 700 mld zł. Dług publiczny na początku roku wynosił 1 300 mld zł. Na potrzeby zadania przyjmij, że wynik budżetu został w całości sfinansowany zmianą długu publicznego, a inne czynniki nie wpływały na jego wysokość.\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-2-z7-1",
+    "label": "7.1",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz wynik budżetu państwa i wysokość długu publicznego na koniec roku.\nOkreśl, czy wystąpiła nadwyżka, czy deficyt.\nMiejsce na obliczenia\nWynik budżetu:mld zł.\nRodzaj wyniku: (nadwyżka / deficyt)\nDług publiczny na koniec roku:mld zł."
+   },
+   {
+    "id": "arkusz-autorski-2-z7-2",
+    "label": "7.2",
+    "number": 7,
+    "kind": "task",
+    "points": 1,
+    "text": "W okresie recesji rząd zwiększył wydatki inwestycyjne, nie podnosząc podatków. Takie działanie jest przykładem polityki\nA.fiskalnej ekspansywnej, która może zwiększać popyt globalny.\nB.fiskalnej restrykcyjnej, która ma bezpośrednio zmniejszać popyt globalny.\nC.pieniężnej ekspansywnej prowadzonej przez bank centralny.\nD.pieniężnej restrykcyjnej prowadzonej przez parlament."
+   },
+   {
+    "id": "arkusz-autorski-2-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "context",
+    "points": 0,
+    "text": "Polski importer zamówił od zagranicznego dostawcy dwie identyczne partie towaru.\nKażda faktura opiewała na 50 000 euro. Pierwszą fakturę opłacił w styczniu 2022 roku, a drugą w październiku 2022 roku. Przyjmij, że zastosowano średni kurs\nEUR/PLN z danego miesiąca i pomiń opłaty bankowe.\nMiesiącŚredni kurs EUR/PLN\nStyczeń 20224.5521\nPaździernik 20224.8069\nŹródło: NBP, Tabela A kursów średnich; wartości miesięczne obliczono jako średnią z notowań dziennych (api.nbp.pl)."
+   },
+   {
+    "id": "arkusz-autorski-2-z8-1",
+    "label": "8.1",
+    "number": 8,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz koszt każdej faktury w złotych oraz różnicę między tymi kosztami.\nWyniki podaj z dokładnością do 1 zł.\nMiejsce na obliczenia\nKoszt w styczniu:zł.\nKoszt w październiku:zł.\nRóżnica:zł."
+   },
+   {
+    "id": "arkusz-autorski-2-z8-2",
+    "label": "8.2",
+    "number": 8,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, jak ta sama zmiana kursu wpłynęłaby na przychód polskiego eksportera, który w obu miesiącach otrzymał po 50 000 euro i wymienił je na złote."
+   },
+   {
+    "id": "arkusz-autorski-2-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "context",
+    "points": 0,
+    "text": "Oprocentowanie rocznej lokaty wynosi 6,5%, a przewidywana inflacja w tym samym okresie – 4,0%. Pomiń podatek od zysków kapitałowych.\nDo obliczenia dokładnej realnej stopy zwrotu wykorzystaj wzór:\nW oznaczeniach wzoru: to realna stopa zwrotu, to nominalna stopa oprocentowania, a to stopa inflacji. Wszystkie stopy zapisz w postaci dziesiętnej, np. ."
+   },
+   {
+    "id": "arkusz-autorski-2-z9-1",
+    "label": "9.1",
+    "number": 9,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz realną stopę zwrotu z lokaty. Wynik podaj w procentach i zaokrąglij do jednego miejsca po przecinku. Zinterpretuj otrzymany wynik w odniesieniu do siły nabywczej oszczędności.\nMiejsce na obliczenia\nRealna stopa zwrotu:%.\nInterpretacja:\nr realna r nominalna\nπ\n6,5%=0,065 r= realna\n−1×(\n1+π\n1+r nominalna\n)100%"
+   },
+   {
+    "id": "arkusz-autorski-2-z9-2",
+    "label": "9.2",
+    "number": 9,
+    "kind": "task",
+    "points": 1,
+    "text": "Marek ma 30 000 zł. Kwotę 10 000 zł będzie musiał wydać za cztery miesiące.\nPozostałe środki może inwestować przez osiem lat i akceptuje umiarkowane ryzyko.\nWybierz strategię najlepiej dopasowaną do sytuacji Marka.\nA.Zainwestowanie całej kwoty w akcje jednej spółki.\nB.Pozostawienie 10 000 zł w płynnej formie i zdywersyfikowanie pozostałej części między różne instrumenty.\nC.Zamrożenie całej kwoty w inwestycji, z której nie można wycofać środków przez osiem lat.\nD.Przeznaczenie całej kwoty na aktywo o najwyższej stopie zwrotu z poprzedniego roku."
+   },
+   {
+    "id": "arkusz-autorski-2-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragmenty Kodeksu cywilnego\nArt. 15. Ograniczoną zdolność do czynności prawnych mają małoletni, którzy ukończyli lat trzynaście, oraz osoby ubezwłasnowolnione częściowo.\nArt. 17. Z zastrzeżeniem wyjątków w ustawie przewidzianych, do ważności czynności prawnej, przez którą osoba ograniczona w zdolności do czynności prawnych zaciąga zobowiązanie lub rozporządza swoim prawem, potrzebna jest zgoda jej przedstawiciela ustawowego.\nArt. 20. Osoba ograniczona w zdolności do czynności prawnych może bez zgody przedstawiciela ustawowego zawierać umowy należące do umów powszechnie zawieranych w drobnych bieżących sprawach życia codziennego.\nNa podstawie: art. 15, art. 17 i art. 20 ustawy z dnia 23 kwietnia 1964 r. – Kodeks cywilny (tekst jednolity: Dz.U. z 2025 r. poz. 1071), stan prawny na 25 czerwca 2026 r.\nSzesnastoletni Kacper bez wiedzy rodziców podpisał umowę z klubem fitness na 12 miesięcy. Miesięczna opłata wynosi 150 zł, a wcześniejsze rozwiązanie umowy wiąże się z dodatkową opłatą. Tego samego dnia kupił w szkolnym sklepiku obiad za 20 zł."
+   },
+   {
+    "id": "arkusz-autorski-2-z10-1",
+    "label": "10.1",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, czy do ważności umowy z klubem fitness potrzebna jest zgoda przedstawiciela ustawowego Kacpra. Uzasadnij odpowiedź, odwołując się do wieku Kacpra, charakteru zobowiązania oraz przytoczonych przepisów.\nRozstrzygnięcie: (zgoda jest potrzebna / zgoda nie jest potrzebna)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-2-z10-2",
+    "label": "10.2",
+    "number": 10,
+    "kind": "task",
+    "points": 1,
+    "text": "Zakup obiadu przez Kacpra bez zgody rodziców jest\nA.ważny, ponieważ należy do drobnych bieżących spraw życia codziennego.\nB.nieważny, ponieważ każda umowa zawarta przez osobę poniżej 18 lat wymaga zgody rodziców.\nC.ważny wyłącznie wtedy, gdy sprzedawca nie zna wieku kupującego.\nD.nieważny, ponieważ osoba małoletnia nie może rozporządzać żadną kwotą pieniędzy."
+   },
+   {
+    "id": "arkusz-autorski-2-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "context",
+    "points": 0,
+    "text": "Opisano trzy sposoby wykonywania pracy.\n1.\nMarta pracuje od poniedziałku do piątku w godzinach 8:00–16:00 w siedzibie firmy, pod kierownictwem przełożonego i zgodnie z ustalonym zakresem obowiązków.\n2.\nAdam zobowiązał się przygotować kompletny projekt znaku graficznego i przekazać gotowy rezultat do określonego dnia za ustalone wynagrodzenie.\n3.\nEwa przez miesiąc przyjmuje w imieniu firmy zamówienia klientów. Ma działać z należytą starannością, ale nie odpowiada za osiągnięcie z góry określonego rezultatu."
+   },
+   {
+    "id": "arkusz-autorski-2-z11-1",
+    "label": "11.1",
+    "number": 11,
+    "kind": "task",
+    "points": 3,
+    "text": "Do każdego opisu przyporządkuj najbardziej odpowiednią podstawę wykonywania pracy: umowę o pracę, umowę o dzieło albo umowę zlecenia.\nOsobaPodstawa wykonywania pracy\nMarta\nAdam\nEwa"
+   },
+   {
+    "id": "arkusz-autorski-2-z11-2",
+    "label": "11.2",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "Wyjaśnij, dlaczego zatrudnienie Marty nie powinno zostać zastąpione umową cywilnoprawną, jeżeli sposób wykonywania jej pracy pozostanie bez zmian.\nOdwołaj się do jednej cechy stosunku pracy opisanej w sytuacji."
+   },
+   {
+    "id": "arkusz-autorski-2-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "context",
+    "points": 0,
+    "text": "W regionie mieszka 40 000 osób w wieku produkcyjnym. Spośród nich 29 500 osób pracuje, a 1 500 osób nie pracuje, lecz aktywnie poszukuje zatrudnienia i jest gotowych do podjęcia pracy. Pozostałe osoby są bierne zawodowo.\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-2-z12-1",
+    "label": "12.1",
+    "number": 12,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz współczynnik aktywności zawodowej oraz stopę bezrobocia. Wyniki podaj w procentach i zaokrąglij do jednego miejsca po przecinku. Zapisz obliczenia.\nMiejsce na obliczenia\nWspółczynnik aktywności zawodowej:%.\nStopa bezrobocia:%."
+   },
+   {
+    "id": "arkusz-autorski-2-z12-2",
+    "label": "12.2",
+    "number": 12,
+    "kind": "task",
+    "points": 1,
+    "text": "Po uruchomieniu programu aktywizacji zawodowej 300 osób bezrobotnych znalazło pracę. Przyjmij, że liczba aktywnych zawodowo się nie zmieniła.\nOblicz nową stopę bezrobocia.\nNowa stopa bezrobocia:%."
+   },
+   {
+    "id": "arkusz-autorski-2-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment Kodeksu pracy\nArt. 94³ § 1. Pracodawca jest obowiązany systematycznie przeciwdziałać mobbingowi w szczególności przez działania prewencyjne, wykrywanie mobbingu oraz właściwe reagowanie na mobbing, a także przez działania naprawcze i wsparcie osób dotkniętych mobbingiem.\nArt. 94³ § 2. Mobbing oznacza zachowania polegające na uporczywym nękaniu pracownika.\nArt. 94³ § 3. Uporczywość nękania polega na tym, że jest ono powtarzalne, nawracające lub stałe. Mobbingiem nie są zachowania incydentalne, choćby stanowiły naruszenie dóbr osobistych pracownika.\nArt. 94³ § 4. Przejawami mobbingu są – występujące samodzielnie lub łącznie – w szczególności: upokarzanie, uwłaczanie, zastraszanie, zaniżanie oceny przydatności zawodowej pracownika, nieuzasadniona krytyka, poniżanie lub ośmieszanie pracownika, utrudnianie funkcjonowania w środowisku pracy oraz izolowanie pracownika lub eliminowanie go z zespołu – gdy przyjmują postać uporczywego nękania.\nNa podstawie: art. 94³ § 1–4 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy, w brzmieniu nadanym ustawą z dnia 19 czerwca 2026 r. (Dz.U. z 2026 r. poz. 1046), stan prawny od 5 listopada 2026 r.\nPrzypadek A. Kierownik jednorazowo, podczas rozmowy w cztery oczy, wskazał pracownikowi trzy błędy w raporcie i poprosił o ich poprawienie.\nPrzypadek B. Przez siedem miesięcy kierownik co tydzień ośmieszał pracownicę przy zespole, pomijał ją w spotkaniach i bez uzasadnienia nazywał nieprzydatną."
+   },
+   {
+    "id": "arkusz-autorski-2-z13-1",
+    "label": "13.1",
+    "number": 13,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, który przypadek może spełniać ustawowe przesłanki mobbingu.\nW uzasadnieniu wskaż dwie przesłanki wynikające z przytoczonego przepisu i opisu sytuacji.\nRozstrzygnięcie: (przypadek A / przypadek B)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-2-z14",
+    "label": "14",
+    "number": 14,
+    "kind": "context",
+    "points": 0,
+    "text": "Przedsiębiorstwo „RefillBox” oferuje organizacjom system opakowań wielokrotnego użytku. Firma ma opatentowane zamknięcie ograniczające wycieki, ale nie posiada własnego zespołu sprzedażowego. W następnym roku miasto planuje uruchomić dotacje dla podmiotów ograniczających odpady. Jednocześnie na lokalny rynek zamierza wejść duży konkurent zagraniczny.\nBadanie dwóch segmentów rynku przyniosło następujące wyniki:\nCecha segmentuStołówki szkolneHotele\nLiczba potencjalnych klientów5018\nŚrednie miesięczne zapotrzebowanie jednego klienta\n500 opakowań2 000 opakowań\nWrażliwość na cenęwysokaniska\nZnaczenie certyfikowanego procesu mycia umiarkowanebardzo wysokie\n„RefillBox” zamierza oferować usługę premium z certyfikowanym procesem mycia i wyższą ceną."
+   },
+   {
+    "id": "arkusz-autorski-2-z14-1",
+    "label": "14.1",
+    "number": 14,
+    "kind": "task",
+    "points": 2,
+    "text": "Wskaż jedną słabą stronę przedsiębiorstwa „RefillBox” oraz jedną szansę w jego otoczeniu. Każdy element musi wynikać z opisu sytuacji.\nSłaba strona:\nSzansa:"
+   },
+   {
+    "id": "arkusz-autorski-2-z14-2",
+    "label": "14.2",
+    "number": 14,
+    "kind": "task",
+    "points": 2,
+    "text": "Wybierz segment rynku lepiej dopasowany do planowanej usługi premium.\nUzasadnij wybór dwiema informacjami z tabeli.\nWybrany segment: (stołówki szkolne / hotele)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-2-z15",
+    "label": "15",
+    "number": 15,
+    "kind": "context",
+    "points": 0,
+    "text": "Plan finansowy przedsiębiorstwa\nPrzedsiębiorstwo sprzedaje zestawy opakowań wielokrotnego użytku. Cena jednego zestawu wynosi 80 zł, jednostkowy koszt zmienny – 50 zł, a miesięczne koszty stałe\n– 18 000 zł.\nDo obliczeń możesz wykorzystać wzory:\nW oznaczeniach wzorów: oznacza próg rentowności w liczbie zestawów, – próg rentowności w złotych, – miesięczne koszty stałe, – cenę jednego zestawu, a – jednostkowy koszt zmienny.\nBEP ilociowy sˊ\nBEP wartociowy sˊ\nK s\nPk zm\nBEP= ilociowy sˊ\nP−k zm\nK s\nBEP= wartociowy sˊ\nBEP× ilociowy sˊ\nP"
+   },
+   {
+    "id": "arkusz-autorski-2-z15-1",
+    "label": "15.1",
+    "number": 15,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz ilościowy i wartościowy próg rentowności przedsiębiorstwa. Zapisz obliczenia.\nMiejsce na obliczenia\nIlościowy próg rentowności:zestawów.\nWartościowy próg rentowności:zł."
+   },
+   {
+    "id": "arkusz-autorski-2-z15-2",
+    "label": "15.2",
+    "number": 15,
+    "kind": "task",
+    "points": 1,
+    "text": "W danym miesiącu przedsiębiorstwo sprzedało 750 zestawów. Oblicz jego wynik finansowy przed opodatkowaniem i określ, czy osiągnęło zysk, czy stratę.\nMiejsce na obliczenia\nWynik finansowy:zł.\nRozstrzygnięcie: (zysk / strata)"
+   }
+  ]
+ },
+ {
+  "slug": "arkusz-autorski-3",
+  "title": "Arkusz autorski 3",
+  "period": "Wrzesień 2026",
+  "url": "https://maturabiz.pl/arkusze/arkusz-autorski-3",
+  "kind": "autorski",
+  "maxPoints": 50,
+  "items": [
+   {
+    "id": "arkusz-autorski-3-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji\nMichał założył przedsiębiorstwo produkujące biodegradowalne opakowania transportowe z wytłoków konopnych i słomy. Zauważył lukę na rynku po zaostrzeniu unijnych norm dotyczących redukcji tworzyw sztucznych w logistyce. Początkowo napotkał problem z kruchością materiału przy dużej wilgotności powietrza. Zamiast porzucić pomysł, nawiązał współpracę z instytutem badawczym, opracował nową recepturę ekologicznego spoiwa i uzyskał ochronę patentową na nowatorski kompozyt. Zanim rozpoczął seryjną produkcję na dużą skalę, przeprowadził testy w trzech lokalnych sklepach internetowych, dostosowując wymiary i grubość opakowań do realnych uwag pakowaczy i kurierów."
+   },
+   {
+    "id": "arkusz-autorski-3-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj jedną cechę osoby przedsiębiorczej widoczną w działaniach Michała oraz uzasadnij odpowiedź, odwołując się do konkretnego zdarzenia z opisu sytuacji.\nCecha:\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-3-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Wybierz właściwe dokończenie zdania. Opracowanie i opatentowanie przez firmę Michała nowego materiału kompozytowego stanowi innowację\nA.procesową, ponieważ polega na zmianie metody organizacji i podziału zadań w zespole.\nB.produktową, ponieważ polega na wprowadzeniu na rynek wyrobu o zupełnie nowych właściwościach użytkowych.\nC.marketingową, ponieważ dotyczy nowego sposobu pakowania i prezentacji marki konsumentom.\nD.organizacyjną, ponieważ modyfikuje strukturę prawną i kapitałową przedsiębiorstwa."
+   },
+   {
+    "id": "arkusz-autorski-3-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "task",
+    "points": 2,
+    "text": "Zespół badawczo-rozwojowy zorganizował sesję poszukiwania alternatywnych surowców uszczelniających. Lider zespołu ogłosił klasyczną burzę mózgów (brainstorming według metodyki Aleksa Osborna) i przypomniał o swobodnym zgłaszaniu koncepcji. Jednak tuż po rozpoczęciu spotkania jeden ze starszych technologów zaczął natychmiast negatywnie komentować i odrzucać propozycje młodszych pracowników, twierdząc, że „to zbyt ryzykowne i w naszej branży nikt tak nie robi”. W efekcie pozostali uczestnicy wycofali się z dyskusji i przestali zgłaszać kolejne pomysły.\nWskaż regułę klasycznej burzy mózgów, która została naruszona przez technologa, oraz wyjaśnij, w jaki sposób złamanie tej zasady wpłynęło na przebieg fazy generowania pomysłów (dywergencji) w zespole.\nNaruszona reguła:\nWyjaśnienie:"
+   },
+   {
+    "id": "arkusz-autorski-3-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Przedsiębiorstwo realizuje projekt budowy ekologicznego zakładu przetwórczego. W analizie otoczenia projektu zidentyfikowano cztery podmioty:\n1.\nWojewódzki Inspektorat Ochrony Środowiska (WIOŚ) – organ wydający wiążącą decyzję środowiskową warunkującą realizację inwestycji (wysoki wpływ, wysokie zainteresowanie).\n2.\nMieszkańcy osiedla sąsiadującego z działką – nie podejmują decyzji prawnych, lecz obawiają się uciążliwości transportowych i aktywnie dopytują o projekt (niski wpływ, wysokie zainteresowanie).\n3.\nOperator sieci elektroenergetycznej – dysponuje niezbędnymi warunkami przyłączeniowymi o kluczowym znaczeniu technicznym, traktując inwestycję jako standardową procedurę komercyjną (wysoki wpływ, niskie zainteresowanie).\n4.\nKrajowa izba gospodarcza – zbiera jedynie roczne dane statystyczne o nowych podmiotach gospodarczych w regionie (niski wpływ, niskie zainteresowanie).\nDo każdej strategii postępowania z macierzy wpływ–zainteresowanie przyporządkuj właściwy podmiot (1–4). Wpisz odpowiednią cyfrę do tabeli:\nStrategia zarządzaniaPodmiot (1–4)\nA. Ścisła współpraca i aktywne zarządzanie relacjami (kluczowi gracze)\nB. Utrzymywanie stałego zadowolenia i spełnianie wymagań formalnych\nC. Bieżące informowanie i otwarty dialog konsultacyjny\nD. Okresowe monitorowanie przy minimalnym nakładzie sił"
+   },
+   {
+    "id": "arkusz-autorski-3-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "context",
+    "points": 0,
+    "text": "Harmonogram projektu instalacji linii formowania biokompozytów\nKażde zadanie może się rozpocząć dopiero po zakończeniu wszystkich zadań wskazanych w kolumnie „Poprzednik bezpośredni”.\nZadanieCzas trwania\nPoprzednik bezpośredni\nA. Opracowanie projektu technologicznego\n3 dni–\nB. Przygotowanie form matrycowych4 dniA\nC. Przyłącze zasilania i sprężonego powietrza\n2 dniA\nD. Montaż i kotwienie prasy hydraulicznej\n6 dniB\nE. Podłączenie układu chłodzenia i zasilania\n3 dniC\nF. Kalibracja aparatury i próby technologiczne\n4 dniD i E\nG. Odbiór techniczny i dopuszczenie do eksploatacji\n1 dzieńF\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-3-z4-1",
+    "label": "4.1",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyznacz ścieżkę krytyczną projektu i podaj najkrótszy możliwy czas jego realizacji.\nŚcieżka krytyczna:\nNajkrótszy czas realizacji:dni."
+   },
+   {
+    "id": "arkusz-autorski-3-z4-2",
+    "label": "4.2",
+    "number": 4,
+    "kind": "task",
+    "points": 3,
+    "text": "W trakcie realizacji projektu wykonawca zadania C zgłosił opóźnienie o 2 dni, natomiast dostawa elementów w zadaniu D opóźniła się o 3 dni.\nRozstrzygnij, czy opóźnienie zadania C oraz opóźnienie zadania D spowodują opóźnienie terminu zakończenia całego projektu. Uzasadnij odpowiedź, odwołując się do pojęcia ścieżki krytycznej oraz luzu całkowitego (rezerwy czasu).\nWpływ opóźnienia zadania C na termin końcowy projektu:\n(spowoduje opóźnienie / nie spowoduje opóźnienia)\nWpływ opóźnienia zadania D na termin końcowy projektu:\n(spowoduje opóźnienie / nie spowoduje opóźnienia)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-3-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "Na rynku ekologicznego granulatu kompozytowego państwo wprowadziło subsydium (dopłatę) dla producentów w stałej kwocie 20 zł do każdego sprzedanego kilograma. Popyt ze strony zakładów przetwórczych pozostał bez zmian. Na wykresie przedstawiono sytuację rynkową – jedna krzywa podaży opisuje rynek przed wprowadzeniem dopłaty, a druga po jej wprowadzeniu.\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-3-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, która krzywa podaży – S1 czy S2 – opisuje rynek po wprowadzeniu subsydium dla producentów. Uzasadnij odpowiedź, wyjaśniając wpływ dopłaty na jednostkowe koszty ponoszone przez producentów oraz na wielkość podaży przy danej cenie rynkowej.\nRozstrzygnięcie: (S1 / S2)\nUzasadnienie:\nD\nS2\nS1\n90\n5\n80\n6\n0\nCena (zł/kg)\nIlość (tys. kg)"
+   },
+   {
+    "id": "arkusz-autorski-3-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Odczytaj z wykresu cenę i ilość równowagi rynkowej po wprowadzeniu dopłaty oraz oblicz łączną wartość przychodów, jakie producenci uzyskali bezpośrednio z zapłaty od kupujących w nowym punkcie równowagi. Zapisz obliczenia.\nMiejsce na obliczenia\nCena równowagi:zł/kg.\nIlość równowagi:tys. kg.\nWartość przychodów od kupujących:tys. zł."
+   },
+   {
+    "id": "arkusz-autorski-3-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "context",
+    "points": 0,
+    "text": "Na wykresie przedstawiono roczną dynamikę Produktu Krajowego Brutto oraz wybranych składowych popytu w polskiej gospodarce w ujęciu realnym (w cenach stałych roku poprzedniego). Wartość ujemna oznacza spadek w porównaniu z poprzednim rokiem, a dodatnia – wzrost.\nWskaźnik lub składowa popytu\nŹródło: GUS, „Produkt krajowy brutto w 2025 r. – szacunek wstępny”, informacja sygnalna z 30 stycznia 2026 r., stat.gov.pl.\nPKBPopyt krajowySpożycie ogółemInwestycje (nakłady brutto)\n-2%\n0%\n2%\n4%\n6%\nZmiana realna r/r (%)\n3,0%3,0%\n4,5%4,5%\n4,4%4,4%\n-0,9%-0,9%\n3,6%3,6%\n4,0%4,0%\n3,9%3,9%\n4,2%4,2%\n20242025"
+   },
+   {
+    "id": "arkusz-autorski-3-z6-1",
+    "label": "6.1",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz dwuletni skumulowany realny wzrost PKB w latach 2024–2025 na podstawie danych z wykresu. Zapisz obliczenia. Wynik podaj w procentach z dokładnością do jednego miejsca po przecinku.\nMiejsce na obliczenia\nSkumulowany realny wzrost PKB:%."
+   },
+   {
+    "id": "arkusz-autorski-3-z6-2",
+    "label": "6.2",
+    "number": 6,
+    "kind": "task",
+    "points": 3,
+    "text": "Przeanalizuj dane dotyczące nakładów brutto na środki trwałe (inwestycji).\nOblicz zmianę dynamiki tej kategorii między 2024 a 2025 rokiem (w punktach procentowych) oraz wyjaśnij, w jaki sposób dynamiczny wzrost inwestycji przedsiębiorstw wpływa na potencjał wytwórczy gospodarki w długim okresie.\nZmiana dynamiki inwestycji:p.p.\nWpływ na potencjał wytwórczy:"
+   },
+   {
+    "id": "arkusz-autorski-3-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "context",
+    "points": 0,
+    "text": "W powiecie zamieszkuje osób w wieku produkcyjnym. Zgodnie z metodologią Badania Aktywności Ekonomicznej Ludności (BAEL):\nliczba pracujących wynosi osób, liczba bezrobotnych (niepracujących, aktywnie poszukujących pracy i gotowych do jej podjęcia) wynosi osób, pozostałe osób to osoby bierne zawodowo.\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-3-z7-1",
+    "label": "7.1",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz współczynnik aktywności zawodowej oraz stopę bezrobocia w badanym powiecie zgodnie z metodologią BAEL. Zapisz obliczenia. Wyniki podaj w procentach i zaokrąglij do jednego miejsca po przecinku.\nMiejsce na obliczenia\nWspółczynnik aktywności zawodowej:%.\nStopa bezrobocia:%.\n100000\n60000\n5000\n35000"
+   },
+   {
+    "id": "arkusz-autorski-3-z7-2",
+    "label": "7.2",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "W powiecie w wyniku likwidacji zakładu przetwórstwa chemicznego pracę straciło\n700 techników, podczas gdy okoliczne przedsiębiorstwa poszukują wyłącznie spawaczy przemysłowych i monterów instalacji fotowoltaicznych. Zwolnieni pracownicy nie posiadają wymaganych uprawnień technicznych.\nPodaj rodzaj bezrobocia opisany w powyższej sytuacji oraz wskaż jedno instrumentarium aktywnej polityki rynku pracy, które powiatowy urząd pracy powinien zastosować, aby ułatwić zwolnionym pracownikom znalezienie zatrudnienia.\nRodzaj bezrobocia:\nInstrument aktywnej polityki rynku pracy:"
+   },
+   {
+    "id": "arkusz-autorski-3-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "context",
+    "points": 0,
+    "text": "Polski producent stolarki okiennej zrealizował dwie dostawy wyrobów do odbiorcy w\nNiemczech. Każda faktura opiewała na kwotę euro. Należność za pierwszą fakturę wpłynęła na rachunek bankowy eksportera w styczniu 2025 r., a za drugą – w lipcu 2025 r. Do przeliczenia kwot na złote zastosowano średni kurs EUR/PLN z danego miesiąca ogłaszany przez NBP. Pomiń prowizje bankowe.\nMiesiąc rozliczenia fakturyŚredni kurs EUR/PLN\nStyczeń 20254.2466\nLipiec 20254.2546\nŹródło: api.nbp.pl.\n40000"
+   },
+   {
+    "id": "arkusz-autorski-3-z8-1",
+    "label": "8.1",
+    "number": 8,
+    "kind": "task",
+    "points": 3,
+    "text": "Oblicz przychód eksportera w złotych z każdej faktury oraz różnicę między uzyskanymi kwotami. Wyniki podaj z dokładnością do 1 zł. Zapisz obliczenia.\nMiejsce na obliczenia\nPrzychód w styczniu:zł.\nPrzychód w lipcu:zł.\nRóżnica przychodów:zł."
+   },
+   {
+    "id": "arkusz-autorski-3-z8-2",
+    "label": "8.2",
+    "number": 8,
+    "kind": "task",
+    "points": 2,
+    "text": "Eksporter obawia się, że w przyszłości kurs euro spadnie (złoty się umocni), co zmniejszyłoby jego przychody w złotych.\nRozstrzygnij, czy zawarcie walutowego kontraktu terminowego forward zabezpiecza eksportera przed ryzykiem aprecjacji złotego, oraz podaj jedną korzyść z tego rozwiązania dla zarządzania płynnością finansową firmy.\nZabezpieczenie przed aprecjacją złotego: (TA K / N I E)\nKorzyść dla płynności finansowej:"
+   },
+   {
+    "id": "arkusz-autorski-3-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "context",
+    "points": 0,
+    "text": "Klient zdeponował kwotę zł na 12-miesięcznej lokacie bankowej o stałym oprocentowaniu nominalnym w skali roku z jednorazową kapitalizacją odsetek na koniec okresu. W okresie trwania lokaty stopa inflacji wyniosła .\nZyski z odsetek kapitałowych podlegają opodatkowaniu podatkiem dochodowym od osób fizycznych (podatkiem od zysków kapitałowych) w stawce ."
+   },
+   {
+    "id": "arkusz-autorski-3-z9-1",
+    "label": "9.1",
+    "number": 9,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz kwotę odsetek netto (po potrąceniu podatku od zysków kapitałowych)\nwypłaconych klientowi po roku oraz rozstrzygnij, czy siła nabywcza ulokowanego kapitału wraz z odsetkami netto wzrosła, czy spadła w stosunku do momentu otwarcia lokaty. Uzasadnij rozstrzygnięcie, odwołując się do relacji stopy zysku netto do stopy inflacji. Zapisz obliczenia.\nMiejsce na obliczenia\nKwota odsetek netto:zł.\nWpływ na siłę nabywczą kapitału: (wzrosła / spadła)\nUzasadnienie:\n20000\n5,50%\n3,20%\n19%"
+   },
+   {
+    "id": "arkusz-autorski-3-z9-2",
+    "label": "9.2",
+    "number": 9,
+    "kind": "task",
+    "points": 2,
+    "text": "Oceń prawdziwość poniższych stwierdzeń dotyczących funkcjonowania i bezpieczeństwa depozytów oraz instrumentów finansowych. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nŚrodki ulokowane na rachunkach oszczędnościowych i lokatach w bankach komercyjnych podlegających prawu polskiemu są objęte obowiązkowym systemem gwarantowania przez Bankowy Fundusz\nGwarancyjny do równowartości 100 000 euro w złotych.\nPF\nJednostki uczestnictwa w funduszach inwestycyjnych otwartych są w przypadku upadłości towarzystwa funduszy inwestycyjnych (TFI)\nobjęte pełną gwarancją ochrony kapitału i zysku przez Skarb Państwa.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-3-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "context",
+    "points": 0,
+    "text": "Konsument kupił w sklepie internetowym ekspres ciśnieniowy do kawy za zł.\nZamówiony towar odebrał od kuriera 4 marca 2026 r.\nSytuacja 1. Po rozpakowaniu urządzenia konsument uznał, że ekspres zajmuje zbyt dużo miejsca na blacie kuchennym, i postanowił odstąpić od umowy bez podawania jakiejkolwiek przyczyny.\nSytuacja 2. Załóżmy alternatywnie, że po dwóch miesiącach prawidłowego użytkowania ekspres uległ awarii technicznej (przestał podgrzewać wodę), co stanowi brak zgodności towaru z umową.\nNa podstawie: ustawa z dnia 30 maja 2014 r. o prawach konsumenta (tekst jednolity: Dz.U. z\n2023 r. poz. 2759, z późn. zm.).\n2400"
+   },
+   {
+    "id": "arkusz-autorski-3-z10-1",
+    "label": "10.1",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "Uzupełnij poniższy tekst dotyczący praw konsumenta w odniesieniu do\nSytuacji 1. Wpisz właściwą liczbę dni w miejsce pierwszego wykropkowania oraz podmiot ponoszący koszt odesłania towaru w miejsce drugiego wykropkowania.\nKonsument, który zawarł umowę na odległość, może w terminie dni odstąpić od niej bez podawania przyczyny i bez ponoszenia kosztów, z wyjątkiem bezpośrednich kosztów zwrotu rzeczy, które obciążają , o ile został o tym należycie poinformowany przed zakupem."
+   },
+   {
+    "id": "arkusz-autorski-3-z10-2",
+    "label": "10.2",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "W odniesieniu do Sytuacji 2 wskaż dwa uprawnienia przysługujące konsumentowi w pierwszej kolejności z tytułu braku zgodności towaru z umową zgodnie z przepisami ustawy o prawach konsumenta.\nPierwsze uprawnienie:\nDrugie uprawnienie:"
+   },
+   {
+    "id": "arkusz-autorski-3-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "context",
+    "points": 0,
+    "text": "Fragment ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy\nArt. 22.\n§ 1. Przez nawiązanie stosunku pracy pracownik zobowiązuje się do wykonywania pracy określonego rodzaju na rzecz pracodawcy i pod jego kierownictwem oraz w miejscu i czasie wyznaczonym przez pracodawcę, a pracodawca – do zatrudniania pracownika za wynagrodzeniem.\n§ 1¹. Zatrudnienie w warunkach określonych w § 1 jest zatrudnieniem na podstawie stosunku pracy, bez względu na nazwę zawartej przez strony umowy.\n§ 1². Nie jest dopuszczalne zastąpienie umowy o pracę umową cywilnoprawną przy zachowaniu warunków wykonywania pracy, określonych w § 1.\nNa podstawie: art. 22 ustawy z dnia 26 czerwca 1974 r. – Kodeks pracy (Dz.U. z 2025 r. poz.\n277).\nOpis sytuacji\nTo m a s z za w a rł ze spółką umowę z nagłówkiem „UMOWA ZLECENIE”. Tomasz codziennie od poniedziałku do piątku w stałych godzinach 8:00–16:00 wykonuje obowiązki w siedzibie spółki, korzysta wyłącznie ze sprzętu powierzonego przez zleceniodawcę i realizuje bieżące polecenia kierownika działu, a każda jego nieobecność wymaga uprzedniej akceptacji przełożonego. Za realizację zadań otrzymuje stałą comiesięczną kwotę."
+   },
+   {
+    "id": "arkusz-autorski-3-z11-1",
+    "label": "11.1",
+    "number": 11,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie przytoczonego przepisu Kodeksu pracy wskaż dwie przesłanki faktyczne z opisu sytuacji, które świadczą o tym, że praca wykonywana przez\nTomasza ma cechy stosunku pracy, a nie umowy cywilnoprawnej.\nPierwsza przesłanka:\nDruga przesłanka:"
+   },
+   {
+    "id": "arkusz-autorski-3-z11-2",
+    "label": "11.2",
+    "number": 11,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj pełną nazwę państwowego organu powołanego do sprawowania nadzoru i kontroli przestrzegania prawa pracy, do którego Tomasz może złożyć skargę, oraz rozstrzygnij, czy w przypadku prawomocnego ustalenia przez sąd istnienia stosunku pracy Tomaszowi przysługuje prawo do płatnego urlopu wypoczynkowego za okres świadczenia pracy.\nNazwa organu kontrolnego:\nPrawo do płatnego urlopu wypoczynkowego: (przysługuje / nie przysługuje)"
+   },
+   {
+    "id": "arkusz-autorski-3-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "context",
+    "points": 0,
+    "text": "Zespół programistów i konstruktorów założył startup technologiczny. Rozważa strategię wejścia na rynek z nową platformą do autonomicznego zarządzania magazynami. Zamiast budować przez dwa lata pełną wersję oprogramowania ze wszystkimi funkcjami, zespół postanowił wdrożyć metodykę Lean Startup i przygotować Minimum Viable Product (MVP)."
+   },
+   {
+    "id": "arkusz-autorski-3-z12-1",
+    "label": "12.1",
+    "number": 12,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyjaśnij, czym jest Minimum Viable Product (MVP) w metodyce Lean Startup, oraz wskaż główną korzyść dla założycieli wynikającą z wdrożenia MVP przed zainwestowaniem znacznych środków finansowych w docelowy produkt.\nIstota MVP:\nKorzyść dla założycieli:"
+   },
+   {
+    "id": "arkusz-autorski-3-z12-2",
+    "label": "12.2",
+    "number": 12,
+    "kind": "task",
+    "points": 2,
+    "text": "W analizie strategicznej otoczenia i wnętrza przedsiębiorstwa zidentyfikowano następujące czynniki:\n1.\nPosiadanie zespołu doświadczonych programistów o unikalnych kompetencjach w dziedzinie algorytmów optymalizacyjnych.\n2.\nNiewielki kapitał początkowy i brak własnego zaplecza serwisowego w kluczowych miastach.\n3.\nWprowadzenie przez państwo programu dotacji na automatyzację procesów intralogistycznych w małych i średnich firmach.\n4.\nPlany ekspansji na rynek polski ze strony globalnego koncernu oferującego darmowy okres próbny na konkurencyjne oprogramowanie.\nPrzyporządkuj każdy z wymienionych czynników (1–4) do właściwej kategorii analizy SWOT. Wpisz w tabeli: Mocna strona, Słaba strona, Szansa albo\nZagrożenie.\nCzynnik z analizyKategoria SWOT\n1\n2\n3\n4"
+   },
+   {
+    "id": "arkusz-autorski-3-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "context",
+    "points": 0,
+    "text": "Przedsiębiorstwo produkuje modułowe stacje ładowania pojazdów elektrycznych.\nCena sprzedaży jednej stacji: zł\nJednostkowy koszt zmienny: zł\nMiesięczne koszty stałe przedsiębiorstwa: zł\nPlanowana wielkość sprzedaży miesięcznej: 55 sztuk\n4000\n2500\n60000"
+   },
+   {
+    "id": "arkusz-autorski-3-z13-1",
+    "label": "13.1",
+    "number": 13,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz ilościowy i wartościowy próg rentowności przedsiębiorstwa oraz wynik finansowy osiągany przy planowanej miesięcznej sprzedaży 55 stacji ładowania. Zapisz obliczenia.\nMiejsce na obliczenia\nIlościowy próg rentowności:sztuk.\nWartościowy próg rentowności:zł.\nWynik finansowy:zł."
+   },
+   {
+    "id": "arkusz-autorski-3-z13-2",
+    "label": "13.2",
+    "number": 13,
+    "kind": "task",
+    "points": 2,
+    "text": "Spółka potrzebuje zł na uruchomienie zautomatyzowanej linii produkcyjnej. Założyciele chcą uniknąć stałego obciążenia comiesięcznymi ratami odsetkowymi i poszukują inwestora, który w zamian za mniejszościowy pakiet udziałów zapewni nie tylko kapitał, lecz także kontakty biznesowe na rynkach zagranicznych.\nDokończ zdanie. Zaznacz odpowiedź A albo B oraz odpowiedź 1 albo 2.\nFormą finansowania najlepiej dopasowaną do sytuacji i celów założycieli spółki jest\nA fundusz Venture\nCapital,\nB bankowy kredyt inwestycyjny, ponieważ zapewnia\n1 objęcie udziałów i wsparcie doradczo- sieciowe bez obciążania bieżącej płynności ratami zadłużenia.\n2 kapitał dłużny wymagający twardych zabezpieczeń rzeczowych oraz regularnej spłaty odsetek i rat kapitałowych.\n2000000"
+   }
+  ]
+ },
+ {
+  "slug": "arkusz-autorski-4",
+  "title": "Arkusz autorski 4",
+  "period": "Październik 2026",
+  "url": "https://maturabiz.pl/arkusze/arkusz-autorski-4",
+  "kind": "autorski",
+  "maxPoints": 50,
+  "items": [
+   {
+    "id": "arkusz-autorski-4-z1",
+    "label": "1",
+    "number": 1,
+    "kind": "context",
+    "points": 0,
+    "text": "Opis sytuacji rynkowej\nPrzed początkiem roku akademickiego studenci poszukują zakwaterowania w miastach, w których będą studiować. Na poniższym wykresie przedstawiono średnie ofertowe miesięczne czynsze najmu całych mieszkań o powierzchni do 40 m² w\nWarszawie oraz Krakowie od czerwca do października 2023 r.\nMiesiąc\nŹródło: Otodom Analytics, Bankier.pl, VI–X 2023: VI, VII, VIII, IX, X (miesiące = okres danych).\nCzerwiecLipiecSierpieńWrzesieńPaździernik\n0 zł\n800 zł\n1600 zł\n2400 zł\n3200 zł\nŚ redni czynsz ofertowy (z\n/miesi ą c) ( z\n)\n2886,0 zł2886,0 zł\n2917,0 zł2917,0 zł\n2955,0 zł2955,0 zł\n2937,0 zł2937,0 zł\n2976,0 zł2976,0 zł\n2396,0 zł2396,0 zł\n2424,0 zł2424,0 zł\n2471,0 zł2471,0 zł\n2488,0 zł2488,0 zł\n2482,0 zł2482,0 zł\nKrakówWarszawa"
+   },
+   {
+    "id": "arkusz-autorski-4-z1-1",
+    "label": "1.1",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych stwierdzeń odnoszących się do przedstawionej sytuacji rynkowej. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\nWzrost zainteresowania najmem związany z poszukiwaniem mieszkań przez studentów przesuwa krzywą popytu w prawo i przy pozostałych warunkach niezmienionych sprzyja wzrostowi czynszów. Nie oznacza to jednak, że średnie czynsze ofertowe muszą rosnąć w każdym miesiącu w obu miastach.\nPF\nW krótkim okresie cenowa elastyczność podaży mieszkań na wynajem jest bardzo wysoka, co umożliwia właścicielom natychmiastowe powiększenie łącznego zasobu lokali na rynku w odpowiedzi na rosnące ceny.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-4-z1-2",
+    "label": "1.2",
+    "number": 1,
+    "kind": "task",
+    "points": 2,
+    "text": "Załóżmy, że władze rozważają wprowadzenie urzędowej ceny maksymalnej miesięcznego czynszu najmu mieszkania do 40 m² na poziomie 2 000 zł. Na potrzeby analizy przyjmij, że limit ten byłby niższy od ceny równowagi rynkowej. Jest to hipotetyczny wariant interwencji, a nie opis obowiązującej regulacji.\nRozstrzygnij, jakie bezpośrednie zjawisko rynkowe (niedobór czy nadwyżka)\nwystąpi na rynku najmu po wprowadzeniu urzędowej ceny maksymalnej, oraz wyjaśnij, jaki długookresowy wpływ może mieć to rozwiązanie na wielkość podaży i standard oferowanych lokali.\nBezpośrednie zjawisko rynkowe: (niedobór mieszkań / nadwyżka mieszkań)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-4-z1-3",
+    "label": "1.3",
+    "number": 1,
+    "kind": "task",
+    "points": 1,
+    "text": "Wybierz właściwe dokończenie zdania. Działaniem państwa lub samorządu opartym na mechanizmie rynkowym, które może trwale ograniczyć presję na wzrost czynszów, jest\nA.wprowadzenie zakazu rozwiązywania umów najmu przez właścicieli lokali.\nB.budowa publicznych akademików oraz wspieranie inwestycji w niedrogie mieszkanie na wynajem.\nC.nałożenie dodatkowego podatku przychodowego od każdego wynajmowanego pokoju studenckiego.\nD.podwyższenie administracyjnych opłat notarialnych przy zawieraniu umów najmu okazjonalnego."
+   },
+   {
+    "id": "arkusz-autorski-4-z2",
+    "label": "2",
+    "number": 2,
+    "kind": "task",
+    "points": 2,
+    "text": "Działania organizacyjne w uczelni wyższej\nWładze uczelni wyższej na początku roku akademickiego koordynują realizację różnorodnych zadań:\nDziałanie I: Bieżąca, comiesięczna weryfikacja wniosków i wypłata stypendiów socjalnych przez pracowników dziekanatu według ustalonej procedury administracyjnej.\nDziałanie II: Zaprojektowanie i wdrożenie zintegrowanego systemu elektronicznego obiegu dokumentów (EZD) w całej uczelni, realizowane przez powołany zespół w terminie do 31 maja przy budżecie 400 tys. zł.\nDziałanie III: Codzienne sprzątanie sal wykładowych, laboratoriów i korytarzy oraz ochrona budynków wydziałowych przez firmę zewnętrzną.\nDziałanie IV: Organizacja jubileuszowej międzynarodowej konferencji naukowej z okazji 60-lecia wydziału (15–17 maja), obejmująca pozyskanie sponsorów, nabór prelegentów i wydanie monografii naukowej.\nWskaż, które z wymienionych działań mają charakter projektów, a które stanowią procesy operacyjne, oraz uzasadnij swój wybór, w s k a z u jąc dwie cechy charakteryzujące projekt.\nDziałania będące projektami:\n\nDziałania będące procesami operacyjnymi:\nUzasadnienie (dwie cechy projektu):"
+   },
+   {
+    "id": "arkusz-autorski-4-z3",
+    "label": "3",
+    "number": 3,
+    "kind": "context",
+    "points": 0,
+    "text": "Zwinne zarządzanie projektem (Agile/Scrum) w branży IT\nZespół projektowy w przedsiębiorstwie technologicznym (software house) tworzy aplikację mobilną „CampusNav”, ułatwiającą studentom poruszanie się po kampusie i planowanie zajęć. Zespół pracuje zgodnie z metodyką Scrum w dwutygodniowych sprintach. W skład zespołu wchodzą: Właściciel Produktu (Product Owner), Scrum\nMaster oraz Zespół Deweloperski (programiści i projektanci UX).\nW trzecim dniu trwającego sprintu kluczowy interesariusz projektu (przedstawiciel klienta zamawiającego aplikację) przyszedł bezpośrednio do jednego z programistów i zażądał natychmiastowego dodania do aplikacji modułu rezerwacji miejsc parkingowych, twierdząc, że to najważniejsza funkcja na ten tydzień.\nProgramista przerwał realizację zadań zaplanowanych na sprint i przystąpił do pisania modułu parkingowego."
+   },
+   {
+    "id": "arkusz-autorski-4-z3-1",
+    "label": "3.1",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyjaśnij, jakie dwie reguły metodyki Scrum zostały naruszone w opisanej sytuacji. W odpowiedzi odnieś się do roli Product Ownera oraz zawartości rejestru zadań sprintu (Sprint Backlog)."
+   },
+   {
+    "id": "arkusz-autorski-4-z3-2",
+    "label": "3.2",
+    "number": 3,
+    "kind": "task",
+    "points": 2,
+    "text": "Dopasuj rolę w zespole Scrum do odpowiadającej jej odpowiedzialności.\nWpisz właściwą literę (A–C) w odpowiednie pole tabeli, a następnie podaj nazwę codziennego krótkiego spotkania zespołu projektowego w Scrumie.\nRola w zespole\nScrum\nZakres odpowiedzialności\nLitera roli\nA. Product Owner (Właściciel\nProduktu)\nDba o przestrzeganie metodyki Scrum, usuwa przeszkody (impediments) blokujące pracę i wspiera efektywność zespołu.\nB. Scrum Master\nOdpowiada za maksymalizację wartości produktu oraz zarządzanie i priorytetyzację\nRejestru Produktu (Product Backlog).\nC. Zespół\nDeweloperski (Developers)\nOdpowiada za techniczne wytworzenie potencjalnie gotowego do wdrożenia\nPrzyrostu (Increment) na koniec sprintu.\nNazwa codziennego 15-minutowego spotkania synchronizacyjnego deweloperów:"
+   },
+   {
+    "id": "arkusz-autorski-4-z4",
+    "label": "4",
+    "number": 4,
+    "kind": "context",
+    "points": 0,
+    "text": "Harmonogram projektu i analiza ścieżki krytycznej (CPM)\nPrzedsiębiorstwo akademickie realizuje projekt utworzenia Studenckiego Centrum\nPrototypowania. W poniższej tabeli przedstawiono listę zadań projektowych, ich planowany czas trwania oraz bezpośrednich poprzedników.\nOznaczen ie zadania\nNazwa zadania\nCzas trwania\nBezpośredni poprzednik\nA\nOpracowanie założeń i regulaminu centrum\n3 dnibrak\nB\nDostawa specjalistycznego sprzętu i drukarek 3D\n7 dniA\nC\nPrace adaptacyjne i budowlane w lokalu\n5 dniA\nD\nMontaż mebli i instalacja stanowisk pracy\n4 dniC\nE\nInstalacja, kalibracja sprzętu i konfiguracja sieci\n5 dniB oraz D\nF\nOdbiory techniczne i testy bezpieczeństwa\n2 dniE\nDane hipotetyczne opracowane na potrzeby zadania."
+   },
+   {
+    "id": "arkusz-autorski-4-z4-1",
+    "label": "4.1",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyznacz ścieżkę krytyczną projektu (podaj ciąg liter oznaczających kolejne zadania) oraz określ najkrótszy możliwy czas realizacji całego przedsięwzięcia.\nŚcieżka krytyczna:\nNajkrótszy czas realizacji projektu:dni."
+   },
+   {
+    "id": "arkusz-autorski-4-z4-2",
+    "label": "4.2",
+    "number": 4,
+    "kind": "task",
+    "points": 2,
+    "text": "W trakcie realizacji projektu dostawca drukarek 3D poinformował, że z przyczyn logistycznych czas realizacji zadania B wydłuży się o 3 dni (z 7 do 10 dni). Pozostałe zadania są realizowane zgodnie z pierwotnym planem.\nRozstrzygnij, czy opóźnienie zadania B o 3 dni spowoduje przesunięcie terminu zakończenia całego projektu. Uzasadnij odpowiedź, odwołując się do pojęcia rezerwy czasu (luzu całkowitego) zadania B, oraz podaj nowy łączny czas trwania projektu.\nWpływ opóźnienia zadania B na termin końcowy projektu:\n(spowoduje opóźnienie projektu / nie spowoduje opóźnienia projektu)\nUzasadnienie i nowy czas projektu:"
+   },
+   {
+    "id": "arkusz-autorski-4-z5",
+    "label": "5",
+    "number": 5,
+    "kind": "context",
+    "points": 0,
+    "text": "Wskaźniki inflacji i polityka pieniężna\nW sierpniu 2022 r. inflacja CPI w Polsce wyniosła 16,1% rok do roku, a inflacja bazowa po wyłączeniu cen żywności i energii – 9,9% rok do roku. Na posiedzeniu 7 września 2022 r. Rada Polityki Pieniężnej (RPP) podwyższyła stopę referencyjną\nNBP o 0,25 punktu procentowego, do 6,75%. Decyzja miała służyć obniżeniu inflacji do celu NBP w średnim okresie. Odczyt inflacji bazowej za sierpień opublikowano później, 16 września 2022 r.\nNa podstawie: NBP, Raport o inflacji, XI 2022; NBP/Forsal, 16.09.2022."
+   },
+   {
+    "id": "arkusz-autorski-4-z5-1",
+    "label": "5.1",
+    "number": 5,
+    "kind": "task",
+    "points": 1,
+    "text": "Wybierz właściwe dokończenie zdania. Wskaźnik inflacji bazowej po wyłączeniu cen żywności i energii jest powszechnie analizowany przez bank centralny, ponieważ\nA.uwzględnia wyłącznie ceny towarów produkowanych przez przedsiębiorstwa państwowe.\nB.eliminuje wpływ cen najbardziej zmiennych, kształtowanych przez szoki podażowe i czynniki pogodowe.\nC.mierzy tempo spadku wartości nabywczej walut obcych na krajowym rynku finansowym.\nD.obejmuje wyłącznie wydatki ponoszone przez gospodarstwa domowe o najwyższych dochodach."
+   },
+   {
+    "id": "arkusz-autorski-4-z5-2",
+    "label": "5.2",
+    "number": 5,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyjaśnij mechanizm transmisji polityki pieniężnej: w jaki sposób decyzja RPP o podwyższeniu stóp procentowych banku centralnego oddziałuje na zachowania gospodarstw domowych w zakresie kredytów i oszczędności oraz jak wpływa na presję inflacyjną."
+   },
+   {
+    "id": "arkusz-autorski-4-z6",
+    "label": "6",
+    "number": 6,
+    "kind": "context",
+    "points": 0,
+    "text": "Forma prawno-organizacyjna dla innowacyjnego przedsięwzięcia farmaceutyczno- biotechnologicznego\nDwoje młodych naukowców – farmaceutka i biotechnolog – opracowało nowatorską recepturę biodegradowalnego opatrunku hydrożelowego przyspieszającego gojenie ran pooperacyjnych. Posiadają unikalne know-how, zgłoszenie patentowe oraz chcą osobiście świadczyć pracę badawczo-rozwojową na rzecz rozwoju firmy, nie dysponują jednak znacznym kapitałem pieniężnym. Znaleźli inwestora (anioła biznesu), który oferuje 100 000 zł na zakup odczynników i badania czystości mikrobiologicznej, w zamian oczekując udziału w zyskach oraz całkowitego wyłączenia swojej odpowiedzialności osobistej za ewentualne długi przedsięwzięcia.\nZałożyciele rozważają wybór pomiędzy klasyczną spółką z ograniczoną odpowiedzialnością (sp. z o.o.) a Prostą Spółką Akcyjną (P.S.A.)."
+   },
+   {
+    "id": "arkusz-autorski-4-z6-1",
+    "label": "6.1",
+    "number": 6,
+    "kind": "task",
+    "points": 2,
+    "text": "Podaj dwie cechy Prostej Spółki Akcyjnej (P.S.A.), które czynią tę formę prawną szczególnie korzystną dla założycieli w opisanej sytuacji w porównaniu ze spółką z o.o."
+   },
+   {
+    "id": "arkusz-autorski-4-z6-2",
+    "label": "6.2",
+    "number": 6,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych zdań dotyczących Prostej Spółki Akcyjnej (P.S.A.). Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.\nAkcjonariusze Prostej Spółki Akcyjnej nie odpowiadają osobiście za zobowiązania spółki swoim majątkiem prywatnym.\nPF\nW Prostej Spółce Akcyjnej akcje muszą posiadać formę papierowego dokumentu z określoną stałą wartością nominalną, nie niższą niż 50 zł.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-4-z7",
+    "label": "7",
+    "number": 7,
+    "kind": "context",
+    "points": 0,
+    "text": "Model biznesowy Canvas (BMC) i otoczenie przedsiębiorstwa\nStartup „EduBox” tworzy zestawy doświadczalne z fizyki i chemii dla uczniów szkół podstawowych.\n1.\nOferowane pakiety zawierają komplet bezpiecznych odczynników, przyrządów oraz dostęp do interaktywnej platformy wideo ze scenariuszami lekcji zgodnymi z podstawą programową.\n2.\nSprzedaż odbywa się w formule miesięcznej subskrypcji dla rodziców na stronie internetowej oraz w rocznych pakietach edukacyjnych zamawianych hurtowo przez samorządy i szkoły.\n3.\nGotowe paczki dostarczane są do odbiorców za pośrednictwem sieci paczkomatów i firm kurierskich.\n4.\nKluczowymi podmiotami współpracującymi są certyfikowani producenci odczynników chemicznych oraz operator płatności bezgotówkowych."
+   },
+   {
+    "id": "arkusz-autorski-4-z7-1",
+    "label": "7.1",
+    "number": 7,
+    "kind": "task",
+    "points": 2,
+    "text": "Przyporządkuj elementy opisu przedsiębiorstwa „EduBox” (oznaczone numerami 1–4) do odpowiednich bloków szablonu Business Model Canvas (BMC). Wpisz właściwy numer (1–4) w wyznaczonym miejscu w tabeli.\nBlok szablonu Business Model Canvas\nNumer elementu z opisu (1–\n4)\nPropozycja wartości (Value Proposition)\nKanały dotarcia i dystrybucji (Channels)\nStrumienie przychodów (Revenue Streams)\nKluczowi partnerzy (Key Partners)"
+   },
+   {
+    "id": "arkusz-autorski-4-z7-2",
+    "label": "7.2",
+    "number": 7,
+    "kind": "task",
+    "points": 1,
+    "text": "W analizie otoczenia przedsiębiorstwa „EduBox” uwzględniono następujące zjawisko: „Uruchomienie rządowego programu Laboratoria Przyszłości, realizowanego przez Ministerstwo Edukacji i Nauki we współpracy z Kancelarią\nPrezesa Rady Ministrów. Program zapewniał szkołom podstawowym środki na zakup nowoczesnego wyposażenia, m.in. drukarek 3D, mikrokontrolerów i sprzętu do nagrań”.\nNa podstawie: gov.pl – Laboratoria Przyszłości; M.P. 2021 poz. 939.\nWybierz właściwe zaklasyfikowanie opisanego zjawiska w ramach analizy strategicznej przedsiębiorstwa (otoczenie dalsze – PESTEL oraz analiza\nSWOT).\nA.Makrootoczenie – czynnik polityczno-prawny stanowiący szansę dla przedsiębiorstwa.\nB.Mikrootoczenie – czynnik konkurencyjny stanowiący mocną stronę przedsiębiorstwa.\nC.Wnętrze organizacji – zasób materialny stanowiący słabą stronę przedsiębiorstwa.\nD.Makrootoczenie – czynnik środowiskowy stanowiący zagrożenie dla przedsiębiorstwa."
+   },
+   {
+    "id": "arkusz-autorski-4-z8",
+    "label": "8",
+    "number": 8,
+    "kind": "context",
+    "points": 0,
+    "text": "Rozliczenia międzynarodowe i kurs walutowy w branży turystycznej\nPolskie biuro podróży i operator turystyki przyjazdowej (incoming) podpisał 2 października 2023 r. kontrakt z francuskim touroperatorem na organizację turnusów uzdrowiskowo-rekreacyjnych dla zorganizowanych grup turystów z zagranicy o łącznej wartości 120 000 EUR. Płatność ma nastąpić po zrealizowaniu pobytów i wystawieniu faktury rozliczeniowej w dniu 1 grudnia 2023 r. Kontrakt jest hipotetyczny; do obliczeń wykorzystano rzeczywiste średnie kursy NBP:\nW dniu podpisania kontraktu (2 października 2023 r.): 1 EUR = 4,6091 PLN.\nW dniu uregulowania płatności (1 grudnia 2023 r.): 1 EUR = 4,3494 PLN.\nPrzyjmij do porównania wartości należności podane średnie kursy NBP, pomijając spread i opłaty za wymianę waluty.\nŹródło: NBP, tab. 190/A/NBP/2023 i 233/A/NBP/2023."
+   },
+   {
+    "id": "arkusz-autorski-4-z8-1",
+    "label": "8.1",
+    "number": 8,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz wartość należności polskiego eksportera w złotych według kursu z 2 października oraz według kursu z 1 grudnia. Oblicz różnicę kursową i rozstrzygnij, czy umocnienie złotego wobec euro było dla polskiego eksportera zjawiskiem korzystnym, czy niekorzystnym. Zapisz obliczenia w wyznaczonym miejscu.\nMiejsce na obliczenia\nWartość należności 2 października:zł.\nWartość należności 1 grudnia:zł.\nRóżnica kursowa:zł.\nWpływ umocnienia złotego na wynik polskiego eksportera: (korzystny / niekorzystny)"
+   },
+   {
+    "id": "arkusz-autorski-4-z8-2",
+    "label": "8.2",
+    "number": 8,
+    "kind": "task",
+    "points": 1,
+    "text": "Podaj nazwę transakcji terminowej na rynku walutowym (kontraktu terminowego), która umożliwia eksporterowi ustalenie z góry w banku sztywnego kursu wymiany euro na złote już w dniu podpisania kontraktu i wyeliminowanie ryzyka walutowego.\nNazwa transakcji:"
+   },
+   {
+    "id": "arkusz-autorski-4-z9",
+    "label": "9",
+    "number": 9,
+    "kind": "context",
+    "points": 0,
+    "text": "Prawa konsumenta i zakupy na odległość\nKonsument zamówił w polskim sklepie internetowym cztery artykuły:\nArtykuł 1: Fabrycznie nowy, standardowy smartfon w oryginalnym zapieczętowanym pudełku producenta.\nArtykuł 2: Zimowa kurtka męska w standardowym rozmiarze L, wybrana z katalogu sklepu.\nArtykuł 3: Koszula uszyta na indywidualne zamówienie według dokładnych wymiarów sylwetki podanych w formularzu przez konsumenta, z wyhaftowanymi jego inicjałami.\nArtykuł 4: Płyta z filmem na nośniku Blu-ray w fabrycznie zapieczętowanym opakowaniu, z którego konsument zdjął folię ochronną po odebraniu przesyłki.\nWszystkie przesyłki konsument odebrał 8 października. W dniu 15 października (po 7 dniach) przesłał drogą elektroniczną oświadczenie o odstąpieniu od umowy bez podania przyczyny w odniesieniu do wszystkich czterech produktów."
+   },
+   {
+    "id": "arkusz-autorski-4-z9-1",
+    "label": "9.1",
+    "number": 9,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, w odniesieniu do których artykułów (1–4) konsumentowi przysługuje prawo do odstąpienia od umowy zawartej na odległość bez podania przyczyny w terminie 14 dni, a w odniesieniu do których prawo to wygasło lub nie przysługuje na mocy Ustawy o prawach konsumenta.\nUzasadnij odpowiedź dla artykułów, w przypadku których odstąpienie jest nieskuteczne.\nArtykuły, od zakupu których konsument może skutecznie odstąpić:\nUzasadnienie braku prawa do odstąpienia od pozostałych artykułów:"
+   },
+   {
+    "id": "arkusz-autorski-4-z9-2",
+    "label": "9.2",
+    "number": 9,
+    "kind": "task",
+    "points": 1,
+    "text": "Uzupełnij poniższe zdanie. Wybierz właściwe określenia spośród podanych w nawiasach.\nUstawowa odpowiedzialność z tytułu braku zgodności towaru z umową przysługuje konsumentowi z mocy prawa przez okres (1 roku / 2 lat / 3 lat) od dnia wydania towaru, a podmiotem bezpośrednio zobowiązanym do rozpatrzenia reklamacji jest (sprzedawca / producent / kurier dostarczający przesyłkę)."
+   },
+   {
+    "id": "arkusz-autorski-4-z10",
+    "label": "10",
+    "number": 10,
+    "kind": "context",
+    "points": 0,
+    "text": "Formy zatrudnienia i obciążenia wynagrodzeń w branży turystycznej\n22-letni student turystyki i rekreacji Piotr podejmuje pracę jako pilot wycieczek i animator czasu wolnego w regionalnym biurze podróży. Pracodawca zaproponował mu do wyboru dwie formy zatrudnienia przy jednakowej kwocie wynagrodzenia brutto wynoszącej 4 000 zł miesięcznie:\nWariant I: Umowa o pracę (na 1/2 etatu).\nWariant II: Umowa zlecenia."
+   },
+   {
+    "id": "arkusz-autorski-4-z10-1",
+    "label": "10.1",
+    "number": 10,
+    "kind": "task",
+    "points": 2,
+    "text": "Wyjaśnij, dlaczego w Wariancie II (umowa zlecenia) Piotr otrzyma wyższą kwotę wynagrodzenia netto niż w Wariancie I (umowa o pracę), oraz podaj dokładną kwotę netto, jaką otrzyma w Wariancie II.\nKwota wynagrodzenia netto w Wariancie II:zł.\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-4-z10-2",
+    "label": "10.2",
+    "number": 10,
+    "kind": "task",
+    "points": 1,
+    "text": "Wymień dwa uprawnienia pracownicze gwarantowane przepisami Kodeksu pracy, które przysługiwałyby Piotrowi przy zawarciu umowy o pracę (Wariant I), a których nie gwarantuje Kodeks cywilny przy umowie zlecenia (Wariant II)."
+   },
+   {
+    "id": "arkusz-autorski-4-z11",
+    "label": "11",
+    "number": 11,
+    "kind": "context",
+    "points": 0,
+    "text": "Rynek pracy i metodologia badania BAEL\nW poniższej tabeli zestawiono wstępne wyniki Badania Aktywności Ekonomicznej\nLudności (BAEL) dla Polski w IV kwartale 2024 r., opublikowane przez GUS 25 lutego\n2025 r. Dane dotyczą ludności rezydującej w wieku 15–89 lat, zamieszkałej w gospodarstwach domowych, i są podane w tysiącach osób. Liczbę ludności ogółem obliczono jako sumę pracujących, bezrobotnych i biernych zawodowo.\nWyszczególnienie\nLiczba osób (w tys.)\nLudność w wieku 15–89 lat ogółem30 352\nOsoby pracujące17 247\nOsoby bezrobotne (spełniające kryteria BAEL)495\nOsoby bierne zawodowo12 610\nŹródło: GUS, BAEL IV kw. 2024, 25.02.2025."
+   },
+   {
+    "id": "arkusz-autorski-4-z11-1",
+    "label": "11.1",
+    "number": 11,
+    "kind": "task",
+    "points": 2,
+    "text": "Na podstawie danych w tabeli oblicz współczynnik aktywności zawodowej oraz stopę bezrobocia w Polsce w IV kwartale 2024 r. według metodologii\nBAEL. Zapisz obliczenia w wyznaczonym miejscu, a wyniki podaj w procentach z dokładnością do jednego miejsca po przecinku.\nMiejsce na obliczenia\nWspółczynnik aktywności zawodowej:%.\nStopa bezrobocia BAEL:%."
+   },
+   {
+    "id": "arkusz-autorski-4-z11-2",
+    "label": "11.2",
+    "number": 11,
+    "kind": "task",
+    "points": 1,
+    "text": "W hipotetycznym regionie w wyniku transformacji energetycznej i zamykania tradycyjnych kotłowni węglowych pracę straciło 200 palaczy i mechaników kotłowych. Mimo że w tym samym mieście lokalne firmy poszukują ponad 300 monterów pomp ciepła i instalacji fotowoltaicznych, zwolnieni pracownicy nie mogą znaleźć pracy z powodu braku wymaganych uprawnień i kwalifikacji technicznych.\nWskaż rodzaj bezrobocia, który wystąpił w opisanej sytuacji.\nA.Bezrobocie frykcyjne, wynikające z naturalnego czasu poszukiwania nowej posady przez pracowników.\nB.Bezrobocie strukturalne, wynikające z niedopasowania kwalifikacji osób poszukujących pracy do aktualnych potrzeb rynku.\nC.Bezrobocie sezonowe, wywołane rytmem pór roku i zmianami warunków atmosferycznych.\nD.Bezrobocie cykliczne (koniunkturalne), wywołane ogólnym załamaniem gospodarczym i spadkiem łącznego popytu."
+   },
+   {
+    "id": "arkusz-autorski-4-z12",
+    "label": "12",
+    "number": 12,
+    "kind": "context",
+    "points": 0,
+    "text": "Inwestowanie i oszczędzanie: lokata a obligacje skarbowe\nInwestor dysponuje kwotą 30 000 zł, którą zamierza ulokować na 12 miesięcy.\nPorównuje historyczne oferty z wiosny 2024 r.:\nOpcja A: 12-miesięczna Lokata Plus w Toyota Banku o stałym oprocentowaniu\n5,10% w skali roku, z wypłatą odsetek na koniec okresu. Oprocentowanie według informacji banku aktualnej na 22 kwietnia 2024 r.\nOpcja B: Roczne obligacje skarbowe ROR0425, sprzedawane w kwietniu 2024 r., z oprocentowaniem 6,05% w skali roku w pierwszym miesiącu. W kolejnych miesięcznych okresach oprocentowanie jest zmienne i równe stopie referencyjnej\nNBP powiększonej o marżę 0,00 punktu procentowego. Odsetki wypłacane są co miesiąc, a kapitał zwracany po roku.\nZyski z obu form oszczędzania podlegają opodatkowaniu podatkiem od zysków kapitałowych (podatkiem Belki).\nNa potrzeby obliczeń dla lokaty przyjmij pełny rok odsetkowy oraz brak dodatkowych opłat. Podatek i wyniki podaj z dokładnością do jednego grosza.\nNa podstawie: Toyota Bank, 22.04.2024; MF, IV 2024."
+   },
+   {
+    "id": "arkusz-autorski-4-z12-1",
+    "label": "12.1",
+    "number": 12,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz kwotę odsetek brutto, należny podatek od zysków kapitałowych oraz kwotę odsetek netto, jaką inwestor otrzyma po 12 miesiącach z lokaty bankowej (Opcja A). Zapisz obliczenia w wyznaczonym miejscu.\nMiejsce na obliczenia\n\nOdsetki brutto:zł.\nPodatek od zysków kapitałowych:zł.\nOdsetki netto:zł."
+   },
+   {
+    "id": "arkusz-autorski-4-z12-2",
+    "label": "12.2",
+    "number": 12,
+    "kind": "task",
+    "points": 1,
+    "text": "Oceń prawdziwość poniższych zdań dotyczących obligacji skarbowych i depozytów bankowych. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.\nSkarbowe papiery wartościowe (obligacje) mają charakter dłużny, w których Skarb Państwa występuje w roli dłużnika (emitenta)\ngwarantującego zwrot pożyczonego kapitału wraz z odsetkami całym swoim majątkiem.\nPF\nŚrodki ulokowane w detalicznych obligacjach skarbowych podlegają ochronie i gwarancjom Bankowego Funduszu Gwarancyjnego (BFG)\ndo wysokości równowartości 100 000 euro.\nPF"
+   },
+   {
+    "id": "arkusz-autorski-4-z13",
+    "label": "13",
+    "number": 13,
+    "kind": "context",
+    "points": 0,
+    "text": "Kredyt hipoteczny: wkład własny i systemy spłaty rat\nW hipotetycznej sytuacji klient ubiega się o kredyt hipoteczny na zakup mieszkania o wartości rynkowej 400 000 zł. Bank stosuje limit wskaźnika LtV (relacji kwoty kredytu do wartości nieruchomości) wynoszący 80%, zgodny z rekomendacją 15.5 lit. a\nRekomendacji S Komisji Nadzoru Finansowego (KNF). W tym zadaniu nie korzysta z wariantu LtV do 90% z dodatkowym zabezpieczeniem ani z gwarantowanego kredytu mieszkaniowego. Pozostałą część klient zamierza sfinansować kredytem hipotecznym na okres 20 lat (240 miesięcy).\nNa podstawie: KNF, Rekomendacja S, VI 2023.\nBank przedstawił dwa warianty harmonogramu spłat:\nWariant A: Raty równe (annuitetowe).\nWariant B: Raty malejące."
+   },
+   {
+    "id": "arkusz-autorski-4-z13-1",
+    "label": "13.1",
+    "number": 13,
+    "kind": "task",
+    "points": 1,
+    "text": "Oblicz minimalną wymaganą kwotę wkładu własnego w złotych oraz wnioskowaną kwotę kredytu hipotecznego.\nMinimalny wkład własny:zł.\nWnioskowana kwota kredytu:zł."
+   },
+   {
+    "id": "arkusz-autorski-4-z13-2",
+    "label": "13.2",
+    "number": 13,
+    "kind": "task",
+    "points": 2,
+    "text": "Rozstrzygnij, w którym wariancie spłaty (raty równe czy raty malejące) łączna suma zapłaconych przez klienta odsetek w całym 20-letnim okresie kredytowania będzie niższa. Uzasadnij odpowiedź, odwołując się do tempa spłaty kapitału zadłużenia oraz podstawy naliczania miesięcznych odsetek.\nWariant z niższą łączną kwotą odsetek: (raty równe / raty malejące)\nUzasadnienie:"
+   },
+   {
+    "id": "arkusz-autorski-4-z14",
+    "label": "14",
+    "number": 14,
+    "kind": "context",
+    "points": 0,
+    "text": "Analiza progu rentowności i marża bezpieczeństwa\nPrzedsiębiorstwo „ErgoDesk” produkuje ergonomiczne biurka z elektryczną regulacją wysokości blatu. W planie finansowym na kolejny miesiąc przyjęto następujące założenia:\nKoszty stałe przedsiębiorstwa (miesięcznie): 72 000 zł (wynajem hali produkcyjnej, pensje administracji, amortyzacja urządzeń, stałe opłaty abonamentowe i ubezpieczenia).\nJednostkowy koszt zmienny produkcji 1 biurka: 900 zł (materiały: blat, siłowniki elektryczne, sterownik, okablowanie oraz robocizna bezpośrednia).\nCena sprzedaży 1 biurka (netto): 1 500 zł."
+   },
+   {
+    "id": "arkusz-autorski-4-z14-1",
+    "label": "14.1",
+    "number": 14,
+    "kind": "task",
+    "points": 2,
+    "text": "Oblicz jednostkową marżę pokrycia, ilościowy próg rentowności () oraz wartościowy próg rentowności () przedsiębiorstwa w skali miesiąca.\nZapisz obliczenia w wyznaczonym miejscu.\nMiejsce na obliczenia\nJednostkowa marża pokrycia:zł/szt.\nIlościowy próg rentowności ():sztuk.\nWartościowy próg rentowności ():zł."
+   },
+   {
+    "id": "arkusz-autorski-4-z14-2",
+    "label": "14.2",
+    "number": 14,
+    "kind": "task",
+    "points": 2,
+    "text": "W październiku przedsiębiorstwo wyprodukowało i sprzedało 160 biurek po planowanej cenie 1 500 zł za sztukę.\nOblicz zysk operacyjny przedsiębiorstwa uzyskany w październiku oraz określ marżę bezpieczeństwa w sztukach (o ile sztuk rzeczywista sprzedaż przewyższyła ilościowy próg rentowności). Zapisz obliczenia w wyznaczonym miejscu.\nBEP\nQ\nBEP\nW\nBEP\nQ\nBEP\nW\n\nMiejsce na obliczenia\nZysk operacyjny przedsiębiorstwa:zł.\nMarża bezpieczeństwa w sztukach:sztuk."
+   },
+   {
+    "id": "arkusz-autorski-4-z15",
+    "label": "15",
+    "number": 15,
+    "kind": "task",
+    "points": 2,
+    "text": "Formy finansowania środków trwałych: leasing operacyjny a leasing finansowy\nFirma logistyczna planuje powiększyć flotę o 5 samochodów dostawczych o łącznej wartości 500 000 zł. Zarząd porównuje warunki umowy leasingu operacyjnego oraz leasingu finansowego.\nUzupełnij poniższą tabelę porównawczą. Wpisz właściwe określenia w puste komórki tabeli.\nKryterium porównawcze\nLeasing operacyjnyLeasing finansowy\nPodmiot dokonujący odpisów amortyzacyjnych środka trwałego\nKoszty uzyskania przychodów u korzystającego (leasingobiorcy)\nSposób rozliczenia podatku od towarów i usług (VAT)"
+   },
+   {
+    "id": "arkusz-autorski-4-z16",
+    "label": "16",
+    "number": 16,
+    "kind": "context",
+    "points": 0,
+    "text": "Zarządzanie ryzykiem i macierz odpowiedzialności RACI w przemyśle farmaceutycznym\nPodczas przygotowywania projektu uruchomienia nowej linii wytwarzania leków w zakładzie farmaceutycznym kierownik projektu zidentyfikował potencjalne zagrożenia oraz zdefiniował reguły współpracy w zespole."
+   },
+   {
+    "id": "arkusz-autorski-4-z16-1",
+    "label": "16.1",
+    "number": 16,
+    "kind": "task",
+    "points": 2,
+    "text": "Przyporządkuj działanie kierownika projektu (1–4) do właściwej strategii reakcji na ryzyko w projekcie (A–D). Wpisz odpowiednią literę strategii w wyznaczone pole tabeli.\nDostępne strategie: A – Unikanie ryzyka, B – Transfer (przeniesienie) ryzyka, C –\nŁagodzenie (mitygacja) ryzyka, D – Akceptacja ryzyka.\nDziałanie podjęte w projekcie\nStrategia reakcji na ryzyko (A–D)\n1. Wykupienie kompleksowej polisy ubezpieczeniowej od awarii specjalistycznej aparatury sterylizującej i skażenia partii produktów, przenoszącej finansowe skutki incydentów na ubezpieczyciela.\n2. Wdrożenie podwójnej procedury kontroli laboratoryjnej czystości surowców oraz dodatkowej kalibracji maszyn dozujących, aby zmniejszyć prawdopodobieństwo wystąpienia wad jakościowych w partii pilotażowej.\n3. Całkowita rezygnacja z wdrożenia preparatu zawierającego niestabilny chemicznie komponent o niepewnym profilu bezpieczeństwa ze względu na wysokie ryzyko odrzucenia przez organ regulacyjny.\n4. Utworzenie rezerwy finansowej na drobne podwyżki cen tekturowych opakowań zbiorczych bez podejmowania jakichkolwiek działań zapobiegawczych."
+   },
+   {
+    "id": "arkusz-autorski-4-z16-2",
+    "label": "16.2",
+    "number": 16,
+    "kind": "task",
+    "points": 1,
+    "text": "W macierzy odpowiedzialności RACI (gdzie: R – Responsible, A – Accountable, C –\nConsulted, I – Informed) przy zadaniu „Ostateczny audyt czystości mikrobiologicznej i dopuszczenie partii leku do obrotu” przypisano literę A jednocześnie dwóm osobom: Kierownikowi Projektu oraz Głównemu Technologowi Farmaceutycznemu.\nWyjaśnij, jaką kluczową regułę tworzenia macierzy RACI naruszono w tym przypadku oraz jakie negatywne konsekwencje dla zarządzania projektem rodzi przypisanie roli „A” więcej niż jednej osobie w ramach jednego zadania."
+   }
+  ]
+ }
+]
