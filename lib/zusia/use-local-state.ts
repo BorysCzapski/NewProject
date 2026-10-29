@@ -4,24 +4,35 @@
 // lib/zusia/use-local-state.ts
 // Tiny localStorage-backed state for ZUSia progress (question stats, flashcard
 // boxes, crossword solves). ZUSia keeps content in code and progress in the
-// browser, so it needs no database migration. Reads/writes are try/catch-ed:
+// browser (ZusiaSync mirrors it to the account). Reads/writes are try/catch-ed:
 // storage can be blocked (private mode) and the app must still work.
 // ============================================================================
 import { useCallback, useEffect, useState } from "react";
+
+/** Fired after every local write (ZusiaSync saves to the account) and after a sync merge. */
+export const CHANGED_EVENT = "zusia:local-changed";
+export const SYNCED_EVENT = "zusia:synced";
 
 export function useLocalState<T>(storageKey: string, initial: T): [T, (updater: (prev: T) => T) => void, boolean] {
   const [value, setValue] = useState<T>(initial);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(storageKey);
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrating from storage after mount
-      if (raw) setValue(JSON.parse(raw) as T);
-    } catch {
-      /* storage unavailable or corrupted – keep the initial value */
-    }
+    const read = () => {
+      try {
+        const raw = window.localStorage.getItem(storageKey);
+        if (raw) setValue(JSON.parse(raw) as T);
+      } catch {
+        /* storage unavailable or corrupted – keep the initial value */
+      }
+    };
+    /* eslint-disable react-hooks/set-state-in-effect -- hydrating from storage after mount */
+    read();
     setReady(true);
+    /* eslint-enable react-hooks/set-state-in-effect */
+    // ZusiaSync merges the account copy into storage, then announces it here.
+    window.addEventListener(SYNCED_EVENT, read);
+    return () => window.removeEventListener(SYNCED_EVENT, read);
   }, [storageKey]);
 
   const update = useCallback(
@@ -30,6 +41,7 @@ export function useLocalState<T>(storageKey: string, initial: T): [T, (updater: 
         const next = updater(prev);
         try {
           window.localStorage.setItem(storageKey, JSON.stringify(next));
+          window.dispatchEvent(new Event(CHANGED_EVENT));
         } catch {
           /* ignore quota / privacy-mode errors */
         }
