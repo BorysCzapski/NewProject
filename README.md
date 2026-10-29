@@ -274,8 +274,11 @@ wyboru, prawda/fałsz i otwarte), `flashcards.ts`, `crosswords.ts` (siatkę ukł
 powtórka błędów), **Test – wszystkie zadania** (tryb egzaminu z limitem czasu i wynikiem), **Fiszki**,
 **Krzyżówki**, **Mapy myśli** (z trybem „z pamięci") i **Zadania AI** (`ai-actions.ts`: Groq generuje
 nowe pytania i przypadki wyłącznie z teorii działu oraz ocenia odpowiedzi otwarte; wymaga
-`GROQ_API_KEY`). Postępy (statystyki pytań, poziomy fiszek, krzyżówki, wyniki testów) trzyma
-`localStorage` (`lib/zusia/use-local-state.ts`), więc są per przeglądarka. Podręcznik nie ma klucza
+`GROQ_API_KEY`). Postępy (statystyki pytań, poziomy fiszek, krzyżówki, wyniki testów) czyta UI z
+`localStorage` (`lib/zusia/use-local-state.ts`), a `ZusiaSync` zapisuje je na koncie (tabela
+`zusia_progress`, `0038`, jeden wiersz jsonb na użytkownika; akcje w `lib/zusia/progress-actions.ts`).
+Przy pierwszym wczytaniu urządzenie scala kopię z konta z lokalną (`lib/zusia/progress.ts`: większe
+liczniki, wyższe poziomy fiszek, suma wyników), potem każda zmiana jest zapisywana z opóźnieniem. Podręcznik nie ma klucza
 odpowiedzi – klucze do ćwiczeń z podręcznika (test z lekcji 2, prawda/fałsz z lekcji 3, zadania 1–4)
 wyprowadzono z treści lekcji; pytania z testu 2017 zaktualizowano do przepisów 2026.
 
