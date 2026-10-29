@@ -282,6 +282,24 @@ liczniki, wyższe poziomy fiszek, suma wyników), potem każda zmiana jest zapis
 odpowiedzi – klucze do ćwiczeń z podręcznika (test z lekcji 2, prawda/fałsz z lekcji 3, zadania 1–4)
 wyprowadzono z treści lekcji; pytania z testu 2017 zaktualizowano do przepisów 2026.
 
+**Matura BiZ** (`/biznes`) to mini-aplikacja do matury rozszerzonej z biznesu i zarządzania, zbudowana
+na silniku ZUSia (te same tryby i ten sam zapis postępów). Treść pochodzi z trzech źródeł:
+- **Baza wiedzy** maturabiz.pl/wiedza (42 artykuły, 6 działów) → `lib/biznes/content/wiedza.json`,
+  zamieniana w `theory.ts` na sekcje teorii i w `mindmaps.ts` na mapy myśli (nagłówki → gałęzie,
+  wytłuszczone pojęcia → liście).
+- **Słownik pojęć** (187 haseł) → `content/slownik.json`; z niego `glossary.ts` buduje **fiszki**,
+  **pytania** do Treningu i Testu (`questions.ts`: „które pojęcie opisuje definicja” i „co oznacza
+  pojęcie”, rozpraszacze z tego samego działu wybierane deterministycznie) oraz **krzyżówki**
+  (`crosswords.ts`; działy 1 i 5 mają za mało krótkich haseł, więc bez krzyżówek).
+- **Arkusze** (arkusz pokazowy CKE, Informator CKE, 4 arkusze autorskie) → `content/arkusze.json`,
+  generowany z PDF-ów przez `node scripts/build-biznes-sheets.mjs [katalog]`. PDF-y nie mają klucza
+  odpowiedzi, a wykresy i rysunki nie trafiają do tekstu, więc `/biznes/arkusze/<slug>` linkuje
+  do oryginału, a odpowiedzi ocenia AI (`gradeSheetTask`) na podstawie najtrafniejszych artykułów
+  bazy wiedzy; punkty można zawsze ustawić ręcznie. Wynik trafia do historii testów.
+Postępy: `localStorage` + tabela `biznes_progress` (`0039`). Zadania AI wymagają `GROQ_API_KEY`.
+Dane z maturabiz.pl pobrano jednorazowo (z przeglądarki, bo powłoka nie ma sieci); odświeżenie
+wymaga ponownego pobrania JSON-ów. Arkusze mają nieoficjalną ocenę AI, nie klucz CKE.
+
 ## Spis treści
 
 - [Stack technologiczny](#stack-technologiczny)

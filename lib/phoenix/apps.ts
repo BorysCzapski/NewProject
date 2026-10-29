@@ -93,6 +93,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/zusia",
   },
   {
+    id: "biznes",
+    name: "Matura BiZ",
+    description: "Matura rozszerzona z biznesu i zarządzania: teoria, arkusze, fiszki, trening, krzyżówki, mapy myśli i zadania AI",
+    section: "nauka",
+    icon: "Briefcase",
+    href: "/biznes",
+  },
+  {
     id: "tracker",
     name: "Tracker",
     description: "Godziny pracy i zadania dzień po dniu, wykres postępu i wskazówki lock in",
