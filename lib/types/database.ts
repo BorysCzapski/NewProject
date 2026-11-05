@@ -1563,3 +1563,40 @@ export interface Habit {
   position: number;
   created_at: string;
 }
+
+// ---------------------------------------------------------------------------
+// Projekty (supabase/migrations/0044_projekty.sql)
+// ---------------------------------------------------------------------------
+
+export type ProjectStatus = "pomysl" | "w_trakcie" | "wstrzymany" | "ukonczony";
+
+export interface Project {
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  status: ProjectStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ProjectItem {
+  id: string;
+  project_id: string;
+  user_id: string;
+  kind: "step" | "need";
+  text: string;
+  note: string;
+  done: boolean;
+  position: number;
+  created_at: string;
+}
+
+export interface ProjectSession {
+  id: string;
+  project_id: string;
+  user_id: string;
+  day: string;
+  note: string;
+  created_at: string;
+}

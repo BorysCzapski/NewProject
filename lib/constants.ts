@@ -139,6 +139,11 @@ export const HABITS_NAV: NavItem[] = [
   { href: "/habits", label: "Nawyki", icon: "ListChecks", exact: true },
 ];
 
+export const PROJEKTY_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/projekty", label: "Projekty", icon: "Hammer" },
+];
+
 export const SILOWNIA_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/silownia", label: "Dziś", icon: "Dumbbell", exact: true },
@@ -158,6 +163,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/zusia", items: ZUSIA_NAV },
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "/habits", items: HABITS_NAV },
+  { prefix: "/projekty", items: PROJEKTY_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];

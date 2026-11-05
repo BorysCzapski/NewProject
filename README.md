@@ -211,6 +211,12 @@ Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik reg
 w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
 `habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.
 
+**Projekty** (`/projekty`) — własne projekty z hobby (naprawa magnetofonu, nauka piosenki...).
+Projekt ma status (pomysł / w trakcie / wstrzymany / ukończony), opis „co dokładnie chcę zrobić",
+**kroki** (z odhaczonych kroków liczy się pasek postępu), listę **czego potrzebuję** (części,
+narzędzia; odhaczasz „mam") i **dziennik sesji** (data + co robiłeś). Schemat: `0044_projekty.sql`
+(`projects`, `project_items` z `kind` step/need, `project_sessions`), akcje w `lib/projekty/actions.ts`.
+
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
 > teorii Matury nosi numer `0016`, nie `0015`. Przed dodaniem kolejnej migracji sprawdź
