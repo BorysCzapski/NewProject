@@ -117,6 +117,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/gitara",
   },
   {
+    id: "projekty",
+    name: "Projekty",
+    description: "Własne projekty z hobby: postęp, czego potrzebujesz i dziennik sesji",
+    section: "narzedzia",
+    icon: "Hammer",
+    href: "/projekty",
+  },
+  {
     id: "butelki",
     name: "Kaucje",
     description: "Licznik butelek kaucyjnych",
