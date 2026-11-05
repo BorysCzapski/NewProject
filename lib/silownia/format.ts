@@ -2,8 +2,7 @@
 // lib/silownia/format.ts
 // Data i drobne formatery dla "Siłowni". Bez importów z next/react i bez
 // "server-only" — te same funkcje liczą etykiety na serwerze (strony) i na
-// kliencie (formularze), więc muszą działać po obu stronach. Ten sam wzorzec
-// co lib/tracker/format.ts.
+// kliencie (formularze), więc muszą działać po obu stronach.
 // ============================================================================
 
 const WARSAW_TZ = "Europe/Warsaw";

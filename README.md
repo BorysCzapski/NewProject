@@ -30,11 +30,7 @@ budują tę samą zagadkę. Nie zasłania pierwszych liter wyrazów, słów funk
 tekstu w nawiasach ani `sth`/`sb`; woli podwójne spółgłoski i skupiska samogłosek, bo na nich Polacy
 się mylą. Postęp pisowni jest w **osobnej** tabeli (`lexicon_spelling_progress`, `0036`) od postępu
 w znaczeniach — znać słowo to nie to samo co umieć je napisać. Ćwiczy tylko słowa, które mają już
-polskie tłumaczenie, i nie woła AI. Talia „Dom i mieszkanie" (139 haseł z zestawu „Pojęcia", ze zrzutów ekranu) ma gotowe tłumaczenia
-(`supabase/seed/lexicon/03_dom_i_mieszkanie.sql`, generowany z `dom-pojecia-source.txt`). Lista jest
-**niepełna**: na zrzutach brakuje fragmentu między `armchair` a `bench` oraz między `boiler room` a
-`bowl` (była tam reklama), a `armchair` i `pot` były ucięte bez tłumaczenia, więc zostały pominięte.
-Seed przenumerowuje `rank` całej talii, więc dopisywanie brakujących haseł jest bezpieczne.
+polskie tłumaczenie, i nie woła AI.
 
 **Trening fiszek** (`/jezyki/nauka/trening-fiszki`) — tylko dla angielskiego: widzisz **polskie** słowo i
 **wpisujesz angielskie** (aktywne przypominanie, trudniejsze niż odwracanie fiszki). Przyjmuje hasło
@@ -46,9 +42,8 @@ jako błąd. Logika porównania to czysty `lib/lexicon/recall.ts`. Warianty sied
 `lexicon_entries.alternatives` (`text[]`, `0037`); `term` zostaje hasłem głównym, na którym ćwiczy
 Pisownia. Postęp ma własną tabelę (`lexicon_recall_progress`) — rozpoznać słowo, napisać je i
 przypomnieć je sobie z polskiego to trzy osobne umiejętności z osobnym harmonogramem. Zapytania
-Pisowni i Treningu współdzielą `lib/lexicon/skill-queries.ts`. Talia „Trening fiszki 4" (28 haseł,
-`04_trening_fiszki_4.sql`, generowany z `trening-fiszki-4-source.txt`) zawiera warianty; trening
-ćwiczy też każdą inną talię leksykonu, gdy jej słowa mają już tłumaczenie.
+Pisowni i Treningu współdzielą `lib/lexicon/skill-queries.ts`. Trening
+ćwiczy każdą talię leksykonu, gdy jej słowa mają już tłumaczenie.
 
 Gdy talia się wyczerpie (nowych słów brak, a powtórki dopiero za 1–2 dni — po poprawnej odpowiedzi
 termin to 2 dni, nie „jutro"), sesja Pisowni i Treningu nie jest już pustym „wróć jutro", które
@@ -216,31 +211,11 @@ API) — z jawną obsługą braku dostępu do mikrofonu, zgodnie ze specem („a
 bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść startowa:
 `supabase/seed/gitara/*.sql`.
 
-**Tracker** (`/tracker`) — dziennik pracy w stylu giełdowego wykresu: jednego dnia wpisujesz
-**ile godzin pracowałeś**, **ile zadań zrobiłeś** i opcjonalną notatkę, a dzień ląduje jako
-punkt na wykresie. Punkt jest zielony (▲), gdy dzień był lepszy od poprzedniego, czerwony (▼),
-gdy gorszy, szary (=), gdy taki sam — kolor zawsze idzie w parze ze strzałką i liczbą, a pod
-wykresem jest tabela. Metryki: godziny, zadania i **tempo** (zadania na godzinę, łapie dni „siedziałem
-długo, zrobiłem mało"); zakresy 7/30/90 dni i całość. Tooltip i nagłówek-ticker porównują dzień z
-poprzednim zapisanym, ze średnią pozostałych dni i z całą historią („lepiej niż 80% dni, miejsce 3
-z 25") — zawsze na całej historii, a nie na widocznym zakresie, więc wynik dnia nie zmienia się
-od przełączenia zakresu. `/tracker/wskazowki` („Lock in") to protokół skupienia (przed / w
-trakcie / po bloku) oraz wskazówki dobrej nauki: aktywne przypominanie, powtórki rozłożone w
-czasie, sen i planowanie. Logika porównań siedzi w czystym `lib/tracker/stats.ts` (bez I/O).
-
-Dwie decyzje, które warto znać. Po pierwsze: **jeden dzień = jeden wiersz** (`unique (user_id,
-day)`), zapis na ten sam dzień nadpisuje wpis (upsert) — wybranie daty z istniejącym wpisem
-wczytuje go do edycji. Dni bez wpisu nie są punktami (wykres pokazuje tylko zapisane dni), a
-dzień z samymi zerami jest pełnoprawnym punktem — wykres, który ukrywa słabe dni, kłamie. Po
-drugie: Tracker **zastąpił aplikację Godziny**. Kod i UI Godzin zostały usunięte, a tabele
-`study_topics` / `study_sessions` (`0027_godziny.sql`) zostają w bazie nietknięte — tak samo jak
-`math_*` po usunięciu Matmy. Migracja `0034_tracker.sql` przepisuje przy okazji `"godziny"` na
-`"tracker"` w `profiles.installed_apps`, żeby aplikacja nie znikła z ekranu głównego. Walidacji
-„dzień nie z przyszłości" nie da się zapisać jako `CHECK` (`current_date` jest STABLE), więc
-pilnuje jej `lib/tracker/actions.ts` w strefie `Europe/Warsaw`; zakresy (0–24 h, 0–999 zadań)
-pilnuje baza. Przed dodaniem migracji zawsze `npm run db status` — runner rozpoznaje migracje po
-numerze wersji, więc plik z zajętym numerem zostałby po cichu uznany za „już wgrany".
-
+**Habit Tracking** (`/habits`) — nawyki × 7 dni: widzisz dziś i 6 kolejnych dni (dni z przyszłości są
+wyszarzone i nie da się ich odhaczyć), strzałkami przeglądasz poprzednie tygodnie (`?od=YYYY-MM-DD`).
+Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik regularności (odhaczone pola
+w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
+`habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.
 
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
@@ -659,9 +634,6 @@ app/
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
     kuznia/            # KUŹNIA — kreator promptów
-    tracker/           # TRACKER — godziny i zadania dzień po dniu
-      page.tsx          # wykres „jak na giełdzie" + formularz dnia + ostatnie dni
-      wskazowki/         # „Lock in": protokół skupienia i wskazówki nauki
     matura/            # MATURA Z JĘZYKA — angielski albo hiszpański (CKE)
       page.tsx          # dashboard: wybór języka i poziomu / szacowany wynik
       nauka/             # hub 4 części egzaminu — wszystkie zbudowane
@@ -721,8 +693,6 @@ lib/
                      # tasowanie ćwiczeń (shuffle.ts — Math.random rozjechałby hydratację)
   algorytmy/         # Algorytmy: katalog działów i typów zadań, typy bloków lekcji,
                      # kolejka ćwiczeń per typ (exercise-stock.ts) i generator zadań
-  tracker/           # Tracker: daty i etykiety, czysta logika porównań dni (stats.ts),
-                     # zapytania, akcje zapisu dnia, treść wskazówek
   gitara/            # Gitara: teoria muzyki i kształty akordów (theory.ts, w tym 5
                      # kształtów CAGED wyprowadzonych transpozycją), Web Audio (syntezator
                      # strun Karplus-Strong, metronom z harmonogramem z wyprzedzeniem,
@@ -732,7 +702,7 @@ lib/
 supabase/
   migrations/        # schemat SQL (0007 = Matma, 0008 = Paragony, 0009 = Schola,
                      # 0013 = Matura, 0016 = wymiar języka, 0017 = teoria i słownictwo,
-                     # 0024 = Algorytmy, 0025 = Gitara, 0034 = Tracker)
+                     # 0024 = Algorytmy, 0025 = Gitara)
   seed/               # dane początkowe (admin, słówka, gramatyka, matma/, matura/,
                      # matura-es/, algorytmy/, gitara/)
 scripts/

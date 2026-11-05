@@ -101,12 +101,12 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/biznes",
   },
   {
-    id: "tracker",
-    name: "Tracker",
-    description: "Godziny pracy i zadania dzień po dniu, wykres postępu i wskazówki lock in",
+    id: "habits",
+    name: "Habit Tracking",
+    description: "Codzienne nawyki: odhaczaj 7 dni, sprawdzaj poprzednie tygodnie, wykres regularności",
     section: "nauka",
-    icon: "LineChart",
-    href: "/tracker",
+    icon: "ListChecks",
+    href: "/habits",
   },
   {
     id: "gitara",

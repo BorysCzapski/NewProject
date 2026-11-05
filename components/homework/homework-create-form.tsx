@@ -278,30 +278,15 @@ export function HomeworkCreateForm({
           <option value="" disabled>
             Wybierz typ...
           </option>
-          {Object.entries(HOMEWORK_TYPE_LABELS).map(([value, label]) => (
+          {Object.entries(HOMEWORK_TYPE_LABELS)
+            .filter(([value]) => value !== "song_translation")
+            .map(([value, label]) => (
             <option key={value} value={value}>
               {label}
             </option>
           ))}
         </select>
       </div>
-
-      {type === "song_translation" && (
-        <div className="flex flex-col gap-3">
-          <div>
-            <Label htmlFor="song_title">Tytuł piosenki</Label>
-            <Input id="song_title" name="song_title" required />
-          </div>
-          <div>
-            <Label htmlFor="song_artist">Wykonawca (opcjonalnie)</Label>
-            <Input id="song_artist" name="song_artist" />
-          </div>
-          <div>
-            <Label htmlFor="song_lyrics">Tekst piosenki</Label>
-            <textarea id="song_lyrics" name="song_lyrics" rows={6} required className={textareaClass} />
-          </div>
-        </div>
-      )}
 
       {type === "vocabulary_mastery" && (
         <div className="flex flex-col gap-3">

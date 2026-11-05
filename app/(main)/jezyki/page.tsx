@@ -5,7 +5,7 @@
 // Phoenix's mini-apps; the platform launcher lives at "/".
 // ============================================================================
 import Link from "next/link";
-import { BookOpen, PenLine, Music, Headphones, GraduationCap, Layers, ArrowRight, Map } from "lucide-react";
+import { BookOpen, PenLine, Headphones, GraduationCap, Layers, ArrowRight, Map } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getHomeworkWithProgress } from "@/lib/homework/progress";
@@ -23,7 +23,6 @@ const MODULE_LINKS = [
   { href: "/jezyki/nauka/gramatyka", label: "Gramatyka", icon: GraduationCap, color: "bg-level-b1/15 text-level-b1" },
   { href: "/jezyki/nauka/czytanie", label: "Czytanie", icon: BookOpen, color: "bg-primary-soft text-primary" },
   { href: "/jezyki/nauka/pisanie", label: "Pisanie", icon: PenLine, color: "bg-accent-soft text-accent" },
-  { href: "/jezyki/nauka/piosenki", label: "Piosenki", icon: Music, color: "bg-level-b2/15 text-level-b2" },
   { href: "/jezyki/nauka/sluchanie", label: "Słuchanie", icon: Headphones, color: "bg-danger-soft text-danger" },
 ];
 

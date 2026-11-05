@@ -11,7 +11,6 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { requireAdmin } from "@/lib/auth/get-profile";
 import { askAIForJSON } from "@/lib/ai";
-import { createSong } from "@/lib/songs/create-song";
 import { createWritingTask } from "@/lib/writing/create-task";
 import { createListeningExercise } from "@/lib/listening/create-exercise";
 import { langInfo } from "@/lib/languages";
@@ -42,7 +41,6 @@ const SUGGESTABLE_TYPES: HomeworkType[] = [
 ];
 
 const HOMEWORK_TYPES: HomeworkType[] = [
-  "song_translation",
   "vocabulary_mastery",
   "training_count",
   "reading_count",
@@ -149,26 +147,6 @@ export async function createHomeworkAction(_prevState: ActionState, formData: Fo
   let config: Record<string, unknown>;
 
   switch (type) {
-    case "song_translation": {
-      const songTitle = String(formData.get("song_title") ?? "").trim();
-      const artist = String(formData.get("song_artist") ?? "").trim();
-      const lyrics = String(formData.get("song_lyrics") ?? "").trim();
-      if (!songTitle || !lyrics) return { error: "Podaj tytuł i tekst piosenki." };
-      try {
-        const song = await createSong({
-          language: languageTyped,
-          title: songTitle,
-          artist: artist || undefined,
-          lyrics,
-          createdBy: profile.id,
-        });
-        config = { song_id: song.id };
-      } catch (err) {
-        return { error: err instanceof Error ? err.message : "Nie udało się utworzyć piosenki." };
-      }
-      break;
-    }
-
     case "vocabulary_mastery": {
       const category = String(formData.get("vm_category") ?? "").trim();
       const thresholdPctRaw = String(formData.get("vm_threshold") ?? "").trim();
