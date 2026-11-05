@@ -57,12 +57,6 @@ Ekran końcowy Pisowni i Treningu liczy „za pierwszym razem" uczciwie: powtór
 zwiększają mianownika, a powtórka po błędzie w Pisowni zasłania INNĄ literę niż poprzednio (o ile
 słowo daje wybór) — samo losowe ziarno często wybierało to samo miejsce.
 
-Druga mini-aplikacja to **Kuźnia** (`/kuznia`) — kreator promptów do budowy kolejnych
-aplikacji: czat z AI buduje razem z użytkownikiem, wiadomość po wiadomości, gotowy do
-skopiowania dokument promptu (Markdown), na bieżąco podpowiadając konkretne uzupełnienia
-i wykrywając sprzeczności/luki w dotychczasowych ustaleniach — z propozycją naprawy jednym
-kliknięciem. Gotowy prompt wkleja się w nową, osobną sesję czatu, żeby zacząć budowę.
-
 Trzecia mini-aplikacja to **Matura z języka** (`/matura`) — przygotowanie do matury z języka
 obcego (CKE): **angielskiego albo hiszpańskiego**, poziom podstawowy lub rozszerzony (język
 i poziom wybierasz na starcie, oba zmienialne w każdej chwili; przełączenie języka niczego nie
@@ -633,7 +627,6 @@ app/
       prace-domowe/      # widok prac domowych użytkownika
       kalendarz/         # kalendarz, streaki, statystyki
       admin/             # panel administratora (prace domowe, ścieżki uczniów)
-    kuznia/            # KUŹNIA — kreator promptów
     matura/            # MATURA Z JĘZYKA — angielski albo hiszpański (CKE)
       page.tsx          # dashboard: wybór języka i poziomu / szacowany wynik
       nauka/             # hub 4 części egzaminu — wszystkie zbudowane

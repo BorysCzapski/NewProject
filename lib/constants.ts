@@ -88,11 +88,6 @@ export const LINGUO_NAV: NavItem[] = [
   { href: "/jezyki/kalendarz", label: "Kalendarz", icon: "Calendar" },
 ];
 
-export const KUZNIA_NAV: NavItem[] = [
-  { href: "/", label: "Phoenix", icon: "Home", exact: true },
-  { href: "/kuznia", label: "Kuźnia", icon: "Hammer", exact: true },
-];
-
 export const MATMA_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/matma", label: "Dziś", icon: "Calculator", exact: true },
@@ -156,7 +151,6 @@ export const SILOWNIA_NAV: NavItem[] = [
 /** Nav sets by route prefix; the longest matching prefix wins ("" = fallback). */
 export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/jezyki", items: LINGUO_NAV },
-  { prefix: "/kuznia", items: KUZNIA_NAV },
   { prefix: "/matma", items: MATMA_NAV },
   { prefix: "/matura", items: MATURA_NAV },
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
