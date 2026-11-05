@@ -117,14 +117,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/gitara",
   },
   {
-    id: "kuznia",
-    name: "Kuźnia",
-    description: "Kreator promptów do budowy kolejnych aplikacji",
-    section: "narzedzia",
-    icon: "Hammer",
-    href: "/kuznia",
-  },
-  {
     id: "butelki",
     name: "Kaucje",
     description: "Licznik butelek kaucyjnych",
