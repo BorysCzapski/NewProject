@@ -4,7 +4,7 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Music, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck, Keyboard } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck, Keyboard } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -58,12 +58,6 @@ const MODULES = [
     label: "Pisanie",
     description: "Krótkie formy oceniane przez AI",
     icon: PenLine,
-  },
-  {
-    href: "/jezyki/nauka/piosenki",
-    label: "Piosenki",
-    description: "Tłumacz teksty piosenek linijka po linijce",
-    icon: Music,
   },
   {
     href: "/jezyki/nauka/sluchanie",

@@ -1130,23 +1130,6 @@ export interface BreviaryDayRow {
   fetched_at: string;
 }
 
-// ---------------------------------------------------------------------------
-// Tracker — jeden wpis na dzień: godziny pracy, zadania, notatka
-// (supabase/migrations/0034_tracker.sql)
-// ---------------------------------------------------------------------------
-
-export interface TrackerDay {
-  id: string;
-  user_id: string;
-  /** Dzień kalendarzowy "YYYY-MM-DD" — kolumna `date`, bez strefy. */
-  day: string;
-  hours: number;
-  tasks: number;
-  note: string | null;
-  created_at: string;
-  updated_at: string;
-}
-
 // ============================================================================
 // Algorytmy — nauka struktur danych i algorytmów.
 // Mirrors supabase/migrations/0024_algorytmy.sql. Ćwiczenia są wyłącznie

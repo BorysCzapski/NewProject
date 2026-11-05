@@ -3,7 +3,7 @@
 // "Kalendarz" screen: streak header, aggregate learning stats, and the
 // interactive month calendar highlighting days with activity_log rows.
 // ============================================================================
-import { BookMarked, GraduationCap, BookOpen, PenLine, Music, Headphones } from "lucide-react";
+import { BookMarked, GraduationCap, BookOpen, PenLine, Headphones } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { PageHeader } from "@/components/layout/page-header";
@@ -20,7 +20,6 @@ export default async function KalendarzPage() {
     { count: correctGrammar },
     { count: readingTexts },
     { count: writingSubmissions },
-    { data: songAttempts },
     { data: listeningAttempts },
   ] = await Promise.all([
     supabase
@@ -42,12 +41,10 @@ export default async function KalendarzPage() {
       .select("id", { count: "exact", head: true })
       .eq("user_id", profile.id),
     // PostgREST has no COUNT DISTINCT — fetch the id column and dedupe with a Set below.
-    // Both songs and listening exercises can be attempted/retried multiple times.
-    supabase.from("song_translation_attempts").select("song_id").eq("user_id", profile.id),
+    // Listening exercises can be attempted/retried multiple times.
     supabase.from("listening_attempts").select("exercise_id").eq("user_id", profile.id),
   ]);
 
-  const translatedSongs = new Set((songAttempts ?? []).map((row) => row.song_id)).size;
   const completedListeningExercises = new Set(
     (listeningAttempts ?? []).map((row) => row.exercise_id)
   ).size;
@@ -57,7 +54,6 @@ export default async function KalendarzPage() {
     { icon: GraduationCap, label: "Poprawne ćwiczenia gramatyczne", value: correctGrammar ?? 0 },
     { icon: BookOpen, label: "Przeczytane teksty", value: readingTexts ?? 0 },
     { icon: PenLine, label: "Napisane teksty", value: writingSubmissions ?? 0 },
-    { icon: Music, label: "Przetłumaczone piosenki", value: translatedSongs },
     { icon: Headphones, label: "Ukończone nagrania", value: completedListeningExercises },
   ];
 

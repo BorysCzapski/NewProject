@@ -101,14 +101,6 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/biznes",
   },
   {
-    id: "tracker",
-    name: "Tracker",
-    description: "Godziny pracy i zadania dzień po dniu, wykres postępu i wskazówki lock in",
-    section: "nauka",
-    icon: "LineChart",
-    href: "/tracker",
-  },
-  {
     id: "gitara",
     name: "Gitara",
     description: "Nauka gry na gitarze: akordy, CAGED, rytm, techniki, piosenki",

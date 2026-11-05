@@ -139,12 +139,6 @@ export const ZUSIA_NAV: NavItem[] = [
   { href: "/zusia/fiszki", label: "Fiszki", icon: "Sparkles" },
 ];
 
-export const TRACKER_NAV: NavItem[] = [
-  { href: "/", label: "Phoenix", icon: "Home", exact: true },
-  { href: "/tracker", label: "Wykres", icon: "LineChart", exact: true },
-  { href: "/tracker/wskazowki", label: "Lock in", icon: "Lightbulb" },
-];
-
 export const SILOWNIA_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/silownia", label: "Dziś", icon: "Dumbbell", exact: true },
@@ -163,7 +157,6 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/geografia", items: GEOGRAFIA_NAV },
   { prefix: "/modlitwa", items: MODLITWA_NAV },
   { prefix: "/zusia", items: ZUSIA_NAV },
-  { prefix: "/tracker", items: TRACKER_NAV },
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
