@@ -211,6 +211,12 @@ API) — z jawną obsługą braku dostępu do mikrofonu, zgodnie ze specem („a
 bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść startowa:
 `supabase/seed/gitara/*.sql`.
 
+**Habit Tracking** (`/habits`) — nawyki × 7 dni: widzisz dziś i 6 kolejnych dni (dni z przyszłości są
+wyszarzone i nie da się ich odhaczyć), strzałkami przeglądasz poprzednie tygodnie (`?od=YYYY-MM-DD`).
+Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik regularności (odhaczone pola
+w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
+`habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.
+
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
 > teorii Matury nosi numer `0016`, nie `0015`. Przed dodaniem kolejnej migracji sprawdź

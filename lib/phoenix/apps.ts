@@ -101,6 +101,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/biznes",
   },
   {
+    id: "habits",
+    name: "Habit Tracking",
+    description: "Codzienne nawyki: odhaczaj 7 dni, sprawdzaj poprzednie tygodnie, wykres regularności",
+    section: "nauka",
+    icon: "ListChecks",
+    href: "/habits",
+  },
+  {
     id: "gitara",
     name: "Gitara",
     description: "Nauka gry na gitarze: akordy, CAGED, rytm, techniki, piosenki",

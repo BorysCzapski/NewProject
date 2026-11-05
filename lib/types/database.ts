@@ -1575,3 +1575,15 @@ export interface GtrTab {
   created_by: string | null;
   created_at: string;
 }
+
+// ---------------------------------------------------------------------------
+// Habit Tracking (supabase/migrations/0042_habits.sql)
+// ---------------------------------------------------------------------------
+
+export interface Habit {
+  id: string;
+  user_id: string;
+  name: string;
+  position: number;
+  created_at: string;
+}
