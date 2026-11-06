@@ -217,6 +217,15 @@ Projekt ma status (pomysł / w trakcie / wstrzymany / ukończony), opis „co do
 narzędzia; odhaczasz „mam") i **dziennik sesji** (data + co robiłeś). Schemat: `0044_projekty.sql`
 (`projects`, `project_items` z `kind` step/need, `project_sessions`), akcje w `lib/projekty/actions.ts`.
 
+**Mind Math** (`/mindmath`) — rachunek w głowie. **Techniki** (`/mindmath/techniki`): mnożenie przez 11,
+kwadraty liczb na 5, metoda braków przy liczbach bliskich 100 i „pionowo i na krzyż" (sutry
+wedyjskie), różnica kwadratów, ×5/25/125, ×9/99, tabliczka 6–9 na palcach, dopełnianie do 10 w stylu
+abakusa (suanpan/soroban) i sprawdzanie przez 9 — każda z krokami i przykładem. **Trening**
+(`/mindmath/trening`): seria 10/20/30 zadań na czas, 3 poziomy, tryb na każdą technikę + mieszanka.
+Generatory to czysty `lib/mindmath/problems.ts` (losowanie dopiero po „Start", nie w renderze),
+treść lekcji w `lib/mindmath/techniques.ts`. Wynik każdej sesji ląduje w `mindmath_sessions`
+(`0045_mindmath.sql`); na stronie głównej aplikacji są rekordy (najszybsza seria bez błędu) i historia.
+
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja
 > teorii Matury nosi numer `0016`, nie `0015`. Przed dodaniem kolejnej migracji sprawdź
