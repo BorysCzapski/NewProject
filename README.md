@@ -206,7 +206,7 @@ bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść
 `supabase/seed/gitara/*.sql`.
 
 **Habit Tracking** (`/habits`) — nawyki × 7 dni: widzisz dziś i 6 kolejnych dni (dni z przyszłości są
-wyszarzone i nie da się ich odhaczyć), strzałkami przeglądasz poprzednie tygodnie (`?od=YYYY-MM-DD`).
+wyszarzone i nie da się ich odhaczyć), nad tabelą są kwadraciki wszystkich tygodni (jak wkład na GitHubie, kolor = % zrobionych nawyków); kliknięcie rozwija wybrany tydzień, strzałki przechodzą tydzień obok tygodnia.
 Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik regularności (odhaczone pola
 w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
 `habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.

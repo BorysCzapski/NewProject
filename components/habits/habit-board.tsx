@@ -8,7 +8,7 @@
 // Dni z przyszłości są wyszarzone — nie da się ich odhaczyć.
 // ============================================================================
 import { useMemo, useState, useTransition } from "react";
-import { Check, Plus, Trash2 } from "lucide-react";
+import { CalendarDays, Check, ChevronLeft, ChevronRight, Plus, Trash2 } from "lucide-react";
 import {
   CartesianGrid,
   Line,
@@ -20,7 +20,7 @@ import {
 } from "recharts";
 import { addHabit, deleteHabit, setHabitCheck } from "@/lib/habits/actions";
 import { consistencyScore, dayStats } from "@/lib/habits/stats";
-import { dayMonthLabel, weekdayLabel } from "@/lib/habits/dates";
+import { dayMonthLabel, rangeLabel, weekdayLabel, windowDays } from "@/lib/habits/dates";
 import type { Habit } from "@/lib/types/database";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -29,22 +29,25 @@ import { cn } from "@/lib/utils";
 
 export function HabitBoard({
   habits,
-  days,
+  weekStarts,
   initialChecks,
   today,
 }: {
   habits: Habit[];
-  days: string[];
+  /** Początki 7-dniowych tygodni, od najstarszego; ostatni to okno zaczynające się dziś. */
+  weekStarts: string[];
   initialChecks: string[];
   today: string;
 }) {
+  const [selected, setSelected] = useState(weekStarts.length - 1);
+  const days = useMemo(() => windowDays(weekStarts[selected]), [weekStarts, selected]);
   const [checks, setChecks] = useState(() => new Set(initialChecks));
   const [name, setName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
   // Wartości z serwera są źródłem prawdy po przejściu na inne okno / revalidacji.
-  const windowKey = days[0] + habits.map((h) => h.id).join();
+  const windowKey = habits.map((h) => h.id).join();
   const [lastKey, setLastKey] = useState(windowKey);
   if (lastKey !== windowKey) {
     setLastKey(windowKey);
@@ -52,6 +55,10 @@ export function HabitBoard({
   }
 
   const habitIds = useMemo(() => habits.map((h) => h.id), [habits]);
+  const weekScores = useMemo(
+    () => weekStarts.map((start) => consistencyScore(dayStats(windowDays(start), habitIds, checks, today))),
+    [weekStarts, habitIds, checks, today]
+  );
   const stats = useMemo(() => dayStats(days, habitIds, checks, today), [days, habitIds, checks, today]);
   const score = consistencyScore(stats);
   const chartData = stats.map((s) => ({
@@ -105,6 +112,69 @@ export function HabitBoard({
 
   return (
     <div className="grid gap-5 lg:grid-cols-[1fr_16rem]">
+      <Card className="lg:col-span-2">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <CardTitle>Wszystkie tygodnie</CardTitle>
+            <p className="text-sm text-foreground-muted">Kliknij kwadrat, aby rozwinąć tydzień. Im ciemniejszy, tym więcej zrobione.</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setSelected((s) => Math.max(0, s - 1))}
+              disabled={selected === 0}
+              aria-label="Poprzedni tydzień"
+              className="rounded-full border border-border p-2 hover:bg-surface-muted disabled:opacity-30"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <span className="flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm font-medium">
+              <CalendarDays className="h-4 w-4 text-foreground-muted" />
+              {rangeLabel(weekStarts[selected])}
+            </span>
+            <button
+              type="button"
+              onClick={() => setSelected((s) => Math.min(weekStarts.length - 1, s + 1))}
+              disabled={selected === weekStarts.length - 1}
+              aria-label="Następny tydzień"
+              className="rounded-full border border-border p-2 hover:bg-surface-muted disabled:opacity-30"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+            {selected !== weekStarts.length - 1 && (
+              <button
+                type="button"
+                onClick={() => setSelected(weekStarts.length - 1)}
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                Dziś
+              </button>
+            )}
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Tygodnie">
+          {weekStarts.map((start, i) => {
+            const score = weekScores[i];
+            const label = `${rangeLabel(start)}: ${score === null ? "brak danych" : `${score}%`}`;
+            return (
+              <button
+                key={start}
+                type="button"
+                onClick={() => setSelected(i)}
+                title={label}
+                aria-label={label}
+                aria-pressed={i === selected}
+                className={cn(
+                  "h-5 w-5 rounded-[5px] border transition-transform hover:scale-110",
+                  squareClass(score),
+                  i === selected && "ring-2 ring-foreground ring-offset-2 ring-offset-surface"
+                )}
+              />
+            );
+          })}
+        </div>
+      </Card>
+
       <Card className="min-w-0 p-0">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[34rem] border-collapse text-sm">
@@ -248,6 +318,16 @@ export function HabitBoard({
       )}
     </div>
   );
+}
+
+/** Poziom koloru kwadratu tygodnia: puste → 0 → cztery stopnie (jak wkład na GitHubie). */
+function squareClass(score: number | null): string {
+  if (score === null) return "border-border/50 bg-surface-muted";
+  if (score === 0) return "border-border bg-surface";
+  if (score <= 33) return "border-primary/30 bg-primary/30";
+  if (score <= 66) return "border-primary/50 bg-primary/55";
+  if (score < 100) return "border-primary/70 bg-primary/80";
+  return "border-primary bg-primary";
 }
 
 function ScoreRing({ score }: { score: number | null }) {
