@@ -109,6 +109,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/habits",
   },
   {
+    id: "mindmath",
+    name: "Mind Math",
+    description: "Szybkie liczenie w głowie: techniki z Indii i Chin oraz treningi na czas",
+    section: "nauka",
+    icon: "Calculator",
+    href: "/mindmath",
+  },
+  {
     id: "gitara",
     name: "Gitara",
     description: "Nauka gry na gitarze: akordy, CAGED, rytm, techniki, piosenki",

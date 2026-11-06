@@ -206,7 +206,7 @@ bez analizy dźwięku"). Schemat: `supabase/migrations/0025_gitara.sql`, treść
 `supabase/seed/gitara/*.sql`.
 
 **Habit Tracking** (`/habits`) — nawyki × 7 dni: widzisz dziś i 6 kolejnych dni (dni z przyszłości są
-wyszarzone i nie da się ich odhaczyć), strzałkami przeglądasz poprzednie tygodnie (`?od=YYYY-MM-DD`).
+wyszarzone i nie da się ich odhaczyć), nad tabelą są kwadraciki wszystkich tygodni (jak wkład na GitHubie, kolor = % zrobionych nawyków); kliknięcie rozwija wybrany tydzień, strzałki przechodzą tydzień obok tygodnia.
 Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik regularności (odhaczone pola
 w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
 `habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.
@@ -222,6 +222,15 @@ nauki i dziennika transakcji. Lekcje, **przykłady** (scenariusze „co robisz?"
 opcji), quiz, kalkulator pozycji (ryzyko, relacja TP:SL, max wolumen) i lista kontrolna przed wejściem.
 Treść w `lib/trading/content.ts`, matematyka w `lib/trading/calc.ts`. Bez bazy: postępy w
 `localStorage` (`lib/trading/use-local-state.ts`). Materiał edukacyjny, nie porada inwestycyjna.
+
+**Mind Math** (`/mindmath`) — rachunek w głowie. **Techniki** (`/mindmath/techniki`): mnożenie przez 11,
+kwadraty liczb na 5, metoda braków przy liczbach bliskich 100 i „pionowo i na krzyż" (sutry
+wedyjskie), różnica kwadratów, ×5/25/125, ×9/99, tabliczka 6–9 na palcach, dopełnianie do 10 w stylu
+abakusa (suanpan/soroban) i sprawdzanie przez 9 — każda z krokami i przykładem. **Trening**
+(`/mindmath/trening`): seria 10/20/30 zadań na czas, 3 poziomy, tryb na każdą technikę + mieszanka.
+Generatory to czysty `lib/mindmath/problems.ts` (losowanie dopiero po „Start", nie w renderze),
+treść lekcji w `lib/mindmath/techniques.ts`. Wynik każdej sesji ląduje w `mindmath_sessions`
+(`0045_mindmath.sql`); na stronie głównej aplikacji są rekordy (najszybsza seria bez błędu) i historia.
 
 > ⚠️ Migracja `0015` w numeracji jest zajęta przez inną, niepowiązaną funkcję („geografia")
 > wdrożoną równolegle na tej samej bazie deweloperskiej z innej sesji/worktree — dlatego migracja

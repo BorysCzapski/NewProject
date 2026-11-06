@@ -153,6 +153,13 @@ export const TRADING_NAV: NavItem[] = [
   { href: "/trading/narzedzia", label: "Kalkulator", icon: "Calculator" },
 ];
 
+export const MINDMATH_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/mindmath", label: "Start", icon: "Calculator", exact: true },
+  { href: "/mindmath/techniki", label: "Techniki", icon: "BookOpen" },
+  { href: "/mindmath/trening", label: "Trening", icon: "Timer" },
+];
+
 export const SILOWNIA_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/silownia", label: "Dziś", icon: "Dumbbell", exact: true },
@@ -174,6 +181,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/habits", items: HABITS_NAV },
   { prefix: "/projekty", items: PROJEKTY_NAV },
   { prefix: "/trading", items: TRADING_NAV },
+  { prefix: "/mindmath", items: MINDMATH_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
