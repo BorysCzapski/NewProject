@@ -144,6 +144,15 @@ export const PROJEKTY_NAV: NavItem[] = [
   { href: "/projekty", label: "Projekty", icon: "Hammer" },
 ];
 
+export const TRADING_NAV: NavItem[] = [
+  { href: "/", label: "Phoenix", icon: "Home", exact: true },
+  { href: "/trading", label: "Start", icon: "TrendingUp", exact: true },
+  { href: "/trading/lekcje", label: "Lekcje", icon: "BookOpen" },
+  { href: "/trading/przyklady", label: "Przykłady", icon: "Sparkles" },
+  { href: "/trading/quiz", label: "Quiz", icon: "ListChecks" },
+  { href: "/trading/narzedzia", label: "Kalkulator", icon: "Calculator" },
+];
+
 export const SILOWNIA_NAV: NavItem[] = [
   { href: "/", label: "Phoenix", icon: "Home", exact: true },
   { href: "/silownia", label: "Dziś", icon: "Dumbbell", exact: true },
@@ -164,6 +173,7 @@ export const NAV_BY_PREFIX: Array<{ prefix: string; items: NavItem[] }> = [
   { prefix: "/algorytmy", items: ALGORYTMY_NAV },
   { prefix: "/habits", items: HABITS_NAV },
   { prefix: "/projekty", items: PROJEKTY_NAV },
+  { prefix: "/trading", items: TRADING_NAV },
   { prefix: "/silownia", items: SILOWNIA_NAV },
   { prefix: "", items: PHOENIX_NAV },
 ];
