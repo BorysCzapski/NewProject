@@ -8,6 +8,7 @@
 import {
   Binary,
   Briefcase,
+  Calculator,
   Church,
   Compass,
   Dumbbell,
@@ -33,6 +34,7 @@ import {
 const ICONS: Record<string, LucideIcon> = {
   Binary,
   Briefcase,
+  Calculator,
   Church,
   Compass,
   Dumbbell,
