@@ -30,6 +30,13 @@ interface Props {
   timeLimit?: number;
   onExit: () => void;
   onRetry?: (wrong: Question[]) => void;
+  /**
+   * Czy zapisywać statystyki poszczególnych pytań (STATS_KEY). Domyślnie tak.
+   * Zestawy spoza głównego banku (np. arkusz z materiałów dodatkowych) wyłączają
+   * to: ekran główny liczy „zadania X/N” po liczbie kluczy w statystykach, więc
+   * obce identyfikatory zawyżyłyby X ponad N. Wynik testu i tak trafia do historii.
+   */
+  recordStats?: boolean;
 }
 
 const LETTERS = ["A", "B", "C", "D", "E"];
@@ -50,7 +57,7 @@ function formatTime(sec: number): string {
   return `${m}:${String(s).padStart(2, "0")}`;
 }
 
-export function QuizRunner({ questions, mode, title, timeLimit, onExit, onRetry }: Props) {
+export function QuizRunner({ questions, mode, title, timeLimit, onExit, onRetry, recordStats = true }: Props) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number[]>>({});
   const [checked, setChecked] = useState<Record<string, boolean>>({});
@@ -87,7 +94,7 @@ export function QuizRunner({ questions, mode, title, timeLimit, onExit, onRetry 
   useEffect(() => {
     if (!finished || savedRef.current) return;
     savedRef.current = true;
-    if (mode === "exam") {
+    if (mode === "exam" && recordStats) {
       setStats((prev) => {
         const next = { ...prev };
         for (const x of closed) {
@@ -99,10 +106,10 @@ export function QuizRunner({ questions, mode, title, timeLimit, onExit, onRetry 
       });
     }
     setTests((prev) => [{ at: Date.now(), total: closed.length, correct: correctCount, label: title }, ...prev].slice(0, 30));
-  }, [finished, mode, closed, answers, correctCount, title, setStats, setTests]);
+  }, [finished, mode, recordStats, closed, answers, correctCount, title, setStats, setTests]);
 
   function recordPractice(question: Question, selected: number[]) {
-    if (question.type === "open") return;
+    if (question.type === "open" || !recordStats) return;
     const ok = isCorrect(question, selected);
     setStats((prev) => {
       const s = prev[question.id] ?? { ok: 0, wrong: 0 };
