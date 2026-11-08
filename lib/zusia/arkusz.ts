@@ -1,0 +1,171 @@
+// ============================================================================
+// lib/zusia/arkusz.ts
+// "Test z materiałów dodatkowych": arkusz „Lekcje z ZUS | Arkusz 2026” przepisany
+// ze zdjęć wydruku (zadania 5–60) razem z kluczem odpowiedzi ze zdjęcia klucza.
+//
+// To OSOBNY bank, nie część QUESTIONS (lib/zusia/questions.ts): arkusz ma własną
+// numerację i klucz, a wrzucenie go do QUESTIONS zmieniłoby liczbę zadań w
+// Treningu i w „Test – wszystkie zadania” oraz próbki dla generatora AI.
+//
+// Czego nie ma: zadań 1–4. Nie było ich na żadnym ze zdjęć (zostały tylko ich
+// odpowiedzi w kluczu: C, C, D, D), więc ich treści nie wymyślamy — patrz
+// ARKUSZ_MISSING. Kilka zadań występuje w arkuszu dwa razy w tej samej treści
+// (5 = 51, 6 = 52, 7 = 53, 11 = 54, 17 = 55) i tak zostawiamy, jak w oryginale.
+// Fragmenty zadań 11, 12, 13 i 50 były na zdjęciach nieostre — uzupełniono je z
+// kontekstu (zadanie 54 jest tym samym pytaniem w wersji ostrej).
+// ============================================================================
+import type { Question } from "./types";
+
+export const ARKUSZ_TITLE = "Arkusz 2026 – materiały dodatkowe";
+/** Numery zadań, których treści nie było na zdjęciach. */
+export const ARKUSZ_MISSING = [1, 2, 3, 4] as const;
+
+const LETTERS = ["A", "B", "C", "D"] as const;
+
+/** [numer zadania, litera z klucza, treść, odpowiedzi A–D] */
+type Row = readonly [number, (typeof LETTERS)[number], string, readonly [string, string, string, string]];
+
+const ROWS: readonly Row[] = [
+  [5, "A", "Co do zasady jeżeli niezdolność do pracy wystąpi po ustaniu ubezpieczenia, to maksymalny okres wypłaty zasiłku chorobowego wynosi:",
+    ["91 dni", "182 dni", "270 dni", "272 dni"]],
+  [6, "A", "Jeżeli płatnik zgłaszał do ubezpieczenia chorobowego nie więcej niż 20 osób według stanu na 30 listopada poprzedniego roku, to co do zasady:",
+    ["ZUS wypłaca pracownikom zasiłki", "pracodawca wypłaca pracownikom zasiłki, a następnie rozlicza się z ZUS", "pracodawca wypłaca pracownikom zasiłki i nie musi rozliczać się z ZUS", "NFZ wypłaca pracownikom zasiłki"]],
+  [7, "A", "Świadczenie rehabilitacyjne przysługuje przez okres nie dłuższy niż:",
+    ["12 miesięcy", "18 miesięcy", "24 miesiące", "32 miesiące"]],
+  [8, "C", "Jeżeli matka urodziła jedno dziecko, złożyła w ciągu 21 dni od porodu wniosek o zasiłek macierzyński w uśrednionej wysokości za okres urlopu macierzyńskiego i rodzicielskiego (bez 9 tygodni zastrzeżonych dla drugiego rodzica), to zasiłek ten wynosi:",
+    ["41,5% podstawy wymiaru zasiłku", "61,5% podstawy wymiaru zasiłku", "81,5% podstawy wymiaru zasiłku", "100% podstawy wymiaru zasiłku"]],
+  [9, "A", "Osobie opiekującej się chorym małżonkiem zasiłek opiekuńczy należy się przez:",
+    ["maksymalnie 14 dni w roku kalendarzowym", "maksymalnie 21 dni w roku kalendarzowym", "maksymalnie 30 dni w roku kalendarzowym", "maksymalnie 60 dni w roku kalendarzowym"]],
+  [10, "A", "Zasiłek chorobowy z tytułu wypadku przy pracy przysługuje pracownikowi:",
+    ["niezależnie od tego, jak długo pracownik podlega ubezpieczeniu wypadkowemu", "po 30 dniach nieprzerwanego ubezpieczenia", "po 60 dniach nieprzerwanego ubezpieczenia", "po 90 dniach nieprzerwanego ubezpieczenia"]],
+  [11, "D", "Absolwent szkoły, który podjął pracę bezpośrednio po jej ukończeniu i został objęty ubezpieczeniem chorobowym w ciągu 90 dni od ukończenia szkoły, w razie choroby otrzyma zasiłek chorobowy:",
+    ["pod warunkiem, że minęło 30 dni tzw. okresu wyczekiwania", "pod warunkiem, że minęło 60 dni tzw. okresu wyczekiwania", "pod warunkiem, że minęło 90 dni tzw. okresu wyczekiwania", "bez względu na tzw. okres wyczekiwania"]],
+  [12, "B", "Osoba, która pobiera rentę z tytułu niezdolności do pracy, kiedy osiągnie wiek emerytalny:",
+    ["aby otrzymać emeryturę, musi złożyć wniosek", "otrzyma z ZUS emeryturę bez konieczności składania wniosku", "do końca życia pozostanie na rencie z tytułu niezdolności do pracy", "otrzyma specjalne świadczenie dla rencistów w wieku emerytalnym"]],
+  [13, "A", "Gwarancję, że emerytura nie będzie niższa od ustawowej kwoty najniższej emerytury, po osiągnięciu odpowiedniego wieku emerytalnego (60 lat kobiety, 65 lat mężczyźni) ma co do zasady:",
+    ["kobieta, która udowodni, że była ubezpieczona przez co najmniej 20 lat składkowych i nieskładkowych, lub mężczyzna, który udowodni, że był ubezpieczony przez co najmniej 25 lat składkowych i nieskładkowych",
+      "kobieta, która udowodni, że była ubezpieczona przez co najmniej 15 lat składkowych i nieskładkowych, lub mężczyzna, który udowodni, że był ubezpieczony przez co najmniej 20 lat składkowych i nieskładkowych",
+      "osoba, która ma wyliczony określony przepisami kapitał początkowy",
+      "osoba, która ukończyła 65 lat i przez co najmniej 15 lat była objęta ubezpieczeniem emerytalnym"]],
+  [14, "C", "Od 1 listopada 2026 r. pełnoletnia osoba, która rozpoczyna jednoosobową działalność gospodarczą, może zarejestrować ją w CEIDG:",
+    ["wyłącznie przez złożenie papierowego wniosku w urzędzie gminy", "wyłącznie przez złożenie papierowego wniosku w urzędzie miasta", "elektronicznie, m.in. przez portal Biznes.gov.pl", "zarówno papierowo w urzędzie gminy, jak i elektronicznie"]],
+  [15, "A", "Zleceniodawca ma obowiązek zgłosić do ZUS nowego zleceniobiorcę, który z tytułu zlecenia podlega ubezpieczeniom, w terminie:",
+    ["7 dni od dnia rozpoczęcia wykonywania umowy zlecenia", "14 dni od dnia rozpoczęcia wykonywania umowy zlecenia", "30 dni od dnia rozpoczęcia wykonywania umowy zlecenia", "nie ma takiego obowiązku w przypadku jakiejkolwiek umowy zlecenia"]],
+  [16, "D", "Przedsiębiorca, który rozlicza składki za ponad 5 osób:",
+    ["ma obowiązek przekazywać dokumenty wyłącznie w formie papierowej", "może przekazywać dokumenty tylko w formie papierowej", "nie może korzystać z programu Płatnik ani z aplikacji ePłatnik", "ma obowiązek przekazywać dokumenty elektronicznie i może korzystać np. z Płatnika lub ePłatnika"]],
+  [17, "C", "Podstawę wymiaru składek na ubezpieczenia społeczne osoby prowadzącej pozarolniczą działalność, która nie ma prawa do ulg w ich opłacaniu, stanowi:",
+    ["kwota 30% minimalnego wynagrodzenia", "kwota 60% prognozowanego przeciętnego wynagrodzenia miesięcznego", "kwota zadeklarowana, nie niższa niż 60% prognozowanego przeciętnego wynagrodzenia miesięcznego", "kwota zadeklarowana nie niższa niż 30% minimalnego wynagrodzenia"]],
+  [18, "A", "Ulga na start przysługująca przedsiębiorcy spełniającemu wymagane warunki, niezależnie od jego wieku:",
+    ["zwalnia przez 6 miesięcy z opłacania składek na ubezpieczenia społeczne, ale nie składki zdrowotnej",
+      "zwalnia z płacenia składek na ubezpieczenia społeczne przez 12 miesięcy kalendarzowych od podjęcia działalności gospodarczej",
+      "zwalnia z płacenia składek na ubezpieczenia społeczne i zdrowotne przez 6 miesięcy kalendarzowych od podjęcia działalności gospodarczej",
+      "zwalnia z płacenia składek na ubezpieczenia społeczne i zdrowotne przez 12 miesięcy kalendarzowych od podjęcia działalności gospodarczej"]],
+  [19, "D", "Osoba prowadząca pozarolniczą działalność, która nie korzysta z ulgi na start, co do zasady obowiązkowo podlega ubezpieczeniu/ubezpieczeniom:",
+    ["wyłącznie ubezpieczeniom społecznym: emerytalnemu, rentowemu i wypadkowemu", "wyłącznie ubezpieczeniu zdrowotnemu", "chorobowemu", "ubezpieczeniom społecznym: emerytalnemu, rentowym i wypadkowemu oraz ubezpieczeniu zdrowotnemu"]],
+  [20, "A", "Jeżeli absolwent szkoły założy swoją pierwszą firmę, która będzie jego pierwszym miejscem aktywności zawodowej, i spełnia warunki ustawowe, to może skorzystać z:",
+    ["możliwości płacenia preferencyjnych składek na ubezpieczenia społeczne przez 24 miesiące", "możliwości płacenia preferencyjnych składek zdrowotnych przez 36 miesięcy", "ulgi na start przez 12 miesięcy", "ulgi na start przez 24 miesiące"]],
+  [21, "C", "Zakład Ubezpieczeń Społecznych:",
+    ["określa wysokość składek na ubezpieczenia społeczne", "określa zasady obliczania wysokości świadczeń", "oblicza świadczenia", "odpowiedzi a, b, c są prawidłowe"]],
+  [22, "D", "Osoba ubezpieczona, której po wykorzystaniu okresu wynagrodzenia chorobowego przysługuje zasiłek chorobowy za zwykłą niezdolność do pracy, otrzyma co do zasady:",
+    ["oprócz pensji zasiłek w wysokości 80% podstawy wymiaru", "oprócz pensji zasiłek w wysokości 100% podstawy wymiaru", "zamiast pensji zasiłek w wysokości 100% podstawy wymiaru", "zamiast pensji zasiłek w wysokości 80% podstawy wymiaru"]],
+  [23, "C", "Składki na ubezpieczenia społeczne samego przedsiębiorcy opodatkowanego wyłącznie podatkiem liniowym:",
+    ["jeśli współpracuje tylko z jednym zleceniodawcą, są opłacane przez tego zleceniodawcę", "nie muszą być opłacane, gdy zatrudnia powyżej 20 osób", "zawsze są finansowane w całości z jego środków", "są opłacane w całości z jego środków, tylko jeśli zatrudnia powyżej 20 osób"]],
+  [24, "D", "Jeżeli osoba, która opłaca składkę na ubezpieczenie chorobowe, jest w ciąży i jest niezdolna do pracy, to maksymalny okres wypłaty zasiłku chorobowego wynosi:",
+    ["91 dni", "100 dni", "182 dni", "270 dni"]],
+  [25, "C", "Wysokość świadczenia rehabilitacyjnego wynosi:",
+    ["75% podstawy wymiaru przez pierwsze 90 dni świadczenia", "80% podstawy wymiaru przez pierwsze 90 dni świadczenia", "90% podstawy wymiaru przez pierwsze 90 dni świadczenia", "95% podstawy wymiaru, jeżeli niezdolność do pracy przypada w czasie ciąży"]],
+  [26, "C", "Przy urodzeniu jednego dziecka o czasie (bez dodatkowego urlopu macierzyńskiego dla rodziców wcześniaków) maksymalny łączny okres pobierania zasiłku macierzyńskiego z tytułu urlopu macierzyńskiego i rodzicielskiego wynosi dla samej matki:",
+    ["61 tygodni dla samej matki", "61 tygodni dla samego ojca", "52 tygodnie dla samej matki", "50 tygodni (niezależnie od tego, czy dla matki, czy dla ojca)"]],
+  [27, "A", "Matka, która przez 10 dni w roku kalendarzowym opiekowała się chorym niepełnosprawnym synem w wieku 16 lat, w przypadku kolejnej choroby syna w tym samym roku kalendarzowym może skorzystać maksymalnie z:",
+    ["20 dni zasiłku opiekuńczego", "30 dni zasiłku opiekuńczego", "40 dni zasiłku opiekuńczego", "50 dni zasiłku opiekuńczego"]],
+  [28, "D", "Które z informacji odnoszą się do świadczeń z ubezpieczenia wypadkowego?",
+    ["zasiłek chorobowy wynosi 80% podstawy wymiaru, a świadczenie rehabilitacyjne 90%", "zasiłek chorobowy i świadczenie rehabilitacyjne wynoszą 90% podstawy wymiaru", "zasiłek chorobowy wynosi 80% podstawy wymiaru, a świadczenie rehabilitacyjne 100%", "zasiłek chorobowy i świadczenie rehabilitacyjne wynoszą 100% podstawy wymiaru"]],
+  [29, "A", "Aby móc skorzystać z zasiłku chorobowego:",
+    ["pracownik obowiązkowo objęty ubezpieczeniem chorobowym co do zasady nabywa prawo po 30 dniach nieprzerwanego ubezpieczenia", "prowadzący działalność, dobrowolnie objęty ubezpieczeniem chorobowym, nabywa prawo już po 30 dniach", "zawsze wystarczy samo podpisanie umowy o pracę, niezależnie od okresu wyczekiwania", "okres wyczekiwania wynosi zawsze 90 dni, niezależnie od tytułu ubezpieczenia"]],
+  [30, "D", "Jeżeli płatnik zgłaszał do ubezpieczenia chorobowego 18 osób według stanu na 30 listopada poprzedniego roku, to zasiłek chorobowy jego pracownikom co do zasady wypłaca:",
+    ["płatnik składek", "ZUS, pod warunkiem, że liczba ubezpieczonych przez tego płatnika pracowników nie przekroczy do końca roku 20 osób", "ZUS, pod warunkiem, że nie zmieni się liczba ubezpieczonych przez tego płatnika pracowników", "ZUS"]],
+  [31, "A", "Aby otrzymać emeryturę w wysokości nie niższej od ustawowej kwoty najniższej emerytury, po osiągnięciu powszechnego wieku emerytalnego trzeba co do zasady:",
+    ["mieć 20 lat (kobieta) lub 25 lat (mężczyzna) okresów składkowych i nieskładkowych", "mieć 25 lat (kobieta) lub 30 lat (mężczyzna) okresów składkowych i nieskładkowych", "mieć 25 lat okresów składkowych i nieskładkowych (niezależnie od płci)", "pracować co najmniej 20 lat na podstawie umowy o pracę (niezależnie od płci)"]],
+  [32, "D", "Aby otrzymać rentę z tytułu niezdolności do pracy z ubezpieczeń rentowych wypłacaną przez ZUS, co do zasady trzeba:",
+    ["mieć prawo do emerytury z FUS", "uzyskać samo orzeczenie o niezdolności do pracy, bez spełnienia innych warunków", "wykazać wyłącznie wymagane okresy składkowe i nieskładkowe, bez ustalania niezdolności do pracy", "uzyskać orzeczenie o niezdolności do pracy i spełniać warunki stażowe oraz pozostałe warunki ustawowe"]],
+  [33, "D", "Do tzw. okresów nieskładkowych nie należy:",
+    ["okres nauki w szkole wyższej na jednym kierunku (jeśli ta nauka zostanie z sukcesem ukończona)", "okres pobierania zasiłku chorobowego", "okres pobierania świadczenia rehabilitacyjnego", "okres czynnej służby wojskowej w Wojsku Polskim"]],
+  [34, "C", "Zakład Ubezpieczeń Społecznych przyzna emeryturę automatycznie (bez składania wniosku) w sytuacji, gdy dana osoba:",
+    ["osiągnie wiek emerytalny", "osiągnie wiek emerytalny i pobiera rentę socjalną", "osiągnie wiek emerytalny i pobiera rentę z tytułu niezdolności do pracy", "osiągnie wiek emerytalny i pracuje na podstawie umowy o pracę"]],
+  [35, "C", "Emerytka, która pobiera emeryturę powszechną oraz okresową emeryturę kapitałową i nadal pracuje z obowiązkiem opłacania składek emerytalnych i rentowych, co do zasady:",
+    ["może składać wniosek o doliczenie nowych składek każdego miesiąca", "może składać wniosek o doliczenie nowych składek dwa razy w roku", "może po upływie roku kalendarzowego złożyć wniosek o przeliczenie świadczenia z uwzględnieniem nowych składek (albo wcześniej po ustaniu zatrudnienia)", "nie może przeliczyć świadczenia z uwzględnieniem składek opłaconych po przyznaniu emerytury"]],
+  [36, "D", "Przedsiębiorca rozpoczynający działalność w 2026 r., który obecnie wykonuje na rzecz byłego pracodawcy tę samą pracę co na etacie w 2025 r.:",
+    ["może korzystać z ulgi na start przez 6 miesięcy", "może korzystać z małego ZUS plus z tytułu tej współpracy", "może korzystać z preferencyjnych składek przez 24 miesiące", "nie spełnia warunków ulgi na start, preferencyjnych składek ani wakacji składkowych z tytułu takiej współpracy"]],
+  [37, "C", "Przedsiębiorca, który prowadzi spółkę kapitałową i opłaca składki na ubezpieczenia społeczne, jest zobowiązany do przekazywania dokumentów do ZUS za dany miesiąc rozliczeniowy w terminie do:",
+    ["5. dnia następnego miesiąca", "10. dnia następnego miesiąca", "15. dnia następnego miesiąca", "20. dnia następnego miesiąca"]],
+  [38, "D", "Osoba, która zarejestrowała firmę elektronicznie przez CEIDG i prawidłowo przekazała w ramach tej procedury zgłoszenia swoich pracowników do ubezpieczeń, zgodnie z zasadami 2026 r.:",
+    ["musi powtórnie złożyć te same zgłoszenia osobiście w ZUS", "musi dodatkowo przekazać te same zgłoszenia do NFZ", "musi ponowić zgłoszenia zarówno w ZUS, jak i NFZ", "nie musi ponownie składać tych zgłoszeń, ponieważ dane są przekazywane do ZUS elektronicznie"]],
+  [39, "C", "Do tzw. pomocy de minimis zaliczamy m.in.:",
+    ["ulgę na start", "preferencyjne składki", "wakacje składkowe", "mały ZUS+"]],
+  [40, "A", "Przedsiębiorca, który prowadzi działalność przez część miesiąca (a składka zdrowotna jest za ten miesiąc należna):",
+    ["nie pomniejsza składki zdrowotnej proporcjonalnie do liczby dni prowadzenia działalności", "pomniejsza składkę zdrowotną proporcjonalnie do liczby dni, ale nie mniej niż do połowy", "zawsze pomniejsza składkę zdrowotną proporcjonalnie do liczby dni", "jest automatycznie zwolniony ze składki zdrowotnej, jeśli pobiera zasiłek chorobowy"]],
+  [41, "B", "Z ubezpieczenia chorobowego przysługują następujące świadczenia:",
+    ["zasiłek chorobowy, świadczenie rehabilitacyjne, renta z tytułu niezdolności do pracy", "zasiłek chorobowy, świadczenie rehabilitacyjne, zasiłek macierzyński, zasiłek opiekuńczy", "tylko zasiłek chorobowy i świadczenie rehabilitacyjne", "zasiłek chorobowy, zasiłek macierzyński, zasiłek opiekuńczy, zasiłek pogrzebowy"]],
+  [42, "C", "Gwarancję emerytury nie niższej od ustawowej najniższej kwoty ma co do zasady:",
+    ["kobieta, która skończy 60 lat, i mężczyzna, który skończy 65 lat", "wyłącznie kobieta, która urodziła czworo dzieci", "kobieta, która skończyła 60 lat i ma co najmniej 20 lat wymaganych okresów składkowych i nieskładkowych, oraz mężczyzna, który skończył 65 lat i ma co najmniej 25 lat takich okresów", "tylko osoba, która otrzymuje emeryturę po rencie z tytułu niezdolności do pracy"]],
+  [43, "C", "Z ubezpieczeń rentowych przysługuje...",
+    ["tylko renta z tytułu niezdolności do pracy", "świadczenie rehabilitacyjne", "m.in. rehabilitacja lecznicza i zasiłek pogrzebowy", "żadna z powyższych odpowiedzi nie jest prawdziwa"]],
+  [44, "C", "Zasiłek chorobowy przysługuje...",
+    ["tylko z ubezpieczenia chorobowego", "zawsze przez 182 dni", "maksymalnie przez 270 dni, jeśli niezdolność do pracy wystąpiła w czasie ciąży albo jest spowodowana gruźlicą", "tylko po okresie wyczekiwania na prawo do zasiłku, który dla pracowników wynosi 30 dni"]],
+  [45, "C", "Świadczenie rehabilitacyjne przysługuje...",
+    ["przez maksymalnie 6 miesięcy", "obowiązkowo każdej osobie, która pobierała zasiłek chorobowy przez 182 dni", "z ubezpieczenia chorobowego albo z ubezpieczenia wypadkowego", "z ubezpieczenia chorobowego w wysokości 90% pensji przez pierwsze 90 dni i 70% pensji w pozostałym okresie"]],
+  [46, "C", "Zasiłek opiekuńczy...",
+    ["przysługuje tylko matce dziecka", "wynosi 100% pensji (średniej z 12 miesięcy)", "nie przysługuje z ubezpieczenia wypadkowego", "przysługuje zawsze przez dokładnie 60 dni w roku kalendarzowym, niezależnie od wieku osoby wymagającej opieki"]],
+  [47, "C", "Kapitał początkowy odzwierciedla wartość okresów ubezpieczenia i zarobków na potrzeby emerytury:",
+    ["po 1999 roku", "i waloryzowane co 18 miesięcy", "sprzed 1 stycznia 1999 r.", "do momentu złożenia wniosku o świadczenie"]],
+  [48, "C", "Stopa procentowa składki...",
+    ["na ubezpieczenie emerytalne wynosi 9,76%", "na ubezpieczenie wypadkowe jest zawsze dwa razy wyższa niż na ubezpieczenie rentowe", "na ubezpieczenie chorobowe jest niższa niż na ubezpieczenie zdrowotne", "na ubezpieczenie rentowe wynosi 19,52%"]],
+  [49, "D", "Przy rejestracji firmy jej właściciel nie może zgłosić do ubezpieczenia:",
+    ["zatrudnionych osób", "członków rodzin osób zatrudnionych w jego firmie", "siebie", "osób zatrudnionych w firmach nawiązujących współpracę biznesową z jego firmą"]],
+  [50, "A", "Gdy matka urodzi jedno dziecko i nie wybrała uśrednionej stawki 81,5%, zasiłek macierzyński za podstawowy 20-tygodniowy urlop macierzyński co do zasady wynosi:",
+    ["100% podstawy wymiaru zasiłku", "80% podstawy wymiaru zasiłku", "60% podstawy wymiaru zasiłku", "żadna z powyższych odpowiedzi nie jest prawdziwa"]],
+  [51, "A", "Jeżeli niezdolność do pracy wystąpi po ustaniu tytułu ubezpieczenia, to maksymalny okres wypłaty zasiłku chorobowego wynosi:",
+    ["91 dni", "182 dni", "270 dni", "272 dni"]],
+  [52, "A", "Jeżeli pracodawca zgłaszał do ubezpieczenia chorobowego poniżej 21 osób na 30 listopada poprzedniego roku, to co do zasady:",
+    ["ZUS wypłaca pracownikom zasiłki", "pracodawca wypłaca pracownikom zasiłki, a następnie rozlicza się z ZUS", "pracodawca wypłaca pracownikom zasiłki i nie musi rozliczać się z ZUS", "NFZ wypłaca pracownikom zasiłki"]],
+  [53, "A", "Świadczenie rehabilitacyjne przysługuje przez okres nie dłuższy niż:",
+    ["12 miesięcy", "18 miesięcy", "24 miesiące", "32 miesiące"]],
+  [54, "D", "Absolwent szkoły, który podjął pracę bezpośrednio po jej ukończeniu i przystąpił do ubezpieczenia chorobowego w ciągu 90 dni od jej ukończenia, jeśli zachoruje, otrzyma zasiłek chorobowy:",
+    ["pod warunkiem, że minęło 30 dni tzw. okresu wyczekiwania", "pod warunkiem, że minęło 60 dni tzw. okresu wyczekiwania", "pod warunkiem, że minęło 90 dni tzw. okresu wyczekiwania", "bez względu na tzw. okres wyczekiwania"]],
+  [55, "C", "Podstawę wymiaru składek na ubezpieczenia społeczne osoby, która prowadzi pozarolniczą działalność i nie ma prawa do ulg w opłacaniu składek, stanowi:",
+    ["30% minimalnego wynagrodzenia", "60% prognozowanego przeciętnego wynagrodzenia miesięcznego", "kwota zadeklarowana, nie niższa niż 60% prognozowanego przeciętnego wynagrodzenia miesięcznego", "kwota zadeklarowana, nie niższa niż 30% minimalnego wynagrodzenia"]],
+  [56, "C", "Jeśli przedsiębiorca zatrudnia 7 osób, dokumenty rozliczeniowe przekazuje do ZUS...",
+    ["w formie papierowej", "do końca każdego miesiąca", "w formie elektronicznej, może w tym celu skorzystać z bezpłatnego programu Płatnik albo ePłatnik", "zawsze pierwszego dnia miesiąca"]],
+  [57, "B", "ZUS DRA to...",
+    ["imienny raport o należnych składkach i wypłaconych świadczeniach za każdą osobę, za którą opłacasz składki", "deklaracja rozliczeniowa, w której są wszystkie składki za dany miesiąc", "imienny raport o przychodach ubezpieczonego/okresach pracy nauczycielskiej", "imienny raport o wypłaconych świadczeniach i przerwach w opłacaniu składek"]],
+  [58, "B", "Przedsiębiorca, który spełnia warunki wakacji składkowych w 2026 r., może skorzystać z tego zwolnienia:",
+    ["tylko w miesiącach letnich (czerwiec, lipiec, sierpień)", "raz w roku za jeden wybrany miesiąc, składając wniosek w miesiącu go poprzedzającym", "3 razy w roku", "tylko w sierpniu"]],
+  [59, "B", "Rentę socjalną może otrzymać osoba pełnoletnia, która:",
+    ["stała się częściowo niezdolna do pracy z powodu naruszenia sprawności organizmu, które powstało przed ukończeniem 18 lat",
+      "stała się całkowicie niezdolna do pracy z powodu naruszenia sprawności organizmu, które powstało w trakcie nauki w szkole wyższej zanim ukończyła 25 lat",
+      "stała się całkowicie niezdolna do pracy w trakcie studiów doktoranckich lub aspirantury naukowej oraz ma odpowiednią ilość okresów składkowych i nieskładkowych",
+      "wszystkie powyższe odpowiedzi są prawdziwe"]],
+  [60, "B", "Aby otrzymać rentę z tytułu niezdolności do pracy:",
+    ["wystarczy być niezdolnym do pracy",
+      "co do zasady mieć orzeczenie lekarza orzecznika ZUS lub komisji lekarskiej o niezdolności do pracy, spełniać wymagany staż ubezpieczeniowy i pozostałe warunki ustawowe (z uwzględnieniem wyjątków)",
+      "trzeba mieć orzeczenie o niepełnosprawności, odpowiednią ilość okresów składkowych i nieskładkowych w zależności od wieku, w którym powstała niezdolność do pracy, nie mieć prawa do emerytury z FUS ani nie spełniać do niej warunków, ponadto niezdolność do pracy powinna powstać w trakcie okresów wymienionych w przepisach albo w ciągu 18 miesięcy od ustania tych okresów",
+      "żadna z powyższych odpowiedzi nie jest prawdziwa"]],
+];
+
+/** Pierwszy i ostatni numer zadania, które mamy w arkuszu. */
+export const ARKUSZ_FIRST = ROWS[0][0];
+export const ARKUSZ_LAST = ROWS[ROWS.length - 1][0];
+
+/** Zadania arkusza w oryginalnej kolejności, jako zwykłe pytania jednokrotnego wyboru. */
+export const ARKUSZ_2026: Question[] = ROWS.map(([n, key, prompt, options]) => ({
+  id: `ark26-q${String(n).padStart(2, "0")}`,
+  // "d1" = „Materiały dodatkowe 2025/2026” (lib/zusia/theory.ts).
+  lesson: "d1",
+  type: "single",
+  prompt,
+  options: [...options],
+  correct: [LETTERS.indexOf(key)],
+  // Arkusz nie ma uzasadnień, tylko klucz — nie zmyślamy komentarzy.
+  explanation: `Zgodnie z kluczem odpowiedzi arkusza (zadanie ${n}: ${key}).`,
+  source: `Arkusz 2026 · zad. ${n}`,
+}));

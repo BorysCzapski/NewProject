@@ -262,7 +262,19 @@ nowe pytania i przypadki wyłącznie z teorii działu oraz ocenia odpowiedzi otw
 `localStorage` (`lib/zusia/use-local-state.ts`), a `ZusiaSync` zapisuje je na koncie (tabela
 `zusia_progress`, `0038`, jeden wiersz jsonb na użytkownika; akcje w `lib/zusia/progress-actions.ts`).
 Przy pierwszym wczytaniu urządzenie scala kopię z konta z lokalną (`lib/zusia/progress.ts`: większe
-liczniki, wyższe poziomy fiszek, suma wyników), potem każda zmiana jest zapisywana z opóźnieniem. Podręcznik nie ma klucza
+liczniki, wyższe poziomy fiszek, suma wyników), potem każda zmiana jest zapisywana z opóźnieniem. **Test z materiałów dodatkowych** (`/zusia/test-dodatkowy`) to arkusz „Lekcje z ZUS | Arkusz 2026" przepisany ze
+zdjęć wydruku (`lib/zusia/arkusz.ts`): 56 zadań jednokrotnego wyboru, numery 5–60, z kluczem
+odpowiedzi ze zdjęcia klucza, w trybie egzaminu (limit czasu, wynik, analiza błędów, historia podejść).
+To **osobny bank**, nie część `QUESTIONS`, więc nie zmienia liczby zadań w Treningu i w „Test – wszystkie
+zadania". Domyślnie zadania i odpowiedzi zostają w kolejności z wydruku (litery A–D jak na papierze);
+losowanie można włączyć. Test **nie zapisuje statystyk pytań** (`QuizRunner` ma prop `recordStats`),
+bo ekran główny liczy „zadania X/N" po kluczach tych statystyk i obce identyfikatory zawyżyłyby X ponad N;
+wynik trafia do zwykłej historii testów. Czego nie ma: **zadań 1–4** (nie było ich na zdjęciach; w kluczu
+mają odpowiedzi C, C, D, D, ale treści nie wymyślamy — `ARKUSZ_MISSING`). Arkusz powtarza kilka zadań
+w tej samej treści (5 = 51, 6 = 52, 7 = 53, 11 = 54, 17 = 55) i tak je zostawiono. Arkusz ma tylko klucz,
+bez uzasadnień, więc komentarz po odpowiedzi to „zgodnie z kluczem arkusza (zadanie N: X)".
+
+Podręcznik nie ma klucza
 odpowiedzi – klucze do ćwiczeń z podręcznika (test z lekcji 2, prawda/fałsz z lekcji 3, zadania 1–4)
 wyprowadzono z treści lekcji; pytania z testu 2017 zaktualizowano do przepisów 2026.
 

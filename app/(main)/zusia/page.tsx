@@ -5,9 +5,10 @@
 // summary kept in the browser.
 // ============================================================================
 import Link from "next/link";
-import { BookOpen, ChevronRight, ClipboardCheck, Grid3x3, Layers, ListChecks, Network, Sparkles } from "lucide-react";
+import { BookOpen, ChevronRight, ClipboardCheck, FileCheck2, Grid3x3, Layers, ListChecks, Network, Sparkles } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { ProgressSummary } from "@/components/zusia/progress-summary";
+import { ARKUSZ_2026 } from "@/lib/zusia/arkusz";
 import { CROSSWORDS } from "@/lib/zusia/crosswords";
 import { FLASHCARDS } from "@/lib/zusia/flashcards";
 import { MIND_MAPS } from "@/lib/zusia/mindmaps";
@@ -18,6 +19,7 @@ const TILES = [
   { href: "/zusia/teoria", icon: BookOpen, title: "Teoria", text: `${LESSONS.length} działów z podręcznika i materiałów dodatkowych` },
   { href: "/zusia/trening", icon: ListChecks, title: "Trening", text: `${QUESTIONS.length} zadań z natychmiastową odpowiedzią i powtórką błędów` },
   { href: "/zusia/test", icon: ClipboardCheck, title: "Test – wszystkie zadania", text: "Pełny arkusz jak na olimpiadzie: czas, wynik, analiza" },
+  { href: "/zusia/test-dodatkowy", icon: FileCheck2, title: "Test z materiałów dodatkowych", text: `Arkusz 2026: ${ARKUSZ_2026.length} zadań z kluczem, tryb egzaminu` },
   { href: "/zusia/fiszki", icon: Layers, title: "Fiszki z pojęciami", text: `${FLASHCARDS.length} pojęć, kwot i terminów do zapamiętania` },
   { href: "/zusia/krzyzowki", icon: Grid3x3, title: "Krzyżówki", text: `${CROSSWORDS.length} krzyżówek, w tym ta z podręcznika` },
   { href: "/zusia/mapy", icon: Network, title: "Mapy myśli", text: `${MIND_MAPS.length} map z każdego działu + tryb „z pamięci”` },
