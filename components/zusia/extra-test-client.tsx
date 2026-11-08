@@ -15,7 +15,7 @@ import { History } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ARKUSZ_2026, ARKUSZ_FIRST, ARKUSZ_LAST, ARKUSZ_MISSING, ARKUSZ_TITLE } from "@/lib/zusia/arkusz";
+import { ARKUSZ_2026, ARKUSZ_FIRST, ARKUSZ_LAST, ARKUSZ_TITLE } from "@/lib/zusia/arkusz";
 import { shuffle, shuffleOptions } from "@/lib/zusia/quiz";
 import { TESTS_KEY, useLocalState, type TestResult } from "@/lib/zusia/use-local-state";
 import type { Question } from "@/lib/zusia/types";
@@ -60,9 +60,6 @@ export function ExtraTestClient() {
         <p className="text-sm text-foreground-muted">
           {ARKUSZ_2026.length} zadań jednokrotnego wyboru z kluczem odpowiedzi, przepisanych z wydruku „Lekcje z ZUS | Arkusz 2026”
           (zadania {ARKUSZ_FIRST}–{ARKUSZ_LAST}).
-        </p>
-        <p className="text-xs text-foreground-muted">
-          Brakuje zadań {ARKUSZ_MISSING.join(", ")} — nie było ich na zdjęciach, więc ich tu nie ma.
         </p>
       </Card>
 
