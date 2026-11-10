@@ -82,7 +82,7 @@ export function FlashcardTrainer({
 
   if (done || !current) {
     return (
-      <Card className="flex flex-col items-center gap-4 py-10 text-center">
+      <Card className="flex animate-pop flex-col items-center gap-4 py-10 text-center">
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent">
           <Check className="h-8 w-8" />
         </span>
@@ -118,7 +118,10 @@ export function FlashcardTrainer({
         </span>
       </div>
 
-      <div className="flip-card-scene h-72 w-full" onClick={() => setFlipped((f) => !f)}>
+      {/* key: każda karta montuje się od nowa, od strony przodu. Bez tego po odpowiedzi
+          karta obracała się z powrotem (0,5 s), już z TREŚCIĄ NASTĘPNEGO słowa, więc w
+          trakcie obrotu było widać jego tłumaczenie. */}
+      <div key={current.uid} className="flip-card-scene h-72 w-full animate-fade-up" onClick={() => setFlipped((f) => !f)}>
         <div className={cn("flip-card relative h-full w-full cursor-pointer", flipped && "is-flipped")}>
           <Card className="flip-card-face absolute inset-0 flex flex-col items-center justify-center gap-3 text-center">
             <Badge>{current.word.category}</Badge>

@@ -139,7 +139,7 @@ export function MeaningTrainer({
 
   if (phase === "summary") {
     return (
-      <Card className="flex flex-col items-center gap-4 py-10 text-center">
+      <Card className="flex animate-pop flex-col items-center gap-4 py-10 text-center">
         <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent">
           <Check className="h-8 w-8" />
         </span>
@@ -176,13 +176,13 @@ export function MeaningTrainer({
         </span>
       </div>
 
-      <Card className="flex flex-col items-center gap-2 py-8 text-center">
+      <Card key={index} className="flex animate-fade-up flex-col items-center gap-2 py-8 text-center">
         <CardDescription>{direction === "en-pl" ? "Jak to jest po polsku?" : "Jak to jest po angielsku?"}</CardDescription>
         <p className="text-3xl font-bold text-foreground">{promptFor(word, direction)}</p>
       </Card>
 
       {mode === "quiz" ? (
-        <div className="grid grid-cols-1 gap-3">
+        <div key={index} className="grid animate-fade-up grid-cols-1 gap-3">
           {options.map((option) => {
             const isSelected = selected === option;
             const isCorrectOption = feedback && option === answerFor(word, direction);
@@ -195,8 +195,8 @@ export function MeaningTrainer({
                 onClick={() => submitAnswer(option)}
                 className={cn(
                   "justify-start",
-                  isCorrectOption && "border-accent bg-accent-soft text-accent",
-                  isSelected && feedback === "incorrect" && "border-danger bg-danger-soft text-danger"
+                  isCorrectOption && "animate-pop border-accent bg-accent-soft text-accent",
+                  isSelected && feedback === "incorrect" && "animate-shake border-danger bg-danger-soft text-danger"
                 )}
               >
                 {option}
@@ -229,7 +229,7 @@ export function MeaningTrainer({
           {feedback && (
             <p
               className={cn(
-                "text-sm font-medium",
+                "animate-fade-up text-sm font-medium",
                 feedback === "correct" ? "text-accent" : "text-danger"
               )}
             >

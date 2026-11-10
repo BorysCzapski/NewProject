@@ -91,14 +91,14 @@ export function BottomNav() {
               <Link
                 href={item.href}
                 className={cn(
-                  "flex flex-col items-center gap-1 py-2 text-[11px] font-medium transition-colors",
+                  "press flex flex-col items-center gap-1 py-2 text-[11px] font-medium transition-colors",
                   isActive ? "text-primary" : "text-foreground-muted"
                 )}
               >
                 <span
                   className={cn(
-                    "flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-200",
-                    isActive && "bg-primary-soft"
+                    "flex h-8 w-8 items-center justify-center rounded-full transition-[background-color,transform] duration-300 ease-(--ease-spring)",
+                    isActive && "scale-110 bg-primary-soft"
                   )}
                 >
                   <Icon className="h-5 w-5" strokeWidth={isActive ? 2.5 : 2} />

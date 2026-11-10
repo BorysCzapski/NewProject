@@ -16,6 +16,7 @@ import { LevelBadge } from "@/components/ui/badge";
 import { HomeworkProgressBar } from "@/components/homework/homework-progress-bar";
 import { HOMEWORK_TYPE_LABELS } from "@/lib/constants";
 import { BackButton } from "@/components/layout/back-button";
+import { stagger } from "@/lib/motion";
 
 const MODULE_LINKS = [
   { href: "/jezyki/nauka/fiszki", label: "Fiszki", icon: Layers, color: "bg-level-a1/15 text-level-a1" },
@@ -62,7 +63,7 @@ export default async function DashboardPage() {
       </div>
 
       {currentStage && (
-        <Link href={`/jezyki/nauka/sciezka/${currentStage.id}`} className="mb-6 block">
+        <Link href={`/jezyki/nauka/sciezka/${currentStage.id}`} className="mb-6 block animate-fade-up">
           <Card className="flex items-center gap-3 bg-primary-soft">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
               <Map className="h-5 w-5" />
@@ -83,8 +84,8 @@ export default async function DashboardPage() {
           Ćwicz teraz
         </h2>
         <div className="grid grid-cols-2 gap-3">
-          {MODULE_LINKS.map((mod) => (
-            <Link key={mod.href} href={mod.href}>
+          {MODULE_LINKS.map((mod, index) => (
+            <Link key={mod.href} href={mod.href} className="animate-fade-up motion-stagger" style={stagger(index + 1)}>
               <Card className="flex flex-col gap-2 active:scale-[0.98] transition-transform">
                 <span className={`flex h-10 w-10 items-center justify-center rounded-full ${mod.color}`}>
                   <mod.icon className="h-5 w-5" />
@@ -112,8 +113,8 @@ export default async function DashboardPage() {
           </Card>
         ) : (
           <div className="flex flex-col gap-3">
-            {activeHomework.map((hw) => (
-              <Link key={hw.id} href="/jezyki/prace-domowe">
+            {activeHomework.map((hw, index) => (
+              <Link key={hw.id} href="/jezyki/prace-domowe" className="animate-fade-up motion-stagger" style={stagger(index)}>
                 <Card>
                   <div className="mb-1 flex items-center justify-between gap-2">
                     <CardTitle>{hw.title}</CardTitle>

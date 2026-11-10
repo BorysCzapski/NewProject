@@ -11,6 +11,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getSkillDecks } from "@/lib/lexicon/skill-queries";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { stagger } from "@/lib/motion";
 
 export default async function TreningFiszekPage() {
   const profile = await requireProfile();
@@ -32,7 +33,7 @@ export default async function TreningFiszekPage() {
           <Card className="text-center text-sm text-foreground-muted">Talie nie są jeszcze wgrane do bazy.</Card>
         )}
 
-        {decks.map(({ deck, available, started, mastered, due }) => {
+        {decks.map(({ deck, available, started, mastered, due }, index) => {
           const disabled = available === 0;
           // Wszystko przećwiczone i nic nie czeka: sesja będzie pusta, więc
           // mówimy to od razu, zamiast kazać klikać, żeby się o tym przekonać.
@@ -74,9 +75,11 @@ export default async function TreningFiszekPage() {
             </Card>
           );
           return disabled ? (
-            <div key={deck.id}>{body}</div>
+            <div key={deck.id} className="animate-fade-up motion-stagger" style={stagger(index)}>
+              {body}
+            </div>
           ) : (
-            <Link key={deck.id} href={`/jezyki/nauka/trening-fiszki/sesja/${deck.slug}`}>
+            <Link key={deck.id} href={`/jezyki/nauka/trening-fiszki/sesja/${deck.slug}`} className="animate-fade-up motion-stagger" style={stagger(index)}>
               {body}
             </Link>
           );

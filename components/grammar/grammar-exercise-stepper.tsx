@@ -92,7 +92,7 @@ export function GrammarExerciseStepper({
 
   if (completed) {
     return (
-      <Card className="text-center">
+      <Card className="animate-pop text-center">
         <CheckCircle2 className="mx-auto h-10 w-10 text-primary" />
         <CardTitle className="mt-3">Temat ukończony!</CardTitle>
         <CardDescription className="mt-1">
@@ -112,7 +112,7 @@ export function GrammarExerciseStepper({
       <p className="mb-3 text-sm font-medium text-foreground-muted">
         Ćwiczenie {index + 1} z {exercises.length}
       </p>
-      <Card>
+      <Card key={current.id} className="animate-fade-up">
         <ExerciseBody
           key={current.id}
           exercise={current}
@@ -182,7 +182,7 @@ function FeedbackNote({ result, correctAnswer }: { result: ExerciseResult; corre
     <div
       className={cn(
         "mt-3 flex items-start gap-2 rounded-(--radius-control) p-3 text-sm",
-        result.isCorrect ? "bg-primary-soft text-primary" : "bg-danger-soft text-danger"
+        result.isCorrect ? "animate-pop bg-primary-soft text-primary" : "animate-shake bg-danger-soft text-danger"
       )}
     >
       {result.isCorrect ? (
@@ -280,10 +280,10 @@ function MultipleChoiceExercise({
               onClick={() => submit(option)}
               disabled={!!result}
               className={cn(
-                "rounded-(--radius-control) border px-4 py-3 text-left text-base transition-colors",
+                "press rounded-(--radius-control) border px-4 py-3 text-left text-base transition-colors",
                 !result && "border-border bg-surface active:bg-surface-muted",
-                result && isRightAnswer && "border-primary bg-primary-soft text-primary",
-                result && isSelected && !isRightAnswer && "border-danger bg-danger-soft text-danger",
+                result && isRightAnswer && "animate-pop border-primary bg-primary-soft text-primary",
+                result && isSelected && !isRightAnswer && "animate-shake border-danger bg-danger-soft text-danger",
                 result && !isSelected && !isRightAnswer && "border-border bg-surface opacity-60"
               )}
             >

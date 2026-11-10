@@ -153,7 +153,7 @@ export function RecallDrill({
   if (done || !current) {
     const percent = Math.round((firstTry / Math.max(total, 1)) * 100);
     return (
-      <Card className="flex flex-col items-center gap-3 text-center">
+      <Card className="flex animate-pop flex-col items-center gap-3 text-center">
         <p className="text-3xl font-bold text-primary">{percent}%</p>
         <p className="text-sm text-foreground-muted">
           {firstTry} z {total} słów przypomnianych za pierwszym razem. Powtórki zaplanowane.
@@ -186,7 +186,7 @@ export function RecallDrill({
         <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(finished / total) * 100}%` }} />
       </div>
 
-      <Card key={current.uid} className="flex flex-col gap-4">
+      <Card key={current.uid} className="flex animate-fade-up flex-col gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-primary">Napisz po angielsku</p>
           <p className="mt-1 text-2xl font-semibold text-foreground">{entry.translation_pl}</p>
@@ -207,13 +207,13 @@ export function RecallDrill({
           placeholder="Po angielsku…"
           aria-label="Odpowiedź po angielsku"
           className={cn(
-            verdict !== null && verdict.correct && "border-accent bg-accent-soft text-accent",
-            verdict !== null && !verdict.correct && "border-danger bg-danger-soft text-danger"
+            verdict !== null && verdict.correct && "animate-pop border-accent bg-accent-soft text-accent",
+            verdict !== null && !verdict.correct && "animate-shake border-danger bg-danger-soft text-danger"
           )}
         />
 
         {verdict !== null && (
-          <div className="flex flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
+          <div className="flex animate-fade-up flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
             <div className="flex items-start justify-between gap-2">
               <p className={cn("flex items-center gap-1.5 text-sm font-semibold", verdict.correct ? "text-accent" : "text-danger")}>
                 {verdict.correct ? <Check className="h-4 w-4 shrink-0" /> : <X className="h-4 w-4 shrink-0" />}

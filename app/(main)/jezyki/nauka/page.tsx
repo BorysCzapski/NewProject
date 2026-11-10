@@ -9,6 +9,7 @@ import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
+import { stagger } from "@/lib/motion";
 
 const MODULES = [
   {
@@ -115,8 +116,8 @@ export default async function NaukaPage() {
         action={<LevelBadge level={profile.level} />}
       />
       <div className="mx-auto flex max-w-lg flex-col gap-3 px-5 py-5">
-        {modules.map((mod) => (
-          <Link key={mod.href} href={mod.href}>
+        {modules.map((mod, index) => (
+          <Link key={mod.href} href={mod.href} className="animate-fade-up motion-stagger" style={stagger(index)}>
             <Card className="flex items-center gap-4 active:scale-[0.98] transition-transform">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
                 <mod.icon className="h-6 w-6" />

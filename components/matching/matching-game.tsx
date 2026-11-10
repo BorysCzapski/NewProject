@@ -125,9 +125,10 @@ export function MatchingGame({
         ? connections.find((c) => c.leftId === id)
         : connections.find((c) => c.rightId === id);
     if (conn) {
+      // Klasa animacji pojawia się razem ze stanem, więc gra raz w chwili połączenia.
       return conn.correct
-        ? "border-accent bg-accent-soft text-accent"
-        : "border-danger bg-danger-soft text-danger";
+        ? "animate-pop border-accent bg-accent-soft text-accent"
+        : "animate-shake border-danger bg-danger-soft text-danger";
     }
     if (side === "left" && selectedLeft === id) {
       return "border-primary bg-primary-soft text-primary";
@@ -145,7 +146,7 @@ export function MatchingGame({
       </div>
 
       {done && (
-        <Card className="flex flex-col items-center gap-4 py-8 text-center">
+        <Card className="flex animate-pop flex-col items-center gap-4 py-8 text-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent">
             <Check className="h-8 w-8" />
           </span>
@@ -173,7 +174,7 @@ export function MatchingGame({
               x2={line.x2}
               y2={line.y2}
               strokeWidth={2}
-              className={line.correct ? "stroke-accent" : "stroke-danger"}
+              className={cn("animate-fade-in", line.correct ? "stroke-accent" : "stroke-danger")}
             />
           ))}
         </svg>
@@ -191,7 +192,7 @@ export function MatchingGame({
                 onClick={() => selectLeft(pair.id)}
                 disabled={connectedLeft.has(pair.id) || done}
                 className={cn(
-                  "flex min-h-[44px] items-center justify-center rounded-xl border px-3 py-2 text-center text-sm font-medium transition-colors",
+                  "press flex min-h-[44px] items-center justify-center rounded-xl border px-3 py-2 text-center text-sm font-medium",
                   statusClasses(pair.id, "left")
                 )}
               >
@@ -212,7 +213,7 @@ export function MatchingGame({
                 onClick={() => selectRight(pair.id)}
                 disabled={!selectedLeft || connectedRight.has(pair.id) || done}
                 className={cn(
-                  "flex min-h-[44px] items-center justify-center rounded-xl border px-3 py-2 text-center text-sm font-medium transition-colors",
+                  "press flex min-h-[44px] items-center justify-center rounded-xl border px-3 py-2 text-center text-sm font-medium",
                   statusClasses(pair.id, "right")
                 )}
               >

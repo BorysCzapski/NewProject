@@ -213,7 +213,7 @@ export function SpellingDrill({
   if (done || !current || !puzzle) {
     const percent = Math.round((firstTry / Math.max(total, 1)) * 100);
     return (
-      <Card className="flex flex-col items-center gap-3 text-center">
+      <Card className="flex animate-pop flex-col items-center gap-3 text-center">
         <p className="text-3xl font-bold text-primary">{percent}%</p>
         <p className="text-sm text-foreground-muted">
           {firstTry} z {total} słów napisanych dobrze za pierwszym razem. Powtórki zaplanowane.
@@ -247,7 +247,7 @@ export function SpellingDrill({
         <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(finished / total) * 100}%` }} />
       </div>
 
-      <Card key={current.uid} className="flex flex-col gap-4">
+      <Card key={current.uid} className="flex animate-fade-up flex-col gap-4">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-primary">
@@ -297,8 +297,8 @@ export function SpellingDrill({
                       "mx-0.5 h-11 w-9 rounded-(--radius-control) border-2 bg-surface text-center text-2xl font-semibold uppercase text-foreground",
                       "focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/40",
                       results === null && "border-border",
-                      results !== null && results[cell.blank] && "border-accent bg-accent-soft text-accent",
-                      results !== null && !results[cell.blank] && "border-danger bg-danger-soft text-danger"
+                      results !== null && results[cell.blank] && "animate-pop border-accent bg-accent-soft text-accent",
+                      results !== null && !results[cell.blank] && "animate-shake border-danger bg-danger-soft text-danger"
                     )}
                   />
                 )
@@ -308,7 +308,7 @@ export function SpellingDrill({
         </div>
 
         {results !== null && (
-          <div className="flex flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
+          <div className="flex animate-fade-up flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
             <p className={cn("flex items-center gap-1.5 text-sm font-semibold", wasCorrect ? "text-accent" : "text-danger")}>
               {wasCorrect ? <Check className="h-4 w-4" /> : <X className="h-4 w-4" />}
               {wasCorrect ? "Dobrze:" : "Poprawnie:"} {entry.term}
