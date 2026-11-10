@@ -53,6 +53,35 @@ bez nowych. Ćwiczenie dodatkowe **nie przesuwa harmonogramu** — poprawna odpo
 (inaczej dodatkowa powtórka przyspieszałaby pudełka Leitnera i słowo wróciłoby za późno), a błąd
 liczy się normalnie. Lista talii też mówi „Na dziś gotowe", zanim klikniesz w pustą sesję.
 
+**Czytanki: tłumaczenie słowa po dotknięciu** (`components/reading/word-translation.tsx`). Tekst jest pocięty
+na słowa (`lib/reading/words.ts`: litery z polskimi znakami i cyrylicą, apostrofy i łączniki w środku
+słowa, np. `don't`, `mother-in-law`); dotknięcie słowa woła `translateWord`
+(`lib/reading/translate-actions.ts`), które tłumaczy je **w kontekście zdania**, bo samo słowo bywa
+niejednoznaczne (`light`), a odmieniona forma (`went`) nie jest hasłem słownikowym — arkusz pokazuje
+więc też formę podstawową, część mowy i krótką uwagę. Jeden stan i jeden arkusz obsługują artykuł oraz
+pytania; ponowne dotknięcie zaznaczonego słowa albo Escape zamyka arkusz, a dotknięcie innego słowa
+przełącza go bez czekania. Wynik zostaje w pamięci strony (to samo słowo w tym samym zdaniu nie woła AI
+drugi raz), a spóźniona odpowiedź na poprzednie słowo nie nadpisuje bieżącego. **Każde dotknięcie to jedno
+małe wywołanie AI** (Groq, `GROQ_API_KEY`), więc akcja wymaga zalogowania i ogranicza wielkość wejścia.
+Słowa to `span role="button" tabIndex={-1}`: czytanka ma kilkaset słów i tyle samo przystanków Tab
+zrobiłoby z formularza pod nią męczarnię; czytniki ekranu nadal widzą przyciski. Przycisk głośnika czyta
+słowo przez Web Speech API.
+
+**Animacje w Linguo** to jeden system w `app/globals.css` (sekcja „Motion system"), a nie klasy dorzucane
+ad hoc: `animate-page-in`, `animate-fade-up`, `animate-fade-in`, `animate-pop` (dobra odpowiedź, nagroda),
+`animate-shake` (błąd), `animate-sheet-up`, `animate-shimmer` (szkielet ładowania), kaskada list przez
+`motion-stagger` + `stagger(i)` z `lib/motion.ts` oraz `press` (reakcja na dotyk). Zasady: animujemy tylko
+`opacity` i `transform`; wypełnienie `backwards`, a nie `both`, żeby po animacji element **nie zostawał z
+`transform`** (stałby się blokiem zawierającym dla dzieci `position: fixed`, np. arkusza tłumaczenia);
+`prefers-reduced-motion: reduce` wyłącza wszystko. `app/(main)/jezyki/layout.tsx` odtwarza wejście strony
+przy każdej zmianie adresu (`components/layout/page-transition.tsx`, klucz po `pathname`, bo `template.tsx`
+reaguje tylko na zmianę najbliższego segmentu). Klasa `.press` jest poza warstwami Tailwinda, więc wygrywa z
+jego `transition-colors` — dlatego sama wymienia też kolory. Animowane są huby i listy (dashboard, Nauka, talie,
+czytanki, prace domowe) oraz trenery: Pisownia, Trening fiszek, `VocabDrill` (wspólny z Maturą), trener
+znaczeń, dopasowywanie, ćwiczenia z gramatyki i czytanka. Dolny pasek nawigacji (wspólny dla wszystkich
+aplikacji) dostał reakcję na dotyk i płynne zaznaczenie ikony. Fiszki montują każdą kartę od nowa: wcześniej
+po odpowiedzi karta obracała się z powrotem już z tłumaczeniem NASTĘPNEGO słowa.
+
 Ekran końcowy Pisowni i Treningu liczy „za pierwszym razem" uczciwie: powtórki po błędzie nie
 zwiększają mianownika, a powtórka po błędzie w Pisowni zasłania INNĄ literę niż poprzednio (o ile
 słowo daje wybór) — samo losowe ziarno często wybierało to samo miejsce.
@@ -263,16 +292,16 @@ nowe pytania i przypadki wyłącznie z teorii działu oraz ocenia odpowiedzi otw
 `zusia_progress`, `0038`, jeden wiersz jsonb na użytkownika; akcje w `lib/zusia/progress-actions.ts`).
 Przy pierwszym wczytaniu urządzenie scala kopię z konta z lokalną (`lib/zusia/progress.ts`: większe
 liczniki, wyższe poziomy fiszek, suma wyników), potem każda zmiana jest zapisywana z opóźnieniem. **Test z materiałów dodatkowych** (`/zusia/test-dodatkowy`) to arkusz „Lekcje z ZUS | Arkusz 2026" przepisany ze
-zdjęć wydruku (`lib/zusia/arkusz.ts`): 56 zadań jednokrotnego wyboru, numery 5–60, z kluczem
-odpowiedzi ze zdjęcia klucza, w trybie egzaminu (limit czasu, wynik, analiza błędów, historia podejść).
-To **osobny bank**, nie część `QUESTIONS`, więc nie zmienia liczby zadań w Treningu i w „Test – wszystkie
-zadania". Domyślnie zadania i odpowiedzi zostają w kolejności z wydruku (litery A–D jak na papierze);
-losowanie można włączyć. Test **nie zapisuje statystyk pytań** (`QuizRunner` ma prop `recordStats`),
-bo ekran główny liczy „zadania X/N" po kluczach tych statystyk i obce identyfikatory zawyżyłyby X ponad N;
-wynik trafia do zwykłej historii testów. Czego nie ma: **zadań 1–4** (nie było ich na zdjęciach; w kluczu
-mają odpowiedzi C, C, D, D, ale treści nie wymyślamy — `ARKUSZ_MISSING`). Arkusz powtarza kilka zadań
-w tej samej treści (5 = 51, 6 = 52, 7 = 53, 11 = 54, 17 = 55) i tak je zostawiono. Arkusz ma tylko klucz,
-bez uzasadnień, więc komentarz po odpowiedzi to „zgodnie z kluczem arkusza (zadanie N: X)".
+zdjęć wydruku (`lib/zusia/arkusz.ts`): 60 zadań jednokrotnego wyboru z kluczem odpowiedzi ze zdjęcia
+klucza, w trybie egzaminu (limit czasu, wynik, analiza błędów, historia podejść). To **osobny bank**,
+nie część `QUESTIONS`, więc nie zmienia liczby zadań w Treningu i w „Test – wszystkie zadania".
+Domyślnie zadania i odpowiedzi zostają w kolejności z wydruku (litery A–D jak na papierze); losowanie
+można włączyć. Test **nie zapisuje statystyk pytań** (`QuizRunner` ma prop `recordStats`), bo ekran
+główny liczy „zadania X/N" po kluczach tych statystyk i obce identyfikatory zawyżyłyby X ponad N; wynik
+trafia do zwykłej historii testów. Arkusz powtarza kilka zadań w tej samej treści (5 = 51, 6 = 52, 7 = 53,
+11 = 54, 17 = 55) i tak je zostawiono. Fragmenty zadań 11, 12, 13 i 50 były na zdjęciach nieostre i
+uzupełniono je z kontekstu. Arkusz ma tylko klucz, bez uzasadnień, więc komentarz po odpowiedzi to
+„zgodnie z kluczem arkusza (zadanie N: X)".
 
 Podręcznik nie ma klucza
 odpowiedzi – klucze do ćwiczeń z podręcznika (test z lekcji 2, prawda/fałsz z lekcji 3, zadania 1–4)
@@ -337,7 +366,8 @@ wymaga ponownego pobrania JSON-ów. Arkusze mają nieoficjalną ocenę AI, nie k
 6. **Gramatyka** — tematy per poziom z wyjaśnieniami po polsku, ćwiczenia (luki, wybór,
    przekształcenia zdań oceniane przez AI).
 7. **Czytanie** — AI generuje krótkie artykuły w wybranym języku, dopasowane do poziomu i tematu,
-   zadaje pytania (ABCD + otwarte), ocenia odpowiedzi otwarte.
+   zadaje pytania (ABCD + otwarte), ocenia odpowiedzi otwarte. **Dotknij dowolnego słowa** (w artykule
+   i w pytaniach), żeby zobaczyć jego polskie tłumaczenie w arkuszu u dołu ekranu — patrz niżej.
 8. **Pisanie** — krótkie formy (bez esejów) z losowym, konkretnym poleceniem od AI, ocena
    poprawności/słownictwa, poprawiona wersja tekstu, mini-dialog pogłębiający.
 9. **Piosenki** — wklejasz tekst piosenki, tłumaczysz linijka po linijce (AI akceptuje sensowne

@@ -8,11 +8,18 @@
 // questions via AI, then shows per-question feedback + the overall score.
 // ============================================================================
 import { useState } from "react";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, Hand, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn } from "@/lib/utils";
+import { stagger } from "@/lib/motion";
+import {
+  TappableText,
+  TranslationSheet,
+  useWordTranslation,
+  type WordTranslator,
+} from "@/components/reading/word-translation";
 import { submitReadingAttempt, type ReadingAttemptResult, type ReadingQuestionResult } from "@/lib/reading/actions";
 import type { ReadingQuestion, ReadingText } from "@/lib/types/database";
 
@@ -34,6 +41,8 @@ export function ReadingSession({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const translator = useWordTranslation(text.language);
+
   const allAnswered = questions.every((q) => answers[q.id]?.trim());
 
   async function handleSubmit() {
@@ -52,9 +61,18 @@ export function ReadingSession({
 
   return (
     <div>
-      <Card className="mb-5">
+      <Card className="mb-5 animate-fade-up">
         <CardTitle>{text.title}</CardTitle>
-        <p className="mt-3 whitespace-pre-line text-base leading-relaxed text-foreground">{text.content}</p>
+        <p className="mt-1 flex items-center gap-1.5 text-xs text-foreground-muted">
+          <Hand className="h-3.5 w-3.5 shrink-0" aria-hidden />
+          Dotknij dowolnego słowa, aby zobaczyć jego tłumaczenie
+        </p>
+        <TappableText
+          id="article"
+          text={text.content}
+          translator={translator}
+          className="mt-3 whitespace-pre-line text-base leading-relaxed text-foreground"
+        />
       </Card>
 
       <h2 className="mb-3 text-lg font-semibold text-foreground">Pytania</h2>
@@ -68,6 +86,7 @@ export function ReadingSession({
             onChange={(val) => setAnswers((prev) => ({ ...prev, [q.id]: val }))}
             result={result?.results[q.id]}
             locked={!!result}
+            translator={translator}
           />
         ))}
       </div>
@@ -93,7 +112,7 @@ export function ReadingSession({
       )}
 
       {result && (
-        <Card className="mt-5 text-center">
+        <Card className="mt-5 animate-pop text-center">
           <CardTitle>Wynik: {result.score}%</CardTitle>
           <CardDescription className="mt-1">
             {result.score >= 80
@@ -104,6 +123,8 @@ export function ReadingSession({
           </CardDescription>
         </Card>
       )}
+
+      <TranslationSheet translator={translator} />
     </div>
   );
 }
@@ -115,6 +136,7 @@ function QuestionCard({
   onChange,
   result,
   locked,
+  translator,
 }: {
   index: number;
   question: ReadingQuestion;
@@ -122,11 +144,17 @@ function QuestionCard({
   onChange: (val: string) => void;
   result?: ReadingQuestionResult;
   locked: boolean;
+  translator: WordTranslator;
 }) {
   return (
-    <Card>
+    <Card className="motion-stagger animate-fade-up" style={stagger(index)}>
       <CardDescription>Pytanie {index + 1}</CardDescription>
-      <p className="mt-1 text-base font-medium text-foreground">{question.question}</p>
+      <TappableText
+        id={`question-${question.id}`}
+        text={question.question}
+        translator={translator}
+        className="mt-1 text-base font-medium text-foreground"
+      />
 
       {question.type === "multiple_choice" ? (
         <div className="mt-3 flex flex-col gap-2">
@@ -140,7 +168,7 @@ function QuestionCard({
                 onClick={() => !locked && onChange(option)}
                 disabled={locked}
                 className={cn(
-                  "rounded-(--radius-control) border px-4 py-3 text-left text-base transition-colors",
+                  "press rounded-(--radius-control) border px-4 py-3 text-left text-base transition-colors",
                   !locked && isSelected && "border-primary bg-primary-soft text-primary",
                   !locked && !isSelected && "border-border bg-surface active:bg-surface-muted",
                   locked && isRightAnswer && "border-primary bg-primary-soft text-primary",
@@ -172,7 +200,7 @@ function QuestionCard({
         <div
           className={cn(
             "mt-3 flex items-start gap-2 rounded-(--radius-control) p-3 text-sm",
-            result.isCorrect ? "bg-primary-soft text-primary" : "bg-danger-soft text-danger"
+            result.isCorrect ? "animate-pop bg-primary-soft text-primary" : "animate-shake bg-danger-soft text-danger"
           )}
         >
           {result.isCorrect ? (

@@ -13,6 +13,7 @@ import { Badge, LevelBadge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { TopicPicker } from "@/components/reading/topic-picker";
 import type { ReadingText } from "@/lib/types/database";
+import { stagger } from "@/lib/motion";
 
 export default async function ReadingHubPage() {
   const profile = await requireProfile();
@@ -68,10 +69,10 @@ export default async function ReadingHubPage() {
           </Card>
         ) : (
           <div className="flex flex-col gap-3">
-            {textList.map((text) => {
+            {textList.map((text, index) => {
               const score = scoreByText.get(text.id);
               return (
-                <Link key={text.id} href={`/jezyki/nauka/czytanie/${text.id}`}>
+                <Link key={text.id} href={`/jezyki/nauka/czytanie/${text.id}`} className="animate-fade-up motion-stagger" style={stagger(index)}>
                   <Card className="flex items-center gap-3 active:scale-[0.98] transition-transform">
                     <div className="min-w-0 flex-1">
                       <CardTitle>{text.title}</CardTitle>

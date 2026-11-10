@@ -11,6 +11,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getDecksWithProgress, NEW_PER_SESSION } from "@/lib/lexicon/queries";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { stagger } from "@/lib/motion";
 
 export default async function CodziennePage() {
   const profile = await requireProfile();
@@ -29,8 +30,8 @@ export default async function CodziennePage() {
             Talie nie są jeszcze wgrane do bazy.
           </Card>
         )}
-        {decks.map(({ deck, totalEntries, startedEntries, masteredEntries, dueEntries }) => (
-          <Link key={deck.id} href={`/jezyki/nauka/codzienne/sesja/${deck.slug}`}>
+        {decks.map(({ deck, totalEntries, startedEntries, masteredEntries, dueEntries }, index) => (
+          <Link key={deck.id} href={`/jezyki/nauka/codzienne/sesja/${deck.slug}`} className="animate-fade-up motion-stagger" style={stagger(index)}>
             <Card className="flex items-center justify-between gap-3 transition-transform active:scale-[0.99]">
               <div className="min-w-0 flex-1">
                 <CardTitle>{deck.title}</CardTitle>

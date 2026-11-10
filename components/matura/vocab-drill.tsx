@@ -171,7 +171,7 @@ export function VocabDrill({
   if (done || !current) {
     const percent = total > 0 ? Math.round((correct / Math.max(processed, 1)) * 100) : 0;
     return (
-      <Card className="flex flex-col items-center gap-3 text-center">
+      <Card className="flex animate-pop flex-col items-center gap-3 text-center">
         <p className="text-3xl font-bold text-primary">{percent}%</p>
         <p className="text-sm text-foreground-muted">
           {correct} z {processed} odpowiedzi za pierwszym razem. Powtórki zaplanowane.
@@ -212,7 +212,7 @@ export function VocabDrill({
 
       {current.produce ? (
         // ---- PRODUKCJA -------------------------------------------------
-        <Card className="flex flex-col gap-3">
+        <Card key={current.uid} className="flex animate-fade-up flex-col gap-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-primary">Napisz w obcym języku</p>
             <p className="mt-1 text-xl font-semibold text-foreground">{entry.translation_pl}</p>
@@ -241,8 +241,8 @@ export function VocabDrill({
             placeholder="Twoja odpowiedź…"
             aria-label="Twoja odpowiedź"
             className={cn(
-              checked !== null && typedCorrect && "border-accent bg-accent-soft text-accent",
-              checked !== null && !typedCorrect && "border-danger bg-danger-soft text-danger"
+              checked !== null && typedCorrect && "animate-pop border-accent bg-accent-soft text-accent",
+              checked !== null && !typedCorrect && "animate-shake border-danger bg-danger-soft text-danger"
             )}
           />
           {checked === null && accentChars.length > 0 && (
@@ -250,7 +250,7 @@ export function VocabDrill({
           )}
 
           {checked !== null && (
-            <div className="flex flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
+            <div className="flex animate-fade-up flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
               <p
                 className={cn(
                   "flex items-center gap-1.5 text-sm font-semibold",
@@ -282,7 +282,7 @@ export function VocabDrill({
         </Card>
       ) : (
         // ---- ROZPOZNAWANIE ---------------------------------------------
-        <Card className="flex flex-col gap-3">
+        <Card key={current.uid} className="flex animate-fade-up flex-col gap-3">
           <button
             type="button"
             onClick={() => setRevealed(true)}
@@ -307,7 +307,7 @@ export function VocabDrill({
           </button>
 
           {revealed && (
-            <div className="flex flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
+            <div className="flex animate-fade-up flex-col gap-1.5 rounded-(--radius-control) bg-surface-muted px-3 py-2.5">
               {entry.example && (
                 <p className="text-sm italic leading-relaxed text-foreground">{entry.example}</p>
               )}

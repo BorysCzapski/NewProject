@@ -11,6 +11,7 @@ import { getHomeworkWithProgress, type HomeworkWithProgress } from "@/lib/homewo
 import { PageHeader } from "@/components/layout/page-header";
 import { LevelBadge } from "@/components/ui/badge";
 import { HomeworkItemCard } from "@/components/homework/homework-item-card";
+import { stagger } from "@/lib/motion";
 
 function Section({ title, items }: { title: string; items: HomeworkWithProgress[] }) {
   if (items.length === 0) return null;
@@ -18,8 +19,10 @@ function Section({ title, items }: { title: string; items: HomeworkWithProgress[
     <section className="flex flex-col gap-3">
       <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground-muted">{title}</h2>
       <div className="flex flex-col gap-3">
-        {items.map((hw) => (
-          <HomeworkItemCard key={hw.id} homework={hw} />
+        {items.map((hw, index) => (
+          <div key={hw.id} className="animate-fade-up motion-stagger" style={stagger(index)}>
+            <HomeworkItemCard homework={hw} />
+          </div>
         ))}
       </div>
     </section>

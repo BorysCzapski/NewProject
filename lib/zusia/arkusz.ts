@@ -1,24 +1,20 @@
 // ============================================================================
 // lib/zusia/arkusz.ts
 // "Test z materiałów dodatkowych": arkusz „Lekcje z ZUS | Arkusz 2026” przepisany
-// ze zdjęć wydruku (zadania 5–60) razem z kluczem odpowiedzi ze zdjęcia klucza.
+// ze zdjęć wydruku (zadania 1–60) razem z kluczem odpowiedzi ze zdjęcia klucza.
 //
 // To OSOBNY bank, nie część QUESTIONS (lib/zusia/questions.ts): arkusz ma własną
 // numerację i klucz, a wrzucenie go do QUESTIONS zmieniłoby liczbę zadań w
 // Treningu i w „Test – wszystkie zadania” oraz próbki dla generatora AI.
 //
-// Czego nie ma: zadań 1–4. Nie było ich na żadnym ze zdjęć (zostały tylko ich
-// odpowiedzi w kluczu: C, C, D, D), więc ich treści nie wymyślamy — patrz
-// ARKUSZ_MISSING. Kilka zadań występuje w arkuszu dwa razy w tej samej treści
-// (5 = 51, 6 = 52, 7 = 53, 11 = 54, 17 = 55) i tak zostawiamy, jak w oryginale.
-// Fragmenty zadań 11, 12, 13 i 50 były na zdjęciach nieostre — uzupełniono je z
-// kontekstu (zadanie 54 jest tym samym pytaniem w wersji ostrej).
+// Kilka zadań występuje w arkuszu dwa razy w tej samej treści (5 = 51, 6 = 52,
+// 7 = 53, 11 = 54, 17 = 55) i tak zostawiamy, jak w oryginale. Fragmenty zadań
+// 11, 12, 13 i 50 były na zdjęciach nieostre — uzupełniono je z kontekstu
+// (zadanie 54 jest tym samym pytaniem co 11, w wersji ostrej).
 // ============================================================================
 import type { Question } from "./types";
 
 export const ARKUSZ_TITLE = "Arkusz 2026 – materiały dodatkowe";
-/** Numery zadań, których treści nie było na zdjęciach. */
-export const ARKUSZ_MISSING = [1, 2, 3, 4] as const;
 
 const LETTERS = ["A", "B", "C", "D"] as const;
 
@@ -26,6 +22,14 @@ const LETTERS = ["A", "B", "C", "D"] as const;
 type Row = readonly [number, (typeof LETTERS)[number], string, readonly [string, string, string, string]];
 
 const ROWS: readonly Row[] = [
+  [1, "C", "Najliczniejszą grupę uczestników powszechnego systemu ubezpieczeń w Polsce stanowią:",
+    ["płatnicy składek", "świadczeniobiorcy", "ubezpieczeni", "żadna z odpowiedzi nie jest prawidłowa"]],
+  [2, "C", "Według planów finansowych na 2026 r. wydatki Funduszu Ubezpieczeń Społecznych (FUS) to w przybliżeniu jaka część planowanych wydatków budżetu państwa?",
+    ["100% tego, co wydaje budżet państwa", "30% tego, co wydaje budżet państwa", "50% tego, co wydaje budżet państwa", "70% tego, co wydaje budżet państwa"]],
+  [3, "D", "Jeśli chodzi o składkę na ubezpieczenie zdrowotne, to ZUS:",
+    ["pobiera składki", "ustala koszyk świadczeń finansowanych ze składek zdrowotnych", "przekazuje składki do NFZ", "odpowiedzi a i c są prawidłowe"]],
+  [4, "D", "Do świadczeń z ubezpieczenia chorobowego zaliczamy:",
+    ["zasiłek chorobowy", "zasiłek macierzyński", "zasiłek opiekuńczy", "odpowiedzi a, b i c są prawidłowe"]],
   [5, "A", "Co do zasady jeżeli niezdolność do pracy wystąpi po ustaniu ubezpieczenia, to maksymalny okres wypłaty zasiłku chorobowego wynosi:",
     ["91 dni", "182 dni", "270 dni", "272 dni"]],
   [6, "A", "Jeżeli płatnik zgłaszał do ubezpieczenia chorobowego nie więcej niż 20 osób według stanu na 30 listopada poprzedniego roku, to co do zasady:",
