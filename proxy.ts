@@ -14,11 +14,14 @@ const GUEST_ONLY_PATHS = ["/login", "/register"];
 // /api/modlitwa/kalendarz.ics jest publiczna z rozmysłem: subskrybuje ją
 // Google/Apple Calendar własnym klientem HTTP, bez ciasteczek sesji.
 // Autoryzuje ją token z prayer_settings.calendar_token (patrz sam handler).
+// /api/habits (Skróty macOS / curl) też: bez cookie, autoryzacja tokenem
+// Bearer z habit_api_tokens, walidowanym w samym handlerze.
 const PUBLIC_PATHS = [
   ...GUEST_ONLY_PATHS,
   "/auth/callback",
   "/api/health",
   "/api/modlitwa/kalendarz.ics",
+  "/api/habits",
 ];
 
 // Schola is a fully separate realm on the same Supabase project — see

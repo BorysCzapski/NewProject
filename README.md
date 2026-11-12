@@ -240,6 +240,30 @@ Bez celów tygodniowych — liczy się każdy dzień. Obok tabeli: wskaźnik reg
 w dniach do dziś) i wykres liniowy „% nawyków dziennie". Schemat: `0042_habits.sql` (`habits`,
 `habit_checks`, jeden wiersz = odhaczony dzień), logika w czystym `lib/habits/stats.ts`.
 
+*Odhaczanie z pulpitu macOS (Skróty + widget).* Schemat: `0046_habit_api_tokens.sql` (w bazie tylko
+hash tokenu). W `/habits` na dole karta „Skrót macOS / API" → **Wygeneruj token** (pokazywany raz;
+„Odnów" unieważnia stary). Endpoint `/api/habits` nie wymaga sesji, tylko nagłówka
+`Authorization: Bearer <token>` (zły/brak tokenu → `401`):
+
+- `GET /api/habits` — lista nawyków z polem `checked` dla dziś (opcjonalnie `?date=YYYY-MM-DD`),
+- `POST /api/habits` — JSON `{"habit": "Bieganie"}` (nazwa bez rozróżniania wielkości liter,
+  dopuszczalna część nazwy, albo `"habit_id"`), opcjonalnie `"date": "YYYY-MM-DD"` (domyślnie dziś,
+  Europe/Warsaw) i `"checked": false` żeby odznaczyć. Idempotentne: ustawia stan, nie przełącza.
+
+```bash
+curl -X POST https://TWOJA-DOMENA/api/habits \
+  -H "Authorization: Bearer hab_TWOJ_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"habit": "Bieganie"}'
+```
+
+Skrót w aplikacji **Skróty**: nowy skrót → akcja **Pobierz zawartość URL** → URL
+`https://TWOJA-DOMENA/api/habits`, **Metoda: POST**, nagłówki: `Authorization` =
+`Bearer hab_TWOJ_TOKEN`, `Content-Type` = `application/json`, **Treść żądania: JSON** z polem
+`habit` (tekst = nazwa nawyku). Zapisz skrót, a potem (macOS Sonoma lub nowszy) otwórz Centrum
+powiadomień → **Edytuj widżety** → **Skróty** i dodaj widżet z tym skrótem na pulpit; kliknięcie
+odhacza nawyk na dziś. Jeden skrót = jeden nawyk, więc dla kilku nawyków zduplikuj skrót i zmień nazwę.
+
 **Projekty** (`/projekty`) — własne projekty z hobby (naprawa magnetofonu, nauka piosenki...).
 Projekt ma status (pomysł / w trakcie / wstrzymany / ukończony), opis „co dokładnie chcę zrobić",
 **kroki** (z odhaczonych kroków liczy się pasek postępu), listę **czego potrzebuję** (części,

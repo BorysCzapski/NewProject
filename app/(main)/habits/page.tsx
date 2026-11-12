@@ -10,6 +10,7 @@ import { createClient } from "@/lib/supabase/server";
 import { WINDOW_DAYS, addDays, todayKey } from "@/lib/habits/dates";
 import { PageHeader } from "@/components/layout/page-header";
 import { HabitBoard } from "@/components/habits/habit-board";
+import { ApiTokenCard } from "@/components/habits/api-token-card";
 import type { Habit } from "@/lib/types/database";
 
 const MIN_WEEKS = 12;
@@ -25,9 +26,10 @@ export default async function HabitsPage() {
   const supabase = await createClient();
   const today = todayKey();
 
-  const [{ data: habits }, { data: first }] = await Promise.all([
+  const [{ data: habits }, { data: first }, { data: tokenRow }] = await Promise.all([
     supabase.from("habits").select("*").eq("user_id", profile.id).order("position").order("created_at"),
     supabase.from("habit_checks").select("day").eq("user_id", profile.id).order("day").limit(1),
+    supabase.from("habit_api_tokens").select("created_at, last_used_at").eq("user_id", profile.id).maybeSingle(),
   ]);
 
   const habitList = (habits ?? []) as Habit[];
@@ -60,6 +62,11 @@ export default async function HabitsPage() {
       <PageHeader title="Habit Tracking" subtitle="Zamień nawyki w tożsamość, tydzień po tygodniu" />
       <div className="mx-auto max-w-5xl px-5 py-5">
         <HabitBoard habits={habitList} weekStarts={weekStarts} initialChecks={[...checks]} today={today} />
+        <ApiTokenCard
+          hasToken={!!tokenRow}
+          createdAt={tokenRow?.created_at ?? null}
+          lastUsedAt={tokenRow?.last_used_at ?? null}
+        />
       </div>
     </div>
   );
