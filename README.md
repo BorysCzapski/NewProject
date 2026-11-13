@@ -270,6 +270,12 @@ Projekt ma status (pomysł / w trakcie / wstrzymany / ukończony), opis „co do
 narzędzia; odhaczasz „mam") i **dziennik sesji** (data + co robiłeś). Schemat: `0044_projekty.sql`
 (`projects`, `project_items` z `kind` step/need, `project_sessions`), akcje w `lib/projekty/actions.ts`.
 
+**Trading** (`/trading`) — nauka tradingu na ropie Brent (OIL CFD, XTB) na bazie własnych sesji
+nauki i dziennika transakcji. Lekcje, **przykłady** (scenariusze „co robisz?" z wyjaśnieniem każdej
+opcji), quiz, kalkulator pozycji (ryzyko, relacja TP:SL, max wolumen) i lista kontrolna przed wejściem.
+Treść w `lib/trading/content.ts`, matematyka w `lib/trading/calc.ts`. Bez bazy: postępy w
+`localStorage` (`lib/trading/use-local-state.ts`). Materiał edukacyjny, nie porada inwestycyjna.
+
 **Mind Math** (`/mindmath`) — rachunek w głowie. **Techniki** (`/mindmath/techniki`): mnożenie przez 11,
 kwadraty liczb na 5, metoda braków przy liczbach bliskich 100 i „pionowo i na krzyż" (sutry
 wedyjskie), różnica kwadratów, ×5/25/125, ×9/99, tabliczka 6–9 na palcach, dopełnianie do 10 w stylu
