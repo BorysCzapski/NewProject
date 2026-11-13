@@ -1600,3 +1600,11 @@ export interface ProjectSession {
   note: string;
   created_at: string;
 }
+
+// Token API do nawyków (supabase/migrations/0046_habit_api_tokens.sql)
+export interface HabitApiToken {
+  user_id: string;
+  token_hash: string;
+  created_at: string;
+  last_used_at: string | null;
+}
