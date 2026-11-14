@@ -2,35 +2,42 @@
 
 // ============================================================================
 // components/reading/word-translation.tsx
-// "Dotknij słowa, zobacz polskie tłumaczenie" w czytankach.
+// "Dotknij słowa, zobacz polskie tłumaczenie i przykładowe zdania" w czytankach.
 //
-//  - useWordTranslation: JEDEN stan na całą czytankę (zaznaczone słowo, ładowanie,
-//    wynik), współdzielony przez artykuł i pytania — dzięki temu nie da się
+//  - useWordTranslation: JEDEN stan na całą czytankę (zaznaczone słowo, tłumaczenie,
+//    przykłady), współdzielony przez artykuł i pytania — dzięki temu nie da się
 //    otworzyć dwóch arkuszy naraz, a zaznaczenie przeskakuje między tekstami.
 //  - TappableText: tekst pocięty na słowa; dotknięcie słowa woła tłumaczenie.
 //  - TranslationSheet: arkusz u dołu ekranu (nie blokuje tekstu — można od razu
 //    dotknąć kolejnego słowa).
 //
-// Tłumaczenie słowa jest zależne od zdania (lib/reading/translate-actions.ts),
-// a wyniki zostają w pamięci strony: to samo słowo w tym samym zdaniu nie woła
-// AI drugi raz.
+// Tłumaczenie i przykłady to DWA równoległe żądania z własnym stanem. Tłumaczenie
+// jest małe i pojawia się szybko, przykłady dochodzą chwilę później; awaria
+// przykładów nie ukrywa tłumaczenia, a "Ponów" ponawia tylko tę część, która zawiodła.
 //
-// Słowa to <span role="button" tabIndex={-1}>, nie <button> i nie ogniska
-// klawiatury: czytanka ma kilkaset słów i kilkaset przystanków Tab zrobiłoby z
-// formularza pod nią męczarnię, a <button> w środku akapitu zachowuje się
-// nierówno w różnych przeglądarkach. Dla czytników ekranu pozostają rolą przycisku.
+// Nowe dotknięcie PRZERYWA poprzednie żądania (AbortController), więc nic nie czeka
+// w kolejce za słowem, które użytkownik już porzucił. (Akcje serwerowe tak nie
+// potrafią — klient wysyła je po jednej, więc tu jest trasa API: lib/reading/translate-client.ts.)
+//
+// Wyniki zostają w pamięci strony: to samo słowo w tym samym zdaniu nie woła AI
+// drugi raz. Słowa to <span role="button" tabIndex={-1}>, nie <button> i nie ogniska
+// klawiatury: czytanka ma kilkaset słów, a kilkaset przystanków Tab zrobiłoby z
+// formularza pod nią męczarnię. Dla czytników ekranu pozostają rolą przycisku.
 // ============================================================================
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
-import { Loader2, RotateCcw, Volume2, X } from "lucide-react";
+import { RotateCcw, Volume2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { translateWord, type WordTranslation } from "@/lib/reading/translate-actions";
+import { defaultWordApi } from "@/lib/reading/translate-client";
+import { splitForHighlight } from "@/lib/reading/translate-core";
+import type { WordApi, WordExample, WordTranslation } from "@/lib/reading/translate-types";
 import { sentenceAround, tokenize, translationCacheKey } from "@/lib/reading/words";
 import type { TargetLanguage } from "@/lib/types/database";
 
 const SPEECH_LANG: Record<TargetLanguage, string> = { en: "en-GB", es: "es-ES", ru: "ru-RU" };
 
 /** Wyniki przeżywają przejścia między czytankami w tej samej sesji przeglądarki. */
-const CACHE = new Map<string, WordTranslation>();
+const TRANSLATIONS = new Map<string, WordTranslation>();
+const EXAMPLES = new Map<string, WordExample[]>();
 
 interface Selected {
   /** Identyfikuje konkretne wystąpienie słowa w konkretnym tekście. */
@@ -39,75 +46,124 @@ interface Selected {
   sentence: string;
 }
 
+type Part<T> = { status: "loading" } | { status: "ready"; data: T } | { status: "error"; message: string };
+
 type Phase =
   | { status: "idle" }
-  | { status: "loading"; selected: Selected }
-  | { status: "ready"; selected: Selected; data: WordTranslation }
-  | { status: "error"; selected: Selected; message: string };
+  | { status: "open"; selected: Selected; translation: Part<WordTranslation>; examples: Part<WordExample[]> };
 
 export interface WordTranslator {
   language: TargetLanguage;
   phase: Phase;
   tap: (selected: Selected) => void;
-  retry: () => void;
+  retry: (part: "translation" | "examples") => void;
   close: () => void;
 }
 
-/** Podpis akcji tłumaczącej; osobny typ, żeby test mógł wstawić atrapę. */
-export type TranslateFn = typeof translateWord;
+const isAbort = (error: unknown) => error instanceof DOMException && error.name === "AbortError";
 
-export function useWordTranslation(language: TargetLanguage, translate: TranslateFn = translateWord): WordTranslator {
+export function useWordTranslation(language: TargetLanguage, api: WordApi = defaultWordApi): WordTranslator {
   const [phase, setPhase] = useState<Phase>({ status: "idle" });
-  // Numer ostatniego dotknięcia: spóźniona odpowiedź na poprzednie słowo nie może
-  // nadpisać tego, które użytkownik dotknął w międzyczasie.
-  const latest = useRef(0);
+  /** Kontroler bieżącego zaznaczenia: abort = użytkownik poszedł dalej, wyniki do kosza. */
+  const controllerRef = useRef<AbortController | null>(null);
 
-  const load = useCallback(
-    async (selected: Selected) => {
-      const request = ++latest.current;
-      const cached = CACHE.get(translationCacheKey(language, selected.word, selected.sentence));
-      if (cached) {
-        setPhase({ status: "ready", selected, data: cached });
-        return;
-      }
-      setPhase({ status: "loading", selected });
-      const result = await translate({ word: selected.word, sentence: selected.sentence, language }).catch(
-        () => null
-      );
-      if (request !== latest.current) return;
-      if (result?.ok) {
-        CACHE.set(translationCacheKey(language, selected.word, selected.sentence), result.data);
-        setPhase({ status: "ready", selected, data: result.data });
-      } else {
-        setPhase({
-          status: "error",
-          selected,
-          message: result && !result.ok ? result.error : "Nie udało się pobrać tłumaczenia. Spróbuj ponownie.",
+  useEffect(() => () => controllerRef.current?.abort(), []);
+
+  const patch = useCallback((selected: Selected, signal: AbortSignal, update: Partial<Phase & { status: "open" }>) => {
+    if (signal.aborted) return;
+    setPhase((prev) => (prev.status === "open" && prev.selected.key === selected.key ? { ...prev, ...update } : prev));
+  }, []);
+
+  const loadTranslation = useCallback(
+    async (selected: Selected, signal: AbortSignal) => {
+      try {
+        const result = await api.translate({ word: selected.word, sentence: selected.sentence, language }, signal);
+        if (result.ok) {
+          TRANSLATIONS.set(translationCacheKey(language, selected.word, selected.sentence), result.data);
+          patch(selected, signal, { translation: { status: "ready", data: result.data } });
+        } else {
+          patch(selected, signal, { translation: { status: "error", message: result.error } });
+        }
+      } catch (error) {
+        if (isAbort(error)) return;
+        patch(selected, signal, {
+          translation: { status: "error", message: "Nie udało się pobrać tłumaczenia. Spróbuj ponownie." },
         });
       }
     },
-    [language, translate]
+    [api, language, patch]
+  );
+
+  const loadExamples = useCallback(
+    async (selected: Selected, signal: AbortSignal) => {
+      try {
+        const result = await api.examples({ word: selected.word, sentence: selected.sentence, language }, signal);
+        if (result.ok) {
+          EXAMPLES.set(translationCacheKey(language, selected.word, selected.sentence), result.data);
+          patch(selected, signal, { examples: { status: "ready", data: result.data } });
+        } else {
+          patch(selected, signal, { examples: { status: "error", message: result.error } });
+        }
+      } catch (error) {
+        if (isAbort(error)) return;
+        patch(selected, signal, {
+          examples: { status: "error", message: "Nie udało się pobrać przykładów. Spróbuj ponownie." },
+        });
+      }
+    },
+    [api, language, patch]
   );
 
   const tap = useCallback(
     (selected: Selected) => {
       // Ponowne dotknięcie zaznaczonego słowa zamyka arkusz.
-      if (phase.status !== "idle" && phase.selected.key === selected.key) {
-        latest.current++;
+      if (phase.status === "open" && phase.selected.key === selected.key) {
+        controllerRef.current?.abort();
         setPhase({ status: "idle" });
         return;
       }
-      void load(selected);
+
+      // Poprzednie żądania nie są już potrzebne — przerywamy je, zamiast czekać.
+      controllerRef.current?.abort();
+      const controller = new AbortController();
+      controllerRef.current = controller;
+
+      const cacheKey = translationCacheKey(language, selected.word, selected.sentence);
+      const cachedTranslation = TRANSLATIONS.get(cacheKey);
+      const cachedExamples = EXAMPLES.get(cacheKey);
+      setPhase({
+        status: "open",
+        selected,
+        translation: cachedTranslation ? { status: "ready", data: cachedTranslation } : { status: "loading" },
+        examples: cachedExamples ? { status: "ready", data: cachedExamples } : { status: "loading" },
+      });
+
+      // Dwa równoległe żądania: tłumaczenie nie czeka na (dłuższe) przykłady.
+      if (!cachedTranslation) void loadTranslation(selected, controller.signal);
+      if (!cachedExamples) void loadExamples(selected, controller.signal);
     },
-    [phase, load]
+    [phase, language, loadTranslation, loadExamples]
   );
 
-  const retry = useCallback(() => {
-    if (phase.status === "error") void load(phase.selected);
-  }, [phase, load]);
+  const retry = useCallback(
+    (part: "translation" | "examples") => {
+      if (phase.status !== "open") return;
+      const controller = controllerRef.current;
+      if (!controller || controller.signal.aborted) return;
+      const { selected } = phase;
+      if (part === "translation") {
+        patch(selected, controller.signal, { translation: { status: "loading" } });
+        void loadTranslation(selected, controller.signal);
+      } else {
+        patch(selected, controller.signal, { examples: { status: "loading" } });
+        void loadExamples(selected, controller.signal);
+      }
+    },
+    [phase, patch, loadTranslation, loadExamples]
+  );
 
   const close = useCallback(() => {
-    latest.current++;
+    controllerRef.current?.abort();
     setPhase({ status: "idle" });
   }, []);
 
@@ -169,9 +225,31 @@ function speak(word: string, language: TargetLanguage) {
   window.speechSynthesis.speak(utterance);
 }
 
+function Skeleton({ lines }: { lines: string[] }) {
+  return (
+    <div className="flex flex-col gap-2" aria-hidden>
+      {lines.map((width, index) => (
+        <div key={index} className={cn("skeleton h-4 animate-shimmer rounded-lg", width)} />
+      ))}
+    </div>
+  );
+}
+
+function RetryButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="press inline-flex shrink-0 items-center gap-1.5 rounded-(--radius-control) border border-border px-3 py-1.5 text-sm font-medium text-foreground"
+    >
+      <RotateCcw className="h-4 w-4" /> Ponów
+    </button>
+  );
+}
+
 export function TranslationSheet({ translator }: { translator: WordTranslator }) {
   const { phase, close, retry, language } = translator;
-  const open = phase.status !== "idle";
+  const open = phase.status === "open";
 
   useEffect(() => {
     if (!open) return;
@@ -182,8 +260,9 @@ export function TranslationSheet({ translator }: { translator: WordTranslator })
     return () => window.removeEventListener("keydown", onKey);
   }, [open, close]);
 
-  if (phase.status === "idle") return null;
-  const { selected } = phase;
+  if (phase.status !== "open") return null;
+  const { selected, translation, examples } = phase;
+  const lemma = translation.status === "ready" ? translation.data.lemma : "";
 
   return (
     <div
@@ -193,14 +272,14 @@ export function TranslationSheet({ translator }: { translator: WordTranslator })
       <div
         role="status"
         aria-live="polite"
-        className="pointer-events-auto mx-auto max-w-lg animate-sheet-up rounded-(--radius-card) border border-border/70 bg-surface p-4 shadow-(--shadow-card-hover)"
+        className="pointer-events-auto mx-auto max-h-[min(70vh,30rem)] max-w-lg animate-sheet-up overflow-y-auto rounded-(--radius-card) border border-border/70 bg-surface p-4 shadow-(--shadow-card-hover)"
       >
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <p className="truncate text-xl font-bold text-foreground">{selected.word}</p>
-            {phase.status === "ready" && phase.data.lemma.toLowerCase() !== selected.word.toLowerCase() && (
+            {lemma && lemma.toLowerCase() !== selected.word.toLowerCase() && (
               <p className="text-xs text-foreground-muted">
-                forma podstawowa: <span className="font-medium text-foreground">{phase.data.lemma}</span>
+                forma podstawowa: <span className="font-medium text-foreground">{lemma}</span>
               </p>
             )}
           </div>
@@ -224,36 +303,59 @@ export function TranslationSheet({ translator }: { translator: WordTranslator })
           </div>
         </div>
 
-        {/* key: przy zmianie słowa zawartość wchodzi od nowa, zamiast skakać. */}
-        <div key={`${selected.key}:${phase.status}`} className="mt-2 animate-fade-in">
-          {phase.status === "loading" && (
-            <div className="flex flex-col gap-2" aria-label="Tłumaczenie się ładuje">
-              <div className="skeleton h-6 w-2/3 animate-shimmer rounded-lg" />
-              <div className="skeleton h-4 w-1/3 animate-shimmer rounded-lg" />
-              <span className="sr-only">
-                <Loader2 className="inline h-4 w-4 animate-spin" /> Tłumaczę…
-              </span>
-            </div>
-          )}
+        {/* key: przy zmianie słowa lub stanu część wchodzi od nowa, zamiast skakać. */}
+        <div key={`${selected.key}:t:${translation.status}`} className="mt-2 animate-fade-in">
+          {translation.status === "loading" && <Skeleton lines={["w-2/3", "w-1/3"]} />}
 
-          {phase.status === "ready" && (
+          {translation.status === "ready" && (
             <div className="flex flex-col gap-1">
-              <p className="text-lg font-semibold text-primary">{phase.data.translation}</p>
-              {phase.data.partOfSpeech && <p className="text-xs text-foreground-muted">{phase.data.partOfSpeech}</p>}
-              {phase.data.note && <p className="mt-1 text-sm text-foreground-muted">{phase.data.note}</p>}
+              <p className="text-lg font-semibold text-primary">{translation.data.translation}</p>
+              {translation.data.partOfSpeech && (
+                <p className="text-xs text-foreground-muted">{translation.data.partOfSpeech}</p>
+              )}
+              {translation.data.note && <p className="mt-1 text-sm text-foreground-muted">{translation.data.note}</p>}
             </div>
           )}
 
-          {phase.status === "error" && (
+          {translation.status === "error" && (
             <div className="flex items-center justify-between gap-3">
-              <p className="text-sm text-danger">{phase.message}</p>
-              <button
-                type="button"
-                onClick={retry}
-                className="press inline-flex shrink-0 items-center gap-1.5 rounded-(--radius-control) border border-border px-3 py-1.5 text-sm font-medium text-foreground"
-              >
-                <RotateCcw className="h-4 w-4" /> Ponów
-              </button>
+              <p className="text-sm text-danger">{translation.message}</p>
+              <RetryButton onClick={() => retry("translation")} />
+            </div>
+          )}
+        </div>
+
+        {/* Przykłady są niezależne od tłumaczenia: ich awaria go nie ukrywa. */}
+        <div key={`${selected.key}:e:${examples.status}`} className="mt-4 animate-fade-in border-t border-border/70 pt-3">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-foreground-muted">Przykłady</p>
+
+          {examples.status === "loading" && <Skeleton lines={["w-full", "w-4/5", "w-full", "w-2/3"]} />}
+
+          {examples.status === "ready" && (
+            <ul className="flex flex-col gap-3">
+              {examples.data.map((example) => (
+                <li key={example.sentence}>
+                  <p className="text-sm leading-snug text-foreground">
+                    {splitForHighlight(example.sentence, [selected.word, lemma]).map((part, index) =>
+                      part.match ? (
+                        <strong key={index} className="font-semibold text-primary">
+                          {part.text}
+                        </strong>
+                      ) : (
+                        part.text
+                      )
+                    )}
+                  </p>
+                  <p className="text-xs leading-snug text-foreground-muted">{example.translation}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {examples.status === "error" && (
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-sm text-foreground-muted">{examples.message}</p>
+              <RetryButton onClick={() => retry("examples")} />
             </div>
           )}
         </div>
