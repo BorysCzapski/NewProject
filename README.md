@@ -55,17 +55,32 @@ liczy się normalnie. Lista talii też mówi „Na dziś gotowe", zanim kliknies
 
 **Czytanki: tłumaczenie słowa po dotknięciu** (`components/reading/word-translation.tsx`). Tekst jest pocięty
 na słowa (`lib/reading/words.ts`: litery z polskimi znakami i cyrylicą, apostrofy i łączniki w środku
-słowa, np. `don't`, `mother-in-law`); dotknięcie słowa woła `translateWord`
-(`lib/reading/translate-actions.ts`), które tłumaczy je **w kontekście zdania**, bo samo słowo bywa
-niejednoznaczne (`light`), a odmieniona forma (`went`) nie jest hasłem słownikowym — arkusz pokazuje
-więc też formę podstawową, część mowy i krótką uwagę. Jeden stan i jeden arkusz obsługują artykuł oraz
-pytania; ponowne dotknięcie zaznaczonego słowa albo Escape zamyka arkusz, a dotknięcie innego słowa
-przełącza go bez czekania. Wynik zostaje w pamięci strony (to samo słowo w tym samym zdaniu nie woła AI
-drugi raz), a spóźniona odpowiedź na poprzednie słowo nie nadpisuje bieżącego. **Każde dotknięcie to jedno
-małe wywołanie AI** (Groq, `GROQ_API_KEY`), więc akcja wymaga zalogowania i ogranicza wielkość wejścia.
-Słowa to `span role="button" tabIndex={-1}`: czytanka ma kilkaset słów i tyle samo przystanków Tab
-zrobiłoby z formularza pod nią męczarnię; czytniki ekranu nadal widzą przyciski. Przycisk głośnika czyta
-słowo przez Web Speech API.
+słowa, np. `don't`, `mother-in-law`). Dotknięcie słowa otwiera arkusz u dołu ekranu z **polskim
+tłumaczeniem w kontekście zdania** (samo słowo bywa niejednoznaczne: `light`), formą podstawową
+(`went` → `go`), częścią mowy, krótką uwagą oraz **dwoma przykładowymi zdaniami** z tym słowem
+(podświetlonym) i ich polskim tłumaczeniem. Jeden stan i jeden arkusz obsługują artykuł oraz pytania;
+ponowne dotknięcie zaznaczonego słowa albo Escape zamyka arkusz, a dotknięcie innego przełącza go od razu.
+Przycisk głośnika czyta słowo przez Web Speech API. Słowa to `span role="button" tabIndex={-1}`: czytanka
+ma kilkaset słów i tyle samo przystanków Tab zrobiłoby z formularza pod nią męczarnię.
+
+*Dlaczego to jest trasa API, a nie akcja serwerowa* (`app/api/reading/translate/route.ts`): klient wysyła
+akcje serwerowe po jednej i czeka na każdą, więc dotknięcie drugiego słowa przed wczytaniem pierwszego
+stawało w kolejce — przy trzecim czekało się na dwa poprzednie, których wyniki i tak były ignorowane.
+Trasa dostaje żądania równolegle, a klient je **przerywa** (`AbortController`) przy nowym dotknięciu
+(`lib/reading/translate-client.ts`). Tłumaczenie i przykłady to **dwa osobne, równoległe żądania** z własnym
+stanem: tłumaczenie (małe) pojawia się od razu, przykłady dochodzą chwilę później, awaria jednego nie
+ukrywa drugiego, a „Ponów" ponawia tylko to, co zawiodło.
+
+*Odporność na błędy przejściowe* (`lib/reading/translate-core.ts`, czysta logika). Model domyślny rozumuje,
+a tokeny rozumowania liczą się do `max_completion_tokens`: przy ciasnym limicie odpowiedź bywała ucinana,
+zanim model wywołał narzędzie, i helper rzucał „did not return a structured response" — raz tak, raz nie.
+Limity są więc hojne, a błędy przejściowe (429, 5xx, zerwane połączenie, brak narzędzia, uszkodzony JSON,
+przekroczony czas próby) są ponawiane do 3 razy po stronie serwera (próba ma limit 9 s, całość mieści się
+w `maxDuration = 30`), a po stronie klienta dodatkowo do 3 prób z limitem 20 s. Błędy trwałe (401, 4xx)
+nie są ponawiane. Odpowiedź niebędąca JSON-em (strona logowania, strona błędu bramki) jest rozpoznawana: wygasła
+sesja daje czytelny komunikat, a 5xx z bramki jest ponawiane. Wyniki zostają w pamięci strony (to samo słowo w
+tym samym zdaniu nie woła AI drugi raz). **Każde dotknięcie to teraz dwa małe wywołania AI** (Groq,
+`GROQ_API_KEY`), a trasa wymaga zalogowania i waliduje wejście.
 
 **Animacje w Linguo** to jeden system w `app/globals.css` (sekcja „Motion system"), a nie klasy dorzucane
 ad hoc: `animate-page-in`, `animate-fade-up`, `animate-fade-in`, `animate-pop` (dobra odpowiedź, nagroda),
