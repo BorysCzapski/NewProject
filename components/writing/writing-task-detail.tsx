@@ -8,14 +8,16 @@
 // sparked by the AI's follow-up question.
 // ============================================================================
 import { useState } from "react";
-import { Loader2, Send, X } from "lucide-react";
+import { Loader2, Send, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScoreBadge } from "@/components/writing/score-badge";
+import { WritingHintsCard } from "@/components/writing/writing-hints";
 import { CyrillicKeyboard } from "@/components/ui/cyrillic-keyboard";
 import { cn } from "@/lib/utils";
 import { submitWriting, askFollowup, type WordCorrection } from "@/lib/writing/actions";
+import type { WritingSuggestion } from "@/lib/writing/hints-core";
 import { WRITING_TASK_TYPE_LABELS } from "@/lib/constants";
 import type { TargetLanguage, WritingSubmission, WritingTask } from "@/lib/types/database";
 
@@ -33,6 +35,8 @@ export function WritingTaskDetail({
   initialSubmission: WritingSubmission | null;
 }) {
   const [submission, setSubmission] = useState<WritingSubmission | null>(initialSubmission);
+  // Tylko dla świeżo ocenionej pracy — propozycji nie zapisujemy w bazie.
+  const [suggestions, setSuggestions] = useState<WritingSuggestion[]>([]);
 
   return (
     <div>
@@ -46,9 +50,15 @@ export function WritingTaskDetail({
       </Card>
 
       {submission ? (
-        <WritingReview task={task} submission={submission} />
+        <WritingReview task={task} submission={submission} suggestions={suggestions} />
       ) : (
-        <ComposeForm task={task} onSubmitted={setSubmission} />
+        <ComposeForm
+          task={task}
+          onSubmitted={(graded, tips) => {
+            setSuggestions(tips);
+            setSubmission(graded);
+          }}
+        />
       )}
     </div>
   );
@@ -64,7 +74,7 @@ function ComposeForm({
   onSubmitted,
 }: {
   task: WritingTask;
-  onSubmitted: (submission: WritingSubmission) => void;
+  onSubmitted: (submission: WritingSubmission, suggestions: WritingSuggestion[]) => void;
 }) {
   const [content, setContent] = useState("");
   const [pending, setPending] = useState(false);
@@ -79,7 +89,7 @@ function ComposeForm({
     setError(null);
     try {
       const result = await submitWriting(task.id, content);
-      if (result.ok) onSubmitted(result.data);
+      if (result.ok) onSubmitted(result.data.submission, result.data.suggestions);
       else setError(result.error);
     } catch {
       setError("Nie udało się wysłać pracy. Spróbuj ponownie.");
@@ -89,43 +99,46 @@ function ComposeForm({
   }
 
   return (
-    <Card>
-      <CardTitle>Twoja odpowiedź</CardTitle>
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        disabled={pending}
-        rows={8}
-        placeholder={COMPOSE_PLACEHOLDER[task.language]}
-        className={cn(
-          "mt-3 w-full rounded-(--radius-control) border border-border bg-surface px-4 py-3 text-base text-foreground",
-          "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
-          "disabled:opacity-70"
-        )}
-      />
-      {task.language === "ru" && !pending && <CyrillicKeyboard className="mt-2" />}
-      <p
-        className={cn(
-          "mt-1.5 text-xs font-medium",
-          outOfRange ? "text-warning" : "text-foreground-muted"
-        )}
-      >
-        {wordCount} słów (zalecane: {task.min_words}-{task.max_words})
-        {outOfRange && " — poza zalecanym zakresem, ale możesz wysłać"}
-      </p>
+    <>
+      <WritingHintsCard taskId={task.id} text={content} />
+      <Card>
+        <CardTitle>Twoja odpowiedź</CardTitle>
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          disabled={pending}
+          rows={8}
+          placeholder={COMPOSE_PLACEHOLDER[task.language]}
+          className={cn(
+            "mt-3 w-full rounded-(--radius-control) border border-border bg-surface px-4 py-3 text-base text-foreground",
+            "placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-primary",
+            "disabled:opacity-70"
+          )}
+        />
+        {task.language === "ru" && !pending && <CyrillicKeyboard className="mt-2" />}
+        <p
+          className={cn(
+            "mt-1.5 text-xs font-medium",
+            outOfRange ? "text-warning" : "text-foreground-muted"
+          )}
+        >
+          {wordCount} słów (zalecane: {task.min_words}-{task.max_words})
+          {outOfRange && " — poza zalecanym zakresem, ale możesz wysłać"}
+        </p>
 
-      {error && <p className="mt-2 text-sm text-danger">{error}</p>}
+        {error && <p className="mt-2 text-sm text-danger">{error}</p>}
 
-      <Button
-        size="lg"
-        className="mt-4 w-full"
-        onClick={handleSubmit}
-        disabled={!content.trim()}
-        isLoading={pending}
-      >
-        {pending ? "AI ocenia Twoją pracę…" : "Wyślij do oceny"}
-      </Button>
-    </Card>
+        <Button
+          size="lg"
+          className="mt-4 w-full"
+          onClick={handleSubmit}
+          disabled={!content.trim()}
+          isLoading={pending}
+        >
+          {pending ? "AI ocenia Twoją pracę…" : "Wyślij do oceny"}
+        </Button>
+      </Card>
+    </>
   );
 }
 
@@ -136,7 +149,15 @@ interface ChatMessage {
   corrections?: WordCorrection[];
 }
 
-function WritingReview({ task, submission }: { task: WritingTask; submission: WritingSubmission }) {
+function WritingReview({
+  task,
+  submission,
+  suggestions,
+}: {
+  task: WritingTask;
+  submission: WritingSubmission;
+  suggestions: WritingSuggestion[];
+}) {
   const [messages, setMessages] = useState<ChatMessage[]>(
     submission.ai_followup_question ? [{ role: "ai", text: submission.ai_followup_question }] : []
   );
@@ -203,6 +224,27 @@ function WritingReview({ task, submission }: { task: WritingTask; submission: Wr
           <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-foreground">
             {submission.ai_corrected_version}
           </p>
+        </Card>
+      )}
+
+      {suggestions.length > 0 && (
+        <Card>
+          <div className="flex items-center gap-2">
+            <Sparkles className="h-4 w-4 text-primary" aria-hidden />
+            <CardTitle>Da się jeszcze ładniej</CardTitle>
+          </div>
+          <CardDescription className="mt-1">
+            Twoje wersje są poprawne — to tylko opcjonalne pomysły, jak powiedzieć to naturalniej.
+          </CardDescription>
+          <ul className="mt-3 flex flex-col gap-3">
+            {suggestions.map((s, i) => (
+              <li key={i} className="rounded-(--radius-control) bg-surface-muted px-3 py-2 text-sm leading-relaxed">
+                <p className="text-foreground-muted line-through decoration-foreground-muted/40">{s.original}</p>
+                <p className="font-medium text-foreground">{s.better}</p>
+                <p className="mt-0.5 text-xs text-foreground-muted">{s.why}</p>
+              </li>
+            ))}
+          </ul>
         </Card>
       )}
 
