@@ -408,7 +408,14 @@ wymaga ponownego pobrania JSON-ów. Arkusze mają nieoficjalną ocenę AI, nie k
    zadaje pytania (ABCD + otwarte), ocenia odpowiedzi otwarte. **Dotknij dowolnego słowa** (w artykule
    i w pytaniach), żeby zobaczyć jego polskie tłumaczenie w arkuszu u dołu ekranu — patrz niżej.
 8. **Pisanie** — krótkie formy (bez esejów) z losowym, konkretnym poleceniem od AI, ocena
-   poprawności/słownictwa, poprawiona wersja tekstu, mini-dialog pogłębiający.
+   poprawności/słownictwa, poprawiona wersja tekstu, mini-dialog pogłębiający. Nad polem pisania
+   jest składana karta **„Przydatne słówka"** (6–8 słów i 3–4 zwroty do tematu polecenia, z polskim
+   znaczeniem; użyte w tekście odhaczają się same). Pobiera ją trasa `POST /api/writing/hints`
+   (jedno wywołanie AI przy otwarciu zadania, cache w przeglądarce, ponowienia jak w tłumaczeniu
+   czytanek). Ocena może dołożyć **opcjonalne „Da się jeszcze ładniej"** — najwyżej 3 propozycje dla
+   fragmentów, które są poprawne, ale da się je powiedzieć naturalniej; prompt wprost każe nie
+   proponować niczego na siłę, więc dla dobrego tekstu lista jest pusta. Propozycji nie zapisujemy
+   w bazie (bez migracji), więc po ponownym otwarciu pracy ich nie ma.
 9. **Piosenki** — wklejasz tekst piosenki, tłumaczysz linijka po linijce (AI akceptuje sensowne
    warianty); tryb „Słówka" pozwala dotknąć dowolnego słowa, by zobaczyć jego znaczenie w kontekście.
 10. **Słuchanie** — wklejasz link do YouTube, aplikacja pobiera transkrypcję i tworzy ćwiczenie
