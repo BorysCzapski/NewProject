@@ -125,6 +125,14 @@ export const PHOENIX_APPS: PhoenixApp[] = [
     href: "/gitara",
   },
   {
+    id: "trading",
+    name: "Trading",
+    description: "Nauka tradingu na ropie Brent: lekcje, przykłady, quiz i kalkulator ryzyka",
+    section: "nauka",
+    icon: "LineChart",
+    href: "/trading",
+  },
+  {
     id: "projekty",
     name: "Projekty",
     description: "Własne projekty z hobby: postęp, czego potrzebujesz i dziennik sesji",
