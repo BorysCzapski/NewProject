@@ -40,7 +40,7 @@ export default async function CodzienneSessionPage({
         <VocabDrill
           entries={session.entries}
           boxes={session.boxes}
-          backHref="/jezyki/nauka/codzienne"
+          backHref={`/jezyki/fiszki/${deck.slug}`}
           accentChars={[]}
           recordAnswer={recordLexiconAnswer}
           finishSession={finishLexiconSession}

@@ -5,7 +5,7 @@
 // Phoenix's mini-apps; the platform launcher lives at "/".
 // ============================================================================
 import Link from "next/link";
-import { BookOpen, PenLine, Headphones, GraduationCap, Layers, ArrowRight, Map } from "lucide-react";
+import { BookOpen, PenLine, Headphones, GraduationCap, Layers, ArrowRight, Map, BookMarked } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { createClient } from "@/lib/supabase/server";
 import { getHomeworkWithProgress } from "@/lib/homework/progress";
@@ -19,8 +19,8 @@ import { BackButton } from "@/components/layout/back-button";
 import { stagger } from "@/lib/motion";
 
 const MODULE_LINKS = [
-  { href: "/jezyki/nauka/fiszki", label: "Fiszki", icon: Layers, color: "bg-level-a1/15 text-level-a1" },
-  { href: "/jezyki/nauka/slowka", label: "Trener słówek", icon: BookOpen, color: "bg-level-a2/15 text-level-a2" },
+  { href: "/jezyki/fiszki", label: "Fiszki", icon: Layers, color: "bg-level-a1/15 text-level-a1" },
+  { href: "/jezyki/nauka/podrecznik", label: "Angielski szkoła", icon: BookMarked, color: "bg-level-a2/15 text-level-a2" },
   { href: "/jezyki/nauka/gramatyka", label: "Gramatyka", icon: GraduationCap, color: "bg-level-b1/15 text-level-b1" },
   { href: "/jezyki/nauka/czytanie", label: "Czytanie", icon: BookOpen, color: "bg-primary-soft text-primary" },
   { href: "/jezyki/nauka/pisanie", label: "Pisanie", icon: PenLine, color: "bg-accent-soft text-accent" },

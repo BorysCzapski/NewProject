@@ -13,6 +13,19 @@ lekcjami, czytanie i pisanie oceniane przez AI, tłumaczenie piosenek, słuchani
 (YouTube), gra „łączenie tłumaczeń", prace domowe z panelem admina, kalendarz i streaki,
 a dla rosyjskiego — wprowadzenie do cyrylicy i ekranowa klawiatura.
 
+**Menu „Fiszki"** (`/jezyki/fiszki`) to jedyne wejście do ćwiczeń słówek w Linguo: najpierw wybierasz
+**materiał**, potem **tryb**. Materiały: talie leksykonu (EF, czasowniki frazowe, „Business English" — tylko
+angielski) i „Słownictwo wg poziomu" (A1–B2, wszystkie języki). Tryby w dwóch grupach: *z powtórkami*
+(Znaczenia = Codzienne, Pisownia, Trening fiszek — własny postęp każdego) i *swobodne* (Fiszki, Trener
+znaczeń, Łączenie). Na talii leksykonu działa wszystkie sześć; tryby swobodne biorą tylko hasła z gotowym
+tłumaczeniem (`lib/fiszki/adapt.ts` przerabia hasło leksykonu na `VocabularyWord`, żeby stare trenery
+działały bez przepisywania) i **nie zapisują postępu**, więc nie psują harmonogramu powtórek. Słownictwo wg
+poziomu obsługuje trzy tryby swobodne (te same strony i ten sam postęp co w Ścieżce nauki). Tryb
+niedostępny jest wygaszony z powodem, zamiast zniknąć. Logika menu: `lib/fiszki/modes.ts`,
+`mode-state.ts` (czyste, z testami); strony: `app/(main)/jezyki/fiszki/…`. Dawne huby
+`/jezyki/nauka/codzienne|pisownia|trening-fiszki` przekierowują do menu, a same sesje
+(`…/sesja/[deckSlug]`) działają pod starymi adresami.
+
 **Codzienne** (`/jezyki/nauka/codzienne`) to moduł Linguo do codziennej nauki angielskiego z dwóch list
 częstości: 3000 najczęstszych słów (EF) i 146 czasowników frazowych (UMN CCAPS). Sesja to powtórki
 na pudełkach Leitnera plus 10 nowych haseł w kolejności listy. Źródła są samymi hasłami, więc polskie

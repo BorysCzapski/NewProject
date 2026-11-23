@@ -40,6 +40,7 @@ export function MeaningTrainer({
   pool,
   backHref,
   language = "en",
+  onAnswer = recordVocabularyAnswer,
 }: {
   batch: VocabularyWord[];
   pool: VocabularyWord[];
@@ -47,6 +48,9 @@ export function MeaningTrainer({
   backHref?: string;
   /** Language the words belong to — drives placeholders and the Cyrillic keyboard. */
   language?: TargetLanguage;
+  /** Overrides how an answer is recorded — e.g. lexicon decks aren't rows in
+   * vocabulary_words, so they can't go through recordVocabularyAnswer's FK. */
+  onAnswer?: (wordId: string, wasCorrect: boolean) => void | Promise<void>;
 }) {
   const [phase, setPhase] = useState<Phase>("setup");
   const [direction, setDirection] = useState<Direction>("en-pl");
@@ -75,7 +79,7 @@ export function MeaningTrainer({
     setFeedback(wasCorrect ? "correct" : "incorrect");
     if (wasCorrect) setScore((s) => s + 1);
 
-    void recordVocabularyAnswer(word.id, wasCorrect);
+    void onAnswer(word.id, wasCorrect);
   }
 
   async function nextQuestion() {

@@ -53,12 +53,12 @@ export default async function TreningFiszekSessionPage({
             nextDueText={describeNextDue(session.nextDueAt)}
             canPracticeExtra={session.startedCount > 0}
             extraHref={`/jezyki/nauka/trening-fiszki/sesja/${deck.slug}?tryb=dodatkowo`}
-            backHref="/jezyki/nauka/trening-fiszki"
+            backHref={`/jezyki/fiszki/${deck.slug}`}
           />
         ) : (
           <RecallDrill
             entries={session.entries}
-            backHref="/jezyki/nauka/trening-fiszki"
+            backHref={`/jezyki/fiszki/${deck.slug}`}
             recordAnswer={extra ? recordRecallExtraAnswer : recordRecallAnswer}
             finishSession={finishRecallSession}
           />

@@ -57,13 +57,13 @@ export default async function PisowniaSessionPage({
             nextDueText={describeNextDue(session.nextDueAt)}
             canPracticeExtra={session.startedCount > 0}
             extraHref={`/jezyki/nauka/pisownia/sesja/${deck.slug}?tryb=dodatkowo`}
-            backHref="/jezyki/nauka/pisownia"
+            backHref={`/jezyki/fiszki/${deck.slug}`}
           />
         ) : (
           <SpellingDrill
             entries={session.entries}
             boxes={session.boxes}
-            backHref="/jezyki/nauka/pisownia"
+            backHref={`/jezyki/fiszki/${deck.slug}`}
             recordAnswer={extra ? recordSpellingExtraAnswer : recordSpellingAnswer}
             finishSession={finishSpellingSession}
           />
