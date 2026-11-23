@@ -4,43 +4,28 @@
 // pages live under app/(main)/nauka/<module>/.
 // ============================================================================
 import Link from "next/link";
-import { Map, Layers, BookOpen, GraduationCap, PenLine, Headphones, Link2, Type, BookMarked, CalendarCheck, SpellCheck, Keyboard } from "lucide-react";
+import { Map, Layers, BookOpen, GraduationCap, PenLine, Headphones, Type, BookMarked } from "lucide-react";
 import { requireProfile } from "@/lib/auth/get-profile";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { LevelBadge } from "@/components/ui/badge";
 import { stagger } from "@/lib/motion";
 
+// Wszystkie ćwiczenia słówek (Codzienne, Pisownia, Trening fiszek, Fiszki, Trener
+// znaczeń, Łączenie) siedzą pod jednym kafelkiem: najpierw wybierasz materiał, potem
+// tryb (patrz app/(main)/jezyki/fiszki).
 const MODULES = [
   {
-    href: "/jezyki/nauka/codzienne",
-    label: "Codzienne",
-    description: "3000 najczęstszych angielskich słów, po 10 nowych dziennie",
-    icon: CalendarCheck,
+    href: "/jezyki/fiszki",
+    label: "Fiszki",
+    description: "Wybierz materiał, a potem tryb: znaczenia, pisownia, wpisywanie, quiz, łączenie",
+    icon: Layers,
   },
   {
     href: "/jezyki/nauka/sciezka",
     label: "Ścieżka nauki",
     description: "Etapy do odblokowania: słówka + gramatyka razem",
     icon: Map,
-  },
-  {
-    href: "/jezyki/nauka/fiszki",
-    label: "Fiszki",
-    description: "Karty do nauki słówek z powtórkami",
-    icon: Layers,
-  },
-  {
-    href: "/jezyki/nauka/slowka",
-    label: "Trener znaczeń",
-    description: "Quiz EN↔PL i wpisywanie tłumaczeń",
-    icon: BookOpen,
-  },
-  {
-    href: "/jezyki/nauka/laczenie",
-    label: "Łączenie tłumaczeń",
-    description: "Połącz słowa z ich tłumaczeniami — gra na dopasowanie",
-    icon: Link2,
   },
   {
     href: "/jezyki/nauka/gramatyka",
@@ -74,23 +59,6 @@ const MODULES = [
   },
 ];
 
-// Spelling drill (fill in missing letters) — English only: it trains English
-// orthography on the English lexicon decks.
-const PISOWNIA_MODULE = {
-  href: "/jezyki/nauka/pisownia",
-  label: "Pisownia",
-  description: "Uzupełnij 1–2 brakujące litery w słowach i zwrotach",
-  icon: SpellCheck,
-};
-
-// Recall drill (Polish word -> type the English) — English only, like Pisownia.
-const TRENING_MODULE = {
-  href: "/jezyki/nauka/trening-fiszki",
-  label: "Trening fiszek",
-  description: "Widzisz polskie słowo, wpisujesz angielskie (też warianty)",
-  icon: Keyboard,
-};
-
 // Shown only to Russian learners, at the very top — the alphabet comes first.
 const CYRYLICA_MODULE = {
   href: "/jezyki/nauka/cyrylica",
@@ -101,12 +69,7 @@ const CYRYLICA_MODULE = {
 
 export default async function NaukaPage() {
   const profile = await requireProfile();
-  const modules =
-    profile.target_language === "ru"
-      ? [CYRYLICA_MODULE, ...MODULES]
-      : profile.target_language === "en"
-        ? [MODULES[0], PISOWNIA_MODULE, TRENING_MODULE, ...MODULES.slice(1)]
-        : MODULES;
+  const modules = profile.target_language === "ru" ? [CYRYLICA_MODULE, ...MODULES] : MODULES;
 
   return (
     <div>
