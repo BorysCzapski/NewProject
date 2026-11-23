@@ -1,0 +1,74 @@
+# Business English — jednostki 5–7 (zdjęcia stron z podręcznika od użytkownika).
+# Format: hasło | warianty (po "/", opcjonalnie) | tłumaczenie PL | przykład EN | przykład PL
+# Hasła pochodzą z pogrubień i zadań słownikowych (Vocabulary, Word Bank) każdej
+# jednostki; przykłady to zdania z tekstów i ćwiczeń podręcznika (część skrócona).
+# Tłumaczenia są nasze — w podręczniku są tylko definicje po angielsku.
+# Wiersze zaczynające się od # to komentarze/nagłówki jednostek.
+
+# --- Unit 5: Sales Forecasts ---
+sales forecast | | prognoza sprzedaży | This report presents our sales forecast for the fourth quarter. | Ten raport przedstawia naszą prognozę sprzedaży na czwarty kwartał.
+volume | | wielkość sprzedaży, wolumen | We will increase total sales by 24% over the current volume. | Zwiększymy łączną sprzedaż o 24% w stosunku do obecnego wolumenu.
+predict | | przewidywać, prognozować | We predict the largest increase will come in the small engines division. | Przewidujemy, że największy wzrost nastąpi w dziale małych silników.
+expect | | spodziewać się, oczekiwać | We expect sales of small motors to show above average increases. | Spodziewamy się ponadprzeciętnych wzrostów sprzedaży małych silników.
+estimate | | szacować; szacunek | Based on that trend, we estimate a 25% decline for the fourth quarter. | Na podstawie tego trendu szacujemy 25% spadek w czwartym kwartale.
+comparison | | porównanie | A comparison with Alta Inc. shows our strengths more clearly. | Porównanie z Alta Inc. wyraźniej pokazuje nasze mocne strony.
+past sales | | dotychczasowa sprzedaż, sprzedaż z poprzednich okresów | Our current figures are much lower than those from past sales. | Nasze obecne wyniki są dużo niższe niż wyniki z poprzednich okresów.
+seasonal trend | | trend sezonowy | A seasonal trend will not last the entire year. | Trend sezonowy nie utrzyma się przez cały rok.
+factor | | czynnik | Another factor affecting the marine division is increasing competition. | Kolejnym czynnikiem wpływającym na dział morski jest rosnąca konkurencja.
+competition | | konkurencja | Competition with Dorsey Marine is increasing. | Konkurencja ze strony Dorsey Marine rośnie.
+contracts | | kontrakty, umowy | The company signed two new contracts to build offices. | Firma podpisała dwa nowe kontrakty na budowę biur.
+existing | | istniejący, dotychczasowy | Strong sales with our existing clients will support this division. | Silna sprzedaż wśród dotychczasowych klientów wesprze ten dział.
+pricing policy | | polityka cenowa | We advise a review of the company's pricing policy. | Zalecamy przegląd polityki cenowej firmy.
+outbid | | przebić ofertę | They outbid us on several contracts. | Przebili nasze oferty przy kilku kontraktach.
+decline | | spadek | We estimate a 25% decline for the fourth quarter. | Szacujemy 25% spadek w czwartym kwartale.
+demand | | popyt | The new engine remains in high demand. | Nowy silnik nadal cieszy się dużym popytem.
+replacement parts | | części zamienne | Sales of replacement parts will show above average increases. | Sprzedaż części zamiennych wzrośnie ponad średnią.
+division | | dział, oddział (firmy) | The largest increase will come in the small engines division. | Największy wzrost nastąpi w dziale małych silników.
+
+# --- Unit 6: Controlling Operations ---
+operations | | działalność operacyjna, procesy operacyjne | I have several suggestions for improving operations and increasing efficiency. | Mam kilka sugestii, jak usprawnić działalność operacyjną i zwiększyć wydajność.
+control | | kontrola, nadzór | The owner has control over the business. | Właściciel ma kontrolę nad firmą.
+efficiency | | wydajność, sprawność | If you work faster, you might increase your efficiency. | Jeśli będziesz pracować szybciej, możesz zwiększyć swoją wydajność.
+strategy | | strategia | Good plans have a clear strategy. | Dobre plany mają jasną strategię.
+raw materials | | surowce | I would advise that you change your strategy regarding raw materials. | Radzę zmienić strategię dotyczącą surowców.
+storage | | magazynowanie, przechowywanie | Warehouses are used for storage. | Magazyny służą do przechowywania towarów.
+warehouse | | magazyn, hala magazynowa | Warehouses are used for storage. | Magazyny służą do przechowywania towarów.
+just-in-time approach | just in time approach/just-in-time | system dostaw „dokładnie na czas" (just-in-time) | You could reduce this cost by up to 90% if you adopted a just-in-time approach. | Mógłbyś obniżyć ten koszt nawet o 90%, gdybyś przyjął system just-in-time.
+minimize | minimise | zminimalizować, ograniczyć do minimum | That would minimize the amount of your resources and space. | To zminimalizowałoby ilość zasobów i miejsca, które zużywasz.
+workload | | ilość pracy, obciążenie pracą | If you minimize your workload, you have less to do. | Jeśli zmniejszysz swoje obciążenie pracą, masz mniej do zrobienia.
+inventory | | zapasy, stan magazynowy | Space goes toward maintaining inventory. | Miejsce jest potrzebne na utrzymanie zapasów.
+inventory management | | zarządzanie zapasami | This would entail the adoption of a new inventory management system. | Wymagałoby to wdrożenia nowego systemu zarządzania zapasami.
+supplies | | zaopatrzenie, materiały i zapasy | At the end of each week you order flour, sugar, and other supplies. | Pod koniec każdego tygodnia zamawiasz mąkę, cukier i inne zaopatrzenie.
+supply chain | | łańcuch dostaw | Materials arrive via the supply chain. | Materiały docierają łańcuchem dostaw.
+quality control | | kontrola jakości | Your quality control process is pretty thorough. | Wasz proces kontroli jakości jest dość dokładny.
+strategic business unit | | strategiczna jednostka biznesowa | I would suggest that you start a strategic business unit. | Sugeruję, żebyś utworzył strategiczną jednostkę biznesową.
+break-even point | breakeven point/break even point | próg rentowności | It may take a few years before the unit reaches a break-even point. | Może minąć kilka lat, zanim jednostka osiągnie próg rentowności.
+factory | | fabryka, zakład produkcyjny | Factories can function without defined operations. | Fabryki mogą działać bez zdefiniowanych procesów.
+retailer | | sprzedawca detaliczny | The supply chain runs from materials to the factory, the retailer and the consumer. | Łańcuch dostaw prowadzi od materiałów przez fabrykę i sprzedawcę detalicznego do konsumenta.
+consumer | | konsument, klient końcowy | The supply chain ends with the consumer. | Łańcuch dostaw kończy się na konsumencie.
+
+# --- Unit 7: Business Relationships ---
+takeover | | przejęcie firmy | The business community was surprised at a corporation's takeover of an auto parts maker. | Świat biznesu był zaskoczony przejęciem producenta części samochodowych przez korporację.
+acquire | | przejąć firmę, nabyć | Nielson-Williams acquires Western Manufacturing. | Nielson-Williams przejmuje Western Manufacturing.
+corporation | | korporacja | Another national corporation tried to take control of WM. | Inna krajowa korporacja próbowała przejąć kontrolę nad WM.
+bid | | oferta przejęcia, próba przejęcia | Nielson-Williams made a successful bid for Western Manufacturing. | Nielson-Williams złożyło zwycięską ofertę przejęcia Western Manufacturing.
+buyout | | wykup firmy | The deal put an end to a months-long battle for the buyout of the company. | Umowa zakończyła trwającą miesiącami walkę o wykup firmy.
+target | | cel przejęcia | For months, WM was the target of another national corporation. | Przez miesiące WM była celem przejęcia innej krajowej korporacji.
+hostile takeover | | wrogie przejęcie | Managers planned to quit if NexiCorp's hostile takeover was successful. | Menedżerowie planowali odejść, jeśli wrogie przejęcie przez NexiCorp się powiedzie.
+tender offer | | publiczna oferta wykupu akcji | Nielson-Williams stepped in and made its own tender offer. | Nielson-Williams wkroczyło do akcji i złożyło własną publiczną ofertę wykupu akcji.
+white knight | | „biały rycerz" (inwestor ratujący firmę przed wrogim przejęciem) | Many hailed Nielson-Williams as a white knight. | Wielu okrzyknęło Nielson-Williams „białym rycerzem".
+divestment | divestiture | zbycie aktywów, wyprzedaż części firmy | WM announced plans for divestment to prevent bankruptcy. | WM ogłosiło plany zbycia aktywów, żeby uniknąć bankructwa.
+bankrupt | | niewypłacalny, zbankrutowany | The company was going bankrupt. | Firma stała na skraju bankructwa.
+bankruptcy | | bankructwo, upadłość | Selling parts of a company can help corporations avoid bankruptcy. | Sprzedaż części firmy może pomóc korporacjom uniknąć bankructwa.
+offer | | oferta | Several larger corporations have made offers. | Kilka większych korporacji złożyło oferty.
+friendly takeover | | przyjazne przejęcie | The board considers this a friendly takeover. | Zarząd uważa to za przyjazne przejęcie.
+parent company | | spółka matka | WM is pleased to accept Nielson-Williams as its parent company. | WM chętnie przyjmuje Nielson-Williams jako swoją spółkę matkę.
+shares | | akcje, udziały | Mr. Lewis made an offer to buy a majority of company shares. | Pan Lewis złożył ofertę kupna większości akcji firmy.
+majority | | większość | A majority of WM's management team announced intentions to quit. | Większość zarządu WM zapowiedziała zamiar odejścia.
+aggressive | | agresywny | None of the offers was as aggressive as NexiCorp's. | Żadna z ofert nie była tak agresywna jak oferta NexiCorp.
+unethical | | nieetyczny | The board objected to NexiCorp's unethical business practices. | Zarząd sprzeciwił się nieetycznym praktykom biznesowym NexiCorp.
+business practices | | praktyki biznesowe | Officials disagreed with NexiCorp's business practices. | Przedstawiciele WM nie zgadzali się z praktykami biznesowymi NexiCorp.
+disagree | | nie zgadzać się | Officials at WM disagreed with NexiCorp's business practices. | Przedstawiciele WM nie zgadzali się z praktykami biznesowymi NexiCorp.
+welcome | | przyjąć z zadowoleniem | The management welcomed Nielson-Williams as their new parent company. | Zarząd z zadowoleniem przyjął Nielson-Williams jako nową spółkę matkę.
+complete | | sfinalizować, zakończyć | Nielson-Williams completed its buyout of Western Manufacturing. | Nielson-Williams sfinalizowało wykup Western Manufacturing.
+profitable | | dochodowy, zyskowny | WM used to be a profitable company. | WM kiedyś była dochodową firmą.

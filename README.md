@@ -19,6 +19,12 @@ na pudełkach Leitnera plus 10 nowych haseł w kolejności listy. Źródła są 
 tłumaczenie, przykład i wskazówkę dopisuje AI (`lib/lexicon/enrich.ts`) przy pierwszym użyciu hasła
 i zapisuje w bazie. Schemat: `0032_lexicon.sql`, `0033_lexicon_definitions.sql`; dane:
 `supabase/seed/lexicon/` (surowe listy `.txt` + `node scripts/build-lexicon-seed.mjs` generuje SQL).
+Talia **„Business English: jednostki 5–7"** (62 hasła: Sales Forecasts, Controlling Operations, Business
+Relationships) pochodzi ze zdjęć stron podręcznika — `supabase/seed/lexicon/business-english-source.txt`
+(`hasło | warianty | tłumaczenie | przykład EN | przykład PL`) → `03_business_english.sql` tym samym skryptem.
+Ma gotowe tłumaczenia i przykłady (bez AI), więc od razu działa we wszystkich trzech trybach: Codzienne,
+Pisownia i Trening fiszek. Wgranie: `node scripts/db.mjs sql supabase/seed/lexicon/03_business_english.sql`
+(idempotentne; wymaga migracji `0037`).
 W Maturze dwa działy: „100 najważniejszych słówek" (`supabase/seed/matura/18_vocab_top100.sql`) i „Phrasal verbs" (41 haseł z przykładami, `19_vocab_phrasal_verbs.sql`, generowany z `phrasal-verbs-source.txt` tym samym skryptem).
 
 **Pisownia** (`/jezyki/nauka/pisownia`) — tylko dla angielskiego: widzisz polskie znaczenie i słowo z
