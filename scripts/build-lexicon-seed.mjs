@@ -164,3 +164,74 @@ on conflict (topic_id, term) do nothing;
 `
 writeFileSync(join(DIR, '..', 'matura', '19_vocab_phrasal_verbs.sql'), pvSql)
 console.log(`✓ Matura phrasal verbs: ${pv.length} haseł`)
+
+// --- Business English, jednostki 5–7 (zdjęcia stron podręcznika) -------------
+// Linia: "hasło | warianty/po/ukośniku | tłumaczenie | przykład EN | przykład PL".
+// Warianty są opcjonalne (puste pole): trening przyjmuje hasło ORAZ każdy
+// wariant, Pisownia ćwiczy tylko hasło główne. Talia ma gotowe tłumaczenia i
+// przykłady, więc dostaje enriched_at i nie wymaga AI (lib/lexicon/enrich.ts).
+const biz = readFileSync(join(DIR, 'business-english-source.txt'), 'utf8')
+  .split('\n')
+  .map((l) => l.replace(/\r$/, '').trim())
+  .filter((l) => l && !l.startsWith('#'))
+  .map((line, i) => {
+    const parts = line.split('|').map((p) => p.trim())
+    if (parts.length !== 5 || !parts[0] || !parts[2])
+      throw new Error(`Business English, wpis ${i + 1}: oczekiwano 5 pól "hasło | warianty | PL | EN | PL": ${line}`)
+    const [term, alts, pl, ex, exPl] = parts
+    return {
+      rank: i + 1,
+      term,
+      alternatives: alts ? alts.split('/').map((a) => a.trim()).filter(Boolean) : [],
+      pl,
+      ex,
+      exPl,
+    }
+  })
+const bizTerms = new Set()
+for (const r of biz) {
+  if (bizTerms.has(r.term)) throw new Error(`Duplikat hasła: ${r.term}`)
+  bizTerms.add(r.term)
+}
+
+const bizSql = `-- Wygenerowane przez scripts/build-lexicon-seed.mjs — nie edytuj ręcznie.
+-- Talia „Business English: jednostki 5–7": ${biz.length} haseł z trzech jednostek podręcznika
+-- (5 Sales Forecasts, 6 Controlling Operations, 7 Business Relationships), ze zdjęć
+-- stron od użytkownika. Źródło: lexicon/business-english-source.txt.
+-- Wymaga migracji 0037 (kolumna alternatives). Idempotentny: ponowne uruchomienie
+-- aktualizuje hasła po kluczu (deck_id, term), więc postęp użytkowników zostaje.
+insert into lexicon_decks (slug, title, description, kind, source_name, source_url, order_index)
+values (
+  'business-english-5-7',
+  'Business English: jednostki 5–7',
+  'Sales Forecasts, Controlling Operations, Business Relationships — słownictwo biznesowe z podręcznika',
+  'word',
+  'Podręcznik Business English — jednostki 5, 6, 7',
+  '',
+  3
+)
+on conflict (slug) do nothing;
+
+-- unique (deck_id, rank) nie pozwala na zamianę numerów w jednym zapytaniu, więc
+-- najpierw odsuwamy rangi poza zakres, a upsert ustawia je na nowo.
+update lexicon_entries
+set rank = rank + 100000
+where deck_id = (select id from lexicon_decks where slug = 'business-english-5-7');
+
+insert into lexicon_entries (deck_id, rank, term, alternatives, translation_pl, example, example_pl, enriched_at)
+select d.id, v.rank, v.term, v.alternatives, v.translation_pl, v.example, v.example_pl, now()
+from lexicon_decks d
+cross join (values
+${biz.map((r) => `  (${r.rank}, ${q(r.term)}, ${r.alternatives.length ? `array[${r.alternatives.map(q).join(', ')}]::text[]` : `array[]::text[]`}, ${q(r.pl)}, ${q(r.ex)}, ${q(r.exPl)})`).join(',\n')}
+) as v(rank, term, alternatives, translation_pl, example, example_pl)
+where d.slug = 'business-english-5-7'
+on conflict (deck_id, term) do update
+  set rank = excluded.rank,
+      alternatives = excluded.alternatives,
+      translation_pl = excluded.translation_pl,
+      example = excluded.example,
+      example_pl = excluded.example_pl,
+      enriched_at = coalesce(lexicon_entries.enriched_at, excluded.enriched_at);
+`
+writeFileSync(join(DIR, '03_business_english.sql'), bizSql)
+console.log(`✓ Business English 5–7: ${biz.length} haseł, z wariantami: ${biz.filter((r) => r.alternatives.length).length}`)
